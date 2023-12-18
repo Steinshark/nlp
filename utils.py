@@ -3,6 +3,7 @@ from torch.utils.data import Dataset
 import os 
 from transformers import PreTrainedTokenizer
 import random
+import re
 
 def load_data(ds_root:str,chunk_size:int,tokenizer:PreTrainedTokenizer,cutoff=None,eval_split=.1,replace_newline=True):
 
@@ -62,3 +63,25 @@ class GPTDataSet(Dataset):
     
     def __len__(self):
         return len(self.data)
+    
+# Returns True if successfully executes and writes to a file
+def get_links(in_file, out_file):
+
+    try:
+        with open(in_file, "r", encoding='utf-8') as file:
+            wiki_info = file.read()
+        pattern = re.compile(r'href="(\/wiki\/[^"]+)"') #re.compile(r'href="(\/wiki\/[^"]+|https?:\/\/[^"]+)"') #re.compile(r'<a\s+href="([^"]+)"')
+        hrefs = pattern.findall(wiki_info)
+
+        # If hrefs exists, write to file
+        if hrefs:
+            with open(out_file, "w", encoding="utf-8") as o_file:
+                o_file.write('\n'.join(hrefs))
+    except Exception as e:
+        print("get_links function did not work because:\n", e)
+        return False
+
+    return True
+
+
+print(get_links("wikilinks.txt", "wiki_out3.txt"))
