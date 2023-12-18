@@ -4,6 +4,8 @@ import os
 from transformers import PreTrainedTokenizer
 import random
 import re
+import nltk
+from nltk import corpus
 
 def load_data(ds_root:str,chunk_size:int,tokenizer:PreTrainedTokenizer,cutoff=None,eval_split=.1,replace_newline=True):
 
@@ -13,12 +15,16 @@ def load_data(ds_root:str,chunk_size:int,tokenizer:PreTrainedTokenizer,cutoff=No
     for item in os.listdir(ds_root): 
         item        = os.path.join(ds_root,item)
         full_text   = open(item,"r",encoding='utf-8').read()
+        
+        #Replace w no newline version
+        if "\n" in full_text:
+            full_text = full_text.replace("\n"," ")
+            with open(item,"w",encoding='utf-8') as file:
+                file.write(full_text)
+            
         if replace_newline:
             full_text = full_text.replace("\n"," ")
-        fulltext += full_text
-        # while len(full_text) > chunk_size:
-        #     data.append(full_text[:chunk_size])
-        #     full_text   = full_text[chunk_size:]
+        fulltext += full_text + "<|endoftext|>"
 
     #Pad 
     data        = [] 
@@ -84,4 +90,17 @@ def get_links(in_file, out_file):
     return True
 
 
-print(get_links("wikilinks.txt", "wiki_out3.txt"))
+def get_readmes():
+    corpora     = ["abc","brown","gutenberg","inaugural","","","","","","movie_reviews","","","","","","","","","","","","","","","","shakespeare","","state_union","","","",
+                   "","","","","","","","","","","","","","","webtext","","","","","","","","","","","",""]
+    corpus.abc
+
+    # #Save abc 
+    # with open("C:/code/nlp/data/abc.txt","w",encoding='utf-8') as file:
+    #     file.write(corpus.abc.raw().replace("\n\n","<|endoftext|>"))
+
+    with open("C:/code/nlp/data/brown.txt","w",encoding='utf-8') as file:
+        file.write(corpus.abc.raw().replace("\n\n","<|endoftext|>"))
+
+if __name__ == "__main__":
+    get_readmes()
