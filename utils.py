@@ -6,6 +6,8 @@ import random
 import re
 import nltk
 from nltk import corpus
+from model import GPTSteinsharkTokenizer 
+import time 
 
 def load_data(ds_root:str,chunk_size:int,tokenizer:PreTrainedTokenizer,cutoff=None,eval_split=.1,replace_newline=True):
 
@@ -57,7 +59,131 @@ def load_data(ds_root:str,chunk_size:int,tokenizer:PreTrainedTokenizer,cutoff=No
     padded_dataset  = list(map(tokenize,data))
     return padded_dataset  
 
+def create_vocab(ds_root:str,
+                 tokenizer:PreTrainedTokenizer,
+                 vocab_size:int,
+                 chunk_size:int
+                 ):
+    
+    #Load all text
+    tx  = time.time()
+    corpus      = ""
+    #Create Corpus
+    for file in os.listdir(ds_root):
+        filename = os.path.join(ds_root,file)
 
+        #Add text to corpus, all lower case
+        with open(filename,"r",encoding='utf-8') as file:
+            text        = file.read().lower()
+            if False and "\uf8f3" in text:
+                input(f"found in {filename}")
+            removes     = {"\u200a":" ","\u2006":" ","  ":" ","\u2005":" ","\uf005":",","\uf001":"fi","\u2002":" ","\uf8ec":"|","\u2008":" ","⁄":"/","\uf8f3":"c","\uf8f7":"c","\u2007":" ","\uf8f0":"-"}
+
+            for bad,good in removes.items():
+                text = text.replace(bad,good)
+
+            corpus += text
+
+    
+    print(f"corpus created with len: {len(corpus)}")
+
+
+    #Iterate until vocab size reached
+    tokens          = [char for char in  corpus]
+    unique_tokens   = set(tokens)
+    #print(f"finished load in {(time.time()-tx):.3f}s\n\tunique:{len(unique_tokens)}:\n{unique_tokens}")
+    print(f"{len(unique_tokens)} vs {vocab_size}")
+    
+    while len(unique_tokens) < vocab_size:
+        tx = time.time()
+        print(f"tokens size {len(unique_tokens)}\tsequence size {len(tokens)}",end='')
+
+        #Generate stats 
+        pairs       = {}
+        top_pair    = ""
+        top_count   = 0
+        for i in range(len(tokens)-1):
+
+            pair    = tokens[i] + tokens[i+1]
+
+            if pair in pairs:
+                pairs[pair] += 1
+            else:
+                pairs[pair] = 1 
+
+
+        pairs   = [(k,v) for k,v in pairs.items()]
+        pairs.sort(key=lambda x: x[1],reverse=True)
+       
+        #Go through top 50 pairs and get non_conflicting 
+        used        = []
+        replacers   = []
+        for pair in pairs[:50]:
+            done        = False
+            pair = pair[0]
+            #Verify and add all leters
+            for l in pair:
+                if l in used:
+                    done = True
+                    break
+    
+            if done:
+                continue
+            else:
+                for l in pair:
+                    used.append(l)
+                #Add to replacers if good
+                replacers.append(pair)
+
+        #Perform replacement
+        print(f" replacing {replacers}")
+        newtokens   = []
+        join_i      = 0
+        was_pair    = False
+
+
+
+        for i in range(len(tokens)-1):
+            
+            if was_pair:
+                was_pair = False 
+                continue 
+
+            #Add first token to newtokens 
+            curtoken    = tokens[i]
+            newtokens.append(curtoken)
+
+            #Check if skipping next token
+
+            if curtoken + tokens[i+1] in replacers:
+                newtokens[-1] += tokens[i+1]
+                was_pair = True
+
+                    #join_i = 8 
+            
+            # if join_i:
+            #     if join_i == 1:
+            #         print(f"tokens: {newtokens[-32:]}")
+            #     join_i -= 1
+
+
+            
+        tokens          = newtokens
+        unique_tokens   = set(tokens)
+        print(f"\t{(time.time()-tx):.2f}s")
+
+                
+    import json 
+    with open(f"vocabulary.txt","w",encoding='utf_16') as file:
+        print(f"writing {unique_tokens}")
+        file.write(json.dumps(list(unique_tokens)))
+        
+        
+    
+    #Generate vocab
+    tokenizer   = GPTSteinsharkTokenizer(vocab_size)
+    
+      
 
 class GPTDataSet(Dataset):
 
@@ -99,8 +225,16 @@ def get_readmes():
     # with open("C:/code/nlp/data/abc.txt","w",encoding='utf-8') as file:
     #     file.write(corpus.abc.raw().replace("\n\n","<|endoftext|>"))
 
-    with open("C:/code/nlp/data/brown.txt","w",encoding='utf-8') as file:
-        file.write(corpus.abc.raw().replace("\n\n","<|endoftext|>"))
+    # with open("C:/code/nlp/data/brown.txt","w",encoding='utf-8') as file:
+    #     file.write(corpus.abc.raw().replace("\n\n","<|endoftext|>"))
 
+
+def parse_time(filename,top_k=10):
+    lines   = open(filename,"r").readlines()
+
+    for line in lines:
+        pass 
 if __name__ == "__main__":
-    get_readmes()
+    t0 = time.time()
+    create_vocab("C:/code/nlp/data",None,32768,16)
+    print(f"finish in {(time.time()-t0):.3f}s")

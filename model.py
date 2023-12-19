@@ -19,7 +19,7 @@ class GPTSteinsharkTokenizer():
 
             #Get raw text 
             with open(file,"r",encoding="utf-8") as file:
-                rawtext     = file.read()
+                rawtext += file.read()
                 pairings    = {}
                 
 
@@ -32,7 +32,6 @@ class GPTSteinsharkTokenizer():
                         pairings[pair]  = 1 
                         
     
-
 
 class GPTSteinshark(GPT2LMHeadModel):
 
