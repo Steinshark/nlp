@@ -22,6 +22,26 @@ import bs4
 GOOD_CHARS          = ascii_lowercase + r".,'?{}[]/\;:!@#$%^&*()1234567890-_=+ |~<>©°•·×→" + '"' + ascii_uppercase + "ΑαΒβΓγΔδΕεΖζΗηΘθΙιΚκΛλΜμΝνΞξΟοΠπΡρΣσςΤτΥυΦφΧχΨψΩω"
 #sys.path.append(os.curdir)
 
+
+def load_corpus(ds_root:str,lower:bool=True,eot:bool=True,newline:bool=True):
+    corpus      = ""
+    #Create Corpus
+    for file in os.listdir(ds_root):
+        filename = os.path.join(ds_root,file)
+
+        #Add text to corpus, all lower case
+        with open(filename,"r",encoding='utf-8') as file:
+            text        = file.read()
+            if lower:
+                text    = text.lower()
+            if eot:
+                text    = text.replace('<|endoftext|>'," ").replace('<|ENDOFTEXT|>'," ")
+            if newline:
+                text    = text.replace('\n',' ')
+            corpus += text
+    return corpus
+
+
 def load_data(ds_root:str,chunk_size:int,tokenizer:PreTrainedTokenizer,cutoff=None,eval_split=.1,replace_newline=True):
 
     fulltext = ''
@@ -232,22 +252,14 @@ def create_vocab_OLD(ds_root:str,vocab_size:int):
         file.write(json.dumps(final_tokens))
         
         
-def create_vocab(ds_root:str,vocab_size:int):
+def create_vocab_perword(ds_root:str,vocab_size:int):
     
     #Load all text
     tx  = time.time()
-    corpus      = ""
-    #Create Corpus
-    for file in os.listdir(ds_root):
-        filename = os.path.join(ds_root,file)
+    corpus      = load_corpus(ds_root)
 
-        #Add text to corpus, all lower case
-        with open(filename,"r",encoding='utf-8') as file:
-            text        = file.read().lower().replace("\n"," ").replace('<|endoftext|>'," ").replace('<|ENDOFTEXT|>'," ").replace('\'',"'")
-            corpus += text
     #Split corpus into words
-    splits      = corpus.split(" ")
-    splits      = [f"{word} " for word in splits]
+    splits      = [f"{word} " for word in corpus.split(" ")]
 
     #Get individual words and frequencies
     wordcounts  = {} 
@@ -257,15 +269,16 @@ def create_vocab(ds_root:str,vocab_size:int):
         else:
             wordcounts[word] = [word,1] 
 
-    display     = f"{[f'{w}:{wordcounts[w]}' for w in list(wordcounts.keys())[:64]]}"
-    #input(f"{display} - wordcounts")
+    display     = f"{[f'{w}:{wordcounts[w]}' for w in list(wordcounts.keys())[:10]]}"
+    input(f"{display} - wordcounts(pre)")
 
     #Create list of free unicode characters
     avail_tokens    = [chr(i) for i in range(32768)]
     mappings        = dict()
     mapped          = dict()
     tokens          = set()
-    words = "s"
+    
+    words           = "s"
 
     #Create initial token set
     for char in corpus:
@@ -280,8 +293,14 @@ def create_vocab(ds_root:str,vocab_size:int):
     #Replace with tokens 
     for word in wordcounts:
         inplace_word    = wordcounts[word][0]
+        inplace_count   = wordcounts[word][1]
         for char in word:
-            inplace_word.replace(char,mapped[char])
+            inplace_word    = inplace_word.replace(char,mapped[char])
+        wordcounts[word]    = [inplace_word,inplace_count]
+
+
+    display     = f"{[f'{w}:{wordcounts[w]}' for w in list(wordcounts.keys())[:10]]}"
+    input(f"{display} - wordcounts(post)")
 
 
         # for word in wordcounts:
@@ -297,14 +316,15 @@ def create_vocab(ds_root:str,vocab_size:int):
 
         #Generate stats on each pair
         pairs       = {}
-        for i in range(len(words)):
-            word    = words[i][0]
-            wcount  = words[i][1]
+        for key in wordcounts:
+            word    = wordcounts[key][0]
+            wcount  = wordcounts[key][1]
 
             #If done, no need 
             if len(word) == 1:
                 continue 
-
+            
+            #Check pairs in word
             for j in range(len(word)-1):
                 pair    = f"{word[j]}{word[j+1]}"
                 
@@ -334,8 +354,9 @@ def create_vocab(ds_root:str,vocab_size:int):
         print(f"\tpair= '{expanded}'\tpair_n={top_n}\tstat_t={(t12-tx):.2f}s\tsort_t={(time.time()-t12):.2f}s",end='',flush=True)
 
         #Replace pairs with token
-        for i in range(len(words)):
-            words[i]    = [words[i][0].replace(top_pair,token),words[i][1]]
+        for word in wordcounts:
+            wordcounts[word]    = [wordcounts[word][0].replace(top_pair,mapped[top_pair]),wordcounts[word][1]]
+
         print(f"\ttotal_t={(time.time()-tx):.2f}s",flush=True)
 
                 
@@ -347,6 +368,73 @@ def create_vocab(ds_root:str,vocab_size:int):
     with open('vocabulary.txt','w',encoding='utf-8') as file:
         file.write(json.dumps(final_tokens))
  
+
+def create_vocab_whole(ds_root:str,vocab_size:int):
+    
+    #Create string of corpus
+    corpus  = load_corpus(ds_root)
+    #print(f"corpus is {corpus[:64]}")
+    #Create tokenization mechanisms
+    offset          = 256
+    avail_tokens    = [chr(i+offset) for i in range(32768-offset)]
+    mappings        = dict()
+    mapped          = dict()
+    tokens          = dict()
+
+    #Tokenize corpus
+    for char in corpus:
+        if not char in mapped:
+            next_token              = avail_tokens.pop(0)
+            mapped[char]            = next_token
+            mappings[next_token]    = char 
+            tokens[next_token]      = True
+            #print(f"{char}->{next_token}")
+    #print(f"tokens are {tokens}")
+    #Replace chars with tokens
+    for token in tokens:
+        corpus  = corpus.replace(mappings[token],token)
+
+    #print(f"{corpus[:64]}")
+    #Iteratate until done 
+    while len(tokens) < vocab_size:
+
+        print(f"n_tokens={len(tokens)}/{vocab_size}\tcorpus len={len(corpus)}",end='',flush=True)
+        t0  = time.time()
+        #Find pair stats
+        pairs   = defaultdict(int)
+        for i in range(len(corpus)-1):
+            pairs[f"{corpus[i]}{corpus[i+1]}"] += 1
+            #pair    = f"{corpus[i]}{corpus[i+1]}"
+            #input(f"pair='{pair}'->{pairs[pair]}")
+        
+        #Find top pair 
+        top_pair    = ''
+        top_n       = 0  
+        for pair,count in pairs.items():
+            if count > top_n:
+                top_pair    = pair 
+                top_n       = count 
+        t1  = time.time()
+        #Tokenize top pair 
+        next_token              = avail_tokens.pop(0)
+        mappings[next_token]    = top_pair 
+        mapped[top_pair]        = next_token
+        tokens[next_token]      = True
+
+        expanded    = expand(next_token,mappings).replace("\n",'/n')
+        print(f"\tpair= '{expanded}'\tpair_n={top_n}\tstat_t={(t1-t0):.2f}s\tsort_t={(time.time()-t1):.2f}s",end='',flush=True)
+        
+        corpus  = corpus.replace(top_pair,next_token)
+
+        print(f"\ttotal_t={(time.time()-t0):.2f}s",flush=True)
+
+
+
+    
+
+    
+
+
 
 def search(ds_root:str,searchword:str):
     corpus      = ""
@@ -360,6 +448,8 @@ def search(ds_root:str,searchword:str):
             corpus += text
     
     print(f"found term: {corpus.count(searchword)} times")
+
+
 '''
     DESCRIPTION:
         given a filetext in the format of a common crawl WET file, parse and return
@@ -601,6 +691,7 @@ class GPTDataSet(Dataset):
     def __len__(self):
         return len(self.data)
     
+
 # Returns True if successfully executes and writes to a file
 def get_links(in_file, out_file):
 
@@ -642,9 +733,9 @@ def parse_time(filename,top_k=10):
 
 
 if __name__ == "__main__":
-    #download_crawl(256,"data",8,True)
+    #download_crawl(16,"data",8,True)
     #create_vocab_threads("C:/code/nlp/data",1024,n_threads=12)
     #download_wiki()
     #create_dataset()
-    create_vocab("C:/code/nlp/alldata",1024)
+    create_vocab_whole("C:/code/nlp/alldata",1024)
     #search("C:/code/nlp/alldata",'))))')
