@@ -733,9 +733,9 @@ def parse_time(filename,top_k=10):
 
 
 if __name__ == "__main__":
-    #download_crawl(16,"data",8,True)
+    download_crawl(256,"data",8,True)
     #create_vocab_threads("C:/code/nlp/data",1024,n_threads=12)
-    #download_wiki()
+    download_wiki()
     #create_dataset()
     create_vocab_whole("C:/code/nlp/alldata",1024)
     #search("C:/code/nlp/alldata",'))))')
