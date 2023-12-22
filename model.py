@@ -1,15 +1,22 @@
 from transformers import GPT2LMHeadModel, GPT2Config, AutoTokenizer
 import torch
-
+import json 
 
 __DEVICE    = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 
 class GPTSteinsharkTokenizer():
 
-    def __init__(self,vocab_size):
-        self.base_chars     = set() 
-        self.tokens         = list(range(vocab_size))
+    def __init__(self,vocabulary: str|list|dict):
+        self.base_chars     = set()
+        if isinstance(vocabulary,str):
+            with open(vocabulary,"r",encoding='utf_8') as file:
+                self.tokens     = json.loads(file.read())
+        elif isinstance(vocabulary,list):
+            self.tokens     = {i:item for i,item in enumerate(vocabulary)}
+        elif isinstance(vocabulary,dict):
+            self.tokens     = vocabulary
+        
         
     def generate_vocab_from_corpus(filelist):
 
