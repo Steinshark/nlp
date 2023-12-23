@@ -16,18 +16,16 @@ class NotEnoughTextError(Exception):
         return self.msg 
     
 
-class GPTSteinsharkDataSet(Dataset):
+class NonUniformTokenSize(Exception):
 
-    def __init__(self,ds_root:str):
+    def __init__(self,msg:str):
+        self.msg    = msg 
+    
+    def __repr__(self):
+        return self.msg
 
-        self.filenames  = [os.path.join(ds_root,file) for file in os.listdir(ds_root)]
 
-        self.texts      = [open(fname,'r',encoding='utf_8').read() for fname in self.filenames]
 
-    #returns text_ids and attention_mask
-    def __getitem(self,i):
-        #Pick random text 
-        text    = random.choice(self.text)
 
 class GPTSteinsharkTokenizer():
 
@@ -97,6 +95,41 @@ class GPTSteinsharkTokenizer():
 
 
 
+class GPTSteinsharkDataSet(Dataset):
+
+    def __init__(self,ds_root:str,tokenizer:GPTSteinsharkTokenizer,n_positions:int,eot_token:str,pad_token:str):
+
+        self.filenames      = [os.path.join(ds_root,file) for file in os.listdir(ds_root)]
+
+        self.texts          = [open(fname,'r',encoding='utf_8').read() for fname in self.filenames]
+
+        self.tokenizer      = tokenizer
+        self.n_positions    = n_positions
+        self.select_pos     = n_positions - 1
+        self.eot_token      = eot_token
+        self.pad_token      = pad_token
+
+    #returns text_ids and attention_mask
+    def __getitem__(self,i):
+        
+        #Pick random text 
+        text                = random.choice(self.texts)
+
+        #Pick random index 
+        start_i             = random.randint(0,len(text)-self.select_pos)
+
+        #Pick random length 
+        length              = random.randint(0,self.n_positions)
+
+        tokens              = self.tokenizer.encode_n(text[start_i:],length)
+        context,next_token  = tokens[:-1],tokens[-1]
+
+
+        
+        return {'context':context,'next_token':next_token,'mask':None,'og':None}
+
+
+
 class GPTSteinshark(GPT2LMHeadModel):
 
     def __init__(self,
@@ -115,14 +148,38 @@ class GPTSteinshark(GPT2LMHeadModel):
                                              n_embd=n_embed,
                                              n_layer=n_layer,
                                              n_head=n_head,
-                                             activation_function=act_fn
+                                             activation_function=act_fn,
                                              )
 
         #Create the model
         super(GPTSteinshark,self).__init__(self.config)
         self.model              = GPT2LMHeadModel(self.config).to(DEVICE)
 
-    def train(self,dataloader:DataLoader):
+    def train(self,
+              dataloader:DataLoader,
+              n_iter=2**17,
+              ):
+
+        #Run the training n_iter times 
+        for iter in range(n_iter):
+
+            #Snatch a random item from the dataset
+            training_tokens,training_mask       = dataloader.__iter__()
+
+            #Ensure proper length of text 
+            if not training_tokens.shape[-1] == self.config.n_positions:
+                raise NonUniformTokenSize(f"token len of {training_tokens.shape[-1]} != n_positions of {self.config.n_positions}")
+                exit()
+            
+            #Ensure proper mask size 
+            if not training_mask.shape[-1] == self.config.n_positions:
+                raise NonUniformTokenSize(f"mask len of {training_mask.shape[-1]} != n_positions of {self.config.n_positions}")
+                exit()
+            
+            print(f"pass")
+            
+
+
 
 
 
@@ -134,10 +191,16 @@ if __name__ == "__main__":
     ##tokenizer.tokens['x']   = len(tokenizer.tokens)+1
     #print(f"{tokenizer.encode('this is a sample text')}\t-> '{tokenizer.decode(tokenizer.encode('this is a sample text'))}'")
 
-    model   = GPTSteinshark()
-    out     = model.transformer.forward(input_ids=torch.tensor([[122,65,512]]),attention_mask=torch.tensor([[1,1,1]]),return_dict=False,output_hidden_states=False)
-    m       = torch.nn.Linear(768,1024)
-    print(f"logits are {out[0].shape}, vs: {m(out[0]).shape}")
+    #model   = GPTSteinshark()
+    #out     = model.transformer.forward(input_ids=torch.tensor([[122,65,512]]),attention_mask=torch.tensor([[1,1,1]]),return_dict=False,output_hidden_states=False)
+    #m       = torch.nn.Linear(768,1024)
+    #print(f"logits are {out[0].shape}, vs: {m(out[0]).shape}")
+
+    tokenizer   = GPTSteinsharkTokenizer(['ab','a','b','c','ca','d','e','ecc'])
+    dl  = GPTSteinsharkDataSet('alldata',64,'<|ENDOFTEXT|>','<|PAD|>')
+    it  = dl.__getitem__(0)
+    
+    print(it)
     #tok     = GPT2Tokenizer.from_pretrained('gpt2')
     #print(model._get_generation_mode(GenerationConfig.from_model_config(model.config),None))
     #Model generate expects an 'input_ids' and 'attention_mask' arg. 'max_new_tokens' also 
