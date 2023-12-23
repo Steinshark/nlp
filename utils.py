@@ -13,7 +13,6 @@ import subprocess
 import sys 
 import typing
 from string import ascii_lowercase,ascii_uppercase
-import multiprocessing
 from collections import defaultdict
 import json 
 import requests
@@ -23,10 +22,15 @@ GOOD_CHARS          = ascii_lowercase + r".,'?{}[]/\;:!@#$%^&*()1234567890-_=+ |
 #sys.path.append(os.curdir)
 
 
-def load_corpus(ds_root:str,lower:bool=True,eot:bool=True,newline:bool=True):
+def load_corpus(ds_root:str,rand_select:float=1,lower:bool=True,eot:bool=True,newline:bool=True):
     corpus      = ""
     #Create Corpus
-    for file in os.listdir(ds_root):
+    file_list   = os.listdir(ds_root)
+    if not rand_select == 1.0:
+        random.shuffle(file_list)
+        file_list   = file_list[:int(rand_select*len(file_list))] 
+
+    for file in file_list:
         filename = os.path.join(ds_root,file)
 
         #Add text to corpus, all lower case
@@ -372,7 +376,7 @@ def create_vocab_perword(ds_root:str,vocab_size:int):
 def create_vocab_whole(ds_root:str,vocab_size:int):
     
     #Create string of corpus
-    corpus  = load_corpus(ds_root)
+    corpus  = load_corpus(ds_root,rand_select=.5)
     #print(f"corpus is {corpus[:64]}")
     #Create tokenization mechanisms
     offset          = 256
@@ -402,11 +406,16 @@ def create_vocab_whole(ds_root:str,vocab_size:int):
         t0  = time.time()
         #Find pair stats
         pairs   = defaultdict(int)
+
+
+        # def add_i(i:int):
+        #     pairs[f"{corpus[i]}{corpus[i+1]}"] += 1
+
+        # [add_i(i) for i in range(len(corpus)-1)]
+        
         for i in range(len(corpus)-1):
             pairs[f"{corpus[i]}{corpus[i+1]}"] += 1
-            #pair    = f"{corpus[i]}{corpus[i+1]}"
-            #input(f"pair='{pair}'->{pairs[pair]}")
-        
+
         #Find top pair 
         top_pair    = ''
         top_n       = 0  
@@ -428,6 +437,11 @@ def create_vocab_whole(ds_root:str,vocab_size:int):
 
         print(f"\ttotal_t={(time.time()-t0):.2f}s",flush=True)
 
+
+    #Save to file 
+    with open('vocab.txt','w',encoding='utf_8') as file:
+        file.write(json.dumps(list(tokens.keys())))
+    file.close()
 
 
     
@@ -736,6 +750,6 @@ if __name__ == "__main__":
     #download_crawl(256,"data",8,True)
     #create_vocab_threads("C:/code/nlp/data",1024,n_threads=12)
     #   download_wiki()
-    create_dataset()
+    #create_dataset()
     create_vocab_whole("C:/code/nlp/alldata",1024)
     #search("C:/code/nlp/alldata",'))))')

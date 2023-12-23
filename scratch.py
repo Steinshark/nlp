@@ -1,4 +1,4 @@
-from transformers import GPT2Model,GPT2Config,GPT2Tokenizer,GPT2LMHeadModel,Trainer,TrainingArguments, DataCollatorForLanguageModeling
+from transformers import GPT2Model,GPT2Config,GPT2Tokenizer,GPT2LMHeadModel,Trainer,TrainingArguments, DataCollatorForLanguageModeling, GenerationConfig
 import torch 
 from torch.utils.data import Dataset
 import utils 
@@ -39,10 +39,10 @@ with torch.autocast('cuda'):
 #BUILD TOKENIZER 
 
 
-model_in    = tokenizer("Here is how to code a Neural Network:",return_tensors="pt")
-model_in    = {key:model_in[key].to(__DEVICE) for key in model_in}
-outputs     = model.generate(**model_in,max_length=1024)
+#model_in    = tokenizer("Here is how to code a Neural Network:",return_tensors="pt")
+#model_in    = {key:model_in[key].to(__DEVICE) for key in model_in}
+#outputs     = model.generate(**model_in,max_length=1024)
 
 
-text        = tokenizer.decode(outputs[0])
-print(f"output: {text}")
+# text        = tokenizer.decode(outputs[0])
+# print(f"output: {text}")
