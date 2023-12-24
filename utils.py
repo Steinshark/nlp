@@ -376,7 +376,7 @@ def create_vocab_perword(ds_root:str,vocab_size:int):
 def create_vocab_whole(ds_root:str,vocab_size:int):
     
     #Create string of corpus
-    corpus  = load_corpus(ds_root,rand_select=.01)
+    corpus  = load_corpus(ds_root,rand_select=1,newline=False)
     #print(f"corpus is {corpus[:64]}")
     #Create tokenization mechanisms
     offset          = 256
@@ -395,6 +395,10 @@ def create_vocab_whole(ds_root:str,vocab_size:int):
             #print(f"{char}->{next_token}")
     #print(f"tokens are {tokens}")
     #Replace chars with tokens
+    
+    #Take only first, middle, and last 50M tokens 
+    corpus  = corpus[:10_000_000] + corpus[int(len(corpus)/2)-5_000_000:int(len(corpus)/2)+5_000_000] + corpus[-10_000_000:]
+
     for token in tokens:
         corpus  = corpus.replace(mappings[token],token)
 
@@ -440,7 +444,7 @@ def create_vocab_whole(ds_root:str,vocab_size:int):
 
     #Save to file 
     with open('vocab.txt','w',encoding='utf_8') as file:
-        file.write(json.dumps(list(tokens.keys())))
+        file.write(json.dumps(list([expand(t,mappings) for t in tokens.keys()])))
     file.close()
 
 
@@ -458,6 +462,11 @@ def search(ds_root:str,searchword:str):
     print(f"found term: {corpus.count(searchword)} times")
 
 
+def find_ml(ds_root:str,whitelist:list[str]):
+
+    for subdir in os.listdir(ds_root):
+        subdir  = os.path.join(ds_root,subdir)
+        
 '''
     DESCRIPTION:
         given a filetext in the format of a common crawl WET file, parse and return
@@ -745,5 +754,5 @@ if __name__ == "__main__":
     #create_vocab_threads("C:/code/nlp/data",1024,n_threads=12)
     #   download_wiki()
     #create_dataset()
-    create_vocab_whole("C:/code/nlp/alldata",128)
+    create_vocab_whole("C:/code/nlp/alldata",512)
     #search("C:/code/nlp/alldata",'))))')

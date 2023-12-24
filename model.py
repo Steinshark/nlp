@@ -35,7 +35,7 @@ class GPTSteinsharkTokenizer():
             with open(vocabulary,"r",encoding='utf_8') as file:
                 self.words     = {word:i for i,word in enumerate(json.loads(file.read()))}
                 self.tokens    = {value:key for key,value in self.words.items()}
-
+        
         elif isinstance(vocabulary,list):
             self.tokens     = {i:item for i,item in enumerate(vocabulary)}
         elif isinstance(vocabulary,dict):
@@ -48,7 +48,10 @@ class GPTSteinsharkTokenizer():
 
         return candidate, text 
         
-
+    def peek(self,candidate:str,text:str):
+        new_candidate   = f"{candidate}{text[0]}"
+        return new_candidate in self.words
+    
     def encode(self,text:str):
         encoding    = [] 
 
@@ -56,39 +59,32 @@ class GPTSteinsharkTokenizer():
 
             #iterate 
             candidate_token,text    = self.munch('',text)
-            while candidate_token in self.words and text:
+            while self.peek(candidate_token,text) and text:
                 candidate_token,text    = self.munch(candidate_token,text)
             
-            if not candidate_token in self.words:
-                candidate_token,text    = candidate_token[:-1],candidate_token[-1]+text
+            if not candidate_token in self.words or not candidate_token:
+                input(f"Weird case where cand='{candidate_token}', and text ={text[:32]}")
             
-            if candidate_token:
+            else:
                 encoding.append(self.words[candidate_token])
         return encoding
 
     def encode_n(self,text:str,n:int):
         encoding    = [] 
         text_len    = len(text)
-
+        text        = text.lower()
         while len(encoding) < n:
 
             #iterate 
             candidate_token,text    = self.munch('',text)
-
-            #Munch until no longer in
-            while candidate_token in self.words and text:
+            while self.peek(candidate_token,text) and text:
                 candidate_token,text    = self.munch(candidate_token,text)
             
-            #Check if no text:
-            if not text:
-                raise NotEnoughTextError(f"text len {text_len}")
-            if not candidate_token in self.words:
-                candidate_token,text    = candidate_token[:-1],candidate_token[-1]+text
+            if not candidate_token in self.words or not candidate_token:
+                input(f"Weird case where cand='{candidate_token}', and text ={text[:32]}")
             
-            if candidate_token:
+            else:
                 encoding.append(self.words[candidate_token])
-            
-            print(f"len is {len(encoding)}")
 
         return encoding
 
@@ -206,3 +202,5 @@ if __name__ == "__main__":
     #tok     = GPT2Tokenizer.from_pretrained('gpt2')
     #print(model._get_generation_mode(GenerationConfig.from_model_config(model.config),None))
     #Model generate expects an 'input_ids' and 'attention_mask' arg. 'max_new_tokens' also 
+
+
