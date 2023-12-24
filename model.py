@@ -87,6 +87,8 @@ class GPTSteinsharkTokenizer():
             
             if candidate_token:
                 encoding.append(self.words[candidate_token])
+            
+            print(f"len is {len(encoding)}")
 
         return encoding
 
@@ -196,8 +198,8 @@ if __name__ == "__main__":
     #m       = torch.nn.Linear(768,1024)
     #print(f"logits are {out[0].shape}, vs: {m(out[0]).shape}")
 
-    tokenizer   = GPTSteinsharkTokenizer(['ab','a','b','c','ca','d','e','ecc'])
-    dl  = GPTSteinsharkDataSet('alldata',64,'<|ENDOFTEXT|>','<|PAD|>')
+    tokenizer   = GPTSteinsharkTokenizer('vocab.txt')
+    dl  = GPTSteinsharkDataSet('alldata',tokenizer,64,'<|ENDOFTEXT|>','<|PAD|>')
     it  = dl.__getitem__(0)
     
     print(it)

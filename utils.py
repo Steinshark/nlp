@@ -376,7 +376,7 @@ def create_vocab_perword(ds_root:str,vocab_size:int):
 def create_vocab_whole(ds_root:str,vocab_size:int):
     
     #Create string of corpus
-    corpus  = load_corpus(ds_root,rand_select=.5)
+    corpus  = load_corpus(ds_root,rand_select=.01)
     #print(f"corpus is {corpus[:64]}")
     #Create tokenization mechanisms
     offset          = 256
@@ -442,12 +442,6 @@ def create_vocab_whole(ds_root:str,vocab_size:int):
     with open('vocab.txt','w',encoding='utf_8') as file:
         file.write(json.dumps(list(tokens.keys())))
     file.close()
-
-
-    
-
-    
-
 
 
 def search(ds_root:str,searchword:str):
@@ -751,5 +745,5 @@ if __name__ == "__main__":
     #create_vocab_threads("C:/code/nlp/data",1024,n_threads=12)
     #   download_wiki()
     #create_dataset()
-    create_vocab_whole("C:/code/nlp/alldata",1024)
+    create_vocab_whole("C:/code/nlp/alldata",128)
     #search("C:/code/nlp/alldata",'))))')
