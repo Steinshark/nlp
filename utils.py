@@ -6,7 +6,6 @@ import random
 import re
 import nltk
 from nltk import corpus
-from model import GPTSteinsharkTokenizer 
 import time 
 import requests
 import subprocess 
@@ -397,7 +396,7 @@ def create_vocab_whole(ds_root:str,vocab_size:int):
     #Replace chars with tokens
     
     #Take only first, middle, and last 50M tokens 
-    corpus  = corpus[:10_000_000] + corpus[int(len(corpus)/2)-5_000_000:int(len(corpus)/2)+5_000_000] + corpus[-10_000_000:]
+    corpus  = corpus[:10_000_000] + corpus[int(len(corpus)/2)-10_000_000:int(len(corpus)/2)+10_000_000] + corpus[-10_000_000:]
 
     for token in tokens:
         corpus  = corpus.replace(mappings[token],token)
@@ -684,7 +683,7 @@ def create_dataset(root='alldata'):
     if not os.path.exists(root):
         os.mkdir(root)
 
-    for droot in ['curated_data','data']:
+    for droot in ['pydata','curated_data','data']:
         for filename in os.listdir(droot):
             filename    = os.path.join(droot,filename)
 
@@ -699,7 +698,7 @@ def create_dataset(root='alldata'):
 
 class GPTDataSet(Dataset):
 
-    def __init__(self,data):
+    def __init__(self,ds_root:str):
         self.data   = data 
     
     def __getitem__(self,i):
@@ -749,10 +748,66 @@ def parse_time(filename,top_k=10):
         pass 
 
 
+def find_python_files(root_dir,limit):
+    python_files = []
+    whitelist   =   ['machine','learning','neural','network','pytorch','sigmoid','model','gpt','']
+    
+    # Walk through the directory tree
+    for foldername, subfolders, filenames in os.walk(root_dir):
+        
+        for filename in filenames:
+            # Check if the file has a .py extension
+            if filename.endswith('.py'):
+                file_path = os.path.join(foldername, filename)
+                found = False
+                for substr in whitelist:
+                    if substr in file_path:
+                        found= True
+                        break
+                
+                # Build the full path to the Python file
+                if found or random.random() < .01:
+                    python_files.append(file_path)
+            
+            if len(python_files) > limit:
+                return python_files
+
+    return python_files
+
+
+def param_edit(parameter,method):
+    method(parameter)
+
+
 if __name__ == "__main__":
     #download_crawl(256,"data",8,True)
     #create_vocab_threads("C:/code/nlp/data",1024,n_threads=12)
     #   download_wiki()
     #create_dataset()
-    create_vocab_whole("C:/code/nlp/alldata",512)
+    #create_vocab_whole("C:/code/nlp/alldata",512)
+    #exit()
     #search("C:/code/nlp/alldata",'))))')
+    pyfiles     = find_python_files("C:/users/evere/Downloads/python-corpus.tar/",limit=100_000)
+    random.shuffle(pyfiles)
+    pyfiles     = pyfiles[:100_000]
+
+    wrote       = 0 
+    for filename in pyfiles:
+        if wrote > 1000:
+            break
+        try:
+            with open(filename,'r') as filein:
+                try:
+                    text    = filein.read()
+                    if len(text) > 4096 and ('pytorch' in text[:512] or 'numpy' in text[:512]):
+                        wrote += 1
+                        with open(f"pydata/python_{wrote}"+(filename.split("\\")[-1].split(".py")[0]+".txt"),'w',encoding='utf_8') as fileout:
+                            fileout.write(text)   
+                except UnicodeDecodeError as u:
+                    pass 
+                except FileNotFoundError:
+                    pass
+        except FileNotFoundError as e:
+            pass
+                    
+    print(f"saved {wrote}/{len(pyfiles)}")
