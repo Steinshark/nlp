@@ -1,11 +1,10 @@
-from transformers import GPT2LMHeadModel, GPT2Config, AutoTokenizer, GPT2Tokenizer, GenerationConfig, Trainer,BasicTokenizer
+from transformers import GPT2LMHeadModel, GPT2Config, AutoTokenizer, GPT2Tokenizer, GPT2TokenizerFast, Trainer,BasicTokenizer
 import torch    
 from torch.utils.data import DataLoader, Dataset
 import json 
 import os 
 import random 
 from transformers import GPT2Model,GPT2Config,GPT2Tokenizer,GPT2LMHeadModel,Trainer,TrainingArguments, DataCollatorForLanguageModeling, GenerationConfig
-from utils import param_edit
 import math 
 
 
@@ -162,14 +161,14 @@ class GPTSteinsharkDataSet(Dataset):
         #Create one string of text
         text                = ''
         for file in self.texts:
-            text += (file + tokenizer.eot_token) 
+            text += (file + tokenizer.eos_token) 
         self.texts          = text
 
         #Set class variables
         self.tokenizer      = tokenizer
         self.n_positions    = n_positions
         self.select_pos     = n_positions
-        self.eot_token      = tokenizer.eot_token
+        self.eos_token      = tokenizer.eos_token
         self.pad_token      = tokenizer.pad_token
         self.size           = 1024 * 64
 
@@ -185,9 +184,27 @@ class GPTSteinsharkDataSet(Dataset):
         
 
             #Pick random length 
-            length              = random.randint(1,self.n_positions)
             encodings           = self.tokenizer(text[start_i:start_i+1_000],return_tensors='pt',padding=True)
-            returndict          = {key:value[0][:self.n_positions] for key,value in encodings.items()}         
+
+            if len(encodings['input_ids'][0]) < self.n_positions:
+
+                #Convert to lists
+                encodings['input_ids']              = encodings['input_ids'][0].tolist()
+                encodings['attention_mask']         = encodings['attention_mask'][0].tolist()
+                
+                #Pad 
+                encodings['input_ids']              += [self.tokenizer.pad_token_id] * (self.n_positions - len(encodings['input_ids'])) 
+                encodings['attention_mask']         += [0] * (self.n_positions - len(encodings['attention_mask'])) 
+
+                #Convert back to tensors
+                encodings['input_ids']              = torch.tensor(encodings['input_ids'])
+                encodings['attention_mask']         = torch.tensor(encodings['attention_mask'])
+
+                return encodings
+            else:
+
+                returndict          = {key:value[0][:self.n_positions] for key,value in encodings.items()}
+
             return returndict
 
         except ValueError as v:
@@ -195,7 +212,6 @@ class GPTSteinsharkDataSet(Dataset):
             return self.__getitem__(0)
          
 
-        return {key:torch.tensor(encodings[key]) for key in ['padded_context','padded_mask','next_token']}
 
 
     def __len__(self):
@@ -204,11 +220,14 @@ class GPTSteinsharkDataSet(Dataset):
 
     def get_iter(self,max_i=100_000_000):
         i   = 0 
-        for char in "".join(self.texts):
+
+        text_files          = [open(fname,'r',encoding='utf_8').read().lower() for fname in self.filenames]
+        print(f"number of text files: {len(text_files)}")
+        for text in text_files:
             i += 1 
             if i > max_i:
                 break
-            yield char
+            yield text
 
 
     def save_to_file(self,fname:str):
@@ -226,7 +245,8 @@ class GPTSteinshark(GPT2LMHeadModel):
                  n_embed=768,
                  n_layer=12,
                  n_head=12,
-                 act_fn="gelu_new"
+                 act_fn="gelu_new",
+                 name="steinshark1"
 
                  ):
         
@@ -245,6 +265,7 @@ class GPTSteinshark(GPT2LMHeadModel):
         self.model              = GPT2LMHeadModel(self.config).to(self.train_device)
         self.n_positions        = input_size
         self.vocab_size         = vocab_size
+        self.name               = name
 
 
     def train_stein(self,
@@ -257,7 +278,8 @@ class GPTSteinshark(GPT2LMHeadModel):
               n_pred=8,
               clipping=True,
               n_generate=4,
-              sample_text='my cat is'
+              sample_text='my cat is',
+              save_every=1024*8
               ):
 
         #Send model to device and prep for training 
@@ -299,8 +321,8 @@ class GPTSteinshark(GPT2LMHeadModel):
                 training_data           = dataloader.__next__()
 
             #Prep data
-            training_tokens         = training_data['input_ids'].to(self.train_device).type(torch.long)
-            training_mask           = training_data['attention_mask'].to(self.train_device).type(torch.float32)
+            training_tokens         = training_data['input_ids'].to(self.train_device).type(torch.long).to(DEVICE)
+            training_mask           = training_data['attention_mask'].to(self.train_device).type(torch.float32).to(DEVICE)
            
             #Send forward
             next_prediction         = self.model.forward(input_ids=training_tokens,attention_mask=training_mask,labels=training_tokens)
@@ -321,16 +343,23 @@ class GPTSteinshark(GPT2LMHeadModel):
                     text    = sample_text
                     for _ in range(n_pred):
                         encoded             = tokenizer.encode(text)
-                        inputs              = torch.tensor(encoded)
-                        mask                = torch.ones(len(encoded))
-
-                        probs               = torch.nn.functional.softmax(self.model.forward(inputs,attention_mask=mask).logits[-1,:],dim=-1).detach().cpu().numpy()
+                        inputs              = torch.tensor(encoded).to(DEVICE)[-self.n_positions:]
+                        mask                = torch.ones(len(encoded)).to(DEVICE)[-self.n_positions:]
+                        logits              = self.model.forward(inputs,attention_mask=mask).logits[-1,:]
+                        probs               = torch.nn.functional.softmax(logits,dim=-1).detach().cpu().numpy()
                         choice              = random.choices(list(range(len(probs))),weights=probs,k=1)
                         chosen              = tokenizer.decode(choice)
                         text                = text + chosen
 
                 text        = f'\n{text}'.replace(f"\n","\n\t")
                 print(f"loss={losses[-1]:.4f}\n{text}\n\n\n\n")
+            
+            if iter % save_every == 0:
+                #Create local directory if it doesn't exist
+                if not os.path.exists("models"):
+                    os.mkdir("models")
+                torch.save(self.state_dict(),f"models/{self.name}")
+                print(f"Saved model at iter{iter} to models/{self.name}")
             
 
     def test_ground(self,tokenizer:GPT2Tokenizer):
@@ -344,23 +373,52 @@ if __name__ == "__main__":
     
     #Training/Model Settings 
     train_bs    = 8
-    lr          = 1e-4
+    lr          = 1e-5
     input_size  = 128+64
-    vocab_size  = 1024
-    train_root  = 'pydata'
-    sample_text = '#Iterate over my_list\nmy_list  = [1,2,3,4]\nfor i'
+    vocab_size  = 4096
+    embed_size  = 1024
+    n_layers    = 16 
+    n_heads     = 32
+    train_root  = 'alldata'
+    sample_text = 'i live with my little family. we live in virginia. we have a little cat. let me tell you about him. '
 
-    #Create and train the Tokenizer
-    tokenizer               = AutoTokenizer.from_pretrained('gpt2')
-    tokenizer.eot_token     = "<|endoftext|>"
-    tokenizer.pad_token     = "<|pad|>"
-    place_iter              = dataloader              = GPTSteinsharkDataSet(ds_root=train_root,tokenizer=tokenizer,n_positions=input_size).get_iter(max_i=15_000_000)
-    tokenizer               = tokenizer.train_new_from_iterator(place_iter,vocab_size=vocab_size)
-    tokenizer.eot_token     = "<|endoftext|>"
-    tokenizer.pad_token     = "<|pad|>"
+    #Create Tokenizer
+    build_tokenizer         = False
+    if build_tokenizer:
+        tokenizer               = AutoTokenizer.from_pretrained('gpt2')
+        place_iter              = dataloader              = GPTSteinsharkDataSet(ds_root=train_root,tokenizer=tokenizer,n_positions=input_size).get_iter(max_i=15_000_000)
+        tokenizer               = tokenizer.train_new_from_iterator(place_iter,vocab_size=vocab_size)
+        tokenizer.save_pretrained("tokenizer2")
+    else:
+        tokenizer              = GPT2TokenizerFast.from_pretrained("tokenizer2")
+    tokenizer.pad_token     = "<|pad|>" 
+
     #Build the model 
-    model       = GPTSteinshark(input_size=input_size,vocab_size=vocab_size,n_embed=256+128,n_layer=2,n_head=16)
+    loading     = False
+
+    model       = GPTSteinshark(input_size=input_size,vocab_size=vocab_size,n_embed=embed_size,n_layer=n_layers,n_head=n_heads).to(DEVICE)
+    model.name  = "steinshark1.model"
+    if loading:
+        print(f"loading model from models/{model.name}")
+        model.model.load_state_dict(torch.load(f"models/{model.name}"))
+
+    #Test tokenization on a large string 
+    testing     = False 
+    if testing:
+        sample_string   = '''this is a sample string that is very long and contains complex vocabulary in order to test the tokenizer. It is multiple sentences long and contains a lot of words, sentences, and punctuation. It is a very long string that is used to test the tokenizer. Nuances must be present, as well as puncation. should we keep going? I think so. It must test at least a trained corpus and include crazy interesteing things that don't  appear anywhere else naturally or otherwise. Maintain some semblance of sanity, but not too much. Usurp the throne of the king of the world. Why? Because we can. We must. We will. We are. We are the world. We are the children. We are the ones who make a brighter day. So let's start giving. On another note, here is some sample shakespear: To be or not to be, that is the question. Whether tis nobler in the mind to suffer the slings and arrows of outrageous fortune, or to take arms against a sea of troubles and by opposing end them. To die, to sleep, no more, and by a sleep to say we end the heartache and the thousand natural shocks that flesh is heir to. Tis a consummation devoutly to be wished. To die, to sleep, to sleep perchance.'''
+        print(tokenizer.decode(tokenizer.encode(sample_string)[:input_size]))
+    
 
     #Train
-    model.train_stein(tokenizer,train_root,n_iter=8192,bs=train_bs,lr=lr,n_pred=16,n_generate=32,sample_text=sample_text)
+    model.train_stein(tokenizer,train_root,n_iter=1024*256,bs=train_bs,lr=lr,n_pred=input_size-len(tokenizer.encode(sample_text)),n_generate=256,sample_text=sample_text,save_every=1024)
+
+    #save model to models directory
+    
+    #Create local directory if it doesn't exist
+    if not os.path.exists("models"):
+        os.mkdir("models")
+    
+    #Save model
+    torch.save(model.state_dict(),f"models/{model.name}")
+
     print(f"{model.model}")

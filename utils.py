@@ -620,7 +620,7 @@ def download_crawl(crawl_size:int,ds_path:str,file_size:int,rand_selection:bool)
 
         #Download and unzip gunzip
         #subprocess.run(f"echo off")
-        subprocess.run(f"curl {next_url} -o {filename}")
+        subprocess.run(f"curl {next_url} -o{filename}")
         subprocess.run(f'7z x {filename} "-o{filename.replace(".gz","")}"')
 
         #Parse for eng documents 
@@ -780,12 +780,12 @@ def param_edit(parameter,method):
 
 
 if __name__ == "__main__":
-    #download_crawl(256,"data",8,True)
+    download_crawl(32,"data",8,True)
     #create_vocab_threads("C:/code/nlp/data",1024,n_threads=12)
     #   download_wiki()
     #create_dataset()
     #create_vocab_whole("C:/code/nlp/alldata",512)
-    #exit()
+    exit()
     #search("C:/code/nlp/alldata",'))))')
     pyfiles     = find_python_files("C:/users/evere/Downloads/python-corpus.tar/",limit=100_000)
     random.shuffle(pyfiles)
