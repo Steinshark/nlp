@@ -1,0 +1,117 @@
+- on november 10th,
+youtube announced that, whether this impacts
+you negatively or not, the dislike counter was going away. the stated purpose of this change was to reduce dislike attacks, a kind of targeted harassment that youtube confirmed disproportionately affects smaller channels. it's a valid problem and
+a noble goal to be sure. you'll just have to
+forgive me for doubting that that was google's entire motivation. like the, "are u ok?" book that they left on my bed at a summit,
+their public concern for creator mental health
+brings a little hollow to someone who has
+lived inside the machine for as long as i have. not because i cynically believe that they are too heartless to care, but rather because they cannot care. the platform vents off
+competitors like twitch and tiktok by frantically serving it's viewers, that's you, as many hours of
+satisfying content as possible, regardless of the creator's
+feelings about it. and the cold hard truth is that no machine learning algorithm is capable of caring about
+your sadness or mine. i don't blame them for any of this. i mean, all they did was build the wheel, like we choose to run on it. but the road that i travel is littered with dead and dying internet superstars, and as sure as the sun sets each day, i will join them at
+some point, maybe soon. and youtube's wheel is gonna
+keep on turning without me. i promise. so, if removing disliked
+counters is unlikely to change this ruthless meritocracy, that uncaring only
+churns through its stars like professional sports and (beeps) what was the actual point of any of this and what can we do about it? well, step one, is to get
+our dislike counter back, and i'm gonna show you guys how, after i show you my sponsor. thanks to jackery for
+sponsoring this video, their explorer 1500 power station provides a huge 1500 watt/hr capacity, support for up to seven devices
+charging simultaneously, and it takes four hours to
+go from zero to 80% battery. get 10% off with code linus tech tips at the link below. restoring the youtube dislike counter takes less than 30 seconds. head to returnyoutubedislike.com/install, click your browser icon and add it. you can also manually look it
+up in the chrome web store. if it doesn't work, just uninstalled the
+extension and try again. according to dmitrii, the project lead, there are some bugs in the
+chrome developers manifest v3 that make it randomly
+fail about 5% of the time. once that's done, voila,
+you're dislike counter might take a second to
+load in, but it's back. the incredible speed with
+which the open source community identifies and rectifies
+problems like this never ceases to amaze me. i mean, huge props to the dozens
+of contributors and donors who are keeping the dream alive. but, as cool as it is on the surface, this project raises a
+lot of questions for me, which is why i made this video. starting with, is it even accurate? well, immediately following
+google's announcement, it was extremely accurate, because the work around was
+a relatively simple one. you see, the youtube app and the website had been updated to hide
+the dislike counter, but the youtube api
+which allows developers to access key stats on the backend was still reporting true dislike counts. so creating an extension that
+would just pull that data and then automatically inject
+it once your page loaded was simple enough. but then on december 13th, api access to dislikes went dark. so how does it work now? the bad news is it involves
+a fair bit of guesswork. dmitrii who goes by anarios on github pulled as much data as
+possible in the time between youtube's announcement
+and the api cutoff. true stats for about 250 million videos. but while that's gonna
+allow you to smugly affirm how right you were that
+youtube rewind sucked, it is far from a complete picture, and it only allows the extension to show historical data for
+videos that were uploaded prior to the cutoff. the good news is that youtube already uses a lot of guesswork in
+its analytics anyway, so no loss there, and the project is poised to become a lot more accurate and useful in the short to mid-term. first up, thanks to the efforts of a digital heritage preservation group called archive team, dmitrii is working on integrating the metadata from a whopping
+4.56 billion videos. it's gonna take some time since that's 69 terabytes
+of data to ingest, nice. but once that's complete, extension users will have accurate historical counters restored for nearly every video on the site. that is pretty incredible, like this new hoodie on lttstore.com. but what about new videos? that's where you come in. by using the extension, you're gonna be contributing
+your own likes and dislikes, which can then be compared against publicly available views and like counts to extrapolate a probable dislike value. in theory, then, the more people install the extension
+and interact with videos, the more accurate it will become. unfortunately, this raises
+some serious privacy concerns. your youtube viewing behavior
+is extremely valuable, particularly to advertisers. and while there's an argument to be made that once you've given
+your data to google, pandora's box is kinda open anyway. i don't wish to promote that attitude. thankfully, as dmitrii
+lays out in this document addressing privacy concerns, the project code is
+mostly publicly available and open-source, and it appears as though he is collecting nothing
+more than what's required to log dislikes and prevent the same kind of spam behavior that contributed to google's removal of the counter in the first place, or at least that's what he's
+collecting from viewers. one of the ways the project could really get to the next level is a commitment from youtubers, both large and small, to
+share their own true stats, to help the extension
+validate its own guesswork. but this gets pretty hairy pretty quickly. while i could use a loft to
+grant access to my own stats, even with the limited
+scope of youtube analytics read-only which can be configured to exclude revenue numbers, there's some really
+sensitive data in there, and it's not the kind of thing that we give away willy nilly even if someone that i've
+never met before offers a pinky promise not to misuse it. but i'm torn, right? because how can i complain about the lack of accurate counters if i'm
+not willing to do my own part to ensure the restoration? well, maybe they can be
+good enough without my help. let's take a look at a
+couple of my own videos that were published after the changeover. here's one that was well received. the ratio of likes to dislikes
+is actually very close when i compare the youtube
+player page to my own stats. meanwhile, here's a sponsored showcase that didn't perform well for us. at the time of writing this, my browser extension reported 12,000 likes to 940 dislikes, a ratio of about 12.77:1. while the true stats tell a slightly less favorable story
+putting us at 11.63:1. so that's a bit farther off, but still accurate enough to reflect the audience's general
+displeasure with that video. it's possible though, that extension users are overrepresented in our audience, meaning that our videos
+might be more accurate than, say, for example, a video
+on a makeup channel. our upside down building
+video, for example, had a whopping 2000 votes
+from extension users out of 14,000 total. though, curiously, i wasn't
+able to verify this one because i believe youtube is doing some funky
+things with the counter after live streams. so i would love for other creators, particularly if you're
+from a different vertical to chime in in the comments with a couple of your own comparisons, if you'd be willing. from my side, though, it's looking pretty good so far, which you might've realized it doesn't help anyone that wants to use a mobile app for youtube, unless this is the straw
+that finally breaks my back and makes me install youtube vanced. yeah, i went there. dmitrii is currently in talks with that team to include his data. and for those who haven't heard of it, vanced is a sideload-only
+alternative youtube app that among other things, enables background playback and ad-free playback without
+a premium subscription. both things that hurt my livelihood as well as those of my employees and my fellow creators. and vanced isn't my
+only unlikely ally here. one of the policies that
+served me very well in my life is to never take a deal
+where i don't understand what's in it for the other party. dmitrii claims that the project started as a simple effort to restore the dislike counter for his own use, presumably, so he can quickly and easily filter out junk content. that's fair enough. that's a pretty big deal for anyone who's ever tried to find any kind of obscure diy tutorial, especially anything to do with software. but by his own account, he hasn't even had time to actually watch any youtube videos since
+this project began. surely, that's not sustainable. and that's even ignoring the fact that running the infrastructure to support this extension is a non-trivial endeavor that may not be able to rely on donors or a small patreon forever. i see a sponsorship link from a vpn that i've never even heard
+of at the bottom of the page, so it makes me wonder
+what's his end game here? truthfully, i don't know. is getting my dislike counter back really worth violating my principles here? promoting online content piracy groups and collaborating with parties whose motivations i
+don't fully understand? i'm not sure yet. what i do know is i sure as hell didn't choose this path. youtube chose it for me when instead of coming up with better ways for creators to moderate
+their communities, they decided to just get away one of the few publicly available video quality markers
+that we still had left. the only answer i've been
+able to get from youtube is that going forward,
+you're supposed to just use comments to gauge video
+quality or validity, but it takes about 30 seconds in a youtube comment section to figure out why that is not a silver bullet. they're full of spam and misinformation. and they are much easier for
+a malicious actor to control. i see the benefit of this control
+for marginalized creators. i truly do. having a bunch of jerks come in storming from some hateful subreddit to dislike brigade you is something that nobody should have to endure. but i also do not believe, i just do not believe that youtube, a multi-hundred billion dollar company, or at least their parent company, couldn't combat this through
+a combination of origin and user behavior tracking and all kinds of other ai black magic that they have access to. and if they really felt that these negative
+interactions weren't valuable, all they had to do was
+remove the button altogether. so if youtube still thinks it's useful and it's still gonna affect your video performance anyway, and so far, anecdotally, it doesn't seem to have actually changed how many people are
+interacting with the button, what purpose are we really serving here? i mean, i've seen every
+conspiracy theory under the sun. youtube wants to protect itself and its corporate partners from embarrassment or the woke mob is running the show over there now, blah, blah, blah, blah, blah. but honestly, the more likely one to me is the simplest explanation. monkey see, monkey do. so many platforms are removing any way of negatively
+interacting with anything, and youtube seems like they
+just wanted to follow suit. and probably the most frustrating thing about all of this is the dismissive way that google has addressed the collateral damage here. i mean, i'm glad that creators can protect themselves
+from unwarranted attacks. i really am, but malicious actors can and will use these same tools to create fake positivity
+around their content and to moderate negative comments. mark my words. the number of kids that
+are gonna get fished with robux scams is going to increase and making the internet safer
+for one vulnerable group, while making it more dangerous for another is not a clear cut win. and some of the benefits
+of disliked counters, like nuking misleading content and punishing creators who, honestly, really had it coming, are going to be sorely missed, at least by you maybe. i'm gonna be running the return
+youtube dislikes extension. (laughs) and i'll be telling you about our sponsor. - thanks to nordpass for
+sponsoring today's video. do you know what the most popular password on the internet is? yeah, it's 1, 2, 3, 4, 5,
+6, and that's pretty scary. our friends at nordpass
+are putting together a list of the 200 most
+used passwords out there. and though we can laugh at
+how stupid some of them are, it's also a reminder of
+how vulnerable you can be if you're using the same simple password for all your accounts. you may have received new gifts or signed up for a few new
+services this holiday season, so now it's the perfect
+opportunity to switch over to using a password manager like nordpass to keep everything organized. your passwords will be stored in a safe, secure place, and you can stop doing the password reset song and dance every time you try to log on to something. hey, but listen, even though
+christmas has come and gone, don't worry, you can still
+get 70% off nordpass premium at nordpass.com/linus or
+by using the code linus. plus you get an additional month for free. so check it out at the link below. - if you guys are looking
+for another video to watch, maybe you could check out, i don't know, the last time i was this mad was probably when they renamed usb again. it's over on the
+techquickie channel though. (upbeat music)

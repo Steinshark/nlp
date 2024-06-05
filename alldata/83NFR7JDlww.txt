@@ -1,0 +1,129 @@
+So today I want to tell you about two things   that are related Bernoulli numbers 
+and Faulhaber's fabulous formula. So when I was a kid I kept a journal and I 
+also had a math journal where I kept all my   secret private musings about math. When I got 
+to Princeton I asked one of my professors my   first year in college um about a question that 
+I was looking at in my journal and she said,   I don't know the answer to that but you should 
+go talk to this guy John Conway - you might   have heard of him. I actually only 
+barely knew who he was at the time.  - (Brady: So you weren't like, 
+oh my God John Conway!)  - I had just had a vague idea yeah yeah which 
+was probably good. So I went home and emailed   him and uh he said come talk to me. I brought 
+him my journal, he looked at some of the things   I'd written in there which was very kind of 
+him; and then he told me about Faulhaber's  fabulous formula and the Bernoulli numbers and 
+that actually uh led to what I work on in research   today in an active area of mathematical research
+in number theory.  - (So you were introduced to these things 
+by John Conway himself? Amazing. Do you-) (do you remember the day?)
+- Uh I do and in my regular Journal I   journaled about it. It was in the spring of 1999, 
+I'd have to look up the precise day but it was a   beautiful spring day in 1999.
+- (Where do we start?) We're going to ask ask a few questions about 
+sums of numbers. So what is the value of 1   to the k plus 2 to the k plus 3 to the 
+k plus dot dot dot plus n the k for k,   some positive whole number. And um just to make 
+sure we're on the same page, so for example if n   equal 100 and k equals say 2 we're looking at 1 
+squared + 2 squared + 3 squared plus dot dot dot   dot dot plus 100 squared - and uh so on. So if 
+k is zero this is really easy, because we've got   1 to the 0 plus 2 to the 0 + 3 to the 0 plus ...
+it's just 1 + 1 plus ... + 1 n times; so we get n.  If we look at first powers then we have 1 + 2 
++ 3 plus ... plus n and there's a formula for   this which people sometimes learn in school. You 
+might know how to prove it, there's also a proof   on Numberphile in some previous episode. And so 
+this is often written as n times n + 1 over 2,   so we could compute this guy easily. Now 
+what if you want to work with squares or   cubes? So what about this number from 
+before, so we had these squares ... plus n squared equals- or cubes or fourth powers 
+and so on; so the question becomes what are these   numbers, how can we get it? And uh you can't just- 
+if you try to just generalize the approach in that   other Numberphile video from this guy and you're 
+like, okay I understand that so got good intuition   I'll try to do that for squares - you might be 
+able to push things a little further but once   you get to cubes and beyond that kind of trick 
+is going to become ou- just a mess. So- oh do   we have more paper? So this is where Faulhaber's 
+fabulous formula and the Bernoulli numbers come   into play.
+- (So is the fabulous formula what is 
+going to solve that problem for us?)
+- It is yeah, yeah it's the formula that solves it yeah. Faulhaber
+said, okay I want to look at 1 to the k -1 + 2   to the k -1 + 3 to the k -1 plus ....
+plus n the k-1. That's equal to 1/k times - um I'm   going to put something in quotes right now and 
+then I'll explain it because well there's two   reasons it's going to be in quotes. So we're going 
+to look at n + B to the k, so we've gone down 1 here and up here, minus B to the k. And I haven't 
+told you what this B is here, you know n is it's   our whole number, these B's are going to tie 
+into the uh Bernoulli numbers. This is going to be,   I'll have to tell you what the stuff on the right 
+hand side is, but this is Faulhaber's fabulous formula.   (I'm assuming Faulhaber themself isn't the person who 
+called it the fabulous formula?) 
+- Uh no and I'm not   sure how it originated; uh certainly John Conway 
+called it that and but- you you would want- I don't   know whether it's safe to attribute to John Conway. 
+He and Richard Guy in their book - do you know the   Book of Numbers? They write about this in the Book 
+of Numbers. Certainly sounds like a John Conwayism.   So I'm going to have to tell you about these 
+B to the ks; these B's are going to behave in a   way that usually would be quite quite weird. Okay 
+so how to define B to the k? Now first of all I'm   going to define a number B zero with the- look we 
+have a subscript here. This is 1 and I'm going   - that's a definition there - and I'm going to define 
+B subscript k equals B superscript k. This looks   terrible, looks like I took a power or something 
+and then I just used a superscript - I still have   to tell you about this guy though. And then for 
+k greater than 1 we're going to put B - 1 to   the k equal B to the k. This is a rule and we're 
+going to use this to define all the other B sub k's.   So eventually things are going to drop down here. 
+- (Are B Bernoulli numbers?)
+- Uh the B sub k's- oh yes and these are   the Bernoulli numbers.
+- (Okay cool, just checking)
+- Yes this is the kth Bernoulli number. Let's compute   what B1 is, since all we know so far is the value 
+of B0. So if we want to do that we'll use this rule,  we have B - 1^ 2 = B^2, so doing this I get B^2. 
+-2B + 1 equals 0; just skipping the step of   canceling the B squareds. And so this tells me then B1 
+equals 1/2 and remember we drop our subscript down   so this becomes the first Bernoulli number. So this is 
+our first Bernoulli number, the value is 1/2. You can   continue like this, you can keep computing these. 
+So if you- should I do another example?
+- (Let's see the next one) Okay so now let's find B2. So for 
+that we have to raise now to the third power; and   the B cubes are going to cancel again and then I 
+have -3B^2 + 3B1 - 1 = 0 having just canceled   the B cubes already. And I know what B1 is because 
+we just figured that out, that's 1/2, and so now   I have -3 and - I'll just drop my subscripts down 
+since I know I can do that from my rule - equals uh   1 - 3 times 1/2 since we just figured out that 
+this guy is 1/2. So we have over here 1 minus 3 halves minus 1/2 - great. So B2 equals 1/6. 
+I'm not going to keep doing examples all day!   (All right, so we get a whole bunch of Bernoulli numbers)
+- Yeah we get a whole bunch of them. Yeah so now   we've computed a bunch of Bs and I assert, 
+following what Faulhaber told us, I assert that   we get this formula so you can expand this out and 
+plug in the B sub case. I just want to say a little   bit about where this comes from. So just to make 
+sure we see what's going on in an example we're   going to do this with a small value of k. So if I 
+want to know what 1 squared + 2 squared plus ... plus say we care about- and we just want to go 
+up to 100 squared is; then what this formula   says is okay our k here, uh this is this is 
+k - 1 here on the left hand side, 1 to   the k - 1 so that tells us k must be 3. So 
+we have 1 over 3 here. And then we have our   n is this guy, so that's 100, plus B cubed minus B 
+cubed and we're just in this little example going   to expand what this looks like. (100 + B)^3
+minus B^3 = 3B^2 times 100 + 3B1 times 100^2   plus 100^3 and then I have a B^3 here 
+that cancels this B^3 so um this is what   we get and then we say oh, I'm going to drop 
+these guys down, so I have 3 times B2 times 100 + 3   B1 times 100^2 + 100^3. And if you cared to compute 
+this you can plug these in because conveniently   uh you just have me compute B1 and B2 so we 
+could even plug these in here. So now we've got   3 times 1/6 times 100 + 3 times 1/2 times 100^2 + 100^3
+and you can compute this big number if you want. So   now I'm going to just tell you a little bit about 
+where this fabulous formula comes from. So let's   look first at a slightly different expression; n 
++ B to the k minus- I'm going to subtract off n + B-1 to the k. And when I do 
+this, well remember we had this rule here so we had this thing. And so when
+I do this I'm going to get this pol- using the   binomial theorem I'm going to get this polynomial,
+looks almost the same on each side except we have   different powers of of B and powers of B - 1 
+there and when I unfold this whole thing I   get j equal 0 to k, k choose j, n to the j. And 
+then I end up with over here B to the k - j minus B - 1 to the k - j. And if I look 
+back most of these gu- most of these terms are   going to be zero because I have B - 1 to a 
+power equals B to a power and here I'm comparing   B - 1 to a power uh with B to a power. 
+Except for this rule only holds for k greater   than 1 and so what we're going to be left with 
+at the end when we work through this is um k times n   to the k - 1. Okay so we unfold this, we got 
+a bunch of zeros except preceding the term  n to the k -1 and there we preceded by 1 * k. And so 
+we were left with this and so now when I want to   get Faulhaber's fabulous formula I have that uh-
+well first first of all we've just seen that   what this tells us is that n the k-1 equals 1/k
+times (n + B) to the k minus (n + (B - 1)) to the k. But I want   a whole sum I don't just want one term here, so 
+what I do is now I'm going to- if I want to add   up all the terms, so if I want to look at n the k 
++ 1 + n -1 to the k -1 plus ... all   the way down to 2 to the k -1 + 1 to the k -1 I'm 
+going to have to add up 1 over k times- now I have   n + B to the k - n + b - 1 to the k - that just 
+takes care of the n to the k-1 term.   Plus I have n-1 + B to the k minus - just to 
+deal with the next term - n -1 + B -1 to the k and   then I get to the next term which is the n minus 2 
+term which is going to go here: n - 2 + B to the k   minus n - 2 + B -1 to the k plus ....
+until I get to the end where I look at the one   piece and that's going to give me an 1 + B to 
+the k - 1 + B - 1 to the k. So this first piece is   our n + B of the k that we have at the beginning 
+of Faulhaber's fabulous Formula; 1 plus B minus 1 this is   equal to B to the k, and everything in between 
+is going to cancel because they have n plus B   minus 1 or n minus 1 plus B. Addition uh commutes 
+so these cancel. Now I have n minus 2 and up here   I have 2 times -1 so that's going to cancel and so 
+on and we can keep playing this game until at the   end all we're left with is 1/k times- at the end 
+of the day we get our n + B to the k minus B to   the k and we get Faulhaber's fabulous formula. 
+So I've skipped over a few details but people   who are interested can also uh check those. And 
+that's Faulhaber's fabulous formula and the Bernoulli numbers. And one thing that's really cool with 
+these Bernoulli numbers is they show up in lots of   places; you might have seen them defined in other 
+ways. They show up in Euler's formula for values of   the Riemann zeta function at positive even integers
+and those numbers there are also encoding uh   really deep information from number theory which 
+is the field I work in. And so one of the reasons   I really like these is they're not only convenient 
+in solving this cute problem is that they tie to   really deep um mathematical phenomena. 
+- [John Conway:] It was so nice not worrying 
+anymore that I thought I'm not   going to worry anymore ever again. I was going to 
+study whatever I thought was interesting and not   worry whether this was serious enough. 
+Because you 
+know you've got one 2 at the end of it, next time   here you've got maybe it's two 2s, I don't know. 
+But anyway it will be 2s. So the the left hand   sequence always ends in a 2 and the right hand 
+sequence - well look, it goes 111312

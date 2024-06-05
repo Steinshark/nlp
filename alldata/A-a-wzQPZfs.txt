@@ -1,0 +1,72 @@
+- Don't buy that! Even at MSRP, that's a waste of money. Let alone during the scalpocalypse. But rather than pitch you the equally unobtainium
+radeoN RX 6,900 XT, I've got something new, gamers. NVIDIA launched two
+important things today, the RTX 3080 TI, a GPU as powerful as their previous King, but at a significantly lower price, and a refreshing change in attitude. Let's talk about both of them and our sponsor, Aorus. The Z590 Aorus master motherboard is compatible with Intel's
+11th and 10th Gen processors, has a wide array of IO, and built-in Intel WiFi 6E. Get yours today at the link in the video description. (upbeat music) Let's start with the elephant in the room. NVIDIA would love for us to compare the RTX 3080 TI directly to the RTX 2080 TI, given that it is, like, the replacement. But given how few people bought those, I doubt it's a burning
+question for many of you. Besides, the more interesting reference point is the RTX 3090 because it is so freaking similar. By comparison, the 3080 TI is missing a mere two and a half percent of the RTX 3090's core count and memory bandwidth, and runs at only a 2% slower boost clock. Same GDDR6 RAM, same total graphics power, same NVENC encoder, same absolute unit of a GPU, except for the main difference. Apart from the smaller cooler on the founder's edition card, it only has half of the memory at 12 gigs. Now, that's less than
+AMD's competing 6,900 XT, which has 16, and it could be a problem if you're one of the eight people trying to gain that 8K. But considering how few loads benefit from 24 gigs of RAM, it's actually more likely
+to end up being a major win for the 3080 TI, since it should help bring pricing down more in line with team Red's
+radeoN our RX 6,900 XT. So, without further ado, here's our test bench. We've got five GPU's for
+your consideration today and I am, I'm expecting a lot, and my expectations are met. Metro Exodus Enhanced
+Edition starts things off extremely strong for the 3080 TI, and it manages to keep within
+the on-paper expected 2% of the RTX 3090 in every parameter, but the minimum frame rate. And guess what, that's the very worst
+news we have for you. NVIDIA's new King, I guess I have to call it that, is actually straight up faster than the RTX 3090 in both F1 2020 and Forza Horizon 4. Perhaps, as a direct result of it having less RAM, that means more power for the GPU itself, allowing it to opportunistically
+turbo more often. And this same, same, but different trend continues with Assassin's Creed: Valhalla and CS GO, where the 3080 TI proves itself to be a ridiculously capable gaming card, which, I mean, of course it is. It's basically an RTX 3090, except for the cutdown RAM. So, what does the
+smaller frame buffer mean for productivity? Well, for the most part, not much. And the RTX 3080 TI continues to show off it's 3090-like prowess with nearly identical
+render times in Blender, in both the CUDA and OptiX renderers, and the same thing in V-Ray where we are still within that 2% range. In fact, even Creative Cloud gives, yet, more favorable results with 1% being the most common
+delta between these cards. So, in these use cases, unless your large
+projects require more RAM, you're basically giving up nothing. In DaVinci Resolve, however, that veneer does begin to crack somewhat, and we see a larger 6% difference that is difficult to pin down exactly. It may be that Resolve either wants more memory capacity or it could be that it's
+more bandwidth sensitive, but, unfortunately, accurately measuring resolves VRAM usage isn't really possible at the moment, so, we're not sure. What we are sure about is our water bottles from lttstore.com. You can measure those 20 or 40 ounces for the same price. Whatever the reason for this result, OctaneBench also sees a larger
+than normal performance Delta and SPECviewperf continues the trend with anywhere from 2%, which we expect, all the way to 21% in the case of the memory
+intensive energy benchmark, which, I guess, we also expect. I mean, the RTX 3090's claim to fame is it's massive high
+bandwidth frame buffer. So, what the real story is then is just how competitive the
+3080 TI is without this. As for thermals, NVIDIA ended up reusing the
+same much smaller cooler as the RTX 3080. So, we weren't really
+sure what to expect going into this thing. I mean, there's no GDDR6X on the back of the PCB now. So, at least we don't have
+to worry about a repeat of the memory overheating
+problems we saw with the 3090. But, we are still looking at, roughly, the same core count and clock speed, and power consumption rating. And yet, thermals look spot on. Never breaking past 80 degrees
+throughout SPECviewperf. The RTX 3090, of course, did get better thermal results, but that card is a triple slot beast. And what's most impressive is that the 3080 TI managed all of this at 11 Watts less power draw. And it didn't even throttle, like Core Clocks were
+a solid 1.9 gigahertz throughout our heavy loaded testing which is just a hundred megahertz lower than the RTX 3090. All in all, it's, I don't know if it's a surprising result cause we didn't really
+know what to expect, but it definitely gives
+us some insight, at least, into just how power hungry and hot GDDR6X can be, which, incidentally, is
+now rated for 105 degrees on Micron's website. I guess, they got tired
+of all the inquiries about RTX 3090's overheating
+at a hundred degrees. Of course, I promise to talk about more than just a new GPU today. So, let's change gears and talk about the new
+straight talking approach that NVIDIA has taken around this launch. Given that this, basically, is a 3090, a card that they already
+can't make enough of to meet demand. We asked NVIDIA, what possessed you to release this GPU at a lower price? And then, instead of blathering
+on about loving gamers, so huggy, muggy, much, they just confirmed what
+we already suspected. Not only is a 24 gig
+frame buffer ludicrous for most gamers today, it's also impacting NVIDIA's ability to make enough cards. Surely, you didn't think Micron was spared from the silicon shortage, did you? So, with half the amount of memory compared to the RTX 3090, twice as many RTX 3080
+TI cards can be produced. That is assuming there are
+enough GPU's to go around. Not only that, but part
+of the reason that NVIDIA was able to use a smaller
+cooler in the first place is that there isn't any
+memory on the rear of the PCB, like the 3090, which also factors into its lower cost. Speaking of lower cost, get subscribed because we're gonna be revisiting our cheap versus expensive VR setups, and trust me, it's getting a lot less obvious than you might think. NVIDIA was also refreshingly
+straightforward talking about supply of these cards, which they admit is not going to meet demand to this year, as well as the difficulties
+that they faced making their products
+available to gamers for MSRP. The target was 9.99, and the idea was to embarrass AMD with superior performance and features at the same price. The features, by the way, they're not new, but it is worth reminding you that NVIDIA's hardware video
+and code functionality, and deep learning features, like RTX voice and deep
+learning super sampling are very compelling selling points. But, due to the ongoing
+scarcity of components, tariffs that are being thrown
+around willy nilly these days. Not to mention predatory
+reselling practices, even by some retailers, the MSRP is going to be higher
+than they would have liked. Now, we're filming this before
+hearing the actual price, so, I'm gonna do a few different reactions and we'll put it on screen with the matching one. (sad trombone noise) So, whatever where it said down there, you could expect to spend more than that unless you end up extremely lucky or you participate in the
+verified actual gamer program. Finally, NVIDIA rather
+humbly acknowledged that, you know what, we weren't entirely wrong about their mining hash rate limiter. I know. I was shocked. They also admitted that, yeah, it'll probably be
+hacked at some point. So, their new story then, is that the main purpose of the limiter is, actually, pretty
+similar to what we're doing with the verified actual gamer program, to just slow down the acquisition
+of these cards on mass by crypto miners. See NVIDIA, that wasn't so hard. You didn't have to come out and say it was unhackable and split your product stack like that, and pretend it's some
+kind of gift to gamers. And you know what, the truth is, I still don't agree with the idea that consumers shouldn't be allowed to run whatever they want with their own hardware to the best of its capabilities. But, if this admission is NVIDIA foreshadowing a willingness to remove the limiter, either officially or
+unofficially through a leak, once supply catches up, I'd be a lot more receptive to the idea. There's no word yet on whether they would
+do something like that, but I think consumers should demand it cause it's a nice way to
+subsidize your purchase, and NVIDIA has clearly just demonstrated a refreshing willingness to listen. But let's bring it back to the card. Should you spend your money on an RTX 3080 TI? Well, if you can get one at MSRP, it's a no brainer, and if you're comparing it to an RTX 3090, it's cheaper, it's slightly less power hungry, it has less overall heat output, it's smaller, in the case of the founder's edition, so, compatibility will be better, and, presumably, it will be easier to find in stock. Meaning, it's a winner. And while scalpers are likely to continue to price these things out
+of reach of many gamers, the scalpocalypse isn't
+going to last forever. And when the dust finally settles, the RTX 3080 TI is gonna stand at the top of the stack for NVIDIA in competition with the RX 6,900 XT. And it's gonna look
+pretty good doing this. You know what's not
+gonna look pretty good, our sponsor, Ting Mobile, because they're all about how good your reception is and how good you sound. Oh wait, but also there's video calling, so, that's a bad segue. Don't worry about it. Ting Mobile has new rates that make it easier to see how much you can save by switching. They've got unlimited talk and text for just $10. Data plans starting at $15 a month, and their new Set 12 plan with 12 gigs of data for 35 bucks a month. They even got unlimited data for 45 a month. So, if you're looking for a good deal, Ting Mobile is offering
+their unlimited plan for just 25 a month for
+the first three months. And if monthly plans aren't you think, guess what, their previous pay for only what you use plans are still there. They're called Ting
+Mobile's Flex plans now and they charge just $5 a gig. One of the coolest things about Flex plans is that if you have a family and you have a family plan, you can connect more phones and share it, and save more. You'll get the same
+nationwide coverage in the US and award-winning customer service, and pretty much any phone
+will work with Ting. So, don't wait, check them out at linus.ting.com, and you'll get a $25 credit. So, thanks for watching, guys. If you enjoyed this video, maybe go check out the build we did. There's a $10,000 machine for playing roblox of all things, and it had a 3090 in it. And boy, could it ever
+have been a lot cheaper with one of these? Sorry guys, honestly, we didn't know this was coming. At least not for sure.

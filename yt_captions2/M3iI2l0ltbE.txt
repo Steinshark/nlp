@@ -1,0 +1,76 @@
+hello and welcome to a new coding
+adventure today we're going to be looking at marching cubes i'm afraid that's what passes for humor
+on this channel now before i can get to the actual marching cubes we'll need
+some function that takes in a point in 3d space and gives out a single value
+then if we have some region of space that we're particularly interested in we
+could use that function to sample points at regular intervals inside of it. the
+highest value i got with my particular function was 16 which i've colored white
+and the lowest was negative 34 which i've colored black. now i need to add a
+little slider here called the surface level. as i move it up you can see that
+the points with values below the surface level will disappear so those points we
+can think of as being in empty space while the points at or above the surface
+level are on the surface or inside of some shape. the goal of the marching cubes algorithm is to construct the surface of that shape from triangles
+so that we can display it as a mesh. to think about how this works we can
+simplify the problem to just a single cube. there are eight corner points each
+of which can be either inside or outside of the shape, which gives us 2 to the
+power 8, or 256 different configurations. for example with just one point inside
+the shape we get a single triangle over here. if the point above it is also
+inside the shape we get a little rectangle made from two triangles and so
+on. as you can see some of the configurations get pretty wild but
+thankfully there are only 14 unique cases, the rest are just symmetries of
+those but still figuring them all out is a tremendous headache that i did not want
+to undertake so i took the easy way out and downloaded a triangulation table
+like this from the internet. so let's take this case for example corner points
+7 5 and 1 are active which we can interpret as configuration one zero one
+zero zero zero one zero, or in a more familiar number system configuration 162.
+this is the code for calculating that index just in case you're interested. now
+i can take this index and look up the corresponding entry in that
+triangulation table this tells me to join edges five zero one and five four
+zero and seven six eleven to form three triangles so in code i look up the
+triangulation info here and loop through each edge index. i then look up in
+another little table the indices of the two corner points that form that edge.
+with those i can calculate the position at the center of the edge and add that
+to my list of vertices. all we need to do now is march through the entire space
+and construct the mesh one cube at a time.
+behold, marching cubes! by the way in the code i just showed i was creating a new
+vertex regardless of whether one already existed in that position. a
+more sophisticated implementation could share vertices between triangles but i
+just wanted to make it as simple as possible for the example. the result here is also extra blocky looking because i'm always placing vertices at
+the midpoint of the edge, but to be more accurate we should try estimate where
+along the edge the surface actually is. for example if the value at the bottom
+of an edge is negative two and at the top it's three and the surface value was
+say zero we would estimate that the surface is forty percent up from the
+bottom of the edge since that's where zero would be if the value was changing
+linearly. all right so once i had kind of wrapped my head around these ideas and
+convinced my triangles to behave themselves, i started experimenting with
+a little terrain editor. this works simply by adding or subtracting from the
+points under the brush. it's a little slow and finicky at the moment but it's still
+kind of cool to play around with so i'd definitely like to improve it at some
+point. i then began experimenting with layering noise in increasing frequencies
+and decreasing amplitudes to generate terrain. i didn't spend too long on this
+but i think in general the results are more interesting looking than pure
+height map terrain, because you get some overhangs and nice details like that...
+although sometimes the physical feasibility is questionable. anyway one
+effect that i found kind of cool is terracing. so the value at each point in
+space is being calculated as -position.y
+which creates a ground plane. plus the noise value at that position. to add
+terraces we just need to add position.y mod the terrace height that we want. a
+small change to the calculation and we have spherical welds instead. while i was
+playing with some more noise i created something that looked a little like a
+fish tank and i thought it might be fun to explore an infinite underwater world.
+to support an endless world i needed to be able to break things up into chunks
+like so. once i had that working i added a little cylinder as a submarine so i
+could swim around and i also converted my marching cube script to a compute shader,
+which sped it up a lot. this would be great if it didn't also turn everything
+into spaghetti. the problem was that i was adding vertices one at a time, and
+because this is multi-threaded vertices from other threads were getting added in
+between and messing up the order of the triangles. i have only recently started
+learning about compute shaders (two episodes ago to be precise) so i'm not sure what
+the correct way to tackle this is, but my crude fix was to create a triangle
+struct, assign three vertices to that, and then append that to the buffer. finally i
+upgraded the submarine from a cylinder to a capsule plus some 'turn-y' bits and
+i was away. so this brings us to the end of another
+coding adventure. i'd definitely like to expand on the terraforming tool and
+experimenting with the erosion from the first episode on the terrain from this
+episode would be pretty interesting as well i think. anyway until next time,
+cheers

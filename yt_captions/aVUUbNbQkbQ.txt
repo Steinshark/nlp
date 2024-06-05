@@ -1,0 +1,88 @@
+Today we're going to look at Egyptian fractions 
+and by that I do mean the ancient Egyptians. They   worked base 10, like we do. So they had symbols; 
+and I'm going to attempt to draw some hieroglyphs.   So their symbol for the number 1 is this 
+- groundbreaking - it's called a single stroke.   So if they wanted to say 2, they combine two of 
+these. Um for 10 in hieroglyphs they have this   which I believe is called a cattle hobble, which I 
+think was used- you maybe put it around cattle legs   to slow them down. I looked into it, don't really 
+know what that does, but this is a 10 which is   a far more interesting use of it. For 100 - and now 
+I'm almost definitely going to get this the wrong   way around - but I think it's this way and it's a 
+coil of rope. I'm pretty sure it's that way round,   someone will correct me if it's not. For 1,000 this 
+is when it gets slightly more complicated, and I've   got to use my art GCSE; it is the water lily. For 
+10,000, a bent finger, that looks vaguely like this,  and that's a bent finger. Okay, bent finger. 100,000? 
+Obviously whenever I think of 100,000 what I think   of is tadpoles; so this is a tadpole. And now 
+finally a million, and this really is going to be   putting my art skills to use. A million is Heh. Now Heh 
+is the personification of eternity or infinity. So   a million also kind of just means an eternal or 
+infinite amount, which isn't actually unheard of   in cultures that we have things like this. Umm 
+some people believe that 1,001 Arabian nights   actually is meant to mean infinity and a bit more. 
+So the idea of there being a very large number,  meaning that number or infinity, is actually not 
+an uncommon idea at all. So these are the Egyptian   hieroglyphs for powers of 10; and if you wanted to, 
+maybe say you wanted to write I don't know 23, what   you would do is you would write two 10s and a 3.
+And you just combine them like that. So now on   to fractions; um I'm going to be talking about - I'm 
+getting technical here - earlier Egyptian fractions. So there is actually evidence that fractions were 
+done slightly different later on, there's a famous   Papyrus called the Rhind Mathemathical Papyrus.
+What we're going to be talking about is earlier   um when fractions were all done by having a mouth 
+symbol like this and then a number underneath. So   you might say this, and what this would be is  
+a tenth, because it's the mouth symbol over 10. Now   with this we can only get numbers- fractions with 
+1 in the numerator. In fact there are only two   exceptions um to this; so we can have 2/3, which 
+is like this, and then there is also 3/4 and a   half for some reason is different. But aside from 
+that, all others are of the form 1 / n. So it begs   a question, how is this useful? What happens if we 
+have another another fraction? What happens if we   have say 5/6? Well 5/6 is going to be just a 
+1/2 plus a 1/3, so actually we can still do   this. Now with Egyptian fractions, which is what 
+these are called, all the denominators have to be   different. Should we try another one? 15/36 is going 
+to be a 1/3 is 12/36, and that leaves 3/36 which is   equal to a 1/12. So so far looks like we can do it.
+The question is, can we always do it? So for this   I want to introduce you to the greedy algorithm. 
+We've got our fraction p over q, and we're going   to say p is not 1 - because we know if p is 1
+we can do it, we'll just write it as is. And the   greedy algorithm looks at the largest 1/n such 
+that 1/n is less than p/q. And we start by just   taking away this 1/n. What do we know about this?
+This is going to be positive, because we know this   is less than this. So we'll end up with pn - q 
+over qn which is positive, okay? We can actually   write an expression for n as well, we could write 
+n is the ceiling function of q over p, so it means   it's the smallest integer above this fraction. Ah! 
+We haven't actually used the fact that 1/n is   the greatest for which this is true. Cos what this 
+means is that p/q is also going to be less than   1/(n-1). So we've said that this is going to be 
+the smallest such n or the largest such 1/n,   they're the same thing, that's less than this, hence 
+we have this inequality too. Now from this we can   multiply this out and then we get that for example 
+p times (n-1) is less than q. And if we substitute this   in we get that pn - q is strictly less than 
+p - and we already know it's positive remember. So   we've started with p/q, we've taken away 1/n,
+ and now we've ended up with a new fraction,   we'll call it p1/q1 such that p1 is less 
+than p. Now if p1 is 1 we're done, because then   we could just say that p/q is 1/n plus p1/q1.
+ And if p1 is 1 we're done. If not, we just   repeat this process. So we can then say that, okay 
+let's find the largest such 1/n, the smallest   n, that we get p1/q1 it's greater than 1
+over let's call it n1 and less than this - and we   just repeat. And then we'll end up with p1/q1 
+take 1/ n1 = p2/q2. And again we'll have, okay,   that 0 is less than p2 is less than p1. We can 
+substitute back in, get p over q is 1/n + 1/n1.    Plus then this will be p2/q2. And again if 
+p2 is 1 we're done - if not we repeat it again.    So this is why it's called an algorithm, it's 
+a series of steps. And what we're going to end   up having is 0 is less than pr for some r is 
+less than - and it just keeps going - less than p. But   these are all integers, these are all positive 
+numbers. We can't have it going down infinitely,   one of these is eventually- we're going to have to 
+hit 1. And the way we've constructed these qs   they're all going to be different as well. Hence 
+this process is eventually going to terminate.  But yeah eventually we're going to get a pr that 
+equals 1, so we're going to have p/q is 1/n + 1/n1 plus plus 1 over...then qr. And we're going 
+to be done. So eventually this process does stop, so this greedy algorithm means that there is 
+always an Egyptian fraction. Okay, there's one final   cool thing that I want to share with you. Because 
+here you remember we we used a greedy algorithm   where we took the biggest 1/n so n was n was 
+this value. Now if we slightly change this, if we   slightly cheat, and instead use the n is q/p 
++ 1 - and I'm going to show you this for 1. So 1   equals- well here q/p, it's 1 over 1. So  
+q/p is going to be 1 + 1 is 2, so that's a   half. And then what we're going to do with our half, 
+this is our new p/q. So q/p, 2 over 1 is   2, 2 over 1 + 1 is 3. So it's a 1/2 plus a 1/3.
+What remains is 1/6. And we can keep following   this algorithm we get a 1/2 plus 1/3 plus- it'd be a 
+1/7 + 1/43 + .... and so on. This is the cool thing   as well, because here if at any point we truncate
+it it gives the Egyptian fraction closest to   1 for that many that many terms. So 1/2  is 
+the Egyptian fraction with one term closest to   1. 1/2 plus 1/3 is the Egyptian fraction 
+with two terms closest to 1. 1/2 plus 1/3 plus 1/7 is the Egyptian fraction with three 
+terms closest to 1 - and I just think it's really cool.  I love that there are so many courses 
+on Brilliant and always new ones being added.   Look here, I've spotted this recent edition on 
+vectors; so, well, I thought I'd check it out. In   typical fashion it's quirky, well designed, 
+and super interactive. I'm not just watching,   I'm doing. All the courses, the quizzes, the content 
+on Brilliant is just like this - it's a great place   to learn. It doesn't feel like education it just- 
+it feels like fun, but I'm learning at the same   time. If you haven't already, you might want to 
+consider signing up and getting into all this   good stuff. Or perhaps give the gift of Brilliant 
+by signing up family and friends for the premium   subscription. What a great and unexpected 
+present. Wherever they are on their learning   journey, Brilliant has something for everyone - math, 
+science, computers; it's all covered. Now Brilliant   has a free 30-day trial so you can go and give 
+it a good go, and Numberphile viewers can get   a 20% discount on their subscription by going 
+to brilliant.org/Numberphile. That URL is there   on the screen and I'll also put a link in the 
+video description. Our thanks to Brilliant for   supporting Numberphile.
+ - So my favorite number changes a lot but for now it is 288. You might be looking at that and thinking 
+'what's special about 288?' Don't worry, we'll   get there, but first we need to rewind a bit 
+and talk a bit about factorials. Specifically   super factorials. Now I know regular Numberphile 
+viewers will have seen factorials before...

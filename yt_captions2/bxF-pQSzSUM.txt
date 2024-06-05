@@ -1,0 +1,103 @@
+- windows 11 is great. i mean, this baby packs so
+many features, like better hdr, better multi-monitor
+support, better search, and there's only, there's only a few little
+bugs to work out that- okay. it has some problems. and these are 11 of the ones that have
+been driving us most crazy over the last few weeks. and this is a message from our sponsor. thank you, smartdeploy
+for sponsoring this video. with smartdeploy it can
+deploy windows, apps, bios updates, and security
+patches to any device, anywhere from the cloud. get your exclusive free
+software worth over $570 at smartdeploy.com/linus. (upbeat electronic music) first up on our list is a
+seemingly minor complaint, but it's one that could hide
+something much more sinister. as of writing, there were a few core tools that were just straight up
+broken on windows 11 launch, the snipping tool, voice
+typing, and the emoji panel. now, microsoft is already
+rolling out a patch and by the time you watch
+this, it'll probably be fixed. but the issue is that these broke because microsoft's digital certificate expired on october 31st. why are core parts of the operating system dependent on these digital certificates that can just expire? if you have the pro version and suddenly you can't use
+a feature you paid for, that is simply unacceptable. speaking of buying windows 11, unless you pay extra for the pro version, good luck creating a local offline account without logging into
+your microsoft account. many of you already
+have microsoft accounts and there are real world
+benefits to using one, like account recovery through the cloud, but this solidifies once and for all the idea that while windows
+is becoming free to use, you are almost certainly
+paying for it with your data. once you've logged in, you can create as many local accounts that aren't linked to
+mr. gates as you want, but your windows 11 et
+will need to phone home during setup, or you are basically hooped. we haven't actually
+encountered this one yet, but there are reports online of the windows 11 driver update tool actually downgrading the drivers that you have installed for your gpu. so for now, you're best off
+completely ignoring the tool and sticking with your direct download from the nvidia or amd website. oh, and by the way, did you notice the menu
+breaking in that clip? well, multiple staff members here at lmg have reported file explorer
+just randomly crashing on them. it's happening to jake
+three to five times a day. and after the first couple of times, it really starts to get on your nerves. i mean, we expect some
+crashes here and there. it's not like explorer doesn't
+hang in windows 10 sometimes, but when a core feature
+like this fails repeatedly, you can't help but get
+this anxious feeling, like there's always a storm
+cloud following you around. speaking of which, where's
+my weather, windows? you took forever to put the
+weather thing in the task bar, and then, now, just as i had
+gotten used to it, it's gone, hidden away in the widgets. how will i know that it's
+going to be a cold day and i need to grab my ltt
+beanie and stealth hoodie from lttstore.com? also, right clicking the task bar no longer gives you the option
+to bring up task manager and no longer gives you the
+option to anything at all, except for task bar settings. and while we're at it, why the heck can't i see
+my clock on every monitor? i want to game on my
+main display, you know, the one where you've
+inconveniently glued the clock, and i don't want to alt tab out of my game or pull out my phone to see
+if i should have gone to bed two hours ago. ah, gaming. if you're running an amd cpu, you got off to a pretty bad start, with up to 15% performance loss in games due to a scheduler issue. thankfully, the patch for that seems to be working for most people now. but now, it's intel that seems to be having
+their own troubles. we've had to do more hard resets
+in the last couple of weeks than in the last couple of years, playing a mix of both older games, like "dota 2" or "slay the spire", and newer ones, like "forza
+horizon 5" and "deathloop". it might be the new auto hdr feature that's causing some of this fuss since what we've seen the
+most is with multiple monitors suddenly going dark and then the entire pc
+becoming non-responsive. but at this point, the only thing we know absolutely for sure is that it's pretty annoying. now, for some more multi-monitor woes. these come in the form
+of weird scaling bugs that we just keep encountering. basically, if you have scaling set to 150% and open the settings menu
+in your secondary display, it'll open scaled to 100%. you can then move it back
+to the primary display and bada bing, bada boom, it's fixed, but this kind of window dance shouldn't be required in the first place. and neither should fussing
+about with the updater. it worked perfectly fine
+for some of our staff, but jake had to do a fresh install and we've seen similar complaints online. to be clear, we always recommend
+fresh installing a new os for the cleanest, most
+bug-free experience, but keeping all of your programs and files is supposed to be possible and makes for a much
+less painful transition for most people, so it'd
+be great if it worked. another annoyance that
+started with what we thought would be a pretty cool
+feature is the overflow icons. it's pretty straightforward in theory. you take apps in your system tray and then put them over onto
+the right side of the task bar as overflow icons. pretty nifty. unfortunately, these icons often become impossible to right click and interact with while a game is up. so what's the point? you know, you hit the windows
+key to bring up the task bar, you right click the icon and nothing. which, you know, maybe you would think, oh, well, that's because
+the game's launched and you can't interact
+with the system tray icons. except if you put them
+back in the system tray, they work just fine. (linus grunts angrily) now, let's talk about the rounded corners. these have been causing a
+fair amount of controversy. for my part, i don't mind the look, but they need to be easier
+to expand and resize. currently, it is too
+difficult to grab the corner in order to perform these actions because microsoft in their infinite wisdom removed the corner. looks great, feels un-great. now, the fix is pretty easy. make the sweet spot bigger
+for the mouse cursor, or just add an invisible
+corner to every window, but it's gotta be done in order
+to improve quality of life with windows 11. also, right clicking on the desktop used to be a great experience. you get all these relevant options that are now hidden away in a submenu. and the worst part
+isn't that those options aren't being hidden away, it's how many of these submenu options are actually just repeats
+of the previous menu. like, why? yes, the new quick options
+at the top, great feature, but you could have added those without tacking on a seemingly
+pointless extra step. as for the start menu,
+there's a lot of empty space and it can take a bit to load too, which is something i
+thought we'd moved past after windows 10's growing pains. furthermore, if you start
+typing to search for something, it switches you over to the search window, which just feels unnecessarily jarring. it doesn't even morph smoothly
+into the other window. it just jankly brings up the search menu while dropping the start menu. at least, it does the
+first time you do it, just like we're going
+to be putting together a one petabyte ssd server
+for the first time. get subscribed so you don't miss that. and don't think we've forgotten about you, mr. windows search. you were the chosen one, finally to be focused on
+helping us find our files and applications. but no, microsoft decided that web results should still be the priority. now, to be clear, it is
+better than windows 10. way better than windows 10. we just feel that a tiered setting, web priority, local priority or local only would allow it to be
+all things to all people rather than, well, an
+annoyance to many people. now, we've mentioned often that
+being an early adopter sucks and while many folks
+are actually reporting a hassle-free experience with windows 11, a fair few are squarely on the other end of the suck spectrum. hopefully the next six months to a year sees the majority of these
+issues ironed out, though, because as painful as
+broken windows can be- get it? 'cause glass, painful. (linus chuckles)
+he laughed a little. i haven't found my month
+long transition to linux to be any easier. but what is easy is
+transitioning to our sponsor. micro center has partnered with asus to offer a new, easy to
+use online pc builder tool. the tool helps customers
+build their own computer with three different base starting points, value, performance, and ultimate. each base system will include a case with a pre-installed
+motherboard power supply and separately packaged graphics card so you can just add your choice of cpu between amd and intel, as well as your preference
+for ram, storage, and operating system. the parts can be arranged
+for same-day in-store pickup or for an added build fee, micro center will assemble
+the computer for you. if you're unsure of what parts you need, micro center's expert technicians can walk you through
+selecting your components. so go check out micro
+center's new pc builder at the link down below
+and check out the link to how to receive a free 240 gig ssd, if you are a new customer. thanks for watching, everyone. have you updated your os yet? swapping over to linux instead?? if you enjoyed this video,
+maybe go check out part one of our linux daily driver challenge. we definitely ran into some issues there. the answer is nothing's perfect.

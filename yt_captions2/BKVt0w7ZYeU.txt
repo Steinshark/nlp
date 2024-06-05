@@ -1,0 +1,120 @@
+- [linus] you can keep hoping the market will magically change and gpu's will begin appearing on the shelves, or you can do something
+about it. that's right. there is a way come closer.
+don't be shy a little closer. don't tell anyone, but graphics cards are
+still on the shelves. they're just hiding in much bigger boxes, ones that look like this. and today we're going to find
+out if getting the rtx 3070 in that pc is worth all the
+extra money you might end up blowing on the sub-standard
+parts included with it. we're also going to see if
+there's a cheap way to turn a prebuilt like this one into
+an enthusiast grade machine. like say by putting a proper
+power supply in it from our sponsor, seasonic. seaonic makes great power
+supplies for brand new machines and for fixing up older ones. and we're going to have
+them linked down below. [music] (supernova by laszlo) [music] prebuilt gaming pcs can be cheaper than building one yourself, but it's an open secret that you kind of get what you pay for. in no particular order,
+here are some of the tricks that big manufacturers use
+to save a buck on production. installing only a single
+memory module rather than two, cheaping out on unsexy components, like the motherboard,
+cooling and power supply. all of which can affect
+performance, upgradability and long-term reliability. and signing deals to include bloatware on your pc for an upfront payout. basically, if it doesn't fit on the
+price tag out of best buy, they probably went for the bare minimum. i mean, who needs a dram
+cache on your ssd anyway. now one area where they
+don't tend to cheap out, as hard is the gpu. i mean, sure. you can find gaming pcs on the shelf that have onboard graphics. you can't cheap out much harder than that, but when they've got a gpu in them, it tends to be built to a
+similar standard as the one that you would buy standalone,
+keyword being "would buy". because the reality is it's
+been so hard for gamers to find gpu's on a shelf that they've
+resorted to buying entire computers like this one. just to extract their
+precious graphics cards. to find out if this is
+actually a good idea, i sent plouffe to our local best buy. his mission to buy a pre-built gaming pc with an enthusiast tier
+graphics card inside. now the asus rog strix g15dk, wasn't strictly speaking on the shelf, but it was available in store. and once the sales rep came
+back with his big brown box, plouffe paid the 2,800 canadian pesos, with the company credit card. strapped that machine to
+the back of his snowmobile and made a beeline for the mexican border. thankfully, mexico doesn't have snow. so we caught up with him pretty quickly. let's take a look at it here then. it's an asus, so it should
+be more like a custom rig than your typical dell. starting off strong, we've got an asus dual fan rtx 3070 and a ryzen 5800x cooled by ooh., a random tiny 80 millimeter
+fan tower cooler. there's just a single 16 gig
+stick of sk hynix memory. although at least it is
+3,200 megahertz i guess. there's a 512 gig western
+digital sn530 for our boot drive. this appears to be an oem
+only skew with no dram cache. and they used a 7,200 rpm two
+terabyte toshiba hard drive, for extra storage, which is fine. and all of that is sitting on an, asus prime b550m-k micro-atx board, or so we thought, our
+bios lists it as a g15dk. and the rig is powered by a great wall c700 80
+plus bronze power supply. now this video is sponsored by seasonic. so we're not going to create
+an obvious conflict of interest by evaluating this beauty in any way. but we can say that the model
+of our unit is so obscure that the only place we found one for sale, is a now de listed post on what
+appears to be russian ebay. now the case is an asus pre-built special, that i absolutely hate for many reasons. we'll get into those later, but let's say it would cost,
+i don't know, a 100 bucks. so that puts us at around
+1750 us dollars so far. throw in a windows 10 license, an rgb strip, assembly, a cheap wifi card. and we're getting pretty darn
+close to the $2,000 price tag. not bad on the face of it. that is as long as we ignore
+the fact that the 3070's msrp, was never formally adjusted
+by nvidia from $499 to $870. you know what you can still get for msrp, trusty ltt water bottle with the new lid, new design and new colors,
+get yours today lttstore.com. now to be clear, it's not like this
+thing's a pile of garbage. our out of the box
+performance was pretty solid, but our cpu reached as high as 90 degrees celsius, in cinebench. and while our gpu maintained
+a respectable 69 degrees in furmark, nice, the piddly, 80 millimeter exhaust fan means means that as soon as the going gets tough, the fans get going, user
+complaints about the noise of this machine appear to be
+entirely on the money. that's strike one crappy case. now let's start with the things we can do to improve our situation
+without spending any more money. we uninstalled all the
+bloatware we could find, thankfully it wasn't that much. then we installed ryzen
+master and msi afterburner, to see if our power supply and cooling could handle any overclocking. the gpu managed some minor improvements with our quick and dirty
+800 megahertz overclock on the vram. though, major core clock adjustments resulted in instability
+and as for our cpu. well, if the cooler was
+at its limits before, overclocking is unlikely
+to fix the problem. so what can we do? nothing really, at least not
+without spending some money. our first idea was to swap it
+out with the tried and true and cheap hyper 212, but unfortunately, the case isn't deep enough to fit a 120 millimeter tower cooler. that's strike two. now, there are downdraft
+style coolers out there still, but high performance
+ones aren't cheap enough that we're really saving any money. so our next thought was to
+add some more case fans. unfortunately, asus made
+a couple of small changes to the prime beef 550mk, including removing the
+second case fan header. so we ended up needing a splitter. we then scavenged a few cheap
+fans putting our total cost at around 20 bucks for additional cooling, then spent about half an hour, getting access to the top and front panels and jury rigging the mounts for our fans because asus didn't think, hmm, if i'm going to put 500 holes in the case, maybe a few of them should be sized and spaced correctly for fans. strike three. surprisingly better case
+airflow didn't actually address our cpu thermal issues
+under heavy load though. so we're at a bit of a crossroads here. in gaming, our attempts
+with the stock cooler, were perfectly reasonable. averaging in the seventies
+or even high sixties. so maybe the average gamer just
+leaves it well enough alone. but for anyone looking to do serious cpu heavy work with this machine. we would strongly recommend
+spending the $60 to $80 on a good downdraft style
+cooler, like one of these. an all-in-one would be an option, but there's no cooling whatsoever on the vrms of this motherboard. so going water cooling means that they could end up running really hot, not to mention that getting
+a radiator into this thing is gonna to be tricky to say the least. just like putting an xbox series s into a computer case is going to be a little tricky. get subscribed. so you
+guys don't miss that. of course, we're not done trying to
+put lipstick on this pig. let's increase our budget a little and fix the next most obvious problems. starting with the single channel memory. in a perfect world we'd like to have another stick of exactly the same ram. but despite what you may
+have heard elsewhere, you can mix and match. so we found this 3,200
+megahertz module from g.skill for 60 bucks on newegg. bringing our new total
+to about 2150 us dollars. while we were at it. we replaced the great wall with a seasonic focus 80 plus gold 750 watt, for a bit of extra peace of mind. to be clear, 700 watts was probably fine, for a machine like this but over specking, a
+little bit on power supply means that even as the unit ages, it'll still be able to keep
+up and it's a seasonic. so you know, that's going to contribute to quieting down an already
+pretty loud machine. these changes also netted us some minor performance improvements in games and a slightly higher cinebench
+score, but that's about it. and you can probably sell your
+great wall for 30 or 40 bucks on facebook marketplace to
+recoup some of the seasonic cost. putting you at around $2,100. and without spending
+unreasonable amounts of money, replacing core components like
+the motherboard or storage, that's about all we can
+do with this sucker. so it wasn't all worth
+it, well in the past. no, it wouldn't have been, but
+these days for many people, the price that they're comparing against is what they would have to pay a scalper, in order to get their hands on a gpu. so let's run the numbers
+here, ignoring the gpu. let's recreate the system as
+we originally purchased it, but without wasting money on crap that we'd have to upgrade later. so better cpu cooler, two
+eight gig sticks of memory, a more robust motherboard and case, a seasonic power supply from the get-go and all ssd storage, that puts
+us at about 1100 us dollars. we're going to have those parts in our affiliate links down below. add a $1000, 3070 off ebay. and we're getting a
+significantly better system, actually here for only
+a little bit more cost, or we could even go back to a hard drive and we could match the
+cost for our better system. so then wait a minute. what happened? okay. this technique of shucking the gpu's in pre-built gaming systems, might've been a good workaround, near the beginning of the shortage. but as you can see, manufacturers have clearly
+clued in to the point where it's not actually any better to buy directly from the
+manufacturer in a system, than it would be to buy the
+stupid thing from a scalper. and to be clear, this
+has always been a thing. i mean, evga basically wrote the book, on releasing a card at
+launch for nvidia's msrp. then following it up with a
+version with their own msrp, that's 20 bucks more. a super clock for another
+40, ftw for another 60, et cetera, et cetera, et cetera. all while quietly discontinuing that original msrp skew and
+not shipping any more of them. and i don't blame them for it. the margins in their business
+are notoriously slim, but when this process ends with cards that are double the
+original price, like this. becomes a little harder to swallow. now, this system ended up being just fine. there's nothing inherently
+wrong with buying a prebuilt and using it as a gaming machine. especially if you make a couple of tweaks and it'll probably go on to live a long and prosperous life is a
+workstation for one of my staff. but i also wouldn't go out
+and buy another one of these cause priced as it is. it really feels like
+even system integrators are scalping gpu's at this point. did you ever buy a pre-built? are you happy with it? unhappy with it? let us know in the
+comments and let us know if you're happy to see seasonic
+sponsoring pieces like this. where we get to take a closer look at what's going on in the market. what's a good value. what should you upgrade? i mean, it's kind of
+an obvious one for them cause power supplies are
+usually pretty high on the list. so go check them out in
+the video description, if you're looking for
+a power supply upgrade. if you guys enjoyed this video, maybe check out the one
+where we tested some modern streaming services
+as an alternative to getting a graphics card at all. they're really not that bad. well, some of them are not that bad.

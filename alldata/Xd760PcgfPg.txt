@@ -1,0 +1,60 @@
+Hey everyone, welcome back! 
+ I'm James Murphy. And this is mCoding, where we try to get 
+ just a little bit better at programming every episode so that during the inevitable robot
+ uprising, we will be spared. If you're watching this video, you probably 
+ already know what a for-loop is and how to use it. This loop, of course, prints 1, 2, 3. But did you know that in Python, like many 
+ other languages, a for-loop is actually redundant? What I mean by that is that you can rewrite literally any
+ for-loop using other things in the language. In particular, using a while. For readability and performance, I wouldn't 
+ really recommend doing this in Python. However, understanding iteration is the key 
+ to mastering any programming language. So let's get to it. Let's replace this for-loop that 
+ just prints out 1, 2, 3 with its corresponding equivalent 
+ using a while-loop. The first thing Python does is to get an 
+ iterator for the object that you're iterating over. Then morally it's just a `while True`. And every iteration of the loop we get 
+the next item out of the iterator. And then run the body of the 
+ loop which in this case is `print`. But there's the obvious error 
+ with this approach which is this is just a `while True`, 
+ it's an infinite loop. How is it supposed to end? The design decision that Python chose 
+ is to have an iterator's `next` call raise an exception in order to 
+ specify that the iterator is done. Running the code as is. Specifically, we see 
+that it raises a `StopIteration` exception. If this feels weird to you, don't worry; 
+ you're in good company. This is pretty weird. By their nature, exceptions are kind 
+ of supposed to be exceptional. But in Python, you get an exception 
+ with every single for-loop. And that's just the way it is. That's the normal way to end a for-loop: 
+ to have this `next` call raise a `StopIteration`. For our next iteration 
+ (pun intended), of course, we'll just try to catch that `StopIteration`. And then break out of the
+  while-loop once we receive it. This version actually works. We get 1, 2, 3 
+ and then the process ends normally with no errors. But there's still a small bug with 
+ this implementation. Comment down below  if you 
+ can see what it is. I'll give you a few seconds [Music]. Okay if you're ready,  here's 
+ what I mean. What happens if something 
+ besides the iterator, something in the body of the for-loop 
+ raises that same `StopIteration`? Python doesn't consider that a normal 
+ way to terminate the for-loop And we see the exception bubble up. But in our implementation 
+ if we raise a `StopIteration` here, then we see nothing because we're specifically catching 
+`StopIterations` inside of our try-except. So the issue here is that our try-except should 
+only be around this `next` call not around the entire body of the loop. The proper way to do 
+ this is with a try-except-else. This runs the code in 
+ the try block. If a `StopIteration` was raised in 
+the try part of the try block then it gets caught here. Any other exception bubbles up. And if no exception is raised 
+ then the else block runs. You can kind of read this in your head as 
+like "if exception else do stuff". Now a `StopIteration` from the body 
+ of the loop will bubble up. We can of course check this 
+ by running it. And in the normal case where we're just printing,
+ we see our expected 1, 2, 3. Take a moment and just pause 
+ to let this kind of sink in. Every single time that you use a
+ for-loop, all of this stuff is happening. And that's the reason that we 
+ have a for-loop in the first place. Although it's technically possible to replace any 
+ for-loop with its equivalent while-loop, that would be a huge hassle 
+ and it's very error-prone. So it's just better to have a keyword 
+ that expresses that intent more succinctly. The only other thing I wanted to 
+ point out about this for-loop structure is that In this code, you can see we have 
+ this variable `it` which is the iterator. Even when you're using the built-in `for`, 
+ this iterator is there somewhere. In our translation using the while-loop, we could theoretically access 
+ the iterator inside the body of the loop. But that would not be possible 
+ using a normal for-loop. However, if you wanted to make the 
+ iterator accessible in the body of the for-loop, you could still do that like this. Just manually grab the iterator 
+ and pass it to the for-loop. This works because iterators 
+ are themselves iterable, which is something I'll talk about 
+ in one of my future videos. That's all! Thanks for watching. Thank you to my patrons and 
+ donors for supporting me. And don't forget to slap that 
+ like button an odd number of times. See you next time! 😊

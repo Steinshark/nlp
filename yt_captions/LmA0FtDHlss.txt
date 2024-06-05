@@ -1,0 +1,124 @@
+- I got a GPU. - But what did it cost? - Everything.
+(somber piano music) - It's a story that's all too common, which is why, instead
+of buying a fancy, new Intel 12th gen processor,
+(cash register pings) you're watching this video, where we're going to figure out the absolute best way to
+save a buck on your CPU. You see, that there's a lot of
+second hand chips out there, that might look like a great deal, like this $20 over-clockable Xeon. But as we've seen, there
+can be hidden costs that are driving the prices so low. I think the answer is gonna surprise you, but what won't surprise you
+is our sponsor, Corsair. Their new H150i Elite LCD is a
+premium all-in-one CPU cooler that combines powerful, low noise cooling, with vibrant RGB lighting, and a personalized LCD display, that you can put custom graphics on, to accent your system's aesthetics, and to track real-time
+performance at a glance. (logo blips and chirps)
+(bright electronic music) To best reveal our CPU bottlenecks, we're going to be using a current-gen GPU for our benchmarks, the RTX 3060 Ti. And we used the Corsair Xeneon monitor for all of our testing,
+since A, it's gorgeous, and B, while most of our benchmarks are going to be at 1080p, to really separate the
+wheat from the chaff, we think 1440p gaming is
+really the modern sweet spot. And at the end, we're going to wanna game on this setup, to see if our best value combo can keep up with 1440p
+high refresh rate gaming. At just $23 and 45 cents, the Xeon W3670 gives you
+a lot of CPU per dollar, and looked like the obvious choice, at least on paper. I mean, sure, it was back in 2010, but in its prime, this thing was a $600
+top of the line beast, with six cores and a turbo
+frequency of 3.5 gigahertz, at least until you overclock it. That's right. Intel hadn't quite locked
+down Xeon overclocking yet, and we were able to take this little guy up to four gigahertz on all cores, yielding a Cinebench R23
+score of over 5,000 points. That's respectable, even
+by modern standards. And we've got performance
+in everything else, that ranged from terrible to worse. In games it, spoiler alert, managed less than half the FPS
+of the other CPUS we tested, and making matters worse, getting it to play nice with Windows 10 was a bit of a pain in the butt. Hello Legacy mode. Running Windows 7 is an
+easy enough work around, but know that Microsoft
+no longer supports the OS, and you're going to lose out on some small games you've
+probably never heard of, like Forza Horizon 5 and Halo Infinite. Ouch. Oh, and we also ran into
+this cool little bug, where Sleep doesn't work, and the system needs a
+full reboot, every time. Your mileage may vary. So you're dealing with significant
+quality of life issues, on a CPU that gets a quarter of its speed from a ratchet, static, voltage overclock, on a ten-year-old motherboard. Not something that I can
+straight faced recommend, and it gets worse. But first, let's take a look
+at our second contender. The Intel Core i5-2500K
+is a four core beauty, from 2011, that you can pick up for about 50 bucks these days. Getting it to work with Windows 10 was much easier than the Xeon, but while the i5 is noticeably
+quicker than the Xeon, that doesn't prevent you
+from feeling its age. Normal tasks feel a bit sluggish, compared to a modern platform, though, in fairness, we were able to remedy that a fair bit, with a moderate overclock. This is our second CPU, now, that topped out at four
+gigahertz, all core, netting us a 10% improvement
+in single-threaded workloads, and 20% in multi-threaded workloads, where frankly, it needs
+all the help it can get. With a Cinebench R23 score of 2992, our second-gen core was by
+far the slowest CPU we tested, in multithreaded loads, due in part, to the 2500K's lack of
+simultaneous multi-threading. For gaming, it was more
+of a mixed bag, though. In Shadow of the Tomb Raider and CS:GO, performance was excellent, and it even ended up beating
+some much newer CPU's. But in Forza Horizon 4 and F1 2021, the results were brutal. If you plan on playing mainly older games, the 2500K might be fine then, but every time you boot up a new game, you are (blows) rolling the dice, and the inconsistent performance isn't even the biggest problem. Buying all the old
+supporting components is. For both the 2500K and the Xeon, you can expect to pay around
+$60 for a motherboard, including shipping, plus another $45 for DDR3 RAM, both of which are well past
+their best before date. And get this, while we were configuring the overclock for our 2500K, our first
+motherboard straight up died, completely destroying
+any chance of that setup being price competitive
+with newer hardware. The thing is though, even
+if that hadn't happened, these 10-year-old motherboards
+and 16 gigs of DDR3 RAM, are coming in at only
+about $5 less expensive, than a modern B450 board and DDR4 RAM, both of which could be carried forward, to a future upgrade to a modern processor. So why are these old
+components so expensive? Allow me to introduce the bathtub curve. This is a simple visual, that shows the odds of a device failing over its lifetime. Off of the production line, you'll usually get a bunch
+of failures right away, usually due to manufacturing defects. These are going to be either
+caught in QC or burn-in, or they're going to fail
+quickly out in the field, hopefully covered by warranty. After that, the chances
+of a device failing, at least a well-designed one, get pretty low for a long period of time. Then, towards the end
+of their expected life, the components start to wear down, and failures begin to increase again. For motherboards, anecdotally, at least, this seems to happen
+around the six year mark. So as more and more
+motherboards begin to fail, you eventually wind up
+in a dumb situation, like X99 motherboards from 2014, that'll go for as much as $300. Which raises the question, why are people willing to
+pay so much for these things? Well, here's the thing. CPU's tend to have much,
+much lower failure rates, compared to motherboards, so you end up with this
+surplus of working CPU's, compared to a dwindling number of compatible working motherboards, that exist to put them in. The surplus drives down the
+cost of the older CPU's, but it's deceptive, because maybe your CPU is only 20 bucks, but you're going to spend a fortune actually getting the thing running. The bottom line then, is
+that it is hard to justify investing in old hardware, when you're confronted
+with both these problems, and the complete lack of any upgrade path. The only old hardware you
+should really be investing in, is the old hardware we've
+printed on T-shirts, from lttstore.com. Nothing illustrates this point better than our next processor. The legendary Intel Core i7-4770K. I was honestly shocked, when I realized that this
+CPU is now eight years old, 'cause it sure doesn't
+feel like it in Windows. I mean, if you wanted Windows
+to feel any snap here, you would need a brand
+spanking new machine, with a fast MVME SSD. And in gaming? Mr. Haswell here, was the
+fastest CPU we tested, across the board. So if you're currently rocking
+one of these in your system, you can safely upgrade to an
+RTX 3060Ti, and sleep soundly, knowing that there is
+no reason to upgrade, until your motherboard gives up the ghost. What you shouldn't do though, is go out and buy a 4770K
+for a whole new computer, because all in, the 4770K was the most
+expensive CPU we tested. The good news though, is that although we were
+able to overclock it, to 4.4 gigahertz, all core, our gaming performance barely increased. That tells us that the
+4770K is performance enough, to keep up with our 3060Ti
+right out of the box. And I say this is a good thing, because it means that you don't
+have to be super concerned about getting a "K-series" SKU. A regular i7-4770, or i5-4550
+is going to be more than fine. And if you're lucky, you might be able to find
+one of those for cheap, in an old pre-build. These are the kinds of deals that you don't find by
+going on eBay, though, so keep your eye on your local Craigslist, or Facebook Marketplace for an old Dell, or ThinkStation desktop,
+that's just a GPU away from gaming greatness. At $110 for a 4770K standalone though, I think it's a bad buy. This is also why the 4770K is the last Intel CPU on our list, because you can buy a 6700K, or an i5-8400, but it's very hard to justify
+a semi modern Intel CPU, because they cost the same, if not more, than a Ryzen 3300X or an i5-10400, which you can buy brand new today, both of which are going to
+have similar performance, without the hassle of screwing around with a used motherboard, that has no meaningful upgrade path. If you're feeling lucky, you could get an 8700K and a
+motherboard with bent pins, but in general, the price
+of an Intel motherboard, especially one that can overclock, makes it really hard
+for their old platforms to compete with AMD, which means the smarter play, is to pick up an affordable B450 board, that can run any AMD CPU, from Ryzen 1000, all the way up to Ryzen 5000, assuming you've got the right BIOS on it. On that note, let's talk about the AMD Ryzen 5 1500X. You can get one of these for around $85. And although historically, that isn't a game-changing deal, like back when the 2600AF was a thing, performance across the
+board is acceptable, which really drives home, how much of a lead Intel
+squandered in the last few years. The 1500X ends up losing to
+the 4770K across the board, despite being five years newer, but it benefits from an extremely
+low total cost of entry. $190 gets you the core bits, and since you're getting a B450 board, when you have a bit more cash, you can upgrade to something
+that will absolutely slay. And this is the main reason
+that I'd recommend the 1500X over the Core i5-6400, their price and
+performance are comparable, but Intel has 50% fewer cores, and no meaningful upgrade path. Oh, one thing to note though, is that if you are
+buying a new B450 board, off the shelf, see if you can find one that does not have the Ryzen
+5000 desktop ready badge, on the front. Due to limited storage on the BIOS chip, you can't actually have
+support for both 1000, and 5000 series CPUs at the same time. So you might need to use a
+CPU-free FlashBack feature, or go to your local computer shop, and have them install a special BIOS, so you can get first-gen Ryzen support. One interesting part of our tests, is that it demonstrates even more clearly than our recent video, how more gigahertz does
+not equal more performance. When overclocked, the Ryzen 5 1500X, Xeon W3670, and i7-2500K are all switching at four gigahertz, but the results are
+dramatically different. Due to IPC or Instructions
+Per Clock improvements, the more modern Ryzen
+is able to do a lot more with its 4 billion switches, than the older Intels. Something that is very
+important to keep in mind, when you're shopping for older CPUs, that on paper, might look really fast. Our final processor for today
+is a budget build classic. The AMD Ryzen 5 2600, and 2600X. They're both selling for about $120, making them very compelling. Performance and price wise, they land right between
+the 1500X and the 4770K, but without the expense
+of motherboard woes of the Core i7. If you plan on doing
+any multithreaded work, the 2600 absolutely destroys anything else that we looked
+at, for bang for the buck. Now let's kick things up a notch, and see how our best value set-up here, handles 1440 gaming on our
+Corsair Xeneon monitor. My poor team, waiting for me to load this map. Let's see, am I going to end up with a team of people that know how to stay together, so that, you know, we can, we can live? Is there a pair of headphones nearby? Monitor looks great, so that's cool. I want this Overshield though. Okay. Other than very occasional
+hitches that we've seen, it's pretty good, like,
+what are we looking at? Hundred FPS average, 99% lows that are at 65? Like, not bad. Like, absolutely no excuse
+for not winning on this thing. (bangs desk) No. No. Oh damn. No. Can you still game on first-gen Ryzen? The answer is yes, as long as your teammates will
+wait for you to load the map. So what's our final verdict? I think it's pretty easy to say, that if you're going used, go for the Ryzen 5 1500X, or if you've got a few
+more dollars to spend, any second-gen Ryzen at, or around $100. It won't give you the best
+performance per dollar, but you will definitely
+save money in the long run, with DDR 4 memory, and a motherboard that
+you can carry forward, to a more powerful setup, once
+your NFT investment pays off. So you guys are looking
+for another video to watch? Why don't you go check out Why
+CPU Gigahertz Doesn't Matter, It's a good little rundown on why these performance
+differences are so wide.

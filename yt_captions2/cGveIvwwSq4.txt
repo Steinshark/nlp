@@ -1,0 +1,83 @@
+hello and welcome i'm james murphy and 
+today we're looking at one of python's   sharpest corners the plus equals operator. python is widely regarded as one of the 
+most intuitive programming languages   but no matter how intuitive 
+a programming language is it   will always have some features which 
+are a little bit subtle or confusing. in python one of those things is the 
+plus equals operator let's take a look. in this first example we're trying 
+to change one of the values of a   tuple but tuples are immutable so 
+this is a pretty obvious error. in this case we cannot change the 
+value of tuple of zero because tuple   is immutable note however that it's the 
+tuple that's immutable, not its elements. so in this case i have a tuple of pros and 
+cons which are both lists, you know pros of   subscribing and cons of subscribing, and even 
+though the tuple is immutable you can of course   get out the zeroth element, the 
+pros, and then add something to it. that's fine. you can see if i run it there's no errors. okay so the tuple itself is immutable but the 
+zeroth element of the tuple is a list which   is not immutable, so will this syntax allow 
+me to append another element onto that list? when i run the code i get the same error as 
+before telling me that i can't assign to a tuple. let's see what happens if we catch that error 
+with a try except and then print out the list. well we can see that it definitely hit the 
+error block but when we print out the list   it also appended the element, what's going on? i think most people definitely expect it to either   give an error and not append anything or to append 
+something with no error, so why is it doing both? well, sharp corner. this is, according to the 
+documentation, a "feature" not a bug. it has to do with the data 
+model and how plus equals   is supposed to work on different data types. in order to get a slightly better understanding   let's take a look at what plus equals 
+actually translates to under the hood. roughly this is what x plus equals y means. it means create a temporary,   call this function iadd for in-place add 
+and then assign the result back to x. when the left hand side of the plus equals 
+is an expression which is not just a simple   variable name then you can see that this 
+pattern expands out to something non-trivial. filling in x sub 0 here shows us 
+that this actually calls the get   item method of x and similarly putting 
+it back here calls the set item method. this is the reason that the list extend 
+succeeds but the tuple assignment fails. this first line happily grabs 
+the zeroth element from the list   and then extends it which is what 
+the iadd method will do for a list,   but when it goes to reassign the result 
+back to x 0 that's where the error happens. the exact same thing can happen 
+with something like x.val   but instead of calling the get item and set 
+item it will call the get attr and set attr. so if you have an immutable object which 
+contains a mutable object like a list,   then you can run into the same kind of trouble. okay so that's pretty wonky behavior. why is that a feature and not a bug? well actually even just basic 
+addition of integers depends on it. if i set x to be 1 and then i say x plus equals 
+1, i expect x to be equal to 2 afterwards. but in python integers are immutable, 
+i can't change a 1 into a 2. i have to point the variable x from 
+a 1 to a different place to a 2. you can see this by examining the unique id 
+that's printed out when i run the function. initially x's id is whatever 
+the id is for the built-in one,   but afterwards it has to be the 
+built-in id for whatever two is. that means that plus equals must have 
+changed the object that x points to. this is very different from many 
+other languages where users have   direct access to built-in 
+primitive types like integers. in python there is no division 
+between built-in primitive types   like integers and floats and all the other types. all types are treated the same and 
+therefore must have the same rules,   but it doesn't stop there it gets even weirder. look at the behavior of a similar example by 
+taking x to be an empty list and then appending   one thing onto the end of it using plus equals. we can see that this time x is pointing to the 
+same place before and after the plus equals. for lists which could potentially take 
+up a lot of memory this makes sense. if i had a long list i wouldn't want 
+to copy the whole list over into some   new memory location with one 
+more element of space on the end. for list it seems like the id is always preserved,   but as we've seen with integers 
+that doesn't have to be the case. that can get you into a lot of trouble if 
+you're not familiar with how python works. consider this example. here i'm using a bad list which 
+is a class that i wrote myself. i'm not going to show you the details just yet. bad list inherits from list and all it 
+does is change the add and iadd methods. what this code tries to do is create an empty 
+list, print out the list, append something   using plus equals, and then append something by 
+passing it to a function which calls plus equals. note here that both times i will be calling 
+the bad list's implementation of plus equals. the only difference in this case is that this 
+plus equals is called inside of another function. we have the following very surprising results. of course the list is empty before the append, but 
+after the append only the one two three is there. what happened to the four five six? we can see that the iadd method was indeed 
+called twice and yet only one of them succeeded. so what's going on? well looking at the implementation 
+of iadd it's just delegating to add,   which is calling the add method 
+of the parent list class,   so in this case it's actually making a new 
+list with the contents concatenated together. that explains why this plus equals 
+succeeded but this one failed. here bad gets reassigned 
+to the newly created list,   here l (ell) gets reassigned to the newly created 
+list, but l (ell) was just a local variable. it's exactly the same thing that would happen 
+if i was doing this with just integers. imagine that bad was the integer zero 
+and here i was doing plus equals. plus equals 1 would succeed here because it's 
+in the same scope and i'm reassigning bad, but   a plus equals 1 here is just reassigning a local 
+variable, that wouldn't change the outer scope. this is extra tricky because, aside from reading 
+the source code of every class that you use,   you have no way of knowing whether plus 
+equals will act this way or this way. in fact the python documentation says that 
+it's perfectly fine to act this way sometimes   and act this way other times. thankfully all of the classes that i know of   pick one or the other not both, 
+but theoretically it is possible. so if you are writing a class and you 
+want it to work with plus and plus equals,   make sure you do so very very carefully. i should also mention that the same applies for 
+any of the other augmented assignment operations   so: plus equals, times equals, or equals, 
+and equals, ... those kind of things. that's all i have on this topic. 
+i really encourage you to download   the code and play with these examples yourself. it can be really confusing at first but   once you understand what it's actually 
+doing then it simplifies dramatically. and don't worry, this actually rarely comes up in   real code so it's not as big a deal 
+as this video might make it seem. thanks for watching, if you liked 
+the video please consider subscribing   and as always slap that like 
+button an odd number of times.

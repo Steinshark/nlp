@@ -1,0 +1,113 @@
+- YouTube has a problem. Spam. From crypto scams to health
+supplements to free Robux. It just keeps getting worse
+with each passing day. And Google clearly has
+no idea how to fix it. All of that changes now. The community restored the dislike counter and the community is coming
+to the rescue once again, led by the unlikeliest of heroes. Listen up guys, because this is important. Thanks to GlassWire for
+sponsoring this video. Are you lagging out while gaming? Use GlassWire to see what apps
+are wasting your bandwidth and causing your games to lag. Get 25% off today using offer code Linus at the link down below. (upbeat techno music) YouTube spam takes many forms, but there are some patterns with most of them promoting crypto,
+investment, alt health products, or perhaps most infamously,
+paid live cam sites, which theoretically should
+make them pretty easy to block. So why doesn't YouTube bother? The truth is they do and poking around in our desktop dashboard, it appears to be working pretty well. Just about everything
+that is obviously spam is filtered out and very few
+false positives get caught up unless they're violating
+our blocked words list. But there's an inconsistency here that I just can't wrap my head around. On mobile, there is
+perfectly reasonable stuff that's getting held for review,
+and I just have no idea why. And it's actually led to some
+really confusing situations with fellow creators. Like this incident where the return YouTube dislike extension
+author's post wasn't showing up, even in our held comments list. We've also seen unhappy
+viewers over the years who have accused us of
+censoring them in the comments when we're totally not. We just never saw them. This unreliability combined with the lack of a dislike counter on comments means that as the bots have improved, our markers to identify
+them and root them out, have gotten worse. Thanks YouTube. And here's the one thing we
+need to get out of the way guys. Don't mock the people
+who fall for these scams because shaming people only
+empowers the scammers more. So if YouTube is not
+going to address this, what we need is consistent
+filtering with a way for creators to keep on top of it or real
+people are going to get hurt. Now it's time to meet our hero. - What if I told you that I
+can actually convert a DVD to a Blu-ray disc, take
+your big stack of CDs and get a blue marker of some kind. - ThioJoe used to run
+the tech tips equivalent of how to basic and those
+videos instructing people to run their co-ax cable
+through a CD for free cable TV, or tape a battery to their ethernet cable to triple their internet
+speed are still up. If you want to go back and watch them. But Mr. Joe, seeing how many
+people were genuinely upset when they wasted their time
+trying to follow his guides, realized that he had a power. And what he really wanted to
+do was use that power for good. So for years now, he's
+actually been focused on uploading real tech tips. And one of his best to
+date is an open source app that he created that will
+scan and remove spam comments from a YouTube video or even
+an entire YouTube channel. How does it work? It's dead simple. In fact, so dead simple
+that it is shocking that YouTube hasn't bothered
+to implement it yet. In its original most basic form, you would choose what you want to scan, enter the channel ID of the spammer and boom,
+(Linus snaps) you get a read out of the
+comments that are about to be deleted just in case. And with another keystroke
+you'll wipe your videos clean of that spammer. But Mr. Joe didn't stop there. He recently released an
+update with an auto smart mode that recognizes and selects comments based on some secret sauce that
+weights how spammy a message is based on the username, comment text, and some other techniques
+like how many times that comment has been repeated. In fact, when you run the script, it'll show you how many of each sample was found by each spammer. You can then delete the messages and ban the accounts all at once. Now, the exact strings and
+patterns that the script searches for are obfuscated. This is to prevent spammers from easily developing a way around it. So they're not something that you can tune and tweak on your own. But if all else fails, you can always do it manually as before. There are options to scan
+usernames, comment text, or both for criteria of your choosing. So if your comment
+section was getting rated by real users, for example, you could select and remove
+the offending comments with ThioJoe's tool. Then there's filter modes, which filters special non-ASCII
+characters from usernames that are often used to
+impersonate content creators. This is one that really blows me away that YouTube hasn't done yet. As well as nuke mode. What this one does is make it
+so that only numbers, letters, and spaces are allowed in usernames. Now that's probably gonna be a last resort for most people seeing
+as emoji are popular and languages other than English exist, but it is called nuke mode and it's colored all red for a reason. I like how the little table
+flip Kaomoji uses characters that would actually be
+filtered out by this option. That's a nice touch. In ThioJoe's experience, the
+false positive rate though, for the smart auto mode is roughly zero, which is why it's the default mode and the one that I'm
+going to use right now. Okay, YouTube spammer purged 2.8.0. Here we go boys. - [Anthony] Woo. - Currently logged in
+user, Linus Tech Tips, channel ID, continue as this user? Yes. This is all configurable by the way, all you got to do is go in and say, hey, I don't want to confirm
+which user I am every time, little things like that. Scan recent videos for a channel. Scanning your own channel just hit enter. Enter the number of most recent, well let's do two. Two? - [Anthony] Two?
+- Two. Total number of comments to scan 2,980. Boop. This mode is a spammers worst nightmare. Now ThioJoe did actually
+share with us the logic that it uses. And it's pretty smart, actually. I have very high hopes for this. Oh, there they are. Okay. Ah, spam comments, ready to display? Also save a log file? Yes, please. Wow, oh boy. Oh, we got some good ones
+here ladies and gentlemen. LoveMe says only for fans 18 years old. Loveme.uno/stormy. I know lots of people, real people who post that on my videos. - [Anthony] I always do. - This should be self-explanatory, do not go to any of these domains here. Like no, not recommended. This is one that drives me crazy when the spammers wanna (beep) something, whatever these other characters are. When they just copy a top upvoted comment that makes it actually kind
+of hard to tell sometimes. MW posted this YouTube link 27 times. How do you want to handle
+the matched comments above? To exclude certain authors
+type exclude followed by a list of all the
+numbers in the sample list? Oh, well that's easy. To delete all of them type delete exactly. See you later. Also ban the spammers? Yes. Now this is interesting. It's checking to make sure
+the comments are gone, which is an optional step
+to save time and API quota. We'll talk about that a bit more later. Program complete, press enter to exit. (upbeat music) That is so cool, which is
+a lot more than I can say for YouTube's own mobile
+filters, like I'm stoked. But Linus, what does
+this have to do with me? We could use this tool
+to seriously cut down on comment spam on YouTube site wide. And I don't mean we as
+in content creators, though content creators
+should get involved. I'm talking about you and me, or like right now you
+can download this app. And after a little bit of setup, scan any video you want on YouTube. Now you obviously can't delete comments from someone else's channel,
+but you can mass report them. So if enough of these
+comments get reported by enough people they should be removed and they should give YouTube's algorithm some clues as to how to identify and delete them automatically. The idea is that if enough
+community members pitch in, they can literally clean
+up the comments sections of their favorite creators with nothing but their keyboard and
+an ice cold beverage in an LTT water bottle from LTTstore.com. So then here's what I'm gonna do. I'm gonna set up this script
+and by, I mean, Anthony. Hey, thanks, Anthony. (Anthony cries) I'm gonna set up the
+script to run on a schedule as often as we can get away with. Now by default YouTube limits each user to 10,000 API requests per day. That's not that much in
+the grand scheme of things, but Mr. Joe actually thought of this. We can take a page from the spammers book and create an army of dummy accounts that we then grant moderator status to. They can't outright delete comments, but they can hold them
+for review if we run up against our own API limit. This should help keep our
+comments section pretty clean. That is at least for the first few days after a video is released. Making it this easy, not
+to mention open source, means that content creators
+across the YouTube spectrum can spend less time pulling
+weeds while being more confident that they're keeping their audience safe. It truly is a win-win. And yet another example
+of the community coming to the rescue when YouTube couldn't. Or wouldn't? Honestly, I'm kind of
+leaning towards wouldn't because while I admire
+ThioJoe's gumption here enough to give him this NFT of
+a certificate of awesomeness. Here you go. He's a self-admitted novice at this just one dude who wrote a
+simple script that happens to be more effective
+than Google's filtering. To be clear, it's not perfect. It's not gonna prevent spam. That is at least until it
+trains YouTube's own filters. And it is limited to those
+10,000 requests per day, but it could make spam take more effort, which could reduce the amount
+of spam that's produced. The only real reason I
+can think of that YouTube wouldn't do this themselves is that it's computationally expensive, but we can obviously run it on
+a desktop PC with no issues. And our servers seem
+no worse for the wear. So I don't know what to say. Other than that, YouTube
+either can't or won't and only they can say which one it is. Speaking of servers, by the way, get subscribed because
+we've got some data recovery to do on one of our servers. And it's gonna be a bit of a nail biter. For now we'll have both the
+GitHub page for this project and ThioJoe's walkthrough
+on how to set it up linked for you guys down below. Thanks ThioJoe. This video is brought to you by Manscaped. Manscaped provides an
+all-in-one grooming kit that's got you covered from head to toe. Their performance package 4.0 features their awesome Lawn Mower
+4.0 waterproof body trimmer, their Weed Whacker ear and nose trimmer, plus a whole lot of other goodies. For a limited time, you get all this plus two free gifts, the shed travel bag and a pair of Manscaped
+anti-chafing boxer briefs. Visit manscaped.com/tech or click the link down below
+for 20% off and free shipping. Thanks for watching guys. Go check out our video on
+restoring YouTube's dislike button for another case where the
+community came to the rescue. It's a little less
+straightforward than this one, but I'm doing my part anyway.

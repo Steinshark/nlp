@@ -1,0 +1,111 @@
+Welcome to mCoding, where we try to get just a little 
+ bit better at programming every episode so that we can have an excuse for 
+writing on the window with dry erase markers. I'm James Murphy, available 
+ for Python consulting. Check me out at mcoding.io. There's one feature of Python 
+ that has not aged well. So poorly in fact that even Python's 
+ creator, Guido van Rossum, wishes that it was 
+ never added to the language. That feature is the `else` clause 
+ of `for` and `while` loops. Unlike `if-else`, `for-else` and `while-else` 
+ are very uncommonly used. Honestly, comment now if 
+ you've never heard of these before. So first off, what does 
+ this `else` clause actually do?   The `else` clause of a `for` or `while` is 
+triggered after the loop terminates normally,   meaning without a break or exception. So in both of these cases, 
+ it'll print 0, 1, 2, "DONE". Whereas in either of these cases, it'll 
+just print 0, 1 and then it will not print "DONE". Also, if there are no elements 
+ to loop over, this is still considered a normal end 
+ of the `for` or `while` loop. So, the `else` will still be 
+ executed in both of these cases. By now I hope that you're asking 
+yourself something along the lines of: "Okay... why is this called else?" I mean, if something else something 
+ makes sense. For something else something or while something 
+else something... What does that really mean? And why does it correspond to this behavior 
+ of executing if there was no break or exception? Way back in the day, Python was 
+ much less popular. And it was not expected to be the 
+ only programming language that you knew. It was basically understood that anyone 
+ using Python was already familiar with C or C++. And in particular how compilers
+ implemented while loops in C/C++. In C and C++, a while-loop could  
+just be implemented in terms of an if check with the same corresponding 
+condition and a go-to statement. You label just before the start of the loop, 
+evaluate the condition. Run the body of the loop and then 
+ go back to the start to repeat the loop. So believe it or not, the `else` in 
+ Python's `while-else` is actually this `else` in the if-go-to implementation 
+ of a while-loop. If there was a break in the while-loop, that would correspond to a go-to to 
+the corresponding end label. At the time it was expected 
+ that this would be intuitive to users. That idea obviously didn't 
+ age that well. But like it or not in modern Python 
+ that is what it means. And likewise, the `else` in `for-else` 
+was meant for consistency with while.   Alternatively you could think about it in terms 
+of how `for`s are implemented in terms of `while`s. So there's the first annoyance. The modern Python programmer doesn't really 
+ think about for and while loops in terms of go-to's. Python doesn't even have 
+ a go-to that's accessible to you! There was at some point some discussion that maybe it should just be called 
+ no-break instead of else. This is clearer and more in 
+ line with what it does. So there'd be way less confusion 
+ around it. But at this point, we can't 
+ really change the else. For reasons we're about to talk about you 
+shouldn't really be using this anyway. But if you do choose to use 
+ the else clause, at the very least,  include a comment 
+ to help jog the reader's memory. So theoretically, when might 
+ you actually be tempted to use this? The most common situation 
+ that I see is to avoid a single extra "unnecessary" 
+ flag variable. Here we have a 
+ simple index implementation. index takes in a sequence like a list and a target value and tells you 
+ where in the list that value is at what index. We create a found flag to tell us 
+ whether or not we've found the target element. then we loop over the sequence. If we find the value, then 
+ we set found to true and break. Then at the end we either raise or return the 
+index that we found the element at. The value of found at the end of the loop is always equal 
+to whether or not we broke out of the loop.   Since we can detect whether 
+ we broke out of loop using a for-else, we technically don't need the 
+ found variable. Not found. Is just when 
+ we broke out of the loop normally. So we can just use else. Cleaner and simpler, right? Well, simpler than that other 
+ implementation. Aut why don't we just take this return. 
+ And put it right where the break is? Then we don't need an else at all. And this is the second major reason why 
+ for-else and while-else have aged so poorly. The vast majority of the time, you can 
+ get rid of a for-else or while-else just by refactoring. Take your loop that you're going 
+ to break out of. Pull it out into a function like 
+ what we have here. And replace breaks with returns. Of course, it's not always possible. I know you can probably come 
+ up with something. But in the vast majority of cases, 
+ it is possible. And it's the same story for 
+ the while-else. You know, writing this example, I actually 
+ realized how little I actually use while-loops. I pretty much always think in terms of containers and iterables 
+ and things that you use with for-loops. Okay, so here's the situation. Besides while-true which I do use that a while-loop 
+ is actually better suited than a for-loop. I start out at some time and want 
+ to do work for five seconds. While the current time is less than the target time,  
+I do some work and then I sleep for a little bit. Let's just suppose that at some time 
+ there's a possibility of some random error occurring. Not an exception, just some way 
+ of detecting that an error has happened. We break out of the loop 
+ if an error occurs. And once again we use a flag to keep 
+ track of whether or not we broke out of the loop. Then we can either handle the error 
+ or print out a "DONE" message. If we run it, we see 
+ working, working, working, working. And then after three seconds, 
+ we hit an error and handle the error. Once again, theoretically this error 
+ flag is unnecessary. And we can get rid of it using 
+ a while-else. We do that like this. If there was no break, that 
+ means no error. So, we just print our done message 
+ and return. If there was a break, then we skip 
+ the return and handle the error. Personally, I think this is way less readable. I would prefer to just have the error flag. All this is done in the name 
+ of performance. But this is going to be a huge readability 
+ cost for what extra performance. Really! Saving one extra boolean? The performance benefit is going to be 
+ minuscule at best if you can even measure it. The only time something like this 
+ could make a difference is if you were doing it inside 
+ of a hot loop. And even then the savings are 
+ still going to be less than a percent. So please join me in actively avoiding 
+ for-else and while-else. Personally, I rarely see for-else 
+ actually used. And I have not once ever seen 
+ while-else used in production code. Although even the creator of Python
+ thinks that it was a bad idea that it was ever put into 
+ the language in the first place. It's probably never going 
+ to be removed. That would be a major backwards 
+incompatibility requiring a Python 4-0 release. From the Python 2 to Python 3 transition, the Python community already 
+ learned how much of a hassle this is. So in the future, it's unlikely that 
+ it'll get removed. But there are still some things 
+ that I would recommend for you. Of course stop using it. And tell 
+ your friends and coworkers to stop using it. And politely suggest your DevOps 
+ or Python infrastructure team to either turn on or create a linter 
+ rule to prevent you from doing this. If you'd like to hear more about creating 
+ your own linter rules, check out my video on the topic. And finally, I just want to say 
+ that all this bad stuff about `else`s is only for for-else and while-else. I have nothing against if-else 
+ or try-except-else. In fact, I think try-except-else is 
+ actually very underutilized. Anyway, and as always thank 
+ you for watching! Don't forget to like the video, comment 
+ and subscribe for more Python content! Special thanks to my patrons and 
+ donors for supporting me! I really appreciate the support! If you especially like my content, please consider becoming 
+ a patron or donor! 😊

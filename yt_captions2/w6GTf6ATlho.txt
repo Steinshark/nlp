@@ -1,0 +1,132 @@
+apple never learns they released yet another 
+laptop with no freaking cooler in it touch it   and you'll burn yourself do any real work on it 
+you'll probably burn your whole house down at   least that's how the internet reacted when apple's 
+redesigned m2 macbook air hit the scene but here's   a question for you any situations will you find 
+yourself in where the heat is a real problem and   for that matter would a similarly priced pc in 
+the same form factor even perform any better   did apple get away with this seemingly obvious 
+design faux pas and if they did do we need to   change the way that we think about laptop cooling 
+we set out to answer all of those questions and we   set out to tell you about our sponsor simplemdm 
+simple mdm is a ridiculously simple apple device   management for it enrolling your company's apple 
+devices and keeping them up to date doesn't have   to be frustrating try it free for 30 days 
+on unlimited devices at simplemdm.com linus there's been a lot made of apple's cooling 
+solution for the m2 macbook air or more   accurately their lack of one instead of something 
+anything more substantial apple decided to   basically attach a thin metal heat spreader like 
+you'd find on a stick of ram to the soc in an   attempt to soak up some heat temporarily before 
+transferring it to the chassis which takes on   the role of a heatsink they could have gone with 
+a finned radiator a fan even a thicker piece of   metal orb some combination of the three but no 
+they settled on some bits of paper thin stamped   sheet aluminum none of which would actually be 
+a problem if the soc stayed nice and cool except   it doesn't and like for all electronic devices 
+this is absolutely a bad thing and while the m1   airs performance did suffer due to poor thermals 
+it wasn't quite to the same degree pun intended   and this is why your typical uses for an 
+entry-level macbook things like content   consumption web browsing photo editing or maybe 
+even light video editing they all have one big   thing in common they are bursty in nature and 
+they're unlikely to put the soc under any kind of   sustained load what that means is as long as you 
+have enough thermal mass to absorb your momentary   heat spikes you can count on long idle periods to 
+dissipate it at your leisure well the m1 macbook   air managed to strike this balance pretty well 
+performing at or near its full capability without   overheating the chassis unless you were to fire 
+up something like cinebench blender or a 3d game   unfortunately that is not the case this 
+time around at least on the surface   apple has tuned the m2's thermal controls to 
+maintain that same 50 degree surface temperature   target as last time which is required by law but 
+almost immediately after being hit by any sort of   load the m2 soc itself hits a whopping 99 degrees 
+celsius because even the pathetic cooler in the   m1 macbook air has substantially more thermal 
+mass than this time around i'm frankly pretty   disappointed now apple's response to this would 
+be pretty obvious well these are silent machines   they're not four pros get a macbook pro if you 
+want to actually put a load on your computer   but frankly that's not a perfect solution either 
+because until they refresh the m2 macbook pro you   are going to be stuck with either a super toasty 
+chip or the old touch bar design with worse io   on the bright side the m2 air gets magsafe to 
+go with your thunderbolt 4 ports and an overall   design that's reminiscent of the 14-inch macbook 
+pro it is thicker than the thinnest point of the   previous gen airs wedge but the new flattened 
+design is thinner overall and from our point of   view feels a lot nicer to hold in the lap and 
+that meg safe charging port is capable of fast   charging up to 65 watts if you pick up either 
+the full gpu model or you pay an extra 20 bucks   over base you also have the option by the way of 
+choosing a 35 watt dual type-c charger instead   if that better fits your needs and from using it 
+we can legit see how it could be super handy to   have for travel compared to the single port fast 
+charger the only major difference between the air   configurations that directly impacts performance 
+is the storage previous gen m1 macbook airs 256   gig variation used twin 128 gig chips to achieve 
+that capacity that divides the workload between   those two chips and makes it much less likely that 
+a read or a write will stall while waiting for   another to finish the m2 airs 256 gig variation 
+meanwhile makes use of a single 256 gigabyte chip   that means that the nand flash will be in a weight 
+state more often and you can think of this kind of   like running single versus dual channel memory in 
+practice this means that the lowest capacity model   gets roughly half the performance of the other 
+storage tiers that make use of multiple chips   although you guys might not expect this i kind 
+of feel like i have to cut apple some slack here   most people are not going to notice the difference 
+between 1.5 and 3 gigabytes per second and outside   of synthetic storage benchmarks the cpu is often 
+going to end up being the bottleneck at either of   those speeds there are situations where that might 
+not be the case though like video editing prores   raw footage but they also aren't as likely to come 
+up on the air compared to a macbook pro the part   of that is the way that the air's performance gets 
+kneecapped by its lack of cooling which is another   problem that apple created i'll show you what 
+i mean though starting with gaming because it's   always kind of funny to me when people complain 
+about gaming performance on a machine that was   clearly engineered for browsing facebook in 
+order to make this a fair test given the cooling   solution we're running each of these twice to 
+warm up and then finally taking our results from   a third run and well yeah the cooling solution 
+on the m2 macbook pro is good for a whopping   35 increase in fps in every test except for total 
+war warhammer 3's battle benchmark where the lead   shrinks to just 30 percent in fairness to the m2 
+macbook air however even with its awful cooling   the competing dell xps 13 doesn't beat it by a 
+significant margin in any of those tests oh but if   you want something that does beat the competition 
+you can check out our screwdriver on lttstore.com   it's now independently tested and verified moving 
+on to cinebench the m2 air loses about a thousand   points in its score over a 10 minute run compared 
+to a single run giving you some idea of how   your performance might degrade under heavy load 
+meanwhile the m2 pro retains basically the same   score geekbench being a shorter benchmark shows 
+basically no difference between the m2 macbooks   so thanks for that but that doesn't mean it's an 
+entirely useless benchmark because interestingly   we can see the difference in gpu performance 
+between the m1 and the m2 base models and it's   roughly in line with the additional memory 
+bandwidth provided by the m2 soc of course   unless you work at our testing lab you probably 
+don't spend all day running benchmarks so let's   take a look at real world workloads starting with 
+an adobe lightroom export and wow not only is the   m2 air faster than the m1 air it's actually rough 
+roughly in line with the pro class machines with   active cooling the m2 also picks up a significant 
+winning compressor thanks to the addition of pro   resin coating engines on the base model soc that's 
+over 475 percent faster than the m1 cpu fallback   h.264 isn't significantly different however 
+indicating that that encoder is more or less   identical between the socs and final cut pro can 
+use up to three of these prores streams on the m2   air macbooks which is more than the m1 air could 
+handle and one less than the pro pretty impressive   if you're a da vinci resolve user well you're 
+going to want to get a ram upgrade regardless   of the rest of the performance numbers if you're 
+using an air or a pro because 8 gigs isn't nearly   enough with 24 gigs the air managed a respectable 
+40 minute export with the pro running about eight   and a half minutes faster than that so overall 
+the base model m2 air is roughly 35 percent   faster than its m1 counterpart and the higher end 
+m2 air is roughly 21 slower than the m2 pro though   the biggest outliers are mostly in gaming which i 
+think for many mac users is not terribly important   if we look purely at productivity then it's 
+within nine percent which is frankly extremely   impressive considering the monstrous difference in 
+cooling capacity the main difference for this as   we pointed out before is that most of these real 
+world use cases just aren't going to be continuous   loads that will throttle the heck out of the chip 
+i mean even davinci resolve ends up being more of   a stop and go affair in terms of cpu usage it's 
+not stop and go float plane though check out our   recent exclusive where we try out some norwegian 
+hockey pulver while we run our battery life tests   for our battery tests we calibrated each laptop to 
+roughly the same output as 50 brightness on the m2   air and we let them rip on a youtube video the 
+first to follow was the xps 13 with the m2 air   falling second though at nearly double the battery 
+life difference in battery life between the m1 and   the m2 macbook airs seems to be primarily due 
+to the larger brighter display as we've seen   other outlets report worse battery life at lower 
+brightness as well but that's not to say that the   soc makes no difference the m2 macbook pro ended 
+up with a result over an hour and a half worse   than the m1 pro model and those share the same 
+display which seems to suggest the m2 soc can   draw more power than its predecessor assuming that 
+adequate cooling and power budgets are allotted to   it overall still excellent battery life for both 
+but you are giving up a bit of run time for the   extra performance of the m2 soc all of which is 
+to say that it very much depends on what you do   with your laptop to determine whether the cooling 
+design flaw is a fundamental one that kills your   experience or is merely a minor annoyance and 
+you wish they just put a little fan in it it   seems like in most real world workloads it's 
+just not going to suffer that much and at a   starting price of twelve hundred dollars for the 
+air it's likely that a lot of folks are in fact   going to use it as a glorified chromebook as for 
+the 13-inch m2 macbook pro i am having a hard time   seeing the benefit considering how close the air 
+comes most of the time yes when specked in a way i   would consider appropriate it's the same price as 
+the air for better performance but at that point   you're only 300 out from a similarly spec 14-inch 
+macbook pro making that the more attractive   prospect for now in my humble opinion for your 
+extra money you're getting a much faster cpu and   gpu a larger 120 hertz liquid retina xdr display 
+an additional thunderbolt 4 port and dedicated   hdmi and sd card readers i'm not about to pass 
+judgment if you don't care about any of those   things but for my money that is more than worth it 
+regardless of your priorities i certainly wouldn't   suggest going with the cheapest m2 13-inch macbook 
+pro if you care that little about ram and storage   you would do just as well with the cheaper air and 
+it would be slimmer and silent we're going to have   all of those linked down below that gives the m2 
+macbook air my vote between the m2 max currently   on the market and if you want to get real work 
+done well you can either spritz compressed air   on whenever you fire up something intensive or 
+save up a little more and wait for the 14-inch m2   pro you won't have to wait for our sponsor though 
+privacy privacy is a free service that gives you   control over who can charge you and how much they 
+can charge by using virtual payment cards you can   directly manage your free trials your one-time 
+purchases or your monthly subscriptions all   from your browser privacy helps you keep track 
+of what you're subscribed to and helps ensure   that you aren't being charged anything extra you 
+can set spending limits pause your cards and even   close them out right anytime you want to and if 
+you're the victim of a fraudulent transaction   privacy.com automatically declines the transaction 
+and notifies you privacy.com is pci dss compliant   uses aes 256 encryption and offers two-factor 
+authentication plus since they make their money   from merchants and business accounts there's no 
+cost to you to use it personally so check it out   today at privacy.com forward slash linus and sign 
+up for an account new customers automatically get   five dollars to spend on their first purchase 
+thanks for watching guys go check out our   initial review of the m1 air the platform's not 
+mature yet but boy has it ever come a long way

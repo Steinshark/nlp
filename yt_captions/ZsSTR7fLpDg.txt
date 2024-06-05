@@ -1,0 +1,98 @@
+- Did you know that your mouse
+isn't getting the bandwidth you need to be the best gamer you can be? We love when manufacturers
+tell us what we need. Thank you, Mr. Business, I'm sure your infinite
+wisdom is looking out for all of our best interests. Just kidding. Over the years, marketing
+has tried anything they can think of to get you
+to buy by their new product. (crowd cheering) - [Man] Oh my (beeping). - And when ASRock came out
+with their Riptide motherboards featuring Lightning Gaming Ports for your high pulling
+rate mouse and keyboard, we just had to find out if it was real. We know our sponsor, NordPass is real. Store your passwords in a single place and log into your favorite
+websites with just a click. Keep your information safe with the NordPass Password Manager. Learn more at nordpass.com/linus. (bright music) (electronic beeping) Now, first things first, we don't expect these ports to matter. USB 3.0 has a couple things going for it. Full duplex data transfer and
+max speeds of five gigabit. This means it can send
+signals back and forth at the same time and it
+can do so very quickly. This has been great for modern hardware as we plug in more and more devices that use more and more data. But how much data does a mouse
+or keyboard actually use? Well, a standard mouse sends
+about a three byte packet every time it's pulled
+to calculate position and whether or not a
+button is being pressed. If you're pulling rate
+is, let's say 1000 hertz, that's 3000 bytes of data every second. To some, this may seem like a lot, but remember that even USB 2.0, which we've had since April of 2000, has a theoretical max signaling
+rate of around 60 megabytes. If a 1000 hertz mouse is sending
+less than three kilobytes of data per second, which is absolutely nowhere
+close to the max signaling rate, why do we even care? Meet Razor's Viper 8KHz. Where is it? Yeah, here it is. This is one of the very
+few eight kilohertz mice on the market. Now, just like your monitor
+having a high refresh rate is good for getting the
+edge over your opponent, a higher pulling rate
+mouse and keyboard are too. The higher the rate, the lower
+the click to photon latency you should experience. Now this particular mouse
+boasts about a 0.125 millisecond motion and click latency, making your actions even more near instant than with a traditional
+1000 hertz gaming mouse. The jump to eight kilohertz
+makes our data usage shoot up to 24 kilobytes per second, but that's still well
+under our USB limits. Even if we add an eight kilohertz keyboard on top of our eight kilohertz mouse and double a data rate to
+48 kilobytes per second, we're still well within limits. And most newer devices these days are using USB 3.0 or later anyway, with newer motherboards
+having increasingly robust IO featuring multiple 3.0 ports. However, the issue lies not
+with the ports or the cables, but with the USB controller
+present on each board. The data comes in from your device through a cable to the USB port, then to the controller and CPU. The maximum bandwidth is
+usually a little under what the theoretical
+maximum of the cable is, with most controllers getting around 400 megabytes per second in 3.0 If you have only one controller, eventually all of that
+traffic is going to add up, depending on how many
+devices you have connected and what they're doing. But, even if you have a file
+transferring to a thumb drive, maybe you're writing data
+to a DVD or Blu-ray burner, there's a mic hooked up to record audio, sound being output to a headset. Chances are you're still fine hooking up your fast gaming peripherals and using cable ties from LTTstore.com. Not according to Asrock, though. Meet the Riptide. This is the X570 model, and it's a decent board for the price. DDR4 up to 5,000 megahertz, 10 Phase VRM, three PCI express slots, lots of SATA and M.2 ports. Yep, it's a modern board, all right. However, what we're interested in are the Lightning Gaming Ports here and here for your mouse
+and keyboard specifically. Let me read you the little description they have on their website,
+and patent pending of course, aimed for die hard gamers and enthusiasts! Lightning Gaming Ports are sourced from two different
+controller interfaces that allow gamers to connect
+their high-speed mice and keyboard with the
+lowest jitter latency and win the best performance. They've even got a little graphic to show what they mean here. Having two controllers sounds cool, and it might be a feature
+we'll see come back more often in the future, but marketing it as a gaming gimmick is dumb. With modern CPUs and USB 3.0 and greater, pulling rate issues are
+simply a thing of the past. We got Kyle, one of our engineers, to solder on the connections
+needed for our LDAT system from Nvidia and check the
+click to photon latency using the fastest mouse
+and keyboard we have, at eight kilohertz and four
+kilohertz respectively. Speaking of keyboards, make sure you get subscribed
+so you don't miss out our upcoming video on the DataHand. What is it?
+(bell dinging) Exactly. Guess what? Regardless of which ports we use, the results were the same
+or within margin of error, whether we added an extra keyboard input while firing off a hundred clicks or not. Right ports, active use,
+about 49 milliseconds. Wrong ports, 49 milliseconds. Right ports, 49 milliseconds. One right, one wrong, 49
+milliseconds every single time. But let's try it, you know, just to make sure that
+in a real world scenario, with a lot of more random input, your USB ports aren't going to cause you to miss that crucial headshot. All right, let's let's pull
+this back a little bit. I don't know wanna.
+(box falling) I'm just gonna play CS:GO first. Man, for a little while I
+was playing with a friend and the friend was in Finland, so I was playing with a bunch of Russians and it's like 300 millisecond lag. Wow, I got all the money. All right, let's go with the AUG. The latency feels pretty good. Like everything I'm doing is
+pretty much instantaneous. All right, well I'm not
+noticing any hitching or anything when I'm moving around, especially not like pressing
+buttons on the keyboard. I would expect there to be a difference if there's a difference,
+I would be able to see it with this monitor since
+it's like 360 hertz, if I'm not mistaken. Yeah, so the overall
+experience I'm having right now is pretty much the same
+as the experience I had when plugged into the USB 3.0 port. Oh, right, sorry, the
+Lightning Gaming Ports. Yeah, this is the plebeian USB 2.0 ports that you'd normally probably
+want to plug your keyboard and mouse into because they
+don't need that much data. Man, this game mode is kind of weird 'cause everybody's everywhere. Xbox. Oh yeah, it is that patch. Casual dust. Should be a little more tactical and less frenetic in this case. Which, I mean, I don't know
+if that's better or worse for like twitch reflexes. But I can't hear anything, so it would help to know
+where everybody's coming from, generally. That was not a headshot, but
+it was what I was aiming at. Also not a headshot. So I'm not clicking heads. I don't think this sensitivity is quite what I'm used to
+either, but it's closer to it. Actually, one thing that's kind of weird about having a really high refresh rate is every little twitch that you make, whether you mean to or not, is registered. So like, as I'm trying to aim, like I'm constantly trying to readjust. Yeah, let's try a different one. Just a second. Yeah, there he is. Yeah. I'm on the 2.0 ports. That's why I'm dying right now. (man laughing) Here we go, I got some health. All right, let's switch it over to the Lightning Gaming Ports. 'Cause like so far, I
+haven't been dropping inputs. I haven't noticed any hitching. My aiming's been okay. What's the mouse cursor doing there? Yeah, I'm not noticing
+a big difference here. - [Man] Are you surprised anyway? - No. I mean, we might
+see a big difference if we were like saturating the
+bandwidth of the controller, but that's not what
+they actually advertise. Like they advertise a
+stupid little, oh no, you're pressing keyboard
+buttons and now your game is, your mouse is no longer accurate anymore. It's skipping around every
+time you press the W key. Your mouse needs to wait. It's not quite how that works. Like even if it does have to wait, even if they like maybe they
+have an oscilloscope thing where they actually verified
+that it makes a difference, if it doesn't make a difference
+in frames in your game, does it actually make a difference? And as of right now, does not appear to be making a difference. I don't know, maybe you
+could convince yourself out of placebo that you're getting a better gaming experience, but, yeah, I'm not calling BS. This graph though, that's BS. Unlike our sponsor, Crucial. Thanks to Crucial for
+sponsoring today's video, Crucial is making high
+quality external SSDs more accessible with their
+X6 and X8 portable SSDs. The X6 is Crucial's ultra portable SSD that holds up to four terabytes and has speeds of up to
+800 megabytes per second. Want something even faster? The X8 holds up to two terabytes and has speeds up to 1050
+megabytes per second. They work great with PCs, Macs, consoles, Android, and more. Both are durable and tested against drops and extreme temperatures. So you can take them with you
+wherever you go without worry. With over 20 years of
+experience in the industry, they make tech that you can trust. Get your Crucial X6 and X8 portable SSDs using the link in the
+video description below. Well, there you have it.
+(upbeat music) Another example of why you
+shouldn't just buy products with random gaming labels on them. Do you have a better application for multiple USB controllers
+on a single board? I can think of a few. Let us know in the comments. And if you liked this video,
+make sure to check out our How Motherboards
+Work - Turbo Nerd Edition for a little bit more information on, well, how all this works.

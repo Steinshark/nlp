@@ -1,0 +1,120 @@
+- Whoa. Okay. Look at that fan hitter
+that was mind blowing. We use upscaling to enhance
+the quality of everything from photos to games, to
+nonsensical movie plots but perhaps the most common use is the restoration of
+old or degraded videos. Now the most basic upscaling techniques work by sampling each pixel
+and then multiplying it to match the desired new resolution, but that's only going to get you so far and it certainly won't generate
+the kind of result we saw with the 4K 60 FPS remastered upload of Rick Astley's, Never Gonna Give You Up. So to learn more about
+how a 720P 30 FPS video, managed to look this good, we reached out to Topaz, makers of the machine learning
+assisted upscaling software used for that project, and we used it to attempt a restoration of my first YouTube upload. My name is Linus Sebastian and today we will be looking
+at the Sunbeam Tuniq Tower. (intense music) As you saw already, the results are uneven but there are some really
+interesting reasons for that and on a slightly less challenging, but equally classic video, we managed some really amazing results, and we did it on the
+MSI Creator Z16P laptop that they provided
+along with a sponsorship of this fun and educational project. You can check this puppy out, down below. Now using software like Photoshop to de-noise and upscale a still
+image is relatively simple, especially for a talented digital artist but video it's a whole other beast. Not only are you now
+dealing with thousands or even tens of thousands of frames but if you want to target a
+modern video resolution like 4K you could be attempting to create literally millions of pixels
+that weren't there before. Are you ready? This is gonna be fun, I get to see it now. 21 gigs? Yeah, but 21 gigs you're trying to take five megabytes and turn it into 21 gigabytes. This is the opposite of file compression. 7-Zip needs this function. We make your files 2000 times bigger. Oh God, this is nightmare fuel. I think a deep fake of a still might have actually been better. It looks like it's, (fingers clicking) you know those Photoshop filters that turn things into a painting? What is my hand doing here? What is this? You know what It looks like? It looks like Tomb Raider era graphics. Were there lines on my shirt because it had no idea what to do? My hands look like they're
+from Half-Life one. My mom is like over here. What's not really fair though is I'm not actually comparing
+this to the original video. Ah, crap. (upbeat music) How catchy is that? Welcome to NCIX Tech Tips. My name is Linus Sebastian. You know, looking at the original video, makes me look at the upscaled
+one a lot more favorably, it was really bad. You know what? The copper heat pipes look better, and the shirt in certain spots, to be clear I am not
+saying this is perfect. In certain spots it is sharper. This looks sort of better actually. The one good thing I'm taking
+away from this is that, I think my hairline was
+always this receded then. Whoa, okay. It has these little flashes of brilliance where you're like, "Oh no, that actually looks a lot better." You know, if I'm back here,
+you know, I'm like watching or whatever from my television, that looks a lot better. It really does look a lot better. See if I can find a
+still where it's decent It looks pretty awful,
+but let me explain why. First up is the fact that our
+original footage is just 240P. That's a total of 76,800
+pixels to work with, which might sound like
+a lot out of pixels, but most of them are just
+a blank wall behind me. For the things that matter,
+like say for example capturing the expressions
+of the human eye, we've got about 20 pixels per
+eye, so good luck with that. Making matters worse, the original footage which we unfortunately no
+longer have, was interlaced and it was rendered without
+a proper conversion. For those of you who don't know interlacing was a
+technique broadcasters used to increase the perceived
+frame rate and resolution of older footage. It works by drawing half
+of the picture first as a series of lines across the screen, then drawing the second series of lines to fill in the gaps and
+back and forth and so forth. CRTs and some plasma TVs
+were made with this in mind, and when you see I instead
+of P next to resolution that means that it is interlaced. By contrast progressive scan P, refreshes the entire
+image with each cycle. So I'm really sorry, young Linus, we tried but that Handycam
+you were using back then just ain't gonna cut it. Ah it's okay, buddy, don't
+even worry about it guy. Luckily we don't have to go too far to find something that was
+shot at a higher resolution. This is more along the lines of what Video Enhance AI
+is meant to work with. Now, they say they can
+handle as low as 480i without too much of this, but our famous firetruck
+video happens to be available in 720P, which should be
+even better than that. Now because I'm a digital pack rat, I actually have the
+original footage for this but we're gonna just
+download it from YouTube to show you guys what you could do with a simple free trial
+of the VEAI software. Now, of course, beefy
+hardware is gonna result in significantly faster renders, and those of you with older GPUs are gonna have a pretty hard time with this sort of
+workload, but the 3070 TI in our Z16P managed to
+take our original footage and crank it up to 4K in
+just a couple of hours. And we could even cut that down if we sprang for the max spec Co i9 and RTX 3080 TI configuration. Speaking of extra budget,
+we've got Swacket V2 in stock. It's neither sweater nor jacket, it's a Swacket, lttstore.com. Now VEAI has tons of
+different modes and features, so you might need to run it a few times to get exactly the result
+that you're looking for, but you can also run a quick
+render preview beforehand to see how it's gonna pan out. Watch out by the way, because
+this type of heavy workload will make your components pretty toasty. Fortunately, we didn't have a
+problem with the Creator Z16P thanks to its vapor chamber cooler which would've been pretty awkward if they'd sponsored this
+video and it overheated. We settled on Artemis Medium Quality with a constant rate factor of zero. This adjusts, the data rate. The lower it is the higher the quality. We turned off, film grain, although for footage that
+was originally shot on film you might actually find
+that a little bit of grain will help it look more natural, and while you can set
+your target resolution to just scale up, which is
+ideal for four by three footage we selected specific pixel counts. So we tried both 1080P and 4K. One more housekeeping item. We've got the one terabyte
+storage version of this machine, and if you're planning to do a lot of this you might wanna get one with more storage because the Land Rider
+RC firetruck unboxing ended up at a whopping 35 gigabytes and that's before the 60 FPS conversion. So for that, we take our 4K footage which is still at 30 FPS, we switch from recommended
+to all modes in VEAI, and then we use one of
+the four Chronos options. We're gonna go with V3 and go, oh, remember how the upscaling was conjuring millions of
+pixels to add to our frames? Well, now we're creating
+entirely new frames. So as you guys can imagine,
+this might take a while. Now the old way to do this
+was the frame blending method which doubled the original frames, then blended them together. It's relatively simple to implement but it typically results
+in a lot of motion jitter. Another option is optical flow which analyzes the clips
+pixel by pixel, frame by frame and then uses the directional changes between the two frames
+to create an in between. It's pretty good, but you
+end up with pixel occlusion when it gets things wrong
+and pixels from one frame can actually block existing
+pixels in the next one. VEAI Chronos is sort of like
+a beefed up optical flow. It's using extensive machine learning to predict the best intermediate frame between the existing ones, and they spent months
+training their neural network on 10s of millions of frames to alleviate the pixel occlusion issues. We've got a few samples here so you guys can see them for yourself and we're gonna have the
+full versions of these on floatplane.com for all of
+our subscribers over there. I've been told the results
+are good, but not perfect, and I think it's time to watch
+the firetruck video then? All right. Okay, I'm not gonna do that yet though. I'm gonna enjoy this in
+its 4K remastered glory. Oh, it doesn't handle
+motion very well, does it? That is kind of crazy, when
+it doesn't have to move, and when we're not looking at a human, it's kind of crazy sharp. Now I don't, I don't actually have the original file next to it right now, but that
+seems really good, I think. Oh wow. You know where you can really see it is the lines on my shirt, clearly aliased in the original version and look at this blocking
+in the table here this just like low bit
+rate, crappy blocking, they have smoothed it out a lot. Oh yeah, like right here that is undoubtedly a
+better viewing experience. The real, the shaky camera, the handheld camera is killing it. That's another big difference between this and the music video. That fixed camera is a
+huge difference maker. I'm impressed that it's
+handling it as well as it is. Like that shot right there where we just moved around the fire truck, Um, yeah you could convince me that
+was 60 frames per second. That shirt though, you
+really see it in the shirt. Okay, I've got it. It can handle motion of the camera and it can handle motion
+of the host, but not both. Look at that non LTT Store water bottle, get that outta here. Oh wow, it really screwed
+up the carpet here though. Oh, wow, it bunged that up. It's trying to smooth it and
+it's like, " Bye bye texture." So it's not perfect, but we also haven't spent
+a ton of time tuning this and it really comes down to your use case. Like if you've got really
+low resolution footage, upscaling may not be
+the best option at all. Maybe you just wanna see
+what improvements you can get through frame rate conversion or de-noising without the upscale, or maybe you've got some
+old interlaced footage that you wanna fix. Speaking of interlaced footage, we've got a DVHS player on the way, so make sure you're subscribed, or you will miss our video on that little piece
+of home cinema history. One of the coolest things about this is that the minimum requirements
+to do a job like this are actually pretty low, but the stronger the hardware
+is the faster it'll be, and that is where our sponsor MSI comes in with the Z16P laptop. On top of its high tier specs, it's got a thin and light chassis, weighs only five and a quarter pounds, and that's with the 16 by
+10 golden ratio display running at 165 Hz with
+a 100 percent coverage of the DCIP three color space. So thank you MSI again
+for sponsoring this video sending over this absolutely sick laptop. If you guys wanna learn more about it you can check it out
+at the link down below. We're also gonna have software
+we use link down below. Thank you for watching. Have you had better success
+Upscaling 240P footage? Let us know what techniques
+you used in the comments and Hey, maybe throw
+a, throw your attempts at the Sunbeam Tuniq Tower
+video at us on social media. I would love to see what
+you guys come up with. If you're looking for
+another video to watch check out our capturing 920K video, video it's a lot of pixels.

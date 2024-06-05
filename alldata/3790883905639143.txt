@@ -1,0 +1,169 @@
+import torch 
+from torch.utils.data import Dataset 
+from tokenizer import SteinTokenizer
+
+import os 
+import random 
+
+class GPTSteinsharkDataSet(Dataset):
+
+
+    def __init__(self,ds_root:str,n_positions:int,is_dir=True):
+
+        #Get list of filenames and shuffle
+        self.filenames      = [os.path.join(ds_root,file) for file in os.listdir(ds_root)]  
+
+        #Create the corpus of texts
+        self.texts          = [open(fname,'r',encoding='utf_8').read()+ "<|endoftext|>" for fname in self.filenames]
+        self.text           = ''.join(self.texts)
+        self.tokenized_text = [12,2]
+        
+        # for file in self.texts:
+        #     self.text += (file + "<|endoftext|>") 
+
+        #Set class variables
+        self.n_positions    = n_positions
+        self.size           = 1024*1024#arbitrary
+
+        #Start in warmup mode
+        self.warmup         = True
+
+        #Perform cleaning operations
+        self.clean_text()
+        
+    def print_stats(self):
+        print(f"Created dataset:\n\t\t{len(self.text.split(" "))/1_000_000:.2f}M words\n\t\t{len(self.text)/1_000_000:.2f}M characters\n\t\t{len(self.tokenized_text)/1_000_000:.2f}M tokens\n\n")
+
+    #returns text_ids and attention_mask
+    def __getitem__(self,i):
+        
+        #Pick random window 
+        if self.warmup:
+            start_i             = random.randint(0,int(len(self.text)*.01))
+        else:
+            start_i             = random.randint(0,len(self.text)-self.n_positions*10)
+        
+        return self.tokenized_text[start_i:start_i+self.n_positions]
+        window                  = random.randint(1,self.n_positions)
+        window                  = self.n_positions*10
+        return self.text[start_i:start_i+window]
+
+        
+    def __len__(self):
+        return self.size
+
+
+    def clean_text(self):
+        #Remove double newlines
+        self.text           = self.text.replace('\n',' ').\
+                                            replace("'",'').\
+                                            replace('é','e').\
+                                            replace("♪",'[music]').\
+                                            replace('\xa0',' ')
+
+        while "  " in self.text:
+            self.text       = self.text.replace('  ',' ')
+        
+
+    def get_iter(self,max_i=100_000_000):
+        i   = 0 
+        for item in self.texts.split(self.eos_token):
+            yield item
+        return
+        text_files          = [open(fname,'r',encoding='utf_8').read().lower() for fname in self.filenames]
+        print(f"number of text files: {len(text_files)}")
+        for text in text_files:
+            i += 1 
+            if i > max_i:
+                break
+            yield text
+
+
+    def save_to_file(self,fname:str):
+        with open(fname,'w',encoding='utf_8') as file:
+            file.write(self.texts)
+        return 
+
+
+
+def get_yt_captions(ytdump_file:str='ytdump.html'):
+    import youtube_transcript_api
+    from youtube_transcript_api import YouTubeTranscriptApi
+    import time 
+
+
+    #Parse file for links 
+    with open(ytdump_file,'r',encoding='utf_8') as read_file:
+
+        filetext        = read_file.read()
+        splittext       = filetext.split("/watch?v=")
+        yt_ids          = set([text.split('"')[0] for text in splittext][1:])
+        cleaned_ids     = []
+        for ytid in yt_ids:
+            if '&' in ytid:
+                ytid = ytid.split("&")[0]
+            if "t=" in ytid:
+                ytid = ytid.split("t=")[0]
+
+            cleaned_ids.append(ytid)
+
+
+        grabber         = YouTubeTranscriptApi()
+        for id in cleaned_ids:
+            if os.path.exists(f"yt_captions/{id}.txt"):
+                print(f"already had {id}")
+                continue
+            try:
+                video_text   = " ".join([l['text'] for l in grabber.get_transcript(id)])
+                print(f"found {len(video_text.split(' '))} words")
+                with open(f"yt_captions/{id}.txt",'w',encoding='utf_8') as write_file:
+                    write_file.write(video_text)
+                    write_file.close()
+            except youtube_transcript_api._errors.NoTranscriptFound:
+                pass
+            except youtube_transcript_api._errors.TranscriptsDisabled:
+                pass
+
+def resave():
+
+    changes     = {
+        '\xa3':'L',
+        '\xa0':' ',
+        '\u2019':"'",
+        '\xb0':'degrees',
+        '\u266a':'[music]',
+        '\u2026':'...',
+        '\U0001f60a':':)',
+        "\x2018":"'",
+        "\u2018":"'",
+        "\xe9":"e",
+        "\u20ac":'Euro',
+        "\u2044":"/",
+        "\xe8":'e',
+        "\xf1":"n",
+        "\u201c":'"',
+        "\u201d":'"',
+        "\xed":'i',
+        "\xc5":'A',
+        "\xf3":'o',
+        "\u2014":'-'
+
+    }
+    for file in os.listdir("yt_captions"):
+        fname = f"yt_captions/{file}"
+        if "_" in fname[4:]:
+            os.remove(fname)
+            continue
+
+        with open(fname,'r',encoding='utf_8') as readfile, open(fname.replace("yt_captions","yt_captions2"),'w',encoding="ascii") as writefile:
+            contents    = readfile.read()
+            for x,y in changes.items():
+                contents    = contents.replace(x,y)
+            try:
+                writefile.write(contents.lower())
+            except UnicodeEncodeError:
+                pass
+
+if __name__ == "__main__":
+    get_yt_captions("ytdump.html")
+    #resave()

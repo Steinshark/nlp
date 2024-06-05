@@ -1,0 +1,146 @@
+- [linus tech tips team] it's chinajoy! - [linus] sorry. what is chinajoy? well, apparently it's a big enough event for amd to announce their
+latest gpu there. so, yup. another graphics card, no
+one can afford thanks to scalpers and miners, or is it? yes, it is. but amd's radeon rx 6600 xt
+announcement also gives us an excuse to talk about
+why pricing for these parts is still so outrageous. and some of the big changes that could finally put an
+end to the gpu shortage in the coming months. it also gives us an excuse to
+tell you about our sponsor, seasonic. never skimp on getting a
+quality power supply for your current or next computer build. checkout seasonic at
+the link below to find award-winning power
+supplies to meet your needs. (upbeat music) - amd's new radeon rx
+6600 xt is looking like a pretty standard launch, so far. you got 32 compute units,
+8gb of gddr6 memory and 32mb of infinity cache. clock speeds are reasonably
+high, and we already know that rdna 2 is a ridiculously
+scalable architecture thanks to earlier looks at their mobile parts. they'll be available
+starting august 11th from third-parties only, no amd
+branded card this time around. although amd says that
+there is a reference design that will likely make up the
+bulk of the early shipments. the reference design calls
+for only a single eight pin pci express power connector
+with a total board power of 160 watts. that's not too
+shabby for what amd is touting as a 1080p monster that
+beats out the rtx 3060, and pulls over double the
+gtx 1060's performance. and it's efficient enough
+to be cec compliant. unlike certain gaming pcs
+from our friends at dell. (linus making finger gun sound) - got 'em. make sure you get subscribed by the way, we have a whole video
+coming about that debacle. the only problem with this
+announcement is that if you hated the rtx 3060's msrp of us$329 the rx 6600 xt's $379 price tag is going to be even more painful. it is roughly as fast as it's
+price difference suggests, if amd benchmarks are
+to be believed, however. so it could still end
+up being a great value at least by today's standards. it's an open secret that
+gpu prices have been steadily rising over the
+past few generations. i mean, heck, the gtx
+1080 launched at $599. and the 1080 ti, a gpu that
+held its status as a top-tier gaming card for over three
+years, cost just $699. ah, memories. but unfortunately,
+memories may be all there is left to that kind of pricing, at least for the foreseeable
+future. and trust me, i hate it too, but that's
+just the way it is. as for why it's the way it is.
+there's a litany of reasons, but a few key factors stand out. starting with, of course,
+the corporate greed angle that's been thrown around
+ever since the launch of nvidia's rtx 20 series. the thing is, believe it or not both nvidia,
+and amd for that matter, love their shareholders much
+more than they will ever love you or me. but it's
+also not the only reason. there are some very real
+logistical problems that are steadily pushing pricing up as companies try to remain profitable. though, to be clear, the companies i'm referring to there are not nvidia or amd, neither of which are struggling to remain profitable. in fact, compared to a year ago, both of them reported nearly
+double the gaming revenue in the most recent quarter with healthy, gross margins of anywhere from 50 to 65%. so the business of designing gpu's, partnering with a chip
+foundry, like tsmc or samsung, and selling the chips to board partners is as healthy as ever. it's the board partners, folks like evga, asus or msi
+who are feeling the squeeze and passing that squeeze along to you. take memory, for example. dram supply has been seriously
+hampered by the silicon shortage with contract
+pricing going up by 5 to 10% in the first quarter of this year, then a staggering 20 to
+25% in the second quarter with a projected 8 to 13% more again, coming in the third quarter. that is over a 50% cumulative
+increase in the price since the end of 2020. and spot prices have been consistently worse
+with current prices sitting at easily double the contract
+price and trendforce saying that at the scalp-pocalypses' peak spot prices were up as much as 200% higher than contract pricing, which is wow. so that is why nvidia canned the rumored high memory rtx 30 series,
+hey. at least for now. and this isn't likely to let up. demand from game consoles
+and gpu's remains high. and the realities of
+wafer production mean that 8 gigabit and 16 gigabit
+gddr6 chips need separate allocations. so this crucial manufacturing
+capacity is split. the consoles use 16 gigabit
+chips while consumer gpu's currently use 8 gigabit chips. and the majority of of
+8 gigabit capacity is reportedly feeding nvida's
+lower end 30 series gpus, which leaves very little on
+the bone for anyone else. thankfully, the 6600 xt is
+going to be using 16 gigabit chips. so for this launch,
+anyway, it's less of a concern. the final dram factor though
+is somewhat unexpected and it's servers. that's
+right. this whole thing is colliding with a big
+boom in server orders. and servers, they need
+dram. lots and lots of dram. and all of that is just the memory. next up, we've got copper,
+you know, that stuff that good heat sinks are
+made of among other things. well, copper has gone from a
+little under $2.20 per pound in mid 2020 to double that as of today. and a lot of that has
+to do with speculation that a global economic
+rebound will boost demand for metals used in manufacturing
+and in construction. if that sounds like it'll
+impact a lot more than copper, you're right. aluminum prices are skyrocketing.
+there up about 45% since this time last year. steel
+and nickel are up nearly 30%. plastics are up 47% and neodymium,
+which is used for magnets in fans and headphones
+is up a staggering 88%. even tin and led, which
+make up solder, are up nearly 36 and 14%, respectively. so all of that means that
+virtually every material that goes into producing a gpu or really any consumer electronics is
+significantly more expensive than it was just a year ago. with the sole exception, being gold. (failing trumpet music) - and the fun keeps coming. if you're a u.s. resident and the gpu that you want is made in china. tariffs are famously
+misrepresented by politicians and enthusiasts alike. but the tldr is, u.s. consumers get to
+pay the u.s. government between 10 to 25% more for electronics manufactured in china right now, which as of the end of 2020, has gpu's falling in that 25% bracket. there's no tariffs on merch
+from lttstore.com though. so buy a t-shirt like this
+one, and you'll be amazed how many fellow tech fans
+approach you to talk shop. it's actually kind of great. the final head of the gpu
+pricing high trade is of course, the silicon shortage itself. now we can see from amd and
+nvidia's financial reporting that they've been telling
+the truth all along, sorry. like clearly they are
+producing plenty of gpu's, but even if we account for
+nvidia taking, on average, 10% more profit margin
+than they did in 2015, both of them are experiencing
+clearly unprecedented levels of demand. and when demand
+goes up, pricing goes up. this shortage is affecting
+industries everywhere from electronics all
+the way to automobiles. and recent reports show that even apple, who to date has seemed
+relatively insulated, thanks to their careful
+production forecasting, is starting to feel the crunch. amd's dr. lisa su said, during
+an interview with barrons, that supply is expected to
+remain quite tight until 2022. and while amd may be
+making inroads on supply, the silicon shortage as a
+whole is likely to continue well into next year,
+thanks to the disruptions that covid has caused in
+labor, logistics and materials. thankfully, taiwan's
+worst drought on record did let up in late june, which should take some of
+the pressure off of tsmc who happens to be the
+world's largest chip foundry. in other good news for
+consumers looking to buy a gpu. one of the major factors
+influencing demand for these processors, mining, has begun
+to wane in recent weeks, following crackdowns on crypto mining by the chinese government. since crypto's pricing
+began to fall in early may gpus have at least begun
+to experience a slow return to normal as miners have
+begun firesale-ing gpu's in the chinese market. although, pent-up demand from
+gamers means that prices are likely to remain high for
+the foreseeable future. that is, until we get a
+mainstream gpu that is shipping in serious enough volume to put
+enough cards in gamers hands that it puts pricing pressure
+on the more premium ones. get subscribed then, by
+the way, so you don't miss our review of the rx
+6600 xt when it launches. it's based on amd's navi 23 die, which should mean better yields per wafer, helping to chip away, pun intended, at the supply constraints. that is, assuming it ends
+up being a solid card. now, at this point in the video, you might've noticed that i
+didn't ever offer an opinion on the state of the gaming gpu market. that's because, in my opinion, it doesn't matter what i think. that's the hottest take you're
+going to get from me today. the unfortunate facts are that
+there is little that can be done about gpu pricing
+right now, but the good news is that once economic recovery
+efforts are in full swing demand for raw materials
+should begin to fall off. and with any luck, we'll
+be able to live in a world where the fun comes back into pc building. you could try to accelerate
+the end of the ride by keeping your money in your pocket when the 6600 xt briefly hit store shelves, but truthfully, it probably won't change anything. just like i never changed
+the segues to my sponsors. not even to build redux. thanks redux for sponsoring this video. redux offers hardware
+with no markup pricing. so you pay only the $75 build fee, and then whatever you
+already would have spent to get the parts. plus with redux, you
+get a two year warranty for the parts and labor
+on your expertly built pc. use their online pc builder to
+customize what's going inside based on the games you want
+to play, and your budget. and that's it. it really is that simple. redux wants to bring pc
+gaming to the masses, which is why they only
+charge a small build fee and they don't cut corners on quality. so click the link in the
+description to create your dream pc today. (upbeat music) while you're down there, maybe
+check out our recent video on nvidia actually
+discontinuing support for their kepler gpus and whether
+you really need to upgrade. that's kind of a strange
+sentence to say about a gpu that first launched nine years ago. man, another nine years. that's, you go back nine
+more years that's geforce 4. isn't that crazy?

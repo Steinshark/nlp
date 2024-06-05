@@ -1,0 +1,178 @@
+Hello and welcome to mCoding. 
+ I'm James Murphy. Today, we're talking about functions within functions, 
+variable scopes, and closures in Python. Of course, don't forget to subscribe so that 
+ more people can see my content. Let's start with this example that looks complicated, but 
+ by the end, I'm sure you'll be able to get it. The question is, what's going to happen 
+when we run this function "level_six"? We've got these two functions,
+ "donkey" and "chonky." "donkey" defines another inner function, 
+ which it ends up returning. "chonky" calls "donkey" to get that inner function. And then calls the inner function with an argument. So ultimately, the function returns some 
+ call of this inner function. But the complexity or confusion of it 
+ all comes from the fact that we have multiple different
+ 'x,' 'y,' and 'z's floating around all the place. inner() has a parameter 'y', so that one's easy. 
+That's just a local variable. But 'x' and 'z' need to come from 
+ somewhere else. It might use this "global x". Or maybe it takes this local x because when the function is actually called, Remember, it's the return results of this 'donkey' call. The nearest enclosing scope might seem like 
+ it's the scope of this 'chonky' function. As for 'z', since the inner function is
+ defined before this 'z,' maybe it uses this outer 'z'. Or maybe it somehow gets this inner donkey 'z'. Or maybe it wants this donkey 'z'. But it can't have it because it's not defined yet. So maybe we get an error. Feel free to take a moment and pause if you want 
+to work out the example yourself. But if you're already confused and you know you're 
+ not going to get the answer, don't worry. This is a tricky part of Python that 
+ doesn't come up that often. And as such, even experienced programmers 
+ don't get a lot of practice with it. And may not know what the rules are. So what answer do we actually get? The answer in this case turns out to be that it 
+ uses the global value of 'x' Of course. It uses the passed argument of 'y'. And it uses this value of 'z' in 
+ the "donkey" function that was defined after the inner 
+ function was defined. We're going to start off with much 
+ simpler examples than this. But once you know the rule, even this 
+ example will make complete sense to you. We'll start off with some simpler examples. But I want you to keep in mind the key to 
+ understanding these is the compile-time of Python. That's right, compile time. A very common misconception is 
+ that Python is not compiled. It's interpreted. In fact, it is compiled. And it's also interpreted. A module source is first compiled to bytecode. Then the interpreter interprets the 
+ bytecode at runtime. We often don't realize that 
+ this compilation is happening first because it happens automatically. How variable scoping works inside nested 
+ functions is one of the few features that depends on the separation 
+ of compile-time and runtime behavior. Here's the one rule that you need to remember in 
+ order to make sense of all of these examples. Variable lookups happen at runtime. But where Python will look for 
+ the variable is determined at compile time. Let's start simple and work our way up. level_one: we just say `return x`. 
+ And there's no 'x' argument. The only 'x' inside is the 'global x'. The code for every function is 
+ compiled at compile time. There are no assignments to 'x' in this 
+ or any enclosing function scope. So the compiler decides that it will look 
+ in the global namespace for this 'x'. Of course, you didn't need this 
+ video to tell you that. This one you probably expected. level_two: once again, we're just returning 'x'.  But in this case, we take an argument 'v'. If 'v' is truthy, we assign a local variable 'x'. Otherwise, we don't assign to 'x'. So, which 'x' is returned? Remember, where we look for 'x' needs 
+ to be determined at compile time. The compiler doesn't use any 
+ information about the argument 'v'. The compiler simply notes that 
+ somewhere in this function, I assign to 'x'. Therefore, everywhere in this function, 
+ 'x' is treated as a local variable. Of course, that means if we pass 
+ in something truthy, then we get the `x = "local x". 
+ And then return that 'x'. But if we pass in something falsy, 
+ we get an error. The compiler determined that 'x' 
+ was a local variable. We tried to return that local variable. 
+ But we never gave it a value. That's why we're getting this "UnboundLocalError." It doesn't matter that there was a perfectly good 
+variable named 'x' in the global scope. It was determined at compile time that 
+ it wasn't going to use that 'x'. It's going to use the local one. Alright, let's keep going. Level three: here we define our 'outer z'. Our inner function which only takes 'y'. 
+ And returns 'x', 'y', and 'z'. And then we call the inner function 
+ with a given argument. At compile time, the compiler says there is no 
+ local variable 'x' in this inner function. There is no local variable 'x' in this 
+ level_three function. Therefore, it will look for an 'x' in the global scope. There is a 'y' in this local scope. So it will use that local 'y'. And for 'z', there's no 'z' in the local scope. So it determines that 
+ it will use this 'z' from the outer scope. And not too surprisingly, indeed, we see
+ the global 'x', the 'y' argument and the outer 'z'. Okay, but what if we defined "inner" first. And then defined 'z' afterwards? We do not get an error even though 'z' 
+ isn't defined when the function is defined. Once again, at compile time, the 
+ compiler decides that 'x' is going to be found in the global scope. 'y' is going to be found in the local scope. And 'z' is going to be found in the outer scope. It doesn't matter where the assignment 
+ in the outer scope is. Somewhere in the scope of the 'level_three' 
+ function 'z' is assigned a value. That means everywhere it's treated 
+ as a local variable of the 'level_three' function. So, Python decides that this 'z' will 
+ refer to that local variable. But remember, it doesn't look up 
+ the value of the variable until runtime. The runtime for this function is here 
+ when it's actually called. And by that time, 'z' is defined. So just as before, we see the 
+ global 'x', the 'y' argument, and the outer 'z'. Even though that outer 'z' wasn't defined at the 
+ time the function was defined. Just to repeat the rule again, it's 
+ because variable lookups happen at runtime. But where Python will look for the 
+ variable is determined at compile time. Let's drive this one home in "level_four". Here, we define an outer 'z'. Then our inner function. Then a new value for 'z'. Then we call the function. So which value of 'z' does it use? There you see it, it uses the second one. Even though at this point when the function 
+ is defined, 'z' already had a value. The inner function does not use that value. Instead, Python says the value of 'z' will be 
+ looked up in the outer function scope whenever the functions run, 
+ whenever the value 'z' is accessed. By the time the function is run in this call, the 
+ second outer 'z' has already been set. So it finds that value. Now, this might be where you start feeling like 
+ something is kind of fishy. How does it know? What if instead of calling this function right here, 
+ I had just returned the function? And then called it a million lines later? Isn't 'z' just a local variable that's 
+ going to disappear and be garbage collected once 
+ the function returns? Here's where we need to talk about closures. Traditionally, a closure is an object 
+ that wraps up a function with some kind of extra environment. In this case, the environment would be 
+ some kind of thing grouped together with the inner function that 
+ keeps a reference to this 'z' variable, keeping it from being garbage collected. Unfortunately, this is one of those cases where there are multiple definitions of a 
+ closure floating around. Some people use closure to 
+ mean the function together with its environment. Other people, including the people 
+ that wrote Python,   use closure to mean just the environment part. Printing out the closure of the inner function, we see that it's a tuple containing a 
+ single element, which is a cell. Python determined at compile time that this cell is where the value of 'z' is 
+ going to be stored. The cell has a reference to a string object which is going to be the first outer 'z' because we're printing it before we 
+ define the second outer 'z'. Printing out the closure again after we 
+ assign the second outer 'z', we see that the cell object itself hasn't changed. It has the same address. However, the string object that it's 
+ referencing has changed. This use of a cell instead of the object itself 
+ is how Python ensures you always get the latest value of 'z' at runtime. Because the inner function only references the cell and not the string object itself. This ensures both that when we run 
+ the function, we get the latest value of 'z'. And it means that we can define the inner 
+ function even when the value of 'z' isn't defined yet. In that case, we see that the cell is just empty. Then, once we define a value of 'z', 
+ it gets put in the cell. Also, note that we only have one cell for 'z'. The global variable 'x' does not get a cell. For global variables, Python stores a reference 
+ to the global namespace in which the function was defined. That means that even if you pass this 
+ inner function off somewhere else and call it from a different module, it will still look up global 
+ variables in the module that it was defined in. Of course, this achieves a very similar 
+ effect to the closure attribute. The global variable 'x' doesn't need to 
+ be defined at the time I define this function. When I call the function, the most recent value 
+ will be looked up in the global dictionary. And if my inner function didn't reference 'z', meaning it doesn't have any references 
+ to any non-local variables, then the closure attribute would 
+ just be set to "None." Let's move on to "level_five". The point of "level_five" is to show you that 
+ although functions are compiled at compile time, meaning their source is 
+ translated into bytecode at compile time, actual function objects that get hooked 
+ up to that bytecode are created at runtime. That's what the "def" keyword does. "def" does not compile a new function. "def" creates a new function object 
+ with the given name. And hooks it up to the pre-existing bytecode. That means every call to level five 
+ defines its own copy of the inner function. Each of these copies is distinct and 
+ has its own closure. Every call to "level_five" has 
+ its own cell for its own copy of 'z'. Therefore, the closures for each copy of the inner 
+ function can refer to completely different 'z's. So in this call, we pass in "n=0." This call, we pass in "n=1". In the first call, we see 'outer z 0'. And in the second one, we see 'outer z 1'. Of course, this is probably what you 
+ expected to happen in this simple case since there's only one 'z' floating around. And now we're back to "level_six". Let's just follow the rules. There's no assignment to 'x' in 'inner'. There's no assignment to 'x' in "donkey." There's no assignment to 'x' in "level_six." 'x' will be looked up in the global 
+ scope of this module. 'y' is a parameter of the function. 
+It'll be looked up as a local variable. There's no assignment to 'z' in "inner". 
+ But there is an assignment to 'z' in "donkey." Therefore, the 'z' will reference the cell in "donkey," which eventually gets set to "donkey z" 
+ and is never modified again. We return the function. And because that function's closure is referencing 
+ the cells, it's pointing to this "donkey z" That cell is not garbage collected, and 
+ it continues to point to the value "donkey z". In 'chonky', we call 'donkey'. And the 
+ inner function gets assigned to the value of 'f'. The 'x' here is irrelevant. The inner function will always look in the global scope 
+ that was determined to add compile time. When we call 'f', we pass 
+ in 'y' which is that local variable. And 'z' is still referencing the cell that 
+ points to 'donkey x'. So we'll see 'donkey z'. Therefore, when we print this out, 
+ we'll see 'global x', 'y arg', and 'donkey z'.   Now that you know the rule, it's not so bad, right? Before we get to the final "level_seven", I'd like 
+ to go over a few odds and ends. First up, what about lambdas and comprehensions? Although lambdas are syntactically a very 
+ different way of defining functions You don't give them a name. They kind 
+ of have to be one line. They have this implicit return statement. And Lambda is an expression, not just 
+ a statement like a "def" is. Ultimately, lambdas are just functions. It's fancy syntactic sugar for 
+ defining a function without giving it a name. All of the scoping rules for lambdas are 
+ exactly the same as for a function. So the rules for this Lambda 
+ would be the same as for this function. The code in the body gets compiled 
+ to bytecode at compile time. And variable lookups happen at runtime. But where Python will look for 
+ the variables is determined at compile time. Next up, comprehensions. I'm going to use a list comprehension, 
+ but it's the same for any of them. You may not have realized it before. But defining a comprehension is defining 
+ a function and immediately calling it. This comprehension 
+ is semantically equivalent to this, which is equivalent to this: defining a generator 
+ and then passing that into a list. And this part, defining the generator, 
+ is more or less equivalent to this. It defines a generator function and 
+ gives you an instance of it. The scoping rules for generator functions 
+ are exactly the same as for normal functions. So whenever you use a comprehension, just pretend 
+ you've got a generator function there. And use the normal scoping rules. These cases usually aren't 
+ very confusing since they're typically very short. In this case, 'x' is treated as a local 
+ variable since the for loop assigns to 'x'. And the last thing we need before our last 
+ example is what do "nonlocal" and "global" do? "nonlocal" and "global" don't actually correspond 
+ to any operation that happens at runtime. By default, the compiler would determine on its own whether each variable was a local variable, 
+ a non-local variable, or a global variable. Because we assigned to 'x' in this function, the compiler would normally assume 
+ that this is a local variable. "nonlocal x" instructs the compiler to treat 'x' as 
+ a local variable of some enclosing function scope rather than a local variable of the 
+ current function scope. So this assignment will 
+ actually change the value in this function. In our first print statement, we see the "nonlocal x." Calling the function changes the value of 
+ 'x' to the overwritten "nonlocal." That's the return value, so we see it once. Then we print out 'x' again, 
+ so we see that indeed, its value has changed. Then in "main," I'm also printing out the global 'x', 
+ so we can see that it hasn't changed. Let's change this to "global x". The first print, we'll see 'nonlocal' Our call to 'f' will change the global 
+ value of 'x' and return it. Then when we print this 'x' again, 
+ we'll still see the 'nonlocal x' because in this function, 'x' is a local variable. But when we get to the global print, we'll 
+ see its value has changed. So indeed, we see 'nonlocal', then the overwritten global, the 'nonlocal' again, and the overwritten global. The lookup rules are exactly the same. It's just that you get to override the compiler 
+ if it would have made a choice that you didn't want. This is typically only needed if you want to assign 
+ to a variable from an outer scope within an inner function. If you're just reading the variable, what the compiler 
+ does is usually the most sensible thing. But if you really shadow your variables 
+ a lot, you might end up using this. So I'd say if you're using "global" to just read a value, then the real solution is to just choose  
+ a better name that doesn't conflict with a global variable. Or, better yet, to not use a global 
+ variable in the first place if you don't have to. So finally, we come to "level_seven". Please, please, please do not do this. But if you understand the rules, 
+ it's a straightforward application that you should be able to understand why 
+ you get the output that you do. Take a moment to think about it and comment below. I'm just gonna blast right ahead. Okay, inside "level_seven," we define 
+ "please_dont_do_this." This defines some generator. And it returns an instance of the 
+ generator along with this lambda returning 'a'. Because of this monstrosity, 'a' is determined to be a local 
+ variable of the "please don't do this" function. It doesn't matter. This code will never execute. Because there's an assignment to 'a' 
+ somewhere in the function 'a' is treated as a local variable of that function. Inside the generator, we explicitly mark 'a' non-local. Every time we unpause the generator, 
+ this updates the value of 'a'. Because 'a' was non-local, 
+ that refers to this 'a'. Inside this lambda, 'a' is also treated 
+ as non-local because we don't assign to it. So it finds this 'a'. Then we return the generator and the lambda, 
+ whose closures both point to this empty 'a'. In the outer code, we grab our the generator and lambda. If we call the function first, then we get a name error. "cannot access free variable 'a' where it is 
+ not associated with a value in enclosing scope." 'a' was pointing to a cell. That was empty. 
+ That's why we're getting this error. But if we run the generator first, 
+ then print the function, we see the value 0. Every time we call "next" 
+ on the generator, it updates the value of 'a'. And whenever we print the function, 
+ it gives us whatever the current value of 'a' is. Just imagine the person who's got 
+ a bug in their code. And they track it down to the source, 
+ and they find this lambda that just returns 'a'. But every time they call it, they just 
+ seem to get a different value. Gotta say, that would be a pretty 
+ bad day for that developer. So anyway, like, comment, subscribe. 
+ Thanks for watching. Thanks to Kevin for submitting the 
+ donkey-chonky example. And as always, thank you to my patrons and donors. If you really enjoy my content, 
+ please do consider becoming a patron or donor. It does help me out. So please go forth with this knowledge 
+ and never do this. See you next time!

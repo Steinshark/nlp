@@ -1,0 +1,68 @@
+from model import ChessModel
+import chess 
+import math 
+import numpy
+import torch 
+
+DEV     = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+
+def fen_to_tensor_bar(fen_list):
+    #fen_list        = [fen.split(' ')[0] for fen in fen_list]
+    batch_size 		= len(fen_list)
+    board_tensors 	= numpy.zeros(shape=(batch_size,7,8,8),dtype=numpy.float32)
+
+    piece_indx 		= {"R":4,"N":8,"B":6,"Q":2,"K":0,"P":10,"r":5,"n":9,"b":7,"q":3,"k":1,"p":11}
+
+    pieces          = {"R":1,"N":1,"B":1,"Q":1,"K":1,"P":1,"r":-1,"n":-1,"b":-1,"q":-1,"k":-1,"p":-1}
+
+    #Go through FEN and fill pieces
+
+    for i in range(len(fen_list)):
+        for j in range(1,9):
+            fen_list[i] 	= fen_list[i].replace(str(j),"e"*j)
+
+    for i,fen in enumerate(fen_list):
+        position 	= fen.split("|")[0].split("/")
+        orientation = 1 if fen.split("|")[1] == "w" else -1
+
+        
+        #Place pieces
+        for rank_i,rank in enumerate(reversed(position)):
+            for file_i,piece in enumerate(rank): 
+                if not piece == "e":
+                    channel                             	= int(piece_indx[piece] / 2)
+                    board_tensors[i,channel,rank_i,file_i]	= pieces[piece]
+        #Place turn 
+        board_tensors[i,-1,:,:] 	= numpy.ones((8,8)) * orientation
+        
+    return torch.from_numpy(board_tensors)
+
+
+
+def play_game(model:ChessModel):
+
+    #Game board
+    board = chess.Board()
+
+    next_moves  = board.generate_legal_moves()
+
+    while next_moves:
+
+        #check for best moves
+        fens    = []
+        moves   = [] 
+        for move in next_moves:
+            
+            #Push and record fen 
+            board.push(move)
+            fen     = board.fen()
+            fen     = fen.split(" ")[0] + "|" + fen.split(" ")[1]
+            fens.append(fen)
+            moves.append(move)
+        tensors     = fen_to_tensor_bar(fens).to(DEV)
+        evals       = model.forward(tensors)
+
+        #Dress up evals to be all positive
+
+        #Do some multinomial as joila 
+        evals       = torch.multinomial(evals)

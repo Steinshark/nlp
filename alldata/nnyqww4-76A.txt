@@ -1,0 +1,303 @@
+- When Valve invited me
+down to their headquarters for a preview of the Steam Deck, they not only refused
+to allow me to open it, but they wouldn't tell me anything about the internal configuration, other than what I was able
+to ascertain for myself using a thermal camera. Well, that all changes today. Valve published a do as we say, not as we do tear down of the Steam Deck, and I have intentionally
+avoided looking at it all day, and I'm going to be watching it together with my cohost Anthony, to see what we're going to learn, and what still remains to be seen. And the whole thing is
+sponsored by IFIXIT. Is your battery not lasting
+as long as it used to? Looking for a new project? IFIXIT's got you covered. Stay tuned to the end of this video, to learn more about their
+battery replacement kits. (upbeat music) Okay, we ready? - Let's do it. - [Host] Hi, this is a video
+about opening up a Steam Deck to replace one or more of
+the components inside it. - [Anthony] I love the gloves. - [Host] Specifically, we're going to cover the thumb sticks and - Very interesting. The
+thumbnail says, don't do this. And the video opens with
+here's how to do this. - [Anthony] Well, they got
+to cover their butts, right? - They do. But I got to say, I absolutely respect that
+Valve is directly addressing what gamers have been asking about it, because we all know the biggest issues with handheld consoles, which excuse me, with handheld consoles
+that are to be unnamed, is joystick drift. And for me personally, if I'm investing this kind of
+money into a handheld device, knowing that it can be
+quickly and easily repaired, is a big deal. - [Host] The SSD. - [Linus] Well, we'll see how quick, and we'll see how easy it is. - [Host] This is a how-to
+video, but in another way, it's a why you really shouldn't do this. (Linus & Anthony laughing) That's because even though it's your PC, or will be once you've
+received your Steam Deck, and you have every right to
+open it up and do what you want - [Linus] Wow! - You have every right to
+open up and do anything. Wow. I've only ever heard that from Fairphone. - What a strong, also framework, but what a strong
+statement, maybe system 76, what a strong statement for a
+device manufacturer to make! When you buy it, it belongs to you. How is that controversial? (Anthony laughs) And yet here we are blown away by it. - It's 2021! - [Host] I really don't recommend
+that you ever open it up. The Steam Deck is a very
+tightly designed system, and the parts are - Okay, I take issue with that "don't recommend that you ever open it up" because that's going to suck in some dust. You're going to want to clean that out. Maybe some compressed air will do it, but you probably want to clean
+out the whole thing inside. - And the thing is, most people are not going to
+be opening this thing for fun. They're going to be opening it, because there is an actual need to do it, whether it's to replace
+a thermal compound, or whether it's to clean it, or whether it's to replace
+a defective component. That's why people are going to open it. I mean, I could see myself opening it as SSD capacities get dramatically larger, and you can get these
+tiny little, what is it? A 30 millimeter unit
+they've got in their forty. - I think it's 20. I guess. We'll see. I'm not entirely sure.
+I saw it briefly there. - Yeah, we'll see. - They're not widely available in the consumer market right now, but they may be coming - The highest cap SSD that
+you can get your Steam Deck with today is one terabyte. And we know we're going to get bigger SSDs in this form factor in the future. - Wait. Do they have a one terabyte model? I thought it was 64, 256
+and 512, M.2 2230 SSD slot. - It is, it is 512. - Wait, technically, shows
+Steam Deck 64 gigabyte to be upgradable to
+one terabyte of storage for less than the official
+512 gigabyte version, however, and then it goes
+on to say other things. - There we go. But there
+is a one terabyte M.2 2230. Kioxia makes one, but
+I think it's OEM only. Apparently there is a
+Dell that you can get for 200 Canadian Rubles - That ain't bad actually. - on dell.com. - I mean the performance
+of this thing, who knows? - It's probably the QLC with no DRM cash. - [Linus] Yeah. - So, like, yeah. - It's more than enough
+for the Steam Deck, given that it can apparently run on EMMC. - And memory, kind of
+like a micro SD card. - Yeah. And they told me when I was down there that they couldn't tell
+me which of the games on my unit were installed on the internal SSD
+versus the micro SD card. But they, that, I probably
+wouldn't be able to tell, and I couldn't. May have definitely done
+some optimization there. - [Host] So they aren't really designed to be user swappable, opening up and replacing
+parts might mess things up, like, profoundly. - [Anthony] Yeah. - [Host] For example, if
+you damage the battery, the whole thing could catch fire later - [Anthony] Yeah. - [Host] which would be bad. - Yes. But there's entire
+hobbyist industries that use these batteries,
+I mean, not just exposed, but in moving mechanical devices that literally fly through
+the air, I mean, these are, these are the same kinds of cells that you would strap to
+a drone ripping around at a hundred kilometers an hour. So yes, it's risky and you do
+need to be careful with them. But also if consumers can handle that, I think, they can probably
+manage to not puncture this thing opening up the Steam Deck. - [Host] So be forewarned and leave this kind of
+thing to professionals, unless you really feel
+like taking big risks with your property and with your life, which could end if - [Anthony] What? - Okay, I mean, a fire could kill you. - If it caught fire in your pants, yeah. - If it caught anywhere
+while you're sleeping, you could die. - [Anthony] Oh yeah. - I mean, this is, this is fair. And this is the kind of device
+that would be very likely to be stored in your, in
+your backpack, you know, in some kind of combustible material. - Yeah. Like, imagine
+you're on the highway, on your motorcycle with
+that in your backpack. And it blows up. - So you know what,
+I'ma back Valve on this. Don't screw around with it if you don't know what you're doing, but also this is not like
+opening up a PC power supply, where literally a slip of
+the hand is the difference between you're alive and you're dead. - [Host] if you do this
+wrong, just saying, also the warranty doesn't
+cover any damage that you do. - [Anthony] Fair enough. - [Host] However - They didn't say that the warranty
+doesn't cover the device. If you don't damage it, - [Anthony] That's an interesting reason. - The mere act of opening
+it up voids the warranty. - Yeah. So if the act of opening it up, doesn't void the warranty.
+That's very good on Valve. - But we'll find out that
+there was a however here, before I paused it. - [Host] having said all that, we also wanted to make this video to simply show you what's
+inside the Steam Deck, taking things apart and putting
+them back together is cool, especially, powerful
+handheld gaming computers. - That last part is a
+really mixed message. - Yeah. - They spent a minute
+telling us not to do this. And then they were like, "but it's cool!" I think I get it. I think
+they're trying to be like edgy, but it really does actually undermine some of the legitimate safety
+warnings that they gave us. - A little bit. Yeah. - [Host] Please note the
+screws that secure the housing or what's called self tapping screws, and they're embedded in plastic boxes, they can be removed and re-installed, but it's much easier to
+strip or over torque screws of this type compared to standard ones. So be aware that they're
+very sensitive and either the screws or the housing can be damaged. - That's a really good point. And I did notice that they
+used two different lengths of screws here. - [Anthony] Hmm. - So you're going to want
+to keep careful track of which ones went where. - You don't want one
+poking through the front of your Steam Deck when
+you put it back together. And I mean, for that matter though, couldn't they have used, like,
+a metal sunk into plastic to prevent this kind
+of self-tapping issue? - They could've, it
+would've increased cost. - Yeah. - They probably would
+have had to press fit some kind of threaded inset. - [Anthony] Yeah. - And that not only adds the
+cost of the metal pieces, which is fairly negligible, but it adds the labor of putting those in that compared to just
+putting a self-tapper into a molded piece of plastic, very different ball game. And given how aggressive
+they've gotten on the price, I don't even begrudge
+them something like that. It really isn't intended
+to be taken apart. I say fair play Valve. - Yeah. Okay. That makes sense to me. - As we've gotten more
+into manufacturing products for ourselves, I've gained
+a lot more understanding, and respect for the difficulty that manufacturers go
+through to make things actually make any sense at all, from a cost perspective. - [Host] It does help prevent damage. - A torque wrench. Okay,
+now hold on a second. You don't need a torque wrench to avoid stripping a
+self-tapper in plastic. You just need to, your fingers
+are the only torque wrench you really need. You go until two fingers,
+can't get it in anymore, and that's it. At that point, it's not
+just going to fall apart. It's in there enough and
+you're not going to overdo it. - These screws seem to be
+sunken into the plastic though. So you'll probably need something. - Maybe three fingers then. If you can't tell, then
+don't take it apart. - [Host] Opening the
+case immediately, we can - Did you notice how many times the host has straightened
+those screwdrivers above the Steam Deck - Yeah - and they're still crooked. Is that a joke? Are they meme-ing? - [Host] And makes the
+product less drop resistant. There's no way to avoid this. - [Linus] Hmm. - [Anthony] Really? - [Host] So just know that
+the structural integrity of your deck will be lessened
+somewhat by doing any of this. - [Anthony] Interesting. - [Host] Static electricity
+can easily break your Steam Deck permanently. - Actually. It's harder than you'd think. - Yeah, it's it's okay. So it probably won't break it permanently in a fundamental way, but it might cause things like, oh, well, now voltage regulation isn't
+quite what it used to be. And you're not going to turbo as high, and you might lose
+performance kind of thing. - Or it just might not do anything. Like we saw in our video with Electroboom. (Electroboom & Linus screaming) - [Linus] Here it is. - [Anthony] That's it, back's up. - [Linus] This is it. - [Anthony] He didn't
+show taking the back off that's that's not very satisfying. - Yeah. I was expecting a reveal shot. I guess what that tells us is there's no ribbon cables attached to the
+backing or anything like that. - Probably. If their goal is to show that they're taking this apart
+and you can't take it apart. The other thing is dude, one
+of the joysticks is missing. - [Linus] Oh wait, yeah! - [Anthony] So this is pretty far in. - [Linus] They pulled the joy, oh no, you can see the
+daughter board for it in the top of the frame. - [Anthony] Yeah, I think that's it - [Linus] It is packed
+tight. It is cooler. - [Anthony] There's all kinds of boards. - [Linus] Cooler, right dead center. - [Anthony] Yeah. - I see what appears to be actually, no, I'm a little confused. Through the right hand, what
+are we looking at there? It kind of looks like
+a grill or something, but it can't be because
+that's the front of the unit. It's the speaker grill. - [Anthony] That might be a speaker. Yeah. Cause I think we're
+seeing the table below it. So where's the speaker then.
+Is it just below his hand? - [Linus] Or hold on. Let
+me see that a little bit. - [Host] spark jumps from you to one of the integrated
+circuits on the board, it'll probably fry some
+of the parts forever. - [Linus] I mean, yes, but also if you're Wait, what? - [Anthony] Now we're back to - [Host] unfamiliar with
+preventing static discharge, - [Host] you should
+probably stop doing this, and turn it over to a pro. - Yes. that is right. - Yeah - But why didn't they just
+shoot a quick pickup, man? - Why this, the production
+value is on this video? - I'm sending an email to my pal at Valve, because this is the kind of thing that would have been
+completely preventable, if they had just worked with us on this. - Maybe they wanted it to
+look really amateurish. So like anybody can go to get
+into it and anybody can do it. Valve is known for doing
+things for a reason. - [Host] First, remove these four screws. - [Linus & Anthony] We just did that. - [Linus] They're literally out. - [Host] So start keeping
+your screws organized to help you when it comes
+time to reassemble everything. - [Linus] Okay, this is good advice. - [Host] After the screws are out, you just need to pry the case open. - [Linus] What is that?
+Do they have a special JAG for assembling these things? - Is that what I was looking
+at? Oh, oh, that's cool. - That is so cool. So it doesn't put any
+pressure on the screen. You don't scratch the screen. It doesn't put any
+pressure on the joystick. - Yeah. And it keeps it nice
+and flat, flush with the table. - I like it. - Yeah. - [Host] your fingernail, that hurts. - [Linus] Okay, here it is.
+Our first unobstructed look. - [Anthony] So that was a battery, a bit of writing on the
+battery that we were seeing. - [Linus] God. - [Anthony] Look at all the ribbon keels and daughter boards. So many PCBs. - This is some PCB, next
+level PCB Tetris right here. I'm surprised because given
+how big it is compared to the Ayaneo, which didn't
+need this many daughter boards, if I recall correctly. I would have thought it would have a bit more of a kind of
+contiguous internal layout. But then Valve also did
+squeeze in more IO or, okay, I shouldn't say more IO. The Ayaneo has like dual USB-C ports, but, but more buttons, which take up a huge
+amount of internal space. - The other thing is that could
+be good for repairability. Cause then you can just get
+a module to replace out. - Hmm. - If like one of the buttons
+was decided like there was a broken trace or something, - That's true. - which may not be a thing
+that'll happen often, but if you drop this thing,
+a lot of things can go wrong. - [Linus] It looks like a combination, some kind of heat shield slash EMI shield. That's over top of the CPU. Or I guess I should call it an APU. - Yeah. - That's going to help keep
+a skin temperature down on the back of the device. You actually have to do
+that for regulatory reasons. - [Anthony] I wonder if that's
+also providing an air path for that fan. Cause the, the intake and the
+exhaust are up there on that, on that entire plane. I think. - [Host] Note that this video
+shows pre-production hardware, and there will be some differences between what you see here and
+the Steam Deck that you own. This is the battery. - Doop. - "This is the battery." - [Host] Before proceeding,
+it's important to disconnect it. Do that by unplugging these wires here. - [Anthony] Disconnected with? Okay. - [Host] The first component
+we're going to replace is a thumb stick. This part is easy to remove. - [Linus] Oh wow. That was very jarring. - Yeah, he didn't actually show. - [Linus] Well, we see it here. There's three screws. Maybe
+we're going to go back in time. - [Host] Be aware that the
+whole assembly is custom. The stick, the board and the cap. Replacing these will require
+matching the custom parts, exactly. Stay tuned in the coming
+months for a source for replacement parts, thumb
+sticks, SSDs and possibly more. - What? Wow. (Linus and Anthony applaud) - We're in sync here. But I mean, I think that
+reflects how strongly we agree that this is a good guy move, that shouldn't be a
+good guy move but it is. Valve should not stand out in the industry for providing easy access to resources, and replacement components. And yet here they are, a
+multi-billion dollar corporation that doesn't have to give two
+(beep) about what you think, because you'll buy it
+anyway and they're doing it. - Well, the other thing
+is too, like these parts, if they manufacture more of them, so they have spares and
+they can sell those spares. That's going to drive down
+the cost due to a economy of scale. - Yeah. - It'll be a little bit
+more in terms of logistics. - Yes. - But it's, it should
+probably just work out and you get good guy points, because nobody else is
+doing this for some reason. - [Linus] Okay. - [Host] Lift this lap. - [Anthony] The clothes are back on. - [Host] Unplug the flex cable. - [Linus] They did it. They went back in time again. (Anthony laughing) These are much better instructions for how to remove this ribbon
+cable than what they provided for removing the battery connector, which by the way is connected again. - [Host] Well here,
+remove these three screws, and then take the stick assembly out. - To be clear. I don't want
+to hate on the host here. - No. It's just an
+amateur video. That's all. - Okay. Be nice. - No, I'm saying, that's what I mean. - That's so catty. (Linus imitates a cat) - That's no, that's not what I mean. What I mean is that it's,
+it's intentionally designed like from the perspective
+of somebody who's just like, "Hey, I'm going to show you
+how to take this apart now. Here's how it goes." Not like, "Welcome to the
+Valve Steam Deck disassembly." - Oh, you pursue more like
+light hearted, like casual tone. - Yeah. - Okay, I thought you were
+calling them amateurs. - No! Amateur means for the love of. - Okay. All right. All right. - [Host] That's it. Now just reverse all that
+to put another one back in. Let's move on to the SSD. - [Anthony] Okay. - [Host] We don't recommend
+replacing the included drive. What we do recommend for
+increasing your storage capacity is the handy micro SD card slot. So much easier and plenty fast. - That's fair. And there's already like
+CAD files floating around in various subreddits of people designing, like, external USB-C storage packs that would clip on the back
+and plug into the USB-C port. There's going to be lots of
+options to expand your storage. If it was me, man, I'd
+upgrade the internal SSD, but I'm also just a big nerd, and I can afford to break my Steam Deck. That's the question you
+have to ask yourself. - I'm not sure if they
+mentioned in this video, but I heard somebody saying that there's actual, like, any EMI reason for why you shouldn't replace that SSD. Just vaguely when I saw it going through on my Twitter feed. - Okay. So let's have a look. Maybe it has a custom
+shield on it or something. - [Anthony] Yeah. - [Host] Please note before
+attempting an SSD replacement, an off the shelf SSD could cause problems. - [Anthony] Okay. - [Host] One: power consumption. An off the shelf SSD can draw more power than the original drive, which could cause overheating
+and reduced battery life. Two: electromagnetic interference. - [Anthony] Yeah. - [Host] Our SSD is located very close to our wireless module, and was specifically chosen and tested to not interfere with WiFi and Bluetooth. An off the shelf SSD might have a different emissions pattern and could compromise wireless performance. - [Linus] Okay. - [Host] Three: mechanical - [Linus] That's fair. - [Host] We place components
+on their motherboard underneath the SSD and a different one might
+mechanically interfere with these components. - So the main reason that might
+happen is if you have NAND packages on both sides of the SSD, which could be a very legit
+strategy for boosting up the capacity of an extremely
+small 30 millimeter long M.2. - Yeah, I think it's
+actually pretty common. - [Host] Especially during vibration. For assembly, at least one screw, which holds down the thermal module onto the APU is also used
+to hold down the shield can. Removing this screw can
+impact the thermal performance of the thermal module. Here we go. First, we're working on
+removing this outer shell. - Now that scenario where I
+could see them bringing out their torque wrench again, you want to make sure that if
+you are installing a cooler, you are screwing it in evenly
+on both or all four sides. And the reason for that is if you've got your CPU die or APU, and you've
+got your cooler on top of it and it's sitting crooked, one side of it could get less
+cooling or even in some cases, if you have an air gap, which
+is effectively an insulator, no cooling, that's a big problem. - Yeah. If you've ever you like at home, you've probably not done this, but if you've ever tried to
+install a thread ripper CPU without their torque wrench,
+that's real difficult too, because you can either over-tighten it, and like flatten out the, the LGA pins so that it
+doesn't make contact anymore, or under tighten it and
+not make contact that way. Like it's, it's actually just
+actually a really good idea to have a torque wrench
+for this kind of thing. - If it's a well-designed cooler, it'll probably have stoppers
+and you just go until it stops, but this is Valve's first attempt, so depending on the OEM
+they're working with. Shield. - [Host] As you've just seen
+these two screws come first, two more screws under here. Okay. Now you can actually
+remove the shield, but be super careful to not
+disturb the whole thermal setup. Very important to make
+doubly sure that the battery is disconnected before proceeding. - [Anthony] So the battery
+was under that can. - [Linus] Yeah. - So this whole time - You can pull it out to the side. To the side. - Yeah. - Okay. - Okay, yeah. That is very
+close to the wifi module. Look at those antennas there, right there. - They're right freaking there. Boy, it's packed. There's your DRM. - [Anthony] Yeah, fat boy heat pipe. - [Linus] One heat pipe. Yup. - [Host] Now disconnect the drive. Note that all Steam Deck
+models use the M.2 connector for internal storage. - [Anthony] Only 20 to 38 size will fit. Yep. That's correct. - Yeah. Give the community time. - Yeah. I mean there's, there's no reason. - Seriously. - Yeah, there's no reason you
+couldn't have an extension. - Ribbon extension, man. You guys want to see on LTT store.com? Okay Steam Deck M.2 ribbon extension, we find some other place to jam a 2280. I honestly don't know. I don't think we'd be able to - Probably have to do it externally. - [Linus] Yeah. - [Host] including the 64 gigabyte model. To actually remove the SSD - So the 64 gigabyte EMMC is a NBME. - Okay. - Module. - Interesting. That was not what I expected. We knew the 64 gig EMMC
+model wasn't going to have the same performance as a full fledged SSD using the NBME protocol. Also the flash it's just not
+as fast if I recall correctly. - No. - But what we didn't
+know was if it would plug into the M.2 interface, or if it would be soldered
+to the board or something, and then you could expand
+that with an M.2 SSD. It looks like it is either EMMC or an SSD, you can't stack them. Cause it was looking like the smart play, assuming that you didn't need, I think it's the better screen
+that comes with the 512 gig or something like that - It's got the laser edge screen. - If you didn't need that, it was looking like the smart play was to take the EMMC model
+and then upgrade it. So you're getting more storage, but it looks like that's not a thing. - [Host] That's it. (Trumpets blowing) - [Linus] Cute. - [Host] We haven't filmed
+the entire reassembly process. But as we mentioned with the thumb sticks, it's basically doing this whole
+thing again, but backwards. Remember, if you have followed
+these directions correctly, you've done absolutely - That was it? - That's as far as they're going to go? Like, I kind of expected
+to see a little bit more, not only that, but I did notice that the
+SSD had cans on both sides for EMI. So they're very, very concerned
+about EMI on that SSE. - Now what we don't know is if we could reuse that EMI shield, as long as whatever SSD we get is in a similar kind of form factor. And it wouldn't surprise me
+to see someone like KIOXIA, who already works in within
+these kinds of constraints to bring out an SSD that's
+specifically compatible with the Steam Deck. I mean, we're already seeing
+it with the PlayStation five. It's not like SSD manufacturers
+aren't on this, you know? Oh yeah. Game console
+is getting SSD upgrades. That's the thing. I think it's an, I think it's a matter
+of time or maybe even with a pre-installed shield
+or doing their own validation, or whatever. - The question there becomes, if other companies are
+doing their own validation, and their own SSDs, how long before Valve actually
+has an official support list? - I don't think they'll do it. - No? - I think it's just more
+hassle than it's worth. - I guess. - Yeah. Why are they taking
+on that responsibility? There's literally no money in it for them, and it's in their best interest for people to not break these things. And even though I think
+at least for our users, the vast majority are not
+going to break their Steam Deck by opening it, the odds are definitely
+greater of breaking it if you open it versus if you just don't. - Well, by that same token, why would they say that
+it's yours to open? Is it just that they're
+very libertarian about it or - Yeah, it's just that you can, but clearly the odds of
+it generating a return, or a some kind of false
+warranty claim from someone who accidentally damaged
+something are definitely greater. if people open them. People make mistakes, it
+happens to the best of us. I remember an incident
+with an iMac pro once, a very long time ago. (screen falls with a thud) - Yeah but the difference here is that you'd actually to
+buy these spare parts that you need to repair it that's, that's something that
+Valve has just said, well, they just came out and said, okay. - They haven't committed
+to every spare part. Joysticks, yes. What else did they actually
+commit to providing? I don't know that they're
+going to provide main boards. - They may not. - So if you spill your
+coffee while you're working on an SSD upgrade,
+that's going to generate a support ticket to Valve, which even if they don't cover it, because it's not covered
+by warranty, does add cost. - I could see batteries. I
+could see maybe, maybe displays, maybe, but probably not mother boards. - Yeah, probably not. Personally. I'd like to see
+Valve go the whole mile, and make it so that for, it
+would cost more obviously, cause he'd have all this extra packaging and extra logistics costs,
+but I would like them to make the entire Steam Deck
+available in exploded form. - To build one? - So you could just buy every part, and put it together yourself. If you, like, were a masochist
+and you really wanted to, I challenge you Valve,
+take it one step further. - It would cost more to
+put it together yourself with no warranty. That is
+an interesting concept. - Yeah. I mean, I don't think many people
+would take them up on it, but it would mean that literally
+everything is available as a replacement part if you needed it. - Yeah. I'd be down for that - Oh of course you will. - Well yeah, I mean, I'm going
+to take this thing apart. I don't care. - Hashtag biased. Did you pre-order one? - I did. - Yeah. Me too. - Oh, wait, hold on. I heard back from Valve, a full tear down in additional content. Make sure you're subscribed guys. I heard back from Valve and we
+are definitely going to have some interesting stuff
+going on once they jump through some internal hoops. - [Host] But you're more informed now about what's inside your Steam Deck. - [Anthony] That we are. - [Host] Anyway, thanks for watching. - That's fair. We are. And so are you, and you're
+informed about our sponsor. IFIXIT. IFIXIT wants to help you
+keep your devices powered, like, they are brand new. They have a wide range of products, including their battery replacement kits for your mobile devices. They've got kits for laptops,
+cell phones, tablets, smart watches, and even Nintendo switches. You don't even need to be an
+expert to prepare your devices with IFIXIT. They've got beautiful step-by-step guides with tons of photos to walk
+you through your replacement. And of course the kit
+includes everything you need. So why pay for someone else to do it? When you can pay to learn a new hobby while also saving yourself
+some time and money. And I really do mean saving yourself time. The time it takes to
+coordinate with our repair shop and like drop stuff off and go pick it up, unless it's a very simple fix, honestly, could in many
+cases be better spent just doing it yourself. So don't wait, check out IFIXIT.com/LTT to find the fixed kits
+for your devices today. Hope you guys enjoyed this video. If you're looking for another one, maybe check out our
+preview of the Steam Deck. If you haven't already seen
+it, we got to play games, we even did a little bit
+of casual benchmarking, thermal camera. It's a pretty good deal.

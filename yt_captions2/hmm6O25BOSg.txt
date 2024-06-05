@@ -1,0 +1,130 @@
+- we've been through all the
+stages of gpu shortage grief, and now we just don't
+feel anything anymore. but who's this sliding into my dms? concrete news about
+dedicated intel arc gpu's this could be our salvation. holy crap. there's a whole bunch of other
+really good stuff in here. dang. now what we know is
+intel is shaking things up in a big way. but the question is can intel
+deliver a competitive product with enough supply to make
+2022, a better year than 2021? i have got some thoughts and i've got a segue to
+our sponsor glasswire. glasswire, lets you see past
+and present network activity detect malware on your
+pc or android device and block its connections
+to prevent things from getting worse. use offer code linus for 25%
+off at the link down below. (upbeat music) the whole gaming industry has been waiting with bated breath for arcs, since it was still called xedg2 and we are going to have
+to wait a little longer. but the big news today is that it's close. intel is already shipping like now arc gpu's to oems who are
+going to be integrating them in both desktop and mobile designs. and they're expecting more
+than 50 new arc power desktops and laptops right out of the gate. and before you groan about
+not even wanting an intel gpu, it's worth remembering a couple of things. first is that this ain't your
+grandma's intel hd graphics. over the last 10 years, intel has improved their
+gpu hardware and drivers by leaps and bounds to the point where we're actually getting, i dare say kind of hopeful. and second is that arc ain't
+some reheated 14 nanometer plus plus plus. it's based on tsmc's and six process, which is currently only used
+by amd's new mobile radeons and apus as far as gpu capacity goes. so we are tapping fresh
+supply of a cutting edge node. that is good news for gpu availability. even if you don't care
+about intels not only that, but intel showed off deep
+link a technology that allows an intel integrated gpu to work alongside arc dedicated graphics, to accelerate a task that
+would otherwise be limited to one gpu. their example used to davinci resolve to encode a video stream
+using deep link hypering code, which dramatically
+improves export times using what they're calling next generation quick
+sync video technology. deep link allows for power sharing too between the cpu and gpu. this is similar to amd smart shift max and invidious max q dynamic boost. but only amd can match
+intel's platform scale control over the cpu gpu and chip
+set to fully optimize it. and that's not all the new gps can do. intel has confirmed that
+death stranding director's cut is gonna be among the
+first titles to support their new xcss ai up-scaling algorithm. in principle, it works very similarly to how invidious deep
+learning super sampling does. by training a neural
+network with a dataset that is tailored to computer graphics, then running the game
+on your local computer at a lower resolution then upscaling it using the gpu's ai accelerators. which intel is calling xmx
+or xe matrix extentions. painful naming aside. this means that while early indicators are that the first arc
+gpu codename alchemist will be a modest mid range offering. it may be able to punch
+above its weight class, especially compared to
+amd's radeon products, which are using a non ai accelerated super sampling technique
+called fidelity effects, super resolution. if that's true then it
+means we will finally have some disruptive
+competition in the gpu space likely got with amd ryzen
+family in the cpu space. and speaking of cpus, intel's launching some
+new ones of those two starting with the quora 9 12, 900 k s. now they didn't spend much
+time talking about it, but it is apparently shipping to oems by the end of the quarter. and supposedly will reach
+5.5 gigahertz single-threaded and over five gigahertz, all core. on the surface this one's
+actually a bit of a head-scratcher seeing as they just
+launched the 12 900 k non-s. but if you think about it for a moment, it's clear that intel is releasing
+this so soon specifically to respond to amd ryzen 7 5800x3 these claim to be the
+world's fastest gaming cpu. competition is great. isn't it? and from what we've seen of 12th gen core, this keeps spending skew
+might actually be worth buying for enthusiasts this time. that is assuming you've got
+the cooling to handle it. we're gonna have to see
+the performance and cost for ourselves, not to
+mention power consumption before making a final judgment call. and that's not the only desktop
+cpu that intel's launching. non-k alder lake is finally upon us with half the maximum base
+power at 65 watts or less. so unlike the ks, these chips are expected to be a lot tamer on the heat output, despite
+sharing most of the same specs as their k counterparts. it's worth mentioning too, that while 12th gen k series cpu's will turbo basically forever. these non-ks have the
+same turbo duration limits as previous generation cpu's. so there's even more of
+a difference for k chips compared to non-k chips now. and it'll be really interesting
+to see how these end up performing in the real world. particularly the core i5 whose k cousin has already become a go-to
+for mid-range builders. these new chips are coming
+alongside new chip sets, obviously h670 b660 and h610. all have wifi6e and ram
+overclocking is supported on all but the age 610. but the primary
+differentiator between h670 and b660 being the amount of available io. b660 has half the number of dmi 4.0 lanes to connect to the cpu. so consequently, these boards will have a lot fewer ports because of the overall lower bandwidth available to the chip set. pcie raid support is also
+not available on b660, but none of this is a major concern for small form factor builds. so i can see these being a popular way to reduce costs there, given that the other
+capabilities are on par. for non over clockers 8670
+looks like a great alternative to z690. and it feels good to be able to say that. so big props to amd for getting intel back on the rails here. big props to our merchant
+team too, by the way. look at this thing, basically indestructable and
+comes in 14 freaking colors. how awesome is that? and you can get a water
+bottle while you're at it. it'll keep your drink cool. now intel thinks their
+new laminar cpu coolers are gonna be cool too. with the rh one bundled with core i9 featuring rgb lighting of all things. that is how you know intel
+is under new leadership. when was the last time you saw
+intel do anything with rgb? that wasn't a skull kenyan knuck. now these things don't
+look super different from the typical intel stock coolers that we all know and hate. but we're going to withhold judgment until after we've tested them and get subscribed because we
+will totally be doing that. finally intel gave us the
+low down on 12th gen mobile, which has broken out
+into three product stacks with a total of 28 processors. the enthusiast h series, the ultra late u-series
+and the mid range p-series. only the h series will have core i9 skews. but unlike the desktop chips, you are capped at six performance cores alongside the eight efficiency cores. making the core i9 the same as the core i7, it even shares the same 45
+watt maximum base power. is it pointless? maybe not. these higher core clocks could result in real-world performance differences, only time and laptop
+manufacturers integrations into their products will
+tell us the true story. dropping down to the new p-series, core i7 is similar in spec
+except for bass frequencies. and the base power cap is a
+mere 28 watts with 64 watts available for boost. i'm really glad that
+intel is providing these power limit numbers, but it's gonna make things confusing when you're comparing laptops at best buy, to have such broad ranges
+of power consumption for these chips. thankfully the p-series
+skews only use four digits in their model numbers, which should help to
+distance them somewhat from their h-series
+higher-end counterparts. the u-series meanwhile is
+even further restrained and looks more like a p-series core i3, to be honest with you. these come in at just 15
+watts base and 55 watts boost on the five series and a measly
+nine watts base and 29 watts boosts on the further
+restricted zero series. this particular distinction
+is definitely gonna cause confusion at best buy. and if you've wondered how a laptop with almost all efficiency cores will run, take a look at these
+pentium and celeron skews. only a single p core. i'm actually pretty interested
+in these though, anthony. i think they could be pretty cool. of course, these u-series
+skews aren't just i3s they're meant for the extreme
+end of thin and light. and regardless of which
+class of cpu you choose, you're gonna end up with
+intel's new evo platform. which includes thunderbolt
+for and attend adp or better camera. except asterisk. asterisk, not always gg intel. intel says that these
+exemptions are literally just for form factors that do
+not have enough physical room for a 1080 p sensor, which
+is fair enough, i guess, but it's still confusing. but hey, at least jill's
+get what intel's calling gna gaussian and neural accelerator. which should help with image
+and audio noise reduction during calls. now one surprise that intel
+didn't give us a heads up on is the fruits of their
+acquisition of screenovate, just last month, promising to make mobile
+devices more interconnected, even across different platforms. not only can intel evo powered laptops communicate with iphones
+to use imessage on pc, but they can also download
+health data from smartwatches, extend the screen to android
+tablets and cast photos and videos to smart tvs. the software they showed
+off looks pretty early, but they say it will be
+available by holiday 2022. ben we've got some weirdo form
+factors that might catch on. intel says that foldable display
+tech is coming to a laptop near you. and while some of these examples
+look absolutely atrocious to use like the dual angle
+thing they've got going on here. some like the tabletop or journal when paired with a separate keyboard, i can kind of get into that
+and getting some big dell xps, m 2010 portable desktop vibes here. so intel's firmly back in the game and we need to give credit where it's due. it's clear that they finally
+have a vision for the future with pat gelsinger at the helm. and they're getting so scrappy. they're even taking shots
+at apple's marketing. look at that. it's so pointless. what are we even seeing?
+it doesn't matter. intel's on top and our sponsors on top. thanks freshbooks for
+sponsoring today's video. freshtbooks is the easy
+to use accounting software that helps you do your business. you can impress clients with
+professional looking invoices that detail the work you've done. use automated payment reminders if invoices get passed you. easily track expenses and
+use their time tracker to log every minute of billable hours. so you don't have to think about it later and keep everyone on the same page with their projects feature, which makes it easy
+for clients, your team, and your contractors to collaborate, share files and comment. choose a plan that's right for
+you and start your free trial of freshbooks for 30 days today
+with no credit card required at freshbooks.com/blindness. if you guys enjoyed this video, go check out some of our
+other ces coverage like amd's for a little more on the
+state of the competition.

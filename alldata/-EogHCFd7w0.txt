@@ -1,0 +1,113 @@
+- Intel's been the industry's
+favorite punching bag, for the last few years. We've certainly taken our
+fair share of cheap shots. But that changes today, because chips like this, with two different kinds
+of cores in them, or more, are probably the direction the entire industry is going to go. That's right. Intel jumped on the
+bandwagon with ARM and Apple for their best generational upgrade, in at least a decade. But let's back up a sec. This isn't going to be another furnace, like past generations, is it? And if they're cheaping out, juicing up their spec sheets with these low-performance
+efficiency cores, how could they possibly compare to AMD, who ships only high-performance cores? Our sponsor Corsair doesn't know. Thanks Corsair for sponsoring this video. Corsair's Xeneon Gaming
+Monitor is an ultra slim, 32-inch QHD gaming monitor, with up to 165 Hz refresh rate, 1 ms response times and more. Learn more at the link below. (upbeat music) 12th-Gen Core, codename Alder Lake, is a paradigm shift
+for desktop processors, but it's also one that we've had in mobile for quite some time. And the TLDR is this, instead of stuffing as
+many full power cores into the CPU as possible, then turboing them down
+when they're all active, the cores are now split up, between performance and efficiency cores, called P and E cores, respectively. The launch lineup ranges
+from 10 to 16 total cores, with the main differences
+between them being, of course, clock speed, and that the performance cores are capable of running two threads at
+once via Hyper-Threading. There's more to the platform than that, but the first question you guys have is, "How does all of this impact performance?" Great question, but we need to
+talk about Windows 11 first. It's kind of a prerequisite for testing Alder Lake's
+radical new design, because the thing is, Windows 10 just doesn't have a scheduler, that's capable of taking full advantage of this new architecture. This is a huge problem, because, up until now,
+Windows 11's new scheduler, hasn't been kind to AMD Thankfully, the fixes for
+performance issues on Ryzen, came out just as we were
+starting our benchmarks, so, our numbers should
+be fair to both sides, in spite of the fact that we're
+benchmarking on Windows 11. We do need to address another
+big variable here, though. Alder Lake supports both DDR4 and DDR5, which each have their own trade-offs. We chose DDR5 for our launch review, meaning that our numbers
+are going to represent a best-case scenario for performance, but maybe won't represent a best-case scenario for value, due to DDR5's higher cost. F1 2021 starts things off
+with a bang for Intel, with the Core i9 12900 K
+coming in at five to 10% faster than its Ryzen 9 competitors, and the Core i5, just
+a hair's breadth away. Can Intel keep it up with Forza? Oh yeah, they can. That is anywhere from eight to 11% faster, depending on the parameter
+you're looking at, and whatever advantage Intel has here, probably clock speed, it's paying off in Far Cry 6 too, with an even bigger lead. It is up to 25% faster
+than the competition, and never dipped below 100FPS. And, if you've been paying
+close attention to the graphs, the Core i5 has never been far behind, making life really difficult for our previous value gaming darling, the Ryzen 5 5600X. Moving on to Microsoft Flight Simulator. Well, this is a bit of a mess, isn't it? The Ryzen 9 5900X beats out the Core i9, with the higher turboing, not to mention, higher core count 5950X, falling behind even the Ryzen 5. Given how lightly threaded
+Flight Simulator has been so far, this might just be an example of the new Windows 11 scheduler, running up against something
+that it didn't expect, in spite of the fixes. In fact, we almost threw this
+test out due to the weirdness, but, we felt like, whatever's going on, this is one scenario
+where Intel's new silicon isn't as dominant as they'd like it to be, and is possibly also an
+area of investigation for AMD and Microsoft. Then you've got situations like CS:GO, where Intel treats us to even
+more ludicrous frame rates in the Dust II benchmark
+and Civilization VI, where our turn times are a
+good seven to 10% shorter, than on Team Red, which could make that,
+one more turn before bed, go by a little quicker. Overall, our testing
+has firmly demonstrated that Intel has reclaimed its
+crown for gaming performance, with the Core i9 enjoying
+a solid 7% overall lead over Ryzen 9, and the Core i5 pulling
+ahead even further, compared to the Ryzen 5. Man, this kind of competition
+is what I signed up for, when Ryzen first launched. Now, Intel famously thinks that Cinebench is not really a real-world test, but they've got cause to
+celebrate these numbers, for a change. Cinebench tends to scale
+linearly with core count. So, the fact that a CPU, that has only eight
+proper performance cores, could dethrone the Ryzen 9, is an achievement, perhaps fueled in part by its DDR5 memory. It also demonstrates that
+those efficiency cores ain't your grandma's efficiency cores. They clearly pack some punch. While the Firefox Compile
+did take a little longer on the Core i9 versus the 5950X, Intel still won out in the
+bursty BMW Blender render, although they lost ground on the higher endurance Gooseberry test, showing that, for really
+serious multi-core work, AMD is still the more compelling option. An aside though, here, that Core i5, be looking more like a 5800X than a 5600X. Keep that in mind for when
+we discuss pricing later. Now, strangely, Corona Benchmark seemed
+to come back in favor of AMD's additional cores, which shows that 3D rendering, may be becoming more than simply a raw, how many cores do you have game. PugetBench, for its part, benefits from what Intel's got
+on tap with a healthy lead, especially in Photoshop, over AMD, although Intel falls
+short in SPECworkstation, where the only consistent
+wins are against the 5900X. Check out the Financial
+Services and Energy test, guys, where the 5950X still lives
+in a league of its own. If you look at all the
+productivity benchmarks, together, though, you'll see that the Core
+i9 averages about 3% lower than the more expensive 5950X, and 10% higher than the
+less expensive 5900X. which puts it in, kind of weird, might be worth, it might
+not be worth it territory, depending on what you're doing. The Core i5, on the other
+hand, is over 30% faster than AMD's competing Ryzen 5
+for just $10 more at retail, making it very compelling. That is, at least if
+you we're already down to spend the extra, to move to DDR5. We're going to have a follow-up, comparing DDR4 to DDR5 performance, at various clock speeds coming. So make sure that you're
+subscribed for that. How's Intel doing all this though? Well, first, is the Intel
+7 manufacturing process. It's basically just a rebrand
+of their 10 nm process, that we've already seen in laptops, but this is its first appearance, without thin and light power constraints. And boy, did they ever unconstrain it, because another big part of the equation, is Intel effectively making support for MultiCore
+Enhancement, official. What this does, is throw the processor-based power rating completely out the window, in favor of always running
+at Maximum Turbo Power, letting the CPU be unrestrained, as long as there's thermal, and power budget available. It makes such a dramatic
+difference to performance, that motherboard manufacturers
+who enabled this, by default, in the past, were accused of cheating at benchmarks. Of course, like any overclocking, it comes at a cost. The processor base power, for the Core i9 12900K, is 125 W. Same as the rest of the lineup. However, when loaded down
+with a long Blender render, this thing easily sucked back over 230 W. That is nearly double what
+our Ryzen 9 chips drew. Thankfully, however, this doesn't carry over to gaming, where F1 2021 stayed within
+the processor base power, of 125 W, often remaining
+lower than Ryzen. So, as it turns out, those efficiency cores
+can make a big difference, to lighter workloads. As for the Core i5 12600K, it stayed within the 125 W processor base power, on both the Blender workload, and our F1 2021 gaming test, where it's only a little
+bit more power-hungry, than the Ryzen 5 5600X. Continues to get even more compelling, doesn't it? Something to note though, is that you won't see
+anything close to this, boost forever behavior, on a non-K chip. So don't assume that just
+because you see two CPU's, with a similar model number, that you will see similar performance, especially not at the very high end. To keep thermals under control under these circumstances, Intel thinned out their die even further, and even thinned out the soldered thermal interface material, but in spite of their efforts, the fact is that anything
+drawing that much power, that is that small is going to get hot. Our NH-D15 strained to
+keep our CPU package below 90 degrees. And
+after about eight minutes, all pretenses that thermals
+might be manageable, were completely gone. For context, guys, the NHD 15 is the top-performing
+heat sink on the market, and it beats out many water coolers. At least the efficiency cores only got to around 70 or 80 degrees. So, that's a plus, I guess, but compared to even the Ryzen 9 5950X, a 16 performance core CPU, this thing packs a
+ridiculous amount of heat, into a tiny area. As much, or more than
+last gen Rocket League, with MultiCore Enhancement enabled. Again, though, it's far
+more manageable with gaming. Where F1 2021 pushed our Core
+i9 into only the mid sixties. Our Core i5, for its part, never got hotter than around 70 degrees, even in our all-out Blender render, while only hitting 60 in games. It almost feels like
+Intel sent us the Core i5, because that's the CPU that
+they really wanted us to review, but they knew we'd want
+to look at the Core i9, so they threw that in the box as well. Like, how much extra heat is that, for what, six more FPS, from a gaming perspective? Save your money. Buy a water bottle at lttstore.com. And it gets even worse for the Core i9. These results mean that if
+you intend to run the CPU at the redline a lot, maybe you're a content creator
+who does a lot of rendering, or you're a developer, who runs a lot of large
+Compile operations. You're going to want to
+invest in a big cooler, both for your CPU, and for your computer room
+during the summer months, and that's a cost that
+you do have to consider. Another cost to consider is the platform. We already mentioned that
+DDR5 won't come cheap, but the same is true, of the
+Z690 chipset motherboards, that 12th Gen CPUs require. Now, there will be long-term
+benefits to taking the plunge. PCI express Gen 5.0, which doubles bandwidth over PCIe Gen 4.0, is going to unlock the full capabilities of the next generations of graphics cards, and the new DMI 4.0 link, between the CPU and the chipset, means, more high-speed networking, more high-speed peripherals,
+more storage devices. You guys can get the full details on this, in our platform overview, which we're going to have linked below. What you need to know now, though, is should you pull the trigger? If an OP cooler is in your budget, the Core i9 12900K would
+get the nod from us, for both gamers and for power users. That is assuming that gaming
+was your top priority. But the really interesting chip today, is the Core i5 12600K. At 320 bucks, It might be only a six-core CPU, like a Ryzen 5, but those extra four efficiency cores, boy, do they ever pick up a lot more slack than
+we assumed they would? I mean, this is a legit generational leap over even the 5600X, and in my opinion, it
+is the big winner today. Just like our sponsor's,
+the big winner, Jackery. Jackery makes solar-ready,
+portable power stations, that are designed to improve outdoor life, by providing power outdoors, whenever and wherever you need it. The Explorer 1500 Portable Power Station has enough juice, to keep all your devices
+powered and connected. It's huge 1500Wh capacity, and 1800 W output rate, allows up to seven devices to
+be plugged in simultaneously. It takes only four hours to
+recharge from zero to 80%. And you can get 10% off
+with code LinusTechTips, at the link down below. If you guys enjoyed this video, go check out our full
+overview of the platform, because there's a lot more
+juicy details in there, that, just didn't make the cut
+for our performance review.

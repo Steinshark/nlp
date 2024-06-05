@@ -1,0 +1,123 @@
+hello and welcome, i'm james murphy
+and today i'm going to show you why   every proof that you've seen
+of the fact that 0.99 repeating equals 1 is wrong.  don't worry, it is true.
+this isn't one of those videos,   it's just the proofs that 
+you've seen that are wrong so first i'll show you why 
+those other proofs are wrong,  and then i'll show you my actual proof. the vast majority of proofs that .99 repeating 
+equals one are so-called algebraic proofs  they start with some number,
+they do some algebraic manipulations,  and then they somehow derive that one 
+is equal to 0.99 repeating from that. these are by far the most common kind of 
+proof that you'll see when you look it up  and at first glance they look pretty sensible. i start with x being 0.99 
+repeating then i multiply by 10,  i subtract x and then i solve for 
+x equals 1. seems valid right? we all know a third is 0.33 repeating,  multiply by 3 and then we get 
+1 is 0.99 repeating, right? well it turns out there are 
+multiple mistakes in these proofs.  well right at the very start we've 
+actually made a huge mistake.  just by writing 0.99 repeating, i'm 
+implicitly assuming that it exists.  if .99 repeating didn't exist 
+then i wouldn't be able to  multiply it by 10 and then solve for it. this is the error that pretty 
+much every video makes.  i've only seen one that doesn't make this mistake. let me show you what can go wrong in 
+a very similar situation by making   this assumption that it does exist.
+instead of looking at 0.99 repeating,   let's look at a very similar expression.
+let's suppose that a number 9 repeating   and then the point exists.
+so i'm thinking here as the decimal point  with nines extending out on the left side 
+of it instead of on the right side of it. i start with 9 repeating, i multiply by 
+10, i add 9, and i see that i end up back   with the number that i started with.
+so then i can solve for that   algebraically and i get that x is minus 1.
+pause the video and check the steps if you want. so do you believe that 9 repeating point   is equal to negative one?
+well no you really shouldn't.  there are number systems where this kind of thing 
+is true, but the real numbers is not one of them. okay so suppose you're willing to believe 
+that it does exist as a real number  then the rest of the proof works right?
+well still no. so what's wrong? is it one   of the highlighted green statements?
+which one of those is wrong?  well, none of them.
+all of those statements are true.  they're true because .99 repeating is equal 
+to one, but these proofs don't show it. you have to keep in mind that 
+a proof of something is not   simply a list of true statements that 
+ends in the one that you're looking for. i can't just say "one plus one equals 
+two" "two plus two equals four"   "the fundamental theorem of calculus holds"
+these are all true statements, but this is not   a proof of the fundamental theorem of calculus.
+you need to show why each step implies the next. since the rules of algebra are so well known ,
+in algebraic proofs it's very common to   leave off this reasoning.  but for now, let me make 
+those implications explicit. so in this slide i'm using this "implies" arrow 
+to indicate that each line implies the next line.  i claim that the issue with these 
+proofs lies in these arrows,  not in the statements themselves.  --these red arrows specifically.
+look at the first step on the left.  i multiply 0.99 repeating by 10 
+and i end up with 9.99 repeating. now, for ordinary finite 
+decimal expansion numbers,  we know that multiplying by 10 is the same as
+just moving the decimal point one to the right.  but how do we know that that 
+holds for repeated decimals?  after all you could never finish the 
+computation of multiplying it out.  now again this is true, 
+you are allowed to do this.  but we haven't justified why in this proof.  the reason that you're allowed to is 
+actually a fact from calculus, not algebra.  now, while this step is fine if 
+you're familiar with calculus,  it's essentially just pushing 
+a constant inside a limit,  the general population that would be 
+interested in answering this question   "is 0.99 repeating equal to 1?"
+we can't assume that they know that.  if we just use that fact, i think 
+we're kind of doing them a disservice  because it doesn't really answer their question. all we've really done is hidden the details 
+in another thing that they don't understand.  the problem with the red arrow 
+on the right is pretty similar,  how do i know that multiplying .33 repeating 
+times three actually gives .99 repeating? and as long as we're on 
+the topic of hiding details  in places you don't understand,  why are you so okay with one-third 
+being exactly equal to 0.33 repeating? that sounds kind of just as hard to 
+prove as 0.99 repeating is equal to 1.  people seem a lot more okay with that one,
+but i don't really think you should be. okay let's start working towards an actual proof.
+first let's address what i think is the   real source of your confusion:
+the definition of 0.99 repeating. what does .99 repeating actually mean?
+it is definitely not some kind of mystical number  with infinitely many nines 
+after the decimal point.  that's not a definition.
+you have to give a definition   in terms of things that are already understood.
+so here's how we actually define 0.99 repeating.  we start by defining a sequence.
+the first element of the sequence is 0.9,   then 0.99, then 0.999 and so on,
+where the nth term in the sequence   is just point followed by n 9's.
+you can write it for an arbitrary n using   this capital sigma fancy math notation,
+but that's not really necessary.  remember that for a fixed value of n,
+this is just a finite decimal approximation.  it has n digits after the 
+decimal point and it stops. the definition of 0.99 repeating is just 
+the number that this sequence approaches,  if there is such a number.
+in mathematical terms we   say that it is the limit of the sequence,
+but it's okay if you're not familiar with limits.  just think "it's the number 
+that this sequence approaches".  so let's get back to the original question. what is ".99 repeating equals one" even claiming?  all it's saying is that this 
+sequence 0.9 0.99 0.999 and so on  is approaching a real 
+number, and that number is 1. well isn't that obvious? you already knew that! here's a plot of the first 
+few terms of the sequence  you can see that it's definitely 
+going to one pretty quickly. so at this point do i even 
+really need to give a proof   now that you understand what this 
+statement is actually claiming? it doesn't seem so mystical anymore, does it? what it's actually claiming 
+is just pretty mundane. but i did say that i will give 
+a real proof so here it is.  all we have to show is that that sequence of   0.9999 approximations is 
+getting closer and closer to 1. okay so let's just look at the 
+difference xn - 1 in absolute value.  plug in the expression for xn and you see that   that difference is 10 to the minus n,
+or 1 over 10 to the n if you prefer. i think a lot of people would be 
+comfortable stopping there and saying   "okay yeah i see that this goes to zero"
+but if you really want to finish the argument   and give the formal definition, then okay.
+give me some tolerance epsilon bigger than 0,  then i say well for any n that's 
+bigger than 1 over epsilon,  we see that that difference is 10 to the minus n,
+which is less than 1 over n,   which is less than epsilon,
+and that's how you would formally   show that the sequence approaches one.
+but of course you already knew that! so i hope that really clears things 
+up for you, so you don't have that   irky feeling in your stomach when you 
+see one of those algebraic proofs and   still don't really feel 
+satisfied with the conclusion. all the real hard work is just in understanding 
+the definition and once you understand that,   i think it clears right up.
+and i do want to address one last thing. i know that a lot of videos 
+phrase this as a choice.  what should we choose .99 repeating to be?
+and that is completely fair,  you can take the symbols and define 
+them to mean whatever you want. but notice that this whole process 
+of defining a repeating decimal   didn't really depend on using 0.99.
+the real choice here that mathematicians made   was not that .99 repeating equals one. the 
+actual thing that mathematicians decided on was:  what does it mean to add up 
+an infinite number of things?  so in that sense, we didn't choose 
+the value of 0.99 repeating to be 1.  we chose the definition of an infinite sum,  and then from that we were able to 
+derive the value of 0.99 repeating. and the last thing that i want to 
+talk about is all those other videos.  now if you just looked at the title of 
+this video, you might think i'm trying   to start some kind of flame war,
+which i'm definitely not. i think that each of those videos 
+is worth watching, and you can learn   something from each and every one of them.
+i just felt like none of those videos really   fully removed the source of confusion.
+so that's the real reason that   i wanted to make this video.
+just to clear things up for you the viewer. i do want to give a special shout out to 
+the mathematical association of america.  their video was the only one that i found 
+that didn't assume that .99 repeating   exists, and i stole one of the 
+examples in this video from theirs. hey everyone that's all i've got on this 
+topic so thank you for watching! if you   liked the video please consider subscribing,
+sharing with your friends and, as always,  slap that like button an odd number of times.
+see you next time

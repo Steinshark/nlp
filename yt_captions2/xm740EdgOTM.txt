@@ -1,0 +1,132 @@
+- i absolutely love the
+extra space in my new house, not to mention the exquisite decor. but the problem is that it
+was built back in the 90's, when smart meant a
+mechanical sprinkler timer and hardwired intercom. marco. - [jake] polo. - that aint gonna cut it for me. but, when i looked into
+expanding beyond this with smart lighting and smart sensors, honestly speaking, there are
+so many different technologies and ecosystems and brands
+that contribute to some or more of them that frankly
+it was pretty overwhelming, even for a tech savvy person, to the point where i
+pretty much had to dedicate one of my staff members to
+figuring this stuff out. so together we're going
+to be showing you guys how we plan to use off the
+shelf commodity z-wave devices to achieve my wildest smart home dreams. ridge wallet has redefined
+the traditional wallet, with its compact frame, and rfid blocking plates. keep your wallet bulge down, and you offer code linus to save 10% and get free world wide shipping. (upbeat music) before you begin your smart home journey, you've gotta figure out what
+exactly you want to automate or smartify. from there, you'll need to do
+research into the available products that can achieve your goals. for instance, if you want to
+install smart light switches so that you can have your lights turn off when you leave your house, there are going to be a lot of options, with a key differentiating factor being there communication standard or what they use to talk to each other and to the internet. now currently the entire smart home market is in a bit of a confusing state due to a standard called matter. it's a project that's backed by some of the biggest companies in the world, with the intention of standardizing the communication between smart devices. the problem is that matter isn't out yet, and we still don't know
+what it's gonna look like, or what it's going to mean for existing communication standards. so for now we're gonna
+say it doesn't matter. that leaves us with the big players, wi-fi, zigbee and z-wave. now wi-fi is the one you're
+probably most familiar with. it's super fast, but it requires connected devices to maintain an active connection
+with a wi-fi access point. that uses a ton of power, so it's not suitable for battery powered devices like this one. not that we'll using anything like this, because screw replacing batteries,
+if you know what i mean. wi-fi is also what's
+known as a star network, which means that all of the devices have to be in range of
+a central access point rather than being able to
+mesh off of one another. it's also worth nothing that depending on how baller your wi-fi access point is, adding 20 or 30 smart devices can start to seriously hurt
+your wi-fi performance. which brings us to zigbee and z-wave. these are both mesh style networks, which means that devices
+within the network can mesh between each other
+through low energy radio waves rather than requiring all of the devices to connect to that central hub. this means they have better range, excellent battery life, and they're more resilient
+than wi-fi based networks. the downside is that they are way slower. not that that really matters
+in a residential application. even if we were taking multiple hots, all the way from the basement to the upper floor of this house, we're still talking
+milliseconds of latency, which isn't to say that
+they're both the same though. there are a few main differences between zigbee and z-wave products. for starters, the z-wave alliance requires that any z-wave product goes through a very stringent certification process that requires the manufacturer to stick to standardized commands and security protocols. this basically means that z-wave devices from various manufacturers
+are way more likely to just work with one
+another and do so securely. it also means though that
+z-wave compatible products tend to be more expensive. zigbee on the other hand is fully open, and doesn't require any certification. that means that most zigbee
+stuff is a fair bit cheaper, it just might not all work together. they also operate on
+different frequencies. z-wave is around 900 megahertz, while zigbee operates in
+the 2.4 gigahertz range. theoretically, this gives
+zigbee the upper hand in terms of bandwidth, but since most devices are
+barely sending any data, just on or off, it usually doesn't make
+a ton of difference. now there's anecdotal evidence that says that zigbee will not mess
+with your 2.4 gigahertz wi-fi, but since it's already
+such a congest band, i didn't wanna take that risk, and since all the devices
+that i wanted to use are z-wave ready it was
+the better choice for me. there's still one issue though, the hub or hubs. the thing is, a device
+like your smart phone can't natively communicate
+with z-wave or zigbee devices, so you need something to bridge the gap. and this right here is
+the ayotech z stick seven, which is the latest
+generation z-wave technology, which means that our power efficiency, as well as better range, not to mention convenient
+backwards compatibility. now, nothing would prevent you from using a z-wave and a zigbee hub, and marrying those devices on the same smart home overall network
+using something like this raspberry pie running home assistant. and in fact there are hubs
+like the smart things hub that natively support both, but it can add an extra
+communication step, so we haven't felt the need to dabble with any of that, we're sticking with z-wave. this concludes the scripted
+portion of this video. goodbye teleprompter. all right, jake, let's
+yolo this thing, shall we? - [computer voice] okay. - [linus] hey, that was the breaker. - so i heard you're supposed
+to lick both your fingers- - uh-huh. - and then- - and then put them up my butt hole? - well, okay, after that
+you lick them again. - oh, so we're on different subreddits. - yeah. (laughing) - there is a neutral, it's in there boys. very nice. okay, was this on or off when i? it doesn't matter. - it does matter actually. - oh, shoot balls. i don't have the little poky jabby. - you don't need a poky jabby. - i do need a poky jabby. - why do you need a poky jabby? - so i can get the thing out. hold on, hold on, don't, push it in a bit before you pull. yeah, there we go. - holy mentos. - [linus] what's up, andy? - [andy] hi. - how you doing? now because this is a smart switch, we can't just wire our two black wires up to the two black
+screws and call it a day, it actually requires the neutral wire, which is gonna be this
+silver puppy right here. so we're gonna wire that
+up to these white wires. now, we've also got a fourth
+connection for traveling. - that's for a three way. - ah, it's for a three
+way switch, perfect. oh good, so this is three way compatible. - yeah. i think you need their
+specific ad on switches, but yeah, you could do a three way. - again, ladies and gentleman, this is not what we would recommend, but we're just doing this to
+kind of test it out today. so we're just gonna jam both
+of the wires under the screw so they'll make contact that way. hold on, i think i can
+loosen it a bit more. - [jake] how much do you
+trust your handy work? - enough to test it right now and then immediately put the
+other switch back on properly, and then have a qualified
+professional do this again later. haza. okay, so we've got our line and our load, and then we've got, normally we would our morrette and a wire chunk to go
+to our neutral here, but we didn't. we just put them both there. just ignore that. we're not even gonna screw that back in. so nice. actually we should screw it back in so no one gets burned. and boom. - [jake] yeah. - all right, cool. - [jake] it's so cute. - yeah, it's, stop it. stop it. another cool way we could have
+checked if power was running, shout out to fluke, is with the volt alert
+setting on their multimeter. so check this out. (multimeter beeping) (multimeter beeping) (multimeter beeping) cool, huh? - what do you want a
+tutorial or something? - no, i just, i wanna see how does it pop up in home assistant. if you're not familiar with it, home assistant is a piece
+of software that allows you to connect basically
+any smart home ecosystem to another smart home ecosystem and then set up automations
+based on the data that you receive from each one. it's super cool. and theoretically our
+switch is gonna show up pretty much like that. - actually, before we do that, we kind of need to set up the hub. now technically i kind of
+did this in the background, but if you need to do this yourself, all you gotta do is
+install the z-wave js ad-on into home assistant. if you have home assistant
+running in a docker container you're not gonna have ad-on support so you're gonna have to do
+this in a separate container, but if you have it on
+a ras pie like we do, it's really easy to install. you basically go to the ad-on store, type in z-wave js and install. there's two versions technically, one that's built right into home assistant and has less configuration, and then there's the fully featured, full fledged web gooey one, which is what we're gonna use because it is way nicer. look at this, you can see everything. - [linus] that is super cool. i don't see our switch yet though. - because we haven't hooked it up yet. so by default nothing's
+gonna be configured. you're gonna have to pick your usb device, we have it there. you're gonna wanna set your network key, and then you should be able
+to see your controller. ours is the 700 series based controller, it's the z sticks, gen seven whatever. it's in there. we can see it's alive,
+we can see it's happy. then you wanna add your devices. so you wanna add the switch? - yeah. - to add a z-wave device, it's called an inclusion. so we're gonna go in the controller and tell it i wanna do an inclusion. now go click both the buttons on there at the same time. - [linus] all right, i'm
+going, i'm going, i'm running. - i think that's the way you do it. oh, it worked. - [linus] it worked? - turn it back on. haza. okay, device found. sweet. so now that it's found the device it shows up unknown af, oh wow that was quick. nevermind. okay. so it interviewed the device, found out what the device can do, what it's called. and we can see in here basic switch, binary switch, (indistinct). - [linus] oh, nice and snappy. - target status on. it's a little slow 'cause- - these are fluorescent lights. that was (snapping fingers)
+basically instantaneous. - [jake] oh, were you
+trying to host right now? - yeah, i'm trying to host a video. - oh, sorry, here you go. - geez, geez. - should we play with some other devices? - absolutely, i already got
+this one out of the bag. - oh, this one i already set up too, but i mean the process is the same. basically z-wave devices usually have an action button it's called. so in this case if you got this brand new, you plug it in, start your inclusion. - and you get you some action. - you click the action button and it just does it. - you're a smart home enthusiast so that's the only action you're getting. - jesus. - don't include that in the video. - [computer voice] okay. - go plug it in. - so i can action myself
+here with the button. - [jake] but i'm gonna action you for you. - jake's gonna action me. so look mom, no hands. do you always ride your
+bicycle on toby's (indistinct). wow, that did work really well. now this is a yeelight, it's a smart light. we could be cheating right now, but we're not. - [jake] we're not cheating. - this is through home assistant. - [jake] proof. - next i'll show you guys
+something that would have been super handy to have when the contractors accidentally plugged the drain
+for the air conditioning unit that's up in the attic. this right here is a moisture sensor, and what we can do is we can say "hey, if you detect any moisture, "turn off "some device." say for example the air conditioning unit. cool, right? at $50 it's a lot cheaper
+than these drywall repairs. another really cool thing
+that i wanna use extensively is motion sensing. now, you can get switches that
+have motion sensors in them that will just turn on for
+a certain amount of time and then turn off. but with home assistant we
+can make it so much smarter. these ge switches that we're using have both the light switch on and off, and the motion sensing component independently addressable
+through home assistant. so we can create all kinds
+of fun little integrations. for example here in the theater room we could tell this switch hey,
+if you don't see anyone move for let's say two hours, turn off all the lights, and while you're at it make sure the air conditioning's off and turn off the tv to save power. dads love that kind of shit. of course not everyone wants
+to buy all new smart switches, so for those folks, check this out. we actually turned off the motion sensor that was built into the switch, and instead we're using one
+of these simple little javis. this is an ayotech, i believe it's a six in one sensor. it's powered by usb or battery. so it absolutely sips power. it'll tell you temperature,
+humidity, motion, i can't remember but there's six of them. oh, it's uv vibration, which will be useful for tampering, and then also light, so it can tell not just
+if there's any light, but it can tell how much light there is. so you can tell it, for example, hey, look, if it's a
+bright sunny day outside, there's already a lot
+of light in the room, don't turn on the lights. and conveniently this ge one
+that i'm planning to deploy also has that functionality, so i probably won't need
+many, if any of these. oh, and one thing that's nice is they have a wider field of view than some of the ones that
+are built into the switches. here's something cool, a lot of these ayotech devices, and for that matter, a
+lot of smart devices, have extra sensors that you can pull to get extra data. so, for example, you can
+see the multisensor six that we're about to show you a demo with in the mechanical room is measuring 23.3 degrees celsius, while that water sensor that
+we had in the upstairs hallway is at 31.7. i feel bad for the contractors here. i was like, i told them, i was like "i'll pay for
+internet in the house, "you got internet, i'll
+run the hvac for you guys "while you're working," but then they broke it. i tried. for our last trick, ayotech
+also makes a whole house energy monitoring solution. and we're just gonna
+open this up real quick and see sort of how scary it looks. and if it's too scary, then we're gonna have [music] brian the electrician [music] - hook it up. oh, it's actually not that scary. everything is, everything is (indistinct). - [jake] here, why don't you
+take the whole thing off? - i'm trying. - [jake] it's hitting the breaker. - yeah, this is really
+clean, they did a great job. i mean i don't, it's not that
+i like hanging out in here, this is not my, this is not my happy place. - how are you supposed to do this ayotech? - yeah, way to go ayotech. you were doing real well up
+until this point in the video. - [jake] okay, that looks
+probably like it'll work i guess. - i mean what the heck
+could this thing even do? so this'll monitor your power and then what? if your power goes over a certain amount you could get like an email? - [jake] oh, it's working. - oh, is it working? - [jake] yeah. - oh cool. - [jake] so guess how much
+power your whole house is using. - let's go look. i mean right now, hold on, okay, let me think, let me think. 'cause the hvac's not running, range isn't running. okay, i'm gonna say- - [jake] the whole house. - the whole house- - [jake] there's not very
+many lights on either. - it's gonna be like four amps. - [jake] yeah, actually, almost spot on. - really? - 640 watts. - oh, that's freaking awesome. (jake laughing) you know what, here we could
+turn on this microwave. okay, ready? - [jake] yeah. is it bad to run an empty microwave? - i have no idea. - [jake] refresh. - what do we got? - 750. hold on. - what are we at? - oh, 2000 watts, holy crap. - now i can't leave this here because as part of the home renovation we're pulling out this 125 amp service, and we're gonna replace it with a 200 amp service, or maybe even more because we actually wanna put a couple electric car
+chargers in the garage. but, that's a project for another day. make sure you subscribe
+so you don't miss it, 'cause there's gonna be lots more videos about this project, and go check out our sponsor, linode. linode is a powerful linux
+space cloud computer service that is affordable and easy to use. it's got a large marketplace with fully configured one click app so you can quickly deploy servers for games like minecraft, cs go and valheim. you can host your own website with easy word press, and drupal integrations, and you can go diy if you
+want a fully custom setup. they've got affordable pricing with no hidden fees that try to sneak on to your monthly bill. and they have servers all over the world. the best thing is that linode has 100% human 24/7, 365 customer service that's reachable by phone,
+email or social media. so why wait? set up your own server today, and get $100 60-day credit on your new account at linode.com/linus. if you guys enjoyed this video, go check out our hvac video where we got a proof of concept running for how we're gonna use
+home assistant to control multi zone air conditioning
+with just a dumb ac unit. mind you i think we're, oops. thanks floatplane, you guys are the best. (indistinct)

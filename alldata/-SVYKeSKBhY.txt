@@ -1,0 +1,103 @@
+- Holy smokes! That's hot! This thing's running at 105 degrees! That can't be right. Ow! Dang it, that cannot be good for it. SSDs are supposed to
+have three major benefits over mechanical hard drives. Performance, longevity, and, of course, efficiency. So how is it that we've come to this? A water-cooled SSD. Only the next 15 minutes
+can tell us the answer, and it's brought to you by I Fix It. Do you like repairing
+your own electronics, instead of spending hundreds on expensive replacement
+or repair services? Use I Fix It! And learn more about I Fix It's essential electronics
+tool kit at the link below or at the end of this video. (Energetic techno music begins) I guess step one is to open this thing up and see what the heck is going on here. You know what's funny is, the thing is, we actually did water
+cooler SSD, coincidentally. One, of course, airs about a year ago with fascinating results. What's most fascinating
+about those results is that Corsair presumably watched that video and then came out with this. This is the MP600 Pro. Not only does it feature water cooling, but it can actually be
+plumbed into your custom liquid cooling loop. Meaning that this thing
+should be the coolest SSD on the market. There we go, thermal pad. Nice copper block. You don't get any corrosion
+from adding aluminum parts to your loop. No actual thins or anything on the inside surface of the block. I can, I can see in there. You got a Phison E18 controller. It's a nice, high-end controller. PCI Express, gen four. You've got, presumably, what? about two gigs, probably, of DDR three memory, and then two terabytes of 3D TLC NAND. That's rated for 3,600 terabytes written. So very high end SSD. Here's a funny thing, the heat spreader that goes on the bottom
+side of the drive, okay? So it's got thermal pad
+there too for the ram chip, and then for four, yup, four NAND packages that are back there, that one doesn't actually
+connect to the water cooling thermally in any way. But there could be a good
+engineering reason for that. You see there's conflicting
+evidence out there as to whether or not
+cooling the NAND flash is actually beneficial. The old wisdom, back when
+we made our original video, was actually, that
+cooling it could make it not last as long. But then there's new research, that seems to indicate that going too hot could increase errors, and basically just, the cooler the better may be true. Like with pretty much any
+other integrated circuits. Of course, though, even if cooling the NAND is good, the hottest component on this device is absolutely this controller. And that's the one that
+if it goes too hot, is going to affect our performance. So that's what the water
+block's attached to. Let's go ahead and reattach it, shall we? Now this is a little awkward. In order to install our water cooled SSD, we actually have to remove
+this chunky heatsink with sexy RGB on it. And this thermal pad, and put them (item clunks on desktop) here. So that we can have this here. Oh crap. I put the water block on upside down. Up until this point in the video, we may have actually been
+very unfair to Corsair. Something neither you, nor I, considered is that on most motherboards, the highest performance M.2 slot is actually extremely
+close to the CPU socket. Because it has to be connected directly to CPU PCIE lanes. What that means, is that it also happens
+to be directly behind the super hot back plate
+of your graphics card. This thing might need water
+cooling more than we thought. - [Alex] No. - Well, - [Alex] No. - You know what, let's give it, - [Alex] One fan, you'll be fine. - Let's give it a try! Let's give it a try. So we're going to run a control, okay? With just the SSD, with
+just the heatstink on it, and see if it slows down
+under a stress test. Ready? Go! It's going now. Hey!
+There it goes, all right. We've got total activity. 100% on our drive. He's ramping up boys! Wait, holy (squeak) bet balls. We have a core I9-11
+900k pegged at 90% usage. Just, (blows raspberry)
+sharting data on to, and then reading it off
+of this drive. (Laughs) - [Alex] Oh yeah, the test that
+I made up slams it. (Laughs) - This is not what we expected to happen. You can see this red line
+here is from yesterday. The drive went whoa! It's so hot in here! And thermal throttled. And today, thanks to our magnificently, you're welcome, air conditioned warehouse workspace, the drive did not actually
+reach the 70 degree thermal throttling point,
+making it only to 68. That's not nice. Remember how I mentioned before, that one of the challenges for an SSD, sitting right there
+between the CPU and GPU, is that when you're gaming or
+doing anything else intensive, it could heat up even more
+than it otherwise would. Well, we're just gonna run for mark and we're going to try this again. Good luck everyone. Something to note is, our curve might look
+a little bit different this time because we didn't let it cool all the way down. We're trying to thermal throttle it. That's the whole point. (Computer techno music) - Well that's just great. We peaked at 79 degrees and
+definitely thermal throttled, but we thermal throttled
+like, to Hell and back. We went from almost two gigabytes a second to one gigabyte a second reads. That's good. Hypothesis proved that
+GPU being nearby is bad, and it can thermal throttle. Alright, well let's add water cooling. Of course, depending who you ask, there's a lot of different ways that you can water cool a product. Remember back when I got that water cooled kit of memory that just had water in it, but it wasn't actually circulating? Well, I have a theory that we could actually get away with doing something similar here. Just filling the SSD with water and then sealing it up. In a nutshell, what we're doing, by throwing water in here, is we're adding kind of thermal inertia. We're making it so that when
+the drive is under heavy load, let's say we're editing 12k video, or something like that, it takes a lot of thermal energy for that water to actually
+change it's own temperature. Because water is awesome. Thank you water. You're amazing. Then, what'll happen is we will stop doing what we're doing and it will be able to dissipate that heat. So it's really great for
+absorbing bursty loads, but maybe not as good
+for long sustained ones. Now if there weren't thermal protections built into this product, I would never recommend
+doing something like this because the drive cannot
+exceed 70 degrees. It's probably fine. But if you had something that could get to boiling temperature, you
+could create a lot of pressure in there and like blow a gasket, and the water everywhere. Now actually seems like a
+really good time to explain the test that we're using
+to thermal throttle our SSD. We're using a tool called Iometer, which was developed by
+Intel back in the 90's and then open sourced in the 2000's. It's not particularly user-friendly, but what it is, is extremely customizable. So the way we've got it configured here is we've set our maximum disc size to 40 million sectors, which means, basically, we're working with a 20 gigabyte file. It's important that this is more than the amount of system memory we have. Then, in terms of our
+access specifications, we're hitting it with
+four kibibyte accesses. It's not quite the same as a kilobyte, but don't worry about it. And they are 50% reads, 50% writes and it's all sequential. So we are just slamming this thing. One other really important
+thing we had to do is change the results
+display update frequency to two seconds. Otherwise this drive is so fast that it would actually just
+throttle at the CPU level if we tried to update
+more often than that. So haha! Fascinating results. The red is without water cooling, and the green is, well, filling up our block with water. So, as expected, the green one takes quite a bit longer to reach that 80 degree thermal throttle point. But then what we didn't expect, is that it doesn't
+throttle all the way back to 70 degrees and doesn't
+tank the performance to nearly the same degree. Although the performance
+gets extremely inconsistent. So this is the actual
+drive write performance. Isn't that fascinating? All right, let's do it properly now. Owie! Ah! Hot! Oh wow, that's hot water. Oh man, this is just, it feels wrong, you know? Here we go! Water cooled
+SSD ladies and gentlemen. We mocked it at the start of this video, but it could be necessary. Nay, essential! For your gaming enjoyment. What the heck is going
+on? It's having a little, - [Alex] (laughs) I've never seen that. - Having a little freak out here. Nah, I know what it is. There's no freaking
+restriction in the loop. - [Alex] (laughs) - That block is, basically, just a U-turn. Like it's not, there's no microfins, or anything like that. You could get really high flow rates through a single component loop. But these days everything, CPU's, GPU's, they've got these like
+impingement jet things, these little microfins, that are hard for the
+water to get through. So you never see stuff like this anymore. I hadn't, I hadn't seen
+anything go like this in years. Well, that's great for cooling. It means our flow rate
+is going to be terrific. Check this out. Our drive is at 19 degrees. 19 degrees, ladies and gentlemen! 60 Minutes? - [Alex] Sure. - Okay. What do you think? Is it gonna throttle? There it goes! It went up by a degree! Two degrees! We're back and this is amazing. We managed to reach a
+maximum of 29 degrees over the course of a full hour long test, and our performance, basically, still got some of that inconsistency. Although that's probably more down to drive garbage collection and like, NAND write speed limits
+more than anything else. But it did stay higher than
+any of our other tests. So in conclusion, water cooling your SSD is completely unnecessary, and we've even done the math to prove it. The thing is, a hundred
+normal circumstances, it is conceivable that your CPU or your graphics card could be 100% loaded for extended periods of time. Whether you're gaming or
+running some kind of render or simulation. So when we test those components, that's why we hit them so
+hard. To ensure that they won't thermal throttle under those conditions. But with an SSD, you normally only hit it with very short, bursty loads at a time. And when I say normally, I mean, almost always outside of
+industrial or server applications. So get this, at the speed of this drive, which it's writing at about
+two gigabytes a second this entire time, it would manage to write
+over the course of an hour, actually, you can see it. Hardware info has done the math for us. It has written a total of 22.8 gigabytes just running this benchmark. To put that in perspective,
+because of the performance of this drive, at it's 1400 terabytes rated write endurance, it would actually burn itself out in a span of somewhere
+between three and four days. Now, obviously, Corsair
+doesn't expect anyone to actually use the drive like this because they estimate it would take about 280 years to fully
+utilize the right endurance of this drive, because they think you'd probably do about 32 gigabytes a day. I would say their estimate is actually probably on the high side in terms of how much you'd write a day. So this thing should last for
+a really fricking long time. Unless, of course, you are stupid enough to run benchmarks like this. That could actually cause
+it to thermal throttle because then, check this out. We managed to use 2%
+of our drive endurance, just sitting here, benchmarking
+it to make this video. So is water cooling good for your SSD? Maybe, but only if you
+were going to kill it in some other way. The one saving grace for this product is that the price of the
+MP600 Pro air cooled version is 450 some odd dollars, and the price for the water-cooled version is actually $469. So at least it's not really
+costing you any extra, assuming that you already
+had a water-cooled system. And it certainly does run
+cooler, especially in that slot that's got all these heat
+generating components around it. That is a very mangled conclusion. - [Alex] (laughs) - Almost as mangled as
+the segue to our sponsor. I Fix It sponsored today's video! Their essentials electronics tool kit is a great basic kit for new users. It has everything you need
+for your most essential electronics repairs. It's compact. It includes the most popular precision bits that you'll need, and they're all held in
+place with high density foam. So you won't lose them. You might lose them, but it'll be on you. You can throw it around without
+any of the bits falling out and they've got a lifetime warranty, and you can get it at ifixit.com/LTT If you guys enjoyed this video, maybe go check out the one
+where we water-cooled an SSD, but we did it our way. The jank way! This is actually like
+kind of, kind of pro. Like it's pretty good. I'm kinda, I'm kinda
+sold if it's only like a $15 add, well you do have
+to buy fittings too though.

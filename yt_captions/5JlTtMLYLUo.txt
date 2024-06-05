@@ -1,0 +1,157 @@
+- This is the fastest gaming
+CPU on the planet right now, installed in $1,100, ROG motherboard. But, you know what? It's just not fast enough
+for me. We need to go faster. So, today, we're gonna be
+taking Intel's Core I9-12900K, putting a healthy little
+dollop of dielectric grease, all in the CPU pins there.
+- [Alex] No. - No, no, don't worry,
+this is for its own good. And we are gonna be taking it
+sub-zero, with our 3000-watt, CPU chiller. That's right, we're
+hooking an air conditioner directly up to the CPU socket, and it's gonna be a lot of
+fun ladies and gentlemen, let's see how fast we
+can make this thing go. And who's sponsoring this mess? - [Alex] Seasonic. (chuckles) - Now, that makes sense,
+they will sponsor anything. - [Alex] What? 1300-watt power supply? - Oh yeah, I guess it kind
+of makes sense in this case. - [Alex] Yeah, like, what in the sense? - You try and do stuff like this without a good quality power supply, you're gonna have a
+real bad time. (laughs) Go check out Seasonic,
+I'll link it down below. (upbeat retro music) You guys did your best
+on the installation job for part one here. - [Alex] No, we didn't. (laughs) - But I'm definitely glad that I'm here to supervise this time. Here's the thing, when I said that I was doing
+this for the CPU's own good, that's the truth. The goop that I'm sticking into the pins in the CPU socket here, is
+called a dielectric grease. And it serves a very important function, because, while the chiller
+project was an enormous success, we managed to get this Core
+I7, this is an older one, down to minus 20 degrees Celsius. There are some inherent risks that come with going that
+cold, namely condensation. So, because you can't stick, you know, a big old thing of foam,
+into your CPU socket pins, you want to use a non-conductive grease, like this dielectric grease that I'm smearing around in here, to make sure that we
+don't have any moisture, 'causing a short between the pins. That would be a real bad time,
+and probably kill our CPU. Something to note guys is
+that as messy and awful as this looks, it's not harming
+the motherboard in any way, and this board could continue
+to function for years with this dielectric grease in the socket, it's, it will just be messy. It'll be a messy boy. ♪ Give me, give me more, give me more, ♪ ♪ free Britney more. ♪ (imitates puking sound) It should be criminal to
+have this much fun at work, it's hilarious. Now, normally at this stage,
+we would install the CPU, and use the hold down and retention arm, to keep it in place. But, when you're going sub-zero, you can't afford to have any
+little air gaps around the CPU, because that's where
+all the cold refrigerant is going to be delivered. And the thing is, something like this, absolutely impossible
+to perfectly insulate, so you're gonna get these little pockets, where you get moisture
+condensing on the cold metal, and then dripping. Is it possible to both hate
+and love something this much? - [Alex] Clearly. - Yeah, 'cause I'm doing it. - [Alex] Geez. - My fingers are greasy. It's probably fine. - [Alex] Yeah, it's pretty shielded. - Oh yeah, it's actually got a whole, like, plate on the back
+and everything, wow. It's Linus-proof. This is a disaster. Why did you guys do this?
+Is there another one? - [Alex] Yep.
+- All right. Thank goodness. - [Alex] Yeah, that one
+was already pretty shot. - The good news is that
+we aren't going to do anything like that to it this time, because you don't really have to. This is a cool feature of
+this board, by the way. It has not only the LGA 1700
+holes, which are standard, but it also has the older
+style LGA 1000 series holes, so, when you've got an old cooler, you can just, (imitates
+fart sound) put it on there. You'd get it, just get
+on there little buddy. How much, how much frost did you guys get on the back of the board last time? - [Alex] Outside of that pad? - Outside of that pad?
+- [Alex] Yeah. - Then the back plate's coming off. I wish I hadn't put
+dielectric grease in just yet, but, hey, that's what
+life is about, learning. Through my mistakes. The good news is that, none of this stuff, that's got a thermal pad
+on it on the back here, is gonna need to be
+cooled. (both chuckles) I should probably explain that. PCB's, or boards like this, are made predominantly of copper. So, copper happens to be an
+excellent conductor of heat, which means, that if you
+cool this CPU socket area, it will actually cool a huge
+amount of the board around it, especially when the CPU
+isn't working real hard, 'cause there's just not enough heat from these surrounding components, to overcome the frost spread. Now, they apparently didn't find this when they were insulating
+last time around, but, I actually have a motherboard, sized, and with all the holes
+already punched through it, piece of this insulation foam here. Then, I'm gonna take the part for the CPU, I'm gonna put it right there, and we're gonna stab all the way through, and that should pretty
+much do it for installation for the back of the board. So, where are the, where the stabies? - [Alex] Over there.
+- Okay. How many of them are through? - [Alex] All of them.
+- Oh, they're all through? - [Alex] Yep.
+- Nailed it. I think you might be mistaken though. I think the, it might be the outer one. - [Alex] No.
+- It doesn't matter though. It doesn't make a difference
+to what we're doing. I mean, we could just use
+the threads to kind of, - [Alex] Oh no. - Eliminate the gap between them. This is a trippy kind of eraser, that I had actually never
+heard of in my life, until I tried to sub-zero cool a machine a few years back, and learn that you like, you like, put it down on the
+paper, and then lift it up, you don't, like rub with it. Anyway, that's super malleable, and it's a nice, cheap way to
+insulate around a CPU socket. So, this allows us to kind of push into, you know, little gaps, that we otherwise wouldn't be
+able to, to properly protect. This is more for if you
+wanted to, like daily drive, sub-zero cooling, which by the way, people used to do back in the day, like, there was a huge,
+small community, (chuckles) at like extreme systems
+and stuff like that, that would build, you know,
+custom phase change coolers, and actually 24/7,
+their CPU's at sub-zero. You always need to make sure that, you're focusing your, your
+installation on places where you could potentially
+have moisture drip. So, I'm gonna make sure that
+I pack things in really good, down around the bottom here. God, it's been so long since
+I've insulated a board. Feels good. Feels nostalgic. Back when overclocking was fun, you know, maybe if I just will it to be
+fun and have a point again, it will. We want to go right up to the RAM slots, because the last thing you want, man. I can't think of anything you want less, than moisture in your RAM slot. - [Alex] Metal chips. - I mean, yeah, metal chips, okay. I mean, it's not a competition,
+Alex. (both chuckles) Now, what we need is
+to get our installation up to the same level,
+as the IHS of the CPU. So, the top of the metal spreader. We're gonna use this for that. It doesn't have to be the most crazy, precise thing in the world. What's nice about sticking this stuff onto the artist eraser is that, you can actually clean up the board, reasonably well, when you're done. - [Alex] You know,
+what's another way to get nowhere in there? - Put it in a vacuum sealed container. No, I refuse. It's awful Alex. (both chuckles) I will not do that to this board. Not perfect, not bad. Now, we need to, this, FI, this. Now, do you want this
+thermal probe in there? - [Alex] Yeah, we need the
+thermal probe in there. - So, we're gonna go right there. We're gonna kind of,
+force it into this crack. I want to get this probe covered, just, oh, hold on, hold on,
+I lost the thermal loop. Okay, right there, yup. This is why I wanted it
+to be round, by the way. - [Alex] I know. - I know that it wasn't possible. Okay. So, now we just have to get it, down to the level of the, cold plate. Like, you probably need a solid
+three layers of this stuff, over every part of it. Do you want to wrap that for me please? - [Alex] Oh yeah, the adhesive
+on this isn't very good. - No, it's really worn
+out, this is super old. Is there an orientation? Does it matter? - [Alex] No.
+- [Linus] Okay. Oh my God. Honestly, this is like, not that stupid. I'm serious. (Alex chuckles) It's really not. So, you'll want to do
+another round of that. - Yeah, on top.
+- And then, don't bother trying to like, poke holes,
+or like cut it perfectly. Just like put it on, and just like poke it
+through the hardware, and then tighten down the hardware, just like right on top of it. Just, just make sure you've got a pretty
+decent amount of pressure. - All right.
+- This is like, going to work. - Now, just more insulation, and, hopefully, we're good to go. And we want this tight,
+but not super duper tight, but also pretty, super, duper tight, 'cause it is holding in the CPU. The last time we had some
+issues with these lines, also getting all frozen,
+and condensation in. So, with any luck, this
+will help prevent that. (grunts) That's really on there. Fricking, heck yeah. Should be so much better than last time. - Yeah. - Yeah.
+- Yeah. - I mean, that's, pretty fine, I think? Where's our GPU at? I like it, I like it. High enough performance, that our benchmark scores will still be, like good, and not bottlenecks, but, we're not risking
+anything too expensive. Got a 3060 going here. You know, what's the craziest
+thing about this chiller? Is that it is conceivable, that
+we could actually hook a GPU up to it as well, in the future. Just with like a splitter, or
+something like that, off here. - Yeah, it won't go a whole lot colder, like you'll be able to see the
+condenser temps right here, but, it can definitely
+pull a lot more heat out of this stuff. - Yeah. It'll be really
+nice to have, just like, a ready to go, sub-zero cooling solution, just like that. Oh, our RAM, is gone. - Oh, yeah. That's pretty important. - I don't want to lose that DDR5 RAM. - This stuff's expensive
+as frigg, isn't it? - Yes. Oh, yeah, this
+is the 6,000 ZL36 stuff. This stuff better not die. I mean, that's okay. G.SKILL, you would, you'd forgive us, right? G.SKILL watching like. I am so damn excited
+right now, are you ready? - Sure. Should we, make
+sure this turns on first? - Oh, yeah, right, if... Okay, if we were daily driving the thing, normally, people set up a relay, so, that when you press the
+power button on your computer, it also fires up your compressor, and your fan for the condenser, but, nope, we not, don't
+have that, so yeah, go ahead. Never do this. This. This is main's power. Never, this. - [Alex] Yeah, none of this.
+- [Linus] None of this. The only reason we have
+that still connected at all, is because you can't just
+plug in a modern compressor and condenser, and expect
+it to just run full tilt all the time, and you wouldn't
+even necessarily want it to. That wouldn't be healthy for it. So, this is the controller
+that has all the safeties, like, say, for example, the
+safety that turns it off, if the evaporator fan turns off, which is why we have this
+sitting here, spinning. Oh, I'm gonna let go of that. All Right. - [Alex] Yeah, it's turning on. - Fire it up. (computer beeps) - [Alex] Come on. Okay,
+we'll see if it starts, it might need to warm this
+thermal probe up a bit. (both chuckles) (both exclaiming) There we go. There we
+go, the fan's spinning. - I really hope it, 'cause... Especially after I lectured you guys about your way of insulating. If my way doesn't work better, then I'm gonna look like
+a jackass. (Alex chuckles) - Oh, it's officially sub-zero. - Nice. Come on baby. Oh, I see flashing on.
+- There we go. - Yes. Okay, that's step one. - Step two's, ignore fan monitoring. - Oh, yeah, please don't do that.
+- For the CPU. - These are already frosting. Definitely need to cover these up. You see what I'm doing here Brandon? I'm just covering up that exposed metal, from the, the bolt through. Our Brandon, there's a
+little display on this, ridiculously fancy motherboard. If you come over to where I am, you can see it's gonna pop
+up CPU package, zero degrees. - [Alex] There it is. - It could very well be lower, but that might be the limit
+of what it'll display. - Yeah. The radiator inlet's currently at 16 and a half
+degrees, which is ambient. So, we are not able to
+get any cooler than, just 14 right now, negative 14. - Minus 14. Okay. Well, I mean, hey, that's not a bad start. - Yeah, it's not warm. (both chuckles) - Do we have any parts of it
+that are sort of, scary cold, and we're worried about condensation on? - [Alex] Some of these bits
+around the top are very cold. - [Linus] Like right here?
+- [Alex] Yeah. - [Linus] Okay. The good news
+is, at least to the touch, it feels not bad. What you would normally do, assuming you actually
+wanted to 24/7 this thing, is you would keep the computer off, during this kind of testing, like where you're, you know,
+looking at temperatures, and checking for condensation,
+because that way, any moisture is not gonna harm it. Then, what you would do,
+is you would make sure you'd run it for like, 24 hours. Take it all apart, kind of go, "Okay, did we actually get any
+moisture pockets anywhere?" And then if you didn't,
+then it's safe to fire up your phase change cooler, and go to town. Because if it doesn't, if it
+doesn't get condensation on it, when there's no load on the
+CPU, it definitely won't, when the CPU is generating some heat. And it looks like that works,
+so we are, we're turboing, which, I guess we expected. (Linus laughs) CPU was like, "Oh yeah, I think I got
+some thermal headroom." - [Alex] Yeah. I feel like if we just, use Asus' AI overclocking
+crap, in the BIOS, we can probably get it going
+pretty fast, real quick. - I sincerely doubt that
+it's related to the chiller right now, it's probably
+just this round being, bleeding edge. Have we updated the BIOS of this board? - [Alex] No, we haven't. - We should probably make sure we've got whatever the latest
+retail BIOS is as well. Brand new platforms, man.
+You just... Stuff happens. That's why whenever you've seen us update our editing
+workstations, for example, I've seen criticism from people like, "Oh, you guys aren't even
+using past the seven." Nah, dog. (chuckles) We go with something proven, when we need to actually get work done. Gaming machine, sure, whatever. You get a blue screen
+once a month, who cares? But like, no, no, no,
+not when you're working. Task manager, just in case we
+need that for whatever reason, okay, we are... (clears throat)

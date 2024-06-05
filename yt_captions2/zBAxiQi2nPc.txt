@@ -1,0 +1,168 @@
+- we have looked at a lot of
+ballin' gpu over the years, whether it's the six titan views we had for the six editor's project, three gv100 quadras for
+12k ultrawide gaming, or even this unreleased mining gpu, the cmp 170 hx. there are not a lot of cards out there that we have not been
+able to get our hands on in one way or another, except for one. until now, the nvidia a100, this is their absolute top dog, ai enterprise high performance compute, big data analytics monster, and they refused to send it to me. well, i got one anyway nvidia, so, deal with it. just like everyone's
+gotta deal with my segues, smart deploy provides out of
+the box windows imaging support for over 1,500 computer models. you can deploy one windows
+image to any hardware model with ease and you can get
+free licenses worth over $500 at smartdeploy.com/linus. (upbeat music) the first two questions on your mind, are probably why we weren't
+able to get one of these. and what ultimately changed that resulted in me holding
+one in my hands right now. the answer to the first one is that nvidia just plain doesn't seed these things to reviewers and at a cost of about $10,000. it's not the sort of
+thing that i would just, you know, buy. 'cause i got that swagger. you know what i'm saying? as for how we got one, i can't tell you. and in fact, we even blacked out the serial number to prevent the fan who reached
+out offering to get us one, from getting identified. this individual agreed to let us do anything we want with it. so you can bet your butt, we're gonna be taking it apart. and all we had to offer in return was that we would test
+ethereum mining on it, send a shroud, that'll allow
+'em to actually cool the thing and reassemble it before we return it. so let's compare it really
+quickly to the cmp 170 hx, which it is the most
+similar card that we have. it's the silver metal and it's not ripped for my pleasure. regrettable.
+- [jake] alright. - and we actually have one
+other point of comparison. this isn't a perfect one. this is an rtx 3090. and what would've been maybe more apt is the quadro or rather they
+dropped the quadro banding. but the a6000. unfortunately that's another
+really expensive card that i don't have a
+legitimate reason to buy and nvidia wouldn't send one of those for the comparison either. so the specs on this are pretty similar. we're gonna use it as a standin' since we're not really looking at any workstation loads anyway. so the a100. this is a 40 gigabyte card. i'm gonna let at that
+sink in for a second. and the craziest part, is that 40 gigs is not even enough for the kinds of workloads that these cards are
+used to crunch through. we're talking enormous data sets to the point where this 40 gig model, is actually obsolete now, replaced by an 80 gig model. and these nv link bridge, connectors on the top here, let's go ahead and pull these off. these, there we go, are used to link up
+multiples of these cards so they can all pull memory and work on even larger data sets. now the diet, the center of it, is a seven nanometer tsmc manufactured gpu called the ga 100. we're gonna pop this shroud off. we're gonna take a look at it. it has a base clock of just 765 megahertz, but it'll boost up to fourteen ten. that memory runs at a whopping one and a
+half terabytes a second of bandwidth on a massive 5,120 bit bus. it's got 6,912 cuda cores and, what is it? 250 watt tdp. woooh. she's packing. - [jake] oh, you're
+just going right for it. - i'm going right for. - [jake] oh geez. - this is linus tech tips. - [jake] and basically every part of this is identical to the cmp card. - it kinda looks that way. i mean the color's obviously different. - yeah, but it looks like the clamshell is two pieces in the same manner. there's no display outputs. the fins look the same. - now here's something
+the cmp card specifically didn't even contain the
+hardware for video in code, if i recall correctly. - yeah, this doesn't have anything. - okay, so it's not that it was fused off. it's just plain not on the chip. - not on ga 100, yeah. - okay but, - ga102, which is like 3090. - yes. - does have it.
+- ooh. - and a6000. - okay, you ready? - oh god! so yeah.
+- hey. - it's like exactly
+the same on the inside. same junk power connector. - wow. that is super junk, check this out guys. it uses a single eight
+pin eps power connector, which you might think is
+a pcie power connector. so here, look, i'll show you guys. this is an eight pin, like normal gpu connector, but watch, cannot go in. but if we take the connector out of our cpu socket on the motherboard, there you go although, the clips are interfering a little bit. i mean, what the heck is going on here, ladies and gentlemen? - you need more power. - yeah exactly. - so you can combine two
+pcie connectors into that. - [andy] can't remember
+how to get it outta here. i see the fingerprint of the technician who assembled the card though. - i think we have to
+unclip this part first. oh, there's a little screw, right? - there's a little screw. - haha, third type of screws. - [andy] yourself.
+- didn't see that one, nerd. - [andy] you're a nerd. - [jake] your face is a nerd. - [andy] your but nerd. - [jake] whoa. - it's not coming off, jake. - what? you gotta like tilt it out, buddy. whoa, whoa, whoa. don't pull the cooler off. - see? it's like it's caught back here. - hey ho. hey, how you doing? - jesus. - stressful. look, maybe if we break it, you'll actually have to buy one. - i don't wanna buy one. that's not the goal.
+- what? - i thought you put your
+hand up for a high five. i was like, "well, what
+are you talking about? i don't want to buy one." - why not? whoa, what is going on here? you see that? - it looks like there was a
+thermal pad there or something, but there isn't, its like greasy. - it actually, no, look at it closer. it's not greasy. it's, you see how this is brushed almost. or looks somebody sandblasted it. - that part's not. i don't remember that on this card. - alright, so the spring loading mechanism is just from the bend of the
+back plate, that's kinda cool. - [jake] so i checked the cmp thing. doesn't look like it. - [andy] i wonder why they
+wouldn't have like a map. - [jake] this doesn't look brushed at all. what did we, last time we twisted? - [andy] no, i don't think we did. - yeah we did. - [andy] i'm pretty sure
+i just rimmed on it. - [jake] oh god! no. you were against rimming on it. and then we were like,
+just twist a little. - [jake] oh. god. ah. it has an ihs. it looks basically the same. - [andy] yeah. - [jake] we're gonna have
+to clean that off and see there's not much alcohol. - [jake] no, i like to go in dry first. so yep, that's the same thing, alright. i mean, this isn't the first time nvidia has used the same silicon
+in two different products with two different capabilities. we see the same thing with their quadro lineup
+versus their gforce lineup where things will just be disabled through drivers or fusing off
+different functional units on the chip. what i wanna know then is besides the lack of nv
+link connectors on this one. - well, they are in there. they're just not accessible
+and they probably don't work. - right. what is the actual difference in function between them? (jake sighs) - well, this one doesn't
+have full pcie 16x, - right?
+- it does less memory. i think it has way less transistors, but it is still a ga100. - yeah, so the transistors are there. - yeah, they're probably
+just not functional. let me see what the chip
+number is on that one. - yeah, 'cause were we not even able to find a proper nvidia.com
+reference to this one anyway. so we're just relying on
+someone else's spec sheet. so the transistor count
+could just be wrong. - okay, so this is so
+the cmp card was a ga. - look at this guy? - yeah. what a weirdo. ga 100-105f. and this is a ga100-833. - if it's a ga100, i guess it could be a different ga100. i don't know. - i mean, it used to be back in the day, you would assume that it's
+just using the same silicon as the gforce cards because
+nvidia's data center business hadn't gotten that big yet, but nowadays, they can totally justify, an individual, like new guide design for a particular lineup of enterprise product. - and interestingly enough, the sxm version doesn't have an ihs at least it seems that way. but the sxm version is
+also like 400 watts. and this is like 250. - [andy] yeah, totally different classes of capabilities, alright? let's put it back together then, shall we? - i got your new goop.
+- goop me. - i brought two goops. - we're going for the no look catch. - oh yeah baby.
+- yes. x marks the spot, baby. my finest work. - maybe it'll perform better now. - [andy] probably not. (jake laughs) (andy truck signals) we're backing it up. (jake chuckles) - [jake] cool story, bro. - [andy] thanks. thanks bro. - where's our back plate. did you take it? oh shoot. - yes.
+- black. i thought it was gold. i was looking for gold. (jake laughs) - [jake] aren't we all.
+- i don't know about you, but i found my gold. - what's that? - yvonne. - shut up (chuckles) - alright. alright. let's get going here. which one do you wanna
+put on the bench first? - what do you mean? we're not gonna compare to that thing. it doesn't do anything. we don't need this thing. - but here we go, boys. - we can't put this in the first lock. 'cause we don't have a display output. - you like the bottom one?
+- yeah, - you're a bottom? - sure. - this, okay. this is how you flex it style. now you might have noticed at some point that the a100 doesn't have any sort of cooling fan. it's just one big fat, long heat sink with a giant vapor chamber
+under it to spread the heat from that massive gpu. so jake actually designed what we call the shroud donator. it allows us to take these two screws that are on the back of the cart for securing it in a server chassis, because that's how it's
+designed to be used. so it's passive, but there's lots of airflow
+going through the chassis, and then lets us take those screw holes, and mount a fan to the back of the cart. it's frankly not amazing. (jake chuckles) - what? no. that is aerodynamics at its peak. you should hire me to
+work on f1 cars, okay? - yeah. not so much. - yeah. it only blows probably
+more air out this end from the back pressure than
+it does on this end. (laughs) but it's enough to cool it, i swear. - it is.
+- yeah. - let's go ahead and turn
+on the computer, shall we? - oh yeah, so a couple
+interesting points here. it wouldn't boot right off the bat. you have to enable above 4g decoding. and then i also had to go in
+and i think it's called like 4g mmio or something like that. i had to set that to 42. - okay. - the answer to the universe. - yes. thank you. and they are both here. a100 pcie 40 fricking gigabytes. - i installed the like game
+ready driver for the 3090, and then i installed
+the data center driver, and i think it overwrote it, but the game ready driver, it still showed as like active and you could do stuff with
+the a100 and vice versa. so it's probably fine. - now, interestingly, the a100 doesn't show up
+in task manager at all. - [jake] did the cmp, i can't, - [andy] remember.
+- no, no. i don't think it did actually, anyways. - what do you wanna do in blender, classroom? bmw? bmw's probably too short. - yeah. let's do classroom. i think bmw on a 3090 is like 15 seconds or something like that anyway so. - that's also like the spiciest 3090. - [jake] that you can
+get. yeah, pretty much. it's just so thick. why would you ever use it? - because you wanted, - is it even doing
+anything like (chuckles) - here's one reason, 'cause you can do classroom renders in a minute and' seconds, that's why? - okay. well, what about the a100? you didn't plug the fan in, hey. - oh whoops. how hot is this? - probably warm. - fortunately it hasn't
+been doing anything. time to beat is a minute and' seconds. so let's go ahead and see how it does. - it feels like this is the intake. i mean it's hot. so like,
+- oh yeah. but it's going. it's going jake. it's going. you did good. - it works enough. this should be like, this is all. - this should be way faster.
+- way huge gpu, right? - [andy] it's actually slower. - [jake] how much? not by much. - it's like a few
+seconds, but it's slower. - so it's worse in cuda. what about optixs? so the interesting thing is this card doesn't
+have ray tracing cores. the 3090 does, see you'd think that optixs would only work on the 3090, right? - do you want me to just try the a100? - yeah, sure. it's still gpu compute. - i mean you gotta give it
+to it in terms of efficiency. for real though, even running
+two renders to the 3090's one, the average power consumption
+here is still lower. - [jake] yeah well, and
+looking at while it's running, it's like 150 watts. - yeah. - [jake] versus 350 or
+whatever it was on the 1390. - yeah, ready to go again? - [jake] yep. - okay.
+- [jake] oh my god. - man, this thing is fast. - what's the power consumption? - [andy] holy bananas. - [jake] 353. still like just, i want one of these. this thing is sick. (jake laughs) it's way faster. - yeah. there's no question. we don't even need to. - it's gonna be like thirty seconds. - yeah. not even close. - so do you wanna know why? - i would love to know why. - you said it earlier. you just weren't really thinking about it. this has half the cuda course of a 3090, it's likes seven thousandish i think. - right, so it's just full of
+like machine learning stuff. - yeah, so it has basically
+half the cuda cores. so the fact that it is even close is kind of crazy in cuda mode. but in optix, what i found out is optixs will use the tensor cores for like ai denoising, - [andy] but nothing else. - which you'll see in there. so i think it's falling back
+to cuda for the other stuff. - [andy] got it. - but the 3090 has ray
+tracing and tensor cores so. - right. - it just demolishes (chuckles) - where's the thing
+where you can select apps and then tell it which gpu to use. yeah, here we go. no, so it'll not allow you to
+select the a100 to run games, even if we could pipe
+it through our onboard, or through a different graphics
+card like we did with that. - [jake] it doesn't have directx ray - mining card ages ago. no directx support whatsoever. - [jake] let's check it in gpu-z. - so way fewer cuda cores. you can see that we go from over 10,000, to a lot less than 10,000. pixel fillrates are actually higher. i guess that's your hbm2 memory talking. - [jake] one point five
+gigabytes per second. - what's a 39, one point five terabytes per second. it's like - [jake] 50% or more - 60% almost. - holy banana. - but what about the supported tech? yeah, so we can do cuda, opencl, - [jake] physx (laughing) - sure. - [jake] we should set
+it as the physx card. - dedicated physx card. all the rag dolls everywhere. - [jake] and opengl but not
+direct anything or vulkan even. - opengl. now that's interesting. - [jake] go to the advanced tab. 'cause you can select like a specific directx version at the top under general. like well, the dx 12. what does it say? device not found. it's the same as the mining card. it'll do opencl. so we can't mine on it (chuckles) - alright. i mean, should we try that? - [jake] yeah, we could
+do mining or folding or. - sure, i have a feeling
+that's gonna kind of suck for that too. - there's not.
+- like ai in mining. - i don't think so. it's still a big gpu dude. - so you can't. - well suck is relative, right? like for the price you'd never buy. - i think it might be better
+than the cmp card though. just a little bit.
+- shut up. - i think so. so the only thing you can adjust, i think this is the same with the cmp card is the core clock and the power limit. you can't mess with the memory speed. - [andy] and you can move
+the power limit only down it looks like. - [jake] yeah. top is the 3090, bottom is the a100. - [andy] wow. that is a crap tone faster than a 3090. - [jake] it's pretty
+much the same as the cmp, but look at the efficiency. - 714 kilo hash per watt. - [jake] and i bet you if
+we lower the power limit to like 80, it's a little bit lower speed. maybe we can go, i don't know. we probably don't have to
+tinker with this too much. i mean, it doesn't draw that
+much power to begin with, i guess.
+- yeah. i think it's pretty fricking efficient right outta the box. - i mean the efficiency is better. it's a little bit better, but before it was doing 175 mega hash roughly at 250 watts, so it's pretty pretty good. 3090, you can probably do like 300 watts with 120 mega hash. we're running the folding client now. i've had it running for a few minutes, and it's kind of hard to say. the thing with folding is, based on whatever project you're running, which is whatever job the
+server has sent you to process, your points per day
+will be higher or lower. so it's possible that the a100 got a job that rewards less points
+than the 3090 did. it does look like it's a bit higher, but you can see our 39. this is like a little, like comparison app thing is 31% lower than the average. so it's probably just that this job doesn't give you that many points. - got it. - the interesting part is the 3090's drawing. 400 watt. - [both] 400. - holy shnikes. - [jake] a100 is drawing. - 240. (jake laughing) man, that's efficient and performance per what? maybe gamers don't care that much. actually we know for a fact, gamers don't care that much. in the data center, that's everything, because the cost of the card, is trivial compared to the
+cost of power delivery, and cooling on a data center scale. - especially when you have eight of these with a 400 watt power budget, like you would get on the sxm
+cards in a single chassis, times 50 chassis, like that's a lot of power (chuckles) - let's try something, machine learning. - unfortunately for obvious reasons, most machine learning or deep learning, whatever you want to call it, benchmarks, don't run on windows. so instead i've switched over to ubuntu and we've set up the cuda toolkit, which is gonna include our gpu drivers that we need to even run the thing as well as docker and the
+nvidia docker container, which will allow us to run the benchmark. we're gonna be running
+the resnet-50 benchmark, which runs within tensorflow two. this is a really, really common benchmark for big data, clusters and stuff. except our cluster, is just one gpu. in a separate window, i've
+got nvidia smi running. it's kind of like the linux
+version of msi afterburner, but it's made by nvidia, so not quite, but what it's good for, is at least telling us our
+power and the memory usage, which we should see spike a lot when we run this benchmark, i took the liberty of
+pre-creating a command to run the benchmark. so we're gonna be running with xla on to hopefully bump the numbers a bit. we will do that for the a100 as well. so no worries there. it should be the same as well as using, what do you want? look, he left cause he
+didn't have time for this. and now he's back. this is the world's most
+expensive lint roller. (andy chuckles) i even don't remember what
+i was saying, damn it. distractions aside, we're
+gonna be running with xla on. that'll probably give
+us a bit higher number than you would normally, but it is still accurate and we're gonna be
+running the same settings on the a100 as well. so no concerns there. we'll also be using a batch size of 512 as well as fp16 rather than fp32. so if you wanna re-create
+these tests yourself, you totally can. let's see what our 3090 can do. look at that 24 gigs of
+vram completely used. god, i don't know if
+there's any application aside from like premier
+that will use all that vram. i'm sure andy can attest
+to that (strained laugh) okay, 1,400 images a second. that's pretty respectable. i think like a v100, which is the predecessor to the a100 does like less than 1000. so the fact that a 3090, which is a consumer gaming card can pull off those kind
+of numbers is huge. mind you, the wattage, 412 watts. that's a lot of power. it'll be interesting to
+see how much more efficient the a100 is when we try that after. the test is done now, and the average total images per second is 1,400 and 35. it's pretty good. i've gone ahead and added our a100 so we can run the
+benchmarks on that instead. and i'm expecting, this is gonna be
+substantially more performant. so it's the same test. i'm just gonna run the command here. gonna wait a few seconds. we got nvidia smi up again. you can see that it's
+just running on the a100. the ram on the 3090 is not getting filled. we're just using that as a display output. see, all 40 gigabytes used. that's crazy. (jack laughing) if we thought the 3090 was fast. look at that andy. that's like a full 1000 images more, we're getting like 2400 instead of 1400 and the icing on the cake. if you look at nvidia smi, we're using like 250 watts instead 400, while getting like almost
+double the performance. that is nuts. - probably the coolest thing about this whole experience though, is seeing the ampere architecture on a seven nanometer
+manufacturing process. 'cause you gotta remember while none of this is applicable
+to our daily business. what this card does do, is excite me for the next
+generation of nvidia gpus. because even though the word on the street is that the upcoming ada
+lovelace architecture, is not going to be that
+different from ampere. consider this, nvidia's gaming lineup is built on samsung's
+eight nanometer node, while the a100 is built on
+tsmc's seven nanometer node. now we've talked a fair
+bit about how nanometers, from one fab to another, can't really be directly
+compared in that way. but what we can do, is
+say that it is rumored, that nvidia will be building the newer ada lovelace gaming gpus on tsmc's five nanometer node, which should perform even better than their seven nanometer node. and if the efficiency of improvements are anything like what we're seeing here, we are expecting those cards to be absolute freaking monsters. so good luck buying one. (jake laughing) hey, at least you can buy one of these. we've got new pillows, that's right. this is the, what are we calling it? - [jake] couch ripper. - the couch ripper the couch rip. it's an amd themed version of our cpu pillow with alpaca
+and regular filling blend. and this video is brought
+to you by our sponsor, id agent. 90% of data breaches start
+with a phishing email. so you can reduce your
+organization's chance of experiencing a cybersecurity disaster by up to 70% with security
+awareness training. that includes phishing simulation, bullphish id by id agent is
+a phish simulation platform that transforms your
+biggest attack surface, into your biggest defensive asset. you can add every employee
+to your security team with security awareness training that empowers them to spot
+and stop phishing threats. you can automate training campaigns and reporting for stress free, consistent training that gets results. choose from a rich set of plug and play phishing campaign kits and video lessons
+accompanied by short quizzes, or you can create your
+own fishing campaigns and training materials easily. bullphish id provides
+effective affordable one-stop phishing resistance training that fits any business and budget. get two months for free and 50% off setup at bullphishid@it.idagent.com/linus if you guys enjoyed this video, maybe go check out our previous video, looking in more depth at the cmp 170 hx. - [jake] i like this silver better. - if we were smart, we'd be mining on this, but we're not that smart. - [jake] well, you know, mining is bad.

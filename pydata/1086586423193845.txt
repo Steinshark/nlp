@@ -1,0 +1,39 @@
+pages   =  [
+"https://olgagromphotography.pixieset.com/everett/?pid=9478290268&id=15&h=MzQ5Njg4Mjk5NQ",
+"https://olgagromphotography.pixieset.com/everett/?pid=9478323927&id=131&h=Mzc1OTY0MDE1Mw",
+"https://olgagromphotography.pixieset.com/everett/?pid=9478336080&id=172&h=MzE0MDY0MjM3MQ",
+"https://olgagromphotography.pixieset.com/everett/?pid=9478344802&id=201&h=MTcyMzk2MjI4OQ",
+"https://olgagromphotography.pixieset.com/everett/?pid=9478363104&id=268&h=MjIzNzI4MTQxNA",
+"https://olgagromphotography.pixieset.com/everett/?pid=9478382298&id=313&h=MjMxMjMyNDMzMg",
+"https://olgagromphotography.pixieset.com/everett/?pid=9478288710&id=10&h=MjY5Njc0MDQz",
+"https://olgagromphotography.pixieset.com/everett/?pid=9478307657&id=78&h=Mjc4MTQ0OTg4NA",
+"https://olgagromphotography.pixieset.com/everett/?pid=9478307670&id=82&h=NjY0NzE4NTM3",
+"https://olgagromphotography.pixieset.com/everett/?pid=9478373877&id=289&h=MTQyMTc1MDY5OA",
+"https://olgagromphotography.pixieset.com/everett/?pid=9478327053&id=143&h=MjE4MTk2NzY2Nw",
+"https://olgagromphotography.pixieset.com/everett/?pid=9478298235&id=40&h=MjQ4ODYwNjA5OQ",
+"https://olgagromphotography.pixieset.com/everett/?pid=9478309871&id=84&h=MTgwMzg0ODU1MA ",
+"https://olgagromphotography.pixieset.com/everett/?pid=9478334823&id=167&h=NDY5MTYxMDI4",
+"https://olgagromphotography.pixieset.com/everett/?pid=9478324761&id=135&h=MTc1Njg5NjU2Nw",
+"https://olgagromphotography.pixieset.com/everett/?pid=9478318849&id=114&h=MzM2NDkwNjIwMA",
+"https://olgagromphotography.pixieset.com/everett/?pid=9478327432&id=144&h=MTE3MTY4MjAxNQ",
+"https://olgagromphotography.pixieset.com/everett/?pid=9478299949&id=48&h=NzMwMDg1ODcx",
+"https://olgagromphotography.pixieset.com/everett/?pid=9478304351&id=61&h=MzI4NjUzMDk4Nw"
+]
+imgs    = [] 
+from fake_http_header import FakeHttpHeader
+
+fake_header_dict    = FakeHttpHeader().as_header_dict()
+import time 
+import requests 
+for pg in pages:
+
+    try:
+        page    = requests.get(pg,headers=fake_header_dict)
+        html    = page.text 
+        IMG     = html.split('"filename">')[1].split(" </div")[0]
+        import random 
+        print(IMG)
+        time.sleep(random.randint(5,10))
+    except IndexError:
+        print(html)
+        input(f"\n\nBAD")

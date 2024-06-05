@@ -1,0 +1,126 @@
+- yeah! let's go! - windows 11 is no ordinary update, but sitting through microsoft's dull and bug-ridden announcements training, you'd never know it. which is why a lot of what
+we're going to talk about was actually pulled from the fine print on microsoft's website and from
+our own firsthand experience with the leaked build from last week. the good news is that there
+is a lot to talk about. the bad news is that, well,
+not all the news is good news. what is good news though,
+is our sponsor glasswire. are you lagging out while gaming? use glasswire to see what apps
+are wasting your bandwidth and causing your games to lag. get 25% off using offer code
+linus at the link down below. (upbeat music) at first glance, windows 11 is little more than a major interface redesign on top of what is
+fundamentally windows 10. but on closer inspection, there is more going on under the hood than we give it credit for. in particular, enhanced support for hybrid architecture processors with both a mix of performance and power savings cpu cores,
+like intel's lakefield. that is gonna be a big
+deal in very little time. [music] big [music] - sorry for that. the most obvious improvement
+is, of course though, the new visual design. it's a frosted glass aesthetic with multiple themed styles,
+rounded corners on windows, and a center aligned task bar, an optimization that microsoft made clear was for touch users. ooh. did you feel that? the new start menu, clearly
+lifted from windows 10x, is powered by the cloud which appears to be code for, we included bing search as usual. but hey, now your recent
+documents will sync across devices if you're using office
+365, so that's pretty cool. there are more useful changes, of course. snap layouts let you quickly and easily tile windows
+in different orientations, similar to how the fancyzones
+powertoy works today, except it's significantly
+more user-friendly and significantly less configurable. microsoft says that nobody
+else lets you do that with this many windows. - nobody else lets you do this. - and that ended up being one of the biggest revelations
+of the presentation. linux has apparently been
+renamed to nobody else, alas. they do bring something new
+to the table here though. windows groups this
+way will group together in the task bar and be
+treated like a single item. so, you can switch to and from
+a window layout on the fly and your multiple virtual
+desktops can now be customized with different wallpapers
+to make it easier to keep track of them. it's kind of like
+customizing your water bottle with the stickers you get for free with your
+order from lttstore.com. what's more, they finally fixed the issue where windows would rearrange
+themselves semi-randomly when monitors are
+disconnected and reconnected. so instead, they will minimize windows that were on the remove to display and then put them all
+back when you reconnect. this is gonna make docking a
+laptop way less frustrating, although i'm not sure what happens if you disconnect the display, then interact with those
+programs, then reconnect it. i guess we'll see. there's more for all-in-ones
+and touch displays in general as well. touch targets are bigger now
+with more visual feedback and there's a new onscreen keyboard that we didn't get to
+properly test drive just yet that looks a lot like the ios keyboard, right down to the ability
+to move the cursor around by holding the space bar. but, that's all boring productivity stuff. what about gaming? well, after debuting on the xbox series x, auto hdr is coming to windows and direct storage support
+is baked into windows 11 at the os and driver level. that's gonna bring windows
+more in line with xbox from a feature standpoint, and personally, i am really excited to see
+both of these in action. i mean, given the windows teams historically terrible hdr implementation, i'm hesitantly optimistic about automatically converting
+older, non-hdr games to hdr. but direct storage, which allows your gpu to access your systems game drive, or really any other drive, directly, should substantially improve
+loading times in games once it's supported. investigating these features is gonna make for some really interesting videos and you're gonna wanna make
+sure that you are subscribed. xbox game pass is now integrated into the xbox app that comes with windows. and we got more promises of cross-platform play as
+is the tradition by now, though we have no idea how
+many titles will support it, if it's gonna be difficult to support it, if it's a system-wide thing, or what . though at least with sony, also finally talking more
+favorably about cross play, it feels like the light
+at the end of this tunnel is finally visible. the additions to pen
+input look pretty sweet and microsoft has added haptic
+feedback to simulate the feel of different tools as you're using them. there's not really a whole lot else for us to say about that because they only showed it briefly. and the same goes for screen rotation which is much more streamlined now with windows rotating
+smoothly with the display and tiled windows in
+landscape mode stacking onto each other rather than
+arranging unpredictably like they used to. speaking of unpredictable, teams is now integrated
+into windows directly. i can't say i predicted that. when did everyone start using teams? am i outta touch? no. it's the children who are wrong. there's now a dedicated
+icon for teams then that gives you what looks
+like a searchable jump list of recent contacts and
+buttons for interacting them and i'm just not sure this is
+what anyone was asking for. but hey, at least microsoft
+has something akin to i-message and facetime built-ins. so, that's cool i guess. there was a brief mention about dictation and voice commands as well. so, presumably that is also an upgrade to compete with siri on mac os. ah, mac os, they made a big deal about how teams works on any platform and it wasn't the only thing that felt like an unnecessary dig at apple. even the faq page on their website has this kind of thing in place of genuinely useful information. guys, microsoft, we wanna know how much it's gonna cost stand alone. obviously computers cost
+anywhere from here to here, i guess we'll know soon enough though when it pops up in the windows store. ah yes, the windows store. now with the ability to
+show movies, tv shows, and other content, regardless
+of the streaming service and integration with the amazon app store. yes, my friends, you can now run android
+apps directly in windows. there's no word yet on whether
+sideloading is possible or if you're stuck with the amazon store, but this is still really cool. as for why they're doing
+it, our best guess is that if enough people run
+android apps on windows, developers will finally
+buy into microsoft's pitch about how it's super easy
+to port your apps natively to the windows store and enjoy microsoft's
+industry-leading rev share and support for outside payment
+processors, finger guns. and i guess the end goal then would be to kill the window store's
+current ghost town vibe. speaking of things deceased,
+but now brought back to life, the new widgets panel is
+nothing like gadgets in vista. microsoft describes them as
+a beautiful sheet of glass, powered by ai. in effect, they're pretty much the news and interests panel that microsoft added to windows 10 in the 21h1 update, but with some additional
+features and the ai is, well, it's news that is tailored
+to your interests, ha ha. they can be brought up or dismissed by swiping in from the
+left edge of the screen on a touchscreen or clicking
+the icon in the task bar. of course, the biggest question
+is pricing and availability. they didn't talk about this
+much in the presentation, but from the faq, we've put
+together that it will be a free update for windows 10 users and it'll start shipping
+in late 2021 on new pcs with standalone copies
+available in early 2022. as for pricing, if i had to guess, i'd say it'll be a hundo for home and a hundo plus for pro. otherwise, smart people
+would all just buy windows 10 which costs that amount and
+then upgrade it for free. another thing microsoft didn't tell us and buried in the faq,
+system requirements. as we've already seen, windows
+11 requires secure boot and tpm 2.0 to function
+as a security measure. this is hands down going to
+create the most confusion for end users around this launch. and microsoft makes their
+own life more difficult for no apparent reason
+because instead of just saying when you go to install it, hey, you need this trusted platform module chip and secure boot enabled
+in your uefi files, microsoft just gives
+you this ambiguous error that says your system isn't compatible. why? windows 11 also requires
+two or more cpu cores, four gigs of ram, 64 gigs of storage, and a directx 12 compatible gpu. don't have all that stuff? i don't know, go buy a new
+pc i guess, says microsoft. what's more troubling,
+however, is this note that windows 11 home edition
+requires an internet connection and a microsoft account to
+complete first time setup. and, this is a weird one, you actually get fewer features for using a microsoft account. desktop wallpaper is no longer synched with your microsoft
+account between devices, though i personally actually just found that feature kind of annoying. and the timeline feature has been removed. there's more. the task bar is now locked
+to the bottom of the screen. the start menu no longer has
+support for folders or groups. live tiles are gone. the menu itself cannot be resized. and tablet mode is gone and replaced with the new touch inputs. not all the changes we had
+to dig for are bad though. cortana mercifully won't bug
+you during first-time setup, nor take up unnecessary space
+on the task bar by default. so, it's just baffling that
+this stuff wasn't touched on during the event because a lot of it seems pretty important to me. now, it's unclear how the
+windows 11 leak occurred before the big reveal today. some have speculated
+that it was on purpose, but what we know for sure is that it was a significantly older build
+than what they just showed and that there's no immediate
+pressure for you to upgrade. the october 14th, 2025 retirement date, puts windows 10 service
+life at just over 10 years. that's just a few months
+short of windows 7's. was it a good operating system? ah, i don't know if it be remembered as fondly as windows 7 was, but it was definitely better than the mess that was windows 8. so, here's hoping then that
+microsoft finally manages to break the good-bad, good-bad pattern and keep that positive momentum going when windows 11 finally reaches our pcs so that i can continue to make segues to sponsors like micro center. get the best prices and best
+selection on computer hardware and everything else technology at any one of micro center's 25 locations across the united states. you can check out the micro
+center custom pc builder to spec out the best pc for your budget. they'll help you ensure all
+your parts are compatible, find stock that's available at your nearest micro center location, then you just add it to cart and arrange same day, in-store pickup. for a fee, you can check the box marked, same-day pro assembly, and one of micro center's
+expert technicians will assemble your pc for you. if you need help deciding what parts to put in your new custom gaming pc, join the online micro center community. it's a great place to discuss
+tech with other enthusiasts. so don't wait, check out
+the link in the description to learn more about micro
+center and even get a free pair of wireless bluetooth
+headphones, valid in-store only, no purchase necessary. thanks for watching guys. go check out our first
+look of the leaked build of windows 11 for some
+more windowsy goodness. i promise there's more
+information in there then in microsoft's presentation today. anthony was real salty about
+having to get up at 6:00 to sit through that thing. i had to de-saltify the script a little. - [anthony] you watered it down! - i did not water it
+down, i desalinated it.

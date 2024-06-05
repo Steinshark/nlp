@@ -1,0 +1,70 @@
+hello, in this episode i'd like to talk about
+the difference between reference types, and value types. right at the beginning of this series, i introduced
+the builtin variable types, such as ints, floats, strings, and bools.
+using these, we can then also create our own datatypes. for example, if we wanted a way
+to easily store a point in 2d space, we could create a custom datatype containing a float
+x, and a float y. we'd need a container for these two variables,
+so that they're stored together, and for that we have two options: a class, or a struct. let's look at the class first. so we would
+create a class called point, with our two float variables inside. we would then have
+a constructor so that we can set the x and y values when we create a new point. now elsewhere in our code, in some method,
+let's say we create a new point 'a', with coordinates (2,5). roughly what happens when
+we do this, is a new object is created in the computers memory, storing the x and y
+values. our variable 'a' then stores a reference to that location in memory. this is why classes
+are reference types. let's look at the implications of this. if
+we create a new point 'b', and set it equal to pointa, then both variables now refer to
+the same location in memory. thus, if we were to set b.x = 10, that value would be updated
+over here, and so both point a and point b would now have an x coordinate of 10. what if i now write b = new point(10,5). well
+in that case, a new object will be created in the computers memory, and now point b refers
+to that instead. changing the coordinates of b will now longer affect point a, and vice
+versa. currently, both points have exactly the same
+coordinates, so what would happen if i created a bool, called pointsarethesame, to store
+whether or not point a equals point b. would that variable be true, or false? well, with reference types, the values don't
+matter, what matters is whether or not the variables are referring to the same location
+in memory, and currently they are not, so the bool will be false. alright, for the next experiment lets create
+a void method called movepointoneunitright. the method takes one argument - a point c
+- and simply adds 1 to its x coordinate. if we now call this method, passing in point
+b, then the variable 'c' inside the method will refer to the same location in memory
+as b, and will increase its x value to 11. now lets change the method to instead create
+a new point, with coordinates(c.x+1,c.y). so now we're creating a new point object in
+memory, which only the variable c references. in this case of course, b's x coordinate does
+not change after calling the method, it remains at 10. now i would like to take this opportunity
+to introduce the 'ref' keyword. if we add ref both before the parameter in our method
+call, and before the argument in the method signature, what happens now is that any modification
+to the variable 'c' inside the method, will also be made to the variable 'b' outside the
+method. so in this case, c gets set to a new object, and so point 'b' will also now reference
+this new object. the 'ref' keyword has one requirement, which
+is that the variable being passed into the method must already have been initialized.
+in other words, it must already have a value. there is another keyword 'out', which does
+the same thing as 'ref', but does not require the variable to have been initialized. we'll
+see an example of this in the next episode. alright, so you should now have a good idea
+of how reference types behave in different circumstances. let's now make our point datatype into a struct,
+instead of a class. structs are value types, so let's how its behaviour differs.
+we'll make a point 'a' once again, and set it equal to 2,5. this time, instead of 'a'
+storing the address of some location in memory, it simply stores the x and y values itself. so now, when we create point b and set this
+equal to point a, the values from point a are copied over into point b.
+since each variable is always storing its own copy of the values, changing one valuetype
+variable will not affect another. so in actual fact, there's no difference between setting
+b = a, and simply creating a new point with the same values as a. let's create the pointsarethesame bool again.
+the equals method works differnently for value types than for reference types. here it compares
+the actual values of each element inside the structs to determine whether or not the two
+variables are equal. here, points a and b currently have the same values, and so our
+bool will be true. now using the same method example of movepointoneunitright,
+it doesn't matter what we do inside the method, we won't be able to affect the original variable,
+unless we use the ref or out keywords, in which case, just like with reference types,
+any modifications to the variable inside the method, will also modify the original varialble
+outside the method. so that hopefully gives you a good idea of
+how value types behave. the last thing i want to mention is how the
+builtin types fit into this. so just about all of the built-in types are in fact structs,
+making them value types. one exception to this is "object", which we're going to ignore
+for now, and the other is the string class. a string is a reference type, but it turns
+out that it behaves like a value type anyway. the reasons for this are interesting and good
+to know, but i'm going to gloss over them for the time being. for now you just need
+to remember the following few things: classes are references types, and thus multiple
+variables can all reference and affect the same object.
+structs are value types, and thus each variable contains its own copy of the values.
+the 'ref' and 'out' keywords can be used to force any modification made to the variable
+inside the method, to also affect the original variable outside 
+the method. "ref" requires the variable to already be initialized before entering the
+method, while "out" does not. finally, the builtin datatypes such as integers,
+floats, chars, and bools are all value types, and string is reference type which nevertheless
+behaves like a value type.

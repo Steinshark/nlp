@@ -1,0 +1,199 @@
+- Asus needs to address
+this. They need to fix it. I don't understand why they don't. Asus, If you're watching, fix it. Cause it sucks. Here at Linus tech tips, we try our darndest to cover topics. That'll be both interesting
+and useful to you, our valued audience members,
+but odds are that you Jeff or, Steve, or Jack have a very you problem
+that we've never managed to cover. And you just want
+someone to talk to about it. Well, today you can. And it's brought to you by
+3CX who provided the phone system that we use to create
+the phone maze that you are going to have to navigate in
+order to get through to me. - Thank you for calling Linus tech tips. - On Twitter. Linus tech tips tweeted
+out that they were doing - This thing called
+press one for tech tips, - where they tweeted out a phone
+number and I've got to call - it because I have an
+issue with my computer. I need tech support.
+I've tried everything. I even bought the water
+bottle from lttstore.com and really hasn't solved my issue. - This number, when you call it you're supposed to have
+like a very hilarious, automated phone system for you
+to get through the directory and stuff. - So I'm going to call this number. - I've got the hotline put into my phone - And it's toll free. So it should be funny, right? - Your call cannot be completed as dialed. - Oh my God. What the hell? - Thank you for calling Linus tech tips. Please listen carefully. As our menu options have recently changed. For Tech Wiki, press one. For LNG clips, press two. For they're just movies, press three. - "They're just movies", what? - For channel super fun, press four. Thank you for selecting.
+"they're just movies", formerly known as carpal critics. - What? - Wait what? - I didn't do that. - Motherf(beep)er. - Why do they all go to that one? - Is it going to hang up on me now? Crap. - For Linus Tech Tips, press nine. - All other inquiries,
+send a tweet at Colton. - Colton (laughs). - Give me a tech tips, Linus. . - You have chosen tech tips. - (rock music) - Oh my God. Someone's calling. - Hello? - Howdy. - This is Dennis. What's your name? (horse neighing) - What is this? - You have chosen Tech Tips. - Can I just speak to- - Let's press one. I don't know what it said. (rock music) - Hello Zachary you've reached
+press one for tech tips. - Holy! This is very weird. - Now it's only weird
+if you make it weird. What can I do for you? - Well, I actually have a problem. I have one of the founder's
+edition for the 30 nineties. That's a problem? - Well, you know, I got multiple problems. My room is hot with this thing, like it's producing too much
+heat, but you know what? My other problem I have is like, it keeps turning on and off. - So the LED on the monitor,
+like turns off and on. - No, I'm sorry, uh, the GPU on the LED. - Okay. So the actual GeForce logo
+turns off and back on and it drops the output, but the
+system does not reboot. I don't have any experience
+with that exact problem, but what I can tell you is
+that any time you experienced something that is so weird
+that nothing could possibly explain it it's either
+memory or the power supply. - I actually have the power
+supplies that were exploding a couple weeks ago and I exchanged
+that and it's still doing it. - Are you making this up? - I can not make this up. - Are you on this computer right now? - Yeah, my monitor right
+now, I'm talking to you. - So it's working now. It's working fine. Okay. Have you tried doing that
+completely fresh driver install? - Um, yeah. And it was doing the blanking
+thing before you reformatted and then it was doing it again after. - It was not doing that on- - Windows 11. Yeah. It's probably software. So what I would do is I would get DDU. Are you familiar with DDU? - I can google it. - Yeah, so Google that. So you're going to want to
+restart your system in safe mode, wipe out your Nvidia drivers,
+do a nice fresh install. If that doesn't fix it, then go to Nvidia because
+one way or another, this sounds like their problem, whether it's the hardware or the software. - Yeah. That was quick. So do I got to pay you
+or some or tip you or. - No, no, we give the tips. - Wait that was the whole point? - Yeah, that's it. - You just call in and get tech tips. Okay. - Well, all right. Thank you Jason, for calling in today. What can I help you with today? - I was just saying you guys
+made videos about installing windows 11. - Yep. And I was just wondering, how do I install less than one window? Cause I got a few windows
+in my house that are broken. - Oh, oh, oh, you're funny. Please help my 3080. - Please. - What you need to do is
+find yourself a toaster oven and put it in the toaster oven, leave in there for about an
+hour and then you'll plug it back in and your
+computer will maybe explode. - Thank you for calling
+press one for tech tips. Please note your call may
+be monitored for quality and training purposes. How can I help you? - I have a problem with
+my USB audio deck. uh, we installed the drivers
+and that sometimes fixes it. Sometimes doesn't fix it. It's weird when I unplug it
+and replug it back in it resets but after every two hours, it goes back to that garbled audio. So I was wondering if you
+could help me with this, this issue. - What I suspect it is is
+it's more to do with the USB controller that you haven't plugged into. So most motherboards these
+days have at least two USB controllers on them. Typically one of them is USB
+two and then the other one would be USB three. Can we have a look at the
+back of your computer? That's your face still? I had your foot for a second there. That's hot. Question for you, are
+you running Ryzen 3000 or Ryzen 5000? - Ryzen 3000. - Okay. So you know, there were some USB issues
+with Ryzen 3000 a little while ago right? - I had no idea. - Now that I know you're
+running Ryzen 3000, I would say there's a really
+solid chance that you just need to update your bios. And
+the issue will go away. Failing that. Never hesitate
+to try a different cable. If you just have any other
+USB cable lying around it, it can be worthwhile trying
+it just to see what happens. But I think that I've gotten
+this one nailed for you. - All right. Thank you. - Thanks for calling in. - These tech tips are making me thirsty. - I hope it's good. - Oh, they're fantastic water bottles they're made with the best materials. - Do you feel me with you now? Right now? I'm just next to you right
+now. You close your eyes. You can feel me right next to you. Hung up on me? (laughing) - Thank you for calling
+press one for tech tips How can I help you? - So I got my good old
+3080 I paid retail for. - Nice! - Was working fine, and then it got really dusty. Cleaned it out, moved a few cables around, just to make it look a little better and now it's not displaying anything - Okay. So what happens when
+you press the power button? - So if I press the power button, essentially the motherboard
+gives me an error code of 00. - Okay. Show me that code zero, zero. That sounds to me like
+basically nothing is happening. What cables did you move? Because
+usually zero zero is like, your freaking CPU is not plugged in. - So I moved these two cables, they where up here I re-routed them down
+and then I did a little troubleshooting cause I
+took the two AIO cables I did reseat the AIO once it wasn't doing anything and then, still nothing - Here's what I want you to do. Can you check and make sure
+your eight pin CPU power connector is seated all the way in. Okay. So let's flip that
+back power switch back on and let's try and fire this thing up. If this doesn't do anything,
+I might have bad news for you. All right. Hit it. Yep. That's all I need to see. Go ahead and flip the back
+power supply, switch off again and let's pop that AIO off. - I don't know how you do this one-handed. - For me it's a top priority
+to be able to do things one-handed that's why they
+call me one hand. Johnny. - I think I got Colton for the first time. And then he told me to put the 3080 in my toaster oven and then just hung up. - And that's some good
+tech tips right there. - All right, so the AIO is off. - Okay. I want you to
+pull out your CPU now. You gotta lift up the arm.
+Did you lift up the arm? You did. Okay, Okay. And just hold the
+CPU up to the camera. Yep. Yeah. I'm not going to be able
+to make this out from here, but do you see any bent pins? - I do not. Let's go ahead and reseat it. Let's put that back in the
+motherboard, ever so gently. Now we're going to do
+an advanced move here. You're gonna flip your power
+supply switch back on and we're going to power this puppy up. Yeah. All right. Sorry Vinnie. You got a big fat hardware problem here. If I had to guess, I would
+say probably motherboard. - I'm glad it's not the 3080 cause that's what took the longest to get. - I wish I had better news for you, but at least you are on the right track, I think in terms of troubleshooting here. - Awesome, thank you so much Linus! - All right, no problem. Vinnie. Take care. - Oh hi Dennis. - Hi. How are you? - I'm glad I could talk
+to you today instead. - Instead? What do you mean? Who are you going to talk to? - Obviously I wanted to talk to Colton. Hey, this is Linus from Linus tech tips. - I like tips! This is Colt- (laughing) - 3CX's technology is something
+that we've never really had the chance to play with before. Normally we don't really have
+open phone lines here at Linus media group. So you can just call us, but with us service like theirs, it is absolutely the kind of
+thing that we could conceivably do. And it was surprising
+how easy it was to set up. You can do it in a number of ways. You can have it hosted by three CX, which is the easiest option you
+can host in your own private cloud. On Google. Amazon, your digital ocean or whatever, or you can even host
+on-premise with windows, Linux, or even a raspberry PI.
+Their costs are super low. The standard license is free
+for a year and hosting is also free for one year on all license sizes. Three CX is ideal for remote workers, just install the free mobile
+or desktop app or use the web client. And they've got
+support for live chat, SMS, Facebook, and Google messaging with all
+of them coming together in one interface. So whatever your
+needs are, go check them out. We're going to have the link
+down below and thanks again to three CX for sponsoring this video. Hi there. Thank you for calling
+press one for tech tips, please note your call may
+be monitored for quality and training purposes. How may I help you? - I've got this really dumb thing, - I downloaded Speedfan a while ago... - Now that's a name I've
+not heard in a long time. - I have no idea how to
+get it to pick up my fans. Or detect them, or do anything
+with this software at all, really. - Here's a question for you. What vendor is your motherboard made by? - This is an MSI XA-570 Pro. - MSI will actually have a
+Windows-based utility that you can download instead of SpeedFan. Why do you need this?
+There is my first question. - Sorry. I have a 3070, and
+sometimes it does get a bit hot, but the fans don't sound like
+they're super ramping up. - So you want to control
+the fans on your GPU. - GPU and CPU. - Well, the GPU's easy, uh for that, you just want to download
+MSI afterburner. There ya go. That's what you want. So you're going to make yourself
+a custom fan speed curve. So the more gradual this slope
+is the less you'll notice it going- you know, up and down and up and down. So what we've done here is
+we've made it to your GPU is going to be super quiet when
+you're not doing anything, but once you start to do something, it will ramp up much more aggressively. And then now if you want it to
+have a more aggressive curve, all you would do is drag your dots up - Got it. - That's pretty much it. That's your tech tip on how
+to use afterburner to control the fan curves on your GPU. It's a lot easier if I have this, if I have these things right
+in front of me at the same time, but that's okay. We made it work. All right. Thanks, Sean. - Yep! I'm going to move on to my
+next tech tip. Take care. - For Mac Address, press five. - You selected Mac Address, As we all know it just works. So instead of technical support, Please enjoy this music
+to help you relax while you use your working computer. (elevator music) All right, what's your
+question. What you got? - Are you into (beep)? - Oh my god (laughs) - So, my phone has this
+ghost touch issue... - So the trick is, you
+have to take an electrode and use that to touch the phone. Also, you can try microwaving
+it if that doesn't work. - Hello, thank you for calling
+press one for tech tips, please note your call may be recorded for quality and training purposes.
+How can I help you today? - I'm having issues with my computer - My fans are always at a
+hundred percent, no matter what. - My fans are always at
+a hundred percent too. Just like you Adam.
+You're a hundred percent. Okay. In all seriousness though, let's have a look at what
+you're working with here, by the way, I love your shirt. Oh, thank you. I want to jump right out
+ahead of you and say, I think your fans are
+plugged into a water pump, header on Asus motherboard. - I've checked it. - Okay. It's a bit embarrassing that
+I can't figure it out as well, cause I work in IT myself. - How sure are you that all of
+them are actually stuck at a hundred percent. - Ninety five percent? Could you like stick your
+finger in them and make sure. Okay, yeah, these are going. These are going okay. Let's reboot. I want to have a look at
+your bios settings. Hold on. Can I, can I just see? Yeah, let's just close out of this
+interface and go to monitor. Do fan configuration. Let's go in there and let's
+go to chassis. Chassis, fan configuration. DWM mode, polo CPU Tam. Yup. Let's change out the PWM. A water pump. Key fan control. Let's set that to enabled
+just for fun PWM mode. It looks like neither of these
+is going to allow themselves to be controlled at all. Now that's fine. Just, just ignore these. Go back. Water pump plus, we are plugged in to w pump
+plus then we are getting an RPM sense off that. Man, people are coming at me
+with the challenging ones today W pump plus is the one right above it. We do not want to use that one. So let's move that down
+to the high amperage one. - Okay, we're significantly quieter now. - Yeah. All right. Now let's go ahead and press
+F10. How's our fan noise? - These are not so bad, but these ones are still
+definitely going to really high speeds. - Okay. Let's go back and
+have a look at the bios again. Now we can see our CPU fan
+speed is a thousand RPM. That's right near the
+rated speed of these fans, So that could be running
+at a hundred percent. Now, what is your CPU temperature? Go up to the top again. 41 degrees. No, that should be fine.
+It might be a warm day. So let's go back to the
+fan control. Yeah, go down, go down and keep finding
+configuration. Yep. Okay. So CPU. Ah, okay. Let's change that over to PWM mode. - It's so cool, me and Linus here, troubleshooting my gear. - One of the challenges
+though is if you have some of the fans plugged into a
+header that just isn't respecting those curves, it's really hard to tell
+when they're working or not, because the system is going
+to be as loud as the loudest individual fan in it. Okay? So for whatever reason, the CPU optional header is
+respecting your fan curve. But the CPU fan speed header is not. What is actually plugged into that header. - That is actually just the
+AIO. So that's the RPM header. - Okay. So is your system quiet then? - I think we're quieter now? I don't know if you can hear them.. - I can't hear anything. - I think that you solved it. You know, what's great. You were totally plugged
+into a pump header. It's a really common thing. Every time I have trouble
+on ASUS board with fans, not responding to fan curves properly, it's one of those headers.
+ASUS needs to address this. They need to fix it. I don't
+understand why they don't. All right, Adam, I'm going to let you go and
+I'm going to move on to my next call. You have a good one. - I looked online and found a great deal on this Gigabyte power supply, the 850W one - I heard you got fired recently I want to hire you! - Ooh! - I can pay you in NFTs Whatever the problem is
+just throw the computer out your window and then you
+won't have any more problems. - I mean, I'll do that right now. - Oh, excellent. - Thank you for calling
+press one for Tech Tips p- (clears throat) - So my computer's
+doing this strange thing where it plays electronic music. - Okay. - And it says "give me tech tips". - Ah. - Check this one out. (electronic music) - Give me tech tips. - It says "give me tech tips". - Uh.. - I can't open up task manager. - Oh boy. - This is Darren at
+Chipotle Evans and Gilpin. Would you like guacamole on that? Whoa. Hello. This is Taren at Chipotle. Evans and Gilpin. You
+want guacamole on that? This is Tara, you want guacamole? Nobody understands the
+Chipotle references. - Thank you for calling
+press one for tech tips. How can I help you? - We just moved into a
+university dorm and our internet likes to cut out a lot. How do you know it likes it? Well, are you plugged in using a
+wire or are you trying to use wifi? - I have everything over wire. Okay. Why don't you run me
+through how the setup works? - I believe we have coaxial
+with Shaw is what the university has. So the thing about co-ax intranet, every time you split it, there's some signal loss you're
+losing some gain when one of them cuts out, do they all cut out? - Not that I'm aware of. - Yeah we haven't figured that out. - When you guys lose your connection, do you go over and look at the Shaw box? Does it say it is
+connected to the internet? There's probably nothing I
+can do about this because it sounds to me like you've just
+got copper cables that are doing rotten ugly old copper
+cable things. So yeah, I wish I had better news for you guys, but you're going to have to
+have Shaw come out and unf(beep) it because they're the
+only ones who can I think. - That sounds about right. - Hey, have a great semester all right? - To hear a dad joke, press six. - All right. All right. Why was the cell phone wearing glasses? Because he lost his contacts. - How can I help you today? - When I built my PC. I
+got both the nine 70 Evo, Samsung as a speaker. And I also got an Intel Optane 280 gig. - Well, that's not
+really a question is it. - Is that really getting me any benefit? - For your 970 you're
+using an Optane cache? No, I would actually not
+recommend that use case. And the only reason I know
+this is because back when they first released, well, whatever that initial Optane
+cache drive they released was I specifically asked them the
+same thing. I was like, Hey, whoa. You know, could I use this as a cache for
+my SSD on like a data center scale? Absolutely. The problem is that Optane
+connected to an NBME interface. Doesn't have the same kind of
+advantages as Optane plugged into a memory slot. When you
+add an Optane drive as a cache, my understanding is that it
+doesn't contribute additional capacity anyway. - I'm using a Primo cache. - Can I pitch you a crazy idea? - I like crazy. - Why don't you just get a hard drive? if you threw that on your
+hard drive as a cache, you'd be blown away by how it performs. - I was thinking about
+that too. That makes sense. - I think that's your best bet. Don't waste money on a high cap SSD. If you're comfortable with the
+concept of caching and if you already have a pretty
+low cache light sense. Thank you so much Linus. - Take care, have a great weekend. - For Linus Cat Tips, press seven.

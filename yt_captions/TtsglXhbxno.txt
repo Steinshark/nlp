@@ -1,0 +1,220 @@
+- Anything is easy if you know
+exactly what you're doing, but by the same token, anything can be difficult
+or even impossible if you lack the requisite
+skills, resources, or knowledge. - That's the basic premise of this video, where Linus and I, now three weeks into daily driving some form of Linux on our personal gaming machines, will change the gears and attempt to complete 12 simple tasks. - Simple as long as we've
+actually been doing our homework to familiarize ourselves with our Linux desktop environments. Here we go. Thanks to NZXT for
+sponsoring today's video NZXT wants to make building
+a custom PC easier. Within NZXT BLD, just set a budget, see how the computer performs
+with your favorite games, and BLD takes care of the rest. Use the link down below to
+get your own custom PC today. (upbeat music) While the main idea behind the Linux Daily Driver Challenge is to evaluate the Linux experience from a gamer's perspective, even the most ardent gamer
+will occasionally want to do other things on their
+PC like print out a document or watch a video. And those things need
+to not only be possible, but also fast and painless enough that they aren't immediately prompted to run back to Windows. So with that in mind, we've set a time limit for each
+of our tasks of 15 minutes. - Compared to gaming, basic office work is much
+more mature on Linux. And for anything that's
+not straightforward, there's a good chance that
+you can find a web app to fill the gap. These days, everything
+from word processing to basic video editing or even creating 3D
+mock-ups can all be done in a browser and often for free. - In preparation for this
+part of the challenge, I practiced using PlayOnLinux
+by installing Notepad++. And I hope that if I really need some other Windows application, that's gonna come in handy for me. If it doesn't, I also have a working
+Windows 10 virtual machine that I set up using KVM, but Luke and I agreed ahead of time that using a VM that's running paid, non-open-source software kind of violates the spirit
+of the challenge here, even if it is technically within bounds. So there's gonna be a 1/2 point deduction for using that workaround. - I didn't install a VM or do any other form of special prep, but because I work from home most days, I've been doing a lot of everyday stuff on my machine already, and I'm expecting this to
+be pretty straightforward. - Here are the challenges
+you must surmount in whatever order you please. Cut and paste a file from one drive. Oh. (laughs) Man, I was expecting them to come up with some stuff that's really challenging. So just like in Windows, Control + X, and I will paste it to
+my Kingston thumb drive. It is done. 3.9 gigs, playing it back. Yes, I do appreciate the irony of trying to play Success.mkv and having it just be a black screen. - I'm going to cut this, and I'm gonna paste this. Done. Okay. Step one complete. - I mean, I really didn't consider that this might take me longer than like a couple of seconds, just like it doesn't take longer than a couple of seconds
+to go to lttstore.com. Check out our great merch. This is really annoying.
+MacOS does this too. There's no refresh button in Dolphin, so you can't force it to refresh. And I know what the philosophy is. The philosophy is you're not
+supposed to need to refresh. Well, sometimes I do. So you need to have the button. (Andy laughs) Sorry, it's just I'm
+still angry about this from like seven or eight years ago, or whenever I did my MacOS
+daily driver challenge. VLC is not even opening anymore. Now I'm kind of afraid to touch anything. Nautilus reports a
+completely different setup. Okay. The file is here. And for some reason, VLC launches now. Did it just take that long
+to cancel the move operation? It did. I am grabbing us smaller file, Trying to install Teamviewer.txt. I'm cutting, and I'm pasting it. Success. Challenge two,
+digitally sign this PDF. I have not specifically
+installed any kind of PDF reader, so this is the default. Digitally sign. Oh. Oh, this is looking promising. Oh, draw a rectangle to
+indicate the signature field. Okay. Do. A signature of this size
+is too small to read. It's because it didn't.
+No, I'm just gonna sign it. There are no available
+signing certificates. Okay. Man, I thought I was gonna be
+done this in like one minute. How to sign. - I'm assuming I'm not
+gonna be able to sign it 'cause I'm assuming this is just a reader. Is there something on
+here? Document viewer? I know what I use on
+Windows for this is Sejda. Okay. Sejda. I'm gonna download Sejda to adjust in case this PDF mod thing doesn't work. Okay. This is what I use on Windows. So let's give this a shot. Sign, your signature. Save. Let me just verify that that worked. Let's get out of here. I don't need Pdfmod. PDF to sign, signed. Done. - Manjaro add PKCS signing certificate. Oh, you can get free trusted certificates from the Let's Encrypt. Oh, or we can use the mkcert tool. Come on. - [Andy] 12:14, you have one minute.
+- Yes, yes. I know, Andy. - Oh. Blah, blah, blah. Blah, blah, blah, blah, blah,
+blah, blah. What commands? - [Andy] Uh oh, time's up. - All right. It's clear that this is
+a thing that you can do, and it's something that I could figure out if I had another half an hour, an hour, but unfortunately it's not
+something that is quick or easy. Ah, I guess I get zero points. I should have bailed a
+couple of minutes ago and switched over to my VM. I failed challenged number two. - Export a chart from the Excel. Right click, save as
+picture an Excel file. This has gotta be the chart we're trying to right click, export as image. Did that work? I've never done this before. I wasn't even fully
+aware that was a thing. Looks like it worked. It has a transparent background, but it doesn't matter I don't think. - So this black background is
+not the color of the cells. The black background is just an image. Oh, yes, yes, yes, yes, yes. Here we go, here we go, here we go. Okay. You just have to find
+exactly the right spot. Export as image. Hey. Why is the name System Volume Information? Okay, why did it default to
+System Volume Information? Okay. Yes. Okay. I needed a W here, and I got it. It's not quite right. You can see it's actually
+missing the borders on the right and bottom, but everything else here looks fine. Calling that a W. - Add a new font. I'm assuming this is just
+dragging it into the fonts folder. We'll just do this. Nope. I thought it was going to be as easy as just dragging it into
+this folder, to be honest. How do you use install
+a font in Linux Mint? Oh, usr/share/fonts/truetype. There we go. Gonna put a Font in here. Permission denied. Okay. So open as root. Done. Now if I load this again, I don't see it. - I'm just gonna copy it
+to my Downloads folder. What just happened? Did that just copy to the folder? Why would it do that? I dragged this onto a folder, but because Arch is some
+completely separate application that doesn't integrate
+properly with Dolphin, it just goes, it just
+dumps it into the folder instead of specifically on
+the folder I'm dragging it to. So I have to open this
+folder, then copy it. I can open Night Zone with... Sorry, what is this? kfontview? Oh, install. Do you want to install the fonts for personal use, system-wide? System-wide. Yes! I'm gonna change my user interface to it. Ha! All right. - I did not think this one
+was gonna be difficult. I don't know how much
+time I have, actually. I wasn't even paying attention 'cause I thought I was
+just gonna blow through it. So it can just go directly into fonts. So it could go directly into there. I don't know. I'm just
+gonna put things everywhere. Is it actually called a Font? Is it called Night Zone? Have I been done this whole time? Okay. (laughs) I got it right. I didn't realize it was called Night Zone. Thanks, James. Oh my God. Okay. Sweet. Sick. Print the Word doc. Okay. Here's my Word document. File, print. Yeah, theoretically. I haven't done any setup for a printer, but this looks like a
+printer, so let's do it. Okay. A Word document is printing. I'll be back. That's in
+my girlfriend's office. We'll see what's gonna happen. That was probably the easiest and best printing experience
+I've pretty much ever had. I didn't detect that printer.
+I didn't install that printer. I didn't do anything. I know from previously using Mint, I've seen the pop-up in the
+top right-hand corner come up being like, "This
+printer has connected." But I never did anything for it. And yeah. - Printers. Okay. Hold on. Whoa, whoa, whoa, what was that. Printer HP Device Manager. What is this? Do I even have an HP printer? It's a Samsung. That's gonna be... Wait, whoa. Whoa, whoa, whoa, whoa. Are you kidding me? There it is. Samsung CLP-310 series. Okay. I was, wait. Oh, it found a driver. This printer is actually a pain in the ass to get working on Windows because I think the last
+time it got a driver was either Vista or Windows 7. I actually have it saved
+to a folder on my server because there's no other
+place that I can find it, or I can, but it's a real chore. You have to like extract
+it from some other thing. Like it's a very giant pain in the butt. This just worked, as far as I can tell. But until I actually see the page, I'm not ready to believe it. Connecting printer, waiting for printer. Let's go, Andy. Let's go, Andy. The light's flashing. It's flashing. Cut on CLP. Yeah! - [Andy] Nice! - I was gonna say I've never been so happy to see a page printed out of a printer, but actually getting something to print is one of those things that pretty much every
+time you need to do it, it's like kind of urgent and
+kind of a pain in the ass. So no, no, I've been through this a lot. - [Andy] Success. (Linus sighs) - Challenge number six, compress and send all
+the files on this drive. Okay. Compress here as .zip. Why is it .zip.uqjqfu? Well, that brings up nothing. Why would it put that there? Goodbye. Failed to open archive. Not a Zip archive. It's a uqjqfu? Nope, it just is broken. Perfect. - I'm going to compress to
+a Zip right here. Create. Let's check top. Gonna make sure things are happening. 7zip is attempting to use 100% of my CPU. So things are happening. - Holy crap. Andy, you know what? I think I just fell for the same thing that I said I wouldn't fall for again. Compress here as .zip. It was doing it down
+here, and I didn't notice. So I guess the six characters or whatever here is just random jibberish while it's a temporary file. I should change this font back. (laughs) - [Andy] Comic Sans. - I like it. Let's do it. Ooh, DSCU Comic. There we go. Are these files gonna
+compress at some point? Dolphin, you're embarrassing yourself. Okay, let's try and do it in, I forget what this one is called. It doesn't matter. Archive name. At least it prompts me for
+what I want to call it, but I don't see any kind
+of progress indicator. Are you kidding me? Am I
+gonna fail to zip a file? - This is not uploading. I was kind of hoping
+that I was gonna be able to do every single task
+in under 15 minutes. The fonts task really slowed me down 'cause I didn't realize the
+font wasn't called a Font. And then this one is slowing me down because it just took a
+long time to compress, and now it's taking a long time to upload. But other than that, these
+have all been very easy so far. - And this one is clearly stalled. Hold on. Maybe PeaZip's got me still. Hold on. So this is all the stuff. Okay. Copy. Then I can go into Downloads, zip folder. Yes. This is the workaround. Oh my God. 10 minutes
+remaining to copy these files. - [Andy] And time's up. - This is another thing
+that I definitely can do. It just had some issues. Wait, wait. No, I'm good. I'm good. The first one I did in
+Dolphin, it's done, I think. - [Andy] Nice. - Wait. No, I didn't get the point. I'm supposed to send them. Maybe I can weasel my
+way out of this a little. - [James] Yello. - What do you mean by compress and send? - [James] Zip it up and
+email it or something? - Well, I mean there's a
+three-gigabyte file in it, so emailing it is not really practical. - [James] Then just
+don't include that video. - Oh, well, I mean, I already zipped the whole
+thing including the video. 'Cause like, okay. I'm giving myself the points. I could have emailed this to
+someone. I think that's fine. - [James] Okay. - All right. - Okay, well, I can do other
+tasks while I'm waiting. Yeah, let's do that. Okay. So take a screenshot. Screenshot. I can do the whole screen. I can do current window.
+I can do area to grab. I'm gonna do area to grab, and I'm gonna screenshot this. Bang. It just shows up right here. I'm gonna throw it in the
+Linux challenge folder. And there it is. There's a screenshot. I'm gonna wait for make a shortcut. I didn't read this line
+before I started this. I don't have a network share. Set up Discord app to open on startup. There's probably, yeah,
+startup applications. Add one, choose application. Discord. Add application. Discord's on startup now. Watch 4K content. I'm assuming that's this, the a video. - Google unveiled the
+Pixel 6 and 6 Pro today, - Nice.
+- but we already knew everything about it because we had every-
+- Did we? Okay. Well, I guess I did that. This is done. That just got finished. Insert files using drive. Linux challenge. Okay. One person, view. Send. Got it. - This is really cool. If I search for a snipping tool, it actually is like,
+"Ha-ha, we don't have that." But we do have Spectacle, which is a pretty cool
+little screenshotting tool. So you just click Take a New Screenshot, and then you can do-do-do-do-do-do-do! Drag a little thing, press Enter. Cool. I get it. - [Andy] Nice. - Now I have to make a shortcut.
+Oh man, I got this too. Ugh, no, you can't right click it to where you wanted to make a shortcut. So no, I will find another way to do that. Link to file or directory. Yes, this is a much better
+way of doing this. Ha-ha. Name for new link. Okay. Can I copy the location? Yes, I can. Ha-ha. - [Andy] Ay. - Done. - I've like never made shortcuts. I don't make shortcuts in Windows either. I can hold the Shift and Control keys, highlighting and dragging
+a file or folder. Okay. Seems a little weird, but let's
+make a shortcut of a video (energetic music) That looks like it's a shortcut. Yeah, it's a link. It's a shortcut. Nice. - Connect to a network share. This is actually crazy easy 'cause while I am using
+Samba on my Linux NAS, it's a Linux NAS. So yeah. So network, shared folders SMB. Ba-bada-ba-ba-ba-ba-ba! Ladner server! Oh, does it want me to
+like map a network share? I mean, that's not really necessary. I can just add a shortcut
+to this right here. See? I'm gonna call that good enough. So now, every time I open up Dolphin, I just click Linus, and it will go to my
+share, just like that. Mm-mm-mm-mm-mm-mm. - I have received confirmation from James. I don't have any
+network-attached storage devices at my home right now, so he said it is okay if I
+set up a folder for sharing. I'm gonna go into property.
+Oh, sharing options. Let's try that. Samba needs to be installed,
+appropriate firewall rules. Let's do this. This is the first one where
+I haven't done anything with this at all yet. I've used Samba, but it was 10 years ago. Share this folder is on. Allow others to create and
+delete files in this folder. And let's do guest access as well. Add the permissions automatically. Cool. It is now a network share. You can see a little thingamajig there. I think that's it. So in the end, that took me
+less than 40 minutes in total. The majority of that time was waiting for a file to compress,
+waiting for a file to upload, waiting for a response from
+the task master himself, et cetera, not doing the actual tasks. I think that would have taken
+me a very similar amount of time in Windows. Actually, the print a file
+portion probably went better than it would have on Windows, (laughs) to be completely honest. So yeah. Overall, no problem. Really easy. - Compressing files
+failed. copying failed. Yeah, thanks a lot, Dolphin. You suck. Set up Discord app to open on startup. I think it might just do that by default. The first thing I'm gonna do, then, is just test that. I'm feeling good, Andy. I got this. - [Andy] I see Discord. - Hey. Okay. Apparently I had already configured this. So another point for Linus. Watch 4K content. a video.mp4. Where'd it go? Hello? Wait, it goes black in full screen? - [Andy] That's a nice feature. - Why? I grabbed mpv media player, the official repository community version 'cause that seemed like
+the most credible one, and then I was able to
+immediately open the video in mpv player, and boom, full screen. Solved. Look at that gorgeous guy. Challenge number 12, watch HDR content. As far as I can tell, this is basically just James rubbing in that I have not been able to consume any HDR content this month. Here's an article from a month ago. RedHat has announced it
+wants to hire an engineer. Oh, that's a fail, but
+everyone's gonna fail. So I feel pretty good. Other than digitally signing my PDF, I managed to complete all
+of my possible challenges, but that doesn't mean that the road to get here was as painless
+as what you just saw. - I've had a very frustrating issue where any amount of Windows movement, especially if I dare to have
+an even low-performance game like "FTL" running, will be very laggy. I've had a few fixes suggested to me that maybe helped a little bit. I can't really tell. None of them have fully
+solved the problem. I could distro hop and try something else, but I'm hesitant to do that, even if it would solve the problem, as that means a lot of
+additional work just to get caught up to where I am now, and it's possible other
+things will break anyways. - Meanwhile, on Manjaro KDE, I've had a relatively smooth experience. I do have little complaints like that the show desktop button doesn't
+actually minimize anything, and as soon as you grab
+a focus application, everything comes ripping
+back onto the screen, or that the application
+labels are underneath the window previews when you
+cycle through with Alt + Tab, making them harder to read. But overall, if all I needed
+to do was run a web browser, do some basic word processing, I wouldn't have anything
+to complain about. Installing and managing
+applications, on the other hand, has made me wish that my Pop!_OS experience
+hadn't been so discouraging. Manjaro has a graphical
+package manager called Pamac that allows applications to be installed in a couple of clicks, but by default, it contains only some
+of the things I need. It can be unlocked to search for Flatpak, Snap, and AUR packages which dramatically
+increases its usefulness, but, if this Manjaro
+developer is to be believed, these non-official sources
+can result in downtime. And if they do, everything
+is working as intended. Fortunately, I haven't
+really encountered that yet, though I have only been
+at it for a few weeks, but it's this kind of
+hit-or-miss functionality that has turned using my computer from something that I do for fun into something that feels more like work. Okay. Here's one. Miraculously, the Browser Source Plugin that I needed for OBS
+was available in Pamac through the Arch User Repository. But the thing is, I ended
+up only stumbling upon that by finding a post referring to it as I was fighting my
+way through attempting to manually copy the plugin files into the appropriate system folders, which, in fairness to me, was based on a guide I found and actually got me really close. I was able to launch OBS, but as soon as I tried to
+actually use that source, it would crash. Now, I understand that this
+is totally a power user thing to do, but it's also absolutely
+something that a gamer, particularly a game streamer, might need. - I wasn't able to install
+the Browser Source Plugin as easily as Linus was. I did figure out how to
+get it to work eventually, but in the hardest way possible because using my Windows brain, I installed OBS by following
+the commands on their website, rather than using my
+distro's package manager. If I had actually started with that, the main OBS install
+would have just included the Browser Source Plugin to begin with. Ah. In my opinion, it's an
+unintuitive user experience to not include the Browser
+Source Plugin by default for all the main ways of acquiring OBS. People who've been using
+this thing for years. It's in there by default on Windows. It is buried under the
+build instructions tab, but come on. - Honestly, some of my dumbest
+problems have been caused by my default file manager, Dolphin. Among other things, it
+does not allow the user to copy anything into a folder that requires administrative privileges, with no obvious way to
+override it in the GUI. And I've run into this twice so far. Adding insult to injury, the community responses to this
+user who shared my concern, that not everyone wants to
+copy files using the terminal and that Linux should allow the user to do what they want to
+do with their computer, were some of the most
+painfully condescending and stubborn things that
+I've had the displeasure of reading throughout this challenge. Now, I lost my link to
+the tweet, unfortunately, but I saw an interesting
+criticism of this series that basically accused me and Luke of intentionally
+smearing Linux and its developers because we were gonna come into this with a basic Windows gamer perspective and try to do things the
+way that they do things. Well, newsflash, guys, that's most people. And if you legitimately,
+like, in your heart of hearts, want Linux desktop to grow, you need to accommodate those people. So you can sit there and
+go, "Am I out of touch? No, it's the users who are wrong." But you're literally a meme at that point. The only question is whether
+you're self-aware or not. - Well, that depends. I strongly believe that enthusiast distros for advanced users should stay advanced. There is immense raw potential
+and an unfettered experience. It is important for new users wishing to eventually achieve mastery of a system and for current masters of that system to be afforded full
+control and responsibility in order to maximize their ability to learn, grow, and realize potential. That being said, not everything
+fits under that umbrella. There are distros out there more for gamers or inexperienced users. So for those systems, we really hope that there's a lot of good that can come from us doing this. We also don't want to paint
+everyone in the Linux community with the same brush because
+it's a diverse bunch of people with a wide range of
+experience with Linux. People like Wendell from Level1Techs, Jason Evangelho from Linux For
+Everyone, and Gardner Bryant from Gardner Bryant
+(laughs) have been inviting and supportive, not just to us, but to fans of the channel
+following in our footsteps, which is super cool, but. - Something that the good eggs in the Linux community you
+need to understand, though, is that you guys are great, and there's lots of you. It's just that it only takes a couple of toxic gatekeepers to turn people off. Like, you gotta remember, it's not always easy
+for people to reach out and ask for help. And if a literal developer of their distro goes out of their way to type extra unnecessary
+words to be condescending when they could have just pointed the user to the resources that they needed, it is extremely damaging to the good work that the majority is trying to do. And there has been so
+much of that good work on display throughout this project. I mean, getting my Windows VM, which I've only ended up needing to ingest some audio using
+Rode's weird, unnecessary utility and to configure my audio interface, was kind of a nightmare. Between incomplete guides,
+meaningless error messages, accidentally installing
+a version of VirtualBox that was made for the wrong
+version of the Linux kernel, and needing to enable an
+additional BIOS option that it didn't tell me I needed, it took me literally hours, but I got there. And it's worth noting that
+it can be a real hassle to set up a VM on Windows too, especially for an inexperienced user. And hey, at least on Linux, it's incredibly powerful and it's free. Now, there's a lot more
+that I could say right now, but I feel like most
+of it is better suited for the upcoming parts where
+we focus on game compatibility and performance and our
+overall conclusions. So I will see you there. Thanks to NZXT for
+sponsoring today's video. With NZXT BLD, getting a custom-built
+PC is easier than ever. Just set your budget, see
+how your PC will perform in your favorite games, and BLD takes care of the rest. Their recommendation engine
+provides benchmark data for the expected performance of your build at 1080p and 1440p, and their FPS estimates are guaranteed to be within 10% accurate. You can customize and upgrade your build from various NZXT case options with RGB lighting and all that good stuff. They feature transparent pricing with a flat $99 assembly
+fee in your local currency, and it will be built and shipped
+within 48 business hours. With all your PC's components covered under one warranty plan, NZXT will manage any problems you have, and you can contact their live chat for real-time help in troubleshooting. So go check them out. They've got 13 years of experience
+developing PC components, and we're gonna have them
+linked in the video description. If you guys enjoyed this video, maybe go check out one
+of the previous parts. It is a heck of a ride, this whole series. It's been a lot of work, but
+it's also been a lot of fun.

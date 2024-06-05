@@ -1,0 +1,102 @@
+import networks
+import torch
+import torchaudio
+from PIL import Image 
+from matplotlib import pyplot as plt 
+import data_utils
+from torch.utils.data import DataLoader
+import time 
+import spec_utils
+from spec_utils import to_spec,to_wav
+
+def spec_sampler():
+    #DATA
+    pca_handler = data_utils.PCA_Handler(sample_rate=spec_utils.__SR,non_pca=True)
+    pca_handler.ds_no_pca(n_samples=5,length_s=8,load_cap=2)
+
+    #Get spec
+    spec                    = to_spec(pca_handler.data_vectors[2].unsqueeze(0))
+    print(f"min,max is {spec.min()},{spec.max()}, shape is {spec.shape}")
+    
+    
+    #Get Waveform
+    waveform                = to_wav(spec).cpu()
+    print(f"\twaveform size=\t{waveform.shape}")
+
+    plt.imshow(spec[0].detach().cpu())
+    plt.savefig("random2F.jpg")
+    data_utils.save_waveform_wav(waveform[0],"random2F.wav",spec_utils.__SR)
+
+def train():
+
+    #Train vars 
+    bs          = 64
+    n_z         = 1024
+    modelD      = networks.SpecDiscriminator()
+    modelG      = networks.SpecGenerator(nz=n_z)
+
+    pca_handler = data_utils.PCA_Handler(sample_rate=spec_utils.__SR,non_pca=True)
+    pca_handler.ds_no_pca(n_samples=256,length_s=16)
+    dataset     = data_utils.AudioDataSet(pca_handler) 
+    dataloader  = DataLoader(dataset,batch_size=bs,shuffle=True,num_workers=1,pin_memory=False)
+
+    optimD      = torch.optim.AdamW(modelD.parameters(),lr=.0001,betas=(.5,.999),weight_decay=.01)
+    optimG      = torch.optim.AdamW(modelG.parameters(),lr=.0002,betas=(.5,.999),weight_decay=.01)
+
+
+    for epoch_num in range(100):
+        print(f"EPOCH {epoch_num}")
+        t_ep        = time.time()
+        for i, data in enumerate(dataloader,0):
+            t0 = time.time()
+            #Zero grad 
+            for param in modelD.parameters():
+                param.grad  = None 
+
+            #Classify real set
+            music:torch.Tensor          = data.cuda().unsqueeze(1)
+            spec                        = to_spec(music)
+            real_class                  = modelD.forward(spec)
+            real_err                    = torch.nn.functional.binary_cross_entropy(real_class,torch.ones(size=real_class.shape,dtype=torch.float32,device=real_class.device))
+            real_err.backward()
+            optimD.step()
+
+            #Classify fake set 
+            latent_vectors              = torch.randn(size=(music.shape[0],n_z),device=real_class.device,dtype=torch.float32)
+            fake_specs                  = modelG.forward(latent_vectors) 
+            fake_class                  = modelD.forward(fake_specs.detach())
+            fake_err                    = torch.nn.functional.binary_cross_entropy(fake_class,torch.zeros(size=real_class.shape,dtype=torch.float32,device=real_class.device))
+            fake_err.backward()
+
+            #Step optimizer 
+            optimD.step()
+
+
+            #Zero grad 
+            for param in modelG.parameters():
+                param.grad  = None 
+
+            #Train on fake set 
+            fake_class_train        = modelD.forward(fake_specs)
+            fake_err_train          = torch.nn.functional.binary_cross_entropy(fake_class_train,torch.ones(size=real_class.shape,dtype=torch.float32,device=real_class.device))
+            fake_err_train.backward()
+
+            #Step optimizer 
+            optimG.step()
+
+        #Sample 
+        for j in range(3):
+
+            #Sample 
+            vector_in   = torch.randn(size=(1,n_z),device=modelG.device,dtype=torch.float32)
+            sample      = modelG.forward(vector_in)
+            waveform    = to_wav(sample.detach())[0][0].cpu()
+            data_utils.save_waveform_wav(waveform,f"C:/gitrepos/lofi/saves/data{epoch_num}_{j}.wav",spec_utils.__SR)  
+                
+        #Stats
+        print(f"\t\treal_err:{real_err.item():.3f}\tfake_err:{fake_err.item():.3f}\tfake_err_train:{fake_err_train.item():.3f}\tt={(time.time()-t0):.3f}s")
+        print(f"\t\ttime={(time.time()-t_ep):.2f}s")
+
+if __name__ == "__main__":
+
+    spec_sampler()

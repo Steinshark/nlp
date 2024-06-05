@@ -1,0 +1,261 @@
+- god. oh, this is really bad. oh, this is terrible. wait, what (beep)? there's no way this is okay. what! why is this on? (david laughing) i just got six gpu's for only $1,700 because they're all dead. although, by the end of
+this video, with any luck, a couple of them will be alive. and huge thanks to origin
+pc for sponsoring this. (upbeat music) the gpus we have here go from
+boots up at crashes to... (box crunching) i haven't looked at this one yet, so let's have a gander brandon. box has seen better days. okay, it's just a loose graphics card. excellent. - [brandon] oh, is it water cooled? - we also have a variety of loose screws. that's never a good sign. if you wanna do what we
+did and go on ebay.com and just get it for-parts gpu, make sure someone else hasn't
+already had a crack at it. like this one right here,
+it looks pretty decent. and as far as i can tell
+from the description, the old owner didn't really
+put a whole lot of effort into trying to fix it. as for like this one, it's
+clearly already been used for a parts card. if we get this guy
+back, i will be shocked. 980 ti for a hundred
+and couple, worth a try. first step when you have a dead gpu is to verify that it's dead. in order to do that, we
+have our test bench here from origin. it's a millennium 5000t, and
+it is certifiably a good one. i guess we should probably
+make sure this works first, brandon. (machine revving) - [brandon] oh. - fancy. so in here we have all of the best stuff. so 12900k, 3080 ti, good looking
+board from msi and a peel. (paper crackling) wow. - [brandon] the best peel in a while. - yeah, that was a really
+good peel i have to say. one thing that's super
+cool about these pcs is that even though it comes with a warranty, you can swap out the parts
+and you still maintain that warranty. i don't know if they intended you to put something like this in it. (chuckles) oh, we're gonna test it out. while the rest of these
+gpus we just got from ebay, this one right here is jono's. - yep. - so what's wrong with it? - it would kind of disconnect, the motor would just disconnect randomly. and it'll do that in a
+series and it'll stop, and it'll do it in a series again. so it would happen every couple hours. so i'm kind of hoping you can fix it or see at least what's wrong with it. - that sounds very hard
+to diagnose.(laughs) - i don't know. (jono laughing) - also i've just been
+running for a mark on this pc and it's looking great. gpu is at 70 degrees. everything's kind of in line
+with what i would expect. yeah, the memory's kind of
+hot, it's at 94 degrees, but that's not too crazy. and video says you can do 120, so that's a good baseline to go off of. now shut down origin... i'm sorry, origin. you did actually do
+quite a nice little job of cable managing here and
+i'm gonna have to ruin it. we have loads of power
+easily available though. thank you for running
+it like that, origin. i don't know brandon, you say it's like their system builder, but i've seen some pretty shotty
+stuff from system builders. - [brandon] that's fair. but not origin. - yeah, not origin. i think step one for this
+guy is going to be just to give it a little clean. one thing to note when
+blowing compressed air, make sure that it doesn't spin your fans. it can just overload the
+motor and turn your fan into a generator, not great. there are apparently like
+diodes and stuff in this that should prevent it
+from killing your stuff, but either way just don't let them spin. (air whizzing) wow, that helped a lot. brand new. if your gpu seems to be dying,
+try out the easy stuff first. make sure your drivers are up to date and check if your temps are okay. so we're just gonna be doing
+a quick driver install here and then we're going
+into hardware info 64. it's a free program. just install it, check your stuff. run something like maybe
+a furmark or something, just any game that you run. see if anything in your gpu temperature starts looking weird. so temperatures that you're looking for, gpu shouldn't be over about 80. and memory's normally
+fine if it's around 100, 120 at the highest. what you really wanna look for though is that your performance isn't just tanking. so we have something like furmark here. we can run it. and we'll see that at the
+start, we're getting 225 fps. it's going to go down
+a little bit at first as the turbo runs out, but it shouldn't become half of that or just completely fall off a cliff. well, i have some bad news for jono. he thought that the temps might
+have been the problem here and they aren't. i didn't think it would be. we could leave this for longer, but it's at 50 degrees right now. there's clearly nothing
+wrong with the gpu temps. one thing that people almost
+never do with their gpus, is update the firmware on it
+even though it can fix things, like what jono has been seeing, they might have patched it like a year ago and he's just never updated it. we've done everything easy on jono's gpu. so drivers, firmware,
+temps are looking good. i can't get it to crash. so that's kind of where
+we're at with that right now. what i'm doing is just running
+3d mark with a gopro pointed at the screen to see if
+it does crash eventually. there's so many things that could have been causing his problems. i don't even know where to start. i personally had a problem
+that was similar to that a while ago and updating my
+monitor's firmware fixed it. so there's too many
+variables at this point until we see it actually crashed and can go through the logs. while it runs though, we're going to test out the
+rest of these gpus to make sure that they're safe to put in our system and just look for anything obvious. so first thing, we're just
+gonna check for shorts. it's highly unlikely that
+there will be shorts, but if there is, and you
+plug it into your computer, you might blow up your power supply. so it's cheap and easy insurance. got a multimeter here. it'll go bing if there's a short. (multimeter beeping) like that. and we're just going to
+go across these pins. it's going to be something like this. thank you gamers nexus. so if these guys are
+shorted to those ones, you're gonna have a bad time. (multimeter beeping) oh, that one is a sense pin, it's fine. it's the sort of thing where if your power connectors are shorted, your gpus probably never
+are gonna come back. you just done. wanna getting it off ebay,
+you might as well check. yeah. so none of these are gonna
+blow up our power supply. super easy. probably don't have to do it, but i would recommend doing
+it if you have multimeter cause cheap, easy insurance. (multimeter beeping) oh, shut up. now what i want to do is
+just take these apart, put them back together. see if there's anything obvious. and i find that a lot of
+the time just dissembling and resembling stuff that's dead is the easiest way to fix it. you won't know why you
+fixed it, but it just does. first one we're gonna
+look at is this rx 580. and we paid $150 for it. what do you think the chances
+are this was mined on david? - [david] 100% - 100% yeah, probably. one thing that i do
+like about this card is that there is still a sticker on the back, so chances are it hasn't been taken apart and no one's really taken a look into what's gone wrong with it. this one smells kind of weird. like, you know how
+there's those thrift shops that get cool stuff in. - [david] oh yeah. - and there's those ones that
+just like someone's nan died-- - [david] oh no. - and her whole house is there. - [david] oh no. this one smells like that. this might be completely unnecessary. it might just work. so easy to take it apart
+and just have a look. there we go. this card, it looks fine. now, there is just some crud on it. there's a little bit of
+corrosion in some spots. that's kind of what i like to see, cause that's the sort of card where if you just give it a clean,
+it might just come back. should we give it a little wash? - [david] hell yeah. - just using a little
+bit of isopropyl alcohol and toothbrush. those spots that are
+kind of gnarly just... (linus humming) last little bit for this 580. (air whizzing) - [linus] sorry david. - if was going to do this properly, i would also replace the thermal pads, but they seem like they're fine. and if it actually works
+later, maybe i'll replace them. this card's good to put in the system, but i just want to keep
+running jono's 2080 ti to see if it eventually crashes. it is entirely possible that we fixed it when we just blew all the crap out of it and put it in a case with good airflow. so it might have just been
+thermal throttling before. it's so hard to say. our next card is this geforce gtx 1080. now, i'm a little bit
+scared about this one because i had the exact
+same card in my system. and these early ones from
+evga had a bit of a bad habit of kind of exploding. there's just something wrong
+with the capacitors, whatever. we updated the firmware,
+it was really fine. whoever owned this might have not, and it might have just killed itself. let's take it apart though,
+give it a little clean and then it should be good
+to put in this system. this one's also just
+pretty crud fill, look. i think those are supposed to
+be holes, but it's just solid. i really missed the days
+of the capacitor plague, used to be that something was dead, you could just take a look at it. one of these guys would be bulging, replace it, it's all good. now it's so much more difficult. even if a capacitor goes, it's like one of these
+stupid little things and they're super hard to deal with. that, yeah, that really
+looks like someone spilled a bunch of water on it. - [david] well, stick
+it in some rice, i say. - yep, let's stick her in some rice. - [david] that's actually really
+satisfying in a weird way. - yeah, this is. i really have been loving this. oh, i am a bit scared for this one though. in this part you can really see just whatever was spilled on this. it's all sticky up here collecting dust. it's even kind of wet right there still. hmm, tasty. well, i think i found
+what's dead with this gpu. and if we just take a look. yeah, that's (bleep). now, how rough is this going to be to fix? this is a smaller phillips. and if we look right here, it looks like a really large phillips when you put it against this chip. but yeah, i am very confident that this is what is wrong with this gpu. now can we get another one of these chips? i'm not sure, but there is one right here and we might have something
+that's dead around that has one of those. i don't know. - one like it? - so i found what's wrong with this. do you wanna have a little look? - someone just extinguished a cigarette on top of that ic. (linus laughs) oh, there's also like
+a massive solder ball bridging a resistor. - yeah, that seems. do you think that's the culprit or do you think someone tried to fix it? - she's had some work done. - the stickers were still on the gpu so no one could have had... i don't think anyone took it apart. - what the heck is attack... oh, i was like... (kyle laughing) this is just disintegrated. it possibly caused a short
+then sent whatever this is. looks like a mosfet. i'm gonna say it's a mosfet. yeah, it's probably, it's dead. - [linus] yeah, it's very dead. - [kyle] oh yeah. you might be able to get the ic markings off the not dead guy. - [linus] yeah, i did. - oh you and you bought it. - [linus] i haven't bought it yet. - okay. if it failed short, then replacing
+it doesn't matter, right? - yeah. - cause it's already shorted. (multimeter beeping) dutting is bad. yeah, this is one bucket of short mate. - oh geez. - have you tried running it? - i have not. i'm going to turn off this
+benchmark of jono's card. it's been running for three hours straight with a stress test and
+it hasn't failed yet. so i think it's safe to say it's fine or the problem was with jono's system. that exploded mosfet
+that we saw is shorted. so even if we replace it, it's effectively doing what
+it's gonna do on its own anyway. - well, one of the tests
+that we wanted to do was what if we just shorted it
+and see if the card boots up. we don't have to take it off to test that cause it's already shorted. if you want it to work properly
+as an actual load switch, we would replace it so that if it needs to turn off it can. - yeah, the worst thing that could happen has already happened. - i think that's a power supply trip, man. - yeah, that sounded like
+a power supply trip to me. - that still smells fine. send it again? - yeah. - oh. - oh. - maybe you just needed
+the magical hands, man. do we have an output? - no. - well. - it still is post coding, so. - oh yeah. maybe it hasn't posted yet. - i feel like we're in windows right now. - and so wait, if we're in windows then... - yeah, device managing. - then we can do stuff, yeah. - no. - nothing. - it's gone. (kyle laughing) knowing what p mosfets do, i would assume that it
+would have to be closed for the graphics card to work. so it is closed permanently. not by choice. so yeah, no, i think there
+might be something else wrong. okay, so what we're gonna do now is see if we get core voltage. this is a junk way to do it. there's no ac it's all
+dc, it's all low voltage. one of the easiest ways to do
+it is probably the end of one of these capacitors. nevermind. i'm getting negative 12 volts cause i've got the wrong way around. but there you go, 12 volts. okay. we have voltage. well that means the
+power supply is working. - [david] wait, are you
+plugged into the gpu right now, like for display? - wait, what? - [david] the display's working. - we're getting core voltage. - [david] it's working. - wait, what? - yeah, it's working. (kyle laughing) - we got-- - gtx 1080. - we got core voltage man. it works, but i have no idea
+what we did to make it work. (linus chuckles) and you know what we call that? - [david] if it-- - so we removed the
+back plate, although... wait, there might have
+been some stuff in there. there is some liquid. - oh yeah. have you tried to replace these? yeah, because those touch the caps, right? is this-- - yeah, those touch the caps. - can you do a stress test" and do we have a thermal camera to see if this actually gets warm? - i can get a thermal camera. oh. - oh. - maybe it's not so worky. - she picks you up just
+to put you down again. - it's less dead than before at least. so we can potentially
+take off the back plate, look at it with like a
+thermal camera or something and see if we can find out some stuff. that's an after lunch problem. i'm disappointed. i'm probably gonna do
+most of it off camera. we're gonna just move on, see if... where did that 580 go? see if this 580 after we
+cleaned it just works now. we have lights. we have fans. interesting. i'm suspicious that it's
+gonna keep doing this. one thing that's interesting
+about this card is it has a bios switch on it, so. - [david] no way. - oh wow.
+- no way. - okay, so this is... i didn't want to say what i
+thought might have happened cause it's so stupid, but
+i was a bit suspicious there might have just been
+a mining bios on this, with no video output, and
+you just switch it over to a normal gaming bios
+and it just boots up. (david laughs) because we did switch from nvidia to amd, i'm just running ddu, getting
+in videos drivers off there, and then this might work. that would be crazy. 150 bucks for a 580. can you believe it, david? - [david] that's what it should cost. - yeah, that is what it should cost. we'll let it run through,
+but i think she's good. it would be so embarrassing
+to put up a video on fixing gpus and not fix one. (david and linus laughing) well, did we actually just fix this thing with the flick of a switch? maybe. hopefully it's not like that stupid 1080. yeah, we'll leave it
+running for a little bit. let's see what the next one is. which one do you wanna do? let's do this one. - [david] what is that? - oh, this one's bad. so this one's... (linus laughs) this is a 5700xt, beautiful card. not great things have happened to this one and someone's already
+had a crack at fixing it. we need to come on to the microscope to show you what's on the go here. you probably can't see it,
+but on this pci-e trace, there's a little capacitor
+that's missing right there. also, it's all burned to heck up here. now, there's kind of two things
+that i could have happened. this cap might have fallen off, card died, and whoever tried to repair it, cause someone clearly
+tried to repair this, was a big dumb dumb, and put their soldering iron
+right here and burned it. that's kind of best case scenario. other option, this memory
+chip destroyed itself and in the process blew up this cap. if that happened, she's
+dead, never coming back. so in the microscope
+you're able to see it. it looks like this might
+have just completely blown itself off. although more likely, someone
+scratched this off trying to repair it. it's got a big old ball
+of solder right there and that's definitely
+not helping anything. that also might have
+been this cap blew up, and in trying to repair it, they ended up just screwing up this one. you can also see some
+solder on this trace up here where they presumably tried to
+add some solder to the trace and bridge it or whatever. now, what you might think
+that you'd want to do is just attach like a
+wire there, a wire there and add a cap. but the problem is that pci-e
+traces are length matched and very fiddly basically. this capacitor being
+gone is a huge problem because there are two traces
+on each one of these pins, and those need to be
+the same length within, i looked it up and i think
+for gen three it's like five thousandths of an inch
+or something stupid like that. that's just because
+the signal is switching so incredibly fast that if
+one of them takes longer than the other, the whole
+thing just kind of falls apart. i'd like to say that i
+have a good fix for this, but i have a really dumb fix
+for this that might work. well, was a success. this 580 seems to be working great. it's pretty much right on what we'd expect for a 3d mark score. this card has 16 pci-e lanes, and the very last one is
+the one that's blown up. - [david] no. - if we just put it an adex
+slot and don't use these ones, (david laughs) (chuckles)maybe it'll work. - [david] let's try it. well, this slot right here is adex. as you can see, there's
+only pins up to there. nothing at all. it doesn't even know if
+there's something in there. we're just in windows, fans
+haven't spun, card's... yeah, i think we're gonna
+just call this one a loss for now. i'll come back to it later
+and maybe have another look. but this one's bad vibes. 1080 ti, 980 ti. - [david] 980. - i was afraid of that. there's nothing obviously wrong besides that it's literally been
+stripped and presumably is dead. one of the many unfortunate
+things about this card is that it came with a pci-e power pin that just fell off in shipping. we need to reattach that before
+we can try and power it on. given the burn marks on this, i don't think it's the
+first time it fell off. (upbeat music) pin's back on. now we just have to figure out which way these connectors are on. cause if we put our power
+supply cables on the wrong way, the card explodes or our
+power supply shuts down. either way, don't want to do that. that's ground, yay. so the end of this that has a little clip is the side that has ground. we just need to make sure
+that goes on the right way. oh god, this is really sketchy. do not do this ever, any of it. we did it. - [david] how confident are
+you this one will turn on? - i feel like this one's
+hovering just above zero. picked up the thermal camera. the reason that i want this is just to try and see if there's a short anywhere. it should just be hotter
+than everything else. and then hopefully we can go from there. oh wow, look at this though. it has all of the covers
+for the display outs. that's impressive. wait what? - [david] no. - what the (bleep) ! - [david] no, no. - (chuckles) no way. - what!
+- holy (bleep). - how did this turn? - [david] oh my god. - geforce gtx 980 ti. what! why is this on? (david laughing) - i'm flabbergasted. - [david] you should go
+buy a lotto ticket dude. - yeah, holy (beep) i just applied thermal paste. i can't believe this is just working. - [david] this is crazy. - this is actually crazy. that 980 ti we got for $103 it ran. score's a little bit low, it's 1700 points under the average, but there wasn't a cooler
+on it, so pretty good. yeah, let's see if hdmi just doesn't work. is it working? - [david] oh, it is. - this card just works. wow yeah, this card's going
+for like 350, 400 bucks. we got it for 103. hell yeah. call it won big win. oh, i don't wanna take
+these connectors off. i'm gonna break the pin probably. just gonna use a little
+bit of thermal adhesive and stick some many heat
+sinks onto the memory chips that aren't going to be
+getting direct contact to the heat sink. the rest i think is gonna be totally fine with just air flow
+directly hitting them here. yeah, i hope it still works. (upbeat music) for cooling, i'm going to
+zip tie this fan to the card. hell yeah. and now we just have to plug it in without breaking the pin off again. this pin is falling off so i'm going to just use our
+pci-e to hold it in place. can't believe this card is working. the only thing i can
+think of with this card is that it had the stock thermal
+compound on the gpu dye and it was just completely dried out. so maybe it was just booting up, almost immediately overheating
+and they were just like, "ah, it's dead." well, the score did increase a fair bit by turning the fan up. now, it isn't quite as fast as i want. it is getting up to about 83 degrees and we're probably losing
+clocks because of that. although look at this thing, it's working. i can't believe it. this thing's is sick. big w. here's our final card. and it's another one that's
+literally had work done on it. we have parts of it right here. look, even just on the
+pci-e, all scratched up. we're gonna see what we can do though. let's take it apart and we might have another
+water damage card. these thermal pads seem little bit wet. it's not looking good, david. what's on the go here? oh, this is bad. this is really bad. just look at the corrosion on
+this card right around here. i feel like this card one or
+two things is gonna happen. either we clean it up
+and whatever's shorted by schmoo up in here just
+kind of solves itself or it's completely dead. it's probably completely dead. oh, this is terrible. this thing's not surviving this david. so, oh, where do we even start with this? it's completely black. and there's just, i don't
+even know what's all over it. it looks like the pcb here, yeah, its just completely lifted up. there's a pad here that's
+no longer really attached. yeah, the pcb's kind of
+exploded all through here. some of it just came off as i touched it. that's a good sign. it's also really hairy. i'm not a huge fan of that. let's see who else we can find on here. yeah, so this resistor is just crumbling. i don't know what to say other than, i don't know enough about electronics to really comment on this
+besides just complete destruction of everything that's
+kind of around this area. we'll give it a clean at
+least, see what it exposes. this poor card. what i find really interesting
+to with this card is that it's water cooled and it
+appears to have water damage, but i don't think that the
+water damage is related in any way to the water cooler. i mean, everything around the dye and around this all looks fine. it just kind of seems like
+someone spilled their drink on this corner. it's kind of hard to see
+through this camera here. but if i look in this, there's
+a literal hole in this pcb and i don't think it's a via, or it might have been at one point, but it's much more than
+a via at this point. it's almost resistor-sized
+hole that just kind of goes through a couple layers. it looks like a cap exploded
+and corroded everything, but there's no caps
+around here that exploded. it's just something very bad got on this and stayed on it for quite a while. oh yeah, that just came right off. i think we just chuck this in the pc, see if it does anything. there's no coming back
+from this i don't think. the only way to save this
+card that i can think of, it's just full zombie. just pretty much everything
+from here, never use it again. get like an external 12
+volt powers apply for this and hook it up, rate
+the vrms or something. we might as well try the card,
+but this thing's so mangled. i don't even think it's worth the time to put that cooler back on. i'm just gonna hold this
+intel stock heat sink up to of the dye. i have been wrong before, but nothing... yeah, i don't think it's worth
+looking more into this card. it's mangled. this one's a no. we paid $400 for this david. - [david] you can buy a
+steam deck for that much. - yeah, that's bad. aside from what we just
+tried with these gpus, there are a couple more methods to try and bring them back from the dead. like for instance, our rx 580 here, where we were able to
+rescue from a bad bios by just getting lucky
+and there being a switch. but on most cards you
+don't have dual bios. to try and fix those, you can use one of these guys right here, a bios flasher. and you can pick these up
+on aliexpresss for under $5. with this, you can flash
+the bios on your card without even needing to power the gpu on. the best resource i
+found for this is a video from defdog that goes over the operation in excruciating detail. if all else fails, there's
+also the good old oven trick. linus did make a video on
+this a couple years ago, but maybe don't watch that. half the video is him just
+cleaning a toaster oven. maybe just read this article by ifixit. basically by heating your gpu
+to around 200 degrees celsius, if a solder joint is cracked,
+it might expand just enough that the connection gets
+well connected again. i have heard people describe
+this as re-flowing the solder, but realistically the ovens
+are not getting hot enough. and if they did, it'll
+be a really bad time because all of the flux is gone. this is pretty much
+just a hail mary though. and even if it does fix your gpu, it's probably gonna last a month or two. so should you buy a
+for-parts gpu from ebay and try and fix it? no. i think you agree, david. - absolutely no.
+- no way. - this was fun. i enjoyed looking at how
+just mangled this card is, that i paid $400 for. i wouldn't recommend it. sure, you'll still can get lucky, like with our 580 or 980 ti, but multiple of these
+already had serious attempts at repair done to them. if you're looking at less powerful cards, then maybe you can find
+one and it can be fun. it's not too expensive. but given the current price of gpus, there's a lot of incentive for repair shop to try and fix these and
+sell them as working cards. on top of that, even if you have a full blown
+board repair level shop, you might just not be able
+to get some of the stuff. if something breaks, like a mosfet, you can get it from
+digi-key and replace it, but memory or dye and a lot
+of other special components, you just can't buy them, and it sucks. if someone out there knows
+how to get gdr-6, let me know. so huge thanks to origin pc
+for sponsoring this video, their millennium 5000t worked
+awesome as our test bench. and it was really nice
+knowing that performance and thermals are not
+going to be a bottleneck in their testing. the fact that you can swap out components without avoiding the warranty
+is straight up awesome. and also just look at it, so much rgb. it looks cool. so thanks for watching this video. hit like, get subscribed. and if you wanna watch something else, maybe watch our crazy
+trying tiktok tech hacks. they were bad. (linus chuckles)

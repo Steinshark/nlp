@@ -1,0 +1,159 @@
+- [Narrator] So, many trapped in a world they think they can't escape. So, many with dread in their
+hearts as 10 turns to 11. So, many unanswered questions. So, many to save. - For some, Linux may be the answer they've been looking for. And Windows 11 could be their
+reason to finally try it. But Anthony you say, installing Linux is a
+complicated and scary process. Well, here's the thing it's really not. So, let's go deeper and see for ourselves how easy it really is. Perhaps it's easy as checking
+out our sponsor War Thunder. War Thunder is an online
+military vehicle combat game that is free to play and a lot of fun. Try it for free down below today and get some special bonus
+items just for signing up. (upbeat music) Conceptually, Linux is very
+different from Windows, pretty much across the board. Some of these differences
+are primarily visual while others are much more fundamental. If you've heard of Linux before, you've probably heard that it's open. Now, evangelists will tell you that, that means free as in speech. And this is true, and that anyone can take a look at the source code and modify it as they see fit. But what it means in practice is that not only is it able to support a wide variety of hardware, it's also extremely customizable. With desktops that can
+mimic the look and feel of any existing operating system or be something entirely unique. You get control. Not only that, you'll hear people say that it breathes new life
+into old PCs, but why is that? The reason is that the
+open nature of Linux means that it comes in
+many different flavors, known as distributions or distros. There are distros with lighter or heavier system requirements, dramatically different aesthetics and even different ways
+of installing software. Now, here's some good full
+feature, desktop oriented ones. If you've got one that you like best, let us know why down below. Our example for today is going
+to be Pop!_OS by System76, which is a good
+recommendation for new users. Not only because it's
+part of the well-known and well-documented
+Ubuntu and Debian lineage, but it's also because it
+has a number of features and sane defaults that make it friendlier and easier to get up and running. Start by downloading the ISO. Now, Pop!_OS comes in two flavors. One that includes the
+very special Nvidia driver and one for everyone else. You can use either, but it's easiest to download the ISO that best matches your system to reduce the number of steps
+required during installation. Now, you could just burn it
+if you've got an optical drive and a blank DVD, but if like most of us, all you've got is a flash drive, you can grab one of a
+couple of different tools. The easiest to which being balenaEtcher. It's so easy in fact that
+it's just three steps, select the ISO, select the flash drive, and then click flash. For Pop!_OS that's all you need to do. But if you've got an image
+for a different distro, for example, that fails to flash this way, we look to a more
+versatile tool like Rufus. Looking at the main window, ignore the persistent
+partition size slider for now, and look at the partition scheme option. For most people, MBR is perfectly fine because it supports both
+legacy BIOS boot and UEFI. You'll really need to
+use the advanced options, but the fixes for old BIOSes can help if you've got a very old
+computer you're trying to boot. For file system, you'll almost
+always want to choose FAT32. Now, NTFS supports files that are larger than four gigabytes, but it's less compatible overall. You'll also always, always want to choose the default cluster size. Larger clusters can improve
+transfer performance for larger files at the
+expense of smaller files and vice versa. Finally, you can choose to
+create an extended label and icon files, which just
+makes your flash drive show up in a fancier way on Windows. If you fancy like that. All this left is to click Start and wait for it to do its thing. If all went well, you're
+now the proud owner of a flash drive with Linux on it. Congratulations, it's a Penguin. Time to plug it in and give it a whirl. Power on your PC and enter the BIOS. We'll need to first make sure that the flash drive has shown up and is first in the boot order. And second, we need to make sure that secure boot is disabled. Otherwise, you'll just
+get this fun message when you try to boot. The DOORS and Ubuntu both
+support it, but as far as I know, every other distro out there,
+including Pop!_OS does not, unless you do it yourself. Blame Microsoft. In most desktop BIOSes, disabling secure boot
+requires the key store to be deleted like this, but laptops, all in ones and prebuilts
+may have a simple toggle. Save and exit, and you should be booting from your flash drive. I know you can do it. After the first screen, you'll
+be treated to an impressive looking array of very technical
+messages as Linux boots up. These make troubleshooting a lot easier, but solves partway through. Some distros cover them
+up with a boot screen, but you can usually hit
+Esc to show them again. It may take a little while to
+boot after the final message. So, give it a minute before assuming something is going wrong. If all goes well, you'll be
+looking at the Pop!_OS desktop and an install Pop!_OS
+window will come right up. Choose your language and region, then choose your keyboard layout, English U.S. default will work for most, but you can choose
+alternatively out here like Dvorak and colemak. Next, Pop!_OS will give you the option of customizing your install,
+just like lttstore.com, lets you customize your water
+bottle with free stickers. Nice. Now, if you're super eager to get going, you can go through the installer now, but if you'd like to poke
+around in an environment where you can't break anything, now's a great time to do that
+by clicking try demo mode. This is pretty much the same thing you're gonna get after a default install. And it's a great opportunity to make sure that all your hardware is up running. Particularly your audio, your networking, and your display driver. Once you're finished poking around, it's time to come back to the installer. A clean install is the most straightforward, so let's
+go ahead choose that option. Choose the drive you want to install to., and then you'll be brought
+to the account setup screen. A username will automatically generate based on your full name,
+but you can change it if you prefer. Click Next, choose a password, then the next step is
+to install the files. Once it's finished, reboot and you'll boot right into Pop!_OS. Now, if you don't, make sure it's selected as
+default boot device in your BIOS. It should show up as Pop!_OS like so. Once you're booted in to Pop!_OS, log in and you'll be greeted
+with the post-install setup, unlike a certain other operating system, this only features a
+single privacy setting. With everything else,
+being things like typing, time zone, and how you want
+your Dvorak and top bar looking function. I like it best when it's set up like this, but you're not limited to anyone layout. If you're okay with installing
+extensions later on. Pop!_OS uses a common desktop
+environment called GNOME, but System76 is Homebrew
+extensions installed. Here's my layout at home. It's kind of a not Windows looking set up, similar to a different desktop
+environment called Plasma. Depending on how fresh your ISO was. Pop! shop will ping you at this point saying that there are updates available. Now, this is your app store. Go ahead and launch it and
+click the Installed tab to download any updates that are waiting. Then you can start to install your apps. It's ridiculously easy to do. Discord one click, OBS one
+click, Steam one click, needing game performance
+metrics and lagging ? Grab Goverlay. Emulators, they've got a
+RetroArch, Dolphin, MAME, DOSbox, never even had to open a browser. I hate opening browsers. Now, that's not to say that
+the interface is perfect. Clicking out of category will
+just give you an alphabetical listing of software with no
+sub categories or filters, which can be overwhelming to say the least when you're just browsing. And advanced users will notice that some under the hood packages
+aren't listed at all with no obvious way to change that. You can install the
+Synaptic Package Manager to get both of those features though. The only problem is that
+it's far less user friendly. Thankfully, if there's
+something that you need, that's simply not available at all, you can add an extra source
+in Pop! shop's settings. Most software has a launch pad
+or personal package archive that you can add there. As the name suggests, these
+are curated by the authors or users rather than the regular operating system maintainers. So, only use these for software you trust. Wine, the software that allows you to run Windows programs on
+Linux is a good example of this because the version included
+in Pop! shop is quite old. However, the developers have decided to host their own and provide
+instructions separately. So, we'll have to use
+the terminal instead. Now, don't worry too much. This isn't very common
+and because we trust Wine, we can just copy these
+commands and paste them into the terminal like so. Once you're done, go ahead
+and type this command to finally install the latest
+stable version of Wine. Now, you can exit the terminal. I also recommend installing
+Winetricks while we're at it, to manage our Windows settings. And to be clear, you
+don't need any of this to run games through Steam, which launches Windows
+games through its own included Proton layer. After all your installs are done, open the applications drawer, and you'll see that they're ready to rock. No extra steps required. Steam opens right up and
+you can log in as normal. Before you go wildest on games though, you should enable Proton for
+all titles under Steam Play and Steam settings menu, click Okay, Steam will restart and you're good to go. Cool, right? Like I can just straight up
+install Cyberpunk for example, and it'll work. In fact, it works really well for a game with a silver rating. Like it must've been in like
+a recent update or something. I don't know. You can check how well the
+game is expected to run, as well as how it ran in the past, and whether anything
+special needs to be done to get it working on ProtonDB. The vast majority of
+games work out of the box, although with some caveats,
+we'll get to shortly. But first, if you have an Nvidia GPU, ShadowPlay doesn't exist in
+Linux and that's a problem. But what if I told you, there's a way to get
+something even better? It's a couple of extra steps
+and we're going to have to use the terminal to do it, but
+trust me, it's very worth it. First, download the code from
+the nvidia-patch repository and extract the zip file. Then go to the folder you just extracted, right click the empty space
+and click open in terminal. Next, type this command and hit Enter. This will enable NVFBC
+or framebuffer capture. The extremely fast method that ShadowPlay uses to capture the screen, and something Nvidia normally has disabled for GeForce cards by default. That wasn't so hard, but we still have to install
+the plugin for OBS to use. Unfortunately, there's no package for it in Pop!_OS or Ubuntu right now. So, we'll have to download it ourselves. To be clear, this is
+one of the last options you want to use as far
+as installing software. Download the code from this
+repository, then extract it, go to the folder and open it
+into the terminal like before. Now, we need to install some things before we can actually continue. So, type this command, hit
+Enter, and have your password. Now, type these commands,
+hitting Enter after each one, and once that's done, you can go back to the Files window, go to the build folder and copy this file. Go to your Home folder, Show
+Hidden Files, then go here, make a new folder called Plugins. Then in there, make new
+folders that look like this and paste the file you copied
+before, and you're done. Linux veterans will point out that we could have done a
+lot of this more quickly if we'd done more of it in
+the terminal, and that's true. The terminal is really
+handy for a lot of things, especially for tutorials
+where it's the only truly common factor between
+Linux distributions, but contrary to popular belief, it's not necessary most of the time. It's just faster or easier if
+you know what you're doing. If you weren't familiar with it, using it in short burst like this can help you get acclimated
+and learn what can be done just by typing a few words. Now, we can go to OBS and add
+the NVFBC source to our scene. And look at that, high resolution, high frame rate screen capture
+with very little overhead, just like ShadowPlay. If you open up System Monitor, which is kind of like
+the Windows Task Manager, you'll see very little CPU usage. You can combine this with NVENC for high-performance gameplay
+streaming and recording too. Oh, and did I mention
+that most game controllers just work out of the box? The list of devices that Linux supports is much larger than the list it doesn't. And the majority of those
+are a result of a company not releasing the driver
+or at least not releasing the information relevant
+for making one from scratch. Nvidia is much maligned proprietary driver on the other hand, works pretty well and has been getting
+some serious attention of team green recently with DLSS, and Ray tracing support and more. Pop!_OS comes with the latest drivers and updates for them come
+down through the Pop! shop like everything else. So, if installing Linux,
+isn't that big of a hassle, why haven't more people jumped on board? Well, the main problem,
+at least in the past, is that for all the freedom and control you're getting from Linux, you had to give up performance
+or functionality, or both. Especially in gaming, but since the release of
+Valves Wine based Proton compatibility layer in 2018, things have been exploding to the point, where the vast majority of Steam games run flawlessly on Linux with
+no configuration necessary. The biggest issue for Linux gamers is the fact that many anti-cheat programs still don't work properly at all. Meaning that games like PUBG,
+Apex Legends, Destiny 2, and Rainbow Six Siege are
+just presently unplayable. Despite working in offline mode. This spills over into
+productivity apps like Microsoft Office and Creative Cloud where their anti-piracy implementations fail to authenticate thanks to reliance on an integrated the Internet Explorer. Yeah, disgusting. But compatibility is rapidly advancing. So, get subscribed, so you don't miss our annual-ish Linux gaming update. At the end of the day, my personal advice is to use
+the tools that fit you best, whether that's Windows, MacOS, Linux, or even something else entirely. And if these compatibility
+issues are showstoppers for you, I'm not gonna no wag my finger at you. Expect you to find an alternative. What I am gonna do though,
+is ask you to give it a try and see if the alternatives work for you. I find immense joy in trying new things and finding better ways of
+doing what I like to do. And with Linux, the sheer number of different
+ways of doing things means you're extremely
+likely to find something. Anything at all, that works better for you than what you're doing right now. You have only to look for it. And hey, maybe the thing is our sponsor War Thunder. War Thunder is a free to play online military vehicle combat game available on Windows,
+Mac, Linux, PS4, PS5, Xbox One, Xbox series
+X, all with cross play. They're incredible arsenal of more than 1700 historically accurate playable tanks, aircraft, and ships from
+the 1930s to the 1990s, have attracted more
+than 34 million players from all over the world, myself included. You can take part in massive
+combined arms battles on more than 80 major
+battlefields from World War II to the end of Cold War. And it's still an active
+development with free major updates every couple of months
+and even more content always coming through, including vehicles, maps,
+and new gameplay features. Head to the link below to start playing War Thunder for free. And you'll also get a free
+premium vehicle for signing up. Thanks for watching guys. Go check out our recent video
+on how to install Windows 11, to get a sense of how difficult or not. This was by comparison.

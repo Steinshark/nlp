@@ -1,0 +1,121 @@
+import torch 
+import torchaudio 
+from torchaudio import *  
+from dataset import compute_svd,compute_svd2
+from matplotlib import pyplot as plt 
+import os 
+
+
+def tensor_to_wav(waveform:torch.Tensor,fname:str,sample_rate:int,final_sample_rate:int=44100):
+
+    #Resample up 
+    if not sample_rate == final_sample_rate:
+        waveform        = torchaudio.transforms.Resample(sample_rate,final_sample_rate)(waveform)
+    
+    #Save via torchaudio 
+    torchaudio.save(fname,torch.stack([waveform,waveform]),final_sample_rate)
+
+def rebuild(tensor:torch.Tensor,u:torch.Tensor,s:torch.Tensor,v:torch.Tensor,n_dims=256,mode="rebuild")->torch.Tensor:
+
+    #u_                      = u[:,:n_dims]
+    if mode     == "rebuild":
+        mult1       = u.type(torch.float32) @ s.type(torch.float32)
+        print(f"mult1 shape = {mult1.shape}")
+        mult2       = mult1 @ tensor.to(torch.device('cpu')).type(torch.float32)
+        return mult2
+    
+    elif mode   == 'reduce':
+        return tensor.cpu().float() @ u.cpu().float()
+
+
+def rebuild_scale(tensor:torch.Tensor,u:torch.Tensor,s:torch.Tensor,n_dims=4096)->torch.Tensor:
+    return u[:,:n_dims].type(torch.float32) @ torch.diag(s[:n_dims]).type(torch.float32)  @ tensor.to(torch.device('cpu')).type(torch.float32)
+
+def low_res_to_high(low_res_tensor:torch.tensor):
+    return 0 
+
+def img_similarity(img1:torch.Tensor,img2:torch.Tensor) -> float:
+    return .1
+
+def plot_fft(tensor):
+
+    n_fft       = 2047
+    hop_len     = 1024
+    win_len     = 1024
+    fft     = torch.stft(tensor,n_fft=n_fft,hop_length=hop_len,return_complex=True,win_length=win_len)
+    print(f"out is size {fft.shape}")
+    ifft    = torch.istft(fft,n_fft=n_fft,hop_length=hop_len,win_length=win_len)
+
+    tensor_to_wav(ifft,"istft.wav",1024)
+
+def tensor_to_stft(tensor,n_fft,hop_len,win_len):
+    return torch.stft(tensor,n_fft=n_fft,hop_length=hop_len,return_complex=True,win_length=win_len)
+
+def stft_to_tensor(stft,n_fft,hop_len,win_len):
+    return torch.istft(stft,n_fft=n_fft,hop_length=hop_len,win_length=win_len)
+
+
+if __name__ == "__main__":
+    # #Load 512 songs 
+    # n_samples               = 512
+    # n_fft                   = 2047
+    # hop_len                 = 1024
+    # win_len                 = 1024
+    # ds                      = "bs_norm_1024_32s_2"
+    # filenames               = [f"C:/data/music/{ds}/" + f for f in os.listdir(f"C:/data/music/{ds}/")][:n_samples]
+    # width                   = n_samples*32
+    # blank                   = torch.zeros(size=(1024,width),dtype=torch.cfloat)
+
+    # for i,fname in enumerate(filenames):
+    #     blank[:,i*32:(i+1)*32]  = tensor_to_stft(torch.load(fname),n_fft,hop_len,win_len)
+    
+    # print(f"shape of blank is {blank.shape}")
+
+    # #perform svd 
+    # torch.svd(blank)
+    # exit()
+
+    DEV1                    = torch.device('cuda')
+    DEV2                    = torch.device('cpu')
+    n_c                     = 4096  
+
+    sample_rate             = 1024
+
+    #ds                      = "bs_1024sr_32s"
+    #u,s,v                   = compute_svd2(f"C:/data/music/{ds}",shuffle=True,chunking=False,q=n_c,max=1024*64,center=True,clipped=True)
+    #v                       = v.T
+    #s                       = torch.diag(s)
+    #torch.save(u,"C:/data/music/svd_32s_4096u.tsr")
+    #torch.save(s,"C:/data/music/svd_32s_4096s.tsr")
+    #torch.save(v,"C:/data/music/svd_32s_4096v.tsr")
+
+    datasize                = 29372 
+    v                       = torch.load("C:/data/music/svd_32s_4096v.tsr").type(torch.float)                # 23006 x 23006 
+
+    #Recreate using first n_c dimensions summed 
+    #u_                      = u[:,:n_c]
+    #s_                      = torch.diag(s[:n_c]) 
+    #v_                      = v[:n_c,:]
+    #s                       = torch.diag(s)
+    #dataset_sm              = u_ @ s_ @ v_
+    #print(f"dataset is size {dataset_sm.shape}")
+    #tensor_to_wav(dataset_sm[:,0],"rebuild1.wav",1024)
+    #print(f"sizes are u:{u.shape}\ts:{s.shape}\tv:{v.shape}")
+
+    if not os.path.exists(f"C:/data/music/bs_svd_{n_c}_1024_32s"):
+        os.mkdir(f"C:/data/music/bs_svd_{n_c}_1024_32s")
+    for recreate in range(datasize):
+       #rebuilt                 = u_ @ s_ @ v[:n_c,recreate]
+       #item                    = dataset_sm[:,recreate].type(torch.float16)
+       item                    = v[:n_c,recreate].type(torch.float16)
+       print(f"final shape is {item.shape} and size ")
+       torch.save(item,f"C:/data/music/bs_svd_{n_c}_1024_32s/data{recreate}.tsr")
+    
+    # for i in [10,54,111]:
+    #     #low     = torch.load(f"C:/data/music/bs_svd_{n_c}_1024_16s/data{i}.tsr")
+    #     low      = v[:,i]
+
+    #     #print(f"u:{u.shape}\ts:{s.shape}\ttensor: {low.shape}")
+    #     high    = rebuild(low,u,s,n_c)
+    #     tensor_to_wav(high.type(torch.float32),f"save{i}.wav",1024)
+        

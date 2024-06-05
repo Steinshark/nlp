@@ -1,0 +1,121 @@
+- this is a powerful gaming computer. (vacuum roars) we designed it specifically to deliver the most
+performance it possibly could while being completely... (snaps fingers)
+(vacuum quiets) silent. it wasn't easy, though, because while noctua's new nh-p1 passive cpu cooler works great, it's also hard to fit in many cases. so we decided to do something
+a little more fun and... well, creative. like my segues to our
+sponsors. like smartdeploy. with smartdeploy, it can manage every windows endpoint
+in their environment from once centralized golden image. grab your exclusive free
+software worth over $800 at smartdeploy.com/linus. (upbeat music) we started with this
+sweet little portable rig, the highlights of which
+are a 3060 ti graphics card and an intel core i7-11700k, all with 32 gigs of crucial ballistix ddr4 crammed into this teeny,
+tiny little silverstone ml08. this thing manages to
+be powerful, functional, and certifiably cute. just look at this little
+handle. it's like... it's so fashionable. which is all well and good until you hit the
+machine with a heavy load and it folds like an
+intel macbook, which... wait. they're supposed to fold. (windows alert chimes) thankfully noctua has the solution, so let's open this thing up and... aw, geez. how did this delightful
+little abc board book for children get in here? lttstore.com. aw, there it is. (cackles) got 'em. anyway. holy crap, is
+this thing ever massive. meet the nh-p1. and it is both heavy and completely unlike any
+other heat sink that i've seen. it weighs in at just a
+hair over 2 1/2 pounds thanks to its huge stack of unconventionally thick aluminum fins. there are only 13 fins, which is a fraction of what you'd have on a normal heat sink. and the fins are spaced
+super far apart like this so that the heated air they create has room to convect itself
+upward and away from the cooler, allowing it to draw fresh
+air into it passively. that's right, it's designed to be used on modern cpus without any fan. and this action is
+facilitated by six heat pipes that carry heat away from the cpu. and then the whole stack
+is actually braced together so that these poor heat pipes don't just bend under
+the weight of this thing. now, looking back at
+noctua's earlier prototype, they've made a lot of
+changes to the design. notable ones include going from large, tabbed holes in the fins to smaller, punched-out ones and the way that they actually reduced the number of the fins that directly attach to the cold plate. now, i would've thought that more fins directly soldered to the
+heat source is more better, but noctua is clearly
+leaving the bulk of that work to the heat pipes. now, of course, it's time
+to find out if it works. oh, yeah, we're gonna need to
+make some modifications here, i think, ladies and gentlemen. (dremel whirs) now, the cooler we were using
+before is a noctua nh-l9i, and it's great for its size, coming in at 59 points on
+noctua's performance scale. but surely this thing
+will be better, right? wait. 42 points? is this even an upgrade? there's one way to find out, i guess. hmm. what are these
+sharpie marks based on? - [colin] i put the cooler
+on and then put the case on roughly where it went and marked it. - oh, okay. uh, all right. good luck, everybody. i swear, i think colin
+is sabotaging me here. okay. oh god, this is so approximate. in spite of my team's best
+attempts to sabotage me here, i'm gonna do a bang-up job of this. and a bang-up job of not- - [colin] i like how you
+put your thumb directly in the path of the razor blade. - because i didn't think of it, did i? where's the top line, though? - i think it might be there. - did you draw it, though? - [colin] i can't recall. it was yesterday. everything's a blur. - oh no. - [colin] just put the cooler
+on top of it. see how it fits. - okay. - [colin] come on. - ugh. - [colin] this isn't life-altering, linus. - it's pretty life-altering. it's case-altering, that's for sure. i mean, i don't know. is that where it goes? - i, uh, nuh, put... just mock it up in the case and then put the case back on it. - what? aw, god. that's pretty straight so far. - [colin] um... - i mean, straight-ish. - [colin] is it a-plus? - well, it's at least a b. do i get an a for that one? - no.
+- what? shut up! that is totally pretty straight-ish. - that's a b.
+- oh, shut up. you guys are being rude.
+- minus. there. there's an a-hole
+if i ever saw one. (colin laughs)
+(linus snickers) - [david] that is nice. don't mind me, just using my
+sponsor to clean my sponsor. got an lttstore.com desk
+pad. that's how to clean it. for mounting, noctua seems
+to have made a revision to their superb secufirm2, and this is called secufirm2+. the main differences are
+that noctua has switched to torx heads for these nuts, and these posts are a little
+bit wider than they used to be. deez nuts. oh. uh, have we test fitted this? wait.
+- yes. - and it goes on, hey?
+- yes. it's very tight. up against that vrm. - yeah.
+- yeah, it's a smidge. you gotta fudge her in there. - oh, okay. one of our concerns, when i was talking to
+colin about this project, was, "hey, colin, the side
+panels for this case slide on. are we gonna have to have a much bigger hole to account for that?" "no, no, no, dawg." because the cooler goes
+in after the fact, so... yeah. (linus grunts) oh yeah. oh yeah. torx me, baby. oh no! there's so much extra over there. - aw.
+- oh no! don't show that, david. get my good side. is it somewhat more
+convincing like that? (laughs) - [david] yeah, that's not that bad. - aw, it's really big
+on this side too! colin! - [colin] hey, you scribed the lines. you can't blame me for that! - [colin] you did the cutting. - i did. but you put the lines on. - [colin] hey, they were just guidelines. and put case on roughly
+where it went and marked it. - oh, okay. aw! it's a good thing it has this light on it because otherwise i'd have no
+way of knowing it turned on. come on, baby. - yeah!
+- whoa! hey, there it is. all right, let's go ahead
+and run our 16 threads of small fft prime95. and when we ran this before on the l9i, the cooler became heat-soaked
+almost immediately, causing our cpu to clock
+down to 3.2 gigahertz to protect itself. and here, in spite of the lower
+estimated performance rating, you're gonna actually see our cpu's still running at 4.4 gigahertz. that is because there is
+so much more thermal mass in a passive solution like this one that it'll take a lot
+longer to thermal throttle. that is, if it thermal throttles at all. i mean, we're giving it
+a pretty big advantage putting it outside the case. and there it is, after only a few minutes you can see it's tick, tick, tick, steadily going down as
+the temperatures go up and then reach a ceiling. so modern processors have a
+mechanism to protect themselves where they will actually
+clock down their frequency until they reach a point of equilibrium with the cooler that
+they are equipped with. so we're gonna allow this
+one to keep running here. but i also want to
+disclaim this demonstration by pointing out that in the real world, this kind of synthetic test
+would never really happen unless you're super into folding@home or you habitually run things
+like long blender renders. the huge amount of thermal
+mass that the nh-p1 has would allow it to soak up short one- or two-minute
+spikes in heat output, so it would be able to maintain
+its turbo clock speeds. then, once the load is
+alleviated for a while, it could slowly cool off while you're performing light tasks. so by artificially hitting
+it with a 100% load, we are intentionally using
+up all that thermal mass and then testing the maximum amount that the cooler is able to radiate away. now, as for whether you would
+want a product like this, comes with a six-year warranty, but given that it has no
+moving parts whatsoever, i'd say a warranty on the cooler is kind of the least of your concerns. and the bigger issue to me
+is that passive systems, aside from cpu temperatures which are gonna range
+between 90 and 100 degrees, can have other components nearby running at higher temperatures than i would deem comfortable, like the power delivery
+on the motherboard. and while the last few
+years of laptop engineering has taught us that 100 degrees
+on a cpu is apparently okay, it hasn't taught us that
+it's necessarily okay for the other heat-sensitive
+components around it. now, you could alleviate
+that issue by mounting a fan, which more than doubles noctua's
+performance rating to 89. but if you're gonna put
+a fan on this thing, an nh-u12s redux is rated for over three times the performance, according to the same manufacturer, and costs less than half as much. so... just get that, right? mmm, not quite. putting on a fan, like the
+nf-a12 that noctua recommends, allows you to set that fan to only spin up for high-stress situations, just like the seasonic
+sgx-650 power supply that we used for our test system here. so that means that the rest of the time, you can reap the benefits
+of just using convection to move air around for zero fan noise and way less dust being
+sucked into your case. although $110 seems like
+a steep price to pay for marginally less noise
+and a little less dust. so how could noctua possibly
+justify releasing this thing? for you, we asked. number one: it took a
+long time to develop. number two: the much thicker cooling fins meant a new, costly stamping process. number three: they know
+it's a niche product that isn't gonna sell at
+particularly high volume. number four: aluminum prices have exploded over the last year and this
+is a full kilogram of it. and number five: it comes
+with noctua's more expensive nt-h2 thermal paste and a
+high-quality torx screwdriver. and besides, a little less dust doesn't really do the value of
+a product like this justice. colin, for example, has a perfect use case for a cooler like this in his workshop, which, by the way, we are
+going to be upgrading soon with a new file server and cad machine, so get subscribed so you don't miss that. in a workshop environment, dust, be it from unsealed concrete
+floors or from active projects, gets inside everything. and that can not just hamper cooling performance over the long term, but depending what kind of dust it is, it can destroy sensitive electronics. so pairing this guy with a power supply like we
+did that can also run fanlessly would be perfect for an
+environment like that and well worth the price you pay. just like our sponsor, privacy. privacy lets you shop online
+with virtual credit cards that offer way more security and control than conventional cards. like, have you ever
+signed up for a free trial and then forgotten about it, only to find charges on your account for a subscription service you only really wanted to try out? well, with privacy.com, you can create a new
+card just for that trial. all you do is designate
+that card to be single-use and set the monthly spending limit. privacy.com is pcidss compliant, uses military-grade encryption
+to secure your information, and offers two-factor authentication, which bloody every even remotely security-minded service should. since privacy.com makes money
+from merchants, not from you, there is no cost to you
+for their basic tier. so sign up today and you'll get $5 in
+your account for nothing. that's privacy.com/linus. privacy.com/linus. if you guys are a fan of these kinds of overdone small form factor builds, why not check out our original hot rod pc. we're gonna have that
+linked in the end screen for you to enjoy. like... my ring is stuck. - [colin] uh-oh. - i am the tech tips guy. mr. tech tips.

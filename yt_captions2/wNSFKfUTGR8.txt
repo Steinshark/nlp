@@ -1,0 +1,80 @@
+- [both alexes] the
+other guy's cpus are hot and use too much power and are slow and ours are better and more efficient! - but who is right? in this zephyrus g14 we
+have an amd ryzen 9 6900hs, nice, and over here an intel i9-12900hk. we already saw that intel's 12th gen was a massive step forward, but amd claims they have a 2.62-times jump in performance per watt. so can ryzen 6000 reclaim
+the mobile cpu throne? we'll give you the numbers after this segue to our sponsor, corsair. corsair's new icue 5000t
+case offers a unique design, 208 individually addressable rgb leds, and tons of builder-friendly features. learn more at the link below. (upbeat music) amd's ryzen 9 6900hs is a
+eight-core, 16-thread cpu that according to amd has been
+optimized from the ground up for exceptional performance per watt. unlike the upcoming desktop
+cpus that will be using zen 4, ryzen 6000 mobile uses zen
+3+ rembrandt architecture. these chips are manufactured using tsmc's six-nanometer process that earned them five slides of just how darn efficient they are. but how do amd's claims
+transfer to the real world? well, the first thing i
+did with these two laptops is run cinebench r23, and
+the results blew me away. the amd ryzen 9 6900hs
+came shockingly close to the i9-12900hk, and i say shocking because
+amd's chip has a tdp of 45 watts and intel's is 110. amd has been making a huge deal about the performance
+per watt of these chips, and they just might be, eh... no. nah, nevermind. reviewing the hardware info logs show that the intel chip
+briefly drew 110 watts, then quickly settled around 80, whereas the amd chip boosted to 80 watts and then settled around 75, meaning intel might be onto something with their mixture of
+performance and efficiency cores. in laptops, the td specs you
+see are largely meaningless. the cpu will use however
+much power is available until either the cooler or the
+vrms can't take it anymore, and good thing techtubers exist because there's basically no way to know what a laptop cpu will do until someone goes out and tests it. since in laptops, whoever
+can get the best performance while using the smallest
+amount of power wins, i devised a little test. using the asus armoury crate on amd and throttle stop on intel, i was able to equalize
+the tdps of the cpus, and then i ran the blender bmw test to see how well they performed. this way we can start at
+70 watts and end at 20 to see which cpu will work best over the largest number of laptops. out of the gate, intel
+took the lead as expected with wins at 60 and 70 watts, but when we got to 50 watts
+things started to change. here amd took their first win, and after that it was just a bloodbath. the craziest bit is that
+between 30 and 25 watts, intel's time increased by a whole minute. that's longer than it takes
+to order a water bottle at lttstore.com. i would've liked to go
+further, but at 20 watts amd started disregarding
+the armoury crate limits and gave the cpu a little bit more juice, but at this point we
+can pretty safely guess intel is not making a comeback. i do want to be careful here
+because it is very possible that intel hasn't tuned the i9-1200hk to use under about 50 watts of power. in the future, the
+lower-power chips from them might be better in this range, but looking at their lineup, i'm pretty confident in my findings. at 45 watts, intel will
+have their p-series cpus with six p-cores and eight e-cores, with a turbo power of 64 watts. but once you get to the u series, where the tdp dips below 45 watts, the number of cores drops dramatically. at 15 watts, intel's i7-1265u only gets
+two performance cores, and i'm very suspicious that
+they'll be heavily leaning on the 55-watt turbo power to extract any performance
+from these cpus. meanwhile, over at team red, it seems like amd can just
+take their eight-core 6900hs and limit the power to
+whatever tdp is needed and the performance just scales linearly. what all of this means is that the choice between amd and intel could come down to the tdp of the laptop that you're looking for. intel has the lead in
+outright performance, so if you need a beast of a gaming laptop with a tdp of over 45 watts,
+i'd lead towards team blue. but if you want decent
+performance in a smaller machine, i'd go with amd below 45 watts. the bit that sucks for intel is that i don't know many people looking for desktop replacements. but i know loads of
+people that are looking for a reasonably well-performing
+laptop that's, you know, light and has long battery. oh, and speaking of which, the battery life on the
+6900hs is excellent. our last-gen zephyrus g14 with a 5900hs got us 5 hours and 42
+minutes away from the wall, while the new 6900hs lasted a massive 11 hours and 11 minutes. both have 76-watt hour
+batteries and 2k screens, so my only explanation is that amd weren't lying with that slide deck. get subscribed because
+we'll dig more into this in our full review of the
+asus zephyrus g14 next week. i've only had, what, 26
+hours with this thing and that is not enough
+time to upload a video claiming it is the best
+windows laptop in existence. which it very well may be. what is crazy though is
+that we haven't even talked about what is potentially the
+biggest upgrade in ryzen 6000: rdna 2 graphics, aka the
+same graphics architecture in the ps5 and xbox series x. don't expect to be cranking
+the details in modern games, but at 1080p you can play
+basically everything. like we managed 85 fps in "forza
+horizon 5" on low details. the iris xe graphics in the
+i9-12900hk only managed 46. damn. this difference is so massive
+that for thin-and-lights, i don't even know if i can
+recommend an intel system since you'll have such a better
+gaming experience on amd. honestly, i just can't wait to see what kind of cool gaming
+devices will come out in the next couple of years
+that take advantage of rdna 2. they've already blown me
+away with the steam deck, and hopefully that's only
+the tip of the iceberg. so yeah, amd wasn't able to
+take back the performance crown from intel with rembrandt, but they've managed to create
+a much more well-rounded cpu that holds up across the tdp range and features the best igpu by a mile. i can't wait to see what
+laptops come out using these and i also can't wait to tell
+you about our sponsor: ting! thanks to ting mobile for
+sponsoring today's video. do you like saving money? ting mobile is a low-cost carrier with rates that help you do just that. start with unlimited talk
+and text for $10 a month or data plans for $15 a month. their set 12 plan with 12 gigs
+of data is only $35 a month, and if you need it, unlimited data plans are at $45 a month as well. you can even share your
+data on a family plan to save even more. ting mobile also offers pay-per-use plans and their flex plans,
+charging just $5 per gigabyte. even with those savings, you'll still get national-wide coverage and award-winning customer service. in fact, consumer reports
+just named ting mobile their number one carrier in america. almost every phone on the market
+will work with ting mobile and they have the perfect
+plan for everyone, no matter what your needs are. check them out at linus.ting.com
+to receive a $25 credit. so thanks for watching. if you want to watch another video, maybe check out our
+review of the steam deck. it used rdna 2 in such a cool way.

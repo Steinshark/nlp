@@ -1,0 +1,149 @@
+hi hi tom how are you the weather has 
+been great it's about 20 20 celsius   right now what about for you oh fahrenheit yeah cool i hope you wear a winter 
+jacket oh it's really warm okay   i'm so tired i'm going on different team meetings 
+to spend what feels like hours in reality maybe   just minutes converting what fahrenheit is to 
+celsius and different things so in this video   we are going to be automating our lives making our 
+lives much more simple with python by building a   desktop notification that will notify us every 
+single day at 12 pm what the temperature is in   both celsius and fahrenheit and this is a fun 
+project even if you this isn't an issue of yours   it's a great way to build with an api build 
+with python build with rebel build a project   that you are using to run a job consistently and 
+send notifications that's that's a mouthful but   you get a lot out of this project even if it's 
+something that you might not use in real life   but maybe you're like me and you will i'm going to 
+do a challenge i am going to pin the craziest the   wildest idea of what we should automate so leave 
+it in the comments let's get let's like get really   creative with this because i feel like i need some 
+fun things to automate also before we get started   hit that subscribe button give this video a like 
+and share with you when i was first learning how   to build with python i python is something that i 
+never used a ton in my day job so as a developer   i used a ton of javascript i worked with node a 
+lot php unfortunately just kidding but i never   built with python professionally i've always been 
+to tinker around and i love it because a it is so   in demand for jobs right now it's evolving with 
+the jobs meaning so many different areas are using   this technology that it's so amazing to learn on 
+that note though i want to share with you some   courses if you are looking to level up your python 
+skills learn more projects all that great stuff   the first one is 100 days of code the complete 
+python pro boot camp for 2023 and this is a course   by dr angela and she is an incredible teacher 
+honestly i would fangirl if i met her i think some   people are excited about celebrities i'm excited 
+about people who teach amazing coding courses and   she always keeps this course really up to date 
+which i love it's almost at a million students   1 million students and the rating is 4.7 so you 
+know it's a great course and i really like this   because you really learn about python in a fun way 
+where you're building unique projects so if you   are looking to build projects this is probably the 
+course i would recommend taking also too i linked   them down below so you can go check them out the 
+next one is the complete python bootcamp zero to   hero in python this is by jose portilla portilla 
+and i really like this course as well there's   actually almost 2 million students who have taken 
+this and although this course has been around for   a while one thing i love about it is he keeps it 
+up to date so you know when you are going to be   taking this course you will be getting the most 
+up-to-date technology and knowledge about python   and two what i really like is it's he starts with 
+he teaches you different projects i took this one   a long time ago actually when i was first kind 
+kind of building with python and it stood out to   me because he teaches you different projects but 
+also really dives into object oriented programming   with classes uh talks about jupiter notebook 
+and you kind of get a full spectrum what you   are the python environment what you can build with 
+python what is possible so if you are looking to   really dive into more of the theory-based theory 
+meaning yeah the theory-based side of things this   is the course i would recommend the next one 
+is complete python developer in 2023 zero to   mastery so we went from zero to hero and zero to 
+mastery now and this is really cool too because   you can build machine learning models so for 
+people who are interested in more of the machine   learning side of things this is a great place to 
+start also too one thing i like about all these   courses i'm listing is you get a certification 
+and as you know nowadays with ai always sifting   through our resumes to start with getting that 
+certification and that text on your resume of   building with python or building with this or that 
+is a huge benefit not just to please employers but   also to to please the ai which sounds really weird 
+to say but it's true in the sense of when you are   submitting your resume ai is taking a scan over 
+do you have these keywords and with these courses   especially with python you do another little 
+tip on that note is include some keywords of   things that you've learned through these courses 
+on your resume so for this one that i'm sharing   with you right now include things such as machine 
+learning model uh include things like function   programming make sure you do even the versions of 
+python that you are learning how to ensure you're   up to date with it get specific with it because 
+you are learning so much knowledge within these   courses it's really important to showcase that now 
+these are just three courses that i really really   enjoy i have taken in the past and really helped 
+me on board with python quickly that being said   though if you are interested in learning python 
+javascript web development data science whatever   the case is udemy has always been my go-to 
+place like if i showed you my course list on   udemy i think i might as well like be employed 
+there at this point i spend so much time on   udemy because it's really i like it because it's 
+reliable meaning they always vet who is teaching   these courses they are experts in their area i 
+also like it too because you can see the course   ratings and see the course schedule very clearly 
+how it's broken down so aside from python you   can see here on udemy they have different like you 
+can literally learn everything we're talking about   python but there's this guy is the limit and also 
+too you can start by taking one python course and   then building upon it so taking a machine learning 
+course then like the possibilities are endless and   the best part is most of them come if not all 
+most of them come with a certification which   is a huge benefit too once again i linked all 
+these down below so you can go check them out   let's get code [music] all right you can see on 
+screen here we are going to be using ripple for   this you know already if you've watched some of 
+my videos i am a huge fan of rebel um rebel can   you like sponsor me or send me t-shirts or 
+something because i love you you're amazing   um anyways i i just think it's a great tool 
+because a you can share projects b you can   start coding right away building interesting 
+things see other people's projects um it's   just really great all right so let's create a new 
+rebel and for this we are going to be using python   also to my mouse died this mouse died 
+so if you see me like going like this   like a dj it's because i'm using my trackpad 
+instead and this project it's called weather   easy simple all right so first thing let's do is 
+get some packages installed so rep will install   them for you so we just need to import them 
+import requests what else do we have here import   schedule there's a lot so 
+i will speed up this part [music] all right we just reported a lot of packages that 
+we will be using and i want to know one thing here   when you see that there's this code coming up 
+like these suggestions for code it's because i'm   using uh rebels paid version which entails their 
+ghostwriter so think of it as like kind of like   their internal ai tool to help you code i don't 
+use it a ton because i just kind of tinker around   with rebel i don't use it for work or anything 
+like that but it definitely is very accurate kind   of creepily accurate as to what i'm typing and 
+also to i think it's really interesting i got it   initially for a video when i was rating different 
+kind of code helpers but i just kept it so far   because i still use it quite a bit or kind of 
+anyways it's really interesting so let's start by   writing this weather get our weather and for this 
+we will be using an api which will need to get the   api key in a set here see how accurate it is url 
+responds open weather map you know what honestly   it's not that far off as to what it is saying 
+but let's just do our own so api key we will need oh my gosh this is accurate very gaggy yes correct 
+no no no stop city name we're not doing it yeah   we're doing same all right uh url yeah let's just 
+call this base url to be consistent is this crazy   how accurate it is let's delete all of this i 
+feel like i'm getting a little too much here   all right we have api key then we have our city 
+name base url which we're using open weather map   which is weird that it knew that uh city name and 
+api key for this actually i'm going to take out   you know what let's do it my way this 
+is just you know what it's nice thanks   ghost rider but i might even turn off 
+ghostwriter it's a little annoying okay no seriously shut up [music]   next up let's add in some base url [music] 
+which will be open ai weather yes oops   and we will also add in our city name which for me i'm going to be doing toronto toronto i know my i'll tab everything over in a sec here complete urls entails of why is this okay 
+this all right we're having some issues   with ghostwriter so i just wrote some codex 
+kept on like overwriting what i was writing   um and i tried to disable it but i didn't have 
+much luck anyways so you can see here we have   get weather which we will put our api key here 
+our city name base url and then complete url and   then also too we're going to get the response 
+to the complete url and then of course create   that in json form so i have here on the other tab 
+the api we are going to be using open weather and   you can find it here you need to sign up and at a 
+certain point if you're doing a ton of requests a   lot of these keys will not be completely free 
+so it really depends on how frequently you are   using them but for our purpose using it once 
+a day totally fine and then you go to your api   it gets too tricky when i'm not sharing it with 
+you so let's just be oops what the heck come here just signed up for you [music] 
+why are you being difficult no it's taking a long time those days 
+where everything just isn't working all   right this took me a minute but you can see here 
+here's our key so let's go ahead and copy this   coffee you can also give it a name and go back into our app 
+and we'll put our key here   and our city name i'm going to use toronto because 
+that's where uh all right so then we are passing   in our uh base url api key and city name next up 
+we need to create a job so this will run every day   at 12 pm eastern so you can do it every time you 
+want but i'm doing 12 p.m eastern alright so i'm   just going to continue writing the code and then 
+explaining it to you because it's just getting too   tricky with ghost rider uh but anyways so what i'm 
+doing now is cod is checking is uh coming from the   response of the api and ensuring that it's not a 
+404. from there if it's not what we are doing is   taking the current temperature in both celsius 
+and also to fahrenheit and then these numbers   here are converting it so that's the difference 
+between the two um and converting it so then it   will return the temperature in celsius and also 
+to in fahrenheit so taking this main temperature   and making it both of those this honestly is so 
+helpful for anyone who works remote or works in   various time zones where there's different well 
+not time zone necessarily but different countries   where some people use fahrenheit some people 
+use celsius this honestly that might be biased   because i'm making this project but i think it's 
+really helpful all right next let's write a job   and essentially what this job will do is check it 
+will run every day at 12 pm eastern and then also   to send a notification for what the temperatures 
+are alright so then i also added in to run a job   which is getting the weather and then i made a 
+simple title weather update but you can make it   whatever you want and then also to schedule every 
+day at 1007 uh this should be i was just testing   it out because it's 1007 right now but this should 
+be 12 p.m based on whatever time you actually   want it to be but let's put it back at 12. the 
+problem i'm finding is when i'm running this   job for whatever reason i had this before in past 
+projects when i use desktop notifications when i'm recording okay i'm recording when i'm recording 
+my screen i have trouble sending the notification   never comes and then i stop recording and it comes 
+so anyways um you i'll link this rubble down below   so you can tinker and play around with it as well 
+and run it on your machine to see it working in   action and one thing that i really want to note 
+is how do you keep this job running so there's   various ways to keep this job running honestly i 
+know this isn't perfect and you could write many   different things but if you're just tinkering 
+around and want to build this the easiest way   is to uh run this script in your terminal and 
+then just keep your terminal open or minimize it   down below and that way it will run on the daily 
+now this isn't perfect there are tons of better   solutions to doing this but this is more so if 
+you're looking to just tinker and then if you want   to take it to the next level you can do different 
+things to really keep it running consistently all   the time actually i just asked chatgpt classic 
+what other ways there is to keep the python script   running continuously so yes terminal screen 
+session they have so many different cron job   of course task scheduler back ground service the 
+possibilities are endless which i feel like would   be a whole other video for this to do but at least 
+now we have completed our project of getting the   weather and then also to get displaying it in 
+a notification in both celsius and fahrenheit   all right we have automated our life for the day 
+another automation done i need that on a t-shirt   i think thank you all for watching i hope you 
+found this video helpful but also too enjoyable   and fun to watch leave down in the comments other 
+video topics you want me to cover things that we   should automate with our lives like all right 
+i'll see you all soon thanks everyone [music]

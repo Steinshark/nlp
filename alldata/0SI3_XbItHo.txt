@@ -1,0 +1,194 @@
+A problem that I give to my calculus students every 
+time I teach calculus; we spend a lot of time doing   it with half the techniques, my students at the end 
+of the exercise are: I hope Zvezda doesn't give this   on an exam. And then I ask them, would you like 
+to see a three to five line solution that a smart   fifth grader would understand? And of course 
+they all want to see it. So let's see how it goes.   There is a river and it's a hot October day in 
+California about 200 years ago. There is a poor   cow, she has broken its leg and cannot move and the 
+cow is very thirsty. The cow is 6 kilometers from   the river, all right so I'm going to call this 
+point B. A farmer 4 kilometers from B down the river - so maybe somewhere here, call this 
+A - the farmer himself is 2 kilometers away from   the river, the farmer has a bucket. So what does the 
+farmer need to do? To walk to the river somewhere,   dip the bucket into the water, and then walk 
+to the cow. So walking to the river and then   walking to the cow. But it's very hot and these 
+are very long distances, right? Remember AB by   itself is already 4 kilometers and so 
+on. And the farmer has many many choices   so which point on the river should he aim for to 
+have his walk as short as possible? So which is   this point X here? 
+- (Brady: Oh, yeah, to minimize the walk.)
+- Right right. 
+- (This feels like it should be simple.)  Simple, that's right. It looks super simple 
+and so my calculus students get to work. They need   a variable, so how can I think about this point X? 
+Well I guess if I know how far it is from point A,  I'm just going to denote this by little x, I will 
+locate it. But if this is x then the remainder   to be will be 4 minus x. And immediately you're 
+thinking of the Pythagorean theorem, there you go,   right, and so what is the distance that the farmer 
+will make FX + XC right? 
+- (So you want to make) (those two hypotenuse as short as possible?) 
+- Well together added up, not individually.  So we have these two right triangles, everyone is 
+happy. The first hypotenuse will be square root   of 2 squared plus x squared plus this hypotenuse 
+XC will be 6 squared plus - what was that 4 minus   x - squared. And what do we want we want? To minimize 
+this. So minimum for which x, so which x is going   to make this maths minimum. Before I start I'm going 
+to make some obvious observations which actually   would need proof but I want to simplify 
+this already horrendous calculus solution.   I mean Brady, would the farmer go somewhere 
+here? Do you think that would be the shortest?  (Of course not.)
+- I mean it's ridiculous, right? Or 
+somewhere here. He probably would have to go   between A and B; and I will leave it to the 
+reader to verify why this should happen. So   that means that x by itself ranges between 0 to 
+4. Can't be negative, can't be more than 4. So I'm   gonna write this here just to help the calculus 
+solution. All right, so how- how- what do we do with   calculus? We say that this is a function f of 
+x and we are going to take its derivative. If   you don't know calculus just close your ears, 
+relax, drink coffee, and join us in two minutes. (That's me, Zvezda, so I'll see you later!)
+- Aww come on
+- (Okay I'll stay) All right so square root derivative, you're 
+going to have a fraction, two of the same   square root underneath and on top I have to take 
+the inside derivative which is 2x. All right we   are done with half of that derivative and we 
+do something similar for the other square root.  We develop a fraction to the same square root in 
+the denominator and then I have to take the inside   derivative which is a bit more complicated, it's 
+2(4 minus x) and then there is a negative in front.  Okay and then we will humanely get rid of those 
+2s here; and if you continue in the standard   calculus we are going to get in trouble. It's just 
+not easy to solve this. But I am going to proceed   in a interesting way, I'm going to say when is this 
+derivative non-negative; I'm going to push things   out of here so that will be x over this radical 
+plus- actually there is no plus anymore this minus   goes to the other side with a plus, the other 
+fraction is here, okay. Now we would like to get   rid of those radicals but inequalities are very 
+tricky. So they really want things to be positive   but we made them positive because that x
+was between 0 and 4 which means that both   those numerators are positive, denominators are 
+positive, we can square both sides no problem.   So I'm going to square x squared over 2 squared 
+plus x squared - when is that greater than 4 minus   x squared 6 squared plus 4 minus x squared? As 
+you notice I'm actually not multiplying things   out; because I've done this a hundred times and I 
+know how to simplify. So keep it compact for now.   And then since everything is positive I'm going to 
+cross multiply 6 squared x squared plus 4 minus x   squared x squared. All right so we're done this way 
+and now crossing the other way: 2 squared 4 minus x   squared plus x squared 4 minus x squared. Now the 
+key step, why do they keep everything so compact?   Because it looks to me I can simplify can 
+I? How about I can just get rid of those two? They're the same! Miracle occurs. Now this 4 and 
+this 36 would give you a 9. All right so the   only survivors here are 9x squared and four 
+minus x squared. And again, no need to multiply   through because I can just take square root on 
+both sides. And all of those little terms are   still positive so what this turns out to be is 3x 
+on the left, 4 minus x on the right. All right when   is this happening? Move the x to the other side: 4x 
+greater than or equal to 4, x greater than or   equal to 1. You know, the calculations didn't seem 
+too complicated but it's because I made drastic   shortcuts. If you don't know about them this could 
+be a nightmare to solve, especially on an exam. At any rate, what did we show? We showed from 
+a calculus viewpoint that the derivative   is greater than or equal to 0 exactly, or if 
+and only if, x is greater than or equal to 1.   Okay what does this mean for our function? 
+We've practically solved the problem but   let me review. If in fact this is the x-axis, 
+right, and our interval is from 0 to 4, I know   that at 1 - from 1 on - the function, my function, will 
+increase the original function, not the derivative.  That's exactly what this relationship means. 
+So so the function has to increase like that.   So the distance for the farmer if he goes 
+beyond that point 1 will actually be   increasing the total distance. But I said 
+that this condition here is if and only if,   so the signs switch if we go the other way around, 
+and the function will be decreasing before 1.   So the function is decreasing before 1 and 
+increasing after 1. Well when is it minimal?  Well, at 1. Which means that the farmer should go 
+up to this point here, which is 1 kilometer, dip   the bucket and then go to the cow. And you 
+can even calculate what you're gonna get.   Now this is complicated if you don't know these 
+shortcuts, or if you don't know calculus, it's just   impossible to understand what I was doing. And if 
+I change the numbers 2, 4 and 6 to something   else you definitely don't want to redo this whole 
+computation. You really need to know why 1 is 1. Strictly speaking why should 1 be the 
+perfect number here in a more general way.   And now comes our smart 5th
+grader with another sheet of paper.   (Hurry up Zvezda, our cow is dying!)
+- Ah yes yes yes, hold on. The smart 5th grader is gonna do it. Back to square one - zero? Minus 1? 
+- (Square one)
+- Square one okay. So why is this problem hard? Suppose you don't know calculus - and 
+Brady says he does not know calculus - so what will Brady do? The problem is hard but for 
+a very specific reason. Can we simplify it? Can we   create a problem that looks almost identical 
+to this and it's actually trivial to solve?   So what makes the problem hard is that the farmer 
+and the cow are on the same side of the river.   What would  happen if just for a moment I told you there is 
+our river, our cow and our- same numbers right?    (I already see it!)
+- I mean what are you gonna do? 
+You'll just take the straight segment towards   the cow. So can we make our problem look 
+like this simple one? Which operation will flip   the farmer across the river? It's a reflection. So 
+we're gonna reflect the real farmer to a phantom   farmer across the river, okay so this is going to 
+be F prime, still 2 kilometers from the river. And   now Brady is thinking, hold on doesn't the river 
+have width? What happened to the width of the river?   Who cares about it? Our original problem is 
+not affected by how wide the river is, correct?  Not at all. And our world that we're flipping 
+across the river is just in our imagination or on   this paper. So we are the bosses; I'm going 
+to forget that the river has any width.   Okay. And so now we know very well what the phantom 
+farmer must do: the phantom farmer must go directly   to the cow and this point will be our desired 
+point x, okay. What should the real farmer do?   What do you think? Should the real farmer go to that x? Would that be the shortest path?    (It feels like it would be, yeah.)
+- Yeah, it feels like it should be.  
+And we claim that indeed the farmer has to follow   suit and go to exactly the same point to which 
+the phantom farmer would have gone. Okay, how do   you actually prove this? Okay our 5th grader 
+would immediately believe it, but we have some   doubts right? Like how would you prove it? It's 
+very simple: any path that the real farmer takes   is mimicked by the phantom farmer. So the whole 
+set of paths for the real farmer are exactly the   same in length as the phantom farmer. For instance, 
+let's say the real farmer goes somewhere here to   point Y, right, and then to cow C. Well is this the 
+minimum path? We will say no because the phantom   farmer can mimic this, go to Y and go to C and we 
+see a triangle F'YC and there's a triangle   inequality right? So the triangle inequality 
+would say that the two in this case drawn in   black sides, F'Y plus YC is greater- the sum 
+is greater than the red side which is F'C.   So this is not going to be the minimal path 
+because we already know that for the phantom   farmer the red path is the minimal and the real 
+farmer has an identical path in length to that one.  So we conclude that whatever the phantom 
+farmer is doing in length the real farmer   will mimic it, or the other way around, and so 
+the minimal path for the phantom farmer will   be the minimal path for the real farmer. And 
+the only thing left here is to find what   this point X is without calculus. We already 
+know that the number 1 should appear for AX but we need now to prove it. And I need another picture. 
+- (Not long now cow, not long) We are almost there. All right, so where is this 
+point X? There are a number of triangles, Brady how   many triangles do you see? 
+- (Uh 1, 2, 3, 4?) 
+- 4, but one of them is not so interesting, this   this one here no. But let me just put dots: this and this-
+- (There are three right angle triangles.)   Yeah and this one. And so they're not just 
+right angled triangles, they are relatives. Those   two are twins, those are congruent, and the third 
+one is similar to them. All right let me write this   down: triangle FAX is congruent to triangle 
+F'AX, and those are similar to Triangle CBX.   That the smaller ones are congruent - I mean 
+it's obvious, they are reflections of each other.   Why are they similar to the other one? They have 
+one angle the same, the right angle, but these two   angles are also the same, they are vertical. When 
+two lines intersect in a point the opposite angles   are always equal to each other. Okay; and by the 
+way this angle here is also equal to them, as a   reflection of the bottom one. So now we have three 
+similar triangles. Similar triangles are probably   the most ubiquitous tool used in solving geometry 
+problems - they appear everywhere. Now let us take   the ratios of sides from the top two triangles. And 
+I'm going to use only the legs of those two right   triangles. So I have 2, 2X; so FA over AX which is 
+2 to X must be equal on the other side: CB over BX   is the same ratio, but in our notation CB 
+is six and BX was the left over 4 minus x. And I think we're almost done, because 2 and 6 
+cancel, flip flop 4 minus x is 3x - I believe we   saw this within the calculus solution - 4 is 
+equal to 4x, x is equal to 1. So indeed the   farmer should walk 1 kilometer down the river 
+from A, dip his bucket in the water and go to C.   (Much easier.)
+- Much easier; but it also 
+reveals some geometry that is related to   um stuff that we experience every day. For 
+instance, what happens if you have a smooth   surface, very smooth like the river, and sunlight 
+is coming to the river at a certain angle. Brady,   any memories from high school physics?
+- (It bounces so that the angle will be the same on the other side.) Correct. Okay so that's the sun here. 
+Is this a law? Is this a theorem? What is it? (I don't know it's just, yeah, a property of nature.)
+- Yeah property of nature, a law of nature right?  Well what the farmer is doing to reach to the 
+cow is exactly the same thing. If I change the   numbers 2, 4, 6 to any other numbers this property 
+of equal angles will be preserved because we   will exactly repeat the same solution - well, with 
+different numbers but the angles will be equal.   So the farmer is doing exactly the same 
+thing as the light is doing when reflecting.   But we showed something for the farmer, what did we 
+show? The farmer is following the shortest possible   path. So what is light doing when reflecting?
+Therefore every time light reflects from a   surface the light is following the shortest path. 
+That's amazing. So now which one is an axiom, a law   of nature? Is it the law of reflection or is it 
+that the light is always following the shortest   possible path? It's- it's mind-boggling but the idea 
+that mathematicians have is they will assume that   one is an axiom and will prove the other one from 
+it; and in this case it looks like they're actually equivalent. (Let me ask you a human question: if if 
+a farmer was standing there, a real farmer, and the)   (cow was there - the same problem, but he's got no 
+mathematics. Do you think he would aim)   (for that point? Do you think his instinct would 
+be to aim for that 1 kilometer point or he'd)   (get it wrong?)
+- I don't even think he would have the 
+measurements in front of him or her-  (No but if they were just walking, they were just- and
+they could see it. I can see the river, I can) (see the cow - I've got to do this thing. Do you think 
+your instincts would fall- would would take you to the right place?) I don't know about the farmer but 
+there is another calculus problem which is about   the dog on the beach and a frisbee is thrown 
+into the water. And so the dog has choices; how   far to run on the beach, and then how far to swim. 
+And the dog wants to get to the frisbee as fast   as possible-
+- (But swimming is slower than running.) 
+- Exactly but maybe he is too far from the water so   it's it's unclear. And we can you know test this on 
+a dog and see what happens, but there is a familiar   calculus problem on that. 
+- (And let me- and let me ask 
+you one more question. You showed me two)   (ways to do it, the calculus way and then the the 
+geometry one which was so much more simple and it) (seemed elegant to me. Does the calculus method have 
+any advantage over the geometry? Like- like if I- is)   (there is there- is one way better than the other 
+for any reason?)
+- Well they're better than each other for different reasons. So for this particular type 
+of problem the geometrical solution definitely   wins in terms of elegance. But if I make the 
+problem more complicated I may not be able to   find the geometric solution and then the calculus solution will kick in. 
+- (What- what do you mean by complicated? (Do you mean no longer using- you don't 
+mean no longer using integers because surely the)   (numbers don't really matter. How could you make 
+it more complicated?)
+- Well maybe they would- the river would not be   straight, that's one thing. Maybe the farmer has to 
+get water but also he has to get food for the cow   from somewhere else; so you can add more variation, 
+more variables-
+- (And the buckets heavier when it's full of water) Yeah, that's right and you know the whole thing becomes an 
+optimization problem and that's what economists   are there for right? But um I do want to give 
+you another problem to try at home.
+- (Of course you do) There is a calculus solution and then there 
+is a super sweet geometry solution, and it's a   it's a folklore problem.
+- Well we've been going 
+for a little while so the next problem we'll do   in a separate video - links to that can be found on 
+the screen, video description, all the usual places. And while you're in the video description 
+make sure you check out links to our other   videos with Zvezda and a podcast 
+we recorded with her where she basically   tells her life story, it's really interesting. 
+- ...his theorem and I did not know about inverse-

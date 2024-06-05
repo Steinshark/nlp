@@ -1,0 +1,61 @@
+- There's nothing more
+annoying for me and my staff than troubleshooting Wi-Fi issues. So, when Juniper Networks told us they wanted to sponsor a
+video featuring the solution to our problems, how could we possibly, how do I go wrong with that? So, they sent us over some of their AP43 Wi-Fi 6 access points and an EX4400 switch
+claiming they've done it. They figured it out, the future of networking. And the hardware, that's impressive. But the real star of the show is Marvis, the virtual network
+assistant driven by Mist AI. Marvis combines machine learning and AI with a conversational interface that understands natural language queries. This should save technicians hours of time that would otherwise be
+spent checking dashboards and using other troubleshooting tools. Certainly seems like a
+good idea, but what I, and probably all of you
+also want to know is, how smart is Marvis? Smarter than me? Probably, but we can't end the video here so we're going to have to try it anyway. (upbeat music) So, we started by casually installing two of their AP43 wireless access points and these things are
+basically the bangin'-est. I'm looking at the data sheet here. It's like limited lifetime warranty, got a humidity, and pressure, and temperature sensor built into it. It's Wi-Fi 6, but not just that, it's 4x4, with four spatial streams. Dynamic packet capture,
+automatic RF optimization, high accuracy indoor location. So it has Bluetooth on it so you can actually tell exactly where everything connected to it is. It's crazy. So, once we were done
+installing a couple of these, we set up our wireless network and added a floor plan, which was surprisingly intuitive and easy to use given the ones that I have tried before. And now we're just going to go ahead and pull up the management dashboard, which you can see scales
+beautifully across my dual monitors. Maybe we'll just make
+it a little bit smaller. There we go, that's more like it. (Linus sings) There we go. So, this one has nobody connected to it. It's 'cause James isn't even here today. And then this one right here has three. Look at that. Wow, you can actually see. Woah, that is exactly where look, that's exactly where Plouffe is standing. Oh, so coming back to the floor plan, we got a bit of a problem. One of our AP's is flashing purple! - [Plouffe] (gasps) Click it, wait, oh. Is Jake not done breaking it yet? He's supposed to break it so that we can see how to fix it. That's the problem. That's the problem when you're trying to do a video about like,
+oh, troubleshooting, is that usually things work from Juniper. (laughs) So, you have to kind of come up with contrived ways to
+break it on your own. There it is, now it's broken. Thanks, Jake. It's broken now. (boxing bell rings) Now, I'm not gonna give too many details about how we're hand-wavy fixing this, but I will say that this
+gave us a really solid clue as to where to look. And what we needed to do was dig into our DNS server. In this case that's the
+same box as our router. And figure out, well, why the heck that access point isn't actually getting an internet connection. And it turns out that the
+admin. (clears throat) Thanks, Jake! Fat-fingered a 3 where
+there should have been a 2. So, now what will probably
+happen in a moment here is it's gonna come back online. Let's try and use Marvis for this. I can't figure out how to reset it. It should be working now, so let's see if Marvis
+can help me with it. Troubleshoot device, James desk AP. Oh, that is so cool. Look at that coverage heat map. I like it. Now that we fixed the problem, I mean, we still can't connect to it, because we can't tell it to reboot itself and get new DHCP information because we're not connected to it. But fortunately, look at this. It's all like, "Oh no, no Linus, I have a problem. I am
+blinking yellow 6, 7, 7 times." Then we're gonna go consult
+the handy key in the software and find out what the devil that means. Oh, look at that, okay. It still says no DNS response. Man, that is so perfectly helpful to find the problem we had. I'm just gonna go ahead and give it a quick unplug and replug. It's funny how no matter
+how much AI we add, that's still the way to
+fix so many problems. Did you try turning it off and turning it back on again? Let's give it a sec here. Wow, red and orange, a bunch of. It's got RGB. It has RG (beep) B, on an access point. Juniper, you mad lads. That's one challenge down, but of course what I want to know is who's wasting network resources watching YouTube videos on their phones when they should be
+watching YouTube videos on their desktops? I mean, I don't actually care
+if they watch YouTube videos, that's scripted into
+the video by the writer. but I mean it's sort of part of our homework sometimes to watch YouTube videos. But they should do it over a wire instead of
+taking up air bandwidth. So I can say the site name is LMG. "Can you tell me something
+you want to troubleshoot?" Okay, let's go with he has a Galaxy A50, so I'll try searching for that. Aye, there we go. Cool. Let's collect some client insights. Wow! All right, yeah. I've got a good solid
+connection speed here. Wow. You know, I think my bigger concern is not actually your YouTube
+consumption here, Plouffe. How on earth have you managed
+to do 211 megabytes of Reddit in the last, what is this? Day? Who bruh? It's text, Plouffe. - [Plouffe] That's my lunch break. - That's your lunch? Oh, I guess there's video on Reddit. (boxing bell rings) Now it's time to do
+our next challenge here and we're supposed to click second challenge. So this is a desktop computer that's actually right on the other side of this window. And we go in here and
+nothing is immediately out of the ordinary, but, oh connected time, two seconds. Oh, okay, hold on. Client insights. Uh-oh, we've got 66 total client events with 15 of them bad. So this is one of those
+things where you're sitting at the help desk and someone's like, "I can't get on the Wi-Fi." And you go, "Well gee let me have a look at your device
+here real quick, Karen." Oh, okay you got an authorization failure over, and over, and over again. I think you might've
+forgotten your password. So here's your password. Write it down, but actually don't write it down 'cause that's even dumber. Most of the time it's not
+this cut and dried though. So, you'll have things like
+a problem device that's constantly disconnecting
+or running into issues. So that's where being able to sort by good client events, neutral and bad ones is
+really, really useful. And you can grab tons of great information from the packet captures. And Mist actually has
+this great dynamic PCAP feature that's a blessing
+to anyone who's sick of trying to replicate issues. So it'll actually actively capture data when an error occurs and then store it in the cloud, meaning that you've already got the logs and you can access them
+without having to go on site. Now let's head over to roaming. Oh, there it is, roaming. Oh, cool. Okay. So here's a common issue. You can actually see the
+roaming data between your access points for that particular client. So, okay Plouffe is usually at the Mac desk and then I don't know, maybe he had a meeting with James or something and connected to his AP, and then he's back on this one. So you can sometimes get into situations where you've got someone who keeps swapping bands to 2.4 gigahertz or they get terrible RSSI values from certain APS. And that's all nicely visualized for you. Or if you have a device
+that keeps swapping back and forth from one AP to another, which can cause kind of a
+high latency feeling for them, or it can cause issues during video calls. Something like this
+can really help you get to the bottom of something
+funky that's going on. Of course what we really want to know is can all of this save me or more accurately Jake, time? Well, our APS are hooked
+up to an EX4400 switch, which offers flow-based
+telemetry, power over ethernet, PoE++, and fast PoE, microsegmentation, and end-to-end campus fabric for a ton of scalability. So what this means for our next test is that all the extra telemetry should be able to tell us exactly what's going wrong without us having to go take a look for ourselves. (boxing bell rings) And what's supposed to be
+the problem with this one? Oh. (laughs) I could've figured that out if I had just actually
+clicked on the thing. Yes, we have 22 bad DNS failures. Fantastic. Now, a common mistake when setting up a new mobile device on a network is just entering the DNS
+credentials incorrectly. You might think you entered
+it correctly while you're just following instructions. Famous last words. But unfortunately, you were wrong. I dream of the day when more IT tasks can be handed off to
+someone less experienced, like me, and there's zero
+worry about the network going down because of a rookie mistake. Wrong permissions, client can't connect, network suddenly down. So with Marvis and Juniper networks, the idea is that your
+team can leverage Mist AI to proactively notify and correct issues before you get a ticket, enabling your technicians
+to look like heroes. So thanks Juniper for hooking us up and giving us an exclusive look at all of Marvis' newest features. If you guys are an IT professional looking for an easier solution, let us know in the comments. And if you liked this video, make sure you check out our
+horrible server deployment from last year. It'll definitely make you cringe. Your whole face will fall off from cringe. It will go numb, and then fall off.

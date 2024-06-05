@@ -1,0 +1,82 @@
+- Do you get triggered every time you see a
+certain family members name on the call display because you know they're going to ask you for tech support? Well, thanks to Acronis, who sponsored today's video, we've got a few tips for you so you'll never have to be
+the IT person for your family, neighbor, or coworkers ever again. Oh, thank God. Ugh, I can't take another
+one of those calls. What are you, you're judging me, just like they do. Today's video is sponsored by Acronis and their Cyber Protect
+Home Office software. Do you no longer trust
+Windows restore points? Can't be bothered to make your own backups and stick them in the Cloud? Check out Acronis today and give yourself some peace of mind. (upbeat music) All right, we can't promise that you'll never get another phone call, email, or text asking for help because the computer you built two years ago is broken, but we can help substantially limit what that tech support might entail. Whether your tech illiterate compadre changed something in the BIOS that they shouldn't have somehow, installed some malware
+from a suspicious email, or can't find their favorite apps since the latest update,
+we've got you covered. One reliable way to kill
+all three of these birds with one admittingly awkward stone, is to set up your drive in such a way that Windows is the only
+thing on your default C drive. So anytime someone calls you can just hit the reset
+button, nuke your Windows, while leaving your personal folders intact on a separate drive partition. Let's say you've just
+built a new gaming rig for your cousins, uncles, other nephew, or something like that
+with a one terabyte SSD. During the Windows setup, we're going to partition it into two, allocating a 100 gigs for
+our operating system on C, as Microsoft suggests 64 gigs of space when upgrading to Windows 11, and we wanna leave some
+head room for that. Once your partition is created, complete the Windows install. After, you'll need to
+head to Disk Management, then select the 900 gigabytes
+of unpartitioned space that we left over earlier. Right-click and create
+a New Simple Volume. Assign a letter, typically
+this is your D drive, unless you've left your
+boot media plugged in, but don't worry because you can choose whatever letter you want. Then, you can label it to your liking. I'm going to go with storage
+for today's purposes. If you're not comfortable using Windows as built-in disk manager, you can do this with the Acronis software we'll be installing later through their Add New Disk feature
+under Tools and Utilities. Our C drive is going to be where we keep Windows and that's it. The tricky part is making sure nobody but you has access to it. So the next step is creating an account for our estrange relative that can't touch C. Go to Accounts, family and other users, add other user, and then
+follow the prompts as you go. When finished, check
+accounts page to ensure you created a local account and not another administrator. Just about everyone seems to need video conferencing these days, Acronis actually has built
+a protection for Zoom, Cisco WebEx, and Microsoft Teams. So use one of these three. Next, add Steam, your browser of choice, and anything else they might need. Steam can be installed
+directly to your storage drive along with any games
+that'll be downloaded. Just make sure at this point that you don't skip through
+any installation steps when downloading any games or you'll miss the part
+where you designate your partition as the
+location for these files. And don't skip on hitting
+that subscribe button because we've got another video coming investigating why Linus's
+PC keeps turning off that you'd won't wanna miss. Many applications must be installed to C. It's not super common, but they exist. They don't give another
+option during installation, no matter where you've
+kept the setup .exe file. We can live with that just as
+long as nothing ends up here that doesn't absolutely need to be. Navigate to Windows System Settings, and then select Storage, then click on where new content is saved. This part is crucial. See, all of these dropdowns that have local disk C selected change all of them. And don't forget to click Apply. For the savages who simply save every file to the desktop,
+we're gonna move that too. Open File Explorer then
+right-click the Desktop below This PC, then select Properties. Navigate to the Location tab, click Move, and then change the directory
+to the storage partition. (laughing) Yes, no more Desktop for you. Actually, the Desktop is still there, but it's at a different place. So you don't get to keep it
+where you thought you did. That's the main one. But you're gonna want
+to repeat this process for Documents, Downloads, Music, Pictures, and Videos as well. And when you perform the system restore, we'll be getting to in just a bit, there are going to be a lot of lost files. That trip to Niagara Falls, gone. So they'll be written out of the will, just like last time. Anyway, now for Acronis. We've used them before when
+we initially tried Windows 11 and the time we intentionally
+downloaded some ransomware. We're obviously still using Windows today, but their software works for macOS and mobile devices as well. Grab the latest version of
+Cyber Protect Home Office and install it after
+creating your account. Follow the prompts and the way we go. Once it's up and running, the first thing you're going to want to do is head to back up. We're going to create an online backup to the Acronis Cloud by just
+clicking this button here. We don't have much on this fresh install, so it won't take very long, but if you have a slower connection or a lot of files to process, this is a great time to stretch your legs or check out the new party
+shirts at lttstore.com. They're real comfy. Another nice feature is that
+while we create this backup, Acronis might also find hidden infections. Not for us today as
+this is a clean install, but something to think about if you've been considering
+making backups recently. At this point, we have our backup. We could stop here and
+simply revert the machine whenever we see fit
+through the Recovery tab, but let's take things
+a couple steps further. We're gonna use Acronis
+to create another backup. You should always have more
+than one backup, of course, but then for those of you short on cash, we're also going to use
+Windows as built-in features to create a restore point, basically like hitting save
+on your operating system. Although it's only for
+the operating system, this will not restore
+your files or folders, should be very, very clearly stated. Head to Tools and then
+select Rescue Media Builder. What we're doing is we're going to create a Windows image file that will save a copy of on our USB flash drive. There are two types of media by the way, Linux and Win PE and it's worth checking that your disks are
+visible under boot media, although you might need to
+add storage controller drivers or alter the storage
+controller operation mode in the BIOS to see them. Now for the part that's so
+many people forget to do. We have to actually enable the
+restore point we just made. In Windows, head to System Properties and then click the System Protection tab, select your C drive, click Configure, check the Turn-on system protection box, and select the data limit for the max amount of usage that your restore points will use. That'll ensure that new restore points don't take over your
+entire C drive over time. We're going to do the same
+thing for our storage partition, just in case Windows decides to stretch its legs a little bit. This is going to be our
+first line of defense. So feel free to label it as
+such or just use today's date. All of the above shouldn't fail you. But if you worked with tech, you'll know how often fail saves, well, fail should is
+basically the only thing you can count on. Let's say someone digs around in the BIOS with when they shouldn't, maybe they're trying to overclock or just fan curves and they set parameters that basically stop
+the system from booting the Windows all together. The quick and dirty way to fix just about any of these
+problems at this point is to remove the CMOS battery
+from your motherboard, which we'll do a factory
+reset on the BIOS settings. Put it back in after about a minute or two to make sure that the SRAM
+is well and truly cleared, and then start your PC
+and perform your recovery through that boot media we made earlier. Hopefully, it never comes to this point, but at least if it does, you won't have to spend
+your entire holiday looking for the problem. Just blast the whole C drive
+and get back to digesting. And big thanks again to Acronis
+for sponsoring this video. Their Cyber Protect Home Office software is a great option when
+it comes to making sure that your data is backed up and tucked safely away in the Cloud. They've got disk cloning and
+full image backup options, as well as Microsoft 365 backups. So you never truly lose anything. You can even replicate your local backup to the Cloud automatically so you always have an off-site copy. Not a Windows user? They've still got your mac OS and mobile devices covered as well. Sometimes a backup isn't enough when faced with cyber attacks. So Acronis has built in
+cyber protection features, like URL filtering and anti-malware, to help keep your machines safe. Check them out in the link below. What's the most data you've ever lost in a single failure corruption? Have you spent hours
+troubleshooting the family PC? Let us know in the comments. And if you liked this video, make sure to check out our How to Try Windows 11 Safely video for more Acronis tips and more tips on how to bend Windows to your will.

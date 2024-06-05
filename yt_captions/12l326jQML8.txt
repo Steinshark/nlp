@@ -1,0 +1,231 @@
+- I called it. (crickets chirping) - [Jake] Called what? - (beeps) Okay. But I did though. - I mean, sort of. I'm pretty sure it was me and I'm also pretty sure it existed before that video even came out. - It doesn't matter. The point is meet the SupremeRAID SR-1000, it looks like an NVIDIA
+T-1000 workstation GPU. In fact, it even has the
+letters T-1000 printed on it. And the same mini display
+port ports are in there, but they're blocked. By, ooh, solid metal. That's because this GPU
+is not meant for graphics. And before you say you know
+where this is going, no, it's not for cryptocurrency either. So, what the heck is it? Through some kind of software funkery, GRAID is using this GPU to act as a freakin' storage accelerator. And if there to be believed,
+which I'm not sure if I do yet, this thing, with the
+write array of NVMe drives can sub supposedly
+sustained transfer speeds of over 100 gigabytes per
+second of sequential throughput. Holy (beep), is what you might say, if I didn't segue to our sponsor. Kioxia, their BG5 NVMe SSD
+brings PCIE Gen-4 performance to an affordable price
+for systems and notebooks. They even make a 2230 sized one, so your PCs can be lighter
+and smaller than ever. Check them out at the link
+in the video description. I have so many questions about this. But before we can even
+start to answer them, we need a little bit of background. Combining multiple storage
+devices has been a staple of computing for decades, and generally falls under
+the umbrella of technologies that we call RAID or Redundant
+Array of Independent Discs. RAID can serve a variety of purposes; improving speed, data
+protection, capacity, or usually, some combination
+of all three of those compared to a single drive. Now, traditionally, high performance RAID required dedicated co-processor, typically found on hardware RAID cards. You would slot one of those
+bad boys into your motherboard, connect all of your drives to it, and it would handle
+both the high throughput of these many disc arrays, as well as the parody
+calculations that are required by popular configurations,
+like RAID5 and RAID6. If you wanna learn more, we actually have a tech
+cookie on this subject from almost 10 years ago. But, RAID cards have a problem. As we've transitioned from
+mechanical drives to solid state, and then to NVMe, storage
+devices have gotten so fast that RAID cards haven't
+been able to keep pace, turning them into a
+performance bottleneck. So, the current meta is to
+connect your storage devices directly to your CPU via PCI Express. This improves both the
+throughput and latency, but requires the CPU to handle
+those parody calculations in any other overhead. This is called software-RAID. And in some ways, it's actually
+kind of a big step backward. First of all, CPUs are freakin' expensive. And in more ways than you might think, a lot of enterprise software
+is licensed according to how many CPUs or how many cores are present in your server. So, you better believe that big businesses are all about squeezing the
+absolute most out of every box. Also, CPUs are generalized processors. I mean, you can brute force it. Here's us hitting 20 gigabytes
+per second in software-RAID. But the issue, is that even
+with a 32-core epic processor, we're looking at a lot of utilization here just to manage storage. And if you compare that to the theoretical combined read speed of
+around 75 gigabytes a second for our 12 Kioxia SD6 drives, you can see that we were leaving a lot of performance on that table. If I'm a server vendor, that's
+too many wasted CPU cycles that my customers now can't
+allocate to something useful or can't rent out to their customers. That is where GRAID comes into play. The most obvious difference
+here right out of the gate, is that there is no port
+to plug a drive into, nevermind 8 or 16 drives. Instead, the drives connect
+directly to the CPU's PCIE lanes just like they would with software-RAID. So, this server from gigabyte handles all of that through a back plane here in the front of the chassis. Then the GRAID card just plugs into any available PCIE Gen-4 slot. Well, do that a little bit later. And all the storage communication happens over the PCIE bus. No direct connection between
+our RAID card and our drives. Weird, and I guess we won't
+need any of our new cable ties from LTTstore.com. - [Linus] Those are cute though. - Are available in so many colors. and you might be thinking, "Gee, Linus, even at Gen-4 speeds, a 16x PCIe slot can only push around 32 gigabytes a second in either direction. How could this thing
+possibly do over a 100?" That's the special sauce. None of the storage data
+actually goes through the card. That's the old way of doing RAID cards. This card handles the RAID calculations and directing the system
+where to read and write from. All of the actual data
+flow just goes directly between the drives and the system memory. No man in the middle. And it does all of this while using barely any CPU resources, or so they claim. What I think this means, is that we could plop this
+GRAID card into any system and it would just work. We are definitely going to try that later. But for now, we're gonna
+stick to the validated server that Gigabyte sent over
+for performance testing. Our CPUs are a pair of EPYC 75F3 monsters. They're only 32-core, but they'll hit 280 watts
+of max power consumption and we'll boost to four gigahertz. And then we paired these with
+some equally monstrous memory. Micron sent over a metric whack ton of 32 mega transfer per second, ECC ram, giving us a total of one
+terabyte of system memory. Shouldn't be a bottleneck, right? - I don't think so. - It should be fine. Then for our drives, we're
+using Kioxia's CD6-Rs. There are a well-balanced
+enterprise Gen-4 NVMe drive. And with 12 of them in here, we should be looking at
+raw sequential performance of around 75 gigabytes a second. Before we can set up an array, though, we need to install the
+GRAID SupremeRAID software, and also we need to finish putting all the mem in this system. It still blows me away how low profile of a cooler they can use
+for these 280 watt CPUs. But that's the thing, is under this giant heat
+spreader, all the dyes, right? It's a chiplet design. So, they're actually
+like freaking spread out, like it's huge. It's a lot of surface area
+to transfer that heat. - Brother, these are 80-watt fans. - Consume 80 Watts each? - That's a 12-volt, seven-amp. I think that might be part
+of the equation. (laughs) - Wow, that is a heavy
+vapor chamber. I love it. For how small this thing
+is, it's like whoa. It's a heavy boy. Oh, my God, this is a lot of memory. (whispers) It's gorgeous. A frickin' terabyte. - (whispers) Why are you whispering? - 'Cause it's a terabyte of memory, I don't wanna wake it up. As of recording the video, this only runs on Linux
+server operating system. So, we're gonna be firing it up with, do we have an SSD in here or something? - Yeah, back here. You know, back of the voice? - Yeah, just a little say to SSD there. Cool. So, we're gonna be
+running Ubuntu server 20.04 LTS. Jake has already gone,
+prepared and installed that onto our boot drive as well as the required NVIDIA drivers and SupremeRAID itself. This is cool, I am liking this like super over-engineered
+airflow director here. - Pretty sure they just ripped
+it off of the Dell, but. - Oh, all right. That goes, hey?
+- Yeah. - That's not even close
+to full send yet either. - The whole process was surprisingly easy. Otherwise, we just had to
+copy paste some commands from their user guide, and it looks to be working. So, think we can make it array now. Should we start with RAID0? - I mean, obviously. - We have to start with RAID0. - RAID0 is not really a
+great use case for this because RAID0 has no
+parity data to calculate. It's just taking each bit, writing it to the next
+drive in the sequence and attempting to multiply
+your capacity and your speed. You get no extra resiliency whatsoever. In fact, it's worse, because
+if any one drive fails, all the data is gone. - Hey, look at that. You can totally use this
+with SEDAN SaaS drives too. I don't know if you'd want to, because I think the limit is
+32 drives per controller thing. I don't know. I wonder if you could put multiple? Why? Why? Yeah, good point. why,
+why, why? I don't know. - It's for NVMe.
+- Yes. Okay. So, here let's see list NVMe drive. Let's see if they all show up. So, we got 7.7. It's probably TB bytes. Or what capacity are those drives? - [Linus] 7.68. - So, then that is terabytes. - Yep.
+- Cool. There's a bit of an... It's not interesting 'cause
+it's very similar to like ZFS, but there's kind of a structure. So, you start with your physical drives. You know, you got your NVMe drives. You can also connect
+NVMe over fiber drives, which is pretty cool. And have the controller in this and your drives and some
+other JBOD, pretty sick. - Somewhere across-
+- We're not gonna do that yet. There is still a limit of 32 drives, so it's not like you're gonna connect 200. - Right.
+- But 32. With that done, you can go
+ahead and make your drive group, which is kinda like a
+set ZFS Z-pool or just... It's like your array. You can pick your array
+level at this stage. You can have multiple drive groups. I think you can have four? So, you could have like
+say you had 16 drives. You could have like
+four, groups of four it. Those would all be discreet pools. - Unlike ZFS, it's not
+like having four V-devs that you then combine into a pool. - [Jake] Yeah. - It's like having four pools. - Yeah, let's go back a bit and actually create our physical drives. It's says create, that's the command, but really it's like,
+"Take me, take me over." - Or unbinding it from
+the operating system. - [Jake] And giving it
+to the GRAID controller. - [Linus] Got it. - [Jake] There's a cool
+little feature here. You can go like dev/mvme0to11. - [Linus] Oh, that's cool. - [Jake] And it makes 'em all, you don't have to do it one by one. There you go, made them all successfully. And then we can just check the list to see if they're all there. Ah, cool. Yes. - This is a pretty solid documentation from what I've seen so far compared to the documentation
+for Microsoft storage spaces. - Oh, God, compared to the documentation for anything Microsoft. All right, create drive group. We're gonna do RAID and then PD ID, so that's a physical disc, so we'll go 0 to 11. It's doing stuff. Ah. Let's see if we can see it now. GRAID list, drive_group (laughs) 92 terabytes, that's not bad. - [Linus] Just like that, hey? - Yeah.
+- That's fast. - A little bit of an
+interesting tidbit here. We don't have a usable file system yet. This is just the array. It's not like ZFS where
+there's a file system built in. Instead, we actually have
+to make a virtual disk. So, you can make a number of them. You could have like a 10 terabyte one, you could have like a 50 terabyte one. - Sure. - We're just gonna make
+one that's the whole thing. - But this is just block level storage? - Yeah, so we'll make big virtual disc, that's the full size, and then we'll have to put
+a file system on it as well. So, let's do that. Create virtual drive. Okay. So, our drive group is zero. So, we'll say zero, and then
+I'm not gonna specify a size. And I think, yeah, that'll
+make a full size one. And there we go, we
+have our virtual drive. It says it's optimal
+and it's 92 terabytes. Okay. Now, I gotta make
+a file system on it. I already made these commands so I can just copy paste off them. Got the file system working. I think it was a little bit angry about how I had previously had
+a file system on these discs, so then just deleted it made a new one. Anyways, I deleted
+everything, rebooted it, created it again, now it's happy. I also realized that because we now have two dims for per channel, previously, when I was just
+kinda tinkering with this, I just had 16 sticks in which
+is eight per, one per channel. Now we have twice that, usually that means your
+memory speed's gonna go down. Fortunately, on the gigabyte servers, you can force it to be full speed captain. We're doing 32 QDEP,
+one meg sequential read, and that's with 24 threads. So, two per NVMe thread,
+that's usually pretty standard. I hear it spun. (laughs) Holy (beep). - It is straight up just immediately. - Okay. It did go down a bit. - It's still twice as fast as what we've seen with CPU RAID though. - Yeah. Look at the-
+- Twice as fast. - The CPU usage is only like- - [Linus] And it's
+barely touching the CPU. - [Jake] 3-4%. That might
+even just be like FIO. But actually it says it's system stuff, so it's probably system stuff. - Wow, that's crazy. - It looks like we've- - You can hear the fans going though? - Yeah. - It knows it's doing something. - It looks like we've leveled off around 40 gibibytes a second, which is, yeah, it's basically twice what you could get with ZFS pretty much. - That's insane. - What's gonna be more
+interesting, is the writes, 'cause in like traditional RAID5, it's really CPU intensive to write. You'll get like a 10th of the performance of your read speed. So, if that's still good, that will be the true test. - Well, this is RAID0 anyway though? - Yeah. Do we even care? Should we just switch to RAID5? - We'll switch to RAID5. - Okay.
+- Okay, to be clear, there are potential disadvantages of going with a solution like this. One of the great things
+about ZFS, is its resiliency. We have actually made
+significant progress, big shout out Wendall from
+Level One Text, by the way. on the data restoration project from our failed ZFS pools. And we're gonna have an
+update for you guys soon. - We're down from like
+169 million file errors to like 6,000. - So, make sure you're subscribed, so you don't miss that. And I cannot necessarily
+say the same thing about whatever this is doing. - Well, the other thing
+is we're also locked into like their ecosystem now, this is very like proprietary software. - We were able to take
+these ZFS VDEVs and pools and just like... - Import them into an S, yeah. Even the ones I just
+did Delta one and two, those pools are from like 2015. - New hardware, new
+software, new version of ZFS. - I imported those 2016 pools. It took like literally 30
+minutes for it to import. - Which is a scary 30 minutes. - [Jake] But it just, it did it. Do you wanna do RAID5 or RAID10? - RAID5, RAID10's lame. - I mean, it might be lame, but it's fast. - Well, no, it's not... Okay. I shouldn't say it's lame. There's a time and a place for RAID10. Let me walk you through. With RAID10, I get only 6
+drives worth of capacity, that's it. The rest is all redundant, which is great 'cause all these could fail and I'd still have all my data. But it's bad, 'cause that's expensive. With RAID5, I get 11 drives worth of data, but I can only sustain one failure. On these kinds of solid state enterprise class devices though. - [Jake] They usually all
+fail at the same time. - It should be okay.
+- Yeah. You're gonna wanna have a backup. - You gotta backup that's for... I mean, what's our backup? Within about 30 seconds or 2 minutes, or something like that anyway? - Yeah, yeah, yeah.
+- It's fine. We're on our RAID5 array. Now, I'm gonna be doing
+basically the same test. - Hey, wow me. - 32 Qs, one meg, read sequential. - We're "World of Warcraft" my whole face. - You see, it's only 18 gigabytes a second or something like that.
+- Wait, what? Really, 18 gigs a second? What's our CPU usage? - 1.7%, 1.9%.
+- Okay. Wow. - But wait, now it's
+getting faster. (laughs) - Wait, what happened? Did you know that was gonna happen? - Yeah.
+- Oh. - Well I watched it happen earlier. It it's like two steps. Okay, so it's written, you know, like 30-gigs,
+and then it starts going. And then, there'll be kinda one more bump where it'll go like above
+30 gigabytes a second. - Wow, that's freakin' crazy with RAID5. - Still at 2.5% CPU usage. There we go, 35-gigs a second. We're at almost 3% CPU now. Remember this is a read test, so it'll be interesting to
+see what the write is like. - That's pretty quick, 35.
+- Yeah, that's really fast. - 35 Gigabytes a second. - Are we switching to this? - We might switch to this. I wanna try to put it in the 1X server, 'cause then we can use the same SSDs. - Right.
+- Yeah. - That would be even faster. - But I'd have to do that on a weekend. - That's Jake asking
+for overtime on camera. - Yeah. No, I don't want to work. I have zero desire to do that. Okay, let's try write
+now 'cause that's really where we're gonna see the difference. - [Linus] Wow, CPU usage is like 20%. - [Jake] That's pretty hefty. - [Linus] Yeah. - And we're only doing five gigs a second. That's not... Actually that's great.
+- A lot less impressive. So, the CPU usage is actually going down while performance goes up? - Yeah, it's more like 12% CPU right now. 11, 10. - It's like it takes a second to like. - What am I doing? Where am I putting stuff? Yeah, like it needs a ramp up. He's over there. (laughs) - All right, I'm coming back. - Okay, seems like it's leveled off around nine gigabytes a second with around 9 to 10% CPU usage. So, pretty good CPU
+usage, still very strange. - I mean, it's very acceptable
+in terms of performance? I mean that's a mibibytes. (laughs) So, it's probably closer to
+about 10 gigabytes a second. Should we try like a random test? It'd be interesting to see how many IOPs 'cause that's another thing software-RAID will struggle with. - Yeah.
+- Let's do that. - Look at this guy's
+legs goes wide stance. - Man's spreading. Just tryna be a little
+more ergonomic here. This is gonna be 4K random read. We're doing 48 threads. A little bit more, and
+Q depth of 64 this time. - Okay.
+- Let's see. - That's CPU usage.
+- That's CPU usage though. - (laughs) This is like the absolute, most punish test you can do. And we're pulling off 6.5
+million IOPS on a RAID5. And actually, 25-gigs a
+second at 4K block size. Holy (beep). - That's insane. - Oh, my God. So, the theoretical
+performance of these drives would put us at around 12 million IOPs, like raw to each of them. - That's insane.
+- Pretty good. If we were on an Intel-based system, we might actually be able
+to get a little bit more, or with Intel drives. But yeah, dang! - That CPU usage just staying high. I can tell you just from the temperature of the back plate though,
+that GPU is at work. - We can look at it actually. So, it's at 70 degrees. (laughs) - And considering the kinda airflow going over it right now. - The interesting thing, is the GPU usage just stays at a 100% even if
+you're not using the array. It's kinda weird. - I wonder if that's like a- - But the fan is spinning,
+it's 55%. (laughs) It just has like a... Ah, it's like you have
+like a little desk fan inside of like a hurricane.
+- Like a tunnel. - Yeah, or like a wind
+tunnel just going past it. - "Oh, thank you for the cooling. - Yeah. (laughs) - Let's try writes. Same specs, everything else. Let's just give it a sec to. - No, no sec.
+- No sex? - I mean. - I know what you mean. (laughs) - Not at the camera. Not the kind of operation
+run. That's a lot slower. - Yeah, it's writing
+though. That's way harder. So, doing 1 million IOPS writings. So, these drives are only
+rated for 85K random writes. - Well that's, wow. That's almost- - That's actually really good. - Almost perfect scaling. Yeah. - That's fricking incredible. - So, if we do 85 times 12, it's almost perfect scaling. - That's probably the most impressive test we've seen so far then?
+- Yeah. - That's crazy. What's cool about the writes, still maxing out these drives though, is that because people
+are actively editing off of these drives, while you are dumping copious
+amounts of data onto them. This could make a huge
+difference to footage ingest. This is fricking crazy. - We're still gonna run
+into a huge bottleneck, that is SMBv. But maybe once they have
+SMB direct on Linux, like RDMA support. (laughs) - We kinda have to deploy this. - Yeah, I think so. (laughs) - Let's find out if we can. - Oh yeah. Okay. - So that's why the bench is here, right? - I got a thread reaper bench here. We're gonna just put that card in it. I got us a little NVMe drive. We're we're kinda clashing brands here. This is like wearing Adidas
+and Nike in the same outfit. We got our Liqid Drive. This has got four NVMe drives on it, and then just like a little PLX switch. So, we'll put that in there, and then we can RAID those four drives. - Okay. It's even less
+sophisticated than I thought. - Yeah.
+- It just- - That's not on a normal
+card. There's no like bracket. - It's just this piece of metal. So, then they just probably
+sourced a random PCI slot. - [Jake] It looks the same
+as the regular NVIDIA one just 'cause like these slots are the same but there's no cutouts here. - Okay. Sure. I'm gonna go get a cooling
+fan 'cause that looks awful. - [Jake] The one in there? Oh, he's fine. - [Linus] No, he's not fine, Jake. - [Jake] He'll be all
+right. He's a good guy. So, let's see, describe license. Let's see if our license is still valid. License is still valid. - Well that's awesome.
+- Interesting. Okay. Yeah, it's see our MVMes. Interesting. These don't
+support 4K block size. - Ow!
+- Do we? - I think this is all we
+really needed to know anyway. - It boots, it runs. It probably works. Let's just boot into windows
+and we'll get the last answer. Holy (beep) it's there, Linus. - [Linus] What? - NVIDIA T-1000 in Device Manager. - [Linus] It's just a freaking GPU? - I just wanna see if this BIOS version matches any of the BIOS versions in the TechPowerUp database. Because if it does, chances are... Oh, hello. Yeah. I'm pretty sure that just worked. Geez, it display connect. No way. (laughs) - Oh, my God, just works. - It's a graphics card. - Well, I mean we knew
+it was a graphics card. - It's a functional display
+outputting graphics card. Okay. I gotta see this BIOS thing now. It's a PNY T1000. So, they must be who, which manufacturer? Yeah, PNY is the exclusive
+manufacturer of Quadro. Excuse me, NVIDIA RTX-
+- Work station. - [Jake] It's exactly the
+same in every other metric. - That GPU accelerated RAID. What world are we even living in? - And it's just a regular ass GPU. - And it's not even a crazy powerful one. Like this is a basically what? Like a 1650?
+- Yeah. - Or something like that? - It's literally a 1650,
+same Silicon basically. - So, what? can we just run? Can we just run GRAID on
+like frickin' like 86,000? (Jake laughing) - So, maybe it just completely
+doesn't care what GPU. Should we put a different GPU in that? Should I go get a GPU? - There's gotta be some ball- - I'm gonna get a GPU. - Okay. Well, do we have? - [Linus] I'll back. - Do we have an a, anything? - [Linus] I'll just get
+like a Quadro or something. - Or a T would be better, touring card. - Excuse me.
+- Jesus. It took a little while to
+generate the rendering kernels, but it blenders. - Oh, I think I found something. - It's pretty fast too. Oh, my God. - Are we gonna have GRAID? Check that license. - We just-
+- I wanna know. So, let's see. Let's first see if the servers... Okay, it's not running
+on the GPU, you see? It would show the running process. So, let's see, it might not work. I don't think it's going to. - Bamer, that would be so funny. - I think the license is done per GPU. - Oh, I wonder if it, as
+part of applying the license, it binds it to it. It's relatively unsophisticated, and it makes you kinda wonder why they would even
+bother at that point, but. - Money. - No, no, no, I don't
+mean that like licensing is a waste of time. I just mean like it's
+relatively unsophisticated if you wanted to spoof that, you couldn't do it. Yeah.
+- Yeah. Huh. - Oh, I'm disappointed. I wanted to like throw eight
+times the compute at it and see what it would do. - Well, to be fair, the
+game is not launching. - Watch GRAID, reach out to
+us after this and be like, "Yeah, we can hook you up with that." - And there we go. "Continue campaign." Sure, 5% play along... How do I play this? - With a controller? This is a good game. You
+should totally play it though. It's really hard. - There is actually no way
+to play it with a keyboard? - I don't know. I mean it's hard. - It kinda looks like. - Try something like
+A, S, D or like shift. - Goddammit. All right, I'm glad I told "Rocket League" to keep downloading. This doesn't launch either. What the hell? - Yeah, the T1000 behaving
+kinda weird, but it can game. We launch pro force, it's fine. And you know else is fine? Our sponsor. Thanks to Telus for
+sponsoring today's video. We've done a ton of upgrades to my house over the past few months, and probably the most important one to me, is our new Telus purefibrex connection. Telus Purefibrex comes with
+Telus's Wi-Fi 6 access point and can get you download and upload speeds of up to 2.5 gigabit per second. That is the fastest residential
+freaking internet speeds that you can get in Western Canada, and is perfect for multiple devices and simultaneous streaming. With the new consoles out, it means that you can download
+a new 50 gigabyte game in less than three minutes, or a five gigabyte 1080p
+movie in just 16 seconds. Assuming that the
+connection on the other side can keep up with you. You'll also get to enjoy an upload speed that's up to 25 times
+faster than competitors, which means that your streams
+will be crystal clear. I mean, you could be
+streaming in like frickin' 8K at that point. So, get unparallel speed on Canada's fastest internet technology with Telus Purefibrex, by
+going to telus.com/purefibrex. If you guys enjoyed this video, this little SSD from Liqid here is hardly their most potent. We built a server using five, I think, of their like way bigger
+eight SSD honey badgers. It's called the Badger den, and it's freakin' amazing. - [Jake] 100-gigs a second. - That's crazy.

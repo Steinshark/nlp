@@ -1,0 +1,230 @@
+from MultiNode import Node 
+#from NodeTorch import Node
+import chess 
+import time 
+import model 
+import torch
+import numpy 
+import chess_utils
+import math 
+import random
+import sys 
+#sys.setrecursionlimit(100000)
+
+def softmax(X,temperature=1):
+    if len(X) == 1:
+        return [1]
+    else:
+        X           = [x**temperature for x in X]
+        max_val     = max(X)    
+        shifted     = [math.e**(x-max_val) for x in X]
+        shifted_sum = sum(shifted)
+        return [x / shifted_sum for x in shifted]
+    
+class Block:
+    def __init__(self):
+        pass
+class Tree:
+
+    def __init__(self,id,n_iters=1200):
+        self.root           = Node(None,None,None,0,True)
+        self.board          = chess.Board()#fen="rnbqkbnr/2ppppp1/pp5p/8/2B5/4PQ2/PPPP1PPP/RNB1K1NR w KQkq - 0 4")
+        self.max_depth      = 50
+        self.curdepth       = 0 
+        self.working_node   = None
+        self.experiences    = [] 
+        self.outcome        = None
+        self.n_iters        = n_iters 
+        self.working_fen    = None
+        self.id             = id 
+    
+    def get_probabilities(self):
+        return {c.move:c.n_visits for c in self.root.children}
+
+    def make_move(self,move:chess.Move):
+        
+        #Make move 
+        self.board.push(move)
+
+        #check gameover 
+        if self.board.is_game_over() or self.board.ply() > self.max_depth:
+            if self.board.result() == "0-1":
+                for i in range(len(self.experiences)):
+                    self.experiences[i][-1]     = -1
+                self.outcome    = -1
+                return -1 
+            elif self.board.result() == "1-0":
+                for i in range(len(self.experiences)):
+                    self.experiences[i][-1]     = 1
+                self.outcome    = 1
+                return 1 
+            elif self.board.result() == "1/2-1/2" or self.board.result() == "*":
+                for i in range(len(self.experiences)):
+                    self.experiences[i][-1]     = 0
+                self.outcome    = 0
+                return 0
+            else:
+                print(f"strange: {self.board.result()}")
+        
+        #update tree 
+        self.chosen_branch  = self.root.traverse_to_child(move)
+        del self.root 
+        self.root           =  self.chosen_branch
+        self.root.parent    = None
+        self.curdepth       = 0 
+        return None
+        
+
+def traverse_to_bottom(tree:Tree):
+    if tree.root.n_visits > tree.n_iters:
+        tree.working_fen    = None
+        return
+    # else:
+    #     if tree.root.n_visits % 50 == 0:
+    #         print(f"visits: {tree.root.n_visits}")
+    
+    curnode:Node            = tree.root
+    board:chess.Board       = tree.board
+    maxdepth                = tree.max_depth
+    tree.curdepth           = 0
+
+    while not curnode.is_leaf():
+        curnode         = curnode.pick_best_child(board)
+        board.push(curnode.move)
+        tree.curdepth   += 1
+    
+    if board.is_game_over() or board.ply() > maxdepth:
+        result  = board.result()
+        if result == "1/2-1/2" or result == "*":
+            node_val    =  0
+        elif result == "0-1":
+            node_val    =  -1 
+        elif result == "1-0":
+            node_val    =  1 
+        else:
+            input(f"weird result: {result}")
+        
+        curnode.bubble_up(node_val)
+
+        for _ in range(tree.curdepth):
+            board.pop()
+        tree.curdepth = 0
+
+        return traverse_to_bottom(tree)
+    else:
+        #Set node to be expanded and leave
+        tree.working_node   = curnode
+        tree.working_fen    = tree.board.fen()
+        return
+        #curnode.prep_to_expand(board,curdepth)
+
+def expand_node(package):
+    tree:Tree       = package[0]
+    probabilities   = package[1]
+    value           = package[2]
+    tree.working_node.children  = [Node(move,tree.working_node,probabilities[chess_utils.MOVE_TO_I[move]],tree.curdepth+1,not tree.board.turn) for move in tree.board.generate_legal_moves()]
+    revized_probs               = [c.init_p for c in tree.working_node.children]  
+
+    if len(revized_probs) == 1:
+        tree.working_node.children[0].init_p = 1 
+        return value
+    else:
+        temperature = 1 / max(20 - tree.board.ply(),4)
+        softmaxxed  = softmax(revized_probs,temperature=temperature)
+
+        for prob,node in zip(softmaxxed,tree.working_node.children):
+            node.init_p     = prob
+
+        return value
+
+def bubble_up(package):
+    tree:Tree           = package[0]
+    value:numpy.array   = package[1]
+    tree.working_node.bubble_up(value)
+
+def reset(tree:Tree):
+    for _ in range(tree.curdepth):
+        tree.board.pop()
+    tree.curdepth = 0 
+
+def make_move(tree:Tree):
+    probs           = tree.get_probabilities()
+    revised_probs   = softmax(list(probs.values()))
+    probabilities   = [0 for move in chess_utils.CHESSMOVES] 
+    for move,prob in zip(probs,revised_probs):
+        probabilities[chess_utils.MOVE_TO_I[move]] = prob 
+    
+    tree.experiences.append([tree.board.fen(),probabilities,0])
+    next_move_i     = random.choices(chess_utils.CHESSMOVES, probabilities,k=1)[0]
+    tree.outcome    = tree.make_move(chess.Move.from_uci(next_move_i))
+
+    return chess.Move.from_uci(next_move_i)
+
+def run_games(n_games=10,n_iters=80):
+    moves           = {id: [] for id in range(n_games)}
+    chess_model     = model.ChessModel(15).cuda().half().eval()
+    chess_model.load_state_dict(torch.load("C:/gitrepos/ChessEngine/chessmodelparams.pt"))
+
+    trees           = [Tree(id,n_iters=n_iters) for id in range(n_games)]
+    iter_num        = 0 
+    while trees:
+
+        #Display updates
+        if iter_num % 10 == 0:
+            print(f"begin iter with trees: {[tree.id for tree in trees]} -> {iter_num}")
+
+        #Compute moves in tree
+        for _ in range(n_iters):
+            t0 = time.time()
+
+
+            #Apply traverse_to_bottom
+            #   Will either land on a state waiting for fen processing, or will max out of iters 
+            #   If max out of iters, then get a list of all those that do
+            [traverse_to_bottom(t) for t in trees]
+            #list(map(traverse_to_bottom,trees)) 
+
+            #Check who actually needs a calculation
+            awaiting_calc       = [tree for tree in trees if not tree.working_fen is None]
+
+            #Perform GPU calcs for those who need one
+            if awaiting_calc:
+
+                with torch.no_grad():
+                    model_inputs    = chess_utils.batched_fen_to_tensor([t.working_fen for t in awaiting_calc]).to(torch.device('cuda' if torch.cuda.is_available() else "cpu")).half()
+                    model_outputs   = chess_model.forward(model_inputs)
+                    probabilities   = model_outputs[0].cpu().numpy()
+                    values          = model_outputs[1].cpu().numpy()
+
+                    values          = list(map(expand_node,list(zip(awaiting_calc,probabilities,values))))
+                
+                    list(map(bubble_up,list(zip(awaiting_calc,values))))
+                list(map(reset,awaiting_calc))
+        
+        #Apply moves and cut trees
+        moves_made  = list(map(make_move,trees))
+        for tree,move in zip(trees,moves_made):
+            moves[tree.id].append(move)
+        trees       = [tree for tree in trees if tree.outcome is None]
+        iter_num    += 1
+        print(f"iter in {(time.time()-t0):.2f}s -> {n_iters/(.00001+time.time()-t0):.2f}iter/s")
+    
+    return moves[0]
+        
+
+
+
+if __name__ == '__main__':
+    n_games = 5
+    t0      = time.time()
+    moves   = run_games(n_games=n_games,n_iters=400)
+    total_t = time.time()-t0 
+
+    # print(f"{n_games} in {total_t:.2f}s -> {total_t/n_games}s/game")
+    # b       = chess.Board()
+    # print(b)
+    # for move in moves:
+    #     input(f"next move: {move}")
+        
+    #     b.push(move)
+    #     print(b)

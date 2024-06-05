@@ -1,0 +1,178 @@
+from torch.nn import ConvTranspose1d,ConvTranspose2d,Upsample,BatchNorm1d,BatchNorm2d,ReLU,LeakyReLU,Conv1d,Conv2d,Sequential,Tanh, Sigmoid
+import torch 
+import os 
+from torch.utils.data import DataLoader,Dataset
+from matplotlib import pyplot as plt 
+DEV     = torch.device('cuda')
+
+
+#Final shape is (256x129x1)
+def build_upsamp(ncz=128):
+
+    model      = Sequential(
+        ConvTranspose2d(ncz,1024,kernel_size=2,stride=1,bias=False),    # 2x2
+        BatchNorm2d(1024),
+        ReLU(True),
+
+        ConvTranspose2d(1024,512,4,2,1,bias=False),                     # 8x4
+        Upsample(size=(8,4)),
+        BatchNorm2d(512),
+        ReLU(True),
+
+        ConvTranspose2d(512,256,4,2,1,bias=False),                      # 16x8
+        BatchNorm2d(256),
+        ReLU(True), 
+
+        ConvTranspose2d(256,128,4,2,1,bias=False),                      # 32x16
+        BatchNorm2d(128),
+        ReLU(True),
+
+        ConvTranspose2d(128,64,4,2,1,bias=False),                       # 64x32
+        BatchNorm2d(64),
+        ReLU(True),
+
+        ConvTranspose2d(64,32,4,2,1,bias=False),                        # 128x64
+        BatchNorm2d(32),
+        ReLU(True),
+
+        ConvTranspose2d(32,16,4,2,1,bias=False),                        # 256x128
+        Upsample(size=(256,129)),
+        BatchNorm2d(16),
+        ReLU(True),
+
+        Conv2d(16,8,3,1,1,bias=False),
+        BatchNorm2d(8), 
+        ReLU(True),
+
+        Conv2d(8,1,3,1,1),
+        ReLU(True)
+        #torch.nn.Linear(True)
+    )
+
+    return model 
+
+
+def spec_to_wav():
+
+
+    model   = Sequential(
+        Conv2d(1,16,3,1,1),
+        LeakyReLU(),
+
+        Conv2d(16,32,3,1,1),
+        LeakyReLU(),
+
+        Conv2d(32,64,5,2,1),
+        LeakyReLU(),
+
+        Conv2d(64,128,5,2,1),
+        LeakyReLU(),
+
+        Conv2d(128,256,5,2,1),
+        LeakyReLU(),
+
+        Conv2d(256,512,5,2,1),
+        LeakyReLU(),
+
+        Conv2d(512,1024,5,2,1),
+        Upsample(size=(8,4)),
+        LeakyReLU(),
+
+        
+        torch.nn.Flatten(1)
+    )
+
+    return model 
+
+
+class AudioDataSet(Dataset):
+
+    def __init__(self,fnames,fnames2,normalizing=0):
+        print(f"\tDATA")
+        print(f"\t\tBuilding Dataset - norm: {normalizing}")
+        
+        #Load files as torch tensors 
+        self.data = []
+        
+        #
+        max_val         = 1
+        for f,f2 in zip(fnames,fnames2):
+
+            tensor1  = torch.load(f).float()
+            tensor2  = torch.load(f2).float()
+            #abs_mult    = max(abs(torch.min(tensor)),abs(torch.max(tensor)))
+            #tensor      /= abs_mult
+
+            #Tensor has to be sent back to CPU
+            #input(f"shape is {tensor.shape}")
+            #if torch.max(tensor1) > max_val:
+                #max_val     = torch.max(tensor1)
+            self.data.append([tensor1,tensor2])
+        
+            #input(f"min is: {torch.min(tensor)}, max is: {torch.max(tensor)}")
+
+        self.data   = [[t[0]/max_val,t[1]] for t in self.data]
+        print(f"\t\t{self.__len__()}/{len(fnames)} loaded")
+    
+    def __len__(self):
+        return len(self.data)
+
+    def __getitem__(self,i):
+        x = self.data[i][0]
+        y = self.data[i][1]
+        return x,y
+    
+    def __repr__():
+        return "ADS"
+
+
+if __name__ == "__main__":
+
+    ncz     = 128
+    #model   = build_upsamp().to(DEV)
+    model    = spec_to_wav().to(DEV)
+    in_spec  = torch.load(f"C:/data/music/specs/alittlelonely0.tsr").to(DEV).unsqueeze_(0)
+    print(f"model in  is {in_spec.shape}")
+    print(f"model out is {model.forward(in_spec).shape}")
+
+    # for tsr_name in os.listdir("C:/data/music/specs"):
+    #     tsr     = torch.load(f"C:/data/music/specs/{tsr_name}")
+    #     input(f"min/max is {torch.min(tsr)}/{torch.max(tsr)}")
+    #print(f"output is {model.forward(torch.randn(size=(1,ncz,1,1),device=DEV,dtype=torch.float32)).shape}")
+
+    #Train for spec to wav 
+    fnames  = ["C:/data/music/specs/"+fname for fname in os.listdir("C:/data/music/specs/")][:2048]
+    fnames2 = ["C:/data/music/dt2/"+fname for fname in os.listdir("C:/data/music/dt2")][:2048]
+    dataset     = AudioDataSet(fnames,fnames2)
+    dataloader=     DataLoader(dataset,8,True)
+
+
+    loss_fn     = torch.nn.MSELoss()
+    optim       = torch.optim.Adam(model.parameters(),lr=1e-3)
+
+    for ep in range(10):
+        losses      = [] 
+        print(f"Run epoch {ep}")
+        for item in dataloader:
+            
+            for p in model.parameters():
+                p.grad  = None 
+
+            x   = item[0].to(DEV)
+            y   = item[1].to(DEV)
+            #print(f"x and y dims are x:{x.shape}\ty:{y.shape}")
+
+            #Get waveform 
+            waveform    = model.forward(x)
+            #print(f"out dim is {waveform.shape}")
+            loss        = loss_fn(waveform,y)
+            losses.append(loss.mean().item())
+            loss.backward()
+            optim.step()
+        print(f"epoch {ep} loss = {sum(losses)/len(losses)}")
+
+
+    
+
+
+    

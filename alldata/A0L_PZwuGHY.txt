@@ -1,0 +1,228 @@
+some time ago I made a video about how there's 
+no equation for a triangle depending on your   definitions the both equation and triangle Because 
+by the end of the video I had this triangle which   is plotted using that equation although the 
+existence of the sine function which says if   a value is positive or negative upsets some people 
+but if you allow that as a valid equation it plots   that triangle if you don't like that we also have 
+this triangle which is made using that equation   and now we've got absolute values to try and fudge 
+around using the sine function you get a bit you   get these spiky bits you get Rays coming out of 
+the middle and I rendered both of these using my   own uh ridiculous python code which meant that 
+I could also turn on like a spectrum effect to   show you how close to the triangle different 
+values are and that's um yeah the kind of Pink   Floyd good fun um and that was the video it 
+took 20 minutes last time could have been a   lot quicker in hindsight however a lot of you got 
+in touch with better equations for triangles it's   classic you folks and so I thought it 
+might be kind of fun to do a sequel and   at last come up with a good equation 
+for a triangle it's triangle two   triangle harder [Music] this video made possible 
+by James tree to more about the James Street   triangle later a reminder that shapes can have 
+equations so here we have a square and its   equation underneath which is using the absolute 
+value function on uh there it is X uh nailed it   and Y and it gives you this fantastic square up 
+here and we can turn something like that into a   triangle by adding in just a a touch of extra 
+X and that one absolute value of x extra kind   of kind of folds it all down and we end up with a 
+triangle however it is only one specific triangle   so individual triangles can have equations but 
+we want a generalized equation that gives us any   triangle we care to plot and you can start messing 
+around with things like this a little bit you're   like well what if I swapped out y for y on B and 
+now if I adjust B what it does is it stretches   or squashes that original triangle so if all you 
+want is my isosceles triangle going up and down   no problem if you want to skew it side to side 
+you've got to replace things with some trigonomic   functions and now you can start to alter a so 
+all these A's here you change them in unison   and that will move the whole thing to the side or 
+back over the other way and you're thinking well   that's not bad we're covering a decent number of 
+different triangles but we want all the triangles   we don't just want ones that you can get to by 
+stretching and skewing and these sorts of things   we want a generalized equation and it turns 
+out such a thing is possible before the fully   generalized triangles however I thought I'd show 
+you a few of my favorite close but no triangles   here is our first triangle sort of this was sent 
+in by Muhammad Jafari and it's a really nice   triangle even better equation look at that look 
+there's such a nice simple equation x to the power   of 2A plus X plus the absolute value of y and all 
+of that there's to the power of 2A as well equals   one and it gives you it gives you this triangle 
+and uh you know I'm gonna move it over here I'll   make it a little bigger so we can all oops too big 
+too big back a bit there it is and what I can do   is I can turn on uh a DOT here and I can label it 
+so it's evaluating that equation at whatever point   this dot is it's displaying the value you get from 
+that equation and this only displays if it equals   one and it currently doesn't there's very much not 
+one it's a huge number and if I drag it around out   here it's just some massive number if I move it 
+inside the triangle it's a tiny number that's now   10 to the negative 17 10 to the negative 56 Tiny 
+But if I put it right on the line that's where   it equals one there one and then likewise over 
+here it equals one right on the line so it's only   colouring in the pixels there it is one where that 
+equation gives you one it fills in that triangle   and you're like well what's what's wrong with that 
+well hang on let's just I'm just going to zoom in   a little here where it crosses the axis and look 
+at that what is that come on there's like a little   there's a dip you don't want to you want this to 
+be straight not having a dip so it turns out it   looks like a triangle if you zoom all the way out 
+not actually in fact the corners zoom in on that   corner isn't that lovely it's like it's a triangle 
+but it was in a hurry it's like I got places to be   uh but we want a more crisp Corner than that and 
+you can kind of fix it by increasing that value   of a so oops let's try and fix that there we go 
+so if I put the value of a uh up it becomes more   and more triangly and hard to tell this level of 
+resolution turn off the dot and in the extreme   value like I guess as a approaches Infinity this 
+will approach a triangle if you go the other way   you can see just how not triangle it is so if 
+I come right down here it starts to exaggerate   the dip exaggerates the corner and becomes a lot 
+more kind of look at that it's it's like a heart   it's a triangle heart I don't know where am I 
+there next almost triangle uh this one's actually   quite nice it's straight lines it's got corners 
+everything you could dream of and the equation   is uh quite pretty let me just drag it out there 
+you are it's using the sine function again a whole   bunch of things equals zero uh it's nice nice and 
+tidy it's a slight variation on the things I was   doing before and the person who made this triangle 
+wants to remain anonymous that's mysterious so I'm   going to refer to them as generic viewer thank 
+you very much generic viewer for this triangle   um you can mess around with all the values here 
+so I can make move the sides up and down move bits   around all the various values in the equations 
+can be um adjusted and the reason why it's not an   actual triangle is because we just want the lines 
+if you turn on the dot with a value for this one   you can see it is indeed zero everywhere outside 
+but if I move it inside that little triangle it   becomes eight and the outside is zero and inside 
+is eight so actually there's two regions the zero   region and the eight region and this line it 
+doesn't actually exist mathematically it's just   it's highlighting where the regions change so 
+strictly speaking this is not the outline of a   triangle that we want because a polygon is made 
+of a strait of line segments basically it's uh   the filled in version of the triangle this is to a 
+triangle what a disc is to a circle which is still   lovely nice equation looks great not technically 
+a triangle but good work generic viewer you're   my favorite now for a quick Round Up of perfectly 
+valid triangles but not generalizable uh starting   with this one here so this one look at me I'm 
+in the Triangle uh this was sent in by someone   uh called Harrison and I thought I'd put it in 
+as kind of a honorable mention because it's made   using 3D planes it's a 2d slice of 3D intersecting 
+planes which is just ridiculous but amazing up   next this triangle which you think well okay okay 
+it's perfectly good triangle it's not good not a   bad equation look at that it's got some it's got 
+an Octan and a tan there and Back Again great   but that slider for n equals three ones if we move 
+that up to four it's a square it's a pentagon it's   a hexagon it makes a regular n-gons by adjusting 
+n in that equation and there is actually more of   that equation so I'm gonna there's all of wait 
+there's more there's more and more that's it   there so wow okay so all of that uh okay it's 
+now real small but this which I appreciate is   now bigger than the shape you change n in that 
+and it gives you all the different regular n-gons   that's so so pleasing uh that was sent in by 
+someone with username idiotinium idiot idiom   generic viewer number two another one here 
+this was sent in by Jaden as well as a few   other people on on Tech talk are they these 
+tick tockers from Tick Tock look at the reach   we've got now people love triangles what can I 
+say a good equation again arctan action bit of   a mod uh not quite as complicated as last time uh 
+sure enough we can we can vary this around and we   get all the look at that it's so good so good uh 
+all the different regular angons by varying end   in that equation which I love immensely finally 
+thanks to Tristan we get this amazing triangle   here which is very similar to the other ones I can 
+vary and to get a different regular n-gons very   very cool they get bigger it's kind of fun there 
+you go it's like it's like I'm zooming into it   and back there we go you know I've not messed 
+with c what does c do oh it's just the size   excellent good to have that as an option there you 
+are I could just made it bigger and smaller that   way uh now there's one downside and one upside 
+to what Tristan has done here the downside is   technically it includes the origin so this spot 
+here right in the middle of that zero is that   is actually part of the shape according to this 
+equation don't get me wrong lovely equation it's   got a big cow Capital Pi so the capital of Pi 
+that's like the product version of summation so   that means you from k equals zero up to n you 
+are multiply you evaluate that each time and   then you multiply them all together um and that 
+gives you the shape which is kind of fun but it   does mean if I turn on the dot here it's undefined 
+outside the shape you go inside the shape and it's   defined and then right on the crossover at zero 
+so technically we're coloring in all the points   where it's zero but if you put that in the origin 
+it goes zero again so you can see I'm I'm a little   bit off but technically right in the center there 
+yeah it gets super small it's actually zero right   on the origin so downside you get Cool Shapes you 
+can zoom them in and out but it does have that one   annoying dot technically right in the very middle 
+of the plot right there the upside to what Tristan   has done however is this a whole separate plug 
+look at this look at this little person uh I'm   gonna name them generic viewer excellent this is 
+what I think of you all as a stick figure however   now I have actually not played with this before 
+um a friend of mine Sam heartburn went through   and double checked all the things that everyone's 
+saying there were so many and she came up with   a short list of all the good ones and she says 
+you've got to see this other plot that Tristan's   made and I've saved it to have a look at it 
+now if I vary H here what is walking okay good that's the most ridiculous and I've seen a lot of 
+plots in my life that is the most ridiculous plot   I've ever seen the rest of the video is just 
+this enough ridiculous plots we now have to   find equations for generalized triangles and we're 
+going to do that using the triangle right from the   start and we're going to start with our triangle 
+from before because lots of people sent me that   equation when I said there's no equation for a 
+triangle they're like that's a triangle that's its   equation and I think this may be the most simple 
+equation for a triangle but like I said before   it's for one very specific triangle in this case 
+well obviously you can scale it up and down very   similar classic triangle base coordinates are 0 
+1 for the top one up there zero on the x-axis one   on the Y vertical you've also got positive one 
+negative one to give us that corner down there   and then you've got negative one negative one to 
+give us that corner over there but what if we want   to move those three corners to three new arbitrary 
+locations now we've just got this is like X1 X2 X3   can we move them to these new points now there's a 
+very long Reddit thread that I will link to below   about this okay and that triangle and people say 
+well why don't you just use an F9 transformation   that's great because that's a transformation that 
+preserves straight lines good for things staying   as a triangle but doesn't care about angles angles 
+are not preserved which is great because we want a   different triangle so all we have to do is find a 
+transformation to go from our starting triangle to   any arbitrary new location and to do that we're 
+going to use a matrix oh here we go may have   literally right in front of me there you are check 
+out these matrices right so there's our original   coordinates that we're starting with and we want 
+to move them to these new arbitrary coordinates   and to do that we've got a matrix transformation 
+T there it is we've got to solve for T and   um that's that's doable so first of all ah 
+right okay check these out okay so uh that   bottom one that's the determinant of the new 
+arbitrary Matrix over there and then this is   the rest of the equation so you take all of 
+these and now we've switched this to be like   a big X big y's you take all of that you plug 
+it in there and magically it will move your   starting triangle to any new look at that any new 
+arbitrary locator so so pleasing I'm I'm uh the   side beside the triangle with excitement I base 
+that explanation of the Matrix transformation on   some working out email to me by Anson Mansfield so 
+huge thanks to them for sending it in all mistakes   and miscommunications are my own and they were 
+far from the only person who got in touch I also   received an email from Graham Goebel and he sent 
+me a whole different way of working it out and it   starts once again with three linear equations 
+my equations from before actually started with   this same idea where you have three generalized 
+linear equations and then you have to combine   them somehow such that they only give a value of 
+zero if you're on the middle bit of the triangle   not the sticky out bits that technically carry 
+on infinitely far in every direction that they're   going and I did that with either using the sine or 
+absolute value to tell which side of these lines   you're on what Graham did is he thought hang on 
+a second you've got several different definitions   of the center of a triangle one of which is if 
+you pick a point right at the middle that then   has a circle around that point which goes through 
+every single vertex and that technically gives us   two regions of space on our plot we've got the 
+outside region everything out here that we don't   want and we've got just the triangle in the middle 
+so if we have a way of basically getting rid of   the outside of the circle that would give us an 
+equation for a triangle and what Graham did was   work out a function based on the equation of that 
+Circle make it a bit more ridiculously complicated   but this will not return a value outside the 
+circle it's under defined but it will return a   value inside the circles could you taken square 
+roots and you've got negative things going on   and so this was Graham's great insight to give a 
+function which is only defined where the triangle   exists but it's not defined outside the triangle 
+so then the rest of it is what we did before you   just rearrange linear equations multiply them 
+all together so you only get a value of zero   if you're on one of the three lines inside the 
+defined region and doesn't matter this gives you   one because you're going to be multiplying it 
+by a zero over here and that works a treat so   well done Graham I really like that the equation 
+that Graham's come up with here the only issue   is that the exact vertices are on that Circle 
+so technically technically the vertices are not   captured by this equation but all of the edges 
+are and the edges go right up to the infinitely   small vertices so uh even though the vertices 
+are technically points with no length and no   size they're not there I mean so you're missing 
+something infinitely small which some would say   does that really count I think it does for the 
+next generalized triangle we're going back to   decimals another Desmos another triangle and this 
+is a classic where you've got the three different   equations for your linear functions and you just 
+kind of piece just the bits you need together to   get the triangle and you can actually edit those 
+so that I can increase that instead of being a one   it's now I don't know a three oh too big I regret 
+that immensely and I accidentally added another   row let's get rid of that look at that that's too 
+too much triangle I think we can all agree in fact   I don't want to add anything there it is perfect 
+love it tiny tiny little uh pocket sized triangle   there you are and you're thinking well how do you 
+how do you combine these three equations to give   you a single triangle there's there's the function 
+is right there I think I think that's all of it is   there is there oh no look at it all it just keeps 
+cut look is there more there's more when does it   it oh it's ended oh my goodness it's too much it's 
+too much so uh it's it's all of this so what do we   got here you add each of the functions to its 
+absolute value and you multiply those together   and then you separately add on the functions while 
+subtracting the absolute values of the functions   and oh my goodness it basically means it's against 
+another way of defining which side of each line   you're on positive or negative depending on if 
+something is equal to its absolute value or not   and so it Narrows you down um to give you those 
+and so yeah it I think it might be arguably it's   exactly the same concept as what I did in my 
+first video but arguably uh you know despite   being terrifyingly long I think you could argue 
+that's a nicer way to go about that same concept   has any one last triangle to have a look at 
+finally we have this tweet from Indigo Killers   who uh has made a moving triangle that matches 
+my original ridiculous matam generated animated   triangle and they put the cool Spectrum on with 
+the magenta and the cyan and it moves around it's   so great and technically uh yeah it's an equation 
+they just kind of show it like all the kind of   workings are spread out but it's doing exactly the 
+same thing as before it's working out how far away   a point is from the closest side of the triangle 
+and then doing the coloring and everything else   accordingly I think that's really nice it turns 
+out it is not only goes first rodeo when it comes   to Graphics like this because uh well let's just 
+say we're going to ignore Desmos for a while and   have a look at Shader toy here it is uh all of 
+inigo's original code on Shader toy I have a link   to this below fantastic website and you can see 
+it animating around again and not only is this a   great website where you can show cool animations 
+like this but actually Indigo was the person who   founded this website they founded Shader toy such 
+a great website and so not only have they got   triangles they've also got a bunch of other shapes 
+as well here are all the 2D ones done in the same   style rounded boxes uh orientated box segments run 
+by parallelogram look at all these look at these   crazy things amazing and that's just 2D here are 
+the 3D all of these 3D shapes are rendered using   equations so it's how far things are away it's 
+so good let's have a look at you know what I'm   an arbitrary capped cylinder exact that's that's 
+look at it oh I've never seen a cylinder so capped   and you can see all the code that it takes uh to 
+to make that it's so nice so I'll link to it below   do check out Shader toy I'd like to quickly thank 
+the sponsor of this video it's my good friends at   Jane Street which is why I'm in the Jane Street 
+triangle which is made up of New York London and   Hong Kong and fun fact I was the first speaker 
+to visit all three of those offices and talk   to the gene Street staff and interns so there 
+you go because Jane Street they solve complex   mathematical problems in the financial World which 
+means they're my kind of people and if you're into   maths and Computing and you've watched a video 
+about equations of triangles then you are also the   gene Street kind of person they're always looking 
+for mathematicians and programmers they can hire   and they offer some fantastic paid internships 
+and courses for young people who are considering   a job in that industry so do check out the website 
+below if you want to go along uh to one of their   courses internships apply for a job there and you 
+may even see me because you've got all these three   different places so many places around the world 
+I was in the Hong Kong one recently I'm not gonna   lie most of the interns I saw there were from 
+Australia what are you gonna do and actually   they were in Hong Kong for their internship but 
+they're about to go to the New York office for   a while it's a fantastic company that exists all 
+around the world and uh fun fact I was the first   person to visit every single office twice I need 
+to do three times then we'll have a Jane Street   tetration it's pretty exciting anyway huge thanks 
+to James Street for making these videos possible   and now I'm going to hand you back out to regular 
+Matt who will probably I don't know thank you for   watching the video or something honestly he 
+hasn't even got a beard that's it thank you   so much for watching the video a huge thanks 
+to everyone who sent in a triangle equation or   equation for some kind of plot there was so many 
+just an overwhelming number of them sent in and   I appreciated each and every single one of them 
+all of you you're all you're all generic viewer   to me thank you so much for making these videos 
+possible and we're going to finish uh with The   Walking Stick Figure partly because I just want 
+to see them walk it's so good uh a bunch more but   also we look at the whole equation let's drag 
+that out shall we so there's there's it's not   too bad there's the oh my goodness a lot of 
+flaws wait I can't do any I've got a scroll   can I scroll I can't even how do I see 
+the rest of the equation oh don't hold out   oh here we go I can push across 
+to the side so that's gonna   how much can there be more than 20 seconds we're 
+going to run out of uh end card on this video I mean don't forget to like And subscribe I guess place your bets on when this 
+equation will end oh my goodness foreign

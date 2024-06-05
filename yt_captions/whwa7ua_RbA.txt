@@ -1,0 +1,138 @@
+i was talking to you about um various things that 
+i've been doing and i was started having one of   those conversations it was like well obviously 
+i'm using this and obviously that's happening   and obviously and you said to me well that's not 
+obvious and i and i realized that there's this   sort of there's that there's a hole in the 
+computer file catalog other than dave brailsford   very bravely trying to say that html5 is a turing 
+complete language we haven't really discussed   a lot of the the set of html5 javascript and css 
+as a whole range of technologies that are now kind   of influencing everything and much as this is old 
+news for a lot of people i thought this would be   a good springboard to launch some other more 
+specific videos from reluctant to bring up uh   professor brailsford's uh conversation with me all 
+those years ago but yeah putting that to one side   things have moved on since that conversation 
+aren't they well they have and the thing is is   they they things were already in motion back 
+then but it's taken as ever you know someone  OUBLISh invents something but then it takes a while 
+before it becomes just pervasive and sort of   standard practice and i wanted to write a plugin 
+for premiere because i'm doing a load of video   editing at the moment and when i downloaded the 
+latest sort of sdk and i was sitting there going  P through doing some bits and pieces i realized that 
+there's this thing that's been in premiere for   quite a while which i hadn't noticed where you 
+can write panels and effectively it's chromium   embedded and it's html5 css and and and 
+javascript to be able to control these things and   this technology is just so pervasive now and 
+it kind of hasn't been covered at all where do   we start with this then what's the first one you 
+want to want to mention well we should start by by   saying you know there's a lot of things that are 
+similar in ways and um there's certain terminology   during this so for example when i say javascript 
+a lot of stuff is also done in typescript which is   a more strongly typed version of javascript but 
+during this conversation when i say javascript   it could also mean typescript and and so we 
+can't really get into the details of that but   i think the power of this technology 
+is that anyone can access it for free   i mean anybody out there who has any kind 
+of computer at all can open up notepad   type in some code and do something run it in a 
+browser or or download node and run it as a as a   as a terminal application and that's what makes it 
+powerful and it kind of reminds me of when i was   six years old and starting on an acorn electron 
+i wrote my first program you could type something   press enter and something happened and we kind 
+of got far away from that with a lot of coding   particularly like windows based and consumer pcs 
+and now with things like visual studio code being   just a free download and obviously a browser a 
+lot more compatible now than they used to be it's   really easy for people to just have an entry point 
+to doing something cool and i really think html5   css and javascript are a really good entry point 
+for people who've never done anything before in   the same way that basic was on an acorn electron 
+or a bbc micro or whatever back in the day   a lot of people don't realize there's loads 
+of places where the html5 css and javascript   family are being used and one place that is 
+being used is in visual studio code if you   go out on the net and watch these programming 
+videos so many people using visual studio code   i think it's the number one ide but that itself 
+is based on a thing that used to be called atom   and is now called electron which i kind of like 
+because of the acorn electron link there but   that is effectively a chromium browser running 
+with you know html5 and css and javascript and   you're kind of got this this desktop app that's 
+actually kind of like a website in a lot of   ways and it's web technology under the hood so the 
+story really starts with the google v8 engine okay   which kind of changed everything it's a javascript 
+engine so back in the day when when sort of   javascript started it was the mozilla lot that 
+came up it was a very simple scripting language   so that it took the commands processed them in 
+real time but obviously that's very very slow   when um google were doing chrome and chromium 
+obviously the open source equivalent they wrote   a thing called the v8 engine which did just 
+in time compiling of javascript so it would   take the javascript compile it so it ran 
+a huge amount faster and of course the the   javascript then was way faster than ever been 
+before and actually became something that could   could to run proper applications from within a 
+within a browser hence we've now got chrome os   and all these progressive web apps and there's 
+a guy called ryan dole back in 2009 so a year   later after google would release the v8 he took 
+the v8 engine and said well what if we don't   use it in the context of the web what if we use 
+javascript as the language and use their compiler   but we allow it to run terminal applications 
+like the old sort of command prompt on windows   or a terminal on linux or mac or whatever we allow 
+terminal applications to be written in javascript   or typescript and that that really kind of changed 
+the landscape for a lot of people because a lot   of people were writing websites where they'd 
+have the html css javascript and then that   would talk to an api over over the internet and 
+that api at the other end might be php or net or   or you know java server page or something 
+like that and it basically allowed you to   write back in code in the same language and same 
+style as your front end code um and it had some   really good advantages so javascript as a language 
+is is is non-blocking so a lot of a lot of um   traditional language so if you look at something 
+like php or net or those those sort of languages   they'll get the first command and then move on 
+to the second move onto the third and it's kind   of in line and if you get to a bit where say you 
+have to do a database lookup it would go off and   look up the stuff on the table and it would wait 
+for that and then come back and do the next line   of code and it would yeah top to bottom down in 
+in the kind of linear way yeah like a bit like   basic i suppose yeah process it like that whereas 
+the way javascript is written is it there's this   there's a thing called the event loop where it 
+so what you do is you put what it needs to do in   the queue so you could send something off and say 
+go and fetch that data from the database and then   when it's finished do this and then while 
+it's waiting for the database to come back   it can move on to the next things that it 
+might do that are not necessarily linked with   requiring that data so the analogy that i've seen 
+many times in videos on that is the equivalent of   if you had a restaurant and there's many tables 
+and you wouldn't want a server coming to the table   and saying what can i get you for for your meal 
+when they say i'd like steak and chips please   and then he goes back to the kitchen and says we 
+need to take and chips that save it and just waits   there with the javascript event loop and the way 
+they cue up the commands the server would go to   the kitchen say he wants steak and chips and then 
+he'd come back and and get the order from the next   table and cue them up and then when the steak and 
+chips is ready it would be put on the side and he   can deliver it back to the table and that allows 
+it to get on and be able to have lots and lots   of concurrent connections and to be able to cope 
+with lots of little sort of micro tasks without   being held up and then if one 
+database call takes a while well   javascript will get on with other things until 
+the database calls finished and it will come back   which makes it perfect for web technology and of 
+course someone then oh well no no js you know that   we can have that in the desktop and we can write 
+apps like that and then then someone took node.js   put the chromium browser on top of it and said 
+well this can be electron so you can write desktop   apps which are cross platform and then you end 
+up with with vs code and you end up with skype   and you're not with all these applications working 
+on this technology and people are using them like   desktop and probably don't realize that at the 
+core it's just javascript and css and html you   know it's just all the same stuff that's powering 
+gmail and facebook it reminds me a little bit of   technology that obviously and actually i'll 
+say happily died out flash right it's it's   it's a respect it's interesting because yeah 
+flash flash was obviously it was was a closed   system whereas this is open you know node is 
+open source chromium is open source electron is   open source visual studio code that microsoft 
+write is open source all of these things are it's the simplicity of it you can get notepad 
+you can get any notepad thing or whatever the   equivalent is in mac or linux you get that 
+any text editor and just write something and   run it and it doesn't require a huge amount of 
+overhead whereas to write something in flash or   do something in flash you had to have the adobe 
+software to be able to create the flash it was   proprietary right that was the problem there right 
+yeah it's proprietary it's it's it's so html5   and and that killed flash thanks to pretty much 
+steve jobs not including it on the iphone and kind   of said no we don't want to go that route this is 
+a and he was completely right although people were   angry with him at the time he was completely right 
+to kind of ditch the flash technology so yeah   all of that has come in and replaced 
+what flash used to do that would fill in   but in a much more set of open standards 
+and and of course because of that the whole   community has flourished and they've taken 
+things that were never intended for use outside   the web and put them on the desktop and it's just 
+stunning to see what you can what you can do now   node which is really was was the key after the 
+v8 engine of being able to compile javascript   node was the the thing that that broke out of just 
+being web technology but then from there you had   the node package manager which i'm sure a lot of 
+viewers would have used npm which is very similar   to to the way um you'd use that get or whatever on 
+on on ubuntu or you'd use any kind of repository   which allowed you to just install whatever node 
+module you want so if you want something that can   root so you get a web address say slash user slash 
+whatever and you want it to run this piece of code   when you get that url you can install express 
+you know it's very simple one line you install   that module and it allows you and and again it 
+opened up um it opened up a lot of opportunities   for people who only had been programming in 
+web technologies to suddenly be able to enter   areas that they would have had to have learned c 
+or c plus plus or you know c sharp or something   like that to do the more you look round now when 
+you turn your tv on and you see something come up   the more chances are that you're actually 
+interacting with this web technology which   really is has been a revolution since 2008 because 
+of google creating the v8 engine and then node and   these other sort of platforms that take use of 
+that v8 engine i love the fact that you know   i started an acorn electron the predecessor to 
+that was the acorn atom and now it's kind of like   atom and now electron it feels feels like there's 
+someone having a nod back to those beautiful sort   of early 80s days of british computing which which 
+just you know just adds a bonus to me all we need   now is someone running the acorn and the electron 
+stuff on a raspberry pi and the circle is complete   well i mean that's the thing you can run i mean 
+many people out there i mean i've i've written um   i've written a couple of apis that i use to 
+control some things at home that are in node   that do run on a raspberry pi over wi-fi and 
+i can i can control various bits and pieces i   had something which was moving the knobs on my 
+amps for me so i could sit down stairs and turn   up my amp and a little motor would turn the knob 
+on my amp and that was done via node things that   i never thought were possible to do for example 
+putting a mixing desk in a browser and being able   to have all the channels of a song and be able to 
+turn up and down the bass drum and the snare drum   and there's the audio apis that sit underneath 
+the browser to actually do the hardcore stuff but   you're interacting with that with javascript and 
+doing stuff that 20 years ago would have been just   out of the league of someone like me to 
+be able to write you need a whole team   of programmers to do and now you can write 
+it in a web browser it's it's fascinating   i've bought the rights to use that 
+picture in any derivative works from it   so if i then reverse engineer the audio from that 
+picture can i use the audio because it came from   the picture which is in this column so sometimes 
+we mix diagonals so it'll be a b c d or a b c d   MANUAL PUBLISH

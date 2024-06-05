@@ -1,0 +1,95 @@
+I am Bjarne Stroustrup. I am the 
+ designer and original implementer of C++. Hey everyone, James Murphy here. This is a joint interview that 
+ I did with Tom from Context Free. We're interviewing 
+ Bjarne Stroustrup, the creator of C++. I can tell that Bjarne deeply cares 
+ about the language and the people who use it. So please enjoy his perspective. Once you finish this video, don't forget 
+ to check out Tom's channel, Context Free, where you can find 
+ the other half of the interview. Even back in, let's say, 2014, You were already talking about 
+ things like concepts, modules, and ranges, which are only now being 
+ implemented in C++ 20 and C++ 23. So, my question is, for today, what are those things that 
+ you're thinking about for C++ 32? Okay, 32 is probably a bit far in the future for me. But let me just point out one thing. I have to start talking to convince 
+ people that certain things are important. Even today, there are lots of 
+ people that don't quite see the step that concepts give to the user templates. And similarly today, I'm having a lot 
+ of trouble getting people to understand that coroutines really are not just cool, they are also important. And one of the things that I hope for C++ 23 is to get better standard library support 
+ for coroutines to make it easier to use them. Currently, they're sort of an expert-level entity. And that's not what they're meant to do. It's very easy to write code with coroutines. For things where you really need a 
+ stream of data generated or pipelined, it's much easier to write coroutine code than it is to write it with you 
+ managing the state and saving it, restoring it. Again, it's a simplification. Apart from that, it runs faster. But people have to learn 
+ that, and they're not going to learn it until they get the support 
+ from the library that they deserve. Okay, then I end up talking about 
+ things for many years before it happens. I can tell about what I'm thinking about now. But this is by definition half-baked. Please remember that. Of course. I would very much like to see static reflection. Reflection is, a dynamic reflection is, basically your code works and a graph structure that does something. And you lose essentially all type checking. You lose the ability to understand the code because it makes it running the interpreter in the background. And it stops what you are doing more or less. And what you are doing is not strongly typed. So, I would like to get the effect 
+ of that without the runtime aspect. Moving that kind of 
+ runtime stuff to compile-time. So basically what I want to say  I have a program here generate for me a JSON reader and writer for these three types. There's been work going on about that. It seems to have stopped a bit just now. We have to remember 
+ there's a pandemic going on. It's hard to meet and hard to talk about the design of major features to support new ways of thinking and new ways of writing code. You need face-to-face discussions, in my opinion. Definitely I'm still dreaming of building these distributed systems.   That's probably what you meant by C++ 36. That's probably where we're going with that. Maybe I can build the system I 
+ was trying to build back in '79 in a decade. Let me just add one thing.   Modules are one of 
+ the major features of C++20. And the standard library has not been modularized. This must happen so that it becomes easier to use. I mean, I have run things that compile seven, ten, fifty times faster using modules. And again, you need 
+ some support in the build systems and some standards for 
+ it to get the benefits from that. And the other thing that we are 
+ going to see in the relatively near future, maybe not in C++23 but maybe in C++26, is a general model of concurrency, which again will build up towards the 
+ aim of dealing with more distributed things. Now, of course, C++ is a very 
+ complicated language right now. You can do a lot of different paradigms, which is why I find the C++ 
+ Core Guidelines very fascinating. I find that it simplifies and 
+ focuses a view of the language. I'm curious how the community views 
+ that as a whole and also, what's the state of automated verification of 
+ compliance to the C++ Core Guidelines? The Core Guidelines came along because I realized that 
+ you cannot simplify the language. If you make a small, incompatible change, you can annoy a couple 
+ of hundred thousand people. So why don't we make a set of 
+ rules for what we think modern C++ is?   What about for people 
+ that are maybe more novice, they are just getting into C++ or maybe don't know C++ 
+ at all but are thinking of learning it, how would you recommend for those 
+ people looking to get into C++ get started? The way I think about it 
+ is there are at least two such groups. There's a large group of 
+ people who have programmed for a while, sometimes in C, sometimes in C++, 
+ sometimes in other languages, that wants to know the fundamentals of C++. You can't put them through a standard textbook because it's boring, and they don't really 
+ need a chapter to be told how to write a for-loop. This is my answer to that question towards C++. I realized that you have to have 
+ something that you can read over a weekend and tell you what is in C++. People come in, and they don't 
+ know that there are templates, for instance. Or they come in and they 
+ say, "Oh, you have concurrency support". Or "There's a library for regular expressions. 
+ I've never heard of that stuff." This is what this one is for. Over the weekend, on a transcontinental flight. 
+ That's the kind of book. Now, I also got a job some years 
+ ago as a professor to teach freshmen. And that's a different group. At the time, they either, half 
+ didn't know anything about programming. And the other half weren't particularly good at it. Even though they thought that some 
+ of them thought they were absolute geniuses. These are sort of natural freshmen, right? These days, more people have programmed before. But they have no clue why they're doing it. Or what they're doing. They just want to build 
+ a game or something like that. What's the quickest way of throwing things together. So, I had to make a course. And then I decided I had to write a textbook. So, I've run many thousands of students through it. That's how I'm reasonably confident that it works. And other professors have not done the same. So I'm reasonably confident it's not just me. And by the way, I did not put my books 
+ on the side because I was being interviewed. They're sitting on the side of my desk because I keep getting questions 
+ about things where the answers are in the book. This is this thing here. And you don't do that over a weekend. This is meant for a student to 
+ be able to do in about three months, taking a four-course thing. There is a third group that I care a lot about and 
+ think a lot about, and I don't have a good solution for them. Those are the experts in 
+ other fields who happen to use C++. That is, a biologist who wants to 
+ be a biologist, doesn't want to be a C++ expert. Sometimes they use some scripting language like Python, JavaScript, or MATLAB. And then they notice that it's 
+ running 50 times slower than it should. And they would like to get on board and 
+ do a little bit of tuning to get it to run somewhat faster. I don't have a really 
+ good answer for how you help those. Because the biologist thinks 
+ differently from the physicist and so on. But if somebody has an 
+ idea, they should run with it. You talked about the committee. What is the process like 
+ of being on a committee meeting? What do you guys do? What 
+ do you talk about? How does it work? The first thing to understand is 
+ that the standards committee is enormous. It is unbelievably large. The last meeting in Prague when we 
+ voted out C++20, there were 250 people there. There are more people 
+ because not everybody turns up. So, my guess is about 350 members. How on earth do you have a rational process 
+ with that many people without a management? The way you run a company with 350 
+ employees is that you have rewards and penalties. These are two things we don't 
+ have and can't have in the standards committee. These are volunteers, these are enthusiasts. They are there to do good. And not everybody's idea of good is the same. So, we have meetings in between the meetings. And there's a lot of email discussions. There's a lot of papers being written. These are the ones we discuss. And then it goes through a process before we vote. The way the process works 
+ is we split up into many groups. The two evolution groups are 
+ discussing what should go into the language. And when they have decided 
+ and voted it should go in, they pass it over to groups that try 
+ to integrate the text with the standard text. We have the standards committee 
+ meeting is where the technical people vote. And agree to something. It is then given to the ISO, 
+ which has the nations vote on it. As this happens, the implementers 
+ work so we get better feedback. By that time, the final vote 
+ comes, the first compilers start coming out. When it comes to these kinds 
+ of interviews or Ask Me Anything, is there any question you wish 
+ people would ask you but they haven't asked? You know, that's a standard 
+ question that a lot of people ask me. I usually, for these very technical interviews, try to drift a little bit into some social issues. A lot of people are in a desperate hurry. They want to get their current 
+ job or their current ideas done immediately. And I'm saying, wait a minute, this is life. It's not a sprint; it's a long-distance run. Make sure you don't burn out. Make sure you do other things 
+ than programming and system building. Sometimes take care of the family. Go see something. And also spend some time learning new stuff, foundational stuff instead 
+ of getting more and more specialized. A lot of weaknesses I find 
+ in the students are in communication. A lot of the best programmers are classical geeks. But it doesn't matter how smart you are 
+ if you can't communicate your ideas to others. Then you could just as 
+ well do sudoku or something. You have to get the ideas across somehow. And that involves communication. It means writing; it means speaking. I mean, there are people 
+ that are too busy to write tutorials, too busy to write comments, too busy to do anything but getting the code. And then they expect us to pick 
+ up the code and understand what it's for. And why we should use it. No, you have to explain; you have 
+ to be careful; you have to help your users. I was just reading something. Who said it? But basically, education is about 
+ what and why, and training is about how. I'm mostly interested in education. Though, of course, I can't 
+ avoid telling people how sometimes. Why did you choose not to use Simula  
+directly when you started C++ and so on? I was a young researcher just 
+ arrived at Bell Labs. And I realized by looking at what people...

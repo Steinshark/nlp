@@ -1,0 +1,139 @@
+- It won't fit, what am I gonna do? - Hey there, little buddy. Don't you worry? That's the SUGO 16, a case that opens up so you can slide your
+GPU in from the front, (audience laughs) giving it nearly the performance
+potential of a mid-tower but in a tiny little enclosure. (audience laughs) It's kind of like you. - Wow, can I help? - You sure can (claps) by listening to this message
+from our sponsor, Graphus. Graphus is an automated
+phishing defense solution for Office 365 and G Suite emails that stops current and
+emerging email threats without you having to lift a finger. Get 30% off list price
+and 30% off onboarding at https://graphus.ai/linus. (upbeat electronic music) There've been a number
+of conflicting trends in the PC building space
+over the last few years. Consumers want their cases
+to be smaller and more quiet, while GPUs keep getting
+larger and more power hungry, meaning they require more cooling. Now, theoretically, the
+solution to this is simple. Just a nip here, a tuck there, get rid of all this dead space, and you're good to go. At least, as long as you can
+find a way to get fresh air, from outside the case, to
+your hottest components. On that subject, let's
+have a look at them. Spread out over our Northern
+Lights desk pad here, https://lttstore.com, we've got everything we need, starting with our AORUS
+X570 I PRO WIFI motherboard. This thing is not cheap, at $210, but it's got PCIe Gen 4, room for two M.2 SSDs, and ample cooling for both
+the chip set and the VRMs, which we are going to
+need because for our CPU, we've gone with a Ryzen 9 5900X. It runs a little toasty, but if we can get all 12 cores boosting up to their maximum, we are gonna be pushing the limits of what a small form factor
+gaming/content creation system can do. And at least, unlike the
+alternative from Intel, it might be possible to cool this thing with a single 120mm radiator. We've got two options for that. The MasterLiquid ML120L V2 RGB and the Arctic Cooling Liquid Freezer 120 are both worth around 75 USD. So the question becomes,
+which trade-off do we prefer?. Thin radiator, 90mm front fan, and then silent, full-size
+ATX power supply, or thick radiator, 120mm front fan, and little SFX-L power supply? Now as an SFX-L fan boy, obviously I'm gonna go with this incredible 1000W
+unit from SilverStone. But it should be noted that we could have easily saved over $50 and still gotten something like a Seasonic PRIME
+TX-850 Watt Titanium, which would have been basically
+silent in this config, albeit at the cost of case airflow and CPU cooling capacity. For Ram, since we've basically
+given up all pretense at this being an economical
+build, we've gone with 32GB of Crucial Ballistix
+MAX 4400MT/s CL19 memory. Woohoo. Gonna be a little bit fast. And then we've gone with a Sabrent Rocket 1TB Gen 4 NVMe SSD for our boot drive. Optionally, we could add something like a
+2 or a 4TB WD Green 3.5" HDD, but I'm not sure if we're gonna bother, because what are we gonna do
+with that hard drive after. You know what, sure. Screw it. We're gonna put it in the hard drive. (baby babbles) We lose the front fan? We are not gonna put in the hard drive. If we needed more space, we'd go with an 8TB Rocket Q. Now that our motherboard's prepped, we're gonna go ahead
+and open this baby up. With any small form factor
+case, I can tell you, you're gonna want to remove as
+many pieces of it as you can in order to get as much
+access to it as you can, because cable-managing these things is always a bit of a nightmare. And in a design that
+requires the motherboard to go all the way to the
+back of the motherboard tray, like this one, it's especially important. This is not a sandwich style case, so that means that almost all the building is gonna be done from one side. I'm just gonna go ahead and lay it down. Not like that, because then you guys wouldn't be able to see what I'm doing. Motherboard goes in upside down compared to what is typical. These front panel connectors
+are sort of unreasonably long, considering that they're gonna
+go into an ITX motherboard and they're only this far away, but the reason for that is
+actually a pretty good one. And that's because, if
+you have a cooler here, or a power supply here, or other things that are interfering at the front of the case, you need to be able to go around them. So you just end up with all this extra slack, unfortunately. Here's another cool thing. SilverStone's documentation
+doesn't seem to mention it, but this looks like an SSD
+mount in the bottom here, and it lines up as an SSD mount. Maybe they intended for you
+to put something else there, but gosh, darn it, I'm gonna put in another
+7.6TB of solid state storage. Unfortunately, this
+means adding more cables, which in the case of our state
+of data cables, no problem, because I managed to
+find one of these old, super small form factor,
+friendly, SilverStone cables, but in the case of our power cable, means adding considerable
+bulk to the build with that plugged into the board side, and kinda cable managed down here, we can talk about a benefit
+of modular power supplies that doesn't really come
+up with normal sized cases. And that is that they allow you to plug in the component
+side of your cables before you actually have
+the power supply itself anywhere near the build. And this is great because it means that if your power supply
+would have been in the way of plugging this stuff in, you don't really have to deal with that. Ah, come on, sideways is
+considerably more ergonomic. And we've got 8-pin EPS. Oh my goodness. I wish I had put this on before I even put the
+motherboard in at this point. Look how deeply buried in there it is. And the problem is that,
+as a right-handed person, I can't even get the hand
+in there to guide it in. We're going left-handed,
+ladies and gentlemen. Okay. It's all coming together. Now it's time to talk about the fans. A conventional cooling layout would have us drawing air
+in at the front bottom, and then exhausting from
+the back and the top, but we are gonna do the opposite today. In order to get the freshest possible air to our water cooling radiator, here, and to our GPU, which is gonna be up here, we're gonna draw air
+in at the back and top, and then we're gonna blow
+it all out the front. So when this thing's going full bore, if you were, you know,
+having a cold gaming day, your hands are cold, you can
+put your hands in front of it. You'd have about a, probably
+a solid 500-600W space heater just blowing air on you. Alright, so we want this
+radiator in a pole configuration. That just means that cleaning it off is gonna be a little bit
+easier in the future. So you can see we're using, okay here we go, this fan,
+to pull air in this way. (chuckles) One second. One nice thing about a Noctua NF-F12 fans is they have these nice
+little airflow guides that keep anything from accidentally bumping
+into the fan blades, at least on the backside. They don't have anything like
+that on the front, however. So we're gonna grab one of these old school style wire fan grills, put that on there then
+now into our front fan, because this is going to make it so that, when we're packing in our power supply, and all these cables,
+nothing's gonna get in the way, and prevent that fan from spinning. And now you can really see why we weren't able to have a
+full-size exhaust fan here along with an ATX power supply. So the ATX power supply would
+go all the way over to here, meaning that we're limited to just this. But our SFX-L power supply, oh, no, this guy... Oh, you know what I think I want this to, we're gonna use this to exhaust
+air from the system, yeah. 1, 2, 3, go. Yes! Success. So wait, what just happened? Oh. How'd it... Really? Oh, interesting. So this goes under the GPU, right, because this is the front of the case, and you don't wanna be
+plugging your power supply into the front of your stupid computer, so it just chills here. Oh, SilverStone, you're so creative. You have to give them credit for that. You can never take that
+away from SilverStone. Bringing us finally to the
+big moment, big reveal. It's true. You cannot fit the GPU in, because of this power pass-through, and that's why they opened
+up the front of the case, like this, so you can
+slide it in from here. Cool. Right. Actually, before I do that though, I never even mentioned
+what card we're using. This is an RTX 3070 from Zotac that we specifically chose for its shorter length at
+the expense of taller height, because the case is wide
+enough to fit a tall card, but it's not long enough to fit a lot of the full length cards on the market. Okay. I mean, that's not bad. This front fan has pretty
+unimpeded access to, you know, pull air away, and I
+just need one cable tie. Man, this is kind of a sick machine. Our CPU is being cooled by this radiator that's drawing fresh air in, fresh, brand new, ambient
+air from the outside. And our GPU is, okay, well, our GPU, we have some concerns,
+because theoretically, it's right up against this
+top intake right here, drawing in equally fresh air, meaning that our hottest components are being cooled by ambient air. Unfortunately, this gap here means that the GPU could end up
+kind of hotboxing itself, so to speak. Fortunately, we have
+an idea to solve that. So we're gonna test the
+thermals in this case two ways. First, like this, then we're gonna pop
+this front panel back off and put a little shroud in here, you see that, like that, so that the GPU is sucking in only fresh headshots, okay? Because it's got a shroud. It's a... Hi Mike. No lie, man, I don't think I've ever seen anything quite like it in
+a small form factor build. This is a really, really cool layout. And I mean that quite literally. We haven't quite reached equilibrium yet. You can see that each
+run of Cinebench here is seeing the CPU temps
+spike a little bit higher, but this is a 5900-freaking-X
+running at 4GHz all core, that is still, even when it settles in, just looking at the way this
+curve is flattening out, not going to reach higher
+than about 75 degrees. And our GPU is settling in around 70, probably around 75 as well. That's crazy. Like normally with these kinds
+of small form factor builds, we would say, okay, you know, in games it doesn't thermal throttle, but if you hit it with a full
+synthetic stress test, right, like fully loading the CPU and the GPU, you're gonna have to expect that in an unrealistic load
+like that it thermal throttles. But this just doesn't, no
+matter what we do to it. And that's exactly where we ended up, our highest peak on the
+CPU is 78 degrees, 78.4. And our GPU ended up at 73
+degrees with the most impressive part being, listen to this. (computer fans hum very quietly) Oh wow. The case is freaking hot at the front. Holy crap. Everywhere else though, not bad, and the internal components, not bad either. Now it's time to see if we
+can kick things up a notch. So let's go ahead and position our shroud. We're not gonna go all the
+way up to the card here, because, as we learned when we tried to make our
+own janky Noctua edition GPU, you don't actually wanna
+block off these exhaust fins. So we're just gonna go
+kinda to here, okay? So we're trying to block it off, so that GPU only pulls in fresh air. Shroud works, confirmed. We dropped from 73 to 71, 71.5 degrees. And we went from around 2100RPM
+and changed to about 2070. So not as dramatic a
+difference as I might've hoped, and certainly not as good as
+just taking the side panel off and giving it a little
+bit more room to breathe, but a lot better than nothing. But wait, there's more. What's this? This is our, this is our GPU, isn't it? No, we have gone one step farther, and we've actually put an
+AMD Radeon 6800 XT in here. It just barely fits. And get this we are still
+topped out at 79 degrees. (computer fans hum very quietly) It's still whisper quiet, and our CPU still had a
+maximum of 78 degrees. It's like right there, (chuckles) right there at the front of the case. Freaking crazy. They made such efficient
+use of this thing, to the point where if they had made it even 1cm longer, 10mm longer, they would have been
+able to put a 3080 in it, and I think with this design, they might've actually
+gotten away with that, from a cooling perspective. 10mm wider, they would've
+been able to fit a 120mm fan with a full-size ATX power supply. And if they'd made it just 5mm taller, they could have actually fit
+triple slot GPUs in here. Honestly, though, even with all those
+little compromises made, I am really, really happy with this case. I think it's super cool and unique, and when it comes out, either in December of this
+year or early next year, I think this thing is
+gonna be a sleeper hit. Just like, oh shoot, I
+hit the power button. Just like, I think, our sponsor
+is gonna be a sleeper hit. Get the best prices and best
+selection on computer hardware and everything else technology at any one of Micro Center's
+25 locations across the US. You can check out their custom PC builder to spec out the best PC for your budget. It'll help you ensure all
+your parts are compatible and you can find stock available at your nearest Micro Center location. Then you just add it to cart and arrange for same day in store pickup. For a fee, you can check the box marked
+"Same Day Pro Assembly," and Micro Center's expert technicians will assemble your PC for you. If you want help deciding what parts to put in your new custom gaming PC, just join the online
+Micro Center Community. It's a great place to discuss
+tech with fellow enthusiasts. And new Micro Center customers
+can get a free 240GB SSD at the link down below. No purchase necessary,
+valid in-store only, limit one coupon per customer. If you guys wanna see another really cool small form factor case that can handle powerful components, why not check out our
+video of the Louqe RAW S1. I don't like it as much as this one, but it's definitely got a
+more sort of unique look to it from the outside. This thing's just awesome.

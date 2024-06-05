@@ -1,0 +1,132 @@
+- [linus] took me a
+while to find that bug. but yeah, that, that was, that was bs. that was bs right there. that was crap. game development is
+notorious for long hours, job instability and early burnout. so when gigabyte reached
+out to sponsor this video featuring their aero 16
+and aero 17 creator laptops we thought, "hey, these
+things are super powerful. why don't we try them out as a game development workstation?" i mean, how hard could it really be? - [plouffe] it's really hard. seriously. - fun fact. this guy actually came to us from the game development industry. so all right plouffe, what did you manage to make in the 12 hours that i
+budgeted for this project? i mean, it's pretty much drag
+and drop these days, right? - sort of actually, i
+mean, in some ways, yes, it's a lot easier than 20 years ago. instead of creating an
+engine from scratch, you can purchase - or depending on your business model and
+revenue, even freely use - a number of development kits like unreal engine, gamemaker studio or unity like we've got here today. they graciously lent us a pro
+license to make this video. - yep. that's a pretty normal
+thing that happens a lot. - okay. - suck it haters. - anyway, that's the game, that's it. - yeah. enough of- enough. i know better than to
+think that's the game. oh god. oh my, what is this? (plouffe laughs) oh my goodness. - [plouffe] so when i
+went to make this guy, the actual sprite like it
+didn't work for some reason. so i had to use a different sprite for the jumping and falling animations so it would actually show up. otherwise you'd be invisible
+while you were in the air. - [linus] ah cool. that would, oh- - [plouffe] hell yeah. - [linus] so as you guys can see it's a simple 2d platformer. even though plouffe has
+game development experience it's mostly in level design and art. so rather than trying to,
+scratch build something he chose a really excellent tutorial from coding in flow that you guys could actually also follow along with. we're gonna have that link down below. now that i know that
+you're a level designer i actually have much, much higher- - [plouffe] expectations. - [linus] yeah. what's
+funny about this is that- - [plouffe] please don't. please don't have high expectations. i made it in like 12 hours. - [linus] the thing is that,
+like, now that i know that someone else did all the
+animation and programming- - [plouffe] sure. - [linus] and that your background
+actually is level design. no, i do have high expectations. i mean, i really feel like that saw was placed very poorly for- - [plouffe] what? - [linus] for level flow. - [plouffe] oh sure. yeah. this is level one and this
+should be a lot easier. (linus laughs) - [linus] okay. - considering the time invested it is kind of impressive though. so we used free assets from the unity asset store. namely pixel adventure 1 by pixel frog, free casual game sfx by dustyroom and casual game bgm #5 by b.g.m. and there's some pretty
+cool details in here. - yeah. everything's animated. the saws are actually rotating. they're not animated to rotate. so they're physically like
+rotating in that space. one of the problems with that is that it's got the bounds box on it or your collision box. so if the collision box
+isn't perfectly square it'll kill you a little differently based on where the saw is. it's fully animated,
+there's background music. i added like an actual start screen. there's a end screen for
+when you get to the end. see there's the checker
+flag, you're a winner. and if this was actually built out the quit button should
+actually close the game. right it doesn't do
+anything because we're just in unity and it's called jump for joy. it's the best game ever. it's not. - [linus] i mean this is really cool. so whether it's an indie, aaa, or project that lies somewhere in between you can use these types of templates as a base to start from,
+and then slowly add maps, unique gameplay mechanics,
+hazards, and enemies and bring your creation to life. i mean, it is really cool when you think about how someone with absolutely zero
+experience could come in and create something like this though. - [plouffe] yeah. it, it might take them a few more hours. a few tutorials in, i was actually starting to
+move forward a little bit on my own 'cause i - [linus] 'cause you
+remembered how to do it? - [plouffe] i remembered how to do it. yeah. not, not so much the coding aspect of it because i was never a programmer. i didn't do well in all
+my programming classes but i can follow a script, and i know when to look for missing things that should be there. - [linus] tell me something though. how does the sponsor fit into all this? - [plouffe] so developer kits and engines, they have become a bit
+more robust over the years but you still need assets and you need code to tell
+those assets what to do. so you write your own
+code in visual studio for c, and then for smaller
+games or light scripts it doesn't take a lot
+out of processing power. a general rule is that
+outside of specific roles like audio design and, you
+know, high poly model creation you only need a bit more
+performance to develop the game than your recommended specs to run it. and the main reason you
+even need that extra bit is that the optimization happens at the end. - [linus] which would
+be why so many games end up being left poorly optimized because that's when you ran outta money. i mean, what percentage of the
+game development process is that tidying everything up optimization? - it's the 80/20 rule, right? 80% of your work is happening
+at the end of the project. - [linus] so then what we
+showed here today - no offense - could have been done on
+a pretty basic laptop. - [plouffe] yeah. - [linus] but with either the
+aero 16 or the aero 17, i mean would you say we've got
+enough grunt to deal with aaa game development like a god of war or horizon level game? i mean, they've got a
+core i9, rtx 3080 ti level mobile gpu ddr5, desktop
+class performance, right? - [plouffe] yeah. i mean, obviously we didn't have the assets on hand to load up a project like that. but from my past experience, other than waiting longer when making
+major changes or compiling code or building the project,
+the experience isn't that different compared
+to a high end desktop. - [linus] obviously the biggest benefit of using a laptop for
+our project like this is the portability and built-in battery. i mean, last friday we actually
+lost power to our building. - [plouffe] i had to leave.
+my apartment still had power so i basically saved the project, packed the laptop up and headed home. luckily it wasn't raining, but if you got caught in
+the rain with a laptop make sure to get subscribed for our upcoming video
+about laptop repair. - [linus] yeah. that one's
+gonna be really good. colin's working on that. we've got a bunch of different laptops and we're gonna like
+simulate horrible situations and see how bad it is to repair them. now, i don't know what your deal is here. maybe you just wanna flex a little bit but you said i'm supposed to
+try your student project next. - [plouffe] oh yeah, sure. so if we have time - not to flex - - [linus] let's do it,
+let's do it. i wanna try it. - [plouffe] all right, all right. all right, it's great. - [linus] heroes of space, here we go. whoa, whoa, whoa. wow. i'm getting like a very
+captain keen kind of vibe. - [plouffe] yeah. we were
+going for like metal slug meets like captain keen or something similar. there's a weird bug where
+his- what's going on there? oh my god. okay. that bug's
+not supposed to happen. - [linus] what? keep going. that- - [plouffe] so those are the
+projectiles and i don't know- but i don't know why
+they're getting stuck. it worked fine at home. oh my god. okay. something's messed up. maybe it's the aspect ratio or something. - [linus] oh, whoa. i just gotta go right up to him. i mean what's the point of
+the gun, if you have to- - [plouffe] it's broken. - [linus] sword gun. i
+mean he did work on gears. - [plouffe] it's broken. i've worked on real games. this, this one is a real game. it's just also super broken. - [linus] did i die? am i stuck here? - [plouffe] no, i think you're stuck. can you shoot 'em? can you
+shoot 'em and kill 'em? - [linus] nope. - [plouffe] you're just
+slowly taking damage. - [linus] oh. - [plouffe] nice. - [linus] are- are they supposed
+to be shooting at me too? - [plouffe] yeah. yeah. all the projectiles are
+just broken right now. - [linus] oh. - [plouffe] i don't know why. normally they shoot at you and stuff. it worked when i played
+it, i was like, oh sweet. everything works still. - [linus] and it's like 3d and everything. - [plouffe] yeah. so we- - [linus] ow. - [plouffe] yeah, these guys drop bombs and they're a little hard to shoot when your projectiles
+don't work properly. - [linus] okay. let's
+try loading it back up. i wanna see it working properly. - [plouffe] yeah, sure. okay. now just shoot and see if everything- hey, see? i knew it would work. - [linus] wow. it's got
+like recoil and everything. - [plouffe] yeah, yeah.
+it's got screen shake. we worked a lot to actually get that stuff to feel really good. there's a whole video by
+i think verbia [vlambeer] or something where they talk about like how screen
+shake and just knock-back makes a game feel a lot better. - [linus] how much fun
+would it be to play a game sitting right next to one
+of the lead developers so that you can criticize them
+in-person when things suck. - [plouffe] like a bomb falls on top. - [linus] it would be exactly this fun. and it's great. final level. ah, is there a boss? - [plouffe] there's a
+boss. yeah. there's a boss. (both cheer) that's pretty much it. i don't think we really
+had an end screen anyway. - [linus] so a lot of your
+stuff wouldn't really benefit from like color-calibrated
+4k oled display. - [plouffe] no. - [linus] but 16:10 aspect ratio. ability to hook up up to
+three additional displays. like there's no way you'd
+work on a single monitor and do development. - [plouffe] no, no
+there's too much you need. - [linus] so you got
+two thunderbolt 4 ports, one hdmi port with the
+included adapter ma-jiggy. it is sort of a bummer for like a more
+professional-oriented machine that you have to have an adapter
+for ethernet, usb type a, got a displayport and an hdmi on it. but at least they include
+it and it's compact. so you know, you don't have to like run out and buy extra stuff. so then, final question,
+going back to the first game. was making that game easy? - [plouffe] god. no. oh, you meant the first game. - [linus] yeah. - [plouffe] oh, i thought
+you meant this one. - [linus] no. - [plouffe] oh. yeah, the
+first game was a lot easier. - [linus] so if you don't
+mind using pre-made assets and following tutorials,
+making a game can be easy but not only will that
+barely get you out the door anytime something does go wrong due to a missed tutorial
+step or a typo in your code, you're gonna have a much
+harder time troubleshooting. so for plouffe, obviously having enough
+experience to build something like the second game we looked at today, it's gonna help a fair bit. but if you don't know anything about c#, you might not know to look
+for a missing semicolon or misplaced bracket, let
+alone something more complex. so if you've never used
+unity or another program common issues that people
+might fix every day could seem as mysterious
+as our product lineup. just what will come next at
+lttstore.com? screwdriver? ah, no, no, probably other things. but in the meantime, you can check out our sweatpants. big thanks to gigabyte
+for sponsoring this video so that we could pay
+plouffe to develop games. once again, this time using
+the aero 16 creator laptop - not your best work - on
+top of the great specs we talked about earlier it's also just got solid construction with a cnc'd aluminum body. it comes with windows hello and microsoft azure ai and wi-fi 6e to to make sure you've always got the
+best wireless connection whenever you're not using the included wired ethernet connection when you're downloading or
+uploading huge asset files. so you can check it out
+at the link down below. thanks for watching. are you a developer looking
+for something to take to and from work or are you thinking about making indie games
+in your spare time? let us know in the comments
+and if you like this video make sure to check out our
+tour of monolith productions from a few years ago to see
+what a real studio looks like. hint, it has a
+lot of people who look kind of like this in it, but
+more, more neck on the beard. - [plouffe] oh, whoa, whoa.

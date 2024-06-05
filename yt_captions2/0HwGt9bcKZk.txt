@@ -1,0 +1,140 @@
+- a year ago, we showed
+you how to put together a decent setup for video
+conferencing and streaming for anywhere from zero to $50. and, okay, i lied a little
+to get your attention. you sound pretty darn good
+and, well, you're breathtaking. (audience cheering)
+(keanu laughs) - you're breathtaking! - but, that doesn't mean
+there's no room for improvement. somewhere between our
+previous $0 and $3,000 setups has got to be a middle ground that levels up your streaming game without breaking the bank. and to show you how much each upgrade changes the experience, own3d
+pro sponsored this video where we've recreated our
+original $0 streaming rig, and we will be upgrading
+it piece-by-piece. that way you can judge for yourself if our choices were worthwhile. so i hope you picked good stuff because this still looks and sounds pretty darn good, don't it? (upbeat music) (upbeat jaunty music)
+(videotape squeaking) there we are back to the original lighting and still not bad considering the budget. of course, we've got
+some more money to spend. so where do we start? sound. if you've got some money left over, it is hard to go wrong
+with an audio upgrade. or sort of. many of you will already
+know that gaming microphones tend to compromise performance for aesthetics, flashy lights, and sponsorships for e-sports teams. but while the conventional
+wisdom used to be, "well, the people in the know
+are gonna go get a usb mic." these days, once you're
+past about the $50 point, there really isn't any reason to do that. even with the blue snowball
+being as decent as it is. the thing is, they just don't have the same internal space and isolation that a good dedicated audio interface and a standalone analog microphone will. for $65 you can get a behringer umc22, which has dual inputs, a trs jack, and a combo xlr-trs connector. it's got midas preamps, which are a little bit
+better than you'd find on behringer's basic units. and it's got three more
+trs jacks for headphones, and stereo studio monitors for when it's time to
+upgrade your listening setup. of course, since we're not going
+for an all-in-one solution, now we need to choose a microphone with condenser and dynamic microphones being the gotos for most
+streamers and podcasters. dynamic microphones are known for their exceptional noise isolation, and the sm48, which you're
+listening to right now, is no exception. it's a hammer-style mic like you might see at an event or concert, but that doesn't mean it's
+only meant for stage use. dynamic microphones do
+have some downsides. they tend to have a very
+tight cardioid pickup pattern, which means that if you lean
+or turn away from your mic you'll almost immediately sound muffled. but if you live or work in a
+room that has a lot of reverb or noisy air conditioning or something, this bug quickly turns
+into more of a feature. also, because dynamic microphones
+don't use phantom power, they can require a huge amount
+of gain to hear clearly. that means that some
+mic and interface combos may require a gain-boosting
+add-on like a cloudlifter. though ours is fine without. they also naturally cut off
+the high-end fairly early, which can result in them
+sounding somewhat flat without any additional eqing. but we'll talk more about that later. condenser mics, on the other hand, tend to have a more open pickup pattern, meaning more background noise. but their large diaphragms also mean that they tend to capture
+those noises with more clarity and a wider frequency response, particularly on the high-end. if you have a room that's
+already quiet as is, and you'll be close to your microphone, but you might move around a bit, well, there's a reason that the $100 audio-technica at2020 is so popular. it can sound fantastic. however, if you're planning
+on using a condenser you will need 48-volt phantom
+power on your interface. now our behringer umc22 did
+end up doing a pretty nice job with the aston spirit mic
+that i'm using at the moment. but at $450, i think the
+biggest takeaway here is how much bang for the buck we had with our $40 dynamic mic. after a cable and an
+inexpensive stand, then, that puts us at $130 for sound. meaning we can now turn
+our attention to video. and as crazy as this might
+sound, if you're a tinkerer i would strongly recommend
+buying an old flagship phone and a cheap tripod on ebay, rather than going with
+the traditional webcam. apps like ip webcam make it
+easy to import the video feed into a program like obs or zoom. and as an extra bonus, you can always use it for phone
+things if you're in a pinch. the main drawback of this
+strategy is that some phones can overheat during prolonged use, and you will want to
+get one that allows you to set a charge limit to prevent
+the battery from swelling. or you can take your game
+to a whole other level with a dedicated camera. if you already have a dslr or a mirrorless camera kicking
+around with an hdmi port, there's a good chance that it
+can output a clean video feed. even if it's an older model, it will look significantly
+better than a smartphone thanks to its much larger sensor. and if you don't have one already, we really like the sony a5100. it's a mirrorless camera that can be had for around 300 bucks on ebay, with a 16 to 50-millimeter
+kit lens included. and, if you add a cheap tripod
+from amazon for 20 bucks, hook it into a capture card,
+more than that in a minute. how do i look? pretty plug and play, right? actually, i should point out that we are using the step-down a5000. it is $100 cheaper but it
+doesn't support clean hdmi output without a third-party modification. so if you're a tinkerer, good for you, but if you're not, i'd
+recommend going for the a5100 and this should give
+you a pretty good idea of what to expect in
+terms of image quality. in terms of camera
+settings, most streamers aren't gonna have to mess
+around with too much. 30 fps is lots for a corner cam, which means you're gonna
+want a shutter speed of 1/60. then you might just need to tune your iso, which is the sensitivity of your sensor, to make sure you don't have
+too much in your image. your white balance to make sure it doesn't look too yellow or too blue. you might have to tune
+your tint a little bit. we had to push this a
+little bit away from green and towards yellow to get
+it to look just right. and then you're gonna
+wanna set your aperture as wide as possible to get that
+nice pleasing depth-of-field bokeh effect in the background. if you wanna avoid focus jittering with an older camera like this
+one, set your focus to manual and you should pretty much be good to go. now, i wanna note that
+there are other options other than the a5100, just
+make sure you do your research. that $150 canon rebel might be tempting, but its hdmi output might
+be full of menu garbage which there's no hack to get around. and that's gonna be pretty hard to explain on your parent-teacher
+conference or whatever. now, in terms of lighting, we previously recommended
+a basic halogen light. either in a lamp, you
+found at value village or in a clamp-style work light. that'll run you anywhere
+from a few dollars up to around 35 bucks. they are power-hungry, and they do tend to run a little hot, but with a reflector and a
+sheet of wax or diffusion paper, i mean, that's what you're
+looking at right now, man. and there's definitely an ambiance to it, but i look not bad, right? switching over to an elgato
+key light for comparison certainly looks a lot better, but compared to just adding
+another halogen light, i think it's hard to
+justify the $200 price. at least, from strictly an
+image quality standpoint. where elgato stands out
+though is in software control. brightness and color temperature can be adjusted with a
+little slider in the taskbar, making it easy to compensate
+for a cloud suddenly covering the sun outside
+your window or what have you. and it also looks a lot more
+professional on your desk, if that matters to you. back to capture card for a moment. it is crazy how cheap
+these things have gotten, with generic usb stick-sized
+devices available on amazon for as low as $15. and these aren't even the
+cheap crummy ones either. they have low latency, they record at reasonably
+high bit rates for 1080p, and they don't need any
+additional drivers or software. this makes them perfect for a
+quick capture of your camera. with that being said, you do get what you pay for to an extent. and a lot of cheap capture cards may suffer from signal degradation or crashing issues earlier
+than higher-end options. also, warranty, right? another benefit of premium capture cards is low-latency pass-through so that you can stream your
+xbox gaming, for example, from your pc. but a good workaround to this
+is a cheap hdmi splitter. and for your viewers, it'll
+look exactly the same, even if, for you, it means a
+little bit more cable clutter. of course, if you wanna capture in 4k, you will need to spend more
+money on a capture card. avermedia and elgato both
+have solid 4k offerings around the $200 mark. although, for like your face camera, i really can't say that
+i'd recommend them. unless you are recording your
+footage locally on your pc so that you can edit it later and you want higher quality source files. now let's get everything set up. after taking a break to take
+a sip from my water bottle. lttstore.com. yeah, love elgatos at home but the bang for the buck
+here just cannot be beat. we're gonna need a couple
+of key pieces of software, obs and voicemeeter, both
+of which, happily, are free. with both programs open, use a1 to select your
+preferred listening device. ideally using a hardware asio
+engine, if it's available. set your first input to be your microphone and then select your desired
+output channel on that input. to eq your mic and make
+it sound all fancy, all you gotta do is right-click
+on the eq above your output, and well, for me, we might wanna raise the
+bass and treble a bit, giving it a warmer more podcasty sound. let's give that a shot. with audio dialed in, it's time to start
+getting our overlay setup. the overlay we're using today was generously made for us by own3d pro, the sponsor of today's video. they have an obs studio plugin that offers 600-plus
+overlays, alerts, and tools in nine-plus languages that can all be installed
+with just one click. using code linus, you can get 50% off the yearly
+subscription at own3d.pro. with own3d it's as simple as that. is that it? one-click, eh? that was actually really easy. their overlays include everything
+from stinger transitions which produced this cool effect, to intro screens and even banners and buttons
+for your twitch page. items are in groups in the sources panel. and you just need to add your webcam setup by clicking on add source and
+then video capture device, and your game or full display capture, if game isn't working, by using game or display capture. resizing elements is simple. just select the one you want
+to edit and you can resize it, holding shift and control keys
+to change how it's resized. or you can right-click to gain access to a whole bunch of
+extra options and tools, such as color keying for
+things like a green screen if you have one. adding alerts is also
+really easy own3d pro. on their dashboard, you can easily add custom
+alert variations and messages and everything sticks to your alert theme without any extra hassle. ah, ga, ga, ga, ga! i shot my teammate! oh, god! oh, where is he? got you. ba, ba, ba, ba, ba, ba! ah! we're running. we're running, boys. this is the original setup. not bad by any stretch of the imagination. but i think the difference
+after our upgrade (gentle electronic music)
+(logo whooshing) is pretty striking. [music] leveling up the stream [music] [music] got that better audio quality [music] now i'm coming for you. oh, shoot. ahh! get 'em.
+(gun blasting) argh! i hate that gun so much. i don't know. i don't
+know what it's called. do i look like i know guns to you? i'm a pacifist canadian. (gun blasting) oh god, my aim is so bad. well, there you have it. whether the upgrades are
+worth it, that's up to you. but at least now you've got a solid idea of what's out there and how to set up for
+different kinds of configs. thanks for watching. and remember to check out own3d pro at the link in the description to get 50% off their yearly plan. if you guys are looking for
+something else to watch, maybe you check out my home
+streaming setup upgrade. that was more of like the
+deluxe version of this.

@@ -1,0 +1,201 @@
+- as tech nerds and geeks we got a lot of problems in our lives. like, fighting for the right
+to repair our technology. finding the right charging
+cable for a specific device or figuring out if running
+a raw dog ethernet cable through your living room is
+worth not having to use wifi on your gaming rig. but none of it even holds a
+candle, at least in my book, to trying to figure out how
+to store all my freaking data without having to add
+to the never ending mess of monthly subscriptions
+we are all expected to pay. now, you could go with a prebuilt nas from someone like qnap. throw a few hard drives in there. but the problem is that
+those things are expensive. usually not upgradable or serviceable. they're pretty much single purpose. and worst of all, that would
+just be too easy, right? what if i told you there was a better way? it's stylish, fully
+serviceable and upgradeable and you get the fun of
+building it yourself. and best of all, in the config
+we're gonna show you today, it is actually cheaper than a pre-build. dang this is the jonsbo n1. a shoebox-sized case that
+can hold up to 100 terabytes of hard drive base storage. holy (beep). - thanks to zoho crm for
+sponsoring this video. zoho crm is a 360 degree
+solution that offers an intuitive ui, ai
+predictions and a design studio to help you get your sales done faster. get 50% off with code
+zcrm50 at the link below. (upbeat music) - from the outside, the jonsbo n1 one looks
+like your average itx case. it's small, but not crazy
+small, with lots of venting and minimal but still usable front io. it can be configured to lie flat or woop, stand up right with little
+feet that come included. and the outside unibody
+shell just slides off to give you full access
+to the inside chassis. just gonna pull it up. look at that. ooh! this is such a basic approach
+to making a sata backplane. look, there's just discreet sata plugs for all five of the drives here. but it's kind of elegant
+in its simplicity. like the rest of the case, it's maybe not the nicest
+build quality i've ever seen and this sort of niche
+small manufacturer chassis but it's only 126 bucks on aliexpress with the included storage backplane that handles up to five hard drives. if you factor that in, it's like, it's a pretty darn
+compelling deal, isn't it? before we go over the
+rest of our parts though, let's talk budget. our plan was to see if we
+could build up a rig cheaper than the equivalent synology
+5-bay nas, the ds1520+. they're currently out of stock seemingly everywhere anyway. but the price to beat is $700 on the dot if we could buy it. and that's totally achievable. starting with our motherboard. we went rog for the motherboard? - [jake] yeah.
+- jake. - hey, itx motherboards.
+there's not a lot of option. - [linus] okay, we blew
+$200 on our motherboard but it's for pretty good reason here. it's got dual m.2 slots, so we can put a cache ssd in
+one of them and then a sata hba so we can expand our
+four onboard sata ports. it's still actually available new. you know, we could have said,
+"oh, go buy a used board." and you could definitely shave
+some of your budget that way. but motherboards tend to be one of the more likely
+components in a system to die. and when it comes to storage, we want this thing to just work. we don't wanna screw around. it also has 2 1/2 gig lan. and because it's amd b550 based, we're gonna start with the lower end chip, but we've actually got a ton of room for upgrades into the future. now, let's actually get that
+io port card installed now since we're definitely gonna need it. so... (drive clatters) - [jake] oh! i've already dropped it like six times. - [linus] good.
+- oh geez. (driver clatters) wow. it's still good. - i expect you to go hard on it. - totally fine.
+- and i you don't i might produce 100,000 units
+of something that's not good. there's a cover on the top m.2 here. you can see, you can install
+anything from a 2242. so, it's a 42 millimeter
+to a 60 millimeter to an 80 millimeter m.2. we are gonna use the
+42 millimeter mounting. look at how cute it is here. one quick thing to note is that
+this little daughter board, once you remove the heat sink, there's nothing holding
+it into place here. you see that? so, we are just gonna (clears throat) pop that connector back in
+and then we're gonna take one of the screws that
+held the heat sink on. and we're gonna take the shorter one. we're gonna put it right here. there you go. now, this daughter board is
+held in place so we're all good. with that outta the way, we're
+gonna flip over the board and install our first bit of storage. now, it should be noted that just like if you were
+buying a bare bones nas, the storage is not
+factored into the budget. so, we chose a 32 gig optane ssd because these things
+are dirt cheap on ebay. while they're not super high bandwidth, they're really low latency
+and really high endurance. so in a cache application,
+they're a really cheap way to get sort of an enterprise dna product into your very, very
+consumer diy solution. for our cpu, we've elected
+to go with a ryzen 3 3100. while you can buy these brand new, still we would strongly recommend trying to find one secondhand
+as cpus generally outlast the vast majority of your other components and are a pretty safe bet to buy used. we got this one for $120 on ebay but they can be had for as little as $100 if you're willing to take your time. make sure if you buy it used, that it comes with the
+stock cooler though, because that's gonna wipe
+out a lot of your savings if you have to go out and
+buy an aftermarket cooler. as for ram, to match the
+synology we're trying to beat, we only need 8 gigs of memory but since prices are decent
+right now, we were able to fit 16 gigs of 3,600 mega transfer per second g-skill ripjaws into our budget. if you're a hardcore user,
+you may even wanna go higher with up to 32 gigs of ram
+for even better performance. since this will get
+used as a caching layer for our hard drives, thanks to zfs, it's $64 for this kit right now. here things get a little
+bit complicated though. the power supply we specked
+was evga's gm550 watt sfx which we had for $80
+at the time of filming. unfortunately, evga didn't have stock. so, our stand-in is the 650 watt version of the same power supply. it's fully modular. it fits in the case and
+is a really great value. however, it's a bit overkill
+when it's not on sale. so, i'd recommend shopping around to see if there's a cheaper option if you're planning to replicate our build. now, it's pretty much build time. the first thing we're gonna do is plug in the power to our backplane. odds are that it would actually run with just one of these
+molex connectors in it. that would be like out of spec probably. so, what i think i'm gonna do is i'm gonna take the first
+one in the chain of four, plug that in there, then i'm gonna jam the rest of it in there and then take the last
+one and go right here. and the reason for this is that this has to stay super low profile 'cause this right here is the rail that lets this inner piece
+slide into the outer shell. so, you can't just have a bunch
+of extra bulks sitting here. this is a really important note. because of that same issue
+where we wanna make sure that we don't have any clearance problems while we're sliding this
+into the outer case. we only want to use 90 degree
+or a right angle sata cables in the backplane here. otherwise, you got a high
+profile straight connector coming outta here. you're gonna rip this
+connector right off the pcb and see you later backplane. - [jake] it's not warranty. - [linus] oh, does it say
+right on this sticker? yeah, we are not liable. get wrecked. that is a nice looking fan. i like that. definitely got some static
+pressure behind that bad boy. i mean, i guess you need
+it if you're gonna have just one fan cooling the entire column of computer behind it. oh, i guess i need to put
+this sata ssd in place. look at that. it's so cute. it just goes right there. for those of you wondering
+why we even need this drive, it's for our operating system. and we've chosen to go with truenas which is a free solution. not to say that it's the only solution. unraid would be another valid
+one. it's got some advantages. i'd say it's easier to
+handle virtualization, easier to handle docker containers. gpu passthrough is really easy. you could mix and match your drives. but for us, because we're
+getting all new drives and we're populating
+the whole thing today, it didn't make sense. your mileage may vary. as for why we used this drive. it was cheap. many storage os' actually both
+truenas and unraid included are not gonna go outta their
+way to hit your os drive because there's no reason for them to. so, basically it's like
+read-only media almost. (cpu clunks) now, it's time to put our hard drives in. and jake claims this is
+gonna be really hard. - [jake] yeah, it's too
+bad you completely skip the part you were supposed to do. what? how is that not?
+- they're sliders for them. - why is that not going in? - [jake] they're sliders. - no, i don't believe you. oh, good. it's in. - (both) oh! - [jake] oh my god. they don't warranty the backplane dammit. - all right. you're right, these do
+look like a bit of a chore. - [jake] those bars are
+like the top handles. - [linus] i get it. - [jake] and then you're
+supposed to put two of the little dots on the bottom. - yeah.
+- and then sliders on the top. - i see it. i see it. that's a pretty... - [jake] see? it slides in
+even if they're tight, right? - [linus] that's a pretty nice mount. i didn't put them in all the way. - oh.
+- i left them a little bit loose. - here, i'll put mine in all
+the way and you can try it. - sure. oh crap. okay.
+- i'm gonna put this one on backwards.
+- okay. this part's a little bit tricky. - putting this one on backward. - no. so, you see if you've run
+your cables across here you can see there's a
+bit of a clearance issue. - [jake] you just jam it.
+- bringing it down there. right?
+- just jam it. - [linus] yeah. - just send it, bud. - that's pretty borderline. (clacks) ooh!
+- oh! what was that? - that was a good um... - that was sending it.
+- good noise? didn't sound like.
+- yeah you told me to send it. i mean it's sent. hold on. just gotta line up the thing. just gonna... oh geez, oh geez. okay and we gotta do this tiktoks. - wait, watch-
+- so what is it? i gotta put it in and oh
+my god i can't hold it. - [david] okay.
+- it's too heavy. - [david] you going to say, let's go. - oh my god. i can't. ow! - wait, why isn't it going in? oh, oh. whoa! - can you get the other
+side for me please? let's go. oh, (beep) did i do it too late? - [david] no, no. that's
+fine. that's fine. - why didn't it close all the way? - because there's a cable in there. - there's hard drives in there too. it just went ka-domp. - oh crap. i can't run the eight pin here. ah shoot. it interferes. - [jake] oh yeah. - [linus] oh balls. - [jake] you have to
+put it around the side. - [linus] yeah, i see that. - [jake] i could have told you that. - aah, well you didn't. this thing is freaking so cool. - the keen it amongst you
+might have already realized we're gonna have a bit of a problem when we go to install our os because we don't have a display output. this is not an apu. now, there's a couple of options. we could have built this
+system up on a box first like the motherboard box and
+slotted in an extra gpu we had and installed the os. that probably is the best
+option for most people. if you have a ryzer laying around, you could also just
+kinda slap that in there and put the gpu in that way. but if you don't have that, what you probably have
+is an extra computer. so, we're gonna to take our boot drive and just throw it in this test bench acting as our other computer
+and install the os on there. setup process is pretty easy. hit install. we're gonna select our
+120-ish gig kingston drive. hit okay. proceed with install. yes. ah! it's done. we don't even need that much movie magic. it only took a few minutes. okay, it says to remove the usb. so, let's just do that. yeah. okay, i'll put the drive back in properly with my handy dandy screwdriver. (drilling sound) oh, there we go. beauty. since we did the install
+in the other computer, we're not gonna immediately get the ip of what the system's gonna get assigned. we're gonna have to go into our router's dhcp reservation list to
+figure out what that is. you can also use tools
+like angry ip scanner and you can look for truenas if you don't have that many
+devices on your network or if you know the mac address of the ethernet port on the board, you can actually just
+look it up that way too. it looks like it's booting now. we're in truenas now. so, you're gonna be logging
+in with the root user and whatever password
+you set in the install. you can see, we got our... it's loading. there we go. we got our four core
+processor, 16 gigabytes of ram. let's make sure all our
+storage is detected. if you didn't slide in
+the drives properly, or one of your sata cables came loose or something like that. but it looks like we got 1, 2, 3, 4, 5 and then our 32 gig nvme. now that we've verified all
+of our storage is working, we can go ahead and set up an array. now, depending on the hardware you have, what you do here is going to change. if you only have like
+two hard drives for now, you might wanna set it up as a mirror. and that basically is
+kind of like a raid 1. if you have anything more
+than two hard drives, you're gonna be moving up two raid-z which depending on the amount of drives, you might only be able
+to use a specific type but there's raid-z1, two and three. and those give you one, two, three respective drives worth of
+failure before you lose data. since we have five drives, we
+could do any of these options but i'm gonna stick with raid-z1 'cause that's gonna give
+us the most capacity. 'cause remember if you
+go to raid-z2 or three, you're losing two or three drives worth of capacity respectively. dev, it's actually recommending
+by default we do a z2. but i'm gonna do z1. since we have an nvme drive in there, we're also gonna create a cache vdev and we can just click it
+and bring it down there. this type of cache vdev acts
+kind of like a read cache to expand the ram cache
+that we have with zedfs which is called arc. so, this is let two arc. let's put a name on here. i'm gonna call it lambo. and look at that 43.65 tebibytes. if you use this disc for anything else, they're getting wiped right now. so make sure you don't
+have anything on them. we got a z pool. look at that. i'm gonna check the
+status just really quick. let's see. we got 1, 2, 3, 4,
+5 (indistinct) cache drive. everything looks to be working. now, to make this storage
+accessible on other computers, your phone, whatever. we're gonna have to
+first set up a data set. it's kinda like a folder but a folder that you can
+set custom settings on. and then we're also gonna
+set up an smb share. that's the protocol that microsoft uses to share files over the network. it's pretty easy to do that. we'll just click under our z
+pool and go add a data set. i'm gonna call it zomba or goomba. zedfs has a built-in compression
+system that basically just automatically
+compresses anything you write and decompresses anything
+you read from the array which depending on which option you select and what you're writing, can actually make your
+storage feeds faster if you have enough cpu. now with a quad core, hard to say. but i'm just gonna leave it
+on the default lz4 compression which is very fast. and then we're just gonna
+set the share type to smb because it's gonna be an smb share. if you're using oh, time machine. you might want apple specific settings but we're just gonna hit save. and then go to shares, click add. select the path. lambo, goomba. and hit save. it's gonna prompt you
+to start the service. that's actually like the smb server. it's not running by default,
+so just hit okay on that. actually, i forgot a step here. we need to create a user
+to be able to access it. i think by default it won't
+let you use the root user just for security reasons. so, we'll add a user. we'll just call it jake. jake, and we can set the password to 1234. cool. type in our ip again here. and then jake and 1234. and look at that. storage. okay, i'm actually gonna
+map this as a network drive so we can see how much storage. and just like that, 43.4 terabytes. we've got our 2.5 gig unified switch. this thing's pretty sick. we've got our share set
+up. we're all connected. i verified that it is
+actually running at 2.5 gig and we've got a little test file here. whooh! 280 megabytes per second. that's sick. and to think that this is still cheaper than an off the shelf nas and
+you've got upgrade ability, you can slot a 10 gig card in there. you still have the nvme port. you could do anything
+you want with this thing. you could put a 16 core cpu in it and it would still work just as good. you could put vms on
+it, whatever you want. i think this is seriously
+one of the coolest little like server storage things
+we've done it in a long time. i just wanted to take a
+quick look at the array now that we've copied something to it. and you can see our compression
+ratio right there is 1.02. that means we've saved
+2% of this storage space of this whatever, 11 1/2
+gigabyte file doing nothing. let's say you were to copy
+over a bunch of photos and documents that you
+had on your computer. like, you're using this as a backup. you could easily expect to save
+10, 20, 30% of that capacity automatically and completely
+transparently to you. if we even look on this file,
+you can actually see, look. size 10.9 gigabytes. size on disk 10.7. so, we've saved 200 megabytes
+doing literally nothing. it's pretty fricking cool. but not as cool as our sponsor freshbooks. when building a business
+you're passionate about it's easy to feel like there
+aren't enough hours in the day. and if you're doing all your invoicing and accounting on your own, you're probably spending
+time on work you don't love. freshbooks is built for
+business owners like you. it's the all-in-one accounting software that saves entrepreneurs and freelancers up to 11 hours a week. that's 11 hours you can
+spend nailing a client pitch, serving your customers
+or honing your craft. from building and sending
+and following up on invoices to tracking and managing expenses, to processing online payments, freshbooks automates and
+simplifies all the tough and annoying parts of
+running your own business. it's also super easy to get up and running and the award-winning
+freshbook support team is always available to
+answer your questions. so, try freshbooks for free for 30 days, no credit card required
+at freshbooks.com/linus and get more time back to
+build the business you love. so, if you like this video and you like servery, truenas-y stuff, maybe check out the new delta 5, new vault three build that we just did. that's a pretty good one. you could also maybe check out the video about we're loss some data. (sighs heavily) how we're loss some data. - [david] did you just lose some words? - i lost some words.

@@ -1,0 +1,252 @@
+[Music] I'm here in New York at the Brooklyn Basketball 
+Academy because today we'll be looking at the math   of basketball answering such questions 
+as are you all ready for this   what copyright and we'll find a way 
+around that y'all ready for maths if you're unfamiliar with the game in basketball 
+you typically get two points if you get the ball   in the basket but if you shoot from outside 
+the three-point line which is a long way out   you get three points a fifty percent increase 
+and I have the general impression that over the   last decade or so three-point shots have become 
+more prevalent not just regular threes from the   line some deep three-point shots so my first 
+basketball stats question is is that an actual   significant change in the sport specifically 
+the NBA or is it just a rough impression I've   got but it's not actually a fundamental change 
+in how the game is played and if it is my second   question is is there a strategic reason for 
+why that happened and if that's also true my   final question why didn't this happen earlier 
+why did this change only happen in the 2010s   to enter these math ball questions I'm joined by 
+my friend Tim who is currently in Residence at the   Museum of mathematics which is why you're in New 
+York and why we're doing this video you normally   work at I guess you still do at Davidson College 
+which is in North Carolina so what do you do at   Davidson well I'm a math professor I teach 
+math and computer science and I also lead a   sports analytics group that started with three 
+students and became 100. you've got a hundred   students working on sports stats and analytics 
+and yeah that's so good and you've advised the   USA olympic team yeah it's an MBA teams yes can 
+you say what NBA teams or is that uh yeah we're   not really supposed to say that but also the 
+league teams what was that awesome also the   league office just MBA League office yeah the 
+zeroth team and the one major question I had was   to my opinion because I watched him play 
+basketball in the 90s and I have not I have my   abilities have gone downhill since then but I've 
+continued watching the NBA and to my mind the game   I'm the first person to say this obviously has 
+moved out yes and now three pointers are almost   non-stop so what we thought we would do is first 
+of all have a look at the statistics like is my   impression watching the NBA correct and so you 
+downloaded every single shot taken in the NBA   between the 1997 season and the 2022 season yeah 
+yeah so I've got literally every shot with the XY   coordinates of where it is on the court so if the 
+shots have been drifting out we should be able to   see that we just need a really nice way to plot 
+them like a very fun interactive math 3D plotting   so anyway um Grant grunt if I got some data 
+can you plot it for me excellent we'll do that Grant Sanderson who you might know from 
+3blue1brown very kindly took all of Tim's   data and plotted it onto a 3D representation 
+of a basketball court and you can see as time   progresses the shots seem to move around in terms 
+of where they're most frequent but to have more   of an Insight you know what let's rewind back to 
+some key years so if you go back to let's say the   year 2000 in 2000 you have these two spikes big 
+clumps of shots on the Baseline on either side of   the basket and then you kind of got this Forest of 
+other shots from the top of the keyway out to the   three-point line if you fast forward now until 
+2010 those clumps of shots from the Baseline   have moved out to the three-point line there's 
+suddenly way more shots happening out here but   you still got a pretty similar Forester shots on 
+the top of the keyway however by 2020 we've now   got almost no shots happening on the Baseline 
+which used to be an incredibly popular shot   two decades earlier loads from the three-point 
+line out here and then run the front look at   this Great Wall of three-point shots that is just 
+solidified on the outside of the three-point line   and inside there's this empty Tundra a desert a 
+almost complete void with no shots happening from   the top of the keyway just inside the three-point 
+line where these mid-range shots used to be much   more prevalent so we can see statistically modern 
+NBA players are taking way more three-point shots   than their predecessors from two decades earlier 
+to find out why we now did an experiment run by   Noel and Liz who were math fellows at the Museum 
+of mathematics and they set up markers at four   foot nine 9 14 18 20 and 23.75 feet corresponding 
+to various standard distances on a basketball   court including the high school college and NBA 
+three-point distances and I took 10 shots from   all of them and we kept track of my data which 
+looked like this so you can see close to the rim   I'm getting well sixty percent fifty percent it's 
+not great I'm out of practice that then drops off   dramatically before an unusual little uptick 
+which to be fair is Two Shots instead of one   shot so that could be a statistical variation 
+it could be what residual muscle memory I have   left from my youth making shots at the specific 
+three-point distances who knows the point is I   was more accurate up close and then I actually 
+dropped off dramatically as I got further out   and to make sure that's not just me everyone 
+then had a go everyone took 10 shots from each   of those six markers including back my co-host of 
+the A Problem Squared podcast and once all six of   us had had 60 shots each this is the final plot 
+you can see very similar to my shots you're up   sixty percent fifty percent accuracy for the close 
+shots once you get up to the three-point line that   drops off dramatically although I suspect for 
+NBA players they're a little bit more accurate should they take shots from the three-point 
+line I'm gonna [ __ ] with x's and y's running   the numbers as the coach nuts so I thought I'd 
+work it out I had to be just over four and a   half million shots taken over 24 years of the 
+NBA that Tim had given me and here you can see   them all I've plotted each year individually to 
+start with but the issue with that is because I'm   running to the nearest inch you get a lot of like 
+these one-off like this is a single shot taken in   that season that went in but because I'm running 
+to the nearest inch there was no other shots that   season in that category but if I was going to 
+do this on a year by year basis I would use   bigger bins like bigger categories but I know 
+I'm gonna take all of the years all the way up   to the 21 22 season and combine them and that 
+gives us a much nicer plot we've lost all that   variability here it's collapsed into a nice neat 
+line once you get further out though we're back   in the same situation there weren't just that 
+many shots taken this far out and you can see   there's a lot of times there's a single shot taken 
+at that distance that missed hence all these zero   points down here so I'm actually going to do is I 
+think the useful data stops about here and that's   roughly where the half court line is so I'm going 
+to remove all the shots which are further out then   roughly the distance of half court which just um 
+gives us this wonderful plot we can break it down   to three regions you've obviously got the really 
+close shots up here I mean this is people dunking   at almost 90 percent you've got you know pretty 
+much at The Rim this is roughly uh 75 chance of   these going in there's a weird spot down here I 
+think that shots that are just like so close it's   awkward but this is kind of the main event and 
+this tapers off uh down to about here which is   approximately 48 inches from the ring or four 
+foot and just coincidentally that's where the   restricted zone is in the MBA if it's an NBA game 
+or in fact a lot of basketball this line here is   exactly four feet from the center of the ring and 
+in this region a defensive player can't draw an   offensive foul from someone coming in trying to 
+score and it seems when you're this close you're   way more likely to score I worked out it's pretty 
+much exactly you lose one percentage point of   accuracy for each inch you are further away from 
+The Ring until you get down to here which is like   the outside of the restricted area then after that 
+it flattens out it goes real flat for a long time   although one thing I want to point out well I've 
+got the picture up here is the backboard there you   can see is like not up against the Baseline it's 
+further in it's like hereish if I cut to a diagram   of the Court you can see the backboard is a little 
+way in it's four foot in from the Baseline then   there's like a six inch gap between the backboard 
+and the ring and then the ring is 18 inches in   diameter and so actually the center of the ring 
+is five foot three inches in from the Baseline   so actually some of these shots here were taken 
+from behind the backboard back behind the ring   so I thought you know what I'm going to change the 
+data so any shot where your y coordinate which is   coming out this way is negative so it's behind 
+the ring I'm going to flip the distance to be   negative and this is what the plot looked like 
+when I did that I'm like wait a minute there's   there's way more over here so if we rescale 
+that you can see here's our ring at zero inches   here's all the positive shots from the front side 
+of the court and then this is behind the ring so   you have the kind of symmetric drop off here but 
+it gets way worse these are shots from like behind   the backboard really awkward shots and then this 
+blur these are shots kind of coming out along the   Baseline here and they're spread out again because 
+we haven't got enough shots in each category to   get a good average like we do on the front so 
+I was like you know what it's kind of fun to   see these but I I don't think there's much we can 
+learn from them other than I quite like the fact   we've taken them out of this data it makes this 
+data a bit neater and just to tidy things up I'm   going to go back like to a negative restricted 
+Zone distance and Lop off all the other ones   but these are just here to remind us that we have 
+taken the negative shots out of our positive data   and to finish our tour you have what I call here 
+the the big flat this is at 39.6 accuracy that's   everything from the basket all the way out to 
+the three-point line anything in here it seems   to be distance and variant it doesn't matter where 
+you're shooting from it's roughly 40 Precision in   fact in recent years this has gone up slightly so 
+if you just take the most recent five years this   line is at 40.8 accuracy but over 24 years it's 
+39.6 accuracy and the three-point line is about   here and then you're actually starts to drop off 
+after that but we're not here about accuracy we   hear about points so first of all I'm going 
+to rescale this down so we've now instead of   going from zero to one we go zero to one then all 
+the way up to two which means as well as plotting   accuracy we can also add in points if you put the 
+points on exactly the same diagram you get this   curve so up until the three-point line it's just 
+this one doubled because you get two points when   all of these go in so that's the average number 
+of points you're getting which means the big flat   here is around about eight points per shot and 
+then here you've got the three point line and   this is a slope it's not an Abrupt change because 
+the three-point line is not a set distance away   from the basket so from The Ring straight down 
+here that's only 22 feet away but then as you   go this way it gets longer and longer and longer 
+and longer until here that's 23.75 feet and so   you've actually got this kind of a transition in 
+the distance and I unsplit them out this is just   the distance and the average number of points from 
+that distance because I could pull the points out   separate from the data I wasn't using the distance 
+to determine what kind of shot it was that's   labeled independently in the data and you get this 
+huge jump up here and then you get basically the   same plot from here this is after all the shots 
+from here are after the three-point line and so   this is just this plot but now multiplied by three 
+as opposed to this plot over here multiplied by   two and the transitional zone so what can we 
+learn from this well the first thing I did was   I took all the shots which are one foot past the 
+3 every point line that is maximum extent and for   that single one foot region here the average 
+points per shot is 1.12 and you're like wow   that's that's amazing 1.12 points per shot if you 
+only get the same value over here you're going to   be 26 inches away from the ring there's two foot 
+two inches before you're averaging 1.12 points   per shot on average so it turns out taking three 
+point shots gets you the same points on average   as being about two foot away from The Ring like 
+that's absolutely incredible this is way higher   than I expected it to be and then there's drop off 
+this drops off a lot slower than I expected and   yes that's a spread out because there are fewer 
+attempted points per inch I probably should use   bigger categories out here but I can still draw 
+a line from this and I worked out when this dips   below the big flat and it's at seven foot past 
+the three-point line you need to be seven foot   out how about that in context here we've got the 
+three-point line here we've got the middle of the   court and seven feet out is about here it's 
+thirty percent of the way out to the middle   of the court so shots from out here I mean these 
+folks are all about seven foot tall if you have   a single like metric basketball player out that 
+is where you're going to get the same points on   average shooting as you would anywhere in here 
+anywhere outside the restricted Zone if you're   shooting in here you're getting the same points 
+on average as shooting all the way I mean these   are some deep threes out here and actually that's 
+Steph Curry is kind of a mascot of this change in   basketball who fun fact went to the same College 
+where Tim works it all comes together nicely and   Tim remembers when Steph was playing college ball 
+there and just how revolutionary his style of play   was of course because it's Steph Curry he just 
+nails that shot from all the way out there I mean   the the he's not human it's absolutely ridiculous 
+and so what this plot is showing us is why we're   taking so many three-point shots now because the 
+average points you're getting all the way out   here I mean for a long way out for the seven feet 
+out from the three-point line you're getting more   points on average than if you took a shot anywhere 
+inside the paint and just for comparison here's   our plot from earlier our precision and if you 
+multiply that by the number of points you get for   each shot you have pretty much exactly the same 
+curve I think this is you know identical to the   NBA really I just went for the NBA threes I didn't 
+do any of the closer three-point lines so you just   get this tick up at the end so there you are this 
+is us as you can see indistinguishable from the   NBA and the moral of the story is why would you 
+get 0.8 points per average here if you can step   back a few inches and get 1.1 points so we know 
+NBA players are shooting from further out we   know they're doing it because they're getting more 
+points on average from those shots the remaining   question is if the NBA introduced a three-point 
+line in 1979 why did it take decades until the   2010s before the average shot distance moved out 
+in a substantial manner one of the big things   is that there was a presumption that this kind 
+of mid-range shot not close and not beyond the   three-point line was not as efficient but people 
+were used to shooting in it it was when the shot   data came that they could study it carefully so it 
+really was the data that convinced teams that the   mid-range shot was inefficient and it was worth 
+training for three point shots I have a question   actually so when when they said oh it looks like 
+three pointers or something that's a little bit   more uh higher expected value for the points was 
+that based on the existing shot data or were they   saying assuming you train for that and like you 
+specifically changed the way that you coach and   you change the way you train we could bump it up 
+such that the expected value for threes is bigger   yeah that's an interesting question I think part 
+of I'm not quite answering your question but in   terms of the the change in the game is that 
+for certain players in the game at that time   it was still very true that they were shooting 
+three-pointers well enough that that what we see   today was efficient for them but now the game has 
+changed where some of the big players come out and   shoot that which was not true in the 90s when 
+some of us played basketball a lot and it's not   just basketball Tim has a huge team of sports 
+analytics data people at Davidson College and   they cover an incredible range of sports finding 
+useful insights that the coaches can use we do men   and women's basketball men and women's soccer or 
+football we do American football swimming Field   Hockey baseball and volleyball a lot of times 
+when we were beginning in any sport that we   do we work with the coaches to actually learn 
+not only what's coachable in the sport what's   coachable for that coach saying for instance that 
+you need a certain three-point percentage for it   to be a efficient for you to shoot from there 
+is coachable because you need to practice until   you have that saying for instance your third in 
+defense is not coachable because it's just it's   just a stat and it's like okay I don't know what 
+to do with that and one of the first questions   if anyone's trying to work with the coach is 
+what do you do with numbers what do you wish   you could do with numbers that's just the basic 
+question and then you go from there is there a   systematic kind of blind spot that people will 
+have before they dig into the data before you're   able to come and help versus after the two blind 
+spots for the coaching staff that's usually how   much of their gut they want to go with and so 
+you have to be careful not to intrude on what   they want because they may be right with it 20 
+of coaches who use their gut do more important   yeah and then one of the biggest things for a 
+sports analyst is that you kind of wanted the   data to say what you already think is true about 
+the game and so you it actually helps to have very   math-oriented people who don't know Sports very 
+well and sports people who may not know the math   very well and people in the middle all part of 
+a sports analytics team at least in the group I   work with so you don't have the confirmation 
+yes exactly okay that makes sense [Music]   the context seems to sometimes matter like if 
+you have stats on Matt's percentage but he's very   rarely given the ball right and it's uh he's only 
+given to it in Desperate circumstances whereas   the easy shots are given to the good players 
+right does that mess up when you're saying oh   well we looking like Matt's shot percentage is 
+like 10 but if he was given more credit like if   the coach had assumed uh you know he's going to 
+make more and he's given more of the easy shots   it might like by giving different coaching you're 
+going to change what the probabilities are yeah   yeah there's two things with that one is just 
+literally sample size so in every single thing   we give coaches we always give the sample size we 
+just say how many times it happened right because   you know if you shoot once and make it then 
+you know you're amazing because you're 100 the   um the other part that plays into that is is just 
+the fact that you really have to be careful with   the numbers in terms of will they hold like if you 
+play really well for 10 minutes will you continue   to play well for 20 minutes right and we can't 
+predict that all the time so you just but you have   to state that even though most coaches are aware 
+of that at least analytic minded ones are some are   but not more again at a gut level than an analytic 
+level yeah I guess what I'm sort of getting is   like is there a difference between do you consider 
+differences between the statistics like the data   gathered and then the probability like given some 
+new assumptions given what you're going to do uh   how do those numbers actually influence what you 
+expect moving forward because like once you change   the coaching it changes some underlying aspects 
+of how someone's playing and things like that yeah   one I think this answers that one time we had a 
+player who had really bad knees and we had this   isn't exactly what you're asking but we were asked 
+he can only play for 10 minutes what are the 10   minutes he should play in the game well he hadn't 
+played that way the whole season so like we had to   make the best educated guess we could of those 10 
+minutes and turned out that we did really well but   there are of course examples where the coaches 
+then went okay let's refine those analytics a   little bit yeah so yeah it's those types of 
+things but it you work hand in hand with the   coaches and that's what enables good decision 
+making to happen now we saw your basketball   progress before it isn't true that your wife 
+actually has the highest shooting percentage of   any player on the Chicago Bulls practice Corps yes 
+yes she does she has a hundred percent a hundred   percent hundred percent exactly she's better 
+than all of them how many shots did you take one that's the important of sample size just before 
+we go I'd like to thank Grant from three blue   one brown for coming down playing some basketball 
+recording some stats and Grant has just announced   the third summer of math Exposition this is 
+a thing that Graham puts on over the summer   where people who are thinking of getting into 
+math communication can make a video a blog post   an interactive you know they can make whatever 
+they want and it's supportive environment lots   of feedback lots of help and there's prize money 
+provided by my good friends at Jane Street so if   you've ever considered doing mass communication 
+please do check out the link in the description   below and yeah once again thanks to Grant I'm 
+always hugely appreciative when Grant makes   time to come and join me one of my ridiculous 
+mathematical Adventures I want to show you two   things yeah one of them is a little special 
+something I got for you so first of all I got   custom jerseys made did you get a pie creature 
+Jersey well no it's just the pie symbol okay it's   just it's just you know just normal existed before 
+the pie mascot so I thought team math this is play   another pie right and this is my one here so I'm 
+back there you can see all your customers yeah   yeah so you're number three one three one four 
+one and I went as far as I could reliably get   them to print digits fair enough my theory is as 
+much as you need to get to the moon yeah exactly there so now I can play I'm clearly you're too 
+mad but I still hang on I can't order a shirt   just for me are you this is just what's up man 
+are you large or extra large you really get medium   okay here we go no offense taken   I take it I get more Exes in front of my L as 
+uh the years going so Grand I guess the real   question is what number you gave from me well 
+okay we're just off the bat you also got pie   oh well but it's team pie yeah like the actual 
+proper number the reason you got that is because   they could only print One Design so you've 
+also got passes so I'm also Burgers it's nice [Laughter] yeah uh well okay I was anticipating 
+a little design work but that I'm Josh   team match yeah let's do it y'all ready for maths thank you so much for watching the video and 
+Tim is the distinguished visiting Professor   here at the Museum of mathematics where they 
+have this fantastic hoop curves exhibit where   we put the ball in it will I've been 
+told make a shot every single time foreign strictly speaking anyway if 
+you're anywhere in the New   York area make sure you come down and 
+check out Mo math it's really good fun eyes on the prize with a large sample that's 
+never lies should they take shots from the   three-point line I'm gonna pluck with x's 
+and y's running the numbers as the coach   nuts to the stats show what they knew 
+in their guts use the distribution is Maps stats fast

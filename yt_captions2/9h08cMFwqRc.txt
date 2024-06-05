@@ -1,0 +1,164 @@
+- cant get your hands on
+a fantastic playstation 5 like this one? have no fear. amd has got you covered with
+the almost playstation 5. that's right my friends. in this brown, nondescript
+box is the exact same silicon that's in your
+favorite game console, but now bigger, uglier, and a pc. allowing us to answer 1
+cent for all the question of what would happen if we installed windows on a game console. - [alex] oh geez, no, she'll explode. you need that - will explode? - [alex] yeah. - i'm intrigued. just like i'm intrigued by our sponsor. thanks to monday.com for
+sponsoring this video. monday.com's work os
+is a powerful platform to run all your work
+and create any workflow. they recently launched
+their work docs feature that allows you and your team to easily collaborate and
+record all your notes and ideas. watch till the end to learn more. (upbeat music) right out of the gate, this
+is a super weird product because the processor inside
+this case is the amd 4700s, a product that is readily
+available and listed on amd.com, and yet there is absolutely
+no obvious way to buy it. now you can get your hands on them, but, especially if
+you're in north america, you're going to have to go a little bit outside of your comfort zone. we did find a listing on new egg but at $1000, it's extremely overpriced. so checking out sites like aliexpress or taobao is going to be a better bet. of course, that doesn't
+really answer the question of what exactly it is we're getting here. let's crack this thing open even more. i am extremely curious about this puppy. - [alex] that one hole is rather enlarged. it's aluminum, but i don't
+think it's high grade. - the more pure the aluminum is, the more malleable it'll be. you'll want an alloy, okay. i mean, overall, the case doesn't seem
+like super hot garbage. this is a jonsbo case, right? or at least, oh, i assumed that because i saw that this is a jonsbo, oh, wait no, its the huntkey pad. where did i see jonsbo? i saw jonsbo somewhere. it's got a jonsbo fan in it. so that's a looks like
+92 millimeter exhaust fan at the back of the case. and your intake is going to be handled by drawing fresh air
+in from the side panel, the other more different side
+panel, and the top panel. of course, the big thing
+i want to have a look at is this power supply. because while i've
+actually heard of huntkey, it's never in a positive context. i'm actually kind of surprised at how much this thing weighs, huh? for how cheap i'm expecting it to be. but that doesn't mean that
+i'm going to plug it in. if you look carefully, you'll notice that this is
+not a dual mode power supply. there's no switch, and does not support a
+110 volt 60 hertz input. what that means is that
+if we plug this thing in, best case scenario, it would do nothing. worst case scenario, it
+could burn the place down. our best guess is they went with the 200 to 240 volt input to avoid paying for active power
+factor correction circuitry inside the power supply, which doesn't inherently mean that it is a bad, unworthy power supply. but when a manufacturer is cheaping out on what has been
+considered a basic feature for the last 20 years, it ain't a good look. it's also really dangerous because while this label is pretty clear, you should only plug in
+220 volt 50 hertz power in the event that it
+accidentally gets peeled off, which could happen. there is nothing preventing you from just lighting your house on fire, - [alex] or the fact that's just inside of the case from the factory. - oh, wait, what? oh, that's right. you would have no way of knowing when it's already installed in here. - [alex] yeah. - i didn't even think of that part. to be clear we're not
+blaming amd for this. it's not their fault that
+the system integrator who designed the system decided
+to cheap out in that way. it just is a thing you
+should probably know. as i continued to assembling this thing, i'm struck by how many different
+kinds of screws are in it. not in like an "f-you, we
+wanted to make this thing hard to reassemble" sort of way, but in a "it really just seems
+like we use whatever kinds of screws we found on the
+floor of the shop" kind of way. ooh. it doesn't even have a
+native eight pin connector. let's look at the gauge of this wiring compared to the adapter that they used, because they probably just
+couldn't find an adaptor that had such send gauge crappy wiring. now, this is weird. i was not expecting a
+graphics card in the system. it looks like this is an rx5 52 gig. cheapo, aluminum cooler on it, no obvious markings to
+indicate who the oem is for it. because the thing is, the
+chip in the playstation five is more of an apu. that's to say it has both a cpu and a gpu baked onto the same piece of silicon. so, i'm starting to have my doubts that what's under this cooler is even a playstation 5 processor. oh my god, are these
+standoffs just like glued into the case? now i normally wouldn't
+lean quite so heavily into a cheap computer for having a cheap power
+supply in a cheap case. but the system wasn't that cheap. whoa, look at the size of that back plate! that is nothing like a
+standard amd back plate. huh? so here's where we're
+getting into the part that amd actually makes. so we've got an amd logo silk
+screened onto this board, and it looks like the whole
+thing is meant to be sold as one integrated unit. there is no socket. it's soldered right to the main board. and this is also really interesting: there's an intel stock
+cooler style cooler on this. - [alex] have you noticed that there's like no ram yet? - oh, that makes sense. because it would be
+just baked into the soc. oh. it only has a pci express
+x8 slot down here. so it's a 16x physical slot, but it's only actually
+wired up for eight lanes. no m.2, which is weird. cause the playstation 5 has m.2, but then the playstation 5
+doesn't have a pci express slot. this is super weird. - [alex] do you want
+to know something else that's very unfortunate
+about that pci express slot? it's gen 2. - ooh. which makes perfect sense. that is exactly what the
+playstation 5's m.2 slot is. if there was any doubt
+that this cooler is custom, we can put that to rest. wait, what? there's four more screws
+for just the back plate. i don't know whether my
+expectations are higher or lower after seeing how jank this is. oh. this may be the single
+weirdest motherboard that i have ever held. you know what's funny? i was looking at the layout of these traces around the board. i was like, this is so weird. it kind of looks like they
+all just go out in a circle and come back because they do. this thing is trippy. but is it actually a playstation 5 chip? only one way to find out. oh, well that trace layout
+looks really familiar. - [alex] it could not be more similar. - yeah, that's a wow. i mean, you don't have to have a degree in electronics engineering to figure out that these
+are probably architected somewhat similarly. yup. oh, you know what? i've never actually been close up with a playstation board yet. so i guess these are the nand packages. there's your add in m.2 slot. this is for the water-cooled
+playstation 5 project, right? - [alex] yeah, i guess
+you could probably say was for the water-cooled
+playstation 5 project at this point. - oh interesting. a bunch of the caps on
+the back are missing. let's see what the
+markings on the dye say. you ready, brandon? big reveal. - [brandon] no dye markings. - [alex] yeah, i'm pretty
+sure that they just sanded the dye markings right off of it. - does the regular playstation
+5 have dye markings? there's no markings on the dye. enough marveling at its greatness though. let's throw this thing back
+together and see how she flies. okay, moment of truth. hey, it's got an rgb fan in it! nice, jonsbo. - [alex] you hear how loud that fan is? (imitating loud-pitched fan) - oh wow, we went straight to bios because i forgot to
+plug in the sata cable. 4700s 8-core processor desktop kit. so this is going to be
+zen 2 based, not zen 3, like the latest 5000 series ryzens. there's like nothing else in here that's configurable in any way that has anything to do with that. so, oh my god, it's at 87 degrees. did i not put it back on right? there isn't even any uefi,
+non-uecfi, like boot mode, nothing. - [alex] yeah, and did
+you see the ram stats that they had there? - 16 gigs. oh, not bad. that's the same amount as
+the playstation 5, right? - [alex] well, but normally
+it would have stuff like ddr4, 3200 megahertz. - at what speed it runs at. but no, no, because this is
+going to be gddr, whatever, like gddr 6 right? yeah. oh interesting. what the heck is cpaz going
+to say about this thing? don't spoil it, alex. - [alex] sorry. - everything about this
+thing is just so weird. even the way that they
+adapt to this cooler with just a couple of punched
+out steel mounting plates, like it's very, almost diy. when you're applying formula
+compound to a bare dye, you have to be a lot more
+careful to cover the whole thing. cause you don't want any hotspots. when there's a spreader over top of it, it's not that big of a deal, but. ah, no! i got thermal compound on me (alex laughs) this isn't even the good tasting one. hey alex, how do you gallop into the bios? (imitates horse galloping on keyboard) - [alex] you missed it.
+- its bit of a drag that it doesn't support an m.2 boot drive. oh wait, whoa, hi, how are you doing? is this the pre-installed windows image? - [alex] oh yes. - oh, okay. we're up. here it is ladies and gentlemen. this is a gaming machine for gamers, okay? cpu: amd 4700s 8-core
+processor desktop kit. i don't think there's any way
+to buy this thing standalone. that's why we ended up with
+this weird, janky system. it was just the cheapest
+one we could find. memory: 16 gigs, and that's it. wow. that's weird. it has an onboard usb
+3 to ethernet bridge. - [alex] what? - and i just, i'm, i want to check that. because sony's using a completely separate outboard ethernet controller chip. no idea how it's connected
+to the rest of the chip set. so obviously they had to
+find a different solution for this board and they went
+with a usb to ethernet bridge. weird. oh, hey whoa! hardware info pulls it up. oh, wait. oh damn. nope. nevermind. that's the gddr 5 on the gpu. that is some uncanny valley stuff we've got going on right there. wow, that fan is going boys. it's going, it's going! - [alex] get immersed liner. - no, it looks like poo poo, and i want to see something
+that's better looking. let's go. (electronic whirring) oh my god, i have to go turn
+off the power or something. i don't care. okay, you know what? this is good enough. and at least we're not
+into seconds-per-frame territory here, but this
+is not a great experience. - [alex] yeah, this is
+a playstation 4 game. it's not even a ps5 game. do you want me to just try
+it with a better gpu now. - [linus] can we at least
+turn down some settings or something? oh, well we're on ultimate quality. why would it be at ultimate
+quality by default? - [alex] especially when
+it knows you don't have the minimum requirements. - [linus] let's see if that's any better. - [alex] yeah, you might
+have like seven fps now. - [linus] nah, this was like 10. this looks like a giant
+boatload of garbage though. (alex laughing) whoa, calm down! jeez. - [alex] now one potential
+problem: will this even fit? - do you have anything else? - [alex] 2016. - [linus] that's reasonable. if it wasn't already apparent, while this might be
+exactly the same silicon, it clearly doesn't have
+the same functionality as the soc or apu, or
+whatever you want to call it, that's built into the playstation 5. there's no gpu, and we can already see
+that some of the io choices that were made on this
+motherboard are different from what sony did on the
+playstation 5's board. my expectations are honestly
+not super high though. pcie gen 2 x8. - [alex] x4. - x4? i thought it's x8! - supports x4 gen 2 signal. (alex laughing) the reason we have such a lack of pci express connectivity on that thing is because with the playstation 5, just like any modern cpu, you've got a bunch of pci express lanes that are built into the soc here, but on the playstation 5, they're used to connect with
+only a couple of things. this io hub/controller hub down here that also acts as the playstation 5's ssd, as well as right here, to this m.2 storage expansion slot. most of these lanes are
+actually going to be wired up to the gpu that's built into this. so if that's just not
+connected, it's non-trivial to, to tap into those lanes,
+you can't do that. so we're stuck with whatever
+it had to communicate with a chip set, which this also needs. and then whatever it had
+to communicate with an ssd. the question then becomes, are we limited by this
+pci express bandwidth, or could there be something else? let's explore another idea
+by benchmarking our 4700s against a regular old ryzen 5800x, starting with a memory
+read speed benchmark. we've got around 59,000
+megabytes a second, okay. and, oh wow, look at that! 62,000 megabytes a second. that's a lot of memory bandwidth. but what you got to
+understand is that gpu memory, that's the "g" in gddr 6, is designed for raw bandwidth. it's the latencies where
+you might run into trouble. wow wee! 143 nanoseconds! i mean, that's not a lot of time, right? these are nanoseconds we're talking about. except that that is slower
+than a pentium d 820, a cpu from 15 years ago. oh my god, it's slower
+than basically everything. - [alex] i haven't looked at
+this rank, that's hilarious. - yeah, like this is, this is higher latency than cpu's that don't have an integrated
+memory controllers. to put this in context, our
+ryzen 5000 series over here is more like 60 nanoseconds. that is going to make a huge difference in regular desktop applications. - [alex] yeah, you can even
+do just the open chrome test to see the difference. ah, just run the center
+bench, see what happens. - while we wait for this to finish. let's talk about why amd
+didn't just allow you to plug in regular old
+ddr port of this thing. because you can't. that's the thing about amd's
+custom silicon division. anything that sony or microsoft
+don't need on the chip, it's not on there. that's why you got to do this weird memory on the back thing, just
+like on the playstation 5. 3600 points. - [alex] is that half? - it's over half, but not by much. this is 6,000 points. all of which raises a
+very big question here. why, oh, why does this product even exist? and the answer is because it already did. when you're manufacturing,
+microprocessors, the odds of getting it
+right every single time, it's basically zero. sure, some of your chips are going to have all of the cpu cores and
+gpu cores functioning, and they're going to be within the power and thermal targets that you set. and those are going to end
+up in the playstation 5. but some of them are going to have runaway power of consumption, or they're going to have
+a gpu that doesn't work, but the cpu still works. well now, instead of taking those and essentially turning them into e-waste, amd has repurposed them into
+these budget motherboard, cpu, ram combo things. and fundamentally i loved this move; taking something that would
+have otherwise been wasted and turning it into something functional? freaking awesome. my main issue with this product is that from a value per dollar
+perspective, it's not great. at $400 in china, remember that's just for
+the board, cpu, and ram, you can get much, much better
+performance for the dollar. and at a thousand dollars
+here in north america, it's absolutely out-of-the-question
+ridiculously overpriced. so, good effort? (linus laughs) just like it's a good
+effort, segue to our sponsor. monday.com. they just launched their new
+workdocs feature into beta, where you and your team can connect, collaborate, and execute
+ideas and workflows all in one place. their real-time engine
+allows hundreds of people to work together on a workdoc, without them overwriting
+each other's work. and since the text is made of blocks, you can embed live objects. so workdocs always stays relevant. you can connect your
+workdocs to your workflows, allowing your team to
+run all of their work in a single unified workspace. and you can sign up today
+for a free month trial at the link down below. if you guys enjoyed this
+video, hey, you know what? maybe check out the weird chinese console that we got our hands on
+a couple of years ago. it also featured, like, what seemed like kind of reject playstation or xbox soc's with graphics memory on it. but that one was intended to be like an actual prebuilt thing you bought, as like a weird console with windows. really, really strange product.

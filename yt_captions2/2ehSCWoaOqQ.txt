@@ -1,0 +1,223 @@
+- i've spent most of my career trying to get into a chip fab. samsung's a hard no, global foundries was open to it in person, then ghosted me when i followed up and intel has said no to me, every single time i've asked except one. honestly, i'm pretty overwhelmed today because i'm gonna be
+taking three major items off my bucket list. i'm visiting israel for the first time, i'm gonna be going deep
+into the heart of intel's state of the art fab 28 and i get to tell you about our sponsor. - zoho crm, zoho crm is a 360 degree solution that offers an intuitive ui, ai predictions and a design studio to help you get your sales done faster. get 50% off with the code
+zcrm50 using the link below. (upbeat music) (upbeat music) - my tour guide today
+couldn't be more experienced. dani is the co-general manager of worldwide semiconductor manufacturing and started at intel working
+in fab 8 in jerusalem back when state of the
+art was the pentium one. microprocessor fabrication experts can safely skip ahead a couple of minutes, but for everyone else, let's run through the basics. every cpu die, every one of these starts
+with a sliced up silicon ingot like the one right here. these are astonishingly pure and are exactly 300
+millimeters in diameter. if they went in any smaller, they'd increase waste around the edges. i mean look at this, obviously this is not
+gonna be a working chip if it's cut off by the edge of the circle. fun fact by the way, the reason that they run
+the non-working edge dies through all of the same
+fabrication processes is that it actually
+improves the uniformity of the full chips next to them. consistency is key in cpu manufacturing, because even though we talk
+about these chips in terms like 14 or 10 nanometer, the components that make
+up these transistors are much smaller, like on the order of less than a nanometer and a tiny error or contaminant in any of the hundreds
+of manufacturing steps means that that die, he no worky. i mean it's a modern miracle
+that any of this is possible and is basically unheard of to get an entire 300 millimeter
+wafer through the fab without a single defective dye on it. before it can be sold however, it needs to be transformed
+from melted sand like this into the brains of your pc. silicon you see is neither an insulator, nor is it a true conductor. so to create all the little transistors or switches that control current flow through the logic gates and other microstructures on the chip, the wafer needs to undergo many processes. implantation fires dopant ions into the surface of the silicon to alter its electrical characteristics. so depending on what kinds
+of ions are implanted, say phosphorous or boron, you might be laying the
+groundwork for an n-type or a p-type transistor. this determines if the voltage
+is negative or positive to open the gate. diffusion furnaces create
+new combined materials by exposing the wafer to various gases at up to 100s of degrees celsius. lithography, is one of the easiest steps
+to understand conceptually, but also one of the most important. within a single processor die, there are billions of transistors and literally kilometers of tiny wires, but they're obviously far
+too small to build them and solder them together by hand. so the wafer gets coated with
+a material called photoresist, then exposed to uv light through a mask. anywhere the light
+passes through the mask, the photo resist will be removed, allowing the exposed
+portions to be processed. then it's quite literally
+rinse and repeat. nikon, who does a lot more
+than make cameras by the way has a great diagram on their
+site demonstrating this. so one such potential
+processing step is etching where the goal is to
+selectively remove material from the top of the wafer,
+creating trenches in it. these can be overfilled with
+copper to create interconnects then the excess gets
+removed by polishing it off using brushes and slurry in a process called chemical
+mechanical planarization. there are different kinds of etching but we can talk about that
+more once we get inside. (upbeat music) this is it. point no return, here we go. there's no card or anything
+just, yeah it's very, good high security. time to learn the procedure. this is great, this is very inclusive, they have child size
+gloves for people like me. this is crazy. so these are not the gloves
+we wear in the clean room, these are the gloves to put on the stuff that we're
+gonna wear in the clean room that will be contaminated that then we will get rid of after. wow, man i'm looking sharp. now time for stage two. basically we grab have a couple of little foot cover doodads here and
+this room is pressurized and the idea is that
+these, these aren't like filtered like the clean
+room or anything like that but by having a little bit
+of pressure in this room, we keep the super stanky
+air from outside, out. so when you walk into here, you feel this gust of air coming out and then what you're supposed to do is you're supposed to have
+dirty stuff on this side and then clean stuff on this side. so i gotta put my little booties on, did i do it right? yep. okay so there's more
+positive pressure in here blowing that way, right? - yes. - so the idea then i guess is the air gets cleaner and cleaner as we go. okay, what do i do? - you start with the hood.
+- yes. - [staff] start from bot, top to bottom. - top to bottom.
+- yeah. - okay, why do we go top to bottom? so that the dust won't fall
+off our top onto our bottom. - better that it'll suit
+into the bunny suits. - oh, got it. 'cause that's how the garments overlap. i have a feeling our audio is not gonna be our finest ever for this video. ladies and gentlemen
+you'll have to bear with us cuz my microphone is already under three layers of fabric now. (upbeat music) - we're out of the gown room into the fab. - into the fab. - and it's already crazy. can you see these like
+robots on tracks up here. apparently these are taking the foups, and i check that is actually
+what's called f o u p, which is 25 wafers. so that's 25 slices of the
+original silicon ingot. that foup we just saw, that
+little robot on the track had hundreds of cpu dies in it, but we don't know how
+many of them are good because they're actually
+on their way to sorting where not only will they
+determine if they work, but they'll determine how well. so is it a core i7 or a core i9. every guy wants to live, it sounds like a nerdy james bond film. i love it. (upbeat music) oh my god. this place is a lot bigger
+than it initially looked. how many square feet is this? - four football fields. - [dani] so lithography is over there. diffusion is over there.
+- diffusion over there. - ...the result of diffusion. - and deposition was over there? - dry and wet etching on the side. - etching. - and planar. - and planing. so we're gonna look at all of that but there's no particular
+order for these steps because once a foup comes
+in here, you guys can see, there're whipping around
+all over the place. there are hundreds of stages. each alder lake cpu die
+might go from lithography to planing to deposition, back and forth hundreds of times, (upbeat music) every silicon wafer
+comes to diffusion land and basically what these machines do. they're more like a, a furnace and they will take that top
+layer of silicon on the wafer and they will diffuse it with
+some kind of other material. i asked for some examples, but other than silicon oxide, they wouldn't really tell anything and in fact, they wouldn't even tell me what the first material layer would be for pure processors that
+they're making here now. here we go, we can actually
+see the robot arm inside that would take the silicon
+wafers out of the foup and position them as
+needed for the machine. this is the loading area down here that we can see through the window and then on top is the actual furnace where it reaches 100s of degrees and then it has gases in there that help them to achieve whatever kind of chemical
+changes that they're going for on top of the wafer. one thing intel's been
+very particular about is don't touch anything because
+it's more than just, you know, not pressing the wrong button, but actually even just
+bumping these machines. when you're trying to build
+something that has structures in it that are on the side
+eyes order of nanometers, that means that the building
+blocks of that thing are sub-nanometer in some cases. so you, you actually, you cannot, you cannot bump one of these
+machines while it's running and in fact, they only build their fabs on particularly stable parts of the world where they don't have to
+worry about seismic activity. this is cool. as we're walking through diffusion, we actually got a great
+opportunity to show you guys the multi-level structure of the fab. so what we're walking on is
+only 1 of 4 total layers. above us are filters and the air comes from there down to here. then below us is where
+they're gonna have pumps, chemistry delivery, you can see these punch-outs
+in the floor here. you can actually see there's like a foam, like vent of some sort
+going up into the machine that's next to us and then the air flows from top to bottom so it goes down to that layer, then it goes down to one more layer where they have water,
+utilities like electricity as well as exhaust. so that air goes back up
+the side of the building and recirculates. in total, intel expects anywhere from 0 to 1 particle part, what was the unit of volume? 1 meter cubed and for context, an operating room could have tens of thousands of
+particles per meter cubed. so you, you could conceivably
+perform surgery in here, assuming you were qualified. i asked about this sign and apparently it's just to make sure that as people are blowing
+though this corridor, they don't accidentally smoke someone coming out of the reticle room. this is one of those secret areas, even here inside the fab
+which is already a secret area because it contains some of
+the most expensive materials that they need for lithography it's also some of the most top secret. now under normal circumstances, every one of these stations
+would be occupied by someone. in fact, the entire factory
+runs on 4 shifts a day, 24/7, 364 days a year, only
+shutting down for yom kippur. so i didn't ask because i'm
+afraid to know the answer, but i think it's probably
+costing intel a fair amount to have us in here poking around while they didn't sponsor
+the video or anything. definitely shout out to intel for how much it's costing them
+for us to make this video. on that note, here's something cool. these tools are maybe not as sophisticated as some of the other
+tools here in the fab, you got your flathead screwdriver but the process is what's fascinating because taking a machine like this offline for more than a few minutes
+at a time, very, very costly. so they handle it kind of
+like a formula one pit crew. they've got all their tools,
+everything's arranged, freaking ready to rock. they go, okay time, we're shutting it off, we're
+performing maintenance, go, go, go, go, go, go, go, fire it back up. that's it. don't worry, i will not hit any buttons. this is the emo button, okay? the machine will get
+very sad if you press it. this machine right here is
+doing dry etching right now. so the foups come down
+off of the track up there and then while they're waiting, you can see they're actually sitting out cause they sit away from the machine and while they're being processed, they come up right next to it here, and then you can see
+there's a robot arm inside grabbing wafers, whipping them around. it just throws it on here
+for a span of, i don't know, 5 or 10 seconds, boom, it's dry etched. it goes back in the foup and then that whole foup
+is gonna head off to whatever the next step is for
+this particular processor. we don't know exactly what it's making, but everything here is intel 7 so, modern cpus pretty much or maybe future cpus for all i know. not every drying machine is identical as you guys can imagine. for all the different
+specialized processes that a wafer goes through, there might be different machinery. so this is another example
+of a dry etching machine where the wafer actually
+sits in this chamber in here and does whatever the heck it's doing. now we're heading back to
+the lithography area again, which is why the lighting in the fab has changed back to yellow and the reason for that
+is they use uv light to expose the wafers. so if they have white light, it could easily contain
+parts of the spectrum that could accidentally expose the wafer. so they have to use these
+carefully controlled light sources that will not cause
+any damage to the wafer as they're ripping around in the foup or going in and out of the machines. fun fact, each of these machines
+costs on the order of 30$ to $40 million and it doesn't take a rocket scientist to figure out or i should say a, a chip architect to figure out that when you put this many
+of them packed this tight into an area of the size
+of four football pitches, that's gonna cost a pretty penny and it's because of those costs
+that they actually have this entire sort of row of cabinets
+i guess you could call it in between the east and
+west side of the fab. this entire thing is full of foups that are just waiting to be processed because the second one of
+those machines is available, you want to be loading it up with silicon so you can make more processors. now we're out of lithography again, we're in the east side of the fab which is also freaking enormous and the first machine
+that we're encountering are deposition machines. so what these do is they'll take the wafer and they'll apply some extraordinarily thin layer of something, say for example, metal, okay? then it comes back into the foup, back up to the rails and
+off to the next step. did i ever say, we're
+gonna go see the planers. - [dennis] - yes you did. - now depending on the
+stage of wafer processing, cuz remember they you go back and forth hundreds of times for a single die, you don't necessarily want the
+straight edges of a dry etch, you might want this kind of
+curved shape of a wet edge. now the actual exact shape is
+apparently extremely important and extremely difficult to control because unlike a dry
+etch, there's actually, you can actually hear
+the sound of the pump. you hear that right now, so there's actually
+chemicals pumping inside. another key consideration if you've got such expensive
+machinery is training. so one of the things that
+intel wanted to show us is how they're using augmented reality practically right here in the
+fab for a variety of purposes. so one is due to covid 19. obviously some personnel were
+not able to be here in person for an extended period of time. so remote assist allows
+someone who is here in person to actually have someone else
+scribbling on a schematic or explaining it to them while
+it hovers in front of them. pretty freaking cool. it's also used as a training resource for maintenance of old machines so you can kind of learn by doing, and they're actually gonna
+do a practical demo for us. hey, here's our, here's
+our test guinea pig here and you got some my
+mug, that's unfortunate. oh, that's awesome. so it shows you all the tools you need. so there's a little instructional
+video for how to do it. very cool. hey, look at me, i'm a fab
+equipment maintenance technician. unfortunately the windows on
+these machines are quite dark but we did manage to catch one that is being processed right now so we've got some footage to show guys. essentially after the deposition step, you're gonna end up with
+some inherent unevenness that needs to be polished off. now in the past, they might have actually submerged
+the wafers for polishing, but now it's actually done by a brush that has a slurry on
+it that intel said is, very proprietary. they wouldn't even give me any
+hints as to what is in this, this polishing with liquid but they did tell me that the pressure as
+well as the motion of it has to be so precise that they
+could take off as little as a few atoms or molecules at a time. you could see the way for moving
+back and forth on the, like spinning bottom. crazy. one thing that's missing is
+i don't see where that tray, that loads all the wafers in is. where the foup is it? haha, get it? cause it's a foup. by the way, something i didn't mention before is that each of the
+different types of machines actually has a number, but it also has these animals because intel found that especially in a multi-layered
+design like fab 28, in order to make sure that the
+maintenance crew down below is actually, you know, shutting down the correct
+machine for maintenance up above, it's much easier to communicate
+and much easier to remember, oh, we're working on a giraffe
+machine or a ladybug machine. apparently most of the staff
+that we saw in there though we're actually maintenance
+staff for the machines and the actual control center
+or brain of the operation is elsewhere. so we're gonna head over there now. this is the remote
+operational center, which is, you could think of kind of
+like the brains of the fab that we just saw. so if something goes wrong, it's gonna pop up as an
+error on someone's screen so it's the job of everyone in this room to optimize the overall
+throughput of the fab. so instead of having technicians
+there on the fab floor, moving things around
+and looking at screens and turning dials, everything is done right here to ensure that they're pumping as
+many chips out as possible because once you invest 30$ to 40$ million in a machine times, however many were in there, (chuckles) you want them going as
+hard as you possibly can, as often as you possibly can. (upbeat music) every shift, they have to do two stretching
+sessions in order to, you know, minimize the risk of rsi, cuz they're basically sitting
+at their computers all day, every day, right? (applauds) but like the friend who
+only invited you to dinner because he wanted to show off his new car, intel had a bit of an
+agenda for inviting us here and that is to show off
+the enormous investment that they're making into fab 38. so everything that we just
+saw is about to be doubled. this roundabout, see you later in about two weeks. that entire construction site out there is going to be state of the art, new generation fabrication technology that will actually be integrated so tightly with the existing fab that you could actually
+take a wafer from one, utilize equipment in the other and then send it back
+if you really needed to, although that's gonna be quite a distance for the foups to travel. to give you some idea of how enormous this
+construction project is, intel actually built their
+own concrete production in the corner of the lot over there which you can see at the very back. unreal. one of the big reasons intel is building out fab
+capacity so aggressively right now is a new concept called idm 2.0 where basically instead of only
+building their own products, they're going to be fabing products for third party companies which i personally given that we're sitting
+in the middle of the largest ever global silicon shortage, i'm pretty excited about. now, unfortunately there
+are a couple of steps in the die creation process that we weren't able to see today. the addition of the bumps that connect the dye to the
+package through electro plating, that doesn't happen here
+and quality control. qc starts with an end of the line e-test, which checks the functionality
+of fake debugging structures and transistors that are specifically meant to be there to ensure that everything went
+correctly in manufacturing. then it proceeds to binning. which is the process of
+sorting the good dies according to their capabilities. obviously the best of the
+best will become core i9, the next best will be core
+i7 and so on and so forth. other than that 12th
+gen core or alder lake is a pretty unique product for intel with much of the design and manufacturing done here in israel. once the wafer's done, intel sends it to one of
+their other facilities for slicing and packaging and a second validation step called class where they basically
+burn in every single chip to ensure that no degradation took place and that the packaging was done properly. this along with design phase testing that simulates the effects of cpu aging is where it intel's reputation
+for manufacturing quality comes from. i mean, think about it, when you're troubleshooting
+a system that won't boot the cpu is the last
+thing you're gonna check because unless you dropped
+it, it probably works. packaging by the way, is gonna be getting a lot more complicated over the next few years
+as multi-die processors like the upcoming sapphire
+rapids start rolling out and it's expected that
+the relatively basic packaging facilities of yesteryear are gonna be getting a lot more fab like. i mean, a packaging error on a $10,000 server cpu is a pretty expensive mistake
+given that the whole thing needs to be thrown away at that stage if something goes wrong. maybe that should be
+the next tour i request. am i right? actually, i'm not gonna
+push my luck at the moment. this was a once in a lifetime opportunity and i'm extremely grateful
+to dani and his team. shout out to karen by
+the way for hosting me, to you guys for coming
+and sharing it with me and of course, to my sponsor. ting mobile. ting mobile has rates
+that make it easier to see how much you can save by switching. they have a perfect plan for everybody no matter what your needs are. unlimited talk and text for 10 bucks, data plans that start at $15, then there's their set 12 plan
+with 12 gigs of data for $35 and unlimited data for $45. if you like their previous,
+pay what you use plans, ting mobile's flexed plans
+charging just $5 per gigabyte are still there. data can also be shared
+if you have a family plan so connect more phones to save more. you'll still get nationwide coverage and award-winning support. in fact, consumer
+reports named ting mobile their number one carrier in america. pretty much any phone
+will work with ting mobile so check them out atlinus.ting.com
+and receive a $25 credit. if you guys enjoyed this video, maybe check out one of previous tours. it's been a little while, but
+they are excellent videos.

@@ -1,0 +1,117 @@
+- intel is back. it's not quite the way we all expected when ryzen first hit
+the scene back in 2017. but, i don't think we could have hoped for a better outcome than this. not just for the consumer, but for the entire industry. - 12th gen core, codenamed alder lake, is like nothing we've ever
+seen on the pc to date. and i'm getting some serious ryzen, or maybe bulldozer, vibes from the lateral thinking it took to put it all together. - so let's talk about the
+who, the what, the why, and how this return to competition
+is so good for everybody. you know what else is good? our sponsor origin pc. origin pc laptops can be customized with intel core processors and nvidia geforce rtx 30 series
+graphics with max-p design. backed by a 24/7 support team, you can check out origin
+pc at the link below. (techno music) intel's performance claims for alder lake are mostly comparing against
+their own last gen product. but make no mistake, they are still coming out
+swinging against amd in gaming. they say alder lake gets equal or up to 30% better
+performance than ryzen 5000 depending on the game, and up to 50% better than
+11th gen core processors. this is huge. although there are some concerns
+about their methodology. intel's graphs mentioned
+running windows 11 for all of their testing, and that's a problem because if you've been
+keeping up with the tech news, you'll know that windows
+11's new scheduler had a little problem with amd processors that took a big toll on performance. it's patched now, but when they tested it definitely wasn't, which means that all of these numbers need to be taken with a
+veritable pillar of salt. and that's not even considering
+the potential impacts that this new hybrid
+architecture is going to have on older drm or anti-cheat technologies that use cpu detection. while providers for these technologies have already begun to roll out fixes, older games and apps
+may never receive any, breaking compatibility. - but what makes it so different that drm and even windows 11's
+scheduler might break? it's more like apple's m1 processors with dedicated performance
+and efficiency cores, p and e cores for short. those allow for tasks to
+be intelligently delegated between the cores that best suit them. this has fueled suspicions that windows 11's
+problematic new scheduler was developed specifically for alder lake, and i can see why. intel claims that each
+cluster of four of the e-cores fit in the same space as a
+single 6th gen skylake core, but each are more capable per watt. and i should point out despite their age, skylake cores are very capable
+and usable to this day, so that's saying a lot still. that ultimately means that
+if all the p-cores are full, sending a task to the simplified e-cores might actually be faster than using brute force
+hyper-threading to split the p-cores. on that note, hyper-threading is only
+available on the p-cores, so we'll have to see for ourselves what that means for heavily threaded tasks like rendering or code compilation. my guess is each e-core cluster will roughly equal one or
+two additional p-cores, if not more depending on the task. - but how do you even use these new cores? enter thread director. which detects what kind
+of work an app is doing and provides feedback
+to the operating system, telling it which cores those
+apps are best suited for. it works kind of like speed
+shift or preferred core does, except it's got the cpu directly talking to the operating system. no extra drivers required. windows 11 already has support
+baked in for thread director, but this should also work with linux. and if microsoft were to grace us with an update to windows 10, it would work there too. not that i'm holding my breath. on the platforms that do
+support thread director, it's gonna be a pretty big deal. background tasks, like say a virus scan or a windows update, are gonna be pushed onto
+the efficiency cores, which not only reduces the
+impact on foreground tasks, like gaming or content creation, but can also reduce power
+consumption and heat output while those tasks are running, which on future mobile chips will mean better laptop battery life. we don't have any info on
+those products right now. but what we do know is that the k series
+desktop i5's, i7's, and i9's will all have a tdp of 125
+watts in this generation. - which sounds ridiculously confusing. because how can a core i5 have
+the same tdp as a core i9? but what intel is doing here
+is such a breath of fresh air compared to previous releases. what used to be called tdp is now processor base power or pbp, and this is how much
+power the cpu is assured to have available to it
+in sustained workloads. and now, intel is also advertising the maximum turbo power or mtp, which is how much the
+cpu can use during boost. - with that information
+being disclosed now, you can finally make informed decisions about your cooling setup. not only that, but k series cpu's are shipping
+with a sustained boost mode where pbp equals mtp, effectively turning on
+multi-core enhancement by default and letting the cpu boost forever. so now there's finally a
+reason to buy a k series cpu. i mean, aside from overclocking, which, hey, may actually be a thing again. intel wouldn't say how
+much headroom there is, but their new extreme tuning utility is shipping with a one-click
+over clock function that adds a fixed 100
+mhz across all cores. so, while that's a mild oc, it definitely shows a lot of
+confidence in their silicon. - and they may have good
+reason to be confident. not only does 12th gen core
+have a larger footprint in the updated lga 1700 socket, it's also built on intel's long-awaited
+10nm superfin process, now called intel 7 because, thanks to marketing, nanometers have lost all
+meaning in chip making. ice lake was the first
+to use this process, but suffered from frequency issues that tiger lake largely resolved. can i just say that it's really fitting that it would be under intel's
+new ceo, pat gelsinger, that the new process would
+finally be ready for the desktop. he was the chief technology
+officer back in 2008, when intel first spoke about 10nm. like it's... it's like they kept the seat warm for him. but six generations of 14 nanometer chips? they could have, you know, just used a water bottle
+from lttstore.com. it would have been a lot cheaper for sure. - right? the new v2 ones even have
+an intel inspired design. there's more to the platform than just nanometers and cores though. intel is shipping the first consumer cpu to use pci express gen 5. which feels really soon
+after gen 4, doesn't it? although it was kind of like
+this with gen 1 through 3. it just took a long time for gen 4 to come around to the consumer market. the benefits of pci express gen 5 though aren't super clear just yet. but, as with gen 4, it doubles the bandwidth
+over its predecessor. and once cards are available
+to take advantage of it, it could allow for far more
+flexible lane arrangements for things like bifurcation. because here's the thing: eight lanes of gen 5 is
+equivalent to 16 lanes of gen 4 or even 32 lanes of gen 3. man, we are firing on all cylinders now. it's kind of like the innovation that we missed out on in the 2010s is all just hitting us at once now. this is great. - 12th gen core cpu's are going to ship with a combination of pci
+express gen 5 and gen 4. perhaps the most useful
+improvement for right now though is the upgraded gen 4 link to
+the new 600 series chipset, which is double the bandwidth of both the outgoing 500 series
+and amd's x570 platform. not only that, but the chipset now supports
+up to 28 gen 4 lanes. taken together, this should make it a lot easier for z690's new integrated wi-fi 6e and standard 2.5g ethernet to co-exist with things like 10g
+ethernet and 20g usb ports, additional storage and more. also, it's not common, but intel is curiously supporting a dedicated clock generator for more reliable base clock overclocking. wouldn't expect to see these outside of enthusiast boards though. because who actually does that? - alder lake is also the first x86 cpu to ship with support for ddr5. now, like many transition chips, the memory controller on
+alder lake is compatible with both ddr5 and last generation ddr4, but it should be noted that you can't run both at the same time. ddr5 could end up being one of the most interesting things about alder lake because it is a huge departure from just about everything we
+know about computer memory. i've got a full deep dive on
+what is different about it. it went up yesterday. you guys are gonna want to check that out. the tl;dr though is that internal bottlenecks
+have been removed, the power management has
+been moved onto each dimm, and it provides much more
+granular overclocking control. intel's xmp 3.0 memory overclocking spec also allows manufacturers to include up to three separate profiles now, and includes two
+user-specified profile blocks with descriptive names for things like high bandwidth
+mode or low latency mode, including per module voltage control. each of the profiles are crc checksum, so if anything should
+happen to corrupt one, the system will actually know about it instead of happily
+moving that decimal point and letting out the magic smoke. as for the hardware vendors, self-certification is free of charge, which should speed up adoption of xmp 3.0. perhaps even among lower end memory kits. - that's not all intel's
+doing with memory though. where 11th gen core brought the ability to toggle xmp manually after
+the pc has been booted, dynamic memory boost is a new feature that can automatically
+toggle it based on load. it's something like turbo boost, but for ram. this means that you can save
+on power and thermal output, while retaining the benefits of high-speed memory when you need it. which might not be a
+big deal for desktops, but for laptops this is gonna be huge. there's no software or
+operating system support needed for it either; it's entirely handled
+by the cpu and the bios, so even something esoteric
+like temple os can use it. intel says that it's
+also usable with ddr4, so you don't even need to buy in on expensive ddr5 right
+away to use it either. this will depend on bios support though, and intel says it'll be rolling
+out shortly after release. - which will be november 4th, when we'll be validating
+intel's performance claims and checking out the rest of the platform. the core i9 12900 k is gonna be priced at an eye-watering $589. that's a fair bit less
+than the leak suggested, but it is still $50 more than the 11900 k and $40 more than a ryzen 9 5900x. a cpu that has no efficiency cores, just performance cores
+and 50% more of them. there's gonna be some spicy benchmarks coming your way next week. i've been getting goosebumps
+thinking about all of the innovations that amd and intel are gonna have to make
+over the coming years now that they are at each
+other's throats again properly, and we finally got an engineer
+back in charge at intel. amd, for their part, are expecting their next gen
+ryzen processors with v-cache to get up to a 25% gaming improvement and a 15% improvement overall. if that is true, intel and amd may end up neck and neck in terms of gaming performance
+by the end of the year, and it'll be amd's turn once again to pull off a little magic trick. don't y'all love that cpu leapfrog? that's my favorite dance. and i love sponsors, like nordpass. nordpass wants to help you keep your private information safe. and their password
+manager stores passwords, notes, credit cards, anything
+that you want to be protected by a strong, secure password
+with two-factor authentication. it recognizes your favorite websites, so it'll automatically
+fill in your login details and allows you to create new
+complex and secure passwords with their built-in password generator. nordpass premium starts
+at only $2.50 a month and gives you additional features, like data breach alerts, password health reports, and up to six active devices. for nordpass's back to school sale, for a limited time you can get 50% off on nordpass premium plan with
+an extra four months for free. so, protect your passwords
+today at nordpass.com/linus and then use code linus. go check out our recent first look at ddr5 for a more technical deep
+dive on what that means for the industry and your
+next pc going forward. - thanks for watching. - indeed.

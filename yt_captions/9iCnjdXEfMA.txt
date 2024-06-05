@@ -1,0 +1,59 @@
+Hello everyone, in this first episode I’d like to introduce two important concepts in programming: variables and methods. In our code we need to be able to keep track
+of changing information, and this is where variables come in. So, a variable is essentially a name to which
+we assign some data. For example, we might assign the number 15 to the name ‘playerHealth’
+at the start of the code. At runtime, in other words while the game is actually being played,
+if the player takes damage, we can update the value stored in the variable. An example of this would be the line: playerHealth = playerHealth - 5 which subtracts from the player’s health,
+by assigning the variable a new value equal to its old value-5. When we create a variable, we need to specify
+what type of data it will be holding. The playerHealth variable, for instance, holds
+a number, so we might specifiy it as an ‘int’ variable. This means that it will only every
+be able to hold an integer, or whole number value. If we wanted it to be able to store
+non-whole numbers, what we refer to as ‘floating point numbers’ (since the decimal point
+can be placed anywhere), we would make it a ‘float’ variable instead. Other examples of data types include ‘bool’
+for storing true/false values, such as playerIsAlive; and ‘string’ for storing text, such as
+the player’s name. As you can see, when we create a variable
+we first specify its type, followed by a name of our own choosing. To assign a value to
+it, we then add an equals sign, followed by the value. Some data types require the values
+to be written in a certain way, for example string values must be enclosed in quote marks,
+and float values must end with the letter ‘f’. Finally a semicolon is added to indicate
+the end of that line of code. You don’t necessarilly need to memorise
+all of this right away, the main take-away from this is simply that a variable is a name
+to which we can assign data, and that this data can be accessed and modified at runtime
+to reflect the changing state of the game. All right, let’s talk about the next concept:
+methods - also known as functions. Methods are a little bit trickier to define in simple
+terms, so I’m to explain them by way of an example. Imagine we write a bit of code for creating
+an explosion. So the instructions would be something like: play a sound effect, make
+a flash of light, and apply 10 damage to all objects within 5 units of the blast. By the
+way, anything that follows two forward slashes on the same line is a comment in C#, in other
+words it does not affect the code, but acts rather as a note to oneself or to other programmers.
+So I’m using them in this video to indicate lines which are not actual code. Now our game might have various objects that
+explode. Cars, barrels, etc. We could copy-paste the explosion code for all these different
+objects. However, if we then wanted to make a change to the instructions, for example
+add smoke, we’d have to remember to go through all the copies and make the change there as
+well. You can imagine this would get very tiresome, so as a rule, programmers tend to
+severely dislike code repetition. What methods allow us to do is define a name
+to which those instructions belong. So we could create a method called Explode(), and
+put the instructions inside of there. Now we can replace all this duplicate code with
+a single call to that method. Let’s extend this explosion example a bit.
+Currently we have hard-coded values for the damage amount and the explosion radius. But
+what if we want an exploding car to be more powerful than an exploding barrel? Instead
+of saying ‘apply 10 damage to objects within a 5 unit radius’, we could say ‘apply
+damageAmount damage to objects within blastRadius of the blast’. We have replaced the hardcoded
+values with variables. We now change what is called the method’s ‘signature’ to
+reflect this. So inside these parentheses following the method name, we define the two
+variables that this method uses. Notice, however, that we don’t give the variables values.
+Whenever we call the method now, we can supply whatever values for those variables we want. Here when the car calls the explode method, damageAmount = 8 and blastRadius = 12 Whereas when the barrel calls it, damageAmount = 5 and blastRadius = 10 So we’ve seen that we can pass data into
+a method, but we can also return data from a method if we want. Say we want to be able to generate random
+names for the different characters in our game, so we make a method called GenerateRandomName.
+This starts off by creating an empty string variable (remember that’s for storing text)
+called randomName. Then we randomly add some letters to this variable. Now we have a random
+name, but we’re not done yet. Whoever is calling this method will want to know what
+the result is. So at the end of the method we add the keyword ‘return’, followed
+by the variable our result is stored in - randomName. Just like we have to specify the type of variable
+we’re creating, we have to specifiy the type of data that a method returns.
+If it doesn’t return any information, as was the case with out Explode method, then we just have ‘void’ before its name. GenerateRandomName returns text, so we’d add ‘string’ before the method name. Now, whenever a name is required, we can say
+string name = GenerateRandomName(); What we’re doing is setting name = to the value that
+is returned from that method. So to recap, a method is a means of isolating
+code that performs a specific task so that it can be called from multiple places. It
+can optionally take in data to work with, and can either return void, that is nothing
+at all, or it can return a piece of data. I hope you found this video helpful. In the
+next episode we’ll be talking about classes. Until then, cheers.

@@ -1,0 +1,152 @@
+- you never forget your first gpu, all the good memories you had and the bad. but all good things must come to an end. i don't wanna play with you anymore, or must they? can an old gpu still game? last summer, we looked at
+the eight year old 780 ti shortly after nvidia announced that they would drop driver support for it and found that it was still
+a pretty capable card. and it's far from the
+only gpu on the market that might have the grunt to play games, but is no longer receiving active support. and with most modern games
+now targeting the latest generation of consoles, we set out to find out just
+how screwed over you are if the last time you got a driver update, people other than your weird
+aunt still used facebook. and to find out how screwed i would be if i didn't tell you about our sponsor. glasswire. are you having
+poor quality video meetings? use glasswire and
+instantly see what apps are wasting your bandwidth during
+your meeting and block them. get 25% off today using code
+"linus" at the link below. we began our investigation
+by plopping these five gpus onto our ryzen 5800 x test bench and picking 25 aaa titles
+from the last few years and boy did this ever
+get interesting fast. now, some ground rules. when we call a title
+playable in this video, we mean that it runs at
+1080p on the minimum settings available in game
+without any hacky tweaks, with a stable average frame
+rate of greater than 30 fps. yellow means that we were
+able to launch the game but it walked more than ran. and red means that it wouldn't
+launch or it would crash. okay? we'll start by revisiting
+the 780 ti that now has both of its feet firmly in
+the driver support grave. out of the 25 games we tested, it was able to play 16
+of them without issue. and except for doom eternal 5, all of the titles that couldn't
+run are from 2021 or later. so even though you aren't getting game ready driver releases, you're actually still
+in a pretty good spot as long as you're not
+dying to play new hits like halo infinite, elden ring, or god of war. but what if we go older? the gtx 480 came out three
+years earlier in 2010 and it received its last driver in 2018 to provide optimal gaming
+experience for far cry 5. and wow did this ever
+thing age like fine milk? out of the 25 games we tested, it only managed five of them. all of which were ever amongst
+the oldest in our suite or more basic free to
+play and e-sports titles. now i confess we included this one mostly out of morbid curiosity, but next up is the beastly
+power guzzling radeon hd 6990. despite being released 11 years ago, it's paid for specs
+indicate that it should have about the same horse power as a 1050 ti. unfortunately, it's just
+as bad as team green. worse actually since it can't really run shadow of the tomb raider
+and draws almost 400 watts. just like life, the older we
+get, the less we can play, right? how about we turn our gaze to something a little newer? like our new cable ties at lttstore.com. so many pretty colors. right. and the r9380x. a couple of months before
+nvidia pulled support for the 780 ti, amd did the same for its substantially, newer
+200, 300 and fury series gpus. and this caused quite a stir
+given that the three adx in particular was released
+just in late 2015. though in fairness, i can kind of see why amd
+didn't want to support it since not a lot of people bought it. it was priced as an upper mid-range card. and honestly, for the performance didn't make a ton of sense. the mid 2010s were pretty
+rough for a poor old amd but look at this, except
+for just three games. this thing rides, baby. this card is only slightly more performant than a 1050 ti just like the hd 6990. so why has the game
+compatibility done a'0, they're both from amd? well, two main reasons. one is that the 6990 is a
+whack card having two gpus on the same pcb. but the bigger reason is feature support. the 380 x isn't getting new drivers, sure. but it does support directx 12 which is a requirement
+for many newer games or at least it kind of does. thing is, we often talk about
+directx as if it's a single monolithic thing, but really
+it's more of a collection of apis that microsoft
+developed way back in 1995, to help with multimedia development, especially game programming. it includes tools for developing
+for sound, 2d applications, text rendering, maybe
+you've heard of x input for controllers. they're
+all part of directx. and what's great about these
+industry standard tools is that borrowing any unforeseen
+bugs, a compliant piece of hardware running a compliant driver should be able to run a compliant
+piece of software or game without special tweaks. within this suite of
+apis then is direct3d. now, obviously a game
+that has great 3d graphics but no sound and no controller support wouldn't be a very good game. so you can't say that
+one api is more important than the rest, but typically
+microsoft does align the naming of each version of directx
+with the accompanying version of direct3d, which is
+why our directx 12380x handled newer directx 12 games so well. at least to the best of
+its geriatric abilities, but linus, you might
+say, it says right here that the gtx 480 also supports directx 12, why can't it play all
+of my directx 12 games? here's the thing. software development never really stops. and many of the apis within
+directx 12 have received significant updates since they launched and that includes direct3d. these updates are called feature levels and they're a good thing. they provide new tools and new functions for developers to use and gamers to enjoy. but while the newer feature
+levels are inclusive of the older levels,
+meaning that your new gpu can almost certainly run your older games, sometimes a new feature level will contain forward looking functionality
+that requires newer hardware in order to be effectively
+utilized or even to run it all. and this is where our
+soup gets a little murky. direct3d 11, which was
+released with windows 7 as part of directx 11 covers
+feature levels nine one to 12 one. direct3d 12 came with windows
+10 as part of directx 12 and spans feature 11 zero
+to 12 two and beyond. so you see that? how there's
+a little bit of overlap there. that means that while
+the 480 is technically a directx 12 gpu, it only supports the most
+basic 11 zero feature level of direct3d. that means anything that's been added in the four feature levels
+that have come since are unsupported. and making
+matters more complicated, this card is so old, it doesn't
+actually have full support for the highest feature
+level of directx 11 either. so in a nutshell, that directx number really doesn't tell you the whole story. it's actually a gpu's
+compliance with more modern feature levels that
+will make it compatible with newer games. and you can see this in our
+results for the gtx titan black. while games did run better, its compatibility was actually
+identical to the 780 ti because it's running the same
+physical hardware architecture and the same drivers. so any game that requires
+a feature that your card doesn't support, pretty
+much puts you up poo creek without a paddle, sort of. if you're not happy with
+the drivers that amd has left you with, for example, you might say, well, why
+don't we just make our own? and that's exactly what
+the gaming community did. these are pretty cool. but before we dive in, they
+are not official drivers, and we can't guarantee that you
+won't encounter major issues nor can we personally
+certify that these drivers are completely safe to
+download and install. but from our point of
+view, it's your hardware, you can do what you want, just like we do what we
+want and emulate games. the 100% legal way. get subscribed so you
+don't miss that video. now amd has gotten a
+pretty bad rap in the past for releasing poorly optimized drivers especially for their older cards. for example, the final
+drivers for the 380 x play halo infinite, a title that the card should theoretically support
+if directx compliant charts are anything to go by,
+but play it like this. (gunshots blasting) yeah. this history of bad
+drivers spurred on development by the community to create drivers that better serve the hardware and respect the customers
+who bought these cards, and the ones we're gonna
+use to fix this issue are referred to as nimez
+drivers or amernime, nimez drivers or amernime zone drivers and they work great. look at that, we can
+play halo infinite now. in fact, we can play all of the games that were giving us issues on the 380x. and according to users
+of these modern drivers, we should even expect big
+improvements and performance for applications that use
+both open cl and open gl. for our part though, we didn't find much
+difference in performance in the games we tested, but fellow youtuber budget
+builds official showed that the 10 year old amd hd 7870 which is actually based on
+a very similar architecture to this card, can run games
+like red dead redemption 2 and halo infinite rather
+well, which is very cool. another great thing about
+these drivers is that they're really easy to install, no
+red edits or editing inf files required, and they don't seem to break any anti cheat software. there are also other workarounds
+for directx 12 support. using dxvk or d3dvk, you can use a compatibility
+layer to translate directx 12 api calls to vulcan,
+which this card supports and is pretty much how
+proton works on linux. though in this case, you'd
+actually be doing it on windows. we decided against testing
+this since the scope of this video had already
+crept pretty high, but let us know if you've had success or if you'd like to see
+a follow up about that. it should also be noted
+that these drivers, while in impressive, do have their limits. they're not gonna turn your
+hardware into a magic card that gets double the
+fps and all of a sudden supports directx ray tracing or anything. and we weren't able to find any
+equivalent for nvidia users, at least for now. but for team red users, they have the potential
+to improve performance, stability and especially
+compatibility, which is great. so if you need something to tide you over until prices settle, you
+can rest assured that until directx 12 ultimate
+features become standard, you can expect pretty solid
+compatibility for a couple of more years, even with an older card. and solid compatibility between
+your wallet and our sponsor. - freshbooks. when building a business
+that you're passionate about, it's easy to feel like there
+aren't enough hours in the day. and if you're doing all the
+invoicing and accounting on your own, you're probably
+spending time on work you don't love. freshbooks is built for
+business owners like you. it's the all in one accounting software that saves entrepreneurs and freelancers up to 11 hours a week. that's 11 hours you can
+spend nailing a client pitch, serving your customers
+or honing your craft. from building, sending and
+following up on invoices to tracking and managing expenses, to processing online payments. freshbooks automates and
+simplifies all the tough and annoying parts of
+running your own business. it's also super easy
+to get up and running. and the award-winning freshbooks
+support team is always available to answer questions. try freshbooks free for 30 days, no credit card required by
+going to freshbooks.com/linus and get back more time to
+build a business you love. check out our video, where we
+use hacked in video drivers to turn a mining gpu
+into one that could game. look at us go, saving the world, keeping one gpu outta
+a land field at a time. good job, anthony.

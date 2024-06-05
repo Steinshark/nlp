@@ -1,0 +1,136 @@
+(phone ringing) - hello? - [asus ceo] hey linus, - [from chinese] we
+received your suggestions and work them into our new products. - really? wow that's so cool. - [from chinese] yeah, and
+it turns out they're sh(beep) - wait, what? - [from chinese] only joking. ha, ha, ha. we sent you one, we think
+you'll really like it. and if you don't, you
+can go f(beep)k yourself. - who is this? d brand? d
+brand are you the sponsor for this video? with glasswire you can
+instantly see your current and past network activity, detect malware and block badly behaving apps on your pc or android device. use offer code linus to
+get 25% off glasswire at the link down below. (intro music) disclosure, i'm invested in
+framework who makes laptops. the idea i pitched to
+asus and that came alive inside this box is
+actually a pretty cool one. because here's the situation. almost every powerful laptop
+on the market today is either for gamers or for content creators, because heaven forbid that any
+one person want to do both of those things. so you end up having to choose. do you want a 60 hertz 4k
+panel to cover with all the little sliders dials
+and switches that you need for video or photo editing? or do you want to sacrifice resolution for a high refresh rate panel
+so you can land those sick 360 no scope head shots. my idea then was to have
+something that can do both. or, well, really it wasn't my idea, tvs that can run at 4k 60 or
+1080p 120 hertz have existed for a long time. and it's been kind of baffling
+to me that nobody has adopted this approach in the pc space until now. i love when things say internal demo only, and i get to play with it. some makeshift bezel don't peel it. - [plouffe] peel it off. am i going to get in trouble if i peel it? - [plouffe] yes. - they said not to peel it? - [plouffe] then don't peel it linus. - why not? jeez. hello. we're setting up a device. usb received, oh, is my battery dead? oh, balls, - [plouffe] do you want me
+to go get a wired mouse? - no. using a wireless mouse with a wire. imagine being such a big loser. boy, that is a lot of pixels. this thing at a hundred percent scaling is freaking ridiculous
+in terms of real estate. i mean at 4k 120 hertz, this
+is already pretty smooth, but it could be smoother. it's 3840 by 2,400. that is awesome. like all these "creator"
+monitors that are 4k, but 3840 by 2160, so you don't even have that additional vertical
+space for all your, all your tracks or whatever else. like that's stupid, this is cool. after rebooting, the display
+will be set to full hd at up to 240 hertz. oh, okay. (swish) that was it. so we're at 1920 by 1200 now. and that is very 240
+hertz, that's super smooth. oh, it's pretty bad. it's chugging, it's chugging. whoa, there we go! what the heck? i swear, it's running faster now or something, like ever so slightly. there's only one of, you're only supposed to fight one spider thing in this zone. it's hilarious. not going to lie. i really like this thing so far. man, this feels smoother
+than the fps it's reporting. it's just super responsive. that's the thing a lot
+of people don't realize about high refresh rate
+panels is it's not just about how many fps your game is running at. it's about how frequently
+you are getting an update, how much latency there is,
+like this is crazy low latency, super responsive. and in terms of resolution, from my point of view at
+this size 1080 p is lots. if you're talking 24,
+27 inch monitors, yeah, you're going to want 1440 p, but i would rather have the
+additional frame rate at this size personally. oh, i fell down an elevator shaft, cool. there are definitely some oddities. in 4k, 120 hertz mode, they rate it for 100% coverage
+of the dci-p3 color space and 500 nits peak brightness. but this is weird at 1080 p, 240 hertz, it's got a hundred
+percent coverage of srgb and can reach only 400 nits. now that's not to say
+that it's a bad panel. we've got an average delta e
+of just 2.27 in sdr in 4k mode. and with firmware updates, i mean, who knows where it's going
+to be once it's finished. one other oddity, it's got a crack in it. asus wanted to clarify
+that not all of them are going to ship with a crack in it. i mean, personally, i don't
+think it's a big deal. i've got a crack in me and i
+don't think anyone ever told me i was defective. ha ha get it. cause
+everyone's got a, anyway. i don't know, maybe the engineer
+dropped it or something. now the quote from asus is,
+"you can game at 240 hertz and can work on content
+creation at 4k while still getting a nice, smooth 120 hertz." and that really is a great idea, that i can't take credit for. the big question for me then,
+is why haven't we been able to do this forever. crt's actually did have a
+similar functionality because the main limitation was
+how fast the electron gun could scan back and forth. so they often had multiple
+rated resolutions, each with their own optimal refresh rate. but the thing is, lcds have
+their own limiting factors and a big one is pixel response time. now manufacturers tune their
+panels in order to achieve as little smearing as possible, which usually involves
+some degree of overdrive. that is for each individual
+pixel, essentially, applying a voltage that is great enough to get past the desired state, but then backing off of it
+at the last possible moment so that it lands in the right spot. so fine tuning that sort of thing, is a royal pain in the
+butt, and fine tuning it for multiple refresh
+rates is even more work. so what i suspect is that
+no one wanted to bother. but that's changed in recent
+years with the introduction of variable refresh rate displays
+with g sync or free sync, those need to perform perfectly at many different
+refresh rates on the fly, so again, what i suspect is that a lot of that r and d is making its
+way into products like this that are going to have
+multiple native refresh rates. there are likely other
+factors, integer scaling that is allowing a two
+by two quad of pixels to be driven as a single unit, only recently gained driver support from major graphics manufacturers. and the last thing you'd want
+is dual native resolutions, but one of them looks
+like an interpolated mess. but all of this is just speculation. what isn't, is that this tech
+is coming and i think it's super cool and it's
+going to be even cooler when it's not a big chore
+that involves rebooting the machine in order to
+change modes, though, that could also just be due
+to the early firmware that's running on these machines. i'm actually kind of
+surprised that this one works as well as it does. now, let's change gears. i love these little engineering
+sample care packages. this one's really cool. first things first, let's
+talk about what's different about this machine versus
+the one i just looked at. it's got an ahva panel. they're rating it at a hundred
+thousand to one contrast ratio, well, we'll see how that works out. almost 1200 nits peak brightness with a hundred percent coverage
+of the dci-p3 color gamut. and this one is apparently
+pantone validated. it's compatible with dolby
+vision hdr and uses a quantum dot layer in order to achieve all of this. now here's, what's kind of trippy. the mini leds are uv, the
+quantum dot film turns that into white light. and then you've got just regular
+lcd sub pixels that gate, that white light as r g or b. so what i imagine is that
+you're not really going to get necessarily the same
+kind of color benefits that you would on a
+quantum dot tv, but that's how you're able to achieve this. i can already tell you extremely
+bright back lighting on a mobile device. it's 1440p 165 hertz. so it's kind of that goldilocks
+zone in terms of resolution and refresh rate. and it's got 512 local dimming
+zones and lara is dead. reflections off the water,
+that looked pretty sick. definitely tres hdr, this one boys, whoa, man i don't know how
+well the camera is going to capture this, but jeepers, ooh. so for comparison, we've got
+a mini led ipad pro here. you definitely lose a little
+bit of the contrast of the ipad going to a matte display
+instead of a glossy one. apple's definitely got
+darker blacks, mind you, this is a product that is
+actually released so there's that. asus seem to be pretty concerned that we were going to be hypercritical
+of their haloing. it is to my eye not that bad though. again, this is actual content. if we played halo testing videos, we would obviously see them
+where you've just got a, a white ball bouncing
+around on a black screen. i guess it was a matter of time. once we saw this stuff in
+the ipad before we'd see it in mobile computers. now there are some areas where
+i've definitely seen notably better performance out of the tablet. here we go, this sign,
+this first floor sign here. you can clearly read the sign on the ipad, but it's actually kind of
+hard to make up this text on the laptop. overall, very impressive. so there's three different
+modes that it can run in, either hdr, which is obviously going to be using full array local dimming. hdr off or hdr off with a single zone, and then it gets 600 nit's
+sustained brightness, so that's meant for like
+color accurate work. if you're editing your photos
+or whatever the case may be. this is super cool. - [plouffe] good job. - yeah, you know what else is cool? ah, the new gamer hoodie on ltt store and there's even more guys. okay. oh my gosh, this is fricking heavy. i thought there's no actual laptop in it. is it this heavy without
+even the components in it? what the heck is this? are you sure this is what
+asus was supposed to send? this is apparently the follow-on from the mothership concept,
+but in a usable size, it's still pretty big. but if it's anything like the mothership, it's going to have the
+performance to back it up. it's my ticket to rog flow. adorable, thank you asus. all right. ho, this is the, okay, is the nr 2201 low surface. so the idea is it's supposed to be kind of like the mothership, which was a laptop that we actually went all the way to taiwan to see the design facility for. and the basic premise was that instead of putting all the heat
+generating components in the bottom where they're
+going to get suffocated by your beautiful desk pad, lttstore.com, they put all the heat generating
+components in the top, kind of like a convertible
+laptop or like a surface. just like a surface, it's
+got a detachable keyboard that comes down in front of it like this. and unlike a surface,
+it's got top tier specs. so i don't think they've
+confirmed absolutely everything about it, but we're expecting up to wait, a 3050 ti? (beep) got a little more
+clarity, we're supposed to be teasing the nr 2201 flow surface, which is based on this concept. this is a mechanical sample
+of the original mothership, but up to 3050 ti, up to
+core i9, up to one terabyte, gen four ssd, compatibility
+with their xg mobile external gpu's, full hd 120 hertz or 4k 60 hertz, blah, blah, blah, liquid metal, et cetera. but i don't have one to show you. so i can't really comment
+on how good the detachable keyboard is or the kickstand
+or anything like that. but i can tell you is that
+we're going to have a lot more coverage of things that are
+getting announced at ces. so make sure you get subscribed
+so you don't miss them. and i want to tell you about
+our sponsor, freshbooks. freshbooks is the easy to
+use accounting software that helps to do your business. you can impress your clients
+with professional looking invoices that detail the work you've done. use automated payment reminders, if your invoices get past due and easily track your expenses and use their time tracker to
+log every minute of billable hours, so you don't have
+to think about it later. you can keep everyone on the same page with their projects
+feature, which makes it easy for clients, your team, and contractors to collaborate, share files and comment, and you can choose a plan
+that's right for you and start your free trial of
+freshbooks for 30 days today, no credit card required
+at freshbooks.com/linus. if you like this video, maybe check out our review of
+my favorite asus laptop right now, the flow x13. it is absolutely sick.

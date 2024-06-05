@@ -1,0 +1,33 @@
+import googlemaps 
+
+
+
+addrs       = ["5315 pinewood trail Edina, MN",
+               "5114 grove St Edina, MN",
+               "9386 amsden way Eden Prairie, MN",
+               "5320 birchcrest Dr Edina, MN",
+               "2315 old beach rd Minnetonka Beach, MN",
+               "2786 halstead Ln Mound, MN",
+               "2606 lafayette rd W Orono, MN",
+               "16526 temple cir Minnetonka, MN",
+               "3634 Farmington Rd Minnetonka, MN"] 
+
+map_client  = googlemaps.Client(key="AIzaSyCCKxCmdT-t9O87LkKH_Nk38CRUqNeS6Yw")
+
+
+# for addr1 in addrs:
+#     for addr2 in addrs:
+#         if addr1 == addr2:
+#             continue 
+time            = map_client.distance_matrix(addrs,addrs,units='imperial')['rows'][0]['elements']
+
+a = [1,2,34]
+addr_pairs = []
+for addr1 in addrs:
+    for addr2 in addrs:
+        route   = time.pop(0)
+        edge    = {"start":addr1,"end":addr2,"time":route['duration']['value']}
+        addr_pairs.append() 
+    
+print(time)
+

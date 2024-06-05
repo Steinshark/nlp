@@ -1,0 +1,280 @@
+import torch 
+import os 
+from torch.utils.data import DataLoader,Dataset
+import random
+
+from functional import tensor_to_wav
+
+
+DEV             = torch.device('cuda')
+act_fn          = torch.nn.ReLU
+
+#Dataset that is from all data combined
+class AudioDataSet(Dataset):
+
+    def __init__(self,fnames,normalizing=0):
+        print(f"\tDATA")
+        print(f"\t\tBuilding Dataset - norm: {normalizing}")
+        
+        #Load files as torch tensors 
+        self.data = []
+        
+        #
+        for f in fnames:
+
+            tensor  = torch.load(f).unsqueeze_(0).float()
+            # if normalizing:
+            #     arr = (normalize_peak(arr,peak=normalizing))
+            #tensor = torch.from_numpy(arr).view(1,-1).type(torch.float32)
+
+            #bring most extreme up to 1 (-1)
+
+            abs_mult    = max(abs(torch.min(tensor)),abs(torch.max(tensor)))
+            tensor      /= abs_mult
+
+            #Tensor has to be sent back to CPU
+            #input(f"shape is {tensor.shape}")
+            self.data.append(tensor)
+        
+            #input(f"min is: {torch.min(tensor)}, max is: {torch.max(tensor)}")
+
+
+        print(f"\t\t{self.__len__()}/{len(fnames)} loaded")
+    
+    def __len__(self):
+        return len(self.data)
+
+    def __getitem__(self,i):
+        x = self.data[i][0]
+        return x
+    
+    def __repr__():
+        return "ADS"
+
+
+class encoder(torch.nn.Module):
+
+    def __init__(self,encode_size=256):
+        super(encoder,self).__init__()
+
+        self.filter_act     = torch.nn.LeakyReLU
+        self.linear_act     = torch.nn.LeakyReLU
+        self.n_filter       = 32
+        self.n_linear       = 64
+        self.stride         = 4
+        self.encode_size    = encode_size
+        dp                  = .25
+        self.lin_size       = 512
+
+        self.filtered       = torch.nn.Sequential(
+            torch.nn.Conv1d(1,16,129,4,64),
+            self.filter_act(),
+            #1x65536->16x16384
+
+            torch.nn.Conv1d(16,16,17,2,8),
+            self.filter_act(),
+            #16x16384->16x8192
+
+            torch.nn.Conv1d(16,16,17,2,8),
+            self.filter_act(),
+            #16x8192->16x4096
+        )
+
+        self.encoded        = torch.nn.Sequential(
+            torch.nn.Flatten(1),
+            torch.nn.Linear(65536,2*self.lin_size),
+            torch.nn.Dropout(p=dp),
+            self.linear_act(),
+
+            torch.nn.Linear(2*self.lin_size,self.lin_size),
+            torch.nn.Dropout(p=dp),self.linear_act(),
+            self.linear_act(),
+
+            torch.nn.Linear(self.lin_size,self.lin_size),
+            torch.nn.Dropout(p=dp),self.linear_act(),
+            self.linear_act(),
+
+            torch.nn.Linear(self.lin_size,self.lin_size),
+            torch.nn.Dropout(p=dp),self.linear_act(),
+            self.linear_act(),
+
+            torch.nn.Linear(self.lin_size,self.encode_size))
+
+    def forward(self,x:torch.Tensor) -> torch.Tensor:
+        x       = self.filtered(x)
+        return self.encoded(x)
+
+
+class decoder(torch.nn.Module):
+
+    def __init__(self,
+                 encode_size=256,
+                 n_filter=32,
+                 dropout=.1,
+                 filter_act=torch.nn.LeakyReLU,
+                 linear_act=torch.nn.LeakyReLU,
+                 output_act=torch.nn.Tanh):
+        super(decoder,self).__init__()
+
+        self.filter_act     = filter_act
+        self.linear_act     = linear_act
+        self.output_act     = output_act
+        self.n_filter       = n_filter
+        self.n_linear       = int(1024 / 8)
+        self.encode_size    = encode_size
+        dropout             = dropout
+        self.lin_size       = 512
+
+
+
+        self.decoded         = torch.nn.Sequential(
+            torch.nn.Linear(self.encode_size,self.lin_size*2),
+            torch.nn.Dropout(dropout),
+            self.linear_act(),
+
+            torch.nn.Linear(2*self.lin_size,2048),
+            torch.nn.Dropout(dropout),
+            self.linear_act()
+        )
+
+        f1                  = 5
+        f2                  = 5
+        f3                  = 5
+
+        nf1                 = 4
+        nf2                 = 2
+        nf3                 = 1
+        self.filtered       = torch.nn.Sequential(
+            torch.nn.Unflatten(1,(1,2048)),
+            torch.nn.ConvTranspose1d(1,nf1,8,2,3,bias=False),
+            self.filter_act(),
+            torch.nn.Conv1d(nf1,nf1,f1,1,int(f1/2),bias=False),
+            self.filter_act(),
+            torch.nn.Conv1d(nf1,nf1,f1,1,int(f1/2),bias=False),
+            self.filter_act(),
+            torch.nn.Conv1d(nf1,nf1,f1,1,int(f1/2),bias=False),
+            self.filter_act(),
+            torch.nn.Conv1d(nf1,nf1,f1,1,int(f1/2),bias=False),
+            self.filter_act(),
+
+
+            torch.nn.ConvTranspose1d(nf1,nf2,8,4,2,bias=False),
+            self.filter_act(),
+            torch.nn.Conv1d(nf2,nf2,f2,1,int(f2/2),bias=False),
+            self.filter_act(),
+            torch.nn.Conv1d(nf2,nf2,f2,1,int(f2/2),bias=False),
+            self.filter_act(),
+            torch.nn.Conv1d(nf2,nf2,f2,1,int(f2/2),bias=False),
+            self.filter_act(),
+            torch.nn.Conv1d(nf2,nf2,f2,1,int(f2/2),bias=False),
+            self.filter_act(),
+
+
+
+            torch.nn.Upsample(scale_factor=4),
+            torch.nn.Conv1d(nf2,nf3,f3,1,f3//2,bias=False),
+            self.output_act(),
+            torch.nn.Conv1d(nf3,nf3,f3,1,f3//2,bias=False),
+            self.output_act(),
+            torch.nn.Conv1d(nf3,nf3,f3,1,f3//2,bias=False),
+            self.output_act(),
+            torch.nn.Conv1d(nf3,nf3,f3,1,f3//2,bias=False),
+            self.output_act(),
+            torch.nn.Conv1d(nf3,nf3,f3,1,f3//2,bias=False),
+            self.output_act(),
+            torch.nn.Conv1d(nf3,1,f3,1,f3//2),
+            self.output_act()
+
+        )
+
+
+
+    def forward(self,x:torch.Tensor) -> torch.Tensor:
+
+        #256->256 
+        x       = self.decoded(x)
+        x       = self.filtered(x)
+        return x
+
+
+class ed(torch.nn.Module):
+
+    def __init__(self,encode_size=256):
+        super(ed,self).__init__()
+
+        self.encoder    = encoder(encode_size=encode_size)
+        self.decoder    = decoder(encode_size=encode_size)
+
+    
+    def forward(self,x:torch.Tensor)->torch.Tensor:
+
+        return self.decoder.forward(self.encoder.forward(x))
+
+if __name__ == "__main__":
+    device      = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+    ep          = 16
+    bs          = 128
+    load_n      = 2048
+    torch.random.manual_seed(512)
+    random.seed(512)
+    #Get filenames      
+    filelist    = ["C:/data/music/bs_4096_16s/"+fname for fname in os.listdir("C:/data/music/bs_4096_16s")]
+    filelist2   = ["C:/data/music/bs_4096_16s/"+fname for fname in os.listdir("C:/data/music/bs_4096_16s")]
+    random.shuffle(filelist)
+    random.shuffle(filelist2)
+    filelist    = filelist[:load_n]
+    filelist2   = filelist2[load_n:load_n+bs]
+
+    dataset     = AudioDataSet(filelist)
+    dataloader  = DataLoader(dataset,batch_size=bs,shuffle=True)
+
+    datasett    = AudioDataSet(filelist2)
+    dataloader2 = DataLoader(datasett,batch_size=bs,shuffle=True)
+
+
+    model       = ed(512).to(device)
+    loss_fn     = torch.nn.MSELoss()
+
+    optimizer   = torch.optim.AdamW(model.parameters(),lr=.0001,weight_decay=0,betas=(.75,.999))
+
+
+    for _ in range(ep):
+        for item in dataloader:
+
+            optimizer.zero_grad()
+
+            item        = item.unsqueeze(dim=1)
+            batch       = item.to(device).type(torch.float)
+
+
+            #Encode 
+            music       = model.forward(batch)
+
+
+            #Calc loss
+            loss        = loss_fn(batch,music)# - torch.mean(music)*.18
+            loss.backward()
+
+            #
+            optimizer.step()
+
+        print(f"max={torch.max(batch[0])},min={torch.min(batch[0])}")
+        print(f"max={torch.max(music[0])},min={torch.min(music[0])}")
+        
+        #Test 
+        model.eval()
+        with torch.no_grad():
+            for item in dataloader2:
+                item        = item.unsqueeze(dim=1)
+                batch       = item.to(device).type(torch.float)
+
+                #Encode 
+                music       = model(batch)
+                #Calc loss
+                loss        = loss_fn(batch,music).mean()
+        print(f"test loss={loss.item():.3f}")
+        model.train()
+        
+
+        print(f"")
+    tensor_to_wav(music[-1][0].cpu().detach(),"decoded_music.wav",4096)

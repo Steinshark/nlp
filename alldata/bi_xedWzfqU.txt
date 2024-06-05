@@ -1,0 +1,122 @@
+- Everyone and their dog
+has tried to get into crypto or blockchain technology somehow. And I think it's now safe to say, we have finally jumped the shark. Norton, the infamous antivirus company is no longer content to
+waste just a little bit of your computer's resources. Several months ago, they said, you know what, screw it. And injected their own
+cryptocurrency mining software into Norton 360. We gasped. We shouted. We cried. And then, because it's our job to try these things so that you don't have to, we resigned ourselves to installing it. Leaving, only one question, is it as good as my
+segue to today's sponsor? Thanks to KiwiCo for
+sponsoring this video. KiwiCo ships out crates that
+contained hands-on projects for kids to help develop
+their creative confidence and problem solving skills. Learn more at the end of this video or at the link down below. (upbeat music) Right out of the gate, we're
+starting out strong here because unlike basically
+every other mining software, you've got to pay to play. Norton Crypto, yes that's what
+they're actually calling it, is only available with a
+Norton 360 subscription. So I begrudgingly handed over
+my credit card to do something that we basically tell everyone not to do. Install Norton. With that bitter pill swallowed, we looked for the opt-in prompt, the one asking if you
+want to make some money while your PC is idling, and we thought, Hey, seems like a great idea. Everybody loves free money and clicked it. But how does it work? Once it's enabled, after about
+a minute of your GPU idling, the Norton Crypto miner will turn on, adding your graphics cards
+power to an Ethereum mining pool where it and every other Norton miner goes to work digging for ether. When a payout happens, it gets split equally
+amongst those in the pool, depending on how much hash
+rate they've contributed. Now, this isn't anything new. The first mining pool,
+Slush Pool, came out in 2010 and consolidated machines to mine Bitcoin in order to give the little guy an edge over larger operations
+by banding together. Over the years, more and more mining pool
+operations have sprung up and as long as you have
+the computational power, you're basically free to join. But Norton had some innovative new ideas. While most pools and
+exchanges take a small one or 2% cut of your mining profits to share with the pool operator, and many mining clients also
+have small associated fees. Norton figured, Hey, we're already charging
+you for Norton 360. So let's disrupt the status
+quo by charging wait, 15 (beep) percent. Excuse me. Even ignoring the paid nature
+of their software compared to basically any other
+solution, 15% is outrageous. And the worst part, is
+we had to go digging for this information. At no point during the setup
+process where we informed of this fee. And we
+even tried clicking the, how does this work button, but found only a brief FAQ
+with basic explanations for things like, what is a blockchain?
+And, how does mining work? The fee was actually hidden
+away in a support page for Norton Crypto behind a dropdown. There's just no respect
+for the customer here. Just a hidden middle finger
+waiting to gouge your wallet. I feel like you should spend your money on lttstore.com instead. Look at these sexy wan sweatpants. It's time to put my feelings aside though. Not every product is targeted
+at enthusiasts like me and you. So, let's play a little game and say, we're already paying for Norton 360 or it came free with
+the purchase of our PC, and we would rather trust
+a big name we recognize like Norton versus spending a
+bunch of time doing research. I mean, it's a couple of
+clicks and who cares about 15% if it's all profit anyway, right? Why not let your GPU mine while
+you're at work or sleeping? Okay. So the app itself
+is actually kind of okay. It shows you the current US
+dollar to Ethereum conversion, the card that you'll be mining
+on, its average hash rate and both your daily and
+monthly expected return. This all seems great for the most part, but it ignores some
+basics like telling you how much wattage your GPU is
+pulling or more importantly, factoring those power costs
+into it's calculations. It also doesn't bring up a
+client window showing you what exactly is going on. When you join a pool on your own or usually through a third party, there's typically a client app involved that shows you important stats
+like, among other things, hash rate, power
+consumption, job acceptance or network info like
+latency or dropped packets and it'll kind of scroll by as
+your machine does it's thing. Maybe that's too scary
+for the target audience or Norton felt it was unnecessary,
+but whatever the case, it's just not here. Another missing feature
+is any sort of optimizer. Often when you're first
+setting up a new minor, you can run through an
+optimization feature that will try a number
+of power, core clock and memory clock settings
+to get the best results for your specific hardware. It then saves a config file somewhere that the miner can read
+whenever it's booted up. And if Norton is doing this
+in the background somewhere, it isn't very good. You know what else probably
+won't be very good? Water cooling gear from wish.com. Get subscribed so you
+don't miss that video. Now I know that a lot
+of you consider NiceHash to be controversial. So we don't work with them in
+a sponsored capacity anymore and we're not promoting their use here. But we needed a control
+that we know is easy to use. So we fired it up on our test bench, which will have affiliate
+links for down below, first using NiceHash's QuickMiner then for another hour with Norton Crypto. And here's the thing, it's
+normal for your return to fluctuate somehow throughout the day, but the results were staggering. With Norton Crypto, our 20 80 super on an open air test bench, hit 65 degrees, pulled about, 160 watts
+and saw a maximum hash rate of 37.2 mega hashes per second. With the QuickMiner,
+after running OC tune, we pulled about a hundred to 105 Watts, hovered around 50 degrees Celsius and had a higher hash
+rate averaging closer to 40 or even 45 mega hashes per second. Now obviously the winner here
+doesn't surprise us much. Do we trust the experts or the newcomers? But I did not expect a performance gap the size of the Grand Canyon. 65 degrees might seem fine overall but we anticipate a lot
+of users to be on laptops with hot components in a
+more enclosed environment. That 65 could easily turn into 80 degrees or higher in the right
+or wrong environment. And don't forget that power is expensive in some parts of the world. So that 30 or $40 of monthly income could come with a hefty power bill. And you'll also be paying Gas Fees, a small or sometimes not small fee when you want to exchange your Ethereum. And the best part is that if the sucky
+performance isn't enough to keep you away, there are even more problems
+with one of the biggest being how hard it is to remove Norton Crypto from the rest of Norton 360. Now actually enabling
+the software is optional but installing it isn't, and
+to get rid of it, you need to temporarily turn off Norton's
+tamper protection feature, then delete the encrypt executable. Now some other users have
+also mentioned things just not working from time to time or suddenly empty wallets,
+both of which are frustrating but, at least you can usually
+find an answer from Norton in the comments. So far, it looks like they only have
+plans to mine in Ethereum, although they will look
+at potentially adding other currencies in the future. In case you didn't know, Ethereum is supposed to
+go from proof-of-work, which is what's currently happening when you joined the mining
+pool, to proof-of-stake, which instead uses staked to Ethereum to validate blockchains
+and add new blocks. It's meant to be much
+more energy efficient, but to be a staker, you need 32 ether, about a hundred thousand us dollars worth. Fear not though, staking
+pools are already a thing. So the little guy isn't
+completely shut out and the full transition has actually been pushed back a number of times but once it happens, there's no telling what
+Norton Crypto will do next. Whatever it is, I expect that it'll reflect
+their obvious attitude over there which is; Hey, you're already stupid
+enough to waste your money on our software, you're
+probably stupid enough to share a disproportionate
+amount of your mining profits with us. Perhaps the worst part of all of this, is the obvious conflict
+of interest that exists. Norton has a clearly inferior product. It performs worse and costs more, but they can use their position
+as a trusted malware blocker to allow their product to
+work while scaring users away from better competing products. But what they be so brazen as
+to do that, the answer is yes. So I have no doubt that this endeavor will be insanely profitable for Norton. They get 15% of your ether and
+you pay for both the hardware and the abnormally high power consumption. I just can't figure out anyone
+else who is benefiting here. Except maybe our sponsor. Thanks KiwiCo for
+sponsoring today's video. KiwiCo is a monthly subscription service to help introduce and make stem topics fun and engaging for kids of
+all ages. KiwiCo believes that if you start learning
+small things today, you can produce
+world-changing ideas tomorrow. Each crate is designed by experts and contains everything
+you need to complete it, along with detailed
+kid-friendly instructions. That means no trips off to the
+store to get extra supplies like glue or scissors. KiwiCo offers nine subscription lines, each catering to different
+age groups and topics. And the create that we're showing here, is a Kiwi level for
+kids ages five to eight, that looks at chemical
+solutions and crystal formation. Another one is the tinker
+level for your tweens and teens aged nine to 16 that explore spool
+mechanics and toy design. KiwiCo is a great way to keep kids and their adults occupied for hours, and they now ship to over
+40 different countries. With KiwiCo you're not just
+teaching your kids to buy, you're teaching them to build. So go to kiwico.com/ltt50 to
+get 50% off your first month of any crate. Thanks for watching guys. If you enjoyed this video and
+you want to get into mining at home, maybe check out
+our mining adventure series where we show you a much,
+much smarter way to do it.

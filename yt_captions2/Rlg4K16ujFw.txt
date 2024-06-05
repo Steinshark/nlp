@@ -1,0 +1,202 @@
+- there are a plethora of
+reasons to transition your daily driver gaming rig over to linux. - you could be sticking it to the "man" - or wanting to support
+the open source community. - maybe you daily drive
+linux for work already. - and all your games are
+natively supported anyway. - or maybe you just want a
+new and challenging hobby. - but if what you want is a simple, painless gaming experience, then let this be a cautionary tale. one of trials, tribulations and of course the sponsors. thanks to airglow for
+sponsoring this video. airglow is a digital e-sim marketplace that allows you to directly download a flexible data plan for one of over 190 countries without ever
+having to leave your living room. try your first e-sim
+at the link down below. (upbeat intro music) - for most of our one month challenge, luke and i avoided specifically
+seeking out titles that would either validate the
+linux gaming experience or intentionally make it look bad. we just focused on playing the
+games that we would normally want to play. - or at least we tried to
+because not all the games that we wanted to play actually worked. the very first day i installed linux. i also tried to play the
+battlefield 2042 beta the previous day, still on windows, i owned some noobs with my buddy joe, and we wanted to play
+again the next night, but that wasn't going to
+happen due to this challenge. it was reassuring, i guess, that even more advanced linux users were also unable to play, but that didn't actually
+remedy the fact that i couldn't play games with my friends. - it's funny because i assumed
+that this challenge would be more painful for me than
+it would be for luke. i mean after all, he has years of linux experience while i came in with basically none. but here's the thing, i game him mostly by
+myself as a way to relax or to hang out with my kids. and i am extremely flexible
+about what game i'll play. if something doesn't work, screw it. i'll just play something else. luke, on the other hand, whose social circle is deeply
+immersed in gaming culture has so much more on the line if you can't solve a problem. - yeah, like i literally had a friend ask, 'hey dude, when are you going to be back?' obviously i had never actually left, but i was a lot more difficult
+to include as a lot of competitive games that have
+anti-cheat just don't work. or it took me so long to
+get a lot of games to a satisfactory level that
+by the time i was ready, everyone else was just
+done gaming for the night. and as a lot of my friends like to just try random games out for fun, this actually happened a lot. - our goal is not to spread fud about the state of linux gaming though. so it's time to get
+specific about some of our 'less good' experiences. first up is steam or rather not steam valves goal of reaching 100% compatibility with the entire steam game library is admirable actually incredible. as noted by this here, reddit post the steam game library
+is chock full of amazing gaming experiences from aaa studios and any developers alike. but it's also not the silver
+bullet that it would have been ten or even five years ago
+when nearly every game worth playing was available on steam. - half of twitch's top 20 games, at least at the time of
+filming this, are not on steam. and i know being a popular
+game to stream doesn't necessarily mean it's popular
+with random gamers out there. but these are all very big
+name games and being on steam isn't an automatic win either. look at apex legends and new
+worlds, both massive games, both listed as borked on proton db. - native linux games are obviously going to be your best bet. want to try one of my personal
+favorites, cross code, click install, click play and (clicks fingers) as simple as that. i mean, i was amazed at how painlessly my xbox one controller worked. though i should note that i stuck with a
+wired connection rather than trying to tackle
+getting the unofficial xow driver, working. valheim meanwhile ran
+amazingly and immediately. demonstrating how even smaller developers can make it work if they've got the will. - in addition to that, while
+not necessarily native, i played legiontd2, tower fall
+ascension, faster than light, slay the spire, path of exile and rust. and they all worked perfectly
+with zero actual effort. and interestingly enough, dota2 and csgo both had
+completely game breaking problems that weren't
+isolated to my system during the challenge. they seem to be solved now, but it goes to show that
+just like with windows, because a piece of software
+was made for it doesn't mean it's actually going to be perfect. - i didn't have any issues running csgo, even got me some kills boys, but i did notice
+significantly more stutters than i'm used to seeing
+on this class of hardware that could be an nvidia driver issue, or it could be something else entirely. but for me, it worked well enough that i
+didn't feel like digging any further into that rabbit hole. not when i could be digging for
+a sweet hoodie like this one on ltt store.com instead. - the next tier is windows native games that valve officially lists as linux capable via steam play. but before we go any further, i just want to say massive
+respect to the incredible teams who have worked tirelessly to make running windows
+games on linux possible. valves proton compatibility
+layer is amazing. it's forked from wine, which has been multiple decades
+in the making with about half of its source code
+written by volunteers. that's freaking wild. and of course honorable
+mentions, all around, for the dedicated communities that maintain tools like lutris, which automates hacky
+workarounds for newbies and protondb, which serves as both a
+troubleshooting resource and a reference for which games work. so you won't have to waste
+your money on a bad experience. with all of that said. in
+spite of all of that work, we're honestly just not there yet. and we're mere months from the
+launch of the steam deck when 100% compatibility is supposedly coming, which, as of writing this, just got pushed back by two months, to february. - also doom eternal reported
+great performance on my system over 200 frames per second,
+using the included tool. i'm kind of reminded of the
+issues that we used to see in old sli configurations where
+the actual perceived animation smoothness is substantially
+less than what the benchmark seems to suggest it should be. again, i thought maybe this is an issue
+with my proprietary and video driver. maybe it set a date, but manjaro begs to differ.
+apparently i am up to date. so your mileage may vary. another problem that's been
+a thorn in the side of the linux community for years is anti-cheat. now the game launches and
+seems to run totally fine. but while, theoretically,
+enabling battle i anti-china in rainbow
+six-seige is as simple as ubisoft reaching out, doing a little bit of
+conjiguring and off we go because battleye has supposedly
+supported linux for ages. ubisoft hasn't done that yet. why? - well because natively supporting linux as seen by some developers as a somewhat brutal experience. ben golus has a rather enlightening thread about this on twitter. he goes on to explain that
+while linux gamers were a very vocal part of their prelaunch community, they accounted for less
+than 0.1% of sales. yet they generated more than
+20% of auto reported crashes and support tickets. he also stated that near
+the end of his time, there nearly 100% of tickets
+were still linux related. despite linux receiving the
+majority of the engineering effort. meaning the company likely spent hundreds of thousands of dollars supporting a community that
+made them a few hundred in sales revenue. and this isn't the only
+version of this story. and every time problems like these happen, it's just more ammo for
+developers that would rather spend zero time working on linux
+versions of their products. i believe that is why over
+65% of reported anti-cheat enabled games have not
+confirmed linux compatibility. despite many of the anti-cheat
+developers getting on board. - and as much as everyone
+already knows it, it bears repeating. the fragmentation problem
+continues to be desktop linux's greatest obstacle
+to widespread adoption. take it takes two, for example. this is a gold rated,
+windows native, origin game that i got running effortlessly. though. i did buy it through steam and i did launch it through steam. at least it was effortless
+until i wanted to have two controllers running at the same time. kind of a requirement
+for this particular game, if i want to play it with the wife. that sent me on a quest to proton db to see if anyone else
+had had the same problem and no, not really. everyone else's problems
+are basically random. so guess we're not
+playing that game for now. one of my other favorite games, supreme commander forged
+alliance was as simple to run as clicking install and enabling
+a couple of launch flags. awesome! but if you want to play
+multiplayer, woo boy. here's the story. when gas-powered games went
+under a small community arranged to preserve multiplayer
+support for the game, by building their own launcher. it is an amazing example of
+the way that the pc gaming community can come together
+to preserve experiences that would otherwise be completely lost due to corporate butt-holery. unfortunately, every guide i could find to get the forged alliance forever launcher working on linux was either hopelessly out of date or not applicable to my particular distro. i don't blame the defs, really nothing but love for you guys, but linux gamers and more broadly, the linux community needs
+to understand that until the burden of supporting linux
+is reduced significantly. this is always going to be a problem. - we actually live streamed trying to work through the
+forge alliance issues on float plane. subscribe, by the way. there were more than a
+few comments, in the chat, criticizing us for choosing
+to play that particular game because 'it's old', 'it's just some crappy java
+game' 'it's, it's obscure' or because 'it's not fair to linux'. or whatever. - but the bottom line is
+that none of that matters, what matters is that we like
+it and we wanted to play it. but instead of doing that, we played terminal command simulator. and honestly, i've gone through enough of
+that over the last month, that it has sucked a lot of the enjoyment out of using my computer. like i have a pretty busy life. and when i managed to
+salvage an hour to relax and play video games,
+that is what i want to do. and it's really opened my eyes
+to why so many people choose to play on console instead of on pc. like this has gotta be how a
+not super computer savvy user feels about updating a driver
+or fixing a firewall setting every time they just want
+to play a bloody game. - to be clear. i would never say that
+just because some old game doesn't run, it means that linux sucks. in fact, i've permanently switched my
+laptop over to linux because there are a lot of things.
+it just does really well. even for someone more on the
+noob side of things like me. what it does mean is that gaming
+on linux can kind of suck. - it's not that i don't enjoy
+tinkering with pcs as a hobby. i mean the rush when anno'00 launched after spending a bunch
+of time fighting with it, it was phenomenal. i felt like the king, but
+then the next 45 minutes of, okay, why isn't multiplayer connecting? completely destroyed that vibe. you know. is it because luke installed
+the game through the script on the lutris page and then i lutrised ubisoft connect and installed
+the game through that resulting in a version mismatch? is it because of some kind
+of manjaro firewall nonsense? the answer ended up being
+that multiplayer used to work, which helped anno'00 get
+a gold rating on proton db. but now it does not. - which isn't to say it
+won't ever work again. if you're a linux developer wizard, you might be able to fix it yourself, or you might end up just needing
+to wait for the community to patch it. but anything that relies on an
+external service that updates independently of your computer
+can just unexpectedly break. and that's a lot of games these days. - so you always need to
+make sure that you read, especially the recent comments, rather than just relying
+on the rating on proton db. another prime example of
+this is minecraft dungeons. works great apparently. well, as long as you happen
+to own it through steam, rather than through microsoft directly with the old launcher,
+because in that case, apparently you can make it work. but for most people, i think it's safe to say that
+you're just going to have to re-buy the game. so i haven't been able to play
+that with my kids in a month. - that ended up being an
+ongoing theme of this challenge. proton db, again, respect
+for all the work that you do. it can save you a lot of time, but it won't just automatically
+fix all your problems. gold, to me, should mean a
+pretty typical gamer can do it. so while the rating system makes
+for a very impressive story on the homepage, did you know fellow gamers that
+78% of the top 100 games are gold or better on linux? wow. the truth is a lot less rosy. - and there's another big
+problem with proton db. it only includes steam games. and while you can use the proton
+compatibility layer on non steam games, even considering
+tools like lutris, the compatibility picture outside of steam is not as simple as, well proton db says linux
+gaming compatibility is good. - i mentioned escape from tarkov earlier. it's been broken for so long,
+but due to battle state games, adding anti-cheat their linux discord has turned
+into a matchmaking channel for other games so they can
+have some fun while they wait. genshin impact, kind of
+a huge game right now, no linux compatibility. and while i did manage to
+find a honestly really great russian guide from penguin gang
+that i could probably follow it illustrates a point
+that i haven't really talked about much yet. being on linux can take
+a lot of the spontaneity out of gaming. you can't just be like, oh, cool, that game looks neat and expect
+to be playing it in just a few minutes. i also hope you're not necessarily
+a fan of playing games, right on launch. forza horizon five, for example, amazing, straight up fantastic that
+people got it working within just five days of launch. but that also means that it
+wasn't working for five days after the launch. and if all
+your friends were playing, they'll now have sick
+cars and you're stuck, trudging through the
+swamps for a barn find. - to be clear, i don't want this to take
+away from some of the great experiences that i've have had gaming on linux in the last month, after an extremely short setup, my daughter was happily hanging out in a discord voice
+channel with her siblings playing minecraft java edition and had no idea she was on a
+completely different platform. that's freaking amazing, luke and i had some awesome
+don't starve together sessions, totally stable, no crashes. and more recently my son
+and luke and i had a blast pinning each other to walls, in towerfall, using remote play together, which worked great on linux. overall, i'm really happy
+i did the challenge. i learned a lot and it gave me
+a lot of hope for the future. and i will absolutely be trying
+to stick with linux when the steam deck shows up sometime next year. but to summarize the question
+that we set out to answer. is this the year of the linux desktop? for gamers, the answer is no, i'm sorry. and the more niche your
+use case gets, you know, maybe you're super into modding
+or the racing or flight sim scenes, or maybe you're a big vr lover. the more resounding that 'no' gets. - and if i'm being honest,
+i'm in the same camp. but something has given me a
+lot of hope and that's how much positivity we've seen
+from the linux community in spite of our concerns. because even if i'm not ready to convert my gaming rig just yet, it gives me hope that
+one day the meme will end and the year of the
+linux desktop will come. i'm as anti-monopoly as anyone. and i'd hate to see the
+status quo maintained forever. - i know what i don't hate is our sponsor. thank squarespace for
+sponsoring this video. we use squarespace like
+no joke. we use it. both our linus media
+group.com and ltx expo.com. websites were built quickly
+using squarespace and are easily maintained. if we need to
+make any quick changes. like say canceling our expo
+for two years in a row. if you haven't heard
+already squarespace is an all in one platform that makes it simple to get your website up
+and running quickly. if you have a home business, you definitely need one.
+you can even sell things. you can choose from tons of
+different templates and find the one that makes the most sense for you, and then just run with
+it. and if you trip, while you're running, you need help. squarespace offers webinars,
+a full series of help guides, or you can contact their 24 7
+support team to help you build your site. so go to squarespace.com forward
+slash ltt and get 10% off today. now that the challenge is
+over it's time to go back and watch the previous parts
+because while the overall conclusion was no, there's a lot to really like
+about the linux experience.

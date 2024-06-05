@@ -1,0 +1,4 @@
+great_anime     = ['One Punch Man', "Darling in the Franxx", "Tokyo Ghoul", "Darling Doesn't Dream of..."]
+
+for anime in great_anime:
+    print("Have you seen", anime, "its so good!")

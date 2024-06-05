@@ -1,0 +1,75 @@
+hello and welcome, i'm james murphy 
+and today we're writing a sudoku solver   for another leetcode hard interview problem. in 
+case you're not familiar, sudoku is a puzzle game   played on a 9x9 grid. you have to fill in 
+the blanks so that every row, every column,   and every block group of three by three cells has 
+all of the numbers one through nine exactly once.   we're given that the board that we 
+take into this function is going to   be a valid board with a unique solution. 
+furthermore we are meant to modify the   board. we're supposed to solve the board 
+rather than return a copy which is solved.   first things first let's write a main 
+function which does at least one test case.   so here i take in the board represented as a big 
+character array and here is the expected answer   that we're supposed to get. then i create a 
+solution class which is really only needed for   leetcode problems. in a real code base this would 
+just be freestanding functions, but in any case i   create the solution class, i print out the initial 
+board i print out what i'm expecting, i do the   solve, and then print out whether or not it did 
+it correctly. so that's at least one test case   i've written. this function, it's 
+very straightforward just to convert   this flat board into a vector of vectors and 
+this little function just to print out the board.   after compiling and running it we can see 
+that we can print out the initial board,   the expected board, and then our solution hasn't 
+done anything so of course it doesn't match.   i think sudoku is a classic example of a recursive 
+backtracking problem where the most obvious thing   to do is look at the possibilities for what moves 
+can be made, try one randomly, or try the first   one, or try all of them, and then recursively 
+solve the problem that way. so the real challenge   for this problem is to decide how do i store the 
+information. well every row column and the three   by three sub blocks need to have all the numbers 
+one to nine so for each row column and cell i'm   going to keep track of which numbers have already 
+been used. i've decided to do this using arrays of   bit sets. a bit set is similar to a standard 
+set except it lets me store all nine elements   in basically a single integer. the way that it 
+does this is effectively by using an integer   and using the first say nine bits of that integer 
+to represent whether i have a true or false value   in that location. so if the bit at the zeroth 
+index, the first bit, is set then i'm using   that to represent that one has already been used. 
+this is especially useful because i can compute   set operations on bit sets by using 
+very primitive math operations. like   for instance i can compute the union of two 
+bit sets just with the "or" operator. i'm   effectively just or-ing the underlying integers 
+which are made up of those bits. the next step   is to loop over the given board and mark out 
+all the integers that were already given to us.   i loop over the rows and columns and then 
+if i see something which is not a blank   then here's what i do. i convert the 
+digit to an index for the bit set   and then for the given row column and cell i set 
+the given index as being true, present, i did also   write this little function get cell to compute 
+which cell i'm in given the row and column. then   i just give all the information i've collected so 
+far to this solve function which we're going to   write, which is going to do all the heavy lifting 
+and the recursion and such. the purpose of the row   and column starts here is to tell the algorithm 
+where to start. basically it should assume that   anything before this row and column start has 
+already been solved and to just progress forward.   and of course by before or after i'm referring 
+to an order where you go left to right and then   top to bottom. the first thing that i want 
+to do is find a position that's a blank,   something that i can fill in. finding the next 
+empty position is pretty straightforward, i just   loop through and check to see if it's a blank and 
+otherwise i keep getting the next row and column   where here we see the implementation 
+of what the next row and column is,   it's just a little bit of math modulus trickery. 
+it's pretty straightforward. the return value of   next empty position is either a location that has 
+a blank for me to fill in or it's off the board   so i can use this as my base case, if everything 
+has been solved up to row 9 then there's nothing   more to do and that's a solution. note here that 
+9 is one index past the last actual row. the next   thing i do is compute which numbers have already 
+been used in the current row, column, or cell.   that's what this line does. so remember each of 
+these things is a bit set so i am or-ing these   sets together. the result is all the numbers that 
+have already been used. at this point in the code   there must be a dot at the current location so 
+if everything has been used then there's nothing   i can use to fill in that dot and so we return 
+false. otherwise we loop over all the possible   digits and if that digit has not been used 
+already then we start the recursive backtracking.   so here's what i do. i take the digit and 
+put it on the board. then i mark it as being   used in the corresponding row, column, and 
+cell, then i recursively solve the problem.   i'm using the return value of solve to indicate 
+whether or not solve succeeded. if the solve is   true that means i was able to complete the 
+board and find the unique solution after   making the guess that i made. otherwise solve 
+returned false and so i need to undo that guess.   so i unmark that guess from the row, column, 
+and cell, and then move on to the next guess.   if none of the guesses succeed, then importantly 
+i need to reset the current location to a blank   and then say this failed. i wasn't able 
+to complete the board given the current   stuff that's in the board. this allows me to 
+backtrack up and potentially give another guess   at an earlier stage. and that's pretty much it. 
+back up here in the main solve sudoku function   i also want to point out that in a real code base 
+i would definitely want to check the return value,   whether the final solve worked, but in this case 
+we're given that any input is going to have a   unique solution so we don't need to check it. okay 
+so i compiled it and ran it and you can see that   with the initial looking like this, and the 
+expected looking like this, we do indeed find   that we have a success and our algorithm 
+was able to successfully solve the sudoku.   all right i went ahead and submitted it and we 
+saw that the run time was four milliseconds,   faster than about 98 percent, and less memory 
+usage than about 96 percent, so pretty good.   that's all i have for this episode. if you liked 
+it be sure to tell your friends, subscribe,   and don't forget to slap that like button 
+an odd number of times. see you next time.

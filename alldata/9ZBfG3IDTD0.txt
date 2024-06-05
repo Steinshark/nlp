@@ -1,0 +1,121 @@
+- [Anthony] It's not a new
+graphics card that you can't buy. It's not even something that belongs to one team or the other. What you're getting today, yes you, is an upgrade for the
+graphics card you already own. AMD's new Fidelity FX Super Resolution may not be the only up
+scaling method out there, but dang it, it's the
+only one that promises to run on graphics cards that launched as many as five years ago. But should you care? - Ridge Wallet has redefined
+the traditional wallet with its compact frame
+and RFID-blocking plates. Keep your wallet bulge down, and use offer code Linus to save 10%, and get free worldwide shipping. (techno music) - We're going to start things off with image quality comparisons. And we'll explain exactly
+how we got there afterwards. But first, a disclaimer. While we would love to compare
+Fidelity FX Super Resolution to NVIDIA's deep learning super sampling, unfortunately the only title
+that supports both right now, "Kingshunt", is still in alpha and doesn't work on our bench yet. So for today, we'll focus solely on FSR. We'll be using an RX 6800 XT on our GPU bench for our testing, though, there's a small caveat. Of the seven games available at launch, we only have these five. "Godfall", therefore, will be
+our main point of comparison, because it's both visually detailed and will let us test how
+FSR impacts ray tracing. But first Linus is a big "Anno" fan, so I can't leave that out
+and keep my job, can I? At 4K, you would be hard pressed to distinguish the ultra quality or even quality presets from native, unless you know where to look. And it's good enough on balanced that you'll rarely notice the difference unless you're looking
+for shimmering artifacts on thinner geometry. The performance preset on the other hand starts to show some warts, with even non-moving thin
+geometry visibly losing detail. But for a low motion game like Anno, if it means you get to turn up the eye candy, why wouldn't you? Dropping the resolution to 1440p with the FSR preset to quality or below lets some blur creep in, with
+more significant shimmering thanks to the lower input resolution. Wait, what do I mean by lower resolution? Well, like DLSS, the
+lower the quality setting, the lower the resolution
+the game actually runs at. So when you set the game
+to 1440p ultra quality, the game's actually
+running closer to 1080p. That's why at 1080p, I'm
+not recommending going below the ultra quality preset unless you like a lot of blur. Still it may be a better experience than running sub 1080p natively, so pick your poison, I guess. Onto "Godfall". In this 4k static scene,
+we got a good spread of edge cases to take into consideration. Compared to native ultra quality looks nearly indistinguishable,
+which is awesome. Everything remains sharp and there's little visible
+loss of texture detail, if any, with only minor issues like the gold color detail
+work on this pillar. The quality preset meanwhile
+introduces some shimmering and finer details like the self shadows and the Silvermane's hair, and some detail's textures
+appear a little bit softer than they should, but
+it's not too noticeable unless you're looking too closely. The balance preset retained sharpness around hard edges, remarkably well, but textures are suffering
+much more than before, and the distance stairs
+begin to show some unevenness in the upscale. Finally, the performance preset using a 1080p input resolution, remember, gives us much blurrier textures and a more shimmery scene overall, which could be distracting. Critically those distant stairs
+are now blurring together because there's not enough detail for the upscale to properly display them. Hard edges with a lot of
+contrast are headed very well, but less contrasting edges are
+a lot blurrier than native. In motion these differences
+between the presets become even more noticeable. Now, graphically simpler games like "Kingshunt", for example,
+are far more forgiving, and the performance preset
+offers a surprisingly similar level of detail to native. You're mostly just losing
+detail on distant stairs and your character's hair. Back to "Godfall". Here's the same scene at 1440p. While textures are still pretty sharp at the ultra quality setting shimmering becomes a bit
+more obvious on finer details as the roughly 1080p
+input resolution lacks the pixels needed to reconstruct them. This is minor though and you really need to know
+where to look to pick them out. Quality preset on the other
+hand becomes a lot rougher on those finer details. Notice the shimmering here and the missing stairs or
+blurry tree leaves over here. Hard edges do pretty well though and if you're in the middle of a fight you probably won't notice that you're not at native resolution. Balanced straight up looks
+like an up scaled image with blurry textures and
+fine details getting lost. Look at that fine gold trim
+turned into a solid blob. And performance preset, well, there's only so much you can
+do with an input 720p image, and it's remarkable that it
+looks as good as it does. Static hard edges like the
+pillar itself look all right, but anything that moves
+like the glowing pauldron on the Silvermane's
+shoulder now also shimmers, and fine details go out
+the window entirely. Still it beats running at
+720p with monitor scaling and compared to an M cable
+it's noticeably sharper, with more detail, and
+you're getting it for free. Just like you get stickers for free with purchase at lttstore.com. Now 1080P is kind of scraping the barrel for FSR unfortunately. With ultra quality providing okay results, but being visibly blurrier and less detailed than native; particularly around the
+sword and the pillar's trim. The quality preset is as low as you probably wanna go for 1080p. It looks like 1440p is performance
+mode, which makes sense because like that mode it's
+actually using seven 720p for the input resolution. Strangely enough balanced
+doesn't look that much worse all things considered, but
+now even hard contrast areas like the arm are beginning
+to show some fuzz and performance, well, it looks kind of like a 540p game on an Xbox 360 or PS3, and that's because it is 540p. Hard contrast areas are still better than that kind of up scaling would look, but now to go along with a slight blur, we've got some halo art effects. This isn't really how I
+would want to play the game, but I mean, if your only
+other option is to not play the game, this is a a
+hundred percent improvement. The 720p is pushing the envelope
+to a frankly silly degree, but it's an interesting demonstration of just how much FSR differs from DLSS. "Three Clicks" Phillip made a
+pretty amazing video showing that going super low-res with DLSS can make an image look
+high-res, but strangely blurry. FSR though absolutely cannot which tells us everything
+we need to know about how it works without even
+hearing the whole explanation, but I'll tell you the
+whole explanation anyway after we go over performance. With ray tracing on at 4k our 6,800 XT managed a
+massive 40 to 46% improvement over native just by switching
+FSR to ultra quality; going from consistently under 60 FPS to consistently well over, which is a pretty great deal if you ask me considering the visual difference is basically indistinguishable unless you really really pixel hunt. We're seeing pretty linear progression down through the quality levels, so depending on your pain
+tolerance for blurring you can squeeze quite a lot of
+performance out of FSR at 4k. At 1440p it remains a linear
+improvement for a 6,800 X T up until the balanced preset
+where the improvement is within spitting distance
+of quality and performance doesn't do much better. Still turning FSR on at ultra quality will provide a more stable
+frame rate for 120 Hz displays, So that might be worth it. Not sure I'd go below
+quality at 1440p however but bear in mind that this is
+a 1600 XT we're talking about and older GPUs that
+struggle at 1440p native may see better returns since
+it's probably the bottleneck not your CPU. 1080p certainly sees almost no improvement on our 6,800 XT with unpredictable results thanks to how CPU bound we're getting. But this brings up an important question: why not just lower your settings? Well, smarty pants, some
+people don't want to and some people can't go any lower because their GPU is too weak. As for why you wouldn't
+just run a lower resolution and call it a day, well you could, but then your monitor or GPU is probably gonna
+use bi-linear scaling which is way less sophisticated than the advanced techniques
+like edge directing and even neural networks
+deployed by the likes of DLSS. So why not use the best tools available? And that begs the question, which tool? DLSS is great if you have
+the hardware it requires: only found on select the
+NVIDIA GPUs is of course. FSR while being a little heavier to run requires no special hardware and is substantially easier to
+implement into a game engine. Easy enough that reportedly
+it took one developer just under two hours after being
+given the code to implement it into their game. I mean, in theory, it could even be injected
+into a game by MODDERS, although AMD wasn't sure if it would look correct
+this way when we asked so your mileage may vary. The effect is implemented
+as a shader that works by using a combination of multiple scaling and sharpening techniques that
+are run before the overlay effects like the HUD, which reduces noise and preserves text Christmas. Christmas. (laughing)
+(camera-person laughs) which reduces noise and
+preserves texts crispness. Under the hood developers
+have given control over the scalers variables, and these can be updated on the fly. No two implementations of
+FSR will look quite the same; assuming the developer hasn't
+just used the defaults. One thing for users to
+know though, is that because there's a sharpening
+pass included with FSR having other sharpening filters
+enabled can, ironically, give the impression of more
+blurring than there really thanks to the ringer effects. And this is probably why
+our first impressions of AMD Computex reveal
+weren't exactly favorable. Unfortunately, as we've
+seen texture blurring and fine detail shimmering
+is still a problem for fidelity FX super resolution today, but that doesn't mean it can't change. Remember him how bad DLSS 1.0 was? Well AMD says we'll see
+new additions, tweaks, and new up scaling methods
+even in the future. All of which will be open to the industry. It remains to be seen whether
+this will work out for them, or if this is another case of CUDA versus open CL where NVIDIA shot first
+and ultimately won. But developer support is pretty extensive with a lot of big names behind FSR. So my money's on things working
+out differently this time. We won't know for sure
+until it's been out a while but for now enjoy your free upgrade. And this message from our sponsor: Vessi Footwear. Thanks to Vessi for
+sponsoring today's video. Vessi Footwear is known
+for being waterproof. They're lightweight and breathable; and the dual climate net material keeps your feet warm during winter and cool during the summer. They fit almost any occasion and some of us are even
+wearing them right now. And did we mentioned they're
+a hundred percent vegan. Get twenty-five percent off each shoe using our code: LinusTechTips at checkout. Check them out at Vessi.com/LinusTechTips. Thanks for watching guys. This was a bit different
+from our usual videos. So maybe check out our
+recent video on seeing if people at the office could tell whether RTX was on or not. Spoiler I could tell, but I
+also knew what to look for. Do you.

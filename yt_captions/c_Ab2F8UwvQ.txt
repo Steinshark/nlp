@@ -1,0 +1,188 @@
+- Come on guys let me show you. (Linus screaming ) For those of you who
+haven't been keeping up, this is my new house and there didn't used to be stairs there. In fact a lot of the things around me didn't used to be here. And because the drywall
+is going on tomorrow this is my last chance
+to take you guys around and show you how we took
+a regular old fixer upper from 1990 something and turned
+it into what I am calling the Ultimate Tech House. Starting of course with
+our LAN gaming center room, which is wired for power, network and even optical display port and USB back to our dedicated server room. There's gonna be this and
+a lot more to show you guys and it is all brought
+to you by our sponsor. Thanks to PCBWay for
+sponsoring this video. PCBWay offers all kinds of PCB services, as well as 3D printing,
+CNC, Sheet Metal Fabrication and injection molding. Check them out today
+at the link down below. (upbeat music) First of all, I wouldn't have been able
+to do any of this without- - Well I wouldn't have been
+able to do this without Jake too so you should come be a part of this. - This is gonna be a fun threesome - Jake and I had some strong disagreements about the best way to do the LAN center. First, our plan was to build
+five dedicated machines to sit at each of the five stations. So three along this wall here, another two along that wall over there and then another one that's over there that's kind of like a utility one. The idea was that the kids' computers are gonna be one, two, three. Where the screens will face the stairs and we can sneak up on them and make sure that they're not
+looking at anything untoward. Of course, none of that was
+what we disagreed about. We both said, look with
+evolving tech standards, we got display port 2.0 coming. We got USB4 all that kind of stuff coming. We're gonna need extra space. So we ran two conduits all the way back to the mechanical room. Some of which is full with
+the current standard cables. But I said, we should
+just have one box here with access to everything, and then we should just
+cable manage everything under the desks. Jake insisted - Hear me out. I'm thinking each
+station is gonna probably have an up desk, right? - Maybe, I don't know. - if you wanna do that having those cables cable
+manage with the desks that's a nightmare. If you're gonna do it just do it right. - The problem is that you're not wrong you're just annoying. (both laughing) The contractor advised
+us that you can only have so many right angles in a conduit before it just becomes impossible to pull a cable through it. So what we've got then is here, where one of our rear top speakers in the theater room is going to be, you'll just pull out the speaker and we're gonna have a pole station. So you'll just kind of
+use these pole cords here and run everything through as you need. - They didn't actually run
+any of the existing cables in the conduits. Both conduits should be basically empty. - [Jake] Oh really? They ran all the fiber.
+You can see right there. - Oh yeah. And all the display port
+right there outside. So those don't take up the conduits. We've got full capacity for new stuff. - Those live in the wall forever. - Yeah. - Genius.
+- Yeah. This room sounds scary. It's eerily quiet in here. I've been so particular about everything. Like they replaced the old
+inefficient air conditioning unit with a heat pump. And I was like, "It cannot go
+right outside this window." - And they told you,
+you were unreasonable, and they were right. But this room is crazy. And the sound is great. Like we have the new exterior door instead of just the glass double
+doors that I wanted. - We're putting a solid door here. - It's far from my only
+unreasonable request. And I think I got away
+with the rest of them. So it's wired for seven surround speakers, two subwoofers and four top channels for that great Dolby Atmos experience. And then cooling has been
+carefully considered. So this cabinet here is
+gonna have a mesh bottom. - [Yvonne] No, no, no, no. - What? - It's not gonna have a mesh bottom. - What happened to my mesh bottom. - Your mesh starts part way up because the bottom is
+for pillows and blankets for comfort and actually
+living in the space. - Oh the bottom has drawers, right? - Yes, it has drawers. So your mesh starts probably like here. - Hey, I thought you
+said this was our room. - So it'll have a mesh. - You guys need a room for yourself. - Yeah.
+- Okay. - Mesh bottom. And then we're gonna have a
+couple of banks of NOCTUA fans. like super low RPM running on the top constantly circulating air
+through this cabinet here. which is important
+because the original plan was for us to have the receiver
+in the mechanical room. So funny story the electrician actually
+terminated every speaker location to both the mechanical room and to here. So for whatever reason the cooling doesn't work out in here, we can actually run the receiver and you know Xbox, PlayStation, Gaming PC, all that stuff over there. But ideally we wanna have it in here. Because it's a little bit easier for the less tech savvy
+members of the family. - Hey, okay, you know what.
+No, it's not just for me. When people have friends over and they're bringing games or whatever- - Less tech savvy friends. - Then we've got conduit from the bottom where we'll have power and networking, and then more conduit over
+to the mechanical room, going up to TV height, If we decided to do a direct view TV or all the way to projector
+location way at the top where we've got power. So the idea is no matter
+what kind of media thing we've either got it wired,
+or we've got conduit. - I don't know if you can tell but Linus is a little indecisive. Some people call that future proofing, I call it not being
+able to make a decision. - I call it content. - You haven't considered any of the stuff that's gonna make this room
+look nice and comfortable. Like all these beautiful wall
+scones that we're gonna have. - Oh yeah. - Yeah, and our awesome theater seating that we've worked out. - Oh, and this is cool. Check this out. We haven't done an HVAC
+update in a long time but here they are, Smart
+Dampers on the HVAC. Okay. We'll show you in more
+detail in the mechanical room. - The Dampers they ended up
+installing are pretty similar to the ones we showed in the video before but the plan has changed. A lot. - [Linus] Do I know about this? - Yeah. I give you an update. Basically, the system that
+they ended up using is, I think it's called
+American Standard AccuLink. It's proprietary AF. If you want to be able
+to control that system with its full potential, you
+have to use their thermostats. The American Standard
+AccuLink Platinum 1050. Do you feel platinum right now? - No.
+- No. It's kind of ugly. - I guess that's kind of the American way. We made our own standards. Rest of the world. - The main reason we wanted
+to use smart thermostat is so we could detect
+presence in individual spaces and shut it off if we're not using it. It's very possible that
+Linus won't have any friends or coworkers come over for a while. Maybe his-
+- Paid friends. - Doesn't get used. In which case we don't need
+to be paying to cool it. We don't need to be paying to heat it. - Hey, you promised you'd come over. - Use the pool. Now home assistant has a Nexus Smart Home, which is like their
+Z-Wave based control thing That's not actually like controllable with Z-Wave integration so we can still talk to it. - Okay. - But it's cloud. - It works, but it's cloud. - I said, no batteries, no cloud. - I'm thinking, we just put a bounty out, like just say five grand. - Fine five grand, right now. - Somebody make a local integration for Home Assistant for these. - I don't wanna talk to their stupid cloud
+to adjust my thermostat. It's ridiculous. - We could maybe pay Floatplane to do it. - Yeah. Unless someone bounties it first. - Yeah.
+- Chop chop. I don't know if Five
+grand's even reasonable I have no idea how much worth that is. - Oh. And this is how decisions get made at our company line. It's just, willy nilly
+throws a number out there and it's like, " Oh,
+now we committed to it, I guess we have to do it now." Okay. - Let's make it 10 grand. - Wait what?
+- No, stop it, stop it. - Five. Actually. Now's a good time to- - Wait, wait, wait, wait, no, no, no. I'm not done, come here. So what does this mean for
+our young explorer Linus? - Oh, (indistinct) - It means we're gonna
+have two thermostats in every single zone. - What, seriously? - Did you not know this yet? OK. I didn't know this, no. - We're gonna have a Ecobee, and we're gonna have a heat pump. Now the other crappy part
+about those thermostats, is they don't have a set
+for hydronic heating. Like what we have here. Which is water that runs
+through the house that's heated. That heats the whole house. So for now we have to have an Ecobee that's gonna be running here. And then we're gonna have our heat pump, which is actually for cooling. - This is gonna be so ugly. It's gonna be a circle
+for the Ecobee right? And then a square or rectangle for the- - Of course it's not that big. It'll look great. - You're ruining my aesthetic. - Yes. Before type that angry
+comment. Yes we know. The only time you would turn down, or turn off your hydronic heat, is when you're gonna be away for a week or something like that. We know, please. Speaking of hydronic heat,
+shout out to IBC by the way. This mechanical room used to have a huge boiler unit like this
+for the in floor heat here. And then it had two giant hot water tanks so that the whole house could
+be serviced with hot water. All of that has been replaced by this. They make super efficient boilers and their installer went
+absolutely overboard on this setup. And when I came in, get this they were like, "Oh, and don't worry this is all gonna be copper too. We're gonna make sure it's all copper." I was like, "That was not what
+stood out to me about it." I was like, " This is so overkill." - I don't know if I would- - This room has more blinging than I do. - I know. - Runs Lennox 2.6. That's kind of old. Oh, why'd you take it off. - So that it's off. - Andy is rolling over in
+his not grave right now. - [Andy] Perfection.
+- I don't even care. - [Jake] So what I read
+on their website is that all their residential
+boilers are at least, it's like 95.7% efficient. At least. This one's probably even more cause it's like the top spec one. But it's cute. It's wall mounted. - This is some crazy wiring
+you've got go going on here. - Yeah. You might be
+looking at this thinking, that is an insane amount of Cat6a. And you would've even missed
+all of this back here. But it's because of all the access points. It's because of the cell
+booster, the cameras, That's not even cell booster, oh wow. - [Jake] It's just
+cameras and there's like 40 other things you wanted ethernet at. - Right. Moving out to the rec room. This space is gonna be awesome. Once again, indecision, I originally said I don't want conduit back
+to the mechanical room. - Oh, so you finally admit it. - Changed my mind, but
+probably anything here. This is probably gonna be
+where the Nintendo switch goes. This is where our VR
+gaming setup's gonna be. This room is wired with 12
+volt to all four corners for Valve Index Base Stations or whatever, kind of external tracking solution we might end up needing in the future. And then we've got a couple
+of power circuits here. So if we wanna put game
+consoles or anything like that the plan is maybe like a big 77 inch TV, something like that. - [Jake] Could put a gallery one here. - Wow. This really is a threesome. I saw you look at me and
+then you look at Jake, just to confirm your decision. - Well, I thought you said
+that you didn't want me to make eye contact with the
+third party if we ever did it. (Jake laughing) - Wow. - There's gonna be six total
+in ceiling speakers in here. Which is, yeah, they
+listened to you not me. - Yeah, apparently you told them that it was supposed to have a lot of- - I told them four, you told them six. They put in six. - We were here when we talked about it. - They put in six. - [Yvonne] That's what they told us. - We don't have enough for that
+then we're gonna need more. There's gonna be a subwoofer right here. So this is gonna be likes
+two subwoofers in this room? - [Jake] Yeah, why not? - Okay. See, this is why
+the contractors hate me. Because I have you changing things. And then I have Jake adding things. - [Jake] I'm just kidding
+it's one subwoofer. - Okay. One big subwoofer? - Yeah.
+- Okay deal. - So there's gonna be
+shelves where you can put I don't know, storage books,
+whatever you want knickknacks. And then on some of the upper shelves, there's actually gonna be
+carpet inside the shelf itself. So our cat can just hang out here. And then we're actually
+gonna have a little, what do you call those? - A bench? - Bench, well-
+- shelf - It's not a bench If you lay on it. There's gonna be storage back here where you can put books or
+board games or whatever. And you can chill back here
+and just hide out and read. Hide from your family. - Yeah. That kind of thing. - Or the cat can hide there. - That will be my spot. - So what happened here
+is there used to be actual cabinets here and here. And then it was square. For like an old school CRT tube TV. So what we did is instead
+of completely redoing this, we actually just took these out, and then they built this little skirt. So this is gonna get painted black. The TV is gonna go on a
+wall mount right here. So the TV actually is gonna
+sit and it's just gonna have this black border kind of around it. So it just kind of gets lost in the- - Infinity TV. - Sure, yeah. You can think of it that way. And then the reason they only did these vertical two by sixes is so that cable management
+and cooling back here is gonna be super easy. - Oh, it's just gonna
+stay like this, right? - Yeah.
+- Sick. Throw it down there. - How to pull out the TV and just be like. (Linus jabbering) (indistinct) - [Yvonne] Yeah.
+- It's right there. - There's conduit's in the back- - There's conduit everywhere. There's conduit on every floor. (Jake laughing) - There is. (Linus laughing) - Do you wanna see my
+new kitchen countertops? I love this one. This one looks awesome. You better love it. It's nice. Admit it. It's nice. Come on. - [Jake] I don't know. - Come on. - It's okay. - Help her out Jake. - It looks dirty. - Well, it is dirty right now. - Oh well, Oh look, it still looks dirty. Oh no. My annual review is coming up this week. I'm gonna get a bad one. - Okay. At least tell me you like
+this blue that I picked. - I do like the blue. - The blue is very nice. - You should have seen when
+my mom got new countertops. I was like, "Oh, those are like awful." (group laughing) She was like, "Jake" - What a good side. - They grew on me. - Once again, indecisive. So both of the computer
+workstation areas here and then over on that side
+where Yvonne's gonna sit. Hi Yvonne. Are wired up for ethernet power, blah, blah, blah, all that stuff. And the only thing Jake
+and I have to figure out is how we're gonna be able to push the power and reset
+buttons remotely because Yvonne has not been a fan of it. Even with it on the other
+side of the wall through one - It happens a lot
+- Simple closed door. - Okay. It happens all the time. My computer just doesn't
+work all the time. Yes. Or my monitor won't turn on. And there's no way to like fix
+without just restarting it. - I think it's Thunderbolt related. I think Thunderbolt on PC can
+just be kind of flaky. So. - Guess what? You're getting like RawDog
+Direct Optical Display. - So because my desk will be over there. So I'll be facing like this way. I'm gonna be streaming, right? So we're gonna have a super cool streaming background that's got- - Okay. This was actually
+to be my bookshelf where I put my arts and crafts stuff on. And somehow this turned
+into streaming background. I don't know. - I offered to give you this whole room and you were like, "No, I don't
+wanna be by myself in here. I wanna be where you are." And so I was all like,
+"All right, you know? Yeah. I'll be near you, you know. If that's what you need." - Okay. So then being near me, turned into taking up my space. More of my space. - Yeah.
+- Taking up my storage. - Our storage. There's a bunch of power
+in here so that we can have like cool lighting on the shelves. Put little knickknacks on there. I don't know. Maybe there'll be RGB involved. And that's it for this room. Main changes in here. These old speakers are gonna go, we're gonna drive all over them. They're gonna have the same
+clips in ceiling speakers as pretty much the
+entire rest of the house. They sound great. So that's the thing that's most important. - Those, aren't the main changes. There's so many other things
+in here that are gonna change. Like we don't have ants
+anymore in the walls. - Oh yeah. That was a problem. - We have this beautiful-
+- You see all this all those like chewed up wood and stuff. - Yeah. - We have all this really nice new tile. Okay. At least Jake and I
+agree on this, right Jake? - Yeah, that looks pretty good. - Okay. Cool. - I think it looks kind of dirty. - Oh my gosh. - I'm kidding, I'm kidding. - And then there's all
+this like, okay. Sorry. - I don't want to talk about the floor. (Jake laughs) - This one that we thought
+was gonna be really nice when we did a bigger patch of it, it ended up having green undertones. Now we've settled on one of these two so people can vote. What actually prompted
+doing renos in this place was actually the master bathroom. - That's the only reason we needed to do like permanent renos. Like the stairs. - The stairs. Yeah. - I don't regret the stairs. - I don't regret the stairs either. And I'm glad we did the bathroom, but that's just how much the scope of the project has changed. It's crazy. - The shower's gonna be awesome. Got that dual head shower. So I call this side - The shower used to be
+in here with the toilets, and it was just like
+this tiny little thing, but this is gonna be amazing. This is awesome. - Oh, this is nice. So if we ever need to get
+access to the air handler or anything like that, it is that easy. Love it. I don't know where the light switch is. - [Yvonne] Oh, did you
+ask them to put one in? - I don't know. (Jake laughing) So we got ethernet, we got power. Just gonna do like a little wall mount. - This where the Driving
+simulator's going right? - Driving sim-. - And it's like real race cars. You're actually like laying down. (Linus laughing) - There's gonna be a cellular
+repeater in this hallway. I think in the dead center, right? - Yeah. That one's that. - Yeah. And then cameras. So the idea is outside of bedrooms and bathrooms to have pretty good coverage of the house and the area around it. - Oh. We should show them the
+cell repeater in the garage. - Yeah. So, the idea
+behind the cell repeater is that there's a rooftop unit. We're gonna kind of point it wherever the best reception is. Cause cell reception here is terrible. - This Is the coolest cell
+repeater you'll ever see. Most cell repeaters suck
+because they're all analog. This one it's digital. We're gonna do a video of that. So stay tuned gets
+subscribed on the channel. - Oh yeah. We haven't done any LTT store mentions. Indoor hoodie. GPU shirt. Oh yeah. I got the underwear. - Okay. - Don't act like you've never seen it. Either of you. - Yeah. I've seen it more
+times than I wanna mention. - Wait, all of this, four
+boxes of cell repeater. What am I even looking at? - That's the J- Bolt and antenna. - Dish mount. Okay. Oh yeah. Car charger. So there's the big old,
+rugged power cable for it. It's gonna be mounted
+to this wall right here. It's a dual head, which means that if we ever had two electric
+vehicles parked in here we'd be able to charge them. Realistically. It only really comes up
+when we have guests visiting like her parents and James always wants to pull into the garage and charge his car when he comes over. So we'll be, we'll be all set for that. - Well, the cool thing about that too is it's got a 40 Amp circuit. And then when you have two cars plugged in it splits the power. So they both charge, which is nice. - War thunder is a free to play, online military vehicle combat game. It's available on windows,
+Mac, Linux, PS4, PS5, Xbox one, and Xbox series
+X and S with crossplay. It features 10 playable nations
+and an incredible arsenal of more than 2000 historically accurate and playable tanks, aircraft's
+and ships from the 1910s, all the way to vehicles that
+are still in service today. You can compete in massive
+combined arms battles on over a hundred major
+battlefields from World War 2, All the way to modern environments. And War Thunder vehicles are implemented with a high level of
+authenticity and detail. So their speed, armor, firepower and model are as close to real life as possible without compromising on gameplay. Their damage models are
+realistic and dynamic. Adding a huge amount of depth that is rarely matched by
+other free to play games. And they're always adding new content. So head to the link below and start playing war thunder for free. You'll even get a free
+bonus premium vehicle just for signing up. If you guys enjoyed this
+video, maybe go check out, do you have a playlist
+for new house updates? We'll have a playlist.

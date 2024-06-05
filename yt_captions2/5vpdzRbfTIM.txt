@@ -1,0 +1,157 @@
+then we can just 
+say, 'you are a dog now!' welcome back to mcoding. 
+i'm james murphy. today, we're talking about the difference
+between the type of an object and the dunder class attribute 
+of that object. and also how to change the class 
+of an object at runtime after it's been created. it's that time again to talk about the best
+sponsor - myself! that's right, mcoding is not just 
+my youtube channel. it's also my 
+software consulting company. we do software consulting, 
+contracting, training, and interview prep. so, if you need any of those things, 
+please do reach out to me. you can find out 
+more by visiting mcoding.io. so, let's dive in. if you have any exposure to python, 
+you're probably already familiar with 'type'. pass in any object to the built-in type,
+and it tells you what type it is. here, we're implementing the dunder copy for 
+the animal class by getting the type of the object. and then creating a new object of that
+type, passing in the same name. when we define equality 
+for our object, it's also common to not want to 
+compare against things that aren't of the same type. in this case, we just check if the 
+type of 'self' is the same as the type of 'other.' and when we're defining a __repr__
+for our class, it's common to have the name of the 
+type in the string representation. the reason that we even use 
+the type at all instead of just hardcoding the name of 
+the class 'animal' is because of inheritance. let's say we had a dog class 
+that inherits from animal. of course, printing out an animal, 
+we get the expected result. but if we create a dog instead, then it still
+prints out 'animal' instead of 'dog.' but if we use the type of 'self,' then it'll
+do the right thing in both cases. for animal, it'll print out 'animal,' and
+for a dog, it'll print out 'dog.' so, that's your pretty typical use case. as expected, 'type of self' gives you the
+type of 'self.' what else is there to say about it? well, if you read enough code, you might see other 
+people instead of using 'type of self,' instead they're saying 'self.__class__' everywhere that you might 
+be expecting to see 'type of self.' instead, you see this other thing. so, is one of them right and 
+one of them wrong? like, what's the difference? hmm, well, how about we look 
+at the cpython source code and just get a feel for 
+how many times each is used? okay, so there are a decent number 
+of occurrences of 'type of self,' and there are also a decent 
+number of occurrences of 'self.__class__.' the fact that they're both pretty widely used
+is a bit strange, but okay. maybe you need a flame war 
+to see which one's better. go ahead and comment #type or 
+#class to let me know which one you like better. i mean, obviously, if you've got class, you
+should go with... anyway, back to the differences
+ between them. rest assured that 99.9% 
+of the time, they do exactly the same thing, and 
+you shouldn't worry about it. the number one reason that people
+ choose one over the other is just pure stylistic preference or just
+ copying code that already exists. people that prefer '.__class__' 
+tend to think that using multiple pairs of parenthesis like 
+this can be slightly less readable, and people that prefer 'type' tend to 
+compare it to using other built-ins like len() where you wouldn't typically call a __len__ 
+you would just use the built-in len() realistically, in most cases, 
+just pick one and stick with it. it just doesn't matter. so, for the 0.1 percent of the time where
+it might actually make a difference, here are the actual differences. the primary difference between using
+ 'type' and using '__class__' is that a class can 
+lie about its '__class__.' the first way a class can lie is 
+just by assigning the '__class__' attribute. if you were to use __class__, you would
+see the lie 'someclass,' but the built-in 'type' can't be fooled. 
+it will always give you the real type of the object. the class could also lie like this: making
+__class__ a property. or it could even lie by overriding the 
+__getattribute__ and specifically checking for __class__. i mean, if you do this, 
+you must have incredible job security. now, as obviously wrong and bad as
+ doing something like this seems, maybe if someone's doing this, 
+they have a good reason. there's probably some testing mock
+ library somewhere that depends on this behavior. so, that's an actual functionality reason
+to use __class__ over 'type.' one big thing to watch out for though is
+not an object lying about its class, but an object changing its 
+class at runtime. getting back to the animal 
+and dog example, we can see that we can 
+actually assign to the '__class__' attribute. so, we can create an animal. if we use 'type' or __class__, 
+we see 'animal.' then we can just say, 
+'you are a dog now!' at which point, both 'type' 
+and __class__ now tell you 'dog.' that's right. it's not just lying to you 
+and telling you that its __class__ is 'dog,' but its type is actually 'animal.' 
+it is actually a dog now. this can obviously go wrong in 
+so many ways. for starters, the object was created 
+and initialized as an animal. if animal defined an __init__ function,
+that would have been called here, but if dog had defined an __init__ 
+function, in this case, it didn't. but if it did, 
+it was never called. so, the dog part of this animal may 
+not have been initialized. you could also do it 
+the other way: start with the dog and then tell it, 
+'you're just an animal now.' just like before, whether you use 'type' 
+or the __class__ attribute, they both agree it starts out as a dog 
+and then it becomes an animal. if you try calling a method that only dog has, 
+that animal doesn't, you won't find it. this is also, in general, 
+not a safe operation, although it kind of looks like upcasting,
+ which would be safe. in this case, it suffers from kind of 
+the reverse problem as in the previous one. here, this is initialized as a dog, 
+and it may contain dog-specific state. but the animal class doesn't know 
+about any of that state, and it might end up accidentally misusing it 
+because it doesn't know that it's there. but you can do even weirder 
+because the new type that you're turning it into doesn't have to be related 
+at all to the old one. it doesn't have to be 
+a superclass, it doesn't have to be a subclass, 
+it doesn't have to be anywhere in the mro. so, before, bork is an animal, and then he's a car, and this is made possible because, 
+in order to convert from one class to another, there's pretty much only one restriction, 
+and that is that the classes need to have a compatible layout. well, how's it even possible that an animal
+and a car have the same layout? didn't the animal have a 'name' attribute,
+but the car doesn't? most python objects are just a 
+wrapper around their instance dictionary, which you can see a proxy of 
+by accessing the __dict__ attribute. this is why it's possible to set and delete
+arbitrary attributes at runtime. this means you shouldn't have any 
+trouble converting between any two normal classes. it is possible to have classes that don't
+have compatible layouts, though. for instance, if you use __slots__ in one
+but not in the other. if you're trying to mutate the 
+class of an object, the 'to' and 'from' need 
+to have the exact same slots. so, if one has slots and 
+the other doesn't, or if they have different 
+slots, then they won't be compatible. you'll also have trouble converting 
+to or from most built-ins or anything that inherits from them as those 
+typically have their own custom layouts. so, how about an example where you 
+might actually want to do this that's not totally crazy? i mean, it's still mostly crazy 
+but not totally crazy. this one's actually straight out of the docs,
+so you know it can't be too crazy. when you define 
+a module in python, you have basically no control over 
+the type of the module object that's created. you just write your .py file, and then when
+you import it, somehow magically, a module is there. by default, modules 
+have the built-in 'moduletype`. but modules are objects just like everything
+else in python, so you might have wanted to customize the behavior of your module. you can actually do that by defining your
+own module type, and then setting the '__class__' attribute of the current module to be that
+module type. in this case, we're just modifying '__setattr__'
+so if someone sets a value on our module like a global variable, then it'll 
+print out a message. but in theory, you could do whatever logging
+or other behavior that you want. the other use case i have is a way of deserializing
+in-memory representations of objects. suppose i've got some data stored in a class,
+and that class has some non-trivial internal state. then, suppose that i want to restore or
+ deserialize an object that had a given state. say, 'x' was 1 and 
+the internal state was 4. depending on the structure 
+and implementation of this class, it may be difficult to construct 
+an instance that has this given state. you may not know the sequence 
+of events that led it to be in this state, or you may not want to repeat 
+that sequence even if you know it. instead, you might like to just have that
+object sort of pop into existence with the given state. so, what we'll do is create a blank class
+that has a compatible layout. then, we can just reach 
+into the object and update its instance dictionary to 
+match the exact state that we're looking for. finally, modify the '__class__' 
+to be our desired class. at this point, once again, 'type' and '__class__'
+will agree that the class is 'somedata.' what might have been cons or points to 
+watch out for before can now be used to our benefit. creating an object this way doesn't 
+go through any of the normal mechanisms. it doesn't get initialized with its '__init__,'
+it wasn't created using the '__new__,. and it didn't have its metaclass's 
+'__call__' called either. now, normally, you would 
+want all those things to happen. but in this case where you just want the
+ object to pop into existence at a known given state, maybe you don't want those 
+things to happen. if you're familiar with the built-in 'pickle,' this is 
+similar but even more extreme than what 'pickle' does. 'pickle' will create the object 
+using the '__new__' of the class. and then it'll update the dictionary, or if you 
+have a '__setstate__' defined, it'll use that instead. but a class's '__getstate__' and '__setstate__'
+may not be something that you control, especially if you didn't 
+write the class. additionally, that representation may 
+not be just a copy of the instance dictionary. it could be compressed or just different variables
+stored or some things just recomputed once it's unpickled. i mean, don't get me wrong, 
+if you can use 'pickle,' then you should definitely 
+use 'pickle' over doing this. but if you need to, 
+this is one use case. once again, i'm james murphy. thank you for watching. if you enjoy the content, 
+please do subscribe. and if you especially enjoy my content,
+ please consider becoming a patron on patreon. as always, thank you to my 
+patrons and donors for supporting me. i really appreciate it. slap that like button an odd number of times,
+and i'll see you in the next one.

@@ -1,0 +1,236 @@
+hey you all know me you know I love polyhedrons 
+where the other day I learned something new that   I didn't previously realize about a wonderful 
+alignment in how you can arrange I mean check it   out here it is right look at how you can arrange 
+polyhedrons polyhedra your choice and it's not   just theoretical someone actually did it isn't 
+that absolutely incredible so I want to share   with you this amazing new polyhedrin plane [Music] 
+quick any other business I'm doing unnecessary   detail in Bristol UK on the 12th of March come and 
+say hi and applications for Jane Street's Academy   of math and programming are now open more details 
+about that at the end of the video my journey of   Discovery started when my mate Glenn Whitney 
+uh and some of his colleagues came up with an   idea where people could send in polyhedrons that 
+they would then display in an art installation of   course I wanted to get involved but I thought I 
+would include all of you so I did a live stream   this is a couple months ago where viewers watching 
+it helped me work out what polyhedron I was going   to build hey hello so welcome to me on my second 
+Channel I'm here to build a shape okay well let's   let's let's just start chucking these together 
+otherwise I'm never going to eat why did we   just make the tetrahedron come on Focus okay I'm 
+calling I'm calling it this is the shape we're   done that's it there I'm sorry the auto focus 
+doesn't seem to be Coop there it is in fol look at   that three blue one gold it's the tetrahedron we 
+all didn't know we needed it'll be in New Jersey   mid April check out the poly plane uh website 
+Linked In the description and go Marvel at this   Mighty polyhedron Glenn and friends took all the 
+shakes people posted in and decided to hang them   in a massive cuboid which means they had three 
+decisions for every shape because there's three   dimensions three axes there's three different ways 
+they can adjust the location of any one polyhedron   they're going to hang and I've got a simulation 
+here of some of the choices they could have made   this is a Geer file that my friend Ben very kindly 
+made for me there's the empty cuboid waiting to   have some shapes hung in it in fact I'll turn 
+on uh tetesan there we are there's mine look at   that I mean do um not necessarily going to put 
+it there I just thought i' um show you there's   one there in fact we'll turn on the rest we got 
+a cube we got an octahedron and we got the rest   of these to start with these are not you know any 
+particular Arrangement they're just kind of lined   up ready to go we got a few prisms we got these 
+are like Jewel pyramids back to back and we got   our friend ponic solids and a square base pyramid 
+why not they're all set to go so um let's make one   choice let's put them with uh this is the number 
+of faces on one axis over here this is the total   volume for a unit side length over there and then 
+this axis is vertices on big face so that's why   this octagon prism is all the way out here by 
+itself it's got the face with the most vertices   on it there anything made from triangles where 
+triangle the the biggest or the most complex shape   um that appears over here like that and so that's 
+one way to arrange them and I don't know I guess   you can kind of see some things coming out there's 
+not obvious patterns let's switch to another one   this is edges on one Edge this is number of edges 
+on this Edge haha uh total surface area on this   axis and then the radius of the circum sphere on 
+the third axis and um what can we see now I mean   there's some in like obviously oh okay so surface 
+area this has got a lot of surface area for the   volume um it contains well this is where the 
+radius of the circum sphere is not quite volume   maybe we should have done volume anyway so uh 
+Ben Sparks who made this uh we had a chat about   different ways we could put things on the various 
+axes to see what kind of patterns we would see but   once again they're kind of all over the place so 
+let's switch to something nice and simple this is   number of vertices on one axis number of edges on 
+another number of faces on the third and so now if   we have a have a little look at these we got oh 
+wait a minute they all they all line up look at   that so now they perfectly align in a single 
+flat plane I can actually turn on that plane   there you are so they're all look at that they're 
+all in that one flat plane isn't that absolutely   incredible and this is just for the ones that 
+Ben and I put in as an example so the question   now is if you take all the random polyhedra sent 
+in by people to Glenn and you hang all of them   according to number of faces number of vertices 
+number of edges in 3D space will you get this   fantastic plane the only way to find out is to see 
+the installation and amazingly I was able to see   Glenn's math insulation yes math because it and I 
+happen to be at the same conference it's just up   here uh The Joint math meeting is happening in San 
+Francisco USA they have installed it in the main   exhibition space the installation now involves 
+hanging all of these shapes in a very specific way   I'm so excited to show you this I'm going to head 
+up see if I can find it I was so excited walking   across the main exhibition floor in the distance 
+I could see a lot of very colorful very chaotic   shapes all suspended inside a cuboid yes this is 
+the installation noun not verb of all the shapes   that had been sent in and sure enough if you look 
+at it from just the right angle they all line up   on the one plane some of you may already realize 
+where they all lie in that one plane in fact that   was the whole point of the installation it's 
+called poly plane because all the polyhedra are   in the same plane now if you know know why that's 
+fine but I was still struck by the mathematical   beauty of how a few different math concepts all 
+knit together to make this incredible installation   possible starting with oil's polyhedrin formula 
+which says the number of vertices subtract the   number of edges plus the number of faces for 
+any polyhedron with no cheeky holes in it will   always equal two and this seems like as good 
+a time as any to actually prove that the first   Factor we need is that any nice polyhedron can be 
+projected down into a planer graph so here I have   the case for a cube there's a cube floating 
+above a plane and we're projecting it down   onto that plane at the moment this is not planer 
+which just means that there are lines crossing   each other so this Edge goes through this Edge in 
+terms of its projection down to that flat surface   however there's always somewhere you can put your 
+projection Point such that there we are such that   now we have a planer graph absolutely nothing is 
+cross in anywhere and as far as we're concerned   mathematically this cube is equivalent to this 
+projection and it works for more complicated   shapes check out this octahedron so you got way 
+way way more faces and again we can move this   around a bit until we get it somewhere like that 
+is that done yeah there we are so that works too   so any shape can become a planer graph to make our 
+life simple going forwards we're going to use the   graph from my tetrahedron the three blue one brown 
+as simple as it gets tetrahedron and it's graph   there you got well there's still the four faces 
+there's the one two three faces and the fourth   face that would be underneath if you imagine this 
+is kind of looking down on it is actually wrapped   out the outside becomes a face as well so those 
+are our four faces you still see the four vertices   they're now the vertices of the graph and all six 
+edges are there as edges of the graph and what   we're trying to prove is if you take the number 
+of vertices subtract the number of edges add the   number of faces you get two if you ever forget the 
+order of those they go up in increasing numbers of   Dimensions that the things exist in so vertices 
+are Zero Dimensional points then you go up to   edges that are onedimensional lines and then faces 
+that are two-dimensional uh polygons and oh and it   works in higher Dimensions as well you continue 
+that where you put them in the increasing number   of dimensions for each component and you alternate 
+the the subtract and add but it equals either two   or zero based on I think it's two or Z based on 
+if you're on in an order and even Dimension anyway   we're looking at 3D shapes projected down into 2D 
+and we're going to do our proof by initially uh   ignoring the edges going take them all out forget 
+the whole graph we're going to replace it with a   much much easier graph this is what's called a 
+spanning tree graph so we're using graph instead   of network because mathematicians uh a tree graph 
+is one with no Cycles so I'm going to fill in just   three of the the edges and this is a tree graph 
+because everything branches but never recombines   which means we have now only got one face so 
+because we have lost these other edges here   there's just this one single face because if there 
+are no Cycles it can't section off one face as a   region distinct from the rest of the plane so now 
+we just have this one massive massive face and if   you think about a spanning tree graph so spanding 
+means it goes through every single vertex we now   definitely have one more vertex than edges which 
+I kind of think about it in terms of like a fence   post thing but you can imagine the way you would 
+grow this you start with one initial vertex and   each time you add an edge to another one you go up 
+by one Edge you go up by one vertex another Edge   another vertex another Edge another vertex however 
+you want to think about it convince yourself for a   tree graph there's always one more vertex than 
+Edge which means up here if you got vertexes   subtract or vertices subtract edges you end up 
+with one because there's always one more vertex   than edges then if you want to add on the number 
+of faces with there's one face one single face so   add the face equals 2 so this is definitely true 
+for our reduced case with a Spanish tree graph now   we need to get back to our whole shape because 
+that's what we want to prove this for so we're   going to add the edges back in one at a time and 
+each time we add an edge obviously the number of   edges is going to go up but if you add an edge 
+you also add a face because every Edge we add   sections off another region we're always closing a 
+well at least a cycle so if you add in that first   Edge there you've now got one extra face so that 
+means the number of edges has gone up but at the   same time time the number of faces has gone up and 
+we're subtracting edges and we're adding faces so   we have to subtract off one more Edge and add on 
+one more face which cancels out and that's the   case for all of them we put on another Edge over 
+here one more Edge one more face cancels out even   like if we're adding an internal Edge internal for 
+this arrangement we pop that in one more face one   more Edge cancels out we can rebuild the entire 
+shape by adding in edges and each time we add in   one more Edge doesn't matter matter cuz it also 
+adds in one more face and those cancel out so I   guess the nice fact you have to trust me on is 
+that any graph from a polyhedron can be covered   with a spanning tree but if you're happy with all 
+of that uh We've now got a hand wavy proof that   Oilers polyhedrin formula is indeed true you'll 
+always get to if you would like a nicer proof of   that a very very old three blue one Brown video 
+one of the original ones is a proof of this very   thing except Grant uses the concept of a duel 
+graph some of you may be familiar with duel   shapes where you swap faces for vertices and 
+vertices for faces you can do the same thing   with a graph it's a really nice proof I'll link 
+to it below fine we know oiless thing works and   the numbers of vertices edges and faces on the 
+three different axes are somehow linked but why   does that relationship between them give you a 
+plane for that we have to look at the equation   of a plane and for that we're going to start with 
+the equation of a line I have here the classic   y = mx + C you can replace M and C with whatever 
+letters the country you did your formative   education in happens to use it doesn't matter 
+please um you may argue about it in the comments   knock yourself out I'm actually I'm quite curious 
+which countries have which letters but we've got M   here for the gradient so if I alter the m in the 
+equation it just tips the line around and we've   got C so if I alter C it's just the you know 
+the vertical the Y intercept and that's enough   to get any possible line by moving up and down 
+the vertical intercept and changing the gradient   you can hit any line you want but that's not the 
+only way to write the equation of a line instead   of having y on one side and X on the other side 
+hanging out with a constant why not put X and Y   on one side and put the constant on the other 
+so here I can flip the representation and once   again huge thanks to Ben for making this for me 
+now we've got a multiple of X plus a multiple of   y equals some constant which in this case we've 
+set to one and still the the multiple of Y if I   move B around that still changes the vertical uh 
+intercept but now it's it's actually if I move the   multiple around in this case it's the inverse 
+of it gives you the intercept but it's exactly   the same I can choose where I want that to cross 
+the vertical axis and a is the other one I can   choose where it crosses the horizontal axis so now 
+instead of choosing one intercept and the gradient   I just choose both intercepts and that still gives 
+us every possible line and this is what we do one   dimension higher here we are in three dimensions 
+we've got a * X plus b * y + C * Z and they equal   a constant we happened to call D and we can move 
+them around so there's the A1 I can move around   that's the xaxis intercept I can move around 
+the y axis intercept and I can move around the   Z AIS intercept actually if I turn on uh the graph 
+it's a plane we've defined a Plane by you know if   you have any three intercept points on the three 
+orthogonal axes that gives you the definition of a   plane and you can get any plane you want by moving 
+a b and c we've also given a slideer a d it just   scales everything up and down and so often you'll 
+see different values for the constant instead   of one but for any of those you could I mean you 
+could divide through by that value through X well   through a b and c to adjust the intercept points 
+so I mean it's equivalent you only need three   variables to Define um a plane and that's exactly 
+what's happened here I love this installation so   much because it gets to the heart of for me what 
+mathematical beauty is where seemingly unrelated   things have the same logic and pattern behind them 
+in this case you have Oilers characteristic where   the oiler polinomial formula tells you that the 
+three things are linked by equaling a constant and   you've got the notion of the equation of a plane 
+in 3D space which is the same form so if you set   vertices edges and faces as the three dimensions 
+of 3D space you end up with the same form of an   equation for a plane so the shapes match the 
+plane oh it's so good I love it so much the   big question of course is where is my shape and 
+because it is the tetraedron with its mere four   faces six edges and oh it is uh four vertices 
+is right here a little unceremoniously in the   corner and now for this long of Grant Sanderson 
+complaining about what constitutes an edge which   one upsets you the most oh oh easily this one 
+right right because oh I mean it's just the am   St no cuz you're supposed to under I'm actually 
+not sure how you're supposed to understand I think   you're supposed to understand that these are Ed 
+is so as opposed to what anyal each little dedon   is an edge each dedon is a point right and then 
+you think of those points being connected into   Ed so it's just and so one I suppose is invited to 
+ignore the Giant number of holes in a topic which   is usually all about counting the number of holes 
+and I suppose one is supposed to ignore the fact   that you've got like an enormous number of faces 
+and vertices and edges um that should get it like   way is the argument that some of these are like 
+frames yeah yeah po yeah yeah yeah I think that's   that's what they're going because you have a very 
+eclectic Style on like how they're even made or   what they're made of or how you're supposed to 
+interpret the faces and The Eclectic nature is   maybe artistically nice but arguably pedagogically 
+confusing if you were trying to you know uh   educate a small child about the nature yeah yeah 
+yeah yeah yeah um cuz there's a lot of like no no   no don't count this as a face that's not but then 
+you go to this one you're like no but do count   this as a face cuz this CU this one was made by 
+Alex who you know who's part of the installation   well yeah but because he's like a mathematician 
+and he like you know he's like what's what's   the whole point of this what's the whole point 
+of like Oiler characteristic he's like what's   more fun is to get something that's off the plane 
+that you can count the hes can see that and so he   deliberately does that I'm assuming you may have 
+noticed some 3D printed shapes are way off to the   side I mean still still on the plane but nowhere 
+near the other shapes and that's because friend   of the channel Henry Seaman thought it would be 
+very funny to bend the rules as much as possible   while still strictly speaking staying inside 
+the rules I mean Matt may think it's bending   the rules but to a topologist this beach ball 
+shape is a perfectly sensible polyhedrin there's   a verx at the top a verx at the bottom and nine 
+different edges connect in them together which   isn't a problem unless you insist on straight 
+lines there are also nine faces each with only   two sides which again isn't a problem if you're 
+a topologist so there are nine faces nine edges   and two vertices and 2 - 9 + 9 is 2 as expected 
+this one is a tetrahedron which would have Oiler   characteristic to as usual except that I added a 
+bunch of vertices along the edges those are the   blob things every time you add a Vertex you also 
+split an edge in two so both the vertices and the   edges go up by one which which never changes the 
+oiler characteristic so it's still two as an aside   when Ben and I were putting together this yra file 
+where everything is plotted according to vertices   faces edges we notice not only does everything lie 
+on this plane which now I can label there it is   the oiless characteristic and the equation look at 
+that so good everything lines up so neatly we then   realized that the shapes are forming two straight 
+lines and that's because we could choose the ones   we plotted and we picked a bunch which were jewels 
+of each other and I can put on there's a central   line here so that middle line on it I'm going 
+to zoom in everything's going to break a little   bit so here's my tetrahedron is on that line 
+and the oh and where we put the line through   is a bit all over the place the uh square base 
+pyramid is on that line and then the other ones   form two separate lines that go off and they're 
+two different lines according to shapes that are   jewels of each other so the decahedron and the 
+icosahedron are jewels and they're opposite each   other as you go out along so we don't you know 
+I suspect it wouldn't take much working out or   thinking about it to show exactly what's going 
+on there but it seems really nice that not only   are the shapes all on the poly plane but they're 
+forming these two neat like they've taken marching   orders and they're partnering up with their dual 
+shapes and the s Jewels are on the line maths if   you would like to see the poly plane installation 
+in real life it is no longer in San Francisco   Glenn packed it up the next day put it into a van 
+drove away with it it's now at UCLA in Los Angeles   at The Institute of pure and Applied Mathematics 
+it will be there for all of February from the 1st   to the 28th that's not quite all of it is it not 
+this year anyway you can go and see it there if   you're anywhere near Los Angeles they're still 
+accepting shape Apes so if you want to build   polyhedrin you can post it in details on poplane 
+dog yep that's the website I'll link to it below   and you can even apply to host it if you're at a 
+place or institution or whatever who would like to   have poly plane installed you can get the details 
+on the website for how to go about doing that but   up next a word from the sponsor of this video Jane 
+Street who are not trying to sell you something   they're trying to give you something Jane Street 
+are now accepting applications for their Academy   of math and programming which is is a summer 
+program runs from the end of June through to   the beginning of August in New York City and it's 
+a no cost education program for recent high school   graduates who are interested in math and computer 
+science and have experienced some kind of barrier   in their education thus far if you get accepted 
+onto the program not only will Jane Street pay   for your travel food boarding program fees The 
+Works they will also give you $5,000 scholarship   towards your future education it's such a great 
+opportunity Unity applications will close on the   13th of March so if you or anyone you know could 
+benefit from this program please do send them the   link I'll put it below and Jane Street have put 
+together a puzzle that you can try this is not   compulsory in fact anyone can do it you've got 
+to arrange numbers that represent skyscrapers on   a grid just to give you a taste of some of the 
+type of content that will be involved but it's   way more than that it will cover everything from 
+mathematics to computer science data analysis Game   Theory and more and you get to meet me probably I 
+was there last time I think I've been to all well   the last two definitely I'm hoping to be at the 
+one at 2024 such an incredible opportunity huge   thanks to Jane Street for making this possible 
+please do either apply or pass it on to someone   who can apply and thanks to Jan Street in general 
+for sponsoring this channel they were also at the   Joint math meeting they ran an estimat Thon 
+where people could get into teams and compete   to estimate things in firmy style problems and 
+they put on an event for undergrads they can can   go along get a free lunch listen to some staff 
+from Jane Street talk and from this guy I pop   by to say hi always very happy to meet people 
+who may be considering applying to work at Jan   Street I think they're a great organization they 
+do Financial things uh so please uh do check out   amp and Jan Street in general links below that's 
+it end of the video thank you watch to the very   end of the video gang for you find people which 
+is very much not everyone yeah a bunch of Post-it   notes in the background finally finished writing 
+my next book uh you might find a link at the very   bottom of the description where you can you you 
+can sign up to hear about pre-orders it's the pre [Music] pre-orders

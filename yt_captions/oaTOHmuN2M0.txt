@@ -1,0 +1,198 @@
+- Running a PC and a
+mini-fridge just doesn't work. You know what does? Hooking up this 3,000 watt refrigeration cooler directly to a CPU, at least I sure hope it does. By the end of this video, with any luck... ♪ Brian the Electrician. ♪ will have transformed
+this gutted mini split into a CP cooler and
+pull the core i7 down. To what? Like negative 40 degrees Celsius. It's going to be really stupid, and huge thanks to Thermal
+Grizzly for sponsoring it. (upbeat music) First thing we need to do is figure out where the heck the thermostatic
+expansion valve is. We've got our condenser here. It sends liquid to the evaporator that turns all of your liquid into vapour with a U sends it back to here into the compressor. But if liquid gets sent
+back into the compressor, well, you put something
+that's incompressible into a compressor and things
+got really bad, really fast. That's why you need a TVX. It turns out it's right
+here, which is great. Because we were afraid it
+would be on the evaporator. The second thing we
+had to do is figure out how the heck this turns on and off. So, this part right here
+goes into your house, and it's responsible for
+like connecting to wifi and sending a signal to the outdoor unit, which actually does
+the real cooling stuff. I don't want to go down
+the electronics engineering rabbit hole (beep) for the next 16 hours, so we're just going to take
+this out and use it as it is. Now, I just need to go spend
+a lot of money on copper. Honestly, this is going
+to be real expensive. I'm sorry Lance. (laughs) Let's look at what we're
+going to turn our $200 of raw copper into, using the turmoil. You're probably familiar with
+how CPU water blocks work, and this is kind of like that, but instead of using water
+to cool down your CPU, we're using the phase
+change of refrigerant. Via a copper tube, our
+refrigerant will be aimed directly at the CPU. When it goes
+from the small diameter and high pressure of the
+tube to the comparatively massive space in here,
+the refrigerant should go from a liquid to a vapour
+with the phase change absorbing loads of heat in the process. After that, we've created
+a maze of copper for the refrigerant to navigate for
+making its way back out the top. To create this maze, we will
+need to machine four copper layers and then solder them all together, sealing the whole thing
+and not allowing any refrigerant to escape, which
+might be a bit difficult, given that there might be over
+two, 300 hundred PSI in here. - This is my first time
+running the 16th inch, so we'll see if we blow it up, I guess. Yeah, it seems to be working. That tool is great for chip evacuation, so I think we're good. Nevermind. - I'm almost wondering if we
+should actually put a little bit of an orifice in the
+end of the tube because with this sitting here,
+you're still gonna have a pretty big opening. - We could just crush the end of that. It's just the most YOLO evapourator. - One thing we are going to
+have to be careful to do is make sure we put this
+through the top layer before we solder down to the lower layer, because otherwise it won't go in. - It wouldn't be great. And I'm going to have to
+get this to sit up a little tighter. It was a.. we're
+winding up with a bit of a gap. So off to work on the
+end of this a little bit, to make it all fit. - Yup. This is why you
+double-check everything when you're running new code. This was supposed to be
+a helix and it is there, but there's not enough space. So it decided instead it
+was going to plunge the tool right down to the final
+depth and then do a cut, which with a 16 inch cutter
+would have definitely blown it right up. So
+we're going to fix that. - Grill the end down a
+little bit, got the end, open it back up and okay,
+that's going to fit. So once we get the two major
+pieces soldered together here, I can solder the tube
+in and that'll seal it into this lower layer.
+And then as we add layers, I can solder the tube where
+it passes through each layer. (upbeat music) - Oh, final piece of copper. This one looks pretty good
+too. The nice stepped edges Oh my tap just broke in there. I guess this was a very (beep) tap. (upbeat music) - That's cool. Now should do. - Oh it's finally time. - I might need the big head This is way too hot for the
+flare to figure out what it is. - It's actually soldered to the pipe - We have fire bricks down there
+for when you figure out how to get it off. - Yeah I think we're going to need that. I'll try to move it I guess. (tools working) - So what did we learn Brian? - Firebricks are our friends? - Yeah, don't solder it to the base. - That's the first for me. Does anyone want hearing protection? (upbeat music) - Have you ever seen a Firebrick glow red? - It's been real hot. - Oh yeah. - Is that straight? - Close enough. - Yeah. You can feel the
+heat just radiating off. - The cool and spraying off of the thing and hitting the screw hole and coming out. Need to fix that at some point. - What do you mean? You
+fixed it. There's a bucket. - Still really hot, but the
+firebreaks are the hottest part. - I dare you to lick it.
+I'll give you 10 bucks. - I have an idea. - Oh yeah. - The top cools down. Oh yeah. It is working. (upbeat music) - Alex. There's enough thermal mass here. You could use this thing as a heater. I would just have to let it
+cool for a while and I can clean it up. Get some bare copper again. And then we'll solder on the last layer. You can solder the hookups
+and let it cool again. And then we can pressure test it. Definitely going to need
+to surface the bottom. - Done - Wow! I don't think it's going to leak. - We did go through about a
+quarter tank of a settling. - That's a lot of potato cannon shots. - Would you really want to
+use a settling for that? I mean, I've seen potato shot
+with compressed air before. - Oh yeah. I used a settling. The
+first time we shot it, my dad was like, you guys can't shoot
+that on the deck anymore. Cause the windows moved too much. - It's got some good weight
+to it, that's for sure. - We're in Brian's truck
+to do the last bit here. We just want to pressure test this. - See those jumps... 400 PSI. If there are any leaks that
+should actually show up even just my pressure's fairly
+fast just because it's such a small volume. We're good. No bubbles. - Good freaking job on the solder. Blocks pressure tested. Now we just need to get
+it ready to go on the CPU. Most of the crap is gone now, but during all the soldering heating up, cooling down and so on, this
+might be very far from flat. So fortunately we have
+a lapping plate here. We're just going to mix up some oil, Oh (beep) not that much and a little bit of this stuff right here. It's just, what would you even call this? And now I just do this for quite a while. The lapping about halfway
+through made the bottom look like it was sandblasted, which reminded me that
+we have a sandblaster. Why does this thing look like garbage? It should look like a $300 park. So there we go. Look at that Out of the sandblaster, the surface finish on
+this thing is incredible. I also went in, locked
+the bottom once more. It's not a mirror finish, but who cares? We have Thermal Grizzly. That'll fill in all the little gaps there. And now it's time for
+the hardest part of this If you've never seen a
+motherboard prepped for Sub-Zero before, this is probably going
+to be real hard to watch, but I swear this is much
+better than not doing it. Just see the Vaseline squishing
+out this poor 8,700 K. I say that it didn't deserve this, but like it's going to
+be a real fast 8,700 K by the end of the day. - So what are the chances this dies? - I really don't think we're
+going to kill this CPU, especially given how much
+Vaseline I just put on here. But there is a reason that
+we're doing this on not our best CPU the first time. I
+think it'll be fine though, This is so gnarly Brandon. Oh, this is so hard to turn. Everything's so slippery
+from all the Vaseline. So we have electrical. It's right in here and now it's time to connect this up and fill it with refrigerant. - First. We have to pull
+it all down into a vacuum. - Oh, now it's time to
+pull it down to a vacuum. - We pull it into a vacuum to make sure that there's no contaminants Nitrogen doesn't compress
+very well at least not in an AC system. You will probably get some condensation on the low pressure side. - Yeah. If it's a problem, we can just insulate the whole thing. Got to use the sponsor of this video. Good old Thermal Grizzly Kryonaut. I'm gonna make sure it's
+reading really accurate. So the sensory needs to get taped there, but we also just need to
+insulate the whole thing - regardless. - So I'm going to use the
+insulation tape stuff. - Oh, we need an Allen
+key for those. Okay. What do you think the chances
+are that one Allen key we don't have is the one that we need. - That's definitely too big. So I'm going to say chances
+are probably pretty good. - You have the electrical connected. This is mostly a box now. We also have our electrical
+here running to it, which maybe works maybe doesn't. Hopefully we can get
+refrigeration into it all. Are we good? - Yep. - All Right. Let's hit it. - Oh. - Is it on? - Yeah. Oh that's cold. Oh E6 Okay. So it just shut down. But that definitely got quite cold. - Do we have a manual for this thing? - E6 malfunction of indoor fan motor. Exactly what you thought.
+Alright, let's plug that in. - Oh no. I was thinking, just
+pull the motor itself out. - Oh yeah. That's more smarter. I was thinking we just chuck
+the whole thing on the table. - Well, I'm in, we could just
+for a quick test, but we. - So good to cool. A
+whole computer with this. - I actually melted in
+the front of a tower. Oh my fans coming on. - So our controller isn't
+happy because it's 17 degrees in here and the lowest,
+this will go is 16 degrees. So when do you heat up the
+temperature probe before it'll kick on. - We don't want to melt the probe. - It's on low. There we go. You can start to see the
+condensation on it. -3, - 4. It's still going. - Oh my hands are cold - This whole thing is
+frosted up. Well, I guess, should we connect it to a CPU? - I think so. - Okay. - I'm very ready to. This
+is getting very cold, very fast and -8 now. - This is really about is
+jank as this could ever get. - Oh wait, geez. - Thermal paste? - Yeah. Thermal Grizzly
+would not have been happy if we forgot to put it down. So yeah. Thermal Grizzly sponsored this
+video and we are going to be using their Kryonaut. They
+do have liquid metal as well, but that will just be metal at
+these kinds of temperatures. The Kryonaut is good for down to what? Like -200 degrees Celsius. Something absolutely ridiculous like that. - Oh wow. - Nice! CPU temperature of
+-3 degree Celsius right now. Not a bad start. Let's try what? 5 GHz. 5.1. Let's try 5.3 and
+just see what happens. We have so much cooling.
+Let's try 1.36. (beep) We'll probably just get a
+blue screen, but whatever. - Oh, it kicked off. - (beep) - Sweating? - Yeah. Sweating pretty bad. Should have encased the whole
+board and Vaseline in case something drips down on it.
+Oh, Windows is not happy. It's not even a stability
+error. It's just stupid. This drive has risen (beep) on it. - It's not our jank cooling
+setup. It's a driver's seat. Yay. - Nope. - You piece of (beep).
+Well, definitely works. Although we're having
+trouble with the electronics, it seems to have some sort
+of like a defrost cycle or something like that. For
+our purposes it's terrible. So preface. Absolutely do none of this. We have a professional electrician
+and electrical engineer, but basically we're ball steep in this. We were hoping just the compressor. - Okay, I don't know if I can say that - Our hope was that the
+compressor just ran off of AC. So we could just have a switch. Turn the switch on,
+compressor runs. We have cold. - To clarify, We were hoping the compressor
+just ran off single phase AC. It's looking like it's
+actually a three phase motor. - So what we've figured out is
+that most of the electronics garbage is to just feed it. Three-phase AC. We have that here. We could just plug it in and send it. - Full send on the three-phase. - So we thought we
+figured it out, but then. - 190 Volts DC at 180 Hertz. - Yes, But basically
+instead of making it dumb, it might be easier to scoop
+the signal at this point. I just really don't want
+to blow up the compressors. - Making a dumb was a lot harder
+than we thought it would be Either we can spoof all of
+the different thermal probes and just potentiometer them
+until everything's happy. Or we can come to this board
+here and try to figure out what the enable pin is. So now I
+get to spend all of today, spoofing thermal couples,
+hoping that works, feed it whatever it wants and it'll run. This is probably going to
+be the only mini split in existence with Thermal
+Grizzly or it's chips. This is the temperature probe
+that was on the evaporator. And it seemed to shut down when we hit about -20 degrees. It
+might've been because of this. It might've been because
+of something in here, but we're going to test it
+out with this just at ambient temperature and see what happens. Oh, there we go. Yep. So that temperature
+is dropping and quickly. Now we just give it a minute? Wobble is concerning Hey Jamie I dare you to stick your belly in there. So we're now into the
+negatives on the block. This is where we might be
+shutting down kind of soon, but we'll see. If it gets all frosty like
+this and then shuts off, all of this frost is
+immediately turning into water. Cause it warms up pretty
+fast. That's really bad. As you can probably imagine
+the compressor also is starting to frost up. So that's why I'm concerned
+that the problem isn't our evaporator, but one of the sensors in
+here is making a kick into a defrost cycle. This is where having a proper
+shroud on this probably would help a lot. We're having a lot of blow back. It's at - 14 degrees now. It seems to be struggling to
+get below 14 degrees. Yeah. It's actually warming up
+right now a little bit. Let's put the trial back
+on for better cooling and try this again. Come on, eat up, kick off, Come on..do it! That's a lot less sketchy
+with it properly secured. So we should now see the
+radiator temp go up as the evaporator goes down, which
+is exactly what's happening. Wonderful. I wonder if turbo will help us. It's actually so stupid that
+just this sensor hitting - 20, shuts it off. That will be amazing. So we need to do two stages. We'll take our other air
+conditioner, hook it up to this. We're close to the moment of truth. If we're able to hold -20, that means I can finally
+finish this project? Holy Frig This has been a lot of
+work. Thermal Grizzly, You really got your money's
+worth with this one. Geez. Oh! -20. There we go. Still dropping. Radiator
+temp's actually gone up a little bit, which is cool. It looks like we're not
+dropping any more though. We're probably just right at
+the limit of what this is able to do. Like I can feel a bit of the heat coming through and that
+might be enough to stop it from going any lower. It's looking good. If it's
+this dumb, I'm really happy. Like they did a good job, I guess. Cause like who wants something That's -20 inside of their house. Look at all that frost. I really hope this works. If this is the last time that
+I apply some Thermal Grizzly Kryonaut, I am so sorry, Roman. Going for the hard mount of course. I just want to get ahead of
+the comments here. I do know the 8,700 K is still a very good chip, especially when overclogged like this one is going to be it's really fast still. I want to turn the AC on now. Cause it can take a little bit, oh, that kicked on. Our
+nice safety shop towels. That's already very cool. Yeah. That's sub zero. All right. So our CPU is currently at 0 degrees. That's that's pretty
+good to start off with. It's kind of weird that it isn't lower. I don't know if during a cinnamon Tron, if this has the heat
+dissipation to deal with that, but we're about to find out, oh, temperatures increased
+to 38 degrees. Oh my God. That's so warm, 4.8 GHz all core. It seems like it's doing fine.
+I don't see any condensation. It's holding at 38
+degrees. That is fantastic. Well, the overclock isn't
+holding quite like I'd like, but it still proves this
+works amazingly well I could fiddle with it more, but I want to save all of my
+fiddling for the 12th gen in another video. That is cold! So Huge thanks to Thermal Grizzly
+for sponsoring this video. Get some Kryonaut or
+conductonaut. I don't know. Chuck in your laptop, your
+GPU, wherever you want. I don't know. Don't eat
+it probably I guess, unless you want to. So I feel like this video hit
+like get subscribed and maybe watch your video where we
+Sub-Zero cooled the Alien ware Area 51M with Steve. That thing was insanely
+cool and very scary.

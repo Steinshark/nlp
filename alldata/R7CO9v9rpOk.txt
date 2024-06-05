@@ -1,0 +1,165 @@
+- Holy (beep) I don't even, I can't even wrap my brain
+around this much of a performance difference from RAM. If you were to buy a computer today, it could easily be slower than
+the same machine would have been just a month ago. And not a little bit, like 20% slower. As far as I can tell OEMs have known about this problem for a while. But they were planning on
+just sweeping it under the rug in hopes that no one would find out. Unfortunately for them
+Jarrod'sTech noticed that something was amiss. And after completing
+our own investigation, we've come to the conclusion
+that this issue could affect everything from laptops
+to prebuilt desktops, to even your own custom built gaming PC. And the scariest part is that
+almost no one includes this vital information on their spec sheets. Which means that you
+won't know it's a problem until it's already too late. CableMod allows you to
+personalize the look of your PC with custom colored sleeved cables. Try out their configurator and
+build your cables exactly how you want with their
+realistic cable preview. We're gonna have that linked down below (edgy music) On paper, the memory in these two systems appears to be identical. 16 gigabytes, 3200 megahertz, DDR4. But the one in the AMD system here is hiding a dirty little secret. It's density. I'll explain what that
+means in a moment though, because I want to show
+you guys something first. - [Alex] Uh, Do you want
+to turn those off first? - Yes. We've already pre-tested
+both of these laptops as they came from the factory and in our original video
+about the Radeon 6800M, which is the GPU and our AMD laptop here. We said that it was slower than the RTX 3080 mobile because, Well, here are the graphs. Slower. But, watch this, we're
+gonna swap these RAM sticks. We're gonna see if that changes. Interesting, isn't it? Even once we've dug into the system, everything about these
+looks totally identical. That is, until you do this. Interesting. So the one in the Intel
+system has eight chips on it. And the one in the AMD
+system has only four. Also, if you look carefully at the specs, the one in the Intel system
+says one rank by eight. And the one in the AMD
+system says one rank by 16. It's unclear if this slate
+change to memory module specs is going to be the norm going forward, or if it's down to the ongoing
+worldwide chip shortage. But, what we do know for sure
+is that swapping these memory modules makes such a
+difference to performance. That honestly, if you told me a week ago that it was gonna be like this, I wouldn't have believed you. I'd have told you balderdash. And you guys might not believe me either. So, let me show you. Now, Alex pre ran this
+stuff multiple times, averaging it out, blah, blah,
+blah, scientific results. But this is my first time
+actually getting to experience it. So I'm not, I mean, I
+have his word for it but? Now something to note is that while I am expecting
+this to help AMD, going to this better memory. I'm not necessarily sure
+what to expect from Intel, because one of the theories is that due to the way that AMD manages memory, this problem could
+disproportionately affect them while leaving Intel unaffected. which has led to some conspiracy
+theories that it's like an industry initiative
+to make AMD look bad. I'm not sure if I buy that but I guess we'll have to see the results. So, I'm sitting at 4964 on Intel. Wait, that is a lot better then. - [Alex] Oh, it's a bit worse. - [Linus] Oh wait, we'll how ... - [Alex] Mildly worse. - I'm at 5267 on AMD. Isn't that worse too? - [Alex] Yep. I don't know why, but that's consistent
+with my test results so, - [Linus] So both of them get worse. - [Alex] Yeah. - [Linus] In Cinebench. - [Alex] Do you wanna do out of 64? - Yes, I would. I would like to get some
+idea of what's going on here. Now, this is really interesting. It appears as though it's
+not quite as simple as four chips bad, eight chips good. Because look at this, the Intel system with the
+x16 memory modules in it has about the same latency as before, but suffers a precipitous
+hit to memory bandwidth. That would explain why the
+Cinebench score got worse. But then the AMD system, it gets a proportional boost to bandwidth. So the maximum speed
+that you can write to and read to from the memory, but it's latency actually takes a hit. Which might explain the performance drop. We do know that AMD Ryzen is extremely sensitive to memory latency. - [Linus] Can I start with rainbow six? - [Alex] Yeah, sure. - [Linus] Let's start with rainbow six. This game started out
+with about a 10% advantage for team blue. But let's see what a memory swap does. - [Alex] How good are your eyeballs at telling the difference
+between 250 and 230 FPS Linus? - Not very. This one's more like gamer mode boosted. You can see more detail
+in the shadows and stuff. So that might be part of just
+a tuning process that they've gone through. I disagree with those
+kinds of tuning processes. Whoa. I mean, we promised a 20%
+difference in performance didn't we? Boy, did we ever deliver on that one ladies and gentlemen. That's a straight up role reversal. The AMD system is now 10%
+faster than the Intel system instead of the other way around. - [Alex] Yeah, the AMD
+one actually got exactly the same FPS as the Intel with that RAM. - [Linus] What? These frame times. So the peaks are not nearly as high. Like we get, wow! Look at this. We have regular frame times
+that are above what the scale on our graph even is at on the AMD system. That's incredible. The mind blowing thing about
+this is how strong that CPU bottleneck is. I mean, clearly the GPU, it's RTX 3080. It's capable of pushing
+those extra frames. We saw it do it. But, that RAM bandwidth
+is limiting the CPU's ability to keep up by that much. And wow, it happened again. Holy ... I really was not expecting this. I was expecting in a
+more GPU demanding game, that the CPU bottleneck caused by this memory mismatch would
+have been less of an issue. Holy (beep) this is mind blowing. Whoa, hey wait a minute. Here he's wearing different clothes. We just dropped 20% of our
+performance on the Intel system, and just gained 20%
+performance on AMD system. - [Alex] Yeah they just swapped. - [Linus] As promised
+ladies and gentlemen, almost exactly perfectly traded results. Just from swapping out
+the computer memory. You got to remember guys, these are completely different systems. Other than that, I don't even, I can't even wrap my brain
+around this much of a performance difference from RAM. How did AMD allow this to
+represent AMD Advantage in our initial look? All they had to do was upgrade the memory. And the craziest part is we
+didn't have to look far to find more examples that highlight this problem. Look at CS GO for example, it's a huge performance lead
+for the Intel Nvidia system until you upgrade the
+memory in the AMD system, and all of a sudden, it's
+within spitting distance. Now that's not to say that
+there weren't exceptions. Dirt 5, for example, very
+small performance differences going from one type of memory to another. And actually performance went
+down a little bit with our x8 memory modules. Now that's weird. It could be that this particular
+game is more sensitive to latency on our AMD system, but it could also be that it's
+a more modern game with more modern techniques for memory management. Throwing a wrench into
+that theory though is for Forza Horizon 4, also a newer game. But one that sees a huge
+difference changing out the memory. I mean, this is mind blowing, right? The performance difference
+in some of these games is comparable to going from
+an RTX 3070 to an RTX 3080. Those two parts costs a
+difference of $300 on Alienware's M15 R4. And for what? So that they could
+potentially save a few bucks? I mean, it's not like these
+manufacturers kit, you know, get the good stuff on Newegg
+for about $45 dollars a stick. So what exactly is going on here? Well, I'm gonna explain
+it to you like your five. Mostly because despite
+talking to the big A's, ASUS, AMD and Anthony, nobody actually had a perfect
+explanation for why this matters so much. So here's our best shot at it. You can think of your system memory kind of like a big library
+where a whole bunch of ones and zeros are stored. Every time that memory is accessed, the memory controller built
+into your CPU needs to track down where that data is and
+either read or write it. Kind of like a librarian. By increasing the
+density of the RAM to the point where you can get rid of
+half the chips on the module. You're basically laying off
+half of your librarians without reducing the number of books
+that they need to take care of. This means that in some cases
+it can take longer for them to retrieve your data. This manifests as higher RAM sub timings and your computer becomes slower. Now the existence of more affordable, slower RAM, isn't a problem. I'm all for consumer choice. The problem is that there's
+basically no way of knowing what type of RAM you have without
+opening up your computer. Like, to be clear, I'm not that surprised that the ASUS Strix Advantage edition has this budget RAM in it,
+because it is a cheaper gaming laptop. It's currently $1650 US dollars while the ARS we compared
+it to goes for $2,400. And as an end-user, I mean, you can substantially narrow
+the performance gap between these machines for at most $90 dollars. Then flip your old
+memory on eBay, I guess. It's inconvenient, but you're
+still coming out ahead. The problem though is if
+companies start putting higher density x16 RAM into laptops that previously featured x8 sticks. Because they almost
+certainly won't disclose this change in the specs, and it causes a massive performance drop that won't have been captured
+by reviews of those machines. I mean, imagine the commotion, if Nvidia randomly decided
+that all 3080 laptops now can just use a 3070, because
+it saves them $15 dollars. Of course pointing out problems without presenting solutions? It's not very helpful. So, here's what I think needs to happen. Going forward, I think laptops should have the density of their
+RAM right in the specs. Because I mean, even from
+a manufacturer standpoint, after watching this video, it seems like really smart marketing. If you're shipping x8 sodems,
+the high performance ones. Put it on your product page so people know that
+it's a quality product. And for any manufacturers who don't display this information. Going forward, we're gonna
+make sure to let you guys know the RAM density of every gaming laptop that enters our office. So, manufacturers know that
+even if it's not in the specs, when we see x16 RAM, you better make sure that
+it's in a budget system that's designed specifically to help
+our viewers put their extra cash towards an insulated
+water bottle from lttstore.com. By the way I'm wearing the
+RAM Hoodie V2 right now. It's coming soon. Interestingly though, RAM
+density isn't the only controversial thing
+that's holding back the Strix Advantage edition. It also suffers from having
+no graphics switching MUX. And let me demonstrate why that matters. Inside this laptop are two GPU's. The integrated GPU that's
+built into the CPU, that saves battery when
+you're browsing the internet, reading PDFs and so on and so forth. And the real dedicated GPU that pushes them good FPS's for gaming, and sucks back a bunch of power. Now this sharing of the work
+is great for the end user, but it does come at a cost. Most laptops are set up so
+that the dedicated GPU is actually routed through the integrated GPU before it displays on
+the built-in monitor. And there's a performance hit
+from adding this extra step. High-end laptops alleviate this problem with a MUX, or multiplexer. A MUX is basically an electronic
+switcher that allows you to input multiple signals. Then choose which one you'd
+like to output at a given time. This allows a laptop to
+choose integrated or dedicated graphics cards, without either of them routing through the other. Meaning you don't have to deal
+with that performance hit. So, why doesn't the Strix
+Advantage edition have a MUX then? It's cost. The answer's always cost. Adding a MUX is expensive because it requires a motherboard redesign, it adds complexity and it adds components. So ASUS and AMD clearly decided
+they would rather sacrifice a bit of performance in order to hit that $1650 asking price. And I guess it is pretty sweet
+that if you hook it up to an external display, you can actually beat the performance of a $2,400 dollar laptop. Look at that 135 FPS average. But it also means that the AMD advantage is more like an AMD compromise. And the specs of this machine
+end up being misleading. and not one, but two major ways, that together contribute a 25 plus percent performance deficit in gaming. Which is what it's marketed to be good at. Now, hold on a second Linus, you said this can affect desktops too, and that's true, it can. Whether you're buying a prebuilt
+or whether you're picking out the parts and
+assembling your own machine. If you end up with x16 memory modules, you could experience a
+performance difference. Just like we talked about today. One of the big differences
+though on a desktop is that A. It's a lot easier to visually
+inspect a module and see exactly what it is. And B. The specs that
+the manufacturers provide are way more detailed. If I were to go on the
+website of a reputable memory manufacturer like G.Skill or Corsair, I would be able to find all
+the information that I need to understand the trade offs that I'm making. So I might say, okay, this
+is gonna be a slightly slower memory kit, but I really
+need the extra capacity that I get with that additional density. So I'm gonna pull the trigger on it. So, really then, while it
+can happen on desktops, this is mostly, yet another episode of "Buying Gaming Laptops is Way More Difficult Than it Should Be!" which is terribly annoying,
+because it would be great if consumers could just look
+at the specs of the device and know how fast to expect it to be, instead of the complete
+mess we have right now. Like if this keeps getting worse, I might have to just get a
+Mac book and be done with it. Which, sorry. Yeah, no forget it. I mean, even if the performance
+is trash, I'm still gonna, I like gaming. So I'm gonna keep doing
+what I'm doing but, but I'm gonna be mad about it. And I'm gonna complain. Mine is the smart data assistant
+that helps you discover where your data is and helps
+you keep it where you want it. With Mine, you can
+exercise your data rights and reclaim your right to be
+forgotten by asking services you no longer use to
+delete your information. With how many data breaches
+there are these days. I mean, I don't know about you guys, but I don't want companies that
+I don't use holding onto my data for no reason. So sign up and Mine will let
+you know how many companies are holding your information. We ran our email and 155
+companies have our data. Westjet? Can't remember the last
+time I traveled anywhere. So there's no reason for them
+to have our financial data. You can send an official data
+deletion request directly from their app or from your inbox. And companies can confirm
+your identity then and delete your info. Data deletion requests can also
+be undone in the first hour if you regret it. So why wait? It's available for free for a limited time at the link down below. If you guys enjoyed this video
+and maybe you like better news about laptops. Why don't you check out the
+video where we showed off Cherry's new MX laptops, which is on Dell
+Alienware's latest machines. They are really sweet.

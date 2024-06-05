@@ -1,0 +1,124 @@
+What is your mega-favourite number? By which I mean what is your favourite
+number that is bigger than 1 million? A lot of people have favourite numbers
+which are small and that's fine! I've got nothing against
+favourite numbers like 7 or, even better, 17. But as well as your regular
+small favourite number I've been working with a bunch
+of other mathematical YouTubers to encourage people to also choose
+a mega-favourite number. There are some amazing numbers
+which are bigger than 1 million which deserve more attention. Some of them are pretty exciting. For example, here is an email
+I got sent in about a week ago and this is pretty typical
+for the sort of stuff I get sent. Someone says here,
+"I think you like rare integers." That is correct.
+"Here is one I discovered today." So this integer is
+less than two weeks old. It is, wow, 1,169,809,367... I'm not gonna read the rest of it. Ends in 36,911. It's a pretty exciting-looking number,
+it's definitely big. I can confirm, without doing
+any additional calculations it is bigger than 1 million,
+and it is the lowest prime number p
+for which the tan of p is greater than p. I did verify this claim,
+well I went onto WolframAlpha and asked it if this number was prime. And it was able to say it was. I have no idea how
+WolframAlpha is able to check the primality of a number
+that size that quickly and then I double-checked
+that the tan of the number, in radians, is bigger than the number,
+and sure enough, it's about four times bigger.
+It checks out. We'll come back to primes later on. First of all, I just thought: can I find any integers
+for which this is true? So I put together some
+terrible Python code, as is my way. It's on GitHub, I'll link to it below. And I made one concession: I allowed for
+the absolute value of the tan function so if I got a very very big
+negative number that was good enough for me. And these are the numbers
+which came out of my code. You can see actually,
+I'm glad I included the negative cause the first bunch,
+that's what you need to do. So the 52,174, that gives you a number
+which is bigger than that if you take the absolute value. However the first positive answer,
+you don't get any positive values for n, for which this works, is 260,515. Although you can tell by the five,
+that's not prime. Don't worry, we'll loop back around. But I guess the first question is: should we care? And the easy way to determine that
+is just to go on to The On-line Encyclopedia
+of Integer Sequences. I put in the sequence
+1, 260,515. Sure enough, there was an entry for it. Someone has made a list of those numbers. I say someone. I had a look
+at the name at the bottom. And it's the same person
+who sent me the email. So there you go, this is THE expert
+when it comes to cases of the tan of a number
+being greater than the number. Also, fun side bonus fact:
+there is a super-list with more values but instead of taking the absolute value
+of what you get out of the tan function like I did, they take the absolute value
+of the number going in so you can put in negative values of n. So there you go, isn't that fun. Fine. It's in the OEIS.
+It's technically interesting. But is it REALLY interesting? So just to recap what we're
+actually looking at here. This is the Real Number line and if you plot the other kind of A-list
+celebrity trigonomic functions: sine, starts at 0 and then goes back to 0
+every pi along the Real Number line. And cos, starts at 1, goes through 0
+at half pi, then every pi-th after that. These: very well-behaved functions. They just go between 1 and -1
+and they don't go racing off anywhere. Tan however, if we add that--
+phwomm, okay. And it's gone. I mean,
+it might come back, I dunno. So anyway-- woah! Oh my goodness,
+you're not gonna believe what's coming. [laughs] That's amazing!
+So there's the tan function. You get a little bit, and then you--
+oh no! Nooo! No! You're not gonna...
+hang on, here it comes. [laughs] That's amazing! Right so, tan--
+oh, an email. Just been told, got another email in. That's um... "Hi Matt..." Very nice for a viewer
+to write in during the video. "Enjoying the video--"
+See I just love stuff like this. "However, this bit with the tan function
+is getting old quickly. I don't think it's quite as funny
+as you think it is." Well, thank you very much for your input, however, I think you'll find that-- Wahey! There it goes! The tan function
+continues to be hilarious. That said, we get this
+explosive tan behaviour because tan is sine divided by cos, so whenever cos equals zero,
+tan is dividing by zero and that's why we get an asymptote
+that goes off to... it's undefined. However it's extremely big
+on either side of it. Where it hits the axis
+is always a multiple of pi or rather it's something and a half pis because the first 0 of cos is at half pi and then an additional pi
+for every subsequent one. So what we're looking for here are values of n,
+which are going to be integers so by definition, they're not going to
+exactly be on one of these asymptotes. But if they're close enough, we will get
+a very large value out of tan. And because we need to be bigger than
+the size of the number we're putting in what we're saying is,
+the further we go that way, so the bigger our real number
+we're putting in to the function the bigger the result has to be. So what we're looking for here
+are integers n such that they're very close to pi on 2,
+plus some whole number k multiple of 2 pi with the test of the tan of the number
+being greater than the number as our threshold
+for if it impresses us much. [Shania Twain's "That Don't
+Impress Me Much" plays] But what about the prime-ness of this? Because on one side,
+we've got trigonometry. On the other side, we've got primes. Do they have any relation to each other? Does the prime-ness of the number
+make a difference to us trying to find this
+ridiculous property? And I don't know.
+Even Jacob in the email's like: "I dunno if the prime-ness
+is relevant or not." They just thought it was fun
+to try and find a prime one. So if anyone has any insight
+into that, let me know. But I suspect, it's unrelated.
+It's just an extra bonus fact. This is just a weird mash-up
+of two different bits of maths for no reason other than, why not. And finding primes
+is not particularly easy. We can look at
+the density of prime numbers which very roughly, up to some value N, all the numbers smaller than it,
+give or take one in every natural log N of those numbers is prime. Which is to say, because the
+natural log of 10 is about 2.3 or about 2, if you count the number of digits
+in your number, in base 10 if you double it, it's roughly
+a 1 in that many chance that it's prime. To a rough approximation. Give or take. 2.3 if you want to be fancy. So the number that Jacob found, it has got 46 digits, so you need to multiply 46 by 2.3 and it's a 1 in that chance. So I'm prepared to say
+it's roughly 1 in 100. About 1% of numbers
+at that size are prime. There you go. So that now leads us to the question: how did Jacob find it? Jacob found that prime by... checking a lot of numbers. So Jacob says they've actually
+found 500 more integers which work just for n not being prime and they're in the process of
+being approved to go on the OEIS. So, any day now, apparently
+they're going to appear there. That's pretty amazing. And then they just checked
+if any were prime and they were amazed to find that one was. And they reckon no-one else
+is going to be able to find one. They compare the chance
+of finding another prime where the tan of the prime
+is bigger than the prime to being similar to looking for
+an odd perfect number which is exceedingly unlikely,
+potentially impossible. So wow, that is...
+that's thrown the old calculator down. Can anyone find another prime? Jacob thinks you can't. That is why this is currently
+my mega-favourite number. But what's your mega-favourite number? If you want some inspiration, you can check out all the other videos
+other YouTubers are making. James Grime is putting together a playlist
+with all the videos including their mega-favourite number. We've also got Brady on Numberphile, Grant of 3Blue1Brown fame, and the list just keeps on going. We've got Katie Steckles,
+we've got Eddie Woo, there you are, good old Eddie. We've got Bobby Seagull
+and Susan Okereke. They've done a video
+and there's loads more. So check it out. And if you choose your own
+mega-favourite number, any number over a million
+which you want to make a video about, you've got one month. And if you use the hashtag #MegaFavNumbers
+we will add it to the playlist. It's an open playlist.
+We wanna get as many videos about numbers bigger than 1 million
+as possible. So if you make one in the next month
+we will put it in there. And do check out the playlist. As well as discovering some cool new 
+mega big numbers you may also discover some
+amazing mathematical YouTubers. There's loads of great videos in there. I highly recommend having a look. And of course, do make a video. With all of us working together we can finally give
+some big respect to big numbers. Thanks for watching. What? One more email? Really? But no-one's watching any more! It's only the hardcore
+End of the Video Gang. So anyway, last email: "Matt, very much enjoyed
+the video about trigonometry." Thank you very much. "You should do more things
+involving trig." Okay so,
+that is definitely worth checking out and you know what, I might!

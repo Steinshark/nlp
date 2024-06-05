@@ -1,0 +1,123 @@
+did you hear the news i'm done code interpreter is 
+the nail in the coffin for me the jobs are going   to be gone tomorrow going to paradise okay why 
+not educate yourself on it rather than running   away from it i'm sure we have all felt like 
+that at some point uh other tiff can i call you   okay i guess i'll stay around for a little bit 
+but then i'm gone but the reality is there is so   much more to it than oh my gosh this is going to 
+take over my job and we are going to get into what   exactly does this mean for software developers 
+for data analysts data scientists many different   roles within the tech industry later in this video 
+but first let's actually get our hands in it let's   see what is this thing actually capable of and 
+what is just the hype about also to make sure to   hit that subscribe button for more tech coding and 
+career related content all right let's get into it   foreign well first of all what are the current 
+capabilities of code interpretive well to start   with it is only familiarized or it only is 
+sufficient in python uh it does not know or   familiarize itself with javascript yet or any 
+other programming language but the keyword is   yet that is to come for now though with python 
+what it is really good at doing is reading and   analyzing big data sets and we're going to get 
+into that and i think the main thing it's kind   of it's funny because code interpreter you would 
+think it would be used for web developers or   that's the tool that it would be mainly primarily 
+focused on writing code building websites but in   turn it's actually really good at analyzing data 
+of this moment or at this moment but in turn at   this current moment it actually focuses more on 
+data if you upload a csv file and then it can   turn this into these really detailed graphs uh 
+explain to you what is going on make gifts for   you out of you know what let me show you all 
+right to start with i have up on screen here   chat gbt and you can see under gpt4 i have code 
+interpreter now i am a subscriber plus if you   are not you won't be able to see code interpreter 
+or use it at this moment it will come though just   slowly being rolled out what i didn't realize 
+at first is because this is better when you   initially if you're a paid subscriber when you 
+initially go to chatgpt4 gpt4 code interpreter   will not be there what you need to do actually 
+is go into your settings and ensure under beta   that code interpreter is toggled on that way then 
+when you go to use it or use gpt4 you will see it   there all right so before we do anything else 
+though we need to get a big data set so let's   go to kegel.com and find a data set that we can 
+start analyzing we meaning code interpreter okay   so you can see on screen here i have kegel.com up 
+and this is a great website whenever you want to   build data for this i went to data sets and you 
+can see here there's trending sports a ton of   different ones to choose from i actually am going 
+to go back because i chose one i want to really   focus on which is sleep health and lifestyle data 
+set and this is interesting because essentially it   is a data set that compromises a 400 rows and 13 
+columns covering a wide range of variables related   to sleep and daily habits so gender age occupation 
+so you can really get a good sense or the goal we   will be using this data for is to get a good sense 
+of who has the best sleep what lifestyle factors   are with that best sleep and see hopefully if 
+we can replicate it because sometimes i don't   get that good of a sleep that's why i drink so 
+much coffee so to take this let's go download   and we do have to sign in or create an account 
+so let's go ahead and do that i'll be right back   all right 20 years later we are back i hate that 
+you have to create a password for everything and i   just downloaded the file the sleep csv so now back 
+in chachi pt let's make sure code interpreter is   toggled which it is interpreter interpreter code 
+interpreter yeah okay now they've got that out of   the way let's upload our csv file let's go into 
+downloads and go to sleep data set we could just   press enter and see work its magic but let's just 
+get a little bit more detailed let's go explain this data set to me in simple terms 
+all right let's see how it does now while it's explaining and writing it's uh 
+explanation for us something really interesting   that i like is you can click on show work and it 
+will show how it got to its explanation which is   really interesting especially for individuals 
+who are data nerds or really that's their world   to understand okay why okay there is males 
+the ages occupations sleep duration and now   if we scroll down here it will say the data 
+set appears to be a collection of personal   health and lifestyle data okay as expected and 
+then it goes into what each column represents   so it breaks down from person gender age 
+and then also too it does kind of a nice   summary in simple terms the data set seems to 
+be examining the relationship between various   lifestyle factors all right let's get into it 
+a little bit further now let's start actually   building graphs with it and seeing what it's 
+capable of let's try seeing what some of the   trends are that's the goal of this for uh this 
+sleep lifestyle what makes people have good sleep   so let's go can you share with me what are some 
+of the trends in this data and i'm hoping it will   return for me a graph as well but if it doesn't 
+we will prompt it to so let's see what it returns i don't think you can but if you listen ever 
+so closely you might be able to hear mr mug   snoring in the background for me i can hear it a 
+lot but i think sits in the next room you might   not be able to 12 p.m on a sunday just having 
+a nap i was gonna say cat nap but he would not   like that dog nap all right based on the basic 
+summary statistics of the data set here are some   initial trends all right you know what this is 
+a lot of text let's let it finish and then we'll   ask it to put this into a graph for us and let's 
+focus on in the graph you just have to do all and   see what happens okay it says this here actually 
+for a more detailed analysis we could examine the   correlations between variables distribution 
+of variables for example we could look how   sleep duration varies with physical activity 
+let's do that plot for me how create a graph   for me with the uh with a detailed analysis let's 
+use its words to examine the correlation between   house sleep duration varies with 
+physical activity level [music]   now let's see this graph come into play i mean 
+that's where the fun part is it can create so many   interesting graphs i think that's what gets people 
+excited really all right this is pretty cool look   at this detailed graph it did this is this is 
+legit i'm telling you and it also too explains   the graph shows how it shows its work this is like 
+you know when you're in school and they're like   show your work that you did to get to this answer 
+this is what that is doing right now so let's see   the scatter plot above shows a correlation between 
+physical activity and sleep okay uh we can see a   positive correlation between physical activity 
+level and sleep duration yeah i'm not surprised   the level of physical activity increases the 
+sleep duration increases as well so we see here   sleep duration in hours so we go to say eight 
+and then as the physical activity level goes   up in time spent on it it correlates to amount of 
+time slept so this is pretty cool this is a small   example showing about how you can really uh you 
+know analyze your sleep or whatnot like imagine   if you had a aura ring or anything else really 
+and you wanted to have a better understanding   of the data behind your health or maybe you're 
+doing something for a job interview i'm using   health as an example but this could be used for 
+anything actually you know what let's go through   some others examples okay i just found this really 
+cool article on medium i want to take you through   because there are some examples that i have yet to 
+see being posted on the internet so let's scroll   down a little bit 10 mind-blowing use cases i'll 
+link this article down below because i'm not going   to go through them all but sm rayan thank you 
+for this all right so easily create all kinds   of graphs we've seen this we we know what this 
+is about uh pretty cool though still of course   and gonna be really very helpful for a lot of data 
+analysts out there all right convert any gif into   an mp4 i mean i've seen this one before pretty 
+cool though let's see if we open up twitter here   upload a gif and then it will turn into a 
+dramatic slow zoom in effect ah we're not   logged into twitter i'm on threads i'm not on 
+twitter but you can kind of see it there i am   on twitter but i don't really use it okay so 
+then this one i found to be really cool this   is you can extract the colors from an image 
+to create a simple png palette that's pretty   wild so what you can do is upload and upload an 
+image so let's say a png and it will actually   you know what let's just watch this i watched this 
+already and i want to share with you let's go here   play create a script that extracts the top five 
+colors from a picture and then makes it into a png   all right so they're going to 
+upload an image here [music] and then it's going to create a new palette image 
+new png with the palette this is wild let's see   working showing its work come on updating the script extracting 
+the top colors [music] can you display the palette png now okay this 
+is worth it i promise you i know it takes a   bit [music] this is crazy this is so cool there 
+is the color palette that was generated generated   from that image so this is it's getting pretty 
+wild out here and it won't be super cliche and   sound like everyone else when we start talking 
+about this but this is not going to take over   your job it's going to take over jobs of people 
+who don't embrace this technology i know if i had   a dollar for every time someone told me that i'd 
+be like barf i'm done i'm so tired of people here   saying this like come up with your own original 
+answer about how ai will affect our jobs but it's   really true this technology will be used a ton 
+maybe not in the form of chat gpt i know that's   the plug-in that we were using right now but as 
+it continues to expand you can think about how   the technology behind code interpreter could be 
+used or there's talks about it already articles   online saying it can be used with say github 
+co-pilot or a different kind of ai tools that   help us code better and what does that look like 
+and it's one of those things that it's not going   to overtake our jobs we are so far away from that 
+and i always say when that point comes that jobs   are taken we're all going to be doomed not just 
+programmers not just people in tech either doomed   or living on a beach like the chip earlier was 
+trying to get to but at the end of the day i would   highly suggest you check this out start utilizing 
+it and playing around with it seeing how you can   build with it because i really think the opposite 
+if you are able to build some really interesting   things with this it will really make you stand 
+out to future employers on your resume showing   you are embracing technology rather than being 
+scared of it like this i was gonna do mugs [music] all right someone uh got to listen 
+to me talk today and it was this one   i hope you found this conversation more 
+interesting than he did because he didn't   seem to really care about it at all anyways 
+hit that subscribe button for more tech coding   career related content and all right i'll 
+see you all soon thanks everyone [music]

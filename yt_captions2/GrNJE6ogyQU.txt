@@ -1,0 +1,114 @@
+hello and welcome to mcoding where we try to get just a little bit 
+ better at programming every episode. i'm james murphy. i'm using an experimental editor theme today. so let me know if it's better or worse than usual. today we're talking about the 
+ algorithm that i affectionately call "fast_pow." if you're a long-time viewer, you might remember that i've had a video about efficient exponentiation before. that video is more about how to find the least 
+ number of multiplications possible to raise something to a small power. "fast_pow," on the other hand, is a general 
+ algorithm to raise things to very large powers. of course, if there's a "fast_pow," 
+ there's probably a "slow_pow,". and that's the one you'd 
+ probably come up with on your first try. to raise x to the nth power, 
+ we start with one and multiply by x n times. that means it takes n multiplies overall 
+ in order to raise something to the nth power. the idea for "fast_pow" is that x to the n is 
+ approximately equal to x to the n over 2 squared. if n is even, that's exactly correct. and if n is odd, then we just need 
+ to multiply by another single x. this is great because it phrases the 
+ answer to the problem "what's x to the n?" in terms of the 
+ solution to "what's x to the n over 2?" a problem of half the size. this lends itself to a very 
+ simple and elegant recursive solution. so let's see how to turn this into "fast_pow." we start off with our base case, which is that 
+ raising something to the zeroth power always gives 1. feel free to argue in the comments  about  
+  whether this does the right thing for x equals zero. if you disagree, you could always raise an exception. we're going to need half the value of 
+ n and the remainder after division by 2. a bit of python trivia, though: if you 
+ need both the quotient and remainder, this is not the best way to do it. python has this built-in called "divmod" that gives 
+ you both the quotient and remainder at the same time. if you're wondering why python would have a single 
+ function that gives you both the quotient and remainder instead of just expecting you to use 
+ divide by 2 and then mod 2, a lot of integer long division 
+ algorithms, like the one that you learned in school, produce the remainder as sort of just a 
+ byproduct of the algorithm. so if you compute and divide by something, 
+ you actually get n mod the same something for free. of course, bitwise operations 
+ also work since we're using two here. but in general, even if you're not using 2, 
+ "divmod" can give you both at the same time. moving on, we  
+recursively compute x to half the power, then square that answer and multiply 
+ by x one more time if there was a remainder. otherwise, just return the result. it's simple, there's a great core idea. 
+ it's very elegant. and it's pretty easy to code up. this is something you could 
+ learn as your first recursive algorithm. by the way, other people call 
+ this algorithm "exponentiation by squaring,". but that's a pretty lame name. 
+ so i'm going to call it "fast_pow." so anyway, instead of using n multiplications, 
+ it only uses about log n multiplications.   there are plenty of ways that you could 
+ take this code and tweak it to go slightly faster. and that's not really the direction 
+ that i want to take this in. after all, python already has 
+ a built-in exponentiation operator. and as you could probably guess,  
+ "fast_pow" is not that fast compared to it. although that's due in part  
+ to the fact that the built-in exponentiation operator uses "fast_pow" or some 
+ more sophisticated modification of it. now, the direction that i want to take this in is: what if we allow x to be 
+ something other than an integer. and what if we allow a different kind of multiplication? this idea and this algorithm don't 
+ really depend on integers or multiplication. and recognizing this allows 
+ "fast_pow" to be a more general algorithm. we'll still stick to non-negative integer powers. but other than that, let's 
+ see what else we actually used. so let's just parameterize this function 
+ by the kind of multiplication that we want to do. we'll do this by adding two  
+  new arguments: "multiply" and "identity." we'll use "multiply" in place of anywhere 
+that we were going to use the star operator. and we'll use "identity" in place of 1 
+ because 1 was really specific to integers. so if we raise something to the zeroth 
+ power, we need to return the identity instead of 1. the division here is division of the power n, not of x. so that is still integer division. we can still recursively use "fast_pow". but we can't use star equals here. star equals is effectively just 
+ saying result is result times result. that's squaring the value. so let's replace squaring the 
+ value with multiplying the value with itself. same thing goes here; instead 
+ of using the star operator to multiply, we'll use the mul operator to multiply. and don't forget to pass the new arguments here. now, in order to use our more general "fast_pow" we need to define this multiplication and identity. if we wanted to check our implementation, we could define our multiplication 
+ function to just take two arguments and use the built-in multiplication. the identity for this 
+is the one that we had here before. run it now and all of our asserts pass. 1 to the power of 100 is 1. 5 cubed is 125. and 2 to the 11th is 2048. so what other kinds of 
+ multiplications and identity can i pass in? we just need a multiplication where 
+ we're allowed to put parentheses wherever we want. that's called associativity. the other property that we used is that 
+ multiplying by the identity doesn't change the value. we actually don't care about commutativity 
+ because we're always multiplying by the same number. reordering them doesn't change anything. so we need associativity and an identity element. well instead of multiplication another associative 
+ operator that we have is addition. it doesn't matter where you put the 
+ parentheses when you do addition of integers. but one is not the element 
+ that does nothing for addition. if we want adding something
+ to do nothing, then we should use zero. well, then what's "fast_pow" going 
+ to give us in this case. 1 to the power 100 is giving us 100. 5 to the power 3 is giving us 15. and 2 to the 11 is giving us 22. read those numbers again and you realize 
+ that it's actually just doing regular multiplication. that's right. "fast_pow" on addition gives multiplication. 1 times a 100 is a 100. 5 times 3 is 15 and 2 times 11 is 22. this is happening because although we 
+ named it 'pow' for power like multiplication what we're really doing is repeated application. so repeated application of 
+ multiplication is exponentiation. but repeated application 
+ of addition is multiplication. if i repeatedly add 5 to itself 
+ three times that's the same as 5 times 3. let's test your intuition. if we still took multiplication 
+ to mean the built-in plus operator and we took our identity to be the empty string, then what would the 
+ empty string to the power of 100 be? what would 'a' to the 11 be? and what would 'abc' cubed be? answer coming in 3 answer coming in 3 2 answer coming in 3 2 1. the empty string to the 100 is the empty string. a to the 11 is 11 a's. and 'abc' cubed is just 'abcabcabc'. once again repeated addition is 
+ basically giving us a form of multiplication. multiplication for strings 
+ means repeat this that many times. this is even consistent 
+ with python's built-in multiplication. so if you've ever wondered why a 
+ hundred times the empty string is even allowed, hopefully, this gives you an idea that it's 
+ because there's some deeper underlying structure there. so, i mean cool story, bro. 
+ but is this actually useful for anything? so far, we've seen a slower version of 
+ the built-in exponentiation operator for integers. and an even slower version of the 
+ multiplication operator for integers and for strings. there's pretty much no way that we're 
+ going to be able to build the speed of a python built-in using something in pure python. so, we need to think about 
+ expensive operations that are not built into python. you got it. here's an example 
+ i think you're really going to like. let's start by importing numpy. then let's take our multiplication to be convolution. convolution is an extremely important 
+ operation especially in signal processing. and it has a lot of the same 
+ properties that the basic multiplication does. in particular, it is associative. but there's a problem. if you've ever looked at the 
+ wikipedia article for convolution, you'll see all kinds of mathematical jargon 
+ about something called an approximation to the identity. why doesn't wikipedia just tell me 
+ what the identity is for the multiplication? well, that's because there is no identity for convolution. at least not for real numbers. now technically we're on a computer. and the discrete convolution does actually have an identity. but for this example, we're going 
+ to be modeling something continuous. and the continuous convolution does not have an identity. so, it'd be kind of susque to use the 
+ discrete version of the identity for convolution here. if we can, we should just not use an identity. so first, we need to modify our algorithm. if you had an identity the kind of algebraic 
+ structure we were working with before is called a monoid. but we can actually get away with even less. if there's no identity, like there isn't for convolution, then we can still do 'fast_pow'. we just need to change our base case. this is called a semi-group structure by the way if you just have associativity 
+ and not necessarily even an identity. so we change our base case. we now no longer allow raising to the zeroth power. we just assume or raise 
+ an exception if you want that the smallest power that 
+ we're going to feed to this function is 1. x to the power one is just x. that one is always available. once again, division here is division 
+ of the power and the power is an integer. we no longer have to pass the identity. and voila. our 'fast_pow' is now 
+ complete and in its most general form. as long as you're not raising to the power zero, 
+ this is still going to give all the same answers as before. but now we no longer have to specify an identity. now let's get back to the convolution. we no longer need the identity. then i'm going to take some samples. and use a discrete approximation of 
+ the uniform distribution between 0 and 1. let's pull in matplotlib and plot it. when we plot it, we just see 
+ a flat line which is what we expect because it's the uniform distribution. every point is as likely as every other point. now get ready for the very cool surprise. what do we get when we use 
+ convolution as our multiplication? and raise the uniform 
+ distribution to the 30th power? are you ready? well, what do you know! doesn't that look familiar?  doesn't that just look so much like a bell curve? and there's no tricks here. there's no e to the minus x squared anywhere inside. you can run the example yourself. let's put that in a loop and see it go slowly. at n equals zero, we just see the uniform distribution. then we see a triangle. and then each subsequent convolution seems 
+ to give something more and more normal distribution like. albeit, shifting further and 
+ further to the right and getting squished. and the really cool fact is that this doesn't 
+ even depend on using the uniform distribution. you could pick any initial distribution that you want. here, i just took some random formula. 2 * x minus x squared plus 1 for those x is bigger than 0.5 minus 1 for those x's less than 0.1. so, this formula isn't even continuous. divide out by the sum to make the sum equal to 1. so it's a probability distribution. and then look at what happens 
+ when we do the iterated convolutions. as you can see, the blue line, 
+ the initial distribution wasn't even continuous. but after just a few iterations, we're seeing 
+ that same normal distribution looking shape again. if you think this is cool, 
+ you should really get into probability. the theorem i play here is the central limit theorem. and the reason that this 
+ is somehow related to convolutions  is that the distribution of a 
+ sum of independent random variables is given by the convolution of their distributions. but that's maybe for a different video. in any case, i hope you liked "fast_pow". and importantly, i hope this shows you some 
+ of the potential benefits of being able to take an algorithm. and reduce it down to its fundamental pieces. abstract away the details that you don't really care about. is there some underlying structure there 
+ that makes sense in a more general context? so while "fast_pow" itself is quite a 
+simple example. some of the craziest, most useful results and very cool optimizations come from abstracting things in the same way that we did in this video. usually with a little more math, though. thank you to my patrons and donors for supporting me. if you liked the video, don't forget to subscribe. and if you especially like the video, 
+ please consider becoming a patron on patreon. my company is mcoding. we do consulting, contracting, training, 
+ interview practice, code reviews, that kind of thing. if you're interested in working 
+ with me, please check out mcoding.io. don't forget to slap that like 
+ button. and i'll see you next time!

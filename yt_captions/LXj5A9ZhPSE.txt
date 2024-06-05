@@ -1,0 +1,232 @@
+- Pocket size game consoles have been around for a long
+time, but you've always given something up for the privilege: bad screens, compromised
+game playing controls, juggling game cartridges. What if there were a way around all that? Let's enter the world
+of unofficial handhelds that actually promise a good
+pocket gaming experience, and if you're after a
+good toolkit experience, iFixit has just the right thing for you. Learn more about the Manta
+Toolkit and its 112 steel bits with two premium drivers
+at the end of the video. (funky music) When you think gaming handhelds,
+depending on your age, you might think of
+Nintendo or Sony or SEGA, probably in that order. You know, big companies from Japan. The first mental image you
+probably have of anything else is something like what SouljaBoy was passing off as his own
+designs, and yet these devices came from a different country entirely. None of them came from Japan, and each has a different
+design and gameplay philosophy. At their core, they all
+share one common trait: they're designed for running
+retro console emulators, but that's not all they are. They're fully functional
+computers built around Arm processors running Linux or Android. The Anbernic RG351M is easily the most premium feeling of the three, with a solid aluminum
+enclosure, twin USB-C ports, and premium feeling sticks and buttons. The Retroid Pocket 2
+is a much lighter unit with a larger four by three display, more ergonomic shoulder buttons,
+and a micro HDMI output. Finally, the ODROID-GO
+Super has a massive screen, full size USB Type A port, and a static GPIO header? Yeah, it is. (Saw voice) So, let's play a game. Without looking any of these
+up, where did they come from? One of them is from South Korea, and the other two are from China. I'll tell you which at
+the end of the video. Let's start off with the Anbernic RG351M. This is a really chunky unit. It's a unibody aluminum enclosure. It's got twin USB Type C ports on the top, one for charging and one for peripherals, although you can use the charging one for peripherals as well The headphone jack. On the bottom, we've got a reset button, a micro SD card slot, which they label TF, because of course they do. It's for trans flash. On the right-hand side,
+we've got this volume wheel, and the placement is really unfortunate. This is where your hand's gonna go when you're playing games. Maybe you're on a bus or
+something and you hit a bump. It's just gonna either blast you with something out of your headphones, or it's gonna blast the entire
+area around you with noise. On the front, we've got our D pad. Feels all right, it's a little stiff. The sticks here, they feel pretty good. They're rubberized, and they click in. Mmm, nice. And we've got our four face
+buttons, start, and select. On the top, we've got those
+USB Type C ports again, but we also have two L and R buttons. They're staggered this
+way instead of vertically, so it's a little awkward to get to. Then around back, all you've
+got are four hex screws, which can be opened with
+a number four hex screw on an iFixit kit, or an Allen key. And we've got these two
+actually rather nice little rubber pads. They don't look like they do much, but they do much. All right, let's turn it on. This is running 351ELEC. It's actually a version of EmuELEC that is specifically designed
+or specifically modified for this system and its plastic version, and they all share the same
+hardware under the hood. In this case, it's a RockChip 3326 SOC, that's a quad core with a Mali-G31 MP2 GPU for those of you who actually care. Now, this came with a number of games preloaded, which is not necessarily the most legal thing in the world, but you know what, we'll go with it. The interface is basically
+the same as what you would get on a Raspberry PI
+running EmulationStation, and that's because it mostly
+is, it's just there's not a whole lot of operating
+system happening underneath. You can set game settings
+globally or by game, so right now we've got the game ratio, the aspect ratio of the screen,
+set to be core provided, so it'll change depending on
+which system you're running, and we've got the scaling
+set to sharp by linear, which I'm sure Taryn will appreciate. It looks the best on these
+low resolution screens as far as I'm concerned. Speaking of the screen,
+it's 480 by 320 pixels, and that's a two by three ratio. That means your scaling
+is not going to be clean for 240p games, so that
+sharp by linear filter will come in handy. However, what this 480 pixel width is perfect for is PSP games. That's a one-to-one scale with a little bit of letter boxing. It's a good compromise. It's not the most loud thing in the world. This is 100% volume. You're probably gonna want headphones. Input lag by default is
+usually pretty bad here, and this is common across
+all these consoles. You're going to need
+to set up your emulator in order to get the best
+possible results from it. Usually that means
+setting up hard GPU sync and setting up run ahead. That'll get you a little
+bit better of an experience. It's still got some input
+lag, but for the most part is pretty much fine. Input lag will be a little
+bit worse with net play. Yeah, this thing has WiFi built in. It can actually either connect
+to other Anbernic devices that have wifi, or it can
+connect to Retroids with WiFi, or it can also connect to, theoretically, a PC or a Raspberry Pi running RetroArch 'cause that's what's
+behind all of this here. You press these two buttons
+in and you get RetroArch. Unfortunately, not all
+cores support net play. Your mileage may vary, but
+it's a pretty cool feature that honestly is something
+that I would have loved to have as a kid. And that's not to say that all it can do is 16 bit games like Super Nintendo. This will actually run N64
+games, PlayStation games, and I mean, depending on
+your definition of run, they'll run Dreamcast games as well. Although those will run
+at about half speed. It might be okay for some
+games, but the console's library is primarily made up of faster paced games so it's not that great, but
+I mean, that is asking a lot. Unfortunately, and this may
+or may not be a deal breaker for you, the USB Type
+C ports cannot be used for display output, only for
+peripherals and charging. There's no way of getting
+capture off of this. That's why we're recording
+with a second camera. Now let's take a look
+at the Retroid Pocket 2. This handheld is
+significantly more plastic. In fact, it's all plastic
+except for the screen, which is tempered glass. It's got a different kind of feel to it. The face buttons are all micro switches, including the D pad, not
+something I'm a huge fan of. However, it does have
+staggered L and R switches, which is much more
+ergonomic in my opinion. This actually feels
+really nice in the hand. We've got a micro HDMI output here. That is gonna rub some
+people the wrong way, but it's the only one here that
+has any kind of display out, but it does do USB Type C charging, and I believe this also
+supports peripherals as well. This is a traditional type stick. I don't know why, but
+this is just a slider. - [Brandon] It's like the 3DS. - Yeah, it's like the 3DS. It doesn't feel great. It kind of, like hitches
+a little bit, and also it kind of turns a lot
+more than you might expect. Nothing on the sides, and on the bottom, we've got a headphone jack
+and a micro SD card slot, which is held in by this
+nice rubber grommet. Under the hood, this thing
+runs a Mediatek MT6580A. Still a quad core SOC,
+but the GPU is much weaker than the RockChip, and so is the CPU. It's just slower across the board. Is that going to hold it back, though? Maybe, maybe not. Let's power it on. And you'll probably notice the
+display is a four by three. It's actually 640 by 480, so this makes most scaling completely straightforward. Everything, pretty much will
+scale up to that no problem. However, I still recommend
+the sharp by linear scaler because any NES and SNES titles, those run at a weird resolution, 256 by 224. It takes a minute to boot. There's a reason for that though. It runs Android. Yeah, this is Android 6 with
+the Play Store included. It is upgradable to 8.1
+if you wanna do that, but you probably don't wanna do that. One of the things about
+this is that you can change the controls to either emulate
+a mouse, a touch input, or a game pad, and that
+might seem like a great idea, but in reality, it's not so
+good because you kind of need it to navigate throughout
+the operating system. There are some things
+that you just cannot do with the game pad alone,
+and there are some things, like gaming, that you cannot
+do with the mouse alone. There's a few things preloaded on here. None of them are pirated, so
+that's a big plus in its favor if you prefer not to pirate your games. There is a game that Nintendo
+did take down though: AM2R. Unfortunately, Nintendo
+completely nuked that from orbit, but it's here. It also includes Flycast,
+which is a Dreamcast emulator, ClassicBoy, a GameBoy emulator,
+N64 emulator, PSP emulator, and of course, RetroArch. It also has Moonlight, which is a Nvidia
+Shields kind of emulator, so you can cast to this
+device, as well as Steam Link. I don't know if you want to do that. Do you want to play your
+games in SD at four by three? Probably not, but the option
+is there if you really want to. The star of the show
+is of course RetroArch, just like before. Unfortunately, because this runs Android, none of it feels very cohesive. In order to load content,
+you need to go through your SD card and kind of just
+manually pick it all out. It's more versatile than you would think, but at the same time,
+because it has Android, it's a lot clunkier than
+you would expect and hope. There is one thing that
+kind of redeems it. There's an icon here for
+what's called Retroid. Hit that, reboot to Retroid
+Pocket Operating System, yeah, let's do it. It's like an older version of Android. I think it must be Ice
+Cream Sandwich or something. It has the hollow UI, but it's
+running a custom launcher, and presumably, it has very
+few background tasks running, so it's similar in spirit to
+what you got on the Anbernic. Unfortunately, as you might see here, we don't have any games installed. That's because it actually
+uses a weird folder layout that is different from the folder layout that you would normally be using so you kind of have to choose whether you want to use
+it in Retroid pocket mode, like this, or in Android
+mode, like before. The problem with Android mode, of course, is that if you've got WiFi
+connected, Google Play is gonna do stuff in the background,
+and there's just gonna be all kinds of things that'll make your experience less good. Oh yeah, and the screen
+is not a touch screen, and these sticks do not click in. That'll also make your
+experience a little less good. And considering that it runs
+Android and none of it's pre-customized, it
+means you have to set up all your emulators, all
+the settings for them pretty much as soon as
+you get the machine. You can't quite just plug and play it. Some things will work like that, but for the best experience, you should actually set
+all your emulators up. They agree. Overall though, it's pretty solid once you get it all set up. I mean, it can do a lot of the things that the Anbernic can do. It can play N64 games and
+it's not much of an issue, but it just takes a little bit more doing, which is where the
+ODROID-GO Super comes in. If the Anbernic was a chonker,
+this is significantly larger, although it's not quite
+as heavy, I don't think, because it's made of plastic. It's kind of like a Switch
+Lite, except the analog sticks are hanging out down at the bottom, and those analog sticks,
+unfortunately, they rock okay, they're kind of smooth,
+but the sticks themselves, they're hard plastic with a sharp edge. They dig into your finger. They're not pleasant to use. The rest of the buttons feel okay, with the D pad being a little mushy. It's kinda weird to feel
+a diagonal like that, it feels like nothing's moving, but yeah, these are all membrane buttons, these are tactile switches, these are just rubber, and these shoulder buttons on the top, those are tactile as well. Also on the top, we've
+got volume controls, kinda weird spot for them. You can't really, there's
+no way to get at them during gameplay, so
+that's a bit of an issue. And we've also got a USB Type C, which is for charging
+only as far as I know, as well as a full size USB Type A. That is interesting. What's even more interesting is this. Yeah, those are GPIO pins. This is actually based on the
+ODROID Single Board Computer. It's like a Rapsberry Pi, it's just, they've got the RockChip. Down on bottom, we've just
+got a micro SD card slot. I'm just gonna steal the
+one out of the Retroid. On the back, we got a
+rather large vent here. There's no fan, and I can't
+see heat sinks either, so it's kind of weird that that's there, and there's the speaker. The first thing you'll notice
+when we power this thing on is it's got a 16 by 9 screen. It's a five inch screen, think
+a 480p wide, so 854 by 480. It's pretty bright, it looks great, but why the oddball resolution? Well, having a 16 by 9 screen
+at this resolution means that you can actually use 16 by 9 games. So say you've got a widescreen
+hack for Super Mario World, or you've got PlayStation
+Portable games, et cetera, these'll fill the entire screen. Then you just need to
+deal with litter boxing for other types of games. If you buy one of these for yourself, probably the first thing you'll
+notice when you turn it on is you don't have an operating system. That's because it doesn't come with one. They recommend, or at least
+they link to Ubuntu Minimal, which is frankly a terrible experience. I went and got EmuELEC for this, just like the Anbernic here. So it uses a pretty similar interface. It's a little bit different, but it has pretty much the same settings. I don't know what's
+going on with this theme, but it's kind of terrifying. Like all of these things just look wrong. Under the hood, this thing actually has the same amount of the
+power as the Anbernic. In fact, it's very similar to the Anbernic in pretty much all aspects,
+except for the fact that it's got a little bit of a more
+plastic build quality to it, and it's got that larger screen. This is another scenario
+where you kind of have to tune the emulator to get the
+best performance out of it. This thing is not gonna
+be able to play N64 games with the most quality possible. You're certainly not gonna upscale them. It's worth noting that there is an overclock option in the settings. They do say that it can cause instability, and I have seen instability happen. Your mileage may vary
+there, but it might get you that extra little bit towards
+being perfectly playable. Get back to the menus, just
+hit these two buttons here on the outside, and yeah, look at that. It's RetroArch again. Overall, I'd say the ODROID
+is a hacker friendly, but a little bit hacky solution. It's got a lot of buttons,
+certainly a great concept, but it's also really no
+surprise why Anbernic uses these designs to make a
+much more polished product. The only major downside
+to the ODROID compared to the rest of these
+consoles is that in order to get wireless for multiplayer
+or any other functionality, you need to buy an aftermarket adaptor. Now, they sell it for
+about $9 on their website, so it's not a big deal,
+but it would've been nice if they could've found a way
+to include it in the chassis. It's certainly big enough to do it. So how did this burgeoning
+class of devices come to be? Well it all started with
+the Game Park GP32 in 2001. The GP32 was the first
+of its kind in offering expandable storage in a
+commonly available format, along with official Homebrew support. This, combined with the
+relatively powerful for the time and easy to develop for
+Arm CPU, led to emulators and public domain software
+exploding on the device and all of its successors. Ultimately, this was a niche in its day, and Game Park declared bankruptcy in 2007, just in time for Homebrew
+on more mainstream, but our also still early
+storage-enabled handhelds, like the Sony PSP and
+Nintendo DS to take off. I actually used to daily
+carry my PSP as an MP3 player and a retro console
+emulator, and my PS Vita continued that legacy when I got one. Although, by then my smartphone had taken over MP3 player duty. But Nintendo and Sony didn't
+take kindly to their consoles being used for what they
+saw as software piracy on still active consoles, and they played a constant game of cat and
+mouse with exploit developers and flash cartridge vendors. Clearly, there's a market for handhelds with emulation capabilities,
+so with the broad availability of mobile CPUs thanks to smartphones and single board computers
+like the Raspberry Pi, and low cost micro SD storage, why not build your own with that in mind? The smartphones themselves
+may be an option if you really want to, but
+unless you're still rocking a PlayStation phone, there will always be a trade-off between carrying
+an unwieldy controller or settling for on-screen controls. And get subscribed by the way, because we're going to look at
+a bunch of weird controllers that have been released over the years, and you're probably not
+gonna want to miss that. Despite this demand and
+these consoles stepping up to fill it, piracy is still
+the elephant in the room, and as much as we don't like to admit it, it almost comes part and
+parcel with these devices. None of these handhelds come with a way to dump your own cartridges,
+and while there are devices like the Retrode that
+do, it's limited in scope and the costs can add up
+quickly if you buy attachments, like the Game Boy or N64, or,
+oh what were the other ones? It only does Genesis
+and SNES out of the box. CD ROM systems like the
+PlayStation are easy to deal with if you've got an optical drive, but those are among the
+more difficult games to get running well, so you're trading one difficulty for another. I can't recommend or condone
+piracy, but Nintendo et al. don't sell ROMs for you
+to download legally, and with Gabe Newell's
+famous quote in mind, you can see why it's the
+option most people go for, even if it is illegal. But let's assume that you actually did back up your own ROMs. Can I recommend or condone any of these? Absolutely. The ORDROID-GO Super
+from South Korea is $80, and it gets you a strong CPU. The Retroid Pocket 2 from
+China is $80, and gets you a better feeling controller,
+a more familiar OS, and a smaller, more
+thoughtful form factor. The Anbernic, also from
+China, is the most expensive, but features the most polished design and comes in metal or plastic, though the less expensive plastic version doesn't have WiFi, much like the ODROID. These are a great, relatively
+inexpensive way to carry your retro game collection
+around in your pocket, and frankly, I am super glad they exist. Just like I'm glad that
+iFixit sponsored this video because their Manta Kit
+has 112 steel bits that can actually open either of these consoles, comes complete with standard
+Phillips bits, Flathead, and also torques, tri-point,
+and game bits as well. These don't use game bits, thankfully. The kit includes not one, but two aluminum screwdriver handles, including a hefty quarter-inch drive for full-size applications
+and a smaller four millimeter for precision work, and they both feature magnetic bit sockets, knurled grips, and silky smooth spinning tops. The toolkit's lid doubles
+as a sorting tray, just like their iFixit Pro Tech Toolkit that I have over here,
+and all the iFixit kits are backed by a lifetime warranty. If something breaks,
+they'll replace it for free. Visit ifixit.com/LTT and
+pick up your Manta Kit today. Thanks for watching, guys. Go check out a similar video
+we did a little while ago on a portable Wii. It's a good video. I got to dremmel a Wii
+motherboard, very satisfying.

@@ -1,0 +1,172 @@
+- hardcore over clocking is super simple. at least that's what i
+thought a couple days ago. unfortunately, i am not
+an electrical engineer and we do not have a full
+blown electronics lab. so we have ended up with this mess. rtx 3090 all the safety's disabled and a hijacked voltage
+controller that has what? one, two, 12 ways it
+could die at any second. i'm going to show you how
+to do all of these mods. and while it might look very janky this could be the fastest gpu in canada. and this madness is
+brought to you by seasonic. mother (bleep). we're gonna be using their
+1300 watt power supply and if it can survive
+this 1000 watt rtx 3090 you're gonna be fine. (upbeat music) here's the plan. to get a gpu to go really fast, you need current and voltage. getting enough current is quite difficult. nvidia has very tight limits on how much current a card
+will draw for safety reasons preventing us from having too much fun. we'll need to trick it into thinking it is drawing less current than it actually is using shunt mod. we'll show you that in a minute. voltage is also tough. for the last couple of generations, nvidia hasn't given the
+users voltage control but we'll be getting it back using this. it is a neat little device that allows us to bypass nvidia and talk
+directly to the voltage control so we can tell it to give the gpu as much voltage as we want. before we can get to that though, we need to take some baseline readings to compare and model performance to. so just running 3dmark
+for all of our tests, and it should be noted this
+gpu isn't exactly stock. it was repasted with conductonaut and also has k5 pro as the thermal pads. that gave us about 6% increase over stock so we're already gonna
+have pretty high scores just baseline. so our baseline score is 10,411. and during that, the gpu
+drew maximum of 390 watts. once this thing's overclocked, it's gonna be brutal
+along this power supply. i'm gonna run the benchmark once more so we can get an actual
+score that we can upload then the madness begins. normally removing the cooler of a gpu is the easy part of a hard mod. although today, oh god, it is not 'cause unfortunately i
+absolutely caked this thing with k5 pro. the plan was to just never
+open this thing again and it would just be a fast gpu, but here we are. all of this needs to leave
+because unfortunately soldering to k5 pro is
+not gonna be a good time. - oh, i don't think
+that's a soap and water kind of business. - yeah big regrets. to up the current available on our gpu we have two options, a
+bios mod or shunt mod. if you don't have access to
+an electronics rework station a bios mod is probably your best bet. no need to trick the controllers to allow 1000 watts of power if your bios just accepts it. but not everyone can use this approach. for cards that aren't
+regularly used by overclockers a bios mod probably just doesn't exist. and if it does exist,
+good luck finding it. model built overclocking bios
+have to originate from nvidia. so it is risky for the authorized person to post online for just anyone to take. if you want one for your card, just try asking around on
+some overclocking forums or discord servers. one might end up in your dm's. but even with a thousand watt bios you might run into sneaky current limits. that's why today we're going
+to be increasing current the hands on way, a shunt mod. shunts are very simple circuits to allow a device to
+find out how much current is being drawn. by measuring the voltage drop
+across the shunt resistor, the control calculates the
+current using ohm's law. so current equals voltage
+over top of resistance. by putting another resistor in parallel with a shunt resistor, we can drop the resistance and make the controller
+think that it is using less current than it actually is. in our case, we're going to be soldering a 5 milliohm resistor
+on top of the existing 5 milliohm resistors, meaning in software the
+gpu power that is reported will be half of what is actually drawing. there is a second method. by placing liquid metal on
+top of the shunt resistors you can effectively
+increase your current limit but it is difficult to
+control, makes your power readings just completely unreliable, can kill your gp if it's spills, and as a bonus, it'll eat
+away at the soldered joints. i didn't want to deal with any of that so we are sticking to soldering. - how much trouble do we
+get into if we kill a 3090? what did you guys do to this poor bit? it's got like goop over it. chain man - (beep) using it. - i know what happened to that. that's dead resistor juice in there, man. we got many solders in the- (laughter) gotta clean your tips. that's a tech tip right there. do we have solder oil here? not dog poop stuff. - you don't want to just cover it in flux? - no, i'm good. it's probably not gonna work anyway so it doesn't really matter what- oh, wow okay. - yeah. it seems too high. - yeah. yeah for sure. how do you go down? this is not inspiring
+confidence that we know what we're doing. nah, i got it. now you have to hold down
+into six nine, i guess. all right. i'm gonna get a proper wire. you have the resistors right? - there we go. - ye boy. that's why you guys were in
+it like 800 degrees celsius. it's 'cause it just
+doesn't have enough heat. - yep. flux. - no, no. oh what have i done to that resistor? i am so sorry. while you went to get the flux i figured out that we
+gone and done goofed. these three shunts. - yeah. - are the ones that i
+connected to the ground pins. so good thing that we had to go get flux because that would've been fun. should do it. ah, bull. oh, it's making bubbly noises. i just, okay. woohoo. it's such a
+bad soldered iron alex. - this isn't too bad of a soldering iron. kyle's just complaining a lot. - is this on? - it is. - dude. it's on. i'm not joking. - why is it so crap? yeah. so the soldering iron
+is at max like 220 degrees. - oh that's 15 degrees
+lower than what it needs. like actually freaking mild solder. ah (dog barking) okay, so i'm not an angry person. - typically. - i just like to shout at things - watching a derbauer video, you might think that
+shunt mods are super easy. i certainly was fooled. the problem is that our 70
+wat hakko soldering iron really wasn't designed
+for something like this. nvidia did a great job designing this pcv to dissipate heat, which
+means unfortunately, our 70 watt soldering iron
+just cannot heat it up enough. there are a couple of ways around this. first you can buy a
+bettering soldering iron and get the results we saw from derbauer. ultimately you can heat up the gpu. so stick it in a toaster oven you'd never plan on using it again. - you could set it on bake setting and set the bake temperature
+to like 75 or 100. - bake it until our
+whole pcv reaches around 100 degrees celsius and then
+you can start soldering. or you can put the gpu
+on top of a toaster. in the end, we used option three. checking our largest tip on
+the end of our soldering iron for maximum thermal mass and
+just setting the temperature to 900 degrees. that gave us an instant of flowing solder and a bunch of boiling flux. - it looks terrible. - with the current limits doubled the next thing we need
+to do is gain control of the core voltage. unfortunately since kepler and nvidia hasn't given the user voltage control to ensure our gtx customers
+get the highest quality product that runs quiet,
+cool and fits in their pc. oh, and if one of their partners like msi or asus gives
+the user that control, the card can't be sold with a warranty. - [buildzoid] nvidia controls
+the creation of gpu bios to like an absurd level. as far as i know, like the way it works is you log into like an nvidia server, make your bios, then you
+have to get permission from them so like actually get the file. - fortunately, we do
+have a solution for this. where is our solution for this? oh, here it is. we have this. the elmer labs enhanced
+voltage controller or evc-2sx. it works by connecting to the i2c bus, a communication bus allows
+all the different components of your gpu to talk to each other to keep everything running as smoothly, and the evc uses that bus to talk directly to the voltage controller. most high-end gpu's these
+days use digital voltage controllers but before you get an evc, make sure your gpu is compatible. on most gpu's there will
+be open i2c solder pads that were used for
+debugging during production. simply solder a header onto one of those and you can use the evc. once connected to the gpu, we can directly access
+the voltage controller through the elmer lab software and set the voltage to
+just whatever we want. there's no way we killed it. - yep. - right? - yep. - it's totally fine. - yep. do you wanna hit the power supply? - yep. we got it. she works.
+- yay. - she has the video title, "we did not kill a 3090
+at this point in time". - with full control over gpu, how much can we improve performance? well, with an air cooler, the results were worse than baseline. the card was drawing 600
+watts and the cooler just could not keep up. so we needed some assistance. who better to help with
+hardcore overclocking than the man behind actually
+hardcore overlocking himself, buildzoid. - [buildzoid] from
+ambient, you're basically not gonna get much past
+the stock voltage settings of these cards 'cause they
+just run insanely hot. so if you keep raising the voltage, the internal temperatures rise faster than you gain stability
+from extra voltage. - we have a couple of options. the one that you might
+be thinking we would use is the chilled hastrophy
+that's right here. the problem is, is that the
+phase change block that i made doesn't seem to work as good as we hoped and needs a little bit of a redesign. instead, and i'm really sad to say this, we're going to have to use this. yeah, i don't even know
+what to describe it as other than just like a
+complete piece of (bleep). we made a video about
+making this chiller nicer and in the process of making it nicer, it just got so much worse. it's in a box and it's
+hard to see what's leaking and if it's leaking on
+domains, voltage or whatever. hopefully it works. i don't know. to hopefully make everything
+work a bit better, i grabbed a bunch of spray foam and the plan is to
+basically just (blowing air) just cover the whole thing in it. hopefully that'll stop some
+of the condensation issues internally. oh. and also it is super heavy because i made it out of welded steel so i could get our welder set
+up for doing the pyramid pc. the back half of yesterday
+was super productive. all of the electronics have been moved out and zip tied slash gaff
+taped to the outside so that water will not
+drip on them hopefully. all of the shunts have also been modded. you can see right here that
+there's another resistor on top of all of them. it was just as painful as
+before given our soldering iron. finally, we need to
+water cool this bad boy. water blocks for it do exist but i would be concerned
+about condensation that i wouldn't be able to
+see forming on the inside. so instead we're just going
+to use a generic vga cooler which means unfortunately we
+need to modify the vga cooler. the problem is that the
+design of it's really stupid. so if you look in here, the
+dimension of the steel piece is what gets you your
+clamping force on this o-ring. super critical for this o-ring working and you not getting
+water all over your gpu. that unfortunately means that
+i'm going to have to make something completely different. we're gonna hack something up with an angle grinder and call it a day. goodbye. our cpu mounting plate is done. 'cause i like you guys i
+even polished this side. i just have to remove a bunch of k5 so we can install these
+cute little heat sinks that are gonna be going
+on the memory modules. it will hopefully keep them nice and cool. for thermal paste we're going to be using thermal grizzly kryonaut. we don't have a heat spreader so if there's a spot that's not covered it might get hot and die. last thing to do before
+this goes back together hopefully some nice cheap insurance. i'm sorry, it's so i don't kill it. - [brandon] i know, but like why? - this poor gpu, it didn't
+deserve any of this. i really hope i don't kill this card. i know i've said that a lot, but like i wanna do more
+hardcore overclocking. chiller just ate 16 liters of water. if this thing doesn't
+leak, i will be so happy. that'll take half a while to cool down but oh, there we go. so far so good. is the air conditioner working? oh, oh. oh it is. the real question is the pump. holy crap. it just worked. we have water coming out of here. is this leaking? i don't see any leaks here. oh, that's definitely leaking. (bleep) what's that? - looks like your spray
+foam didn't do its job. so i think what's leaking is right here. oh, that's gross. i need gloves for this. this has to be what's leaking. oh my god, that's gross. oh, this got out of hand something fast. where is the drain port? i know that i included one. this is a mess, brandon. you're not wrong there. i believe there was a drain
+port on the bottom somewhere. yeah. let's get a bucket in there. of all the ways that this was
+going to go horribly wrong, this is not the way that
+i expected it to happen. i'm sorry, viewers, that
+you need to watch this. oh, oh, where's the drain port. okay. i see it. everything's fine. i have a lot of water down my sleeves. - [brandon] i bet you do. - gpu's going on the test bench. block's fine. gpu's not leaking. that's all great. water temperature's at 14
+degrees, which is awesome. it's sub ambient, but not so cold that we're going to have
+condensation issues. it's time that we boot her up. you already know this but don't do anything that we've
+done in this video at home. it's all a bad idea. like i've done some
+pretty jank stuff before but this is primo jank. yes. gpu is not dead. so gpu temperature is
+currently at 11 degrees. you're not getting condensation but you are getting nice and cold. all of our powers look good. do we have vrm temperatures on here? everything right here seems
+to be working pretty well. as long as you just
+don't look back past it. it's boosting high memory
+is getting kind of hot but it still is doing just fine. so vrm temperature in
+the last run, 54 degrees. gpu temperature, 33. fricking awesome. memory's getting a little bit hot. we saw 96 degrees. we can probably cool
+those down a bit better. on that last run we drew 360 watts, which is half of what we actually drew, which means we did what? 720 watts. and the gpu is at two gigahertz. this thing is freaking fast. it's finally time to do some overclocking. so i think we're gonna
+be pretty easily able to get around 21, 2200
+megahertz on this gpu although that doesn't really matter. nvidia does this thing
+called clock stretching so if the core voltage drops a little bit, to keep the gpu stable, they will for a couple of
+cycles drop the frequency down and just not report it
+in the software at all. so even though we might be
+looking at 2200 megahertz or whatever, the thing that
+really is going to tell us if it's good or not, is the 3dmark score. now for those scores,
+our baseline was 10,000. if we can get 11,000,
+i'm going to be happy and if we can get 12,000 were like top 10 in the
+world with this gpu. let's fricking do it. here's our first overclocked run. so this is plus 50 megahertz on the core. and our plan is to basically
+just add 25 megahertz, see if it's stable. if it crashes, we add some more voltage. we just keep on going like that until either the thermals
+or the vrms or something just can't take it anymore. go away brandon. i'm gonna over clock
+this for the next while and see if we can get a record. okay. 10,900. i think that's slightly
+more than we had baseline. actually that's deadly close to 11,000. so we're just gonna keep on going. let's see how far we can push it. so cpu it's at 5.5 gigahertz and i had to open the door back there so that it wouldn't keep on
+thermal throttling on us. anyway, gpu, isn't quite
+as fast as i wanted. we are getting like 11,500 for our scores. sometimes 11,700. that is a 12% increase over stock and stock was already
+6% faster than stock. so like this is a lot
+faster than a normal 3090. problem is, that doesn't get us onto the 3dmark leader boards. i think it's just simply
+a case of silicon lottery. like no matter what i do, can't get more than plus
+100 megahertz on the core. so was all of this worth it? i guess it depends on
+what you're trying to do. for a 12% performance increase? like that is measurable. but at the same time you're risking a card that's infinite dollars
+'cause you can't buy one. yeah, there we go. 11,706. so that is obscenely fast. our poor stupid chiller can
+barely keep up with our 3090. it's outputting so much power. i don't think we're gonna be
+able to get better than that. that said, i had fun. is that a good
+constellation prize brandon? my leak bin filled up so i put a leak bin
+underneath my leak bin. i guess i thought going into this that this was going to be super simple. just, you know, chuck some
+resistors onto the board and bippity boppity you
+have a super fast 3090. turns out it's not that easy. there's no good reason to do this besides you have fun making
+your scores get nice and high. what's also a lot of fun is seasonic. they sponsored this video
+and i'm honestly shocked that i was able to use a single power supply. i brought two of them over here thinking that i have to
+run both of them because cpu's drawing 400 watts, card's drawing a pretty consistent 800, that's like 1200 watts. i kind of thought it was gonna conk out and it didn't so excellent job seasonic. this is a real stress
+test of your power supply and you passed. they also have a 12 year warranty. i run it in my system at home and they're just high
+quality of power suppliers. what else more do you want? so if you like this video
+hit like, get subscribed. do you wanna see more
+hardcore overclocking stuff? i kind of want to. 6.9 gigahertz cpu. i wouldn't mind doing that. and if you wanna watch something else, maybe watch when we sub zeroed
+the alien where area 51 m. that was ridiculous.

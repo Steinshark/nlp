@@ -1,0 +1,215 @@
+I recently discovered that using clever 
+mathematics you can algorithmically identify   the tail of a humpback whale in a photograph. 
+And I'm not saying like just that's a tale it's   a whale we're talking the individual whatever 
+that whale's name is you can identify which   specific whale that is because tourists like 
+both going everywhere and photographing the   tales of whales you can use that data set 
+of tourist photos to algorithmically follow   track and analyze the migration patterns of 
+humpback whales absolutely amazing however   take a closer look at the maths behind this and 
+maybe find a whale of my own I'd have to head   off to Antarctica. Yep we're off to Antarctica 
+where we're gonna have... a whale at a time this video about whales machine learning and 
+spreadsheets, get ready, is part of the series   I filmed in Antarctica and this specific 
+video is sponsored by private internet   access they are the VPN that I use because 
+they're 100% open source and they have a no   logs provably no logs policy at the moment if you 
+use privateinternetaccess.com/standoutmaths it's   a mere two dollars and 11 cents a month once you 
+factor in that you get three months for free and   they are the VPN I used while I was in Antarctica 
+filming this video and for the record the video is   not sponsored by Hurtigruten I had to give them 
+a lot of money to get myself to Antarctica and   it's not sponsored by Happy Whale I approached 
+them because I realized they were doing some   very interesting mathematics in their pursuit of 
+identifying whales and spotting identifying animal   as well a trip to Antarctica is all about and we 
+saw a lot of penguins possibly too many penguins   although one day I saw a penguin fall off an 
+iceberg best day of my life uh dolphins, other sea   creatures the works but there is no bigger animal 
+spotting prize than a whale we saw a few different   types of whales sometimes they do an announcement 
+on the ship saying where whales have been spotted   sometimes you'd just be looking at the ocean and 
+a spout of water would suddenly go up and you know   there's a whale there and like this time there'd 
+be a commotion and you realize someone else has   seen a whale and I was filming a different bit 
+for a different one of my Antarctica videos I   heard the commotion I ran over and there were some 
+humpback whales close-ish there was one time when   a tower went up in the air but was a bit too far 
+away and then another time I managed to zoom in on   my camera oh I think it was just close enough 
+there might just be enough resolution in this   image to be able to automatically identify that 
+whale so I logged into my account on Happy Whale   yes we we had Wi-Fi and Antarctica is ridiculous 
+I know I was able to upload the image not that   fast but still you know Antarctica Wi-Fi and then 
+into the details about what ship I was on where I   saw the whale the latitude and longitude as well 
+as which Bay uh we're on the Antarctic Peninsula   on the west side and that was it then I just had 
+to wait while happy Wales algorithms crunched away   to see if they could recognize what whale owned 
+the tail I had seen the important thing is though   what is the math we're using to identify these 
+whales the people at happywell had to find a way   they could automatically identify whales from 
+images of their tails and so they turned to the   website kaggle this is owned by Google it's an 
+online community for analyzing data and machine   learning and so what they did was they started a 
+competition and there's all sorts of competitions   on this one of my favorites is the Titanic one 
+this is a data set of most of the people on the   Thai Titanic whether or not they Survived The 
+Sinking or not you train some kind of machine   learning algorithm on that and then they give you 
+a test set of data where you get the details about   the people but no information about if they lived 
+or not and you've got to try and predict it and   people compete to get the best algorithms and 
+there's all sorts of options on here in their   words we gave the competitors five well-curated 
+catalogs of humpback whale fluke images to develop   train and test algorithms to achieve the desired 
+automated matching of humpback whale individuals   they actually provided 25 361 training images that 
+had the identity of the whale as part of the data   set and then there was a test set of 7960 images 
+with no identification assigned and so people had   to try and work out which whales those 7960 were 
+they then submitted what they thought the matches   were didn't have to provide their algorithm yet 
+and people were ranked by how accurate they were   they then contacted the top five ranked entrants 
+to see what their algorithm was and if it could be   implemented and it worked here's the grand result 
+Advanced image recognition a fully automated high   accuracy photo identification matching system for 
+humpback whales and of those top five responses   I mean they ended up using the third ranked one 
+which was able to correctly identify 97.1 of the   unlabeled images amazing but of all top five four 
+of them all used densely connected convolutional   networks so we'll go into that in more detail 
+the one that didn't use a convolutional network   used other methods that actually needed at 
+least an order of magnitude more processing   power to achieve the same results so this is 
+clearly the way to go but what is a densely   connected convolutional Network we're densely 
+connected just means lots of connections so   we're going to ignore that the network part is 
+a neural network and that has been explained   far better than I can I'm not going to use this 
+video to explain what a neural network is because   3blue1brown has already done that perfectly and 
+they uses their example image processing here is   an image of a handwritten nine in this case and 
+then they show how you can take that handwritten   image each pixel becomes a single node and then 
+it goes into this a neural network so every single   node at the beginning here is one pixel from 
+the image and then you've got these links and   each one's weighted and what the value is in each 
+of these determines what the combined value is in   these based on the weighted links which control 
+these which control these 10 end ones and there's   10 of them because one corresponds to each digit 
+from zero to nine and whichever one lights up with   the biggest value is the digit the neural network 
+thinks the original hand-drawn symbol was and it   works neural networks are absolutely amazing and 
+through blue one brown I mean Grant just knocked   out of the park with these videos so I highly 
+recommend you go and check them out however what   I thought I would give an extra explanation on is 
+this word convolutional and Grant briefly mentions   this as a type of network in their videos but this 
+is a particular type of neural network that's very   good at working on images and the issue is images 
+have too many pixels for example if we take my   picture of a whale tail open it in Photoshop crop 
+it down to one just small low resolution version   that's still 93 pixels by 60 pixels and if we 
+grayscale that we've now got 5 580 different   values which are going into our neural network 
+and this is a tiny image big images are going   to have way more pixels going in that's too many 
+nodes in our neural network we need to simplify   that down somehow against my bit of judgment I'm 
+going to try and make a convolutional layer for   machine learning you know analyzing an image in 
+Excel which I am already regretting so what I've   done so far is I've pasted in all our values 
+so every single cell is one of those pixels   and they're all different values between zero 
+and one and actually I've inverted them so that   um white cells are zero and black cells are one 
+I'm not going to select the entire image and I'm   going to use conditional formatting so if I 
+go into additional formatting here I'm going   to use a classic Spectrum with the lowest value 
+so the background is going to be white and then   the maximum value of the foreground are going 
+to be black and in theory this should give us a   oh it's oh it's loading a bit okay Excel very much 
+not designed for there it is okay not designed for   this has taken a while but you can see there's 
+the whale tail appearing and actually I'm going   to zoom out a little so we can see it all look 
+at that so that is my original image of the whale   tail this just values in a spreadsheet but as 
+we established too many values imagine an even   bigger picture we couldn't put all of these into 
+a neural network too many nodes so we're going to   get a filter often called a kernel which is much 
+much smaller I'm going to do a little four by   four one up here in the corner okay so I filled 
+this in it's eight negative ones eight positive   ones you take this four by four grid and you 
+apply it to every possible 4x4 Grid in here so   you apply it to this 4x4 you apply it to this 
+four by four you apply it to this four by four   when I say apply it I mean you multiply all the 
+matching squares by the matching values and then   you add them all up so actually let's try and 
+do that over here so we'll zoom out and we'll   apply that to every single pixel in the image 
+so we're going to basically copy it over here   but multiplied by this so that first cell is that 
+one times that one Plus that one times that one thanks to the magic of editing here it is 
+now so I've set all the ones over here to   be absolute references so that stays still on 
+my kernel the filter and then these ones here   are relative so they'll move around and I've used 
+an if then statement to do basically a rectified   linear unit so if it's below zero zero if it's 
+above zero it equals itself just it's it's the   way you'll scale things in machine learning and 
+then that one there is a zero I can now stretch   this out to I worked it out it's GL that would 
+be the same size image again and there we are   there's our duplicate image huh well once again 
+we want to use some additional formatting so we   can see what's going on there so there's a same 
+thing and again background is going to be why   interesting features are going to be black it's 
+not zero to one this time but this will scale and   we'll see what it looks like and oh look at that 
+oh my goodness so now you can see we've gone from   the original image with all sorts of stuff going 
+on to now this and it's picked out features it's   picked out there's a line here there's a line 
+there this is like a line finding algorithm but   because I've coded it up like I can mess around 
+with it a bit so what if instead of it being up   and down what if I switched you know what let's 
+make the middle zero see if that changes anything well that's probably a better line finding 
+algorithm I could take out oh look at that one   oh that's just nothing that doesn't work 
+okay let's put the ones at the bottom again   yeah look at that that's not a bad filter so 
+now we've lost a lot of the noise and we're just   pulling out certain features so actually I'm going 
+to switch this half to be all zeros and then this   side I'm going to put in some more negative ones 
+and so what I'm doing now this oh look at that   that's given us a type of feature what 
+if these were ones oh look at that   I got a lot more noise coming oh that's too 
+much that's too close to the original that's   all the noise back so I'm this is this is machine 
+learning by hand i'm tweaking tweaking these knobs   to see oh no that's just a blurry version of 
+the original uh tweaking the knobs manually in   this case to see what filter I can use to pull 
+out the features I'm after and so there now you   can see I'm favoring vertical features and so oh 
+ignore the strap on oh I went too far this stripe   on the side is where we've wrapped off the edge 
+of the image uh let's just clear that uh because   we've now got smaller because it's for each four 
+by four grid fits and so here we go so that that   I've just messed around I put some values in you 
+can see this is now pulling out these vertical and   sloped features and so this convolutional layer 
+means that we can take our original images instead   of taking in every single Pixel we run this kernel 
+over it and we filter it down to just interesting   features and then only these get passed into the 
+neural network and of course we can do this with   multiple different filters and it worked from 
+the final report they say when compared against   the workflow of manually matching the automated 
+workflow including manual match confirmation   station reduce the time required for matching 
+by at least 98 isn't that incredible and they're   going to add that it reduced error rates from 
+approximately six to nine percent down to one   to three percent depending on the image quality 
+thresholds that's including the low quality images   basically they even say that the error rates go 
+to near zero for high quality images absolutely   incredible it's made a huge impact I will link 
+to the paper below if you want to go check it out   they've also said that access to the algorithm 
+and the supporting information architecture is   available for use at no cost via their website 
+happywale.com so go check that out as well but   it does now raise the question if they've managed 
+to cut this down over 98 of the manual matching   version what on Earth was the manual matching 
+version how do you do this manually thankfully the   ship I was on in Antarctica the MS rolled amundsen 
+was as well as being a floating luxury Tree Hotel   don't get me wrong with also a science ship so 
+they had a full-on science lab all sorts of great   science excursions and data collection I had so 
+much fun if you go to standupmath.com Antarctica   it will take you to the herty gruten website that 
+I booked I mean I paid for this trip myself my   patreon supporters will be very pleased to know 
+but if you want to go on the same trip I cannot   ever recommend it please do check that out an 
+event on board they had a science coordinator this   is Zoe Walker and when she was doing science she 
+had to identify humpback whales the old school way   so I asked her how on Earth they did it and Zoe 
+you used to have to look the whales up in a book   to say how how on Earth do you look up a 
+whale in a book well it's a very very big book   um it's just a very large catalog so the whale 
+tails the humpback whales their tail pattern can   be sort of broken down into General categories 
+so you start based on the amount of whiteness   on the tail so they range you know ABCD from 
+Mostly black to mostly white and then you can   see different patterns so maybe the white 
+is at the stock or the bottom or the top   and uh and so you start there and that narrows 
+it down a bit and then you just spend a lot of   time narrowing it down a lot more because I was 
+wondering how on Earth we would you can't put   Wales in alphabetical order not so well no but you 
+can do it by like percentage of uh White there's   a penguin That's Just floated by as well I don't 
+know if that's yeah that's a penguin uh what kind   that I want to say magellanic correct ding ding 
+ding here we have another creature please identify   this from my continued cooperation that looks 
+like it's going to be a a black brown Albatross   someone has been look at that Science Program whoo 
+ah I feel like I'm bordering on being a biologist   um yeah okay so so if you want to identify a whale 
+yes you look at the percentage of white yeah you   flick through the whale of a book find that and 
+then and then there's just like pictures of Tails   pretty much and you've got to locate the yeah more 
+or less so they kind of come in distinct patterns   uh so if you look at enough whales you start to 
+see it's not just the percentage of them but also   you know more along the bottom or more along 
+the top Edge or from the middle going out or   asymmetrical of course is everybody's favorite 
+default category and then you just spend hours   until you find the well you're after you just 
+flicked yeah you start to become familiar   with them and if they've been seen in that 
+area regularly then you kind of know where   to look but it's actually very interesting over 
+time because the whale Tales evolve as they get   new scars and new Barnacle marks and maybe boat 
+damage which is unfortunate but we do see it so   you might get one that you're like this is a 90 
+match but actually it's something a bit new now   the the the the the whale has aged yeah and um 
+the patina of ocean life right now okay but Joe   you'd be pretty happy if you could automate the 
+bulk of that to just take a photo of the tail   and it tells you the whale I think it's one of 
+the best uses of Technology we have there you go an email's just arrived let's have a look an 
+individual you encountered in Antarctica was   determined to be new to science to the best of 
+our knowledge and has been assigned an official   well number we hope you're pretty excited I'm 
+pretty excited the problem probably oh sorry do   you want to take it from okay the problem is a few 
+days later I got another email it turns out they   weren't able to match it to a different whale 
+in the database giving it the new catchy name hwmn1300439 however it was still a whale I managed 
+to cite it was recognized in happy whale and it   did not yet have a name and that was something I 
+could fix back to you voice over Matt here is my   whale you can see since I saw it down here in the 
+Antarctica Peninsula actually if I zoom out you   can see the rest of Antarctica which is huh a lot 
+skinnier and more repetitive than I remember it   being projection joke okay anyway let's spot it up 
+here in Chile uh it's pretty exciting you can see   the people who saw it down there and the pictures 
+they took and actually where's my pictures it's in   this group here uh no that's not my picture that's 
+me oh that's mine there it is oh and these people   saw it too Hilda and V who are these people Hilda 
+and V I guess they were on the um hurtigrutin ship   same with me ha I mean it was a fun ship there 
+was a lot of people on there but I didn't realize   anyone else cleaned up it's my picture let's have 
+a look is it just my photo or do they get a photo   too no just me oh they just said they saw it oh 
+come on those Free Loaders but more importantly   hasn't been named yet right so it's swimming 
+around it's still called unnamed or HW mn1300-439   however if you have a look up here you can 
+name your whale right if you donate money   to a whale or ocean charity you can then name 
+the whale and so I'm gonna name it Krill bill   Krill Bell if you think you've got a better and 
+or funnier whale name find your own whale get to   Antarctica and work it out for yourself wow I 
+really am in the middle of nowhere here and as   that fog rolls in I could be anywhere much like 
+this video sponsor private internet access.com   stand-up maths means that your computer or 
+phone or any device could be anywhere and   private internet access is really useful when 
+traveling I can open the app on my phone I can   go through the list of where all the servers are 
+I can connect to them look at all these countries   I would then pick one in the UK so here we go 
+let's go to London and then it just connects   and now all the traffic from my phone is going 
+via London I can carry on doing business as if   I was at home and I'm only paying two dollars 
+and 11 cents a month to connect to any country   I want and as a bonus hypothetically bypass 
+any content restrictions on a Wi-Fi network and   in a emergency so you know the video about how 
+there's no equation to plot a triangle I was   actually finishing that while I was in Antarctica 
+and I had matam my plotting software running on   my machine at home and I don't want to go to the 
+details but because we do have onboard Wi-Fi in   Antarctica it's ridiculous I was able to finish 
+the video remotely because the onboard Wi-Fi here   had no idea what I was doing online what websites 
+I was visiting what may or may not be blocked I   was able to finish my video and it went out on 
+YouTube so huge thanks to this video sponsor   privateinternaccess.com stand up maths hold up 
+rewind did you spot that in the background that   was a whale I didn't even realize there's one 
+behind me when I was filming that Antarctica is   amazing if you can get that you must go there's 
+just incredible Wildlife everywhere and I had   a lot of fun I mean I'm not a biologist but 
+I really enjoyed spotting it in fact as you   saw I think I got so good at spotting Wildlife I 
+may have actually earned a legit biology degree wow the posters here oh I did get a legit biology   degree check that out and 
+it wasn't even on purpose

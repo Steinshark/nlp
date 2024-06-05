@@ -1,0 +1,135 @@
+- Intel's new Dragon Canyon NUC Extreme is like nothing we've ever seen before. But you wouldn't know it from the outside. Packed in this shoebox sized enclosure, wait, no, this one, is a shockingly zero compromises PC. Gaming at 4k? Easy. Content creation? No biggie. There is nothing it can't do. But it's also clear that Intel's engineers had to find some creative solutions to make the whole package
+come together this tightly. Just like I find creative solutions to tell you about our sponsor, PebbleHost. PebbleHost offers dedicated servers starting from 39.99 a month
+with a range of systems for all use cases. Use code Linus for 30%
+off your first month, valid for the first
+hundred people who use it. Spurred on by the rise of the Mac mini and other single board computers, Intel's NUC concept didn't
+start out like this, but rather like this. The kind of thing that you
+might find at your local library or gracing the desk of
+your friendly neighborhood spreadsheet warrior. These compact machines have
+been incredibly attractive to businesses for their
+flexibility, portability, and most importantly, their cost. So then, how did this become this? And is that even a good thing? Well, Intel's ninth
+generation Ghost Canyon saw the six to 25 watt
+power-sipping cuboids like this one, replaced by a larger 45 watt powerhouse. Still no full size GPU slot, but given the form
+factor, that makes sense. And you can always add an external one. Then 11th gen came around and, boom, four different NUC models. You got the Performance and Pro, which were still in the micro PC format. Then you've got the Enthusiast, rocking an RTX 2060 that
+made for a heck of a package given the size. And finally, the Extreme. This guy right here. The main innovation
+for the Extreme edition was the inclusion of a
+modular compute element that contained the storage
+slots, memory slots, CPU, and cooler, all
+of which were designed to simply slot into a back plane that was pre-installed
+in a larger chassis. Because there was more room to play with, the Extreme was equipped with
+a modular SFX power supply and space for a two slot
+GPU up to 10 inches long. And naturally with extreme in the name, Intel decided to give it RGB underglow for that "Too Fast Too Furious" style, and a modifiable backlit
+skull front plate. But that was last year's model. What's new for 12th gen? (Linus grunts) - [Camera Man] Whoa. - Okay. We've got the Core
+i9 12900 equipped model and up front, there's
+only one major change. The dual USB-A ports are now a type A and a type C that runs thunderbolt 4. Then around back, this is where things get really interesting, because above the 2 1/2
+gig Intel network port that we had already, there's
+a new Aquantia 10 gig port. Having this onboard
+makes the Dragon Canyon pretty much the only player in
+town for a machine this size that can fit a full size
+GPU and effortlessly handle high bit rate video editing
+off of a shared network drive. Then we've got the usual
+assortment of USB 3 10 gig ports, an HDMI output, over here
+on the compute element just in case you don't
+want a discreet GPU, and two more thunderbolt 4 ports, each supporting up to
+six daisy chain devices. So when it comes to IO, this
+thing is absolutely packing. And the most unbelievable part is that even with top tier hardware inside, it managed comfortable temperatures
+on both the CPU and GPU even in unrealistic synthetic workloads. And all without sounding
+like a hair dryer. I guess that's what full
+mesh side and top panels will do for you, right? Now let's have a look under the hood. Just gonna, clear some space here. Four captive screws on the back. This pops off. Both
+side panels slide back. Little something like that. You pull this bad boy up, and we're in. Now, my fabulous assistant
+over here has done the same, thanks Colin, to the 11th gen version and side by side, it becomes easier to start noticing a few differences here. Starting from the top, the 90
+millimeter Cooler Master fans have been replaced by 92
+millimeter Sunon fans. Fun fact in computer terms, 90 and- - [Camera Man] Oh. (beep) - 90 and 92 millimeter are the same thing, they're used interchangeably, who knew? The other changes are shrouded
+in secrecy, deep within. Yes. Let's go deeper. So the first step to doing that is to remove our Intel Arc Alchemist GPU. Unfortunately, it's pre-release
+so it's got full active camo so the camera won't be able to see it. Let me just get this put away over... Just gotta keep it clear over there. - [Camera Man] Wow. - Be careful handling those, stressful. lttstore.com. Next we're gonna pull out this little airflow ducts maneuver here. Now you might think looking
+at the back of these devices, that they've got, you know one
+slot for the compute element, two slots for GPU, and then a final slot where you could put a
+network card or a wifi card or a raid card, who knows
+what you wanna put in there. But actually, it's completely
+bare because it needs that extra space to pull in
+fresh air for the compute unit. Otherwise, I mean, it
+would be pulling in hot air off the back of the GPU. This thing would absolutely freaking cook. Two more captive screws, man
+do I ever love captive screws. The last thing you want
+is to drop a screw here and have it fall onto
+this board down here, short something out, sucks. Let's pull this up and oh, there we go. Oh, wow, that gives us
+a really great look. Got a couple of thermal pads
+for a couple of M.2 slots, and ah, this is another difference in it. Okay. Just a second here. Let's pull out this guy. Aw yes. Gone is one of our M.2 slots here. So you can see here's our SO-DIMM slots. Here's one M.2, two M.2, three M.2, all supporting full size
+2280 or not full size, but standard size 2280 and VME drives. But over here we have just two of these along with our two SO-DIMM slots. These are DDR4, by the way. And the third one has been
+relocated to the back. That's right. Pop off this. Whoop. There it goes. Something that is a downgrade though, is that the original NUC Extreme
+had another 110 millimeter M.2 on the bottom here
+and that little trap door on the 12th gen one opens up to reveal a tooling cost savings where
+they reused the trap door but don't actually have
+anything there anymore. The good news is that while
+we go from four M.2s to three, all three of them run
+at gen four speed now. So at least they're all fast. If you wanna take the
+whole compute element out, you'll wanna be extremely careful with these antenna connectors. We accidentally broke the
+other one during testing. Mm. Okay. And the reason that I
+wanted to take this out, there we go, was to show you the wifi M.2 in the back here, but
+the backplate appears to come off with screws
+from the other side which means we need to go deeper. Oh, well, there we go. That was relatively straightforward. Just those four around the edges. And that gets us a
+perfect look at actually, both the wifi chip, which is wifi 6E. So that's an upgrade over last gen, which is just wifi six,
+as well as our PCH. Whoa. This thing is
+heavier than it looked. I guess that's what all
+copper fins will do for you. That explains how it manages
+to cool this darn thing. And look at the size
+of that vapor chamber. It covers both the CPU and the VRMs. Oh right, and we haven't even
+gotten to the best part yet. Unlike its predecessor,
+it has a desktop socket. So even though it comes with a 12900, conceivably we could put a 12900K in it and see if if it would run it. There you go, oh, no problem. There's still time for me
+to break something today. Yeah. Okay, we need a GPU. Whew, I think this is the only
+one of these in the building. RTX 3080 Ti, baby. We're going big or going home. Okay. You know, with it pulled apart, you can really see how they pulled off those excellent thermals because the CPU is sucking fresh air in straight from outside of the case. And then the GPU, same
+thing, is gonna be sucking fresh air in right through the mesh. It's fricking awesome. I love it. - Okay. We've got the 12900K all fired up and getting it to work was not easy. It appears there's some
+sort of weird current limit for the chip at one amp. And when you're running
+something at like 1.2 volts, that's like a watt and a bit. Basically 400 megahertz
+is how fast it was going. We were unable to get
+into Windows 11 at first, due to a BIOS feature
+that we couldn't enable, halting the boot sequence but it turns out Windows 10 did work. We then used the Intel
+Extreme tuning utility, uncorked the current limit. And boom, there's plenty
+of performance actually but not all of it. We were still falling way short
+of our prior CineBench runs that were in Windows 11
+by nearly 6,000 points. We added in TechPowerUp's ThrottleStop. And after some fiddling around, we unlocked most of the
+potential of this thing. It appears that we're
+very thermally limited, not very surprising. And we are able to get
+within margin of error of our original CineBench multicore runs, like a few hundred points. Well, until right now. So we were at 16,000 before but with just a little
+bit of undervolting, we were able to get it to
+19,000, which is frigging wicked. Let's just drop the voltage more. Basically less voltage
+means less temperature which means higher
+scores until it crashes, which it might right now. Yeah, 'cause before these were immediately jumping to a hundred degrees. Now it's like in the nineties for a bit, it's probably gonna thermal throttle here but we're drawing 130 watts. And because of the lower voltage, it's not immediately killing itself. Oh, and it was slower. So I guess we picked about the sweet spot for undervolting before,
+negative 0.1 volts. That seems to be where it's happiest. That's a 4770K worth of
+performance right there. That's mangled. It crashed. With a little bit of tuning, it is clear with an unlocked processor, you can get a lot more
+performance out of this. But I wouldn't, you know, trust it. It's very clear that the
+12900 that Intel had in here from the factory was the right call. Like Colin, how mad
+would we been if they had this 12900K in here and you
+just couldn't use most of it? - It kind of defeats the purpose. You spend $300 more on an unlocked chip and you can only eat like
+18% more power out of it. So like really what's the point there? - One thing I do find really interesting between the old NUC and the new one is that on the old NUC, I was able to get way
+more performance out of it by increasing the TDP of the
+chip to around 90, 95 Watts. And it survived it. Like it was hot, but it could do it. Whereas in the new one,
+probably because of the IHS and just the space that takes up, we can only get about 65
+watts out of this chip for a long period of time. Just more between your chip
+and the cooler, higher temps. As for the Dragon Canyon NUC as a whole, it's a very compelling package. There's connectivity,
+more CPU performance, 10 gig networking, and PCIe gen five to pair with Intel's
+upcoming Arc Alchemist GPUs. All in this tiny little
+football of a case. There's really nothing else quite like it. But the cost? Well, the i7 variant comes in at $1,150. While the i9 we have here
+will separate you from $1,450. And that's before you buy
+the storage, a graphics card, and the memory, but don't run
+away at the price just yet. We benched a couple of systems to see what it would take to
+get all these features. And in that context, the
+pricing's kind of sane. Obviously we can make some
+compromises to save a buck. Maybe we don't need to
+have a bunch of M.2 slots or 10 gig networking. But if we want to maintain feature parody, we're getting dangerously
+close to the retail price of the Dragon Canyon NUC and we weren't even able
+to match it for its size. So with a three year warranty and this level of build
+quality, I can see the appeal. I could see a gamer on
+the go picking one up or a traveling video editor or vlogger. Heck I could even see someone
+using this as a professional. You could just chuck like a Quadro in it, awesome CAD workstation, or even just as a banging home theater PC. Speaking of which, we have some awesome new home theater content coming out soon. So get subscribed. You won't wanna miss it. And you also will not
+want to miss this segue to our sponsor, ting. Do you like saving money? Ting Mobile is a low cost carrier with rates that help you do just that. Starting with unlimited talk and text for $10 a month and data
+plans for $15 a month. A set 12 plan with 12 gigs
+of data is only $35 a month. And if you need it, unlimited data plans are available from $45 a month as well. You can even share your
+data on a family plan to save even more. Ting Mobile also offers pay per use plans with their flex plans,
+charging just $5 per gigabyte. And even with those savings, you're still getting
+national wide coverage and award-winning customer support. Consumer reports named Ting Mobile their number one carrier in America. Almost every phone on the market
+will work with Ting Mobile and they have the perfect
+plan for everybody, no matter what your needs are. So check them out at linus.ting.com
+to receive a $25 credit. Thanks for watching this video. If you want one of these
+NUCs, links down below, and if you want to check out
+our other NUC content we did, well, that'll be on the
+end screen right here. Have a good day, bye.

@@ -1,0 +1,137 @@
+- To answer the question once and for all, whether you can water cool an air cooler. Hold on we got to get all the
+fins. Alex, what'd we get? - [Alex] We're at 85 now and dropping. - Nice! - [Linus] What kind of motherboard has nowhere to install a CPU? Well, no motherboard, all mother boards need a CPU because otherwise
+what will do the processing. But if you look at this
+one, there's something a little unusual about it, right? You got your PCI express sockets,
+you got your memory slots, and you got just a blank metal plate. That's because the CPU
+socket is on the back. But why? Well, as it turns out this
+motherboard was designed with some pretty unique
+cooling concepts in mind and I for one cannot wait to try it out. And I can't wait to tell you about our sponsor, dot tech. Dot tech domains, and namecheap are donating 100% of all sales
+proceeds from dot tech domain sold until July
+5th to code.org to help make computer science
+education more accessible. Checkout go.tech/ltt to learn more. (upbeat electric transition music) - Other than the CPU socket
+being on the opposite side, the ANC tech rev Q2 70 is a pretty standard looking
+industrial motherboard. What I can't say the same about is the heat sink that
+they designed for it. And in order to explain why they thought that this was the best solution, I think we're going to have to back up. ANC tech is a spinoff company of - [Linus] EDAC electronic technology co, who specializes in inspection equipment for electronics
+manufacturers like Foxconn, Panasonic, and Sony. AKA
+these guys are the bad asses that do the engineering work that lets other engineers
+test their engineering work. And for their inspection
+equipment, EDAC needed to have ultra stable computers that are basically impervious to dust. So, logically they just went ahead and designed their own motherboard and flipped the CPU socket around. You see when you're working in a manufacturing or
+fabrication oriented space, there's nothing you can do about the fact that there is going to
+be some dust in the air. And, unlike in your bedroom, we're not talking about cat hair, we're talking about
+potential metal filings. Microscopic ones floating
+around in the air which can eventually cause enormous problems for a computer. That's why in a workshop, passively cooled machines like this one from compulab here - [Linus] are King.
+Even slow spinning fans with an excellent dust filter are going to quickly get clogged. But to pull off this little Marvel - [Linus] compulab had to create an entirely custom
+chassis, motherboard, and actually a fair number of other things. So EDAC wanted to create
+something that's a little more modular, and a little more affordable which explains how we ended up with a standard ATX
+form factor motherboard. But it still doesn't explain this. Well, the thing is, - [Linus] to passively
+cool, a CPU, even one that's not terribly powerful, you need a lot of metal.
+And EDAC wasn't able to fit a big enough cooler
+on the front of the case - [Linus] while still allowing
+for PCI express expansion. See that. So after putting in the work
+to create this motherboard for their own uses, EDAC
+thought, well, I mean, yeah. What if somebody else
+found this useful, thus ANC tech was born and we
+were able to get our hands on this motherboard, so let's try it out. Wait, we are going to
+submerge it in water right? - [Alex] Well not that bit, but yeah. - Oh, sorry. Not that. - [Alex] Yeah not that one. - Not that. Oh, but, but the thing, - [Alex] Yeah. Oh good. Just making sure. Everything about this feels wrong. Starting with flipping over the motherboard to install the CPU. We're going with a core S seven 6,700 K. This is near the top end of what this motherboard can support, but we're going to try a 7,700 K
+a little bit later and, oh, this is an interesting note. Is there no cooler for the chip set? - [Alex} There is Actually. I don't. There is. - [Alex] Yeah Oh, wonderful. Hey, look at this. When
+I see stuff like this it makes me wonder if
+the engineers at ANC tech aren't watching LTT,
+because we've said a lot of times, it's baffling,
+given how shamelessly computer companies rip each other off, that more of them haven't just ripped off Noctua secu for a mounting mechanism. And that's basically what this is except with kind of a
+clever cost saving measure. So they use an O-ring here to secure the back bolts instead of
+having them be pressed fitted which is just kind of
+cheaper ,but a lot better than having them just flop around like a lot of other guys do. There we go, just put - [Linus] that, Oh, huh. Well, didn't think of that. Look at this Brandon There's so much space back here because of like the IO and stuff
+that you can't just, you can't just put it here and
+then put it down on the box. I guess I just have to do it like this then, like
+is this how you did it? - [Alex] Not even close. - Oh, all right. Well, this is how I'm doing it. All right. There we go. Can I get that chipset
+cooler by any chance? - [Alex] All right. - I'm going for the no look catch. Oh, what the, who does that? Threw it at my head. This is a very wimpy heatsink, considering that it is designed to be used
+with a passive CPU cooler. Ya, (teeth scratching metal) not much to it. ♪ Compound. ♪ And, no way! (snort) - [Alex] Really? - It's just not aligned. They just used a generic,
+whatever this spacing, which is pretty standard, heat sink. And it doesn't actually
+line up with the little like silk screen marks they need for where it's supposed to sit. Another cost saving measure, is that it doesn't come with a CMOs battery. So you'll just have to
+get your own CR 20 32, three volt cell and pop it in. Really guys. (deep sigh) Okay. It's not designed for end users. Clearly. Let's go ahead and pop this on. - [Alex] You'll wanna put that
+on after it's in the case. - Oh, that makes sense. Yeah. Cause like, Well, can I just put
+it on for temporaries? - [Alex] Okay - I just want to, I won't even put thermal compound on for now. I just want to see, Oh,
+I need a screwdriver. No look catch. No, we're not doing that Man. If they just sold this heat sink, this thing is like bad ass looking. no idea if the performance
+is actually any good, but it's definitely bad-ass looking. It looks awesome. Are we like at the point of diminishing returns though? Being this far away from the CP I guess not with a passive heat sink. I see we've gone with
+Trident Z, Royal thins, because I guess we're going for the most fanatically coherent
+build of all time. Now, all we need, (groan) is a case large and hefty enough to accommodate this flippen beast. And as Alex alluded to before, there is no case hefty enough to fit this heat sink
+through the motherboard tray while you're installing the motherboard. So we're going to go
+ahead and pop it off now. Everything about this feels
+kind of wrong, you know I build so many computers in my life and this is the first one like this, this is a "thanks I hate it and a half". Cursed motherboard. - [Alex] What do you have
+against this thing Linus? - It's just, I had nothing against it. I was super excited about it until I had to actually like, touch it. You know? - [Alex] It says on their
+website that it fits most cases. - Uh huh - [Alex] But some require modification. - Yeah. We tried a few cases and lots of them interfered with
+the top of these heat pipes. And I think having your compatibility list account for people doing modifications to their case is kind of cheating because with a dremel, theoretically, anything is compatible with anything. (rubbing metal sound) - Oi! That looks awesome. I mean, by the time you hack
+a hole in your side panel (laughing) it's probably not going to
+be the cleanest mod ever done but the potential's there. Well, let's get OCCT running, right? This is a CPU stressing
+tool that will allow us to see just how well that heat sync can keep up with a 6,700 K. Hottest cores up at around
+65 degrees right now It's not even hot to the touch yet. There's just so much metal. - [Linus] Right up at the top
+of those heat pipes there. But you can also really see what a great job heat pipes
+do of moving heat around. It's not that much cooler at
+the very end of the heat pipe. It's really even. Meanwhile, over here you can see that with every load spike
+temperatures were peaking a little bit higher
+than before, until now. You know what probably happened? A tiny bit of air flow
+from me moving the case around probably caused it
+to go down a little bit. Let's keep it still again. It steadied at around 80
+degrees on the hottest core which is not what we were expecting based on either ink techs testing
+or Steve from gamers Nexus's testing. However, we have observed that our CPU is only running
+at around 3.45 gigahertz. So we're thinking maybe
+there's a bio setting that's not allowing it
+to run at full power. Were gonna go ahead and try that. Yeah, we got turbo working
+and it can't do it. (stifling laughter) - We've managed to thermal
+throttle within about two or three minutes, but ANC tech,
+doesn't say you can do that. And it's a pretty easy problem
+to solve if you want to just - [Linus] throw a big 200
+millimeter fan on here. But Stephen from gamers
+nexus already did that. We have other ideas (laughing maniacally) (running water) Okay. Not too much cause
+remember this has some... Oh my gosh, this feels
+really, really, really wrong. What we're about to do right now. Uh, oh, okay! (laughing) All right. I will lift it. Oh crap. I'm stuck. I'm snagged dog. Our power cable is cable tied. LTT store.com baby. Get them cable ties. Okay. Okay. Oh, this feels so wrong. Wait, what are the CPU temp at? - [Alex] Well there's a
+thermal throttling right now. - Okay. Here we go. - [Brandon] Okay. - [Alex] Is it fine? - I mean, theoretically,
+it should be fine. - [Alex] Oh wow. (high pitched laughing) 100 degrees down to 74 - [Linus] Now that's water cooling boys! Okay. So we're at about 70 degrees. I think we can do better. Okay. Phase one, lift the computer. - [Alex] I think getting
+on the table might be the best solution. - I think that this table is on wheels and that... (water splashing) - [Everyone] Oh! - [Alex] Oh Linus! - It's still running. - [Alex] Okay. - No, yeah, no dude you're not getting on the table, Alex. - [Alex] Okay - You ready? - Yep. - Yeah, go ahead and lift it. Okay. You're going to have to have it for a little while though. - What's that? That's not good. - Did it power off? - It's powering back on. (laughing) - Hold, hold! - I'm holding. - Okay. One second. I just need to... - Okay, I guess let's just get these... - Wait! I just need to,
+wait, hold on. I need to, (water pouring) Oh God! Alright. - I think that's enough water. - Alright, there is, ah, there's water. Hold on. You gotta put it over this one. - [Linus] Okay. I got
+your second bucket here. (high pitched laughing) Okay. You know what? We've got a little bit of submersion but we're going to have
+to add some more water. I'm going to start another render. She'll be fine. We're learning so many
+things today that will never be applicable to anyone else ever again. Small problem, Alex. - [Alex] Yeah. - I think I may have
+actually splashed the VRMs over here when I rocked it back and forth. - [Linus] Can you see that? - [Alex] Mm hmm - [Linus] Yeah. It's water. Okay. Well that might explain why it was crashing under load. I'll put these in for fun
+while Alex gets a bag of ice. (clacking) - [Linus] This is so cool. You can see the very end of the heat sink is a little bit cooler
+and you can kind of see a halo of warmth around it in the water. Hey Brandon, check this out. We were trying to stick a thermal probe in the water near the heat sink, to kind of see how close these values are. And it kept reading exactly
+the same as far away. And what we realized is,
+it takes such a small disruption to move these warm areas of water, that you
+basically can't measure it by physically sticking something in. Watch this, watch this. - [Linus] Okay. I'm going to blow on the surface of the water. - [Brandon] That cool. - I want to get a shot of the premium ice. - [Alex] Premium ice. - [Linus] Get the ingredients, please. (chuckling and snorting) (bag crinkling) (grunting) - All right, just got, This bag is just going to give birth here. Birth bag. No, I got this. (bag crinkling) (Grunting) When this hits it, are we going
+to have a Titanic failure? - [Alex] (scoffing) That's definitively a reason. (metal scratching ice) You'll have to excuse me for not knowing how to use a bag of ice. I don't entertain much. I don't have any friends. Alex invited me to a super bowl
+viewing party once though, that was kind of him. - Yeah you brought your
+kids, it was really cool. (laughing) - [Alex] So we're currently
+at 92 degrees Celsius. - Uh-huh (crashing) Oh! Okay. There's a, there's four ice
+cubes stuck under the heat sink. - [Brandon] This is so stupid. - Well look, I don't make the
+rules around here, Brandon. So that puts us at around 60 degrees. But I think we can do better
+because as we've learned even just small differences in location or flow can make a big difference
+to the actual temperature. So right up here, it's like 0.7 degrees and then
+you go, you know, what? To eight to nine centimeters lower. And you're at eight degrees. If only there was a way that
+we could move the fluid around inside the container. You
+think of everything, don't you? How fun is this? (laughter) Okay, let's add a pump. This is a submersible pump. Do you wanna go ahead and plug it in on the other side? - [Alex] Sure. - And I'm just going to yolo it, I guess. Right? Okay. - [Alex] The power cables
+only in their a bit. - It should be fine. I
+mean the pumps power cables in there too. What could go wrong? Okay. That seems like a good spot. Ooh that's chilly. It's a chilly boy! Oh, it's splashy. Ooh
+it's really splashy. Alex! Hold on, turn it back on. Turn it back on. I'm trying to show the peeps. Hoo! Yeah. That's a little
+splashy for my liking. - [Brandon] Too Splashy? - I don't know. Let's find out. Maybe if it was just the
+right amount of splashy. Is it still blending? - [Alex] It is. But I think the temperature is like the same. - That kind of makes sense cause it was coldest at the time, no, no, no. It's trending down. - [Linus] Look, it's
+totally trending down. And we're still at 4.37 oh you can totally see the water, like touching
+the base of the heat sink. Settling in at 56 degrees on the package, full load. Pretty practical, right? - [Alex] Yeah. Daily-able for sure. - And you might get the
+opportunity to daily drive a cooling system like this because they're actually releasing a more - [Linus] gaming oriented,I guess, product. It's based on
+a Z four 90 chip set. - [Alex] Yup. - So yeah, we could probably come up with something better
+for daily driving. Couldn't we? I think we can. We will. We will. I promise. Make sure you're subscribed and make sure you check out our sponsor. Thanks to Flexi spot for
+sponsoring this video. - [Linus] Flexi spot offers
+ergonomic solutions that help people lead healthier,
+more productive lives and they're celebrating their
+birthday by offering 15% off everything site-wide and up to 30% off flash deals each day
+from May 24th until the 30th. - [Linus] One of the products
+available is their Cana bamboo standing desk which offers customizable height
+presets, anti-collision, and it's super easy to install. And the bamboo material is made with lateral compression
+tech to retain the natural beautiful grain of every bamboo strip. The frame can handle up
+to 275 pounds, stands over four feet, and is available
+in three different colors. Flexi spot is even giving away
+three desks to LTT viewers. All you've got to do is click
+the link below to enter. So don't wait and learn
+more about the sale at the link in the video description. If you guys enjoyed this video and you like Linus and
+Alex crazy cooling projects maybe you would enjoy the; why don't we do the five gigahertz
+blowymatron laptop over clock. - [Alex] Sure. - Yeah, go watch that. It's a good video. Remember when we tried
+to reuse thermal compound from inside a CPU. - [Alex] No, that wasn't a good video. - No, that wasn't a good video really?

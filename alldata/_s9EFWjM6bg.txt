@@ -1,0 +1,94 @@
+- Free performance? Wow! How much does it cost? It's free? Nothing in life is free. But Nvidia's DLSS is really close. Look at these images side by side. One of them is running
+at native 4K resolution, and one of them is an imposter running at just a quarter of
+that, then upscaling to 4K. Can't tell which is which? You're not alone. - I think this game is going
+to be really hard to tell. - It's pretty hard to tell the difference. - Not a lot of difference. - The best part is that the
+GPU in our upscaled machine only costs a quarter as much. Let's talk about how this
+technology works then and see who from the LTT team was ultimately able to
+tell the difference. Our test was generously sponsored by LG, who also provided their new G1 TV featuring a second gen OLED Evo panel. This is as good as it gets for gaming TVs, and will give our
+participants their best shot at picking out the imposter 4K GPU. (beeping) (upbeat music) There are many obvious benefits
+to a premium graphics card. Typically they have enough
+performance headroom to enable advanced visual features, like more realistic hair rendering, real-time dynamic lighting
+and higher quality textures. Of course, you can get all of those things out of a mid-range GPU, but if you can't render
+enough frames per second, they come at the cost
+of animation smoothness and input responsiveness. That's why medium settings exist. Of course, if you don't like
+turning the details down, another great way to get more FPS is to drop down the resolution that your GPU is rendering at. But take it too far, and the
+downsides of stair-stepping or aliasing and chunky looking textures start to outweigh the smoothness benefits. That's where DLSS comes in. It combines the visual benefits
+of high end game settings with the performance benefits
+of lower resolution rendering, using a process that I call magic. I'm just kidding. This is magic. Lttstore.com. DLSS, that's not magic. And it wasn't always
+actually even very good. In the first iteration,
+Nvidia would generate both low resolution frames
+and then the same scene again, but super sampled a perfect frame, then they would train their AI to compare them pixel by
+pixel and fill in the gaps, all of this in real time on
+the RTX series tensor cores. Very cool, but very flawed. Version 1.0 lacked temporal awareness, which made it basically impossible to accurately upscale moving objects. And it had to be painstakingly implemented game by game, scene by scene, which led to all manner of distracting and even comical results. Oh yeah, and the performance
+uplift wasn't that great. But with version 2.0 and higher, the results are pretty shocking. In our double blind test, subjects played three
+games on our LG G1 OLED TV, Cyberpunk 2077, Control and
+Metro Exodus: Enhanced Edition. - So I'm just trying to
+tell which one is which? - [Man] Yeah. - Okay. - Avert your gaze. Let's do like this. - This is gonna be really embarrassing if I don't get it right. - Our two gaming PCs had an RTX
+3090 for native 4K rendering and an RTX 3060 using DLSS
+with otherwise identical specs. There was no time limit
+and our participants could switch between the
+inputs as often as they liked. - The sign is just completely, it's like the quality
+is turned way up, so. Okay, what would that mean? So on DLSS you get to turn the details up and still run a higher frame rate. So whereas a native, you would have- To maintain the frame rate, you turn the details down. So if this one was DLSS, they would have the
+details turned up higher. - [Plouffe] Yeah, like, if
+you weren't analyzing this. - I would not notice the difference. It would be the same. - God, there is no different at all. Maybe I'm just looking at the wrong thing. Let me go somewhere else. - Between the reflections over here and the character's hair textures, I'm pretty sure this one
+here is the 4K native. The definition between the strands of hair is a little bit less over here. It seems to be almost like, I don't want to say blurred, kind of more like it's painted on, whereas over here, the definition seems to
+be more self-shadowed. So there seems to be more actual like, pixel work going in. Also, if you look over here, there's a little bit of detail
+in this reflection here, but on this one, we
+don't have that detail. So I'm pretty sure this is DLSS. - Yeah, this is DLSS. See this, this lamppost right here? - [Man] Yeah. There's a little bit of kind
+of artifact when you move. When you're still, you cannot tell,. But when you move slowly, you can see just a little bit of kind of, it's like a fuzziness. Boy is it subtle, though. - While Anthony and I
+both correctly identified the DLSS machine every time,
+even in performance mode, which renders at just 1080p and upscales, we both relied on our technical knowledge rather than trying to subjectively pick the better looking one, and we both agreed that without specifically looking for clues, almost no gamer would
+notice the difference in the course of normal gameplay. And this is backed up by
+the rest of our results. Interestingly, Andy, who's a bit more into the
+artistic photography scene, ended up actually preferring the slightly softer look
+of DLSS in some cases. If you want to see what we saw, the screen capture from both systems will be uploaded with corner cameras as a behind-the-scenes on Floatplane. I'd recommend the 4K tier for
+image quality comparisons. So what did Nvidia change
+to make it this good? Well, with DLSS 2.0 and up,
+the AI is no longer trained on each game individually, but rather on a generalized dataset. It now uses 16K reference
+images to improve clarity, and it now takes motion vector
+data from the game engine to predict where moving
+objects are going to be in the next frame. That improves accuracy. The smaller updates have
+mostly added features with 2.1 adding an 8K
+ultra performance mode, VR support, and the
+ability to upscale games that dynamically alter
+their own resolution, depending on scene complexity, and DLSS 2.2 was mostly focused on performance improvements and bug fixes. Of course, as I said before, nothing in life is free. So what's it costing us? Well, to find out, we
+ran LDAC latency tests on our 3090 system using both 4K native and DLSS performance mode. And what we found was that we got about an extra one millisecond of click to photon latency on average. And considering that you
+can be doubling your FPS in many cases, while
+DLSS is clearly adding some processing time,
+to me that looks like a pretty good trade-off for the increase in frames per second. Also, as we played through these games to find good comparison
+scenarios for our testers, we found some more obvious
+examples of poor upscaling. But that's actually about it. In performance mode, which is
+usually using 1080p textures to fill in at 4K, it's an
+extremely compelling story. We've got more than double
+the original frame rate in both Control and Cyberpunk compared to native 4K on our 3060, and while Metro Exodus: Enhanced Edition saw slightly worse results,
+they're still very impressive. But we haven't answered
+the biggest question here. For years, hacky
+corner-cutting in GPU drivers was considered cheating. So why are we accepting anything
+other than the traditional brute force pixel-perfect
+approach to driving more FPS? The answer is that we
+don't really have a choice. Developers keep building more and more realistic looking games and manufacturers like
+LG, wonderful OLED TVs, thanks for sponsoring the video, have pushed the resolutions
+of their displays so high that GPU makers couldn't
+possibly hope to keep up unless you want your GPU to
+take up half of your case and double as a space heater
+for your two bedroom apartment. And given that the RTX 2000
+series only had an estimated 10% of its die area allocated to RTX and other AI features like DLSS, it actually seems like
+a pretty good trade-off as long as the image
+quality is up to snuff. And it's useful for more than just saving a buck on your GPU. If you have an enthusiast graphics card, who's to say you don't want
+even more FPS for free-ish? Also, I'm expecting
+DLSS to play a huge role in allowing the rumored
+Nintendo Switch Pro to achieve high resolution gaming in a super power-efficient design. Of course, when and even if that's coming is a big question mark right now. What isn't a question mark is that I hope to be
+enjoying the maybe Switch Pro on one of these new G1 OLEDs from LG. LG's next generation OLED Evo panels offer brighter and punchier images with all the traditional benefits of OLED, like perfect blacks and
+per-pixel illumination. This thing manages to look
+like a gallery display, while feeling like a gaming monitor with support for adaptive refresh rates, HDR, up to 120 Hertz 4K over HDMI 2.1, and of course, lightning
+fast pixel response times for excellent image clarity. It really is the perfect TV for 4K gaming if you've got a card that can drive it. But then, hey, maybe thanks to DLSS, you don't even need a
+card that can drive it. Haha, got 'em. Oh, LG also wanted me to
+mention Game Optimizer, which optimizes the picture by genre of game that you're playing, and Motion Pro, which
+aims to reduce motion blur for games that don't
+allow you to turn it off. So are you enabling DLSS
+in games that support it or do you still notice the
+weirdness that can occur? I mean, hey, I could tell, but it was a lot harder
+than I would have thought we'd ever get to based on
+my experience with DLSS 1.0. So let us know in the comments. And if you enjoyed this video, maybe check out our "Is RTX a
+total waste of money?" video. Those results might surprise you too. - I mean, if you're gonna
+spend $2,000 on a 3060, anyway, (laughing) Ugh, I wish things weren't so bad.

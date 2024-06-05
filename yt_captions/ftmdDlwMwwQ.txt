@@ -1,0 +1,214 @@
+Welcome to mCoding! 
+I'm James Murphy. Let's talk about asynchronous 
+programming in Python. I'll show you the basic async/await
+ syntax, as well as the built-in asyncio library. Then, we'll get into the good stuff: 
+writing a web crawler. Alright, let's jump into the code. I claim that you already 
+understand asynchronous programming. Suppose today we've got 
+three things we need to do. We're waiting on our Amazon 
+package to arrive. We need to do our laundry. 
+And we're also baking a cake. So, do we just loop over those 
+tasks and do them one after another? According to this, first, we should spend all 
+day waiting for our package to arrive. Only after it arrives should 
+we start our laundry. And then we should sit 
+and wait for our laundry to finish. After our laundry finishes, we start baking 
+the cake and watch it in the oven until it's done. Nothing wrong with a lazy Saturday 
+if that's the way that you want to do things. But at the very least, you probably recognize 
+that things could be done more efficiently. Why not just order your package, then immediately 
+put your laundry in, and then immediately put the cake in? All you're doing is waiting. Why 
+not just wait for all three at the same time? Well, that's exactly the fundamental 
+idea behind asynchronous programming. Just like in real life, there 
+are some tasks in programming that are primarily made up of 
+waiting for something to finish happening. These would typically be things like waiting on a file to finish 
+ writing to disk or waiting on packets from the network. It doesn't matter whether 
+using Python or C. You can't make facebook.com 
+respond any faster. You just have to wait. And that's what asyncio 
+is all about. If you're waiting on a bunch of things, you can 
+wait on all of them at the same time. Alright, so how do we 
+do it in Python? Take any function that might need to
+ wait on something and slap an "async" on there. For us, that's "do_work." And then, we also have to mark "main" as "async" 
+because we want to do work in the main. "do_work" and "main" 
+are now coroutine functions. Unlike a normal function, when you call a 
+coroutine function, it doesn't run the function. Instead, calling a coroutine function, 
+an async def function, returns a coroutine, which you can think of 
+as a very lightweight task. But the whole point of async is that we don't just 
+want to immediately run every task that we come up with. So, calling "main" down here just creates 
+this "main" task, but it doesn't run it. Use `asyncio.run` to start the 
+very first coroutine. This starts the event loop, which is in 
+charge of actually running our coroutines. Here we're calling "do_work". But remember, this 
+just creates a coroutine; it doesn't run it.   If we run the code, we see a warning 
+saying the "do_work" was never awaited. If you ever see this error, it
+ probably means you forgot to write an `await`. An `await` means 
+"wait here until this thing is done," pausing the 
+current task if necessary. Async in Python is purely cooperative; you have to opt-in 
+and participate in order to see the gains. Here we're still using `time.sleep`, 
+which is not an async function. Python will not pause and let someone else 
+work just because this is sleeping. The only time you might pause and let 
+something else run is when you `await` it.   So, replace `time.sleep` with `asyncio.sleep`.
+And don't forget to `await` it. This is a kind of silly example because I 
+could, of course, just delete the `sleep` altogether. But remember, here, asyncio 
+is usually about waiting on I/O. So, mentally replace this with writing to disk 
+or waiting on packets from the network. Stay tuned for the web crawler 
+to see a real use case. In any case, we run the thing again. 
+And it still took three seconds. And that's because of 
+these lines here. Remember, `await` means 
+to wait here until this thing is done. But I don't want to wait here until this
+ thing is done before I start the next one. I want to start all of them 
+and then wait for them to finish. You accomplish that using tasks. `create_task` takes in a coroutine and wraps it in a 
+task object and schedules that task on the event loop. But importantly, it does not 
+await the task right then and there. This allows us to create and schedule 
+multiple tasks before waiting on any of them. Then, we can use `asyncio.wait` 
+to wait on all of them. And now when we run it, we see all three tasks 
+are started immediately. Then, a second later, 
+they all finish. And it only took one second, not three, because 
+we were waiting on all three tasks simultaneously. This is still just one Python 
+process and one Python thread. We don't need multiple cores 
+or threads to wait for time to pass. The package will arrive, the laundry will finish, and 
+the cake will bake, all without any extra input from us. We just wait. If our coroutines returned any results, we 
+could inspect the results like this.   If there was an exception, it would be 
+re-raised when we ask for the result. `wait` returns done tasks 
+but also pending ones. This is because `wait` 
+supports a timeout. And it's possible that not all the tasks 
+are done by the time the timeout is over. But if you don't specify a 
+timeout, `pending` should be empty. Another way to do basically the same 
+thing is using `asyncio.gather`.   This accumulates the results 
+of the tasks in a list. It can even take coroutines directly,
+ which is something that `wait` can't do. In that case, it'll automatically 
+create tasks for them. You could catch any exceptions raised with 
+a try-catch around this line. Or specify `return_exceptions=True` to just get the 
+exceptions as elements of the results list. And in Python 3.11, there's yet a 
+third way to do exactly the same thing. Just like a normal `with` statement can ensure 
+that a file opened using `open` is automatically closed. This `async with task_group` ensures that 
+all of the created tasks are automatically awaited. I know this must be very jarring to have
+ three different ways to do exactly the same thing. I can hear murmurs of the Zen 
+of Python even across the internet. But the reality of it is that asynchronous 
+programming in Python was very much an afterthought. Like it or not, that's reality in Python, 
+so we just have to deal with it. Just make sure to keep 
+up to date with best practices. It's one of the most rapidly changing
+ parts of Python with each new release. So, enough with this syntax and the silly example 
+where I could just delete this `sleep` statement. Let's get to the web crawler. Here's a basic but 
+fully functional web crawler. It takes an asynchronous client. In this
+ case, I'm using the `httpx` library. We take some initial URLs 
+to start our crawl. Then, this `filter_url` is just a function that we're going 
+to use to filter out links that we don't want. And we'll take in the number 
+of workers this crawler should use, which will determine the number 
+of simultaneous connections it can use. And we'll put a limit on the 
+total number of pages to crawl. 25 is a really small limit, 
+but this is just for testing purposes. We save the client, 
+save the set of starting URLs. We make a queue to hold 
+the work that needs to be done. `seen` will hold all the URLs we've seen before 
+to prevent us from crawling the same one twice. And `done` will contain all the 
+finished crawls that were successful. We store our `filter_url` function, specify the number of 
+workers, and the limit on how many crawls to do. Then, we initialize `total`, which 
+will keep track of how many crawls we've done. Everything is centered around 
+this `run` function. It's an async function 
+that will crawl until it's done. We start by putting our 
+starting URLs in the queue. This is done in this 
+`on_found_links` function. Whenever we find some links, we compute 
+which ones we haven't seen before. Mark those as seen. You could save things to a database 
+or file here, but we're not going to. Then, for each new URL, 
+we put it into our todo queue. We do this in a separate 
+function to respect our limits. Whenever we put something 
+into the queue, we add one to the total. If we're beyond our limit, then we 
+don't put anything more into the queue. An async queue has a pretty standard queue 
+interface, the main methods being `put` and `get`. Of course, being an async queue, 
+these are async functions. We didn't set a limit on 
+how big our queue can be. But if we did, putting something into the queue might 
+require waiting until something else has finished. Anyway, back to our 
+`run` function. The effect of this is to put all of 
+our starting URLs into the queue. Then, we use a pretty 
+common technique which is creating a bunch of workers that 
+all simultaneously wait for work from the queue. Each worker is just another coroutine, and 
+we use `create_task` to schedule this many workers. However, we don't wait 
+on the workers. We await on what we actually 
+care about, the queue. The queue contains all 
+the work that needs to be done. Waiting for the queue to join is the same 
+as waiting for all the tasks to be completed. As long as there's more tasks, 
+we want to keep going. But as soon as there's no 
+more work to do, then we can stop. In that case, we go through and 
+cancel all the workers. `cancel` is a method that's available on all coroutines 
+that just raises a `CancelledError` inside the coroutine. So, what does each 
+worker do? They just forever try to process one 
+element in the queue until they're canceled. Processing an element is 
+pretty straightforward. `get` is also asynchronous, and we might have 
+to wait in order to get work to do. If we do have to wait to get work, 
+that means the queue is empty. But that's not the same as 
+there being no work left to do. That's because the queue's `join` that we're waiting on 
+doesn't go based on the number of elements in the queue. But rather whether the number 
+of elements taken out of the queue is equal to the number of 
+tasks that have been marked complete. The general pattern is: get work out of the queue, 
+do the work, and then mark the work as complete. We use a try-finally to ensure 
+that the task is always marked done, no matter whether 
+there was an exception or not. This is important because 
+if we ever missed a task done, the queue would never join because 
+it thinks that there's still work in flight. As far as actually doing the work, now we finally get 
+to something that's specific to the crawler. This whole run_worker_queue 
+stuff is a very common pattern. So the crawl is the first place where we
+ actually do something specific to our crawler. We try to crawl the URL, and 
+if anything goes wrong, we just pass. If you wanted to, this would 
+be the place to add retry handling. Put the URL back into the queue, and keep 
+note of how many times you've tried. We're going for a 
+more minimalistic approach. On to the crawl. I'm just outright sleeping 
+for 0.1 seconds here. This would be a good 
+place to do proper rate-limiting. You want to make sure that you're not sending 
+out too many simultaneous connections, both in total and per domain. Our number of workers limits the 
+total number of connections. But we have nothing to limit 
+the number of connections per domain. In any case, be nice, 
+rate limit yourself. Oh, and if you forget to 
+rate-limit yourself, this is a great way to get yourself 
+banned from all your favorite websites. Many websites will automatically ban your IP address 
+if they detect too many connections too fast. After rate-limiting, we use our 
+asynchronous client to go out and get the URL. Once we've got the HTML, parse 
+out the links, mark them as found. And then you're done 
+with that URL. I left `parse_links` as an async function. 
+But really, it's just totally synchronous code. All I do is create this URL parser, which is a 
+custom subclass of the built-in HTML parser in Python. Let's take a look at the parser. Did you know Python has a 
+built-in HTML parser? So please put away that attempt 
+at using a regular expression. HTML is not a regular language. Regular expressions are not 
+sufficient to parse HTML. All we do is override the 
+`handle_starttag` from the class. There are other ways to look for links,
+ but we're essentially just looking for `` tags. So, if we see an `` tag with an `href` 
+attribute, then we go in and filter our URL. If it passes the filter, then 
+we add it to our set of found links. Just a note on what 
+this `base` thing is. When you click on a link, where it takes
+ you depends on where you currently are. So, the `base` is being used 
+to track where we currently are. The `filter_url` function we're using 
+for this crawler isn't very sophisticated. I wrote this UrlFilterer. It just takes allowed domains, 
+schemes, and file types. Then, to filter the URL, it parses 
+where the link would go based on the `base`. And if the scheme is bad, 
+or if the domain is bad, or if the file type is bad, 
+then we just return `None`. Otherwise, we return the 
+normalized URL. You can really put in whatever you want here; 
+those are just a few things I came up with. And that's it for the crawl. We 
+got the response, parsed the links.   And then on_found_links, we'll 
+add the new ones back into our queue.   And then the worker will just 
+get the next element and keep going. Eventually, we'll either crawl 
+everything within our constraints. Or hit the limit on the number 
+of crawls that we're willing to do. Either way, the queue will 
+eventually empty. The todo join will finish. 
+And we'll cancel all the workers who would otherwise be 
+stuck here waiting for more work. Then, all that's left 
+to do is try it. Let's make a UrlFilter. I'm just going to use my own 
+domain as the only allowed one. And I'll only search links with HTML, 
+PHP, or no file extension. We use an `async with`
+ to get a client for our crawl. Pass everything to the crawler with 
+an initial URL of the root of my website.  And then await the crawler's 
+`run` method. At the end, we'll just print 
+out the results. And there you go. It found 
+all the pages on my website. Finally, a quick tip when 
+you're debugging with coroutines. `asyncio.run` takes a `debug` flag. If you turn this on, things will be slower, but 
+you'll get way better error messages. If you're looking to test your understanding, 
+then try some of these exercises as homework. Thank you to brilliant.org for
+ sponsoring this video. Hone your algorithm skills with Brilliant's 
+Algorithm Fundamentals course, where you can learn about 
+classic searching and sorting algorithms, concepts like Big O notation
+ and the stable matching problem. Or branch out and find 
+something new to fit your taste. Brilliant has thousands of interactive
+ math, science, and computer science lessons to help you learn something 
+new every single day. And there are more lessons on the way every 
+month, so you're never going to run out.   Visit brilliant.org/mcoding or click the link in the description to 
+get started with your free 30-day trial today. And if you'd like, the first 200 of my viewers to sign up 
+for Brilliant's annual premium subscription will get 20% off. That's brilliant.org/mcoding. As always, thank you for watching. 
+And thank you for making it to the end. Asynchronous programming 
+is a huge topic. So let me know if there's 
+anything you'd like me to cover. As always, thank you to my patrons 
+and donors for supporting me. See you next time!

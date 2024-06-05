@@ -1,0 +1,60 @@
+import torch
+
+
+
+class Upsampler(torch.nn.Module):
+
+    def __init__(self):
+
+        #Init as 144x256
+        self.upblock_1  = torch.nn.Sequential(
+            torch.nn.Conv2d(3,16,3,1,1),
+            torch.nn.BatchNorm2d(16),
+            torch.nn.ReLU(), 
+
+            torch.nn.Conv2d(16,32,3,1,1),
+            torch.nn.BatchNorm2d(32),
+            torch.nn.ReLU(), 
+
+            torch.nn.Conv2d(32,64,3,1,1),
+            torch.nn.BatchNorm2d(64),
+            torch.nn.ReLU(), 
+
+            torch.nn.Upsample(size=240)
+        )
+
+        self.upblock_2  = torch.nn.Sequential(
+            torch.nn.Conv2d(64,64,3,1,1),
+            torch.nn.BatchNorm2d(64),
+            torch.nn.ReLU(), 
+
+            torch.nn.Conv2d(64,64,3,1,1),
+            torch.nn.BatchNorm2d(64),
+            torch.nn.ReLU(), 
+
+            torch.nn.Conv2d(64,64,3,1,1),
+            torch.nn.BatchNorm2d(64),
+            torch.nn.ReLU(), 
+
+            torch.nn.Upsample(size=480)
+        )
+
+        self.combine    = torch.nn.Sequential(
+            torch.nn.Conv2d(64,32,5,1,2),
+            torch.nn.BatchNorm2d(32),
+            torch.nn.ReLU(), 
+
+            torch.nn.Conv2d(32,16,7,1,3),
+            torch.nn.BatchNorm2d(16),
+            torch.nn.ReLU(), 
+
+            torch.nn.Conv2d(16,3,9,1,4),
+            torch.nn.ReLU()
+        )
+
+    def forward(self,x:torch.Tensor) -> torch.Tensor:
+
+        x   = self.upblock_1(x)
+        x   = self.upblock_2(x)
+        
+        return self.combine(x)

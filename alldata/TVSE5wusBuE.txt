@@ -1,0 +1,137 @@
+- [Anthony] Oh, hey! I'm just playing Mario Kart here. Oh yeah, this is an Xbox controller. See, I'm I'm using Linux
+to emulate it right? Oh, right. This is a PS4. Yeah. I'm running Linux on my PS4. Pretty cool, right? Almost as cool as our sponsor, Zoho CRM. Zoho CRM is a 360 degrees solution that offers an intuitive UI, AI predictions and a design studio to help you get your sales done faster. Learn more at zoho.com/crm. (upbeat music) This exploit humorously named pOObs4 is a kernel level exploit that makes use of an out of bounds exploit
+hence the name, P-O-O-B-S 4, "play Out-Of-Bounds station 4". And playing out of bounds is correct. With this exploit, you can do all kinds of crazy stuff from basic stuff like
+accessing debug menus and loading up cheats and game trainers all the way up to running a
+full fledged Linux install, there it is. The PlayStation 4 Pro
+actually isn't as optimized on this version of Linux than
+the PlayStation 4 itself is. The hardware is slightly different. So the drivers aren't optimized
+for the extra horsepower that the PS4 Pro can provide. So it actually ironically runs better on the standard PlayStation 4. All right, so we let up the web browser, Karo Host Manual Exploit. That's the URL there, you just punched that in manually if you didn't have a tab already opened. GoldHen v2.1. There is not enough free system memory. Trying again. There you go. So now I get to insert this USB drive and then click OK on
+the popup notification. The reason why this is a
+little bit weird is because memory scrambling is a thing to kind of make it difficult to
+do this kind of thing. So you kind of got to brute
+force it a little bit. Then we wait. Jailbreak done. Please remove USB drive and click OK. So what's happening when
+we put this USB in is due to a programming error in
+the PS4's version of WebKit, the web browsers that we're using here, we can take advantage of a buffer overflow and that's pretty much a
+exactly what it sounds like. A buffer is a region of memory
+that's used to store data, right while it's being
+moved between locations. When too much data is sent to a buffer, it gets written out of bounds which can cause things
+like crashes, blue screens or the ability to run some malicious code at the kernel level. This USB though uses a buffer
+overflow to inject code into the PS4 that allows us to access all sorts of fun things. Like I saw RetroArch
+on the Main Menu there, a Homebrew browser and a
+whole bunch of other stuff. So let's take a look around and see what this gives us access to now. The Homebrew store, I
+kind of want to look what, see what's in the Homebrew
+store, PS4 temperature? You can make the fans scream. So turn the threshold way down. Ooh, getting ready for takeoff. Yeah, I noticed this Patch Installer. - [Adam] These will just show
+your installed applications and their version
+numbers, which is helpful. And then you would just have
+to like drop files in over FTP. - [Anthony] Okay. - [Adam] Or you can use a USB. - So this is the main downside
+of this particular exploit is that it's already been patched. This is something that requires an older version of the
+PlayStation 4s firmware. And if you go on PSN to
+download games or updates or even play online, it'll force you to
+update in order basically be one with the Sony. And if you update, you no longer
+have access to any of this. So as of Dying Light 2 there
+are still major releases coming out that you can still play with this version of the system software. But yes, despite the fact that
+it can run these new games you're not going to be able to play online - [Adam] Not through PSN. - Yeah, right. Not through PSN. - [Adam] Any game that
+supports local multiplayer you can basically forward your LAN. - Right, the Homebrew Store, I wanted to see what's available in there. Okay, so why is Twitch and
+Prime Video and Crunchyroll, and Plex even on here, when we obviously have access
+to those through the PSN? Well, the PSN is not
+available to you anymore and those apps actually
+do have re-check in them that makes it so that
+you have to use the PSN to launch them. So what this does is gives
+you the version of the app that has that check disabled. And therefore you can just log
+in with your Twitch account or your Crunchyroll account
+or your Amazon account. Let's see, what else do we have here? Test application, yup.
+That sounds about right. Dead Island: Riptide Dev Menu Edition. So this is the kind of stuff
+that you can get with this. You can get patches or versions of apps that have been modified or tweaked to give you access to
+things that, for example the developers would've
+used during development, modding your console
+basically turns it into a PC in terms of what you
+can do with your games. Like we've got RetroArch here, we've got PS4 Explorer, that's
+a file manager I believe. PSN Enabler? Yeah, that's a troll app. Half-Life: Blue Shift? - [Adam] Ooh.
+- [Anthony] That's on here? Is that a Dreamcast simulator? Yeah, Reicast. So what have we got installed? Let's try River Raid. This like the old Atari River Raid? Yeah, this is absolutely River Raid with some very interesting music. I'm not quite sure what this is all about. I like this. Like this is probably not legally distinct from Atari's River Raid, but it's here and this was somebody's project. Something that somebody decided, hey, you know it sounds like
+you got like a really fun idea. Let's take some assets
+from the Unity Store and recreate this old arcade game. That's the kind of thing that Homebrew has always kind of had. - [Adam] Go back to the web browser. - [Anthony] Go back to the web browser. - [Adam] And we're going to
+get some trainers running. - [Anthony] Oh, trainers. I like those. Those are available on PC 2. - [Adam] So you're going
+to go to, we'll go to WebRTE - [Anthony] The blue boy, PS4 Trainer. For now let's go with
+The Last Of Us Part II and do some training. - [Adam] See, notice now you're here just so you can leave it. - [Anthony] Okay. - [Adam] And we're going to
+go back to the web browser. - [Anthony] Back to the web browser. So The Last Of Us is running. Yeah, ps4trainer.com. One thing you might notice
+here is in the top left corner under PS4 Trainer we've got an IP address. If we go to ps4trainer.com
+on our smartphone or a laptop or even a desktop, we could punch that IP address into that and then actually load
+exploits from there. So we can enable the Dev Menu. We can enable Infinite Items
+and Infinite Silencer, too Why not? On L3 plus right, there it is. - [Adam] Yeah. - [Anthony] There is the Dev Menu. Weapons, Gun Cocking, Aiming Accuracy. I don't know how much of
+this I want to play with 'cause it, this is a deep Dev Menu let me tell you that right now, I read The Cutting Room
+Floor all the time. Most Dev Menus do not have all this stuff. So let's pause that, L3 and L3. Woo. I like she's meditating. This is the sky box. Oh, you can see, what was that? Oh, there's some water. (both laughing)
+Oh, okay, cool. She's displaying dominance
+with two hammers. One in her hand and one, just kind out of floating
+there, back there. The little mini animations
+that she's doing, those are done but she's
+going back to the T pose because that's the
+default animation state. This is the kind of stuff that I love. I love Dev Menu stuff. It shows you how the
+game was actually made, gun cocking, tunables,
+stealth delay, combat delays. So you can choose how
+quickly the gun cocks, visualize bullet spread, yup. Mario Camera? I'm supposed to have
+infinite ammo here, yup. I don't have anything in reserve but I can keep shooting forever. And of course I can go into no clip mode to just go wherever I want. Oh, is the camera supposed
+to turn like that when you move with just the left stick? - [Adam] Wait, left cam, left stick? No. - [Anthony] That's Mario camera then. - [Adam] Oh yeah. - [Anthony] Now we still
+have The Last Of Us Part II into this console right now. Yup. No disk, but we got it off the disk. Oh the 60fps patch was made
+with love by Lance McDonald. Ooh. This key is normally locked to 30. The PS4 Wasn't capable of
+going much higher than that. I think you can, you can apply this patch. I was reading up about it earlier. You can apply it, but
+you're not going to get 60. - [Adam] The physics were
+tied to the frame rate in the original Bloodborne. - [Anthony] Oh, that's good. Yeah. When physics are
+tied to the frame rate, that's always horrible. So if you just removed the FPS lock, then the game would just run faster. This patch must have
+been an actual endeavor to put together, made with love. Actually, 60fps mean it seems mostly 60. - [Adam] You can see that the save file has already been tampered with. - [Anthony] Yeah.
+- [Adam] 'Cause you have a million blood echos. - [Anthony] Wow. Yup. (character screaming) (gunshot sound) (character screaming) - [Adam] Well that's enough. How about we go and we,
+we go and do some cheats? - [Anthony] Cheats, yes.
+Cheats would be good. Bloodborne, oh God.
+Which version do we have? Probably the latest, right? So start speed. - [Adam] Go Infinite Health. - [Anthony] Infinite Health. Yup. - [Adam] Infinite Stamina. - [Anthony] Infinite stamina, yup. - [Adam] R1, R2. - [Anthony] Yes, thank you. (Adam laughing) Well, that's the video. (both laughing) You know, it's, it is what it is. Maybe I should have used the other, oh no. Did the system totally crash now? Junky software can sometimes crash, but you don't have to worry
+about that at lttstore.com. Our servers are always there for you and for me and for everybody else who wants to get cool
+merch, like a WAN hoodie. Real nice. Just like this Linux. Linux, yes. I said Linux. Coming back to the Karo
+Host Manual Exploit here. We've got multiple different
+flavors of Linux here up to five gigabytes down to one gigabyte. What is that? Basically, you're telling
+the PS4 how much memory it's going to still have
+after you start running Linux. So one gigabyte would actually
+allocate more memory to Linux than to the PlayStation 4. Now, if I do this, it'll probably error the first couple times I try it. One gigabyte is usually not
+enough but let's try it. Failed to load file, yeah. Okay. So now I need to try again. I think it's that it just
+doesn't have enough memory. - [Adam] Well, no, usually
+we'll throw like a, there we go. Yeah.
+- [Anthony] There we go. Do a terminal console, yay! Console. What desktop environments we, oh, we have we've got gnome and everything here but the default is LXDE
+for obvious reasons. LXDE is a lot more lightweight. All right, we've got Linux
+and a Linux terminal. Yeah, check this out. It's actually just straight up Linux. So like we've got full Chrome here. We can go to lttstore.com. In a much better route than
+one that ships with the PS4. It's smooth, smooth
+like that plaid flannel. I can use the PlayStation controller like the mouse even
+works with the touchpad. Of course, it is running off of USB. So it is going to take a minute to launch. Let's skip it. It'll keep compiling in the background. Okay. I mean, it's, it's not terrible. It's like 40 or 50. It's probably running
+better than it did on my PC when I first played it. Settings and do 1080P. It's not bad. It's like 30, something like that. There's tearing cause VSync's not on. I imagine when I get into a fire fight it'll be a little bit different. Oh, that's why we should have
+let those shaders compile, uh oh, that's not good. Aw, come on. - [Adam] It never
+crashed when I played it. - [Anthony] So we've got seven gigs of RAM assigned to this VM. So that could also be
+part of why it crashed. Okay. It say, oh crap. There we go. Exclusive full screen,
+it does not like that. Can I play it with the
+PlayStation controller? Doesn't seem, wait. I can kind of, I can use the touchpad. This is terrible. Stop running away, you coward. Okay. So that's what
+happens when you try to use the touchpad on the
+PlayStation controller? Give me that Xbox controller. Yeah. (upbeat music) Another one? So you might be watching
+this and asking yourself why? Well, for the most part, the
+answer is because we can. But also this is a pretty great way to get more mileage out of a console that's just gathering
+dust or with certain mods and trainers you can get a
+glimpse behind the curtain and see how some of your
+favorite games were made. These kinds of hacks have
+enabled the lure of ravagers from software fans to explore
+and discover cut content and development secrets that coy devs would never talk about. So if you have a PS4 that's gathering dust or maybe you just love
+the chance to tinker, we highly recommend giving this a shot. A great place to start would
+be watching Modded Warfares extensive tutorial guides that
+were an invaluable resource for this video. You got to love the modded community. Just like I love sponsor segues like these to Zoho CRM. Zoho CRM is a 360 degree solution from managing your
+business' sales, marketing and customer service. With their intuitive UI
+and simple navigation, you can implement their
+service quickly and efficiently with minimal disruption
+to your current processes. They offer AI predictions
+to help you understand your customer's needs,
+so you can see trends and purchase patterns by
+a variety of indicators. Plus they're inbuilt design
+studio helps you customize your CRM experience to help
+you spot critical customer or account information at a glance, helping you get your work done faster. Zoho offers flexible
+contracts, transparent pricing and an ever evolving product
+that grows to meet your needs without snowballing costs. With over 15 years of
+experience in the industry and over 250,000 clients, Zoho CRM is a great
+solution to support you and your customer
+relationship management needs. Get 50% off your annual
+subscription when you use code ZCRM50 using the link in
+the video description. Thanks for watching guys. I gave Sony a lot of crap
+about their integrated browser in this video but Microsoft
+recently enabled Edge, full fat Edge in their Xbox consoles and we do the video on that as well. There's a lot of stuff
+you can do with that. So it's a great video.

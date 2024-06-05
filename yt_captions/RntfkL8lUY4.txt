@@ -1,0 +1,898 @@
+Why are there so many
+programming languages?  And given that there are so many, how
+come people are still  creating more of them?
+I mean, it's a lot of work, right?  It's a heck of a lot of work to do
+something we seem to have plenty of.  Why bother?
+I think there are a few  really compelling reasons.
+Some people do it for research.  They have an idea of how programming
+could look in the future,  how it could be, and they
+want to take that idea for a walk, put it  through its paces, explore it further.
+Other people create a new language  because they're cherry-picking.
+They look out into the world and say,  "Well, I like Python's
+programming model, but I want  C syntax and some of Go's concurrency
+features, so I'm going to put them  together in something
+new."  A bit like recipe making,
+they're baking their own cake.  And other people build a language because
+there's a hole in the market.  JavaScript is the famous example.
+It exists because browsers needed a  programming language, so
+someone had to create one.  And that's actually my
+favorite thing about JavaScript.  It took you to somewhere you couldn't
+have gone without it.  But all these motivations come together
+in the creation of a  relatively new programming
+language called Gleam.  You might not have heard of Gleam, but
+stick around because you're about to.  I'll give you one metric.
+If GitHub stars are   anything to measure
+by, it is apparently  more popular than F sharp.
+So let's find out why.  I'm joined today by the very charming
+Louis Pilfold, who's the  creator of the Gleam programming
+language.  And he's going to tell us why he thought
+the world needed a new  language, how he survived
+for the multi-year crazy journey it takes  to go from idea to
+production, and what Gleam  has to offer us as programmers.
+We're all out there  trying to get a job done.
+Can Gleam help us do it better, faster,  easier, cheaper, more fun?
+Any of those?  Some of the above?
+Well, let's find out.  Let's get cracking.
+I'm your host, Kris Jenkins.  This is Developer Voices.
+And today's voice is Louis Pilfold.  I'm joined today by Louis Pilfold.
+Louis, how are you doing, man?  I'm great.
+Thanks for having me.  Good to see you.
+Oh, it's a pleasure.  Yeah, it's good to see you.
+We haven't met in person  since before the pandemic.
+Oh, since before the event, yes.  The event.
+The event that shall not be named.  Yeah, I keep having to bump into you, but
+yeah, just digital do for now.  They'll have to, even
+though London's not that large.  But now I do online.
+I feel like we're with the same city and  it's similar interests.
+We would have bumped into each other at a  tech or something with
+lots of people making  bleeps and bleeps with
+sympathizers and stuff.  But no, nothing.
+Yeah, yeah.  Sooner or later, we'll cross paths again.
+But for now, I have been keeping tabs on  you in my secret tracking cave.
+Ominous.  You've been busy writing a whole
+programming language.  I have.
+It's a, yeah, sort of started as a pet  project and grew wildly
+out of a job and it's now  dangerously useful.
+It's quite nice.  See, that's something I want to get into,  but first we should
+probably set the frame  and what is your
+language is called gleam, right?  Yes.
+What is it?  Why do we need a new language?
+Well, so I think it really comes from me  being always a little bit.
+So I'm a person who loves languages,  which I think you are as well.
+So I always try and use used to try and  learn a new one or two
+or three every year or so.  And I reached this point where I was just
+annoyed with every  language because when I
+was writing when I was writing Elm, I  wished I was writing Haskell.
+When I was writing Haskell,  I wish I was writing Erlang.
+When I was writing Erlang,  I wish I was writing Rust.
+You know, it's like I wish I could get  that bit from there
+and that bit from there.  This would be really easy if I had that.
+And so, yeah, I ended up sort of like  saying, well, what
+happens if I try to draw all of  the best bits?
+Could I make something that was like  cohesive and really nice or
+would it just be, you know,  the horrible mash of bells and whistles
+and nothing quite fitting together?  See, I know a few languages that have
+asked that question and  their answer has been a
+horrible match.  How are you feeling about your answer?
+Good. So I think it's tricky.  I took a lot of inspiration from Lua and
+Go and, you know, as a  functional program, I
+don't know how to put you off.  I don't mean in the like, it's a very
+simple procedural  language, but I tried to make the
+surface area of the language very small  and tried to make it very consistent.
+Hopefully more so than Go, I think.  And yeah, it's just sort of like what are
+the really valuable  things from these different
+types of languages, which I  think are really interesting?
+And then how can we take the smallest  amount of all of them
+and make it as possible?  Which I think is not the way a lot of
+people go for languages.  It seems to be like adding more, but I'm
+trying to like have less.  And yeah, a bunch of years in, it seems
+like it's really  resonating with a lot of people.
+So that's quite nice.  I'm pretty happy with that.
+Very cool.  Okay, so tell, tell us what your, what
+you've picked from the  buffet car of languages.
+So it is a simple functional language in  sort of in the style of Elm, perhaps.
+I think you're an Elm fan from the past.  I'm an Elm fan.
+Yeah.  So, you know, there's, there's the
+language got quite a small  number of features and we
+generally say like, well, you've got  functions and they take in
+values and they return values  and you kind of ignore everything else.
+That's sort of all you need.  But rather than having like an Elm
+syntax, although we did  originally have a syntax like
+that, we've got a syntax that's much more  familiar to, you know,
+JavaScript programmers  or C programmers, you know, lots of curly
+braces and all that stuff.  And I originally thought,
+Oh, what's the point of that?  You know, just syntax doesn't matter.
+And then we switched in tax and suddenly  everyone was like, Oh,
+this language is great.  Now it's like, nothing's changed.  So I was wrong.
+Syntax really does matter.  And I sort of miss the old one, but the
+new one people really like.  So, and the thing that is, I think one of
+the big sales bit is  that it runs on the Erlang
+virtual machine, which is called the  Beam, which is unusual
+for a virtual machine that  is designed for functional
+languages from the get-go.  And rather than being like a research
+project, like a lot of  functional things are, it was
+built for industry.  You know, it was built for
+telephone switches, Ericsson.  So it's got loads or it's really built
+with running and  maintaining and debugging, you
+know, really reliable systems.  Oh, that's interesting.
+So the main thing I know about the Beam,  other than it's not
+Apache Beam, it's Erlang  Beam.
+Yes.  Is it's famed for its
+novel approach to reliability.  Yes.
+Yeah.  So like, we're trying to both think,
+Liam, you know, that  there's all these arguments
+between the typing people and the Erlang  people about how do you should deal with
+errors?  Like, oh, you should make it impossible
+in the in the Elm  world, you know, making valid
+states unrepresentable in your program,  which is actually
+really fantastic to do that.  But all the Erlang people are like, no,
+that's rubbish,  because like, how do you make
+how do you make memory corruption  impossible in your application?
+What happens if you're going to, what if  you've got a cluster of
+computers and want to get  struck by bolts of lightning because it's
+up a telephone pole  doing, you know, run a
+telephone switch firmware?  Oh, yeah, you can't really
+do that with types, can you?  So the whole thing is about
+failure is going to happen.  You just have to lean into that your
+entire system needs to  be able to explode in some
+dramatic way.  And you should be able to survive that.
+And it sort of boils down to the sort of,  you know, it crowd have
+you tried turning it off  and on type thing and breaking your
+system into loads of tiny little  bulkheads where like, oh,
+when everyone's gone  wrong in this subsystem.
+Okay, let's restart that.  Did that fix it?
+No.  Okay, let's go one step bigger.
+What if we reset?  What if we discard the corrupted state in
+that system and then just  like slowly, incrementally
+drop things out?  So you can kind of see parallels between
+the beam and maybe  Kubernetes or something.
+You know, so if you've got a you've got a  pod, a deployment of a web service that's
+raining go or something and something  goes wrong in it, while the
+VM, the sorry, not the VM,  the instance goes down and then
+Kubernetes brings it back  up again and then should be a
+good state and you've lost those jobs  that are in in progress,
+but then it should be okay.  That's really cool.
+But kind of rubbish in that, like that  single instance of a go
+program is probably running  hundreds or maybe thousands
+of of jobs at the same time.  So losing the whole thing sucks.
+So like imagine if you could have the  whole pattern, but rather
+than like a sort of data  center level, you could have inside your
+program level where your  your single VM instance is
+really running hundreds, thousands,  millions of threads.
+And you can do that incremental shape  state shedding at the
+individual thread level.  So maybe you just lose
+like one web request.  Yeah, yeah, the idea is, I mean, you can
+sort of do this sort of  things like, you know, try
+catching in, you know, other languages,  but it's it's so much
+more it's taking the idea of  like, you know, we'll catch it and we
+deal with it, but in a much more  how did it swipe it in a much more fine  grained and sort of
+sophisticated way than you would do  in other languages.
+And it just results in.  Yeah, it results in extremely reliable
+services like this  companies that claim nine nines of
+reliability with her language.  I'm not sure I've
+ever seen proof of that.  But the fact that they can claim it and
+people go, oh, maybe, you  know, I think that says a
+lot about how how good this thing is.  And it also means you can do things on
+the radar to look at.  Right.
+Yeah, exactly.  Like the fact that it's plausible implies
+that, yeah, this is  really, you know, extremely,
+extremely good.  And it means you can do things like
+offensive programming quite happily.  So like, I just never going
+to check any of the errors.  I'm just going to
+insist everything succeeds.  And if it fails, well, I don't need to
+write any error handling  logic in my business logic.
+That can be dealt with   out there in the
+ether with non local  error handling, as they might
+call it.  I've always wondered, does that just
+result in systems that are  constantly trying and crashing
+and trying and crashing in an infinite  loop of let it crash?
+Yes.  Sort of.
+Sort of.  Like there's a there's a company called I
+don't know how to pronounce their name.  That's embarrassing.
+But they they're one of their they're the  people who run
+PureScript on the Erlang virtual  machine.
+And they do video streaming.  And they said they had a bug where the
+system would crash every  100 frames or something
+like that.  And they didn't notice for eight months.
+Because it was it just ran so well, like  they didn't notice any
+any problems in the area.  It would just it would run for 100 frames
+crash system would  restart that tiny little
+subsystem, and then it would continue.  Oh, so it was picking up after every 100
+frame and they got  this like, oh, we'll just
+retry that frame.  They just didn't know.
+And I was like, maybe they should improve  that, you know, monitoring.
+But the fact that you can the fact that,  you know, so if we
+think about running systems  in production, we want to we want it to
+continue working for our users.  But you also will not want to have a
+really stressful time  when it does go wrong.
+So, you know, when when things do start  crashing, you do want to know about it.
+And there's lots of mechanisms for that.  And you do want to be able to debug it.
+There's lots of mechanisms for that.  But mainly, you don't want to like, you
+know, you've woken up at  three in the morning with
+people screaming down the phone saying  you've got to fix it, got to fix it.
+You want to be able to do it in like the  most low stress way possible, right?
+So it's all about it holding itself  together just well enough for
+you to deal with whatever the  problem is.
+Right.  Because that kind of monitoring,
+debugging and failure  handling baked in from the start in
+industry, I think really appeals.  Yeah.
+And I've often like, for the sake of the  platform, the beam, I have
+gone towards Erlang for a look.  And Erlang is really weird.
+Yeah.  And I say that as a
+lisp Haskell programmer.  Erlang is weird, right?
+And it's put me off every time.  Yeah, I think that's part of the problem.
+So like, the Erlang rung time has got  these amazing properties
+because they come from real  world requirements, you know, you know,
+we want to make sure that a greedy  thread, greedy green
+thread can never block the   scheduler and causing problems or anything else.
+So you can have a hot loop and it just,  everything continues running.
+That's fine.  We want it to, if someone, someone says
+it's a bad regex, we don't want it to  block the scheduler.
+If something crashes, we don't want it to  print on the system or these things.
+They've got that all down.  Amazing.
+But like the actual language, I mean, I  love Erlang, I'm just going
+to say it first, but it looks  dreadful.
+It looks so bad and it's like, it's  really awkward in lots of
+ways and the tooling is strange.  I was looking, I was refreshing myself.
+Earlier and I had a look and I'd  forgotten about this, but to export a
+function out of a module, you  have to export function name slash the
+number of arguments.  Yes, because of my start slash one.
+Yeah, because function functions are not  just unique name, it's like
+unique base for not just the  name, but also the number of arguments.
+So you could have like, main zero, main  one, main two, main three,
+those are all separate functions.  I think that's a good question. Functions.
+It feels like something a computer could  take care of for us.
+Yeah, but if you it's true, and we do do  that, but like, what is gleam does do
+that, but if you have  that control, you can
+actually do different things.  Like you can actually,
+it's actually more powerful.  You can actually decide if you want to
+reference the one or two or three.  Is that you?
+I don't know.  You just end up with in
+Erlang, they do use it a lot.  You know, it's these sort of things like
+whatever tools you're given, you're used  to, you will find uses
+for and so even though I, I as a person  who likes, you know, Rust and Elm and
+things like that, I'm  looking again, I'm not sure I
+like that feature very much.  All the Erlang and Elixir people complain
+constantly that they don't have this when  they're trying gleam.
+So you're sort of  damned either way, really.
+And with, you know, one of the goals of  gleam is to make all these wonderful
+things you get in the Erlang  world, make them much less alien seeming
+to, you know, the rest of us.  So people can, people, you know, because
+there's only so much  strangeness you can tolerate.
+Like if someone is mildly interested in  Erlang, because they've heard these
+really cool things about  this, like super concurrent fault
+tolerant runtime, and they're suddenly  met with Erlang, they might
+go, this is just weird.  This is too much.
+The weirdness is  greater than my curiosity.
+I'm going to go somewhere else.  Yeah, so I want something that looks a
+lot more normal, you know, and even if  that is worse in some
+ways, if we can get more  people, that'd be better.
+That'd be better enough.  Always, you know,
+it's always a trade off.  Yeah, yeah.  Let's use the word accessibility because
+that makes it sound really good.  Okay, not weirdness.
+Accessibility.  Not weirdness.
+Yeah, I did.  I did once ask the creator of, it was
+after a conference and I had a couple  beers, I was feeling
+a bit brave and I asked the creator of  Erlang, why does it look like that?
+And he said, oh, you should have seen it  before we open sourced it.
+It looked much worse.  Awesome.
+Can only imagine.  Go Armstrong, right?
+I was asking Verding, but yes.  Oh, okay.
+Yeah.  So did you explicitly when you're going
+around picking up your  favorite bits of languages, was it
+always the case that you wanted to  compete with, replace, offer an
+alternative to Erlang, but be  on the beam?
+So I was very, I've been a  beam user for a long time.
+Both, I got it through, through elixir  and I quite quickly ended
+up writing early as well.  I quite enjoyed both languages.
+And it be, it being a runtime that isn't  used very much and I love a lot.
+It just seemed like quite an  obvious choice to use this.
+And even before I started thinking about  like, how could this be useful to people?
+It's like, I really like this runtime.  I really want to use it in my, you know,
+my, my ideal pet programming  language that no one's ever
+going to use.  They seem like the right way to go.
+But even, even if I was designing it to  be like, this is for people,
+which I do now, but like from  the very beginning, I think it would have
+made the same decision.  Um, but I don't see it as being competing
+so much because, you know,  the, the, I think the people
+who are going to come to Erlang and the  people are going to come to
+gleam, a two different sets of  people.
+Um, there's lots of people who, you know,  there's lots of people
+who have an interest in the  runtime, but we'll say this thing has
+like a weird prologue  mishmash syntax and it is dynamically
+typed and it has loads of sort of  unusual, not quite, not quite
+prologue, not quite this, not  quite that, um, patterns and stuff in it.
+That's probably not for me.  Um, I'll go write
+Scala or something else.  And there's lots of people who always got
+this weird Ruby, sort of  this weird Ruby syntax.
+You know, I'm not sure  about this elixir thing.
+It's all weird lisp macros.  That's not me.
+I won't use it either.  Well, those, the people who don't like
+those two things may like  the idea of a C looking small,
+um, functional language that has a, uh,  sort of an Elm style type
+system, you know, so I don't  think, I don't think we're going to draw
+so many people from  the Erlang and Lix a lot.
+I think it's going to be much more.  We're going to bring people to the, um,
+the beam community as a whole, really.  So I'm hoping we'll work together.
+And a lot of gleams, the language is  built around the idea of
+like interrupt between gleam  and the other languages as well.
+So hopefully people write things in it.  Well, people can write things in Erlang
+and Lix and we can use  them, but hopefully it's also
+the way around.  We make it really easy to write things in
+gleam and then that will be  able to use by the Erlang and
+Lix effects as well.  Okay.
+So that's often overlooked  that kind of two way interop.
+Yes.  You can be both, you can
+both consume and provide.  Yeah.
+Yeah.  The talk, the toolings a bit, um, isn't
+quite as good there as I  would like it to be because it
+depends upon the Erlang and Lix people  building a bit of tooling, but there are
+ways that they can do it.  Um, yeah, I think there's like, you know,
+there's loads of value in  it because we're not, I don't
+want to compete with  Erlang, elixir because I'll lose.
+Why would I want to compete  with my closest neighbors?
+You know, I want to be, we  want to be working together.
+Um, and I wish more  languages thought about it.
+Like Erlang being the universal language  of the platform, it's
+quite easy to, to work in both  directions, but elixir is very much
+designed to be able to use  Erlang code, but it's a trickier
+and a lot of ways to, um, use it from  Erlang and there's certain
+features you just can't use.  Um, that's just the trade-off I've made.
+Fair enough.  Well, an interrupt future, if we'll get
+there eventually, universal  computing, but take me through
+the, so I, and I know a few programmers  who've done this have
+written like a hobby programming  language is kind of one of those rites of
+passage once you've been  programming for long enough.
+And you, I realized two  things from doing that.
+The first is that a  programming language isn't magic, right?
+Writing a program that evaluates source  code is actually really
+interesting and not that hard.  But the journey from that hobby project
+to something you can  actually put in production is huge.
+Yeah.  Take me through your journey on that.
+I think it's just  stubbornness on my part, really.
+I, I went, I was, I was, um, I sort of  explained these people who don't
+understand tech as being  like, um, a chap who's built a model
+railway in his garage.  So it's like a very, very large ornate
+one with multiple layers  and realistic representation
+talent.  Like it's just, you look at it and you
+go, why have you done this?  It's very impressive.
+But like, that was clearly   a lot of time.
+Yeah.  Um, but yeah, it was just, um, curiosity
+because there's, I love languages and  there's just so many
+bits you can dig into.  Um, and so that kept me interested and
+busy for a few years.  Um, maybe the first two or so, but I was,
+I was quite lucky in the,  um, I was already fairly well
+known in the Erlang and elixir world  because I got onto elixir
+quite early and I had done a thing  of, Oh, well, it doesn't have this thing
+that I used to use in, um,  Ruby or Elm or something.
+I really wish I had that.  Maybe I'll try and make one.
+So I made a, a linter, um, which was  forked and is now the
+main linter in the electric  system, which is great because I don't
+have to maintain it.  Um, I wrote open source
+it, push it out the door.  Exactly.
+Yeah.  It's much better than the one I wrote,
+but it was mine originally.  Um, and I wrote, I wrote a format, um,
+cause I thought Elm format was amazing.  And so that, that then
+inspired an official one.  So just, just from these things, I'll
+sort of known a little bit.  Um, and then when I started doing this
+language thing and I put lots of like  fashionable words on
+it, like types, people are  like, Oh, that's interesting.
+And it's sort of like people started  chatting a bit cause
+I'm always, I'm always  insistent on, on, um,
+developing in the open.  So even though I wasn't really
+publicizing it, people  would look at it and say, Oh,
+look at this thing.  Yeah.
+And then that gave me  a lot more, um, yeah.
+When people show interest in your work,  you know, it gives you a lot more, um, it
+gives you encouragement, you know, you  want to keep working on it.
+And then I slowly got to say to like,  maybe this, maybe this,
+I actually quite like all  the ideas I've come to here after, you
+know, a couple of years of work on it.  Maybe this could be useful for something.
+Um, and yeah, now we're in a place where  people are using it, which is why.
+That's amazing.  Yeah.
+You must have put, I mean, there are a  large number of pieces you must have put
+together along the way though, because  just adding a type system to a platform
+has never had a type language.  Yeah.
+That's a whole chunk of  knowledge and research.
+Yeah.  That was quite painful.
+Like I knew I was always a lover of  well-typed languages, but never knew how
+they worked, you know, so all the, all  the things in, I think
+part of the reason why  Gleam is doing well is that I'm not a,
+like, um, I'm not like a, uh, a very  academic person when it comes to like the
+theory of the implementing these things.  Um, I would describe myself more as like
+a language designer than I am a language  compiler implementer or a runtime
+implementer, which is a shame because  I think there's a really fascinating
+things, but all my learning has been, I  want specifically X, you know, I've, I've
+been, I've, I've, um, spent a lot of  time like experiment with
+different language designs.  Like what if, what if the language had
+this feature and then I would like write  loads of code as if it had that feature
+and then just like compile it in my head.  Go, what would that do?
+How would that work?  How could I write these programs?
+And I'd go through that  loop over and over again.
+Go, right.  I want this.
+Now, how does that, I  know people can do this.
+How do I do it?  And I don't have to like find the, the,
+the, uh, and if there's suitable amounts  of, um, understandable papers and stuff
+to try and work out and it was just.  It was misery, but, um, I sort of know a
+bit about some type of systems now.  So that's good.
+Like, and also make it, make it useful.  Could you pass the, uh, exam now?
+I'm sure I couldn't.  It's not loaded into short-term memory.
+I'm very good.  I'm very good at anything that Gleam has
+inside it and  anything it doesn't, I don't
+know, and, and it's frustrating a bit  because you get to a point where like you
+understand it, um, well enough.  And that's because you've successfully
+implemented whatever that feature is.  And I'd really like to continue learning
+it, but I actually need to do this other  unrelated thing for the language.
+Cause Gleam, Gleam's quite, um, one thing  Gleam does, which, uh, I think is quite
+clever and when I think more, more  language should do is
+that like everything  is, all the bits that you commonly touch,
+what we considered part of like the core  language, not called the language, but
+like the core project.  Um, so we don't just have
+like a language and a compiler.  We've also got a build tool and package
+manager and, um, language server and,  you know, all these sorts of things and
+like a package index, you know, so we,  rather than leaving those things up to
+the community, like  that would be baked in.
+And that's resulting in like a really  good experience, but I just means I've
+learned something interesting about type  systems and I have to go work on like
+dependency resolution algorithms instead.  And I never actually
+get good at any of them.  That, that how on earth do
+you stay on top of all of that?  Cause each one of those could be a
+project in itself, right?  It's building a package manager from
+scratch and making it good.  There are teams of people that do that.
+Yeah.  So we're package management.
+We can, we're luckily we're forced to  cheat a little bit and the, you know, we
+want to interrupt really well with the  rest of the beam language.
+So we use their package manager.  So that the, the, the side of, um, you
+know, uploading and distributing what all  the server side stuff, somebody's already
+built that we just have to use their API.  Bit confusing because no one's really, I
+think as far as how two people have  integrated ever with that API.
+So the docs are not amazing three now.  Um, so by the time I worked out that, uh,
+yeah, I only need to do the client side,  but that's still really complicated.
+Like the algorithms for how you,   um, you
+know, work out which version she's  with a bunch of, uh, bunch of constraints
+is quite challenging.  Um, but yeah, a lot of it is just working
+out what is the, it's the  whole startup thing, right?
+You know, what is the MVP of each things?  What is the smallest useful, um, approach
+and having a language that is designed to  be small because I think that is a better
+experience as a user actually makes it a  lot easier to implement as well.
+If I was trying to make it rust or a  Scala, I just never possible with it.
+But I'm trying to  make it a little or ago.
+So right.  Yeah.
+Oh, I can hear your  cat in the background.
+Happy little guy.  So do you think, because I've followed a
+bit about your design process and you  say you're doing like
+fantasy programming design, right?  I also know you've done things like, um,
+gone off to Twitter and  said, Hey, what syntax
+would you expect for  this behavior and stuff?
+And you've run regular Twitter polls on  design and you're
+keeping the language small.  And that allows you to
+make certain design choices.  What's been important about
+making a cohesive language?  Some languages do that well.
+Some do it badly.  How do you approach that?
+Um, so, so the, the, all the polls and  stuff's really useful because I, you
+know, I want to make things  not, what's the word we said?
+Accessible.  Um, not to be least surprised.
+Yeah.  And I just find that, um, I'm often wrong
+just about what is normal and what isn't,  you know, I think it's easy to assume
+that your opinion is the, is the standard  one, but I just isn't.
+I've got. So it's really useful to just have you  done again, sort of, um, sentence check
+and say like, which of these two things  looks, you know, try
+not to ask it directly.  Like which two things looks least weird,
+but like sort of ask them simple  questions about some example code and
+just see which ones  people get confused by.
+Um, cause yeah, even if I think something  else is better idea, I'm probably wrong.
+Um, but it's quite tricky.  Just like you just spend, I think just
+doing things really slowly really helps.  I know.
+I think that's another reason why, you  know, having something that's small where
+I'm doing the majority of the work really  helps because I get to
+spend an awful lot of time.  Cause I know I'm, you know, I'll be
+working on a package manager or something  and I would have had an idea for
+something six months  before I even started that.
+But I'm still working  on this for six months.
+So I've got like a year of like, you  know, I'm having
+breakfast staring at the window.  I'm like, well, what
+if it did this thing?  How would I impact this thing?
+How would I impact this thing sort of  like gently brewing ideas in the back of
+your head and after like 12 months of  thinking about these things, you'll have
+enough moments where something went, Oh,  but I would interact with this thing.
+Oh, that's interesting.  What about that?
+And you normally end up sort of  accidentally covering all of it just by,
+well, I guess obsessively thinking about  it for an extreme amount of time.
+Slow, slow programming.  That's my, um, slow but obsessive.
+Yeah.  Never stop thinking,
+but spend a long time.  Yeah.
+Yeah.  Cause I know I'm going
+to try not to name names.  But there are some languages that look
+like the author has woken up in the  morning with a new feature idea, throwing
+it together as fast as possible and  chipped out of the door.
+Yeah.  And then there are some
+that feel more cohesive, right?  Yeah.
+And I want to do that.  It feels great to like have an idea,
+throw it together and chip it.  Like I sort of, I dream of, um, finishing
+Gleam, you know, handing it over to some,  some Gleam foundation that can do things.
+And then I can just make the language.  That's all the bad ideas
+that I didn't do along the way.  Cause they're always like the really,
+the, um, the medium ballad is, or were  they're bad and you go,
+yeah, that's not clever.  Let's not do that.
+But the really bad ideas, the ones where  you go, Ooh, Ooh,
+that sounds really good.  Let's do that.
+And then you think,   um, I don't know.
+I'm not sure.  It's always, it's always, it's always
+like, whatever sounds fancy as possible.  I wonder is, um, dangerously good
+sounding is algebraic effects.  Cause you can do all sorts
+of exciting things with that.  Like you can model, you can in user land
+model things like async awaits and  exceptions and try catch
+and all that sort of stuff.  Like it's a clearly a
+really powerful thing.  And, um, I think a lot of future
+languages will probably have it in some  degree and it would just become normal.
+And that's, and that's part of why it's  such a dangerous idea.
+Cause it goes, that sounds great.  But actually would that align with any of
+the goals of the project?  What's whether I'm trying to make a, like
+a really simple language  that's really approachable.
+And I'm going to be wedging in a.  Yeah.
+Very powerful tool, which is sort of  experimental and a few
+very complicated languages.  Um, and it would completely destroy
+interrupt with, you know, interrupting  the other direction
+with a line of expression.  And stuff like that.
+So yeah, it's just not,  it's not particularly smart.
+I didn't think.  Yeah.
+I can see why you want to leave it on the  table, but still be hankering
+to revisit it at some point.  I really want it.
+It's just so cool.  Okay.
+Then.  So if you've left that on the table, it
+does seem like a sensible choice.  Which bits, which bits have you taken
+that if I want to get started learning  gleam, what you think are
+the bits I need to know.  Oh, this is something I'm thinking about
+at the moment because I'm trying to make  a course for learning.
+Oh, yeah.  So, um, I've got some funding from the
+Erlang ecosystem foundation, which is a  lovely org to try and like grow the, the,
+you know, the community in general to,  um, make a syllabus on exes as you've
+come across that, which is a platform  for, for practicing and learning
+different languages.  So, yeah.
+Yeah.  Yeah. In February, we launched a, uh, a regular
+track, um, on exes, which they featured,  which is really lovely of them, which is
+basically like, here's a small program  and challenge, solve it.
+And then you can get, um, you know, you  can have a bunch of tests, um,
+automatically run for you, but then also  you can be mentored by, you know, a
+member of the community.  And it's just a really fab
+little, it's a really fab site.  Really recommend using it if you want to,
+um, practice any languages, but they also  have like another layer on top of that,
+which is a syllabus.  So as well as having challenges, they
+can, they have special challenges which  teach you individual
+concepts of a language.  So if you've got a well-made syllabus,
+you can go from being a programmer, not,  not, you know, you need to know a bit of
+programming and you should be able to go  to, um, from zero to usable of a
+language, uh, by going through the  course, which is really exciting.
+So, um, what do you need to know?  Not much really.
+We tried to, try to boil it down.  Again, I'm playing on easy mode because
+it's such a small language,  but, um, it's mostly just, uh,
+functions and values and pattern matching  and, and records and
+all that sort of jazz.  Okay.
+Okay.  You're so, but I'm going to need to mix
+that into some knowledge.  I mean, Erlang is very heavily actor
+based is gleam like deep  knee deep in the actor model.
+No.  I, so in, I think it, I think it's always
+tricky with talking about OTP, the, the  actor framework of Erlang because, um,
+Erlang is also quite a small language.  It's odd, but it's
+quite a small language.  Um, so when you learn Erlang, you spend
+like this much time learning Erlang and  this much time learning the actor
+framework because it's, you know, it's  much more than just like, um, async await
+in, in, or, you know, it's  much more than like a little
+concurrency module in other languages.  It's, it's in many ways, much more akin
+to an operating system, you know, all  these like independent things and ways
+that they talk to each other and patterns  you should use so they can look after
+each other and deal with  failure and all this sort of stuff.
+And it's really quite complicated.  And I think if you go into beam
+programming through Erlang, you'll  probably be spending a lot of time
+looking at that stuff just because that's  quite at the forefront of
+the,   um, of that community.
+However, if you learn, if you learn beam  programming through Alexa, they've got
+much more of a spin on normal sorts of  business programming.
+Um, so, you know, making web apps and  websites and this sort of
+jazz and managing databases.  And even though your code is all running
+inside this active framework, you may  never actually see, like, I think, I
+think maybe I've also got no data, but I  think maybe the majority of Alexa
+programmers don't write  any, um, OTP code at all.
+Because they just use, well, I'm using  the web server that comes with the
+popular web framework and it has loads of  actors under the hood and their pub
+subsystems or actors and all  these other things are actors.
+But like, I just write the web handle a  bit that talks with database connection
+that it's all actors again and you just  don't worry about it.
+It looks very much like if you're writing  an application in, well, even perhaps
+like Ruby on rails or Python or  something, because there's not even any
+async or wait inside the code because  it's all just like outside of it wrapping
+your, your handler stuff.  Right.
+So, because I've always had the  impression that you have to get into that
+model to get anywhere with Erlang.  But I could opt into that later once I've
+got my feet under the table.  Yeah.
+And you may never get there.  So the nice thing about, um, the actor
+model over like async or wait or  callbacks from futures and things like
+that is that, um, if you're, each actor  only performs one piece of work.
+Uh, so it's entirely single threaded.  You know, you just write code that says,
+well, I pulled the, I pulled the, um, the  body off of the request objects.
+There's no async, you just block the  thread and then, oh, and then I'm gonna
+talk to the database.  No async block the thread and then I'm
+going to send the response.  No async block the thread, you know, it
+doesn't get, it looks like, um, you know,  it looks like it should
+be really inefficient.  And I've code that, you know, causes the
+whole, uh, the operating system thread to  be blocked, but it doesn't because it's
+like, you're just  blocking this one actor.
+You can have, um, you know, hundreds of  thousands of them for happily.
+And people routinely do.  Right.
+It's, it's a very normal thing in the  beam scheduler, right?
+Yeah.  Yeah.
+It's super normal.  Like you should be doing that.
+You should, you know,  you, you write the sim.
+So,   um, um, Joe Armstrong would say it's
+really hard to make one web server that  can handle a million requests
+concurrently, but it's really,  easy to make one web server that can run
+one, uh, request and  then run a million of them.
+And like, that's kind of the whole idea  of, um, like the early OTP actor thing.
+It's like, just do the thing that's  really simple for your little, whatever
+the smallest task is.  And you multiplex it in a
+completely different place.  And it also means when something goes
+wrong, you don't go, well, how do I  discard that one bit of states and then
+not impact with the other ones?  You go, well, it's
+just this tiny little box.  Like, oof, off it goes.
+Everything else is okay.  This is something I love in programming.
+When we, when we have a different way of  looking at the same problem, that gives
+really interesting different results.  Okay.
+I'm going to have to find  time to play with gleam.
+Yes.  Um, so there are two other things I
+really want to ask you and maybe we  should talk about
+keeping the lights on first.  Okay.
+Because you've, you've, um, done a  mixture of things to keep developing
+this, including being poor, right?  Yes.
+That was a good one.  What's it like being an
+independent language designer?  It's a captifed.
+It would, so traditionally the experience  has been, I work a job for a while and I
+get progressively more irritated with a  job, not because the job's bad, although
+I have had some of those.  But just because I wanted to be doing
+this other thing and I'm spending my  evenings and weekends doing it and
+there's something where I'm going to quit  and I'm going to work full time on gleam.
+And then I just watch  my bank balance do this.
+And then at some point I go, oh, so I  need, you know, rents this much.
+And my, my bank balance is this much.  I should probably get a
+job in the next 30 days.  So I do, I did that like, I
+don't know, two or three times.  Um, but then at some point, uh, get hub
+release, the GitHub sponsors program,  which is like, you know,
+pay a Patreon for programmers.  Um, and some people are
+like, you should sign up to that.  And I thought, you know, the idea that
+this would ever be a  project that could sustain me.
+I just never even considered it really,  because, um, that just making money from
+open source seems completely impossible  as far as I can tell, unless you've got
+something very  complicated to sell on top of it.
+Um, so I signed up and then to my  surprise, a few people started, um, yeah,
+a few people started sponsoring me and I  was like, wow, that's, that's amazing.
+I didn't realize I had that,  like that level of support.
+And I just, um, you know, I started  marketing at little more focusing a bit
+more on, um, you know, trying to write  things are actually just good.
+Like let's write more blog posts about  how these, how, how gleam works and
+what's going on in the gleam world.  So people keep track of what's going on.
+And then it just steadily grew and it  grew to a point at which, um, yeah, it,
+it's a lot smaller of an income than any  other job I've had in a long time.  However, it is actually
+enough to pay the bills.  And yes, how much money am I willing to
+sacrifice in order to like, um, a make  gleam successful and make it exist, uh,
+but also, you know, not have a boss.  Well, something I care about.
+Um, and yeah, that's a good trade.  So now I'm, I'm have less money, but can,
+can make this thing  happen, which is really good.
+And then that's always looking for like  little bits on the side to,
+to, um, you know, waste money.  So if I can find a piece of work that
+aligns with gleam, um, but also can bring  you some money to, you know, help make it
+a bit more sustainable, um, then that's  worth doing like applying for grants and
+stuff like the early as in the early  ecosystem foundation one, which I
+mentioned earlier for making  this course to learn gleam.
+Like that, that's a good  example of that sort of thing.
+I'd love to do more stuff like that.  Ah, cool.
+Can I ask, I mean, feel free to refuse to  answer this question
+because it's about money.  But the, the whole, um, get hub
+sponsorship thing, is it like, if you've  got a few large sponsors,
+is it lots of little people?  What are the rough numbers in there?
+It's almost entirely, uh, money.  Um, uh, the biggest sponsor is fly the
+deployment platform.  Um, it's also a really good product.
+I don't have to say that, but it's good.  You should probably use it.
+Uh, I use it.  Uh, right.
+Yeah.  Yeah.
+Yeah.  I like, I know that because I've got,
+I've got good developer experience, but  they just do clever
+stuff for firecracker VMs.  And I'm sure, Oh, that's really clever.
+I like that.  Um, but, uh, yeah, so they, they give
+about maybe a third,  maybe a bit more than a third.
+And, um, then the rest is like people who  could be giving anywhere between like,
+you know, $1, $5, $10.  And then a few people give a hundred,
+which is just amazing for people.  Um, I mean, my, my.
+Ideal situation is would be that, uh, in  the future, the companies that are using
+gleam, they'll all give a small, like,  you know, amount of money that is almost
+insignificant to a business to, um, not  as clean, but their
+dependencies in general.  I think companies should give a small
+amount of money to, to support their, um,  you know, any open source projects that
+use, and then that will be, uh, you know,  much less scary for me.
+If I've got like, you know, tens of  businesses giving us all that money
+rather than rely mostly on one company,  giving a larger man, because the flying
+guys have been fantastic.  Um, and you know, I do hope that they
+continue to support.  Um, I'm extremely grateful, but like,
+there's no reason why they have to, you  know, it may, and point
+may come in the future.  They decide that they want to do
+something else and that that's it.  That'll be, uh, uncomfortable for me.
+So, yeah.  Yeah.
+Did you ever consider,  were you ever offered?
+Like, um, I know the inventor of Elm  ended up working for a company that used
+Elm heavily and he was just employed to  be their in-house language developer.
+Is that something you'd be interested in?  I had a few organizations sort of, um, we
+didn't get very far down the process, I  think, because I didn't sound very
+positive towards it, but a few people  sort of like gently approached that.
+But I'm very concerned that, um, having a  single company have such a large
+investment or like a large perceived  control in the language, um, will really,
+you know, shape what  kind of work that gets done.
+And I don't want to, well, I mean, I do  actually, um, if people are sponsoring
+and they say, Oh, we want to be, you  know, this is a problem for us.
+So we want to be able to do that.  I generally, you know, shift the backlog
+a bit to try and align with those needs.  But if it was my employer, um, you know,
+suddenly it's not really my decision and  I'm not sort of deciding, um, you know,
+what I think is best.  I think there's actually going to be a
+bunch of obligation there.  And then I'm not convinced that I'll be
+building the thing that is best for, um,  you know, the gleam
+community and future gleam users.  Cause in theory, you know, if all goes
+well, this project's going to go on for  decades and decades and decades, you
+know, hopefully last longer off.  Continue long after I've, um, you know,
+finished working on it.  So, you know, what some company needs
+today is not super relevant and I'd like  to, to separate those
+things out as much as possible.  So does that mean you're going for the
+like benevolent dictator for life?  I always, I always joke that it's the
+malevolent dictator for life.  Really depends on the author.
+Yeah.  I mean, so I think that, um, I think
+Elmo, um, Evan, the, the Elm chap did  some good writing on this about, um, you
+know, I think it's a really good fit for  a language at the start of, not just for
+language, but technical projects.  Um, assuming you've got a good, uh, you
+know, assuming you get lucky with the  person, I guess, to some degree and they
+make good decisions.  It's really helpful to, to, um, you know,
+what, what can be more a cohesive  decision making process than a single
+person, eh, you know, and not squabble  and not get caught in these things.
+And that can get you to a point when  you're mature enough
+in order to go, okay.  And now it's, um, much less pioneering
+and much more stewardship at that point.  I think you can spread out a lot more.
+Um, we're not quite there yet.  Um, I think we're pretty close.
+Um, I got the impression that Elm kind of  burnt out before it got
+there by putting on one person.  Yeah.
+I, it's, it's, it's tricky to talk about,  you know, what's going on with Elm
+because, um, I'm not privy to any of it,  but it did seem at some point the updates
+just sort of stopped coming and I, you  know, he's clearly very smart guy.
+And I, but I speculate it is, you know,  might be burnout as he, as he suggests,
+like he seems to like, um, working on  things, um, like having quite a high
+degree of control over it, which, you  know, all, all, everyone in that sort of
+situation is going to have  a high degree of control.
+But I think delegation is so important,  you know, um, I, I, I'm very
+much an old open source nerd.  No, I'm not old, but I'm very, you know,
+I've been an open source nerd  for a long, for a long time.
+And as such, like, I think the community  aspect of creation is super important.
+And so, so much of gleam is, is, you  know, from the way that we manage the
+issues and the way that I try and  interact with the, um, you know, the
+community, it's about trying to enable  people to, to, to get
+involved and build things.  Whether that be, um, you know, this
+person did this amazing piece of work  that'd be really hard for me to do and it
+saved me loads of time.  Awesome.
+Or if it's just this person made a pull  request and it wasn't very good.
+Um, we helped them get it there and it  probably took a lot more time than if I
+just done it myself, but they had a good  time and now they're a
+member of the community.  Like those are both wins.
+Those are both really good things.  And so like, trying to grow, trying to
+grow both of those things and all the  other, um, you know, interactions can
+have is like super important.  And I hope it means if I, you know, if I
+were to vanish tomorrow, which I'm not  going to, um, the
+board, the board keep going.  Do you, so have you got people like
+contributing tools,  contributing to the language itself?
+Yeah.  Design decisions.
+How spread out from you is it?  The majority of the compiler development
+is me, like, you know, quite a large  share, but the, we, we've got a, um, the
+community is mostly focused around  discordment, which is lovely.
+It's just, it's the friendliest,  cheeriest bunch of people ever.
+Um, and people just  like, just there to hang out.
+Some, some people, some people are there  because they want it really interested
+and involved in the, the, you know, the  language development and
+tools and all sorts of things.  They're making like
+great libraries and things.  And you know, there's a few academically
+types who do a lot, you know, write  actually quite long form posts about, um,
+different language features and how they  can interact with each other and like,
+oh, well, and the  references to papers and such.
+And then there's the people who just sort  of use gleam and they mostly just sort
+of, um, you know, they, maybe they share  some libraries they've made or like show
+some pet projects they've got.  And there's just some people who don't
+use gleam and they're just  there because they like it.
+Like not, not, not it isn't gleam.  They like the people like they joined it.
+They was like, have you  ever, have you ever used gleam?
+Like, oh yeah, I installed it once.  I've never run it.
+It was like, you'll hit every day.  But that's quite nice.
+Like I think it probably shows that, um,  we're doing something right.
+We're building a community.  If some people are just there because  they like the community so
+much, like that's a good sign.  Yeah, yeah, absolutely.
+It makes me imagine that you're, uh,  eventually going to get sponsorship to
+buy like a hundred acre ranch whole clean  community or just work the ranch.
+Where programmers go to retire.  Yes.
+Yeah, absolutely.  When they're burnt out, the Louis pilfold
+burnt out retirement clinic.  Gone to live in a farm.
+Yeah, I love it.  But what, what, what
+is the future of gleam?  I mean, if I look at gleam two years from
+now, when I see exciting new features,  Louis pilfold being the MC of gleam comp.
+Oh, maybe I've made a tricky decision  lately to like do a lot less, um, like
+talking at conferences.  Um, and I really enjoy it, but it just,
+uh, it takes me a long  time to write a talk.
+I know some people can write a talk on  the train on the way over, but maybe it's
+because I did a lot of theater.  When I was younger, but it always ends up
+like writing a script and rehearsing the  thing and like doing iterations on it.
+And it just takes many, many, many hours.  And like, I could write a blog post in
+much less time than this.  And it would be read by much more people.
+And then I can go and make a second blog  post for a third or like work on a
+feature and these sort of things.  And you know, at this point in time
+where, um, you know, people, people are  looking at gleam, you know, it's got a
+lot of, of momentum,  which is really exciting.
+It's got more stars on GitHub than F  sharp, which I find bizarre.
+Wow.  Yeah.
+Like how did that happen?  So like now is the time to, to push.
+So we've got to be really efficient with  time and that isn't conferences at the
+moment, but I'm hoping somebody will do a  gleam comp because I'll definitely,
+definitely do something for that.  Um, but in the next two years, like we're
+getting, we're finally getting the point  where the language is
+starting to look complete.  That doesn't mean nothing will be added
+anymore, but like all the things that I  think have been, you know, if there was a
+version one of gleam, the language would  have to have this, this,
+this, this, this, this mess.  And that's always just seem like this
+mountain on, on, on the horizon, but now  it looks like a hill, you know, like it's
+still a very large, it's still huge, but  like it's, it's, um, yeah, it's, it's on
+the horizon, which is really exciting.  And then there'll be decisions about,
+okay, does that mean  we do version one now?
+What does, what does version one actually  mean when, um, the binary doesn't have
+just the compiler and language in it, but  it also has build tools and a language
+server and all these other things.  Like, can I have some of those be like
+zero point something, or is the version  one of the language only stability
+guarantees that only  for the language itself.
+And it's not for the surrounding things.  So there's a lot of, there's lots of, um,
+you know, nuances to work out and I'd  like to have, um, a good amount of, uh,
+just data on how people are using it and  finding it in, in, in production,
+because, you know, I feel pretty  confident we've got a good design, but it
+may be after two years, people are  actually, this thing sucks.
+Like that thing there is rubbish.  And I go, okay, cool.
+We're going to fix that.  And it'd be really nice if that was like
+pre one rather than that.  Well, let's do one to two.
+Um, because you know, the artics, uh,  it'd be the same amount of work.
+The upgrade process will be the same, but  it would just feel quite
+different to the community.  So you want the major features to be
+ironed out in production for a while  before you put the
+production stamp on it?  I think so.
+Like I, I, I, well, I just want to have  some, I just want to have like more data,
+more data is always good.  Like for any decision, you know, if
+you're not entirely sure about something,  just wait a bit, um, have more, have more
+shower thoughts and talk to more people  and do more experiments.
+Go into the gleam community, spawn a  number of actors and
+see which one's crack.  Exactly.
+Yeah.  Yeah.
+Now you're talking.  Well, I am going to go and check it out
+because I've got the  rest of the afternoon off.
+Um, cool.  Louis sounds absolutely great.
+I'm looking forward to getting my hands  dirty with a language that isn't as weird
+as Erlang, but has the power.  Thank you very much
+for joining me on this.  Talk to you soon.
+And it's going to be great having you in  the gleam community.
+Yes, absolutely.  Good plug.
+Cheers.  Thank you.
+Thank you, Louis.  And thank you to Louis' cat, Nubie, for
+making a guest appearance there.  With that, I think I am going to head off
+and kick the tires on gleam.  I've got some spare time at the moment.
+So I'm going to treat  myself, do it a programming.
+If you want to learn more  about gleam head to gleam.run.
+That's the website with all the details.  And if you're anything like me, you'll
+probably also want to look at packages.  gleam.run to see what kind
+of library support it's got.  Before you head there, this is the part
+of a podcast where I tell you about our  sponsor, but we, we don't
+actually have a sponsor yet.  So this week's episode is sponsored by
+having a nice cup of tea.  Whether you're listening to this podcast
+in the gym, the kitchen, or on the way to  a trumpet lesson, why not follow it up
+with a nice cup of tea  and perhaps a biscuit.
+If you want to throw a biscuit my way and  support future episodes of Developer
+Voices, please consider clicking like and  subscribe and share
+and all those buttons.  It would be great if you share it with a
+friend who you think might be interested.  And we all know the algorithms are trying
+to figure out what interests people.  So if you found this interesting, tell
+them with a click, please.  And with that, I think we're
+at the end of this episode.  I've been your host, Kris Jenkins.
+This has been Developer  Voices with Louis Pilfold. 
+Thank you for listening.

@@ -1,0 +1,84 @@
+hey friends we are going to be building a tool 
+that will display location data in bing maps using   open edge and specifically version 12.6 openedge 
+is a platform that i recently came across well   not really recent i would say it's been a few 
+months now i was blown away by their app dev   platform and their advanced business language abl 
+so we are going to be using that to build today   i'll pull up on screen here openedge so you can 
+learn a little bit more about the tool we will be   using openedge essentially supercharges enterprise 
+app development so you are able to build dynamic   multi-language apps with secure deployment let 
+me pull up the project on screen here so you can   see we have employee number name last name phone 
+number and email and this data is coming from the   demo in open edge in their database specifically 
+if you go onto screen here you can see we have   a rest api that is returning the data for the 
+employee data so once again the number the name   last name home phone number and email address 
+also too i want to note that the demo i'm going   to be going through to day is one that was made in 
+collaboration with openedge i just wouldn't feel   right if i didn't shout out the amazing developers 
+who work at progress who developed the open edge   platform let's get into it foreign before we dive 
+into it let's talk about some prerequisites which   are pretty standard for these type of things 
+and for this we are using abl as the programming   language for the business logic on the server wait 
+to explain to me what exactly is an abl stands   for advanced business language it's a language 
+with its purpose to express business concepts as   efficiently as possible i was blown away by their 
+application server which they refer to as paz for   openedge also for more information on paths for 
+openedge i linked it down below we are adding   these fields to the temp table definition so that 
+this data can be returned from the application   server the openedge abl the programming language 
+in the progress openedge application platform   really makes things efficient we do not need 
+to even update the buffer copy statement as   it already knows internally which fields can be 
+copied the abl language is tightly coupled to the   database so doing database operations like getting 
+the customer data in this example is simply a   matter of a for loop with a single line of code to 
+fetch the data comparing this to other programming   languages requires a bunch of line of code to do 
+the exact same thing the next step is to have some   prerequisites as we are accessing bing we will 
+need to set up an account and also to have a bing   maps key i'll link down below as well how you can 
+follow along and get those alright if i open up   vs code here you can see our html page and also 
+too i want to note for this project we are using   kindle ui kindle ui is a set of user interface 
+components and tools that will will allow you   to build for both web and mobile applications 
+and it's based on html css and javascript and   kendo ui is also developed at progress also to 
+one of the main features or really interesting   features about kendo ui is its cross-platform 
+compatibility it allows you to build apps that   work across different devices browsers including 
+desktops laptops tablets smartphones you name it   alright so let's go back to the html page and 
+you can see in the html file we are importing   grid.js so if we go to the grid.js file you will 
+see there is a function here called create grid   and within that function we are calling the rest 
+api then if we scroll down a bit further you can   see we are creating a grid format and displaying 
+the columns on the grid component next up is let's   create a cls file and what that will do is really 
+enhance the employee application also a cls file   is a source code file for abl class definitions 
+it is a simple text file that can be opened in   any text editor you can see here this is the code 
+that implements the rest api and let's go ahead   and add some fields latitude longitude position 
+but you can add more as well and as you can   see we are adding these fields to the temp table 
+definition so that this data can be returned from   the application server next up let's go back into 
+our html code and ensure that we have support for   bing maps so you can see here on line 23 we have 
+added in support for bing maps next let's create a   map.js file and this map.js will do a call to the 
+bing map control api now in map.js you can see we   have the function called getmap and this is where 
+we will be creating an instance of the map object   so you can see we are creating map microsoft dot 
+maps map and then two passing in our credentials   then this code is calling load data on line 22. 
+and this function here is calling the rest api as   you can see then in our for loop as you can see 
+it is adding the location information for each   employee and then this location's array is passed 
+into the add locations function down below on line   43 and in the add locations function you can 
+see we are actually creating push pins for each   location next up we need to have a handler for 
+the on push event that when you click on a push   pin it will display the info box all right if we 
+go back to take a look at the new version let's go   back to localhost and see the new api that we have 
+enhanced we can see here it now includes latitude   it also includes longitude and position and if 
+you inspect this page and go to your network   tab you can see that this data is being returned 
+as a json now with all the steps we've taken we   can simply access our demo html page to open your 
+project now right click on the demo.html file and   then open it up in microsoft edge and there it is 
+this is pretty cool if you ask me we were able to   make this in a matter of minutes you can see here 
+now we have a bing map which really shows where   the employees are located and if you select one 
+of these push pins it will show the name and the   title of the person okay we have completed our 
+project this is pretty cool honestly is really   simple and the power that openedge brings is 
+pretty incredible and for this example we were   using javascript but openedge integrates with 
+several programming languages not just javascript   and also too it provides a wide range of platforms 
+and services from database management application   integration security management reporting 
+analytics you get the point it's really powerful   this is a platform that if you are developing 
+independently you can use but also too that a   lot of businesses use so it's something that is 
+really important if you are going to be applying   in the job market and you are looking for other 
+platforms to learn i would definitely suggest   checking out openedge because it's something 
+that will really help you stand out on your   resume there are thousands of mission critical 
+applications written in abl in multiple industries   such as manufacturing healthcare travel finance 
+and tons more these applications are waiting to   get extensions improvements and modernization 
+and also to their users and customers need new   developers benedge has a free developer 
+training and certification program i know   a lot of us like to continue to upskill and gain 
+more certifications to continue to grow our career   so i really wanted to share with you about this 
+this training will help you as a developer become   certified in open edge coding an openedge doesn't 
+have to be complicated also too coding skills from   other languages are transferable to abl i linked 
+it down below so make sure to go check it out   and once you have finished the training and are 
+ready to jump start your career openedge even has   a linkedin group that helps connect job seeking 
+developers with businesses that are specifically   looking for open edge developers let me know what 
+we should build next i wonder if we could like   add on to this to track the employees as they 
+move around where's that creepy that's creepy   that's creepy tip okay hit the subscribe button 
+i'll see you all soon thanks everyone [music]

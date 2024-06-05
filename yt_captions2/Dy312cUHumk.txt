@@ -1,0 +1,112 @@
+- remember that time i was upgrading my personal gaming setup and i had to blur out
+a super secret cable. well, the story there is that
+i really needed one of these to complete my setup but because the product
+was still in development i had to sign an extremely
+restrictive nda to get it. corning had no problem with me using it, but i didn't end up being
+able to show you guys or talk about it for almost another year while they got it ready for prime time. but this is it. boom, bigger reveal! it's a pickle. no, i'm kidding. it's corning's optical thunderbolt 3 cable and it might look like any other cable but it's actually a technical marvel. and i'm going to tell you guys why. after i tell you about
+our sponsors, smartdeploy. smartdeploy enables it admins
+to manage pcs from the cloud. you can push windows,
+apps and security patches to any device anywhere
+without leaving your desk. get your exclusive free software with over $800 at smartdeploy.com/linus. (upbeat music) from the first day i
+installed a high performance graphics card in my pc. i dreamed of a way to keep my gaming space both cool and quiet without compromising that
+sweet, sweet performance. and when i discovered
+corning's last generation optical thunderbolt 2 cable, i finally realized that dream. using a dock, i could have
+all the io that i need running over a single cable
+with all the heat and noise of my gaming rig in
+another room altogether. and it worked really well until a couple of things happened. first, i wanted to upgrade my machine and thunderbolt 2 isn't
+really a thing anymore. and second, every single one of my first gen thunderbolt 2 cables died due to what was apparently a fairly widespread overheating issue. a cable that overheats! as it turns out, that's
+just one of the many reasons this thing took years to develop. another, is that it took many, many months to get the firmware just so to appease the intel certification gods and okay, hold on a second! we got overheating. we got certification. what kind of electrical cable is this? i'm glad you asked because it's not one, it's a fiber optic cable. now most optical cables
+contain one or two strands of fiber optic filament,
+but this one has six. each of them is just one quarter of a millimeter in diameter with a glass center that is just one eighth of a millimeter and then a core, where the
+light actually travels, that is less than half of that again. fibers like this are
+used in many data centers and can transmit 20 gigabit per second. so then, one pair in here
+transmits 40 gigabit per second. another pair receives
+40 gigabit per second. and the remaining pair carries lower bandwidth control signals between the two ends of the cable. all of this is done internally and to the devices on either side, it appears as a completely
+normal thunderbolt connection, no drivers required. that is why it needs this. yes, my friends! we cut a a $400 cable to show you this. packed inside each of the connector ends is a tiny little circuit board containing the components
+that take an electrical signal convert it to an optical signal, transmit it over each fiber, and then convert it
+again at the other end. each connector contains three vcsels or vertical cavity
+surface emitting lasers, a type of light source that's common in fiber optic networking because it's narrow beam
+and fast switching speed offers superior performance
+and range compared to leds, but at a lower cost than
+full fat laser emitters. there are also three photo diodes which are the detectors that
+receive these laser signals along with chips to
+control the laser timings and to receive the photo diode signals and turn them back into electrical ones. you can actually see that corning has put a lot of work into
+designing the strain relief that protects the optical fibers and bonds the circuit board to the cable. okay, the thing is glass
+fiber is, well, it's glass and it needs to be treated
+with a bit more respect than copper in order to avoid breakage. you guys might actually remember when we fiber optics my house and colin accidentally
+broke one of the fibers as we were running it through the attic and we had to run out and replace it. that was an adventure by the way, definitely check out that
+video if you haven't seen it. with all that said though, corning claims that this is one of the most durable
+cables they have ever made, which naturally means
+that i want to test it. we'll just plug into our
+thunderbolt port here and then, type c, type c. this dock should not work! okay, just because thunderbolt and usb and display port for that matter, can use this same type c connector doesn't mean that every
+port and every dock and every cable can actually
+carry all of those signals. and in fact, this cable can
+only carry a thunderbolt signal. so, no problem. let's go ahead and plug in
+this thunderbolt ssd then. no! right, okay. this is an optical cable. what can we not transmit
+over fiber optics, power. ha! one moment please. - [colin] here you go.
+just at it. just at it. - now, we can do our durability test. that's looking good. getting speeds of 200, 300, 400. 500, nope! 400 megabytes a second. and if corning is to be believed, we can do crazy stuff like tie this thing in a
+fricking knot and wrench on it and it shouldn't stop transferring. (laughing) okay, i mean that's glass,
+but apparently it's, pretty like rugged glass, more knots, we're getting knotty here. you wanna get knotty? let's do it again. copy here. i mean, (laughing) - [colin] we could try
+and skip rope with it. - i'm sure we could, at this point. look at this. this is crazy. - [colin] that poor glass. - easy peasy. and one more thing. remember how i said the cable
+can't carry display port. it only carries thunderbolt. well, thunderbolt can carry
+a display port signal. you just need a dock that
+is able to split it out. so, we've got our dock, we've got display port and da ta da! there it is. so you've got your display port,
+your thunderbolt, your usb, your ethernet, whatever
+else it is that you need. and the really truly
+mind blowing thing here is that for the laser
+light to be transmitted, the fiber in each of these
+cables has to be prepared exactly like the polymer coating on each fiber has to be removed, precisely cleaved then the fiber has to be perfectly aligned and secured to its assigned
+laser or photo diode within 10 micrometers of tolerance. and much of this fiber handling work is performed in a clean room by hand and is super labor intensive. that is why they cost so much. but the thing is copper
+thunderbolt 3 cables, like this one, can only reach a maximum of three meters before the signal degrades too much. so while these are cheaper, for certain applications this
+is just the only way to do it. but, how well does it work? okay, hold on. i've actually got something
+perfect to test this. where did we put it? nope. oh, hey, there it is. check this out. this is a aorus's water-cooled rtx 3080. that comes in an external
+thunderbolt enclosure. so, wow, this thing is really big. ha ha, that's okay, because let's say, "oh no, i don't have anywhere to put it. where on earth will i put it?" hi. we'll find somewhere else. and i'll connect it with this guy. here we go. do to do, to do, a do do to! where am i going to put my graphics card? i could put it at madison's desk. i could take it down the stairs or i could go over to the
+accounting department. i can put it in yvonne's office. - [yvonne] what are you doing? - i'm just running a cable. this isn't really far
+enough to do my demo though. i've still got a lot left on the spool. so see you later. i could go to colton's office. does he still work here yet? yep, turns out he does. all good, don't worry about it, colton. i'm going to go over to
+the creator warehouse. i'm going to see all the prototype merch. we're going to go down to logistics. wow! 50 meters is actually
+really, really far. now, we're down in logistics. and we still got cable left. oh, this is perfect. we can put it on top of this server rack. brilliant, i just have to go get the gpu. i forgot to bring it. oh you! wow! what a beast! thanks colin. now, we just got to hope
+nobody trips over this and like pulls it off the desk. go, go, go back. interestingly, the maximum
+length of this cable isn't limited by the fiber itself but rather by thunderbolt's
+timing requirements. so it takes around 0.25
+microseconds for light to travel 50 meters in an optical fiber. so due to the 0.5 microsecond
+roundtrip signal time, the size of thunderbolts buffer registers and some timings to find in
+the pci express specification, performance starts to degrade or you can get weird
+behavior after 50 meters. now, the thing is we're
+hooking up a gpu here but it could actually be
+any thunderbolt device. you could even daisy-chain
+multiple 4k monitors or hide your storage drive
+away, somewhere theft resistant, or put a dock somewhere
+far away from your pc. like i do at home to isolate
+the noise and the heat. all right, let's go
+ahead and launch a game. what do you think? and that is definitely not running on the integrated graphics. i mean, to be clear, this xps 15 has a very
+respectable rtx 2060 in it, but this is shadow of the
+tomb raider running at 4k, absolutely maxed out (chuckles) and we are getting
+significantly better numbers. 34. okay. - [colin] the 3080 should be
+able to do more than that? - yeah. okay. so, that's the thing, maybe a pci express 4x interface shouldn't have such a
+powerful graphics card on it but at least the cable
+is holding up just fine since no one has tripped over it yet. and oh, another thing to note is that this config isn't optimal either because some of the cable's bandwidth is being used to bring the image back from egpu to this display. so we would actually see
+a definite improvement if we were to plug directly into our egpu for the display output but then i couldn't
+just go put it wherever, i would have to put it
+where i actually wanna game and i would just be able to
+put the computer wherever. anyway, long range high-speed connections for consumer level hardware isn't even the coolest thing about these. say for example, you needed
+to run along power lines. i neglected to mention
+that because these are, it's right, fiber optic and there's no metal
+elements within the cables. they're impervious to
+electromagnetic interference. so you could actually use something like this to run data somewhere
+you normally couldn't, like an mri, for instance. neat, huh? it all comes at a cost, of course though. so the 165 foot or 50
+meter one runs just shy of 480 us dollars. while the shortest length
+of five meter cable is still a wallet puckering $360 which goes to show you that the cost is in the manual assembly of the ends and not in the actual, you know, glass that's running between them. of course, if you have a
+specific use case like i do at least it's there as
+a solution to a problem that otherwise we would
+have no way to solve. and i'm glad that someone went through it all
+the trouble to make it. so thanks corning. and, thanks to our sponsor
+for this video, ting mobile. ting mobile has new
+rates that make it easier to see how much you can save by switching. they've got unlimited
+talk and text for just $10 and data plans starting at $15 a month with unlimited data for 45 bucks a month. and if you liked their previous
+pay for what you use plans, hey, they're still there. they're called ting mobile flex plans and they charge just $5 per gig. what's really cool is that the data in their flex plans can actually be shared across multiple devices if you have a family plan. so the more phones you
+connect, the more you can save. you still get nationwide
+coverage in the us and award-winning customer service. and pretty much any phone
+will work with ting mobile. so check them linus.ting.com
+and receive a $25 credit. did you tie this up more? oh, well that's it for
+this (chuckles) episode if you're keen on cable related matters, we've got an upcoming video that asks the question and answers it. does cable length really matter? keep your eyes peeled for
+that in the near future. bye. oh, actually wait. no, you wanna get knotty?

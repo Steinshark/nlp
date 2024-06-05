@@ -1,0 +1,63 @@
+- the best windows ever for gamers. at least that's what microsoft says, but microsoft has made a lot of promises to gamers over the years. remember when vista was going
+to be the best for gaming? remember games for windows live? oh, sorry. i threw up a little. so with windows 11 creeping ever closer to final release, we felt that we needed to give you guys some answers you can actually trust. is microsoft taking the upcoming threat of linux gaming seriously? are you really getting a
+better gaming experience on windows 11? or is this just a lot of
+hot air so they can finally make you link your microsoft account? well, i usually save my hot air for sponsors, like amd. thanks to amd for sponsoring this video. amd's ryzen 5000 series cpus and radeon rx 6000 series graphics cards enable the ultimate gaming experience for any gamer, across any setting, at any resolution. head to amdgameeveryday.com to learn more. (upbeat techno music) our first step was setting up our gpu test bench here with two ssds. one running windows 10, and the other running the
+latest preview of windows 11. both of them were loaded
+with the same games, and both were running the same version of nvidia's game ready drivers. this way, we've got exactly
+the same environment, down to the exact motherboard for both operating systems and we can switch between them without changing anything else. starting with a recent top end gpu, the story is already really interesting. windows 11 comes in a little bit slower than windows 10 in
+"assassin's creed: valhalla", but it's close enough that it could be a coincidence. f1 2021 without ray tracing shows more or less the same performance
+between the two os's, and that doesn't change with ray tracing enabled either. nor does it change with "forza horizon 4" or "flight sim 2020". i mean, it's not like you'd expect a big difference anyway, right? well you wouldn't, but then along comes "cs:go" representing a legacy gaming title, and it sees a significant
+reduction in performance, losing 110 fps on average. so what is going on here? looking at the data, cpu utilization is more or less the same, but gpu utilization takes a significant dip in windows 11. remember guys, we're
+running the same hardware, same driver, same game, same test. we aren't thermal throttling. so what gives? ah, well which cpu cores are being loaded gives us our first clue. where windows 10 seems to spread the load across threads 0, 10, 11, and 12, windows 11 is splitting
+the load far more evenly across threads 0 through 3, 5 through 10, 13, 15, 24 and 25. that might sound way better. i mean, it's spreading the load across more of your multi-core cpu. but remember we're using a ryzen cpu. so constantly crossing between our ryzen's chiplets means the cpu is spending
+way more time waiting on data to be pushed into cache and less time sending commands to the gpu. now, i wouldn't expect
+nearly the same kind of impact on a cpu with a single ccd or on an intel cpu, but it's definitely something that we're going to keep our eye on as windows 11 gets closer to release. and this bad behavior seems to carry over to the "civilization vi" ai benchmark, with turn times nearly a second faster on windows 10 on the same cpu. this suggests then that, while windows 11's scheduler might be more sophisticated than windows 10's, not all of its efforts are
+making positive impact. at least not for gamers. to be clear, directx 11
+and directx 12 titles that are built with multithreading in mind don't suffer the same fate, and directx 9 games are old enough that they're going to run well enough on any high core count modern cpu anyway. but we still hope that this can be fixed before windows 11 goes gold. gold like the pins on our cpu pillow. lttstore.com. it's very soft. now as for how an older gpu fares, we chose the gtx 1060 based on its popularity in the
+steam hardware survey. and it sees a very similar
+pattern across most, but not all of our testing, with virtually identical numbers between the two os's in "assassin's creed:
+valhalla", "f1 2021", "forza horizon 4", and
+"microsoft flight simulator". where we deviate from
+our rtx 3080's pattern is in our "cs:go" performance. here, we get pretty much the same numbers between windows 10 and windows 11. and this makes sense because we're more gpu bound in this scenario because we have a less powerful gpu. so that means that cpu scheduling and context switching is no longer what's holding back our
+overall performance. let's put performance aside though. there's a lot of other
+reasons why gamers might want to upgrade to windows 11. i mean, microsoft wouldn't
+call it the best windows ever for gaming if it weren't, right? well, i mean, even with
+microsoft's track record aside, you would hope the next version of anything would be
+better than the old one. how true that is depends on who you're talking to, because from where i'm sitting, there's one major advantage that remains for windows 11 gaming, and that is hdr. in windows 10, hdr needs
+to be manually enabled by the user. and once it's on, it's on system-wide, which means you can run into situations where your
+hdr content looks great. that is assuming you also remember to enable hdr in the game menu, but your sdr content, which is everything else, might look a little off. auto hdr is microsoft's effort to fix these problems in windows 11. and it actually does a
+surprisingly good job of bringing hdr-like visuals to standard dynamic range content through automatic tone mapping. it looks like it will legitimately be a key selling point for anyone who has an hdr
+compatible display and gpu. the only problem is that not everybody has such a thing and many lower cost
+hdr compatible displays are really compatible in name only. providing correct mapping of hdr content, but not actually displaying content in high dynamic range. 'cause they just can't get bright enough. so whether you'll actually
+get a better experience on such a display is going to depend on the content and on the display. and by this point we're digging into niches within niches to try to find windows 11 gold. okay, so what about direct storage then? that's a feature that enables your gpu to directly read and write from your game's install directory. kind of like the xbox series',
+and the playstation 5. well, funny story about that one. it was supposed to be
+windows 11 exclusive, but after severe user backlash against that announcement, it's a bit of a pattern for them, microsoft backpedaled and are now bringing it to windows 10 as well. although exactly what that's going to look like is anyone's
+guess at this point, because according to
+a microsoft blog post, windows 11 has, "storage
+stack optimizations." that, "unlock the full
+potential of direct storage." whatever that means. we really don't know what that means, because we still don't know exactly what direct storage is going to do for gamers in practice, because no games have been built to take advantage of it yet. what we know is that the goal of the technology is to
+achieve results similar to what sony showed in their ps5 architecture demo. so seamless open world exploration without loading screens in between and stuff like that. one thing we know for sure though, is that if you're not rocking an nvme ssd, whether you're on
+windows 10 or windows 11, you're going to be out
+of luck when it comes to enabling direct storage. get subscribed by the way, because when direct storage is ready, we're going to be on
+it like white on rice. or white on milk? anyway, the point is today
+we're looking at beta software and it's impossible to
+draw hard conclusions like, "don't upgrade to windows 11." or, "windows 11 will give you more fps." but we can make some observations. first, as with any
+operating system upgrade, you shouldn't expect miracles. obviously, there's going
+to be new optimizations, but they're not going to make your hardware magically better. whether it's brand new or a few generations old. and second, at the end of the day, most people upgrade
+their operating systems for new features or because they need to do something or use a new device that their old operating
+system doesn't support. and the good news for those folks is that windows 10 is going to be supported until fall 2025. so there is plenty of
+time left for microsoft to fix things and for you to make the jump when it's right for you. anthony also wrote in here that you should just jump to linux instead if you're going to be jumping anyway. and he might actually have a point. i think he expected me
+to argue with him here, but i'm trying to talk valve into giving us an early version of the steamos that they're running on the steam deck so
+that we could just put it on a regular pc and take the latest
+performance optimizations and anti-cheat workarounds for a spin. so, hey, cross your fingers with me. 'cause i think that would make for one heck of a video. just like this is one heck of a segue to our sponsor, nordpass. thanks nordpass for
+sponsoring today's video. nordpass wants to help you keep your private information safe, and their password manager
+helps you with that by storing all your
+passwords in a single place. it recognizes your favorite
+websites automatically, so it'll fill in your login details without you having to do anything, and it can help you create
+new, complex, secure passwords with their built-in password generator. you can access your login
+credentials on any device, even when you're offline. and it offers unlimited password, note, and credit card storage. nordpass premium starts
+at only $2.50 a month, and you'll get additional features like data breach alerts,
+password health reports, and up to six active devices. for nordpass's "so long summer" sale, you can get 74% off a two
+year nordpass premium plan with an extra four months for free. just check it out at the link in the video description. that's nordpass.com/linus. just make sure you use offer code "linus". thanks for watching guys. go check out our guide
+on installing windows 11 if you'd like to do
+some pre-release testing of your own, which is probably not a bad idea if you're looking to take the jump.

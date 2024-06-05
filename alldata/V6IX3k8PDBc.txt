@@ -1,0 +1,71 @@
+How should you check whether or not a file
+or directory exists in Python? This is one of those 
+things that's confusing mostly because Python 
+offers several different ways to do it. So, which one should you use? I've seen many beginners 
+follow a path like this: First, they check to see if the path 
+exists using something like `os.path.exists(file)`. Print something 
+in return if it doesn't. And then proceed to open the file 
+and do something with the data if it does. In most situations, although 
+this does have some problems, let's be honest, it's  
+probably fine. For small personal scripts and otherthings like that, 
+I probably wouldn't even worry about it. But if your intention is to build
+ something just a little bit more robust, then let's take a 
+look at some of the issues. The first issue is that time passes
+ between when we check to see if the file exists. And when we try to open it. It's possible that another thread or some
+external process deleted the file between when we check whether 
+it exists and when we try to open it. If that were to happen, this open 
+call would raise an exception, specifically a `FileNotFoundError`, 
+which is something that you might like to catch. So really, we need to basically 
+repeat our error handling code. Okay, so we surround 
+it in a try-except. But wait, if `open()` was going to 
+throw if the file didn't exist, then why did we need to
+check if it exists in the first place? And that's my point - checking whether it
+exists or not is basically redundant. If you're going to open the file immediately 
+after checking whether it exists, instead, just try to open it. It either exists and opens 
+successfully, or you get an exception. When you do it this way, the 
+operating system will prevent other processes from deleting the file out from under 
+you as long as you have it open in Python. Although it typically will not prevent the
+ same process from deleting it out from under itself, it's still possible that other threads
+ or processes read or write to the file in between when you 
+open it and when you read it. So, there are still things you need to worry
+about, just a few less of them. Another advantage of 
+this approach is that there are other things that can go wrong when you try to 
+open a file besides the file not being found. For instance, you might get an `IsADirectoryError` if 
+you try to open a directory instead of a file. You could use the `os.path` function 
+to check if something's a directory, but once again, you'd end 
+up with a potential very subtle bug. If whether it's a directory or not 
+changes in between when you ask the question and when you actually 
+try to open the file. So, if you're checking whether the 
+file exists because you want to open it, then don't. Just try to open it and catch 
+whatever errors you get. And if you want to be super modern, you might even consider using `pathlib.Path(file).read_text()` 
+as a quick one-liner to get all the data out. But sometimes you don't 
+want to actually open the file. You really do just want to 
+know whether or not it exists. You could be using the 
+existence of a file as a boolean. Checking whether an old temp file exists or 
+checking if the user made a configuration directory. In that case, the recommended way to
+ check whether or not a file or directory exists depends on whether you really need strings
+or whether you could do with `pathlib` path objects. Many applications default to strings 
+because it seems like the easiest choice. And in a lot of cases, it is. If that's you, then `os.path.exists` 
+might be what you want. Hopefully, unsurprisingly, it tells 
+you whether or not the file exists. `exists` will return true for files and directories, 
+and it also follows symbolic links. In particular, `exists` will return false for a 
+symbolic link that points to a file that doesn't exist. So even if there is an actual file for the symbolic link 
+at this location, it would still return false. It does sound a bit confusing, but this 
+is the behavior that you would usually want. If you want to check that you got an actual file
+and not a directory or some kind of device object, then you want `isfile()` instead. Once again, `isfile()` follows links. And this is probably what you want, 
+even though it sounds a little confusing. And you guessed it. For directories, there's `isdir()`, and it
+also follows symbolic links. So that's all fine 
+and dandy, and it works. But using strings to represent 
+paths can be kind of error-prone. Instead, using a `pathlib.Path()` can
+ provide a more ergonomic and safer interface. If you already have a string, you can convert
+it to a path very easily like this: `pathlib.Path(file)`.  Or you can do it like this if you're constructing
+from scratch. `path` provides a wrapper 
+around a lot of the `os.path` functionality. And they make it easy to 
+access through method calls. For instance, `path.exists` will 
+use `os.path.exists`, `path.is_file` will use `os.path.isfile`. and similarly for `is_dir` and a number 
+of other `os.path` functions. If you're already using strings all over the place, 
+of course, there's a bit of overhead to convert. But once you do, pretty much every built-in 
+function that takes a string path also takes a `pathlib.Path`. And importantly, `pathlib.Path` 
+takes care of a lot of idiosyncrasies that might come up if you 
+were to switch operating systems. Things like using forward slashes
+ on Linux but backslashes on Windows. Oh, and `pathlib` actually follows PEP 8.

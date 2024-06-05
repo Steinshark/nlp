@@ -1,0 +1,103 @@
+- these two computers have
+the exact same specifications, which means their performance
+is exactly the same, right? wrong. when we tested the corsair one a200, we noticed some fishy results. so we built a near exact
+replica except for the case, motherboard, radiator, and memory. and don't you worry, we'll explain why the
+memory is different later. then, we ran the same benchmarks and i'm pretty sure the
+results will surprise you. no, actually that's a lie. i am completely sure the
+results will surprise you. what won't surprise you is this message from our sponsor, glasswire. are you worried that someone
+else is using your wifi? glasswire can alert you
+anytime a new device joins. so use offer code linus
+to get 25% off glasswire at the link in the video description. (upbeat music) our corsair one a200
+boost impressive specs. it's got an amd 5900x, 12 core cpu, a full-fat rtx 3080 gpu, one terabyte of nvme storage with two terabytes of
+hard drive based storage and 32 gigs of 3200 megahertz ram all in this nifty little
+case with separate 170 and 240 millimeter
+all-in-one liquid coolers for each, the cpu and the gpu. wait, 170 millimeter? well, it should be better
+than 120, at least. so then what the heck is
+up with this performance? i mean, to be clear, 60 fps in "shadow of the tomb
+raider" at 4k with rtx enabled is a lot of performance. but the corsair one a200
+also costs a lot of money. so i expect it to leave
+absolutely nothing on the table. and something smells a little funny here. (sniffs) you smell that? (sniffs) it smells like heat. it's going up my nose. ah, there's your problem. despite this machine being liquid cooled it's cpu idols at around 50 degrees and check this out. just about the second you put it under any kind of load. i'm gonna print screen, ms paint and we're gonna paste this. you're gonna see it's actually
+jumped a full 10 degrees just from, since i took this screenshot. what even is that? and get this, our cpu never saw the max rated
+boost speed of 4.8 gigahertz throughout our testing. i mean, it is important to note that amd's fine print specifies that that is a single core boost speed, but still seeing 4.8
+gigahertz on the box and only actually seeing 4.5 in
+games and 4.0 in cinebench can be very confusing to the average user, especially when i'm pretty sure that this chip can do better. and we're not the only
+ones experiencing issues. we found a few posts on corsair's forum discussing poor thermals on the 5900x and 5950x equipped models. it's not surprising considering
+how small form factor builds do tend to run hotter, but
+it's certainly not ideal. the thing is though many
+modern computers are actually designed to run at or near
+their thermal limits without it significantly impacting their performance. so the only way for us
+to know just how much this is hindering us is to build up another machine to compare. and thanks to movie magic, (awkward music playing) panel. (murmurs) (awkward music playing) this one is already done. she's a chunky boy, but spec for spec, this
+sucker is identical to our corsair one a200 except for a couple of things. as i mentioned before, we used a different motherboard
+to match our case size and our 3200 megahertz memory
+actually had to be manually adjusted to be slower, to match the loose timings on the ram included with the one. and since we don't have
+a 170 millimeter rad, we went with a 240, since
+120 is definitely not enough. during a 10 minute stress
+test running cinebench r23 the corsair one reached a sweltering peak of 90 degrees celsius running
+at just over 4 gigahertz. meanwhile, our clone here with
+a similar corsair mind you, 240 millimeter radiator
+ended up in the mid seventies at just over 4.9 gigahertz. that's a difference of
+just over 15 degrees. but the thing is that clock speed delta doesn't fully explain the performance that i feel like is missing here. what else is going on? in both of our systems, the rtx 3080 gpu's easily reached their maximum boost clock of 1950 megahertz and maintained nearly
+identical average clock speeds throughout our testing. but while our air cooled card
+barely pushed past 60 degrees running "shadow of the
+tomb raider" maxed out the liquid cooled corsair
+one peaked at over 70 in the same test. now 70 degrees under load
+is fine for a gpu and it's clear from the narrow two and a half percent
+difference in results that 80 degrees on the cpu is also fine. that is if you don't mind trading two and a half percent of your performance for a super gorgeous and
+compact design like this one. but hold on a second. not all games behave the same. take a look at cs:go. yeah, sure. both machines manage around
+600 frames per second. so you're gonna be having
+a pretty good time, but that is a 6% difference
+in raw performance. so it's clear that the more cpu bottlenecked our application is the more the corsair one's
+borderline cooling system is likely to affect it. and this rabbit hole goes even deeper. you know, man, i thought this was just gonna
+be a simple system review. that makes sad linus even sadder linus, lttstore.com. we actually built our clone system here with a fatal flaw. watch as we transform it into a system that performs even better. (linus makes instrumental tone) yeah. holy hot monkey bananas. going back to cs:go here. there's something i
+didn't mention last time. average fps is not
+really a great indication of the gaming experience because you don't notice
+animation smoothness when it's good. you notice it when it sucks. that's why a cpu that's
+thermal throttling at all is such a problem. as its speed fluctuates you'll experience extremely short, but sometimes
+drastic dips in performance. and we can measure those. so looking at the worst, 1% of our frame times our clone here beat the corsair one by almost 15% right out of the gate and our upgraded clone takes
+that lead to almost 20% just for adding a bigger radiator. i mean the corsair one is still
+over 300 fps, so, all right, no problem in this game, but these effects can be measured
+and more importantly felt in other situations as well. let's take a look at cinebench. our clone with the dual radiator performed nearly identically
+to our corsair one, but all of a sudden we
+throw a triple radiator in and it manages a 3%
+advantage over both of them. this is probably because
+our 12 core 5900x is right at the limit of what a dual 120 millimeter aio can handle. so bringing that coolant temperature down, lets the cpu opportunistically
+boost up higher and more often. of course this raises the question, why is it so hard for a
+170 millimeter radiator to cool a cpu that's rated
+at just 105 watts tdp when a slightly larger
+radiator on the other side of the same computer is cooling a gpu that's rated at 320 watts. that's over double. well, there's a couple
+of reasons for this. first is that the dye
+of the gpu like this one is much larger and more surface area means more thermal transfer. second, gpu coolers are
+pre-installed at the factory where they can be placed directly, that's a pun, on the gpu itself rather than having a
+heat spreader in between. our die lapping adventure video by the way is a great look
+at just how many degrees you can literally shave
+off with a steady hand and some risky work. now some of you have probably
+noticed i've been very focused on thermal differences
+between our systems here. it is possible that the power delivery on the asrock b550 phantom gaming itx/ax is holding us back. but given that our performance
+continues to improve by going to a bigger radiator, it looks like thermals are the culprit. and in any case, it changes nothing about this machine costing $400 more than corsair's own similarly
+equipped vengeance a7200 while underperforming compared to what the
+hardware is capable of. i mean, we poked at some
+ideas to fix the one a200. we updated the bios. we tried undervolting with 1usmus tool, which resulted in hard crashes. we tried tuning the fan curve, although that gave us some
+really funky behavior that doesn't seem to be isolated to our unit. and i mean, i don't know. we could reapply a high
+quality thermal paste or put liquid metal on it or something. but the thing is, this is a prebuilt. for better, for worse most people are not going
+to do any of that stuff and it should just work out of the box. and besides some people
+might not even care about the trade-off they're making. maybe for you, form
+means more than function. and the corsair a200 might be worthwhile from your perspective. i mean, it still is a
+downright sexy machine that uses standardized parts, which allows you to
+upgrade it down the line if you're so inclined. it's just that i do
+think that corsair should revise the case in cooling design if they're going to keep
+packing it with the latest and greatest hardware going forward. just like i'm gonna keep packing this video with sponsors. thanks to ting mobile for
+sponsoring this video. ting mobile has new
+rates that make it easier to see how much you can save by switching. they've got unlimited
+talk and text for $10, data plans starting at $15
+with their new set 12 plan with 12 gigs of data for 35 bucks and unlimited data for $45 a month. if you're looking for a great deal ting mobile is offering
+their unlimited plan for just 25 a month for the
+first three months right now. and if you don't prefer
+those package plans and you just want pay for
+what you use, guess what? those old plans they're still here, they're called ting mobile's flex plans, and they're just $5 a gig. data can even be shared
+if you have a family plan so you can connect more
+phones to save more. you get the same nationwide
+coverage in the u.s. and award-winning customer service and pretty much any phone
+will work with ting mobile. so check them out at linus.ting.com and you'll get a $25 credit. so did you guys buy an a200? i mean, even though it's expensive, it might just be the easiest
+way to get your hands on a 5900x and a 3080. so we understand entirely if you did just, hey, make sure you keep it well ventilated and let us know in the comments, if you're running into similar issues. if you guys liked this video, make sure to check out "my
+easiest pc build in years!". the machine looks a lot
+like the corsair one but it's not. it's like super easy to build.

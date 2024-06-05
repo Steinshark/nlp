@@ -1,0 +1,94 @@
+- how can this be faster than this, when it should clearly
+be the other way around? for years, i've been
+reading comments from people who believe that the faster the gigahertz, the faster the cpu. and why shouldn't they believe that? gigahertz, also referred to
+as clock speed or frequency, is quite literally a measure of how fast the transistors in a processor switch. so all else being equal, more gigahertz should be more better. but all else is not equal. and in today's video, we're going to dive into what
+those unequal things are, and just how unequal they can be. we're also going to dive
+into today's sponsor: arozzi. thanks arozzi, for sponsoring this video. arozzi's new occhio webcams
+are privacy focused, so you can be seen and heard
+only when you want to be. get your occhio webcam with
+or without a ring light at the link down below. (bright electronic music) to make sure that our test
+is as fair as possible, both of our cpus used
+identical test benches: asus tuf b550-plus motherboards, noctua nh-d14 coolers, 16 gigs of dual-channel
+3600 mhz c14 memory, a crucial p5 nvme ssd, and an rtx 3060 xc from evga. we're going to have all these parts in our affiliate links down below. well, most of them. gpus can be kind of hard to find. (baby crying) now for the cpus. to keep politics out of the conversation, we're going to be using
+only amd branded processors, but these principles can be
+applied to any other situation where cpus are being compared. naturally, we started with a
+full run of our benchmark suite at out of the box speeds, so we can see how the
+higher-gigahertz 3600xt fared against the 5600x. remember that both of these cpus have exactly the same
+number of cores and threads. somewhat intuitively, the newer processor does outperform the older one, and sometimes by a considerable margin, but why? well, many modern processors are capable of dynamically
+boosting their clock speed under favorable conditions. say, for example, when they have a really
+good cooler installed. maybe our 5600x is just a mad cpu frequency boosting machine. let's try reining it in, and seeing what happens then. at our locked clock speed of 3.4 ghz, the 5600xt still wins
+in every single test. so clearly then, gigahertz is not the
+only determining factor for cpu performance. but these numbers aren't
+enough to tell the whole story. let's look at gaming. if i only measured average fps in shadow of the tomb raider
+and grand theft auto v, i might think that a 5600x
+is only about 5% faster than a 3600xt in the real world. but take something more
+cpu-bound like cs:go, and these two cpus, with the same core counts
+running at the same frequencies, are nowhere near each other. but then, dropping the clock
+frequency even further, to 2.4 ghz, it's clear that the lower the clock goes, the slower our cpus get. so what is it? does gigahertz matter, or not? there are a couple of takeaways here. starting with that, yes,
+gigahertz absolutely matters. which raises the question, then: why don't cpu manufacturers
+just run their chips at higher clock speeds? i mean, bring on the 10
+ghz cpus, am i right? well, that was the plan actually, but higher clock speeds come at the cost of more power consumption, which tends to result
+in hotter-running chips. thankfully though, there are a lot of other levers
+that cpu designers can pull to improve performance, which leads us to our second takeaway. cpus, or any kind of
+processor for that matter -- gpus, phone socs, anything -- should never be compared
+using gigahertz alone. it is clearly an important spec, and manufacturers do need to disclose it because it enables us to compare products within their own families. but if you want to talk about an m1 mac versus an intel mac, or an amd gpu versus an nvidia one, don't even bring it up. you would only be revealing
+your ignorance on the subject. let's talk then about some of the ways a cpu can differ, aside from gigahertz. an obvious one is that
+they can be designed to process more threads
+or tasks in parallel. intel was the first to
+process two concurrent threads on a consumer chip with
+hyperthreading, or smt, while amd was the first to
+build a truly multi-core cpu, with their x2 series dual-cores that were capable of doing
+nearly double the work under ideal conditions. the only drawback to additional cores is that they increase die size, meaning cost and power consumption, and they can't be used to accelerate single-threaded workloads. so in many consumer
+applications like games, they're only helpful up to a point. currently amd and intel's
+mainstream lineups top out at 16 and eight
+cores, respectively. so we can't keep pushing
+core counts forever and expect consumer applications to scale. and clock speeds have been
+locked in the same range for over 15 years. then, what have they changed to really push forward
+single-core performance? the simple answer is ipc,
+or instructions per clock. if we think of a cpu like a mine, and each core like a miner running back and forth doing work, the clock speed is how many times our miner can run back
+and forth per second, while the ipc is how much
+they can carry on each load. look at the apple m1, for example. joe average gamer might laugh at its meager 3.2 ghz clock speed. but when it comes to the real world, it performs pretty damn well, like this sexy retro gpu
+t-shirt from lttstore.com. what that tells us about it is that it has better ipc than a cpu that runs
+at a higher frequency, but performs the same. the problem, though, is ipc
+sounds a lot simpler than it is. you can't just add more
+instructions to each clock cycle. let's go back to our mine analogy. the problem is that our mine contains every single possible
+type of mineral or rock. and let's say those represent
+different apps or programs, and each of them requires
+specialized equipment. so let's say you level up your miner by adding more points to their shovel, and suddenly there's a boost
+to your coal gathering. but sifting for gold, well the shovel doesn't
+help you with that, so performance is entirely unaffected. that's how you can see a new
+generation of cpu come out that absolutely crushes cinebench, but gets the same fps in games. so ipc is problematic. along with clock speeds and core counts, it's one of the most important ways to predict a processor's performance. and yet, unlike those other attributes, nobody can agree on a fair and
+objective way to measure it. the way that we enthusiasts use the term, saying things like: this new cpu has 20% higher ipc than the old one, can be misleading. a manufacturer could
+easily spend all their time tuning performance for a single
+commonly-benchmarked program like geekbench or cinebench, when that wouldn't be representative of the real-world experience of using it. though amd and intel also throw the term around in
+this way when it suits them. so, i blame them. now, there are major cpu design factors that can cripple the
+real-world performance of a "high ipc" cpu that's tuned
+for a particular benchmark. let's talk about waste. going back to our mine analogy, adding cache to a cpu is kind of like making easy
+piles of our minerals, or data, that can be shoveled and carted out of the mine more quickly. the bigger the pile, the more likely it is that you can just fill up your
+wheelbarrow, and off you go. on the other hand, if
+there's nothing in the pile, the miner has to go deeper into the mine, or to the system memory, to retrieve it. that's going to take longer. then there's the branch predictor. it is kind of like mine supervisors, who attempt to proactively communicate which minerals are going to
+be needed in the near future, rather than just having the
+miners wait around for an order. cpu designers can dramatically
+improve performance with accurate branch prediction, but the logic for it
+takes up space on the cpu that could also just be
+used to add more miners. so it ends up being a
+delicate balancing act. speaking of the physical
+layout of the cores, imagine if our miner
+parked their wheelbarrow right next to the mineral heap instead of five steps away, and carried it like that. cpu designers are always looking for ways to make each load more efficient. and sometimes the actual physical
+proximity of cpu elements can be a big difference maker. so an obvious solution
+to this problem, then, is to stop using gigahertz, stop using ipc, and rather use a broad
+industry standard set of real world tests. the problem with that is, if we're looking at real-world benchmarks, we end up with real-world messiness, including politics
+between competing brands, who would each, naturally, prefer tests that favor their own products. this is why to this day,
+we still need reviewers, lots of them, so that you can see a wide variety of different methodologies
+and test suites, and how the product that
+you're considering stacks up. and so that you can learn
+about sponsors, like nordpass. nordpass wants to help you keep your private information safe. the nordpass password
+manager stores your passwords in a single place and recognizes your favorite websites, so it can automatically
+fill in your login details. you can create new complex
+and secure passwords with the built-in password generator, and then access those
+credentials on any device, even when you're offline. they offer unlimited password, note, and credit card storage, and nordpass premium starts
+at just $2.50 a month. it comes with additional features like password health
+reports, data breach alerts, and up to six active devices. for nordpass's back-to-school
+sale, for a limited time, you can get 74% off a two-year
+nordpass premium plan, with an extra four months for free. so start protecting your passwords today at nordpass.com/linus, and use code linus. as always, thanks for listening, folks. i hope it helps you make the right choice next time you're looking to upgrade. if you enjoyed this video, hey, give a thumbs up and
+make sure to check out "is four-core still enough?". you might be surprised by the results. they're only helpful- (sound of hitting the floor)

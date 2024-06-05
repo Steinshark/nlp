@@ -1,0 +1,100 @@
+- Compared to AMD, Intel's box coolers are kind of an embarrassment. Their main workhorse for
+many years, the E97378-003, has about as much sex appeal
+as its name would imply, but what's this? Oooooh, at first you're
+thinking, damn Intel, how you get all fine like that? And then you're like,
+"But are those even real?" And that's kinda where
+I find myself today. Alongside their 12 Gen CPUs, Intel launched three new stock coolers, the RH1, RM1 and RS1. As you can see, we only got two of them, but they're the most important ones and once we got them disrobed, we realized there is a lot
+more here than meets the eye. Beauty and brawn perhaps? Perhaps, perhaps I'll tell you
+about our sponsor, SignalRGB. With SignalRGB, you can control and sync your favorite RGB
+devices all from one app. Best of all, it's free. Download SignalRGB at the link down below. (upbeat music) For nearly 13 years,
+Intel's consumer platforms used the same 75 millimeter
+mounting hole pattern which has been great for consumers. I mean, who doesn't wanna
+carry their old cooler forward to their new system? But with 12th Gen, that's finally changed. Alder Lake is Intel's
+biggest performance leap in many years and to pull it off, they needed a new much larger CPU socket which appears to be the driving force behind the new expanded 78
+millimeter mounting holes. These obsoleted every previous
+Intel compatible cooler including Intel Zone, resulting
+in the creation of these. Standing at 47 and 69
+millimeters respectively, nice, the RM1 and RH1's new design
+language is a refreshing change from the value optimized
+Intel coolers of the past. The larger model features knurled stainless steel captive
+thumb screws for mounting, a pleasing two-tone finish,
+addressable RGB lighting and enough cooling capacity
+for the core i9-12900 and 12900F processors
+that it ships alongside. As for the RM1, this little guy borrows design
+cues from its bigger brother. You got your black anodized
+aluminum cooling fins, sleeved four-pin fan connector
+and stylish crown profile, but there are definitely
+some cut corners here. The plastic pushpins are
+certainly an improvement over previous generations,
+but they're plastic and gone is the RGB lighting, accent machining and included backplate. It's the RM1 though that
+you'll find included alongside core i3, core
+i5 and core i7 CPUs, which means that this is the unit that most people will actually end up with and while it appears
+smaller and more basic and therefore probably worse, what's interesting is that Intel's entire multiplier
+locked core series lineup, all the way from i3 to i9 is rated rated at the same 65 watt TDP which immediately made us wonder, well, why wouldn't they just use the same cooler for all of them? To really understand what's going on here, we need to look at the performance of a few generations
+of Intel stock coolers. All of them were adapted to work on our MSI Pro
+Z698 Wi-Fi motherboard and we used a core i7-12700
+as our standard thermal load. Now, Intel has traditionally offered three mainstream cooling solutions. A basic all extruded
+aluminum fin heat sink, a second more performant
+variant of the same, this time with a copper slug pressed into the center
+to add thermal mass and facilitate faster
+heat transfer to the fins, that's the one we're gonna focus on today, and occasionally, they've done
+these weird tall boy versions for higher TDP chips. These had remained essentially unchanged for the better part of a decade until the introduction
+of the LGA 1200 socket for 10th and 11th gen chips. That saw our old standby here dumped for a younger sleeker cousin now with more black and less mass. Hmm, so Intel kept the
+construction method, the profile, the fin count and even the performance the same and yet they dropped 17 grams
+of weight, about 11% overall. It turns out they did so by
+machining out more copper from the center slug
+and this is really cool because it goes to show
+you just how much copper has gone up in price
+over the last 10 years. It's at the point where when you're operating at Intel scale, machining out that 17 extra
+grams of copper per heat sink then pressing it into
+pucks and recycling it manages to be more cost effective than just leaving it in there. Now let's our new unit stack
+up starting with the RM1. We tested with Blender BMW, which is about a five
+minute test on this chip, in three different fan profiles. In our noise normalized profile, the RM1 was disappointingly exactly on par with our older style coolers. Then in the auto profile, it managed, well, extremely
+similar performance again within about 1/2 a
+degree and at full speed, the RM1 managed to run as
+much as two degrees cooler across multiple tests. But wait, how could that be that you've got no performance
+difference at one fan speed and a significant one
+at another fan speed? Well, one factor could
+be the solid copper core at the heart of this new
+series, that's right. In spite of the ever
+increasing cost of this metal, Intel put so much into these new coolers that they weigh nearly
+double the last gen design. We think that this could be to accommodate the aggressive turbo boost
+behavior of 12-gen core CPU, but there's a big asterisk on our results and that's fan performance. While doing research for this video, we found out that Intel actually published the full design specs for
+their LGA 115X cooler family, the older ones, and digging through these, we found out that there
+were three manufacturers of the exact same skew,
+Foxconn, Delta and Nidec. Going deeper into these documents, we found that the fan RPM
+specification varies by 8.25% and that's on top of the plus or minus 10% that the fan can operate at
+while still meeting Intel spec. If the new generation is a similar story, that means that we could easily
+see a larger performance gap from just one cooler to the next compared to one generation of coolers to the next generation. With that in mind, we still think it's worth testing the RH1 to see how it might compare. The differences were underwhelming, less than one degree between the much taller
+version of the cooler and the little skinny chicken one. In both, are noise normalized
+and full speed tests. It did manage to shave
+15 seconds off our render and sustain a 50 megahertz
+higher clock speed throughout the run compared to the RM1, so the extra mass in the
+cooler is making a difference. I just feel like that difference
+could have been bigger and I've gotta question Intel's use of thick chunky fins here
+because a lot of smaller fins would've had more surface area and therefore probably better performance. So I'm left feeling like aesthetics took a priority over performance in spite of the fact
+that these are shipping with core i9 CPUs and on that note, I didn't even mention the cute little back lit
+spinner hub cap on the fan hub. That's definitely purely aesthetic. Now, we didn't get to
+testing these coolers against AMD's Wraith offerings
+for a couple of reasons. One is the different
+mountings systems of course, but that is the sort of thing that will be happening in
+the near future with LTT labs and the second reason is that
+we just didn't really have to. They're so much better. You don't even need me to tell you. With that said, I still
+need to commend Intel for value engineering a small
+but measurable improvement to their previous thermal solutions and more than that, I'm glad they took the time to make this new generation of coolers just attractive enough
+to not look horrible in the tempered glass side panel world that we find ourselves in today. They're also quiet enough to
+go unnoticed by most people especially any of those of you who are lucky enough to also
+have a presumably louder GPU. So 12th generation Intel is making the CPU industry
+competitive again. We're reaping the rewards. That is after AMD made the CPU
+industry competitive again. All we need now is for Intel to finally drop their Alchemist GPU to shake up that side of things. So get subscribe so you don't miss, wait, oh, don't miss our sponsor, Squarespace. We use Squarespace, no joke. We use it both for linusmediagroup.com and for ltxexpo.com. RIP LTX, someday it'll return. Both of those sites were built quickly and easily using Squarespace and just about anyone
+on staff can maintain it as long as they've got the credentials. We better lock that down. If you haven't heard
+of Squarespace already, it's an all in one platform
+that makes it super simple to get your website up
+and running quickly. If you have a home business,
+you definitely need one. You can sell things, you can choose from tons
+of different templates, finding the one that makes
+the most sense for you and running with it and if you need help,
+Squarespace offers webinars, a full series of help guides and you can even contact
+their 24/7 support team via live chat and email. So don't wait, go to squarespace.com/ltt and get 10% off today. If you're looking for
+another video to watch, go check out our launch review of Intel's Alder Lake 12th-gen core CPUs. They are a lot better
+than what they had before which is good.

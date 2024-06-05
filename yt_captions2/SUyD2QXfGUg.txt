@@ -1,0 +1,189 @@
+- we paid over $30,000
+to get every version of apple's new m1 pro and m1 max macbooks and now that we finally got
+our grubby paws on them, we can really put them
+through their paces. we're focusing on the 14
+inch m1 pro macbook today, both the 8/14 core and
+the 10/16 core models. not only are we going to review and benchmark the all new
+redesign from notch to bottom, we're going to answer all
+the questions apple wouldn't, and the question of who our
+sponsor is, it's crucial! thanks to crucial for
+sponsoring this video, get more done with crucial's p5+ nvme ssd with up to 6,600 megabytes
+per second sequential reads at a five-year warranty, crucial makes tech to last, get yours today at the link below. (upbeat music) as soon as you lay eyes
+on the new macbooks, the flattened edges
+strike you in the same way older generation macbooks did. this is in stark contrast to
+the 2016 pedigree of macbooks that did everything in their
+power to hide their dimension by adding curves wherever possible, looking kind of like an envelope with something bulging out from it. this refreshed flattened design philosophy just so happens to allow apple to stuff more functionality into the new machines. it's almost like thin at
+any cost held them back. imagine that. while the changes keep rolling back, we're looking at a new
+touch bar less keyboard with basically zero deck flex, and thankfully they brought
+back the function keys. personally, i'd still like
+to have the touch bar, maybe stick with half
+height function keys, and sneak it in there. just so long as i get function keys, like look how much faster
+it is to mute a mac with function keys than
+with the touch bar. it's not even a contest and there's no contest that
+magsafe always has been and always will be the
+best charging method for an expensive laptop
+like a macbook pro. not only is the new
+implementation much shallower and thus less likely to hook
+your laptop off the desk, but it's capable of fast
+charging it up to 96 watts depending on which
+charger you end up with. what's more, the number
+one complaint people had about magsafe that the
+cable frayed over time, i've had it happen. that's been largely addressed here. thanks not only to a much
+more supple braided cable, but also the fact that it's
+a detachable type c connector on the other end, mind you, apple is still charging $50 for
+a mere six foot replacement, but that's still cheaper and less wasteful than
+a new power adapter. besides you can always charge
+via type c if you want, you just won't get fast charging, but there's one thing here that has never been on any apple notebook or to my knowledge, any previous notebook, the notch, it looks a smidge larger than the notch on my iphone 11 pro max and inside is a single 1080p webcam. apple's justification for
+the notch's size on iphones is that they need the extra
+space to house face id sensors, and these laptops don't have face id. maybe the true depth sensors
+are too thick for the housing. maybe smaller sensors were
+expected to be available, but the silicon shortage delayed them. why then did apple not wait
+for the next generation? it just feels like they planned for it, realized at the last minute,
+crap we can't make it work, and then thought, (beep)
+it ship it as it is. but mind you, the webcam in
+that notch is quite good. i'll be it, marred with a
+skin smoothing algorithm that i can't find a way to turn off. it takes effect both in
+photo booth and quicktime, still the image is otherwise
+quite sharp around the edges. with a little tweaking, i think it could actually
+be one of the better webcams integrated into a laptop. certainly far better even now than dell's. and how about that microphone anyway? not too shabby if you ask me. the speakers though,
+apple says they've got four counter firing
+woofers and two tweeters, and quite frankly, it
+sounds so much better than anything else i've heard in a laptop that it's not even close. (upbeat music) sorry xps 15, you sound
+like trash by comparison. apple's definitely tuned these speakers with a sweet spot in mind. and that sweet spot seems
+to be sitting at a desk. when you're in that sweet spot, the frequency response is at its best and stereo imaging is almost like you've got widely separated speakers. i almost wish we had a
+binaural recording rig so i could show you. (upbeat music) i can show you the display though. this, this is beautiful. it reminds me of my tv at home with its 2000 local dimming zones and 1600 nits peak brightness, just crammed into a
+much smaller form factor thanks to the mini led backlight array that apple calls xdr. the other big feature is the new 120 hertz adaptive refresh
+rate pro motion support that can go as low as 24
+hertz to save on battery life during an activity. apple's way out ahead
+of windows on this one, way out thanks to having first
+baked this into the ipad line several years ago. it's not quite 4k, but apple has a history of not targeting specific resolutions, but rather specific pixel densities. and in that regard, it's close to 4k and definitely retina from
+any reasonable distance, which is really all
+that matters day to day. for professionals, a separate
+pixel matched external display for critical viewing is common and can be hooked up
+via any one of the three display port enabled thunderbolt 4 ports or the full-size hdmi 2.0 port, which can handle up to 4k60 with hdr. hdmi 2.1 support for 120
+hertz would have been nice on a top of the line laptop like this, but honestly this wouldn't be too useful for non-gamers right now anyway, unless you're working
+with 8k for some reason, 4k60 is the most you're going to get out of a typical projector or tv. so it's just not a huge limiter. now we don't have the m1
+max macs in for testing yet, but we can put the m1
+pro through its paces with some pc competition,
+a surface laptop studio, an asus zephyrus g14, and if those fail, we've
+got our trusty gpu bench to show it what for. starting with good old cinebench, we've got our first impressive showing, our 10 core macbook pro matches the zephyrus's top end ryzen nine, and the eight core stomps
+the surface laptop studio and the macbook pro 13 inch as well. geekbench brings more pain for microsoft, and even the zephyrus takes a beating from the 8 core m1 pro this time around. handbrake in software encoding brings more good news for apple with only our ryzen desktop
+outperforming the 10 core in h.264 and the zephyrus pulling
+a lead in the more complex and thread hungry h.265 encoder. when we turn on hardware encoding, why is this macbook so slow? okay, it looks like apple's
+video toolbox has some issues with the new media engine right now. so unfortunately these
+results are unusable, but i'm including them here because this is something
+you might run into if you pick one of these puppies up. compressor gives us a better
+look at what the hardware and coding performance looks like, and strangely it seems
+like whatever apple did with the media engine
+to add prores support negatively affected h.265
+in preference to h.264, which is a strange balance to make, but it's not a big difference
+either way it's just weird. in final cut both the new
+macbooks put up numbers roughly double what the
+original m1 mac macbook could, which is largely down to
+the additional gpu cores and prores encoding is almost
+three times faster than m1, thanks to that new media engine that turned apple's
+$2,000 afterburner card into retro tech. video's not everything people
+do with their macs though. so let's come back around
+to 3d modeling with blender. as of right now, apple silicon isn't natively supported by blender, but apple has joined the
+blender development fund and provided patches to
+enable metal going forward. so stay tuned for that. for now cpu rendering
+performance isn't too shabby with the 10 core m1 pro
+beating out the zephyrus in both the shorter bmw render and the sustained classroom render, which is ridiculously good. adobe creative cloud mostly
+runs in rosetta as well, and unfortunately that means that either pugetbench will often crash or in the case of the few
+available apple silicon versions of these apps, simply not work. we do have photoshop numbers though, and these show very similar
+performance to the m1, perhaps because of rosetta, but also perhaps because of
+the lightly threaded nature of the work. what isn't lightly threaded
+is code compilation. and it's here that m1 pro
+comes back to dominance. even the eight core m1 pro outperforms the best mobile ryzen chip on the market. and the 10 core is second only
+to the desktop ryzen 9 5950x. it's ridiculously impressive when something like this happens, kind of like our new water
+bottles at lttstore.com, you got to see the new lids and colors, and even you can get 50% off a lid if you bought one of the old ones. now we need to talk games. i know, i know, games aren't a mac thing, i disagree, but more importantly, they're a great way to visualize
+relative gpu horsepower. unfortunately for us, i'm not aware of any game that takes advantage of apple silicon. the ones that i thought did
+merely run in the rosetta as a result turn times in
+civilization vi, for example, are ludicrously long, a good three times longer than
+the surface laptop studio, and zephyrus. this trend continues at csgo where it seems that despite
+having double the gpu cores running in rosetta is seriously hampering the m1 pro's performance potential. although there is a marked improvement over the standard m1. shadow of the tomb raider,
+meanwhile does come close to the rtx 3050 ti and
+our surface laptop studio and scales pretty linearly
+compared to the original m1. temperature readings on the
+cores can get alarmingly high under sustained load. although those sensors
+are buried inside the soc. if we look at the integrated
+gpu clusters on the same soc, we see far more manageable temperatures. so these core temps are not likely to be a major cause of concern. strangely, the fans never
+even got to max speed. i suppose i need to hit it with
+a combined cpu and gpu load to really get to the scream. get subscribed by the way, because we'll be comparing every chassis and soc's full thermal characteristics throughout the rest of this series, and you don't want to miss that. this is just scratching the surface. the main hotspot is in the
+middle of the keyboard, where we read somewhere in from 46 to 48 degrees on both models. while the palm rest area
+stays relatively cool in the low thirties, that's pretty similar across
+all of the laptops we tested if a bit warmer on the hotspot. curiously, apple has
+designed the cooling system so that hot air is exhausting directly onto the lower corners of the screen, where it's getting as hot
+as 50 degrees or more, which may be cause for concern over time. my recommendation to combat this is to manually set the fans to maximum if you're doing a sustained
+all core load by using tg pro or another utility that
+can manage the fan speeds. that should keep air flowing and prevent heat from
+concentrating in one small spot. now we need to talk
+battery and to do this, we turn the 13 inch macbook display down to about a third brightness, matched all the laptops
+off as best we could, fired up this youtube countdown
+clock and cut the power. not only did the zephyrus
+die hilariously quickly at just under seven hours, but the surface laptop
+studio also ended up dying a little early due to
+the gpu resetting partway in. next to fall was the m1 macbook pro at just under 22 and a half hours, and the lower end m1
+pro shortly after that. and the 10/16, well, it kept
+going past the 24 hour mark. honestly, the only reason i can think of that the lower end m1 pro
+didn't hit the same milestone was horse was probably still logged in and i didn't notice. ah, the joy's of having to share. still to say, this is
+luminary battery life would be underselling it, especially in light of
+the machine's capabilities like the most comparable overall performer is the zephyrus and it got
+less than a third of that. i need to see this thing's
+battery for myself, pulling it apart is the same process as with other recent macs, but now just two screw
+types, like my 2011 macbook, long in the back and short in the front now with collars to prevent
+them from going too far. pop two clips on the left and right, the panel slides right off, now that is a pretty interior. and it shows more of what apple's doing with that extra internal volume. not only is there more battery capacity along with pull tabs for
+safer user servicing, but there's a reasonably
+robust cooling solution, and that battery no longer
+overlaps the logic board either. amazing what you can do with
+a little more volume, huh? while we're under the hood, i should mention that wi-fi is limited to two spatial streams, so
+wireless ac, aka wi-fi 5, will top out at 866 megabits per second. this has been standard
+for macbooks since 2019 and is one of the few design elements that apple hasn't changed for the better. if i had to guess why not, these mac's use broadcom wi-fi adapters, while the ones with three by three support were running on murata
+chips that apple co-designed and branded as universal
+scientific industrial, evidently those proved
+to either be too costly, too unreliable, too power
+hungry, or all of the above. if cost was a factor though, apple sure hasn't spared
+any for the thunderbolt because each of the usb type c ports has its own thunderbolt 4 controller. apple's doing a lot right here. there's the return to an sd card slot, albeit without sd express support and we've got a high
+impedance headphone jack that while it doesn't sound amazing is better able to drive
+higher end headphones than previous gen macs. what apple hasn't gotten right
+is the handling of the notch, the mouse cursor going behind the notch and getting lost seems like
+such a colossal oversight next to the way that the
+rounded corners are handled on the display, and this behavior isn't even consistent if you've got menus open. what's more the notch's
+whole reason for being, that is to provide a menu bar above the regular 16 by 10 display area that would otherwise just be bezeled, is by default entirely removed if you use full screen mode. like apple, why? thankfully both of these issues can be worked around by either
+turning off this setting or by choosing get info on the app and checking scale to fit. the latter option nobody
+should ever want to use this. the final issue i have is price, starting at $2,000 us
+for the 14 inch model, it's not going to be for everybody, and as we've seen the
+base model falls behind in a few fundamental ways. and of course, because the
+memory is part of the soc and storage is soldered
+to the motherboard, not only does that make
+future repairs more expensive, you also need to order
+what you think you'll need by the time you replace the laptop, not what you think you'll need today. personally, i wouldn't go lower
+than 32 gigabytes of memory to make a machine of this
+caliber last a while, particularly considering
+it's unified memory that both the cpu and gpu need to share. i also wouldn't go
+higher than two terabytes of internal storage because you've got thunderbolt
+for high-speed expansion, if you need it. that puts my sweet spot
+recommendation at about $2,900 us, which is $200 more expensive
+than a similar configuration for the surface laptop studio and a thousand dollars more expensive than the 13 inch m1 macbook pro, i'll be it with double the memory. is it a thousand dollars more worth it? you really need to look
+at what tasks you do daily to see how long it'll
+take to recoup that cost. but what apple has here, what attracted me to my 2011
+macbook pro in the first place is a combination of power,
+form factor, build quality, display quality, versatility,
+and especially battery life, that while outclassed by
+less expensive machines in any one metric is not
+even remotely matched in all. it's still early days for apple silicon in the grand scheme of things and mac os isn't everyone's cup of tea, but you can't deny that apple's
+got a good thing going here, and so does our sponsor nordpass. today's sponsor is nordpass,
+security experts agree humans are the weakest link
+when it comes to security. managing multiple complex
+passwords across all your apps and devices are the pain in the butt. it takes a bit of a leap for some, but it's hard to look back once you do get a password manager. even before updating your passwords, you'll find relogging in from
+device to device a breeze, setting up your new mac,
+streaming at a buddy's house, online payments, and so much more. now faster and encrypted on your device so only you have access. there are a few things as
+universally agreed upon in cybersecurity than the
+need for a password manager. nordpass makes it simple to
+remove that vulnerability and brings tons of
+conveniences along the way. they're offering ltt fans a
+special cyber month discount of 70% off a two year plan plus an additional month for free. go to nordpass.com/linus and use code linus to start
+making your log-ins safer and easier today. thanks for watching guys. go check out our initial coverage of the 14 inch macbook pro announcement, where we made the decision
+to buy all these laptops in the first place. kind of want to take
+one home, play with it, we've got enough of them coming
+in to cover for me, right? - [horse] stop thief!

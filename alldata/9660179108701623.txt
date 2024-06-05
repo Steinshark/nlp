@@ -1,0 +1,10 @@
+import string 
+
+
+def is_strong(password):
+    #Check len
+    if len(password) < 6 or len(password) > 20:
+        return False 
+    
+    #Check contents 
+    if not 

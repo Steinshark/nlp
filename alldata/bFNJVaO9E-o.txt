@@ -1,0 +1,92 @@
+- [Alex] Geez! Is it okay? - Ah Crap. I bent a lot of pins. - [Alex] Linus! - Ooh, that's really bad. I can fix it. (clock ticks) - If everything goes
+according to plan today I'm gonna install this
+brand new Ryzen 5600G CPU in that Lenovo ThinkCenter M75s PC destroying it permanently. And believe it or not, that's a feature not a bug. You see, some AMD Ryzen
+CPUs contain a fuse that allows a motherboard manufacturer to lock the CPU to their
+own brand of motherboard. It's a security feature
+that first showed up in EPYC server chips, but Lenovo seems to have taken it upon themselves to
+enable it on the desktop. Okay, maybe destroyed
+permanently is a little unfair. The chip will still work as long as you put it
+in a Lenovo motherboard, but.. damn it! I'm mad. Or at least I will be
+if it behaves the way that I'm expecting. Obviously we don't wanna brick any more chips than we absolutely have to. So we haven't actually tried it yet, but we're about to. SmartDeploy gives you zero touch, zero headache, PC management for IT. You can deploy windows, apps
+and drivers from the cloud with no VPN required. Get your free subscription worth over $600 at SmartDeploy.com/linus. (vintage music) - Why am I so good at fixing hardware? You break a lot of hardware, you gotta fix a lot of hardware. Well, it's not hardware in
+general that I'm good at fixing, but I am pretty good at fixing bent pins. (vintage music) (vintage music) (vintage music) (vintage music) (vintage music) (vintage music) - There is virtually no way of knowing if the Lenovo system that you just bought has a locked CPU inside it. There's no visual indication of sticker, the website, no mention of it whatsoever, and even the full nine
+page spec sheet? Nothing! And I bet that the vast majority of people that bought a system like this one would think that the
+Ryzen 5 5650G inside it would work like any other desktop CPU. Let's try that first. Maybe this is all a big misunderstanding and Lenovo didn't lock down this machine. I guess we should put power it on first? Make sure it actually works, right? - [Alex] Yeah, sure. (grunts) There we go. Everything booted up as normal. The DVD drive works which is really good. Overall what are we looking at here? We've got solid front IO, less solid rear IO. Ryzen 5650G processor with a very unexceptional looking blower cooler, although I do like that
+it exhausts all the heat directly out of the back of the system. M.2 boot drive. 260 watt power supply? Wow. Where do you even get a 260
+watt power supply anymore? Oh lordy, is that single channel memory? For shame. 16 gigs on a single stick. Well I can definitely see why people would wanna put the
+CPU in a different computer. So what's your bet, Alex? - [Alex] Doesn't work. - You bet it doesn't work? - [Alex] Doesn't work. - I don't know. There's so little concrete
+information out there about this. I kind of am hoping that it's just a storm
+in a teacup situation. Holy crap. It's just in a boot loop. - [Alex] What's the code it's throwing? - [Linus] It ends up at
+C2 and then it reboots. It goes C2, zero zero,
+and then it reboots. And I know zero zero means no processor. We've given this a solid
+five minutes at this point. It's clearly not gonna fire up. I wanna take a closer look at this CPU. Maybe it's, maybe there's
+something else at play here. Okay. Well, here's one thing. This is a Ryzen 5 PRO 5650G. And we do know that their PRO lineup is geared more towards
+the workstation market. And I don't mean workstation in the sense that you're doing like
+3D modeling or animation, certainly not on a machine like this. But workstation, that this
+is a professional machine. Maybe it's just PRO ones? Or maybe that motherboard's
+not PRO compatible, or- - [Alex] If you want, we can test a PRO CPU in that motherboard. - We have another PRO? - [Alex] Yeah, we have another PRO. - Oh. - [Alex] I can go grab it. - Yeah, let's do that. - So I have this 4750G, although we do have a problem that this is from a Lenovo system, so- - Oh. - If its locked, that would suck. - I just fired this one up. And Alex is about to fire this one up. If this turns on, then what we'll know for sure is that this motherboard
+works with PRO CPUs, and if it doesn't, then we
+won't really know anything. Either that CPU is also vendor-locked or this board doesn't support PRO CPUs. If this one turns on then we will know for certain that the CPU itself still works but that Lenovo absolutely did lock it down to their motherboard. Ryzen PRO compatibility confirmed. - [Alex] There we go. - [Linus] It only took me
+two tries to time that. Do I have to break the 5600G? - [Alex] Well, we don't
+know if it'll break or not. - We're pretty sure it's gonna break Alex - [Alex] But we don't know - There it is, PSB enable, enabled by default. If it is enabled, when a new CPU is installed the system will notify
+the user during post. This notice message can
+be cleared by pressing Y. So you clear it by pressing Y, but which, if I understand correctly will also mean that you have
+just vendor-locked your CPU. That's not as simple as just
+clearing a notification. And confirmed, it is locked down so that the CPU will only work in a Lenovo system by default. Which raises the question, why would anybody want
+that in the first place? I mean, I get why you'd wanna lock down certain parts of your PC. Firmware, for example could help prevent malicious code from being injected into it or having an encrypted hard drive to make sure people can't steal your data. I mean, heck, even encrypted RAM since you could hypothetically have someone freeze it
+with liquid nitrogen and then read the bits off of it. But how could vendor-locking
+a CPU increase security? Well, as it turns out we aren't actually super
+concerned about the CPU. We're concerned about the
+UEFI BIOS, the firmware. And locking the CPU is a
+byproduct of locking down that. The culprit here then is AMD's platform secure boot or PSB. And we can see it's enabled right here. And it's legitimately a useful feature that some customers do want, because once an intruder
+has access to your BIOS, the rest of your security measures become largely meaningless. So to address this, AMD and Intel for that matter, puts a little ARM microcontroller in their CPU that is
+responsible for security. And to ensure that everything is secure the BIOS or firmware, needs to trust the CPU and the CPU needs to trust the BIOS. So when PSB is enabled there's a little field
+programmable fuse in the CPU that has some information from the BIOS written onto it, including
+a cryptographic code from the motherboard manufacturer. So let's disable PSB in the BIOS and put our off-the-shelf
+Ryzen 5 5600G in here. Oh wow, you did a great job
+of straightening those pins. It actually goes in pretty easily. - [Alex] Thank you. - Like so many parts of this video, we are not a hundred percent
+sure that our non-PRO Ryzen CPU will even have
+this feature at all. So we're gonna head into the BIOS with it disabled, don't wanna accidentally lock it, and see what it says. Okay. Uh TCG, PSB ena-, okay! Well the feature's here. I wanna enable it. I wanna know. - [Alex] Oh! - [Linus] Apparently it's
+on the regular chips. A new CPU has been
+installed on your system. Press "Yes" button or Y to lock the CPU and execute the Platform
+Secure Boot Process. Note, the locked CPU cannot
+be used on other models. Am I supposed to do it now? Is this the point in the
+adventure when I have to do it? - [Alex] Press Y. - [Linus] Oh God. - [Alex] Goodnight, sweet friends - To confirm, the CPU does still work. lttstore.com. Holy crap. We launched the cute little pluses. But I am now expecting the CPU to not work on our other machine. I hate this. - [Alex] That light's just blinking. - [Linus] And it's going through the exact same postcode cycle. Oh, I like really don't
+feel very good right now. That really sucks. So at this point, you
+guys are probably thinking truly there is some way to
+reverse this process, right? No, there is not. Once PSB is enabled, it cannot be undone. In fact, the whole point of AMD's PSB is to allow the CPU to verify
+that the BIOS can be trusted. So if a hacker was able
+to easily overwrite the cryptographic key, then
+you can sure as heck bet that, that would be the first
+step of their hack, to just disable it, right? Speaking of hacking, we're currently working on a video where we hack a PS4 pro. Get subscribed, so you don't miss it. Now to be clear, I have no problem at all
+with this feature existing or even OEMs having it on their systems. The problem is that in
+the case of this one, I wasn't given a choice nor was I given clear messaging around it. There are so many better ways that Lenovo could have handled this. They could have shipped the system with the feature enabled
+but not yet locked and maybe had a better
+worded warning about it. They could have had PSB as an option in their online configurator. I mean, heck, even just clearly
+stating it on the webpage would be a great start, so people know what the trade-off is. So the blame rests pretty
+much entirely on Lenovo here, because on servers, for example, PSB is something that
+customers actually want, and almost more importantly, understand. Having a server shipped to you with PSB enabled from
+the factory is valid, because it allows the CPU to verify once it arrives that
+the BIOS or the firmware has not been tampered with in shipping. HP, Dell, and probably a
+bunch of other companies have been doing this for years and we didn't make a video about it. Intel also has a similar
+feature in some xeons, but again that kind of hardware is much less likely to end up in the hands of the average consumer. By contrast, when this desktop ends up at a recycler or in an office supplies auction, do you think the person that
+buys this will know that, that CPU cannot be used
+in other motherboards? Probably not. And it's gonna be a huge pain in the butt, when these CPUs end up
+on the secondhand market. Even worse is the fact that
+nothing prevents Lenovo from using this feature to actually lock the CPU
+to a particular model. To our knowledge that
+hasn't been done yet, It's only a vendor level lock for now, but is there any reason
+Lenovo couldn't have a whole host of different encryption keys for all their different models? Now, Patrick, from ServeTheHome came up with what he thinks is
+the solution to this problem. AMD CPUs could come with two fuses, one that enables PSB and then another, that permanently disables it once that CPU is put out to pasture. This would allow it to be disabled, hopefully without compromising CPUs that are currently using the feature. But as much as that sounds good on paper, it would be probably
+require a hardware change. So we are unlikely to see a solution like that in the short to midterm. Probably the biggest issue with this whole cluster though is that like Intel's
+notorious management engine. PSBs value as a security
+measure is unproven at best. It assumes a couple of things. Number one, that the vendor's cryptographic
+signature or signatures will never be leaked. And number two, it assumes that it's actually secure. But it's closed source. Meaning that there's no way for independent security
+experts to audit it. So it could very well be that we're just creating more e-waste for no good reason. Sorry, mother earth. I guess this is just one more that you're gonna have
+to take for the team. Graphus, is an automated
+phishing defense solution that protects every inbox
+in your organization from outside threats. Adding Graphus to your security stack allows you to defend your
+employees from cyber attacks, including phishing, email compromise, account takeover, identity spoofing, malware and ransomware. They use a patented
+machine learning technology that monitors communication
+patterns between people, devices, and networks to reveal untrustworthy emails and they analyze messages in real time, integrating at the API level to detect social engineering attacks and activation only takes a few minutes. So don't wait, you can get 30% off the list price and 30% off onboarding with Graphus at the link down below. If you guys enjoyed this video, why don't we throw it
+at the TempleOS video? It's a good video, and Anthony did a good job of writing it.

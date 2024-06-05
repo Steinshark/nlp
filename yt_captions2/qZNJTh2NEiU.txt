@@ -1,0 +1,146 @@
+let's talk about bloom filters not to be confused with the bloom shader effect a bloom filter is a simple probabilistic 
+set originally conceived by burton bloom yeah it's not some weird mathematical 
+bloom it's just his last name suppose you run a website where users post links 99% are cat pictures, cool new 
+websites, and youtube videos but every once in a while someone posts a link 
+to a known malicious site which you want to block there's millions of known bad links so you pay for   a service that keeps a list 
+of them that you can query calling out to the service costs money and 
+slows down your response times to your users so you'd really like to know whether a 
+link is bad without querying the service but with say 10 million bad links and 
+considering overhead it could easily   take a gig of extra ram if you just 
+stored all the data in a python set with a bloom filter we could cut down on   98% of calls to the service using 
+only 10 megabytes of extra memory but before we see how a bloom filter can help 
+your website first you're going to need a website so please consider this video sponsor's 
+hostinger for all your web hosting needs hostinger just happens to be running 
+their biggest ever black friday sale   where you can get their business 
+plan for as little as $3.49 a month if you just want a tinker there's also the premium 
+plan which goes as low as $1.99 a month and comes with everything you need to get started 
+like a free domain, email, and ssl certificates but if you want to run a site with some real 
+traffic i recommend the business plan which additionally comes with increased 
+performance and access to hostinger's cdn when you check out make sure 
+to use coupon code mcoding to   get an additional 10% off on 
+top of the black friday deals choose your free domain and use the 
+website builder if you're a novice   or deploy your site straight 
+from github if you're a pro and don't forget to use my custom link in the 
+description to let them know that i sent you let's get back to bloom filters a bloom filter is kind of like 
+a set in that you can add things   to it and it quickly tells you 
+whether an element is in the set except when you ask if an element is in the set it 
+either tells you "possibly yes" or "definitely no" in other words if it tells you "no" 
+the element is 100% not in the set but if it tells you "yes" there's a 
+small chance the answer is actually "no" oh yeah and you can't remove 
+elements from a bloom filter either if you need to remove something you need 
+to create a whole new one from scratch you're probably thinking this 
+sounds like a worse version of a set why would i ever want a data structure that has   a restricted interface and 
+gives me incorrect results? like many probabilistic data structures 
+the answer is that by giving up a bit in   accuracy and flexibility we can save 
+an enormous amount in performance the catch is that you need a use 
+case where mistakenly identifying   an element as in the set when it's not is okay that often occurs when you have a fast way to 
+compute something that works for most but not   all elements and a much more expensive way 
+to compute the same thing that always works for our website we can use a 
+bloom filter to tell us yes   a link is possibly bad or definitely 
+no this link is not a known bad link if the bloom filter says a link is possibly bad we   fall back to the paid service 
+to give us a reliable answer so it's fine if we get a false 
+positive in a small percentage   of cases that's still a win compared to 
+sending everything to the paid service great so how does a bloom filter work? think about identifying objects by their shadows shadows contain much less data than the originals but given an object you can usually 
+tell whether it's part of a shadow yes the shadows could conspire to trick you into   seeing something that isn't there but in 
+reasonable cases you can work around it a bloom filter consists of a 
+block of memory that's m bits   long along with some number k of hash functions in order to add an item to the 
+set we hash it using each hash   function and set the bit at the 
+corresponding memory location to 1 this pattern of bits from the hash 
+functions is like the object's shadow then to query if an element is in the 
+set we look for its shadow by using each   hash function and checking whether 
+all the corresponding bits are set if any bit is a 0 then this item 
+was definitely not added to the set if every bit's a 1 it's either because 
+the element is actually in the set or   because some combination of other 
+elements happen to set those bits so we can at best say the 
+element is possibly in the set that's really all there is to the bloom filter it uses a fixed amount of memory 
+no matter how many elements you add and the time it takes to add or query 
+elements only depends on how many and   how slow your hash functions are not 
+how many elements were added already its implementation is rather 
+simple we'll get to that later all the difficulty lies in analyzing how much 
+memory and how many hash functions to use if we use m bits of memory, k hash 
+functions, and added n items what's the   chance of falsely identifying an element 
+as in the set when actually it's not? in real life it depends, measure it but we can get a good approximate 
+answer if we assume the hash   functions select bits uniformly and 
+independently for distinct elements for a fixed bit the chance that one 
+hash of a single element will set   that bit is 1/m so the chance that 
+the bit is not set is 1 minus that for k independent hash functions to all not 
+set that bit we raise that to the power k and repeating this for n total 
+elements we raise that to the power n this is the chance that this fixed 
+bit is not set after adding n elements therefore the chance this fixed bit is set 
+after adding n elements is 1 minus that and a false positive means that k fixed bits 
+have all been set so we raise that to the power k to finally arrive at our estimate 
+of the false positive rate you can start plugging in numbers if you want or 
+using calculus we can approximate this as follows multiply and divide by m and then use the limit definition of e and then rearrange notice the quantity m/n is 
+something meaningful to us that's how many bits of storage 
+we've allocated per element if we fix that quantity to say 
+1 byte per element and plot we see that we don't need a 
+huge number of hash functions in fact the error rate is minimized 
+using around 5 hash functions more generally, using calculus 
+take derivatives set to zero etc.,   you can show that we can achieve 
+an error rate as small as we like by choosing the number of hash functions 
+to be about log base 2 of the desired   error rate and the number of bits per 
+element to be about 1.44 times that so if we're okay with around a 2% false 
+positive rate then we could use five or   six hash functions and eight bits per element for 10 million elements that's just 10 megabytes 
+of data regardless of how large each element is because the filter doesn't 
+store the actual elements okay but where can i get k different 
+hash functions for my data? instead of inventing a bunch of hash 
+functions there are a few tricks you can do like using a hash function that takes a seed or   appending k different suffixes 
+to your data before hashing but here's a trick that can get the job 
+done using just one good hash function if i'm using 10 megabytes of 
+memory that's 80 million bits so my hash functions need to 
+output numbers up to 80 million higher is fine we'll just mod by the length 
+but we need at least up to 80 million log base 2 of 80 million is 26.25 so my 
+hashes really only need to be 27 bits long how about i use a 256-bit hash and then just 
+split the first 240 bits into 5 chunks of 48 bits treat each chunk as a separate 
+hash function and now i've got   five 48-bit hash functions that 
+i can use for my bloom filter obviously if you need many more hash functions   there won't be enough bits 
+and this trick won't work but for our use case it does work now let's implement it! it's super simple this is the whole implementation we take in the memory and a 
+function that computes the hashes i chose to use a function that 
+outputs multiple hashes rather   than to store a list of hash functions 
+because hashes may share computation like first computing the 256-bit 
+hash then splitting that into   5 48-bit chunks there's no need to 
+recompute the 256-bit hash five times estimating the false positive rate is just   plugging into the formula 
+we had earlier in the video adding an element means calculating each 
+hash and setting the corresponding bit to one and checking if an element is in 
+the set means calculating each   hash and checking whether any of 
+the corresponding bits are not set here we see how to split the output of a   hash function into smaller ones 
+which is pretty straightforward the last "gotcha" we need to work around is that   in python if we use a list of integers as 
+our underlying memory for the bloom filter that's going to be using 8 bytes per 
+index because under the hood python   will store a pointer to the unique cached 
+0 or 1 int object at each index location that's 64 times more memory than the one 
+bit per index we assumed in our analysis therefore to really make use of a bloom filter we   should use something like a bit 
+array that uses one bit per index we can implement a bit array like this have it hold the data which is made 
+of an array of bytes and a size we keep track of the size separately because we   might want to store a number of bits 
+bits that's not a multiple of eight so the array might be a few 
+bits longer than the size we can construct an array of zeros like this 
+allocating a byte for every eight bits rounded up getting a bit is just calculating which 
+byte and which bit within the byte using   divmod then grabbing that index 
+and masking out the bit we want setting a bit is similar this first expression we do a 
+bitwise "and" to clear the bit then the second one we do a bitwise 
+"or" to set the value we want putting it all together we can use it like this we define a hash function in this case we just 
+use sha256 and convert the result to an int we split our long hash into five 
+hashes that use 6 bytes or 48 bits each then we create our storage as a bit array 
+initialized to zeros and create the bloom filter i made a little timer utility here that 
+just times each operation, not important we create 10 million random length-16 
+strings and add them to the bloom filter note that we're using a huge amount of memory here 
+because we continue to store the strings in memory for the malicious link detection use 
+case we could add all the links to the   bloom filter and then serialize just the 
+bloom filter to distribute to our servers the servers don't need to 
+keep all the individual links so they would only need that extra 10 
+megabytes of memory for the bloom filter not gigabytes for all the strings just to check our implementation we 
+assert that there are no false negatives meaning that everything that we did add 
+returns true when we check whether it's there then we count false positives by querying an   equal number of strings that 
+were not added to the filter and compare with the estimated false positive 
+rate based off our mathematical analysis amazingly we find a 2.169% false positive rate   which is stunningly close to 
+the estimated 2.168% estimate everything was completely random and yet we 
+predicted the answer with great precision probability is pretty cool anyway you probably noticed these times are 
+really long which is caused by the fact that we're committing the cardinal 
+sin of doing a numerical hot   loop in python for 10 million iterations this won't really be an issue in 
+production since you're going to be   bottlenecked by waiting on the network 
+way before this makes any difference but if you really want to i'm sure you could find   a decent c-extension that 
+implements a bloom filter my name is james murphy my company is mcoding and 
+we do software consulting and once again thank you to 
+this video's sponsor hostinger don't forget to check out their current 
+sale and use coupon code mcoding at checkout you can use my personalized 
+link in the description also thanks to my patrons and 
+donors see you in the next one

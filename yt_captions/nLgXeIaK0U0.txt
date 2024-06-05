@@ -1,0 +1,141 @@
+- The eagle-eyed among you have
+probably seen that this LTT mousepad many times over
+the last, oh, I don't know, six months, six months. That's cute, Past Linus. We tried to launch this video
+eight months ago when we got our first shipment of deskpads, but you, you guys popped them all. Then we tried to launch the video again, three months later and
+you bought them all again. We have loved all of your
+feedback on the mouse pads. You guys can actually check
+out some reviews on the store page, and finally, we have
+our biggest restock yet, but I can't promise you that
+they will last long, anyway, back to you Past Linus. What you haven't seen is the
+absolutely painful amount of R and D that went into our
+attempt at making the best mouse pad we possibly could. We didn't actually intend
+to make a video about this experience, but we ended
+up learning so much, that I felt that we had
+to share it with you. Here's how it went down. This video is brought to you by Yubico, the YubiKey from Yubico is a cost-effective and
+easy to use two-factor authentication solution. Learn more about how to get
+$10 off yours at the link down below. (lively music) Feast your eyes on LTT's first peripheral, well sort of, it doesn't look
+like it should have taken 15 months, but the truth is, we have no idea how much was involved in doing something like this, right. I thought it was gonna be
+as simple as, ask one of our lovely designers Lloyd, in this case, to create some options for artwork, get Nick to contact some
+overseas vendors to requisition samples, evaluate the
+samples and you know, the communication of the
+suppliers in bippity boppity, we print them. Well, for starters, about half of the requests
+for samples we sent out, never even got a response,
+their loss, I guess, and out of the many that we
+received a couple of weeks later, only four of them
+weren't obviously garbage. Even out of those four,
+none of them were perfect, which was a big wake up call for us. There's varying materials,
+print qualities, and of course costs, and
+as part of this process, we also bought a whack of
+competing mouse pads for comparison. But how do you compare,
+if you have no data? Well, aesthetic appeal
+and overall feel are easy, but those aren't definitive rankings. We wanted to actually quantify
+the performance of each sample pad, so we needed data. We challenged the jank
+master supreme, Alex, to rig something up in
+the workshop and well, I'll let him speak for himself. - This is the basic plan for
+our testing here, you know, just toss down a mousepad. And then we're going to use
+the good old CNC router here to like wrap it around and a bunch
+of different ways to be able to precisely track how much
+the mouse is moving and then, now switch out the mousepad, throw another one in and it'll
+do its circles or whatever, again. Only problem is, I some have
+to attach this mouse to the router and I'm not
+entirely sure how to do it. One of the problems is that, you know, if this goes up and down, I don't know exactly
+how much force there is, (router buzzing) but I think it's, like 960 Newton meters, which is it's way too much for
+a mouse to handle, for sure. You know, before we do this, I'm gonna put on some safety glasses, just in case something, oh (squeaking), to be clear, the scroll wheel on this
+mouse actually is broken. So if we blow it up, it's
+not the end of the world, but you know, we still don't want to. That said, let's give her. (router machine buzzing) Seems to be working. - [Linus] Because we
+know that our CNC routers movement is sufficiently
+accurate and repeatable, we tested it and we mostly
+trust the engineers at Logictech who designed their hero sensor. We can assume that on a
+mousepad with perfect tracking characteristics, the input path should match
+the output plot of our mouse's movement within experimental
+margin of error. So the idea here is we
+tell the router to drive perfect circle over and over again. And we expect to see basically
+one circle in the software, at the end. We expect, unfortunately, the data was all over the place, which is why we were moments
+from placing our bulk order only to end up delaying this
+product for another six months. At the time, we weren't
+sure what was to blame. We had some theories that
+maybe our pressure on the mouse was too high or too low, or
+our DPI settings were bad. And that is something we
+ultimately had to fine soon, but what ultimately ended
+up solving the problem was a stiffer mount for the mouse. How did we know that
+our testing rig was bad? Ah, I'm glad you asked. Truthfully, until Fnatic contacted us claiming to have made the
+world's most accurate mousepad, I hadn't even given it a lot
+of thought, I mean, yeah, isn't it the mouse that
+determines how well it tracks? Well sort of, here's the
+thing, an optical mouse works essentially by taking pictures
+many times per second of the surface that is moving over,
+some fancy math happens and it determines how far it's
+moved and in which direction, by comparing the images, which is great, as long as the mouse exists in
+a world where the surface is perfect, the pictures are
+perfect and all bodies are completely rigid, but they're not. So credits have Fnatic. They really did make a great
+mousepad and studying it, has taught us a lot about
+how to make ours better. One thing we figured out even
+before using theirs as a point of comparison was that a stretchy
+material could affect the tracking of the mouse, think about it. Take this pad for instance,
+stretches in one direction, but not in the other direction. So when you move this way, it kind of forms a bow wave ripple, if you press hard enough into the pad, not that you would do that, but it's interesting nonetheless,
+and while we're at it, what if the bottom surface of the pad, doesn't grip the desk properly? I mean, that's a ridiculous
+example we're looking at here, but on a smaller scale,
+that is a real factor. Armed them with our stiffer
+mount and a mousepad that the manufacturer claims can produce
+this perfectly consistent performance, we set to work trying to replicate their results. From this point on, creator
+warehouse's very own engineer, Kyle took the reins and in
+short order, built us a new test rig using our proofs of print
+farm for all of the custom bits, aluminum extrusion for
+the structure and a bunch of 3D printer hardware for the electronics. It's pretty bare bones as
+far as a CNC machine goes. It uses a ramps board for the electronics, essentially in Arduino Mega,
+some cheap NEMA 17 size stepper motors and GT2 belts. We couldn't know until it was built, if it would be rigid
+enough for our testing, but the name of the game here
+is if you're going to fail, do it fast and do it cheap
+and conveniently once it was equipped with a new mouse
+holder that Kyle reverse engineered from Fnatics
+picture of their test rig, it did end up doing the trick. It's not perfect, perfect, but given the Logitech only
+guarantees 98% accuracy for the hero sensor, this test data from Fnatics
+pad looks about right. For our test, the carriage moves the mouse
+around in a perfect circle, 26 times while we run
+a super simple pointer plotter on a laptop connected
+to the mouse, which sorry, in spite of this being a G305,
+it's still a G Pro wireless. Running the test this
+way tells us two things. One, if Fnatics test can be
+repeated by a third-party, which for all intents
+and purposes, it can, it's a great mousepad and two,
+whether or not we can match or beat their performance. Let's talk about that now, in our attempt, we sourced two new versions
+of the LTT pad from the same supplier. Now, at the time, we were mostly
+focused on the stretchiness of the material. So we asked for one with two way, rather than one way stretch. So at least we'd have consistency to it. And we also asked for one with no stretch, and as it turns out, funny story, the first sample we had
+with the one-way stretch was actually far and away the most
+consistent when it came to tracking, even better than
+the no stretch sample that our supplier couldn't even do
+full color printing on. So it wouldn't even like, look all cool. We're still not quite on
+par with the data in Fnatics marketing materials. And I do still think that we
+might see an LTT pad pro in another year, that manages
+to be absolutely perfect, but we are close enough that anyone, but the most professional of
+gamers is not gonna notice the difference. So all that was left at this
+point was to adapt our design for the 15 different sizes,
+finalize the thickness. We settled on three and a
+half millimeter by the way, which I feel is a great balance
+between soft comfort and performance and oh
+wait, our final samples. So this is it. The LTT mousepad. (inhales deeply) Take it in. Yeah, it doesn't smell that good. I cannot say how proud I am
+of our team for getting this done, even for something
+as simple as a mousepad. So many hands are involved
+in getting you guys the best possible swag. And I hope that you enjoyed
+this long awaited piece of kit, and you can see the whole lineup
+in our shameless promotion, short circuit unboxing video
+over on our other channel. Big, thanks to Yubico for
+sponsoring today's video. Yubico wants to make the
+internet safer for everyone, so they created the YubiKey. It's a physical two-factor
+authentication key that helps you secure your online accounts. It doesn't require batteries
+or a mobile connection, and it's both crushed
+and IP68 water resistant. It works out of the box with
+hundreds of popular business and personal apps like Gmail, Twitter, cryptocurrency exchanges,
+and password managers. And Yubikeys are super portable
+and work across tons of devices and operating systems
+like iOS, Android, Windows, and Mac, it's time to take
+security seriously then. So go beyond basic authentication
+and get $10 off your YubiKey 5 series today, by going to the link in the
+video description and using code Linus10. All right, video is over. Smash that link in the
+description and get one for yourself before they all sell out. Oh, something to note, by the way, there are no limits switches
+to protect the CNC machine from traveling too far, and
+once the power is on, it has no idea where in space
+it is because it has no way to reference a home position. So if you decide to use the
+files linked in the video description to make one for yourself, just make sure you're a diligent operator, because otherwise it could
+ruin itself pretty quickly, but that won't happen to you,
+you're a diligent operator.

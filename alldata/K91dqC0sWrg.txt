@@ -1,0 +1,109 @@
+- For just $10, this tub of
+goop can give you more FPS, or at least it can according to Computer Systems who made it. To put their claims to the test, we're gonna be removing
+the stock thermal pads from an X17 and a 3090, applying this goop and reassembling it all to see how much improvement we can get. Is it worth what I'm sure
+it will be a huge mess? I don't know, but I am sure I want to
+tell you about our sponsor. - [Linus] GlassWire let's you see past and present network activity, detect malware on your
+PC or Android device, and block its connections to prevent things from getting worse. Use offer code Linus to get
+25% off at the link down below. (bouncy electronic music) - There are kind of two types of weird thermal things that we find. The first is someone realizes
+gamers have a lot of money, and they want that money. And the second is someone
+has a use case in industry and they find it after the
+fact it's good for gamers. This fortunately is in the later group. K5-PRO came about because the
+founders were just working at a computer repair shop. They were having a lot of issues with devices coming back to them, and they realized that a lot of the time the problems were just
+old worn out thermal pads. A thermal pad is a specific thickness, like this one right
+here is one millimeter. So they would have to go in, measure it, and if you get it wrong your
+device overheats and it dies. Now, it just so happens that they also were
+working at a university. So they did the thing you do
+when you work in a university. The result of all of their R and D is this right here, K5-PRO. It's a goop instead of a pad, so they can just slop it in. And apparently it's way more conductive than a thermal pad as well, and can have performance gains in like something like this right here. Our test today is pretty simple. First, we're going to just run them stock, find out baseline numbers, then replace a thermal paste
+with Thermal Grizzly Kryonaut. From there, we're gonna
+tear it apart again. Replace the thermal pads
+with K5-PRO and Kryonaut to find out basically
+the maximum performance of these things with
+their current coolers. We're going to use FurMark,
+F1 2020, and 3DMark to hopefully give us
+a good range of stuff. And I'm gonna go eat some lunch
+and see you in 15 minutes. First round of tests are
+nearly done, laptops all good. GPU still needs to run 3DMark once, but then we're totally good. We can look at our results here. The longer the FurMark goes, the GPU just slowly gets
+slower and slower and slower. Are you excited for
+tearing this laptop apart? - [David] Yeah. - Now, I was a bit of a dumdum and decided to use the Alienware X17. And like, I want do that
+because it's really fast, and I like it as a laptop, but doing this was really stupid because the disassembly
+process, it's not easy. This is not a simple laptop to take apart. Good job Alex, smart thinking. Everything that you need like SSDs, battery, RAM is all pretty easy to access. Cooler, not so much, it's
+on the other side of this. Do you like taking laptops apart, David? - [David] Not even a little bit. - Not even a little.
+- [David] I hate it. - Batter first. People always get really mad
+at me when I don't do that. You might be wondering given
+how much of a pain in the ass this is to disassemble,
+why I choose to use it. The main reason is that most of our other really fast
+laptops are from ASUS, and ASUS uses thermal paste on their VRMs instead of thermal pads, which
+means switching it to K5-PRO isn't really gonna give
+you much of a benefit. What do you think the chances are that there's a random cable on the bottom that I need to disconnect David? - [David] Pretty good. - Wow, okay. Wow, that's a lot of cooling. 17 CPU Perrier. So it looks like that we
+have liquid metal on the CPU, but the GPU is just regular,
+everyday thermal paste. So do we replace the liquid metal David? Kind of feel like we should. - [David] Okay, you do it. - Spread around liquid
+metal, you piece of crap. Now we just have to put it back together and hope it all works. Here we go. Way to go, a little bit
+of liquid metal on there. - [David] But that makes
+it go faster, right? - Yeah. - Perfect, she works good. Now, we get to take apart a GPU. Oh, I really hope that ASUS
+made this easy to disassemble. With them, it's normally kind
+of a toss up with the GPUs. While we take apart the GPU,
+let's get the laptop on the go. Initial looks, seems very close to stock. Oh, these are the guys
+where we'll probably get a lot of benefit from it getting replaced. This screw is basically
+stripped from the factory. That's gonna make
+getting it back in a joy. Oh, I hate doing this so much. Oh no, ugh. One thing that's worth
+noting is that on cards, and particularly motherboards, the really high end models
+with really high end VRMs might benefit less from
+K5-PRO than a lower end model because these right here
+are probably very efficient and kept quite cool by
+all of this heat sink. All right, GPU repaste was a success. Laptop also looks like
+it's doing pretty good. Yeah, it's not even thermal
+throttling on the CPU. So I guess our liquid metaling
+is better than Alienware's. See you in another 30 minutes. My first impressions are it's
+pretty much margin of error between the two thermal pastes. I mean, Dell did a great
+job and so did ASUS. I'm not super surprised given that these are incredibly
+high end devices. Now, the fun begins,
+and off the second time. The cooler comes off. Get rid of these stupid
+little thermal pads. One millimeter up to
+about three millimeters, it still is a good. Above that what you want to do is have like a paste copper shim
+and then paste again. Yeah, thermodynamics is frigging weird. I'm going to start just
+applying this as we go. You cannot really have too much. Oh, this is making a mess. Although that's a good thing. If you have too much of it, it's going to squish
+out and you'll be fine. If you don't have enough of
+it, they'll have an air gap and your components are
+going to overheat and die. The other benefit is that it can actually stop condensation from forming. Now, why should this stuff
+be better than a thermal pad? This copper, although it
+may look fairly smooth, on a microscopic level
+there's a whole bunch of little hills and valleys and crap. And that's what your thermal
+interface needs to get rid of. A thermal pad gets you about
+60% contact on the surface. Whereas the K5-PRO is able to fill in 99% of all of those hills and valleys. - [Linus] Oh my God. - Beautiful, isn't it? One thing you might be
+wondering looking at this is, how do you get rid of it? When I asked Computer Systems about it, they were kind of like,
+"Why would you?" (laughter) It just works. It's incredibly stable, why
+would you ever replace it? But apparently if you just
+soak it in alcohol for a bit, you can wipe it off and it's not too bad. How much squished you expect David? Yeah, I'm hoping for a lot of squish. Oh, a bit of smoosh there. We're just protecting our components. I was expecting this to
+be way grosser looking. We used under a tub of
+the stuff for the laptop. Given we have a bunch of
+two millimeter ones on here, we're gonna need quite a bit for this GPU. It's so goopy, oh geez. I will not let you down Computer Systems. It is really important on chips like this, that you cover the entire thing because there probably isn't
+much temperature sensing besides maybe a single probe in this. So if you miss half of
+it, it might overheat and not even know that it's
+overheating and kill itself. They can't say I didn't use enough. Tub number three. Oh, I'm having a lot of fun, but this may be disturbing
+to some viewers. Where would you rank this on like the tech gore you've seen David? - [David] 6 out of 10. - Now what we have to do is run the tests. This is going to be a bit more involved, figuring out if it worked or not, because it isn't a simple
+look at temperature, it good. It's more like I have to go through all the frame times, organize it, and then we'll be able to
+tell you if it worked or not. All right, it's the next morning and I've crunched the numbers. On the RTX 3090, the
+results are very clear. The repaste got us more FPS,
+17 more actually in FurMark. And the K5-PRO got us
+an additional four FPS for a total gain of 21. This translates into
+a 6.3 increase in FPS. And I've seen a lot of people go to a lot trouble than
+this for less gains really. In F1 2020, it's a CPU bound game, so there was no change. As for the Alienware X17, if you want to repaste it, don't. It turns out they're
+extra special element 31 that they talked about a whole bunch. Yeah, it kicks ass. So when we replaced it, our performance dropped
+by seven FPS in FurMark. And in F1 2021, we lost three FPS. Fortunately, we were able
+to make up some of that by adding the K5-PRO. So our losses were halved in FurMark, and an F1 2021, we saw an
+incredible gain of one FPS. Meaning that having your VRMs
+better cooled on these laptops can make up for worst CPU temperatures. So am I going to put K5-PRO on everything? Well, the impressive part of this is that the K5-PRO was able to
+give us performance gains in brand new devices and
+brand new thermal pads. If your laptop or GPU is
+around two or three years old, and you're already planning a repaste, I think including a tub of this
+stuff makes a lot of sense. I'm probably gonna order a bulk jar, so I don't have to use
+the stupid thermal pads that come with water blocks
+and cut them and stuff. Also, applying it's pretty fun, I like the dirtiness of it. - Thanks FreshBooks for
+sponsoring today's video. FreshBooks is the easy to
+use accounting software that helps you do your business. You can impress your clients with professional looking invoices that detail the work you've done. You can use automated payment reminders if invoices get past due. You can easily track expenses
+and use their time tracker to log every minute of billable hours so you don't have to think about it later. And you can keep everyone on the same page with their projects feature, which makes it easy
+for clients, your team, and contractors to collaborate,
+share files, and comment. Choose a plan that's right for you and start your free trial of
+FreshBooks for 30 days today. No credit card required
+at freshbooks.com/linus. - If you enjoyed watching this video, maybe you watch the one where
+we water cooled the Area-51m. That was brutal.

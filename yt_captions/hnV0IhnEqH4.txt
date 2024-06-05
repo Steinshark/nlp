@@ -1,0 +1,58 @@
+hello and welcome i am james murphy from 
+mcoding.io and today we are re-covering   a problem that i've covered in a previous 
+video. the problem that we're covering again   is the first missing integer problem. last time i 
+covered this problem i solved it using python and   i took advantage of one of the problem constraints 
+that the input array size is at most 300   and because i really took advantage of that 
+constraint the solution that i came up with   wouldn't really work if you had much bigger 
+array sizes. so today i'm redoing it in c++   and i'm going to be using an algorithm that 
+will work for whatever array size you want so   just to recap the problem we're given an input 
+array like this 3 4 -1 1 5 and we're supposed   to find the smallest positive integer that 
+is not in the list so in this case we have 1   is there but 2 isn't so the algorithm should 
+return 2. the way that i'm solving it this   time is going to be a lot better than last time 
+because i'm not going to use extra space that   depends on the size of the nums array so this 
+algorithm will work no matter how big nums is.   additionally it's going to scan through 
+the array at most twice. so here's the idea   for each slot in the array imagine 
+the number that should be there. so in this case first we see a 3 and the 3 
+is supposed to go here so let's put a 3 here. now we clobbered this value 
+-1 in order to put the 3 there   but -1 is outside of the range 
+of numbers that we care about. so during this algorithm whenever we encounter a 
+number that's outside the range that we care about   we just ignore it or we stop what we're doing 
+and move on to the next iteration. okay so the   next iteration we go through and we see 4. 
+4 is supposed to go here so we put 4 there. now we had to displace 1 in order to put the 4 
+there and we do care about 1 so let's continue   the process with the 1. 1 is supposed to 
+go in this location so let's put it there. and we had to displace a 3 in order to do 
+that so we go to where 3 should be and we see   that 3 is already there so we stop. then 
+we continue on to the next iteration   which is here. we see a 3 which is 
+already in the right place so we move on.   we see a 4 already in the right place so we move 
+on. we see a 5 already in the right place so we   move on and then we hit the end of the array. 
+we're done with the first pass, notice now that   any element in the array that we care about is 
+in the correct position, so all we have to do is   scan through the array and see if the number that 
+we find at that position is the correct number.   we look at the first position and we see a 1-- 
+that's correct-- so we move on then we look at   the second position, and we see a 4 but we're 
+supposed to see a 2. if there was a 2 in this   array it would have moved to this position so 
+there must not be a 2 in the array so we can stop   and return 2 as the answer. this is an amazingly 
+simple and fast algorithm that gets the job done   so let's switch over to vs 
+code and code the solution. so first we just make a loop over the array. 
+if you're wondering why i'm using longs here   the problem statement says that the ints that 
+are in this vector can be all the way up to the   maximum possible int to the minimum possible 
+int and so since we're going to be doing plus   or minus 1 kind of things i went ahead and made 
+these longs in order to avoid overflow issues.   next we just check for the current element that 
+we're looking at, is the index a valid index,   so current minus one is the index that current 
+should go in since we're only looking for positive   integers and not non-negative integers the index 
+corresponding to current is just current minus   one. this checks to see if current minus one is a 
+valid index and then this checks to see whether we   have looped back on ourselves. so if current were 
+equal to next then there's nothing more to do.   then inside this while loop all we do is put 
+current into the location that it's supposed to   go and then uh replace it with next. after this 
+for loop all of the positive integers that were   in the vector are now in the right places then 
+we just loop through the vector again and look   for the first index for which uh the thing at that 
+index is not equal to what's supposed to be there.   of course it's possible that we never return 
+from this return statement, everything is in   its rightful place, so the first missing thing 
+is the first thing that's outside of the range.   so that would be the length of the vector plus 
+one. all right so i went ahead and submitted it   uh it says the run time was zero milliseconds, 
+faster than 100% of c ++ online submissions   for this problem. so i can't imagine that 
+no one else has come up with this solution   and that this is actually the fastest code 
+that has ever been run for this question,   i'm guessing just that anything less than one 
+millisecond is deemed zero milliseconds and so a   whole bunch of good answers get lumped as exactly 
+100%. so there you have it there's my second take   at the first missing in problem with a much better 
+solution. i hope you enjoyed this one a lot more   than the last one and if you did don't forget to 
+like comment and subscribe, see in the next one

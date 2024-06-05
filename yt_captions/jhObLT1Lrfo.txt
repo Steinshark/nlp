@@ -1,0 +1,106 @@
+So this one I want to go back to when I was 
+a student, I was in high school, and a friend   of mine who knew I was kind of a math 
+person came up and he's like, hey Grant   do you get like money if you can find really big 
+prime numbers? Like I don't know maybe. He's like,   because I think I found a way that you can get uh 
+uh any any arbitrarily big prime number that you   want. His name was Patrick Paterson; this is the 
+Patrick Paterson patented method for generating   bigger primes. Uh do you want to give me your 
+favorite prime number? It could be a small one.  (Brady: I would go 17.)
+- All right so we'll take 17 and the method 
+is we're going to write this in base 4. So in base 4 you have the 1 spot, you've 
+got the 4 spot and you've got the 16 spot. And   it could go on with other powers of 4 - 64. But 
+in this case 16 is big enough because we would   write this as 1 - 16 - and then you don't need to add 
+any 4s and then there's a single 1 in there.  This is what that number looks like in base 
+4 and his observation was, hey if you read   this as if it's base 10, and you ignore the fact 
+that it's writing the number in base 4, 101 is   also a prime in base 10. And you say, well that's 
+just one prime let's try it with a different one,  do you have another favorite prime number?
+- (3) 
+- So 3 is pretty simple, um 3 is just also   3 in base 4. The next one, you know, a little 
+bit less obvious, 5; and 1 is also prime in base 10. (Awesome)
+- And this keeps going actually, 
+so if you try it with 7, you get 13. If we   try this with 11 that's also prime; and this was 
+the pattern and he notices that no matter what   prime number he seemed to plug in you always 
+seem to get out another prime number. And, you   know, it follows for these first few seems like a 
+natural enough rule, therefore it goes on forever. (You have to know prime numbers to make prime numbers though)
+- Well but you can see how the scheme goes, you just start   with 1 and I have to- for example maybe we do this-
+- (Oh yeh, 101, the one we spat out there) 
+- Yeah actually   let's try that, let's try that, let's try that. 
+There's going to be a single 64, so then how many   do we need in the 16s place? Two of them in there 
+to get 32 and then this leaves us with one 4   and one 1. Now I don't know off the top of my 
+head if 1211 is prime - tragically, sorry to say,   for Patrick uh this one is not actually prime. This 
+is 7 times 173. And so, you know, this is this   is before it was very common for you know kids in 
+school to be programming things certainly so he   probably didn't check that far. But what is true, 
+what I can tell you, is not a coincidence that we   see a 7 in here and if you just go through 
+with your normal pattern and you try this with   all of the primes you can - so all of the primes 
+up to that point the rule works pretty well. So   you know, very sad, the pattern breaks, this is not 
+going to be the scheme to just plug in new ones   and constantly get bigger ones. But it's kind of 
+interesting to ask why why did it seem to work for   so long? And in this case it's not actually that 
+hard to see why it's decently reasonable that   this would be happening for the small numbers and 
+then break down for larger ones. First of all if   it's even in base 10 it's also even in base 4;
+and this is because 4 is also an even number so   any number in base 4 that's even it's going to 
+end with a 0 or it's going to end with a 2.   And what that means is if it's not even in base 
+10 there's definitely not even in base 4. If 2   did not go into your original number, 2 also does 
+not divide the bigger one. Slightly less obvious is   that the same thing happens for 3 where- a 
+lot of people might know a divisibility trick   for 3. You have some large number like 9732. Someone goes   and they asks you, hey is this number divisible 
+by 3? The trick is to say, if you add up all of   those digits 9 plus 7 plus 3 plus 2 
+and you ask if that's numbers divisible by 3 -   that's 21, 21 is divisible by 3 so we'd say yes 
+this one actually 3 does divide that number.   And the reason this works is basically because the 
+number 10, the base that we're using, is one above a   multiple of 3. And the idea there is that if we 
+expand out what this whole number actually means   we're saying we take 9 times 10 to the power 
+3, plus 7 times 10 squared - all very elementary,  sort of literally elementary, it's what we learned 
+in elementary school. But let's say we want to say   reduce this mod 3; which is a way of saying 
+what is the remainder that this number will   leave when we divide it by the number 3? The 
+way that you can think about this is that when   you reduce things mod 3, or you ask about this 
+kind of remainder operation, a very nice fact is   that operations like multiplication and addition 
+play nicely with reduction. And what I mean by that   is if I take something like a plus b and then ask 
+for- what is that when we reduce mod 3? What is the   remainder when you divide by 3? That's going 
+to be the same as if I take a mod 3 and I add it   to whatever b mod 3 is. I can kind of reduce them 
+before I do the actual addition operation. If you   take two very large numbers, like I've got 90 plus 
+73, and I want to know uh what's the remainder when   I divide by 3, I can just take the remainder 
+beforehand on each one of them. 90 it's going to be   0, 73 it's going to be 1. So I don't actually have 
+to add the numbers in order to know the reduction   of their sum. Same deal with products, you know if 
+I multiply the two numbers doesn't matter if I   do it before or after. When you're thinking of the 
+expansion of a big number like this, 10- because 10   is just 1 mod 3 we can think of the expansion by 
+saying this is the same as saying 9 times 1 to the   power 3, plus 7 times 1 to the power 2, and 3 
+times 1 to the power 1 and 2. The reason we can   just add the digits is because the thing each one 
+gets multiplied in the expansion, as far as you   know the universe mod 3 is concerned, all of those 
+are the same thing as 1. And of course the point   here is, the same would work with 4 if you're 
+doing it in base 4. And what that means is if   you're given a number that's not divisible by 3 
+in base 10, and then you write it in base 4, this   rule with the digits and whether the digits add up 
+to a multiple of 3 or not, that's also going to   hold. And slightly more subtle is also if it's not 
+divisible by 5 uh once you reduce the base 4; if the original number wasn't divisible 
+by 5 the new one you see interpreted in base   10 won't be. But that- it's a little bit more subtle,
+in this case it's a it's a nice coincidence of two   facts, one that 10 is divisible by 5 so- you know, 
+a number is going to be divisible by 5 only   if you end in a 0 or a 5. It's one of the 
+first things we know about divisibility if we   learn about it as elementary schoolers. But then 
+in base 4 there is no 5. So the last digit   could never be a 5; and if the last digit is a 0 it must have been even. So assuming it wasn't   even, there's nothing that you can write in base 
+4 that would be divisible by 5. And so the   first prime number that's even available to divide 
+one of these expressions that we get by starting   with a prime and writing in base 4 would be 
+7. So in some sense all of these numbers are   immune to divisibility by 2, 3 and 5 which 
+actually rules out quite a bit, but they don't have   that same immunity from 7 or 13 or 11 and all of the next ones.
+- (So using the Paterson technique)  (you are never going to spit out a 
+number in base 10 that has 2, 3 or 5 as) (one of its prime factors ever in history?) 
+- Exactly yeah. And for for small numbers that   accounts for most of the possibilities for what 
+could be dividing it. In fact up until you get to   49 that's enough to guarantee that you're prime, 
+because 49 is the first composite number where   its divisors are all strictly above 5. And 
+after that it's just sort of a random toss-up   whether or not you hit divisors or not. So 59 you 
+happen to hit it, 101 very sadly you happen to get   it. Maybe we could have gotten a string that was 
+a little bit longer. You know, we can kind of see   it here; like you start with 5 you get out 11, 
+and if you start 11 you get out 23, if you start   with 23, 113 like looks pretty prime as far as 
+I'm concerned. So if you're, you know, if you're   a school kid and you're just messing around 
+you might think this is plenty true enough.   (What should someone watching this video take from this?)
+- That's the right kind of question to ask. I mean   this is this is all loosely related to something 
+Richard Guy described as the Strong Law of Small   Numbers. I'm going to paraphrase but small numbers 
+can't support the weight that we give them with   all the patterns that they have to hold, and you're 
+just going to run into these kinds of coincidences.  I can show you another one if you want that is in a similar vein.
+- (You know I'm going to say yes!)   All right.
+- (I'll get you another piece of paper.)
+- Okay we'll get another one. So yes this is to be continued and see the links 
+in the video description for details of the next   video in this interview. Also check out Grant's 
+channel, 3Blue1Brown, for a whole other   video he's just released about false patterns. 
+In the meantime on screen as you can probably   see are the first 1000 prime numbers in base 
+10 converted to base 4 and then checked for   Paterson primality. No 2s, 3s or 5s in 
+those prime factors, just like Grant promised. As you can see things start 
+strongly but then start tailing off. In   fact only 388 of the first 1000 prime 
+numbers past Patrick's test. Check out all the usual 
+links for more videos and information and   of course make sure you're up to date with 
+Grant's channel, that's 3Blue1Brown,  always amazing stuff to be seen there.

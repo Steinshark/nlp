@@ -1,0 +1,110 @@
+Hello and welcome to mCoding! 
+This is James Murphy. I am doing another giveaway. So, if you'd like
+a professional license to PyCharm, which is the editor that I'm currently using, then
+check the description. In this video, we're going over whether or not a bunch of 
+built-in things in Python make copies of your data. This is actually inspired by one 
+of my previous videos. I had a lot of commenters, rightfully worried
+that looping over a list this way in order to loop over it backwards 
+might be making a copy. I got suggestions to use 
+a slice of a list instead. And, in the wild, I've even seen people fall 
+back to using error-prone indices just to avoid this issue. Well, it's definitely clear this index-based
+approach doesn't make a copy of my list. But it's so much less readable. So, I'm happy to tell you that reversed() does
+not make a copy of your sequence. If you want to loop over 
+something backwards, this is the way to do it. This isn't a foolproof method to 
+tell whether or not a copy is made. But we can actually get 
+an inclination that one is not made by printing out 
+the reversed of the list. Notice that instead of getting 
+an actual list back, we get this list reverse 
+iterator object. If you see something that says 
+like an iterator or a view or a generator, that should be a clue that a copy 
+probably isn't being made. Just for comparison, notice that if 
+we use this fancy slice of a list, then we actually get 
+another list back. So although it's shorter in this case, 
+it is also making a copy. So then how is reversed() able to loop over
+the list without making a copy? Well, here's an implementation of a class
+that acts the way that reversed does. The key idea in all of these ways of iterating
+is to define your own iterator. An iterator is just an object that you can
+repeatedly ask for elements. The way that you ask it for an element is
+by calling its __next__ method. This is also what's called by 
+the built-in next function. If there are any more elements left to iterate
+over, then next returns the next one. If there aren't any more elements to iterate
+over, you signal that by raising a stop iteration. Technically speaking, an iterator must also
+have an __iter__ method that returns self. This is a little bit confusing because the magic 
+__iter__ method is used to define an iterable, not an iterator. Iterables are just things that you can ask
+for an iterator from. Whereas, an iterator you can think of
+ more as an in-flight stream of elements. So all the return self really 
+says is that if you want to get a stream of elements 
+from a stream of elements, just return the stream. Most of the important logic 
+is in the next method. So all we do when we construct the reversed
+object is store reference to the sequence. Initialize an index to the last 
+element of the sequence. And do some error checking. Every time you ask a reversed 
+for the next element, it gives you the element 
+at its current index. And then subtracts one 
+from the index. The last or I guess first valid index is 0. So, after returning that one, 
+our index gets set to -1. So, if we see minus one, then 
+we know there are no more elements. So as you can see this allows us to iterate
+over the entire sequence without making a copy of it. The built-in reverse is actually going to
+do something more like this that actually does things in terms 
+of this next method. A common way to do something similar without
+as much code is to use a generator instead. This generator code 
+does essentially the same thing. And is quite a bit clearer 
+in what it's doing. But the major difference here is 
+that the error checking doesn't happen until you actually start the generator which happens when you 
+actually ask for the first element. Whereas, the class solution did 
+the error checking in its init function. Of course, doing error checking earlier rather
+than later is usually a good idea. But this is an option. So then the question is: Which of the major built-ins actually 
+make copies and which don't? Aside from sorted, most of the built-in
+ that make copies are containers themselves. And that kind of makes sense. If you ask to make a new container using an 
+old one, then you're kind of asking to make a copy. On the other hand, there are a 
+bunch of them that don't make copies. So enumerate, filter, inter, map, 
+reversed, and zip, any of the dictionary views and 
+generator comprehensions don't make copies. Once again, you can mostly 
+tell by printing them out. The ones that make copies look like 
+they've returned a new version of the original thing. Whereas, the ones that don't make copies 
+are returning these special purpose looking objects. As is often the case in Python though,
+ there are almost always exceptions. You're able to change how a lot 
+of built-ins interact with your classes. For instance, slicing a list 
+makes a copy. Because that's the behavior 
+that the built-in list shows. But you can define your own 
+get item method for your classes. And do whatever you 
+want with it. And that's exactly what NumPy arrays do. Things are not looking good 
+if you just print it out. Both of these objects 
+are numpy arrays. So, you might think that 
+reversed is a copy. But NumPy arrays are actually 
+just very thin views around raw memory. And printing out the data attribute 
+of both of these arrays, we see that they're sharing the 
+same exact memory object. Contrary to the way that lists behave, 
+no copy was made here. The way that NumPy achieves 
+this is by using strides. Strides tell you how many bytes you need to jump if 
+you want to get to the next element of the array. These are tuples instead of just numbers because 
+arrays can be multi-dimensional. But for a 1D array, we basically 
+just have a number. The `4` here tells me that from some element 
+I need to jump four bytes to get to the next one. That's because NumPy chose a 32-bit 
+or 4 byte integer type for this array. So, all I need to do to get 
+a reversed array is start at the end and jump by negative
+e 4 for each element instead of positive 4. It's a very simple, clever and effective
+ way to do things efficiently. I wouldn't expect anything less from NumPy. And finally, we spend all this time talking
+ about how to avoid making copies of things. But I have to say that copies 
+are not always bad. Sometimes you really need 
+a copy. The canonical example of when 
+you'd want to copy is if you're iterating over something and
+ mutating it at the same time. For instance, here I have a, b, c 
+mapped to 1, 2, 3. I want to go into the dictionary and add
+ uppercase A, B and C with the same values 1, 2 and 3. Seems simple enough. 
+Iterate over key value pairs. Convert the key to uppercase and 
+assign it the same value. It seems straightforward but we got
+ slapped with this runtime error. Dictionary changes size during iteration. If you're not familiar how dictionaries
+ are implemented in terms of hash tables, this might be a very confusing error. Why does Python care if I modify
+ something while I'm looping over it? The very short and simple explanation 
+is that modifying the dictionary might cause the dictionary to have to
+ move all the elements around. If that were to happen then the iterator
+ might basically just lose its place. The solution is to manually make the copy. Making a copy here means that 
+we exhaust the iterator and collect all the results 
+into the list. So the iterator is completely done before we ever start to modify 
+the dictionary. So, there you have it.
+ I hope this helped a bit. Don't forget about the giveaway if you're interested in a 
+professional PyCharm license! Of course, thank you to my fantastic 
+set of patrons and donors! If you like my content, 
+hit that subscribe button. And if you especially like it, please
+ consider becoming a patron or donor! My team and I are also available 
+for Python and C++ consulting! Thanks for watching! See you next time!

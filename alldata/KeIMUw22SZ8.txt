@@ -1,0 +1,58 @@
+what's up everyone james murphy here from 
+mcoding, back with another video on python   weirdness. do you know what the comma equals 
+operator does in python? if you know the answer   to this trick question, let me know down below 
+in the comments, otherwise here are some choices. in this situation x is one, 
+y is the list containing two,   and we're looking at x comma equals y. 
+afterwards we're printing out the value of x, so   is x the integer one? is x the integer two? 
+is x the singleton list containing one? is x the tuple containing one and list of two? or is this just a syntax error? pause the video now if you need 
+some time to think about it. all right done thinking 
+about it? so do you know what   the comma equals operator does? 
+let's find out by running it. x gets the value 2. did you get it right? 
+well if you're like me then you probably   thought this was just a syntax error. 
+when i first saw this in a real code base,   i thought it was a syntax error and maybe that i 
+accidentally put the comma in myself. well that's   not true, as you can see this does something. so 
+if you're not sure about why this printed out two,   let's look at a simpler example. but first let me 
+give you a hint. i'll run my code formatter on it. did you see what happened? here let me do 
+it again. ready format. it moved the comma.   do you know the answer now? if not let's just go 
+through it. here is a simpler example. suppose   we have a function, you know do 
+something, and x is 1 and y is 2. then we can say x comma y equals y comma x.   what this syntax does is it will swap 
+the values of x and y. it's kind of   doing a little bit of pattern matching. let 
+me put in some unnecessary parentheses here. it's kind of saying look at this pattern 
+on the left: x comma y, and try to extract   out values for x and y based off of what's on 
+the right hand side where you see y comma x. in this case it kind of makes sense 
+that it would swap the values of x and y   because i would say, well matching the pattern 
+x should be the thing inside the tuple which   is at the zeroth index so that's y, and y 
+should be the thing which is inside the tuple   at the first index, which is x. so afterwards x is 
+equal to what y was and y is equal to what x was.   well this would work just as well 
+if this was a list or any other   iterable with two elements in it. and here's where 
+we see our previous example x comma equals y.   if you have a list of just one thing or a 
+tuple of just one thing the syntax looks a   little different. so suppose x was like this, 
+a tuple of one thing in python gives you  the following syntax. you need to have this extra 
+trailing comma after the single element in the   tuple because otherwise it just looks like you 
+parenthesized x, and we don't want parentheses   to be creating tuples unless you really meant 
+to. so in this case if you want the left hand   side to be a tuple you need to put that comma 
+in. but these parentheses are still optional,   so now do you see why x comma equals something 
+gives you the value that it did before?   well our previous case looked like 
+this: y was 2 and we just said x   comma equals y so now y here is 
+just like we're putting two in.   so it's saying pattern match this tuple 
+of one thing with this list of one thing. that's why x gets the value two at the 
+end of it. make sense now? is there any   real case where you might want to use this 
+syntax? admittedly if you're using this syntax   you might be in a gray area. at the very 
+least absolutely do not format it this way.   put the spaces in the right place otherwise 
+you're just going to confuse people.   so i have come up with one case where it might 
+actually, you know, make sense to have something   like this. let's suppose that i have two sets 
+and i know that their intersection has only one   element. so just for demonstration purposes let's 
+say that we have a list of primes you know 2 3 5   7 11. and we have a list of evens which is 2 4 6 
+8 10. let me actually make these sets not lists,   now i know that the set of evens and 
+the set of primes only has one thing in   common and that's two. so i could say x comma 
+equals (with the correct spacing of course)   primes dot intersect intersection 
+with the evens, and then print x. so in this case if i call do something 
+now we see that again it prints out two   so that's one case where if you know ahead of time 
+that there's only one thing in the right hand side   then you might actually want 
+to use this comma equal syntax   instead of having a temporary variable. you 
+know intersection equals this, and then x equals   intersection dot pop to get the one element out. there you have it that's the 
+comma equals "operator" in python hey thanks for watching again, if you like the 
+video remember to like comment and subscribe.   also i offer online python courses so if 
+you would like to learn python from me,   then go ahead and drop your contact 
+info at the link in the description,   and i'll let you know when online 
+python courses are available.

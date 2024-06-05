@@ -1,0 +1,101 @@
+- Stop! No matter the price, you should never buy a secondhand GPU that was used for mining. It could be as much as
+10% slower for each year it's spent mining cryptocurrencies like Ethereum or Dogecoin. At least, that's what the rumor that has been spreading ever
+since Palit Microsystems, a large manufacturer of GPUs, allegedly warned benchmark.pl about the supposed dangers
+of buying used GPUs. But hold on a minute. A GPU manufacturer only makes
+money when you buy a new GPU. Of course, they would wanna warn you off buying a cheaper secondhand one. So is there any truth to this? To find out, we contacted
+an acquaintance of mine, a local, full time crypto miner.
+(fire crackles) (crowd chatters angrily) Yeah, I know. I know. But he's otherwise a totally cool guy. So we got in touch with him,
+and we borrowed three GPUs that have been mining 24/7, 365 for one, two, and three years. And I'll be comparing their performance to our closest available equivalent GPUs that have done pretty much nothing but sit on the shelf in our store room. This is an important video, because when the inevitable
+GPU price crash does happen, it'll determine whether it's
+worth it to pull the trigger on a used GPU to finally turn the tables on those filthy, filthy miners. Oh, no offense, but by the way, thanks for lending me these cards. And thanks to World of Tanks
+for sponsoring this video. World of Tanks is the free to play epic online combat multiplayer
+game that features tanks. Use invite code tankmania
+at the link below to get some great bonuses. (upbeat electronic music) We've talked about
+performance degradation before in this video, where I compared
+a ten-year-old GTX 480, that had been quite heavily
+used, to a brand new in-box one. And that time around,
+our conclusion was that if it's still running,
+at the same clock speed, its performance will be
+identical to the day it was new. However, if the silicon has degraded to the point where it can't
+run at those clock speeds, it's gonna artifact or black screen, rather than somehow lose performance. So why are we revisiting this topic? I'm so glad you asked. Modern graphics cards,
+ever since the GTX 680, no longer run at a fixed clock speed. And it's common practice for manufacturers to advertise both a base clock speed, as well as a boost clock speed
+for what they would expect the GPU to reach under typical conditions. And this is where things
+get really interesting. All other things being equal, the performance of a
+processor, like a GPU, is directly determined by how many cycles it performs per second. And with nearly a 20% difference between the base and boost clocks of say, NVIDIA's RTX 3080, it's conceivable to imagine
+a card that still works, but with dramatically worse performance. So let's meet our cards, shall we? Starting with the ASUS
+TUF RTX 3080 10G Gaming. Now we were really lucky here,
+in that we happened to have (hand slaps) in the box, to give you some
+idea how little it's been used, a TUF 3080 Gaming card that is identical to the one that has been
+running for 10 months of continuous use mining cryptocurrency. Now that is less than a year, but if the rumored claims
+from Palit are to be believed, it should already have dropped a measurable amount of performance compared to this otherwise identical card. Let's get it on the test bench. Because we're comparing like for like, that is to say that both graphics cards in each round of our testing
+are using the same GPU, our setup can be very straightforward. All we're gonna do is run FurMark until we reach a plateau in temperatures. Then, we're going to
+log the GPU clock speed for a period of one minute
+and take the average. That'll tell us about what
+the card is boosting to. (clock ticking)
+One down, and while our results seem fine, we won't know for sure
+until we compare to a card that doesn't have a layer
+dust all over the fan. Here comes GPU number two. Divided by 1950 equals. Oh. Well, our mining 3080 did end up slower, but it turns out it was only by 0.8%. So that is well within
+the margin of difference that you might expect just
+picking up two brand new 3080s off the shelf and running
+them against each other, but that doesn't prove
+degradation isn't real. Let's move on to something that's been running
+for quite a bit longer. Representing our, approximately two years is this RTX 2070 Gaming Z 8 gig from MSI. It's actually only been
+mining for about 18 months, but in theory, if it's
+supposed to lose 10% performance per year, this one should be quite a bit slower than an unused card. Okay, I had planned to show you guys the results for the 2070s
+after I had run both cards, but this first one is so
+interesting that I couldn't wait. In spite of it being rated only for a boost clock of 1830 megahertz, this MSI card is still running
+at well over 1900 in FurMark Definitely interesting,
+even if I'm not sure how valid this data point will be. Because while we did manage to get perfectly matching
+cards for our 3080 test, for our 2070s, we were not quite as lucky. I mean, we'd have loved to just buy a perfect match for the one that was given to us by the miner. But, the problem with that
+is that most used GPUs on the market are so-called, because, well, they've been used. (audience gasps)
+And the whole point of our test is that we want
+to compare to something that is in like new condition. So even if we found a
+GPU that someone said hadn't been touched, we'd be
+just relying on their word, as opposed to any kind of empirical data. So what we decided to do was
+go with a non-matching GPU that we know has spent most
+of its life on a shelf, even though it is rated
+for a lower boost clock. If anything then, this
+should make it even easier for our mining card to
+maintain its performance edge. And this card also ran well
+above its rated boost clock. So, I guess what that means is
+that our test doesn't tell us really anything about performance
+degradation due to mining, but rather that Nvidia's
+sophisticated GPU boost technology has never really cared much about what the rated clock
+speed from the board partner is. So both cards are behaving as they should, and even their relative performance, given that they're both rated for about 100 megahertz
+difference in boost, is exactly what we would expect if they were brand new. Of course, that doesn't mean that it's BS. Because we still have one more test, a GTX 1060 that has been
+mining for four years. Okay, I was way off in the intro. For this generation, both of our cards are rated for the same clock speeds, but with different cooler designs. Though, both of them
+should help them reach pretty much the full
+potential of the silicon. This AnonTech review from 2016 shows a Founders card like this one performing within about
+5% of an ASUS Strix card that has a beefier cooler. So, if mining for four years did anything to our
+Zotac card's performance, it should be pretty
+evident in the results. Let's take them down. We're looking at an average of 1835. (clock ticking) And, conclusion. 1847 versus 1830. Basically the same. So, okay then. Using a GPU still doesn't
+appreciatively affect the day-to-day performance of said GPU. That is, unless Palit is admitting that their cards die really
+quickly, or something. I don't know. Probably not. So it's purely binary, then. It still works, or it
+doesn't work anymore. Go ahead and buy mining cards. End of story, right? Well, not quite. It's clear from their condition that while these GPUs might've
+been heavily used for mining, they've also either been
+very regularly cleaned, or kept in a basically
+dust-free environment. And because modern GPS boost higher, in some cases much higher, when they're run at lower temperatures, the condition of the cooler is critical to the performance of the graphics card. So a broken, or clogged up,
+or otherwise hobbled heat sink could easily cause a 10%
+performance hit or more. That's why it is so to carefully inspect the condition of the
+cooler of a graphics card before you make a purchase. They can be a real nightmare
+to track down secondhand if you need to replace them. And depending on how much you're spending, the remaining lifespan of the GPU before it reaches that
+binary doesn't work state could be a major concern as well. I mean, if you're paying half the price for the same performance brand new, I say YOLO it, and buy
+another one if it dies. But if you're only
+saving a few bucks, well, I'd recommend this video
+about why electronics die, where Luke explains how even
+components with no moving parts can be gradually worn
+out by invisible forces like thermal expansion and contraction, and even the physical flow of electrons through the tiny copper
+wires in a microprocessor. With that said, a quality GPU would have been built to last much longer
+than its warranty period. And in my opinion, the flood of used GPUs that is undoubtedly coming
+could be the tide change the PC gaming community
+has been waiting for. So the bottom line, know the risks, but don't let anyone scare you off of a good deal with baseless FUD. And don't let me scare you off
+our sponsor, World of Tanks. World of Tanks is a free to
+play multiplayer online game, that is, well, free to play, but skills win the battles, not money. It features over 600 tanks
+from the mid 20th century that are made to be historically accurate, including legendary Shermans,
+Churchills, Tigers and more, and has 40 battle arenas that feature historic locations all over the globe. There are a hundred
+million players worldwide, so why are you waiting? Play on your own and master
+the art of armored combat, or join team clashes and
+climb the leaderboard with invite code tankmania. You'll get the Excelsior
+tier 5 tank, 250,000 credits, seven days of premium access, plus three rental tanks
+for 10 battles each. If you guys enjoyed this video, you might enjoy our turning a
+mining GPU into a gaming GPU, where we had that headless card, we managed to get it running. That one was pretty cool.

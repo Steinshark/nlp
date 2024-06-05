@@ -1,0 +1,184 @@
+hello and welcome to mcoding. i'm james murphy. let's get going talking about descriptors. contrary to how the name might sound, descriptors are not the 
+ mutual enemy of autobots and decepticons, nor do they have anything to do with descriptions. descriptors in python are  somewhat of a feature that's 
+ hidden in plain sight. officially, an object is a descriptor if it has  any of these dunder 
+ `get`, `set`, or `delete` methods. and their purpose is to allow you to  customize what it means to get, 
+ set, or delete an attribute. in this case, `x` is an instance 
+ of the descriptor on the left. when you call `obj.x`, this 
+ calls the descriptor's `get` method. when you call `obj.x = something`,
+ that calls the `set` method. and when you call `del obj.x`, that
+ calls the `delete` method. `get` takes the object and the object type. importantly, this allows you to do different things based on whether something was called 
+ from an instance or the class itself. if this is your first time
+hearing about descriptors in python, you're probably thinking this 
+ is one of those very niche features. it's advanced use only. and, by the way, isn't that the same thing 
+ as `getattr`, `setattr`, and `delattr`? why is there a need for descriptors at all? it is true that without knowing 
+ more about the internals of your class, `something.x` could be calling the `getattr`, or it could be calling the 
+`get` method of a descriptor. `obj.x = something` could 
+ be calling the `setattr`, or it could be calling the `set` of a descriptor. and `del obj.x` could be calling
+the `delattr`, or a `delete` of a descriptor. without seeing the internals
+of the class, you just can't tell. but there's a big difference 
+between `getattr`, `setattr`,   and `delattr` versus the descriptor versions. namely, the methods on the right-hand 
+side are defined per class. whereas, the ones on the
+left-hand side are defined per attribute. on the right, it's the class that's
+determining how to access attributes. whereas, on the left, it's the attribute
+itself that determines how it's accessed. even still, you may be thinking: "descriptors? i'm never going to need that, right?" "i never define descriptors, i never work with descriptors." "i don't need to know." well, welcome to my list
+of descriptors hiding in plain sight. you may not have realized it,
+but you're using them all the time. in descriptor number one, functions. have you ever noticed a difference that you get when you access a function
+through an instance versus through the class? accessing the function `f` through an
+instance little , `a`, we get a bound method. but accessing the same `f` through
+the class itself gives us a function object. it's the same `f` in both
+cases, but i'm getting different results. that's because every function you define
+with the `def` keyword is a descriptor that defines a `get` method. and it uses the descriptor 
+protocol to do something different based on whether it was called
+from an instance or the class itself. functions in python are written in c. so this isn't exactly what it's doing. but it's something close to this. every function has a `get` method. if the object is `none`, then there's
+no instance associated with this lookup, meaning it was called from a class object itself. in that case, we just return the function as is. otherwise, `object` isn't `none`, 
+and we're in a case like this, where we're looking up a function
+on an actual instance variable. in that case, instead of 
+returning the function itself, we return some kind of bound
+function that remembers the object. so, yeah, if you're using functions, 
+then you're using descriptors. number two, descriptor hiding 
+in plain sight, properties. and yes, this is a different case
+than just functions. let me show you why. let's reach into the class's dictionary
+and print out what this `area` thing actually is. i'm accessing it through the dictionary  like this in order to avoid 
+invoking the descriptor. we see that `area` is not actually a function. it's a property object. first, `area` is defined as 
+a function just like normal. then, you replace `area` with
+whatever you get by calling `property` on it. that's why technically, `area`
+is a property object, not a function. so, this is exactly the same as this. and property is a descriptor. so, it controls what it does 
+when you say `dot area`. it just so happens that what it
+does is call that original `area` function. properties like this are never really needed. you could always just call the function directly. but it's a common way to indicate to the  programmer that this thing 
+is really cheap to compute. by making `area` a property, you're basically  telling users that `area` 
+is so cheap to compute that it's basically as free as an attribute access. if for some reason your
+`area` function really was expensive, then make it look expensive. don't hide the fact that
+it's a function call. just make that explicit. funnily enough, the main reason
+that i see people use properties is actually to introduce a feature to python
+that was specifically left out of the language. by design, in python, all attributes are public. there's no way to prevent someone from  accessing internal implementation 
+details of your classes. and aside from inheriting
+from a built-in type like `tuple`, this also makes it impossible 
+to make truly immutable types. but this is a pretty common pattern to  prevent people from accidentally 
+mutating your object. add an underscore to the
+beginning of your attribute name. then make a property with
+the same name without the underscore. people can still read the name, no problem. but if they try to write to it, they get an error. but of course, this isn't true immutability. someone could just reach inside and
+manually change the underscore variable name. but it's pretty much an unspoken rule in python that if you have an underscore
+variable or underscore function, then you're not meant to touch those. so if you do change an underscore
+variable or call an underscore function, then you should expect
+everything to break. it's your own fault. anyway, here's how you might
+implement property if you were doing it yourself. the built-in property also does
+`set` and `delete`, but you get the idea. as per usual, if you weren't passed
+an instance, then just return the property itself. otherwise, call the stored function 
+on the instance that was passed in. hidden descriptor number three,
+class methods and static methods. both class and static methods
+allow you to call a function whether you have an
+instance of the class or the class itself. in both cases, since you
+might not have an instance to work with, there's no `self` parameter. and the difference is that a static
+method has no implied parameters. whereas, a class method
+has an implied class parameter. so in both of these cases, whether you called with the capital
+animal class or the lowercase animal instance, the class parameter of the `create`
+function will be filled in with the animal class. i have a whole video on class 
+methods versus static methods. check that out if you want to hear more. as far as possible implementations go,
+they could look something like this. just like properties, both of these take and 
+remember the function that they're applied to. static method is much simpler. whether you were called with an instance
+or not, just always return the function back. class method is a bit trickier because 
+we need to supply that class parameter. if we weren't passed the type to use,
+then we just use the type of the object. then this is how we bind
+that object to the class parameter. remember, functions are descriptors. and the `get` method returns
+a bound version of the function where the first argument
+is bound to the first argument of the `get`. it's not totally clear if the 
+second argument matters at all. but this works. so as you can see, descriptors are often
+used to make sort of function object-like things. but that's not all they're useful for. let's take a look at number four, slots. this is another one that i have a full 
+video on, but here's the quick rundown. normally, objects have an instance dictionary. anytime you store a variable into the  object, it really just stores 
+it inside this dictionary. but especially for small objects, dictionaries  aren't necessarily the most 
+efficient way to store things. if you define `__slots__ = ['x', 'y', 'z']`, then you're saying the only three attributes  that my instances are going 
+to have are `x`, `y`, and `z`. you can get, set, and delete 
+`x`, `y`, and `z` no problem. but if you try to get, set,
+or delete `w`, then you get an error. once again, directly reaching inside the  classes dictionary, we see 
+that `x` is a member object. these `__slots__` members also
+define all three of `get`, `set`, and `delete`. and because there's no
+instance dictionary to manage this, these `get`, `set`, and `delete` have
+to reach into the underlying c structure of the objects and manually modify them. again, see my video
+on slots if you'd like to hear more. and speaking of instance dictionaries, 
+do you know what else are descriptors? instance dictionaries. the dunder `__dict__` attribute of any class
+that has instance dictionaries isn't a dictionary. it's an attribute object, which is a  descriptor with all three of 
+`get`, `set`, and `delete`. and notice this weird idiom that i had to 
+do in order to see this attribute object. i had to reach into the dictionary
+of the class and then read the dictionary. if you print out just the `__dict__`,
+it looks like a dictionary. but if you look at the type, you see
+that it's actually a mapping proxy object. this happens because,
+remember, `__dict__` is a descriptor. so accessing `e.__dict__` invokes the descriptor. and what the descriptor does is return
+this proxy object instead of the actual attribute. so that's why we had to
+do this double `__dict__` thing. moving on, how about a
+real-world library use case of descriptors? look no further than one of the most
+popular python packages of all time, sqlalchemy. sqlalchemy lets you communicate
+with databases through python in a pythonic way. here, i define a user account
+table with two fields, id and name. when i define the class, i say that id is a column  that takes integers, and name 
+is a column that takes strings. when i operate on an actual instance
+of the class, i'm working not with column objects. but with actual ints and strings. getting different behavior
+on a class versus an instance? you guessed it, they're descriptors. number seven. another common
+use for descriptors is field validation. for example, i want to say here, this
+item has a price that's greater than zero. whenever i set a price, i want to make  sure that it's positive, 
+and if not, i want an error. this functionality is
+accomplished in the `set` method. before setting the attribute, 
+check if it's bigger than zero. otherwise, throw a `valueerror`. then proceed with setting the attribute. this is an interesting use
+case for python's `__set_name__`. this function is called at 
+class construction time. and its purpose is to let
+each object know what its name is. after the class body runs, this  `greater_than` object will be 
+told that its name is `price` by having the `__set_name__` called with the  owner being the `item` class and 
+the name being `price`. in this case, i'll prepend 
+an underscore to the name. and then use that as the sort of private
+location where i'm storing the actual data. so the descriptor is stored at `item.price`. but the value that's underlying the price, the 
+actual price, gets stored at `item._price`. knowing the name that we're assigned 
+to is a good way to avoid conflicts if you have multiple of these
+descriptors in the same class. so if i also had a `quantity` field, then there  wouldn't be any fight over 
+where to store each of them. they each have their own private location. and the final descriptor on 
+my list is super lookups. suppose i have a `package` class
+that can ship to some address. and an `expresspackage` that ships faster. i don't really recommend doing this. but you can set a base view onto your class. create a super object, and stick it on there. if you ship an `expresspackage`, 
+it's on the way right away. but if you call `ship` on the base
+view, then you'll get the parent's behavior. i'm not going to go into why this works here. i have a whole video on `super` if 
+you want to see the gory details. this next portion is slightly more advanced  and deals with some 
+tricky issues you might run into. so if a descriptor's `get` method
+and a class's `getattr` method can both define what it means 
+to say `object.something`, then what happens if you 
+have a class that has both? i encourage you to take this example. and try commenting and uncommenting things
+to see how things actually work. the first trip-up is that 
+there's not just one `getattr`. there's `getattr`, and `getattribute`. and `getattribute` is actually the one that's 
+more similar to `setattr` and `delattr`. `getattribute`, `setattr`, and 
+`delattr` are always called. when you say `object.something`. `getattribute` is always called. when you say `object.something = something`. `setattr` is always called. when you say `del object.something`,
+`delattr` is always called. and for these three functions,
+it's actually the base `object` class whose versions of those functions
+actually implement the descriptor logic. so if you're defining `__getattribute__`,
+`__setattr__`, or `__delattr__`, then you should call the base `object`'s  version of that function 
+inside your implementation if you want it to work with descriptors. if you don't call the base `object`'s version, you'll find that your descriptor
+methods `get`, `set`, `delete` are not called. unless, of course, you manually
+call them in your version of the function. that's to say, you can sort of override 
+the descriptor protocol if you so choose. and then there's `getattr`, which is actually   only called if `getattribute` 
+raises an `attributeerror`. so how does `getattribute` decide 
+what order to do things in? the object version of `getattribute`
+has a series of fallbacks that it tries to figure out which
+one is the best one to call. if it finds a descriptor that has 
+a `get` and a `set` or `delete`, then that's called a data descriptor, 
+and it has the highest priority. next, it checks inside the instance dictionary. then it checks for descriptors 
+that just have a `get`. these are called non-data descriptors. then it checks for variables 
+found at the class level. then it'll raise an `attributeerror`, which 
+triggers the `__getattr__` if it exists. these defaults are definitely not obvious,   although they are generally 
+good for most use cases. it may feel especially 
+weird that instance variables  are split between these data 
+versus non-data descriptors. the reason that non-data descriptors
+get lower priority than instance variables is because the most
+common use case for these is caching. the descriptor computes some expensive  variable and then saves it 
+in the instance dictionary. the next time it gets looked up, it's found
+in the instance dictionary and isn't recomputed. this was chosen because of how common caching is. but if you want your descriptor 
+to always be preferred, then you can just define a `set` or 
+`delete` that just does the default thing. here's a case where you can see 
+that priority difference play out. for `x`, i have a data descriptor. it
+defines both a `get` and a `set`. whereas `y` just has a `get`. both of our `get`'s return `none`.  so when we print `x` and 
+`y`, we get `none`, `none`. then for both `x` and `y`, we store 
+`42` in the instance dictionary. print them out again, and for `x`,
+we get `none`, but for `y`, we get `42`. this is because the data descriptor's `get`, which  returns `none`, has a higher 
+priority than the dictionary. whereas the non-data 
+descriptor's `get` is not called  because the dictionary has 
+higher priority in that case. obviously, the rules are complex, non-intuitive. and i don't expect you to get them in one go. i just hope this helps you remember 
+that there is some subtlety there. and you might want to look into it if 
+you're ever defining a descriptor like this. anyway, thanks for making
+it to the end. i hope you enjoyed it. as always, thank you to my
+patrons and donors for supporting me. if you enjoy my content, 
+please consider subscribing. and if you especially enjoy,
+please consider becoming a patron on patreon. don't forget to slap that like 
+button an odd number of times. see you next time.

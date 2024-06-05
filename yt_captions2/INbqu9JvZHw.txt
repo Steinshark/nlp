@@ -1,0 +1,89 @@
+hello, in this episode we're going to be looking
+at arrays and lists, which are both ways of storing a collection of variables of the same
+type. let's start with arrays:
+imagine we want to store a number of different names. instead of creating a new variable for each
+one: string name1 = "fred"; string name2 = "george"; and so on, we can rather create just one string
+array variable, which we do just like creating a normal variable, except that after the type
+we place a pair of square brackets. if we want, we can directly assign a collection
+of values to the array by having a pair of curly brackets, inside which are all the elements,
+separated by commas. somewhere in our code we can now access any
+element in the array by writing "possiblenames", followed by a pair of square brackets, inside
+which goes the index of the element we wish to access. now there are 4 elements in this particular
+array, but arrays are indexed starting at zero, meaning that the first element has an
+index of zero, the second an index of 1, and so on. if we try access index 4, or greater, hoever,
+we will get an indexoutofbounds exception. now lets say we want to pick a random name
+from this array for our character. the first step would be to generate a random
+number between 0 and 3. so if we're working in unity, we can simply
+use the random.range method, and pass in 0 as our min value, and possiblenames.length
+as our max value. the length of our array is 4, but remember
+that the random.range method returns a value that is >= to the min value, and < the max
+value; which means we are actually getting a value between 0 and 3 like we want. so, now that we have our random index, we
+can write string charactername = possiblesnames, with an index of randomnameindex. ok, let's look at another example. this time i'll create an array of integers,
+which i'll call powersoftwo. say we just want to store the first 5 -- well
+we've already seen one way of assigning these, so lets look at another. we can set the array equal to a new int array
+with a size of 5, at which point all 5 elements in the array will be equal to 0, since that's
+the default integer value. somewhere in our code we can then write powersoftwo[0]
+= 2; powersoftwo[1] = 4; and so on... much smarter though, would be to use a loop
+to initialize all of these, and we'll be seeing an example of this in the next episode on
+loops. note that we could also leave the initialization
+out at the top here; but then we'd still have to define the array's size before we can use
+it. once we've initialized the array's size, we
+cannot change it, except by setting the variable equal to a new array with a new size, which
+of course will destroy all the elements currently inside the array. now arrays don't have to have just a single
+dimension. say we want a 2dimensional integer array to
+keep track of the pieces in some board game. the syntax for creating this would like so:
+... the size of each dimension is separated by a comma -- so here i've create a 3x3 board. a single comma is also placed between the
+square brackets at the declaration, indicating that there is space for 2 dimensions. we could now visualize the array as looking
+like so, with all elements currently initialized to their default value of zero. the indices work how you'd probably expect,
+with the first index determining the row, and the second index determining the column. so in some method, if we wanted to set the
+value of the bottom left square to 1, for example, that would be as simple as writing
+board[2,0] = 1; now perhaps the game requires a starting configuration of pieces, with different
+pieces obviously represented by different numbers. well the syntax for this is the same as a
+one dimensional array, but now the entries for each new row are surrounded by curly brackets
+as well. to make this easier to read, we could separate
+each row onto a new line, which gives us a nice visual representation of the array; you're not limited to just two dimensions,
+by the way; for more dimensions, simply add more commas! all right, let's now take a look at lists. say we want to do something like keep track
+of the names of every character that our player kills so that we can display them all at the
+end of the game. we might think to make a string array called
+slainenemynames, but unlike the previous examples, the size of the array is uncertain, because
+we don't know how many enemies the player will end up killing. to solve this problem, we can make use of
+the list class, which is in the system.collections.generic namespace. now to create a list of strings, we write
+list, followed by the type string inside angle brackets. we then of course have the variable identifier,
+in other words, its name, and we can initialize this to a new empty list. take note of the syntax for this, we have
+the new keyword, followed by list of type string, and then a pair of parentheses to
+call the contructor of the list class. say we now have an onenemykilled method, which
+supplies us with the name of the enemy. we can add this name to the end of the list
+using the lists add method, -- so slainenemynames.add, and pass in the supplied name. accessing a certain element from a list uses
+the same syntax as with arrays: just the variable name, followed by square brackets, with the
+index inside. just like arrays, lists are indexed starting
+at zero. recall that to get the size of an array, we
+could use the length property. you can keep track of the number of elements
+inside a list using the count property. lists also have some other functionality that
+mere arrays do not. for example you can use the remove method
+to remove a given element from the list, you can use the contains() method to check if
+the list already contains a given element, and theres even a sort method; so if you have
+a list of numbers, calling sort will cause them to be arranged in ascending order, and
+if you have a list of strings, they can be sorted alphabetically. we'll even look later at how you can instruct
+the sort method to follow your own custom rules. so since lists can do everying arrays can
+do, as well as change size, and they have helpful methods for things like searching
+and sorting, you may be left wondering why we even need arrays. well i think it's important to know that behind
+the scenes, a list is actually storing everything inside an array. whenever the internal array gets filled up,
+the list has to create a new, bigger array and copy all the existing elements over into
+that new array. purely for interest's sake, on the screen
+at the moment you can see a heavily simplified version of the list class, just demonstrating
+how the array is resized as new items are added. so in general, arrays are slightly faster
+that lists, although in most cases this difference is negligible. the real reason you might sometimes want to
+use an array over a list is if the collection should logically have a fixed size. for example representing a game board, or
+storing the items in a player's inventory. in these cases the concept of "adding" an
+item doesn't really make sense; you only ever want to insert an item at a specific index. i should mention that its entirely possible
+to have a list of arrays, or an array of lists, or a list of lists, or an array of arrays,
+or pretty much any configuration you can imagine. i should also mention that arrays and lists
+are reference types. so if i have an empty integer array, say with
+a size of 5; and i now create a second array, and set it equal to the first array -- then,
+if i set one of the elements to 99 and print out the value of that element in the other
+array, we'll see that it also now has a value of 99. if this seems strange to you, please go back
+and watch episode 17. anyway, to recap: arrays are for storing collections
+of a fixed size, and can have one or more dimensions. lists are slightly slower than arrays, but
+are able to resize themselves dynamically as you add and remove elements, and also provide
+some helpful methods, such as contains(), and sort(). finally, arrays and lists are reference types. that's everything for this video, until next
+time; cheers.

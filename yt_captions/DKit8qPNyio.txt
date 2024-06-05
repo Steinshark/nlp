@@ -1,0 +1,86 @@
+(RAM clicks) (film crackles) - (whispering) Hello, YouTube. Today we're going to be sharing with you our ASMR PC build guide,
+sponsored by EPOS, the brand for Demant and Sennheiser's previous collaborative effort to build high-end gaming audio solutions. We'll be using their B20 USB Type-C mic for our voice recordings today. So sit back, relax, and enjoy the sound of PC building. And look, I've brought
+some friends to help out. - Hi, guys. - Hi. - Hello. - Hey. - Hello. - Let's get started. (computer gently chirps) (air whooshing softly) We need our usual tools: multi-bit screwdriver, side cutters, magnetic parts tray, anti-static ankle strap, and cable ties. Attach your anti-static
+strap to your ankle or wrist and then ground yourself to a plugged in, but powered off, power supply. Be careful. We don't want to
+shock any of our components. (clock ticking) - [Linus] We're going AMD,
+and it all starts here with the ASUS Prime B550-Plus. It's a great fit for your budget today, while leaving space to upgrade when you feel like you're ready. Remove it from the box, then place the motherboard
+on top of the box after you've removed
+all the extra contents, like your I/O shield,
+SATA cable, and M.2 screw. The box is a perfect static-safe workspace for pre-testing your hardware. Now get your board ready for the next step by lifting the latch on the CPU socket. (Zippo clinks) Always open your CPU box carefully. AMD's Ryzen 5 3600
+features six Zen 2 cores at up to 4.2 gigahertz boost and we'd hate for you to damage them. For AMD CPUs, the lettering always matches right-side up with the logo at the socket. Alternately, you can
+match the golden triangle with your board to make
+sure it seats properly. When you're ready, gently
+press it into place. Give it a wiggle to make
+sure it went all the way in, then close and lock the latch. This last part can be a little scary, but as long as you
+follow our instructions, I promise it'll be okay. (water gently splashing) - To match our Ryzen processor and to stay ready for
+potential future upgrades, we're installing two 8-gig sticks of 3600 megahertz CL16 memory. It was only an additional $10
+over the 3200 megahertz option and no RGB saved us a few dollars. After all, today's about sounding good rather than looking good. Open slots A2 and B2 on your motherboard. Remove the modules from their packaging. Line up the notch on the
+bottom of the module, then slot them in gently, but firmly until you hear a distinctive click. (RAM clicks)
+Ooh, that's nice. (zipper zips) - Sabrent's 1-terabyte Rocket NVMe SSD is a great value, especially on sale. And our 2-terabyte Seagate hard drive is perfect for all thick
+games we're gonna install. We'll do the SSD now and
+the hard drive later. Find your M.2 standoff that we grabbed from our motherboard box and place it in the 80-millimeter slot. Then remove your drive from its packaging and gently slide the notched
+connection into the M.2 slot. Hold the end down and screw it in with this teeny, tiny M.2 screw. (keys faintly clacking) - [Yvonne] Our board
+comes with handy mounts for our cooler to latch onto, but we're going to use the Hyper 212's mounting hardware instead. Start by remove the
+backplate and standoffs by removing these four screws
+here, here, here, and here. Then simply pull the
+brackets from the backplate. Next, remove our Hyper
+212 from its packaging and grab the required AM4 hardware. Place the squared standoffs
+into the AMD holes, like so. Then place the wider clips over top. Place the prepped backplate
+on the back of your board, then screw on the standoffs
+to keep it in place. Now take the two AM4 brackets and place them over the standoffs like so and fasten them down with the nuts, making sure to keep the
+Phillips pattern on top. Remove the fan and heat sink from the box. Peel the plastic off the bottom and remove the fan from the heat sink for an easier installation. Squeeze a pea-sized drop of thermal paste onto the middle of the CPU heat spreader. Align your cooler so the screws
+line up with the brackets and screw them down
+until it's nice and snug. There, that's not going anywhere. Mount your fan by letting the clips rest along these sides here and connect your fan to the CPU header at the top of the board. (bristles softly swish) - The Phanteks P series
+is a great budget option that still gives you
+everything you need in a case: tempered glass side
+panel, rubber grommets, good airflow, plenty of space to work in, and great cable management. You can save a bit of money by going with their last year's model, like we did with their P400A Digital. Open the top of the fox, flip it over and onto the floor or
+table, whatever's easiest. Then slide the box off. Remove the extra protective packaging and stand your case upright. Remove the glass panel and side panel and place it back in the box
+for now so it's nice and safe. The other side panel should
+be okay just about anywhere. With the panels removed, unstrap all the cables in the back and pull them out of the way for now, then lay your case on its side. Our standoffs come preinstalled, but if you're using a different case, make sure to check the
+manual and put them in. Not too many, though. Now, before we forget,
+install the I/O shield by pressing firmly and
+clicking it into place. This cannot be done
+later if you forget now, unless you want to take your motherboard out of the case again. Grab your board and align it with the standoffs and the I/O shield, ensuring that no tabs are
+sticking into the ports. Once it's in place, screw it down with these mounting screws. Great job, we're really getting there. Take your hard drive from earlier and place it in one of the 3.5" bays at the bottom of the case, like so. (shutter clicking) - [James] Our 650-watt modular
+power supply comes from EVGA, the G6 80 Plus Gold. You can save some money by
+going semi- or non-modular, but you could end up
+with some extra clutter. Open the box and take out
+your PSU and its cables. Separate the ATX 24-pin, EPS CPU 8-pin, PCIe 8-pin, and SATA power connectors. Plug these into the back
+of your power supply. Don't force them. These can only go into your unit one way, so if there's too much resistance, you might have done it
+backwards, you silly goose. With your cables attached, slide the power supply in sideways and pull your cables out of the way. Take your four power supply screws and screw it in here,
+here, here, and here. Buh-bye! (flame fizzles) - Let's start with our larger
+cables first, shall we? Feed the ATX 24-pin cable
+through the top rubber grommet and plug it in here. Remove any slack and stuff it
+under the power supply shroud. Good. Next, let's grab our 8-pin EPS cable and route it through the
+top cutout, near the plug. This can take a little while,
+but with some patience, you'll get it through. Plug it in, then route the cable along
+the top and down the side, tucking it out of the way. Now route your PCIe 8-pin cable
+through the rubber grommet and leave it hanging it
+roughly where your GPU will be. Graphics cards often get in the way, so we'll put in last and plug it in after. Now it's time to connect your case fans. The best bet for an easy and clean look is to buy a three-to-one
+4-pin fan splitter. Connect all three to the splitter and then connect the
+splitter to an extension. And finally, the extension
+to the chassis fan header on the bottom of the board. This is a lot easier than water cooling, but for tips on how to do
+your own hardline tubing, make sure to get subscribed so you don't miss out
+on our beginner's guide. While we're here, let's plug in our HD audio cable here and our USB 3.0 cable here. Connect your front panel headers in the proper configuration, like so, and we're nearly done. Remember our hard drive? It's time to connect the SATA power and SATA data cables to the back of it. Then route the data cable up through the bottom of the rubber grommet and into one of the SATA ports. Make sure you put it in the
+middle or top slots, though, as the bottom one gets disabled when you're using the second M.2 slot and you may want to
+populate it down the line. Once everything is connected, use ties or zip ties to
+strap down any stray cables, trying to bundle them
+up for a cleaner look. If you want to get lazy, that's okay. Wiring mullets aren't the
+worst thing in the world, as long as the front looks pretty. - We know these are hard
+to come by right now, but if you can manage to get
+one anywhere close to MSRP, an RTX 3060 is a fantastic choice for 1440p gaming with the Ryzen 5 3600. Open the box, remove the
+card from its ESD bag, and gently place it down. Remove the two slot covers here and here, as well as the adjustable
+cover on the side. Make sure the locking
+tab on the slot is open, then grab the card and
+gently push it into the slot until you see the lock close. It should make a little click. Replace the PCI Express slot cover screws to hold it into place, reattach the adjustable piece, then plug in that final loose
+PCI Express power cable. Now all that's left is
+to replace our panels, connect our monitor, mouse,
+and keyboard, and turn it on. Ah. I love the sound of
+a successful first boot. (PC hums) Wasn't that easy? Are you as satisfied as I am with this beautiful new machine? I hope you enjoy the clicks and whirs as it processes your every desire. Listen to that faint hum as the hard drives and fans power on. (moans softly) Exquisite. If you like how my voice sounds now and throughout the video, check out the new B20 from EPOS. We recorded every word on it
+using the cardioid pattern, but it has three others for all sorts of recording scenarios. And you can tune the EQ to your liking with their digital Gaming Suite software. And hey, four physical knobs on the device means you can change some
+settings without even looking. That's handy. If you're a streamer or a creator looking for an alternative
+to existing USB mics, look for it in the description below. It features Nordic design,
+premium construction, and the high-quality audio
+you've been listening to for the past 10 minutes. If you enjoyed listening today, but you want to go Intel
+instead of AMD for your own rig, check out our
+first-person-view build guide for tips on dealing with LGA sockets. It's 40 minutes long, though, so strap in for a bit of a long ride.

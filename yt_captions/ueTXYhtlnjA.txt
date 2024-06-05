@@ -1,0 +1,91 @@
+You read the title. Python 3.11 is finally here! Make sure you're subscribed. Because two lucky 
+ subscribers will be getting a free license to any JetBrains IDE, 
+ including PyCharm, IntelliJ, and more. It's October 24th, also known as release day. Which means any second now, the final  
+ official release of Python 3.11 is going to drop. It's definitely going to come out on time. Previous releases have gone perfectly 
+ with no unexpected last-minute catastrophes. So let's just jump into it. The main thing to know about Python 
+ 3.11 is that it's going to be significantly faster. Upgrade to 3.11, and you'll most likely see an immediate 10% to 60% 
+ performance improvement in your code. Of course, if your code 
+ already spends most of its time waiting on packets from the network 
+ or calling out to C code like NumPy functions, you won't see much change. Pure Python code is where 
+ you'll see the biggest improvements. The work to make this possible 
+ comes from the Faster CPython project, which is run by Guido 
+ Van Rossum, the creator of Python, Mark Shannon, who's the tech 
+ lead, and a small team at Microsoft. This is just the first release 
+ in a series whose goal is to achieve, wait for it five times faster Python 
+ over the next four years or so. There are already alternate Python 
+ implementations like PyPy, Python and MicroPython that can achieve these speedups and even more. But importantly, all those other 
+ implementations give up something from CPython, like C compatibility or dynamic typing. Whereas the Faster CPython 
+ project will be giving us performance benefits without requiring any user code changes. This is still Python. So we aren't trying to compete 
+ with C or other compiled languages for speed. That's not the point. But it's always nice to get a free speed-up. Next up, I want to highlight an 
+ unsung hero of Python doing great work. Pablo Galindo Salgado. Pablo, who's also the release manager for 3.11, has been working on what 
+ I consider one of the most important, useful, yet boring improvements to Python. Better error messages. Python will now show you not 
+ just the traceback with line numbers but also exactly where 
+ on each line triggered the error. This will save years of developers' lives, which they can then spend doing more 
+ important things like watching mCoding videos. It's such a small change. But literally 
+ every Python developer will benefit from it. So it's going to make a huge difference. And hopefully even other languages 
+ will take a lesson from Python and do the same. Now, to some new features and libraries. Python 3.11 adds support for exception groups. For when you went to the store to buy eggs, 
+ they were out of eggs, and also you got a flat tire. Just like in life, sometimes more 
+ than one thing goes wrong at the same time. Using the new `ExceptionGroup` and 
+ `BaseExceptionGroup` built-in exceptions, you can now easily conglomerate exceptions together. A trace back of the exception group contains a 
+ tree of information about all the individual exceptions. In this case, we try to update the 
+ database, call an API, and send a heartbeat. Each of those things failed in its own separate way. And we see those tracebacks over here. Additionally, using the new `except *` syntax, you can peel off and deal with 
+ subgroups of certain types of exceptions. `except*` recurses through 
+ the entire tree of the exception group. And finds all the exceptions 
+ matching that certain type or subclass. The result here is going to be 
+ another exception group of connection errors rather than just a single connection error. You can also now add notes to exceptions. For when you go to the fridge, find the milk is bad. And want to let everyone know the milk is bad. But don't have the capacity 
+ to handle the problem for yourself. You just attach extra info 
+ to an existing exception and re-raise it. For example, here's a fuzz tester that 
+ tries to find errors in the function you give it. It tries random inputs. And eventually, it finds 
+ an error in this quadratic solver. It adds a note to the exception 
+ containing the input that caused the error. We can then see any 
+ notes at the end of the traceback. You might find something like this 
+ used for real in a testing library like Hypothesis. There's also a new built-in library 
+ for parsing TOML files called `tomalib`. This is good because Python moved 
+ to the TOML format for project configuration, as in `pyproject.toml`, some time ago. But there was no built-in 
+ library for parsing or writing TOML files. Sadly, there is still no ability to write TOML files. But at least you can read them from Python now. One thing to watch out for is 
+ that TOML files must be read in binary mode. Attempting to load a TOML file 
+ from text mode will result in an error. Then there's a whole slew 
+ of new type hinting features. The average user should care about 
+ these not because you yourself are going to use them. Although props if you do. But rather because very popular 
+ existing libraries will start to use them. And once they do, this is going to make 
+ your IDE's autocomplete much, much better. Autocomplete in many IDEs takes into 
+ account type information to give you better suggestions and catch errors you write 
+ before you ever have to run the code. That's why with no type 
+ annotations when I hit dot, I get no suggestions. But if I annotate the variable and do the same thing, then I get good suggestions relevant to strings. So what are these new type hinting features? First up is variadic generics. This allows you to annotate a finite 
+ but unspecified number of type variables using this new `TypeVarTuple` tuple. This will hopefully be used in NumPy, 
+ TensorFlow, and other array implementations in order to allow users to annotate not just 
+ this variable as an array but the dimensions and data 
+ type of the array as well. Right now, what `TypeR` 
+ tuples can do is pretty limited. But this is an active area 
+ of work in the typing community. So keep an eye out. Then there's data class transforms, which will allow third-party libraries like 
+ `attr`, `pydantic`, `SQLAlchemy`, and Django to have the same level of support for 
+ their custom model types as built-in data classes. Previously, type checkers had 
+ special logic for built-in data classes. But outside libraries that had 
+ similar functionality-generating methods like `__init__`, `__eq__`, `__repr__` couldn't 
+ properly be annotated easily. Well, now they can. However, as you can see, my IDE is 
+ still not understanding what's going on. And that's because just because 
+ the support for this feature is in Python itself, that doesn't mean support for this 
+ feature is part of your IDE's type checker yet. That's why I'm not getting 
+any useful suggestions in this case. But if I was using the built-in data class, it knows that `id` and `name` are 
+ the parameters to the `__init__` function. Once type checkers add support for this feature, you'll get the same level of 
+ suggestions that you would for the built-in data class. Then there's the literal string type annotation that says this variable isn't just a string but a literal string type somewhere in the source code. Or it's generated from literal 
+ strings type somewhere in the source code. So, sums, joins, and f-string substitutions 
+ involving only literal strings will still be considered literal. This is primarily to prevent SQL injection attacks by having your IDE and type checker warn 
+ you as soon as you try to fill in your query string with data that you got from `Johnny; drop tables`. Although SQL injection is mostly a solved problem, a survey of open-source projects using `sqlite3`, Python's built-in SQL library, found that 33% of usages of queries calling 
+ `connection.execute` were using potentially unsafe strings. This literal string annotation 
+ will allow IDEs to gently remind users that queries should only involve literal text. You should use parametrized queries if you 
+ want to fill in a query with user-provided information. Of course, there are far too 
+ many changes to list them all here. So let me end with a gem 
+ that I personally am excited to see. And that's the `asyncio Task Groups`. A very common issue with 
+ coroutines is just forgetting to await them. It's kind of like opening 
+ a file and forgetting to close it. Whenever you're in a situation like 
+ that, a context manager is the way to go. So, instead of creating tasks and using `gather`, now we can use an `asyncio.TaskGroup`. This gives a convenient way to 
+ create and schedule a bunch of related tasks and ensure that you don't forget to await all of them using this new `async` context manager. At the end of the `async with`, you 
+ can be sure that all of your tasks completed. Any errors that happen during the tasks 
+ are combined and raised as an exception group. Of course, if you want the result of a task, say the result of calling this API, you can do that by asking 
+ for the results from the corresponding task. In 3.11 and onwards, it's now 
+ recommended to use `TaskGroup` methods instead of manually calling 
+ and creating tasks and gathering them. That's all for now. If you want to hear more about a 
+ specific new update, comment below. Don't forget to subscribe and check out the 
+ full release notes and giveaway details in the description. Thanks to my patrons and donors for supporting me. And don't forget to slap that 
+ like button an odd number of times. See you next time!

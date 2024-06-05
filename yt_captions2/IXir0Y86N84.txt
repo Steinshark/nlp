@@ -1,0 +1,98 @@
+- ai upscaling is all the rage, the most widely used being nvidia's deep learning super sampling. i mean, if you can keep good visuals with better performance, why wouldn't you? there's just one problem. with dlss, every game's
+implementation is different and they almost never get updated with the newest goodies later on. if only there was some way to take the latest dlss and
+drop it into an older game. oh wait, there is. and we're
+going to go over how to do it and what you can expect out of it. like you'd expected, dang it. ow, i got mad and hurt myself. thanks to linode for
+sponsoring this video. linode is a powerful, affordable, easy-to-use linux-based
+cloud computing service that has one click apps for games like minecraft and valheim. sign up today at linode.com/linus to get a free a hundred
+dollar 60-day credit. (upbeat motivating music) the concept is simple. a game comes with a single file that determines its dlss version. funny thing about files
+though, you can replace them. techpowerup has a database of all the dlss revisions to date, and programmer brad moore created a handy tool called dlss swapper that makes it dead simple
+to try different versions on your favorite games. the question then becomes, how far can we push it? we start off by installing dlss swapper. this would be straightforward, but as a non-windows store universal app, we need to import and trust
+brad moore's certificate before windows will let us install it. this is one reason why uwp
+apps aren't very well liked, by the way, but it's easy enough assuming we trust brad here. he's outlined all the steps
+you need to import it, so follow the instructions. and when you're done, double-click
+on the app to install it. now, we need to download the dlss files from techpowerup directly, which, i'm sorry, techpowerup, i really am. for people playing along at home, please try to spread out your downloads across multiple servers, if you can. and i'd suggest only getting the latest and oldest versions of each major revision to start off with. you can always come back
+and grab others later. once they're downloaded,
+go ahead and click extract. then optionally delete
+the downloaded files once that's done. the software's pretty early though, so there's no feedback
+when it's done extracting. but if you want to be
+sure that they're there, you can find the files
+inside your documents folder. with that done, we can
+finally do the swap. while you can do this manually for any game with dlss, dlss swapper only supports
+steam games right now. unfortunately, there's also no filter for non-dlss games yet, but, you can tell when
+a game does support dlss by the version number on
+the bottom right corner. this is the dlss revision
+that it's currently using, and if you've never
+swapped the dlls before, use the version that the game ship with. dlss 1.0, the first released, rendered at a fixed 50% native resolution and it had no temporal component either. so, every frame got treated in a vacuum, leading to shimmering
+artifacts and other errors that were often
+distracting and unpleasant. 1.1 improved things slightly
+with a sharpening filter, although there's not a
+whole lot more information about it, and it wasn't around for long before 2.0 came out anyway. that version removed
+the need for each game to be trained individually by nvidia, and added the temporal element that makes dlss so
+impressive to look at it now. 2.0's debut game was control, which notably shipped with version 1. that gave us the first side-by-side look at the two upscaling revisions, and highlighted how important that motion vector data was for improving image quality. dlss 2.0 also had a
+different scaling factors in its quality, balanced,
+and performance presets, and dlss 2.1 added the
+ultra performance mode, which renders at 1/3 of
+the native resolution. not a lot is known
+about what 2.2 does yet, but early reports indicate that tweaks have been made to reduce some of the worst artifacts. we can see here that doom eternal, metro exodus, and war thunder are all on dlss 2.1, while f1 2021 runs 2.2, and of course, shadow of
+the tomb raider runs 1.0. clicking on a game will give you a list of all the dlss reversions
+that you've downloaded, and swapping is as simple as choosing one and clicking update. as you might expect, sticking to the same major revision of dlss is probably going to
+be the most stable option. but if you want to be bolder, you can easily reset it back to stock, as long as you don't
+manually delete anything. just like you could reset your water bottle to stock
+after getting a new spout lid, but why would you? lttstore.com, half off if you already own one or buy it with a new bottle. in testing, i've found
+that as a general rule, version 2.1 and 2.2 are
+often interchangeable, but some games have a floor that's usually a few versions
+below what they ship with. this makes sense because they'd probably have been initially
+developed with that version before shipping with an updated release. i did run into one game in particular that
+didn't like any changes, and that's war thunder. swapping the dll disables dlss entirely, which may be a function of the anti-cheat software
+that gaijin is using. if that's true, then be aware that other games with energy may or may not take kindly to tinkering with these core files either. doom eternal, which only recently got dlss and rtx support, come stocked with 2.1.66, but runs fine with the latest provision, down to as low as 2.1.55. in terms of visual fidelity, at 10 ndp ultra performance, the latest dll shows
+significantly less shimmering on this floor grading over stock, which seems to corroborate the findings digital foundry made in their dlss 2.0 first look. it's not likely that you'll
+be using ultra performance at any resolution lower than 8k, but this shows how far along dlss has come since its first outings. f1 2021 come stocked with version 2.2.9, which is pretty close to the
+latest revision available, but still, upgrading has a subtle effect on the amount of ghosting
+present on thin objects, like the pitot tube at
+the front of the car. this helps reduce often
+distracting high motion trails, but in some scenes, the car's wheels will still
+also ghost pretty badly, and there's unfortunately not a whole lot that the
+update can do for that. the reason for this is as best i can tell, while the car is more or less
+stationary in the frame here, the motion vectors for it are moving with it at high speed along the racetrack, feeding irrelevant motion
+data to the algorithm. this is visible to some extent around the pitot tube
+at high speeds as well, where it gets softer, thanks to that ghosting,
+even when you're not turning. so does that mean that upgrading to a newer version is
+always going to look better? maybe not. in metro exodus, we
+can again see ghosting, thanks to that motion vector, the train, moving along the tracks. interestingly, it's worse with the stock and latest revisions of dlss, while the older 2.1 revision seems to suffer less from it. not only that, but while the latest version provides better clarity in the chain links in most cases, the older version, surprisingly, often looks closer to native rendering, and i struggled to explain why. perhaps the older version
+made less aggressive use of motion vectors than
+later 2.1 and 2.2 releases. this doesn't really line up with digital foundry's findings with the bright gun
+sight in the dark sewers. so, contrast and perhaps
+even color detection may make up the bulk of
+the tweaks since 2.1. but what about dlss 1.0? well, you obviously cannot use a different major revision here. the game just doesn't launch
+in every game we tested. however, there were a
+few different revisions for each of the early
+titles that came out, like final fantasy xv, the debut title that shipped
+with free version 0.9. fascinatingly, if we upgrade
+that to the final 1.0 variant released for shadow of the tomb raider, which is, i think point 17, we're treated to a slight
+image quality improvement. it's pretty minor, but the studs in cindy's head here have a kind of smear to
+them with the stock dlss, while the updated version shows them more correctly as round. there's also a bit more contrast around her shoulder pocket, and a bit more clarity
+to our jacket's patch. you can much more clearly make out the royal capital lettering
+on the license plate too. there's a lot of admittedly
+subtle differences, and the very earliest release
+shows even rougher upscaling, so it's just a fascinating look to see how little changes to either the algorithm or the dataset
+have improved things over time. because, remember these old revisions, they were trained by nvidia
+on a game by game basis. now, you might be wondering, if it's this easy to upgrade dlss, why did brad have to program anything? well, it seems to be that nvidia might want to look at
+opening up a little bit. these off-label upgrades for dlss are fascinating and potentially can improve your gaming experience. amd's fidelityfx super resolution may not be an ai upscaler, but it's been making
+waves among enthusiasts and big projects alike, thanks
+to its open architecture. not only that, but intel's also open ai upscaler, xcss, hopes to compete with dlss'
+walled garden directly, whenever we finally get a
+taste of team blue gpus. that's a while off yet, but get subscribed because it'll be one of the biggest events
+in pc gaming hardware in a long, long time, and you're not going to want to miss that. i have to wonder where it
+all goes from here though. we've got the scaling itself. we've got the temporal
+element with multi frame data. we've got motion vectors
+to inform future frames. what's next? will the scaler take data about the viewport, scene geometry? i mean, from there, the question becomes how
+long before ai upscaling, in effect, is doing the bulk of the rendering work with so little input from traditional rendering
+that it's basically obsolete? those are questions we can't answer today. we also can't answer how swapping dlss might affect your favorite game. there's just far too much
+to dive into for one video. so put on your scientist goggles and maybe do a little bit
+of testing of your own. it's super simple to do this video. - [linus] this brought
+to you by manscaped. manscaped provides an
+all-in-one grooming kit that has you covered from head to toe. their performance package 4.0 features their awesome lawnmower 4.0 waterproof body trimmer, their weed wacker ear
+and nose hair trimmer, plus a whole lot of other goodies. and for a limited time, you get all of this plus two free gifts, the shed travel bag and
+a pair of manscape's anti-chafing boxer briefs. so visit manscapes.com/tech, or click the link down below to get 20% off and free shipping. - thanks for watching guys. a small portion of this video's a-roll was legit ai upscaled
+to 4k from five 560p. did you notice? if you're feeling confident, take a look at our recent video of whether we could tell
+if dlss was on or off. it was fun.

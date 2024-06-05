@@ -1,0 +1,101 @@
+So this is a new recent maths result! We've got 
+this here, a graph which is a network of points   and lines. So you could think of it like a 
+network of friends; a network of computers;   London Underground map - these are all the classic 
+examples of networks, points and lines connecting   together. It's slightly unusual this graph; look, all 
+the points that you normally get in a graph, I've put   them all in one line. And then you can see all 
+the connections being made between those points.  And when you do that, you know, these connections 
+these lines they cross each other, crisscrossing   is everywhere. I wonder if we can uh uncross these? 
+Uncross them without keeping those points in a   straight line. I don't know. This is a way you could 
+uncross them; maybe if I took some of these lines,   maybe if I lift them up like that they don't 
+cross anymore.
+- (Brady: Oh that's cheating isn't it?)   And then maybe if I take this page here and lift 
+this up so they don't cross anymore - and what   we've created is something called a book. 
+- (Book?) 
+- What? Do you want me to do it in a Southern accent? - (No it's alright)
+- Book? I don't know how to do it in a Southern accent. It's a book - I'll do it proper Northern. It's a book 
+graph. So what we've done it's created a graph   using four pages so that the lines now are 
+uncrossed; and this is special because this   is the first one of its kind that shows 
+that this type of graph needs four pages and it can't be done with fewer pages. I'll put 
+my book away and tell you a little bit more about   book graphs. So that's the idea, so you're going 
+to put the points on a line; we're going to   try and draw our graph but we're going to try 
+and connect the points uh like their pages in a   book. Let's start with a simple example, I'll just 
+start with- I'll just do a square, four points. So   now let's turn that into a book and that means 
+I'm going to put the points along the spine of   the book. And it's helpful to number these, let's do 
+1, 2, 3, 4 yeah. Now let's do 1, 2 3 and 4 all in a line where 1 connects to 
+2; 2 connects to 3; 3 connects to 4; 4 connects to 1 so it goes back like that.
+That would be a one page book because I've just   got this top half here that I'm using. So it's a 
+one-page book, it does depend on the order of your   vertices here. So if I do a different order you 
+get a different book. Let's do 1, 3, 4, 2 then what do I need? 1 connects to 2 like 
+that; 2 connects to 3; 3 connects to   4; 4 connects to 1. so I've created a two 
+page book. Let's see if we can find something that   needs three pages - we could do something like a 
+complete graph. A complete graph is when you have   the points and the lines and everything's 
+connected to everything else. So here is a   classic with five points, and I connect everything 
+to everything else. So it looks like this. Now let's   say I'm going to try and minimise these crossings; 
+because that's kind of what I'm trying to do with   this book as well. If you imagine these aren't like 
+elastic or string I could pull two of these lines   out so I could do something that looks like this 
+and it will only have one crossing. Now if I want   to draw that as a book this is how you would do it. 
+This pentagon is a loop so if I just name them   that's 1, 2, 3, 4 and 5. I'm going to 
+draw out my points: 1, 2, 3, 4, 5. Now   I'm going to do the loop first: so 1 connects to 
+2, connects to 3, connects to 4, connects to   5, 5 connects to 1. And then anything inside 
+the loop I'll put on page 1. 2 connects to 4, 2 connects to 5 - and you can see I'm going to 
+have that crossing there. Maybe I'll save that as   the last thing I do. So I've got 2 connects to 
+4, 2 connects to 5 like that and anything   like outside the loop I'll do on page 2. So what have
+I got? 1 connects to 3 and 1 connects   to 4. And then yes there was one line that I 
+missed which was 3 connects to 5. Because   I know that's going to cross and so I've got two 
+pages here looking lovely but yeah I'm gonna have   to use three pages. I'll do it in a different colour,
+3 connects to 5. So that would be my third   page. So this graph here needs three pages. If these 
+didn't cross I would have been able to do that in   two pages. In fact you can make a book of any size; 
+if you've got a complete graph with n points   the book has n divided by 2 pages - or it's that 
+number rounded up. So if I wanted to make a book   with 100 pages you just do the complete graph 
+with 200 points. So you can make a book of   any size you want, there's nothing interesting 
+about that right so who cares. Like what might be   more interesting though is um what about graphs 
+that can be untangled, right? Let's just look at   a specific kind of graph that's called a planar 
+graph when you can untangle it. Here we go. So if   you've got a planar graph, if you can draw a 
+loop you can do it in two pages. I can do my   five points again but maybe with less lines 
+so they don't cross over this time? So if I've got   a planar graph which means they don't cross, and 
+I've got a loop, then I can make it two pages. Same   as before: there's my loop, anything inside is page 
+1; anything outside is page 2. What about if we   don't have a loop? Right, now there's a couple of 
+ways you can get around this. If you don't have a   loop you could do- I'm going to call it a phantom 
+loop. So it could be like this: there's no loops   here, I'll call it 1, 2, 3 and 4. But I 
+can make a phantom loop if I want to: so I can go   1 connects to 2, 2 connects to 3 and I'm 
+gonna put an imaginary 3 connects to 4 and   4 connects to 1. Then using that I can do 
+the same idea. Here's the book, and I can go 1   connects to 2, 2 connects to 3; phantom 
+3 connects to 4, a phantom 4 connects to   1 if I wanted to. And then what's inside that 
+loop? 2 connects the 4, so I will draw that   on page 1. I would actually get a one page book 
+here. So you can turn things that don't have loops   into something that has loops. So really now we're 
+interested in graphs that don't have crossings, that don't have loops, and you can't even do 
+phantom loops. So there are graphs like that   as well. I'll show you an example of what something 
+like that would look like: (There it is)
+- So we've got  a graph here: it's called the Goldner-Harary graph 
+and you can see it's got no crossings, and it has   as many edges as you can put in it as well - at 
+least without creating any extra new crossings.   So we can't even put any phantom lines in this. 
+And this, if we turned that into our book, is going   to be a three page book. Because we can't quite 
+use the trick I used before. So the three-page   book would look like this: so there we go we've got 
+our points in a line. We've tried our best, you know   we've connected it as a two-page book and then 
+we will have one extra line there that they've   put in and that will have to go on the third 
+page. So this is an example of a planar graph  - which is a graph that has no crossings in it - that 
+needs three pages. Are there any graphs that need   four pages? And that was the question. We knew that 
+there were no planar graphs that needed five pages;  so we knew the answer was going to be 3 as 
+a maximum or 4 as a maximum. And that was the   conjecture. And that was a conjecture for 30 
+years until uh 2020. So only recently uh we   got our graph; and that's the graph I showed you at 
+the beginning so let's just take another look   at it. It's got 275 points, it's got 819 edges. You 
+connect it up, it needs four pages and every order   as well need four pages - it can't be done better. 
+So this was- for the first time a planar graph   that needed four pages as a book; if you want to 
+see the original planar graph, so that it's just   points without any crossings in it. You'll 
+like this Brady.
+- (Yeah I'm dying to see that) You'd love this. It's this beautiful heart-shaped 
+graph. It's got- I'll give you options: it's   got 275 vertices, 819 edges, and it was found 
+by uh you know a combination of computer   search - obviously mathematical methods as well - and 
+they also used just purely mathematical methods   um to find a whole family of graphs like this
+that can only be done in four pages and not better.
+- (Awesome) This episode was sponsored by 
+Jane Street. They're a research driven trading   firm with offices all around the world - here are 
+some of their locations - and they're looking for   smart, curious, talented people to join them. Could 
+you be one of them? Check out janestreet.com and   click here where it says Join Jane Street. It's 
+not just jobs on offer, although there's plenty of   them; they also run various programs, internships,
+all sorts of stuff that might be right up your   alley. I visited their offices and it's really 
+impressive, certainly beyond any place I've ever   worked. There's more on the website, check them 
+out, and there's a link in the video description. ...my guess would have been, you know, what 
+is the largest area if you had all these you   know diagonals fitting inside a 1x1
+box and I would have guessed regular hexagon.  But it's not. So it's this thing,
+so this is not a regular hexagon...

@@ -1,0 +1,271 @@
+(Linus laughing)
+(thunder crashing) - The million dollar
+PC, it's alive. (laughs) So much solid metal. I can't
+even believe this thing. (Linus laughing) Oh, my goodness. What happened? Hey, where'd it go? - We don't get to enjoy it yet. You gotta build it first, you silly goose. - Today's a very special day. We've unboxed everything. We
+built up one of the servers. By the way, big shout out to Supermicro for building the rest
+of it. Love you guys. And now, we are going to
+take the entire petabyte of the SSD storage project
+and we are going to assemble and power it on for the first time. And let me tell you (grunts), it's gonna take (grunts) some power. Just like our sponsor is powerful. - SmartDeploy. SmartDeploy
+allows IT professionals to image and manage
+unlimited computer models with one Windows image. Search their library for your models and claim your free
+license worth over $500 at smartdeploy.com/linus. (upbeat music) - Look at how whomped this thing got. - I know it got destroyed in shipping. (Jake laughs)
+- It looks like a Tesla. - Oh, that's just rude. - What's rude? That's accurate. - Compared to our server room, it's gonna be great having actual access to the rack from all four sides. (both laughs) - Oh see, that's not so bad anymore. - Are you not gonna take it off, Jake? - Well, I'm trying to make it look pretty. - We're building a thing here. - This is a million dollar rack, you can't have Tesla panel
+GIFs and, whoa, hold on. Look at this rack. You see
+how this has teeth here? Yeah. I think when you loosen
+these up, you just slide them. - Oh, that's awesome. The reason you might wanna do
+that is depending on the depth of the components you're planning to install in your cabinet. It might be beneficial to have
+them much closer up here or, hey, maybe you've got
+some super deep components you're gonna install and
+you wanna move them back. - Yeah. Or the front, if you
+wanna pass through cables tho the side.
+- Yeah. So let's have a look at this puppy. This is a power bar and
+this is a power bar on meth. This baby don't stop. It'll
+do 24 amps at 240 VoLTE C, which is somewhere in the neighborhood of- - 5, 6,000 watts. (both laughs) - And we're gonna need
+another then, I guess, right? - Yeah. There's another one somewhere. - Look at the thickness
+of this power cable. What's our plan in terms of layout? Did they send us a recommended plan or are we just gonna YOLO it? - He didn't even send me a photo. (laughs) So I think maybe we go off
+where the cage nuts are, but those don't seem to be in
+any sort of particular order. - Cool. - Let's just YOLO it, I guess. - Nice.
+(Jake laughs) I like it.
+- Oh, you know what? We might actually have to
+consider where we put stuff 'cause we have pretty short cables. - While Jake's calling tech support. Like some kind of nube,
+I'm just gonna go for it. Dang, I can't even get
+this box open. There we go. This is going really well, so far. Where the heck are the screws? - I've hacked the mainframe,
+I've gotten the information. So the switch is gonna go backwards. HGX in the top, one storage
+server and then the other five. - Okay. Sure.
+- It should be pretty easy. - Also, confirm these are just random because the cage nuts and screws
+that came with the hardware are just in there. So-
+- Nice. - I don't know what rack this is, but I don't think it's the one
+they used to do the testing. - They just gave us like,
+maybe it was already beat up. - Maybe.
+(Jake laughs) - They're like, this is the one that's been sitting in the
+warehouse for like three years. Nobody wants it.
+- I'm not gonna lie, I have no idea how these work. - Oh, my God. What the f- Oh God, I feel like such a nube. Something like that, maybe? It's designed like this
+because it's static. You're not really supposed
+to slide the switch out. There's nothing to service
+inside of it for the most part. Basically, all the things
+you're gonna need to touch like, put a replacement fan in, is all at the front or the back. So, whoa. (laughs) 1,100 watts for a network switch. (screwdriver whirring) Oh, God. (laughs) That's got a little too
+much sauce. (laughs) I put it in like the minimum
+mode, so it should stop. But I guess it's still a drill. (laughs) Sorry, NVIDIA. Wow. We don't really
+have that many screws. There's only four screws. Oh, God. I guess if I just put one in the middle, that should be okay. Since the HGX is gonna go
+at the top of the rack, this is kind of what we
+need to put in first. I've been looking at the rails and they're not really like rails. It's kind of more like a shelf. You see, there's a bit
+of an indent back here that lines up with that guy. And I'm pretty sure this
+just goes in the rack and then you slide the
+150 pound HGX on top and that's the only sliding mechanism. There's no actual rail. It's kind of scary that just, this is holding that entire
+server up on both sides, but I don't see any
+other way that it works. So hopefully, that works. (laughs) - This thing is chonktastic,
+I could probably hang off it. Hold on, I'm gonna try. - [Jake] Oh, my God. - Hold on. Ready? - [Jake] You got that
+sort of finger strength? Oh, wow. (both laughs) - I maintain that being short
+is an evolutionary advantage for tech geeks. (screwdriver whirring) - [Jake] Whatever you
+gotta tell yourself, buddy. - I mean, can you fit in a server cabinet? - [Jake] Do I want to
+fit in a server cabinet? - Think of it kind of
+like the cool version of being stuffed into a locker. - I can't think of it.
+I've never had that happen. Definitely stuffed someone
+in a locker before. It was consensual though. (screwdriver whirring) - Consensual-
+- The part that wasn't consensual is that
+we didn't let them out. - Consensual stuffing? (Jake laughs) Okay. Go ahead and roll. Roll over on me though.
+- Okay. - I'm the star. - [Jake] You're a special little guy. - I'm not even the star.
+This server is the star. - [Jake] Oh, this is the
+switch, but good try. - Put your switch in my face. - [Jake] Oh, I'm gonna stuff
+your face with my switch, backwards, other way. - Well. You're the one
+who handed it to me. - Yeah.
+- Well, look at how this guy tries to correct me. He's all like, oh. Oh, geez. - You got it. You got the
+whole thing. That's all you. - Access to this thing
+is gonna kind of suck. It's not that deep. - Oh, we should have used rack studs. - Yeah. Where are they? - [Jake] Oh, okay. Here. Pause. Oh, they're so easy. - [Linus] That's pretty awesome. - You're doing it the right way? - Yeah. - [Jake] Yours are just
+like 90 degrees off kilter, but I actually don't think it matters. - Okay. - [Jake] I suppose we'll find out later. - Crap.
+- What? - I put mine in slightly the wrong spot. - Are you kidding me?
+- See how it's on kilter? - Oh, my God. (both laughs) - [Editor] I mean
+they're so quick to move. - Aah. Ooh. Aww. Oh, my finger. - Ouch. That didn't sound good. - Damn it, that hurt. I just like jammed my finger into this. No, I'm good. I'm good. I'm not cut so I don't have
+to fill out that stupid form. It's a good form. It's an important form. It's work place safety related form. - He's just not gonna make a
+claim against his own company. - Yeah. 'Cause that
+would be really stupid. Actually, there are situations
+where it could make sense. Like if I suffered a
+life-threatening injury and I couldn't work anymore. - And you were like in the hospital. - Yeah. I think I could actually
+claim against our company and it would make sense. Oh, that is so painless.
+Except for when I got hurt. - Yeah. But that wasn't
+the rack stud's fault. - Yeah. It was really not. - These are sick, man. Just the fact that you don't
+have to hold it in place while you try to screw whatever it is in. - Yeah.
+- So nice. We'll have a link to
+these in the description where you can check them out. - Where's our next set of rails? I mean, are we just gonna
+put the compute in next? I kind of feel like we should. I feel like it's the
+right thing to do, Jake. - [Jake] Oh. Why are you taking that out? - Oh, it's too heavy. - [Jake] Just to make it easier. - Yeah. We are not doing
+this as all one piece. It weighs-
+- Can you carry this by yourself?
+- I'm not even sure. - You gotta be gentle. Oh, God. That's connectors in the back. Oh, God, if you drop this,
+it would be game over. - I know.
+- I don't know why I just handed it to you. - There's no way NVIDIA would
+send us another one of these. It's crazy though, because even this, is spectacularly heavy. - Hopefully this rack is still square. - Yep. - Yeah. I'm gonna screw
+this one in for sure. - Yeah. Imagine we forget, we throw this thing on the
+forklift to move it around. - Like, we can, boom. - I don't wanna think about that. It's traumatizing. Okay. - I think this server might
+be worth more than my life. I do have to say, I have a giant raging
+server right now though. - I don't know if I wanna touch it. - You wanna touch it. Here. - I just don't-
+- Here, touch it. Here, touch it. - No. Okay. I'm uncomfortable. (both laughs) I just want, you gotta be careful about these PCIU connections. - Guide it in. Guide it in for me. - Tilt her up there, bud. - Okay. (grunting) - [Jake] God, it makes such awful noises. - [Linus] I know. Beauty.
+- Ooh. - You know, if I'd thought ahead, I might have said, maybe
+we should build her low, keep the bottom heavy. - I mean. - Oh, there's so much copper in it. (Jake grunting) - No, I think it's okay. - Okay. All right. (laughs) - As long as nobody like tries to tilt it. - Yeah. - We definitely should have waited until we had the rails put in down here before we put this thing in. - [Linus] Oh, we'll be fine. - Go, look at those rails
+though. They look awful. - Oh. Oh, really? I mean, at least
+it's clearly labeled back. - This is the server that's going on. - This almost definitely goes here. I see it. - You figured it out?
+Does it just clip on? - It's actually pretty straightforward and it just clips right on.
+It's actually kind of nice. All right. Supermicro. All right. We good. We cool. - [Jake] Whoo, Nelly. You gotta kinda do it the right way. - [Linus] Oh, shoot. - [Jake] You just bend the (beep) up? - No, the cage nut is
+interfering with the slot above. Look, in my defense, the holes for the rack studs are square. - In my defense, rack
+units are square. (laughs) - Well, they can go in anyway. Okay. - Usually. Yeah. We only had to take them all off once. We only have to do this five more times. - I know. Right. It's always fun the first time. And then it's like, oh, after a while, but I'm still gonna have fun. I committed that to myself. - You're in?
+- Yeah. I'm in. - Keep her straight. - Beauty. And then you can
+screw that in if you want. - If we took our rack
+studs off one more time, we could cable manage it now
+and it would actually be sick. Let's see if it'll fit. Where are they? - I think they're in this crate that you've conveniently
+put the box on top of? - Ready. 1, 2, 3. - I can't believe you've done this. Oh, God. Oh, God. (Linus laughs) - You all plug your computer
+in with a cable like this. - You plug your puter in. - Your puter? - Your puter- (laughs) - You all plug your pouter in like this? (both laughs) (Linus grunting) Whoa. That's some abuse. - Ah, mint.
+- Oh, look at that. - Imagine if our server room
+had cable management like that. - I know right. Okay. You gotta stop putting
+screwdrivers on the floor. You just put them on the
+floor when you're done. - Yeah.
+- No wonder you worry about losing screwdrivers. Jake's all like, oh,
+the screwdriver's black, I'm gonna lose it. Look
+where the other one is. He just puts stuff on the
+floor when he is done with it. What, were you raised in a barn? - Look (beep), when you got like 17
+different tools you're using and there's no cart to put them, I don't have that many pockets. Oh, get away. Get away. - I'm trying to help you. - I'm using mine. - No. No. No.
+- I found the screwdriver. Move back, move back. - Nature screwdriver. - Don't cross swords with me. - Now, does it matter? Which server goes where? - No.
+- Okay. - [Jake] 'Cause it's just network, right? - Let's just grab another one. (grunts) - [Jake] Put it on top of there then. - Okay. The race is on. You got that one, I got this one. - What? What? No, what? - Here we go. - What? You're already
+starting, that's cheating. - Yeah. Well, yours is on a cart. - Look, I'm putting
+stuff on the floor again. I'm such a bad guy.
+- Yeah, Jake, way to go. - Oh, I'm taking the rack. You don't need it. - What is this? Wait, what? You get to use the rack as a work surface? - I don't know. You picked the box. You got lots of space on the box. - I did not pick the box.
+You pointed me at the box. - Wait, there's a box of stuff in here. - I'm gonna take- - Do we know what this is for? - The top spot, man. - Look.
+- What? - Screws.
+- Ah. We don't need them. - See you later. (metal clanking)
+- Ah, Jake. Wait, which ones are my racks? - [Jake] I don't know.
+Sounds like a you problem. - Rails, rather. Oh, yeah. I'm so far
+ahead right now, you guys. - I don't think you are, honestly. - [Linus] This is madness. - [Jake] You lose. - What do you mean I
+lose? It's not in yet. - No. - Crap. (grunts) - Oh, is that heavy? (laughs) - It's gonna be a lot of
+work for the editor to blur. - Yeah. (laughs) Sorry. (laughs) - Just blur the whole boy. - Blur him for a while.
+I've had enough of his face. - Oh, yeah. Oh, God. You hear those noises? That's failure. - You know what I call it? (beep) Completion. Get out of here. (both laughs) (beep) No. - I'm in, boys. - He cheated. There you go. (beep) - That's so loose. (laughs) You know what though? Silly race aside. That was really fast to install. (Jake laughs) I've got an idea to get
+the last server up here. Oh, that box collapsed. - [Jake] Oh, God. You sure about this? - Yeah. Yeah. I'm good. - Are you just gonna pass it to me? - Look at me. I'm Oscar, the tech roach. Hey, get outta here. What the (beep) is wrong with you, kids? Don't know your ABCs yet. Get a (beep) job. (box cover thuds) - Yeah. That's what my
+parents have been telling me. (Linus grunting) - I mean, don't help or anything, Jake. - [Jake] We're not racing on this one. - No. No, no, no, not necessary. - Oh. We didn't even talk
+about the servers again. - Oh, that's right. We did a video where
+we showed the servers, but the configuration
+that we ended up using is actually even faster
+than what we showed then. We already covered that
+there's 256 gigs of RAM, a total of 400 gigabit per
+second in network connectivity and 64 total CPU cores. But what we didn't mention.
+- Yeah. These are actually overclocked. I think what they said is 3.7 gigahertz on all cores for these nodes. And then I believe the HGX, which is the big one with
+the GPUs is 3.6 or so. The folks at KIOXIA turned
+these things up to 11. It's not necessarily
+that you would need it to run a config like this. It's just that you'll want it when you wanna go absolute
+balls to the walls, maximum possible performance. Keep these network cards
+fed. Keep the storage fed. It's just, I don't even know what to say. I'm lost for words. Absolute madness. - The really mind blowing
+thing about the price of this is that the kinds of organizations that buy this kind of
+equipment, they don't buy one. - Yeah. They buy a data center's worth and that's after they already spend tens of million dollars building said building to put the servers in. - For those of you who
+are new to this project, these are KIOXIA's CD6 data center drives. These are 15.3 terabytes each and every one of these bays is full. - 72. - Yes, 72. And the reason that we have to have six separate servers each with dual overclocked EPYCs inside, is that in order to push
+the kinds of data rates that all these drives can do at once, you just need a ton of CPU. As for this head unit,
+it's got 128 EPYC CPU cores as well as eight of NVIDIA's
+A100 top tier data center GPUs. And this guy does, what again exactly? - Well, when you have this much storage, it becomes a little
+difficult to create a load that can actually make use of all of it. That's the intention of this thing. - This is just a load generator. - Literally a load generator. (Linus laughs) I mean we're talking like
+200 gigabytes a second. - Yeah, we sure are. Could you be slightly more casual with the extensive direct
+attached copper cables, Jake? Geez. Stop. - I'm making a pasta. (laughs) - 200 gigabit per second each. It's one of those things where this hardware could be dead and I would still be excited
+to just play with it. - What do you, what? (laughs) - Like honestly, it's just,
+look at these connectors. If that doesn't get your motor running. I don't know what will, there
+are actually circuit boards. There's actual logic
+built into these modules. So whether you're using
+direct attached copper, like we are, or fiber, in
+which case you have to convert from copper to a light-based signal, there is some translation work that needs to be done in the cable, which is one of the reasons that these are so flipping expensive. 1.6 terabits per second. Whoa. I actually got chills. Woah. It's a little cold in here too. - I've got really bad news. I think they changed the plugs. - Shut up.
+- In the shop. It used to be a 3-pole 30 amp, and now it's a 3-pole 20
+amp. That's really bad. We can at least plug this one in, this will plug in behind the laser. Should we have half of our power? - We confirmed it. Thank you, Jacob. The 3 phase, 220 volt was removed and replaced with 2, 110 volt, 20 amps. What if we just grab a bunch
+of our filming extension cords and (tongue clicking). - Yeah, I think there is-
+- Put them in. - I think there is enough shop. - And drag them over here. - The only problem potentially is if this was specked out at 208 volt, 'cause I mean, it's an 800
+watt power supply without and a 1,200 with, but there's two- - Should be okay. - 1,600 watts for two
+EPYCs and some storage. I think it's probably fine. - Okay. Let's do it. - Okay. - This looks great, Jamie. I think we should be good to go with this. - Okay, cool. - Fantastic. - The folks at KIOXIA said that
+each blade peak 1,200 watts. So we need a circuit for each. - Oh, crap. - Yeah. I don't- We might have to scrounge
+some other extension cords. - Yeah. This is not how it
+was supposed to go down, boys. - [Jake] No, it was
+set up. It was perfect. - How is it that no matter
+how much planning we do, we always end up like this? - [Jake] Because there's just
+too many cooks in the kitchen. - [Linus] It always comes
+down to the wire, Jake. - [Jake] Every time. - [Linus] Every time. - I literally, I had the
+perfect solution ordered. Thanks infinite cables. And
+even that, wasn't enough. All right. She's live. Oh. - Whoa. (machine whirring) - [Jake] Oh, my God. - We have lift off, ladies and gentlemen. It sounds like an alien
+spaceship. (laughs) It's pulling a thousand watts and it hasn't even done anything yet. - [Jake] What? - [Linus] Four amps. (Jake laughs) We're gonna need hearing protection. - What if I pull one out,
+you think it's gonna get mad? Oh, wow. Put your hand there for a second. - Okay. Hold on a second. - [Jake] The static pressure. (Linus laughs) It blows it out. - What's really mind blowing
+is it hasn't done anything yet. (Jake laughs) - Now that it's actually booted,
+it's only drawing one amp. So like, 200 watts. I guarantee you that
+most of that power draw was literally just the fans. I can take my earplugs out now. It's almost like it's barely on. I must have been full chooch. (laughs) Mind you, it's doing nothing. Literally nothing. - Yeah. Pulling 250 Watts
+doing absolutely nothing is still something. (laughs) For context, that's maybe
+10X what we'd expect from a reasonable gaming machine. (machine whirring) A hundred is about like a subway train. 110 would be industrial noise. And we're squarely in between. Wait a second. Is this thing
+pulling 2,500 watts right now? What the heck is it doing? Oh, that's a relief. Curiously, neither pressing nor holding the power button
+turns this computer off. But the only way to do
+that appears to be to- Oh, no. I told you that's not gonna work. It's just gonna do that again. (Jake laughs) - Jake. - What, did it just go to sleep? Whatever. We're just gonna shut it off at (indistinct) anyways. That's hilarious.
+- Wait. It was off. - Oh, that's off? - That's off.
+(Jake laughs) That made sense, because
+the light was orange. - Oh, it was just the power of supplies. Oh, my God.
+- That's hilarious. - Oh, my. That's off?
+- Even when it's off. It draws 250 freaking watts. - After starting everything up
+and turning the HGX back on, it was right at 24 amp, which
+is supposed to be its limit. I went ahead and the
+three that we have running on their own circuits, I unplugged their second
+connection to this, for now. And hopefully, that's enough. Curiously, I think two or
+maybe three of the IP addresses for this A100 box are not pinging. And then when I looked
+at the switch down here, you can see that a few
+of the links weren't up. I just moved this cable
+to a different port and now it's blinking. You can see we have one and two. And when it was plugged
+in to three up here, it wasn't doing anything. But now, it's happy. Upon pinging all of them again, all eight ports are connecting. That's so much bandwidth. The KIOXIA guy sent
+over all the information for how to hook it up. They failed to include
+how to start the array. I'm in the WEKA panel
+here and you can see, it just says stopped. I can click on the servers and
+see, we got 12 drives there. Look at the drives.
+- I'm back. - Lots of drives. All
+the networking's working. I think-
+- This is such a cool visualization. - Yeah.
+- What is this? - This is Weka.
+- Oh. This is the $400,000-
+- The $400,000 file system. Yeah
+- Yeah. - Yeah.
+- That's how you know you're in the enterprise when
+it's a million dollar project and the software is the
+most expensive part. - Back up a bit. So it's not so loud. - I'm sorry. Sorry. Sorry. I just, I like to bask. - Oh, stand behind. That's the warmth. It's actually kind of nice back. - Wow.
+- Well, I mean it's- - I like it. - It's like 20 amps. 16 amps. Yeah. Like-
+- That's like 3,000 watts. - Yeah. More than that, but yeah. I figured out how to
+kind of boot the cluster. - Cool.
+- In the settings, configure, start IO. - Oh, yeah.
+- Are you ready? - [Linus] Okay. So wait, is
+this gonna generate a load? - [Jake] No, no, no. This is just starting up the file system. - And it sounds like that when you start your fricking file system? We're up to 18 amps, boys. Closing in on 5,000 watts. - This is such a cool
+visualization. I love it. - Oh, I know. It's almost worth 400 grand. Okay. To be clear, it has like
+other redeeming qualities. - [Both] One failure. - Four drives aren't working? That's like curiously, exactly these two. I bet you a cable is just loose inside. - Gotta be internal.
+- Yeah. - [Linus] Is this the one we worked on? - No, it's not. - Oh, really? Oh. It might have just have
+gotten wrestled in shipping- - Yeah, I'm sure. - And we didn't open them all up. And- - So maybe we should just reseed them all. - Yeah. Let's just give it a little reseed on all the NVMe connectors. - I'm glad it's not the
+server we messed with. - Yeah, me too. That would've
+been really embarrassing. And 1, 2, 3, hop, ho. - I don't know if this file system is designed to run on a single node, but imagine if we could get
+Whonnock to run on this, that'd be pretty cool. - Yeah. WEKA, hey, what's up? Huh? We may actually be able
+to tell right away. Sometimes, it'll just
+access all the drives as part of the boot sequence. And we can see if they're all flashing. - Oh, my God. Second monitor. - Hold on a second. I gotta talk to the viewers
+for a second here. Okay. Luke's safe. Okay. We got all the Floatplane subscribers. They get that exclusive
+content, all that stuff. But this man, this man, Nick Light. Ladies and gentlemen,
+if you do not register to order a screwdriver and a
+backpack, he's in danger. Okay. - [Luke] He's gonna lose his job. - Are all the drives there? - Yeah. There's no more alerts
+anymore, which is great. - Yes.
+- You know what's so crazy? These NVMe drivers are so fast, that with those four drives down- - I got the feeling. I got the feeling again. I got the chills. (both laughs) This is so cool. - Yeah. With the few drives down, we actually lost a
+couple percent protection and it was rebuilding. And then when I put
+the drives back in now, everything's happy again. It rebuilt from like
+98% to 100% protected, in like a minute. So fast.
+- Oh, wow. - So fast. - Guys, re-silvering a
+hard drive configuration of this kind of capacity- - Takes like two days.
+- Is a multi-day operation. Okay? To see something like that done on the order of seconds or minutes, rather than hours of days. - Crazy. - Wow. - Funniest thing happened. I went to mount the file
+system on the big chungus, turns out the clocks on the
+servers are out of sync enough that it won't mount. - Oh, wow. - It's not connected to the internet. We can't just like go, ping Google time. So I'm setting up the
+local Windows time server on this Windows 11 machine, so
+that I can go on each machine and go, update NTP from this client. Are you ready?
+- Ready? (Jake laughs) - Oh, my God. Have you ever seen it like
+that? Oh, my God. (laughs) (Linus laughs) - Are we gonna show them yet?
+- No. (beep) no. - The truth is we were planning to tease you guys this whole time and you're gonna have to
+wait until the next part for us to run it through its paces. - What? I'm doing that. - What we'll tell you
+now is about our sponsor. - FreshBooks. Now, I'm gonna go ahead and guess that you're not an accountant, which is why you're
+gonna love this software. It's built for freelancers
+and small business owners who don't have time to waste on invoicing, accounting and payment processing. In fact, FreshBooks users can
+save up to 11 hours a week by streamlining and
+automating pesky admin tasks like time tracking,
+following up on invoices and expense tracking. With features like the new digital bills and receipt scanner. Over 24 million people
+have used FreshBooks and love it for its intuitive
+dashboard and reports. It's easy to see at a glance exactly where your business stands and it's even easier
+to turn everything over to your accountant come tax season. 94% of FreshBooks users say it's super easy to get up and running. And with award-winning
+support, you're never alone. Try FreshBooks free for 30
+days, no credit card required. Go to freshbooks.com/linus
+to get started today. So what will you do with
+11 more hours a week? - If you guys enjoyed this video and you're not too mad at us right now, go check out parts one and two where we unbox the whole
+shebang and took a closer look at one of our six SSD storage servers. They are definitely worth a watch. Secretly, I wanna make this my way. Don't tell Yvonne. - I won't. (both laughs)
+- Don't tell anybody.

@@ -1,0 +1,60 @@
+hi everyone, in this episode we're going to
+look at a way of using delegates that is conceptually very different from how we used them last
+episode. let's consider a simple scenario where we
+have a game with a player class, an achievements class, and a userinterface class. the player class has a "die" method, which
+we can imagine gets called when the player's health falls below zero. now let's say that the achievements class
+wants to know when the player dies, so that it can keep count for the 'die 1000 times'
+achievement or whatever. and the ui class also wants to know when the
+player dies, so that it can show the gameover screen. to this end, we can add an onplayerdeath method
+to both of these classes. the question is, how do we actually call these
+methods when the player dies? the simplest solution is to make sure that
+the onplayerdeath methods are public, and then, in the "die" method of the player class,
+to get references to the achievements and ui classes, and simply call onplayerdeath
+on those references. this is a tempting way to do it, because it's
+so quick and easy, but there are some pretty good arguments against it. mainly, it's simply not the player class's
+job to keep track of who wants to know when the player has died. and what if some other classes also want to
+know when the player fires a weapon, or kills an enemy, or opens a treasure chest. the player class could quickly become littered
+with references to other classes, obscuring the actual functionality of the player code. furthermore, since the player class now references
+these other classes, it is dependent on their existence. we couldn't remove any of these classes from
+the project, without breaking the player class. this makes reusing code very annoying: you
+want to reuse your player code in another project, but first you have to weed out all
+the references to different classes that don't exist in the new project. ideally what we want is for the player class,
+instead of individually informing other classes when the player dies, to simply announce when
+it happens. it is then the responsibility of any class
+that wants to know when the player dies, to actually listen out for that announcement. so i'll remove the references i created in
+the player class, and instead create a public delegate up at the top of the class, which
+is void and has no parameters - just like the onplayerdeath methods. i'll call it the deathdelegate. we can then make an instance of this delegate
+- so public deathdelegate deathevent, and when the player dies, we will invoke this
+delegate. it's important, before invoking a delegate,
+to make sure that it is not null. this is to prevent an error from occurring
+in the case that nothing has been assigned to the delegate. in the achievements class, let's make a start
+method, which we can imagine will be called at the beginning of the game. here we can get a reference to the player
+class, and subscribe the onplayerdeath method to the deathevent. note the "plus equals" notation for subscribing
+a method to a delegate. when the player dies, it would be good practice
+to unsubscribe from the delegate, using the "minus equals" operator. let's copy this over to the ui class as well. so now, when the player dies, the deathevent
+is invoked, and all the methods subscribed to it will be called. this is fantastic, but there are two things
+that can go wrong. the first is if we accidentally write "=" instead
+of "+=" when subscribing a method to the delegate. this will overwrite anyone else that has already
+subscribed to that delegate, and so they won't be notified. the second is that, any class with a reference
+to the player, can invoke the delegate by simply writing player.deathevent(); everyone
+who has subscribed to the delegate will now mistakenly think that the player is dead. of course neither of these things issue an
+issue as long as one is careful when programming. however, the last thing we need as programmers,
+is to give ourselves more opportunity to screw up. this is where events come in. to make a delegate into an event, one simply
+adds the "event" keyword when creating the delegate instance. all of a sudden, classes other than the one
+in which the delegate is defined, are no longer able to assign directly to the delegate - they
+can only subscribe and unsubscribe using "+=" and "-=" furthermore, they are not able to invoke the delegate. so you can think of the event keyword as simply adding these two restrictions to the delegate. i'd like to mention two more things: actions
+and funcs. these don't provide any new functionality,
+they are simply convenient shortcuts for creating delegate variables. they're both part of the system namespace,
+so you'll need to write 'using system;' to access them. so the idea is that, in order to create this
+deathevent variable, we had to first create the deathdelegate to specify the return type
+and parameters. actions and funcs allow us to skip this step,
+and go straight to creating the variable. so i could replace these two lines with public
+event action deathevent; this is because "action" represents a void delegate with no parameters. the generic versions of action, can be used
+to create a void delegate with a single, or multiple parameters. func can be used to create a delegate with
+a custom return type, and no parameters. func can also be used to create a delegate
+with a custom return type, as well as parameters. this is done by specifying multiple types
+when creating the func. the last type specified will be the return
+type, and all previous ones will be parameters. for example, creating a func of type int,
+string bool; is equivalent to making a delegate that returns a bool, and takes in an int and
+string parameter. and, then making an instance of that delegate. i hope you've found all this to be helpful. if you'd like to support these videos, you
+can do so on patreon. cheers.

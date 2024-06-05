@@ -1,0 +1,205 @@
+Well I want to tell you about some numbers.   We'll start with 2 and go on to 8, pass by 7776 
+and come finally to 3264. We have a tour to make.   So how about 2? First of all this is a story about 
+conics. Conics are curves in the plane that are   very familiar to students in high school already. 
+If I have y equals x squared and I graph that it   looks something like this, that's a parabola. 
+Parabolas are important in all sorts of ways   but they were also studied, along with the other 
+so-called conic sections, by the Greeks already   for a long time and were a big subject in the 19th 
+century geometry. So-called conic sections because   you can get all of them by slicing a cone. If you 
+slice it right across straight you get a circle,   if you tilt your slice a little bit you get an 
+ellipse, and if you slice it you get a parabola.   Tilt it a little more, just parallel to the 
+center, you get part of a hyperbola. If you think   of the cone going both ways you get both parts of 
+the hyperbola. In the 19th century people began to   think about these in a different way; uh they're 
+given, all of them, by quadratic equations.  So here's an equation which is quadratic, has 
+degree 2, an exponent of 2 and nothing higher.  And of course a circle can be written as x 
+squared plus y squared equals 1, for example.   Ellipse if you put an x coefficient in front of 
+the x you might get an ellipse. Hyperbola is x   times y equals 1. So all of these are quadratic 
+equations, they have a term of degree 2. All   quadratic equations give conics; if you really 
+include all of them then you get funny things   that you might not think of as conics at first. 
+For example if you just take x squared equals   zero - what does that look like? Well here's x 
+equals zero and x equals zero is the y-axis. X   squared equals zero is sort of twice the y-axis, 
+and that will play an important part in our story.   Anyway those are conics. They're degree 2 things 
+for a different reason as well. So one way that   mathematicians measure the degree of these things 
+or of other curves is to draw a straight line and   see how many times it meets them. So let's try 
+that with a circle: so we agree that a circle   is degree 2, it's given by a degree 2 equation, we 
+drew it. If I draw this straight line it obviously   meets it in two points. You might object that well 
+I cheated a little bit because I didn't draw this   line which seems to meet it at one point. But 
+if you think of moving this line towards that   one then these two points just come together so 
+I should really count that as two points - and   then that's two points. But now you'll say, okay 
+that was fine but how about this line? It doesn't   seem to meet it at all. However you may or may not 
+remember that I did a video about the fundamental   theorem of algebra which says that any polynomial 
+in one variable of degree d has d roots if you   count it with multiplicity. That's the case here 
+but the roots have become imaginary. One way to   see that, the equation of the circle we drew 
+before is x squared plus y squared equals 1,   and if I now substitute y equals ax plus b,
+the equation of a line, then I can write this   as a quadratic equation in x and y. This is 
+then y squared, would be a squared x squared   plus 2 axb plus b squared. If I add an x 
+squared plus x squared and it's x squared   plus one x squared and I've set that equal to 
+1 - or subtract 1 and look for the roots. Then   that will have to have two roots because it's a 
+polynomial of degree 2. So there are two points,   they just happen to have imaginary coefficients.
+- (Brady: So that line is touching the   circle) (I just have to imagine it)
+- That line touches the circle twice   but you imagine it that's right. So that's nice. 
+Now in the 19th century this was well understood,   Gauss proved the fundamental theory of 
+algebra, they knew that this should be true,   they worked in the complex numbers. But they 
+went a step further; if you think about this,   what happens with this vertical line? Where 
+does it touch the hyperbola? And the answer   is it touches it at the point of infinity. If you 
+continued these lines out they would get closer   and closer together; they would never meet but 
+you can imagine that there's a point out there   in infinity. We have a tangency at infinity of 
+these two lines so that's a double intersection   again. And what about this one? Here these two 
+go out and if we had a line at infinity - as they   imagined already in the mid 19th century - this 
+thing would be tangent to the line of infinity.   That's what happens when you move that line all 
+the way up. In fact when you look at equations   and allow yourself to make complex changes of 
+coordinates, all these figures look the same.   There's no difference between a circle, hyperbola, 
+parabola in terms of just the equation - they're   all degree 2 equations. And as I say they're 
+degree 2 because they meet a line in two points. Now I want to talk about tangencies of 
+figures, this was a big deal in the 19th   century too. So what do I mean by tangency? 
+Here's the simplest tangency. You can see   if I think of a line in the space of lines, 
+what would that mean? So let's take a point   out here and think of all the lines through 
+the point, so that's what I would mean by a   line in the space of lines. And you can see 
+that as I do this there are two places where   it's tangent. So that's a condition of degree 
+2 also. In the space of lines this is a line   ,this family of lines is a line, and that line 
+meets the condition of tangency also in two   points. So condition of tangency is an equation 
+of degree 2 on the coordinates of this line. So   that's another way that you can have degree 
+2. So now let's talk about the first number,   and another 2. Suppose I look at tangency of 
+two circles. So two circles can be tangent, for   example this way - here are two tangent circles.
+- (They're just kissing each other)  Kissing each other, they could kiss on the inside 
+too like this. And a line in the space of circles,  what would that mean? Well here's- here's how I 
+draw a circle but I could have other radii right?  I could put an r in there, that would be 
+the radius of the circle. Turns out if I   make r bigger and smaller that's a line in 
+the space of circles. Here is one circle,   I'm going to fix this circle and I'm going to 
+take another circle and change its radius. So   I'm going to fix the center, the center here is 
+(0,0), and I'm going to change the radius and   watch it and it expands and at a certain point it 
+becomes tangent to this circle and then it stops   being tangent afterwards. After a while it'll 
+be a circle which has this as its center which   looks like this and is tangent up here. It has a 
+second tangency right? So in the space of circles,   being tangent is a degree 2 condition.
+Right? That happens twice.  - (And it can't happen a third time?)
+- That can't happen a third time,   even over the complex numbers, you have to 
+take my word for that. But we could work it   out in equations and then it would be easy. 
+Here's another way the degree plays a role:   we saw that a line meets something of degree 2 
+in two points - how about two things of degree   2? An ellipse and a circle both have a degree 
+2 and they can meet in four points, 2 times 2.   And it's something called Bézout's 
+Theorem, a very important theorem in   geometry, Étienne Bézout I think.
+- (But didn't your two circles   both) (have degree 2?)
+- Yeah these both have degree   2 but they- and they look like they're 
+meeting only in two points at a time  - (Oh they're meeting, sorry, 
+that's meeting not tangenting yeah) That's right. But even so these circles look like 
+they're meeting only in two points right but this   is a case like this- these lines, if we do 
+it in equations then we could parameterize   the circle and substitute the equation of the 
+other circle in it then we'd get an equation   of degree 4 and it would have 4 roots. So just as 
+we computed here the degree 2 we'd have 4 roots.  So over the complex numbers they always have 
+four intersections counted with multiplicity. Two   conics. And that's a case of Bézout's theorem: 
+if you have a bunch of conditions of degree d   where you expect d solutions from a line, but 
+if you have two of them then they meet in d   squared points. If you have three of them 
+meeting in a 3-dimensional space like three   spheres would meet in eight points over the 
+complex numbers. So that's a general fact. So   how many circles are there? What is the space 
+of circles like? So if you think of circles,   there are really three numbers that are important: 
+there's a center, let's say the point (a,b),   and there's the radius, the equation x minus a 
+squared plus x minus b squared equals r squared.   So that's the equation of a general circle 
+and there are three numbers involved. So the   space of circles is a 3-dimensional space. 
+Now if you have a 3-dimensional space and   you have conditions which are satisfied by some- 
+somewhere on a line, let's say two in a line, those   are quadratic conditions, then Bézout's theorem 
+tells you if you have three such conditions there   ought to be three points of intersection. So Bézout 
+interpreted that funny way says there should be   2 times 2 times 2 - 8 circles - that fulfill all of
+three degree 2 conditions, like being tangent to   a given circle. So we take three circles - so here's 
+one, and here's one, and here's one. If you worked   over the complex numbers you could do it with 
+any three circles in the plane you wanted. And   now let's see if we can draw eight circles tangent to
+all of them. And the trick is that a tangent circle   can be outside or tangent inside. So I have 
+two different ways of being tangency and three   circles so 2 times 2 times 2 seems very 
+reasonable. So here's a circle that's inside all of   them, here's a circle that's outside - whoops - outside 
+all of them. These are Eisenbud circles you've- you've had   Eisenberg 17-gon so- 
+- (We're used to your using a lack of precision yeah) 
+- Yes so let's see if we can draw one   that's inside this and outside those two: well no 
+problem, here's one that's inside that and outside   those two. And I can do the same thing over here 
+clearly, something like this or something like this.  Let's see, so I have inside all of them, inside the 
+three and outside the others, what am I missing? I'm   missing one that's-
+-(Gonna be one there isn't there?) 
+- There's going to be one-    (Oh hang on, that's the same circle- )
+- No that's right. So there's one here touching 
+all three, so we now have the counting game. Let's   see there's one in here, we're missing this one, and 
+this one- that's eight - ah we got it! So we got eight   circles tangent to the three given circles. Okay, so 
+that's the beginning of the story, the 2 and the 8. (Okay all right!)
+- Maybe this is two videos. Alright, so in the middle of the 19th century people   got more ambitious and they said, let's do the 
+same thing with conics - why just circles? The circle   story is very old, I don't know who did it first, 
+but maybe Apollonius or something like that. But   with conics it's more complicated, but this was a 
+problem proposed by Jacob Steiner in 1848. He said   let's try this with conics but how many conditions 
+do we need for conics? So we need to see how many   parameters a conic depends on. You can write it 
+always as ax squared plus by squared plus cx   plus dy plus a constant e. One, two, three, four, 
+five - so it's a 5-dimensional space of conics.   So we need five conditions. Well okay we could 
+have tangent to a line, that might be interesting,  but why not tangent to conics? So if we- once again 
+conics tangent to a conic is co-dimension 1, it's   it's given by one equation in the coefficients of 
+the conic. If I fix a given conic like a circle   then there'll be a 4-dimensional family tangent 
+to this conic. If I fix a second conic, maybe   that one, a parabola, there'll be a 3-dimensional 
+family tangent to both. If I fix a third maybe it's   a hyperbola somewhere it'll be a 2-dimensional 
+family tangent to all three. And if I fix two more   it should be just a finite set of conics tangent to 
+all of them. So let's see if we can count how many.   So we have to see what the degree of the condition 
+is of tangency. And with coni- with circles I could   draw it for you but with conics it's much harder and 
+in fact it's a condition of degree 6. Each of   these five conditions is a degree 6 so Bézout's 
+theorem says that five conditions of degree 6  should have solutions which are 6 to the fifth 
+power and which is 7776 the last time   I looked. So Steiner said, okay this there should be 
+that many conics tangent to five given conics.   (So just like you did the eight circles for me, you 
+could do the same thing now with your conics)   (drawing other conics? And you could draw 7776?)
+- Well that's what Steiner thought but   he was wrong. And Bézout's theorem doesn't work 
+so well in this case. This was discovered pretty   soon afterward and first published by Michel Chasles;
+ the right answer is not 7776 but 3264.   So you could draw, in principle, 3264 conics tangent 
+to five - these five - given conics.
+- (They- those those) (new ones you would draw in in red pen for me - 
+which I won't ask you to do -)
+- But I could draw it   just by filling the plane with red. You couldn't- 
+you would never see the conics.
+- (But they would be) (all different sorts of conics? There might be like 
+1000 circles and 20 parabolas?)
+- There might well, right. (Right, and and you don't know what that 
+mixture necessarily would be?)
+- I do not. But remember   in the- in the in the setting in which these guys 
+worked there's no difference between parabolas   and hyperbolas or- they all look like equations 
+like this, this coefficients just just they're   different coefficients. There are 3264 five tuples 
+of numbers a, b, c, d, e which satisfy the condition,   that's what they- that's what Chasles proved. Or  claimed!
+- (I mean as I- as I look at that now)  (it's almost hard for me to imagine one conic 
+that would manage to tangent all of them-)   Well, that's because there's complex numbers involved right? 
+- (So so you couldn't draw them- even if you)   (knew them you couldn't draw them?)
+- On my real plane that's right. So it was a question for a long time   whether there is any configuration of the five 
+conics which allows all 3264 conics to be real.   And the answer is yes, uh could be real could be all real.
+- (Oh wow 'cos that would mean-)
+- And there are pictures. - (There are pictures of it?)
+- Yes. Again you can draw 
+3264 it just fills the plane with black. But   you can draw a few hundred at a time and explain 
+how they fit together. And this was done by a man   named Frank Sottile, that's quite recent. So sottile 
+has specialized in this quest of realizing these   funny configurations over the real numbers in 
+different ways.
+- (It was quite a come down from)   (the hope of 7776 to the reality of-)
+- That's right. So where did the other ones go, right? And there's a   good answer to that. So when you write down the 
+the five equations that give the conditions of   tangency, unfortunately they have some spurious 
+solutions. And the reason is very simple, and   I could even demonstrate it with the eight 
+circles although it doesn't play a role there.   Circles are circles, you know what they are, 
+they're round. But conics, as I said they come   in lots of shapes and if you let the equations 
+degenerate a little bit; if you take b equals c  equals d equals e equals zero you get x squared 
+equals zero, and that's the equation of a double line.   So the double lines could be in there; and 
+if you think about it what is the condition   of tangency? It's that it where it touches it 
+touches twice. But a double line touches twice   wherever it touches right? There's there's two 
+lines there so it's it's tangent. And how many   double lines are there? Not just finitely many but 
+a whole plane full. Because- you know you can draw   one parameter family of lines through a point, 
+you can move the point so you have a two parameter   family of lines so there's a whole surface 
+of lines. So when you intersected those five   conditions of degree 6 you got not finitely 
+many solutions but a surface of double lines,  plus the solutions you really wanted. And Chasles had 
+to figure out how to remove the surface and write   down the conditions without the surface. He got 
+the right answer by methods which are not rigorous   by our standards; and probably the first rigorous 
+demonstration of this number is due to Fulton and   MacPherson in the 1970s. So it took a long time to get this right. 
+- (Well a long time to get it rigorous,)   (he got it right!)
+- That's true he got it right.
+Actually there were a lot of numbers computed by   by shady methods in the 19th century and they've 
+all been right so they were pretty smart. 
+- (Who needs rigour?)   Right, exactly. Nowadays we just compute on the 
+computer we can see. And in fact numerically   you can find the 3264 lines in a second or so 
+on a fast machine, but it's not quite a proof.  (Tell me about your special relationship with the
+number 3264 - you've used it)
+- Yes I have. Joe Harris   and I wrote a book on this subject which is called 
+intersection theory and the book is called '3264   And All That' and there's the picture of the eight 
+circles tangent to three given circles on the   cover. Let me explain a real proof of the case of 
+the conics somewhere in here. Let's see, there are some   conics I wonder if I have a theorem somewhere in 
+this chapter. We called it the five conic problem   and uh here it is as a keynote problem - how many 
+conics are tangent to five? And another similar   problem given: 11 general points in the plane, how 
+many rational cortic curves contain them all? And   there you can multiply these problems as long 
+as you like. They're mostly good for sharpening   your tools for more serious things, but problems 
+like this are all over the place in mathematical   physics today. In general this whole theory of what 
+what are called excess intersections which Fulton   and MacPherson made precise in the mathematical 
+sense play an enormously important role in   mathematics and physics. So that's the story 
+of 8, 3264, and 7776.    ...crude simple-minded way. And it turns out to be that you're really pretty close for big numbers. So let's let's do a little   calculation. One of the most famous theorems 
+in number theory is the prime number theorem...

@@ -1,0 +1,791 @@
+#Chess related
+import chess
+import chess.svg 
+
+#Utility related 
+import random
+from cairosvg import svg2png
+#System related 
+import sys
+import os
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
+#os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
+import threading
+import time 
+from threading import Thread
+#Debug related 
+import tkinter as tk 
+from tkinter.scrolledtext import ScrolledText
+import torch 
+sys.path.append("C:/gitrepos")
+from steinpy.ml.networks import ChessModel,ChessModel2,ChessDataset
+import json 
+import math 
+import copy 
+import itertools
+
+#Computation related
+import numpy
+from torch.utils.data import DataLoader
+
+sys.path.append(f"C:/gitrepos/steinpy/ml")
+
+
+#MATE_EVAL		= 10
+MAX_EVAL 		= 1
+EVAL_DEPTH		= 4
+#MAX_EVAL 		= pow(MATE_EVAL,EVAL_DEPTH)
+LOOKUP_TABLE 	= {}
+
+
+def fen_to_tensor_expanded(fen_list,orientations=None):
+	#fen_list        = [fen.split(' ')[0] for fen in fen_list]
+	batch_size 		= len(fen_list)
+	board_tensors 	= numpy.zeros(shape=(batch_size,7,8,8),dtype=numpy.float32)
+
+	piece_indx 		= {"R":4,"N":8,"B":6,"Q":2,"K":0,"P":10,"r":5,"n":9,"b":7,"q":3,"k":1,"p":11}
+
+	pieces          = {"R":1,"N":1,"B":1,"Q":1,"K":1,"P":1,"r":-1,"n":-1,"b":-1,"q":-1,"k":-1,"p":-1}
+
+	#Go through FEN and fill pieces
+
+	for i in range(len(fen_list)):
+		for j in range(1,9):
+			fen_list[i] 	= fen_list[i].replace(str(j),"e"*j)
+
+	for i,fen in enumerate(fen_list):
+		try:
+			position	= fen.split(" ")[0].split("/")
+		except IndexError:
+			position    = fen
+		
+		#Place pieces
+		for rank_i,rank in enumerate(reversed(position)):
+			for file_i,piece in enumerate(rank): 
+				if not piece == "e":
+					channel                             	= int(piece_indx[piece] / 2)
+					board_tensors[i,channel,rank_i,file_i]	= pieces[piece]
+		#Place turn 
+		board_tensors[i,-1,:,:] 	= numpy.ones((8,8)) * orientations[i]
+		
+	return torch.from_numpy(board_tensors)
+
+def fen_to_tensor_bar(fen_list):
+	#fen_list        = [fen.split(' ')[0] for fen in fen_list]
+	batch_size 		= len(fen_list)
+	board_tensors 	= numpy.zeros(shape=(batch_size,7,8,8),dtype=numpy.float32)
+
+	piece_indx 		= {"R":4,"N":8,"B":6,"Q":2,"K":0,"P":10,"r":5,"n":9,"b":7,"q":3,"k":1,"p":11}
+
+	pieces          = {"R":1,"N":1,"B":1,"Q":1,"K":1,"P":1,"r":-1,"n":-1,"b":-1,"q":-1,"k":-1,"p":-1}
+
+	#Go through FEN and fill pieces
+
+	for i in range(len(fen_list)):
+		for j in range(1,9):
+			fen_list[i] 	= fen_list[i].replace(str(j),"e"*j)
+
+	for i,fen in enumerate(fen_list):
+		position 	= fen.split("|")[0].split("/")
+		orientation = 1 if fen.split("|")[1] == "w" else -1
+
+		
+		#Place pieces
+		for rank_i,rank in enumerate(reversed(position)):
+			for file_i,piece in enumerate(rank): 
+				if not piece == "e":
+					channel                             	= int(piece_indx[piece] / 2)
+					board_tensors[i,channel,rank_i,file_i]	= pieces[piece]
+		#Place turn 
+		board_tensors[i,-1,:,:] 	= numpy.ones((8,8)) * orientation
+		
+	return torch.from_numpy(board_tensors)
+
+def custom_loss(prediction,actual):
+	with torch.no_grad():
+		bad_mask 	= prediction.clone()*actual.clone() 
+		bad_mask[bad_mask > 0] = 1
+		bad_mask[bad_mask < 0] = 2 	
+
+		#scale correct sign evals by .5
+		good_mask 	= prediction.clone()*actual.clone() 
+		good_mask[good_mask < 0] = 1
+		good_mask[good_mask > 0] = .5
+
+	return torch.sum(torch.nn.functional.mse_loss(prediction,actual) * good_mask * bad_mask)
+
+
+def peek(iterable):
+    try:
+        first = next(iterable)
+    except StopIteration:
+        return True, None
+    return False, itertools.chain([first], iterable)
+
+class Node:
+
+	def __init__(self,parent,move,evaluation):
+		self.parent 		= parent 
+		self.move	 		= move 
+		self.evaluation 	= evaluation 
+		self.children 		= [] 
+		self.matein 		= -1_000_000
+		self.mate_node 		= False
+
+
+def alphabeta(node:Node, α, β, maximizingPlayer):
+		
+	if not node.children:
+		return node.evaluation
+		
+	if maximizingPlayer:
+		value = -1*MAX_EVAL
+
+		for child in node.children:
+			value = max(value, alphabeta(child, α, β, False))
+			if value > β:
+				break
+			α = max(α, value)
+			
+		node.evaluation = value
+		return value
+	else:
+		value = MAX_EVAL
+
+		for child in node.children:
+			value = min(value, alphabeta(child, α, β, True))
+			if value < α:
+				break
+			β = min(β, value)
+		node.evaluation = value
+		return value
+
+
+def alphabeta_bootstrap(node:Node,model:ChessModel,depth,α, β, maximizingPlayer,board:chess.Board):
+	
+	gameover 	= board.is_game_over()
+	if depth == 0 or gameover:
+
+		#Check end of game 
+		if gameover:
+			if board.result() == "1-0":
+				#node.evaluation = MAX_EVAL 
+				node.matein 	= 0
+				node.mate_node 	= True
+				return MAX_EVAL#pow(MAX_EVAL,depth+1) 
+			elif board.result() == "0-1":
+				#node.evaluation = MAX_EVAL * -1 
+				node.matein 	= 0
+				node.mate_node 	= True
+				return MAX_EVAL * -1#pow(MAX_EVAL,depth+1) * -1
+			else:
+				#node.evaluation = 0
+				return 0 
+		else:
+			fen 	= board.fen()
+			fen2  	= fen.split(" ")[0] +"|" + fen.split(" ")[1]
+			if fen2 in LOOKUP_TABLE:
+				#node.evaluation 	= LOOKUP_TABLE[fen2]
+				return LOOKUP_TABLE[fen2]
+			else:
+				tsrs 				= fen_to_tensor_expanded([fen],[1]).to(torch.device('cuda'))
+				LOOKUP_TABLE[fen2]	=	 model.forward(tsrs).to(torch.device('cpu')).item()
+				#node.evaluation 	= LOOKUP_TABLE[fen2]
+				return 		LOOKUP_TABLE[fen2]
+			
+		
+	if maximizingPlayer:
+		best_eval 	= -1*MAX_EVAL
+
+		for move in board.generate_legal_moves():
+			board.push(move)
+			newnode				= Node(node,move,None)
+			node.children.append(newnode)
+			newnode.evaluation	= alphabeta_bootstrap(newnode,model,depth-1,α,β,False,board)
+
+
+			best_eval 			= max(best_eval,newnode.evaluation)
+			newnode.matein		+= 1
+			α 					= max(α, best_eval)
+
+			board.pop()
+			if β <= α:
+				break
+			
+		return best_eval
+	else:
+		best_eval 	= MAX_EVAL
+
+		for move in board.generate_legal_moves():
+			board.push(move)
+			newnode				= Node(node,move,None)
+			node.children.append(newnode)
+			newnode.evaluation 	= alphabeta_bootstrap(newnode,model,depth-1,α,β,True,board)
+			
+			best_eval 			= min(best_eval,newnode.evaluation)
+			newnode.matein		+= 1
+			β 					= min(β, best_eval)
+			board.pop()
+
+			if β <= α:
+				break
+		return best_eval
+	
+
+def alphabetanosave(model,depth,α, β, maximizingPlayer,board:chess.Board):
+	global LOOKUP_TABLE
+	empty,nextmoves 	= peek(board.generate_legal_moves())
+	
+
+
+	#EVAL CASE
+	if depth == 0 or empty:
+		
+		#Check gameover
+		if empty:
+			result = board.result()
+			if result == "1-0":
+				#print(f"found result {result}")
+				return MAX_EVAL
+			elif result == "0-1":
+				#print(f"found result {result}")
+				return MAX_EVAL * -1
+			else:
+				return 0 
+		
+		else:
+			fen 	= board.fen()
+			fen2  	= fen.split(" ")[0] +"|" + fen.split(" ")[1]
+			if fen2 in LOOKUP_TABLE:
+				return LOOKUP_TABLE[fen2]
+			else:
+				tsrs 				= fen_to_tensor_expanded([fen],[1]).to(torch.device('cuda'))
+				LOOKUP_TABLE[fen2]	=	 model.forward(tsrs).to(torch.device('cpu')).item()
+				return 		LOOKUP_TABLE[fen2]
+	
+	#EXPAND CASE 
+	if maximizingPlayer:
+		best_eval 	= -1*MAX_EVAL
+
+		for move in nextmoves:
+			board.push(move)
+			eval	= alphabetanosave(model,depth-1,α,β,False,board)
+
+
+			best_eval 			= max(best_eval,eval)
+			α 					= max(α, best_eval)
+
+			board.pop()
+			if β <= α:
+				break
+			
+		return best_eval
+	else:
+		best_eval 	= MAX_EVAL
+
+		for move in nextmoves:
+			board.push(move)
+			eval 	= alphabetanosave(model,depth-1,α,β,True,board)
+			
+			best_eval 			= min(best_eval,eval)
+			β 					= min(β, best_eval)
+			board.pop()
+
+			if β <= α:
+				break
+		return best_eval
+
+
+
+
+
+class MinimaxTree:
+	def __init__(self,board:chess.Board,model:ChessModel):
+
+		self.root 			= Node(None,None,0) 
+		self.board 			= board.copy()
+		self.model 			= model.eval()
+		self.size 			= 0 
+		self.lookup_table 	= {}
+		self.lookups 		= 0 
+		self.cmate_nodes 	= {}
+		self.comp_tree 		= {}
+	
+
+	def rundown(self):
+		
+		#If board has no legal moves, then its a terminal state 
+		moves_list 	= self.board.generate_legal_moves()
+		i = None 
+		for i,move in enumerate(moves_list):
+			#print(f"playing move {move.uci()}",end=" ")
+			#Push move 
+			self.board.push(move)
+			newnode 	= Node(self.curnode,move.uci(),False)
+			self.curnode.children.append(newnode)
+
+
+			#Get repr 
+			pos_fen 		= self.board.fen()
+			reduced_fen 	= pos_fen.split(" ")[0] +"|" + pos_fen.split(" ")[1]
+
+			
+			if reduced_fen in self.comp_tree:
+				self.comp_tree[reduced_fen].append(newnode)
+			else:
+				self.comp_tree[reduced_fen] = [newnode]
+
+			self.curdepth 	+= 1 
+			self.size 		+= 1
+			if self.curdepth < self.depth_limit:
+				self.curnode 	= newnode
+				self.rundown()
+			self.board.pop()
+			self.curdepth -= 1
+
+		if i is None:
+			#Check endstate 
+			if self.board.is_game_over():
+				result 	= self.board.result()
+				print(f"found a gameover: {result}")
+				if result == "1-0":
+					self.curnode.evaluation 	= MAX_EVAL
+					self.cmate_nodes[self.board.fen().split(" ")[0] +"|" + self.board.fen().split(" ")[1]] = self.curnode
+				elif result == "0-1":
+					self.curnode.evaluation 	= -1*MAX_EVAL
+					self.cmate_nodes[self.board.fen().split(" ")[0] +"|" + self.board.fen().split(" ")[1]] = self.curnode
+				elif result == "*":
+					self.curnode.evaluation 	= 0 
+				else:
+					print(f"strange result: {result}")
+			else:
+				print(f"found board 0 not game over")
+			
+
+		self.curnode = self.curnode.parent
+
+
+	def expand(self,depth=4):
+
+		self.curdepth 		= 0 
+		self.depth_limit 	= depth
+		self.curnode 		= self.root
+		start 				= time.time()
+		self.rundown()
+
+		print(f"finished build in {time.time()-start}")
+		self.fens 			= list(self.comp_tree.keys())
+
+		for i in range(math.ceil(len(self.fens)/1024)):
+			collection 	= self.fens[i*1024:1024+i*1024]
+			tsrs 		= fen_to_tensor_bar(copy.deepcopy(collection)).to(torch.device('cuda'))
+			evals 		= self.model.forward(tsrs).to(torch.device('cpu'))
+
+			for i,fen in enumerate(collection):
+
+				evaluation 	= evals[i].item()
+
+				for node in self.comp_tree[fen]:
+					if not fen in self.cmate_nodes:
+						node.evaluation 	= evaluation 
+
+		print(f"tree size is {self.size} with {self.lookups} lookups in {(time.time()-start):.4f}s")
+
+	
+
+class App:
+	def __init__(self):
+		self.board  	= chess.Board()
+		self.model  	= ChessModel(7,n_convs=32).to(torch.device('cuda'))
+		#self.model.load_state_dict(torch.load("C:/gitrepos/statedict.model"))
+		
+		self.dataset 	= None 
+
+		self.window     = tk.Tk()
+
+
+	def load_data(self):
+		self.train_data 		= [] 
+		self.test_data 			= [] 
+		
+
+		#Get root folder 	
+		root_folder 		= self.root_entry.get()
+		if not root_folder[-1] in ['\\','/']:
+			root_folder += "/"
+
+		print(f"root folder is {root_folder}")
+		try:
+			load_n 	= int(self.size_entry.get())
+		except ValueError:
+			self.output_view.insert(tk.END,f"Invalid load_n int: '{self.size_entry.get()()}'\n")
+			self.output_view.see('end')
+		try:
+			#Load Pick 5% as validation 
+			datafiles 			= os.listdir(root_folder)
+			random.shuffle(datafiles)  
+			datafiles 			= datafiles[:load_n]
+			
+		except FileNotFoundError:
+			self.output_view.insert(tk.END,f"Invalid training dir: '{root_folder}'\n")
+			self.output_view.see('end')
+			return 
+		
+
+		#Load 
+		validation_set 		= random.sample(datafiles,k=max(1,int(.05*len(datafiles))))
+		training_set 		= [file for file in datafiles if not file in validation_set]
+
+		for filename in validation_set:
+			with open(f"{root_folder}{filename}","r") as temp_file:
+				self.test_data += json.loads(temp_file.read())
+	
+		for filename in training_set:
+			with open(f"{root_folder}{filename}","r") as temp_file:
+				self.train_data += json.loads(temp_file.read())
+
+
+		self.output_view.insert(tk.END,f"Loaded {len(self.train_data)} training_examples\n")
+		self.output_view.see('end')
+
+
+	def train_wrapper(self):
+		self.train_thread 	= Thread(target=self.train_model)
+		self.train_thread.start()
+
+
+	def train_model(self):
+
+		#Set in train mode 
+		self.model 	 	= self.model.train().to(torch.device('cuda'))
+
+		#Prep
+		kwargs 						= eval(self.kwarg_entry.get())
+		self.model.optimizer 		= torch.optim.Adam(self.model.parameters(),**kwargs)
+		#self.model.optimizer 		= torch.optim.SGD(self.model.parameters(),**kwargs)
+
+		train_loss 		= []
+		test_loss		= [] 
+
+		try:
+			train_dataset 	= DataLoader(ChessDataset(self.train_data),shuffle=True,batch_size=int(self.bs_entry.get()))
+			test_dataset 	= DataLoader(ChessDataset(self.test_data),shuffle=True,batch_size=int(self.bs_entry.get()))
+		except ValueError as v:
+			self.output_view.insert(tk.END,f"Invalid bs int: {self.bs_entry.get()}\n{v}")
+			self.output_view.see('end')
+			return
+		
+		try:
+			ep 				= int(self.epoch_entry.get()) 
+		except ValueError:
+			self.output_view.insert(tk.END,f"Invalid ep int: {self.epoch_entry.get()}\n")
+			self.output_view.see('end')
+			return
+
+		for epoch in range(ep):
+			t0 			= time.time()
+			num_equals 	= 25 
+			printed 	= 0
+			self.output_view.insert(tk.END,f"\tEPOCH {epoch}\tPROGRESS [")
+			self.output_view.see('end')
+
+			#TRAIN
+			for i,batch in enumerate(train_dataset):
+				percent 	= i/len(train_dataset)
+				while (printed / num_equals) < percent:
+					self.output_view.insert(tk.END,"=")
+					printed+=1
+				
+				#Zero Grad 
+				for p in self.model.parameters():
+					p.grad 		= None 
+
+				#Load Data
+				fens 			= list(batch[0]) 
+				orientations 	= []  
+				for fen in fens:
+					orientations.append( 1 if fen.split(' ')[1] == "w" else -1)
+				
+				state 		= fen_to_tensor_expanded(fens,orientations).to(torch.device('cuda'))
+				value 		= batch[1].float().to(torch.device('cuda')).unsqueeze(dim=1)	/ (1_000_000/MAX_EVAL)
+				#Forward Pass and Error
+				pred 		= self.model.forward(state)
+
+				#CUSTOM LOSS 
+
+				loss 		= custom_loss(pred,value)
+
+
+				train_loss.append(loss.mean().item())
+				loss.backward()
+
+				#Step optimizer 
+				self.model.optimizer.step()
+				#print(f"train loss={losses[-1]}")
+
+				#Telemetry 
+			
+			#TEST
+			with torch.no_grad():
+				for i, batch in enumerate(test_dataset):
+					fens 			= list(batch[0]) 
+					orientations 	= []  
+					for fen in fens:
+						orientations.append( 1 if fen.split(' ')[1] == "w" else -1)
+					
+					state 		= fen_to_tensor_expanded(fens,orientations).to(torch.device('cuda'))
+					value 		= batch[1].float().to(torch.device('cuda')).unsqueeze(dim=1)	/ (1_000_000/MAX_EVAL)
+
+					#Forward Pass and Error
+					pred 		= self.model.forward(state)
+					loss 		= torch.nn.functional.mse_loss(value,pred) 
+					test_loss.append(loss.mean().item())	
+
+
+				trainloss 	= f"{sum(train_loss)/len(train_loss):.3f}".rjust(8)
+				testloss 	= f"{sum(test_loss)/len(test_loss):.3f}".rjust(8)
+				self.output_view.insert(tk.END,f"]\n\tTrain loss: {trainloss}\tTest loss: {testloss} in t: {(time.time()-t0):2f}s\n\n")
+				self.output_view.see('end')
+		torch.save(self.model.state_dict(),"statedict.model")
+
+
+	def pick_best_move(self):
+		pass
+
+		
+	def load_fen(self):
+
+		self.play_board 	= chess.Board(fen=self.load_fen_entry.get())
+		self.game_canvas.create_image(20,20,image=self.chess_png(self.play_board),anchor="nw")
+
+
+	def show_eval(self):
+
+		#Set model as eval 
+		self.model.eval()
+
+		#Get position calculation
+		global LOOKUP_TABLE
+		global EVAL_DEPTH
+		global MAX_EVAL
+		EVAL_DEPTH 				= int(self.depth_entry.get())
+		#MAX_EVAL 				 = pow(MAX_EVAL,EVAL_DEPTH)
+		LOOKUP_TABLE			= {}
+		# root.evaluation 		= alphabeta(root,self.model,EVAL_DEPTH,MAX_EVAL*-1,MAX_EVAL,self.play_board.turn,self.play_board.copy())
+		
+		#Find optimal node
+		best_move 		= self.play_board.generate_legal_moves().__next__()
+		best_score 		= -1*MAX_EVAL if self.play_board.turn  else 1*MAX_EVAL
+		#best_node 		= root.children[0]
+		
+		if self.play_board.turn:
+			comparator 	= lambda x,y : x >= y  
+			print(f"maximizing")
+
+		else:
+			comparator 	= lambda x,y : x <= y
+			print(f"minimizing")
+
+		for move in self.play_board.generate_legal_moves():
+			newboard 	= self.play_board.copy()
+			newboard.push(move)
+			eval 		= alphabetanosave(self.model,EVAL_DEPTH,MAX_EVAL*-1,MAX_EVAL,newboard.turn,newboard)
+			print(f"{move.uci()}:{str(eval)[:7]} vs {best_move.uci()}:{str(best_score)[:7]}\t",end='')
+			
+			if comparator(eval, best_score):
+				best_score 	= eval 
+				best_move 	= move 
+			print(f"-> {move.uci()}")
+			
+
+		#self.eval_view['text'] = f"{best_score}"
+		#print(f"best that can be done is {best_move}->{str(best_score)[:8]}, min={min([n.evaluation for n in root.children])}, max={max([n.evaluation for n in root.children])}\n\n")
+		
+		#Display results
+		self.eval_view['text'] = f"{best_move}->{str(best_score)[:7]}"
+		return best_move,best_score
+
+
+	def run_as_ui(self):
+		mainframe = tk.Frame(self.window)
+
+		#TrainingBox 
+		training_box = tk.Frame(self.window)
+
+		train_label = tk.Label(training_box,text="Training Dashboard")
+		train_label.grid(row=0,column=0,columnspan=2,sticky='ew')
+
+		self.epoch_label 	= tk.Label(training_box,text="epochs:") 
+		self.root_label 		= tk.Label(training_box,text="root dir:") 
+		self.size_label 		= tk.Label(training_box,text="load_n:") 
+		self.bs_label 		= tk.Label(training_box,text="bs:")
+		self.kwarg_label 		= tk.Label(training_box,text="kwargs:")
+		#_label 		= tk.Label(training_box,text="bs:")
+
+		
+		self.epoch_entry 	= tk.Entry(training_box)
+		self.epoch_entry.insert(0,"4")
+		self.root_entry 	= tk.Entry(training_box)
+		self.root_entry.insert(0,"C:/data/chess/exps/")
+		self.size_entry		= tk.Entry(training_box)
+		self.size_entry.insert(0,"1250")
+		self.bs_entry 		= tk.Entry(training_box)
+		self.bs_entry.insert(0,"4096")
+		self.kwarg_entry 		= tk.Entry(training_box)
+		self.kwarg_entry.insert(0,"{'lr':.0002,'weight_decay':.001,'betas':(.5,.999)}")
+
+		self.epoch_label.grid(row=1,column=0,sticky="ew")
+		self.root_label.grid(row=2,column=0,sticky="ew")
+		self.size_label.grid(row=3,column=0,sticky="ew")
+		self.bs_label.grid(row=4,column=0,sticky="ew")
+		self.kwarg_label.grid(row=5,column=0,sticky="ew")
+
+		self.epoch_entry. grid(row=1,column=1,stick="ew")
+		self.root_entry.  grid(row=2,column=1,sticky="ew")
+		self.size_entry.grid(row=3,column=1,sticky="ew")
+		self.bs_entry.grid(row=4,column=1,sticky="ew")
+		self.kwarg_entry.grid(row=5,column=1,sticky="ew")
+
+		out_box = tk.Frame(self.window)
+		self.output_view = ScrolledText(out_box)
+
+		load_button 	= tk.Button(training_box,text='Load',command=self.load_data)
+		train_button 	= tk.Button(training_box,text='Train',command=self.train_wrapper)
+		load_button.grid(row=6,column=0,columnspan=2,sticky="ew")
+		train_button.grid(row=7,column=0,columnspan=2,sticky="ew")
+		
+		training_box.grid(row=0,column=0)
+
+		#train output
+		out_label = tk.Label(out_box,text="Program Out")
+		out_label.grid(row=0,column=0,stick="ew")
+		self.output_view.grid(row=1,column=0,stick="ew")
+
+		out_box.grid(row=1,column=0)
+
+		#Playing Box 
+		play_box = tk.Frame(self.window)
+
+		play_label = tk.Label(play_box,text="Game Dashboard")
+		self.move_entry = tk.Entry(play_box)
+
+		engine_label 	= tk.Button(play_box,text='Engine',command=lambda:self.play_move("engine"))
+		self.start_new = tk.Button(play_box,text='New Game',command=lambda: self.reset_game())
+		self.end_res = tk.Label(play_box,text="Game result")
+		play_self   = tk.Button(play_box,text='Play',command = lambda: self.play_move("self"))
+
+		self.load_fen_button 		= tk.Button(play_box,text='Load Game',command=lambda: self.load_fen())
+		self.load_fen_entry 		= tk.Entry(play_box)
+
+		self.eval_button 			= tk.Button(play_box,text="Eval",command=self.show_eval)
+		self.eval_view 				= tk.Label(play_box,text="")
+
+		self.depth_label 			= tk.Label(play_box,text='Depth')
+		self.depth_entry 			= tk.Entry(play_box)
+
+
+		play_label.grid(row=0,column=0,columnspan=2)
+		engine_label.grid(row=1,column=0,sticky="ew")
+		play_self.grid(row=2,column=0,sticky="ew")
+		self.move_entry.grid(row=2,column=1,sticky="ew")
+		self.start_new.grid(row=3,column=0,sticky="ew")
+		self.end_res.grid(row=3,column=1,sticky="ew")
+		play_box.grid(row=0,column=1)
+
+		self.load_fen_button.grid(row=4,column=0)
+		self.load_fen_entry.grid(row=4,column=1)
+		self.eval_button.grid(row=5,column=0,sticky="ew")
+		self.eval_view.grid(row=5,column=1,sticky="ew")
+
+		self.depth_label.grid(row=6,column=0,sticky='ew')
+		self.depth_entry.grid(row=6,column=1,sticky='ew')
+
+
+
+		#Game out 
+		game_out = tk.Frame(self.window)
+
+		self.game_canvas = tk.Canvas(game_out,height=500,width=500)
+		self.game_canvas.grid(row=0,column=0,sticky="ew")
+
+		game_out.grid(row=1,column=1)
+
+
+		self.play_board = chess.Board(fen="5B1k/8/7K/8/pp6/2b4P/2b5/6q1 w - - 0 1")
+		self.game_canvas.create_image(20,20,image=self.chess_png(self.play_board),anchor="nw")
+		#Finish up and run
+
+		mainframe.columnconfigure(0,weight=1)
+		mainframe.columnconfigure(1,weight=1)
+
+		mainframe.rowconfigure(0,weight=1)
+		mainframe.rowconfigure(1,weight=1)
+		mainframe.grid(row=0,column=0)
+		self.window.mainloop()
+
+
+	def chess_png(self,board):
+		svg_raw =  chess.svg.board(board)
+		png_file = svg2png(bytestring=svg_raw,write_to="current_board.png")
+		self.img = tk.PhotoImage(file="current_board.png")
+		return self.img
+	
+
+	def play_move(self,mode="self"):
+		if mode == "self":
+			try:
+				self.play_board.push_uci(self.move_entry.get())
+			except ValueError:
+				self.move_entry.text = 'Bad move!'
+				return
+
+		#Engine move 
+		elif mode == "engine":
+			best_move,best_score 	= self.show_eval()
+		
+			#Try using this, and predict also
+			self.play_board.push(best_move)
+
+		
+		if not self.play_board.outcome() is None:
+				winner = self.play_board.result()
+				if winner == chess.WHITE:
+					self.end_res["text"] = self.play_board.result()
+				elif winner == chess.BLACK:
+					self.end_res["text"] = self.play_board.result()
+				else:
+					self.end_res['text'] = f"{self.play_board.outcome().termination}"
+
+		self.game_canvas.create_image(20,20,image=self.chess_png(self.play_board),anchor="nw")
+
+
+	def reset_game(self):
+		self.play_board = chess.Board()
+		self.game_canvas.create_image(20,20,image=self.chess_png(self.play_board),anchor="nw")
+		self.end_res['text']	= ''
+
+
+	def run_model(self,i,e,s,output=None):
+		t = threading.Thread(target=self.train_model,args=[i],kwargs={"exp_replay":e,"simul":s,"output":output})
+		t.start()
+
+
+if __name__ == "__main__" and True:  
+	q = App()
+	q.run_as_ui()
+
+
+if __name__ == "__main__" and False:  
+	b = chess.Board(fen="5B1k/pp6/7K/8/3bq2P/3b4/8/1R6 b - - 0 1")
+	model 	= ChessModel(7,32).to(torch.device('cuda')) 
+	model.load_state_dict(torch.load('C:/gitrepos/statedict.model'))
+	#t = MinimaxTree(b,model)
+	
+	#t.expand(5)
+	n 	= Node(None,None,None)
+	alphabeta_bootstrap(n,model,4,-1*MAX_EVAL,MAX_EVAL,False,b)
+	print(f"{[str(r.move)+':'+str(r.evaluation)[:7] for r in n.children]}")
+	print(f"root val is {n.evaluation}")
+	exit()
+	q = App()
+	q.run_as_ui()

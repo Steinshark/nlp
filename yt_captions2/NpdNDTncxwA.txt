@@ -1,0 +1,68 @@
+this video is about a forbidden technique
+in python, the twin snake sacrifice juts-, storing mutable or non-hashable things in
+sets and dictionaries. normal sets and dicts use hashing, meaning
+when you want to check if an element is in there, you use the element's hash to pick
+the exact index where the element would go if it was present, so you can just check that
+one location instead of checking every location. it's kind of like when you go to the grocery
+store and need to find the milk. you don't walk through every aisle, you just
+go straight to the refrigerated section and if it's not there, then they're out, no need
+to check the rest of the store. but hashes are necessarily based on the state
+of an object in order to make hashes be different for as many different objects as possible. hash collisions are allowed, they just degrade
+performance. like if the grocery store made the whole store
+refrigerated then you would have to fall back to searching every aisle to find the milk. but if hashes are based on object state, then
+mutating the object would probably change its hash, so if you went to go find it later,
+you'd look in the wrong place. for that reason, the usual wisdom is that
+you shouldn't make mutable things hashable. python tries to enforce this by defining a
+hash for your classes by default, but not defining the hash function if you define an
+equals function. in practice, this is a solid 6/10 solution
+but realistically python can't do any better, it can't read your mind and there's no default
+that would suit every case, so if you have an opinion about whether or not your type
+should be hashable, then either define the hash yourself or set it to none. but sometimes you just want a set of mutable
+or unhashable things, so what do you do? you could use a list or create your own mapping
+or set type that stores data in a list, but this is not the forbidden technique. the problem is looking up elements becomes
+incredibly slow because you lose that constant time lookup that hashing provides. you're falling back to checking every aisle
+in the store for the milk. instead, let's take advantage of a key property
+of every python object, its identity. every python object, hashable or not, mutable
+or not, has an integer id that's guaranteed to be both unique and constant for the duration
+of its lifetime. you can access this id by using the built-in
+id function. id's can be reused, after one object is garbage
+collected, its old id could be reassigned to a new object, but as long as an object
+is alive, the id is an immutable hashable value that uniquely determines the object. i hope you see where i'm going with this. so what we're going to do is make our own
+mapping and set types that internally never hash the object itself, but instead hash the
+id of the object. in our mapping type, we'll still use a plain
+old dict, but we'll map the identity of a key to its key value pair. again, the id of a key is just an int, it's
+perfectly fine to use as a key of a dictionary, regardless of whether or not the key itself
+is hashable. the result of looking up an id is a key value
+pair. storing the key in addition to the value ensures
+the key isn't garbage collected and that the key's id won't get reused by another object
+as long as this mapping exists. getting an item now looks up the id of the
+key up in the dict and returns the value. setting an item maps the key id to the key
+value pair. and deleting an item deletes the id of the
+key from the map. there are a few other functions here but they
+are pretty straightforward, and we take advantage of the collections mutablemapping abc to fill
+in the rest of the usual dictionary interface like get, pop, and so on. our set type is similar, we keep a plain old
+dict of value ids to values. again we're storing the value in addition
+to its id to prevent values from being garbage collected while the set is still alive. adding an element to the set means mapping
+its id to its value, discarding an element means popping its id from the map, and checking
+if an element is in the set is just checking if its id is a key in the dictionary. once again, there are a few other pretty simple
+functions and we use collections' mutableset abstract base class to fill out the rest of
+the usual set interface. and there we go, we can now create a list,
+which is not hashable, put it in our mapping or set no problem, even mutate it in-between,
+and we can still look it up no problem. mutating the list doesn't change its id. great! so what's the downside? the downside is that when i lookup an element,
+i need to use the exact same object, not just an equal one. compare to a normal set, if i add 257 in,
+then add int(float(257)) in, the set just has one element, 257. but if i use the idset, the same code would
+add in two copies of 257, because the two 257s, although equal, are different python
+objects that have different ids. it is still a set and it does filter duplicates,
+but in order to be considered a duplicate, you have to add in the exact same object twice. this can be especially confusing for small
+object types like ints and strings or for types where it's not clear whether its operations
+mutate the object in-place or return a new one back to you. i highly discourage using these types with
+idmapping or idset, and this potential for confusion is the reason this is forbidden
+python knowledge. but, if you're certain your objects will be
+stored and looked up using the exact same object, then you might find this trick to
+come in handy. i take no responsibility for the criticism
+you get in code review if you actually try this though. it's forbidden knowledge for a reason. thanks to me myself and i for sponsoring myself. in addition to making esoteric and questionable
+python content on youtube, i also run a software consulting business. if you have a project at your company that
+you think needs some outside eyes, check us out at mcoding.io. and of course, thank you to my patrons and
+donors for supporting the channel. i appreciate the support and i'm glad you
+find my videos useful. don't forget to slap that like button an odd
+number of times, and i'll see you in the next one.

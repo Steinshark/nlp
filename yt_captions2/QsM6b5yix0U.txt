@@ -1,0 +1,60 @@
+snatch and smash. it's the viral trend that's breaking all the rules, and maybe your phone. this clip, with over six million views on tiktok, shows an elderly man sneaking up on an unsuspecting zoomer, snatching her phone, and smashing it right in front of her. hey, billy, did you see this on the tv news? it's fake news, dad. look, it's the same guy in a different hat. i reverse ai searched him, and his linkedin employer just says he has contracts at google and apple. it's just a stunt to promote icloud and google one. but you have the idrive, right? no, dad. my generation can't afford bmws. unsettling if true. now it's time for today's tech tip minute, where we're going to be showing you an affordable way to safeguard your data. watch this. i press this button and... instantly, my photos are syncing over the internet, but instead of to an expensive cloud storage provider, i'm backing up to the nas board right behind me. wow! look at it go! of course network-attached storage or nas devices are nothing new. what's
+special here is the value. the friendly elec cm3588 nas kit costs about what you'd spend for two terabytes
+of cloud storage per year and its arm-based processor from rockchip crushes the cpu in this $700 big name nas. as a bonus it's so efficient it can be powered by just a 2 amp 12
+volt input. there is one more thing you'll need to know before you can stop paying that
+monthly subscription and we're going to tell you all about it after the break. supermicro if you're
+in need of high performance servers to support your ai and machine learning workloads supermicro
+is here to server for up some great options. check out their petascale 1u and 2u storage servers
+at the link down below. . despite being able to purchase the cm3588 standalone, it's really intended to slot into their bundlable $35 nas kit that comes equipped with two and a half gig ethernet, three hdmi ports, one in, two out, usb 3, usb-c, a micro sd slot, and the star of the show, four full-sized m.2 pcie gen 3 slots. how is this only $35? i mean, i guess if you take away the expensive bits like the soc and the ram, a pcb and some connectors, it even has gpio. still doesn't cost very much. all we gotta do is install a cute little heat sink, click it into place, and we're done. but this ease of use is only part of the story. the other part is modularity. for now, friendly elec only has this one board, but in the future, who knows? a sata version for hard drives or maybe one with a pci express slot. that would be sick! and what's cool is in the future, if your daughter board
+still meets your needs but you want more performance, you could potentially upgrade the brain of your tiny nas without having to scrap
+the whole thing. i mean, no promises. the first iteration kind of has to succeed for there to be
+a follow-up, but as it stands right now, i kind of love it. this version of the compute board
+comes with 4 gigs of ddr4x memory and no onboard storage, so the expectation is you either use the
+sd slot on the nas kit or the compute board on the pc. or you upgrade to the 8 or 16 gig ram versions, which includes 64 gigs of emmc
+storage. we ended up with the latter, which brought our price to 160 us dollars. it's not cheap, but it's a really solid value when you consider that that's a
+one-time cost, kind of like our ltt screwdriver. yeah, one driver, many different bits. let's get these drives installed, but while we're doing that, let's talk about
+the options that we have. each of these slots is a pcie gen 3x1 connection, so that does limit our
+bandwidth a little bit, but it also opens up some very interesting options. for example, with inexpensive adapters, we could turn each of these into as many
+as 5 sata ports, giving us support for 20 conventional hard drives. we were more interested, though, in a tiny, power-efficient, solid-state nas. now... with only one lane per port, we're not going to be setting any speed records
+here, but, realistically, our two-and-a-half-gig network interface is going to
+limit us long before those pcie lanes will. which, realistically, gave us a lot of flexibility when it came to choosing our
+ssds. we obviously don't want anything unreliable, so we're not going to go with the
+cheapest thing, but we don't need to spend a fortune, either. so we picked these 4tb mp34 drives from teen group for $165 each. they're only gen 3, but they have a 5-year warranty, and they even come with a
+dram cache, though that shouldn't really have an impact on the relatively
+sequential video editing work that we would do off of this thing at a trade show
+or something. and for that matter, most nas duties are pretty similar, whether you're using it
+for pc backup, photo and movie backup, or even running a video streaming server
+with plex or jellyfin. and besides, because you're configuring your own, you can choose lower capacity
+drives, or you can populate just two slots. run them in a mirror for redundancy, then, six months later when you get a nice
+paycheck, you can add one or two more. so some of you are probably wondering then, why do you need a nas instead of
+just using external hard drives anyway? well, for starters, these things suck. they're a single point of failure, and
+they're super easy to lose. by comparison, a nas can be shared with anyone else on your network. which leads to point two, having all of your data on your personal machine is
+something that i have advocated against for years. your daily driver is the most likely to be infected
+by malware or to suffer a malfunction putting any data that's on it at risk. with that said, a
+single copy on a nas isn't best practice either and you should always follow the 3-2-1 rule. three
+copies of your data on two types of media with one of them being off-site. now we usually turn to
+truenas for these types of projects but with this board being arm based we were forced to look for
+another option and eventually we settled on omv or open media vault. conveniently, friendly
+elec's website includes a link to a google drive that has all the install files and
+instructions for the different methods of installation. we're going to be going from an sd card to our emmc
+storage. the process took about 25 minutes and at the end gave us an ip that we could use to access the gui for open media vault. we chose raid 5 for a balance of protection and capacity. and after compiling and syncing, we were left with, dang, almost 11.2 terabytes of capacity. now we wanna connect it to our windows-based computers. so we enable smb, the protocol that windows uses for network file sharing, and then create a shared drive. let's see how we did. different media file copying from our desktop to our tiny nas. wow, completely saturating our two and a half gig interface. that's awesome. i wonder how much cpu usage is happening. yeah, you can actually check that. we could check that. yep, pretty substantial amount. it's not very powerful. and transfer back. wow, there you go. it's almost like that's a lot of interface for a two and a half gig connection. did i mention it's completely flipping silent? barely even hot to the touch. what am i even listening for? there's no fan on
+it. just whatever, doesn't matter. do you know where there are fans though?
+flowplane. oh. go subscribe to flowplane. this is all fine and good, but it doesn't answer the question of how do we protect ourselves against the very real threat of snatch and smash. well, under the plug-in section in omv, you can grab photoprism, an
+ai powered photo library that we can use a separate application to sync to. in our case, we used photosync. so for just over $5, we're able to sync our photos with almost any storage solution you can think of, including photoprism. and what's really cool is the sync can work both ways. so if your phone ever dies and you need to replace it, you just re-sign into photosync and you can sync back from your nas to whatever new phone you get. no monthly subscription, just a one-time payment of this many dollars for the app. compared to more common setups, x86 processors on truenas or unraid for example, we did have times when we
+needed a little extra tinkering and know-how to get things working. but after jake spent a couple of
+hours getting plex up and running in a docker container, this little guy handled streaming just
+great to two concurrent clients. at least at 1080p it did. once we bumped it up to 4k, that was a
+different story. but hey, if you're not super satisfied with the playback off of this device, that's okay.
+you can run the plex server on a more powerful machine in your house, say your gaming desktop,
+and then just use this as a beef-caked out little external hard drive. all you need is a
+network switch. i am curious to see how it'll handle video editing though. as it turns out, the entire editing department is on lunch right now. so, i guess i get to do this. i'm scrubbing. i am starting to think. we've got our apple vision pro video here. this is the facebook version of it though, hence the super obnoxious aspect ratio. i can't even tell what the heck's going on. people watch videos like this? this is terrible. but you know what isn't? the nas. why don't we try 1/2 resolution? it's not the fastest thing ever, but realistically, this is reasonably heavy 4k footage. this was such a great moment in this video. and you can't really appreciate it at all because of the stupid aspect ratio. yeah, facebook. so, it's pretty great. and if open media vault isn't your thing, elec's list of supported os's includes versions of libyan-friendly wrt, ubuntu, and even android. so what are you waiting for? it's a linus-sized nas that can scale up to 32 terabytes of storage with a top
+spec price of $160, if you're okay with doing a bit of work. and the value is especially apparent when you look at the cost of the larger
+storage plans from the major cloud providers. google, for instance, wants $600 a year for their 10 terabyte cloud storage
+plan. that means it would take less than a year and a half to pay off this exact nas
+in this configuration with all the ssds. and that's with us going full ltt and making a solid state
+nas. so what can i say other than i give a strong recommendation to this small boy, just like i
+give a strong recommendation to this small boy. oh, and to our sponsor, supermicro. their petascale storage servers are designed and optimized to support data-
+intensive workloads like ai and machine learning. they have convenient rear i.o. and front i.o.
+configurations to make networking easier. they're available in 1u and 2u form factors, and they support
+up to 32 of the latest generation pcie gen 5 nvme ssds. they also tout single-socket sp5 amd
+epyc 9004 series processors and up to 24 dimm slots. not dimm, that's smart. plus, their 2,000-watt-redundant titanium-level power supplies will keep them chugging along, reducing maintenance costs and downtime. not to mention, their supercloud composer cloud management platform grants you access to a unified dashboard to integrate tasks into a single intelligent solution. so don't wait. learn more about supermicro's petascale servers in the description box down below. if you guys enjoyed this video, go check out the 90 terabyte nvme server that i ended up building and not taking home to my house. it's kind of the opposite of this, but it's still a fun educational video.

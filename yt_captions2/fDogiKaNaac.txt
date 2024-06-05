@@ -1,0 +1,109 @@
+- i made three critical
+mistakes building this computer. see, look. (finger tapping) it no worky. i didn't seat my ram correctly. and i didn't flip the
+switch on my power supply. or but wait. i said there were three errors. well, the last one, it's
+not gonna prevent the system from powering on. you can see it's powering on just fine. but what it is, is a
+silent performance killer. i didn't peel the plastic
+on the bottom of my cooler. baaa. "but come on", you might say. "not me, i mean, who
+could be that stupid?" and i thought like you once. until one fateful day,
+even though i had years of pc building experience. i was in the middle of build. i got distracted, pulled
+away doing something else, came back, carelessly put it together. and pow. plastic between my cpu and my cooler. but that raises a few questions. just how bad is it? is there plastic between
+your cpu and your cooler right now without you knowing it? and who's our sponsor for this video? ridge wallet has redefined the wallet with their compact frames
+and rfid blocking plates. get yours today at the link
+below using offer code linus to get free worldwide
+shipping and 10% off. (upbeat bass music) for the best possible performance, every heat sink or water block is finished with a smooth, flat surface. this is to ensure that there's as much contact area as possible. any small imperfection in this surface could easily impact the
+cooler's performance or even cause the system
+to thermal throttle. so that's why many manufacturers
+of cooling solutions include plastic covers, or
+at the very least stickers to prevent this sensitive
+area from being damaged in shipping or by the technician who's building your computer. so some for example, will
+have a hard plastic shell. this is particularly common on coolers that have pre-applied thermal compound like this water cooler from nzxt, i think. yes. one nice thing about this approach is that because it's so bulky,
+it would be pretty hard to accidentally install the
+cooler unless you've removed it. though, i'm pretty sure
+that has been done. most coolers use something more like this hyper 212 evo though. they've got like a thin film type sticker that usually, if the
+manufacturer is smart, has a warning that looks a
+little something like this. "please peel off label before you use it." "warning." (mimics ticking sound) nice little tab. of course, i'm not gonna
+pull on that tab today because what we wanna
+know, is what happens if you don't peel it. our first victim- (clears throat) participant is gonna be
+an intel core i3-8100 and this is for a couple of reasons. #1 is that this is a
+relatively inexpensive chip and i don't know what's going to happen. i don't think that it's going
+to be able to fry itself, but it is possible that
+this plastic could melt and render the chip inoperable that way. #2 is that this is an
+entirely realistic scenario. i mean, someone could easily
+be kind of half asleep on the assembly line at a
+computer maker like acer or dell. and it's possible that it could
+make it all the way past qc into the box and to your front door. or is it? oh, almost forgot to
+put thermal paste on it. [music] hoo hoo hoo hoo [music] (mimics crashing noise) oh my goodness, this feels so wrong. while we boot up, it's a
+perfect time to stay hydrated. lttstore.com. oh yeah, t-shirts too. we have mystery shirts now. what's a mystery street, you might ask? it's a mystery obviously. now brandon, you don't
+give away the mystery. right out of the gate,
+i can launch programs, browse the web. everything is like perfectly responsive. there is nothing to indicate
+that something's wrong. in fact, okay, this sorta
+spoiled the big reveal. i've even got counterstrike
+running in the background here at anywhere from 100 to
+150 frames per second. now that's not a lot
+for an rtx 2080 super, but that is a lot for a,
+you know, core i3-8100. it's the craziest thing. there's nothing about this experience to indicate that anything is
+the matter with this computer. now sometimes you'll have 200 fps, but you'll feel inconsistencies
+or stutters or hitches. that's not, oh hi. that's not the experience at all here. we've been playing the game for a while and blah, blah, blah, blah,
+we have lots of fps, etc. check this out. hardware info. a casual 45 degrees celsius, maximum 54 while gaming. if every cpu ran at 45-55 degrees celsius, the world would be a cooler place. of course, it's a
+well-known fact that games, particularly older ones, aren't capable of fully utilizing a multi-core cpu. so we fired up cinebench r23, and we're gonna let this run for a while to see if we manage to overwhelm
+our plastic coated cooler. (hawaiian music) a few moments later. with a maximum of 68 degrees, i feel like i have to prove to you guys. i'm just gonna turn it off. you're gonna see that this is in fact, the system i'm running. i'm gonna pop this cooler off. i swear to you, the plastic is on it. that's a completely serviceable
+operating temperature. i wouldn't even... i could own this computer for years and never realized that there
+was any kind of problem. and the craziest part is we actually turned on multi-core
+enhancement in the bios. so this thing is turboing to the greatest, possible extent that it can, even with an enthusiast class motherboard. come on over here, mark. i gotta prove this. we're doing this as a one-take. plastic baby. and get this. there was no effect to the
+chip physically whatsoever. so, that means i am ready to
+take things to another level. because the thing is,
+acceptable performance doesn't equal optimal performance, and surely if it didn't make
+any difference whatsoever cooler master wouldn't bother
+with this fancy little, hey, peel this thing off warning. so to take things to the next level, we're gonna go with an
+intel core i9-9900k. this is an eight core processor
+rated at 95 watts tdp, which on paper, doesn't
+actually sound like that much more than 65 watts. but in practice, intel's
+tdps are more like pirate code guidelines
+and this 65 watt chip, there's no way it actually
+consumes 65 watts. meanwhile, this 95 watt chip, especially if you enable
+multi-core enhancement, is gonna consume way more than 95 watts. and here it is. absolutely disgusting, right? (parts clicking) let's give it a chance. let's go with the cpu's default behavior. let's see what happens. and once again, no obvious problem. we're anywhere from 350
+to 250 frames per second. like obviously that's easily
+playable and it's smooth. this little core i9 (mimics gunfire) wow, there are a lot of bullet holes in the wall behind his head. how's my aim so bad? aha! but while we were gaming, we hit a maximum of 91 degrees and yes, we did in fact thermal throttle. and this is before we even ran an intensive all core load like cinebench. let's see what happens when we do that. and start. i'm expecting this to be pretty rough. ooh, 100 degrees instantly. and check this out. this heat sink is cool to the touch. so what the heck is going on here? there are actually a few
+factors at play here, starting with (mimics bang
+sound), surprise math lesson. this is normal. you've got your cpu and
+you've got your heat sink. you want all the heat
+to go from here to here, where it can be dissipated
+to the air around it. but there are a couple of
+different paths it can take. it can either travel from metal to metal because remember on a microscopic level, metal is gonna be textured, no matter how much you try to polish it. so they might meet up kinda like this, where those atoms are
+touching, that's where you're gonna get the best
+possible thermal transfer. for everywhere else, well, of course, there's thermal compound
+to fill in those gaps. that's gonna be r2. now heat is kind of like electricity in that it wants to take the
+path of least resistance. so these paths can be
+considered to be in parallel with as much heat as
+possible being transferred to our heat sink. this, is where our plastic comes in. now we've got this original
+resistance equation except kind of, there is no r1, because there is no metal to metal contact and therefore no optimal route. and then we actually have to
+add the thermal resistance, our plastic, which is
+gonna be a function of how thermally conductive our plastic is. hint, not very. and, how thick it is. hint, not very. but that's still really bad because the thermal resistance of
+plastic is so freaking high. so what that means in practice, is that with a very
+high thermal resistance, the difference in
+temperature between the cpu and the heat sink needs
+to be really, really high as the wattage goes up, right? so the more watts we're trying to move, the more heat we're trying to move between the cpu and the heat sink, the more that resistance hurts us. but, i did say there was more than one factor at play, didn't i? you might've noticed the
+computer is still running. that's because any modern cpu, whether it's from amd or intel is gonna be equipped
+with a thermal sensor, or in many cases, a suite of them, along with the ability
+to dynamically scale its own frequency. and working together, those two features are called thermal throttling. so what they allow the chip to do is say, hey, if we reach this
+predetermined temperature that the manufacturer has deemed unsafe, you need to dynamically
+scale down the frequency until we're not drawing any more power, and therefore putting out any more heat, than the thermal solution can deal with. so you can see here that, while the chip is absolutely running, it's getting a much
+lower score in cinebench, than a normal core i9-9900k would. and that's because we
+don't have enough cooling. and finally, there's how you
+actually use your computer. we saw a significant difference
+in throttling behavior between cs go and the heavily
+multi-threaded workload like cinebench r23. so the answer to our original question. just how bad is it? is it depends. if you have a low powered cpu or if all you do is game, it's possible, you've been running plastic
+on your cpu for years. and the worst effect you might
+notice is the odd stutter or hitch as your thermal
+throttling kicks in and drops your cpu frequency. or, if you're a heavy user, it's likely you're leaving a significant amount of performance on the table, or as a worst case scenario,
+your chip could even die a premature death because, as we all know, the cooler you can keep your cpu, the longer it should last. but good news though,
+is that if you screw up and you accidentally put the plastic on and go, "oh no, my temperatures are bad." and check it and fix it, the odds are that it's not gonna kill anything. not like my killer segues to our sponsors. sponsors like redux. redux offers pcs with no markup pricing. that means you pay what you would pay if you bought the hardware from a store and just a $75 build fee on top. you get a two year warranty
+on parts and labor, and you can use their
+online builder to customize what's going inside based
+on the games you wanna play and the performance you wanna get. redux believes in bringing
+pc gaming to the masses. even folks who don't feel
+comfortable building a pc. 'cause they think they might put the thermal compound on the plastic. and that is why they only
+charge a small build fee. and they won't cut corners on quality. so click the link below, and
+create your dream pc today. if you guys enjoyed this video, you might enjoy another
+kinda investigation into screwing up in our, "is
+your rig bottleneck" video. we're gonna have that linked down below.

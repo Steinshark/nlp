@@ -1,0 +1,67 @@
+I thought today maybe we would talk about 'grep', a well-known command 
+in the UNIX world. Something that's been around since the early 1970s. What 'grep' lets you do is to search for 
+patterns of text - arbitrary patterns of text in one or more files and there could be an unbounded number of files of input. Or the input could be coming from some other program, for example as it is if you're using Unix pipelines. So you take some program and you pipe it into 'grep' and 
+that way, no matter what the amount of input is, 'grep' can filter out, or show you, the things that you're interested in. And that's stuff that you can't do with a text 
+editor very conveniently - if at all. One of the issues with 'grep' has always been: Where does that weird name come from? And so I thought, perhaps, I could tell that story, if it would be 
+of any interest and we'll see where we go from there. The way it came about - you have to put yourself back in the 
+early days of computing, before everybody present in this room, except me, was born. Let's say something like 1970-71 -- the very, very, early days of UNIX. The computer that UNIX ran on was a PDP 11. At that point it was probably an 11/20. It was a machine that had very 
+very little computing power. It didn't run very fast. It also didn't have very much memory. Probably something in the order of 32K, maybe 64K bytes and that's 64 Kbytes, not megabytes. And very small secondary storage as well, you know 
+a few megabytes of disk and things like that. So, very very limited computing resources and that meant 
+that a lot of the software that was in early days of UNIX tended to be fairly simple and straightforward. And, that reflected not only the sort of ... the relative 'wimpiness' of
+the hardware but also the personal tastes of the people doing the work, primarily Ken Thompson and Dennis Ritchie. So one of the prop ... one of the standard programs that 
+people use is the text editor on any system The UNIX text editor was called 'ed', and it's not pronounced 'edd' At least by those in the know, it's pronounced 'ee dee'. And this was written by Ken Thompson and I think it was a, basically, stripped-down version of an editor called QED, which Ken had worked with 
+and done a lot of work on earlier. So a very small, simple, straightforward editor and the thing that you have to remember 
+is that, in those days, in addition you didn't have actual video display terminals - not of the sort that we're used to today, or 
+even 10 or 20 years ago. But in fact all the computing, all of your 
+editing and so on, was done on paper Remember paper? If you zoom down here you can see paper! This meant that there were a lot of 
+things that tried to minimize the use of paper. It also meant that editors worked one line at 
+a time, or multiple lines at a time, but there was no cursor addressing, so you 
+couldn't move around within a line. And so the 'ed' text editor reflected that kind of thing. Maybe what I should do is just a quick look at what 'ed' looked like? 
+so the commands for 'ed' were single-letter commands. So, for example, there was a command called 'p', Which stood for 'print'; there was a command called 'd',
+which would delete a line There was a command called 's', which took a little bit ... which 
+said 'substitute' so you could change this y'know, 'ABC' into 'DEF', or something like that. There was an 'append' command that simply said 'add some more text' and 
+you could add a bunch of lines and then terminate it with something. There was, of course, a 'read' command so that you could read information from a file, and there was 
+a 'write' command [so] that you could put it back in a file. a handful of other 
+things like that. So that was the essence of what it did. One of the things that 'ed' did very nicely was that, 
+OK, these apply by default to the current line But what do you do when you want to have more 
+specification of what lines you're operating on? And so you could say things like 'line 1 to line 10 print' So, this would print the first to 10 lines. 10 was that. But suppose you wanted to print all of the lines in the file? So there was a shorthand called '$'. So, I could say '1,$p' 
+and that would print all of the lines in the file. Or I could say: "Gee! I wonder ... I just want to see the last line".
+So I could say '$p' and that would give me that. I could even elide the 'p', but that's good enough. Or I could delete the last line by saying '$d'. Or I could 
+delete the first line by saying '1d'. That is sort of the line addressing. So far not very complicated. The thing that 'ed' added to all of that, and this is definitely 
+Ken's influence was the idea of regular expressions. So, a regular expression is a pattern of text - its a way of specifying patterns of text. They could be literal texts like the word 'print' or they could be 
+something more complicated, like things that start with 'Prin' and but might go on to 'Print' or 'Princeton' or 'Princess',
+or whatever, That kind of thing. And the way that regular expressions were written in the 'ed' text 
+editor was you said '/' and then you wrote the characters of the regular expression. 
+So, I could say '/print/' and that would be something that would match the next line,
+in what I was working on, that contained the word 'print' anywhere within it. eSo the regular expressions in the 'ed' editor 
+were somewhat different - a little more sophisticated, and complicated, than the regular expressions 
+that you might find in shell wildcards, where, for example, a star means 'anything at all'. So, the same idea of patterns of text - a slightly different specification - a different way of writing patterns but suitable for 
+text editing. And so, then, I could say things like "I want to find the next occurrence of the word 'print' in my file". And then there I would be. And on, and on, and on, like that. OK, so that's the 'ed' text editor. We are a long way away from 'grep' at this point. 
+So what's 'grep' all about? Well, it turns out that at the time that this 
+was going on, 'ed' was the standard text editor. But, as I said, the machines you're working on are very very wimpy. Not much computing capacity in a lot of ways And in fact one of the limitations was that you couldn't edit a very big file, because there wasn't enough memory and the 'ed' 
+worked entirely within memory and so you were stuck. One of my colleagues at the time, 
+Lee McMahon, was very interested in doing text analysis. The sort of thing that we would call today, perhaps, Natural Language Processing. And so what Lee wanted to do ... he had been studying something that, at the time, was the very 
+interesting question of who were the authors of some fundamental American documents called the Federalist Papers. 
+The Federalist Papers were written by, variously, James Madison and Alexander Hamilton and John Jay in 1787 and 88, if I recall correctly, There were 85 of these documents But they were published anonymously under the name Publius. 
+And so we had no idea, in theory, who wrote them And so there's been a lot of scholarship trying 
+to figure out for sure. It's well known who wrote some of them and others are still, I think, a little uncertain and so Lee was interested in seeing 
+whether you could actually, by textual analysis of his own devising, figure out who wrote these things. So that's fine. But it turns out 
+that these 85 documents was in total just over a megabyte - I mean down in the noise by today's standards - wouldn't fit. 
+He couldn't edit them all in 'ed'. And so what do you do? So one day he said: "I just want to go through and find all the 
+occurrences of 'something' in the Federalist Papers so I can look at 'em!" And he said this to Ken Thompson and then went home for dinner or something like that. 
+And he came back the next day and Ken had written the program -  and the program was called 'grep'. And what 'grep' did was to go through a bunch of documents - one or more files - and simply find all of the places where a particular regular expression 
+appeared in those things. And so the way ... it turns out that one more of the commands in 
+'ed' is a command called 'g'. And this stood for 'global'. And what it said was, on every line that matches a particular 
+regular expression - so, for example,'print'- I can then do an 'ed' command 
+So, I could say: "On every line that contains the word 'print' I'll just print it". So, I can see what my various print 
+statements would look like. Or I could, in some other way, say 'g' - and some other regular 
+expression in there - and delete them. So I could delete all of the comments in a program, or something like that. So the general structure of that is 'g' followed by (in slashes), a 
+regular expression, followed by the letter 'p' - g/re/p - and that's the genesis of where it came from. OK, and so this is in some ways the genius of Ken Thompson.
+A beautiful program, written in no time at all, by taking some other program and just trimming it out and then giving it a name that stuck. 
+That's the story of where 'grep' came from. Let me add one thing - 25 years ago [it] literally was the spring of 1993, I was teaching at Princeton as a visitor. And I needed an assignment for my programming class. And I thought "Hmm!" So what I did was to tell them - the students in the class: 
+"OK, here is the source code for 'ed' " It was at that time probably 1800 lines of C. "Your job is to take these 1800 lines of C and convert them into 
+'grep' as a C program. OK, and you've got a week to do it". And I told them, at that point, that they had 
+a couple of advantages. First, they knew what the target was. Somebody had already done 'grep' so they knew what it was supposed
+to look like. And all they had to do was replicate that behavior. And the other thing is that it was now written in C. 
+The original 'grep' was written in PDP 11 assembly language. And of course, they also had one grave disadvantage:
+None of them were Ken Thompson.

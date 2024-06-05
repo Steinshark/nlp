@@ -1,0 +1,209 @@
+hello and welcome to my perfectly normal nothing 
+unusual video about spatial derivatives in this   video nothing unnecessarily exciting will happen 
+it is just one nerd and they're whiteboard talking   about derivatives so we've got your position 
+in space X that's what I'm going to call our   position and I'm going to measure it in meters 
+but what if we want to take the derivative well   the derivative is just the rate of change over 
+time so that would be d x d t which means if   we've got a small amount of change in position 
+over a small amount in time what is that often   call it your velocity I'm going to call it speed 
+because we don't care about Direction and that's   in the meters per second unit category what if 
+we want to take the next derivative well this   is acceleration which you might know from 
+the accelerator pedal in the car if you're   American the gas pedal which stands for greater 
+automobile speed pedal so checks out now that's   if we differentiate with time again now a little 
+secret what it's actually doing is you're putting   another D DT which is another differentiate with 
+respect to time at the front of your previous DX   DT but because mathematicians are mildly lazy you 
+don't worry about all this you pop a squared on   the D you pop a squared on the DT and you're in 
+business you've now got acceleration which I'm   going to abbreviate to acceleration and that is 
+in meters per second per second meters per second   squared so far so standard but what if we take 
+another derivative well of course we can do that   mathematically there's no reason why we should 
+stop there over here we know the pattern just   continues it's going to be D cubed D that's the 
+worst three I've ever done d t cubed it's going   to be in meters per second cubed and it's going 
+to be the rate of change of acceleration and if   you're familiar with that you know that is called 
+The Jerk yep you got it and this is not a Perfect   Analogy because of friction but a jerk is when 
+you move the acceleration pedal around but how   fast are you moving it around what is the rate of 
+change of jerk well of course we can have more and   more derivatives the next one down oh goodness 
+I think I can just fit in the fourth power D to   the four over d t to the 4 which is going to be 
+in meters per second per second per second per   second what's that called what do you call the 
+rate of change of jerk well if you change being   a jerk that's an o snap situation rate of change 
+of jerk is snap rate of change of snap is crackle   I don't have to let us pop because physicists just 
+think they're that funny but as a mathematician   I'm obviously familiar with like the theoretical 
+derivatives but I want to actually experience them   I just haven't got a Need for Speed I've got an 
+e for Speed and it's higher order of derivatives   can I do something and log some data so I know 
+if I've definitely experienced jerk and indeed   snap but for that kind of crisp rate of change 
+of the rate of change of the rate of change of   the rate of change I can't just get in a regular 
+road legal car no I have to go into the world of   Motorsport and something like Formula One might do 
+the trick but if you want true pure acceleration   and it's higher derivatives you want to go on a 
+motorbike you want a MotoGP bike that's what I'm   going to experience jerk and hopefully snap so I 
+guess to continue this video I need to go ride a   Grand Prix bike so I'm gonna ride hey Grand Prix 
+Mike I'm here at the British round of Moto GP at   Silverstone Racecourse as part of the cosmic 
+shambles documentary about speed I'll link to   that below and they're actually going to put me 
+on a Grand Prix bike it's one of the Ducati bikes   from the 2012 season and they're going to send 
+me around oh there we are that's easier to talk   send me around the Silverstone waste track 
+so I can enjoy some extreme data collection oh my God [Music] yep I'm a bike guy now that's no no as I 
+mentioned that was because I was helping   out with the documentary you can watch the whole 
+thing I'll link to it below and if you want to   have a go at that it's run by a charity called two 
+wheels for life they will occasionally auction off   the opportunity to do exactly what I did which 
+is mostly motorbike people who do that in the   training they were saying things like no of course 
+reposition your weight and look into the Apex just   like you would when you're riding your own bike 
+and I'm like I write a very different type of bike   but they let me keep the gloves uh these would be 
+great for when I'm cycling is what I thought but   did not say out loud never one to waste a data 
+logging opportunity separate to the documentary   on my phone I just happen to be running an app 
+which dumped all the data from all the sensors   including the GPS and the accelerometers into a 
+CSV file so afterwards we can have a closer look   at it and see not only how fast did I go but what 
+level of derivative did I definitely experience   I'm going to take these off now first thing I did 
+was just pull off the GPS which is updated once a   second and gives you the latitude and longitude 
+and I just did those as a scatter plot and very   pleasingly you can see the path I went around 
+it looks like there's a gap here but in the   data I mean that's just kind of what I mean I also 
+you've got like all these clumpy bits So in theory   this is the Silverstone race track that I've gone 
+around and up here at the top is where we started   and stopped and then I mean this should follow 
+the shape of well let's check it you know what   um let's check it into Photoshop one second okay 
+we're in Photoshop I've just got the plot from   before and over here I went to Wikipedia from the 
+2022 British Moto GP thing and I got an outline of   the track so we're going to copy the track that's 
+the original one off Wikipedia there and I've just   orientated it with North up so it matches my 
+latitude and longitude here and uh let's have   a little look if we pop that in the corner ah look 
+at okay if I don't change the aspect ratio that's   maybe my plot maybe the ratio that's not bad look 
+at that that's kind of close it's not the worst I   mean you can definitely see the dots are roughly 
+the outline of the track give or take and GPS   I mean it's once a second it's not outrageously 
+accurate it's accurate enough but it's not super   accurate which is why we're not getting an 
+exact match to the shape why there's some   weird clumping here and there like all these dots 
+there that's just me going around quite a tight   corner you know the one that corner on the 
+Silverstone they've all got names and the   Gap here I know something went wrong so who 
+knows so GPS is pretty good but not amazing   it does also record the speed so she 
+better get the velocity for the speed   from the GPS and that's log separate and that 
+traditionally is more accurate because it's not   an absolute recording it's a relative measurement 
+so we'll bring that up here it is let me talk you   through what I've done this spreadsheet I've got 
+the uh exact time and date that each bit of data   was recorded and knowing that that's all text 
+so reference time is me just pulling that out   and turning it into seconds and then here my 
+absolute time is how far through the Journey   around the course and I picked a time to start 
+roughly near where I began moving and then this   is each interval so the actual data that's been 
+recorded by the app is a hundred times a second   but the distance and the GPS and the velocity 
+from that only updates once a second so we'll   get to the higher resolution stuff later and 
+then what I've done over here I'll scroll down   a bit uh you can see now I'm actually moving and 
+doesn't update that often and then over here I've   worked out the amount I will have moved from 
+that tiny bit of time at that speed and when   I add them all together you can see my lap was 
+5.5 [Music] six zero kilometers and Silverstone   is 5.9 kilometers so where within 10 like that's 
+pretty I think it's pretty amazing GPS and this   is not super accurate but if you actually work 
+out the area under this plot this is my velocity   plot and it's all quite chunky because it's only 
+once the second data if you add up all the area   under there it's within 10 of the actual distance 
+around the track and I think that's actually quite   amazing that you can just put a phone in your 
+pocket and get a measurement that is that close   um but this is not this is not good enough like 
+the resolution is not fine enough to be able to   look at acceleration with enough resolution 
+to then get jerk and snap so we're gonna have   to do something else but before we move on I'm 
+just gonna you know what I wonder what my Max   Speed was let's find out the maximum of all the 
+speeds and this will be in meters per second was   72 point 0.25 now I think that's going to be 
+pretty accurate let's just look that up now okay 72.25 meters per second in kilometers per 
+hour so my Max Speed was 260 kilometers an hour   oh my goodness what is that in miles per hour 
+I was doing 161.6 I was doing a hundred times   the golden ratio miles per hour that's so stupid 
+and the reason it's so incredibly fast by the way   is that was an actual like retired racing bike 
+so you know in my uh everyone's got a copy of   the uh motor course book from 2012. this is the 
+year that that bike was actually racing and so in   here I can find a photograph of the exact bike 
+there it is that's the bike I was actually on   going around the course so they converted it 
+to be a two-seater and by converted it made a   mildly bigger seat and welded two tiny handles 
+to the fuel tank thanks a lot so I was on that   actual racing bike which is why I was going at 
+such insane speeds and I've been asked to point   out that uh that oh that's a race worn helmet 
+from the 2012 season and that is not a it's not   2008 season I've just been told 2008 season 
+and this is also a 2000 that's also 2008 by   7 2007 bike as you can see not yet 
+a fully fledged bike person [Music]   and now we pick up the pace by moving on 
+to acceleration which is a whole other   thing because the accelerometers in the phone 
+very cool um they're logging a hundred times a   second roughly but as well as getting the like 
+the acceleration in three different directions   I'm also getting the angle the phone is on with 
+its pitch your and um uh roll that's the other   one and we need to better convert from the three 
+different acceleration components in the phone by   using the angle of the phone to work out in the 
+reference frame of the bike and of course you've   got gravity making the whole thing a complete mess 
+the phone does a little bit of the lifting for you   but a bunch of the heavy lifting mathematically 
+speaking has to be done after the fact which I   was not able to do so I asked very nicely I have a 
+podcast called a problem squared I do it back held   normally we solve other people's problems but we 
+also ask our listeners to help with our problems   and I put a call out for people who could take 
+my CSV and do something nice with it so I want   to very quickly thank uh Cass Visa Dom Wilson 
+and Jan Jan Jan Wolfe for giving me a hand and   crunching the data and sending through some nice 
+aversions which I then had a bit more of a play   with so well the final inaccuracies are absolutely 
+mine but uh here it is this is the acceleration   data in the direction the bike is pointing so 
+this is not the acceleration that's leaning me   into the corners it's not any of the up and down 
+movement this is pure forwards and backwards down   the central axis of the bike and I've plotted it 
+so you can see at the beginning the acceleration   goes up that's me accelerating uh straight down 
+the line um and then there's a lot of positive   there's a lot of negative oh my goodness there's 
+a lot of negative you can see down here that is   more than one G deceleration and actually there's 
+slightly more than a g acceleration over here I   think I got to like one point oh we can find out 
+let's find out there was some Max of uh that's   the acceleration in G there and that's the Min so 
+actually I'm at I think I hit like 1.1 G was the   most I had which is I mean the maximum that the 
+actual writers have in a proper race is apparently   about 1.8 G in terms of acceleration deceleration 
+down the line of the bike and so I mean I'm not at   the max but they're still it's a lot it's a decent 
+percentage of the total acceleration now before   we move on to see if we can take the derivatives 
+of the acceleration to get the jerk and the snap   in theory we should be able to integrate this 
+we should be able to take the area under this   and work backwards to get velocity we should 
+match the velocity we got from a completely   different sensor from the GPS so I thought you 
+know what just as a little bit of a validation   of what's going on I'm going to integrate 
+this first and get the same velocity plot   but through in a completely different means 
+and here's what that looks like it's not great   so I'll talk you through this plot so this is the 
+velocity plot here in meters per second and it   kind of matches what I remember happening in the 
+race that's us taking off from the line that dip   there was the rider doing a wheelie down the first 
+straight which is why the velocity flattens out   for a second and then the acceleration kicks back 
+in again uh and then so on and so on and so on now   you may notice at the end of the ride we are way 
+way up here and that's because we've got all these   values we're taking a hundred a second there's a 
+lot of inaccuracies that are going to add up so   this is why you've got the GPS and you've got the 
+accelerometers accelerometers are good in a moment   by moment basis but the accumulative errors are 
+pretty horrific whereas GPS is not a particularly   good Moment by moment give or take depending on 
+what you're doing but it doesn't it stays the same   over time and so I was like oh well I'm gonna how 
+am I going to compare this so I'm still confident   this is great on a moment by moment we'll still 
+get our jerk and snap that I experienced because   those will be very fleeting but I really wanted to 
+see if I can match this up properly so down here   all I've done in this plot is take the top plot 
+and over time try to compensate for the drift   which is not perfect it was a really lazy linear 
+correction I assume that the accumulating error   is linear over time and I've just deducted it 
+and it's given me this and the question now   is how close is that to the GPS one from earlier 
+and it's not wildly different I mean GPS there's   there's going to be some lag in there it's very 
+low resolution but you can still see accelerating   off the line really and then rapidly catches up 
+whereas here we've got a much smoother curve so   I think on a small scale the shape is better on 
+this one but the long-term accuracy is better on   the GPS one so what's really nice is I was able 
+to show we get exactly the same shape plot two   different ways by either taking the GPS location 
+and its derivative the velocity versus the   acceleration and its integral the velocity it's 
+a fundamental theorem of calculus moment [Music]   to recap I'm quite confident in the acceleration 
+data on a moment by moment basis so we are going   to do some derivatives I will say however that 
+having a phone on a vibrating motorbike which   is basically an engine with a few trivial Wheels 
+it's not the best way to collect that sort of data   and so we did have a lot of other vibrations and 
+things to be removed and so the acceleration data   as well as being converted to the bikes reference 
+frame has been filtered a lot to try and take out   um the frequencies coming from the motorbike in 
+fact a huge debt to Dom Wilson I'll be using Don   Wilson's filter data for the rest of my analysis 
+so again thanks to everyone who helped out with   the day even the people who had a look at it 
+but weren't able to do anything I appreciate   everyone who gives it a go but now we are going 
+to take this plot here which is our acceleration   plot and then we're going to take its derivative 
+to work out the jerk in the direction of travel   which looks like that that one down there so I put 
+an extra column on where I've just worked out how   much it changes between data points and 
+the time interval between them and there   I mean does that count I think that's a very 
+abrupt negative jerk oh my goodness yeah that's   that's a jerk where I'm really slowing down and 
+there's some pretty clear jerks early on over   here so I wonder what that was that's me that's 
+me going real slow you know what let's see if we   can match that back to the GPS coordinates and 
+work out what was happening so that jerk came   at 93.4 seconds into this data set so if I go 
+back to GPS and I come down to 93.4 seconds is   here and so that's when I'm at 52.7 and negative 
+1.01 and if that's is that low enough resolution   to be able to see it 52. that that's it 
+there there it's this part of the track huh   I mean it looks like it's a pretty sharp corner 
+but you know what we'll look up the footage we'll   see what was happening then and we'll play 
+in the moment when I was was a maximum jerk [Music] all right so I'm now convinced that I'm there I 
+experienced very distinct jerk I think actually   these points here are non-trivial a lot of these 
+smaller ones that could be noise in the data let's   go one further though see what our snap looks 
+like uh so there's our jerk and uh this is the   snap column I've put in there but I haven't 
+plotted it yet I thought we could all see it   together so I'm gonna do is duplicate The Jerk 
+plot pop that down here and then I'm going to   move it one over so instead of being the data in 
+column L I'm going to move it to column M so we   go in here and we change the data so that's now 
+column M and we're plotting M against the same   horizontal axis and it looks a little bit like 
+this oh wow that is real quiet and then real big   so look at this that is a lot of snap okay I 
+mean I know I know snap is all oh snap but that's   that's too much snap I think now I think that's 
+noise in the data I mean I believe in The Jerk   because when we look at the footage but that 
+that these snaps yeah yeah I think now with um   we've just hit hit mess in the day I could be 
+wrong not a professional at this I don't think I   could say just by eyeballing this plot having been 
+messed with by me and filtered by other people I   don't think I can definitively say uh that's 
+a snap but I will say that's a jerk [Music]   okay just had an update from behind the 
+camera a little Trent my Moto GP consultant   and writer director of the documentary I was 
+in saying that corner is the most kind of EX   acceleration deceleration you're going 
+to get on the course apart from I guess   maybe starting so maybe maybe snap let me 
+know in the comments below do you do a vote   if I think if you think I am a loud snap just 
+at some point in your comment put oh snap   if you think I'm not I'm being a jerk but you're 
+being a jerk and and that'll be the that's how   you decide things in physics you take a 
+vote pretty sure that's how science works that's it for my nice boring video about spatial 
+derivatives thank you so much for watching this   hello to all the students watching this in a 
+lesson at school thank you so much my patreon   supporters who make this possible please do check 
+out the documentary rapid motion through space   made by The Cosmic shambles folks uh although 
+Trend sitting right behind the camera right   now uh go watch go watch it it's on their website 
+um and ah huge thanks to two wheels for Life the   charity who got me on the bike that was great 
+and loads of other people I mean using footage   from Silverstone on the actual race weekend is 
+a non-trivial task in terms of both my bravery   and admin so we're going to thank everyone 
+Below in the description uh please do check   that out and that's it thank you for watching 
+I hope you enjoyed this lesson about to reverse [Music] thank you [Music]

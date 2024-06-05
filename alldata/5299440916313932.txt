@@ -1,0 +1,16 @@
+import torch
+import math
+import random
+import numpy 
+
+
+def rebuild(tensor:torch.Tensor,u:torch.Tensor,s:torch.Tensor,v:torch.Tensor,n_dims=256,mode="rebuild")->torch.Tensor:
+
+    if mode     == "rebuild":
+        mult1       = u.type(torch.float32) @ s.type(torch.float32)
+        print(f"mult1 shape = {mult1.shape}")
+        mult2       = mult1 @ tensor.to(torch.device('cpu')).type(torch.float32)
+        return mult2
+    
+    elif mode   == 'reduce':
+        return tensor.cpu().float() @ u.cpu().float()

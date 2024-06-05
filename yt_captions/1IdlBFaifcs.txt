@@ -1,0 +1,45 @@
+>> Sean: We've looked at Chomsky and we've looked at Finite 
+State Automata, and you've given me a sneak preview about what might be next, and my first thought was "What do all these notation marks mean, and where do they come from?" >> DFB: Chomsky instinctively went for a notation that appeals to mathematical logicians or theoretical computer scientists 
+nowadays -- very tight, very compact. What he would basically say about a programming 
+language identifier, which we're trying to define, is that everything in Chomsky's
+world is a sentence. We've covered this already in the car park: "A legal sentence in this language is five-five-five-five-five." So everything's an 'S' in Chomsky notation. What he would say about the identifiers problem ..., 
+In sensible languages, we've got to start off with a letter. I'll call that L. And then, the tail piece of the identifier. Well, it could be nothing at all because a single letter is an
+identifier in pretty well every language. But the tailpiece could be more letters, more digits, in any
+combination. Fine. Now, round about the time late '50s turning into 1960, there
+was a whole bunch of them defining the language ALGOL, which was the first language to
+be designed by a committee and ran into all the usual committee problems, but when you
+think back to that era, FORTRAN was there, COBOL was there, they never, until later
+on, had a formal definition. The ALGOL people said we are going to use something like
+Chomsky notation to define what's a legal program. John Backus and Peter Naur, who were on the ALGOL 60
+defining committee -- Backus was famous as one of the big inventors of FORTRAN; Peter Naur, a very famous European computer scientist -- they said we need something that is more self-explanatory. And they invented a notation that looks like this:
+pointy brackets! Yes, this early on! And we are going to say, an identifier - not a
+sentence, it's an identifier we're trying to define. And rather than using Chomsky's arrow, which they felt might
+occur in the middle of a program and cause confusion, they wanted a "is defined as" operation here which wouldn't
+ever occur inside a program. But they wanted it to be clear it was part of the definition. And they said, "Easy, we're not going to call it L, we're going
+to say ". And you see the advantage straight away: That you can then
+say, ahh!, it's a letter followed by a tailpiece, which we'll call . By putting things in the pointy brackets, we're saying:
+We don't literally mean that you must look for the characters l-e-t-t-e-r on your input, no, we mean
+"anything that can be a legal letter". So further down here there'd be another definition saying a 
+letter is an 'A', a 'B', a 'C' (...) all the way up to 'Z', and all that. The tailpiece is far more complicated because it's any mix of
+further letters or further digits, but there could be a definition for digits. But the point is, they're readable things here, they're readable
+notions as they're sometimes called. And they are pretty well self-explanatory, far more appealing
+to be setting out a definition of a programming language, than you forever having to remember, "Oh, a letter capital
+'D', is that a digit or is it a denominator?" You know. Of course the theoreticians say, "Oh, it's far too verbose, but
+yes, I expect I do understand. You've got to make it clear to people who have got no brain,
+exactly what's going on." So this was very popular for defining languages. >> Sean: So this is a bit like having a how-to guide, is it? Like
+saying "This is not programming; this is how the programming works." Yeah, exactly, it's a blueprint for legal programs -- all of them
+-- they've got to fit into this template basically; that's what the formal definition did. And the interesting thing, as many of you are yelling at me now
+is, "This is XML, isn't it?" It is the forerunner of XML. XML, as some of you know,
+started of with a thing called SGML, which was its earlier form, but it was refined into being XML. And right back from the early SGML days, somebody saw
+Backus-Naur Form notation and said "That is going to be fantastically useful for what we
+want to do." The characteristic of this [BNF] stuff is that you never ever
+see it in the actual language itself, and we can see advantages in actually making these appear
+in documents. Now, we all know this, don't we?! We all accidentally see a listing of
+our Web pages that went wrong and you see things like . So this is XML, be clear. You see things like . >> Sean: And actually, if anyone right-clicks on the YouTube webpage
+and selects 'View Source', they're going to see all this (...) 
+>> DFB: Yes, they're going to see this, all of that. But what the XML people realized was that so long as you
+introduce the "end-of" slash -- just elaborate the notation a bit -- you really could use it in
+an actual document. Say: "the paragraph starts here" and "the paragraph ends here". The break-line here, it starts and finishes, it's just a marker,
+and most browsers are tolerant if you miss the slash out, but, you know, theoretically that should be there. So, they gave it some new lease of life, really, by saying, well,
+we're not going to just keep it in the abstract, we're actually going to use it, within documents, to clearly delineate
+where things start and where things finish.

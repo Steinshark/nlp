@@ -1,0 +1,67 @@
+import chess_utils 
+import math 
+import random 
+import chess
+from MCTree import MCTree
+import os 
+import json
+import time
+
+DATAPATH        = "C:/data/chess/mcts_train"
+
+
+def softmax(X):
+    if len(X) == 1:
+        return [1]
+    else:
+        max_val     = max(X)    
+        shifted     = [math.e**(x-max_val) for x in X]
+        shifted_sum = sum(shifted)
+        return [x / shifted_sum for x in shifted]
+
+
+def generate_data(n_games):
+
+    data    = []
+
+    for _ in range(n_games):
+
+        tree                = MCTree()#from_fen="rnbqkbnr/2ppppp1/p6p/1p6/2B5/4PQ2/PPPP1PPP/RNB1K1NR w KQkq - 0 4")
+        result              = None
+        game_experiences    = []
+        while result is None:
+            t0  = time.time()
+            #Run search
+            move_probs      = tree.calc_next_move(n_iters=1000)
+            revised_probs   = softmax(list(move_probs.values()))
+            probabilities   = [0 for move in chess_utils.CHESSMOVES] 
+            for move,prob in zip(move_probs,revised_probs):
+                # print(f"move {move} -> {prob}")
+                probabilities[chess_utils.MOVE_TO_I[move]] = prob 
+            
+            #Append data            
+            game_experiences.append([tree.board.fen(),probabilities,0])
+            
+            #sample and make move 
+            next_move_i     = random.choices(chess_utils.CHESSMOVES, probabilities,k=1)[0]
+            #print(f"probs are {move_probs}")
+            #input(f"next move is {chess.Move.from_uci(next_move_i)}") 
+            #tree.board.push(chess.Move.from_uci(next_move_i))
+            #tree            = MCTree(tree.board.fen())
+            result          = tree.make_move(chess.Move.from_uci(next_move_i))
+            #print(f"move in {(time.time()-t0)/sum([p for p in move_probs.values()]):.4f} s/iter")
+        for i in range(len(game_experiences)):
+            game_experiences[i][2]  = result
+        data += game_experiences
+        
+    #Get file to save to 
+    offset  = len([int(file) for file in os.listdir(DATAPATH)])
+    print(f"saving to {os.path.join(DATAPATH,str(offset))}")
+    with open(os.path.join(DATAPATH,str(offset)),'w') as file:
+        file.write(json.dumps(data))
+
+if __name__ == "__main__":
+    t0  = time.time()
+    n_games     = 5
+    generate_data(n_games)
+    print(f"played {n_games} in {(time.time()-t0):.2f}s -> {(time.time()-t0)/n_games:.2f}s/game")

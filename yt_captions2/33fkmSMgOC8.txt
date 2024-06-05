@@ -1,0 +1,212 @@
+- i believe we will be the first to game on a development kit. words cannot express how
+excited i am right now. i've completely sequestered myself. i haven't looked at any other coverage. i haven't looked at any pictures, and i have not yet opened this box. but inside here is an xbox series x. totally normal, except for the fact that it has 40 gigabytes of ram, extra buttons on the front, an oled display, and it
+looks absolutely nothing like the xbox on the shelf at best buy. that's because this xbox
+is not for playing games, it's for developing them. and because these dev
+kits, as they're called, are the property of microsoft, very few of them make
+it out into the wild. microsoft, by the way, i know this is technically
+stolen property. we good? just give me a call, i'll have
+it back to you right away. but i do need to play with
+it for a little bit first. and play i actually may. now gamers nexus recently
+also got their hands on a series x dev kit, but they weren't able to
+actually run any software on it. as for ours, we believe it
+may still be in working order. but all of this raises
+quite a few questions. why do these kits exist? how the heck has everyone been getting their hands on these lately? why does it look so different? and of course, who is today's sponsor? humble bundle. that's right, we're
+partnering with humble bundle to support life lights and the bc children's hospital with their handheld pc power bundle of eight steam deck verified games. learn more at the end of this video or by using the link down below. (upbeat music) either my left arm is way weaker or this thing is way heavier than the actual finished product. it has 10 gig ethernet. what the (beep) is going on right now? okay, we need to get this going here. i know absolutely nothing about this, other than that it's a dev kit and dev kits are a thing. i can't believe it has
+a 10 gig network port. why is it labeled debug? i guess if they wanted to know what the actual hardware capabilities are when downloading files at like, future network speeds
+or something like that. based on the history of this device that we got from our seller, we're pretty sure that aside from them and our logistics team, who had to inventory this bad boy, we're the first ones to
+really unpack everything and power this thing on. a small studio went under and a few of these
+special development kits ended up sitting in a warehouse somewhere. they got access, picked one up, posted it to reddit and
+the rest is history. we ended up paying somewhere
+in the neighborhood of around 2,000 us dollars. thank you very much seller, who posted a price and then
+turned it into a bidding war. we're very happy we have it, because opportunities to get your hands on a codename scarlet development kit are not going to come around very often. i mean, outside of developers, nobody should ever see this. and yet, here we are. these are features that most
+people really wouldn't need. don't give them too much information. i mean, last thing you want is the exact details leaking, and i (beep) guarantee you that part of the legal agreement you have to sign to get one of these says you do not open it up. stack up to five xdks vertically. yeah, for them, that would be
+a pretty big deal, i guess. you know, you gotta pack
+in your play testers. why else would i need to stack xboxes? come on, tell me. sit,
+come, come, come, come. - that's pretty much it. one qa person might have something like four xbox, four kits at their desk, and they're gonna stack
+them to save space. and then on top of that, you're gonna have racks
+that are running automation and stuff like that.
+- oh! - and usually, you can get
+away with having each one on an individual rack. that's the ideal. but sometimes, you stack
+them up a little bit. - and it's something like this? - lots of stuff. i put it all in the script, but... (people laugh) - plausible deniability right here. "i don't actually know
+what the buttons do." - i know what the buttons- - "but here's my concept of what-" - they can be programmed.
+they can be programmed. so they can do whatever you want. you would show something
+like animation states. nav mesh that's on the ground so that you can see like, "oh, there's a level here." - there's a hole that
+they can fall through or something. - there's a hole they can fall through, or "why are the enemies moving around?" "oh, there's no nav mesh."
+- oh, so cool. - so you can turn on nav mesh. - cheat buttons! - kind of. these are probably more
+like, "turn on fps, "turn on geo, turn on..." like, stuff like that, yeah. so you want like, a quick store button, you can be like press the number five and it'll take you to the store. it's whatever the
+programmers wanna do, right? and then give the tools to qa so that they can qa faster. - programmable oled display, and i can see right here, it's showing ssd speed and fps. especially now that we know that xbox is more of an ecosystem and less of an individual device, and they intend for games
+to run on multiple tiers of the hardware, like, if i wanted to upsell better xboxes, enable fricking fps
+counters, you buttheads. why do i have to explain
+why this is a good idea? front facing usb 3.1 gen one, so you can just connect all
+the controllers with a wire. so microsoft knows it's
+convenient, they just don't care. what that tells you is that the soc has this functionality. it is definitely in there. they did not re-spin it
+and remove usb c from it. so it's got a total of six usb ports. four type a, two type c,
+and microsoft removed them. it has a higher speed development ssd. it's like, it's some of the coolest stuff, whether you're sony or
+you're microsoft or whatever, it's some of the coolest stuff they make, because it's the cutting edge. look at this giant foot.
+- i know. - that's not a foot,
+that's a whole fricking... - can you see the clarence, so you can stack them no problem. like, all this fan here and all the vents around the side? we actually had a retail kit
+like, catch fire at one point, 'cause it was stacked. 'cause the old xboxes, they had
+the vents on the top, right? on the one side?
+- yeah, yeah. - okay, let's talk about
+unoptimized builds. that would be why it has 40 gigs of gddr six memory then, right? - pretty much, but this one's
+a little out of the ordinary, because normally, so
+for example, a scorpio, the dev kit had double the memory. 12 gig kit, and then the scorpio had 24. so they just doubled it. with this, a series x is 16 gigs of ram, so they more than doubled it. - more than doubled it. - yeah, it went from 32 to 40. so they've added a whole
+eight extra gigs of ram. - i'm just gonna open
+this shell. i'll be good. - okay, yeah, just be careful
+with the thermal pads. - i'll be good, i'll be a good boy. - it's not even pads-
+- good boy, good boy. - they do give these to
+development companies, but you can only get like,
+two of them for free, or for cheap. they rent it to you for like, a hundred bucks or something like that. any more kits than that, and you will usually have to pay a price. i can't speak to how
+much this one will cost or what xbox is doing now, but like, for example,
+when i was at (beep), we had a giant stack of
+boxes of ps4 dev kits, and they were like, "yeah, those are like, 2,400 bucks a pop." so a lot of people are actually using the retail kits for
+testing a lot of the time because they're so
+expensive comparatively. - got it. - and you mostly just need these guys for like, tool development.
+- sure. - engine development and optimization and stuff that you'd look at before the game comes out, or before the console launches, right? - you heard it here first. ifixit repairability score, very low. lots of adhesive. now hold on a second. let's say i declare myself to
+be a game development studio. i hired a game developer guy or something. i'm gonna make a game. so what? microsoft will
+just send me two of these? - you have to apply and
+become part of the program. it's called the game developer program or something like that, part of microsoft. - [linus] got it, so they have
+to say "yes, we actually..." - yeah, you have to like,
+pitch them the game, and be like "okay, here's our game, "we wanna make it for xbox as well, "can we please have a
+development kit or two?" and they'll typically send it to you. i thought you were just
+gonna play games on it. (beep) - how long have you worked here? - it's okay, david. if it breaks, it's just the plastic part. it's fine. the ports are still there. - yeah. relax, buddy. - cool. - so that's interesting. these are very, very
+not meant to be removed. you can see they're
+actually melted into place. - [david] fantastic. - they don't expect engineers to like, tear these down or anything. if there's any kind of like, major architecture over haul for it, then they'll try to figure out how to run their games
+on the new architecture. but luckily, they're all
+pretty much computers now, so it's a lot easier. like, ps3 was notably
+really a pain in the ass to develop for. - all right, we might have
+to go a little deeper. oh! okay. - it's probably more of the
+same kind of plastic clips. - oh, interesting. - [nicholas] they're really
+not meant to be taken apart. - this is one time assembly,
+ladies and gentlemen. you know what? this is as far as i wanna go before at least trying
+to power this thing up, because i can see that there's some strain on these front usb ports here, as i'm trying to tilt this up. and it's very clear that this thing is just melted plastic riveted together. i was pressing this button right here, and just like, "oh no,
+it's not doing anything," 'cause i thought the pcb
+was mounted behind it. but the pcb was actually here, so i had to press the switch here. wait, so ours works! - so ours should work. so that's the thing, is
+basically everything, it needs internet. we can play games, theoretically, we should be able to pop a game in and it should be like "yeah, sure, "you can play it, 'cause
+you're not signed in" or whatever. - whoa, what did you just
+do? did you do cheat codes? - kind of. you can do this on a retail xbox as well, but basically, you hit
+l-b-r-b-l-t-r-t really quick, and it brings up a developer settings tab. normally, what you need to do to get more development stuff, is that there's an actual like, xbox developer xdk app that
+you go and you install. it's called like, dev kit or something. and you look it up in the play store and you install it. we can't do that for obvious reasons, but every xbox can do this, where you just bring up this
+little extra hidden menu, and then you can pop
+it into developer mode. console will restart after that. but while you're here, you
+can get a bunch of stuff. so it tells you what your sandbox id is, it gives you like, a
+console ip, a tools ip, kernel version, os
+version, all that (beep) that you can see, yeah. the main thing that we
+use the sandboxes for is for different development environments when you're testing a game. - [linus] okay. - so for example, retail is just retail. this is if we were in retail sandbox, we would be pointing to every other kit that's on the market right now. it would be part of
+xbox live and all that. there's normally like, three
+or four of these, at least, and everyone's testing different stuff in each environment. - right, so it could be in
+like, very early production, where you're just testing "can we even get this function to work?" - yeah. - then it's gonna go to bug testing, then it might go to optimization, and that's what you're talking about. - kind of, yeah. so like, all the qas'
+probably on like, test, and then once you're
+ready to go to production, like before you push out an update, you test everything on basically
+what's a copy of retail. - flip plane calls it pre-prod. - sure, yeah, but
+exactly, that's all it is. your different staging environment. - it has to be staged in
+multiple data centers. microsoft has to pay for that bandwidth. i mean, we've seen events,
+like major game launches, where internet traffic as
+a whole has gone phwomp. i mean, microsoft can't even
+do it with a windows update, and nobody even wants to download those. (nicholas laughs)
+- [david] boom, roasted. - what it's usually looking for is when you've got it not connected to a white listed network, and we would have ports at our desks that are like, this is the
+port you connect everything to. - touch nothing else. - this is your like, random pc port. that's for everything else, basically. - okay. look at that. internal storage development ssd clear local xbox 360 store. is that a thing on the regular xbox? that's like, separate
+storage for xbox 360? - this was all probably standard. one thing you can get for free, and just that's available to the public, is the regular sdk. but that only lets you make pc games or for pc game pass. it doesn't let you do
+any actual xbox stuff. that's all under nda. - [linus] i'm not gonna check
+the network, don't you worry. - it probably wouldn't do anything here, but yeah, if we're plugged in, i'm sure it would be like
+"no, this is not recognized "as a white listed account" or whatever. - okay. - so throw on "mass effect." - "mass effect." - oh, something went wrong. - whoa, hold on a second. - [nicholas] these error
+codes are probably in like, on microsoft's website. - insert first disc. - oh, okay. oh, this is fine then. - this is the eject... how do i eject? - the little button on the side there. - i was trying to figure out, oh, could we use the 10 gig
+to speed up this download? - oh yeah, it's a disc. - right, we're going off a disc. okay, i'll just be patient. - please god, don't plug
+in the frigging 10 gig. - i'm having so much fun right now. - [nicholas] so they're on 35, 42. so this is pretty old, comparatively. - this probably showed up
+in that developer's studio in like, early 2020, late 2019. - possibly, yeah. oh, a date, december 12, 2019. - that's the last time it synced. those who know, know. oh, right. it's fine, we're not
+connected to anything. i keep freaking out, "okay, if we don't enter
+the password, it's fine." it's irrational, it's totally irrational. this thing has no way of talking to a microsoft server. that we know. you know, when's the
+last time you sat down in front of a computer that didn't have an internet connection. - oh yeah. - and you were like, let
+me use this computer, and you realize you can
+do absolutely nothing on a modern computer without
+an internet connection. - unless you're lucky and you've got steam already launched and you click "go offline" or whatever. - yeah, like you can play some solitaire. - yeah, pretty much. they don't even have
+"space cadet" anymore. - open up notepad. - and be like, "here's my cool xbox "i can't use for anything." people come over, you say "hey,
+you wanna see my dev kit?" you bring it to the room and you're like "there's the dev kit." - well look, maybe if i was still single, and i really needed to
+impress the chicks... - sure, yeah, that's the ticket. - "guess what i've got." - yeah, "you wanna see
+my project scarlet?" - outside of a game development studio, i believe we will be the first to game on a development kit. - the ps1 dev kits were
+like, sgi machines. like, you would make the
+game not even on a computer, it was like on a work station, and then import it to the playstation. - making sure people know that... - that stuff costs 10s of thousands. even the old consoles, like,
+xbox gives these away kind of to dev kits, right? or to developers. but even as far back as like, ps3s, like i said, they were
+like $2,500 per kit. and if you're (beep)
+with 60 dudes downstairs playing just (beep) and
+(beep) the whole day, that's 60 xboxes, you know. - right, that adds up pretty fast. - that's a lot of money. i've seen everyone set up stuff wrong. - 'cause then you just
+don't even have the hassle of like, "oh, i accidentally plugged it in "to the wrong port,
+and fricking worked it. "great." - yeah. - he's not seen anything.
+this is just speculation. - yeah, i haven't seen anything. - allegedly. - i'd never do anything wrong
+at a game development studio. everything goes perfectly smoothly. - yeah, we're trying to keep
+your butt covered, okay? and we're trying to keep
+the rest of him covered. we've got the stealth
+hoodie from ltt store. we've got the dad hat, we've
+got matching hats today. - [both] eeeh. - go check out ltt store. we've got lots of new
+colors of water bottles, they're fricking amazing. and i believe party
+shirts are back in stock, unless they're gone by the
+time this video goes up. you know what, i'll let you do the honors of playing on a dev
+kit for the first time. no, i'm joking. he's not even excited about it. i wanna game on it. - okay. - plouffe is back from willow video. shout out willow video. those guys are awesome. and the first one i'm
+gonna try is "dirt 5." all of these are either launch titles or they're xbox 360
+titles with backwards... - compatibility. - that's the same error, isn't it? - this one is a different error code than what i got before, but it's a lot of like, incompatibility or it may be due to a
+network or service issue. - how much money did i
+just waste on xbox games? - like, a hundred bucks.
+- oh! - it's not that bad. - what do you mean, it's not that bad? a hundred bucks is a hundred bucks. okay, here, can i have a hundred bucks? - i mean, i don't have cash on me. you want me to e-transfer
+you a hundred dollars? - excuses. - so there's one thing that we can try. - oh. - this is kind of a wrench in the plans. there is an offline-
+- a good wrench? - maybe. there's an offline system update. hold on, there's specific instructions on how to do this. - [linus] full shutdown. - [nicholas] yeah, full shutdown. - is this something you know
+from your development days? or like, is this just crazy... ? - no, i just started googling if you could do an offline system update, and like, turns out you can. i don't expect this to work. - yeah, right, because this
+isn't even the same hardware. - yeah, so, but we might
+as well give it a shot. wait 30 seconds and then
+plug the main leads back in. oh, that's to like,
+kill the power for sure. - that doesn't mean 30
+seconds. 30 seconds is bs. - no, but... - if we just try and start it. let me just try to power it on. - yeah, sure, that should like, cycle any juice that's in there. you got it?
+- yeah, go for it. - press and hold the pair button located on the left side of the console. is there even a pair button? yeah, that looks like the pair button. and the eject button located
+on the front of the console. - well, the locations are
+not gonna help me, sir. - i know. - this is a different console. sir, sir. - i meant press the xbox button
+on the console, so then... so you've got those?
+- yeah. - okay.
+- okay. - continue holding pair
+and eject for 10 to 15. it made a different noise this time, so i think it's doing it. - probably doesn't need anymore- oh, hi.
+- troubleshoot, cool. - [david] oh buddy. - so.
+- oh! - [nicholas] oh, there it goes. - [linus] oh, only the d-pad
+works. that's interesting. - [nicholas] it's probably
+just like, a really low, like a safe mode kind of thing. - [linus] whoa, no, (indistinct), shut... okay, wait. - [nicholas] downloading from the... nothing's plugged in, nothing's hooked up. - okay, but what i was
+actually freaking out about was i thought it was like, "yes, this will work." but if it hasn't downloaded the file, it can't do a checksum
+yet, so it might not... it might be thinking... maybe it downloads fricking
+any file with that extension. and then it'll check it after. - yeah, but it's not
+connected to any network, so like, i have no idea if
+this is going to work or not. - we made it 100% of the
+way through verifying without it freaking out and saying no. - and it is supposed to restart once or twice during the update. - i'm starting to... oh, i'm getting tingles. i can't believe you found this. 'cause yeah, they would have to have a way to update it offline, just in case people don't have internet. - [nicholas] yeah. - holy crap. if this works, microsoft is
+definitely going to make sure that this is fixed for the next one. - well, these aren't supposed
+to even get into our hands. - hold on just a gosh darn second here. - [nicholas] check the firmware. - [linus] this does not look
+new. holy crap, it updated. - [nicholas] it totally did, yeah. - holy crap. - that doesn't guarantee
+that these are gonna work. - "mass effect," here we go, boys. - it could still need some kind of- - play disc! - i still think it's gonna need some kind of network handshake, and it's gonna say no.
+- yeah. - whoa, ho, ho, ho! okay, wait, hold on, hold
+on. we could still... shut up. we could still try one
+of the earlier ones. - sure. no.
+- [david] yeah. - no dice.
+- [david] damn. - you know what? we got the 10 gig one is debug. - oh right. - and the other one says retail. so we should use the one gig port. - network settings. current network status, wired. oh. - [linus] checking service - [nicholas] it's trying to do something. - it's trying to do
+something. it's not working. to be very clear, guys, this is not gonna like,
+perform better or anything, it's just... holy (beep), did "f1
+2019" just do something? does it say "ready to start?" - [nicholas] it's updating. - now hold on a second... something went wrong. "getting your game ready, this
+might take a minute or two." holy crap, i think this is doing stuff. we are downloading "f1 2019"
+61 megabits per second, ladies and gentlemen.
+- oh, there it is! - no, it's banned! - "console is banned
+from the xbox network." - it's banned!
+- there it is. - we got the splash screen
+for "mass effect" to come up, and then it instantly went to ban. - "who are you?"
+- "something went wrong." - "give it another
+try." yeah, it's (beep). we didn't have that tile, it was good. - desk flip. - back to microsoft it goes.
+- yep. - "there's a problem with
+your xbox live profile." - [david] yeah. - oh yeah, that's definitely it. - yeah, it's borked. - [david] nice. - okay. - [david] $2,000 paperweight, let's go. - eeh. - well that's okay.
+- we tried everything. - and you know what else is okay? our sponsor. humble bundle. for a limited time, we are
+partnering with humble bundle to bring you the handheld pc power bundle. for just 20 bucks, you
+can get eight great games, including "orcs must die 3," "mechwarrior 5: mercenaries," and "mutant year zero: road
+to eden deluxe edition." all of the games in this collection are controller friendly, and are steam deck verified or playable. plus a portion of the
+proceeds will be donated to life lights and the
+bc children's hospital by way of the children's miracle network. so whether you have plans
+to get a steam deck or not, this bundle is the perfect
+way to get some amazing games, and support children in
+need at the same time. if you're not familiar with humble, their mission is to support charity while providing awesome
+content to their community at great prices. almost all of the games, books, software and digital content that they sell contributes to a charity in need, and when you join humble choice, their pc gaming membership, 5% supports their featured
+charity of the month. so learn more and get the
+handheld pc power bundle using the link down below. if you guys enjoyed this video, another really cool console
+video we did a while back was we got our hands on this
+weird console from china, that was the first windows running pc that we had ever seen that had a similar architecture to the last couple of
+generations of consoles, where the memory was shared
+between the cpu and the gpu, and it used gddr style memory for a cpu. sorry, i forget what it was even called, but we'll get you guys a link to that. it's a really, really cool video.

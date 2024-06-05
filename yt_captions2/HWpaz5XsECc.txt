@@ -1,0 +1,119 @@
+hello and welcome, i'm james murphy and today
+we're talking about the md5 hashing algorithm. md5 stands for "message digest 5" and what
+it does is it takes in a message and outputs a summary, called the "digest", of the message.
+change the message by even one character and the digest is supposed to be completely different.
+the message can be any length but the digest will always be exactly 128 bits, which we
+think of as four 32-bit integers. md5 is what's called a "hash function", which
+really just means it takes messages of any length to a fixed-length.
+but md5 wasn't intended to just be a hash function, it was intended to be a secure hash
+function. among other things, you aren't supposed to
+be able to find inputs with a given hash, or even two inputs with the same hash.
+unfortunately, md5 is not a secure hash function. it's completely broken for cryptographic use,
+but it's still important from a historical perspective, so let's take a look at it, see
+an implementation of it, and then discuss some real-world attacks against it.
+but before we do, do you know who is not going to use the broken hash function like md5?
+today's sponsor, hostinger. try hostinger's premium shared hosting plan,
+which has 99.9% guaranteed uptime, one free domain and free ssl certificate, and a 30-day
+money-back guarantee. use coupon code mcoding in all caps at checkout
+to get up to 91% off on all yearly plans. okay so let's just dive into the code.
+what i have here is an implementation of the md5 algorithm.
+the first thing that we need to do is decide what does md5 take in and what does it spit
+out. so what i decided is that we're taking in
+bytes and we're spitting out bytes. the way that we're going to do this is basically
+we make a state object which is going to keep track of all the information of the algorithm,
+we feed in whatever bytes that we have and then we're going to have to do some finalization.
+and the reason for this is because md5 works on blocks that are 512 bits long, 64 bytes,
+so if your input string was not the correct length that it has to get padded,
+and that's going to happen in this finalization step.
+so down here i have basically the same thing, but instead i'm directly passing in a file
+handle. we see that the md5 state object is keeping
+track of four things, the most important one is this state variable.
+at the end, the state is going to be what is ultimately made into the digest.
+the way that works is it operates on chunks of 512 bits at a time, so the first thing
+is, of course, you need to take in exactly 64 bytes,
+and then we may convert those bytes to integers. so we take the whole chunk and we convert
+64 bytes into 16 integers. then we start with the process of updating
+the state. so we have four variables, a b c d, that make
+up our state variable then we're going to go through 64 times and basically mix in the
+message in a particular way. so the general way that this works is for
+each of the 64 steps there is a mixer for that step.
+it's going to mix up bits and then we're also going to mix up which of the bytes that we
+use from the message. the 64 steps of the algorithm are split into
+four rounds of 16. in the first round we use the f mixer, in
+the second-round we use the g mixer, third-round h mixer, fourth round i mixer.
+so this mixer_for_step whatever is going to just tell you which of the f g h i is going
+to be used for that step in the algorithm. similarly we're not going to read the message
+in order, and so in the first round you read the 16 integers in this order,
+in the second round we read it in a different order, and so we take the mixer for a given
+step and we take the index which integer do we want to read from the message at each step,
+we just put both of those into big list so that for every step we know which int we're
+supposed to be reading out of this array, and which mixing function we're supposed to
+use. so for all 64 steps we pick the correct mixer,
+we pick the correct index for the message that we're supposed to be using, and then
+we just use this formula. we take a, and then we throw b, c, and d in
+with the mixer and then add that in, and then we add the message at the specified index
+in, and then we add in this sine randomness. this is just another thing that's just thrown
+in just because the algorithm says to. okay so back to the main loop.
+we mix our bits, we rotate our bits, then we add a to b and then we rotate.
+we take a b c d and you can see we take the d and we put it in the front here so that
+we have d a b c. that's all there is to it. after we mixed
+all of our bits up in this way 64 times, then whatever our state variables are, now
+we add them to what they were at the beginning. so how do we ensure that we actually do this
+for every 512 bits in the message? well that's what the process function is for.
+so here's what we do in a loop: we try to read however many bytes it takes
+to fill up our buffer and make a full block_size number of bytes.
+if our buffer was empty before and then i read in a full block size, then i just go
+ahead and call compress on the buffer and then increase the length.
+otherwise i already had some bytes in my buffer or i didn't read enough bytes in order to
+fill up the buffer. so what i do in that case is i note that,
+you know, i've now filled up more bytes, and if i filled up, now, enough to do a compression,
+if i filled up the whole buffer, then i go ahead and compress and increase
+the length and then set the number of filled bytes back to zero.
+otherwise i still haven't read enough bytes in order to do another compression, so i just
+keep reading bytes until i get to the end of the stream.
+but what happens when i get to the end of the stream and i've read some bytes but not
+enough to fill up the entire 512 bits to use a compression on it?
+well then we use this finalize method to basically pad the end.
+what we have to do is we append one bit onto the end of the message and then we pad it
+with zeros. in all cases we're going to pad with zeros
+and append the length of the message that we just read as a 64-bit integer on to the
+end of the message, but if adding that length on to the end is
+going to overflow the block size, then we actually need to do an extra compression.
+so we might have to add on more zeros, compress, and then add on the length, but in any case
+we're basically just padding with exactly enough zeroes so that once we get to the end
+of the message, we can add on our one bit, our zero padding,
+and then our bytes representing the length so that it comes out exactly to a multiple
+of 512 bits, and we do one last compression. once we finalize the message then we just
+need to output the digest or hex digest and the way this works is it's literally just
+the state variables, whatever we updated them to,
+that's now what we output as the digest. so why do we say that md5 is a completely
+broken hash function at least for cryptographic purposes?
+well it's susceptible to a number of attacks and, for one, here is a collision.
+here's two different messages that have the exact same md5 hash.
+i know they look very very similar, and they are, but they actually differ in two places:
+there is 0x00 0x02 and 0x55 versus 0x55. they're a bunch of different types of attacks
+against hash algorithms. if you say you have a collision attack against
+a hashing algorithm, then you're just saying you're in the situation like i showed before
+with these two messages, where are you just have two different messages
+that have the same hash. and that's not necessarily that useful for
+an exploit. what would be more useful to an attacker is
+something like a chosen prefix attack. it's given this name because you can pick
+any two prefixes you want like this one says "launch the nukes" and this one says "don't
+launch the nukes" and then you can add on extra bytes, different sets of bytes to those
+two messages, and then whatever suffix you want after that, such that those two things
+have the same hash. already in the real world there have been
+several instances where either researchers or real hackers were able to use something
+like a chosen prefix attack on md5. one instance they had a microsoft code signature
+for one of their binaries and they had microsoft sign something that was completely innocuous,
+but that completely innocuous thing had the same md5 hash as a virus.
+so whenever you're allowed to control the prefixes like that, that's the case where
+you can really start doing some damage. okay so these last two attacks are just theoretical
+for md5, there's no publicly known actual implementation that can do either of these
+things. so a second pre-image attack is basically,
+you have a file or message that already exists and you want to find another message with
+the same hash. you can imagine, you have an operating system
+a linux image that lots of people are downloading, and hacker could switch it out for a different
+image that has the same hash. and a full preimage attack is basically the
+same thing but you don't even need the file, all you need is the hash of the file.
+and that's all i've got, thanks for making it to the end, don't forget to like, comment,
+subscribe, and check out our sponsor in the link below.

@@ -1,0 +1,97 @@
+- Why would anyone run an app
+that is specifically designed to crash their computer?
+(bomb exploding) That's a good question. And I have some pretty good answers. Stress testing applications
+can make your computer overheat or even outright crash, but in doing so, they can also reveal weak
+points in your system that could have led to bigger problems, like instability or even data loss. But of all the options out there for CPU stress or burn applications, which one is actually going
+to hit your CPU the hardest? The answer, spoiler alert, is Prime95 at least in terms of heat. But the whole story is a lot
+more complicated than that. And we just couldn't tell it
+without our sponsor, CableMod. CableMod allows you to
+personalize the look of your PC with custom colored sleeved cables. Try out their configurator to build your cables
+exactly how you want them with their realistic cable preview. We're gonna have the link down below. Like test driving a vehicle, stress testing is an important part of savvy PC shopping and maintenance, but, let's say you have
+never done it before. You head on over to Google,
+smash in some keywords and, oh, that's a lot of options. You got your Blender, Cinebench
+R20 and Cinebench R23, OCCT, Prime95, CPU
+expert, HeavyLoad, Linux, Intel XTU, Ryzen Master, IntelBurnTest, AIDA64, Linpack Xtreme. (gasps) And that's all just for the CPU. The unfortunate reality is that there is no silver bullet best test, and depending on your hardware, software and what you're trying to accomplish, you could end up with
+completely different answers. So yeah, we spoiled the conclusion. Prime95 runs the hottest, but even then, which of the 5 tests, 10, if
+you include the AVX2 checkbox, should you run? To find out, we built up two identical PCs with just two differences,
+motherboard and CPU. Here's the thing, we
+suspected that team blue and team red might behave differently under extreme conditions and we're really glad we tested both because they absolutely did. On both platforms though, we also locked our CPU clock speeds, core voltages and fan speeds, leaving just our CPU temperatures
+as our stress indicator. Time to show them the graphs. - [Colin] Give them the graph, editor. - Intel first, two tests
+didn't work at all. Ryzen Master, we saw that one coming. And Intel Extreme Tuning Utility. We didn't see that one coming. It ended up ever ring out
+the same way in Windows 11 that we saw in our recent
+Dragon Canyon NUC video. Among the tests that did work, Prime95 small FFT stood absolutely alone, beating out the next highest
+score by 10 freaking degrees. There just no other way to put this. We did not believe our results. So thinking that maybe Intel's
+turbo boost power management was banging up the other
+tests or something. We reran the entire
+suite with our voltages and our clock speeds back to stock. And to say I'm shocked
+would be putting it mildly. It was like witnessing a brutal
+beat down in slow motion. Again, we have some theories here, but first, let's get to
+the rest of the results. Our 10 middle performers had just a 6 degree overall spread. Then we had our underperformers. IntelBurnTest, CPU-Z and OCCT's CPU large
+dataset extreme benchmark. At this point, you can probably see why we declared Prime95 best in heat but looking at thermals alone
+would be a huge mistake. Check out the heat profile
+and power consumption profile of Prime95 small FFT. Huge spikes, then they
+just hold indefinitely. It achieves this by repeatedly performing demanding mathematical calculations, but on a data set that's so small, it fits right in the CPU's on die cache. No bottlenecks, maximum burke. But obviously, no real world
+application behaves like that. Even notoriously demanding
+professional workloads like CPU Rendering and Blender or video encoding will generate
+very different profiles. So if I was validating a thermal design for a demanding client, and I wanted to see an
+absolute worst case scenario, Prime95 needs to be part of my toolkit. But if I care more about stability in real world applications,
+I need to look elsewhere. Enter Linpack, the most used stability stress testing tool of all time. It was originally created
+for use on supercomputers in the 1970s. And in a nutshell, it's a software library that performs linear algebra, this equation specifically, on repeat and it still behaves the same way today, except it's been rehashed multiple times to keep up with modern computers, which is pretty important considering that it was written in Fortran, a code language that is so old, it was originally input via punch cards. Fun fact, by the way, because Linpack is a
+library not an application, it's easy for developers to integrate it into their own test suites. And six of the tests we used
+are actually Linpack based, but even then, not all tests are equal because there are
+multiple Linpack versions. And any of those can be
+combined with other methods to create a complete hodge-podge of stress for your poor CPU. This is what a Linpack load looks like on our thermal graphs. A spikey wave gets produced
+as each equation is solved, then there's a brief pause
+between calculations. And now that we know
+this, it's really easy to spot this shape in many
+of the tests that we ran. Now, if we switch from
+temperature to power consumption, we see, well, the same thing. These swings in power are really
+tough on not just your CPU but also your motherboard
+VRMs and your power supply, which is a perfect combination
+for evaluating stability. Which we're definitely gonna check out on AMD's new 3D V-Cache CPUs. So get subscribed so you don't miss it. Also, buy a shirt or
+a water bottle. Ha ha. lttstore.com. On that note, let's take
+a look at our AMD results. Here, we didn't see anything
+that seemed anomalous. So we left our voltages
+and clock speeds locked per our original test methodology. To start with, AMD ran much
+cooler overall with Delta Ts. So that's the temperature difference between ambient and our CPU,
+peaking at just 39 degrees compared to Intel's 56. Man, 12th gen performs
+but, Lord, is it ever hot? Now, Prime95 still came
+on top for thermal stress but only barely, just half
+a degree behind was AIDA64. Then, the middle of our chart doesn't have the same
+flat middle zone as Intel. Instead, there's a
+fairly consistent decline with a spread of about 10 degrees. Note by the way, that
+Ryzen Master did run, but it's right near the bottom of these thermal stress loads. We don't know for sure why that would be, but my tin foil hat says that maybe AMD doesn't want you to cook your CPU. I don't know though. Even ignoring Ryzen Master, we can draw some interesting
+conclusions here. If you wanna hit it hard, it's Prime95 for maximum heat output with AIDA 64 FPU as a close runner-up. (man laughs) As for stability, while we already learned that this is not what we're looking for. We want a rapidly oscillating power load. So let's have a look at
+one of our Linpack loads, OCCT Linpack 2021. And oof, look at that power
+draw porcupine right there. 35 watts spikes, roughly
+six times per minute. How about Linux? Again, very nice, very
+stable clock speeds, which we expect since we locked it, but we still saw some
+intermittent clock drops and huge swings in power
+drop from 82 watts, all the way to 170 watts. This is probably the best
+example we could have hoped for to show you why you need to test with multiple pieces of software. Every one of these is a valid part of your stress test tool kit. Yet, each is different. Sitting down and inspecting
+these results though, lead to some pretty tidy conclusions for you to take with you. If you wanna get in and out quickly, Prime95 is gonna give you
+thermal results on air in about 15 minutes and
+on an AIO water cooler in about 30 to 40 minutes. As for stability, a
+Linpack load like Linux, OCCT Linpack or a Linpack
+Extreme are the best bang for your time bucks. Unfortunately for those ones, I can't give you a firm guideline for how long you need to run them though, because it comes down
+to personal preference. For a gaming test bench, I might be comfortable with 10 minutes, but for a video editing workstation that I want years of service from, 24 to 48 hours isn't out of the question. Also, none of these synthetic loads excuse ignoring real world ones. If you've got the time and
+if you're serious about it, a Blender Render or a
+continuous Cinebench run, followed by a few rounds of PugetBench would absolutely be a good idea. Now, it may not be common knowledge, but the tools that we use to
+log and review our data today are both free for personal use, HWiNFO and Generic Log Viewer. And you can check them out at the links in the video description. HWiNFO allows you to
+log all your sensor data while Generic Log Viewer
+gives you a perfect tool for quickly and easily charting that data and comparing against other runs. What I hope is common knowledge
+though, is our sponsor. Micro Center. Micro Center is one of
+the best places to shop for desktops, laptops,
+computer components, monitor, TV, networking equipment, and
+all your technology needs. They've got great prices
+and great selection and 25 locations across the U.S. You can check out the MSI
+Sword, 17.3 inch gaming laptop at Micro Center, featuring
+an Intel Core I7 11800H and Video RTX 3050 Ti graphics, 16 gigs of DDR4 RAM, a 512 gig SSD, and of course, a 17.3
+inch 144Hz IPS display. Plus, the MSI Center app
+helps you easily control and customize your laptop
+for different use cases, like battery saving or
+extreme performance. New Micro Center customers
+can check the link in the video description for a coupon code for a free 240 gig SSD,
+no purchase necessary. Offer valid in-store only. Thanks for watching. If you're interested
+in this sort of thing, why not check out Whole
+Room Water Cooling. That was a stress test on us. Ha ha. That's very funny. I like your joke that you wrote. (upbeat music)

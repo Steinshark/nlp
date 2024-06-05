@@ -1,0 +1,150 @@
+- What's next? A Kirkland Signature gaming PC. I mean, come on. It's one thing if Amazon
+wants to shamelessly rip off someone's messenger bag, but engineering, a big screen TV is a little more
+complicated than cutting up someone else's, turning
+it into a blueprint and assembling your own,
+which is why they didn't. But the Fire TV Omni
+Series appears to serve a very similar purpose. It's been contract
+manufactured by someone. Hopefully we can figure out
+who by the end of this video and exist specifically for
+Amazon to compete directly with its partners offering
+low everyday prices and already aggressive deals
+during promotional periods like Black Friday. The only question to answer
+before millions of you rushed out to buy one then
+is, does it totally suck? Thanks to T-Mobile for
+sponsoring today's video. T-Mobile is a customer-focused
+mobile provider with low rates and nationwide
+coverage in the US. Almost any phone works with T-Mobile. To learn more and get $25
+in credit at linus.t.com. (upbeat music) All right, you got me. It's not quite Amazon basics, but the Fire TV 75 inch
+Omni is still pretty basic. It takes all the most
+important boxes, 4K 60 Hertz. HDMI 2.1 with arc, HDR
+with Dolby Vision support, voice control with ALEXA and
+support for pretty much any app that you'd want. But if you were expecting
+anything more extra like ultra thin bezels, support
+for variable refresh rate or a comprehensive color calibration menu, then you won't need to waste your time checking out our links down below. For everyone else once you
+make it past the initial setup, prompting you for your Amazon account, regular Amazon Firestick
+users will find themselves feeling very much at home. You've got your main apps. Amazon specifically calls out
+there'll be vision support for Disney Plus, Netflix and Prime Video. And then along the top,
+you've got a dumpster fire. Literally 40% of the home
+screen is taken up by ads. Fortunately, the
+navigation isn't the worst, but all the stuff you care
+about is in this little thin bar and then the options will populate below as you navigate through. One weird quirk we ran into during testing was that picture settings
+weren't giving us anything other than a brightness option out of the box. We're not sure how, or
+when that got fixed, maybe installing some apps
+for some update or something, but it seems okay. Now let's have a look at IO.
+We've got USB type A, ethernet. It doesn't say how fast, but based on the fact that
+its speed test is slower than the onboard wifi, I don't think we'll be streaming any original quality,
+Blu-Ray Rips and plaques. There's a jack for the
+included IR receiver. This is pretty nice. If you don't wanna have to aim your remote right at the TV, you can just
+run it off somewhere else. A digital optical audio
+port, three HDMI 2.0 ports, and then a fourth HDMI 2.1 port. Now you might wonder why
+Amazon bothered with HDMI 2.1. if the panel is 60 Hertz. But being able to take advantage of IR, to pass Dolby Atmos audio
+to your receiver or soundbar is a pretty good, nice to have. Just like it's nice to have
+this sweet, sweet party shirt from lttstore.com and like, it's nice to have
+accurate colors on your TV. We're not sure where Amazon
+is sourcing these panels and our contact at Portrait isn't sure. - All right. So Linus asked me to
+take apart the Fire TV and do some digging. This thing is huge. So I got a hand from one of
+our new hires in logistics. We got it apart and started searching up the back link controllers, as well as the like LCD
+pixel controller board and basically every code we
+searched came back as TCL. So we're pretty sure that's
+what we're dealing with here. Amazon bought either finished TVs or at least a bunch of parts from TCL slapped their logo on the
+housing, integrated Firestick and put it in the box and on the shelves. - What I do know is that out of the box, our sample was not very impressive. In standard mode, color
+accuracy had an average Delta E of 12.6 with primary colors like
+red, green, and blue doing all right, but anything in between dipping off significantly. To put that in context,
+anything over a Delta E of two is going to be noticeable
+to the human eye. However, putting the
+display into movie mode drastically improved matters. We've got a very decent
+average Delta E of two with a max of five and a half, not bad. The main points of failure
+were blues and grays while red and green were pretty spot on. As for HDR accuracy again in
+movie mode, it's not great, but it's markedly
+improved with our average without luminance error
+getting cut in half. So if you care about watching content, as it was intended to be viewed, you're not gonna wanna have
+this thing in any picture mode, other than movie. Although you still might not
+be getting the full experience. It's not particularly
+bright, at least in SDR. We measured a peak luminance of 277 candela per meter squared. For those of you on aware nits and candela per meter squared are basically interchangeable values. So unless we're talking about
+an enormous projection screen, less than 300 nits, ain't that bright. And unfortunately, in spite
+of all the marketing noise made about it, the HDR experience
+is not a whole lot better. Our Fire TV only reached about
+430 nits peak brightness, which sounds better when compared to the peak SDR brightness we achieved. But here's the thing brighter whites that come at the cost of turning all the dark
+parts of the screen, gray do not an HDR image make. And the Fire TV Omni
+is simply not equipped for decent HDR performance. The thing is modern IPS and VA type panels rely on a technology called
+full array, local dimming, where the back light
+shining through the panel, selectively dims or boosts
+its light output in zones, depending on the content
+being displayed in each zone. So this thing we're looking at right here, you'd wanna turn down the
+back light at the bottom and turn it up at the top. So the star shine nice and bright. And if the significant
+backlight bleed in the corners and along the bottom
+edges anything to go by you won't find that technology here making this TV yet another
+notch in our HDRint belt. And of course, adding insult to injury, our color accuracy was significantly
+worse when testing HDR. That's not to say that, you know, it'll necessarily be noticeable. Let's give it a chance
+in the real world, right? Oh, that's super annoying. So the stupid thing where we
+can only adjust the backlight in the settings menu is back. When it's not on a source, if it's absent video, you can't adjust it. We had a whole paragraph
+about how inconvenient this is because on a TV where you are
+going to be wanting to adjust your picture settings, you can't be looking at content
+while you make your tweaks. Like what's the point of getting something with a Fire TV built-in
+and then you have to go buy an Nvidia shield anyway, so that you can actually run
+in the right picture profile? So when the contents actually playing, you can change, what? To clarify it has this
+dynamic backlight feature. So that will adjust the
+entire backlights brightness depending on the scene, but
+that will not help you with HDR. Good Lord, this thing is not very bright. Oh, my God. I can't even see anything. So much for the dynamic
+contrast or dynamic backlight. So now the whole image is just gray. We get HDR signal, but that is not HDR. Like all the detail in the
+dark parts of the scene is completely lost. And you can kind of get
+the specular highlights off of Toothless' scales
+and stuff like that but they're not bright. It's not HDR. They don't sparkle like the
+white dragon, the Light Fury you're supposed to
+really see like glinting off of the white scales
+and stuff like that. It's not there. And what I opened this up to talk about, which is color accuracy. It's not over cooking greens
+or reds or any of the things I would normally look for in a cheaper TV. It's actually like really
+solid as far as the color goes. I think this is just an
+expectations problem for Amazon. If they didn't talk so
+much about the Dolby Vision compatibility in HDR, I'd be
+looking at this going, okay. I wanna talk about gaming. It's an LCD panel. So we don't have to worry about burning, but how does it actually feel? Well, one thing I can tell
+you is whatever you do, don't leave it in anything
+but game mode for gaming, or you're going to have
+a seriously bad time when it comes to input latency. Oh, I guess I got to try that now. - [Man] Yeah. - Oh, fantastic. Holy bananas. That is horrendous. I mean, you guys can probably
+see this through the camera. We don't even need a high-speed camera. Watch this, watch this,
+look at that delay. It's exactly as bad as I expected it to be based on the desktop. You just cannot react to
+things quickly like this game. Oh, that's so much better. Yeah. That feels very better. Everything looks so doll though. We can try turning on the
+dynamic backlight again. No. It just really doesn't
+look very good for $1,000 TV. I'm sorry. Like I know it's big, but you still might as well
+just get the TCL or the Vizio. - [Nicholas] Same price, same size. - Yeah. In standard picture mode, which is what it comes set to default and what I'm playing in right now. We measured an average
+click to photon latency of 139 milliseconds
+using our Nvidia Elder. That's not just bad. That is outright unplayable in games that require precise inputs,
+like "Super Meat Boy". And fixing the issue ended
+up being kind of confusing. You see, normally picture
+mode just applies presets to color tint, saturation,
+that sort of thing. But here the game picture profile, which a lot of the time
+we'll do stupid stuff like boosting up dark parts of the scene also enables low-latency processing, which put us all the
+way down to an average of 29 milliseconds from click to photon. That is pretty darn good. Now to be clear, many TVs these days do
+have a game mode setting to help produce latency. It's just usually, or
+at least on good TVs, it's its own setting and not
+built into the picture profile. Both of our tests we're using "CS GO" running at around 280 frames per second, which is much faster
+than our 60 Hertz panel can take advantage of. And honestly, (laughs) this
+is funny before we read it, our color measurements in movie mode, we said you should just
+leave it in this mode because the accuracy is no
+different from standard, but you're gonna wanna be flipping back between movie mode and game mode, depending on what you're doing. Although I would probably
+make the argument, you shouldn't be flipping back and forth between either of them because you just shouldn't buy this TV. Which raises a pretty big question. Linus, why are there so
+many five star reviews for this thing? Are you just being a hater? Well, no offense, but there's a reason that the people giving this
+thing five star reviews are school teachers or
+bus drivers or lawyers or whatever else it is that they do rather than tech reviewers. I mean, I don't doubt
+that it's a lot better than their old TV. That's kind of how technology goes, but compared to other
+options that you can get in this same price range, like this TCL 5-Series Roku TV that does have local dimming,
+or this Vizio M-Series with Airplay, Chromecast,
+variable refresh rate, and local dimming. The Fire TV Omni really
+struggles to stand out. I mean maybe if you're really into Amazon special sauce features
+like the microphone, which thankfully includes
+a physical disable switch or the webcam support for video chat, which is coming in a future update. And Airplay support, which is also coming in a future update. Then I guess maybe you
+could kind of justify it. But for my part, I think it's fair to say that Kirkland probably would have done it better. Better luck next year Amazon. Privacy lets you buy things
+online using virtual cards rather than having to use your real card, protecting identity and
+your bank information on the internet. Like have you ever signed
+up for a free trial and then forgotten about
+it only to find charges on your account for a subscription service you never really wanted? With privacy.com, you
+can create a new card just for that trial. All you do is designate
+the card to be single use and set the monthly spending limit to $1. So companies actually cannot
+charge you even if you forget. Privacy.com is PCI DSS
+compliant and uses encryption to secure your information. They also offer two factor authentication and since they make money for merchants, there is no cost to you. In fact, if you sign up
+today, you'll get $5 for free. So check it out today
+at privacy.com/linus. That's privacy.com/linus. Are you looking for a new TV? Love Amazon hate Amazon,
+let us know in the comments and if you like this video, be sure to check out our video
+on the Skyworth 55 XC 9000, a 65-inch OLED display that
+you can actually get for less than what this thing costs. And the brightness isn't
+even actually that much worse even though it's OLED. Yeah, this thing is sort of poo poo.

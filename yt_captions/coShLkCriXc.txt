@@ -1,0 +1,191 @@
+- After months of performance hiccups, several blue screens, and us literally being able to bring down the entire core of our operation just by ingesting video
+footage to our storage server, I'm finally ready for a change.
+(upbeat music) Admittedly, maybe running
+new, new Whonnock, our main video editing server, on Windows was a mistake. I had my reasons, some
+of which were valid, but it's clear at this point
+that you guys were right. The advantages of running
+Windows are far outweighed by the problems that we've encountered. So, it is finally the day so many of you have been waiting for when we remove the last Windows machine from our server room.
+- [Jake] Woo. - We're goin' Linux, baby,
+we're doin' it right. Thanks CableMod for sponsoring this video. CableMod allows you to
+personalize the look of your PC with custom colored sleeved cables. Try out their configurator and build your cables
+exactly how you want them with their realistic cable preview. We're gonna have it linked down below. (electronic music) This should be easy. I've got my Linux install USB right here. All we gotta do is slap
+it into Whonnock's server and boom, we're off to the races, right? Wrong. You see, the thing is
+unlike most of our videos where the hardware is
+just gonna get torn down immediately afterward, Whonnock server (fast electronic music)
+is our one and only production network editing server. We can't just shut it down, format it, and re-install anytime we want, because A, we wouldn't have anything
+to store our videos on or edit off of, and B, we
+would lose all of the work we've done on our active projects. That means we either have
+to do this whole process on a weekend, or we have to migrate,
+at least temporarily, to a different server. As you can see, it is not the weekend. So, the plan is to use my home
+NAS machine as a test bed, and then eventually
+migrate what we've done over to new, new Whonnock. - [Jake] Whonnock 3. - New, new Whonnock. My intention is for this to
+eventually end up at my house, but that may not end up happening
+for a number of reasons, not the least of which is that Jake has become very enamored with the kind of performance that we get out of these Gen 4 Kioxia NVMe drives. He and I are gonna have to fight that out a little bit later. In the meantime, let's
+build up a server, shall we? Actually, that's a bit of a lie. This server is already built. So, what we need to do
+is we need to upgrade it. We'll start by taking out this EPYC 7402. I got it.
+(beeping) 24 cores is plenty for
+what I'll be doing at home, but as we learned the hard way, you basically can't have
+enough CPU performance if you wanna get the most out of these Gen 4 NVMe drives, oh, and if another eight cores doesn't end up alleviating the bottlenecks we've found, we've got a 7742 64 core that
+we can play around later. Another thing you can't have enough of in a storage server like this is RAM- And I mean that both in terms of capacity and in terms of speed. When we were deploying this at my house, we put the smallest, crappiest
+kit that we possibly could, I mean, obviously without
+compromising on reliability. So, this is 64 gigs of 2666 DDR4. Truthfully, the sticks I'm putting in now aren't really ideal either. They're running at 2666
+mega transfers per second, compared to EPYC's maximum of 3200, but we're gonna have 256
+gigs rather than 64 gigs, which is gonna make a big difference, especially for using ZFS, which, we are. As much as there might be some kind of GPU accelerated storage, something, I've never heard of it. So, we're gonna pull
+this 1050 Ti out here. That was supposed to be
+for Plex transcoding, and we're gonna replace
+it with this gorgeous Mellanox ConnectX-6 hundred
+gigabit per second network card. Do we really need these one
+terabyte drives for boot? You have like a dozen of those Optane M.2s that are like, 32 gigs, and they're perfect server boot drives. - There's actually not that many left. - Oh really? Oh, alright. Well, I guess I keep using
+them for stuff like this, where it just really doesn't matter how much capacity you have, and you just want something reliable. Speaking of our installation media, there was a fair bit of deliberation when it came to choosing
+an operating system. Ubuntu server seemed good, except that the current
+long-term supported version, or LTS for short, doesn't have open ZFS 2.0, which features a bunch of
+performance improvements for ZFS, which is the file system we intend to use. And then, Debian 11 sounded good. It has open ZFS 2.0
+and a version of Samba, the software used to host Windows compatible
+SMB network shares from this year, which is great, except it's from March,
+which is not great. So, the beginning of this video ended up being a bit of a lie because while we could
+have still gone with Linux, just find a distro that's
+got a new enough kernel, potentially build open ZFS 2.0 and Samba from scratch, there is an easier option, TrueNAS. It's got open ZFS 2.0, a very recent Samba, and a
+really nice web interface for managing your storage. It's not Linux, but it is based on a
+Unix-like operating system called FreeBSD. So, we're back on the used to be FreeNAS, now TrueNAS, train. I don't know what it
+is about their product, but pretty much every time I go to use it, something blows up in a way
+that is totally inexplicable. I've ended up escalated to directors and VPs of engineering, multiple times, with nobody ever able to explain why the product just won't
+work properly for me, but hey, fifth time's a charm. - [Jake] But it works properly for Jake. - Yeah as long as it
+works properly for Jake. - [Jake] You know, our backup
+servers are running TrueNAS, for like, a year now. - I know, I know it's a good product. I've recommended it to countless people. I've just never been able
+to get it working the way that I need it to work. Did it just turn on?
+- [Jake] Yeah. - You have it set to
+just restore power on AC? - [Jake] Probably. - Okay Let's just give it a sec here. - [Jake] That's what
+servers are supposed to do. - Okay, where's that USB? - We don't need it! - Oh. - We're gonna do it properly. - I thought you told me we need a USB. - Oh, just for visuals. - Wait, are we gonna go IMPI AF and use an image and everything? - Yeah. - Look at us doing things properly today. - Yeah, I didn't download
+TrueNAS, but I will now. - Wait, what happened to my laptop? - I put it away. You don't need it. - Oh, you've told me to bring it! - I didn't realize there
+was a keyboard here. - Oh. - The problem with Mac IPMI
+(cheery simple music) is I can't press F10
+properly, it doesn't work. - Press F10 to pay respects. - Doesn't work. I can screen record on
+this thing for like an hour and only use like 30% battery. - And its touch pad is the equivalent of being hung like a horse. It is! Look at it. Look at this. Let me show you my touch pad.
+- Oh, okay. - Look, it's a touch pad.
+- Okay. Ah! - Actually, what I was
+really gonna show you was my underwear from lttstore.com. - Ah, LTT store.com. It comes with cat hair. - Comes- No it doesn't. That's from your cat. - I just walked out of the hallway and he was just like, 'sup bro? Virtual CD-ROM, enter. - Here we go, boys. This is the smart way to do it. You shouldn't actually
+ever have to plug a monitor into a server. - [Jake] You ready? - [Linus] Install. - [Jake] Wow. - [Linus] Wow. - [Jake] That was inspirational. - [Linus] Look at it go.
+(upbeat music) - [Jake] Okay, hold on. - [Linus] Hold on. - [Jake] Click our drives. - Yeah, we don't want to
+install the wrong drive. Now, this is cool, even though AMD EPYC servers
+do not have any innate support for RAID. That means you can't even install two boot drives like we did, and then just configure it in the BIOS to run RAID freaking simple 1. TrueNAS has a quick and easy way for you to install your
+operating system to two drives so in the event of a hardware failure, you're just ready to go again. - Yeah, it literally just shows
+up as a separate boot entry. You can just pick which
+one to boot it from. Okay, time to go to lunch. See ya later. - And ask me if I can turn it on. - Well, that's too bad
+because I already did. - Ah, roasted. (both chuckle) Yeah, what's up now? - What, are you gonna hard power it off? - Yeah, we'll (beep) what's up, no. Ha, got him. Now who turned it on? This guy. - I want to turn it off again. - I'm turning it off first.
+(simple cheery music) - [Jake] This is bad hardware practices. - Hey wait. - [Jake] Mother (beep)! - Man, it's not as plugged in all the way. - [Jake] Oh my God, really? - It snapped out. Must've been when you unplugged the power. I'm turning it off first. Why is there no... - Is there blinking on the port? - IP, no. - We have to take it to the
+server room later anyways. Let's just take it there now. - This is the way to do it. I mean, did we say we
+were gonna do everything properly today? - [Jake] Uh, no. - Okay, cool. - [Jake] 'Cause that's
+definitely not what's happening. Hey, I got a hundred gig. - [Linus] You won't
+believe how much gigabytes you can put in this bad boy. - [Jake] There's a bunch of hard drives under there, stop slapping it. Let's go back over there. - I don't want to wait. Okay. Let's create a Pool. - [Jake] Yeah, name.
+- [Linus] Name. - Let's call it LAMBO.
+- LAMBO! - Do all caps. - So do I click them in
+order to add the VDEV? - No you don't have to do that. Click all and then unselect that don't want this DAO. - This boy. - I think that's the
+virtual thing for my PLA. 12 selected, let's click over. - Okay. - So I did a little bit
+of testing beforehand. It doesn't seem like it makes a difference between having one VDEV
+or two for our workload. - Okay, RAID-Z is fine. RAID-Z is gonna give us one failed drive before we actually start to lose data. I'm not expecting to lose
+a ton of these drives and this data is gonna be replicated using our snapshot to another server that's over in unit 101. - Yeah. - And then it will be replicated again, offsite to Kamloops, once
+Jake gets around to fixing the new Kamloops server. - Yay, there we go. - Okay. - Wow, 72 terabytes, that's not bad. - That's not bad and usable. - Okay, so we gotta make a- Oh here, first thing, go to that. - Yeah. - We have to turn auto TRIM on. Pool options. - Oh, why is not that by default? - Well, most people don't
+use SSDs with TrueNAS. - That's fair. - We've gotta make a new
+dataset, add dataset. and let's call this Z drive. - Turn compression off. We don't need that. - Yeah. - Pretty much all the data we're gonna write to this thing is incompressible video footage, so there's just no benefit. - We could turn it on later because there are other things, like Word files.
+- Ah, but, psch. - But for now, because we're gonna do some
+performance testing too, let's leave it off. Turn atime off, we don't need that either. That's like the access
+time, is that FS will store the last time a file was
+accessed, you might use that- - To see if your kids have
+been looking at your (beep). - Share type SMB.
+- Okay. - That's gonna set it
+to be case insensitive. - Okay. - And we're gonna leave
+the record size at 128 KB. Now, you could, theoretically, change it to one megabyte.
+- Yeah. - That might be better if you're like- Have a Plex server, because those are bigger chunks,
+which means less overhead. - I mean, our chunks are pretty big. - But, for whatever reason, when I was playing with Premiere, it seemed like it was a little worse. - So...
+- At least in scrubbing, because it will increase your latency, so- Oh, we've gotta do some Zetta-FS tuning. - Yeah, because why would you
+want things to just, like, work immediately? - Look, it's not made for NBME. We're kinda doin' it dirty right now. Primary cache, all one
+word, equals metadata, and then we'll do space
+LAMBO slash Z drive. (electronic music)
+- Okay. - Enter. Haha!
+- Okay. - Do Zetta-FS.
+- So that just means our RAM now stores only metadata? - Yes, so- - Which makes sense 'cause our storage is so fast
+(Jake laughs) that there's pretty much no point using our system RAM as a more
+conventional cache for it. - For most use cases, though I haven't actually
+played with it in Premiere, it might actually like the lower latency, and when we deploy to actual Whonnock, we'll have a terabyte of RAM. So, maybe it might actually make sense, but for now we're just gonna leave it off. - Okay. Wow. It's really poorly formatted, but LAMBO Z drive user's metadata- - It's on the next line! (laughs) Cool, it worked. Alright, now we've gotta tune Samba. So, on TrueNAS, SMB slash Samba is not really configured
+for the type of performance that we're goin' for. We're talkin' like 20, 30, 40 gigabit on our a hundred gig card, not gigabit or 10 gig. - Right. - So, we have to make a few changes. Now, by default, for some reason, at least according to
+this dude on the internet that has this article about TrueNAS, and the testing that I've done, it seems like they set the default threads for SMB multichannel to
+like, one read one write, whereas the default in
+Samba is like a hundred. - Right. - There's probably a reason for this, and maybe they've changed it back, but from testing before changing it, to testing after, it was a huge difference. - I wonder if it's one
+of those things where, for the average home user, repurposing an old machine-
+- Mmhmm. - And just throwing a couple
+of hard drives in the closet. - Like, slows it down, yeah. - Yeah, maybe it overwhelms, you know, that, the Athlon XP. - This is also the
+community edition, right? - Yeah. - So, if you were to buy
+a machine from TrueNAS, one of their prebuilts, I imagine they would already
+configure this stuff for you. - Yeah. - Anyways, we're just
+gonna copy paste this stuff into our config. Just need one more zero in there. - [Linus] Lotta bytes. - [Jake] Yup. - Now, the thing is, these drives are capable of tens of gigabytes a second
+of raw reads and writes, but as soon as you start
+tryin' to run a file system on them, like ZFS, performance takes a bit
+of a kick in the balls. - Especially when you
+have to calculate parody, which is a whole other thing. That's why we upgraded the CPU. Hopefully we can get a
+little more parody-ing. - Let's see where we end up. - Okay. We're gonna do right test first. - [Linus] Okay, here we go. - [Jake] 12 jobs, 'cause
+we have 12 drives. - [Linus] Laying out some files. (electronic music)
+(Jake laughs) - [Jake] That's pretty good. - [Linus] Wow. - [Jake] That's more than a hundred gig. It kinda fluctuates a bit,
+but that's pretty damn good. - [Linus] That is not bad. - As long as we're above a hundred gig. - Yeah, then we can't
+possibly be bottlenecked by the drives. - And, I think we're bottlenecked
+by CPU right now, too. I bet if we go look at the CPU- - Oh yeah, it's probably
+getting absolutely crashed. - It's probably a hundred,
+a hundred percent. 41%. You know, it's probably
+a little bit slower in terms of writing, that I bet you if we do a read test, it'll be a hundred percent. - Oh, okay. - But I think it's just because it's calculating parody and whatnot. TrueNAS is not built for these speeds. - It's really not. - We're using 'em for these speeds. - But, properly. - Yeah. Alright, read, eight gigabytes a second. You know, I was getting a
+little higher than this before. - I'm a little surprised. - I wonder if this CPU is slower. - So far beyond good enough. Now, something to note is that when you're benchmarking
+your desktop system, changing the qDev to get massive numbers is not representative of the real world because an individual user sitting in front of a computer could never use it hard enough to reach qDevs of, you
+know, eight probably, let alone 16 or 32.
+- Yeah. - Which you might do in benchmarking. However, for a machine like this, where literally dozens of
+people are accessing it, that is conceivable, and that is a reasonable way to test it. - But, we were only testing with two. - Yeah, so that's why I said it's- Turning it up, it's not a hack to just show you guys a bigger number. It actually is applicable
+to this use case. - I wonder if we try more threads. We have more threads,
+so let's try 24, 2 per. - Give me all the threads. - 24. - Mmm. Give me more threads. - I want a bigger number. - [Both] Oh! - Hey, there it is. 18 gigabytes per second. Interestingly, CPU usage
+doesn't really go up. - TLDR, it's very fast. - Very fast. - It's way faster than we ever need, and it's way faster than one. - So, let's try it. - You know, it's good
+that we actually left the one terabyte in there
+because of those ingest issues. - So, that was another problem, that actually, that was what
+really prompted me to go, okay, yeah, forget it,
+we're done with this, because when we would ingest footage from the stations over there, if it was greater than one terabyte, it would fill out the RAM. - It's less than that.
+- Is it? - Basically, when you
+write to storage spaces, it just goes to RAM and then
+it flushes the disc slowly, and when we had the Ursas, those drives gives you like one and a half gigabytes
+a second, times a few. If you ingest it fast enough, you fill up the RAM and storage space only lets itself use half of your system memory. - Right. - And then at that point, it would just crash the
+network share for everyone. - And there's no evident
+way to turn it off. - Yeah. - Because our disks are fast enough, we could just go straight to the discs, but we couldn't turn off
+the stupid round caching. And, especially when you've got an OS that blue screens every once in a while, having 500 gigabytes of data
+potentially in a RAM cache? - Yeah. - One does not simply. So, this is kind of dog poo. What we need to do is go into
+one of the editor's stations that is not Windows server, running storage spaces, and
+copy these files or something. - Okay. So I actually, oh my god. I didn't touch it. - I'm sorry! It's been a stressful week. What's up? - Can I borrow this?
+- Of course. - Okay Let me drive for a sec here. Okay, so I wanna copy
+this to my local drive. Huh? That is not very good.
+(electronic music) Jake! It's possible that the issue
+is just Windows file transfer being Windows file transfer. So, we're pullin' out the big guns here, bringing out ChoEasyCopy. - Look at that, 20 gigabit. - Oh, well that's better. Uh, where are you going
+to and from right now? - I'm going from Whonnock to the other- - The test one. - Yeah. And I'm sure if we opened
+this, lots of blinky lights. (Jake laughs) - [Linus] So there are, okay. (Jake laughs) Yeah, there's your CPU usage right there. - [Jake] It's hurting. - Hey, I'm copying over RED mag. Boom. Pinned to 495 megabytes a second, which is the speed of a RED mag. Okay. What else we got? - [Brandon] We got the RED mags. - Brandon, what's yours going at? - 199. - Okay, so we've got a total of a gigabyte a second headin' over there. I need to find some
+more media to copy here. - [Jake] What you'll see is
+sometimes it'll slow down when it's going between clips, red footage is a bunch of clips.
+- [Linus] Yeah. - [Jake] So, between each clip, Windows file transfer
+will like dip for a bit. - Yeah. We're definitely running
+into some kind of bottleneck on this system where it's maxing out at 500 megabytes a second, no matter what we plug
+into, but still, overall, the ingest stations are performing better than with old Whonnock,
+which is new Whonnock. - [Jake] Whonnock 3. - So this will be new, new, new Whonnock. - [Jake] Whonnock 4. - Anyway, the point is I
+paused all the transfers and we're gonna have three or four editors now try to edit, and then I'm gonna start these again and make sure everyone's smooth. Our Guinea pigs are gonna be
+Ed, Mark, and Emily over here, and you guys are
+pretending to edit, right? I mean, that's basically all
+everyone in here does, right? Is everyone pretending to edit? - What? - Are you pretending to edit right now? - I am not pretending. - Oh, okay. Well we've got, at
+least, we got one editor actually editing, fantastic. Hoffmann, that that's a
+beautiful picture of David. Alright, so guys, keep pretending to edit. Andy, you stay here. I'm gonna go turn on
+all those file copies. Just like before, we got about 10 gig on the one on the right, five gig on the one on the left. And, how are your projects going? It seems fairly normal, or very normal, or better than normal? - It's not better, but it's normal. - Not better, but normal. - Yeah, pretty much it's exactly the same. - Alright, thanks, Emily. - It's good. It's acceptable. - Is it the same?
+- It's not worse. - That's good, but it's not better? - It's- It's hard to say, to be honest. - Okay. - Yeah. - Okay. - It's- I could, I could
+edit with this, yeah. - Okay. It really wasn't the goal today. The goal today was, "Hey, this is gonna be
+perfect and amazing, you guys are gonna love it, so-" - No, no. - No, you had your chance. - [Jake] The goal was the same. - Okay, Ed, how's yours doin'? - I think this is doin' well. Historically, I think it's about on par with what performance was like before, but as of late, this is a lot better. I used to have runaway footage pretty often in the last, a little bit. - For those of you not familiar, that means when you stop the play head, it keeps going for a bit, or...? - Yeah, yeah. - Okay. - [Jake] The last couple of weeks, right? - Yeah, the last couple of weeks, when I would play back footage, especially the footage from the Sony's, it would just like run away
+from me for a few seconds. - It's hard to make an
+accurate cut that way. Okay.
+- Yeah, but now it seems fine. - Okay, alright, confirmed. We're gonna move ahead
+with it and confirmed. We're gonna tell you about our sponsor! Thanks to Current for
+sponsoring this video. Current is a mobile app and debit card that helps you spend and save better so you have the freedom to do you. Their app makes it easy to see where your money's going and
+set different savings goals to keep you on track. You can withdraw your money without fees across all 40,000 Allpoint ATMs in the US and there are no overdraft
+fees up to a hundred dollars. You can send money easily
+to friends and sign up, takes less than two minutes. So head to current.com/LinusTechTips and sign up for Current today. If you guys enjoyed (electronic music)
+this video, maybe check out some of
+our previous server blogs. - [Jake] It's the last time
+we try to deploy this server. How about that? - Yeah.
+(Jake laughs) Oh, someday we'll get it
+right, maybe this is it.

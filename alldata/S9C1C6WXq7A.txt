@@ -1,0 +1,57 @@
+hello i'm james murphy and welcome to part 
+two of what's new coming in python 3.10.   in the last video i discussed everything relating 
+to type hints. in this video it's everything   else. most of what we'll cover in this video is 
+more or less just quality of life improvements,   but there are some new features. okay let's 
+get started. in my video on data classes,   the one thing that i said the data classes library 
+is lacking is support for the slots feature.   well, data classes now support slots. nice. 
+they can also now be pretty printed. as far   as quality of life improvements, here we go. 
+first up is parenthesized context managers.   you can now use parentheses to enclose context 
+managers which allows you to put them on multiple   different lines if you so choose. previously you 
+weren't able to do this because of limitations   of the parser, but in python 3.9 the parser 
+was actually updated to a new kind of parser.   the new parser is a little bit more robust from 
+the old one and it can now handle things like   this that the old one couldn't. this is especially 
+useful when you're using and capturing multiple   different context managers. if you had to 
+put all of these on the same line or use   line continuations this would be really annoying. 
+the next quality of life update is a whole bunch   of different better error messages. for instance, 
+if you forget a closing brace python will now tell   you that you didn't close the brace. i'm sure that 
+veteran python programmers are well aware of what   kinds of error messages you might have gotten if 
+you forgot to close a brace somewhere, but for new   python programmers something like this can really 
+make it easier to learn the language. it tells you   exactly what went wrong. it can now also tell you 
+about needing extra parentheses around generator   expressions and arguments, and it can tell you 
+if you forgot a colon say after an if statement.   i've definitely done this one, forgetting to put 
+parentheses around a tuple in a comprehension.   the previous error message was not so helpful. it 
+looks like this person pablo contributed basically   all these better error messages, so thank you 
+to pablo. did you forget a comma? did you forget   some parentheses? did you have a dictionary key 
+with no value? did you use a single equal sign   instead of two? i've never tried to do this but 
+apparently star expressions are not allowed in   f-strings, now i know. and the list keeps going. 
+better errors if your indentation is messed up,   and "did you mean..." suggestions for typos in 
+attributes or in names. i think these better error   messages are really going to help out newcomers. 
+on the other hand, pep 626 about precise line   numbers is going to help veterans alike. those 
+of you that have spent enough time debugging may   have noticed in the past that line numbers are 
+not exactly right all the time. i'm not exactly   sure what makes it happen, but it seems to crop up 
+in multi-line comprehensions and pass statements.   in any case, line numbers in debug statements 
+are going to be more precise in python 3.10.   here's a change that was really hidden in the 
+details. remember my video on how plus equals is   the sharpest corner in python? well apparently 
+power equals was a little bit sharper because   there was a bug in its implementation. power 
+equals will now behave the same as all other   augmented assignment operations like plus equals. 
+and as long as we're down here let's talk about   pep618: adding a strict flag to the zip function. 
+now you can pass strict equals true to a zip in   order to ensure that all of the iterables have the 
+same length. if they don't, it'll raise an error.   there are also some optimizations to existing 
+features in the language. the most notable one is   that they claim that constructing strings, bytes, 
+and byte arrays is now 30 to 40 percent faster.   i'm a little skeptical about that one. do some 
+performance tests and let me know what you find   in the comments. the last two things that i wanted 
+to talk about are two safety features that have   been added to python. python now requires a recent 
+version of openssl. i think this is a good thing,   i don't think you should be using any 
+kind of out-of-date cryptography software.   and the last thing that i wanted to mention 
+was the new optional encoding warning.   if you're reading or writing text files you 
+should pretty much always be using utf-8,   but in some operating systems this is not the 
+default and it is therefore also not the default   in python. this has previously been a huge source 
+of bugs where one person tries to write a file,   gives it to someone on a usb stick, who tries to 
+read the file, and it doesn't work. you can now   set this flag to true if you want a warning so 
+that you can see all the places in your codebase   where you don't specify an encoding 
+or that you're using a binary format.   alright that's pretty much the rest of the 
+stuff that stood out to me on the change log.   if you haven't already be sure to check out 
+my video on structural pattern matching,   that's really the big feature 
+that was introduced in 3.10.   otherwise, of course there's a huge amount of 
+things that changed that i didn't talk about.   let me know what your favorite is in the comments. 
+thanks for watching and see you next time!

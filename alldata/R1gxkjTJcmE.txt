@@ -1,0 +1,38 @@
+everyone knows that 0 * 
+anything equals 0, but why? your intuition is probably telling you 
+that multiplication is repeated addition and if I add zero copies of something 
+then of course I have zero things if you have a bit of math knowledge 
+you might go beyond intuition and say "that's just how multiplication is defined: 
+0 is the base case, 0 * anything equals 0, and multiplication of larger numbers is 
+defined by saying (y + 1) * x = y * x + x" but we use the symbol "0" for a lot 
+more than just the natural numbers 0 the natural number * anything equals 0 0 the real number times anything equals 0 0 in modular arithmetic times anything equals 0 the 0 matrix * anything equals 0 the constant zero function times anything equals 0 and even the zero function 
+convolution anything equals zero these are all different types of zeros 
+and different types of multiplication they're definitely not simple repeated addition and yet we still end up with 
+0 * anything equals 0, why? let's prove it and see what about 
+zero actually makes this happen start with the expression 0 * x for now you can assume these are real numbers but we'll see shortly that's not necessary 0 is 0+ 0 because 0 plus anything is that thing then because addition distributes 
+this is 0 * x plus 0 * x at this point in the proof we don't know that 0 
+* x equals 0 but we know that it's some number and we know that number has a negative so let's add that negative 
+to both sides of the equation then group with parens and since a number plus its negative 
+is zero we get 0 = 0 + 0 * x and since again 0 plus anything is that thing we finally arrive at 0 * x = 0 in this proof the only facts we really used 
+are: that 0 plus anything equals that thing, that addition distributes over multiplication, that every number has a negative 
+that cancels it to give zero, and if you want to be real technical we 
+did also use associativity to group parens we don't even need commutativity 
+of addition or multiplication which is good because matrix 
+multiplication is not commutative if you're applying for grad 
+school you might describe this as "the identity for an associative 
+invertible operation is absorbing   for any other operation that 
+distributes over the first" that's why it works for matrices, 
+functions, convolutions, and many more because all these types of 
+objects satisfy common axioms which in particular include the properties we need and no this does not prove 
+that 0 * Infinity equals 0 the proof only works if 0 * Infinity is 
+defined so that we can do algebra on it but 0 * Infinity isn't defined so no proof although if you're a teacher it's a fun exercise   to ask your students to explain why 
+the proof breaks down for Infinity anyway you're probably wondering 
+"well what about those assumptions?" is there a similar trick to show that 
+0 plus anything equals that thing? it feels like a very similar kind of problem usually this is just shown manually 
+because the behavior of zero under   addition is closely aligned to 
+the definition of addition itself a lot of the time you give the label 
+zero to an element of your number system precisely because it has the property 
+that it does nothing under your addition so maybe the real question is "how do 
+we normally define addition at all?" great question, maybe a topic for another video thanks for watching, as always thank you to my   viewers who support the channel through 
+patreon and other forms of donation slap that like button an odd number of 
+times and I'll see you in the next one

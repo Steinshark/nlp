@@ -1,0 +1,138 @@
+Unique pointer is basically a fancy 
+wrapper built around `new` and `delete`. And I don't use dynamic allocations.
+So I don't need unique pointer.  That's what you might have said 
+before you watched this video. Part of that is true. By default; a unique pointer is just a 
+convenience wrapper around `new` and `delete`. It's referred to as a 
+smart pointer because it takes care of calling 
+`delete`, so you don't have to remember to. Unlike with the x pointer, 
+the y pointer gets deleted automatically. But in this video, I'm not here to tell 
+you about the basics of unique pointer. If you have no idea what a unique pointer 
+is, please see my previous video on the topic.   We'll write a basic implementation 
+of it in about 50 lines. And if you already know what a unique pointer is, 
+you don't need to watch that previous video I mean, unless you want to. In this video, we're focusing on unique pointer's 
+lesser-known second template argument - the deleter. When a unique pointer is destroyed, it doesn't 
+just call the builtin `delete` on its managed object. It actually just passes its raw 
+pointer to its deleter. It just so happens that the default 
+deleter calls the built-in `delete`.  But theoretically, you could put 
+pretty much whatever you want there. Let's take a look at a classic example 
+- interoperability with a C library.   As much as we love C++, there 
+are times when an existing library that's already written in C is a better choice 
+than rewriting something in C++. But C doesn't have, and probably 
+doesn't want, smart pointers. So it's very common for 
+library functions written in C to just `malloc` memory, put something in it, 
+and then return the pointer to you. And oftentimes, it's up to you, 
+the caller, to free that pointer. Because the pointer was allocated using `malloc`, 
+we need to delete it by using `free`. We can't use the built-in `delete`. Therefore we also can't just use 
+`unique_ptr` the way we normally would. By default, `unique_ptr` uses 
+`delete`, not `free`. So instead, let's define 
+our own custom deleter. We define a call operator that the unique 
+pointer will call when it's destroyed. And instead of calling `delete`, 
+we call `free`. Just throw your custom deleter class in the second 
+template argument, and you're done. Now, at the closing curly brace, 
+the `malloc` pointer will be freed. You may be wondering why 
+I wrapped `free` up into a class that has a call operator 
+with the same signature as `free`. It's actually for efficiency. You can directly pass in 
+the `free` function like this. Instead of using our `FreeDeleter` class, we 
+could use the `decltype` of the `free` function. This `decltype` is 
+a function pointer type. And we're storing the 
+value `free` in that function pointer. Because the unique pointer actually 
+stores its deleter inside of itself, this means that it's storing 
+an extra pointer. So if we go ahead and print 
+out the size of the unique pointer, we see that it ends up being 
+16 bytes, which is the size of two pointers. On the other hand, when 
+we use our `FreeDeleter` class, we don't specify the second argument, 
+and it just gets default constructed. But a `FreeDeleter` instance 
+doesn't have any state. Standard library implementers are very smart, 
+and they do a neat trick here.   Because the deleter doesn't have 
+any state, they don't store it. So as you can see, the unique 
+pointer ends up only being 8 bytes, which is the size of just a pointer. This is what allows a unique pointer to have 
+basically no overhead compared to a raw pointer. Because when you do it this way, it's 
+just syntactic sugar that gets all compiled away. Now, the `FreeDeleter` is something that you 
+might want to use over and over again. So it makes sense to 
+give it a name. But if you find yourself in a situation where you're 
+only going to use this deleter once, you can go ahead and just put it directly
+ in the template argument using a lambda like this. This tends to make things longer 
+and can quickly become unreadable. So, use with caution. On the other hand, if you're using these 
+unique pointers with free deleters all over the place and you find it annoying to 
+constantly write this out, then you can use an alias. We use the `using` 
+keyword to introduce the alias. And now we just have a C-friendly 
+unique pointer that uses `free` instead of `delete`. Personally, I often go one step further and define 
+a C++-friendly wrapper around the C function. The wrapper just calls the underlying 
+C function and wraps it in a unique pointer. Doing it this way, there's 
+nothing for the caller to forget. They don't need to remember 
+to call `free`. They don't need to remember to 
+wrap the result in a unique pointer. And there's no question about whether they got 
+back an owning pointer or a non-owning pointer. It's a unique pointer, 
+so they definitely own it. And this pattern doesn't just apply to heap 
+allocation functions like `new` and `malloc`. Anytime you have a resource that 
+doesn't clean up after itself, you can use a unique pointer 
+with a custom deleter. If a C library gave you a file 
+handle that was opened with `fopen`, you need to close it with `fclose`. You
+ could use a deleter for that. You could even use it 
+with a custom allocator. I'm using standard allocator, 
+which again just calls `new` and `delete`. But fill in here your favorite 
+stack-based or arena allocator or whatever here. We use a lambda to define our 
+custom deleter, which just calls `deallocate`. Then we just pass that in as the second template argument 
+and the second argument of the unique pointer.   The default allocator is stateless and doesn't 
+do any work upon construction. So it's most efficient to 
+just construct one right here. Because our deleter is stateless, 
+once again, we just have an 8-byte pointer. If your allocator is stateless, then 
+you're going to need to capture it somehow. In this case, I'm 
+capturing it by reference. In this case, the unique pointer needs 
+to store that reference to that allocator. So it does increase the 
+memory usage. So keep that in mind. This is actually a
+ case where a unique pointer does have overhead.   You can get around this by using a stateless 
+allocator or by storing it in a global variable. Now, to the technical part - how do they 
+actually implement the deleter in unique pointer? We're not going to be looking at the standard library 
+implementation. It's basically unreadable.   But although this is not by any means a complete 
+or probably even correct implementation,   it does carry all the main 
+ideas in just a few lines of code. If you want to see the basic implementation 
+that doesn't even have a deleter, then check out my previous 
+video where I explained the whole thing. So for this, we start out by 
+adding the deleter template argument. No surprise. We create a `DefaultDelete` 
+class that just calls `delete`. And set that as the default value 
+for the template argument. Unlike the version that used `free` on the pointer, 
+the version that uses `delete` needs to be a template. This is because while it's possible to `free` a 
+void pointer, it's not possible to `delete` a void pointer. Okay, once we have our deleter type, then we 
+just go down to our private members. And add in a `deleter` member. Then, in the destructor and `reset`, and in other places 
+where you might expect `delete` to be called, instead, we call the deleter, 
+passing in our member pointer. We do an if check here. Because although the built-in `delete` 
+can handle null pointer, not every deleter can. Then there are just a few 
+other things that need to be changed. We add convenience functions, 
+like adding a getter for the deleter. And then pretty much the only other thing 
+that needs to change is constructors. We added a deleter member, so we just need to 
+make sure that all of our constructors initialize it. But keep in mind, the most common,
+ convenient, and efficient case is this one, when we have a stateless deleter 
+that does nothing upon construction. Pretty much nothing 
+else needs to change. Now we have a fully functioning unique pointer 
+class that even supports custom deleters. Unfortunately though, this
+ implementation has one fatal flaw, which we'll see when we 
+try to run our example again. When we run our example, 
+even with the stateless allocator, we see that our unique pointer is 
+taking up 16 bytes instead of eight. Because the allocator is stateless, 
+we don't really have anything to store. But for some reason, it's 
+still taking up eight bytes. This is because, except 
+for special exceptions, an object must 
+take up at least one byte. So that's one byte for the deleter, eight bytes 
+for the pointer, and it takes at least nine. And this class is eight bytes in size, 
+so it ends up taking 16 bytes. But if you remember, standard unique 
+pointer only took up eight bytes in this case. So how can we achieve that? If you have the great luxury 
+of working with C++20 or later, then you have `[[no_unique_address]]`, or if you're on Windows 
+[[msvc::no_unique_address]]`. Maybe they'll implement it 
+without the MSVC in the future. But with no other changes other 
+than adding this no unique address, we're back down to 8 bytes. The `[[no_unique_address]]` attribute 
+allows data members to overlap.   In the case of a stateless deleter, allowing it 
+to overlap means it doesn't take up any memory.   So this is a hugely important 
+attribute to become familiar with. It can really, really improve the data compactness 
+and efficiency of your programs.   But remember, I said you can only do this 
+if you have the luxury of using C++20.   But standard unique pointer 
+works in C++11. So that means they're 
+doing something a little bit trickier. They use what's called the 
+Empty Base Class Optimization (EBO), which is a clever trick 
+involving inheriting from your deleter. And explaining that would 
+be its own whole video. So comment below if you're stuck on C++17 
+or earlier and want to hear about it. And last but certainly not least, I'd like to thank Pi for becoming 
+an Exponential tier Patron on Patreon. I really appreciate the support 
+and encouragement. And I'm glad you think the 
+videos are worth it. Everyone else, don't forget to subscribe.
+ And I'll see you in the next one.

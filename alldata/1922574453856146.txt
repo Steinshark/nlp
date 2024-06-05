@@ -1,0 +1,77 @@
+import torch 
+import random 
+import torchvision 
+import os 
+import numpy
+
+MULT    = 255/2
+
+def to_img(t:torch.Tensor):
+     
+     #Scale 
+     t  = t.numpy()
+     t  = numpy.transpose(t,(1,2,0))
+     return t 
+def generate_dataset(data_dict,window=3,dark_thresh=-.95,save_n=2048):
+
+    if not os.path.exists('C:/data/battlefield/'):
+        os.mkdir('C:/data/battlefield/')
+
+    for classification in data_dict:
+            print(f"start {classification}")
+            saved           =  0
+            path_load       = data_dict[classification][0]
+            path_save       = data_dict[classification][1]
+            
+            if not os.path.exists(path_save):
+                os.mkdir(path_save)
+            
+            video_loader    = torchvision.io.VideoReader(path_load)
+            nframes         = video_loader.get_metadata()
+            n_frames        = int(nframes['video']['duration'][0]*nframes['video']['fps'][0])
+            save_frames     = random.sample(list(range(n_frames)),k=save_n)
+            save_frames     = sorted(save_frames,reverse=False)
+            cur_i           = save_frames.pop(0)
+
+            try:
+                cur_frame     = -1
+                while True:
+                    frame  = next(video_loader)['data']
+                    cur_frame += 1
+
+                    if cur_frame == cur_i:
+                        #Cut to 512x512
+                        dims        = 512
+                        h           = frame.shape[-2]
+                        w           = frame.shape[-1]
+                        w_start     = int(int(w/2) - int(dims/2))
+                        h_start     = int(int(h/2) - int(dims/2))
+                        frame       = frame[:,h_start:h_start+dims,w_start:w_start+dims].type(torch.float16)
+                        torch.save(frame,path_save+f"/{classification}{cur_i}.tsr")
+                        saved       += 1
+                        cur_i       = save_frames.pop(0)
+
+
+                    if cur_frame % 500 == 0:
+                        print(f"\ti=[{cur_frame}/{n_frames}]")
+
+
+            except IndexError:
+                print(f"\tfinished {classification} with {cur_frame} frames")
+                continue 
+            
+
+def ch_visualize(img):
+     pass
+
+
+if __name__ == "__main__":
+     dictionary     = {  
+                                        #"flood":["C:/users/Steinshark/Pictures/training_data/flood_clip.mp4","C:/data/battlefield/flood"],
+                                        "gobi":["C:/users/Steinshark/Pictures/training_data/gobi_clip.mp4","C:/data/battlefield/gobi"],
+                                        "shanghai":["C:/users/Steinshark/Pictures/training_data/shanghai_clip.mp4","C:/data/battlefield/shanghai"],
+                                        "zavod":["C:/users/Steinshark/Pictures/training_data/zavod_clip.mp4","C:/data/battlefield/zavod"],
+                                        "islands":["C:/users/Steinshark/Pictures/training_data/islands_clip.mp4","C:/data/battlefield/islands"],
+                                        "dawn":["C:/users/Steinshark/Pictures/training_data/dawn_clip.mp4","C:/data/battlefield/dawn"],
+                                      }
+     generate_dataset(dictionary)

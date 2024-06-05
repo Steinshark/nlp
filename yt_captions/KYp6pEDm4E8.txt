@@ -1,0 +1,124 @@
+- A new GPU is launching. Will you be lucky enough to
+get one before they're gone? What do you mean? What are the specs? It's a new GPU. You have to buy it, right? You'll have to forgive me for being a little jaded at this point. It's tough to truly get
+excited about these launches and this one's especially tough for me because AMB's pulling out all the stops to cost down the new RX 6500 XT. With 16 RDNA 2 compute units, this thing isn't much
+more powerful on paper than AMD's new Ryzen 6000 mobile APUs. Is there anything to be excited about here or does AMD just think you'll
+buy anything at this point? (chuckling) I think you'll buy this
+segue to our sponsor, though. Privacy.com lets you shop online with virtual credit cards that offer way more security and control than conventional cards. Click the link in description to get $5 to spend on your first purchase when you sign up below. (bright upbeat music) How do you make a GPU that's
+affordable in these dark times? According to AMD, first, you slash the
+number of compute units, video memory, and memory interface compared to even a five-year-old GPU. Then, you cut from 16 PCI
+express gen three lanes to four gen four lanes for
+half the total bandwidth. Finally, and this step is important, you remove the media
+engines and coder blocks and all but two of the display outputs. One HDMI 2.1 port and
+one display port 1.4. Yes, this GPU has a lower transistor count than the RX 570, a card that kinda sucked on its own. Although that's not to say that this has no tricks up its sleeve. The core clocks are cranked up past 11 with peak boosts getting shockingly close to three gigahertz. What's more, the more efficient RDNA 2 architecture on TSMC's N6 process, and this is the first GPU
+using it to make it to market, makes for a graphics card
+that's less power hungry than that old card, albeit
+just by about 40 Watts or so. From the spec sheet alone, the RX 6500 XT looks more like
+an energy efficient RX 580, which isn't a great sign for what is supposed to
+be a $200 GPU in 2022. Granted with inflation, the RX 570 is actually closer in price, but this isn't a huge performance
+per dollar improvement in the span of five years. At least on paper, we've gathered an array
+of old and new GPUs, including the RX 580, in order to put the AMD's
+performance claims to test. It's worth mentioning
+that AMD's target audience is folks with GPUs
+several generations old. So our test rig is actually giving it the best possible scenario
+to stretch its legs. Your mileage will surely vary and it looks like it
+varies for the RX 6500 XT's gaming performance too. F1 2021 starts off with
+some pretty low performance for AMD's new GPU, reaching less than 75% of the performance of the RX 580 from 2017. I reran this bench a bunch because it doesn't make any sense, but that's what I got. Things get even worse when
+we enable ray tracing. We're just 16 ray accelerators isn't nearly enough to
+keep frame rates playable at a title like this. Remember the RX 6600 has less
+than twice the compute units, but that card performs
+nearly three times faster. It's possible that video
+memory is a bottleneck here. Which really shows its face in Far Cry 6 where the game itself,
+even straight up says that every preset, but 1080p low is more than the GPU's
+frame buffer can handle. Surprisingly the performance
+at 1080p high doesn't tank. It's just enough to squeeze by and only the RX 6600 outperforms there. When we turn on ray tracing though. (chuckles) Yup. There's your V-RAM bottleneck right there, told you it was marginal. To be clear guys, that
+you're not going to want to run anything ray trace
+with this class of GPU without running some kind
+of upscaling algorithm like AMD's FidelityFX Super Resolution. And even then it's probably a bad idea. These RT tests are all about
+the relative performance versus the RX 6600 rather than some kind of
+endorsement or lack thereof. Forza Horizon 4 brings some more good news for the RX 6500 XT though. The medium preset easily fits into memory. So we see performance
+unequaled by any other GPU, save its bigger brother. This carries over to Hitman 3 too, although there's a pig asterisk that needs to be thrown over this one. These numbers are for the
+second run of the benchmark. The game hitches bad on
+the first run every time and that's problem. I think this is a result
+of memory bandwidth being just so low. Because once the assets are
+in memory, everything's fine. Streaming in textures
+and assets really hammers the 64 bit memory bus. Now AMD claims the effective
+memory bandwidth is up to 231 gigabytes per second. But the problem with this number is that it's using the infinity cache, which is ridiculously fast by comparison. The real bandwidth is
+144 gigabytes per second, and that is rough. It's below the RX 580. That's why it's chugging. It's filling the small
+infinity cash and then dumping it out to RAM as fast as it can. And it's just not fast enough. All of these settings were fully within AMD's guidance by the way. Finally, CS:GO was a title
+that's very bandwidth hungry, as we discovered in our recent
+GPU splitting exploration. And it's confirmed big time here. 16 megs of infinity cash isn't enough and it falls behind even the RX 580 in terms of minimum frame rates. Which has made even worse by the 6500 XT's higher average FPS. That higher variation will
+feel like stutters in game and can lead to miss shots or worse. It's not a great experience. Productivity isn't this
+class of GPS forte, but AMD had a pretty good
+run at the top of the charts back in the day. Blender is not good. The new HIP API support does
+its job with the RX 6600, but the 6500 XT only beats the RX 580. Because that card is no longer supported. While it beats out the
+GTX 1660 in Photoshop, it loses to everything
+else and every other test. With substantially less
+performance in DaVinci Resolve, likely thanks to its four
+gigabyte frame buffer. Indigo benchmark shows it
+beating out its ancestor, pretty soundly, but every
+other card does too. So it's not a great showing overall. Mind you, all of these
+cards cost a fortune on the street by comparison. But the GTX 1660 launched at $219. So it's really a loss for AMD. The 6500 XT is not something someone with a card in this class would want to upgrade to for productivity. Instead you should
+upgrade to a water bottle from lttstore.com. Unlike GPU V RAM, we don't
+charge for extra capacity. If you're looking for
+an upgrade for an old PC with this class of GPU as AMD intents, chances are you only have
+four or six cores at best and you're probably running
+PCI express gen three. This card has four gen four lanes, which is finding the gen four board, but in a gen three board
+that's half the bandwidth, which might not be so fine. That's a bottleneck. Although whether there'll be a problem depends on how weak your CPU is. The bigger problem for
+potential upgraders is that there's no hardware
+video encoding support. So streaming has to be done
+entirely on the CPU cores or integrated graphics, if you got them. This might not be such
+a big deal with simpler e-sports titles that don't
+take full advantage of more than a couple of cores. But if you're a budding
+streamer looking to stream all of your gameplay, you'll probably want to look elsewhere or else play older or very simple titles. Now as with any of these lower end GPU's without founder's edition style cards, thermals are going to
+vary from design to design and there's no reference
+cooler to compare against, so take this one with some salt. Our XFX Quicksilver 10
+cards, dual fan layout seems to be a little bit
+overbuilt for this GPU, with the hotspot never
+reading beyond 75 degrees except for a brief spike while rendering the initial loading screen. The RX 6600 happens to share
+the same cooler and it reaches just past 80 degrees throughout the run. I wouldn't be surprised
+if somebody were to make a single slot variation of this card, particularly seeing how there's only two display uplifts to work around. Power consumption is where
+things get very interesting. This it's almost a linear
+drop for the 28 compute units on the RX 6600. Power draw only briefly
+breaks the a 100 watt mark while rendering the loading screen and settles into that
+average around 80 Watts during the run proper. Now this is the default
+power target for this card, but the fact that it
+remains at max core clocks near 2.9 gigahertz is impressive. That said, if AMD had shaved off just 5 Watts more power consumption, they could have been the only modern GPU with no PC unexpressed power requirements. At the end of the day, the RX 6500 XT is a GPU for the desperate,
+plain and simple. It trace blows well enough to work out to roughly equal the GTX
+1660 or 1070 in gaming, which is great. But it falls behind those older cards, anywhere four gigabytes of
+video memory is too little. And the unfortunate reality is, this is already a problem
+for AMD's own guidance. Heck it was a problem for the RX 580. Nobody wanted the four gig
+version for $200 back in 2017. And it's only going to
+get worse from here. For an extra a hundred bucks or so the RX 6600 represents shockingly close to double the performance. If of course you could
+buy one of them at SRP. It feels kind of wrong to call that card or even it's NVIDIA
+equivalent a good value but this is the world we inhabit today. The RX 6500 XT really could
+have been something special. If AMD hadn't brutalized it
+to meet that $199 price point. At least these are using
+new manufacturing capacity, unlike some of NVIDIA's
+other upcoming GPU's. But the RTX 3050 is going
+to come in at a $50 premium with eight gigs of faster video memory, a full media engine and more
+than two display outputs, which makes it pretty
+compelling on that basis alone. high imo. Get subscribed by the way, because we're going to have
+her full review of that card ready for its launch too. I'm left with a sour taste in my mouth. Not because AMD cut the card down, but because quite frankly, I would recommend waiting
+until the RTX 3050 launches to make your decision on
+whether to buy this thing. But because of the
+current market situation, the reality is that you
+don't have that long. You might not even be able
+to find one as of right now, thanks to minors, scalpers
+and desperate gamers alike. I do wonder what AMD's
+margins on this thing are. Because it's a sure
+thing, they'll sell out. Just like I sell it for
+sponsors like Hello Fresh. - Thanks to Hello Fresh
+for sponsoring this video. Time for a healthy new year's resolution, Hello Fresh is here to help
+you hit your healthy goals. With Hello Fresh, you get fresh pre proportioned ingredients and seasonal recipes
+delivered right to your door. They create delicious
+step-by-step recipes every week, including calorie smart, carbs smart and family-friendly options. They source fresh
+pre-portioned ingredients in recycled content packaging. So you can waste less
+and eat more sustainably. And if you're looking
+to save time cooking, they even have 20 minute
+meals and low prep options. Keeping on your
+resolutions is hard enough. So let hello fresh deliver
+help through delicious meals right to your door. Go to HelloFresh.com and
+use code LINUSTECHTIPS16 for up to 16 free meals
+and three surprise gifts. That's HelloFresh.com
+promo code LINUSTECHTIPS16. - Thank for watching guys. Go check out our recent overview of AMD's other CES announcements
+for more on what to expect from team red in 2022. There's a lot of cool stuff coming.

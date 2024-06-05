@@ -1,0 +1,100 @@
+- [narrator] forget what
+you know about chromebooks, this is a gaming laptop now! - steam is finally coming
+to chromebooks, baby. and that means that you and
+all of your chromebook friends can finally join the elite
+league of gamers, or does it? we tried the steam alpha and it's cool, but it might actually
+really be chrome itself that isn't ready for gaming. let me explain why, after our sponsor. - build redux, build redux
+offers competitive pricing as compared to building a pc yourself. their website makes it easy
+to configure your build alongside their helpful support guides. head to buildredux.com/linus and start creating your pc today, the easy way. - the thing that makes chromebooks great is also what makes them awful for gamers. a laser focus on simplicity. you can do browser things and maybe run a couple of android
+apps, but that's about it. sure, in 2018, google added
+a linux implementation called crostini, that allows
+you to use pretty much any desktop environment you'd
+want on your chromebook. but that's not an
+improvement to chrome os. you can do that on any computer, but with the introduction
+of native steam gaming, this 11-year-old os, much
+like an 11-year-old human, looks like it will be doing
+a lot of growing and changing in the coming years. so how does steam on chromebooks work? well, since it's an alpha, you'll have to switch to the dev channel, change a few flags and type a couple lines into the terminal, and boom! you're up and running. assuming of course, you
+have a supported chromebook. we have two, the acer chromebook spin 713 and the asus chromebook cx9. so why these two? well, they are among these
+six supported devices that can run this alpha. yes, you heard correctly, just six 11th gen intel chromebooks are supported for the alpha. support should expand as this rolls out, but, for now, like the food network, you can get a taste
+vicariously through our video. yum, (slurps) tasty. first up, let's talk
+about gaming performance. we were hoping to compare
+steam on chrome os to these same machines running windows by swapping the m.2 ssds. but, yeah, no, they won't even boot up. turns out these chromebooks
+use coreboot instead of uefi, meaning we'd have to
+flash firmware onto them. but since these are on loan from their respective
+manufacturers, we couldn't do that. that means a one-to-one
+comparison on the same laptop will have to wait until steam is available on chrome os flex, the version of the os you
+can install on any machine. for now, what we can do
+is compare the steam alpha to running steam games in
+crostini, on the same machine. now, remember, it's an alpha. there are a bunch of
+issues like no dx12 games, weird performance and scaling
+at non-native resolutions, and a kanye west level
+of general instability. so while you should take these
+results with a pinch of salt, if you're chomping at
+the bit to piece some gs on your c book, here's
+what you can expect. - our limited benching gave
+us some strange results. you could say they were a little bananas. lttstore.com. half-life: lost coast worked swimmingly with very slight gains in the alpha over the linux implementation. but when we look at the talos principle, well, things get interesting. in crostini, the game was unplayable, scoring between 0 and 3 frames per second. but when it ran through the alpha, well, look at that,
+that's a playable game! but curiously, it performed
+substantially better on our lower-spec i5 chromebook, a strange trend we noticed
+in all of our benchmarks, despite the i7 equipped cx9
+possessing more execution units than the gpu on the i5. we think it's a driver issue
+on the intel side of things, because it persisted in
+both crostini and the alpha, but we were unable to nail down
+exactly what was happening. in other alpha weirdness, we tried to benchmark
+shadow of the tomb raider, but that just stopped working
+altogether after an os update. that's what an alpha's like, folks. - now, the bugs are to be expected. but the thing that shakes my belief that gaming could succeed on chrome os is that pc gaming often requires tinkering and chrome os is by
+definition, a limited os. for example, file management
+is horrendously obfuscated. you can't tell where your
+files are located in relation to other folders, or even
+navigate to your steam game files. you can see the file structure
+by using steam's file browser but you can't do anything with it. if google wants to take gaming seriously, they need to make it easier for people to troubleshoot
+and manage their device. you know, it's like
+medium-level tinkering. chrome os has this massive chasm between the limited things
+typical users can do and the unlimited possibilities
+available to developers. but what about gamers? it's like you get the choice between a tricycle or a unicycle. i need a middle ground. where can i do things like
+install a mod or tweak graphics or power management settings without needing dev level
+knowledge of the os. you can't just power
+wash your problems away when you have a quarter terabyte
+of content to redownload. but let's talk about why google is bringing steam to chromeos at all. back in 2013, google took a
+stab at making chromebooks premium with the chromebook pixel, a laptop that was just a
+couple hundred dollars shy of directly competing
+with the macbook pro. and it was a flop. reviewers liked the hardware
+but no one wanted chrome os. so google tried again,
+and then again, and again. and after nearly a decade, i think that google has finally realized that if they wanna sell
+a premium chromebook, they need to sell the
+idea of a premium os. and gaming is part of that idea, especially for the next
+generation of chromebook buyers. you see, google has been invading schools all over the world, leading
+to scores of children being brought up on google's os. and as they switch from
+their school provided laptops through their own personal devices, google is hoping they
+don't want to jump ship by making chrome os a compelling package as a sole personal computer. google would love for you to switch, but they're trying to
+get your kids to stay, and gaming will be a core
+part of that retention plan. wait a second, how does
+stadia fit into all this? aha, you forgot about stadia, didn't you? in classic google fashion, it seems like the left
+hand doesn't really know what the right hand is
+doing because bringing steam to chromebook seems like it's
+going to harm stadia's growth. i mean, sure, local gaming and
+game streaming are different, but stadia is google's gaming brand. and it seems like they're
+fine to just kinda leave it in the wings
+rather than make any effort to integrate it into chrome os. in my opinion, that would
+be a more logical move. stadia as a cloud-based service is more in line with chrome os vision of a cloud-based future. whereas traditional pc gaming
+that is being introduced by this steam alpha is
+kind of antithetical to how chrome os has always worked. oh, this one died, how appropriate. and there are other reasons i don't want a game on
+a chromebook anyway. the os sucks at translating
+track pad inputs to accurate mouse movement. window management is slow and frustrating. and the design language has a general lack of information density, and i can't change any of it! while i certainly welcome
+the idea of playing games i already own on my chromebook, for this to work properly,
+google needs to really commit to making gaming a good experience. and that means that chrome os will have to become
+something it's never been. that might be good for gamers but bad for people who are happy with chrome's lightweight simplicity. it's a balance that will be hard to find, but google, i think you could do it. so long as you don't abandon the project. - today's video is brought
+to you by privacy.com. privacy.com lets you buy things online using virtual cards rather
+than your real credit cards. mother's day coming up, and the last thing you
+should be worrying about is getting your card info stolen online while shopping for a gift. if you're a victim of a
+fraudulent transaction, privacy automatically
+declines the transaction and notifies you immediately. you can set spend limits, pause
+and close cards at any time. no more jumping through
+customer service hoops in hopes of canceling
+or losing money on apps you never meant to spend money on. privacy.com also offers
+different plans for your goals, from cash back to team plans. head to privacy.com/linus
+and sign up for an account. you'll automatically get $5 to
+spend on your first purchase, so you can have a little
+extra to treat mom like she deserves, like how i treat her. - thanks for watching this video. hey, if you liked it, why
+don't you go check out the one where linus struggles
+to buy his son a chromebook against linus' will. we make him do these things
+for content. (laughs)

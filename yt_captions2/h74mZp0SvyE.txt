@@ -1,0 +1,108 @@
+(upbeat music begins)
+- well, that didn't take long. amd's threadripper lineup revitalized the high end enthusiast desktop
+space when it first dropped. and now after a few short
+years, it no longer exists. that's right. amd just announced their new zen 3 based, threadripper pro chips yesterday. and they look great. but note the pro. these bad boys aren't gonna
+be on store shelves near you. they're oem only. and they aren't going to be cheap. that's right. now that they're on top, it seems like amd is
+resting on their laurels, just like intel did. and this announcement
+demonstrates once again that amd is not your friend. you know, who is though? actually they're not your friend. they're just our sponsor. they're our friend. build redux offers competitive pricing, compared to building a pc yourself. and their website makes it
+easy to configure your build alongside their helpful support guides. head to buildredux.com/linus, and start creating your pc today. ("supernova") oh, here we go. linus is ranting about
+evil corporations again, but hear me out. amd's threadripper pro
+5000 series cpus are a zen 3 refresh of the
+threadripper pro 3000 series and come with every,
+everything that zen 3 implies. higher core clocks,
+better memory controllers, more cache in the eight
+core ccx arrangement, and amd's shadow stack feature that protects against buffer overflows. they also come with increasingly
+enterprise focused features like more memory capacity and channels, more pci express lanes,
+and a bigger price tag, which is great. awesome, love it. but i have one question. where are the cheaper
+non-pro threadrippers? what's that? there aren't any? well, then, what happened to socket strx4? oh, it's dead like x399
+after only one generation? that is such a shame. now look, amd is a publicly traded company and that means that they're
+actually legally obligated to do whatever they
+can to increase profits for their shareholders. legally, like, if they didn't do it, they could be sued by their shareholders. so when faced with the prospect of using those zen 3 chiplets to power lower cost consumer or enthusiast threadripper processors, compared to jacking up the
+price for threadripper pro and just not selling
+consumer chips anymore, you gotta bet that they're
+gonna choose threadripper pro. after all, you gotta remember who it was
+that introduced the concept of a thousand dollars consumer cpu when they were on top, back in the 2000s. here's a hint. it wasn't intel? yes, they make good products. and yes, they've been an
+underdog for a long time but when amd can take advantage
+of their top dog position they have, and they will, just like intel. so why did they make threadripper
+in the first place then? if you ask me, mindshare. the og threadrippers, the 1000 series. if you believe the story
+weren't even on amd's roadmap and launching them supposedly provided amd with just another piece
+of their product stack to put even more zen chips
+in machines worldwide, meanwhile slapping team blue in yet another one of their
+traditional strongholds, the high end desktop market. there's just one problem
+with that in today's world. and that's where this conversation takes a bit of a weird turn. the high end desktop
+concept for enthusiasts is, in my opinion, currently obsolete. think about it. intel hasn't released an
+hedt platform since mid 2017, and they haven't released a
+chip for one since late 2019, which coincidentally is around the time that the last consumer
+threadripper chip was announced. so what happened? ryzen happened. the 16 core ryzen 9 3950x
+also launched in late 2019. and for the first time you were able to get
+truly hedt core counts, 16 freakin' cores, on a desktop platform. remember, the first gen
+threadripper, the 1000 series, actually capped out at 16 cores. so ne'er we had a desktop platform now with pcie gen 4 for massive bandwidth, and dropping at a time when
+late generation ddr4 modules with higher capacities, we're rolling off the production lines. so overnight both intel's x299 and amd's threadripper platforms became significantly less
+appealing for most users because their major
+selling points were now being cannibalized by the
+consumer desktop platform. the last consumer threadripper chips that came out then in early 2020 tried to stay relevant
+with up to 64 cores, 256 gigs of ram, and 88 total
+pci express gen 4 lanes. but how many people
+made use of all of that but then didn't need much
+more memory capacity? how many prosumers were really building their own threadripper rigs
+versus buying prebuilt systems with enterprise features and support? that's the question amd
+apparently asked themselves. and the answer seems
+to have been very few. and honestly speaking, i don't like that hedt is basically dead. i hate it, but i get it. maybe what amd is really
+doing here is creating a product lineup that better reflects what their customers are actually buying. and it's kind of a smart move. as consumer platforms start rolling out with pci express gen 5, the need for additional lanes, is going to be seriously reduced. there's even talk already of reducing ssds to just two lanes once gen 5 hits the data center because the bandwidth is already there and it makes no sense to
+tie up the extra lanes and the associated pins, and design complexity that come with them. and while it's not quite the same thing as quad channel memory, ddr5's double burst length with two sub channels per
+module effectively means that memory transfers get
+similar latency benefits. and quite frankly, at risk of
+being quoted out of context, 'cause i'm all about that more power, well, 16 cores ought to be
+enough for anybody, today. if you don't find that comforting, maybe pick up a swacket
+from a lttstore.com, unlike threadripper they
+are not discontinued. and i know that kind of
+thing might upset you as an enthusiast, but think about it. what workloads need 16 cores right now? we're in the middle of a
+software design paradigm shift, like when we went from
+single to dual core, and dual to quad core. it took and is taking
+a while for developers to figure out the best way
+to utilize these extra cores. and quad core turned out to be enough as recently as five years ago, because, well, dammit,
+intel said it was enough. and also, because utilizing those extra
+cores really is a struggle. and going all the way to 16, even power users are having
+a hard time imagining how to fully utilize them. - it's true. i've got a 12 core 3900x at home. and honestly i don't use all
+those cores most of the time. if i didn't dabble with running
+multiple virtual machines i'd be just as well off with an eight core or even a six core cpu, especially if all i wanted to do was game. in fact, six cores is what
+i went with for my vr rig. now, sure, there's stuff
+like compiling code and non gpu rendering. but the reality is, that anybody's serious enough
+about coding or graphics to be looking at a threadripper would probably also be looking at a separate build or render box, so their workstation isn't unusable while the job's being done. if, say, i ran a plex instance,
+a personal web server, and maybe mess around with a windows or mac os virtual machine, that'd be roughly half my dozen cores. and i'd probably be more pressured on memory and storage at that point. now, would i complain if i
+had 16 cores to play with? (chuckles)
+no. but i don't need them either. i don't even need what i have now. by the time i do pricing
+for those extra cores, not to mention platform features like pci express gen 5 and ddr5, will have come down and it'll
+all be more mature to boot. the only times i've
+personally gone for like, the top end consumer processors
+were the core i7 3770k, i got with intel retail edge on the cheap, and the core i7 6700k, near the tail end of the
+quad-core-is-all-you-need years. so i'd have the extra
+threads to work with. and that's just me
+comparing my 12 cores to 16, let alone threadripper with up to 64. now you could argue that
+threadripper would stay relevant for way longer than
+any desktop chip would, but you'd be wrong about that. the 16 core threadripper 1950x workstation that i used to type this
+script is slow as balls. and i have never once used all the cores. i desperately want more
+ipc and faster memory. i'd happily trade for a 5800x or even a 5600x and some fast memory. i'm not even using more pci express lanes than a modern ryzen desktop can handle. and i'm anthony. - all of that said, the workstation experience is still there. and threadripper pro is here to stay, and makes more sense to
+more customers looking for something that's in
+between ryzen and epyc compared to the og threadripper. and don't worry, we will definitely be doing a deeper dive on these zen 3 behemoths. so make sure you're subscribed
+so you don't miss it. for now, i don't like that they've hung threadripper
+customers out to dry, and neither do you. in fact, i'd encourage
+you to be angry about it because quite frankly proving
+that there's still a market is the only way that amd might
+listen and reverse course here. but i would also encourage
+you to reassess your needs and consider whether you
+might be just as well served by the coming generation of consumer cpus. it's not as glamorous, and it doesn't look as great
+on your instagram feed, but it's gonna have wider support, and a lot more versatile form factors. and your wallet will
+probably thank you too. just like this segue will thank me for our sponsor squarespace. if you're looking at creating and sharing your own content
+online, give squarespace a try. squarespace is the all in one platform for building a top tier website and growing your brand online. you can upload or embed your
+video library and organize it in one of squarespace's
+best in class templates to explore the new ways that
+you can monetize your content. you can both display
+your social media content and push website content
+out to your channels. plus with the members area you can unlock a whole new
+revenue stream for your videos by posting exclusive content behind either a subscription
+or a onetime fee. and squarespace's analytics
+and insights ensure that you're optimizing your
+website every step of the way. so head to squarespace.com/ltt
+and get 10% off today. thanks for watching. if you guys enjoyed this, go check out our recent video on amd's pro series ryzen processors and their platform locking function. it's more evidence that
+maybe amd doesn't always have the consumers' best interests top of mind.

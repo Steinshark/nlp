@@ -1,0 +1,135 @@
+- Games are going to look
+better and play better, thanks to this new tech
+powered by The Humble SSD. That might not make any
+sense like for years, we have been saying that storage speed does not matter for gaming,
+but now that Microsoft's DirectStorage API has finally
+been released to developers, that changes. It's now possible for your GPU to load data directly from your SSD. And it's only a matter of
+time before games supported. But why does it matter where
+your GPU gets it data from and how is this going to
+make your games better? And how am I going to
+load this sponsor segue directly into your brain? - .tech, last year .tech
+domains gave away a ton of awesome prizes with their
+break the code puzzle contest. And this year they're gonna
+take it to a whole new level. Try and break the code to win today, using the link down below. (upbeat music) - In my opinion, DirectStorage
+and Sony's equivalent have always been underrated. Because we can't turn
+it off, we can do a side by side to see how much
+of a difference it makes. So it's always been this
+weird nebulous thing that we can't feel, and now
+that it's finally on the PC, we can get some real answers. Now we don't have games to test right now, but Microsoft did give us
+a peak at what it can do. The first there's a
+simple, HelloDirectStorage that's designed to get developers
+acquainted with the API, but more importantly, there's
+a MiniEngine ModelViewer. This is intended to show developers the difference DirectStorage
+can make when loading assets with a real world example. Why don't we have a look for ourselves? This is the ModelViewer,
+what this lets us do is basically show the
+difference between DirectStorage and not DirectStorage. So these two commands that I'm cycling between here have the non-DirectStorage and DirectStorage versions respectively. So let's launch the
+non-DirectStorage version first and see how long that takes to load. Okay, not too bad. And then we can look around, it's not a very complicated scene. It's actually quite, quite
+small for what it is. It's not like the unreal engine five demo, but it is a whole bunch of assets that are just loaded in here. We can see that took 0.33 seconds for everything to start up. Now let's go with DirectStorage. Okay, you can see the same
+thing is happening here. We've got the same overall set of assets. And if we get out 0.08 seconds. I cannot overstate how
+much of a difference that is. This one little scene,
+just 52.4 megs uncompressed is loading nearly three times faster. Now true we're talking
+fractions of a second here, but expand that out to hundreds of megs even multiple gigs of assets
+loaded by modern games, and that's a lot of time saved. But now I have two questions, first, how does it save so much
+time on the same hardware? And second, how will it scale
+with those more detailed game environments? In order to understand
+what's going on here, we have to understand
+how assets are loaded into video memory. The reality on PC up until
+today has been that the asset is first read from storage to the CPU, then placed into system memory, your RAM. From there, it's copied through
+the CPU again to the GPU. Now this sounds like a roundabout
+process, and as we've seen in our demo it definitely
+slows things down. But up until the mid two thousands
+this wasn't a major issue because you'd usually load everything you needed all at once. What changed?
+Streaming assets. As open worlds became larger,
+and as consoles available video memory shrunk in comparison to PCs it became increasingly common
+to need to use more textures and 3D models than could
+be held in memory at once. This was foreseen as early as 2001, when Sony filed a patent to
+seamlessly load game worlds as boundaries are crossed,
+eliminating the need for loading screens. Fast forward to today and
+loading screens are seen as an unnecessary inconvenience in an age where seamless
+asset streaming is the norm. You usually only see the
+first one and then again when you die or when you fast travel. Ever noticed how today's
+games connect areas with elevators, or tunnels, or hallways? Yeah, that's why. There have been attempts to help with this over the years. Compression was one of the
+first such concepts introduced. And in fact, one of the earliest methods is still in use today. Prior to that, you had to
+either shrink the dimensions or use a color map to reduce
+the memory footprint textures and after its introduction
+of adoption by the industry, it enabled larger, more detailed assets to be loaded more quickly even if they still had to be
+copied from the CPU to the GPU. Compression paid the way
+for graphics to leap out of the crunchy nineties visuals and into brown muddy
+two thousands visuals. Hey, it was good for the time. It also paid the way for another attempt to improve performance,
+this time in the same way that DirectStorage does. By cutting the CPU out
+as much as possible, texture atlases effectively rounded up all the little textures a scene would need and then plop them into one giant texture. The end result being a dramatic
+reduction in the number of textures that needed
+to be copied to the GPU. And more importantly,
+for the time, the number of draw calls that had to be made. Sounds like a great solution. What do we need DirectStorage
+for 'em am I right? Well, texture atlases have some drawbacks. You can't tile them,
+colors will blend together around the edges of each
+subtexture in the Atlas, and perhaps most importantly, swapping one or two individual
+textures requires swapping out the whole Atlas, which
+is really inefficient since they're so big. The nail in the coffin texture
+atlases were becoming a thing around the same time that
+streaming assets became popular, talk about bed timing. DirectStorage solves
+all of those problems. It allows the GPU to read
+directly from storage without any intervention from the CPU, meaning that an entire copy
+step is just being removed from the pipeline for each and
+every asset loaded this way, which as we've seen leads
+to a significant reduction in load times. That means that not only
+can game worlds be larger and more detailed with shorter or even no loading hall ways, but you won't need a
+massive GPU for it either. Since lower end GPS with less
+VRAM will be able to swap assets in and out more efficiently. I can see game engines
+becoming more aggressive in terms of how they tweak asset streaming according to available VRAM
+to maximize the effect. And I can see you in a
+swacket from lttstore.com, seriously, it's comfortable
+for most of the year and doesn't look half bad either. But what about our second
+question, will DirectStorage scale for larger assets? Well, for it to be able to, the GPU first needs to fetch the assets and b, compressed them. This is a problem. Well, yes I said before that
+GPU support compressed assets, this is a different type of compression. With games being as massive as they are, assets are typically stuffed
+into giant compressed archives to save space and for more
+efficient distribution. Prior to DirectStorage,
+the CPU handled all of this and that was fine because
+it was all going through the CPU anyway. Unfortunately DirectStorage
+in its current form doesn't include a way for the
+GPU to do that decompression, at least not on PC but it is possible. Nvidia has something similar to how Sony's dedicated PS5 hardware handles
+this, which they call RTX IO. When it's enabled, decompression
+via custom hardware or via the GPU itself will
+be significantly faster than it is via the CPU at all full stop. And as a bonus, it's decompressed
+straight to video memory. So that performance boost we
+saw earlier will be amplified because we're skipping two
+steps instead of just one. But as long as data has
+to pass through the CPU, DirectStorage won't be super useful. Microsoft says that
+fixing this is a priority so hopefully we'll see
+it before games go live. The alternative is games that
+ship with uncompressed assets, which I mean with how big
+call of duty has gotten with compression, I sure
+hope you got a big SSD. Why is it taking so long though? Microsoft just had DirectStorage
+on Xbox for ages now and we're still getting
+table scraps on PC. Well, it's easier to
+implement a brand new API like this on a fixed
+platform that you can control both the hardware and
+operating system for, and consoles are usually the platforms with the greatest initial lead. Asset streaming for example
+was to my recollection anyway, first seriously explored
+on consoles at a time when the available VRAM
+compared to a contemporary PCs was laughable. Regardless it was a problem
+at the end of every generation since then, and even the eight to 10 gigs of memory that the Xbox series is and the PS 5 have, is going
+to seem extremely limited in 5-10 years. To stay relevant for longer
+than the Xbox One and PS 4 did, they need tech like DirectStorage
+that will offer game developers the flexibility
+they need to crank up the visual fidelity or
+create evermore sprawling open worlds we crave. Supporting DirectStorage
+on both Windows 10 and 11 is also no easy feat, but
+Microsoft says that windows 11 will work better thanks to enhancements to the storage subsystem. Something that we're going to have to test in more detail when games get released. Get subscribed so you
+don't miss that by the way. And that's really it. It'll be a while yet before
+we see games coming out with support on PC, but it's
+getting really close you guys. And when it does finally drop, it's legit going to change
+the way the games are made. Won't change my sponsor segues though. - NZXT, their new function
+mechanical keyboards are perfect for those looking to join the
+mechanical keyboard community. You can choose between mini
+10 key lists, 10 key lists, and full size models. All the keyboards come with
+hot swappable switch sockets, a detachable USBC keyboard
+cable, and per key RGB. Plus they're rated for up
+to 50 million key presses. The NZXT Function Retail
+Keyboards come with the option of white or black colors with
+gutter on red key switches. But countries with NZXT BLD can choose from five different kinds of switches and a variety of color options for a custom look to match your desk. Learn more and purchase your
+own NZXT Function Keyboard using the link below. - Thanks for watching guys. Go check out our recent
+video on the Radeon and Pro SSG for an earlier
+approach to this kind of thing. Different purpose, and
+didn't quite catch on, but hey you never know
+what the future holds.

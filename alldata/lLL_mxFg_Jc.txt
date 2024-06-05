@@ -1,0 +1,105 @@
+- It's a fact of life
+that, wherever you go, someone is always trying
+to sell you something. Whether it's a brand hyping up their latest 1.21 gigahertz CPU, or a so-called influencer
+rubbing your face in a brand new gaming setup that you would have to
+save for years to afford, for the third time this week. But I'm gonna let you
+in on a little secret. Come on, come over here. You don't have to buy anything. In fact, I bet the old crappy quad-core PC that you already have is good enough for anything you'd need it to do. And if it's not, you could get
+one of those for much cheaper than the fancy eight or 16 core CPUs that all the big players want you to buy. Let me show you, after I show you today's
+sponsor, GlassWire. Are you lagging out while gaming? Use GlassWire to see what apps
+are wasting your bandwidth and causing your games to lag. Get 25% off using offer code
+Linus at the link below. And yes, I appreciate the irony. (upbeat music) There have been many popular four core CPUs over the...
+(metal thudding) (crew laughing) There have been many
+popular four-core CPUs over the last 10 years, and
+we can't test all of them, but we do have a handful, dating from today all the
+way back to early 2013. We've used an RTX 2080 Founders Edition for all of our tests, and we ran our gaming tests at 1080P, so more of the burden will be on the CPU rather than the GPU. I don't wanna waste your time, so let's jump right into the
+results where, whoo-whee! Wow, look at that. I mean, it sure is easy to show you what a piece of crap your
+old 4770k is, isn't it? The 3300X, which represents
+a modern quad-core CPU, manages to beat it handily, and stepping up to six or eight cores, especially with the 5800X, which features AMD's
+latest Zen-3 architecture, is gonna deliver a completely different
+computing experience. that is, as long as you actually use any of these applications. The truth of the matter
+is that the benchmarks that we and other members
+of the tech press use to compare processors are not chosen for how representative they are of the typical user's daily workload. Rather, they're often
+chosen because they allow us to demonstrate how their
+performance differs for heavy users, or in future workloads that might not be mainstream yet, but we expect them to be at
+some point down the road. Like, there's a pretty good
+chance that you personally have never fired up V-Ray or Cinema 4D. There's a good chance you
+don't edit or encode videos. So, if we flashed these
+charts in front of you, you could easily end up
+spending a lot of money for something that you might never need. Even file decompression, which this is something
+that we all do often when we unpack a download
+from the internet and is a poster child for the
+benefits of multi-core CPU's, well, it's a relatively
+light workload these days, and most decompression tasks
+will complete in seconds on any of the CPU's on this chart. So, does it really matter
+the two or three times a week that it comes up, if it's
+25 seconds or 45 seconds? It's time for the other side of this coin. While our Cinebench R23
+single thread, web browsing, "Grand Theft Auto V", and
+"CS:GO" results demonstrate that there are certainly
+benefits to modern processors, the addition of more cores
+isn't the biggest one. And check this out. If we covered the legend on these "Assassin's
+Creed: Valhalla" results, you'd be hard pressed to guess which CPU's have four, six, or eight cores. Go ahead and try. But hold on a second, Linus, everyone knows that FPS and action games are still dependent on
+just a handful of threads. You need to test strategy games that can use a multi-core CPU to calculate all the possible AI moves or whatever. And yeah, someday that will
+probably be a valid point, but it is not this day. And we did a quick "Civilization VI" run on our Zen-2 CPUs to
+demonstrate that point. Now, with the latest gen
+consoles from the big players featuring eight core, 16 thread CPUs now, we are going to see developers really push to take advantage of everything they can squeeze out of them, but if history is anything to go on, it'll be a while before we see a game that was really built from the ground up for this generation of hardware, and it'll be years before we
+see these many-core designs used to their fullest potential, which doesn't mean our video
+is over, not even close. I haven't even mentioned LTTstore.com, with its great designs and
+high quality shirts yet. The thing is game consoles
+do pretty much one thing: They game, but your PC could
+be doing any number of things, capturing video from your webcam, removing ambient noise
+from your microphone feed, encoding a stream to share
+with your friends or viewers. What happens to our quad-core performance when we throw common
+background tasks into the mix? So, let's fire up Premiere. We're not working on it right
+now, it's just sitting there. We're gonna need Discord,
+little bit of OBS, stream that gameplay, right? And love me some background
+YouTube music playlist action. All right, let's do this again. Despite the fact that we had all of this extra software
+open in the background, none of our CPUs performed in a way that I would describe as being unplayable. Our older four-core chips did struggle significantly more in "CS:GO" with all of these programs running, with the 4770k actually losing nearly half of its performance, but that still left it at
+over 120 frames per second, and that would more than
+good enough for most people, unless they're especially
+competitive, in which case, guys, turn off your
+background tasks, all right? And moving to our more
+modern quad-core 3300X, it lost only a marginally
+higher percentage of its performance when compared
+to the eight-core 5800X. In "GTA V", the performance
+hit was even more negligible. What this tells us then is that, sure, if you have more overhead overall, there will be less to worry
+about when you open extra apps if you have a many-core CPU, but as long as you're not gonna be running 30 pieces of software while
+you're running your game and expecting to get the maximum FPS, you're still gonna get a
+completely playable experience. But there are other advantages to overbuilding a gaming rig, particularly with modern AMD processors. If you allocate four of your cores exclusively to your game, and this is something you can do manually, or there are tools to help
+you do it, theoretically, it could help smooth out the experience, both by removing extra
+clutter from background tasks on those cores, and by having
+all of the game tasks running on the same physical group of
+cores for faster cache access, at least in theory. In practice, we didn't observe
+nearly as much difference as we expected, but some users on Reddit have reported measurable
+performance improvements, particularly in "CS:GO"
+with first-gen Ryzen chips, so your mileage may vary. The truth is, thought, that
+if you don't have a fortune to spend on a gaming PC, that's okay. A chip from 2013 may come
+with unpatched security flaws that have scary names
+like Spectre and Meltdown, and Microsoft warns that
+older platforms experience 52% more kernel mode
+crashes in Windows 11, but real talk, Spectre and
+Meltdown are only of concern to enterprise and business
+customers, for the most part. And 52% more than 0.2% is 0.3%. That sounds like a risk worth taking, when a 4770K can be had for
+about a hundred bucks on eBay. There is still the question
+of whether it's wise to buy into aging technology like DDR3 when older Ryzen 3000 chips
+can be had for not much more, but that one is just gonna come down to your individual budget,
+which we have no way of knowing. What we do know is that
+four cores is still enough, unless you actually need
+extra multi-core grunt for content creation or
+for non-gaming workloads. Just like you need to check
+out this sponsor message. Thanks, Ting Mobile, for
+sponsoring this video. Ting Mobile has new rates
+that make it easier than ever to see how much you can save by switching. They've got unlimited talk
+and text for just $10, data plans starting at $15,
+with their Set 12 plan, which includes 12 gigs
+of data for $35 a month and unlimited data for 45 a month. And if you liked their previous pay for only what you use
+plans, they're still around. They're called Ting
+Mobile's flex plans now, and they charge just $5 a gig. Data can even be shared
+if you have a family plan, so you can connect more
+phones to save more. Anyone who signs up for
+a Ting plan in September, it gets entered to win one of four Ting-branded Yeti prize packs, and everyone who signs
+up for an unlimited plan automatically receives a
+free Yeti tumbler as well. So, check out the details
+at linus.ting.com. Oh, and you'll also get $25 in
+credit towards your account. If you guys enjoyed this video, maybe check out our Ryzen 5000 review, which has a bit more
+detail about how tasks pinned to certain CPU cores
+can have a performance benefit.

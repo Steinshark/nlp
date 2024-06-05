@@ -1,0 +1,161 @@
+Well this is, I think, possibly the best board game 
+ever which is quite a bold claim. Many people talk   about this as just the perfect game; it involves 
+strategy and a little bit of luck as well because   of the role of the dice. It's a actually a game 
+which- people play together, there's talking all   the time, there's trading going on. Sometimes 
+games suffer because the person playing that   particular turn is the only person really being 
+involved and the others are sitting waiting for-   This one involves everyone. This is called the 
+Settlers of Catan. It was created by a German   dentist who also loved board games and it won 
+the Spiel des Jahres which is kind of Nobel Prize of   um gaming in Germany. It's the sort of game which 
+gets a mathematician immediately excited because   just look at the layout of this board. It's um 
+hexagons not squares, and hexagons are just such   a beautiful shape and the tessellation of the 
+plane using hexagon so as soon as I saw this   game I I was getting very excited. But you'll 
+see there are also numbers on here, so let me tell   you a little bit about how you play the game. So 
+you'll see there are different sorts of squares;   there's woodland here and woodland will generate a 
+different resource of logs. The mine hexagons give   you ore; the pasture hexagons allow you to graze 
+sheep; the fields then we can grow some wheat; and   then in the hills you can dig out stuff to make 
+bricks. And each of these will allow you to build   different things. Now how do you get these? Well if 
+you own a property and it's on say the corner of   these hexagons; we're going to see which of these 
+is going to generate some resources in this turn, and I'm going to throw some dice and I've got 10.
+So those areas of land which have the number 10   on them will be generating - uh in this case 10 
+is generating a sheep, so this will generate a   sheep for anybody who's got a property on the the 
+corner of this land. But unfortunately I I've not   generated anything because I wanted a 5, 4
+and 11. So if I'd been here I would have got some   sheep resources. Interestingly, what's the chance 
+of getting - for example if I'm here - of getting a   12? Unfortunately there's only one way to get a 
+12 with two dice which is a 6 and a 6. And   this is what this little dot at the bottom here 
+is telling me, that this is actually quite a hard   thing to generate resources from. So is it a good 
+idea to put your property here? Because there's   only one chance. Well look at 6 for example, this 
+has got five dots underneath it - why? Because well   to get a 6 how many different ways can I get 
+a 6? There are five because I can get a 5 and a 1, or a 4 and a 2, or 3 and 
+a 3, 2 and a 4, or a 1 and a 5. So   there are five different ways to get a 6; four 
+different ways to get a a 5. So these little   dots actually help you to do the probability in 
+this game, because um let's see. You know the if I   put a property here I've got 1 + 5, 6 plus another 
+4, that's 10 kind of different ways the role of   the dice can generate things for me here. Um let's 
+choose somewhere else and just calculate uh; let's let   let's go here. That w as 10, so here we got 3 + 2 
++ 4 - that's only 9. So this is a less strategic   place to put your property because only 9
+out of the 36 different things are going to   generate resources. So this is what you need to 
+do when you're playing Catan. So a little bit   of mathematical strategy here will help you to 
+choose which corners to go on. Because you want   to add up those dots cos that's telling you um 
+the probability, you're going to add up those   probabilities that you're going to generate some 
+resources if you put your property there. This   is why a little bit of mathematics can help you to play this game.
+- (Brady: There must be more to it than)  (just who can crunch the numbers the best though 
+to win this game or?)
+- Well there's actually a lot   of psychology involved, because once you've 
+got resources you might have found you've just   generated a lot of sheep, and what are you going 
+to do with all these sheep? And you need to start   trading. So that's actually why this game is so 
+beautiful because it involves a lot of conversations   and "I'll give- I've got loads of sheep but I 
+want some some some logs, will you trade me?"   And there's a little- and that's not determined by 
+the game, that's determined by how much you need   something and how much you can see your opponent 
+needs things. 
+- Oh do you have any clay? Will you trade   a rock for a clay? 
+- But let me talk about another 
+mathematical aspect of the game which I think is   rather beautiful. It's not about strategy whilst 
+playing the game, but it's about how you set the   game up. Because if you notice this is a lot of 
+hexagons placed down on the board. And I place   it down in a particular way, we've got the mines uh 
+placed here, there are three mines here. But the   beauty of this game is each time you set it up you 
+can lay the hexagons down in a new way each time.   (Cos these are like- these are modular)
+- They are! So you know we could have set this up such that uh   this was uh swapped over. And so actually perhaps 
+there's a lot of woodland, you know we could have   a a whole great big forest here. So the numbers 
+actually must stay the same, although they can   actually rotate. So I was intrigued about, you 
+know, well how many different games are in this   box? You know Monopoly you only get one board so 
+there's only one game but there are so many games   inside this box because of the permutations you 
+can do. So um I thought it might be fun with your   Numberphile audience just to calculate how many 
+different boards there- there can be.
+- (The hexagons) (can go- can they go anywhere? Is there any rules 
+or restrictions?)
+- No there are none at all so-   (It sounds like it would be quite easy then)
+- It is quite easy but there's a little bit of subtlety   here because obviously- so you'd say okay, how many 
+squares are there?
+- (Well hexagons, how many-) Oh my gosh yes, there's like-
+- (How many hex-)
+- How many hexagons are there?
+- (Okay: 3, 7, what's) (that 12, 16 - is that 19?)
+- 19 and these are called 
+hex numbers. So hex numbers go 1, 7, 19 and it's   the number of hexagons you need. You know we 
+made- there are expansion of Catan, this is the   basic version. Little challenge for Numberphile 
+ viewers: uh what's the formula for you know   like the a Catan board with n layers? There's a 
+way you can generate these hex numbers. The hex   number for this board is 19. There are actually 
+19 factorial different ways can lay the hexagons   down. So, you know, I can- let's- we can start in the 
+middle; there are 19 hexagons, I can put the first   one down there then we we go around in a circle 
+and then do this circle. So at first it looks   like there are 19 factorial different games you 
+can play in the Settlers of Catan. But you have   to remember some of these hexagons are actually 
+the same because I've got three different hexagons   which are mines. So actually I could have put these 
+down like this and the board hasn't really changed.   It means that these three mines can be permuted 
+around and I don't really get a new game. So I   need to divide that 19 factorial by 3 factorial 
+for the mines. Now the other resources, there are   I think 4 um - oh no let's see, look, there are 
+only 3 of the hills so that's another divide   by 3 factorial. The other ones are all 4
+so there are 3 of those, so I need divide by   3 factorial, 3 factorial, 4 factorial, 4
+factorial, 4 factorial. And that will give me   uh the total number of- so let's just add that 
+up, make sure that uh 4 + 4 + 4 -- 12, plus 3,   15 + 3, 18 and you get- but there are 19. And that's 
+because there's actually a little desert. If you   generate the number 7, you'll see that 7
+isn't anywhere here, it's the most common throw of   the dice. And so that has a different function in 
+the game. So that's given us our 19 hexagons, 19   factorial divided by 3 factorial squared, divided by 
+4 factorial cubed. It's the total number of ways   I can lay these hexagons down.
+- (What number does that give us?)
+- It gives us uh a very large number   and I think I remember when I calculated it, if 
+we played a different game each night ever since   the dinosaurs were around we'd still be playing 
+on different boards. So so that's quite a lot of-   in fact let's let's look it up cos I did actually 
+calculate it in my new book about games! Um here we   go, my little hexagons. There are actually 244 
+billion, 432 million, 188 thousand different boards in   that game. Actually there is a little few more 
+subtleties to this um which you have to take   into account. So um the way these numbers can be 
+laid on the board, actually it's a fixed way but   they can be rotated in six different ways. So 
+actually you- you have to multiply up by   another 6. Um and then there's another subtlety 
+which I haven't talked about which are little   ports that you can land in and they do different 
+things in the game which also determine another   few factors more of the way that you can play 
+this game. So there are a lot of games contained   in this one single box.
+(Is Catan a game where people debate strategy or?)
+- Yeah there's a lot of   debate of strategy about where to place um your 
+properties as you're settling Catan. And so   that's important to look at these numbers because 
+you want to go places where you're more likely to   be generating resources because of where you've 
+placed your uh properties. Um there's also uh   another part of the game which is laying roads;
+so you're interested in in making the longest   road and that wins you things in the game. And so 
+again there's an interesting strategy about um how   am I actually going to lay roads through this 
+tessellation of hexagons? Um what's the longest   road that's possible um in the settlers of Catan?
+That's another nice little mathematical challenge.   (Professor, you're a mathematician, and you like 
+playing games. Do you often play games with other mathematicians?)   Uh yes because very often people 
+who are not mathematicians get wise to the fact   that this guy seems to have some tricks up his 
+sleeve and I often find my children stop playing   games where I have a kind of an advantage because 
+of my mathematical uh goggles. But uh yeah there's   I mean a lot of mathematicians love playing games. 
+But I think you'll find that many mathematicians   do not like a game which involves any element of 
+chance. They like it to be pure strategy, so games   like chess or the the game of Go, Chinese game 
+of Go. Intriguingly though, chess originally came   from India and it actually involved dice. So the 
+early versions of chess, you would throw a dice in   order to determine which piece you were allowed 
+to move. And then the use of dice and gambling   was banned in India and people had to take these 
+dice away and then they thought, actually we   can just play this as a pure strategy game. So I 
+think people uh might be surprised to learn - one   of the things I learned when writing this book 
+about games - is that um actually dice were part   of chess originally. 
+- (Have you ever played a game 
+of chess using that rule? That'd be amazing) Yeah I think it's um a bit rubbish actually, because you 
+know you're really wanting to move your knight and   the the role of the dice is uh forcing you to move 
+the rook. And um there's another interesting thing   I discovered about chess, which is it wasn't 
+a 2-player game originally but 4-player   game. And actually you can see that um in the game that 
+survived, because your army consists of two knights,   two bishops, two rooks and the point is that you 
+actually captured one of the other players armies   and it became part of your your army and that's 
+why you see these doubling up of pieces in the game. (Do you know what I would love to know? Cos 
+I'm not good at chess. I know the rules but)  (I'm not- If I played against Magnus Carlsen a game 
+of chess, where I could move any piece and he could)   (only move pieces determined by dice, who would 
+win the game?)
+- I think it's a really interesting   experiment, yeah we should set that up and just see 
+you know how much of a handicap is it to be forced   to play certain pieces in the game. I think for me 
+as well, chess suffers a little bit because anyone   who knows their openings um actually has such 
+a big advantage. So um they can get to a place   in the game, if you don't know your openings you're 
+already weak after 11 moves. Which is why sometimes   I think if you're playing somebody who's really 
+good at chess it's probably good to start in mid   game and start from both armies being in a strong 
+position because of a Sicilian Defense for example.   If you're a fan of games, check out today's 
+episode sponsor Jane Street. They love games.   So much in fact they've even invented one, more 
+about that in a sec. Jane Street's a quantitative   trading firm with offices all around the world,
+you can see there. Now obviously they're passionate   about solving high stakes, complex problems - it's 
+part of their business. They're experts at machine   learning, mathematics, statistics - all that kind of 
+stuff. And that problem solving passion extends to   puzzles and games. The team at Jan Street often 
+spend free time playing each other at chess and   go and, yes, even Catan! And they created this card 
+game called Figgie to simulate elements of markets   and trading. It looks pretty cool, something you 
+might be into. You can play it online at figgie.com    So why don't you go and have a look at that. 
+And while you're there check out Jane Street as a   place where you might like to work. As you can see 
+they've got all sorts of jobs, internships, training   programs available; there's always new stuff coming 
+up on the site. Check it out janestreet.com or   see the links in the video description. I've 
+got the link to Jane Street and Figgie down there. Check out more videos with Marcus du Sautoy. 
+You know he's really into games, in fact he's got   a new book out at the moment called Around 
+the World in 80 games, I'm also going to link   to that in the video description.
+- Interested as a sculptor and yeah, well what about taking this   atomic shape, the tetrahedron, and and seeing 
+what you can build? 
+- This was mathematicians   hope that- okay there's some the weird logical 
+gidillian sentences which who really cares about

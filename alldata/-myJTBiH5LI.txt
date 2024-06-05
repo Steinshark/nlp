@@ -1,0 +1,157 @@
+- [Jake] Has it started yet? - No, it hasn't started the test! - [Jake] I've done like four! - Holy bananas, here we go. Okay, it's starting the test. My ping is 3/4 of a second and my jitter is over 1 second. Despite spending more money,
+than I'd like to admit, renovating my new place into the ultimate dream tech/smart house. We've discovered a pretty big problem, that I might even call a fatal flaw, that no amount of new paint, 10Gb ethernet or smart controls can fix. See this? Zero bars of reception. The cell service at this place is so bad, that I can't even complete a speed test. And half the time I try to
+make a basic phone call, it'll end up dropping. Now, fortunately, we've found
+what might be one of the most clever pieces of technology
+that I've played with for a while, that will, hopefully, fix the cell reception in here for good. You know what it won't fix, though? My corny sideways to our sponsors. (Jake grunting) Like Seasonic. Don't grunt, you wrote it. - Seasonic is good. - Seasonic Prime TX 1000 W power supply features an 80 Plus
+Titanium efficiency rating. Hybrid fan control. And a 12 year warranty. Learn more at seasonic.com or at the link in the video description. (upbeat music) Enough complaining, though. It's time to do something about it. Now, when we bought this house last year, it's not like, I didn't
+know the cell signal was gonna be a problem. If you've been keeping
+up with these videos, you'll know that this house
+uses hydronic heating. Which basically means that
+there's a ton of tubes running through the floors,
+filled with warm water. That's what heats the house. It's great, 'cause it's super efficient and relatively low maintenance. But it's not great, because those tubes need
+to be encased in concrete on each level of the house. Which heavily blocks
+cellular and WiFi signals. Now WiFi was easy to solve. We just added more wireless access points. But with cellular, it's a bit tricky. I didn't really think it
+was gonna be a huge deal, as long as we had good WiFi. But the problem is that
+not every cellular provider or phone supports WiFi calling. And that doesn't help with SMS, which is really hit or
+miss inside the walls. But that is still something we can solve. We just need to cell repeater,
+like we have at the office, which is essentially a juice-up antenna that you install at the highest point, and then aim at the
+nearest cell phone tower, that is then connected to
+points inside the building that will boost the signal for your phone. The problem with the cell
+repeater industry though, is that, unlike many
+other areas of technology, there isn't really a big DIY community. And most of the whole home solutions are sold directly through installers, which means that there isn't a lot of reviewers or reviews in general. And a lot of installers sell
+only one brand of repeater that they "absolutely swear by". There is no "Linus Cellular
+Tips", if you catch my drift. To add insult to injury, basically every
+manufacturer seems to think that their cell booster is
+"Just gosh darn the best!" So how on earth do you know what to buy? We tried talking to the company who's doing the renovation
+on our house, Shirmar. And they said that, after installing several
+different systems over the years, inspected by the installers
+that they subcontracted, basically none of them
+ever worked as described. Because you see, 99% of the
+cell repeaters on the market are analog and therefore
+subject to signal loss. So they typically work like this. The donor sell signal,
+from the nearby cell tower, is picked up by the outdoor antenna. Then that signal travels
+along a coax cable to an amplifier which boosts it. Then it runs along another coax cable to your indoor antenna, which broadcasts the signal to your phone. That means that regardless of the fact that you are boosting the
+signal, there's gonna be loss between that outdoor
+antenna and the amplifier, and again, between the amplifier
+and the indoor antenna. Now, when you're talking
+about something like, a small house or an RV, the cable runs end up being pretty short. So it's not that big of a deal. When you scale up to say 5,000 or 10,000 or 20,000 square
+foot house or facility. Those systems tend not to work so great. Then, we stumbled upon
+something way cooler. This is the Cel-Fi Quatra system. And it's digital. That means as soon as the
+signal gets to the main router thing, they call it a network unit, the signal gets digitized and can be sent hundreds of feet over PoE ethernet, or kilometers over fiber
+with no signal loss. To what is essentially kind of like, how an access point would
+behave in a WiFi system. They, they call it a Coverage Unit though, not an access point. The coverage unit itself then amplifies the digitized signal and broadcasts it. This allows them to use the Quatra system to boost cell signals in buildings in the hundreds of thousands
+of square feet range. It also means that if
+there's a certain carrier that has way stronger
+signal than the others, it doesn't just get boosted to infinity. The system can automatically balance them on each coverage unit. The guys at waveform.com, who provided us with this gear, had us walk around the house and do a series of signal tests to determine the best
+place to put the antenna. And that ended up being
+right here above the garage. The bad news is that
+it's a little bit too far from the mechanical room to run the cable from the antenna on the
+roof to their network unit. They wanna keep that
+within about a 100 feet to avoid too much signal loss. 'Cause that's still analog. So instead, we're gonna put
+the network unit right here in the garage, where
+it's a nice short run. Then we're gonna run our ethernet cables, which go to each of the repeaters, or what do they call them? Coverage units, from here. And you can see, the
+network guys have actually already run those for us. So, we're pretty much ready to go. - Ooh, I got one of the
+coverage units here. Quatra 2000. - I do not, hmm... I do not understand this
+ventilation hole pattern. - [Jake] Does it look cool? - It does look cool. - [Jake] That's probably
+what they were going for. Oh, I also said just send us
+a bunch of cable just in case. Wow! Look at how... - What the heck?
+- that's a lot of conductor. - This is probably the
+craziest coax I've ever seen. - So, what we didn't mention
+earlier is I reached out to probably 20 different
+cell repeater manufacturers, and I didn't even get as much
+as a reply from any of them. - It was the same when I
+was shopping for the office. - Yeah. But I reached out to Waveform, who is a retailer, and
+they got back to me like, within 10 minutes. They were like, "Oh yeah,
+that sounds awesome!" - And they have good cookies. - Here we are.
+- You want cookie? - Oh, is it actually branded cookie? Holy crap! That's next level. It literally is branded. - Branded cookie. - Okay. Last box! (Jake speaks gibberish) - Okay. Please read. - I'll do that after. (Linus laughs) We'll read that after we install it. So we got another coverage unit. - Okay. Pack. - Another coverage unit.
+- Yeah. - So we should have four. The original plan was to do one per floor, but I also asked them to send a fourth one in case we wanted to put it in the garage. So we got our LAN in, that's where our networking is gonna come from the server room. And then CU1, 2, 3, 4, for
+each of the coverage units. There's also a LAN out? Maybe? Oh! I think you can
+have multiple of these. You know like LAN-- Because all this LAN is
+doing is just the signal... to the web panel to control it. - Right. - But like in a warehouse, you
+might need a couple of these. - I guess that's fair.
+- Yeah. - So what are we thinking aesthetically? Like, we put a little shelf here. Maybe put-- Actually, maybe we can just
+do a couple L brackets. We do like a rack-mount UPS, just so in case the power goes out. - Yeah. I'm thinking a rack-mount UPS with just one of those 2U...
+- Sure. - wall rack things. - And then this boy, could maybe just go like
+right here with just-- Whoa!
+- Whoa! Linus is the reason I have trust issues. - Well, there you go. - So, do we bother cutting these back or should we just terminate
+them where they are and just leave a spool on the wall? - Let's do one of those. - Oh, that's super jank. Why?
+- I don't know. 'Cause it's just like that. You know what? We can do
+it however you want, Jake. Apparently, this is your project now. The number of times I've been
+overridden, on my own house (Both laugh) - He's got a wife and a employee. - Yeah.
+(both laugh) Jake, this is your idea of
+getting the ladder ready? - Yeah.
+- Where am I climbing to? - Narnia Alliance. You don't need either of those things yet. - Oh, I don't need the antenna yet? - Well, you want the J-pole first, right? - Yeah, that makes sense. And where does it go, exactly? - I was thinking we'll just
+put it on the siding up and then it'll just point that way, kinda. - Oh, okay. Which, wait, which
+direction do we wanna point? - That way. - That way?
+- Roughly. - In this corner would
+definitely be better then. So we got our hardware on. Basically, you can and
+tighten these boys up when you're ready to lock it into place. Boom. Just like that. I think we gotta move the ladder. I can't reach from here. - [Jake] You're not going there,
+you're going on the white. - On the white?! - [Jake] Yeah, on the top. It's gonna be hideous. - [Jake] That's what I was saying. We should put it over here. - Well then-- I don't wanna put it on the fascia. - [Jake] You're Putting it on the white. - No!
+- [Jake] Yes! - It doesn't even fit, look. - [Jake] Put it the other way, then. - What, like that?
+(Jake laughs) - No!
+(Jake laughs) I'm not gonna have a dong hanging off the side of my fascia board like that. - [Jake] Yeah, you are. - No! I'll put it on the siding. - [Jake] No!
+- Yeah! - [Jake] Okay, fine. - Yeah, we're putting it on the-- - [Jake] How are you
+gonna do that, though? You're gonna need this ladder. - Yeah, that seems adjustable. - [Jake] You look adjustable. - Well, Jake, you look adjustable. Dang it. - [Jake] You were always good
+at the short side of things. - Dang it, buddy. Okay. So, it's gonna have
+to come down pretty low to make room for that
+giant shark fin, isn't it? Where did it go? - [Jake] Giant what? The what thing? - The shark fin. How does the shark fin
+actually go on here? (Jake grunts) Like that? (Jake grunts) - Yeah, just like that. - Oh my God. - [Jake] Just get it full of erect. It's gonna be right under the light too. - No, I'm gonna move it.
+- It's like, what? Look at my shark fin. (laughs) - Ooh, so it sticks off that way? - [Jake] Yeah. (laughing) Roughly. - Hold on. Are there any other...
+- I could be wrong, though. - Are there any other options? Like... - Let me double check our bearing. The cell tower is basically like there. - Okay, so either corner is fine. - Either side is fine. Put it on the back, so you
+don't have to see it so much. - But it's right under the
+light and I can see it anyway. - Why don't you put it on
+that side then? (chuckles) - Yeah, sure. - You wanna do it over that?
+- Oh yeah, let's do it there. - [Jake] Cool. - All Right, screw me. - [Jake] Where are the screws-- Oh, they're on top of the mantle. - Ooh! Really, Jake?
+(Jake laughs) - [Jake] Andy, can you see the screws? - [Andy] Yeah.
+(Jake laughs) - Oh no. But I got them up there
+without going on the ma-- Yeah, okay. This is fine. - All right. It's on. - [Jake] Oh, it looks kind of gross. - I've only done this once. When we did that Ubiquiti thing. - [Jake] He doesn't play with poles often is what he's really saying.
+- No! Not my favorite way to dance, you know? Okay. How's it look?
+- [Jake] Awful. - Well, yeah, I mean, but like, for what it is, how does it look? - [Jake] It looks like it works. - All right. - [Jake] That's what I'm hoping. - All right. Time for this thick boy
+coax cable to go on. Oh yeah, right. So there's supposed to be
+a lightning surge protector due that, like, right here. And there will be once the
+professional electrician does all of this, but
+we're just testing for now. - What's a little discouraging. Is that it still shows this
+network unit is offline. I think maybe it just doesn't turn online until there's a booster connected to it. - Possible. No stools at the new place, but we do have extra spools
+of network cable left over. So I'll use that. So I'm just gonna jam
+this up here, I guess. All right. Where's the indoor unit? - It's in there. - Well, you could have,
+instead of standing there, you could have gotten it. - Yeah, well.
+- Look this guy. - [Jake] Oh! - Okay. So maybe it just doesn't do stuff until it's plugged into stuff. Yeah, maybe this was in the documentation that you like chucked
+aside at the beginning. - You can see the little cloud is unhappy. It's not connected. And then if I click on the site, the network unit also
+shows is not online, still. Oh! Coverage Unit 2, connected! - 2? This is 1. - Well, it's labeled "2" in this system. Oh, I can go plug it into 2, I guess. - No, no. I mean, it doesn't matter. - [Jake] Maybe it does matter. - But it's not doing anything. - [Jake] Port number 2, it says. - Port 2. What? Hi. - So interestingly enough, I moved the CU2 to this CU2,
+just so they're matched. I think they're just
+named in here, whatever. - Yeah. - We're just calling this one CU2. It shows as link status connected. Let me just check CU1,
+which isn't connected, and see if it also shows
+as connected or not. Oh, it still shows disconnected. So that means nothing great. Wooh! We're nowhere. Like, should I just call 'em and see? - Yeah, I think we should
+call 'em at this point. - [Waveform] Okay. So what
+are you saying about it once? - Okay, well, I'm just
+gonna check it again now. 'Cause something has changed. We were just, we were having issues getting the network unit
+to connect to the network. - I have four bars. Hold on, I think it might be working. Let me go inside. I turned off my WiFi. And it's time to go again here. This is already better. Okay. Now we're talking. No, these are not the fastest speeds on the face of the Earth, but... Wow! Is that ever an improvement
+over last time around. That's awesome! I don't even have that
+thing mounted correctly. I think Jake messed with it. It's off again. (chuckles) (cameraman laughs) Crap! Jake, did you mess with it? - No. - I had four bars and then
+it dropped down to one. - Okay. Super jangly
+connected right to the rack. Let's see if it goes online. My money is on this cable is bunk. So we were just on the phone with the guys over at Waveform. 'Cause we were having some issues. I think it's that there is a problem with this network cable,
+because look at that. Active. I mean this might have to update in a sec but it shows the system is online. We just plugged it in
+with a little shorty cable and now it's happy, so. - Moment of truth. We tried the new connector, it's the ones that I brought from home. But I had no trouble with it last night. - Oh my god. - What?
+- [Jake] It lit right up. - [Linus] Did it? Oh, it did! (chuckles) I couldn't see it from here. - Let's see if it, it did. It looks like it's doing, though. - To clarify this is
+without even dialing in the antenna position. Moment of truth. Oh yeah. My jitter is literally
+a hundred times better. - [Jake] Wow! Whoa, 10! You can actually like... Can of like, 12Mb is not
+something to be excited about, but you had basically zero before. - Yeah. - [Jake] Let's see if you can upload. - Come on, show me the upload. - [Jake] Yeah! (laughs) What?! What?! - Aah, okay. - [Jake] Brother. - I don't know how the math works on that. - That's an infinity increase. (laughs) - Yeah, yeah, pretty much. Loss 0%. Does it work then? - Yes! I'm honestly perfectly happy with this. This is good enough to
+have like, a video call. 20 up, 20 down. Good enough. That's great. I'm stoked... to tell you about our sponsor. Thanks to FreshBooks for
+sponsoring this video. Now, I'm gonna go ahead and guess that you are not an accountant. Which is why you're
+gonna love this software. It's built for freelancers
+and small business owners, who don't have time to waste on invoicing, accounting and payment processing. In fact, FreshBooks users can
+save up to 11 hours a week by streamlining and
+automating pesky admin tasks like time tracking,
+following up on invoices and expense tracking. With features like their new digital bills and receipt scanner. Over 24 million people have
+used FreshBooks and love it for its intuitive dashboard and reports. Because it's easier to see at a glance, where your business stands and even easier to turn everything over
+to your accountant, come tax season. 94% of FreshBooks users say
+it is super easy to get set up and running, and with
+award-winning customer support, you are never alone. So don't wait, try FreshBooks
+for free for 30 days, no credit card required, by
+going to freshbooks.com/linus. That's freshbooks.com/linus. Thanks for watching guys. And huge shout out to Cel-Fi and Waveform, who provided all the sick hardware that we installed today. Man, such a game changer. - [Jake] Yeah. - Like sure, 20 up, 20 down. (grunts) Not that fast, but compared to... - nothing.
+- [Jake] Zero. (chuckles) Test failed. - I'm stoked. You can check them out
+in the video description. They've got gear for boosting
+cell signals in a vehicle, all the way up to multi
+hundred thousand square foot offices and warehouses. If you're looking for
+something else to watch, why not check out the
+unlimited budget WiFi upgrade we did in this house a few months ago. All the APs are removed at the moment, for drywall and finishing, but they'll be back up soon enough.

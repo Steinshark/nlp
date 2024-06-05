@@ -1,0 +1,73 @@
+welcome to mcoding. today we're hitting a common problem with
+some recursive algorithms causing them to fail on even moderately sized inputs. let's say you have to traverse a tree in some
+way. the tree is made up of nodes that contain
+some data and zero or more child nodes. let's take a dead simple recursive task, just
+printing out the nodes. here's the whole implementation, yes it's
+that simple. we print out the current node, then loop over
+the children, recursing on each child. the order we are going in here is called a
+pre-order traversal of the tree, by the way. and it works! when we give it this small example, it prints
+out all the nodes in the expected order. first the root, then child 0, the three children
+of child 0 which are 0-0, 0-1, and 0-2, and then child 1 of the root. so great, all your tests pass, it's simple
+and readable, you ship it to production ... and the second a client touches it, whamo
+bamo it instantly breaks. surely they must have passed a ginormous,
+unsightly, pathological tree in order to break the perfection and elegance that is every
+line of code beget of your golden fingertips? uhh nope, they passed a linked list with 1000
+nodes in it. what went wrong is you hit the recursion limit,
+which is a mere 1000 in python by default. that's why the crash happens near 1000 children. you can increase the recursion limit using
+sys.setrecursionlimit but that doesn't really solve the problem. the recursion limit is there to fail early
+in the case when you accidentally cause an infinite recursion, so you can crash the program
+instead of running out of memory and crashing the whole computer. increasing the limit a lot would defeat the
+purpose of having the limit. but only increasing it a little bit is just
+asking for the client to hand you a 2000 node list in the future. so what do we do? we use this handy trick. the idea is to convert your recursive call
+stack into a literal call stack, making the entire function iterative, thereby completely
+bypassing any recursion limit problems. we'll use a list as the data structure for
+our stack. append is pushing onto the stack and pop is
+popping off the stack. we'll use a "while stack" to keep going as
+long as our stack is not empty. then we indent this, and replace any recursive
+calls like this one with pushing onto the stack. running our linked list example again, we
+see now it fully prints all the children down to child 999. but if we take a look at our first smaller
+example, we'll see that we've actually changed the order that nodes are printing in. before we had the root, then child 0, then
+0-0, 0-1, and 0-2, finishing with child 1 last. and the reason for that is because a stack
+is a last-in-first-out data structure. the fix for this is that in our implementation,
+whenever we want to make multiple recursive calls, we actually need to put them on the
+stack in reverse order, so they go in the intended order when we pop them off the stack. so we just loop over each node's children
+in reverse order. then we're back to the same output as before. we now have an equivalent function to the
+original recursive implementation that prints our nodes and that works no matter how deep
+a tree you pass it. but you may be wondering, what if i had a
+more complex recursive function that doesn't just have a single node parameter like this
+one? let's say i wanted to add a max depth to my
+print. in the recursive case, that means checking
+if we've hit the max depth and not recursing if we have. otherwise we do recurse and pass each child
+one less max depth. to make the iterative version, we do the same
+trick as before, but instead of just putting the current node on the stack, we'll put a
+tuple of whatever arguments we were going to pass to the recursive call. we start by making a stack with the initial
+arguments to the function. then we do a "while stack", pop off an element
+from the stack, and unpack the variables. popping the tuple off the stack and assigning
+to these variables restores all of them to a state just like we would have had if we
+made a recursive call. once again we indent. an early return in the recursive implementation
+just means that we don't want to do any more work in this iteration. so in the stack version, that just becomes
+a continue, which will skip and process the next item on the stack. then we replace recursive calls with just
+pushing onto the stack any arguments that we were going to pass to the recursive call. and as before, we need to put those things
+on the stack in the reverse order. and now our max depth parameter is working. max depth of 0 just means printing the root. if we have a depth of 1 then we'll use the
+root and its children, but we don't recurse to their children. and a max depth of 2 or higher for this tree
+will print the entire thing. so that's the trick, it's just an easy way
+to convert any recursive function into an iterative one. but i did want to finish by just pointing
+out one other issue with this code. both the recursive and iterative solutions
+still suffer from high coupling. namely, this function is actually doing two
+things. number 1, it's iterating over the tree of
+nodes. and number 2, it's also operating on the data,
+in this case printing out the nodes. if we wanted to do something else besides
+just print the node, we may end up copy-pasting this entire block of code, only to change
+one line. as you can imagine, copy-pasting huge blocks
+of code just to change one line is discourages. instead let's decouple these things by pulling
+out the part that does the iteration and making it a generator. instead of actually doing anything with the
+node, let's just yield the node so that someone else can do something with it. change the name of course. then we can implement our printing function
+just by iterating over the nodes and printing. now neither the printing code nor the iteration
+code needs to know anything about each other, meaning they are completely decoupled, allowing
+you to plug in a different operation or different order of iteration without rewriting or duplicating
+code. as far as functionality goes of course it's
+the same as it was before. but especially in larger projects, this is
+going to make your code much more testable and maintainable for the future. so just keep that in mind. anyway i hope you enjoyed the trick and this
+video. if you did don't forget to subscribe and if
+you especially like the video please consider becoming a patron on patreon
+so thank you so much and i'll see ya next time.

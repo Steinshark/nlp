@@ -1,0 +1,161 @@
+(angle grinder screeching) - whoa. hey, no, that's not how you do it, geez. i don't think nzxt sponsored this video so we could chop up their hardware. they sponsored it so we can show you guys how to take a single gaming
+rig, like this build pc, and split it into two or even more virtual gaming machines. so you and a couple of
+buds can pool together and share a single, working gpu, even if not everyone can get their hands on their own graphics card. super cool, right? let's show you how it works. (upbeat theme music) splitting a gpu used
+to be a huge challenge for a number of reasons. first and foremost being that
+nvidia didn't want you to. you see, nvidia locked down the ability to virtualize their consumer gpus, taking one physical
+card and dividing it up into multiple virtual ones. and for years, they have only
+allowed this functionality on their workstation
+and data center cards, like the quadro, tesla, and grid series. these artificial software limitations have allowed nvidia to
+price those other cards vastly higher than their geforce options. and remember how i said there
+were a number of reasons? there weren't. nvidia kept you from
+sharing your gpu resources because they wanted to charge
+more for the capabilities. shocker, i know. but we've got a trick
+up our sleeves today. everyone's favorite, windows,
+specifically windows 11 and some fancy tech
+called paravirtualization. paravirtualization differs
+from standard virtualization by communicating directly with
+the hypervisor using drivers rather than through hardware level calls. so while spinning up a
+virtual machine or a vm, setting up the hardware and software, and actually getting to a workable vm used to take a lot of skill and time, the keyword there is "used to." thanks to a cute little
+script aptly named easy-gpu-p, the p is for partitioning, which was written by one
+of parsec's developers. almost all of the work of
+setting up a windows vm is done for you, it divvies up your hardware,
+installs your os and drivers, and of course, installs parsec. but that's not just because they wanna shield their software, it's kind of the secret sauce that makes this whole thing work. but before we get to that, we need to talk about the
+limitations of the setup with the most important
+one being hardware outputs. while the virtual machines we create are able to borrow our
+gpu's processing power and it's onboard memory, they cannot borrow the
+physical display outputs. think of it kind of like this, we can slice our gpu up this way, where one of the virtual machines ends up with all of the outputs, but we can't slice it up this way where each one gets its own output. that is where parsec's
+cloud gaming software comes into play. it's able to snag an encoded video feed from each of our vms, and then stream it to a different device, like a low-powered pc, a
+macbook, or even a phone. before we can even think about
+splitting a gpu up though, we're gonna need to get one. fortunately, our friends
+over at nzxt build sent over a sweet, pre-built system that is absolutely perfect
+for this kind of use case. it's got a ryzen 9 5950x 16 core processor and a near top-of-the-line rtx 3080ti. of course, you can check out this rig at the link down below. but, you don't need specs like
+this to be able to do this. we tested a handful of modern gpus with really amazing results,
+though your mileage may vary. and one thing to note is that
+you must split your gpu's video memory evenly between each vm. so if your gpu is light on vram, you may have issues gaming
+on more than a couple of vms. since we're starting with two
+vms and one of these 3080 tis, that's gonna give us six gigs each. now, regular system memory can be divided up any way you like, just like with regular vms, but since we've got a
+total of 32 gigs of ram, and most modern games are
+asking for eight gigs or more, we're gonna divide them
+up with eight gigs per vm. now, we'll get into more details later, but for now, we've got hyper-v manager open on our monitor. (dark atmospheric music) very funny, buy a desk pad, lttstore.com. so hyper-v manager open on our monitor, and we're gonna go ahead and fire up a couple of our vms here. we've got gpu-p-1 and gpu-p-2, for player one and player two. each of these was configured with four of our 16 ryzen cores,
+and as i mentioned before, eight gigs of ram. fortunately, the parsec scripts that we linked in the description did all the heavy lifting leaving us with just games to install. - [colin] here we are, yayyyy. - but before we fire them up, we've got a couple of housekeeping
+items to take care of. first and foremost is the fact that these windows are
+limited to 1080p resolution, which doesn't sound like a huge problem, until you remember that
+the 3080 ti in this machine is capable of way higher
+resolutions than that. that is where cheap, little display port or hdmi dummy plugs,
+like these ones, come in. even though we can't actually use the physical ports on our
+gpu to plug into a monitor for each vm, if you plug these in, they can trick the gpu into thinking that a monitor is connected, which actually unlocks the
+resolution selector in windows. so we go ahead and set that
+to 4k on each of our vms, and it's time to see how a 3080 ti handles two concurrent 4k gaming sessions. it's pretty cool, right? - if you wanna mirror
+it to both one and two, then we can get a display
+here so people can see it? - sure, i can do that. first, i'm gonna set it to 3840 by 2160. duplicate is not an option. - no, interesting. - well, i guess you won't be peeking into what we're doing from over there. let's for the first time in my life run two games at once on the same gpu on two separate machines. colin, you can be my
+counter-strike friend. - i am only at 1080p. - right, right, right, right, right. we'll get you the real
+performance numbers later. the developer ran into
+a bit of a weird issue where for whatever reason, that
+one vm is not able to do 4k, but he's replicated it on
+his side, he's working on it. okay, this is not the most
+amazing performance ever, but i'm at 60fps. oh, it's going, david. it be like, "whoa, dog, what is this? two games running at once." oh, someone's spawn camping us. - [colin] yeah, they're
+all spawn camping us. - [linus] how rude. - [colin] come on, it's counter-strike, what did you expect? - [linus] yeah, that's fair. i'm going back to 1080p. okay, we got a match to win here, colin. - sure, fair. i mean, i'm getting 200fps. - yeah, i want more like that. my game is dead. i'm gone. steam is closed. - why did you do this? and it's beautiful here, terrible there. - [linus] oh yeah, don't
+look at that and think that that is representative of the gaming experience of
+the gaming experience at all. hey still, i got two kills, okay? - okay, but we're playing video games. - we're playing video games. - on one gpu and one cpu. - and we're both getting 150 to 200fps. - yes. - david, does this blow your mind? - [david] yeah. - [colin] yeah, he just shot me direct, straight through the door. - [david] you can shoot through the door. - [colin] yeah, but he could see, he was tracking me, i swear. hex. - hex. question for you then. in total, we're getting about 400fps between the two of us on that gpu. so running a single instance at 1080p, what were we getting? - i only ran at a 4k.
+- oh, balls. - well, but at 4k, we're getting 462fps. - so theoretically, assuming
+that we are still cpu limited? i have no idea. i just don't even know
+what to expect from this. when you split the gpu
+across multiple workloads in a game like cs:go,
+where you're typically cpu rather than gpu bound, could you potentially
+end up with more fps-es or less fps-es? it looks like a little bit less right now, given that we're running 1080p, but what if we were to split it more ways? would it scale better or worse? - we can find out. - i guess we can. as impressive as it is that
+this is running at all, i'm sure what you really wanna know is objectively speaking, how
+well is it running, right? so right now, we're getting
+anywhere from 350 to 400fps shared between the two of us. so how does that compare
+to running the same card but just in a single
+instance on bare metal? even though we only have
+one of these running at 4k right now, we've actually
+got some numbers for you. so cs:go on a single 3080 ti managed about 460fps average, then with our 50% vms, so
+this is 1/2 of a 3080 ti, we managed 175fps. so it looks like we actually do get less than 1/2 of the performance,
+the scaling is not perfect, which is, i have to admit,
+not quite what i expected, cs:go being a mostly cpu-bound game, i would have thought would allow our gpu to stretch its legs more. but who knows? maybe we're not dividing it up enough. we've got more demos, right? - we do got more demos. - all right, let's try something new. yeah, i'm averaging 50fps even in fairly busy parts of town, 40, it dipped down to 40. my 99th percentile's is 25, that is absolutely playable
+in a game like this. so to be clear, anno'00, not the world's most demanding game, but it's also not the
+world's easiest to run game. this is all very reasonable,
+80 degree hotspot. - [colin] it's fine, yeah. - this thing's not working
+that hard actually. do dual gs:gos is, for whatever reason, heavier than dual annos. is that because the cpu
+is scaling really well in the gs:go, and making it...? oh, hold on, i gotta win lunch. so gpu usage is right up around 70, 75%. - [colin] i'm surprised
+it's not just pinning it. i wonder if the host
+vm is using some of it. - could be. clearly it works, and all things considered, it was actually pretty easy to set up. colin here who set up and wrote this video has literally never touched hyper-v, yet he was able to get this up and running in a couple of hours. so what does it take to do it? well, apart from what
+we've already mentioned, you're gonna need a pro
+or enterprise version of windows 10 or windows 11, we would suggest the latter
+as it is a bit easier. you start by downloading the files from the easy-gpu-p github and extracting them to your desktop, then you grab the latest
+drivers for your gpu from nvidia's website directly. now comes the most important step. you need to enable virtualization both in the bios and in windows. now on most systems, you'll
+find the bios settings under cpu settings, and they'll either be
+called svm mode on amd, or intel vt-x on, well, intel. save and reset, and once
+you're back into windows, hit the windows key and type "turn windows
+features on or off." scroll down to hyper-v, and
+enable everything inside and reboot your pc. while it's booting by the way, why not hit the subscribe button? we've got a lot more cool
+windows 11 content planned, like running it on a phone. ooh. now that our operating
+system is set up properly, we can run the easy-gpu-p scripts. because it's possible that
+these steps will change, i'm gonna refer you to the github page to find the latest information. and if you get stuck, the
+linustechtips.com forum is a great resource. once you configure your script, you can rerun it over and
+over to keep making vms, just make sure to change the vm name each time before creating another. and remember that nvidia limits the number of concurrent end
+banking coding streams to three on their consumer graphics cards meaning the practical
+player limit is four: one local, and three remote ones. if you did everything
+right, in hyper-v manager, you should see your new vms
+just like we saw earlier. you double click the vm to boot it up, and then you can install your
+games and configure parsec. now all that's left is for us to go ahead and make three vms, each
+with four cpu cores, 25% of our gpu, and eight gigs of ram to see if we can run four gamers off this single cpu and gpu. which one is alt? is it command is alt? - no, command is wind key.
+- oh. - it's gotta be an option. - okay, i think we might just
+have to lose the macbook, it was a funny meme, but we're just having some issues. - hey, macbook works. - oh, heck yeah. i got my ltt crew, it's linus and the linustechtips's. - okay, let's queue up.
+- and mac address. you know when it's like
+you're the little brother and he's who's holding the controller but not actually doing
+anything while you play? this is what i feel like now. - i think we're doing it, guys. - oh, oh, i'm playing. oh, i got one. - [linus] wait, i killed
+ltt benchmark tertiary, we're not all on the same team? - [colin] no. - so we're actually getting a grand total of around 300 frames-per-second, does that sound about right to y'all? - jeff's experience being
+on native is clearly better. - yeah, that looks a
+little more responsive. - 'cause i'm getting a
+lot of chop on my end. - mine look like that? - [linus] wow. - oh, let's go. - [linus] yeah, with
+only a 1/4 of the gpu, he's still getting 150,'0fps. gpu's definitely working
+harder than it was with anno right now though. you know what though? i actually don't think it's
+working as hard as it was with two instances of cs:go. can you all tab for a sec? whoa, gpu crawl mode is 98%. i lied, i think the fan's
+just running heavier. okay, go, go, go. remember guys, not only is it running four instances of the game, but it's also running four instances of nvidia's hardware encoding. oh, there's a guy there. (linus laughing) and theoretically, that hardware encoder is sort of separate hardware, but in practice, it does put
+additional strain on the gpu, it does produce additional
+heat when it's operating. and so it can affect
+your overall performance. - [jonathan] so how do i change guns? - [colin] so press b to buy guns. - [linus] oh yeah. - [jonathan] what? to buy? - [linus] yeah.
+- [colin] yeah. - [linus] you have to buy guns. - [colin] i mean, logically. - imagine what this would be capable of if nvidia allowed us
+to access them locally rather than remotely. you could have a single gaming machine in the middle of a big table and just have four separate
+sets of peripherals hooked up to it, and all be playing a game
+off the same hard ware. that's freaking incredible. but the 3080 ti is pretty expensive. what if we tried it with
+something more reasonable, like a 2070 super? we did, and as long as
+you're only gonna play fairly light games,
+things like rocket league, it's actually surprisingly usable as well. though there are some things
+to note about this setup if you're going to try it for real. hardware that crazy, top of the line, is not strictly necessary,
+but it definitely helps. and perhaps even more important
+is your network speed. parsec suggests having an upload speed of over 50 megabit per second if you plan on hosting two or
+more vms over the internet. and even if you're running locally, you will need a directly wired connection. wi-fi or mesh networking might have the throughput
+for modern applications like 4k netflix, or what have you, but their latency is not
+nearly good enough for this. you may also encounter some black screens with windows security
+prompts and stuff like that, so having parsec access to
+the host as well as the vms is a good idea, so you'll be able to squash
+those little interruptions. another thing is you
+should definitely temper your performance expectations. as we found, 400fps on bare metal absolutely does not result in four times 100fps on four vms. you'll also need a windows
+license for each of your vms. definitely don't just spin up a new one whenever your license expires. another thing to discuss is the cost. you're absolutely saving some
+money using a single machine to run four instances instead
+of four separate machines. you only need once case, you
+only need one power supply, you only even really need one ssd. but it should be noted that you're going to end up shelling out for higher quality hardware versus if you only had to
+run a single client workload. say take the ssd for example, if you were to use a basic, basic qlc ssd with no dram cache, you could get away with that
+for a single gaming machine. you try to have four clients
+working off of that thing at the same time, you're gonna have and extremely bad time, and the same goes for a power supply. nevermind just the wattage
+that it's rated to output, but let's talk about the duty cycle. manufacturers, when they
+warranty these things, when they decide about how
+long they expect them to last, they have an expectation
+for how many hours a year you're probably gonna have it running, and how hard it's gonna be hit. as we discovered with
+all four of our gamers hitting that 3080 ti, it
+is pinned at 100% usage. these and other components
+like your motherboard or a mini core cpu are things
+that you would wanna consider when you're configuring your system with someone like, of course, nzxt who is the sponsor of this video. so in conclusion, this is a really cool
+and novel use of parsec. it's normally used to
+have a friend remote in to play a multiplayer game, or to stream games from your home pc to another of your own devices, kind of like having your own
+private cloud gaming service. but here, you're turning it into all of you and your friends'
+private cloud gaming service, which is a seriously legitimate
+possible use case for it, especially in these troubled times. now, in addition to
+performance drops though, you'll experience additional
+connection latency, about a frame on a local network, and a couple of frames on a remote one, and you'll be giving
+up some image quality. even a high bit rate hevc
+stream is going to have more blocking and artifacts than a hardwired display port connection, especially if you crank
+your frame rate past 60. but i'm super excited for the future of this kind of technology, and i think it's an awesome little project that they created over there, so go give them some love, all right? if you enjoyed this video, go check out "six workstations, one cpu," or "seven gamers, one cpu" for an example of doing
+this with actually, very little performance drawback because we loaded up the system with gpus back when you could actually find them. hey, who just killed me? rude. rude.

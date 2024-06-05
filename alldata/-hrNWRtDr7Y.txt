@@ -1,0 +1,275 @@
+I think we've done fairly well actually
+on Turing, Enigma - all this kind of thing. We've raced around Bletchley Park-
+saw the Colossus machine - which was for the Tunny, or Lorenz, cipher. There is
+a bit missing in the middle: "Why was Colossus necessary why did they
+need a computer?"  What was the nature of that traffic that Colossus 
+could help with? In one of our previous videos we've actually shown a picture of this weird
+trace that they were getting off the airwaves. They showed it to the experts
+at Bletchley Park and they said: "That's broadcast teleprinter traffic!" And we've
+got to remind ourselves [that] they may not have had electronic computers back in the 1940s,
+early on, but they certainly did have teleprinter machines. They were very
+common - used in stock exchanges; used for foreign telegrams all sorts.
+It looks a bit like a keyboard. As you press the keys there was a very
+comforting 'splash splash splash' sound of the electromechanical things. Because, as
+well as sending five-, or maybe even seven-hole, pulses over the land-line, it was
+also printing out, as you went, what it was you were typing. So, that technology
+was just phenomenally well known. The staff at Bletchley Park were comforted, in
+a way, that it was teleprinter traffic, but puzzled as to its precise nature.
+However, they'd all been on cryptography training courses - or even
+been instructors on cryptography training courses - and one of the stories
+was:  "Don't forget the Vernam Cipher!" So, again, in a previous video, there's more
+details about this but a guy called Vernam, who worked for Bell Labs, AT&T, in the
+late '20s / early 30s, had this idea of taking 5-hole teleprinter codes and
+exclusive-ORing them with an arbitrary letter, which was like a cipher key, and
+coming out with a different letter. I'll just do one for you just to remind you
+of the sort of principles  that went on.[Looks at open booklet front page]  
+Probably available somewhere online: "Code-breaking with the Colossus Computer". In the teleprinter code
+the letter H is represented by 0 0 1 0 1 Now if you take the letter F, that is 1 0 1 1 0 
+and from numerous videos we've done about the nature of bitwise
+exclusive-OR it's now dead easy. Exclusive-OR says you do it bitwise. It is like an
+addition but what happens is the result is 1 if and only if the two bits differ.
+If they're the same then the answer is 0 So 0 exclusive-ORd with  1 ?
+They're different that's a 1.
+ 0 with 0 ? they're the same [so] it's a 0
+1 with 1 ? 
+They're the same; it's answer is a 0  0 with 1 is 1.   1 with 0 is 1 
+The result, then, of exclusive ORing F with H 
+is to give you a cipher result of 1 0 0 1 1. You'd have
+known this off by heart if you were at Bletchley Park in the middle '40s, but I
+*don't* know it off by heart(!) But the answer is that it's the letter B. 
+Vernam said: "That's a great idea! if I provide a paper tape with a key on it, that's
+random, I'll just, y'know, randomize them myself. I'll type in a great long random
+key stream. If you exclusive-OR these  5-bit patterns with each other, and the
+other tape is the plaintext, top secret message, you want to send, then fine! That's a
+superb way of encrypting it, you see". Believe it or not, Vernam and Bell Labs
+actually patented this. But there's one huge problem in getting it to work,
+because their idea was you have a 5 hole paper tape full of your plaintext - your
+secret text you want to send - you have a Gilbert-Vernam-produced equivalent tape
+with lots of random [key] and you just want to run them side-by-side through some
+machine that reads that one; reads that one, exclusive-ORs them and prints out
+the encrypted result. And what's the problem if you
+literally use two paper tapes?
+Keeping them in sync! They had huge difficulties with
+differential slippage. So you either ended up with them not in line and not
+working at all, or the wrong pattern being XORd with the wrong pattern. So
+in the end the feeling, I think was, among the cryptographic community: "This is a
+promising technique but there's no way you want to be trying to synchronize two
+stretchy bits of tape!" One bit of tape - fine. You can even keep track.
+So there was a knowledge in the cipher world that sooner or later somebody
+would produce the key stream, not on another tape, but automatically, as part
+of the teleprinter process. You could have a bolt-on accessory to a
+teleprinter that provided the 5-bit key stream automatically, either
+electronically or electromechanically. And so this one that has become so
+famous, which the Allies at Bletchley called "Tunny" -  part of these 'Fishy Ciphers'. They
+didn't know what machine was producing it. And our colleague Jack Copeland,
+historian and who's on top of all these things says: "Every time you mention
+this you must mention that at Bletchley Park, if you called it 'Lorenz' in 1941
+they wouldn't have known what you were talking about!" The company that made the
+machine - that did this traffic - was a mystery to them. They just called it
+Tunny. It wasn't just the mystery Tunny machine there were other machines around.
+I have to emphasize this. There was a Hagelin cipher machine in Sweden,
+there was a Siemens cipher machine. A lot of people were investigating this idea
+of providing the keystream electromechanically and not on a
+separate tape. So the overall picture, then, of exclusive-ORing teletype
+characters - the plaintext one with a key character and doing it character by
+character by character by character. You could summarize it by saying that the
+ciphertext that you prepare is a result of taking a
+plaintext - and remember the + in a circle means exclusive-OR. So that's
+your basic equation: cipher text (C) is plain text (P) exclusive-ORd, character-by-
+character, with the key stream (K) like that. Now we did a thing called "ZigZag
+Decryption", which you can look up and you can see the details of that. To cut a long
+story short the Allies were very lucky in that, by using this special ZigZag decryption, 
+on a rather weak [and duplicated] message. They got a whole bunch of Key out of it and
+this was like gold dust. In the so-called Research Section at Bletchley
+- headed up by a guy called Gerry Morgan - [they] picked on a new recruit called Bill
+Tutte. He was from Cambridge, just like Turing. But I empathize with Bill Tutte
+because he started off doing chemistry! And had it been today he'd [possibly!] have moved
+into computer science. But as it was then he gradually turned himself into a
+mathematician. He loved doing puzzles; he went through his Bletchley pre-training
+learnt all about Vernam's - and whatever. And they put him working on another cog
+machine called the Hagelin machine which was used for Italian ciphers. It turned
+out to be rather simpler than Tunny and it was good training for him. They'd
+got tons of stuff from this mystery [Lorenz] machine which was defying analysis. Bill
+Tutte was given the chance to make a name for himself by having a go at it. The
+only extra information that Gerry Morgan gave him was the following. He said: Do
+you know the Germans - just like we encountered on the Enigma in the very
+early days - are actually sending us the initial [cog-wheel] settings. Before we got these
+4000 characters the Germans sent out what we are calling 'the Indicator' "
+And it's passed into fame and infamy - the Indicator [Looks at HQIBPEXEZMUG indicator from the Tiltman Break]
+I always pronounce it to myself as "H quib pexxy zeemug" What you'll find in the literature is people
+don't want to say it! It's called "Zedmug", or "Zeemug", whichever
+side of the Atlantic you're on  and with my mid-Atlantic persona
+please forgive me for switching from one to the other - just like that. So "Zeemug" / "Zedmug"
+was the indicator setting at which they had this lucky [Tiltman] break and could get
+the key. Morgan said to Bill Tutte, he said: "You know, the weird thing is we've looked
+at these settings, they're always alphabetic and if we're assuming that it's a bit
+like the Hagelin, and if  there's lots of teeth on there and all this kind of stuff, they're only ever using [in the Indicator] 
+25 letters. Except in one of these positions [DFB: I can't remember which it was now, I think it's
+the fifth one along] In that position there's only ever 23 alphabetic letters!
+We've saved up all the indicators we've ever had, and on that position they only
+use 23 letters out of 26" So, with his training in mind, Bill Tutte said: "23 is a
+prime number. Interesting! I wonder if - a bit like the
+Hagelin machine - this thing is actually using cog wheels on each of the
+bitstreams? Five parallel bitstreams of a five-bit character. Perhaps it's using
+different wheels on different streams and messing about, that way, with the
+patterns of 1s and 0s that gets exclusive-ORd, you know, as part of the
+key generation exclusive-OR thing? I wonder if this is a cogs machine? If there's a 
+23-toothed wheel somewhere? But then the rest are 25, right? 23 times 25 is 575. Yeah! let's
+start investigating. Now I think, at this stage, before we get stuck into what
+Bill Tutte did, we need to talk about possibilities of repetitions, depending
+on the number of cog wheels you've got. Let me put it to you like this. Suppose
+you have two very simple cog wheels indeed. So simple they'd never ever be
+used in cryptography - but in some sense these things are on a common spindle, like that, and every time that [i.e. a cog] rotates it
+moves on one position. In fact I'll use a red pen. I'm saying that this first wheel
+has only got two possible positions it can either be there, or it can be there.
+There's a rod, if you like, flipping from being upright there to upright down
+there. Thi one - the fact that it looks like a Mercedes Benz logo is purely
+coincidental - this one has got three possible positions. Let's call these two
+positions, on the two-toothed wheel, a and b those are the two possible positions.
+On the car logo - whatever that brand is - I don't know - let's just call it 1, 2 and 3.
+The start position we can characterize as being a 1. Then we click the spindle
+and it moves on to the next stop position. a will turn into pointing
+downwards and being b The 1 on the other hand, on the other one, will just
+go to 2. So you get a1, b2. One more click. b will go back to a but 2 will go to 3 - [hence] a3. 
+One more click - you'll go from a to b again, but the 3 will go back to 1. b will
+go back to a again. 1 will go to 2. a will go back to b again. 2 will go to
+3 and finally back to a1. It may not look relevant, but it is. This is looking
+for repeats. When does a pattern repeat? And it depends on the number of teeth on
+the wheel. So one looks at this and you think, all right, a1. How long before it
+comes back to being a1? [Counting patterns]  1 2 3 4 5 6 Oh! what a coincidence! We've got a
+two-position wheel we've got a three-position wheel. 3 times 2 is 6. It's easy! Instant
+mathematics! It's obviously the case that all you do is multiply the number
+of teeth together? Nope?! Even Sean is shaking his head - not quite. 
+>> Sean: causation and correlation ?
+>> DFB: causation and correlation, yes. Those of you who are Numberphile
+fans this is trivial stuff. You'll know it off backwards but for those who are less
+familiar let's just now develop it one stage further and be the devil's
+advocate. But this time we'll turn the "motorized" logo into being a cross
+shape. It's a four-position cog here and I'll number it 1, 2, 3, 4.
+Now, since I've done this earlier I'll write out the sequence for you, as to what
+happens here. It goes a1 b2 on to a3 on to b4 and back to a1. So, what's the repeat
+length? Fouur. But look - there's 4 on that there's 2 on that, it ought to be 8. Why isn't
+it 8? Why is it only 4? And the answer is there are factors in common:
+This [wheel] is 2 that [wheel] is 4. 
+Four is not a prime number. It's 2 times 2 so the factor of 2
+is -- it's a common base, like doing Lowest Common Denominators [Least Common Multiples], 
+y'know, when you're combining fractions you try and find out what's the thing on the bottom [line]
+that's got everything in it, but is as small as possible. And that is what is
+happening here. You don't want cog-wheels with factors in common because otherwise
+your repeat length will be a lot shorter than you ever imagined. Finally, I'll just
+draw out the possibility for you. We'll do a 3 with a 4. And they now got a b c 1 2
+3 4. What is the overall length of the repeat cycle? And the answer is it's 12
+and you say 4 times 3 is 12. But 4 isn't a prime number! So why is it working out
+OK again that you do just multiply them? The answer is that 3 and 4 are what's
+called 'relatively prime'. Although 4 isn't a prime number it doesn't have any
+factors in common with 3. So therefore relatively prime - sometimes called
+co-prime. The story will go, then, on the numbers of teeth on these wheels, we
+think, in this machine, they'll either be a prime number, or if they ran out of
+prime numbers and the prime number of teeth was getting a bit big, the
+next best thing - because it is safe - is to use relatively prime numbers.
+And in the long run we will find in this [Lorenz] thing we're going to talk about,
+that one of the cogs has got 26 teeth on it, which is not prime but it's 2 times
+13. So - so long as that has no factors in common with anything else that's equally
+safe. So this, then, was the backdrop of what they were expecting - what Bill Tutte
+was expecting - it was that there would be a machine probably with several cogs in
+it of some sort and the prime numbers of teeth would probably be involved. So,
+remembering what Gerry Morgan had said to him about this - that one of these
+positions had only got 23 possible alphabetic characters all the
+rest had 25 - he said OK what about the product of 23 by 25? There aren't any
+factors in common, you see, 23 is prime. "Tell you what I'll do", he said "rather than
+worrying about the whole character let me just look at the leftmost stream of
+bits in all these characters". Now, I would call that bitstream 1. What they did at
+Bletchley Park was they called it 'impulse 1'. What I'm talking about is the stream
+of bits from all of the characters, like y'know, the bit that's in the number one
+position over all characters in the message, from one to five, left to right.
+He started off with what he regarded as bitstream 1, the leftmost one.
+He said: "remembering my training which said if you think there's going to be
+repeats have a look for them?" And he said: "Well, why not do two at once? If I do 23
+times 25 I might be able to spot vertical runs happening every 23, if I
+write them out in a block. I might see them at 25 because they're not going to
+interfere, they're relatively prime. So, on an enormous sheet of paper and it doesn't matter 
+whether it's Turing, Bill Tutte  or a host of other workers at Bletchley Park, they
+used acres of big sheets of paper, divided up into squares, to make notes on. 
+And he said: "I wrote it out along a great long strip;
+575 bits then another 575 then another 575. And, don't forget. this intercept was 4000 characters. So, he ended up with six and a half huge
+long rows - all on this combined period of 575. And he said I was expecting to
+look down vertically and find every 23 there was a bunch of 1s
+or something like this, or every 25. He didn't see that looked at it
+carefully and "... to my amazement" he said [as you look at it] I saw, going down these
+five rows, a clear diagonal sequence of 1s, going like that but down the
+diagonal! What did that tell me? I'd got the wrong period it wasn't 575, it was 574". 41 is a [prime] factor of 574.
+So, as he says in his paper, if people say this genius Bill Tutte was straight on
+to spotting 23 and 25 and it was the first thing he found ... No, he
+didn't! He went off down the wrong trail temporarily but accidentally, with sheer
+pure luck, found that the number 1 stream was having its 1s and 0s
+that were added to it [and] was generated by a wheel, probably, with a periodicity of 41.
+But the Germans wouldn't be daft enough to make sure there's a blindingly
+obvious repeat every 41. There'll be 'messing about' going on behind the
+scenes. It will be 41 but it will perhaps be disguised. But maybe they
+didn't totally succeed in disguising it enough. Armed with 41 what he then did
+[he] said right I'm gonna write down all of these sequences now, not on a 575
+grid but on a grid of 41. So he writes out this impulse stream of 1s
+and 0s but the tradition at Bletchley was to use '.' for 0 and 'x' for 1. 
+Tutte says he can't understand why they did this. Other people say " ...  it's all very
+well, Bill, for you mathematicians, wanting 1s and 0s but I find patterns
+easier to spot with dots and crosses". I think I agree, actually. And when he put
+out all these impulses - all 4,000 [per stream] of them - on a grid 41 across, you suddenly find
+that - not on every row but on quite a few of them - there are certain patterns that
+repeat. So the message from that is 'Yes, there is a wheel with 41 teeth involved 
+but there's almost certainly some extra stage where it's trying to
+disguise what's going on. That might be another wheel with different teeth or
+something's going on. It's not pure and simple. It wouldn't be - because it'd be
+dead easy to decrypt if it was. But there is a sneaky suspicion 41 was involved.
+So, Bill Tutte tells the rest of the Research Section who piled in and helped. Because
+what he points out - the next obvious thing to do is look at the number 2 stream, look
+at the number 3 stream look at number 4 stream, look at the number five
+stream. And when we've worked out what the initial wheels - how many teeth
+they've got on - then we can take that away and start looking to see if we can
+figure out how the excess stuff, that's trying to distort it, gets generated. And
+to cut a very long story very short, after a few weeks work of probably 10
+or 11 people, what they finally came up with was in this diagram here. They
+decided that initially your stream from your teleprinter was put through 5
+distinct cogs, one for each bitstream or 'impulse'. The numbers of teeth were 41, 31, 29, 26, 23 So, as Tutte says, " ... eventually
+if I'd not discovered the 41, I would have proved what a genius I was
+because 23 *is* there. It's just that it's on stream 5, not stream 1. But it is
+there, right! And then they managed to discover that the obscuring mechanism
+was another set of wheels which sometimes turned on by one place and
+sometimes didn't. And these have got 43 47 51 53 and 59
+teeth. And the eagle-eyed among you who watch every single morsel of Numberphile
+will immediately jump on our necks and say 26 isn't prime. No - it isn't. It's 2
+times 13 but it's relatively prime to everything else. Equally 51 isn't prime,
+it's 3 times 17. Fine. So, if you use other "relative prime-nesses" you can't have
+2s or 3s involved in their factors because they're taken up now. But that
+was it. These two extra wheels at the bottom? There was another thing: they
+could sort of understand why 10 wheels - two sets of of 5. Well what do the
+other two do? The other two - in a very complicated way - determine whether this
+second set of wheels moves or stays still. And I think the Germans were
+hoping that by that mechanism they would confuse the Allied decryption effort
+even more. Because the first set always move. You do a character-worth it'll click 
+and they [the cogs] all move on. But they've got different numbers of teeth on them.
+[The] second set sometimes moves, sometimes doesn't. By the end of the war the
+feeling was from people like Jack Good and Donald Michie, who had a look at this
+statistically. They said: you know by the time you got used to looking for whether
+the wheels were moving - a 'stutter' we call it - you got to be able to 'spot the
+stutter' and it was such a landmark, once you were really familiar with it, that
+the Germans actually did themselves a disfavour. They'd have been better off not
+to put it in. They managed to get all of that structure out of it. What they
+realized was their next big task was to say: OK - we know the number of teeth on
+each wheel but what we don't know is the patterns on the wheels of 1s and
+0s that they are contributing to the exclusive-OR key characters. So, that was
+another great long journey because they knew that, on the Hagelin machine, so
+it's probably similar on the Tunny machine, that on every cog there
+was a little slider which could set up or down. And in one position it
+contributed a 0, but if you put it down it always contributed a 1. So, can
+you imagine going ... the task of setting this wretched thing up! You've
+got all of these cogs with all these teeth and if you add up the total number of
+teeth of several hundred. And every one of these positions has got to be set up
+with a 1 or a 0, according to this instruction manual. Do you think they
+changed them every day? Not a chance! They [initially] only changed the wheel patterns
+once a month. You've got the Indicator that tells you what the 
+[initial] wheel settings are. You can work for a whole month on trying to work out
+what the wheel patterns are. Once you've got it you can decrypt like mad. What
+would happen if they ever stopped [started] saying: Let's not put the indicator out. It only
+helps them. [Actually] it doesn't help them, it's totally secure. But it's pointless to put
+it out. Just like on Enigma. So, in the middle of - early to middle of - 1942 they
+stopped putting out the Indicator. Oh dear! Calamity.

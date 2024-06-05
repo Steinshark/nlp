@@ -1,0 +1,121 @@
+Hey everyone James Murphy here, this 
+is mCoding, and let's just jump into   it with some controversial events 
+happening in the world of Python.
+  If you haven't already heard the news, 
+the CPython developers just pushed out a   breaking change to the language, modifying 
+longstanding behavior of how int-to-string   and string-to-int conversions work, putting a 
+default limit on how many digits are allowed.
+  Previously, there was no limit on 
+the size of integer you could use,   as long as you have enough memory to hold it. 
+This was one of the cool features of Python   that new programmers would often explore. Just 
+print math.factorial(10000) and there it is.
+  But if you download Python today,   instead you'll be greeted with an error 
+telling you the answer is too big.
+  The default limit is 4300 digits.
+Users must now call this   sys.set_int_max_str_digits to increase the digit 
+limit or set it to 0 to disable the limit.
+  Now it prints just as before.
+This limit only applies to conversions   from int to string and string to int that 
+aren't in a base that's a power of 2,   so printing binary and hex are not affected. 
+But humans normally write numbers in base 10,   so this does affect the most common use case.
+Also note that this is not a limit on the   size of integers outright, only on 
+conversions to and from strings.
+  So you can still operate on big numbers without 
+any changes, you just might not be able to print   the results. That's why the error here is on line 
+4 where the print statement is, and not on line   3 where the answer is actually computed.
+Part of what makes this so controversial was   that this change, which undoubtedly breaks some 
+existing projects, was pushed out with essentially   no warning to the community not just to the 
+latest development branch of Python 3.11,   but to Python 3.7, 3.8, 3.9, and 
+3.10 as well in a patch release.
+  Patch releases are generally meant to be 
+made of small changes that are completely   backwards compatible or that fix outright bugs, 
+errors, crashes, or security vulnerabilities.
+  As such, tooling such as automated test 
+runners may use the latest patch by default   and package managers may ignore the patch number 
+when considering version compatibility.
+  This means that projects depending on the old 
+behavior will have their automated tests broken,   and their users who are on the latest 
+patch will immediately start experiencing   these breaking changes, even if the 
+project hasn't made any new release.
+  So why would they push out a 
+breaking change like this?
+  Going to the CPython source, this GitHub issue 
+claims the previous behavior of int/string   conversion is a security vulnerability, which 
+explains why it was able to be pushed out so   quickly even though it was a breaking change.
+This vulnerability was initially reported in May   of 2020 and officially went public on September 
+1, 2022, according to RedHat's CVE page,   although the GitHub issue was apparently 
+created a month before, in August.
+  So what is this vulnerability?
+Well, CPython uses an N^2 algorithm   in the number of digits for int/string 
+conversions when the bases aren't compatible.
+  Here, a mere million and one digits 
+took 4.5 seconds to complete.
+  We can confirm this N^2 behavior empirically by 
+looking at the timing plots for conversions.
+  We can clearly see superlinear 
+growth in this plot.
+  And, if we look at a log-log plot and compute 
+the least squares fit we see that the estimated   power is very close to 2.
+So, empirically at least,   this really is an N^2 algorithm.
+Under the hood, the actual algorithm   that Python uses is very similar to 
+these basic conversion functions.
+  It's really not much more than repeated division 
+or multiplication depending on the direction.
+  These may appear to be just O(N) algorithms, but 
+it's actually O(N^2) because multiplication and   division are not constant-time operations since 
+we are working with arbitrarily large numbers.
+  So these divide-by-10 or multiply-by-10 
+are actually O(N) operations themselves.
+  This means that converting between integers 
+and strings is more expensive than you might   expect and it opens Python up to a 
+denial of service attack on any code   that tries to convert between them.
+In particular, any kind of parser or API   that takes base 10 values as strings may be 
+vulnerable, including the builtin json module,   parsing libraries like Pydantic, and 
+API frameworks that depend on these.
+  A bad actor can send a moderately large number 
+with say a million digits to cause an API to   freeze for around 5 seconds like we saw.
+The new default digit limit fixes this issue   by raising an exception that your code can 
+catch unless you have explicitly opted-in   to allowing this expensive conversion.
+Of course, primarily in favor of the change,   there are operators and users of services 
+that have these vulnerable APIs.
+  The original GitHub issue argues that the change 
+is necessary in part because of how incredibly   common it is to take unsanitized user input from 
+the internet and pass it directly to int.
+  On the other side are authors and users 
+of libraries that use big numbers,   meaning this is probably going to 
+hit math libraries the hardest.
+  This may complicate things for their users and,   of course, now the code that they've 
+already put out there is broken.
+  Some in this camp have argued that doing 
+anything with unsanitized user input is   already a vulnerability waiting to happen, 
+so it should really be up to vulnerable APIs   to sanitize their inputs, not the Python 
+language to limit how numbers work.
+  Others are confused why we're using 
+these N^2 algorithm, when there are   known faster algorithms readily available.
+Potentially, switching to faster algorithms could   make the denial of service infeasible, eliminating 
+the need for the digit limit at all.
+  And then, of course, there are a large number of 
+people that are perfectly fine with the change   as they are most likely not affected by it, 
+but just upset by the lack of transparency or   opportunity to have their opinions considered 
+and to potentially prepare for the break.
+	
+  Regardless of how this issue pans out, 
+the core dev team did apologize for   the lack of transparency on the issue, 
+although it is sometimes necessary for   security vulnerabilities.
+And they are welcoming   further discussion on the issue.
+If you have an opinion on the matter,   especially if you are affected by the change, the 
+correct place to respectfully voice your opinion   is the Python discourse, linked below.
+Please keep your suggestions and criticism   constructive and don't use 
+the discourse to rant.
+  And that's where I pass it off to you.
+What do you think about this breaking change?
+  Is protecting vulnerable APIs that you or I 
+may unknowingly be using every day worth it?
+  Even if that means some math 
+libraries are broken?
+  Or should vulnerable code be on 
+the hook to sanitize its inputs?
+  Don't forget to subscribe, 
+and I'll see you next time.
+  As always, thank you to my Patrons 
+and donors for supporting me.

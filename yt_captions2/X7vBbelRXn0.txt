@@ -1,0 +1,137 @@
+welcome, everyone to 
+ mcoding with james murphy, that's me, where we try to get just a 
+ little better at programming every episode so that we can take unknown hours 
+ to automate our 30-second interaction with the coffee machine. today, we're talking about parallel programming. specifically, how to unlock and 
+ use all of your cpu cores in python. i'm also an independent consultant. so if you or your company needs 
+ python consulting, please check me out. i'll motivate this with the following 
+ extract transform load (etl) workflow. we start off with a bunch of audio files that 
+ we want to read in, process, and then write back out. we use scipy to read in 
+ each audio file as a numpy array. we then operate on the numpy array. in this case, adding 
+ random normally distributed noise. : ) and then we write back out 
+ our new transformed audio file. obviously, adding random noise to a bunch 
+ of files isn't necessarily a very useful thing to do.  but please consider each of these 
+ steps as just a stand-in for a real workflow. extract data from some location, 
+ whether it be a file, a database, or whatever. do something useful to transform it in memory. then you take your transformed 
+ data and store it out somewhere else. let's see how this primitive 
+ etl performs in a loop. here we have 24 audio files. they're just sine waves for about four minutes long. : | : ) now, let's process each of 
+ them and see how long it takes. right off the bat, it's taking 
+ about a half second to process each file. maybe for a single file, you 
+ might be okay with waiting half a second. but if you're starting to process 
+ hundreds or thousands of these files, this is going to add up really quickly. but let's take a look at the handy 
+ cpu monitor and run that process again. as you can see, although it's 
+ going to take 12 seconds to finish, we're only utilizing 24% of our cpu, approximately.   wouldn't it be great if we could utilize all 
+ of our computing power to get the job done faster? there are three big contenders for 
+ how to deal with multiple tasks in python. there's asyncio, threading, and multiprocessing. as the name suggests, asyncio is 
+ primarily concerned with i/o-bound operations. asyncio is built to allow tasks 
+ to cooperatively pause themselves. and allow other tasks to run, particularly while they're doing nothing, just waiting. so, if the bulk of your program 
+ time is spent reading or writing to disk or waiting on a network connection, then asyncio might be a good choice. while we're definitely reading and writing files, assume, for the sake of the argument, that the transformation step, the 
+ one we're actually doing raw computation, is where the bulk of the time is spent. in that case, we'd say we're compute-bound. 
+ and asyncio wouldn't be a good fit. okay, what about using threads? in a lot of languages besides python, 
+ using threads would be the answer here. the ultimate reason that we didn't 
+ see 100% cpu utilization was because python is just running on 
+ a single thread on a single cpu. that one cpu might have been close to maxed out. but the seven others were just sitting idle. however, just take a look and see what happens when we swap things out for a threading solution. here's the cpu monitor again. and let's run it. okay, here we go. things look like they're going well. but we're still only getting 32-31% cpu utilization. it was a little bit faster, 
+ almost eight seconds, not 12. but we still didn't get 
+ anywhere close to full cpu utilization. with seven extra cores, we should 
+ expect things to go six or seven times faster. and here's where we get to the big 
+ elephant in the room with python and threads. python, well specifically cpython, which is the  python that 
+ 99% of you are going to be using, has what's called the global interpreter lock (gil). a lock is a parallel processing primitive that helps threads prevent themselves 
+ from accessing the same data at the same time. in particular, to prevent one 
+ thread from reading or writing some data while another thread is writing to it. only one thread can acquire this lock at a time, which is ensured by your 
+ operating system and by your actual hardware. if two threads are trying to 
+ access the same data at the same time, one of them will get the 
+ lock first, and it's able to do its thing. then it releases the lock, 
+ and the other one can grab it. well, as the name suggests, the global interpreter lock is a 
+ global lock around the entire python interpreter. in order to advance the 
+ interpreter state and run any python code, a thread must acquire the gil. so, while it's possible to have 
+ multiple python threads in the same process, only one of those threads can 
+ actually be executing any python code. while that's happening, all the 
+ other threads just have to sit around and wait. now, we did still get some speedup  here. and the reason for that is simple. you only need to acquire the gil to run python code. your python code can then call 
+ out to c code or other external code that doesn't care about the interpreter. during this time, it can drop the 
+ gil, let another python thread do its thing. and wait on that c code to finish simultaneously. in our case, this is what happens 
+ when we read and write files to disk. at the os level. it's possible to wait on 
+ multiple files to read and write at the same time. and that's where the savings is happening here. however, for our transform 
+ operations, we don't get so lucky. threading in python can still 
+ be useful, mostly for i/o-bound things. but it can also be useful in say a gui application where you want to run a long-running calculation off the main thread to maintain responsiveness. however, in python, at least for the near future, we're not going to be able to use 
+ threading to get maximum utilization out of our cpu. therefore, we turn to the third option, 
+ multiprocessing, for our compute-bound tasks. in our case, it's going to work fantastically because all of our tasks are 
+ completely independent of each other. processing one audio file has 
+ no impact on processing any others. while you may eventually need to dive 
+ down to the level of managing single processes, most of the time, you 
+ don't need the process object. i'd say 90% of the time, 
+ what you really want is a pool object. a pool object represents a process pool. you just tell it what tasks you want to execute. it takes care of creating 
+ the processes, scheduling the tasks. and collecting the results, 
+ all in a thread and process-safe way. you can control the maximum number 
+ of processes that you want it to start like this. but if you just leave it 
+ blank, it'll just use one per cpu. each process is its own python interpreter. in particular, they no 
+ longer have to fight over the gil. they all own their own gil. we're using a with statement here to ensure that 
+ all the processes coordinate and terminate gracefully. there are three basic methods that the pool offers. map, imap, and imap_unordered.  `imap_unordered` immediately returns an iterator. then asking for an actual element 
+ of the iterator is what blocks. `imap_unordered` will return the 
+ results to you in whatever order they finish in. so, if some tasks complete 
+ quicker, you'll get those back faster. let's see how it goes. i don't know if you saw it, but we 
+ did have a full spike to 100% cpu utilization. and the total time was only three and a half seconds. also, notice that because we used the unordered 
+ version, our results did not come back in their original order. this is actually part of the reason that i 
+ return the input file name as part of the result. if i'm getting things out of order, i 
+ need to know which task this corresponded to. let's try again with the normal `imap`. once again, we had a brief period 
+ where we had maximum utilization. and once again, it finished 
+ in about three and a half seconds. this time, the results are guaranteed in order. that means that we may have waited a little bit. for example, 0 to finish even 
+ though example 1 was already done. it just queued up for a bit. and then finally, there's `map`. `map` just blocks and waits there until 
+ all the results are ready, returning them in a list. once again, it took about 3.5 seconds 
+ total, and the results are guaranteed in order. now, that's more like it. just two lines of code, and 
+ i get to fully utilize all of my cpus. then i can scale this operation to as 
+ many tasks as i want, just by having more cores. with access to relatively cheap 
+ core hours from online compute services, this can be a surprisingly scalable way to 
+ process a lot more data without waiting a lot more time. okay, great! we've seen sort of the 
+ best-case scenario using `pool.map` here. next, let's take a look at just a few of 
+ the ways where everything can go wrong. let's just take a look at a few different scenarios. one, running normally on just a single cpu. and the other running multiprocessing 
+ using the pool stuff that we just talked about. in the normal case, i'll just map the given 
+ function `do_work` over the given set of items. and then convert it to a list. and in the multiprocessing case, we'll use `pool.map`. pitfall number 1 trying to use multiprocessing in a situation where the overhead of creating 
+ processes and communicating between them is greater than the cost 
+ of just doing the computation. suppose all we wanted was a 
+ quick calculation, like multiplying by 10. let's see how the multiprocessing 
+ and normal cases compare. using multiprocessing, it took 0.77 seconds. but just doing the computation outright on 
+ a single cpu took less than 100th of a second. creating processes and communicating 
+ between them can be very expensive. so keep that in mind and 
+ only apply multiprocessing to things that are already taking a long time. pitfall number 2 trying to send or receive something 
+ across process boundaries that's not picklable. threads share virtual memory. so a variable that you create in one 
+ thread can be accessed in another thread. processes, on the other hand, have their 
+ own address space and do not share virtual memory. without specifically using 
+ something like shared memory, a process cannot access 
+ variables from another process. the way multiprocessing gets around 
+ this is by serializing everything using pickle. it then uses an inter-process 
+ communication method like a pipe, to send bytes from one process to another. the takeaway is that you 
+ can't send anything that isn't picklable. if you try, you'll get an error like this. in this case, this lambda function, 
+ `lambda x: x + 1`, is not a picklable object. of course, the same 
+ thing goes for the result objects. you can't return anything that's not picklable. pitfall number 3: trying to send too much data. remember, all the items that you're using 
+ need to be serialized and sent between processes. if you have a lot of data, like numpy 
+ arrays, then this can be a big slowdown. instead of passing the data from process to process, consider sending a message like a string that informs the other process  
+how to create the data on its own. for instance, in our audio example, we didn't read the wave 
+ files here and then send them over. instead, we just passed the file name 
+ and had the separate process load the file itself. pitfall number 4 using multiprocessing when there's a 
+ lot of shared computation between tasks. here's a basic fibonacci implementation. we want to compute the 
+ first ten thousand fibonacci numbers. we go ahead and try our 
+ experiment, and what do you know? doing it on eight cores was 
+ actually faster than doing it on one. but of course, we've been tricked. it is a huge waste to be computing 
+ these ten thousand fibonacci numbers independent of each other 
+ since there's so much overlap. if we just changed our 
+ implementation to reuse shared computation, then we could compute the first 
+ ten thousand fibonacci numbers instantly. and pitfall number 5: 
+ not optimizing the chunk size. `map`, `imap`, and `imap_unordered` 
+ all take a chunk size parameter. instead of submitting each item as a separate 
+ task for the pool, items are split into chunks. then, when a worker grabs more 
+ work, it grabs an entire chunk of work. bigger chunks allow individual workers to have 
+ to take less trips back to the pool to get more work. however, there's also a 
+ trade-off because a bigger chunk means that you have to copy more 
+ items at once across process boundaries. this could potentially cause you to run 
+ out of memory if your chunk size is too large. if you're running out of memory, 
+ consider setting a smaller chunk size. and also consider using `imap` 
+ or `imap_unordered` instead of `map`. remember, `map` keeps 
+ all of the answers in memory in a list. whereas, `imap` and `imap_unordered` can 
+ give you results as they come in rather than storing all 
+ of the results all at once. so, a larger chunk size tends 
+ to be faster but uses more memory. and a smaller chunk 
+ size uses less memory but is slower. so, if you really want to optimize the 
+ performance as much as you reasonably can in python,   then don't forget to optimize 
+ that chunk size parameter as well. and that's all i've got for today. thank you so much for watching. there will definitely be more 
+ multiprocessing, threading, and async content coming. as always, thank you to my 
+ patrons and donors for supporting me. if you enjoyed this intro to multiprocessing, please consider becoming a patron. and as always, slap that 
+ like button an odd number of times. see you next time!

@@ -1,0 +1,66 @@
+So, pipeline is basically a mechanism for
+connecting the output of one program directly - conveniently - into the input of
+another program. So that you can do, in effect, two stages of processing just by
+saying "program-1, vertical bar - that's the pipeline symbol - second program". And what
+that does is to start both programs and take the output quietly from the first
+one and stick it into the input of the second one and then of course you can
+have multiple of those.  Before that, the way that people connected programs --
+but first I think they often didn't think of connecting programs at all; you thought
+of each program as its own thing, and it would produce some output. >>Sean: So you might put a few numbers into it
+by punch card or whatever, it would sort them, you'd take that output, and then take that one
+literally ... connect the next program. >>BWK: Right, yeah. You do that, as it were manually. Unix had the
+idea of file redirection, which made that syntactically easy. The new invention was
+to say, "Hey wait a minute, we could put an operator to do that right in the shell," the
+command line interpreter. And then that made it a lot easier to do,
+and it also encouraged people to, if the mechanism wasn't clean already, retrofit
+cleanliness into the implementation. I think it is a new idea with UNIX as
+far as I know.  I have somewhere in my collection of historical documents a
+page that Doug McIlroy wrote in 1964 saying what we want to do is a mechanism
+for screwing programs together... connecting programs together just like screwing
+pieces of garden hose together, and that's the model.  And then I think it was
+probably three or four years later and I don't know how it came about, but it just
+got done, and literally in a very very short period of time. >>Sean: So basically the pipe is like 
+pumping water into a garden... >>BWK: Yeah. And you just screw on another
+length of garden hose if you want to do further processing. Garden hose doesn't process
+in that same sense, but it's a pipeline in the sense that you see in 
+certain kinds of manufacturing processes, or something like that, where there's just
+stages of processing. >>Sean: What's the benefit of that
+rather than just writing one big massive program that just does everything
+for you? >>BWK: Well, first you don't have to write the
+one big massive program.  You've got existing smaller programs that may
+already do parts of the job.  And having smaller programs is better than having
+massive programs, so that's one thing. Another is that it's possible that the
+amount of data you're processing would not fit if you stored it in a file, if you
+took the output of one program and had to store it totally before you put it
+into the next program.  It might not fit because remember we're back in the days
+when discs on these things had, if you were lucky, a megabyte or two of data, not
+a gigabyte or a terabyte, but a megabyte. And so you couldn't instantiate necessarily the
+output of a program before passing it on to the next program.  So the pipeline
+never had to instantiate the whole output.
+>>Sean: So by "instantiate", that's "store," is it? Yes, store it. A big word for storing. And so that meant so that you could kind of just sneak things through without having to
+do this along the way.  So that would be another example.
+And then it was just keeping track of the intermediate files could be a nuisance,
+cleaning up the mess afterwards -- all of those things went away with the pipeline
+mechanism where you just said, "Hey, this is what I want to do:
+this, this, this, in order." >>Sean: Give me one result at the end of it?
+>>BWK: Give me one result at the end of it. >>Sean: Is that something that's still used today ...?
+>>BWK: Oh, absolutely. It's still fundamental mechanism. You use it all the time. You don't even think
+about it at this point.  It's just part of it. It took a while to get retrofitted I
+think into let's say Windows but it's an absolutely integral part of any UNIX-based system,
+has been since, since the late sixties. Just by taking existing programs, tools
+like grep and wc and sort, and somewhere in there I could throw in AWK if I
+wanted to do slightly more complicated kind of processing.  So all of
+these things are using UNIX tools with glued-together pipelines in ways that
+were not thought of in the original design.  That's the critical
+observation, and that's the reason why these little programs are often much more
+useful than the very big, monolithic one which does whatever it does, but
+nothing else.  It's definitely an instance of "don't reinvent the wheel." Other people have done a lot of useful things
+for you, and the ingenuity and often a lot of fun of just saying, "Hey, I don't have
+to do anything here except glue together things that somebody else did
+for me already." >> Sean: I may be getting the wrong end 
+of the stick - or another cliche will come to me in a minute - but is this where libraries come from then? 
+>> BWK: So you can think of  programs like grep and wc and sort as in
+effect libraries, but libraries of programs that stand alone, rather than libraries
+of code which is linked, more or less permanently, with other pieces of code.
+So it's a library mechanism but in some ways at a higher level, and the programs 
+are really independent of each other.

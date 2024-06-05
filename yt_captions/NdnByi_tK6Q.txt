@@ -1,0 +1,127 @@
+Another classic puzzle if it's all right? This time 
+I want your gut reaction and I encourage viewers   to note their gut reaction before you ponder 
+further. It's one of those classic ones where you   should get gut reaction, park it, and then analyse 
+whether it has any sense to it. And this time   I'm going to ask you a probability question. I'd 
+like you to answer this question on the scale of   impossible (i.e. probability zero) up to certain; and 
+I don't really care about a number. If you can give   me a number I'll be impressed. The 50/50 is there; 
+let's call this very unlikely, unlikely, likely,  very likely - I think you get the idea. So that's 
+your scale to use, and here comes the question:   What are the chances that there are two people in 
+London with the same number of hairs on their head? Remember you don't need to give me a 
+number I want somewhere on this scale. (Brady: Very close to zero.)
+- Okay so I'm gonna put a Brady 
+BH like down here, is that- is that fair? Or do   you want to be closer to zero than that?
+- (No I- I'd maybe go even a shade closer but that'll do for now.)   We're talking ballparks only, but the idea 
+of actually giving me a percentage answer seems   nonsense as well I think. So my claim is - which 
+I will try and answer in the remainder of the   video - is that I know exactly where on the scale 
+the answer is and I know to full precision,   full precision - like I can nail the absolute 
+full decimal expansion if you wanted me to.   And I'm just checking the viewers have got your 
+gut reactions; you may disagree with Brady, you may   agree, uh maybe you disagree by like a fraction 
+of percent - who knows? So uh the reason I'm asking   this question is that there's a little bit of 
+background I want to explain. In the UK there's   a qualification you can take post-16, if you're 
+not doing an A-level in maths you can do something called   core maths now, it's a relatively recent thing. It's 
+the matter of everyday life and it's really useful   for students to take who are not going to do an A-level
+ in maths but still want to keep some basic   numeracy, understand headlines. It sounds like a 
+sales pitch a little bit because I think more   people should do it but the point is part of that 
+course is estimation skills. Like you get examined   how well you can estimate things and there's 
+these classic types of questions called Fermi   questions or Fermi estimations where- the story 
+is that Enrico Fermi, the physicist, estimated   this size of an atomic blast. He didn't have any 
+other way of measuring it so he dropped a piece   of paper, noticed how far the blast wind blew it, 
+and got the size of the blast within a factor of   2. Detail didn't matter but the size estimate was 
+a really useful skill and actually knowing roughly   how many things occur; maybe I don't know like the 
+number of people in London or maybe the hairs on   your head, those questions are tied up with this. 
+So we're going to use a bit of Fermi estimation to   solve this once and for all.
+- (It wasn't a trick question, you're not counting people with zero) (hairs on their head are you?)
+- Well if we did what's your answer? 
+- (Well then then it's 1 because there) (are two people with zero, but I'm not counting that.) 
+- Brady, inexplicably that's at the other end of the   scale from your guess, but let's say to be fair to 
+you that we are not counting that and maybe we should   rephrase the question. Most people are shouting at 
+the screen probably I think "What about bald people?"  So if we said what are the chances of two hairy 
+people - whatever that means - having the same   number of hair follicles on their head whatever we 
+could have hair follicles- whatever. We're going to   do some estimation in typical core maths style. How 
+many hairs are on our heads? Like are we talking   10 million? Are we talking 10?
+- (I'm regretting my 
+decision now. There aren't that many hairs on a head)    Well so I had a thought about how to give 
+people advice; estimating stuff is hard which is   incidentally why they use these sort of questions 
+as interview questions quite often, like how many   tennis balls can you fit on a jumbo jet I've 
+heard was a Google interview question. No   one cares about the answer they care about how you 
+think about it. So maybe you come up with your own   ways of thinking about hairs on your head; I had 
+an idea which is: I had a 30 centimeter ruler in   my drawer, a nice bendy one, and I can sort of like- 
+well it's it's roughly- my hair is roughly like 30   centimeters by 30 centimeters. I mean I know my 
+hair is a source of contention among Numberphile viewers - there's been incidences on camera 
+where I had questionable hair and possibly still   do - but we're leaving that aside. 
+- (You think I haven't just put them on screen? That's cute.) I talked myself into that didn't I? New 
+Numberphile video, new haircut - that's my motto.   And I think actually if you drill down, the size of 
+my head is kind of within grasp of centimeters and   if you think about like a one centimeter squared 
+patch - no close-ups right - I think we can get an   order of magnitude. So I think there's probably 
+more than 10 hairs in a centimeter squared, like   it like feels like sparse. Probably not as many 
+as a thousand, so let's pick a hundred. I'm going   to start writing some stuff down. 100 hairs per 
+centimeter squared, and then roughly let's get   the size of my head. So when- I've already waved the 
+rule around, that's 30 centimeters by 30 centimeters   approximately 900 centimeters squared? 
+Times 100 - 90,000 hairs. How do you feel about that? (Loads of people in London have the same 
+number of hairs on their head.)
+- Are you wanting to change   your answer? I'm glad we are already acknowledging 
+that there is doubt creeping into your earlier gut   reaction. So let's just settle it once and for all;
+uh I don't even trust my estimation but if we went   to - let's call it 100,000 - I don't think 
+many people are going to be in order of magnitude   out from that. Incidentally I did do some research 
+on this and apparently redhead people have uh   fewer hairs? Quality not quantity apparently is 
+the name. But roughly people are estimating between   50,00 and 150,000 so I'm 
+really glad our estimate is pretty good.  How many people in London, Brady?
+- (What is it? Is it like 12 million or 8 million?
+- And anyone who was shouting the   screen earlier when I asked the question would be 
+like "It depends what you define as London" right? Greater London, the city of London - however you 
+really do it I think we're in millions, agreed?   Like even if you go small - and let's 
+say greater London - I reckon about 8 million? But again I don't actually care because I'm 
+just going to say 8 million. You will see that   the actual detail doesn't really matter. 
+Now you've already upgraded your estimate,  but let's think about why. I'm going to do what 
+they call in the trade a piece of common sense,   uh which is the name for a mathematical theorem 
+which everyone thinks is really profound and   everyone else is like - well that's just obvious. But 
+this is called the pigeonhole principle and if you   have heard of it uh well done, you might think it's 
+common sense. If you haven't heard of it it's time   you heard of it. So if there are 9 pigeon holes 
+in this little grid here and I had 8 pigeons,   they could arrange themselves all through and 
+there'd be a gap, they've got one pigeonhole each.   They could arrange themselves to double up, there's 
+no rules against it if they're particularly cozy,   but they don't have to. My point is if I have 9 
+pigeons they could have a pigeonhole each. They   might double up but they don't have to; whereas 
+if I have 10 pigeons, 2 pigeons are sharing.   At least. This is known as common sense to most 
+people, and other people call it the pigeonhole   principle, and it's a surprisingly profound useful 
+result uh in very different situations. If you've   got more things than options then the people 
+choosing options are going to double up. And I   think- by the velocity of your nodding you have 
+seen how this might apply. Let's imagine all the   people in London are choosing an amount of hairs; 
+even if they're making up a number, right, they   just- I have 963 hairs and I have 900,000 whatever. 
+- (They want to be unique.)
+- They're trying to be but   if 8 million people try it and there's only 
+roughly 100,000 or even 200,000   or even 300,000 options two of them are 
+going to duplicate. There's nothing we can do about   it. I'm sorry to break it to you, not only we're 
+not down here we are precisely there. It's 100% and   I said I'd do the full decimal expansion if you 
+want it but it gets pretty dull pretty quickly.   So I like this question because it feels like 
+our gut reaction goes wrong quickly and I think   it's because we're not very good at estimating 
+without training - incidentally why core maths is   a good thing to study. And it's nice to actually 
+do an exam where you're rewarded in this common   sense way of thinking.
+- (I studied maths Ben and I got it wrong terribly.)
+- I think- I think mathematicians   particularly- you've done your share of maths, maybe 
+more than the majority of people in the world,   are actually less good at the basic common sense 
+estimating than other people. And people who have   to do a lot of this every day are better at it, it 
+just takes practice. And actually studying maths   doesn't involve lots of it which is why there's an 
+interesting qualification to talk about and a good   skill to have whatever qualifications you study. 
+The art of estimation is important and in this   case what's nice is the probability question not 
+only has a definitive answer; all you need is rough   ballpark estimates to nail it down completely. It 
+turns out that the pigeonhole principle has lots   of important applications if you want to look at 
+the possibility of things duplicating, if you make   up a random password with a certain key space and 
+someone else makes it - like what are the chances   of duplication occurring? Suddenly you realise it's 
+the same sort of question and that's important. And   there are links to another cliche problem called 
+the Birthday Paradox, like what are the chances two   people share a birthday? It's not quite the same 
+but if you have enough people in that question, if   you have 366 people in a room, you guarantee that 
+two of them share a birthday. Same idea, pigeonhole   principle means at least one is going to double 
+up. That's it, that's the hairy problem for you   and I think it's a good advert for estimating 
+skills and this qualification called Core Maths. So continuing the theme of probability - have a 
+look at this, it's a new subscription box from   our episode sponsor MEL Science. In the past 
+I've shown you some of their cool chemistry   sets but they're also getting into mathematics 
+and this one has me intrigued - How to Never Lose.   As always, everything your needs in the box. 
+It's well-explained, really hands-on. I'm making my very   own bean machine here. And have a look at this: 
+lovely. And some very nice normal distributions.   Where was this when I was a kid? I guess it doesn't 
+matter I can play with it now that I'm a slightly   bigger kid. This snazzy machine comes with handy 
+lessons, other probability games - it's really   interactive which is always the best way to learn 
+and have some fun along the way. You can get 50%   off your first purchase with MEL science by the 
+way. Check out the link and details in the video   description or you can just go to melscience.com, 
+have a look, see everything, it's a great website. Look at that, I could watch that all day. Brady, what are the chances of 2 people in London 
+having exactly the same number of hairs on their head? (100% because of the pigeonhole principle.)
+- Well this video is really short. There we go.

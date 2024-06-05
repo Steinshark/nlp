@@ -1,0 +1,91 @@
+- I just bought this $2,000 CPU for 428 bucks, brand new. (sniffs) Smells like a
+scam, and walks like a scam. Might even talk like a scam. Hello, I'm a little scam. But I assure you, this is very real. A high performance. This CPU has 18-cores chip that you can actually buy right now for less than a quarter
+of its sticker price. And there's tons of them available. So what are these, why are they so cheap, and where on Earth did they come from? And who's our sponsor? ORIGIN PC laptops can be customized with 11th-gen Intel core processors and NVIDIA GeForce RTX 30 Series graphics. They're backed by their 24/7 support team, and you can check them out at the link in the video description. (upbeat electronic music) When we first stumbled upon
+these Intel Extreme Edition CPUs for sale at mindbogglingly-cheap prices, my brain jumped to three possibilities. One, these could be B-stock
+units that were returned to a retailer or system integrator. So they're working, but not brand new. Two, they could've been pulled from decommissioned workstations as part of a large
+organization's hardware refresh. Or three, and this is a classic eBay scam, these are actually engineering or qualifying sample chips
+being sold as retail. And that one's a big problem, because A, they are technically still
+the stolen property of Intel, and B, they often have performance
+and compatibility issues. But, after further investigation, otherwise known as actually
+reading the eBay listing, these are advertised
+as seller refurbished, which lines up pretty
+well with my theories, except that wait, what? 100% not used, not repaired, not engineering sample. (chuckling) See ya later,
+theories. It was nice knowing ya. I mean, it looks too good to be true, but these guys have all
+kinds of chips available, and every single one of their ads lists these CPUs in the same fashion. So I started to think,
+"Maybe they're real." I mean, look, they even come
+with a one-year warranty! All right, Strong Exuberant
+Electronics HK CO Limited, I'll play ball. So I blew $1,000 on not one, not two, but three of these chips,
+all in the name of science. After all, if I ordered one, and I got a working one,
+that could be a fluke. But three, that's a pattern. You guys know I do this all
+for you, right? (chuckles) "But Linus, cheap eBay
+CPUs are nothing special." I know, I know, it's the
+motherboards for these things that tend to kill the deal. But not for these. The thing is, the chips
+I'm holding are a 7940X and 7980XE, 14 and 18 cores, respectively. They are formally discontinued, but Intel's matching X299 Chipset is still an active product, which means that motherboard
+supply for these things hasn't actually dried up yet. And because of that, if
+you want to save a buck, there are pages and pages
+of compatible boards on eBay for as little as around $200. That is not bad, compared to
+a decent B550, or X570 board, especially when you consider that Extreme Edition HEDT boards tend to come with a lot
+more standard features. But just a second. From the outside, not
+one of our three CPUs appears to have been mounted in a socket for any appreciable amount of time. These earlier 14-nanometer chips, notably Skylake, used thinner substrates that had a tendency to bend at the corners after spending even a few
+months mounted in a socket. We don't see any of that. And there aren't any telltale
+pressure or abrasion marks on the IHS from being
+held down in the socket, or from having thermal compound on them. Except there's one small thing. Consistent with the eBay ad description, there are scratches and dings
+all over all three of them, including at the edges of the substrate, and in between the pads. In all my years assembling PCs for NCIX and Linus Tech Tips videos, I haven't seen this kind
+of superficial damage on a brand-new chip. It's just weird. Of course, I'm not gonna
+care about any of that, if it works, which is hardly
+a guarantee at this point. I mean, it's not like
+I haven't been scammed buying DOA CPUs on eBay before. That's why I always buy
+my CPUs in pillow form, (pillow thumps) from LTTstore.com. You ready for the moment of truth? Here we go. Yes! (keyboard clacking) There we go, 7980XE. (quiet upbeat electronic music) 7940X, that's two for two! Bam. Exactly as expected. So, all three of these work as though I pulled them
+out of a retail package, kicked them around on
+the floor a little bit, and then chucked them into a motherboard. No temperature or stability issues. And they're even running
+the correct clock speeds. And they report retail steppings in diagnostic applications like CPU-Z. That's a big one, by the way, because Intel uses flags like this that are built right into the CPU to permanently mark engineering
+or qualifying samples, so that even if a scammer were to swap out the
+integrated heat spreader, you still wouldn't be able to hide it. I mean, even performance is
+identical to the retail chips that we already had on hand
+from, once upon a time, before our threadripper
+gave the people's elbow to Intel's entire HEDT lineup. (thumps desk) Now, some of
+you are probably asking, "Could they be fake, or imitation,
+non-genuine Intel CPUs?" And the answer is, no, actually. The reason that Intel and AMD can charge so much for these products is that no one else can make them. Even multi-decade-long attempts to reach this level of
+performance, in China and Russia, are only now starting to
+approach the same playing field. And getting your counterfeit chip, that you somehow miraculously built, to report as an Intel one, and then miraculously work in
+an Intel socket motherboard, (scoffs) good luck. So where are they coming from? Well, as strange as it sounds, the only realistic answer is,
+they're coming from Intel. And there's a couple of ways that something like this could happen. One possibility is that
+they're just plain leftovers that haven't sold in four years. I doubt it, but it is possible. Another is that Intel
+could have excess capacity at one of its 14-nanometer fabs, and rather than shutting it down, they found it was better
+to make these things and flip them to resellers
+and developing markets at a deep discount. Intel will save some cost by not bothering with fancy packaging, support, and warranty coverage, and that gets passed
+along to the end user. That sort of thing isn't unheard of. And those discount parts
+making their way onto eBay isn't unheard of either. So, I lean towards the second hypothesis, because you guys might have noticed, we bought one 14-core,
+and then two 18-cores. What's up with that? Here's the thing. We actually placed an order
+for three different chips. One of those 18-cores was
+supposed to be a 16-core 7960X, but the seller fulfilled
+it with an 18-core, saying they were still waiting
+for more stock to come in. Wait, more stock to come in? So, if stock is still flowing, and it has to be coming from Intel, then they gotta still be making them. Of course, just because the retail price is formally $2,000 for this thing, that doesn't mean anything. Intel rarely actually cuts the price of their top-of-the-line products, because they'd rather
+just discontinue them, so they can maintain that perception that Extreme Editions
+are really expensive, and they're for ballers only. So, the question becomes,
+at $400, should you buy one? Well, if all you're doing is gaming, the answer is an unequivocal no. You're better off with a used Ryzen 3000, or Ryzen 5000, if you can afford it. But if you do anything other than gaming, well, now the answer gets a
+little bit more interesting. Considering core counts alone, these things absolutely
+crush any Ryzen 3000 or 5000 Series competitor, for the money. But it's also not quite that simple. They lack some of the latest features, like PCI Express gen four. And this older, 14-nanometer
+silicon is gonna struggle to keep up with AMD's
+state-of-the-art seven-nanometer. You'll notice this especially on the higher-core-count models, which are gonna have much
+worse all-core clock speeds. However, if you've got a workload that benefits from a many-core CPU, a brand-new 3950X 16-core on eBay costs $660 on average. That is substantially more than
+we're paying for an 18-core. And if you drop down to the 14-core 7940X, which, by the way, will
+be better for gaming, thanks to its higher boost clocks, you're paying just over half the price from our new BFFs on eBay. And remember, these X299 platform chips have another potentially huge advantage. They have a whack-load
+more PCI express lanes than AMD's consumer platform. So let's say you wanted
+to build a NAS for Plex with Ryzen 3000. Well, if you want GPU transcoding, and you want a whack of storage, you could end up running
+into an IO bottleneck, or even running out of PCI
+express slots to plug stuff into. What about an editing rig that needs a capture
+card, and fast networking? Or what about a home lab,
+or a split gaming setup, like we've shown before,
+using virtualization to run multiple guest operating systems? I mean, seriously, guys, bottom line, for a professional, or an
+enthusiast on a budget, these chips are a steal, and they're real. That's the deal. Now I feel like telling you
+about our sponsor, Soundcore. Soundcore's new Life P3 wireless earbuds deliver active noise cancellation and wireless charging,
+all for a great price. And with the Soundcore app, you can get access to
+features like gaming mode, which enhances the sound
+of footsteps and gunfire, find my earbuds, which
+emits a high-pitched noise, making them easier to find, and sleeping mode, so you
+can listen to an assortment of ambient sounds before bed. They're available in five great colors, they have up to 10 hours of battery life, and IPX7 water resistance, and all in a package
+weighing just 60 grams. So check out the link below, and reserve your early-bird
+coupon for just a dollar, as well as getting 25% off, once the earbuds launch in early July. If you guys enjoyed this video,
+you might also enjoy the one where one of our viewers got scammed buying a fake CPU from Best Buy, and sent it to us for a post-mortem. It was very enlightening. (pillow thumps repeatedly)
+(upbeat electronic music)

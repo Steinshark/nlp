@@ -1,0 +1,125 @@
+- At last year's WWDC when
+Tim Apple got on stage and proudly announced the
+transition to Apple Silicon, it blew the lid off the tech space, which is why it's so baffling that now in the exact middle of
+Apple's two-year transition away from Intel CPU's, they announced... (drum roll) No hardware whatsoever. So what did they announce? And should we have
+bothered to bust our butts to make this same day
+reaction video at all? It's unclear, but what
+is clear is blah blah and who's our sponsor,
+Ridge Wallet, that's who. Ridge Wallet has redefined
+the traditional wallet with this compact frame
+and RFID blocking plates. Keep your wallet bulged down
+and use our offer code, Linus, to save 10% and get
+free worldwide shipping. Use our link below. (soft music) (upbeat music) WWDC isn't really the place where Apple announces new hardware but since they changed that last year, we had hoped to get some news about their next-gen SoCs this year. I mean, those leaked reports of Apple's big eight
+performance core Jade C dies had us salivating at the thought of high thread count Apple Silicon but unfortunately, that's not what we got. Although we did get little
+hints here and there about what Apple's doing
+for their future hardware. One big indicator is that all
+of Siri's voice recognition will now be processed on-device rather than being sent up to the cloud. And this is huge, huge, because it's not only better for privacy it's a lot faster and a lot more reliable in areas with spotty coverage, making Siri way more useful, full-stop. Not only that, but
+they're also implementing what is essentially Nvidia's RTX Voice and background blurring
+for FaceTime calls, along with expanding spatial
+audio for group calls so voices appear to come from where each person's feed
+is situated on your screen. Wow, it feels like they're really standing around me in a circle like
+they did before the bad times. There are even more new
+machine learning features being rolled out across the whole range of Apple's new operating systems, including the ability
+to detect and recognize any kind of text in an image, or even things like dog breeds or plants, and that information
+then gets contextualized and becomes searchable. If that sounds like a lot of
+work for a phone processor, you're right. So it sounds like Apple's planning on a pretty big boost to
+the iPhone soC this fall, if you ask us. You probably shouldn't be surprised that Apple focused on
+software this morning, it is the worldwide developers
+conference after all. But what's cool is that
+a lot of the new stuff they talked about is applicable across the whole lineup of their products. For example, SharePlay, which lets you have
+listen and watch parties and screen share all through FaceTime. And to try and do that before,
+you needed third-party apps or at the very least, a good
+stopwatch, but no longer. Support for SharePlay
+is rolling out initially for services like Hulu,
+HBO Max and Disney+ with more undoubtedly to come. Obviously Android users can't join a SharePlay enabled FaceTime session but what they can do now,
+for the first time ever, is to join a regular
+FaceTime call using a link. Wait, so Apple made a
+FaceTime app for Android? No, no, no, no. You have to use the
+browser because you're poor but you can still talk to
+your rich friends, very cool. Now for groups of friends
+who all have iDevices, sharing links, images and other content has been cranked up to 11 with a new Shared with
+You section in many apps. In iMessage, you can now
+pin specific messages to read later, which is super useful to someone like me who
+leaves people on read to remind myself to reply later, but kind of like mark
+unread an or an email. And if your device is
+in, do not disturb mode, other iDevice users will be
+able to see that you're busy and we'll have the option
+to notify you anyway which kind of undoes the
+whole do not disturb thing but whatever. I'm sure this will be completely abused by certain people in your contact list, and, I don't know how it's going to work for people not using that
+device, but hey, it's a thing now just like our water
+bottles from lttstore.com except we know how they
+work, they hold liquid. Speaking of do not disturb,
+it's been incorporated into a broader feature called Focus which allows you to set customizable modes for work, personal time, or say fitness. This means that you can customize which notifications will
+come through and from who, which apps are shown on your home screen while it's switched on, and a lot more. And it can be set either
+manually or automatically based on time and location data. To compliment that, there's a
+new design for notifications with larger icons big
+and profile pictures. Amazing, 2021. And the ability to group
+certain notifications, like from promotional or news apps into notifications summaries that you can receive at
+the time of your choosing. This honestly sounds like it
+could significantly cut down on notification clutter,
+and maybe that app that constantly spams
+notifications at you for no reason, but has some useful notifications
+sometimes that you do want can finally stop annoying
+you throughout the day, I'm looking at you Google News. Let's, see what else? Redesigned weather app with beautiful new animated backgrounds, new maps designed with crosswalks, traffic lights and 3D building models. Apple Wallet is getting a house
+key and personal ID support that totally won't be a security concern. Auto translation, that's
+actually really cool but there's not much to say about it. New memoji outfits? hearing about privacy features
+during these event things is usually a bit of a slog but Apple made this one
+a bit more interesting by essentially introducing
+what is a VPN, or two VPNs? Because the new iCloud+ subscription includes something called Private Relay, which bounces your internet
+traffic, not once but twice so not even Apple knows
+what you're doing out there, presumably. You can also create
+single use email addresses to give to sketchy companies
+when you make an account, and on some plans, get
+unlimited storage for video from HomeKit enabled security cameras. And this feels like a
+slog again, let's move on. Oh, the iPad. Apple's brought the
+home screen up to parity with the iPhone. Widgets can now be placed anywhere and there's an app library that can live on the
+dock for quick access. What's more, you can easily
+hide rearrange home screens now which Android's had for a while, but hey, better late than never. More importantly, multitasking sucks less, a new floating menu makes it
+a bit easier to split screen and app windows can be
+minimized to a shelf and then can be added to a
+new split-screen workspace. Combine that with the new
+Universal Control feature that lets you share input
+between multiple Macs or iPads and you've got a formidable
+multitasking setup if your workflow includes the iPad. Universal Control is actually really cool and it's basically a refined Apple flavored version of Synergy that automatically arranges and extends to devices immediately nearby. presumably only those signed
+into the same Apple ID, you know, for security, But this is wild, you can drag and drop
+content between your devices and even across a device
+to a third device, so your weird iMac,
+MacBook, iPad desk setup will finally make some
+sense, at least to you. Seriously though, this could be a pretty dang useful feature, and when that compliments
+another new feature, Airplay to Mac. Now, we just did a video on Luna Display, a dongle that allows you
+to connect a Mac or iPad as a secondary display,
+similar to Apple's own Sidecar. What we liked about Luna
+Display was it's flexibility. Apple hasn't offered a way
+to make another Mac a display since target display died off, and we weren't happy about it. And then they go ahead and Sherlock it with their own implementation. That video isn't even on YouTube yet so the timing is just
+fantastic, thank you, Apple. No word on compatibility yet though but presumably you'll need
+the latest release of macOS which Apple has dubbed
+Monterey, after the bay. Monterey supports virtually all of the new features
+we've talked about so far, and some we haven't. Quick Notes are one of
+them, and they're on iPad 2. Basically these are
+context sensitive notes that you can take quickly and have synced across sessions and devices that lets you do things like skip through web pages with copied text, save specific snippets from apps, and search through them using Spotlight. It's a pretty smart feature and one that along with tags and mentions for groups should help with making the
+notes app itself more useful. Shortcuts are also coming to macOS and since shortcuts are basically a more user-friendly version of Automator, macOS users will be able
+to import Automator scripts until Apple phases out that old
+lame not colorful enough app in about two years, I'm guessing. speaking of old lame app designs, Safari looks way better now. They've moved the address/search bar directly into the active tab itself and the tab bar is located
+at the top of the window as if it were the title. The tabs themselves are made smaller and they can now be grouped without the need for
+an external extension, with those groups extending
+across all devices. And speaking of extensions, iOS and iPadOS will now also fully support
+Safari web extensions, meaning things like Honey can now be installed on those platforms. On the iPhone where the tab
+bar doesn't really exist, the old address bar is now
+near the bottom of the screen where you can swipe left and right to quickly switch between tabs, or swipe up for an overview. Seems pretty slick, but we'll
+have to get our hands on it to know for sure, so make
+sure you hit subscribe so you don't miss that coverage. Developers are getting access to all of these fancy
+OS changes this month, while next month public betas go live, and final releases will
+presumably coincide with another Apple event in the fall. There's obviously more things here that we don't have time to talk about like new HomeKit stuff, the AirPods enhancements
+including Find My support, and the health stuff but this
+video is already long enough. WWDC was a nearly two hour stream and we're still kind
+of processing all of it so maybe you can check out
+our Mac Address channel where Jonathan almost certainly has different perspective on things, we'll have that link below. We'll also have links
+to our sponsors, Setapp. Are you using your Mac
+to its fullest potential? Did you even know it can do stuff like recognize and copy text from images? Recover important files
+after you've formatted your SD card by mistake? Or retrieve what you copied
+to your clipboard months ago? You could unlock and
+discover these features and more with Setapp. Setapp, provides access to a collection of paid productivity
+focused apps for your Mac. Every app on Setapp is curated to provide a boost to your efficiency so just type what you
+needed the search box and find the right tool immediately. There are hundreds of apps to choose from, like Luminar, a modern AI photo editor, the famous CleanMyMac, and much more. So don't wait, use the description below to supercharge your Mac with Setapp. So thanks for watching guys,
+if you liked this video you might like our review
+of the new 2021 iMacs and you can let us know which color you would have bought in the comments.

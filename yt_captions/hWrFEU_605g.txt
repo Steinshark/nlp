@@ -1,0 +1,114 @@
+- Hi, I'm Linus Sebastian and you may remember me professing my love for LG's OLED
+displays in YouTube videos like "every other monitor is dead to me" and "My end-game gaming TV." Well, now that I've been daily driving one for the past few months, I'm going to show you
+everything wrong with it and hopefully how to fix it. - What about today's
+sponsors, Mr. Sebastian - Ha ha, thanks Jamie. But you know, I would never forget to tell our viewers about
+our sponsor, GlassWire. Instantly see your past and
+current network activity, detect malware and block
+badly behaving apps on your PC or Android device with GlassWire, use offer code Linus and get
+25% off at the link below. When I reviewed the 48 inch
+LG C10 earlier this year, I loved it, so much that as
+soon as David got his own and returned mine, I dumped my old monitor set
+up and put it in my office and all of the great stuff I
+said about it still holds up, its high refresh rate and
+unbeatable pixel response times make it among the best gaming
+displays on the market, And its inky blacks and
+great color performance, make it super comfortable
+to use for everything else. Be it movies, spreadsheets, the whites. That is why I'm still gonna have an affiliate link to it below. But before you click on that, this burn-in is a result of snapping my windows into the four corners of my display, a pretty common thing to
+do on such a large monitor and Wendell from Level1Techs, who has been daily driving one
+of these for longer than me has also hit some snags. - It is amazing, but what's not amazing is that I'm starting to
+see signs of burn-in. Hmm. It's unsettling. It's just
+enough to be unsettling. - Yeah, mine too. But LG thought of that and
+maybe, just maybe we can fix this with a feature that's built
+into every OLED display that I'm aware of, that
+LG calls pixel refresher. Start now, hopefully that works. I guess we'll find out soon
+enough, but while it's running, let's talk about burn-in a little more because there's a lot of
+mixed messages out there, including from us. On the one hand you've got manufacturers like LG saying it's not a
+problem and on the other hand, you've got tech experts
+like Wendell saying. - I would say that with heavy use, you know, 6, 8, 10 hours a day, uh, you can only count on these
+things lasting about a year, maybe two. - What's the truth? As usual,
+it's somewhere in between. But to understand why, we
+need a bit of background to start with the term, burn-in is a relic of the CRT days when your monitor was
+as big as a microwave and your TV was the size of an oven. It's also a total
+mischaracterization of the problem because burn-in refers to ghost images that were quite literally burned into the luminescent
+phosphor coating on the back of the glass of
+those older style displays. Here's an example that is so
+extreme that the DMV stopped having to even turn the TV on anymore. But we continue to use this term because even though the
+mechanisms are different, the behavior of modern
+displays can be very similar. So whether you're talking about a CRT, LCD, plasma or an OLED, if you display static or non-moving images for extended periods of time, you might eventually see them as ghosts that haunt your other content. So this type of image retention can affect nearly all
+direct view modern displays. The only difference is how
+likely you are to encounter it, for LCDs, which make up the majority
+of TVs and monitors today, we could more accurately
+describe this phenomenon as image retention, because it's typically
+caused by the liquid crystals losing their ability to easily
+return to a relaxed state. We don't talk about it much though, because it's pretty uncommon. Unlike lttstore.com. We talk about that all the time. Look at this great desk pad. As for OLEDs, a more apt
+term would be burned out, and that's because OLEDs don't have either a phosphor coating or any liquid crystals to get stuck. Each pixel of an OLED display, actually, each RGB sub pixel
+is an individual light source, and from the moment it first
+powers on it is deteriorating, and the brighter each one of
+those little candles burns the faster it will dim. Now, obviously this gradual weakening, isn't going to be too
+noticeable if every pixel gets used exactly the same, but how likely is that to
+happen in the real world? So to combat this educated OLED users can employ a number of tricks
+to extend their lifespan. - I've been running this
+monitor super conservatively. My OLED brightness has
+only been around 60. I left on the, you know,
+the logo compensation thing where it tries to detect a logo or, you know, like the start menu, and it's like, oh, let me
+move that around a little bit. - Those are some good tips,
+lowering the brightness overall means that each pixel isn't blasting out as much light wearing itself out, logo compensation tries to surgically dim static
+elements on the screen like sports score bugs
+or news channel logos and screen shift or pixel shift, takes the whole onscreen image and tries to kind of move it around by
+a few pixels every so often in hopes of at least
+softening the transitions between the more burned out pixels and the less burned out ones. But as you saw, when we began this video, even a few months of use was
+enough for me to overcome all of those protections. My brightness by the way,
+was usually set to 80, and I also have pixel shift
+and logo compensation enabled. Let's take a look at
+our results, shall we? Wow. Okay, hold on. Yeah. Is a lot better. It works, but there's bad news, the way it works is, it
+runs a horizontal line down the screen over a long period of time in an attempt to basically even out the wear on all the pixels, so you could think of this approach sort of like sanding out a
+scratch from a wood floor. Yes, the damage is far less noticeable, but only because you
+intentionally wore away the wood around it. And as you'd expect this kind of thing, doesn't work forever. - The pixel refresh
+function of the display does help when you turn it off, it's supposed to automatically
+do that on its own, but I think it's kind of
+diminishing returns at this point. Text in certain areas, are not quite as sharp as it used to be, and I've got this sort
+of weird red splotch in the middle of the screen because, you know, so
+much stuff is going on in the middle of the screen. - Great. And even if pixel refresher
+works perfectly for you, there are some daily use
+problems with these TVs, that we should have caught in our review. One inconvenience is
+that they don't handle auto awake from sleep the
+way that a monitor does, so you'll have to manually turn it on every time you sit down at your computer, but that one's pretty minor compared to the auto-dimming issues that Barnacules has been struggling with. Now, I understand why LG is doing this, remember the whole burn-in thing? But when you've got three
+displays all side by side by side, something as simple as dragging
+a window across a border can cause one or more of the TVs to suddenly change their brightness from, I think I can see it to eye searing. Now I, on the other hand, I'm only running 1, 48 inch display and I only have to do my
+little brightness dance when I'm reading or editing a large document for an
+extended period of time. So, given that burn-in is a
+much larger concern for me, I'm content to leave
+the auto-dimming alone. But if you absolutely cannot tolerate it, there does appear to be a fix. And, ah, there it is. That's right, we've got it. This is the LG service technician remote that can supposedly access
+menus that are hidden using the regular consumer one. All Ploof said was "play with it." Shall we? Okay. Well, I mean, can you? Okay. You can do just regular stuff, like change an input. What's P check? Huh. Oh crap. Well, now what? Man, how much do I miss
+having buttons like this? Instead of just having an input button that you have to click a bunch of times, just HDMI 2. HDMI 1. Dedicated button for that. I kind of just want this
+remote to just be this remote. Can I Un-P check it? Sound check. Oh, picture check, picture check, and sound check, that's what it is. Man, there's so many buttons on here. What's P only. Ooh. Oh geez. There is a mode with the password. Here we go, boys. According to Reddit, it's 0-4-1-3. What's so special about that date, LG. And look how smart this is, see the IR meter is angled such that it'll just work if you're just like holding
+it like this, looking at it. That's awesome. Menu. Oh, hello. This all looks like the regular menu. Whoa. Hi, in start. Whoa. And then we want, OLED. TPC enable, off. Wow. Whoa. Hi. Oh, look at that. HDR on, off. Just like that. I guess normal is auto. Man, this is the kind of
+thing you could really get into the weeds tuning. And by the way, it would void
+the heck out of your warranty, so if you ever did need to
+get any kind of servicing done or even update the firmware on your TV, it is strongly recommended that you return all of the service menu options
+to normal and then do it. Otherwise, I take no responsibility
+for your stuff breaking. All right. And we're back. Now, is this? Is this
+brighter than before? This looks terrible, just a sec. Houston, we definitely have a problem. Oh, we're in vivid mode. I wonder if that's why it looks like crap. This still doesn't look quite right. It's horrible. And then the second I change this to HDR. I bet it's fixed. Yep. And perfect now. I am going to plug it
+into my laptop real quick. Come on. Come on. Come on. It still looks like absolute dog crap. It's doing something
+to the incoming signal, I have no idea what. We're gonna put this all back to default. Exit, okay. Now, we are going to do a factory reset. I think I found it. I think I found it. I think it was just super resolution. Yeah, I thought that was off. But I wonder if it's
+just like a stupid thing where it was turned on and turned off. Cause we are in SDR right now and this looks fine. Huh. all right, good. It's back to normal, factory reset and then changing settings, even though they, changing them back doesn't
+break it again, seems fine. We need to move on, because none of what
+we've talked about so far supports LG's position, that
+burn-in is not a problem. Let's talk about that. The thing is, the OLEDs on my desks are not the only ones in my life, and the 77 inch G10 in my living room, has actually been there for about as long as Wendell has
+been daily driving his C10. And in spite of being used
+daily for not just movies, but also games which are notorious for
+burning-in static elements like speedometers, life
+bars, you get the point, it shows no signs of burn-in whatsoever. And you'll actually find
+plenty of similar testimonials from users online. So, it's clear that OLEDs absolutely can live long, healthy lives,
+doing what they do best, absolutely crushing other technologies with their image quality. They just clearly require a level of TLC that other display technologies do not. This just means as much
+as I agree with Wendell. - I love OLED. Oh my goodness, this is
+like living in the future with this kind of display technology. Back to you, Steve. Back to you, Linus. - I'm gonna have to be more careful who I invite to be a guest on the channel. I'm also gonna have to be more careful about my display
+recommendations going forward, because even though, by the way, the service menu thing does appear to have worked. These TVs are clearly best suited for customers with more
+typical home theater use cases. And they're only suitable as monitors for deep pocketed enthusiasts who are willing to accept, either the downsides like the auto-dimming, or the cost of replacing
+them ever so often. And they'll also have to accept hearing about our sponsor Micro Center. Micro Center is one of
+the best places to shop for all your technology needs. They've got great prices and
+selection on computer hardware and everything else technology at 25 locations across the U.S. They have a growing lineup
+of business solutions for small and medium-sized businesses featuring workstation
+computers from Dell Precision and from Supermicro. They have experts on staff who can advise and make recommendations for why a server or business desktop or workstation is gonna be the right choice for your business. They offer services around
+repairing business systems, including replacing components and providing technical support and new customers can check the link in the video description for a coupon code for a free 240 gigabyte SSD, no purchase necessary, in store only. Well, that was fun. By the way, if you enjoyed this video, maybe check out our video
+where we fixed a dead CPU.

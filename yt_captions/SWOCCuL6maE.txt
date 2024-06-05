@@ -1,0 +1,150 @@
+- Your computer is nothing
+without the motherboard. It carries both power and data between every critical system component, be it a CPU, SSD, or lowly keyboard. If it was a system of the body, it would be kind of like
+your circulatory system and your nervous system combined. Everything plugs into it. Thankfully, we've got standards that tell us exactly
+what goes where, which, wait, what are these? And whoa, what is this? Why does the CPU go in
+the back of this one? Can this really be legal? Only if it's legal to have fun. So for fun today, we're going to show you guys
+some wacky standard-breaking motherboards and tell you why on earth they should even exist in the first place. Speaking of existing,
+Ridge Wallet does do that. Ridge Wallet has redefined
+the traditional wallet with its compact frame
+and RFID blocking plates. Keep your wallet bulge down
+and use offer code Linus to save 10% and get
+free worldwide shipping. (excited music) Let's kick things off with
+the Portwell PEB-9783G2AR. It's a relatively unassuming little board, standard microATX, CPU socket, memory slots, pretty much where they're supposed to be. This one's a little bit
+off kilter, but then bam, look at the rear I/O, 20 USB ports, of which six of them are rated for 10 gigabit operation. That is a ridiculous
+amount of USB expansion. So much, that I can't even
+conceive of a legitimate desktop use case for it, which
+is probably for the best, since you won't be
+powering this motherboard off of a normal desktop
+power supply, either. It uses this pair of
+screw on power terminals. And I have no idea where I'd get a power adapter for this thing. It did not come with one. But, ignoring that, we've
+got three display outputs along with dual gigabit ethernet, meaning this is one hefty
+boy in terms of I/O. I mean, you think you'd need a beefy CPU like a Threadripper with
+tons of PCI express lanes to power this thing. But in fact, you do not. It uses Xeon-branded 10th Gen Core CPUs that do get a few extra
+enterprise features, but none of those involve additional I/O, it's just the same four lane DMI 3.0 link between the chipset here and the CPU, just like you'd have on
+a regular desktop board. So, some back of the napkin
+math here seems to suggest that the total rated theoretical
+throughput of all these USB ports would be
+nearly five times greater than the bandwidth available
+between the CPU and chipset. So, uh, good luck with that. To be fair to Portwell here though, this thing is not intended
+for balls to the wall transfer speeds at all times, and that's reflected in how
+these USB ports are connected to the system with a mixture of chipset connected ports and ports connected to ASMedia controllers, you can actually see
+these three right here. That means that no one
+controller is going to be totally overwhelmed by high-speed I/O. And it means that you
+can strategically connect high speed devices and
+lower speed devices, depending on your needs. According to Portwell, this type of board is
+intended for things like autonomous vehicles,
+industrial automation, manufacturing robots,
+and things like that. So, lots of cameras and lots of low bandwidth I/O for controlling servos, and what have you. That use case is exemplified not only by how many USB ports the board has, but by other things like
+how many serial ports. It's got two, which can be switched between RS422 and 45 modes. And also, this crazy PCI
+Express 16x connector, that's at a 90 degree angle and then also rotated 180 degrees. Meaning that this board
+is designed for some seriously weird chassis layouts. A lot of support components are actually on the rear of the board, as well. And there are even eight general purpose I/O pins here, somewhere. Those are very useful for
+controlling simple electronics. Although I couldn't tell you
+where they are since they're unlabeled and there's no manual
+available, but that's okay. You don't need a manual to
+figure out how to wear a dad hat. The hardest part is picking
+the right color and design so you can get your dad to help. - Wow, a dad hat, thanks, Linus. Portwell's great, but we've got more in our batch of weird boards. And one of the more well-known ones is the Enctec Rev Q270 Surnia here, which is a relatively
+normal looking motherboard. You've got your display outputs, your type C, your dual gigabit ethernet, actually pretty impressive rear I/O. But then you look at the front and, like, what, this thing has no CPU socket. You'd be forgiven for
+thinking that maybe the CPU is soldered on because
+there's more to this story. Because even the chipset is missing here. It's when we flip around that we see what's really going on here. The CPU socket and the chipset
+are just chilling back here, like it's no big deal,
+but, uh, yeah, big deal. How the heck are you
+supposed to put this thing in a regular case without
+all kinds of headaches mounting your cooler? As it turns out, this
+design is specifically made to remove headaches that other cooling
+arrangements can create. Think about it, you've
+got your PC controlling the CNC mill or other connected mega tool. And there are shards of
+sawdust, fiberglass, metal, you name it, flying all around the room. That stuff's a recipe for a very bad time, if it gets ingested by
+typical air intake fans. So if you still want to be
+able to access your I/O, your choices are to use cable extensions or relocate your cooling to
+the other side of the PCB. It's the same story if
+you're dealing with extremely temperature sensitive work equipment, or maybe you're near a
+forge where the intake would be inundated with extremely hot air. Ha, gosh dang forge. This way you can more
+easily duct the cooling and potentially operate
+entirely passively. Oh, and one neat little
+feature is this AT mode jumper. It's not in the manual, but what it does is makes
+it so the PC stays on as long as the power button is active. So you can have a hard switch, like you'd see on a power
+supply with on or off. Again, more of an industrial thing, but chunky switches are super
+satisfying, so I like it. - Okay, that is a niche use case. Well, how about something that you might've actually seen
+before without realizing it? This bad boy right here is the Shenzen Zeal-All ZA-SK1050. And it has both a regular CPU socket and a G-Force GTX 1050 Ti built into it. Why? Well, it's actually built
+as a TV motherboard, which seems like a poorly translated way of saying digital signage. And that seems about right. Not only do we have that 1050 Ti, which is much more
+capable of 3D acceleration than Intel onboard graphics, but there are twin LVDS
+headers on the motherboard, both capable of driving a 1080p display. And in fact, the I/O on
+this thing is spread around in a very unusual way. Both the left and right edges
+of the board are absolutely brimming with ports. So if we assume that the CPU is on top, then on the right, we've got
+a 19 volt power connector, HDMI, gigabit ethernet,
+USB 3.0, SATA, and audio. But wait a second. These are some of these
+are internal connectors. What's up with SATA and
+what's this little weird SATA-labeled block next to it? Ah, yes, these are cool, right? These SATA power connectors
+are common on a lot of embedded motherboards because
+they take external power. That means that, kind of like
+the ATX 12 volt only standard that Intel has been pushing, this motherboard is responsible for handling all peripheral power, usually using an adapter that
+plugs in as a single block into the back of your
+drive, like this one. Around the other side, we've got what looks like an HDMI port, but is actually an LPC
+Bus port for debugging. I'm not entirely sure how you'd use it, but it's nice that it's there. And then next to that are
+SATA power and data ports, those LVDS connectors, a USB
+3.0 front panel connector, a backlight invertor connector, and a single USB 2.0 header. To say that this is non-standard would be like saying Linus
+drops things sometimes. Wait, wait a minute, was this written with Alex in mind? Okay, you know what, whatever,
+it's just seriously weird. Presumably, the idea is
+that this would mount to a box in the back of the digital sign, and then break out into all the connectors that it needs from there. And the 1050 Ti is in there to make sure that it's got enough power
+to drive whatever animations that you're going to run on the displays. Aside from that, there's not much else going on with this, other than the distinct
+lack of expansion slots, other than an M.2 SATA 2240 port and an M.2 2220 slot
+that's marked for WiFi. RAM is handled by DDR4 SODIMMs, and you thankfully get two slots stacked on top of each other to play with, similar to how a thicker laptop
+might keep a low profile. - [Brandon] Boring! - Okay, fair enough, enough
+with the industrial boards. Let's talk about something
+a little bit more practical, this little number from PCWINMAX. Well, it's pretty normal looking
+right out of the gate here. You've got a PCI Express
+16x slot, a 1X slot, two DDR3 RAM slots, SATA ports, a really poorly placed USB 3.0 header, and even fairly normal rear I/O. PS2, HDMI, VGA, four USB
+ports, and gigabit ethernet. Wait, are you sure this is a weird board? I mean, have you guys noticed
+what makes it weird yet? Ah, yes. It's the socket, what is that? That is PGA-989, and what uses it is mobile second and third Gen
+Intel Core series CPUs. Yep, we're looking at a
+desktop board that was made for mobile CPUs that first
+launched back in 2011. So you might look at this and say, well, that's gotta be some kind of
+ancient relic of the past, but if this date code on
+it is anything to go by, it was actually manufactured
+on Christmas Day in 2018. What gives, well, remember
+back at Computex 2019, when we started seeing
+new x79 motherboards for Ivy Bridge-y high-end desktop CPUs? This just so happens
+to coincide with that. And my best guess is that
+these components were being recycled at around that
+time and found their way over to China where still-good
+components were repurposed to become low-cost options for PC builds. It makes sense. I mean, you might've
+thrown out that old laptop with a busted screen, and a battery that looks like
+it ate too much at the buffet, but the components on the main board were probably still totally fine. And we saw something very
+similar recently, actually, with Haswell mobile
+CPUs being transplanted into desktop CPU form factors. This kind of upcycling,
+honestly, is kind of awesome. And I wish that it happened more often. Unfortunately finding a CPU
+to match a board like this is a little tough. By third gen, most CPUs
+were being soldered directly to the motherboard, using ball grid arrays, rather
+than pin grid array sockets. And the only one that I
+know for sure uses pins, is the Core i7 3920XM, which goes for around 130 to $150 on eBay. Worth it? Considering that I'm not even sure they're selling these boards anymore, probably not, but why don't we take a look at what was in the other PCWINMAX box. Okay, this is a really weird board. It says it's ITX, but it's
+clearly much smaller than that. I mean, I can hold it in one hand. The model number says EPIC-M37, which really doesn't help any, you certainly won't be installing an epic server CPU on this thing. So from what I can tell, it's a similar concept to the
+other PCWINMAX motherboard, but a little more integrated, because you can see, if we flip it around, ah, yes, our CPU is now soldered. And then we've got an
+additional chipset on here that, according to the marking,
+seems to suggest it is an HM65. So this is an earlier
+Sandy Bridge era board with a single DDR3 SODIMM on the front and two mini-PCIE slots. One of those is probably SATA-only, given that the age of this chipset means you wouldn't be able to
+boot from an NVMe drive, even if you had a compatible SSD. Oh, yeah, speaking of chipsets, get subscribed because we're going to find out once and for all, if you really get more performance out of a high-end chipset motherboard. I/O on this puppy is pretty
+limited, just four USB ports, gigabit, ethernet, VGA, and HDMI. Input power is actually
+kind of an unknown here. It just says DC jack one. So just start trying things
+starting with 12 volt, and hope you don't fry it. I mean, it can't require that much juice, all it's got on it is
+CPU, one stick of RAM, maybe a couple of mini-PCIE
+devices, ethernet, and USB. Okay, technically there's
+SATA power on here as well, but that kind of goes against
+the spirit of building with something this tiny. Surely, you're not going to
+put a big old hard drive in it. This one is so tiny that
+there's not much else to say about it. The one additional feature that would make it
+interesting is a serial port, and unfortunately there isn't one on here, so it's really just a tiny PC, and your guess is as good
+as mine as to how exactly the cooler is supposed to mount to it. There's no mounting points for one, not even for the chipset. Maybe whatever CPU this
+is doesn't need one? Yeah, no, that's definitely,
+that's definitely not right. This was but a small taste
+of what's out there, guys. We had at least three more that we wanted to get in for this video, that just never arrived,
+like this x79 motherboard with only two RAM slots. So let us know of some of
+the weirder motherboards that you've seen, and
+maybe we'll circle back and take another shot at this, because there is no
+shortage of them out there. Just like there's no shortage of segues to our sponsor, Manscaped. Manscaped provides an
+all-in-one grooming kit that has you covered from head to toe. Their performance package
+4.0 features their awesome Lawnmower 4.0 waterproof body trimmer, their Weed Whacker ear
+and nose hair trimmer, plus a whole lot of other goodies. For a limited time, you'll get all of this
+plus two free gifts, The Shed travel bag and Manscaped's anti-chafing boxer briefs. So don't wait, visit manscaped.com/TECH or
+click the link down below for 20% off and free shipping. Thanks for watching, guys. If you enjoyed this look at
+some weird-ass motherboards, maybe go check out our previous video looking at some weird-ass GPUs. They were, they were,
+they were very weird.

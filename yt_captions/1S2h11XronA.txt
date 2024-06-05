@@ -1,0 +1,90 @@
+Welcome back to mCoding!  
+Hope you're having a great day. attrs is a library to help you 
+write Python classes in a simpler, less error-prone, 
+and less boilerplate way. It offers similar functionality 
+to the built-in dataclasses library. And in fact, dataclasses 
+were originally based on attrs. Very commonly, 
+when I write a class, I need to define an __init__, __eq__, 
+a __repr__, maybe a __hash__, __lt__ etc., And most often, all those functions 
+are complete boilerplate. Who can even remember all of them? And if I do, yeah, maybe 
+procrastinate on actually filling them in. __init__ means self.something= something, 
+for each argument, __eq__ means check 
+self.something= other.something, and so on. If I want to add 
+or remove an attribute, I now have to add or remove 
+it in all of these places, which is both a huge waste of my time
+ as well as a very likely place where I make a 
+typo and break everything. Enter attrs and other 
+dataclass like solutions. Instead of writing all that, 
+they write it for you. Delete all that flaky, error-prone code. 
+Here's how you write it with attrs. Let's watch that again because 
+it was so satisfying. Nice! You can also customize the generated
+ code using parameters to define or by using these field 
+objects on individual attributes. This is implemented by 
+posting wrong code to Stack Overflow and waiting for someone 
+else to write it for you. Just kidding, 
+it's this `@define` decorator. It could also be done 
+with a metaclass. But attrs and dataclasses both take 
+the decorator approach instead. At this point, you may feel your 
+knee jerking upwards, telling you that this is 
+too much forbidden magic. But fear not. After the decorator runs, the result is the
+ plain old class that you would have written yourself. We can even inspect, say, the __init__ method 
+to see the source code it generated: self.something = something, and so on. Exactly the boilerplate we wanted to avoid. No magic is happening when 
+you use the class. The plain old boring repetitive 
+code is still there. And the resulting class is just as 
+efficient as if you had handwritten it. It's just that you didn't have 
+to handwrite it. While the logic of 
+this decorator is complex, ultimately all it's doing is 
+using your annotations and whatever parameters to write 
+the source code of each function in the class. And then it executes that code to create the 
+function objects and stick them onto the class. But pretty much everything I've said applies 
+just as well to dataclasses as it does to attrs. So why do I prefer attrs? To be clear, dataclasses 
+are still great. And once they came out when 
+they were first released, I started using attrs less and less just due to their 
+convenience of being built into Python. But in the past year, the tables 
+have really started to turn. And I'm choosing attrs over data 
+classes more and more. The first reason is slots, 
+which is kind of a superficial thing because both attrs and 
+dataclasses support slots. But attrs make slotted classes the default, 
+and good defaults are surprisingly important. I have a whole video on slots 
+if you want to check out the details. But the short version is that normal Python classes are 
+basically syntactic sugar around a dictionary. And just like a dictionary, they can 
+have arbitrary new keys/attributes added to them. In contrast, a slotted class has 
+a fixed set of instance attributes, which makes it slightly 
+more efficient, but also, this prevents a very 
+common bug from making a typo. If I accidentally try to set 
+`user.nmae= JAMES` instead of getting an error 
+on a normal class, I would just silently create the `nmae` attribute 
+on my instance, leaving the old name unchanged. There's no error. I just now 
+have incorrect data in my application. Can't wait to ship it to a customer, only for 
+them to tell me every name in a database is null. But on a slotted class, as soon as 
+I try to set the `nmae` attribute, I get an error telling me 
+I've done goofed again, telling me `nmae` isn't 
+a valid attribute. While it's certainly possible that you want the ability to 
+dynamically create new attributes on your class at runtime, it's far more common for classes to
+ know all their attributes ahead of time. So it makes sense for slots 
+to be the default. But like I said, attrs and dataclasses 
+both support slots, so what's the problem?   This brings me to my second reason: 
+Versioning. Dataclasses are part of the 
+Python standard library, As Python develops, more and more features 
+like slots are added to dataclasses. But if I want to use those features, 
+I need to upgrade my version of Python, which may involve convincing a client to upgrade 
+and/or drop support for an older version of Python.   That might not be acceptable. And in a world where many companies 
+are still using Python 3.8, that means no slots if I'm using dataclasses since 
+they aren't supported until Python 3.10. In contrast, if attrs introduces 
+a new feature that I want to use,   all I need to do is bump the version of attrs 
+on a per-project basis, which is super easy to do. And reasons three, four, five, and so on are all of the features 
+that attrs supports that dataclasses just doesn't. In particular, attrs supports validators, converters, 
+and factories that take a `self` parameter. And it allows you to set 
+specific `on_setattr`  hooks per attribute. So you could, for example, make only 
+one field frozen but allow the others to change. Another superficial one: attrs recognizes 
+the importance of immutability and gives you a top-level `@frozen` alternative 
+to define that just sets the frozen parameter to true.   These are all little things. But when 
+you use a tool like this every single day, these little things really 
+start to add up, which is why I find myself using 
+attrs more and more in 2023. Let me know what you think! 
+Do you use attrs? What about dataclasses, or do 
+you prefer handwriting all your classes? Thanks for watching! 
+Thank you to my patrons and donors. Slap that like button an odd number of times.
+And I'll see you in the next one. Do you have a Python or C++ project 
+at your company that needs a bit of love? Well, my company does consulting. So check out mcoding.io 
+to see if I might be able to help.

@@ -1,0 +1,76 @@
+hello and welcome i'm james murphy and today we're 
+going to be looking at what's the fastest way to   loop in python so just as an example task we're 
+going to loop through the numbers 0 to n minus 1   where n is going to be some big number like this 
+and just add them up you know something to do in   the loop which one do you think is faster using a 
+while loop or a for loop you can see in both cases   we're doing essentially the same work but one of 
+them is using a while loop and the other one is   using a for loop in both cases we initialize a sum 
+to zero and then loop over all the numbers adding   to the sum we'll test to see which one is fastest 
+by using the timeit method from the timeit library   let's just go ahead and run it okay and you can 
+already see that it took a surprising amount of   time over 15 seconds for the while loop but just 
+under 10 seconds for the for loop so it looks like   the for loop is the clear winner in this case 
+i would like to point out that i am recording   this at the same time that i'm running this code 
+so these numbers are largely inflated but if you   run the code at home and i have done this you will 
+find that the ratios are approximately the same   so we saw that although the for loop and the 
+while loop are doing essentially the same thing   the while loop took over five seconds longer why 
+is that well the unfortunate fact of the matter   is that compared to the c programming language 
+that python is written in python itself is an   extremely slow language in order to do the 
+for loop python passes the iteration off to   c code that works with the iterator of this 
+range object that's all written in c so all   of the iteration part of it is actually done 
+in c all the bounds checking and incrementing   of this variable i is done in c and it's only 
+this statement which is actually done in python   in contrast in the while loop both the check to 
+see whether i is less than n and incrementing i   both of those things are done in python not 
+in c we can confirm that this is actually the   issue by adding in these functions so what 
+these functions do these are modifications   of this for loop function that add in a redundant 
+operation that doesn't actually need to be there   so in this one we add in the increment 
+so we increment i now of course   this variable i is going to be incremented 
+by the range iterator on its own so this i   plus equals 1 actually has no noticeable 
+effect besides running and taking up time similarly in this one we add in this redundant 
+check to see whether i is less than n and then   in this one we add in both the check to see if 
+i is less than n and the redundant increment so   i've just given them their own lines in the timeit 
+code and let's go ahead and run it again and see   how long they take so as you can see just adding 
+in these redundant operations to the for loop   implementation that it significantly increased 
+the time this i plus equals 1 shouldn't really do   anything but adding that in alone has practically 
+made the for loop as slow as the while loop similarly we can see that adding in the redundant 
+if i is less than n check also adds a few seconds   to the computation then worst of all is doing 
+both the redundant i plus equals 1 and test to   see if i is less than n that's coming in at 
+around 19 seconds making it the slowest one   and showing us that doing these useless operations 
+just because they're in python and not in c even   though they have no real effect is really slowing 
+our code down okay that's pretty sad so is there   anything that we can do to go faster than a for 
+loop or a while loop one thing that should come   to mind is use built-ins over loops whenever 
+you can so this implementation uses the built-in   sum which does a for loop under the hood uh 
+and the built-in range of course rather than   writing the loop ourselves so let's see how fast 
+that goes wow that is a lot better than both the   for loop and the while loop so you can see if 
+ever you have the ability to use a built-in   over an actual loop you should definitely take 
+that route but can we do even better than that   how about let's try using numpy which is built 
+for doing these kind of operations quickly   i went ahead and imported numpy and added this 
+sum numpy function the numpy sum just creates   the range as a numpy range and then uses the 
+numpy.sum to sum it up so this is essentially   equivalent to this one but it's using numpy 
+functions instead of python functions and again   numpy is primarily written in c so as much of this 
+as possible should be happening in c not python   let's try running it again okay so that one was 
+much faster compared to the others this is the   only good one because the entire summing operation 
+is written in c this whole function essentially   is one c call so both the iteration but also the 
+adding itself is done in c and that's what makes   this one the fastest of them all the only downside 
+to this one is that this creation of a range   actually creates that whole array in memory 
+so i just made a 100 million element array in   memory so if i had chosen a bigger number 
+i might not have enough memory to do that   comparatively this sum range this range doesn't 
+actually create all those elements in memory   so this sum could actually run no matter how big 
+n is without worrying about memory constraints   but in this case i think it's definitely worth 
+it to give up the memory and let the sum happen   in c rather than python so you might be 
+asking is there anything that we can do   to beat out numpy you would be hard-pressed 
+to find a faster implementation even in c   for this sum operation i think numpy does a really 
+good job at making this happen quickly so the only   feasible way of making this happen faster is 
+to know the answer ahead of time that's why the   final implementation is to use math knowledge what 
+are we doing we're adding up the first n minus 1   integers well there's a formula for that you may 
+not know it but you can certainly look it up and   here it is so this is pure python and it's going 
+to beat out the c one for sure by a lot let's go   ahead and test it and of course it is no contest 
+the pure math implementation is not even in the   same league numpy is good but knowing the answer 
+ahead of time you just can't compete with that   in conclusion what's the fastest way to loop 
+in python well the unfortunate truth of the   matter is the fastest way to loop in python 
+is not to loop in python if you have the   great luxury of being able to compute the answer 
+mathematically ahead of time definitely do that   your next best option is to have the whole looping 
+and everything that you want to do be done in a   pure c function your next best option is to call 
+a pure c function that can do all of the looping   and your operations for you failing that 
+use python built-ins like sum or map   rather than writing a loop yourself as a last 
+resort use a for loop over a while loop hey thanks   for watching if you liked the video don't forget 
+to leave a like a comment and if you especially   liked the video don't forget to subscribe it 
+really helps me out thanks see you in the next one

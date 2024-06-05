@@ -1,0 +1,61 @@
+hey everyone james murphy here with mcoding. in 
+this video we're talking about method chaining.   this design pattern is not specific to python 
+and you may also see it referred to as "method   cascading" or using a "fluent api". here we 
+have a simple player class. player has a name,   a position, and a level of fatigue. we can draw 
+players, move players, and let them rest. so   let's create a player. i make a player james 
+then move him up, right, up, let him rest, and   then draw. there's nothing wrong with doing things 
+this way and this is how i usually do it ... but   look how much of this code is just repeating the 
+word "james". this is a verb driven api, move,   rest, and draw all just return none, so how about 
+instead we make them all return self? then each   of these methods returns the james object back 
+to me so now i can delete these and do this.   now all the repeated information is gone. 
+you can put all the calls on separate lines   if you use line continuations, or if you wrap 
+everything in an extra pair of parens then you   don't need line continuations, and this is the 
+style i see most common in the wild. just keep   in mind that in order to convert an api into 
+this form all of the methods had to return none.   this kind of api works because each of these 
+methods is a verb that mutates the underlying   object. and there's also a variant of this pattern 
+for immutable objects. you're probably familiar   with the idea even if you haven't explicitly used 
+it. here i have some random text, then all chained   together i can say take the text, strip it, 
+uppercase it, and center it. and python strings   are immutable so instead of actually stripping the 
+string it returns a stripped copy of the string,   and likewise the other methods return some 
+kind of modified copy of their self parameter.   here's an example how to code a class 
+with method chaining support using copies.   i've got a basic xyz vector and normalized returns 
+the same vector but scaled down to unit length.   just compute the length of the vector, then 
+construct a new object of the same type as self.   of course pass in the modified arguments. and the 
+same kind of thing goes for a reflected vector.   now we can create a vector 1 2 3 and i can get 
+a reflected normalized copy. because we made a   copy our p and q are different. if reflected and 
+normalized modified the original vector and then   returned self, then they would be the same. of 
+course there's always a penalty if you're making   copies of things but there are also benefits to 
+making things immutable, so this is a trade-off   that you get to decide. how about a real and 
+useful example of where this actually shows up?   here i have two sql alchemy database models. my 
+user model has an id, a name, and a full name.   and the address model has an id, email 
+address, and the user id that the email   address corresponds to. straight from the docs, 
+look how we can pick out an email address.   we start with a select address. this creates a 
+select object. a select object models a select   statement that you're going to send to 
+the database to get information back.   at any point in the process we can print 
+the select statement and see the sql that   it corresponds to. so here we have a select id, 
+email address, user id from the address table.   when i uncomment the join, now i have 
+join text on the end of the query.   every time i apply another method i get back 
+another select object with a more detailed query.   this is method chaining at work, and it makes 
+creating sql queries really easy in python. how   about a data science example? here's some sample 
+sales data across four different months for three   different companies. using plain old pandas you 
+might write code that looks something like this.   first we create a data frame object from the 
+sales data. we don't really care about company   1 so we delete it. we know there are some nans in 
+there and for this analysis we don't want to use   them so we'll drop them. oh, and these aren't just 
+company 2 and 3 it's actually amazon and facebook,   so let's rename. and the google data was stored 
+somewhere else, so let's go ahead and add it in.   then we go ahead and proceed to do whatever data 
+analysis we were going to do. there's nothing   necessarily wrong with this code, but it's still 
+kind of just hard to read. enter pyjanitor. it's   a library that you can pip install and it provides 
+a method chaining verb-based interface to pandas   data frames. now the same operations as before can 
+be done in a much cleaner and more uniform way.   i hope you can agree that this is a lot 
+easier to read than the previous example.   i load my dictionary, i remove a column, i drop 
+the nans, i rename a column, i rename another,   and then i add a column, and that's all there 
+is to it. it's all the same functions as before   or you can define your own, and it just provides 
+an easy way to kind of create a pipeline for your   data. if you're an R programmer, then this 
+should look pretty familiar to you, and the   design of this library was actually inspired by R. 
+remember, don't ever try to force this into one of   your projects, but do consider it as an option. 
+that's all i've got, please let me know what do   you think? do you like the way that method 
+chaining looks? is it more or less readable?   are copies worth it for immutability, 
+or would you just prefer to avoid it?   let me know with a comment. as always, thank 
+you to my patrons and donors for supporting me.   if you especially enjoy my videos please 
+consider becoming a patron on patreon. enjoy   your day coding and don't forget to slap that like 
+button an odd number of times. see you next time.

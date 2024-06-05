@@ -1,0 +1,132 @@
+- up until around 2014,
+the cheap and easy way to get around region-locked online content was to fire up a trusty vpn
+like private internet access. but then netflix pushed an update to detect and stop its
+users from doing so, and the rest of the
+industry followed suit. it was a dark time and many people simply accepted that the golden age of watching anything you wanted was over. but what if i told you that there's another way
+to mask your address. one that could not only
+unblock geo-restricted content, but even save you a
+substantial amount of money on your subscriptions? what if i told you you can
+use it on your smart tv, home console, or any other device? and what if i told you about it after this message from
+today's sponsor, jackery? thanks, jackery, for
+sponsoring this video. from september 20th to october'th, jackery is celebrating
+their ninth anniversary with a photo contest. watch
+till the end to learn more. (electronic music) - whether it's an
+out-of-market sports ball game, your favorite show that
+just got taken off netflix but only in your region, or
+just any other random footage that's exclusively available
+in some other country, losing access to content sucks. i mean, as a user, you don't
+care which cable network or syndication has the rights. you just want to kick back, relax, and put whatever you
+want on the big screen. now even when they worked,
+there were drawbacks to using a vpn to get
+around these problems. i mean it wasn't convenient exactly to configure it on devices
+like smart tv's and roku's. and especially if you were
+proxying to a distant location, your network performance for everything other than your stream could
+slow down substantially. thankfully, a canadian
+company got fed up and went to work developing
+something similar to a vpn but kind of better actually,
+at least when it comes to watching sports and streaming services, and i'll tell you more about
+why it's not a replacement for a vpn later. meet the stream locator. the hardware is, frankly
+speaking, nothing special. it's a gigabit-capable
+ac1200 dual-band router. the real magic is in their customized open wrt-based firmware
+that uses a combination of smart dns, transparent dns proxy, and domain ip-based smart routing to circumvent regional blocks. and it does all of this
+while not slowing down or compromising the security
+of your regular browsing. now, of course, our
+reviewers are not going to accept magic as an
+explanation for how a device on their network functions
+and they shouldn't. so let's talk about how exactly it works. now, normally you type
+netflix.com into your browser, which sends a request to a dns server, which converts that netflix.com
+url to an ip address that your browser can actually connect to. then traffic starts to flow,
+the stream locator deviates from this normal manner of operation by checking your dns requests against a bank of urls that it has stored. if it sees you're searching
+for a video streaming site, it takes the ip address
+that your dns server says corresponds to that url and
+throws it in the garbage. instead, it responds with
+the ip of a proxy server that is in the region you're
+trying to access it from and all of your traffic
+reroutes through that, just like how a vpn works. it's a pretty elegant
+solution to this problem, and we actually wanted to shoot our review of this thing over a month ago. but then netflix managed to
+block stream locator system just two days after we
+had tested the device and confirmed that it
+worked, talk about timing. now stream locator has recently gotten things back up and running again, using basically the same
+system we just explained, but with an added layer of ipv six hackery and at the time of writing
+american netflix is back online with the promise of more countries in the near to mid future. i said a moment ago that
+it works just like a vpn, but i also said before that that it's not a replacement
+for a vpn, what gives. okay. the difference is that a vpn
+routes all of your traffic through the selected proxy
+server and all of the good ones, encrypt your data to make
+it more difficult for your internet service provider
+to track what you're doing. both of those factors contribute
+to crap your performance. stream locator, by
+contrast, doesn't advertise any kind of privacy
+enhancement whatsoever. but the benefit of their approach is that by cherry picking the
+traffic that gets rerouted, they can achieve performance
+in other applications like web browsing and gaming that is on par with your raw connection. here's a quick demo.
+let's say we like ufc, but we don't like paying jacked up, american pay-per-view prices for it. let's subscribe for $12 and
+50 cents a month in germany, where they're obviously
+struggling to find an audience for the sport and look at that,
+same sweaty dudes and gals beating each other up, much lower price. now we jump into a game
+while our stream is running on a second monitor and
+look at these ping times, just about identical to
+our regular connection. now you might look at this and think, gee, that could really be a software product. and honestly, that was my first response. seems reasonable on the surface, but only if you want to
+use it on a computer. consider this, certain devices
+and services don't use dns. for example, the netflix smart tv app is developed by netflix.
+it doesn't have to check netflix's own address with a dns server and instead it just
+connects directly to the ip. to adapt to this, stream
+locator uses ip forwarding instead of smart dns in those situations. now they could build apps for
+every device under the sun that each contain all of
+the necessary workarounds, but that would introduce a
+ton of development overhead. and i actually agree with them
+that from a user perspective, this is way simpler to use. instead of downloading and logging into and configuring an app, i
+just plug this unit into my existing modem router
+combo that my isp sent me. it detects my existing sub-net and creates a non conflicting one for all the devices that connect to it, and then i never think about it again. you even have the choice between using the wifi access point that's
+built into your stream locator or connecting to a higher performance one. if it's a dedicated ap, like ones we've shown in the
+past from ubiquiti or ruckus, then no special configuration is required other than disabling the
+wifi in the stream locator, but if you want to use an all-in-one like wifi router connected to it you'll probably need to
+put it in bridge mode. now the most pain-free install would be to put your isp combo unit in bridge mode so it's acting only as a modem and have the stream
+locator act as your router and wireless access point
+for your whole system. connecting to it is as
+simple as connecting to your existing network. unfortunately in our experience that comes with some limitations, the stripped down version of open wrt that they're running has some of
+the advanced features removed. and i really do mean advanced
+features and finger quotes because i don't personally
+consider port forwarding to be that advanced. also the
+hardware inside is fine at best. it uses a media tech
+mt, 76, 21 8 chip set, which is enough to speed test our gigabit connection at around 850 megabits, so more than enough for
+most residential connections but it's not exactly state-of-the-art. back to the good stuff though, it has this really cool function
+where you can run supported streaming services from
+different locations concurrently. so back to vpns for a second, remember the way they work
+is you choose one location and all of your network
+traffic routes through it. so if you wanted to say, for example, watch a ufc fight with that
+cheap german subscription while also streaming something from bbc, you're fresh out of luck. with
+the stream locator though, you could have netflix from the uk and american amazon prime at the same time, hooked up to your home theater screen. just check out the services list, toggle the options you
+want, and you're all set. speaking of home theaters by the way, we've got a doozy of a video
+coming up where we're going to be testing html 2.1 cables
+from a ton of manufacturers to see who's lying and who's not, make sure you're subscribed
+so you don't miss it. if you're trying to maintain
+privacy for whatever reason, a vpn is still an important
+piece of your toolkit. and it should be noted that
+any device whose purpose is to sort through your internet traffic has inherent privacy
+risk associated with it. you've got to kind of trust stream locator because we don't have any
+way of guaranteeing that they're not benefiting from
+any kind of data collection. i'd love to hear your guys discussion about that in the comments below. what we do know for sure
+is that for the price, it's a really compelling package that does exactly what it says on the tin. for 85 bucks, which includes
+the first year of service after which at seven dollars a month, it really does unlock
+region locked content, which is all fine and good.
+but my lord is this legal? well... yes and maybe no. their own website states the following, the short answer yes of course. stream locator is completely
+legal in 99% of the world, which of course leaves out
+that 1% which could be a lot more than 1% because if
+you're living somewhere like china or iran, which last time i checked is a lot more than 1% of the world, you could very well be breaking
+laws by using this thing. the good news for
+everyone else is that the worst case scenario is that right holders might get mad at streaming platforms for not geoblocking their
+content effectively enough, but that doesn't really sound
+like your problem does it. what it does sound like is a
+segue to our sponsor, jackery. jackery wants to inspire
+an outdoors lifestyle, so they're advertising online as tech tips because apparently they
+think we need to be reached. they want people to be closer to nature and to live with a positive
+and energetic attitude. and from september 20th to october'th, they are celebrating
+their ninth anniversary with a photo contest for a
+chance to win big prizes. to enter, all you have to do is take a picture of you
+exploring the outdoors and upload it to their campaign site. all winners will be notified
+by email by october 29th, and we're going to have
+all the links down below. seriously though guys, if you're using a vpn and it
+works for you keep using it. and if you liked this video
+make sure you check out our video on how to browse
+the internet anonymously.

@@ -1,0 +1,142 @@
+- there we go. 10 gig networking on an m1
+mac mini that's just, wow! ah, well, maybe, the thing is just because a
+port is present on your computer doesn't mean that it will
+operate at full speed, and it certainly doesn't mean it will operate at full
+speed all the time. usb for example, is rated
+by the speed that is shared across multiple ports, high speed i/o and ssd
+slots often share resources, meaning that both of them will slow down if you use them simultaneously. and in the early days
+of gigabit networking basically no motherboards could run those ports apple's speed because they were connected
+to the lethargic pci bus, you know the old non express pci bus. of course, we only know these things because vendors like intel
+published block diagrams of their platforms to help us
+understand their capabilities. apple on the other hand
+does no such thing, meaning that if there
+are internal bottlenecks, the only way to find out about them is to have your performance drop while you're in the
+middle of doing something. that makes today's adventure
+interesting for two reasons, one, it'll tell us if apple delayed this
+version of the m1 mini perhaps over performance concerns and two, it might give
+us some fresh new insight into the black box that is apple's m1 soc and it also might give us some insight into our sponsor, honey. honey is the free to use shopping tool that helps search for some
+of the best promo codes on lots of your favorite sites. get it today a joinhoney.com/ltt. (upbeat music) the m1 mac mini blew us away
+not just with its performance, but also with its price. it beat out every previous intel mac and single-threaded
+benchmarks and a ryzen 5 5600x one of the fastest single thread
+desktop cpu's in the market all without breaking the bank. it didn't have the cores to back that up in heavily multithreaded tasks, but so far that hasn't generated many, if any user complaints thanks to m1's tight
+integration with macos and of course the
+availability of the mac pro if you really need more horses. what has generated complaints is the i/o, with just two usbs, two thunderbolt ports, and a single one gigabit ethernet jack m1 mobile pedigree seemed
+to be holding it back for people like me who
+loved the cpu performance but need to work with heavy video footage or other shared resources over a network. if one gig wasn't enough you had to use a bulky expensive dongle and use up one of your thunderbolt ports, or you had to buy into a
+dead end intel platform, which was so disappointing
+for me personally, after seeing apple push 10 gig forward over the last few years, first with the imac pro,
+then with the mac mini, but it turns out i just
+didn't have enough faith, in my hand right now is a
+shiny new 10 gig version of the m1 mac mini and we're gonna be running
+iperf on it as a server to give us full control
+over what other ports or devices might be hogging
+pci express bandwidth causing potential bottlenecks. so to start, we were running an absolute
+best case scenario here with nothing plugged into it other than networking and
+power, not even our display. once i come over here and
+have a look, that is... dang! that is pretty stable. 9.25, 9.45 gigabits per second. not too shabby 'cause remember guys 10 gigabit is the line speed, and it's perfectly normal
+for the actual data speed to be a bit lower. what's not normal is the price for our 40 ounce water
+bottles on lttstore.com, they're the same as 21 ounce, what a deal. now let's up the ante and
+connect a pro display xdr but linus you might ask, why would plugging in a monitor affect how much bandwidth is leftover for something like high-speed networking? i'm so glad you asked,
+the m1 mac mini is notable for being the first mini with dsc or display stream compression. and what that does, is it allows it to have
+enough leftover bandwidth to run the integrated
+usb 3 hub on this monitor at full speed. previous intel-based mac
+minis ended up running either not at the full 6k resolution or in an uncompressed tiled mode that some users have reported
+actually took this hub and knocked it all the
+way back to usb 2 speeds. that's because uncompressed, this monitor will suck up about 34 gigabits
+per second of bandwidth. to be clear, i'm not
+actually expecting this to throttle our network speed. it's just an excellent illustration of how a system has a
+finite amount of resources that needs to be carved up. also, now that we've got our display up, you can see that the terminal on our mini matches our ssh session so no smoke and mirrors
+here ladies and gentlemen. well, let's go ahead and
+run it again, shall we, and as expected we are exactly the same. i mean, no computer
+manufacturer in their right mind would rate the speed of their ports assuming that no display has plugged in especially not a display they make. but yeah, we're gonna
+kick things up a notch and to do so anthony repurposed, some of these shell script
+that he wrote previously that constantly writes data to an ssd and then spits out speed
+info regular intervals for graphing purposes, and he targeted it at this high performance thunderbolt ssd. maybe with this thing running, we'll finally start to
+see some bandwidth sharing in our iperf test. all right, apple, all
+right, i'm impressed. our ssd right now is pulling
+over 10 gigabits per second in reads putting us darn close to the, up to 40 gigabits per second number that's advertised for these ports but all that tells us so far is that the two thunderbolt
+ports don't share bandwidth, so let's continue. remember the usb hub i mentioned on the back of the pro display xdr well we're gonna load
+it up with usb-c ssds. we're gonna run that ssd script on all three of these at the same time, then we're gonna run our network test and see if we can make
+this poor mac mini cry. and good news, sort of,
+our ssds did slow down, that means we managed to find a bottleneck but it's in the usb hub
+of the pro display xdr which presents us with
+a couple of problems. number one, that doesn't
+actually tell us anything about internal bottlenecks
+of the m1 mac mini, and number two is we are
+fresh out of usb-c ports to plug ssds into. unless a thunderbolt dock, ah, yes! we need a thunderbolt dock
+and more ssds. (laughs) we're gonna plug all these in and then we're gonna
+run the script on them and then see how you like that. there we go. five ssds plugged into the
+hub and then for good measure an additional one
+another thunderbolt 3 one plugged into the thunderbolt daisy-chain. guys, if that 10 gig ethernet is stealing bandwidth from somewhere we are going to find it. our pre-planning did not have
+this actually go down at all. we figured it out, one of the discs was
+not showing up properly and running the command
+to a missing target was causing something, i don't know, maybe some
+kind of cpu overhead. anyway, now that all
+the disks are showing up we are getting the results we expected, which is anywhere from 9.3
+to 9.42 gigabit per second and this is even with all
+of the drives running. - the cpu usage while we're
+just doing this is around'% and that's with it all
+the drives plugged in. if i add that drive that's not plugged in, what's our cpu usage now 32, 36 significantly higher. - interesting. - i didn't test this on the
+bench, i didn't expect this. - hey, it's done. - 40, 77. (laughing) - okay, wow! way to write a script that hurts computers when you do it wrong. but while our side adventure interesting, you know, hey it turns
+out runaway cpu usage is going to affect network
+transfer performance. it wasn't really the
+point of the video today. so let's refocus and talk about
+what we've learned so far. there's a few things actually. so one, we now know that the 10 gig m1 is legit non-shared 10 gig, no switch chips, no controller hubs just a whole gen 4 pci express lane. that's why nothing that we
+did was able to bottleneck it. so clearly apple's delay had
+nothing to do with performance and you can buy this
+puppy with confidence. that's cool, but we're not done, diving deeper while our
+theoretical max speed when testing the drives individually works out to just over
+58 gigabits per second. it capped out somewhere
+around 50 in the real world and that means that we
+did throttle somewhere. the ssds connected to the pro display xdr were obviously going to throttle
+as they were being crowded by that chunky 13.7 gigabit per second display port a signal. but the thunderbolt 3 hubs
+throttling is another story, and this one comes
+primarily down to the fact that each thunderbolt 3 port
+appears to be capping out at around 20 to 22 gigabits per second. but hang on a second linus, apple said each of these ports could do up to 40 gigabit per second, and you said they didn't
+share bandwidth, what gives? so remember how our 10 gig
+nic is expected to be less than 10 gigabit per
+second in the real world? well, the same is actually
+true for thunderbolt 3, usb for whatever the hell this thing is. so around 7.6 gigabit per second of that is set aside for our display port, which are thunderbolt 3 dock has, and then the rest of it gets
+eaten up by the signal encoding bring us down to a theoretical maximum of only around 26 gigabits per second. and that's close enough to our numbers that the difference probably comes down to the fact that we're
+going through busy hubs rather than attaching directly, hence the wavy patterns on the graphs compared to the individual drive results. that means that if you've got applications that are sensitive to
+i/o variants, like audio or anything involving real-time data you would do best to directly attach or use only one high-speed device on a hub or dock at a time. of course, for most
+people this is academic and it won't make a difference real world. well sort of because
+m1 is still i/o limited and it has affected the port
+options on apples m1 products, like for example, the new
+imac which we'll be reviewing, so make sure you're subscribed. the question just becomes,
+how limited is it? what it looks like is we've
+got two pci express gen 4 lanes going to apple's thunderbolt controller which steps down to two
+thunderbolt three channels, then we've got one gen 4
+lane for the 10 gig nic, there's 10 gigabits to go
+around for the type-a ports, so that's another lane that is maybe shared
+with the wi-fi 6 adapter, and then there's an hdmi port
+connected directly to the gpu via an internal display
+port to hdmi converter. that's your i/o, four lanes accounted for. we ran the i/olga terminal command to try and find out for sure but while it does show device hierarchies it doesn't show how they're
+connected to the main system just that they are connected. of course, most pc systems have a lot more than four pci express lanes. surely m1 does as well then right? well, not necessarily. you might think it would have
+another four lanes at least for its ssd, but it doesn't. remember how the t2 chip
+that we loved so much was the storage controller for the final generation of intel macs and then it just disappeared with the m1. well, the reverse engineering effort for getting m1 running on linux has actually discovered
+that apple wasn't kidding. the m1 soc has its security
+chip built right into it and it's controlling the ssd directly through some kind of
+memory map arrangement, not through pci express and you got to remember
+nvme is a protocol, so while we associate it with pci express it doesn't technically have
+to run over pci express. all of which is to say
+then that the m1 mac mini is probably near the limits
+of what apple can manage with the m1 soc but it's got far more i/o than we initially gave it credit for because remember we
+haven't even accounted yet for whatever bus they're
+using for the internal gpu. so the reason they held
+off on the 10 gig version was probably more to do
+with logistics or strategy, but whatever it was
+apple has done a lot here with little and that's pretty admirable kinda like how apple used to be back in the good old days
+and kinda like my segues to sponsors like micro
+center, get the best prices and best selection on computer hardware and everything else technology
+at any one of micro center's 25 locations across the united states. micro center's custom pc builder will help you spec out the
+best pc for your budget by making sure all your
+parts are compatible finding stock that's available at your nearest micro center location making it so you can
+just add it to your cart and arrange same day in store pickup. for a fee you can check the box
+marked same day pro assembly to have a micro center expert technician assemble the pc for you
+and if you want help deciding what parts to put
+in your new custom gaming pc just join the new online
+micro center community. it's a great place to talk
+tech with other enthusiasts. check out the link in the description for a free pair of wireless
+bluetooth headphones valid in store only no purchase necessary. so thanks for watching guys, check out our review of the m1 mac mini when it first launched to get just a little bit
+more of an appreciation for how much of a game changer this modest piece of silicon could be.

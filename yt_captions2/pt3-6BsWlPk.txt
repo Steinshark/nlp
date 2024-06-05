@@ -1,0 +1,137 @@
+- the truth is i am not happy with the current state of linus tech tips. to be clear, my team's amazing and we've basically perfected
+our gateway drug formula. it's that taste of hardcore
+tech that goes down smooth and has been turning young
+gamers into comp sci majors by the thousands for over a decade. the good news is that all changes today. i'm about to show you my plan to radically change the
+face of linus tech tips, but it's gonna take time and it's going to be extremely expensive, which is why this video is
+brought to you by nzxt bld. nzxt wants to make building
+a custom pc easier. with nzxt bld you just set a budget, see how the computer performs
+in your favorite games, and they do the rest. use the link below to get
+your own custom pc today. (upbeat music) welcome to ltt lab one. this has been a dream
+of mine for a long time, but due to a number of factors, including the white hot real estate market here in vancouver, i
+have found myself waiting and waiting for the right time, when what i should have done
+was just pull the trigger ages ago, regardless of the cost. we're hiring a couple of
+writers this time around, including one for mac address. you can apply down below. but that's not what this is. the vision for this lab is pretty simple. in the time i've been doing this job, tech journalism has suffered
+blow after blow after blow. nearly every publication that i followed as a young enthusiast has either folded or been bought out by a
+soulless corporate interest. and most of the journalists who guided me through my early years have retired or, more likely, moved over
+to the manufacturing side, where there's still money to be made. that ends now. the gloves are coming off. are you an expert on
+mobile gaming performance or displays who needs a
+second day job to survive? are you stuck in marketing
+for a major board manufacturer and hate every minute of it? do you think i can't afford you? try me. when i'm done, every
+square foot of lab one is gonna be filled with
+engineering personnel and equipment that will take
+our content to the next level, starting behind this door, and you're gonna wanna be part of it. oh, look, it's a luke. - hey guys. you probably already know
+that, for the last four years, i've been working on floatplane.com, our early access video
+platform that's full of behind the scenes and video
+extras for our supporters. what you might not know
+is that, more recently, we've been hard at work
+expanding our development team to tackle other projects,
+not just floatplane.com. like these cool browser quizzes and games for the verified actual gamer program and our merch message notifier
+for orders on lttstore.com for our live streams. we're expanding our team even more. this time, we want to
+throw some dev muscle behind the writing team by
+integrating or creating tools for automated benchmarking
+processes and data collection. i also want a data scientist
+for some unrelated stuff. so at the moment, i'm only
+actually personally hiring 2 of the 15 positions we've got listed, but if we get the right
+applicants, who knows, maybe three of you will be sitting here. - [sebastian] after a paint job maybe some new floors.
+- maybe some new lights. (luke laughs) - yeah, this is pretty oppressive. okay, look, we just took
+the session on friday, okay. anyway, this is where the
+real action is going to be. before you can really
+appreciate it, though, you got to hear the vision,
+so let me lay it out. this corner at the back of the room here, that's where we're gonna have our thermal and acoustic combo chamber. "why a combo chamber?" you might ask. well, because it doesn't matter
+how cool your laptop runs if it sounds like a heli taking off and it doesn't matter how quiet it is if the cpu is drowning in
+a pool of its own sodder. so the plan for this is pretty simple. we'll be diying it, naturally, and we're going to put the indoor side of a mini-split heat pump along probably this side over here, along with some kind of smart damper that will allow the airflow
+to either go into the chamber or redirect out of the chamber with exactly as much
+granularity as we need to maintain an exact
+temperature inside the room. once that target is reached
+and our loaded devices, let's say i'm a desktop pc running blender have reached equilibrium, we'll hit a kill switch that'll disable the hvac
+and any circulation fans that we have inside the
+chamber for some time period, let's say 10 seconds, while
+we take an acoustic reading, assuming a large enough
+internal air volume and a low enough noise floor, clearly this room is going
+to need to be treated. (hands clapping) we should be able to measure acoustics under various conditions, say at room temperature
+versus on a very hot day, both accurately and precisely. now the exact size and
+layout of the chamber is definitely subject to change. but what i know for certain is that we're going to have a
+station right out here, probably along this side, that's going to be for recording the performance of the device at each of our target
+temperatures as well. since on a modern device, it's more a question of when it throttles as opposed to if it throttles. also along this wall is going to be the gear that we need to seriously amp up our thermal testing game. we already have the
+manufacturing capabilities in the workshop to build super precise thermal load generators. so here, we're going to use a combination of internally designed tools and real-world cpu's to
+run through as many coolers as we can get our hands on. that is why the staffing
+aspect is so important. this isn't even about
+making videos anymore. it's about cutting through
+the bs in order to decide what to make videos about, which means that most of the
+testing that we do in here is going to be published
+more in the form of white papers on a written website, as opposed to, you know, behind me making a big
+thumbnail face like. this whole space will need to be climate
+controlled, obviously. there goes 15 grand. thankfully, i've got this. blank check oh, and i've got a new and
+improved accounting team. we're looking for an
+accountant and a bookkeeper, and we'll have links to
+all the new positions in the video description. now, kyle, most of our
+audience hasn't really met you. - i'm an engineer for create a warehouse. i'm designing the portable battery bank slash shoe dryer thing,
+an rgb housewares item that is currently under wraps, and i also took over
+alex's early development on the screwdriver. i'm a big, i'm not reading that. - [sebastian] you know, you have to. - i'm a big no. - excellent. so then tell me, what would
+you put along this wall? - i actually think it'd
+be really cool if we had a thermal camera set up
+for time-lapse capture so we could see the
+heat soak into a cooler. it could actually tell us the
+efficiency of the heat pipes, for example, as for other things, truthfully it's anything that
+can be objectively measured. it's just a question of
+equipment, budget, and time. - man, i'd love to test stuff like pci express signal integrity, or we could look at
+the performance of vrms on like every budget motherboards so we could figure out not
+just who's cheaping out, but like, does it matter? right? we did a video recently
+looking at a whole bunch of different motherboards and found that the performance differences were actually quite
+significant from one board to the next. i mean, is that something that you could conceive of us being able to test here? - [luke] absolutely. - i mean, what about power supplies? - [luke] for sure. power supplies are one of
+the most important parts of a system. if that goes, it could
+take other things with it. - [sebastian] but it's not
+just whether it goes or not like could we meaningfully evaluate them so we could tell people, okay, at $99, this is the best one. - yeah. like the stuff like efficiency, how much power you're putting in versus how much you gain out, is the voltages stable, are you getting 12 volts where you need 12 volts? - [sebastian] how much
+is that going to cost me? - could be more than 15 grand. - [sebastian] cool. on the subject of power, i think this would be
+a great place to set up for something like a test
+bench for phone thermal throttling and charging
+rates and stuff like that. not every thermal test
+needs acoustic measurements. and it'd be nice to have a
+second smaller thermal chamber, maybe over on this side where
+we could evaluate things like phone performance
+degradation over time while gaming. man, the software guys are
+going to have their work cut out for them. like in my perfect world, i'm imagining that we just
+put the phone in there. we run a 3d mark benchmark, right? we use machine vision to
+take the results, log them, obviously we capture an
+image every time for safety. then we use a robotic hand
+to run the benchmark again, right away we detect when
+the performance bottoms out, then we run five more for safety. and then it turns on a light
+on the outside of the chamber to say, it's done. i mean, can it be done? - whatever you say linus. absolutely. i mean, you're paying for it. - let's go this way. i think displays are one of
+the areas of technology that we can do a way better job of
+evaluating with just a little bit of gear and know-how. i mean, pretty much
+everything about them can be objectively measured
+with high-speed cameras and easily available devices like input latency testers and colorimeters or spectrophotometers. and i would imagine something
+like that would go here. oh, obviously i'm not going to let steve be the only tech media outlet
+with a fan tester, by the way. i've been jealous of
+coursera's for many years. so i guess we could put that, i don't know, here or something. or maybe we'll just leave
+fans to gamers nexus. hard call. i guess it depends what our
+priorities end up being. i want to hear from you guys, what you want to see us
+take to the next level. speaking of next level, let's head to the next level, upstairs. it's time to talk about
+how we're going to pay for all of this. as i already mentioned, not all of the new positions are ltt labs. one of the biggest growth areas
+for our business right now is in merch. so that's right, you guys are going to pay for it. - you guys paid for all this. - by buying beanies desk
+pads, water bottles, hoodies, you guys are funding. you're already doing it. the biggest reinvestment into our content that we have ever made and
+we are going to need more. so if you or someone you know
+is in the fashion industry, or if you're an engineer
+who's more interested in product development rather than product evaluation,
+check out the link below. we've got those positions, as well as a product manager to handle ordering and logistics to add to the creator warehouse team. as for this space, i know neither what it
+was intended for before. see these weird power outlets that are up along the ceiling, brendan? super, super weird bunch
+on the floor as well, nor do i know what i'm
+going to put in here later. it could be another sound treated room, but maybe this time for
+evaluating soundbars or home theater, speakers and projectors. it could be a small lab for testing active noise cancellation or headphone frequency response curves, or battery life claims or touch
+be an input responsiveness. it's hard to say. the only thing i know for sure
+right now is that you guys are still here watching this video, which means that you're as excited about this new direction as i am. and maybe you want to get involved. so feel free to put your hat in the ring, but don't be disappointed
+if we don't take you. this time around, we're looking for industry professionals and it is not going to be
+easy to get into the lab. but don't be discouraged because we actually have even
+more positions available that i haven't mentioned yet. so make sure you check out the jobs page, linusmediagroup.com. so you can be part of our next chapter and also check out our sponsor, jackery. we still need sponsors. thanks jackery for sponsoring this video. jackery makes solar ready
+portable power stations that are designed to improve
+outdoor life by providing power outdoors whenever and
+wherever you need it. their explorer 1500 portable
+power station has enough juice to keep all your devices
+powered and connected. it's huge 1500 watt hour capacity
+and'00 watt output rate allow up to seven devices to
+be plugged in simultaneously. it takes only four hours to
+recharge it from zero to 80%. and you can check out the
+explorer 1500 at the link below and get 10% off with code linustechtips. if you guys enjoyed this video, maybe you want a blast from the past. why don't you go check
+out our first studio tour back when we were still working
+out of a house in langley. it's a bit of a contrast. wow, back then, i would've given anything
+for this as our main studio, let alone as a dedicated lab.

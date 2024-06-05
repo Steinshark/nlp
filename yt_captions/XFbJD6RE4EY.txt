@@ -1,0 +1,178 @@
+- We told you we would test
+the most popular HDMI cables. (energetic music) And we're doing it. But it turned out to be a lot more work than we bargained for. The good news is it was all worth it. 53 cables from 17 different
+manufacturers, totaling- - [Colin] A thousand-ish dollars. - $1000. And after painstakingly labeling, testing, and logging all of them, we've got the juicy details for you. Which ones are top notch? Which ones aren't even
+worthy of being used as a skipping rope? We're gonna tell you and
+also give you some guidelines that you can follow to make sure that you are not getting
+ripped off on cables. After this message from
+our sponsor, Honey, who helps you not get
+ripped off on anything. Honey is the free to use
+shopping tool that helps search for some of the best promo codes on lots of your favorite sites. Get it today at joinhoney.com/LTT. (bright jingle) Ask a cable vendor and naturally, they'll claim that their
+products does everything from dissipating noise to
+reducing EMI interference to turning water into wine.
+(energetic music) But you, an intellectual,
+you're too smart for that. You should just buy the cheapest
+cable every time, right? Well, not quite. The truth, as usual, lies
+somewhere in between. You see, on the surface,
+an HDMI cable is basic. You've got your plugs on the
+ends, 19 conductors in between, and some kind of plastic sheath
+covering the whole thing. They're basically a commodity item. But as we learned on this journey, there is a lot that can happen
+in between the two ends. And some of the bold
+performance claims actually can change the user experience. Also, well over 10% of
+the cables that we bought and tested failed to meet their claims. Let's start then with a handful
+of things that don't matter. One, while it looks
+nice and feels premium, this right here is not a
+signal-carrying component of the cable. And as long as it isn't so corroded that it literally cannot fit in the slot, the inclusion of gold plating on the HDMI connector
+housing doesn't matter. Two, and this is gonna blow your mind, but I give you my personal
+Linus Tech Tips guarantee that anyone selling you a cable based on the conductors inside
+is probably BSing you. To be clear, better conductors
+or better construction can improve signal integrity,
+which will increase the chance that a cable will meet spec. And then we'll talk
+about that more in a bit. But that is the manufacturer's
+problem, not yours. For digital signals, like
+HDMI, all that matters is that the signal
+arrives reasonably on time and at a high enough
+amplitude that it can be read. What that means is that
+whatever materials are used, if the cable meets the
+spec, there will be no loss of ones or zeros and therefore, there cannot be any discernible
+difference in quality. If you say you believe otherwise, you are a sucker or you are a liar. But here's the thing. That doesn't mean that all of
+the marketing is snake oil. In order to meet the spec or
+to improve the user experience, there can be numerous physical
+differences from one cable to the next, many of which
+wouldn't be obvious to the eye, at least not without cutting them open. Category one and category
+two cables, for example, both have four twisted
+pairs to carry color, sync, and clock signals. But the with Ethernet versions took some of the extra conductors and
+added a fifth twisted pair to carry Ethernet. The category three spec, by contrast, includes this fifth
+twisted pair as standard. So then are all HDMI cables
+with Ethernet the same? No, not even close. Remember how I said
+materials don't matter? Well, they do.
+(suspenseful music) In theory, because we're still using the same conductor count and connector from nearly 20 years ago, a
+cable that was made in 2001 could conceivably carry
+a modern 8K 60 Hz signal. Just not very far. The thing is, each new
+generation of the HDMI spec has approximately doubled
+the maximum data rate, putting much greater
+demands on cable quality. That is why certification is so important. Everything from the gauge of the wires to the tightness and
+consistency of the twisted pairs to the, yes, the materials,
+including both the conductors and the shielding, will
+impact the integrity of the signal over a given distance. So a manufacturer who cracks
+the code, so to speak, might be able to stay in
+spec over a longer distance or create a lighter, more flexible cable using thinner conductors. But from a performance standpoint, if you are comparing two compliant cables at the same length, you don't need to care what's inside them. With that in mind, we set
+off and purchased a whackload of cables from the usual
+suspects: Amazon, Best Buy, Monoprice, and a few
+others for good measure. For the majority of these, we bought three or more of each cable. Why? Well, because one
+failure could be a fluke. Two is a coincidence. But three, that's a pattern. Before we get to the results though, one really important note here
+is we were initially aiming to test only HDMI 2.1 cables 'cause that's the latest and greatest. But because neither AmazonBasics nor Best Buy's Insignia
+brand offer HDMI 2.1 cables, we decided to test those
+2.0 rated cables as well. I mean, they're both
+category three, right? Maybe it'll work. Wow, Colin, that's a lot of tests. - [Colin] Yeah, it was a lot. - Something is there's more than 53 here. - [Colin] Yeah, I also
+went around the office and grabbed some interesting
+cables just to see what would happen, they're
+down at the bottom as bonus. - Got it, okay. Let's start with the normies though. Of the 53 cable tests, nine failed. These failing cables were made by four different manufacturers:
+Belkin, Monoprice, AmazonBasics, and CableDeconn. Doing the math here, that is a 16.9, nice, percent failure rate.
+(energetic music) That means that the odds of buying an out of spec HDMI 2.1
+cable, even if you shop with reputable brands,
+is nearly one in five. Wow. Two of them passed the
+signal integrity test, meaning you'd probably never
+know something was wrong. Where they failed was on continuity. That means that some of the wires were outright not connected
+where they were supposed to be. Pretty lame. The other seven failed on
+either signal integrity alone or a combination of the
+two at HDMI 2.1 speeds. None of our cables failed
+on the third category, DC resistance, which
+means that any of them would comfortably power
+a low power device, like say an early generation Chromecast. This kind of makes sense
+because DC resistance increases with length and most HDMI
+2.1 cables are quite short. We found that this is
+a much bigger concern with passive cables at
+lengths of 25 feet or more. Let's start with the most
+surprising of our failures. AmazonBasics was doing really
+well until they had one that failed, number 28 here. Now, because this is the
+only one that didn't make it out of our batch of three,
+it looks more like a one-off. And considering that it's also
+one of the 10-foot cables, it's not that surprising. What is surprising though
+is that these three, numbers 25, 26 and 27, all
+of which are six-foot cables, not only passed the HDMI 2.0
+spec, but they also passed the HDMI 2.1 spec at
+48 gigabit per second. That's pretty good. That makes AmazonBasics six footers one of the best bang for the
+buck cables on the market, but not quite the best.
+(energetic music) That throne is reserved
+for Infinite Cables, who not only guarantee
+their cables for HDMI 2.1 instead of just maybe it'll happen, but they even charge
+about 17% less per foot. Our next runner-up in the fail
+Olympics then is Monoprice, which hands down had the worst showing out of all the manufacturers we tested. Only 11 of their 15
+cables passed our tests. And we're also starting to see a trend with the only failures
+coming from either 10 or 15 foot lengths due
+to signal integrity. That makes sense. If you remember from our previous video, the longer a cable gets,
+the more voltage drop is experienced across its length and the more opportunity
+there is for interference. Something else interesting is
+that the fails all occurred on the same pair of signal wires, number four and number six. Now, consistency in manufacturing
+is usually a good thing, but consistently failing? Well, that's a bad thing. Looking at these fail reports, we also find something very interesting. You know how the best lies have a grain of truth at their core? Well, much of the marketing, particularly around
+audiophile HDMI cables, centers around jitter. And jitter is bad, really bad. High jitter means that
+even though your signals are being sent at regular intervals, they might not be arriving
+at those same intervals. It's terrible for any application but in really different ways. Professor Riley? - In analog signaling, even
+a small amount of jitter can manifest as an obvious loss
+in audio quality with pops, crackles, and other unpleasant anomalies. Baby snaps.
+(energetic music) This appears to be the grain of truth upon which modern audiophile
+marketing is built, but where it turns to horse plop is when these same principles are applied to digital signaling. Digital signals are made up
+of discrete zeros and ones. Jitter can't change the order of the data, but it can change when it arrives, which can lead to it
+being read incorrectly. Let me show you. This is an eye diagram from our tester, and at its center is a
+single data sampling point, right where the eye is. A one or a zero is measured at this point. As jitter increases, the variance between our samples also
+increases, thickening these lines, causing the eye to narrow. Like this. Lots of jitter takes what used
+to be a good signal like this and makes the signal not come in on time, meaning the sampling
+point could be at a point where the signal is
+still rising or falling to a one or a zero respectively. Once you can't get a clean
+reading, your data is garbage. And you will experience
+a very obvious failure, either sparklies or more likely,
+a complete loss of signal. So there you have it, either
+everything arrives in order and on time or nothing does. That's why I mark all late
+assignments with a zero. Back to you, Linus, ooh,
+nice hoodie, by the way. Lttstore.com. - You better believe it.
+(energetic music) WAN Hoodie V2 is awesome
+and it's finally in stock, get yours today. Let's move on to the most
+expensive cable we tested, this braided HDMI 2.1 cable from Belkin. It costs me a tear-inducing 8
+dollars and 41 cents per foot. And it failed miserably
+on its continuity checks. We did only get one of them and the signal integrity
+technically passed, but at this price, frankly,
+one failure is enough for me. Don't take a risk on this. We also tested an ROG cable that we had lying around the
+office, and to our surprise, even though it was
+included with a monitor, it also failed, though it
+was just on continuity. So it probably will work
+for most applications. It just goes to show that we
+should be checking the cables that come with products going forward to see what kinds of trends we discover. Our last cable that failed
+was this short little cute one from CableDeconn. We're assuming that the LED
+feature that's in the cable here caused it to fail on the continuity test, but it also failed on signal integrity. So that's just to skip
+over this particular cable. So that's some pretty surprising results. Now, if we step back for a sec
+and take a more macro view, we start to see some trends. First is cost. Paying more than say about a dollar a foot for an HDMI cable appears to
+be a complete and utter waste of money, at least from
+a signaling perspective. With that said, there are other attributes that might be important
+for your application. Properly rated sheathing, for
+example, is probably required for an in-wall installation in your area. UV resistant cables can be
+useful for outdoor installations, flat or flexible cables might look nicer in your theater room, and
+active cables are great for hitting longer
+distances or in the case of optical active cables,
+running in environments with a lot of interference. We can also say that if you're
+going anywhere over 10 feet with HDMI 2.1, you're asking for trouble. Only 50% of our 15 foot cables passed. And it seems like the
+high bandwidth signal just doesn't have the beans to
+transmit over lengths like that without the voltage dropping
+to unreadable levels. So for those situations,
+you're gonna wanna consider going active or even optical active. I think this testing is pretty
+definitive at this point and answers the most
+important questions about the HDMI cables that you all
+are actually shopping for. And turbo nerds can check
+out the full data dump on our forum at the link down below. But if you guys disagree and you think that we should blow
+hundreds or even thousands of dollars testing extra
+snake oily audiophile gear, tell us in the comments who
+we should be secret shopping and maybe we'll take another
+stab at in a future video. There's still tons of
+stuff we wanna get into with our cable tester here,
+and we sure hope you guys have enjoyed this deeper
+dive into HDMI cable quality, which leaves only one question. What am I gonna do with
+all these HDMI cables? Actually, I know. I'm gonna replace all the bad ones that have been causing
+intermittent problems for us here at the office
+for the last seven years. - [Colin] Woo-hoo. - Woo. I'm actually super stoked. And I'm stoked to tell
+you about our sponsor. Manscaped provides an
+all-in-one grooming kit that has you covered from head to toe. Their Performance Package 4.0 features their Lawnmower 4.0
+waterproof body trimmer, their Weed Whacker ear and nose trimmer, plus a whole lot of other goodies. For a limited time, you get all
+of this plus two free gifts, the shed travel bag, and a pair of Manscaped anti-chafing boxer briefs. Just visit manscaped.com/tech
+or click the link down below for 20% off and free shipping. If you guys enjoyed this video, go check out our original
+cable tester video because it's got a lot more
+detail about how you guys can interpret some of the
+visuals that you just saw.

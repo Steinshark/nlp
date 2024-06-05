@@ -1,0 +1,79 @@
+- i don't know what's most shocking about this thing. the fact that it's so stealthy and clean, the fact that it's made by dell, or the fact that it costs just $600, which is a little over
+half of what apple charges for their a monitor stand, which doesn't have a computer in it. what a value. and it gets so much better. i mean, look at this thing. it's a full fledged computer in here and it really does pop apart that easily for maintenance. it's even got space for a two and a half inch drive. and it gets even better. with smartdeploy, it can manage every windows endpoint in their environment from
+one centralized golden image. grab your exclusive free software worth over $800 at smartdeploy.com/linus. (upbeat pop music) - the first time anyone
+outside of dell heard about the optiplex 7070 ultra was in a press release
+back in august, 2019. and you guys might be thinking
+that's a long time ago. didn't you guys miss the review window for this by almost two years? great question. dell positioned this as a
+first of its kind concept, hiding a complete pc
+inside a monitor stand for a clutter-free zero footprint desktop, kind of like an all-in-one, but with the ability to upgrade the display and the pc separately and also choose any mounting
+system that you want, thanks to the included vesa adapter. also inside the box are all the cables that you'll need to get up and running with any monitor that has
+a display port connection and a built in usb hub, so, most of them. if you've got a display though that runs off of usb-c,
+that's even more awesome because not only can
+you use a single cable for your display signal and your usb hub but the computer module
+can be powered straight off of the display, as long as it supports usb power delivery. now the 27 inch lg ultragear that we're using, doesn't have type c. so we're gonna have a
+bit of cable clutter, but, it's still pretty good. and the nice bonus is that
+unlike the basic stand that lg provides, dell's pro stand here pivots from side to side and can rotate in either direction. dell really has had monitor ergonomics down for a long time and it shows here, and this isn't even the only option. you can get a large version for up to 40 inch displays, a fixed stand for 24 inch and under, wall mounts, and offset vesa mounts for attaching to arms. the setup process is super easy. they list five steps on the stand itself and that's all it takes to get you going. however, it should be noted
+that once you set it up it's nearly impossible to plug cables into the main ports without disassembling the whole thing. though to be fair, that is pretty minor since it
+is so quick and easy to do. can i do it without looking? - [narrator] no, no, no, no! (dramatic music) (beep) - just push the latch, pull up, and then un-clip the module and then do that in reverse, to get it back together. but all we've talked about so far is the stand itself. what about the pc? right, the pc, well, it's old. the thing is this kind of got lost in the warehouse and we
+kind of completely forgot about it until we did
+a big inventory audit. first, the good news, there's a two and a
+half inch sata bay here that is super easy to get to just one screw and
+digging deeper. so hard. we find two easy access ddr4 sodimm slots and a 30 millimeter nvme capable m.2. there's actually a second m.2 slot here, if you wanted to add more storage but, it's got a wifi card in it right now, and you probably want
+wifi, unless you don't. i mean, it does have ethernet. so it's up to you and
+whatever you want to do dell has an excellent service manual that has guides on how to access and replace everything,
+complete with part numbers. man, this is just something you don't see on consumer grade machines these days. like clearly we have
+the technology, right? this is one of the reasons that
+anthony's old computer shop really liked selling off-lease optiplexes and vostros, just so much easier to work with, to a limit. as for the cpu, it's not replaceable. and because we sat on
+our butts for so long, we're looking at an eighth
+gen intel core i7 8665u which is a quad core coffee-like mobile cpu with a max
+turbo of 4.8 gigahertz. now, thankfully ours isn't
+configured for tdp down or the base clock would
+be just 800 megahertz. so let's do a quick 10 minutes in a bench run and see what it looks like. actually not bad. it's scored about as well as a 15 watt 11th gen core i7 and the 28 watt version scores
+about 26% higher than that. so it's actually not as
+slow as you might think. of course, though, performance. isn't what we came here
+for because it's outdated. so let's talk about thermals. this is actually one scenario
+where intel's definition of tdp really comes in handy because dell is able
+to let the cpu run hot for the 26 second short duration turbo saturate the cooler and then dial it back. we can actually see that
+in our package power readings where the short
+duration is 51 watts. and the long duration is
+the stated 25 watt tdp which it comfortably handles indefinitely at around 85 degrees or so. just like our insulated
+water bottle comfortably handles your hot beverages, lttstore.com. the fan has a reasonably smooth ramp-up. although sadly it has a bit
+of an annoying whine to it but thankfully the display
+actually blocks a fair bit of its high pitch. so if you've got an hvac
+system or a desk fan running you probably won't hear it at all. it does seem like they
+could have done a bit more with the cooling though,
+if they didn't have to cater to monitor arm setups,
+though, at the end of the day this is a business
+machine and businesses do really like their monitor arms and they like their upgrades. so you can have actually still buy the eighth gen
+version that we have here, for a decent discount,
+get subscribed by the way. cause we've got a video on some really interesting
+cpu deals we found coming up but dell also offers a modern upgrade that features 11th gen parts called
+the optiplex 7090 ultra. it still caps out at four cores, but now the cpu's are 28 watt and have a much higher base
+frequency of three gigahertz with xe graphics and a
+thunderbolt four connector. meaning that conceivably
+you could have one of these all-in-ones with an external gpu. curiously, they've decided to add a full-size display port connector but it doesn't take up any extra space, thanks to stacking the
+usb type a's i guess including a type c to
+display port cable costs more than just retooling the design. and as far as pricing goes, by the way it's not actually that much
+more expensive starting at 749, although, for a similar trim to what we have here you are looking at spending
+over a thousand dollars leading to my final question for dell, why the hell isn't this a consumer thing? you've got inspiron all-in-ones with similar hardware and stowaway webcams but they only come with 10 adp displays. so we're locked to that
+for no apparent reason. and not only that once they're obsolete they effectively become paperweights. you can't even repurpose the display without a major hack job. i mean logistically it can't be easy to manage so many skews for the same stupid all-in-one,
+wouldn't it actually be more efficient to have a
+modular approach like this which you have already
+engineered where you just bundled the display with the machine and snap the parts together for this really basically
+all-in-one experience. i mean, imagine how simple
+your warranty repairs would be. pull the cover off, remove the module slap a new one in, test
+it, ship it back and then refurb whatever needs fixing
+on the module you removed. you've already got the concept. it works. it's not perfect and it
+might not be for everyone but for anyone who's
+looking for an all-in-one to save desk space and looking at the number of
+all-in-ones on the market. there's clearly a lot of those people, this makes so much sense. it gives consumers choice. it gives consumers an upgrade path and it even reduces eventual e-waste. dell, bring this to the
+consumer market because if you don't, you know someone else will, especially now that we've made a video
+about it, but you know what else i will do is
+pull off smooth segways to sponsors like wren. wren is a website where you can answer a few
+questions about your lifestyle and then see what your carbon footprint is along with some tips for how to reduce it. now, no one can reduce their
+carbon footprint to zero. so they also offer some
+ways that you can offset what you have left after your reductions. once you sign up to make
+a monthly contribution to offset your carbon footprint you receive monthly updates
+from the tree planting, rainforest protection, and
+other projects that you support. so you can see the trees you planted and what your money is being spent on. so try it out by clicking the link below and helping do your part to end the climate crisis. so thanks for watching guys. if you want an even cleaner
+form factor, by the way with no compromises whatsoever go check out the latest installment of next gen desk pc. you will love it. trust me. you'll love it, cause i do.

@@ -1,0 +1,15 @@
+normally when you pip install a python package, it 
+will download from pypi, the python package index.  but did you know that you can actually 
+pip install directly from github?  take the git url to your favorite 
+project and add "git+" in front.  then you can just pip install it to try 
+out the latest commit from that repo.  you can also add an "@" sign with a git reference, 
+such a branch, tag name, commit hash, or pull   request number to install a specific version.
+this can be useful for testing versions of   packages that haven't been officially published 
+yet, like from a feature branch or a pull request.  it's good practice to also specify the 
+egg name, which is what pip will treat   this project's name as for the purposes of 
+dependency checking, so if you later install   another package that depends on the github 
+one it will know it's already installed.  all this only works if the repo is an 
+actual python package with a setup.py file,   not just a lonely script.
+check out my video on automated   testing if you want to see how to set that up.
+if the setup.py isn't at the root of the repo,   you can specify it with the 
+subdirectory query parameter in the url.

@@ -1,0 +1,104 @@
+import torch 
+import numpy
+from torchaudio import transforms 
+import librosa 
+from matplotlib import pyplot as plt 
+from functional import tensor_to_wav
+
+print(f"build spec")
+top_n               = 32768
+signal              = torch.load("C:/data/music/bs_4096_16s/careless785416.tsr") / torch.max(torch.load("C:/data/music/bs_4096_16s/careless785416.tsr"))
+periods             = {}
+new_signal          = torch.zeros(len(signal))
+
+
+signal_fft      = torch.abs(torch.fft.fft(signal))
+signal_fft      = signal_fft[:len(signal_fft)//2]
+top_items       = torch.topk(signal_fft,k=top_n)
+
+periods         = {item[1].item():item[0].item() for item in zip(top_items[0],top_items[1])}
+
+for period,mult in periods.items():
+    if period == 0:
+        continue
+    freq            = 1 / period
+    top_component   = torch.from_numpy(numpy.sin(numpy.arange(0,len(signal),1) * (2*numpy.pi*freq))) * mult
+    new_signal      += top_component
+
+plt.plot(new_signal)
+plt.show()
+tensor_to_wav(new_signal,"newSIG.wav",4096,44100)
+
+# for _ in range(top_n):
+
+#     #Find top component
+#     signal_fft      = torch.abs(torch.fft.fft(signal))
+#     signal_fft      = signal_fft[:len(signal_fft)//2]
+#     plt.plot(signal_fft)
+#     plt.show()
+#     total_weight    = torch.sum(signal_fft).item()
+#     top_items       = torch.topk(signal_fft,k=1)
+#     mult            = top_items[0].item()
+#     top_period      = top_items[1].item()
+
+#     #Remove top component from signal
+#     print(f"top period={top_period}\tmult={mult}/{total_weight}")
+#     freq            = 1 / top_period
+#     top_component   = torch.from_numpy(numpy.sin(numpy.arange(0,len(signal),1) * (2*numpy.pi*freq))) * (mult/total_weight)
+
+
+
+#     signal          = signal - top_component
+#     signal          = signal / torch.max(signal)
+
+#     new_signal      += top_component
+
+# plt.plot(new_signal)
+# plt.show()
+
+
+
+
+# #Recreate using values 
+# frequencies     = {f:s for f,s in enumerate(spec) if s > .2}
+
+# slate           = torch.zeros(len(spec))
+# for f in frequencies:
+#     #create the sine wave of that freq
+#     signal      = numpy.arange(0,len(spec),1) * 2 * numpy.pi / f
+#     print(f"signal is {signal[:10]}")
+#     print(f"plotting f={f}")
+#     sine        = numpy.sin(signal[:f])
+#     plt.plot(sine)
+#     plt.show()
+
+
+# #spec    = transforms.Spectrogram(n_fft=12)(torch.load("C:/data/music/bs_4096_16s/careless785416.tsr"))
+# print(f"shape is {spec.shape}")
+# plt.plot(spec)
+# plt.show()
+
+# print(F"SHAPED")
+# #plt.imshow(librosa.power_to_db(spec),origin="lower",aspect='equal')
+# #plt.imshow(spec,origin="lower",aspect='equal')
+# #plt.savefig("SAVEFIG.jpg")
+# #plt.show()
+
+
+
+# #Create 
+# pi              = numpy.pi
+# length          = 32768
+# period          = 4096
+# freq            = 1 / period
+# signal          = numpy.sin(numpy.arange(0,length,1) * (2*numpy.pi*freq))
+# print(f"{signal[:20]}")
+# plt.plot(signal)
+# plt.show()
+# spec            = torch.abs(torch.fft.fft(torch.from_numpy(signal)))
+# plt.plot(spec)
+# plt.show()
+
+# top_freq        = torch.topk(spec,1)[1]
+# converte        = length / top_freq
+# print(f"top_freq:{top_freq}\tperiod={converte}")

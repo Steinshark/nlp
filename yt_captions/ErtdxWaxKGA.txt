@@ -1,0 +1,122 @@
+- They said two years
+of support was enough. They said, "If you want a new CPU, you'll have to buy a new motherboard." ASRock said, "No." That's right, it started
+out as a hacky work around, but on January 12th, 2022, ASRock rolled out official support for installing a brand new AMD processor in a motherboard from four years ago. Which raises some burning questions, like if AMD and ASRock can
+do it, why can't Intel? And is this one of those situations where just because you can do something doesn't mean you should? It's a situation where I'm gonna
+tell you about our sponsor, that's for sure. Thanks to Kemp for
+sponsoring today's video. Kemp develops load balancers that provide maximum reliability for applications in both
+virtual and cloud deployments, object storage optimization, web application, firewalls, and more. Get your free load balancer
+at freeloadbalancer.com or at the link in the description. (bright music) AMD and their partners
+have done an amazing job over the last five years or so, supporting both backward
+and forward compatibility between their multiple generations of CPUs and chip sets on the AM4 socket. Though, it hasn't been without hiccups. At its launch in 2016, AMD promised compatibility
+for the socket through 2020, only to pull the rug out from under us when they announced that their
+Zen 3 Ryzen 5000 Series chips would still use them AM4, but only with the latest
+X570 and B550 chip sets. Now, they quickly backpedaled and added official
+support for B450 and X470, but the messaging was, "That's all folks. We're doing you a favor here. Don't expect it to get any better." And yet here we are all the way in 2022, discovering that their original
+promise ended up being true. At least to a point. Meanwhile, Intel's
+strategy for over 10 years has been to release a new socket almost every other
+generation like clockwork, physically breaking compatibility so there's been no way to
+challenge their narrative that we needed a new
+motherboard every time around. But then something happened. A few years ago, socket H4,
+more commonly known as LGA 1151, lasted for four whole
+generations of chips. But Intel still stuck to their story that the early boards couldn't
+run with the later chips and vice versa. Now, to be fair, while the socket and the pin
+layout itself hadn't changed, allocation and usage did change. For Coffee Lake, which was the third generation
+of chips on this socket, some of the previously reserved pins were reassigned to add
+power and ground lines to meet the requirements on
+beefier six and eight-core CPUs. That's pretty understandable, but Intel also relocated
+the processor detection pin, breaking compatibility. They called this socket LG 1151 revision 2 in order to help differentiate. But stuff like that is a big part of why so many people find
+building computers complicated. It can be scary spending hundreds or even thousands of dollars on parts, only to find out that
+yes, they fit together, but they don't actually work together. Unlike our processor hoodie that goes great with just
+about anything, lttstore.com. Practices like these are
+a big part of why we, and the majority of the PC industry, don't advise you to attempt
+to future-proof your build, because no matter what you do, it's only gonna get you so far, whether it's the next generation of RAM, PCI Express, or even IO. How many of you wish you had
+a USB-C port, for example? There is simply no way to guess which investments into
+better parts will bear fruit and which ones will end up having been just a waste of money. Unless you believed AMD,
+and ASRock for that matter, back in 2016 and splurged
+on this motherboard, the ASRock X370 Pro 4. The idea at the time was that
+if you were a savvy shopper, you could save a few bucks by going with an affordable
+Bristol Ridge Athlon X4 chip, and then hold off and upgrade later when either you had some more cash or you took advantage of
+one of the best practices, by trailing the bleeding
+edge by a generation or so. So you might've waited
+until Ryzen 2000 launched and then snagged a snappier Ryzen 1500X from someone who was upgrading then. Man, that is savvy. Why don't we do some role-play? I'm you. Boy, the years
+haven't treated you well. But they've been a lot less kind to your poor four-core eight-thread CPU with its piddly 16 megabytes
+of level three cache. Now here's the thing. Remember, I'm you. I don't wanna download some hacky BIOS from a Russian forum, so I'm going to the CPU support section on my motherboard's download page. And would you look at that? It's there. So for just $270 for a 5600X, that is what my dumb
+friends will end up paying for their new Intel motherboard alone. I'm gonna be on the latest generation. Freakin' get wrecked. But there are some catches. Unlike my friends, I will not be getting
+cutting edge features like PCI Express gen five, or
+even gen four for that matter. I'm gonna have to update
+the BIOS of my motherboard to piece 7.10, which removes compatibility
+for older chips, which can carry some risk. And unless I want to invest
+more money into my machine, say by upgrading my original
+DDR4 to something faster, I might not be getting the
+most out of my new chip. So am I actually getting a good deal? Let's test it out. Now, short of a power outage occurring in the middle of BIOS flashing, you should be okay if you follow along. We had to get this specific
+board, the X370 Pro 4, but on the ASRock forum, we already found evidence
+that support is rolling out to X370 boards more broadly, and we've heard rumors that other manufacturers may follow suit. So all we need is our test bench here, some peripherals, a USB drive, and we're gonna have
+links for all this stuff in the description down below. We'll also need an internet connection. So you're gonna wanna unzip your new BIOS and drop it onto an otherwise
+empty FAT32 USB flash drive. FAT32 is still the default
+when you format it in Windows for lower capacity drives,
+but if you wanna double check, you can just look in the properties once your drive is plugged in. Once you're ready, restart the system and
+mash or hold F2 or Delete to enter the UEFI BIOS. Now, we're gonna ignore
+the majority of this and just go to the Tool tab. Hey, I get it. That's not funny. And select Instant Flash
+and steel yourself, because once we take this next step, there is no turning back. The Bridge BIOS that we're going to use removes support for Bristol Ridge CPUs and cannot be unflashed, at least according to ASRock's website. So we're gonna do this
+BIOs, then another one, and we should be ready for Ryzen 5000. Oh, and I hope you're ready, because we've got a video
+upcoming about GPU shunt modding that you're gonna wanna be
+subscribed so you do not miss. This is gonna take a minute, so. And reboot. What's that? - Just hold it.
+- No, I like mashing it. I'm a masher. I wanna make sure that's
+the correct version. We actually should've done that before. "Do you wanna update?" Yes, I do. Hopefully we have all the... Secure flash check fail. Whoa, and it's off. I mean, I did say this process wasn't without risk, didn't I? I looked it up and
+apparently this can come up when you're using a thumb
+drive with too much capacity, which is exactly why I
+keep this piece of crap in my little bag of tricks. It's a one gig pen drive,
+completely generic USB 2. And we're gonna throw
+the BIOS file on there. Fatty 32 is what I call this boy. It's my fatty 32. Oh, there it is. Yes, it's got it. Come on, come on, come on, come on, come on, come on, come on, come on. Yeah! All right. Fatty 32 to the rescue. All right, well, we don't
+actually wanna boot right now, 'cause we are gonna put a 5600X in... Ow! We are gonna put a 5600X in this mamajama. Okay, come on. Now we're gonna try. It's gonna do its best to
+defend its socket from us. Okay. Argh! - [Andy] Pre-applied thermal paste. - Yeah, yeah. Please subset that I am
+reusing the thermal paste on the bottom of the heat sink. If we were doing any kind of
+comparative thermal analysis, obviously I would reapply
+fresh paste, but we're not. We're just getting it
+running and this is fine. Everything's fine. Everything is good. Here, catch. No, I'm not gonna, I'm not
+gonna, I'm not gonna throw it. Geez, you guys give me
+no credit around here. Okay, new CPU installed. Blah, blah, blah, structure
+change, blah, blah. Yes, reset. And this is where we would
+lose all of our data. Why is this on here? If we had been using... Was that on my shoulder the whole time? - [Andy] Yeah. - Oh, for crying out loud. I wanted to change to a shirt you can actually buy on
+lttstore.com, so I had the thing. Ah, look at that. Look at that. It sure didn't go to 3200. It's at 2133. All right, so we're gonna
+have to try and re-enable our DOCP memory profile here. I don't know what to expect
+in terms of memory speeds. Obviously we're getting a
+much newer memory controller, but I also know that
+motherboard manufacturers have learned a heck of a lot about optimal memory
+trace layouts for Ryzen in the last four years. So maybe this will just (clicks) go and maybe it'll go. I don't know. And remember, you can't
+have success without succ. Sorry, I've been in a bit of a mood today. I swear I'm fine. And there we go. Right to
+3200, no complaints whatsoever. We haven't done any stability
+testing or anything, but that's definitely a good sign. Pew pew pew, pew pew pew. Melee, melee. I don't know how to melee in this game. Oh yeah, you gotta switch to knife, okay. I'm gonna get them. I'm gonna get them. Pew pew, pew pew pew, pew pew pew pew pew. Pew pew pew pew. Oh no, I got beat by a bot! But that's okay because the 5600X in our ancient X370 motherboard did not get beat by an X570 board. That's right. Where'd it go? Where's my X570 board? Ah,
+there it is over there. Okay, technically, technically, we came out behind our X570 board by about 15 FPS in CS:GO, but we're talking the difference between 545 frames per second and 560, so it's not exactly a big deal. Crazily enough, we actually
+came out ahead in "F1 2020." So not only is our ancient
+board not causing any problems with a pretty powerful graphics
+card, an RTX 2080 Super, our PCI Express gen three bottleneck isn't causing any
+bottlenecks for us at all. Again, I can't speak to the future, but come on guys, do you
+want more future out of this? It's doing pretty well. It all just goes to show you that sometimes trusting
+a company's promise of years of support and spending a little bit
+more actually can pay off. At least one time it's happened. We did still obviously
+need to buy a new CPU, but we can keep the rest of
+our system exactly as it is and get a massive uplift in performance with significantly higher
+boosting capabilities, twice the level three cache to our 1500X, not to mention two more cores. Now over on the Intel side of things, LGA 1200 was just put out to pasture after just two processor generations and LGA 1700 has just launched. And I don't think we've
+heard any kind of commitment to long-term support for that socket, but the same is actually true
+on the AMD side of things. Officially, they haven't committed to any kind of long-term date for their upcoming PCI Express
+gen five and DDR5 platform. But based on the success
+that AMD has had with AM4, I think consumers have signaled that longevity is something
+that they want to see more of and I think the entire
+industry could do better. You know what couldn't be better?
+This segue to our sponsor. Thanks to Ting Mobile for
+sponsoring today's video. Ting Mobile has rates that make it easier to see how much you can save by switching. They offer unlimited
+talk and text for $10, data plans starting at just $15, and their Set 12 plan with
+12 gigs of data for $35. They've even got unlimited
+data for $45 a month. And if you liked their previous
+pay for what you use plans, they're still there. They're called Ting Mobile's Flex plans and they charge just $5 per gig. Data can even be shared
+if you have a family plan, so you can connect more
+devices to save more. You get the same nationwide
+coverage in the US and award-winning support. In fact, Consumer Reports
+just named Ting Mobile their number one carrier in America. Pretty much any phone
+will work with Ting Mobile and they have the
+perfect plan for anybody. So check them out at linus.ting.com
+and get $25 in credit. If you guys enjoyed this video, make sure to check out our
+AMD versus Intel title fight, where we pitted equivalent
+laptop CPUs against each other. Man, I love how they're
+going at it. Lightning.

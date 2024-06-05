@@ -1,0 +1,55 @@
+Hi everyone. Quite often we need to access information
+in one script from another script, or we need something happening in one script to trigger
+a method in the other script. Let's look at a simple example where we have
+a player script, and a UserInterface script. Say the player script has a health variable,
+and the UI script wants to access this variable so that it can display a health bar. We'll
+need to get a reference in the UI class to the Player script. There are several ways
+to do this. For example, if we know the name of the object that the Player script is attached
+to in the scene, we could use the GameObject.Find("") method. We would pass the name of the object
+into the method, and it would return a reference to that gameObject. Then, by using the GetComponent
+method, we could get the attached Player script. Similiarly, if we add a Player tag to the
+player object, we could instead find the object with GameObject.FindObjectWithTag(""); The
+most straightforward way, however, would be to use the FindGameObjectOfType method, and specify
+Player as the type. This will search the scene for the object to which the Player script
+is attached, and return a reference to that instance of the Player script. Once we
+have a reference to the player using any of the above methods, we can access its public health variable, and use this value
+to draw the health bar. All right, so that's simple enough; let's
+look at another case. Say that inside the Player's update method, we have a check to
+see if the health variable has fallen below zero, at which point the player script will
+destroy the object it is attached to. Now the player's death obviously signals the
+end of the game, so we want the UI script to be notified when the player dies so that
+it can display the words Game Over on the screen. We could start by creating a GameOver
+method in the UI class to write these words, but this method still needs to be called from
+somewhere. The simplest solution would be to get a reference
+to the UI class inside of the player script, just before the object is destroyed. This
+reference could then be used to call the UI's GameOver method, which would of course then
+need to be made public. So this approach works fine, but it's not
+really a great solution. To understand why, let's consider the relationship between the
+player class and the UI class. The UI class is responsible for displaying information
+about the player, so it makes sense that the UI class has a reference to the player. However,
+the player class shouldn't really have to care about the existence of the UI class. Put another way, if we were to delete the
+Player class from the project, it makes sense that the UI script would no longer work – its
+purpose was to display information about the player, and the player no longer exists. However,
+if we keep the Player class and instead delete the UI class, it is bizarre that the Player
+class should no longer work, just because the UI has disappeared. With that in mind, let's look at events. Events
+are actually a relatively advanced topic, and we'll be exploring them in some depth
+later on. I think it's an important concept to be aware of from the beinning though, so
+I'm just going to show you enough to solve this basic problem. In the player class, I'll start by importing
+the System namesapce, which will give us access to a thing called an Action. We can now create
+a public event Action, and call it OnPlayerDeath; When the player is about to die, we can invoke
+the Action, as though it were a method, simply by writing its name followed by parentheses.
+Now for the interesting part. Inside the UI class, our reference to the player gives us
+access to the OnPlayerDeath event. We can now write player.OnPlayerDeath += GameOver;
+This is called subscribing the GameOver method to the OnPlayerDeath event. What happens now is that when OnPlayerDeath
+is invoked, all methods that have been subscribed to the event will be called. In this case
+that's just the GameOver method. What's great about this is that the player
+doesn't care who, if anyone, is subscribed to the event. It is just responsible for triggering
+the event at the appropriate moment. So, if we now imagine that we delete the UI class,
+the player class still works fine, it never knew about the UI's existence in the first
+place. There is one small thing we have to be careful
+of though. If nothing is subscribed to an event, then the event will be null. This means
+that if we try to invoke it, it will cause an error. To prevent this, we simply add an
+if statement checking that the event is not null, before we invoke it. Alright, so hopefully you have a picture now
+of the two main ways in which we can have classes interact with one another. Either
+by a direct reference, or with the help of an event.
+Until next time, cheers.

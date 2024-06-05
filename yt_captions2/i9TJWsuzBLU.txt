@@ -1,0 +1,75 @@
+hey, get over here. on the count of three, your wi-fi password's gonna appear on this monitor. ready, one, two, got 'em! pretty neat trick, huh? and sure, maybe i didn't get it for all of you, but a shocking number of people are still either using the default password that came with their device or their phone number or a loved one's phone number, which you may already know is a huge security problem. how easy is it to crack these passwords? well, with the crackinator password stealmatron, aka this van, i
+can do it in seconds, which would give me access to any shared resources on your
+network, would allow me to use up your data limit, and would even allow me to
+engage in illegal activities that would ultimately be traced back to you. i'm going to show you how we built it, and i'm going to give you
+guys the tools to stop people like me. and today's video is brought to you by apos, ltt keycaps. yes, they're real. and yes, you can get them right now. check them out at the link down below where you can get free u.s.
+shipping. wi-fi security historically has been a bit lacking. in fact... and if you're thinking that was a dramatic reenactment, surely it's
+not that bad. you're right because it's worse than you think. whether
+we get chased off or not doesn't even matter. we can grab everything we need from a
+target's network in the 30 seconds that it takes them to spot us outside
+their house and walk out to confront us. so if they're using any kind of phone
+number password i should be able to break through it. this easily. and so that was it. yep. while it may shock you to learn how easy it was to crack that network's password, it might also shock you to know that for the majority of wi-fi's life, it's kind of been this way. wep was the first generation of wi-fi password protection to find widespread adoption. and at first, it was good enough, especially compared to the alternative of your
+data just raw-dogging it through the air unencrypted, but it took technology
+only a few years to advance to the point where wep could be cracked in under a
+minute. the attack method was pretty straightforward. every packet of data
+contained the password in some manner, so if enough packets could be
+intercepted, they could all be compared to find out what they had in common. this was the reason for the switch to wpa2, or wi-fi protected
+access, which ditched the constant sending of the password, simplifying the
+process down to a four-part handshake. first, the device tells the router it wants to connect, then the
+router sends back a challenge key, the device then mixes the challenge key with
+the password and returns it to the router. finally, the router sends back a session key, and that gets used
+for the remainder of the time the device is connected. for an observer then, this is kind of like having a picture of the
+lock, and knowing that a standard looking key opens the lock, but having no idea
+what the exact shape of that key needs to be. now they could attempt to brute force it, but it would take
+forever, and they would risk detection because they would need to be in range of
+the lock at all times. this ended up being pretty effective for a while. but wait a minute, what if, instead of just knowing what the lock
+looks like, the hacker possessed a collection of exact replicas of the lock,
+allowing them to try key after key after key without detection? well, that is exactly what
+we did. by stealing the complete handshake packet, we've obtained the challenge key and the result
+of mixing it with the password. well, at that point, we can take that information to a safe
+location, brute force it with the power of our crackenator, and then return to
+do our shady business. making things even simpler for ne'er-do-wells, encryption cracking plays real nice with multiple cores, with each core of a processor hypothetically being able to try a different key in unison. and this might not mean that much for cpus that have only a handful of cores, or at most, what, 128, 192? well, when it comes to gpus, we are talking thousands of cores. so while we obviously could put hardware with this kind of password cracking capability into a mobile hacking station like this, we don't even need to. all right, let's finally properly meet the comino grando rm. now, just so you remember, the rtx 4090 has 16,000 cuda cores in it, and this has six of those. i haven't seen one of these for about two years. every time comino sends over a system, they are so. nice. actually, before i'm even in, i can see something that is a huge improvement over the last one. previously, they were using sfx-l power supplies, three of them, which is not the best if you want to have a server. this time we have proper server grade power supplies and there are four of them. so i am kind of curious if it will just keep on running if you take one of them out, maybe even two of them out. i have never seen a 4090 like this. this is strange. so we have our power connectors right here, which are not connected
+to anything at all, because comino have put power connectors on the back of these gpus.
+i have seen some pcbs with the pads for these power connectors, but never anything actually
+installed like this. it looks like comino has made their own custom pcb for 12-volt high power
+connectors right here. you can see that we have a couple extra, and if they wanted, they could
+have heaps, absolute gobs and gobs of gpus in this thing. i take it this computer's extraordinarily loud. yes, very. that's loud. these run much quieter. yeah, and they also can't run any ai workload worth a damn compared to this thing. they're quiet. in the past, comino have had their servers set up so that you can kind of just put it in like your office and it would be fine. we'd have like noctua fans set up here that blow across the power supplies. and the radiator at the same time. this right here is clearly a lot
+more server grade with these absolutely chonktastic cut your finger off fans right here. what
+hasn't changed though is how impressive their water cooling is. in here we have a great big
+water cooling manifold that's distributing in parallel water to our cpu and all of our gpus and
+then it's taking all of that heat and dumping it into this great big radiator with those massive fans. it looks like all of the water blocks are completely custom for comino. we've got these beautiful gpu ones that are just nice and small. just look at how beautiful this vrm heatsink is over here. it's just machined out of copper. everything in here is just absolutely beautiful. 32 gigabytes. i think the last one that we had, all of them are 64. so not too much ram. 256 is still a lot though. so tanner, have you done everything that you need to do with this for the video? yeah. have you tested the power supply redundancy? no. should we? we can do that. all right, let's see if these power supplies are redundant. this is a very simple test. the computer is on. the computer is still on. good job, guys. one thing that isn't very server-like with this is the i/o. we have heaps of usb ports right here. normally on a server board
+you only get like two. we also have two 10-gig and intel ax200 wi-fi, which will get you
+wi-fi 6e, and wpa3 for that good, good high security wi-fi. ah, yes. while hackers and crackers were working to defeat it, wpa was doing some leveling up of its own. and it's a pretty safe bet that any wi-fi 6 device will be using wpa3 encryption. what's changed? well, the new dragonfly handshake method aims to make it much more difficult to observe the handshake process and crack the password offline. but along with a few smaller vulnerabilities, it does have one major flaw that still persists. if your network contains any devices that were made before wpa3 or one of the few devices made after that, then it's likely that you'll be using wpa3 that just doesn't support it. like say for example, an hp printer, your router will fall back to wpa2 for that device unless it is explicitly told not to. that is our entry point. wow. thanks linus. yeah, no problem. see you later, buddy. let's hope things go a little better with victim number two. about a week ago, i gave them an hp printer and as long as they didn't get far enough in the setup process to realize hp requires them to have a subscription just to use the ink in the box, they're gonna have that on their network. doesn't that come with like a trial or something? yeah, but i kept that for myself. what, i'm gonna pay for my own printer subscription? i'm a hacker. are you done? yeah, i'm done. okay, got the handshake data, let's go. all right, let's go. okay, this is not going so well. and that's because even with our stolen lock, the cracking difficulty of one wi-fi password compared to the next can be dramatically different. a traditional lock and key might have only five or six values that differ and five or six possible heights for the teeth. wpa passwords, by contrast, can use any of the printable ascii characters and be up to 63 characters long. that means that the total number of different passwords that could exist is... very high, or at least it would be if people weren't so gosh darn
+predictable. when you are expected to share a password with others, you are much
+less likely to select one that looks like this, and you are much more
+likely to select one that looks like this. so with a dictionary attack, where
+a list of words is used instead of random strings of characters, hackers can
+drastically reduce the number of passwords that they need to attempt down from
+20 quadrigentillion apparently yes that is a real number to only hundreds of millions
+which might still sound like a lot until you consider that a single rtx 4090 can attempt
+over 2 million wpa2 passwords per second let's tackle a pretty typical 12 character password then
+with a number and a special character and yeah armed with only a dictionary of a million common words combined
+with a mask of any non letter ascii character i can take down your super secure, but still easy to say password
+in just seconds all right, then linus if full sentence passphrases don't work. what
+do i do now? well, you might try creating a password with a string of random upper and lowercase letters with numbers and punctuation, which is
+actually great in theory but unfortunately, once again, people are predictable and they tend
+to do things like use mnemonic phrases for easier memorization. according to researchers at carnegie mellon, these phrases often
+tend to be based on popular media like shakespeare or, more commonly, apparently, the oscar mayer wiener jingle, making
+them susceptible to dictionary attacks all the same. you could use a password generator to create a long string of truly
+random characters and then only share your wi-fi credentials through qr codes. this has the benefits of being both secure and easy to use in most scenarios, but it can be a huge pain as soon as you need to connect a device that doesn't happen to have a camera. or at least it would be a huge pain if you allowed those devices on your network at all. as it turns out, you don't really have to if you just make a new network for obnoxious devices that compromise your security. if all they need is internet access, a really great and fairly noob-friendly way to deal with this is to
+put them on your router's guest ssid. if they need more though, then you might have to learn
+about vlans. network security doesn't end at wi-fi security, and wi-fi security
+doesn't end at a strong password. many routers do include an option to limit networks to
+wpa3 only, and while this does break backwards compatibility with older or
+less secure devices, having a second wpa2 network using a different password and with
+much stricter network access rules is a great option if you're willing to put in the time to learn
+about it. in fact, at that point, why stop at two networks? you could have
+one for your main devices, one for your iot devices, and then a limited guest network for your
+visitors. it's a great way to really improve your network security, usually without having to
+purchase any additional hardware. just like this is a great way to segue to our sponsor, squarespace. are you looking to create a website but lack the technical
+expertise? squarespace is here to help. their all-in-one platform simplifies the process of getting your
+website up and running quickly. with squarespace, you can grow your business online through their
+marketing features, which include seo support, email campaigns, and social tools. they offer a wide selection of award-winning, mobile-optimized
+templates, and their commerce platform provides everything you need for merchandising to check
+out. you can also access analytic insights to optimize your website's
+performance and identify areas that need improvement. if you require assistance, squarespace has help guides and a 24/7 support team. so visit squarespace.com/ltt to receive 10% off your first purchase. if you guys enjoyed this video and you want a more detailed guide on how to improve your home network security, check out the time that i separated my main network from my iot devices.

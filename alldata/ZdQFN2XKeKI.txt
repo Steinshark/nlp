@@ -1,0 +1,169 @@
+So I'm going to tell you about the goat problem, 
+yeah? It's maybe- it's not the greatest of all   time but it's, you know, it's good enough, we'll 
+do it, it's all right. This is kind of like a   school kind of problem but it's actually hard 
+to solve. For a long time we did- we only had   an approximation of the answer, until recently. 
+And we actually for the first time have an exact   answer to the goat problem. So let me tell 
+you what it is - it does involve a goat. So   you've got like a fence going around a circular 
+field. And you have tethered a goat to the fence,   so to the side of that circle. So this is some 
+sort of rope of length - what do we call this?   Length r. So the field has a radius of 1 - why not 
+- and now we're going to tether a goat to the side   of the field and let's say the rope has length r, 
+okay, let's- there you go let's do a little goat. (Brady: That is confusing that we made it r.)
+- Well yeah it's kind of r because if you look   at where the goat can reach it's kind of a radius 
+of a circle. So this is where the goat can graze. So this is a fixed point where you've tethered 
+the goat; the goat can now roam as freely as that   tether will let him and so he can graze on the 
+field. And they question in the goat problem is:   how long should the rope be if you want the goat 
+to graze on half the field? And that feels like   something you might be able to solve maybe with 
+school level maths - you can get quite far with   school level maths. Let's see how far we can get.
+- (It feels easy)  - Yeah, it feels easy. And this is why people 
+are so frustrated when you tell them this   problem. I'll tell you what, I gather this is a 
+problem that they used to teach a lot in U.S Navy   academies. I don't know if they're teaching this 
+as an example of being used to difficult problems;   because they would teach this in these navy 
+academies and they would say - and you can   do this - there's no exact answer. 
+And people were frustrated and go,   surely this must have a exact answer, but no 
+exact answer was found until recently, and   it involved some hard maths. - (How old is school 
+student attack this problem?) So let's do another   circle. Let's make that the centre of the field 
+- do a little x at the centre of the field - and   let's say my goat can eat some sort of circular 
+area like this, something like that. So my goat   can reach all the way to the fence here, and my 
+goat could reach all the way to the fence here,   and then he can eat all this kind of curve here. 
+So it's a fraction of a circle with a radius of r.   This angle here that I've just made, let's give it 
+a name, alpha. I'll use alpha for the angle, okay,   quite good, it's a good name for for an angle.
+- (Good grassy number; grassy,) (alpha- alfalfa.)
+- You think alpha is grassy?  - (Alfalfa, yeah, it seems- I don't know.)
+So, this is how you would start to calculate   this with a bit of trick- I'm not going to go 
+through all the details of the trick because   it's boring. So what is the area of the field? 
+Well it's a circular field, it has a radius of 1,   so you use your traditional formula for working 
+out the area of a circle. And the field is going   to have an area of pi. But we want the 
+goat to eat half the field, so pi over 2.  Happy with that?
+- (Okay, pi over 2   is what the goat- we want the goat to have.)
+- Yeah, exactly. (Alright, now you've given us   his eating- well some of his eating area there.)
+- Yeah so this is some of his eating area   isn't it? I've kind of missed off some bits here, 
+I'll come to that as well. So what I'm going to do   is a little bit of school level trig; so when 
+I say trig I mean, you know, it's angles and   signs and cos's and triangles and things like 
+that. The length of the rope is going to be   2cos and then it's alpha over 2, it's half of 
+this angle here. But I've kind of- doesn't help   me work out the length of the rope, that's what 
+I'm trying to work out, because now I've just   sort of change the problem because I need to work 
+out what the angle is. Okay, so that's what we're   doing next. So that part is not so hard. Working 
+out the angle is where it starts to get hard,   okay. So if you calculate this, what we can 
+calculate is alpha is a fraction of a full   circle so I know that this area here is a fraction 
+of a full circle of radius r. I can also work out   if I start at the centre here a different circle, 
+because I've missed off these bits here, so let's   try and get those back. This is a fraction of a 
+circle with a radius 1 and so we could talk about   this angle and we could work out- if I worked out 
+at that angle it's going to be related to alpha   so I'm not going to do all those calculations. But 
+we can work out this fraction of a circle as well   and then add it together and then we've got this 
+area; but oh no wait, hang on, this diamond shape   that I've got here - can you see it's overlapped? So 
+I've got an overlap, kind of like two triangles and   it's all overlapping. You remove the overlap and 
+then you've got the area the goat has eaten. I've   not gone through the trig details because we 
+would just be here looking at sins and cos's   for a long time. But this is what you would get: pi 
+plus alpha - so that's our angle - cos of alpha minus   sin of alpha. That's the area that the goat 
+is eating - hopefully you can see why I didn't   go through all the details because it's actually 
+quite a nasty calculation to do. What we're going   to get then if we solve this is we're going to 
+find the angle alpha. And then that's okay because   I have a formula for the length of the rope there, 
+that's where we come- we fill- we do one last step   and then we'll get that length of the rope. So it's  
+actually calculating that angle that's important   for us for now. And we want this area that the 
+goat is eating to be half the field; and half   the field is pi over 2. So we set this equal to pi 
+over 2. We're trying to solve this equation; it's   not a particularly nice equation, it's trig and 
+in fact this is difficult to calculate because   it's called a transcendental equation. So it 
+sounds like a nice name but it's a difficult   kind of equation to solve. A nice equation to solve 
+is what we call a polynomial, and that's the kind   of things you get where you have x squared plus x 
+minus 6 - those kind of things. They're quite easy   to solve and when you do you get an exact answer 
+at the end so I can then say x is equal to - and I   could write something down. It might have square 
+roots and horrible things in it but I can give   you an exact answer. For a transcendental equation 
+I'm afraid there is no method for giving you an   exact answer; the only way to solve it - and it's the 
+angle we're trying to solve - is approximations. It's   the only way to solve it. And so that has been done, 
+so we have an approximate answer for that angle. So   we're getting closer and the approximate answer is 
+it's about 109 degrees plus some decimals. It's 109   degrees point 1885- something something something. And we're not 
+quite finished the goat problem because I want to   know the length of the rope. And then really the 
+last step is the easy step, yes the easy bit   of trig showed us that the length of the rope 
+should be 2 cos alpha over 2; and that's going to   be - and again it's only an approximate answer - but 
+it is this answer: 1.15872847301...   (So just longer than the radius of the field?)
+- So it is- yeah it's a little bit longer than the radius   of the field. I would have expected- if you asked 
+me to guess I would have gone um root 2, square   root of 2, something like that. That's what the answer
+expected it to be. I think that's where some people   get frustrated with this because they want it to 
+be an answer like that; but it's not what we've   got. And there is - well until recently - there is no 
+exact answer, it's that dot dot dot that shows you   it's not exact. It's a decimal, goes on forever, and 
+yes. I mean we've got an equal sign, but equal dot   dot dot. We can make this more accurate, you know, 
+you can make better approximations but I could   never tell you like an exact answer, like a little 
+equation or a little formula telling you what the   length of this rope is. What's surprising about 
+that problem, why it's surprisingly hard is because the   3-dimensional version of it is easier. The 
+3-dimensional version is a bird in a cage.   Imagine having a spherical cage of radius 1 
+and you've got a bird tied with a thread and then   that bird can then fly wherever it's allowed to fly 
+limited by that thread. So it can fly around; what   does the length of the thread need to be to be 
+half the volume of the sphere? That should be a   harder question - it turns out to be easier. Umm yeah 
+you can actually solve it. Here's the answer: the   equation you get to solve is something like this, 
+it's 3r to power 4 minus 8r cubed   plus 8 equals zero. I mean it's a traditional 
+mathematical equation, it's a polynomial. And if   it's a polynomial that will have an exact answer. 
+It might have square roots in it; it might look   a bit nasty but it will have an exact answer. 
+In fact when this was solved - Marshall Fraser   was a mathematician who solved this - he did 
+give an approximation for this answer. His   approximation was that thread was 1.228545 and then something something something. So he did originally give an 
+approximation. But a few years ago   um an exact answer was given and this is kind 
+of nice for me, it was a couple of friends of   mine who did it, so this is nice I get to give 
+them a shout-out. This is Nick and Graham Jameson;   actually Graham was my lecturer at university, and 
+Nick is my friend for other reasons. So hey hey   guys, this is really nice. And they actually worked 
+out the exact answer for the bird version of the   goat problem and it's this monster - all right, you 
+ready? And it is a monster, so are you ready?   (I'm ready)
+- My friends actually broke it down into two 
+parts because it's such a difficult thing to write   down. They define something called a and this is 
+a horrible thing as well; so a is 16 over 9 plus   4 over 3 and inside a couple of brackets we've 
+got 4 plus square root of 8 cube rooted   and then we add on another bracket here which is 
+going to be 4 minus square root of 8 in a   bracket and we're going to cube root that as well. 
+And then that's just halfway there, because then   their length of the rope thread for the bird was 
+going to be 2/3 plus a half of square root of a, that's where that a comes in, minus and then we've 
+got another horrible thing, another square root   of 16 thirds minus a - wow - plus 128 over 27 and 
+a square root of a down there as well. Whoa - it's   ridiculous isn't it? It's outrageous but it is an 
+actual exact answer to this problem. 
+- (So I could) (write that down as a decimal number?)
+- You could write that down as a decimal number but- I mean   that's what Marshall Fraser did; he didn't want 
+to calculate that outrageous expression so he said   well, I'll just approximate it and maybe that's 
+kind of more useful in some situations. But in   this case, this is a solvable problem. Umm actually 
+in higher dimensions it gets easier; if you keep   going up into the dimensions - 4 dimensions, 
+5 dimensions so on - the Goat Problem, the   length of the rope, starts to tend to an answer 
+and it tends to 1.41421... Oh it's the square root of 2. It's- 
+it actually tends to the square root of 2, so it   actually gets easier somehow as you're going to 
+higher and higher dimensions. And I would have   expected the answer to be square root of 2,  
+just intuitively that would be my guess. Square   root of 2 feels right to me - maybe that's just me 
+but it just feels right. But it's the 2-dimensional   one that caused all the problems. It's just really 
+really hard to solve - uh well until recently, we now   have an exact answer. This has finally been solved, 
+it's been solved by a German mathematician called   Ingo Ullisch; and to solve it he actually had to use 
+some higher level maths. He used complex analysis   so he calculated- that uses complex numbers. And he 
+calculated the areas using functions in complex   numbers, they were like sin functions and cos 
+functions, but now they're using complex numbers   instead of the regular numbers. And worked out 
+the area using this kind of maths and he found   an exact answer; he found that he found the exact 
+answer for that angle alpha. Once you've got that   then you can stick it into the formula we had 
+before. And it looks like this: so our angle alpha,   that's what we wanted to know. It's an integral, 
+it's a complex integral, that's what that symbol   means. And we're going to evaluate this - when we do 
+evaluate it - at z is a variable and oh what we've   got is going to be z minus 3 pi over 8 equals to 
+pi over 4. This is where you evaluate it and   then this is the function; it's z divided by the 
+sin of z minus z cos of z minus pi over 2. Put   that in a bracket and let's integrate that; that's 
+the dz, that's how you do that kind of thing. And   we're dividing by another integral which is kind 
+of similar - it's outrageous isn't it? But   it's an exact answer; I mean for the first time 
+we've got alpha equals a formula.
+- (And how long's the rope?) And how long's the rope? I mean I'm just 
+going to go back to our approximation because it   was easier to work out, which was what I said 
+earlier which was 1.158. 
+- (So it gets pretty much the)   (same it's just now-)
+- Oh it is the same, it is the 
+same. In fact I will tell you this, it's really nice   to have an exact answer - I mean a formula for the 
+first time. Although this formula is hard to work   out and if you wanted to work it out you'd be 
+better off approximating the values anyway. So   it's still calculated by approximations. But hey 
+we've got the first formula for the angle alpha!   (So you would then put that into-)
+- You then take that alpha, put it straight into the formula that   we had with our trig. So the trig is still there uh as our final step.
+- (And that- and that's just)  (going to change the length by like a billionth of 
+a nanometer sort of thing?)
+- I have no idea. Because I don't think   it's actually been calculated because it's hard.  (So we know the exact number but no one would probably bother calculating it. You couldn't put that into Wolfram Alpha?) I don't think we can- even Wolfram Alpha I think would struggle to calculate this answer. 
+- (Why did this mathematician do this? Why)  (did he spend his time just because-)
+- I don't want to speak for him but I can guess if you want? I mean   it is an exercise in his methods in mathematics. 
+It's- it's practice. And then, you know, this is   not an important problem uh but it is um a way to 
+practice, you know, your tools. And then you can use   that practice one day in the future for problems 
+you do care about.   Okay, here's a puzzle for you: it involves rotating a die, using the numbers 
+on the face, and moving it around this board.   It's the latest brain bender from Jane Street, 
+today's episode sponsor, and to check out the   details have a look at their website. There's a 
+nice clear explanation there and you'll also find   a wall of fame for people who have already cracked 
+the puzzle - maybe your name could be added. See the   link on screen and in the video description. And 
+while you're there why not check out some of the   latest jobs and opportunities and things going 
+on at Jane Street. They've got officers in the likes   of New York, Hong Kong, and London - a career at Jane 
+Street could be just the thing for someone with a   puzzle solving mind like you. 
+- ...every row column 
+and the diagonals, I also want them to include   a club, a heart, a spade and a diamond.
+- It's like a Sudoku. 
+- It is like a Sudoku! So try it out, it should   be the same kind of thing as a Sudoku. There 
+is a solution I'm not trying to catch you out.

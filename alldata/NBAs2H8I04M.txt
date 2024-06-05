@@ -1,0 +1,95 @@
+- I signed a non-disclosure
+agreement with Intel that prohibits me from reviewing any of the 12th Gen core Alder Lake family chips that they sent me until the embargo lifts. What it doesn't prevent me from doing is going out on the open market and buying this core i9 12900K engineering sample on Chinese Craigslist. Is it legit? How's it going to perform? Should you go buy engineering
+samples to get early access to upcoming platforms? Will Intel ever talk to me again? The OBSBOT tiny 4K gives you
+a smoother webcam experience with AI powered auto framing, gesture controls, and 4K recording. Learn more at the end of this video or at the link in the video description. (upbeat music) This cost me 4500 Chinese Yuan, which is about a 100 dollars
+more than a retail chip, but I'm hands-on with what is supposedly the core i9 12900K or at
+least some variation of it. Now I've talked about
+this in detail before, but when you buy anything
+other than a retail chip in a sealed box, you're
+risking a number of things. It could have been tampered with, Maybe IHS swapped with another lesser CPU. It could be faulty. Whoa, whoa, whoa, whoa. Or it could be an early engineering sample with entirely different
+performance characteristics. I believe that this one falls
+into that latter category. Let's have a closer look at this thing. So you can see it's not square. Like Intel's old CPUs. It says LGA 1700. So it has 1700 contact pads on the bottom. We can surmise that
+many of these extra pads are for additional connectivity or additional power delivery. Theoretically, this is a top spec chip. So it's gonna have 8 performance cores, 8 energy efficient cores, and a total of 24 threads. Since the performance course will have SMT or hyper-threading and the efficient cores will not. Frankly it looks exactly
+like our retail sample other than the fact that
+it says Intel confidential at the top. So, where did it come from? Here's the thing, for any new release, Intel works with platform
+partners like ASUS and MSI to ensure that when
+the new CPU's launched, there are accompanying motherboards and with partners like Crucial or G.Skill to ensure that there are
+shiny new DDR5 memory kits on the shelf right next to them. In order for that to happen, these partners need early
+access to processors. Like, before the specs are even finalized to test their hardware. Hundreds, thousands of chips can go out as part of the sampling process. And inevitably some of them
+end up falling off a test bench into a technician's pocket
+and onto the open market. Once the retail chips launch, these engineering samples
+turn from pretty hot to pretty not. Because no one in their right
+mind would pay full price for a potentially broken CPU when they can have a perfect one. But that hasn't happened yet, has it? Now, Anthony and I already did a video outlining the main deets
+for the Z690 platform. But here's what you guys need to know. You can expect 16 lanes
+of PCI Express Gen 5 for your GPU or other
+high-performance add in carts 4 lanes of PCI Express Gen 4, which is also coming directly off the CPU for a high-speed NBME storage device and a DMI 4.0 connection to
+the south bridge or IO hub or whatever the heck they're
+calling it at this point. It's about equivalent
+to two Gen 4 by 4 links, which is double last Gen for
+lots of high-speed storage and network connectivity. For power users and workstation users, I do hope to see the X699 ATDT platform that leaked come to fruition
+sooner rather than later. But this is a great start and more than enough for most gamers. The memory slots can be DDR5 or DDR4 with support for speeds of
+up to 4800 mega transfers per second, or 3200. Not at the same time,
+it's one or the other. And any higher speeds are going to require the integrated memory
+controller on the CPU to be overclocked. And that is one of the things
+that I'm expecting to be kind of crap about my engineering sample. You see, there are different
+kinds of engineering samples. ES1 is typically gonna be pretty early, often running at very low clock speeds while they dial in the
+manufacturing process. QS or qualifying sample is at
+the other end of the spectrum and can have issues, but it tends to be
+basically retail silicon with a different stamp
+on the heat spreader. ES2 which is what I have, in theory, that lies somewhere in between. So on paper, this should be pretty close
+to full functionality, but often with higher power
+consumption, lower clock speeds, turd level memory compatibility, especially when you're moving
+to a new type of memory, DDR 5, that kind of thing. Oh, thermal compound. I'm gonna need that. What a gaming beast this
+thing is supposed to be. We don't want any bottlenecks. So we're going RTX 3090, very
+last gen technology, okay. PCIe Gen 4. I'm kidding, obviously. I feel like I need to say that very fast. Unfortunately, I'd have an
+LTT store desk pad over here, and I'm not even showing
+off our best feature that you can get it in any size you want and it won't have to hang off the thing. lttstore.com. We have all different sizes. Don't do this. Don't be this guy. Moment of truth Andy. (switch clicks) (CPU whirring) That's a good sign. Where's the remote? Now the thing about unreleased hardware is that you can't exactly
+just look up error codes and see what problems
+other people have had and how they've solved them. This motherboard has a button
+called the retry button. Should we try it? Man, if I just got ripped off, I'm gonna be pretty, not stoked. Hi - Hi - It's not posting. - Have you tried clearing the CMOS? - Well, I couldn't find the pins. - Is there...
+- There's a button on the IO. I really hope I didn't
+just get completely, I mean, I expected to
+get ripped off a little. I was paying a 100 dollars
+over retail for an ES CPU. You know, I do it for you, right? - [Anthony] Can I have it, after that? - No, no, not you. I was playing at the camera. (Anthony laughing) If this doesn't work, I'm
+mostly out of options here. I'm plugged directly into the onboard. I actually don't know. This might be at 12900 KF. In which case it won't
+have any onboard video. So everything is fine, except
+for that it isn't working. This is why Dr. Su will
+always beat Pat Gelsinger in a fight. I wonder if Intel's done
+something to brick compatibility with ES chips in retail BIOSs'. (CPU whirring) I've never heard of
+them doing that before, but I also haven't played
+around with ES chips for any of the most recent platforms. So I'm gonna try another PCIe slot. Maybe there's a problem with
+the Gen 5 slots or something I don't know. Should've bought two, that's the solution. - After going through
+four more motherboards from two different vendors,
+we've figured it out. The POST codes seem to indicate
+that the CPU is working, but we can't get a display out because at some point in
+the validation process, motherboard manufacturers
+switched over qualifying samples or retail chips and Intel issued a
+management engine update that seems to break
+compatibility with ES 2 chips. Since they are engineering samples that ultimately are supposed
+to be returned to Intel or discarded, Intel is obviously not going
+to burn engineering resources, fixing compatibility with them. So Linus bought a paperweight. I guess I'll call Linus
+and break it to him. - Hey.
+- Hey, so I got some bad news for you. You just bought a $700 paperweight. - Oh. Okay. - Yeah. Like it powers on, but it's like some version
+thing with the BIOS. It's like just not gonna work. - I wish it was at least heavier 'cause it's not a very good paperweight. - Well, I mean, you could weigh down one
+sheet of paper probably, maybe up slightly. - Thank you very much for that. Okay, thanks for finishing the testing. - Yep. - Bye. - Bye. - To be honest, while I was hoping to run
+some performance tests ahead of the official release, these kinds of compatibility
+issues are not that uncommon with engineering sample chips. And we've even seen
+examples before of sellers who list not only their
+engineering sample for sale, but also specific boards
+and BIOS revisions that they have validated to work. And maybe something like that is going to emerge in the future for these ES2 Alder Lake samples, but as I outlined before, whenever you're buying
+something like this, your best case scenario
+is crappier performance and, or weird bugs. And your worst case scenario is getting absolutely
+hosed by a shady seller. No offense, no offense to the seller. It's just that by definition, anyone dealing in ES
+chips is a little shady. Unlike our sponsor. Thanks OBSBOT for sponsoring this video. Following up the popular OBSBOT tiny, OBSBOT has released
+their new tiny 4K webcam with a Sony sensor, with
+built-in auto-focus, allowing you to capture
+crystal clear 4K video at 30 FPS, or go for 10 ADP60 if you're looking for
+something a little smoother. They've also got AI powered auto framing using the 2-Axis Gimbal. So you're always in frame and to make quick adjustments easier, you can use gesture
+controls to zoom in and out instead of having to manually adjust. If you're worried about privacy, you can simply tilt the tiny 4K down and it will automatically stop
+recording audio and video, or you can use the power switch that they built into the cable. With built-in dual microphones, it's a great option for
+plug and play web cam users. And you can get yours today at the link in the video description. If you guys enjoyed this video, maybe check out the ES
+chips that we bought for our six workstations, one CPU project after I accidentally dropped
+one of the official ones that Intel gave me,
+rendering it inoperable. Those ones, we locked
+out and they did work. They just offered poorer
+performance because the clock speed wasn't as high.

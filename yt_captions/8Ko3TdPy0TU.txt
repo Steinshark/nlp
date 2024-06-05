@@ -1,0 +1,369 @@
+if a game involves aspects of randomness and 
+chance is it possible for one player to be so   lucky while playing that game that we can say with 
+mathematical certainty that they are officially   too lucky this is actually the most requested 
+video topic i have ever had because just over   a month ago there was some big drama in 
+the minecraft community one of the most   popular players someone called dream they've got 
+over 15 million subscribers on youtube they're   probably on twitch as well i don't know but 
+they were accused of cheating because in their   minecraft speed runs they were having incredibly 
+good luck and because all the arguments against   them all the proof that they were cheating 
+was based on probability and statistics an   overwhelming number of you got in touch with me 
+and asked if i could take a closer mathematical   look at it and i was very happy to do so and 
+my goodness there were some interesting results   but a beard how long did that take to film [Music]   i know a lot has already been said about the dream 
+speed run controversy but i think i'm actually   quite well placed to make a video about it because 
+i am a disinterested party that's not to say   i'm not uninterested like i am interested in 
+what's going on but i haven't got an interest   like an investment in either of the two parties 
+so i'm disinterested i don't care who's right   but i'm interested i want to make sure we get 
+to that right answer and we're going to have   a pretty wide spectrum of people watching 
+this video if you're here for the minecraft   first of all welcome to the channel 
+i'll try and go through the maths   as clearly as i can if you're here for the maths 
+regular viewers thanks for showing up uh i also   didn't know much about minecraft before this so i 
+will try to go through the minecraft details nice   and carefully some friends of mine had given me a 
+lot of help so we'll start with a very quick recap   of what the controversy was minecraft is a game 
+that can be played in many different ways some   players just want to explore the landscape mine 
+resources and craft items other players however   like to achieve some kind of objective and 
+effectively you know complete the game and in   minecraft java edition 1.16 you can finish the 
+game by killing an ender dragon and of course   the moment you can finish a video game 
+people are going to try and speed run it   speed running is the challenge of finishing a 
+video game as fast as possible and if you're not   aware of this that it's super popular there are 
+videos all over youtube streams on twitch people   love watching people finish games incredibly 
+quickly because it involves a lot of skill   now to speed run minecraft 116 players normally 
+start by collecting useful items in the overworld   traditionally done by finding a village that's the 
+fastest way to obtain a number of key resources   they then head to the nether which is a different 
+dimension by traveling through a nether portal   in a speed run that requires getting water 
+from a river and lava from a lava lake   don't try to understand the logic just go with it 
+once they're in the nether players can barter gold   that they've mined with piglen who will give them 
+different items some of which will be ender pearls   the players then have to find a nether fortress 
+where they can kill blazers and blazers will   sometimes when they die drop a blaze rod the ender 
+pearls and the blaze rods means the player can now   activate yet another portal which will get them 
+through to pretty much the end of the game they   pop out there's a dragon they've got to kill an 
+exit portal and then that's done the credits roll   and the challenge of speed running is just to find 
+the fastest way to do a certain combination of all   these different things to get to the end of the 
+game as quickly as possible and traditionally   i tend to watch speed runs of classic games things 
+like super mario brothers where yes there's some   luck like there's some randomness in the game but 
+it's mostly skill i mean even things like mike   tyson's punch-out a very old game watching people 
+hone the skill required to do that is absolutely   incredible in minecraft while there is obviously 
+a lot of skill there's way more luck than you   get in a lot of other speed runs for example 
+when trading with a piglet there are actually   17 different distinct items they might give you 
+and inside the game code there's a table for the   weights of how likely each of these different 
+items are if you want to get an ender pearl you   can see that's weighted 20 and 20 out of 420 gives 
+you a probability of 4.728 ish roughly 5 so you've   got to do a lot of trades to get ender pearls and 
+if you start putting gold ingots on the ground   a piglen will stand there and sequentially trade 
+until they've used up all of the gold what you   can do little pro tip here is if you put them in 
+a bit of a hole it will stop them from wandering   away when they're done you can then go and start a 
+parallel series of trades with a different penguin   and if you get them all going at once eventually 
+you should get enough ender pearls and in the six   live streams that dream did from october 2020 
+across them there were 262 batters and so you   would expect on average 12 of those trades to 
+result in ender pearls dream however got ender   pearls from 42 of their barters that's over three 
+times the average blaze rods are a bit more simple   they occur fifty percent of the time you kill a 
+blaze over the same six live streams dream killed   305 blazers which should give you 152 or 153 
+blaze rods on average dream got 211. dream was   getting pretty lucky now that we know precisely 
+how lucky dream was the next step is to calculate   what is the actual likelihood of someone being 
+that lucky what is the probability that you get   ender pearls 42 times from 262 barters we can work 
+that out using this the binomial formula i love it   it's such a good formula it gives you the exact 
+probability for a specific number of successes   in here you put the probability of success you 
+then raise it to the power of how many successes   you want and here's the probability of failure 
+which is to the power of all the other times   when you don't want a success and the term at the 
+front that's the choose function which compensates   for the number of different ways you can arrange 
+where the successes are so like in this case we   don't care when people get the end of pearls we 
+just care how many they get using that formula   we can fill in a whole table to give you the 
+probability that you will get any number of   successful batters resulting in ender pearls 
+and we plot that you can see the most likely   is 12 up at 11.6 probability and this middle 
+clump between 1 and 24 successful barters is 99.9   you are overwhelmingly likely to be in this 
+part of the distribution whereas dream is at   42 all the way out here that has a probability of 
+happening of 0.00 a bunch of zeros four although   it's slightly deceptive when you're looking this 
+far out to just pick one specific value because   there's so many other nearby ones it could be so 
+what we actually do is we look at the probability   of getting this or better which is the same number 
+of zeros but then five six i'm actually going to   stop writing that as a percentage and just do 
+it as a straight up number the probability is   5.6 times 10 to the negative 12. and sometimes 
+it's useful to think of that in terms of odds   and so that is the probability of one in 1.8 times 
+10 to the 11. we can now repeat the whole process   for blaze rods which have a 50 chance of happening 
+each time you kill a blaze and the probability of   getting 211 or more blaze rods out of 305 kills is 
+8.8 times 10 to the negative 12. also incredibly   small not dissimilar to the other one and that 
+represents odds of 1 in 1.1 times 10 to the 11.   so there's one in 110 trillion very very unlikely 
+and if we assume that these two probabilities are   independent the chance of them both happening we 
+multiply them together and the overall probability   is 5.0 times 10 to the negative 23. that's a 1 
+in 2 times 10 to the 22 chance a 2 with 22 zeros   after it getting a result as good or better 
+than what dream got is vanishingly unlikely   but just the straight odds that's clearly not the 
+whole story i mean you're watching me sit here   have arguably better luck than i have any right 
+to have what are the odds of this happening is   this real have i faked it somehow well there's 
+a lot of things you don't know how long have i   been sat here for where did this beard come from 
+how can we compensate for all the unknowns outside   of the actual bit we're looking at and don't worry 
+this is where more statistics and probability come   in and actually it's a good time to go to the very 
+first segment of this video part one the attack   part one the attack it all kicked off when dream 
+submitted one of their speed runs to speedrun.com   and it would have been at the time the fourth 
+fastest speed run of this part of minecraft   in the world however the moderation team at 
+speedrun.com were not convinced that dream   was using an original unaltered installation of 
+minecraft they thought the luck indicated dream   must be cheating they had somehow changed 
+the version of the game they were playing   and so they released a summary video that 
+went through their investigation into the   mathematics of the probabilities in a nice kind of 
+introductory level and they released a 29 page pdf   that went through it in i would say a rambly level 
+of detail the starting point was some observations   from other speed runners that dream had had very 
+good luck with the ender pearls and blaze rods   across six consecutive live streams in october 
+2020 they then did the same calculation that we   did with the binomial distribution combined them 
+the same way and got the 10 to the negative 23   probability that we previous saw but they didn't 
+stop there in fact the vast majority of the paper   is dedicated to looking at how there could be some 
+kind of bias in their findings they accounted for   four different ways that their investigation into 
+this probability could be unfair against dream and   tried to compensate for all the unknown aspects 
+of how dream could have got this lucky i we don't   have time in this video to go through all four of 
+those so i'm going to look mainly at sampling bias   in stream selection this is the idea that if 
+dream was doing a lot of different live streams   someone could have just maliciously picked the 
+ones which made dream look the most guilty however   we can fix that with some mathematics as i will 
+demonstrate with a coin flipping example let's say   i've uploaded a video to youtube of me flipping 
+a coin a hundred times because i have i've done   that it's on my second channel you can check it 
+out it's there in case you ever can't be bothered   flipping your own coin and i'm using a coin which 
+is yellow on one side for heads and it's blue   for tails however let's say hypothetically some 
+malicious actor has edited out just a run of 12   flips from the middle where i got 10 tails out 
+of 12 times i flipped the coin and they're saying   that clearly the coin can't be fair if you do the 
+binomial distribution on this there's only a 1.6   chance that you'd get 10 tails out of 12 flips or 
+a 1.9 chance that you would get 10 or more tails   out of 12 flips clearly it can't be a fair coin if 
+the chance of getting my results are so incredibly   small now you come along and you're not sure 
+who's telling the truth here so you're going   to try and compensate for the fact that you know 
+i did a hundred flips and let's say hypothetically   you can't find the original footage so yeah 
+yeah i know matt flipped it a hundred times   and obviously this malicious actor has 
+picked a run of flips with the smallest   probability of having occurred if the coin was 
+fair like the the p value but there were loads   of other runs of flips they could have picked 
+technically they could have picked any of the   individual flips there was a hundred of those to 
+pick they could just cut one out they could have   picked any of the 99 pairs of flips they could 
+have picked any of the 98 runs of three any of   the 97 runs of four all the way up in fact there 
+are 5050 different possible consecutive runs of   flips this malicious actor could have picked now 
+at this point to be honest you've got the general   idea if you're looking at some results you got to 
+bear in mind that there were probably more results   which someone could have picked from and you've 
+got to somehow factor that in the details of how   we do this get difficult to follow though because 
+you're taking lots of inverses of other inverses   and you're rounding things up or down and there's 
+no way you can pick this all up on the first pass   i'm gonna go through the details just so you get 
+a flavor of it but don't panic to understand it   properly you'll have to pause the video here 
+and go away and do some more reading that said   to give me the benefit of the doubt you're gonna 
+work out what is the probability if you flip a   coin a hundred times if the coin is fair that 
+there's a run in there somewhere out of any of   the 50 which is 1.9 percent likely to happen if 
+you flip a fair coin or worse so you're giving   me every possible chance to show my innocence and 
+to work that out so the probability would be one   minus the probability of that not happening just 
+easier to work it out that way so uh the chance   of it not happening 0.981 you raise that to the 
+power of 5050 and you subtract it off one and you   get one it's like a hundred percent but strictly 
+speaking that's not the exact probability because   to multiply them together like we've effectively 
+done by raising it to the power that assumes   each of the different potential runs are 
+independent but they're not they're overlapping   some of the the coin flips from one sequence are 
+also in a different sequence however if you were   to do it correctly you would always get this value 
+or smaller so you've done the upper bound the   maximum possible value because you're giving 
+me the benefit of the doubt and in this case   it is the maximum value it's 100 so you've not 
+managed to prove that my coin must be biased   i'm exonerated i'm very happy and of fun fact 
+the exact probability is actually 88.3 percent   so the rounding up took it a little bit higher in 
+my favor they have done the same thing with dreams   results and if you take the probability of having 
+the amount of luck that occurred on the trades   for ender pearls and instead of just being the 
+six live streams from the sample if you expanded   out to all 11 that could have been picked and 
+you do the same procedure the probability goes   up to a new upper bound of 8 times 10 to the 
+negative 10. it's still vanishingly unlikely   and this is the number which is as much in 
+dreams favor as possible by the way if you're   enjoying this video my book humble pie when math 
+goes wrong in the real world has just come out   in paperback in the us and it's full of very 
+similar stories so if you're enjoying this video   i guarantee you will enjoy the book as well 
+i will have more details about how you can   get copies with a free signed gift and i'm 
+doing a online talk at harvard bookstore   on the 4th of feb all of that at the end of the 
+video now we need to move on both from humble pie   and from the accusations against dream because 
+the pdf goes into incredible details about all   the other ways that they very carefully calculated 
+and up abound in dreams favor and if i had one   criticism of their paper they go into a level of 
+technical detail and language that's so dense it   feels almost deliberately obtuse i don't think 
+it's malicious i just think they were so worried   about people going through their argument with a 
+fine tooth cone that they overdid the technical   language and the details and i don't think it's 
+amazing math communication unlike other things so   we'll put that aside for now and we'll move on to 
+section two dreams response part two the response   dream responded with both a video of their own 
+on their second channel and their own 19 page pdf   full of mathematics this was written by an 
+anonymous astrophysicist who is apparently   an expert in astro statistics there you go they 
+are based at an online science consulting company   who dream paid to write this mathematical report 
+for them and before we get into any of the details   the one important thing to note is that they agree 
+on the headline statistic the naive calculation   that the probability of getting those enderpeal 
+trades and those blaze rods is a one in two times   10 to the 22 chance that's the hardcore maths 
+no one is arguing that what everyone's arguing   is how you compensate for all the other unknowns 
+how many live streams there are how many people   are playing the game or how many things from the 
+game you could choose to analyze all of that is   where this lot of mathematical working out differs 
+from what the mods on speedrun.com did and i'll be   honest i accused the previous paper being a bit 
+of choose this one is basically it's maths chaff   like it's terms i recognize and calculations that 
+i'm familiar with but the way it's put together   is not nonsensical but it's it's 
+clearly just trying to pad together   enough maths that a surface reading of it gives 
+some element of doubt a reasonable amount of doubt   that maybe dream genuinely got those results from 
+a normal version of minecraft so i'll give you two   examples of what i mean first of all there's a lot 
+of stuff in there which is true but you wonder why   they've put it in so here they show that you 
+can change the expression from the original   paper you can rearrange it using a thing called 
+the binomial approximation don't get me wrong   big fan but there's no reason why you would put 
+that in the paper that's just a step you would do   when you're actually crunching the calculation 
+it's nothing to do with the theory or the concepts   that they're trying to get across not only that 
+but it's missing a closing bracket that is an   unforgivable sin in mathematics and certainly does 
+not indicate that this was put together with care   and fact checking attention and here this number 
+the actual odds come out to be about 1 in 6 300   that number is incorrect and this is within their 
+own hypothetical situation they came up with   the idea that if you flip a coin 100 times what's 
+the chance that you get 20 heads in a row and i'm   not the first person to point out that that number 
+is wrong but as a expert in getting things wrong   i thought i should try and work out what they 
+actually did incorrectly and i ran the simulations   myself and discovered they must have simulated 
+it for heads and tails and then to compensate for   the fact that it's just heads they accidentally 
+divided by two when they should have multiplied   by two and that's why they're out by a factor 
+of four and it totally changes the thrust of   their argument because it moves what they claim is 
+the correct answer from one side of approximation   to the other and it's just indicative of a lack 
+of care and attention when putting together even   their own hypothetical examples i absolutely agree 
+with their point that probability calculations are   hard often in stats there is not one right way 
+to do something which is why they don't agree on   how to compensate for outside influences the only 
+thing we agree on is this original stat and while   we're here a quick subtle side point they use the 
+example of a lottery in terms of explaining that   unlikely things happen which i agree however their 
+whole paper is bringing down the odds that dream   could have got these results on a fair version of 
+minecraft down to 1 in 10 million but that's not   the raw stat that's still 2 times 10 to the 22 
+this is already compensating for the fact that   there were lots of opportunities for this to occur 
+it's not like the lottery if you compensate for   how many people actually buy lottery tickets the 
+odds of someone winning the lottery at all is one   people win the lottery all the time and this one 
+in 10 million figure is already compensating for   the fact that loads of people were doing a lot of 
+speed runs and i don't like the fact that they're   flipping between the two i would say a little 
+bit disingenuously i mean it just makes me sad i   know i started as a disinterested party but i can 
+say of the two papers this one is by a long shot   the least convincing please don't come and brigade 
+me dream stands i'm just going off the maths here   however there's a way around this i'm going to 
+ignore all the compensation that both parties have   done and just take the agreed raw statistic of 1 
+in 2 times 10 to the 22 and we will move forward   solely using that and to do this we need to 
+take a detour via a much more analog game   when you roll two dice not all outcomes are equal 
+a total of two is as unlikely as they come of the   36 different ways that two dice can land only 
+one of them is snake eyes whereas of the other   36 different ways they can land a full six of them 
+will give you a total of seven that is the most   common outcome you get when you roll two dice now 
+before minecraft back in the day where games were   analog dice were a common source of randomness 
+and so i thought we'll take a quick aside   to look at an equally spectacular world record 
+from a much more old school game ah craps it's   a two dice game where you want to avoid rolling 
+a seven i mean the rules are more complicated   than that but the short version is if you roll 
+a seven you're out and the current world record   for the most consecutive roles in craps without 
+getting a seven was set by patricia demero in 2009   when she rolled 154 consecutive non-sevens and the 
+probability of not getting a 7 is 30 out of the 36   options to the power of 154 is a probability of 
+6.4 times 10 to the negative 13. that is one in   1.5 times 10 to the 12. it is less likely than 
+the run of ender pearl trades that dream god and   i actually looked this up when i was trying to 
+find another improbable achievement in a game   to compare with what happened to dream and this is 
+the most unlikely result i was able to come across   so the question now is did patricia cheat 
+or is this legitimate to put it in context   the previous world record for craps was set 
+20 years before that and it was a mere 118   rolls in a row without getting a 7 which is the 
+probability of four point five times ten to the   negative ten one in two point two times ten to 
+the nine now that that i find plausible you see   according to statistics from 2011 there are about 
+three and a half thousand casinos in the world   i estimated they have an average of i don't 
+know five craps tables each some would have   way more some would have far fewer you can 
+get about six games of craps in per hour   on average i've decided the average casino was 
+open for i don't know 12 hours a day some are open   24 7. some are only open occasionally and just 
+to put it all together i decided to look at 10   years across that period of time my rough 
+fairly conservative estimate is every decade   there are 4.7 times 10 to the 9 games of craps and 
+that's twice as many as the 118 odds of one in 2.2   times 10 to the nine so i can totally believe it's 
+about a once a decade occurrence now patricia's   that's like a thousand times less likely so that's 
+like a one in ten chance of happening once a   century maybe my numbers were too conservative it 
+could be more likely it's it's right on the edge   of being plausible like it's feasible but it's 
+still very unlikely but of course we need to bear   in mind i didn't just set out looking into the 
+odds of craps for no reason it was because of this   record that i was even looking at the game of crap 
+there are loads of other games where something   unbelievable could have happened but hasn't 
+so i decided to pick a different game roulette   and then look into the odds after i'd already 
+selected the game and there were two world records   in roulette the world record for the most 
+consecutive spins of the same color is 32   absolutely incredible that's a one in 1.1 times 10 
+to the 10 occurrence and the world record for most   consecutive numbers uh the number 19 came up seven 
+times in a row and that is a one in three times   ten to the nine odds event so they're all around 
+10 to the 9 10 to the 10. and that seems to be the   ballpark for unlikely things happening in games of 
+chance in casinos and patricia's incredible run at   craps was just the meta lucky it was the luckiest 
+of the lucky ones and that's why i got pushed out   to something that was a one in 10 to the 12 chance 
+of actually occurring now dreams odds with the   ender pearl trades was at the level of 10 to the 
+11 so pretty much the same slightly more likely   but the thing is dream didn't just have that run 
+of good luck they also had one in 10 to the 11   odds in terms of their blaze drops for comparison 
+it's like if patricia had her world record 154   rolls and craps and then turned around and equaled 
+the roulette world record of 32 consecutive spins   on the same color in fact the odds of patricia 
+doing both of those at the same time is more   likely than what happened to dream what happened 
+to patricia boggles the mind in terms of its odds   there's no way you would have two things like 
+that happening at the same time so to try and   put dreams incredible luck in two unrelated parts 
+of the game in context i'm going to introduce   a new unit in the field of probability introducing 
+the 10 billion human second century the 10 billion   human second century is my attempt to put an 
+extreme upper bound on the odds any one event   can have and still potentially occur as being done 
+by humans so 100 years is equivalent to 3.15 times   10 to the 9 seconds yes a century is roughly pi 
+billion seconds let's not get distracted by that   now even though it's amazing it's within half a 
+percent we then multiply that by 10 billion humans   again we're rounding up to the maximum number 
+of humans and this result 3 times 10 to the 19   means that if every single human 10 billion of us 
+were all doing the same thing every single second   non-stop around the clock for a century that 
+thing will have occurred 3 times 10 to the 19   times so if anything is plausibly going to happen 
+as being done by a human it has to have odds below   that so if something takes more than a second to 
+do it's odds would better be below 3 times 10 to   the 19. if something is not being done by all of 
+10 billion humans the odds better be below that   if something's not being done constantly for 
+a century it needs to be below 3 times 10 to   the 19. and i know when we were looking at things 
+in casinos things that have occurred but are very   unlikely were around the 10 to the 9 10 to the 10 
+region and the world record for craps at 10 to the   12 is like the extreme version that's way below 3 
+times 10 to the 19 because it is a very very big   upper bound nothing that a human does will ever 
+have odds worse than 1 in 3 times 10 to the 19.   and as a quick aside i'm not saying you can't ever 
+do something which has more than 3 times 10 to   the 19 outcomes you could roll a 10-sided dice 20 
+times you'd get a very long number which is bigger   than 10 to the 19. but that number is meaningless 
+and this is an interesting nuance of probability   it's like prior knowledge it depends what you 
+wanted to get if you want to get any number you   can do that if you get a number that has 
+previously been agreed to be amazing and   what we're talking about in these situations are 
+when there's something people want to achieve   and we're looking at the odds of that not the odds 
+of getting anything that's the difference between   throwing a dart out of an airplane and it 
+perfectly landing like miles down on the ground   bam right in the bull's-eye of a target versus 
+just throwing a dart out of a plane letting it   land you land find the dart and then paint the 
+target around it very different probabilities   same action different probabilities in the case 
+of speed running minecraft it is agreed what   outcomes a lucky player wants to happen they 
+want to get ender pearls as fast as possible   they want to get the blaze rods as quickly as 
+they can and for dreams live streams they had   odds in the region of 2 times 10 to the 22 that is 
+way above the 3 times 10 to a 19 10 billion human   second century so all the extra stuff that was 
+put in the paper all the p hacking or the optimal   stopping the selection bias all fascinating and 
+very important parts of statistics for normal   statistical investigations where you're trying 
+to tease out subtle differences from stats but   when someone does something with odds of 2 times 
+10 to the 22 way beyond like just a thousand times   bigger than the 10 billion human second century 
+you don't have to worry about anything else that   is never gonna happen before my final verdict 
+a couple last things to clear up yes i have   dismissed a lot of the mathematics and statistics 
+in the two papers and that's partly because some   of it is terrible and partly because i think a lot 
+of it isn't necessary i have focused solely on the   2 times 10 to the 22 odds that everyone agrees 
+on because that's all you need you compare that   to the 10 billion human second century of 3 times 
+10 to the 19. now i know not everyone is fluent   in scientific notation and orders of magnitude so 
+i appreciate often i've habitually been rounding   or even dismissing those lead numbers because a 
+lot of the time all you really care about is how   big the number at the top here is which is why 
+i say that what dream did is a thousand times   more likely than this number because that is just 
+three bigger at the top and when numbers are this   big but yes you could calculate it unnecessarily 
+precisely in factory and leap years and the exact   human population and everything but the point is 
+one number is much bigger than the other number   and this is the absolute upper bound you can't 
+just think oh yeah but thousands of people are   playing the game and that makes up the difference 
+no no what i'm saying is if every single human in   existence was doing a speed run of minecraft every 
+single second around the clock every human doing   it for a century the odds are still you would 
+never see a result anywhere near what dream   got we don't have to compensate for how many 
+opportunities there are or how many people are   doing it that's all factored in if every human 
+was doing nothing but speedrunning minecraft   there's still only a one in a thousand chance 
+that you would get ish dreams results it's just   that ridiculous and when you compare it to the 
+highest probability result i actually found in   any other game and that's the world record and 
+craps the difference here that's a difference   of 10 orders of magnitude so dreams result is 
+10 billion times less likely than the current   most unlikely thing i could find in any other game 
+that has been officially recognized there was just   no way this happened which is not to say that 
+i'm saying dream definitely cheated and the odds   are not the chance that dream didn't cheat all 
+these odds are the chance you'd get that result   if the version of minecraft is exactly 
+as we think it is and so all we can say   definitively is the version of minecraft is not 
+the standard probabilities that we've been told   and other people have looked into the random 
+number generators and the code and maybe there's   an issue with how the program works and maybe the 
+blaze rods aren't separate to the ender pearls   because the program's going wrong somehow but 
+i think if there was a more systematic problem   like that then you wouldn't have such an anomaly 
+in only dreams speed runs but whatever the case   i'm not assigning guilt i'm just saying that 
+definitively as a disinterested party i can   confirm these speed runs done by dream should not 
+be included in the list of world records because   the version of minecraft they were played 
+on does not match what we think it should be oh right so thank you so much for watching 
+this ridiculous video all about feats of good   luck as i mentioned before the u.s edition 
+of humble pie is out now it is the same as   all the other editions well it's the same as 
+the other american one actually other than   more flexible and i have put an extra bit at the 
+back i added all the stories which i wasn't able   to put in the book because they happened after i 
+finished writing it so it's kind of the updated   verse the expansion pack version of humble pie and 
+because i couldn't get to the us to sign copies   what i've done instead is i got out the 
+old printed proof of the book when it was   being typeset and so some of these pages have my 
+handwritten corrections on them some don't because   they were fine i have signed every single page 
+if you order humble pie from harvard bookstore i   will link to it in the description below we will 
+send one of those sign sheets for free to the   first 314 orders at least if we have spares we'll 
+keep sending them out oh and they might come with   the book we might have to post them separately 
+haven't worked out the logistics just be patient   if you order it quick enough we will 
+get one to you and if you miss out   i mean at least you're supporting an independent 
+bookstore because other massive online retailers   also sell humble pies so you know you 
+can choose where you want to get it from   an extra vote for harvard bookstore though 
+tomorrow night i'm doing a free online talk   for them so 4th of february i'll link to it in the 
+description like i said totally free not limited   to 314 people you can come along you can ask me 
+questions we'll hang out we'll talk about math   it'll be good fun but don't forget order quick 
+to get a free signed sheet from the original   corrections proof now if you've been wondering 
+how long i've been sat here filming to get the   incredible good luck as required by this video 
+don't worry i have saved every single attempt   and i'm going to upload all of it hours of footage 
+for my fantastic patreon supporters because this   this video just wouldn't be possible without them 
+in fact when the whole minecraft controversy first   kicked off i thought you know what given people 
+support me to make math videos and there's   suddenly a whole flood of young people who want 
+to learn about statistics because of minecraft   i'm obliged to do a video and thanks to the 
+fantastic patreon support not only was i able   to sit here until i got the video to work uh 
+but oliver dunk has helped me out with all the   minecraft in the video uh alex genbash helped me 
+with doing the editing ben sparks helped me put   together some normal distributions binomial and 
+so there's a whole team of people and we can do it   because of your support and if you don't 
+support me on patreon that's fine don't worry   uh i know not everyone can afford 
+it if you're watching these videos   sharing them doing algorithm pleasing things 
+that's hugely appreciated as well thank you so   much and hopefully this video has reached a 
+new audience of people who've now realized   that they can go through stats themselves 
+critically and occasionally they just bear   in mind that when they see something which 
+seems too lucky to be true occasionally it is hey all right hey thanks for 
+your help that was excellent   no worries all that wait a beard 
+how long have you been filming for

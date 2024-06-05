@@ -1,0 +1,129 @@
+(motherboards crashing)
+(thunder booming) - There can be only one motherboard. Because your system needs only one CPU. But with so many options, all with different configurations of power phases,
+(lighting sizzling) PCI express lanes,
+(robotic bleeping) and M.2 slots,
+(computer buzzing) how do you choose which
+one is truly the best? Is it actually worth
+it to spend more money (cash register ringing)
+on a higher end motherboard? Well, Micro Center sponsored this video and sent us 10 motherboards from various manufacturers to test. And let me put it this way, if the results surprised us, then they're almost definitely
+going to surprise you. Like this
+(box thudding) was not the biggest loser,
+(words popping) not by a long shot (box thudding)
+and neither is Micro Center. Get the best prices and best
+selection on PC hardware and other technology at any
+of Micro Centers 25 locations across the United States. New customers can get
+a free 240 gigabyte SSD at Micro Center. Offer valid in-store only,
+no purchase necessary. (computer beeping) (upbeat music) For every motherboard, we tore down and rebuilt
+the exact same test bench, reusing the same memory,
+CPU, cooler, power supply, SSD, and graphics card. We even made sure to
+grab the exact same type of thermal paste for the last few boards when our first tube ran out. This is to control our variables
+as tightly as possible. We even tested every system in the same climate
+controlled environment. After building each bench, we'll have affiliate links down below for everything we used by the way, we immediately found an important reason to choose one board over the other. Not every UEFI BIOS is created equally. Some of these didn't even
+allow us to change the PL1 and PL2 power limits that much, if at all. And while most of them did, we had to dig through
+advanced CPU settings to find them in some cases. After powering on, we updated the BIOS, enabled XMP, and maxed out our long
+duration power limits whenever possible. We could have gone for a more, you know, vanilla configuration here, but given this is a more
+enthusiast-oriented exploration and that we are looking for benefits of more premium motherboards, we felt this was the right approach. The reality is modern CPUs
+have gotten really good at knowing exactly when
+it is okay to boost and when it is not. These days, it's actually
+pretty hard to break a CPU. And on most boards, you'll get some kind
+of warning when you toy with the settings that can do so. Enthusiast cooling has
+also gotten really good with most performance-tier
+gaming systems being equipped with a 240 millimeter AiO water cooler or a large tower heatsink. We used a Noctua NH-D15,
+(screen whooshing) which will run you about
+115 bucks at Micro Center and should give our
+processor plenty of room to stretch its legs while providing some
+incidental cooling to the VRMs, which could help performance. Something to note is that
+even with a great cooler, our Cinebench and Blender tests never saw our CPU push
+past the 250 watt mark and this is in spite of
+setting the power limits to the maximum of like
+4,000 watts in some cases. So what gives with that? Well, the thing is, even if we do find some
+performance differences from board to board, changing the power limits is kind of like removing the governor on a car. Yes, theoretically,
+the speedometer goes up to 300 miles an hour, but your engine is still
+going to max out on its own and like a car, you can open up some more headroom by increasing voltage,
+adjusting load line calibration, and manually changing the
+frequency of your chip, but that's a topic for
+another video, like this one, or for you to explore by subbing
+to an extreme overclocker like der8auer. This video is all about
+out-of-the-factory performance and right out of the gate, I'm really surprised. Our big winner was MSI's Godlike Z590, which ended up with the
+highest Cinebench score and the fastest Blender render times. To be clear, (screen whooshing)
+this is a $900 motherboard, competing against boards in
+the 100 to $200 category. But I mean, even in the days when motherboards affected
+system performance by a lot, it was common to see expensive boards that were loaded up with features. In this case, Thunderbolt 4, Wifi 6E, obviously super premium power delivery, but it didn't actually offer
+a clear performance advantage unless you were trying to break sub zero overclocking records. Of course, that performance advantage
+was still pretty small. So let's take a look at the
+board that came in second place, at least in terms of Cinebench. Our ASRock Z590 Pro 4 was
+behind by just 19 points in Cinebench and ran only
+a couple of seconds slower in the renders, yet managed a
+whopping 1% more FPS in CS:GO. Okay, that last bit doesn't
+sound that impressive, but it costs a fraction
+as much, at 185 US dollars and while it only has 14 power
+phases with 50 amp chokes, 2.5 gigabit LAN, and no onboard wifi, the choice is pretty clear
+if you care about value. Buy one of these instead, and maybe use the money you saved (screen whooshing)
+at lttstore.com. The beanie and the water
+bottle are a great combo. As for the rest of our results, they're mostly what we were expecting. CPUs are more integrated
+than ever these days. So motherboards don't
+contribute like they used to, but there are some outliers. For instance, MSI wins the crown for the best microATX B560 board as well, beating out three other Z590 boards, at least in Cinebench. The B560M MAG Mortar was slower to render by eight or 7% in BMW and
+Classroom respectively, but it had the third
+highest Cinebench score, the second highest FPS in CS:GO and the second fastest turn time in Civ 6. B550s aren't supposed to overclock, so picking up a supposedly
+lower tier board for its performance is
+a little un-intuitive. Meanwhile, MSI's Z590-A
+Pro lost in Cinebench by just 17 points. But how? Well, you could explain
+this with some simple run to run variants. That's such a narrow victory that it's barely one at all. You'd think that, but we actually reran our
+benches on every board and these margins between
+them, while narrow, were surprisingly consistent. One of the major benefits
+we saw with MSI boards was when you set them up, it asks you what kind of
+cooling solution you have. The more robust solution you pick, the higher they push both the long and short duration power limits. Since an NH-D15 is basically as good as a solid water cooling setup, we chose water-cooled
+instead of tower cooler and it maxed out the limits
+for us at 4,000 watts. You could easily achieve the
+same on a different brand, but this kind of
+user-friendliness is something the others could learn from. Of course, performance
+isn't the entire story. MSI's Z590 board managed to stay about 10 degrees cooler on the VRMs. So while the 90 plus degrees of our B560M MAG Mortar isn't out of spec for these kinds of components, a hot day could easily
+push that to 100 or 110. And remember, we have some
+air flow around the socket. If you're using an AiO or
+you're in a tight case, you might not. As for our losers, well, as you could have guessed, it's mostly the B560s and
+our solitary H510 board. The Gigabyte Z590 UD was 20 points behind in Cinebench and so, it unfortunately gets to hang out down here, despite performing significantly
+better in the render times and performing the best when it comes to CS:GO at nearly 560 FPS average. So if you're purely
+after gaming performance, this one might call to you
+from Micro Center's shelf or in one of their custom prebuilts, despite being down here
+in the loser's bracket. As for the one that was
+bad across the board, there are a few reasons for this. First off is their inability
+to set higher power limits. Most of them capped out
+at 125, 150, or 200 watts and increasing the duration
+limit didn't help all that much either. Most of them aren't running too hot. And if you chose a matching mid-tier CPU, they would most likely be fine, but they're just not able to live up to the 11900Ks full 250 watt potential. They typically have fewer power phases and a less robust power delivery system with just one 8-pin EPS connector. Speaking of phases, we're building out a DIY
+phase change CPU cooler with some help from ♪ Brian the Electrician ♪ - So make sure you get subscribed so you don't miss it.
+(bell ringing) Back to our B560 boards though. These power draw limits aren't surprising, but what is surprising
+are the bottom two boards. You might be shocked to learn that the ASRock H510M
+(cardboard scratching) wasn't in last place. It has no XMP option and memory can only go as
+high as 3,200 megahertz. So it did see the worst CS:GO
+score at 472 FPS average. However, it absolutely
+crushed our loser board in Cinebench by roughly 4,000 points. Render times were also won
+by nearly an extra minute in the BMW render and two
+minutes in the Classroom. As impressive as this is, these results are still
+significantly lower than the B560M board above it. But what the heck is going on
+with our Gigabyte B560M DS3H? Well, power phases
+don't seem to matter all that much until they do. This thing starts out strong and the initial render in
+Cinebench R23 finishes quickly, giving you hope, but with
+each subsequent render, the score goes down and down and down, all the way to about 7,688 points. Ouch. If we check our clock speeds and power, they're all over the place while CPU temperatures are
+mediocre at 80 to 84 degrees. What gives? Well, our VRM temperatures are terrible, quickly hitting 112 degrees Celsius. This board is trying to squeeze
+all the power it can out for our CPU, but the
+load is simply too much for the system to bear and it buckles under the pressure, dropping wattage and clock speeds in an effort to lower the temperatures, bringing them back up
+to see if it's okay yet and then quickly settling back down again. It's like a person trying to
+take a bath in boiling water. The toe dips in, they recoil, and they wait a moment
+and then they try again and it just keeps going like that. How other CPU heavy tasks saw
+similarly poor performance, with this board seeing the
+worst turn times in Civ 6 and the second worst FPS in CS:GO. I have a hunch that if
+the memory had been set to 3,200 megahertz, it would have lost the battle
+to the ASRock H510M as well. So our winner is obvious, but it's not the Godlike. As it stands, the best board of the bunch, with prices we can actually recommend, is the ASRock Z590 Pro4. It didn't come out on top in any category, but it was always near the
+head of the pack at $185. The BIOS was relatively easy to use. It has a lot of options
+for expansion and storage, and it comes with ASRock's
+base frequency boost technology that supposedly pushes
+non-K CPUs past their limit through base clock overclocking. So theoretically, you should
+be able to buy this board, put a lower end chip in it, and still get pretty good performance until you can afford something better. Our honorable mention is
+MSI's B560M MAG Mortar. For a smaller machine on a
+budget, it's a great choice, just like Micro Center, today's sponsor. Get the best prices and the
+best selection on PC hardware and technology at any of the
+Micro Centers 25 locations across the United States. New customers can get
+a free 240 gigabyte SSD at Micro Center, offer valid in-store only,
+no purchase necessary. Thanks for watching, guys. If you enjoyed this video, make sure to check out
+our How Motherboards Work, Turbo Nerd Edition for
+a better explanation of how some of this works. I'll have that linked down below.

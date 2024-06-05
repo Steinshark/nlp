@@ -1,0 +1,168 @@
+- we were called out
+recently by shank mods in his super popular hot
+wheels pc modding video where he invited us to
+work on a dumb idea. put a 3090 in a hot wheels
+chassis he offered as a present. well, christmas come early. shank mods is here and so is the hardware. there's just one problem. - this isn't a half-length card. - smartdeploy! now powered by pdq.com, smartdeploy allows it professionals to image and manage
+unlimited computer models with one windows image. search their library for your models and claim your free
+licenses worth over $500 at smartdeploy.com/linus. (upbeat music) - let's start by going
+over what we wanna do versus the constraints of
+this tiny 9.6 liter case that's gonna try to
+stop us from doing that. first of all, this big graphics
+card, where's it gonna go? - so, it's gonna be similar to how i had it on my other hot wheels pc. so we're gonna cut out a slit right here. this case is really beat up, so it's a good candidate for
+doing lots of work on it. - okay, so you have a spot for the 3090, but i'm guessing that the power supply that comes with this thing
+isn't gonna be enough. - so the power supplies
+from these hot wheels pcs are kind of infamous for
+just getting toasted. we're gonna be using a different
+setup for the power supply. we got two of these sfx power supplies, they're 650 watts each. so we're gonna take
+these two power supplies, and we wanna turn this whole area here and use it for something else. so we're gonna take these power supplies and put 'em right up here along the top. - that's gonna fit - like that. so they'll fit up top. - up above? - [shank mods] yeah,
+so we'll have these two at the very top of the case. together, we're looking
+at like 1300 watts. - hopefully that should be enough. so that brings me to what
+other parts are we gonna use? - [shank mods] we're gonna
+using a 5800x3d, the new one, this gigabyte mini itx motherboard along with two sticks of ballistics ram. - i couldn't help notice this
+giant air cooler on here. - so this is just what we
+have right now for kind of testing to make sure
+the whole thing works, but we're gonna be running
+a liquid cooling loop for everything.
+- it is gonna be water cooled. - yes, so the whole thing, the
+gpu and the cpu were gonna be on a single loop. the case is actually
+pretty easy to take apart, you just removed two
+screws here at the top and then one in the bottom with this pretty sweet screwdriver - lttstore.soon. - so once you remove these two screws, the whole chassis-- - oh my god. - nope, it slides right out. - [james] oh, she's dusty. - ah yes. yeah, this one's fresh. it doesn't work. - in your last video when you
+revamped a hot wheels species, you basically just made
+like a superpower version of most of the original kind of pc, right? - yes, so for mine i tried
+to keep the optical drive, the floppy drive and then i
+stuffed it with two hard drives. but for this one, because we're cramming so much more power inside of it, - we're losing all of that. - yeah, the airflow in the original case, we had two air intakes there
+and then we had this grill here and that's all the air intake. by removing the floppy
+drive and the optical drive, we're gonna get a lot
+more airflow in the front which will help us cool
+the much beef here, gpu. - is that gonna be enough? or should we think about
+maybe widening these or maybe putting a hole on
+the top or what do you think? - that's something i considered, but i really want to try to keep the case as close to original as possible, kind of keep the same aesthetic. the airflow you gain versus what you lose, - like the spirit of the building. - i don't think it'd be worth it. - being the hot wheels
+connoisseur that shank is, he brought multiple. so let's just use this one so it's easier to see
+your plan for the cooling. now, we emailed back and forth a bit and you had an original plan. - yeah, so the original plan was this 80, this right here, we have
+an 80 millimeter grill, and this is the only
+exhaust on the entire pc. so my original plan was to run another 92 millimeter custom
+loop here with a blow e metron. there are 12 volt fans that
+drop out four to five amps. that should do a good job cooling it. but the issue is it's really loud. (blow e metron whirring) - there's another problem with it though, was that linus was
+actually really skeptical that that would even
+be sufficient cooling. - so another plan we had was
+to put more tiny blow e metrons up here with another radiator,
+with another radiator here and just have radiators
+everywhere with blow e metrons. but that would just be so loud. aside from putting radiators all over it, me and alex got to work,
+brainstorming through a video call. alex came up with the idea of trying to fit a bigger radiator by moving the power supplies. - how big are we talking, 120? - so 120 millimeters. so what i was able to do was i had those flex atx power supplies. and if we mount them to the top, this clears up where the power supply was. rather than using an 80 millimeter exhaust for the 92 millimeter rad,
+we can cut this part out and have a 120 millimeter rad right here. - there's another thing, at
+the top we were talking about how this is longer than a typical 3090. how are we gonna make this fit? - fortunately, the hot
+wheels pc itself has a bit of dead space. we're gonna have to cut
+into the back of the frame and have a place for it to extrude a bit. and that will also provide support for the back of the graphics card. - okay, so we've got
+everything on an open air bench and right away i'm thinking
+this 120 millimeter radiator is looking pretty thick compared to the tiny chassis
+that needs to fit into. but what we're trying to
+figure out right now is is this even sufficient cooling? so we have furmark running
+to tax the [james]u, we've got prime95 running to tax the cpu, and we've got hardware info
+open to monitor our attempts. and we're gonna see what
+they end up plateauing at. now you might say that this
+isn't even a relevant test to do because it's an open air
+bench and it's gonna be going into this completely, almost
+completely closed off chassis. but what we want to know is, do we at least have some headroom here? if it doesn't thermal throttle on this, that means we have some room to play with. and maybe there's a chance in
+hell that it'll work in here. but if it does thermal throttle on here, then we have to reinvent the wheel and think of another solution. 'cause if it doesn't work
+here, it's not gonna work here. okay, so we have a cooling loop set up, and the game we're gonna play here is, does linus think this
+is sufficient cooling? - oh my gosh, i can already
+tell you probably not. - all right, so i'm gonna
+aim the camera at it. you've got your water block 3090, you've got a 5800x3d in there, and-- - wow, okay. - there's your rez, and this is your chungus,
+thick, 120 millimeter rad. - that's a crossflow rad, so i can already tell you
+you're giving up some there. - so what do you think the temps are? we've been running furmark
+for about 20 minutes, as well as prime95. - well, i can tell you i
+think that [james]u is up in the 80 degree range. and then i think the cpu is
+probably as high as 70 plus. - we got the furmark here. - shut up! (crew laughing) - 51 degrees after 26 minutes. - really? okay, this might just work then. yeah, you might just pull this off. - (laughs) daddy's proud. we're gonna modify this chassis to fit our 3090 in five steps. step one is gonna be to clean out and empty out this whole thing. so it's more like this. that
+means we're gonna have to drill out these rivets and pull out these cages. next, we're gonna have to
+drill a hole here for the gpu. that's step two, and step
+three, the opposite side, 'cause remember the gpu has to stick out 'cause it's too long. step four is gonna be cutting
+a hole for our power supplies and then step five, cut a
+hole for our big old radiator. but i actually have a lot of other stuff to do in my regular job. so i'm gonna get tynan do this for me. - oh, what? (upbeat music)
+(vacuum cleaner whirring) (drill whirring) (upbeat music) - i originally used this
+motherboard on my previous build, but there's a few issues
+we're gonna have to solve to make this one work. this bracket right here interferes with this little extrusion, so we're gonna need to remove this plate. the other issue we have is right here because this is a permanently
+a fixed io shield, this but right against
+this lip right here. so in order to make this
+fit, we're gonna need to cut into the bed 'cause this
+is where it's all mounted. (machine whirring)
+(upbeat music) - so after taking out this initial cut and realizing that this
+is kind of impractical, i just spent a little
+bit of time cutting up what's going to be our back plate here with all of the cutouts for
+power supplies, the [james]u as well as the io shield and the radiator. and i'm about to cut out
+one of our test pieces before trying to go on to
+either our mill or our router to cut it out of a metal. i cut out a thicker piece
+of acrylic that's also clear so we have an idea of what's going on. and also it's a lot more structural. and then the next thing
+we wanna try to do is fit in the rad, which we already
+know is gonna be not fun. - so the radiator's the biggest thing. so right here, there's not
+enough space right here because of the cap right
+there is bumping against it. so the screws posts
+are barely not able to. - so we had a thought
+that maybe we can get away with taking this cap off,
+taking it off onto the tormach and machining it flatter so
+we have a lower profile bit, 'cause it has a nailing on
+it so we can hand tighten it. and that might just
+give us enough clearance to let it fit in. - ready for more dumb idea? - oh god. - [shank] instead of this, what if this? - yeah. - [shank] we had it kind of crooked. - [tynan] yep. - [shank] so then it was
+right up against there, that would give us more clearance for the [james]u and a little
+bit more clearance there. so the only downside is it
+would look a little crooked on the back of it, which-- - [tynan] that's fine. - [shank] which is fine. - yeah, we can totally do
+that. i'll cut out another one. (upbeat music) (drill whirring) - now that we've cut this hole
+outta the front of the case for the back of the [james]u,
+it should be able to fit. can slide right into there
+and click into place. and even though it is
+extruding out of this part of the case slightly, it's
+still within the range of that gap inside of there. so it'll fit right into the
+dead space inside this case but outside of this
+frame, so fits right in. (upbeat rock music) - some breaking news, shank
+mods is now on floatplane. he already has multiple
+exclusives ready to go, including over an hour
+long director's commentary of his gamecube joycons video, and a bunch of behind
+the scenes information. so if you love shank's content but are left wanting by the
+big gaps between his videos, check him out on floatplane
+for extra goodies. now back to the video. (car engine roaring) - this aluminum back plate
+represents the crossing off of every list item. we've done it. - yeah. - we've finished--
+- at this point, yes. - okay.
+- pretty much, yeah. - so now we have everything sitting like a pile of meat in the case loose. and once we put this on, then it'll all be mounted and secure. then we can fill the loop and pray to whatever
+existence is beyond us that this thing actually
+still boots and works. so let's get this on. - all right, ready? so i'm gonna lift this up
+and then push this part in. so then it fits then. - [david] nice. - okay. - slides right in. - okay, we got furmark
+going, prime95 going. we're two minutes into this test, and we do not have the fan set to 100%. so we're hoping that's gonna be fine. - if not, we'll try setting it to a hundred and see how it goes then. - and how loud it is. - yeah. - 23 minutes in, temps are stabilized. tynan can you remind us what
+the numbers were before? the cpu max before was? - so cpu max before was 68.8 degrees. - now it's 81.6. the [james]u temp before was? - 52 degrees. - 52, the max now 64. - so hotter, but not
+technically throttling - the cpu could be cooler. - yeah. - i wouldn't wanna daily drive at 82, but i'm pretty happy with
+the [james]u temp at 64. that's not that good. so let's ramp it up. - yeah, so let's restart it,
+- and do this all again. - go into the bios, crank the fan and see if it runs any better. - it's been 20 minutes
+with the radiator found max and we dropped 10 degrees. lttstore.com ladies and gentlemen. 70 degrees on the cpu, and what is it? bouncing around 54 on the [james]u. - wow.
+- damn. - yeah, not bad for so much
+power in such a little case. in what, 9.4 liters, 9.6? - 9.6. - less than 10. - [david] i can drink that in a day. - oh yeah.
+- but this is a gaming rig. so let's play some games. (upbeat music) - i feel terrible that
+i missed all of this, but at least i get to see it now. - all right, you ready for this? - i'm ready to feel greater. oh my god, it's amazing. you guys did up the ostendo. what did you even do? is this just the electrical tape? oh, oh (beep) dog. shut up. this might be the greatest
+retro-themed gaming set up of all time. no, i'm serious. what could be better? we've got the ostendo, basically what? how many of these even exist anymore? you have rear projection ultra
+wide, the first ultra wide. we've got the one and only hot wheels pc. that's interesting. well, it's hot wheels. wait, the radiator's... you guys managed to get everything inside? holy crap, is it ever? can i open it up? it doesn't open up the
+old way anymore, does it? - [james] well, the problem is you'll see that these are rivets and not screws. - [linus] yes, i see that. - and the reason for that was because it's so tight in
+there that if we use screws, we wouldn't be able to hold the nuts so that the nut didn't spin. and we couldn't even put nuts in. it's nutless. - no-nut hot wheels pc. i have to game on it. oh oh, okay, it's the actual hot wheels. i was hoping we had a modern
+mouse with vinyl decals like you guys did on
+these, but wait, what? you guys spray painted an
+entire keyboard for this. - [james] yeah, he didn't
+even take the keys off, just bombed it - just went for it. it took me this long to notice though. so stealthy. this is absolutely insane. what could be more glorious? oh, i see. oh, i see. ooh, that's actually pretty sleek. oh my gosh. the only thing i've ever
+seen that gets close to this is luke's fallout bomb pc. it's packed so tight,
+front to back rtx 3090, fricking flex atx power supply. - [james] there's two of them. - there's two. there's two? there's two! this may be the greatest
+computer in existence. what, you don't believe me? fine, show me a greater one. prove it is greater. is this custom? did shank do this? well, this is my favorite xbox controller. is it mine? - [david] no, i think he wants it back. - oh crap, okay. oh, that's fine. i would too. the maximum noise of it
+isn't even that ridiculous. to be clear, it's not quiet,
+but it's not loud in the ways that i might have expected. for example, those flex atx power supplies are barely even contributing. it's just that knock to a
+air mover industrial ppc fan that we've got in there. kids, can you say 130 fps at whatever weirdo resolution this is? it looks like garbage 'cause the image is so soft on this monitor,
+but it's running great. i was big into the just black
+frames around everything. nah dog, i want a blue,
+orange and yellow monitor now. there's just no other way to put it. this build absolutely slays. it's the coolest thing i've ever seen, just like our sponsor. - war thunder. war thunder is a free-to-play online military vehicle combat game. it's available on windows,
+mac, linux, ps4, ps5, xbox one, and xbox
+series x with cross play. it features 10 playable nations
+and an incredible arsenal of over 2000 historically
+accurate playable tanks, aircrafts and ships from the 1910s to the vehicles in service today. you'll compete in massive
+combined armors battles on over 100 major battlefields
+from world war ii to modern environments. war thunder's vehicles are implemented with a high level of
+authenticity and detail. so their speed, their armor, fire power and model are as close
+to real life as possible without compromising on gameplay. their damage models are
+realistic and dynamic, adding a huge amount of depth that's rarely matched by
+other free-to-play games. so head to the link below and start playing war thunder for free. you'll also get a free
+bonus premium vehicle just for signing up. - if you guys enjoyed this video, you absolutely need to subscribe
+to shank mods on youtube. he has done some absolutely crazy stuff, both with hot wheels and barbie pcs, as well as other cool stuff. so definitely go check him out. and if you're looking for
+another video to watch right now, maybe go check out... actually i've got a playlist for you. this is far from our only sleeper pc, and some of them, actually i don't know if they're crazier than this one, but alright they'll be a let
+down, but they're good too.

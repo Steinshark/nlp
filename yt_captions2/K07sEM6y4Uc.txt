@@ -1,0 +1,138 @@
+- if you buy electronics
+on marketplaces like ebay or ali express, you can
+easily end up with a product that doesn't live up to
+the performance or quality that you would expect. but what if i told you that the same thing is happening right now
+on reputable websites, like newegg and micro center, and with trusted brands like
+kingston, pny and adata. that's right. all three of them have been accused of releasing new products, then silently downgrading
+them after the fact. it's the perfect crime, right? you get a wave of positive reviews from media and early
+enthusiast customers, right? and for everyone who comes later, well, they have no way of getting the original
+product to compare. so you can just hand wave it
+away as your mileage may vary. right? wrong. in march of this year, i put out a bounty for a particular drive,
+the adata xpg sx8200 pro, offering to pay our community
+members three times the msrp if anyone could ship me a
+unique variant of this drive. i mean, how many could there be, right? two, three, eight? wow. that's a lot. and we've got five of them to answer three questions
+once and for all. our manufacturers, bait and
+switching their customers, why would they do that? and does it really matter anyway? oh yeah. there's one more question. who's our sponsor? honey. honey is the free to use
+shopping tool that helps search for some of the best promo codes on lots of your favorite websites. get it today@jointhoney.com/ltt. (low-pitched music) (upbeat electrifying music) on paper, the xpg sx8200 pro is one of the top performing pci
+express gen3m.2 drives. it's rated at up to 3500
+megabytes per second reads and up to 3000 megabytes
+per second writes. and in third-party
+reviews, it managed to meet and sometimes even exceed
+those lofty claims, whether sequential speeds
+are a meaningful measure of ssd performance is
+a separate discussion, but adata used it as the
+standard to measure this product and they delivered on it,
+except for one small problem. if you go to the store today and pull an sx8200 pro off the shelf, you might not actually
+be getting one of these. it ended up being a reddit user
+by the name of svarchimpans, who blew the whistle on this. they purchased three 88
+sx8200 pro two terabyte drives at different points in time and found that a brand new
+drive purchased in 2021 was performing a boat as
+well as a 94% full drive that had been in use for over a year. big yikes, as the kids say. of course, just because
+something was on reddit, doesn't make it accurate. and in fact, adata pointed out that the user appeared
+to have connected one of the ssds directly to
+cpu controlled pcie lanes while the other was running
+through the motherboards pch. that actually could account for the observed performance difference, but i'm not fully satisfied. let's go through all of
+our different variants then and get them naked, starting with what
+adata sent to the media. there we go. now there are three
+main hardware components that affect ssd performance,
+starting with the controller. this acts as both the brain
+and communications hub of the drive and better ones
+use smarter storage algorithms that have a profound impact on both performance and endurance. next, we've got the nand flash, where all your data is actually stored. fast high endurance nand means
+a fast high endurance drive. and then finally, we've
+got our dram cache. this holds data temporarily
+so that it can be written in a way that, okay,
+this is becoming a bit of a pattern here, makes the drive faster and longer lasting. and this right here, this
+is a good combination. silicon motion sm 2262 eng controller, 4x256 gigs of imft 64
+layer tlc nand flash. it's a total of one terabyte, and two packages of 512
+megabytes of nanya ddr3l. hold on a second. given that speed and endurance are the only things really
+separating a premium ssd from a cheap one, it stands to reason that changing even one of these
+components has the potential to turn this into an entirely
+different class of product. so, what did adata change? i'm so glad you asked? everything. thanks to a tool developed specifically for silicon motion controllers, we were able to generate this table with the full actual specs
+of each of our five drives and to summarize what's
+happening here compared to our original. remember the one sent to the media, not a single drive had more than one of these three components i just talked about that matches. only this one purchased in july of 2019, even uses the same eng
+variant of the controller with the other three using
+the slower g variant. none of our samples used the
+same ddr3 as our original, although i don't really
+expect that to be a problem. and all five of them use not
+just different nand flash, but different nand flash from
+completely different vendors. that's right. out of the top six nand flash
+manufacturers in the world, we have five of them represented here, which doesn't matter as long
+as they all meet the same bar for performance and endurance. but the question is, do they? unfortunately, without
+hundreds of samples, we can't perform any kind of
+meaningful endurance testing, but we can validate performance. and let's just say some
+discrepancies were found. right out of the gate, the three drives using
+the slower g variant of the controller failed
+to meet the up two sequential read and write
+speeds advertised on the box while both of our en variant samples at least came very close
+in crystaldiskmark. but let's see if these
+differences hold up in pcmark, which is a benchmark that more closely simulates
+real-world drive use. now, this is interesting. much like in the synthetic benchmark, the faster clocked en variants
+managed higher peak speeds for both reads and writes, but their overall performance
+was actually measurably lower. and when we rerun the tests
+with all of the drives, three quarters filled with data, the en variants took a more
+noticeable performance hit between seven and a half to 9%. that's compared to less
+than 1% on the g drives. so in the case of the controller swap, you're likely to end up
+with better performance in the real world, but
+that doesn't explain 88 as loot box approach to
+nand flash procurement. now, this one is more likely down to pricing and market availability. the sx 82 pro launched
+right around the time that 96 layer flash was making
+its way onto the market. there's an rnd cost associated
+with these transitions, but adding more layers generally lowers the cost per gigabyte, incentivizing this kind of development, except that nand pricing is subject to supply and demand
+pressure like any commodity. so if apple, let's say booked a huge order for 96 layer nand tightening the supply, that could drive up the
+price forcing smaller players like adata to buy older 64 layer tech or whatever's available,
+all of which can be fine, just like you'll look fine
+in that stealth hoodie from lltstore.com. the thing is sourcing components from two or more suppliers
+isn't a new strategy, and sometimes it's a necessary one. samsung uses both snapdragon
+and exynoses on flagship phones and apple was sourcing modems from both intel and
+qualcomm simultaneously at one point while they
+made the transition. this practice can alleviate
+supply chain issues and it can force your vendors
+to stay cost competitive if they know you can just
+buy it from someone else. amd famously pulled a bait and switch with one of their products, the ryzen 5 1600 a couple of years ago. but in that case, what they
+did was quietly moved it from 14 nanometer to 12 nanometers, giving their customers a
+slightly better version of what is fundamentally the
+same product at a great price, no harm, no foul. it's just that the two rules to follow are that proper validation is needed to ensure that both parts are
+indistinguishable to the end-user and failing that the
+changes must be disclosed. adata doesn't appear to have
+done either of those things. in their statement to tom's hardware, they said, "we do guarantee
+that every sx8200 pro will perform to spec within
+the regular variations since the drives have
+been tested stringently." but while that may be technically correct, anything between zero and
+3500 megabytes per second is technically up to 3500
+megabytes per second. it also has the potential
+to be extremely misleading. there was a similar scandal back in 2014 when kingston and pny were called out for the same bait and switch tactic. actually, as we were
+finishing writing this video, new surface that pny had allegedly quietly reduced the accelerate cs3030's endurance by nearly 80% on their
+500 gig one terabyte and two terabyte models yet
+there was no revision number or announcement and it's still labeled on shelves as the same drive. that means that customers are
+left without the proper tools to make an informed decision. now these vendors might say, who cares about a 10%
+performance difference, or it's not our fault. it's down to the inconsistent supply and it's unmanageable to make a new skill every
+time there's a change. but my counter to that is a, people pay a lot of money
+for 10% more performance in some cases. and b, if you can't be
+arsed to test and label and get the specs right
+for your own products, maybe you need some oversight. i mean, this is why
+organizations like vesa exist. prior to vesa's display
+hdr certification program, hdr ready was casually thrown
+around without any regard for the level of experience that product would actually deliver. now, the current system
+ain't perfect either. i mean, display hdr 400
+shouldn't even exist, but at least that label means that you can trust that product to meet a certain performance standard. camera storage labels, like u3 and v 90 on sd cards
+serve a similar purpose. they give consumers a quick and easy way to ensure that their media will handle the speeds
+their camera requires. now, this hasn't really been an issue with ssd boot drives up until now because the main competition
+for them has been from hard drives, but as
+genuinely faster ssds become a requirement for gamers
+who wanna take advantage of features like direct storage, it would be really nice to see someone hold these
+guys accountable finally for playing so fast and loose
+with their product specs. oh, wait, i guess that's us. ssd manufacturers, stop it. we see you, all of us. you see that view counter down there, everyone knows about this now and if you guys don't cut it out, we're gonna be stuck telling
+everyone to just stick to vendors like samsung, who
+are vertically integrated and don't randomly change suppliers for literally every core
+component of their product. just like we tell everyone to stick to buying technology and
+computer hardware at micro center micro center has 25 locations
+across the united states and you can check out micro
+center's custom pc builder to spec out the best pc for your budget. they'll help you ensure all
+your parts are compatible, find stock available at your
+nearest micro center location, and once you add it to your cart, you can arrange same day in store pickup. for a fee you can check the box
+marked same day pro assembly and micro center's expert technicians will assemble your pc for you. if you want help deciding what parts to put in your new custom gaming pc, join the online micro center community. it's a great place to discuss
+tech with other enthusiasts. so don't wait, check out the
+link in the video description to learn more about micro center and get a free pair of
+wireless bluetooth headphones, valid in store only,
+no purchase necessary. if you guys enjoyed this video, maybe check out the
+"linus was right" video. it's not what it sounds like. it's the other line is, we're talking about ecc memory offer. (man laughing)

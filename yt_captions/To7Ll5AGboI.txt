@@ -1,0 +1,111 @@
+this is a 5G phone tower and I'm going to explain 
+why 5G data is so incredibly fast and I'm going   to explain what 5G actually [Music] means I mean 
+that bit's easy uh the five means fifth generation   that's what the capital g means generation so all 
+these things 4G 3G Etc it's just the generation   we're up to the capital G is meaningless it's 
+about as important as the capital G in the   video ID on this video what I care about is the 
+fact that this Tower behind me is putting out   well photons it's putting out radio waves and 
+that's just a standard kind of sine wave but   somehow we're able to encode data at incredible 
+rates into just waves well how is that done okay   spoiler it's Mass it's always Mass it's actually 
+trigonometry in this case and bonus spoiler I'm   currently writing my next book and I think this 
+is technically the official announcement of that   it's why I've got writing a book face uh I'll 
+have a link to pre-orders in the description   more details about that at the end of the video 
+Welcome Back everyone who went to check the video   ID to make sure it did have a capital G of course 
+it does so we're now going to have a closer look   at these waves because if you've got a sine wave 
+there's three things you can vary you can mess   around with the frequency you can mess around with 
+the amplitude that's kind of how big it is and you   can mess around with the phase that's where it 
+starts and we're going to ignore frequency and   amplitude and we're going to focus in on messing 
+with the phase because we can use that to encode   binary data all right give me a wave there it is 
+right so this is our signal wave that's what's   being sent by the phone tower and we're going 
+to split it up into individual wavelengths and   we're going to send one bit of information per 
+wavelength and by bit I mean a one or a zero   they're currently all set to one but what we can 
+do is decide if we're going to send a zero so we   switch that one to a zero it flips the wave the 
+other way up and so what you do now is you take   your message of ones and zeros you have the ones 
+and zeros across the top and you flip the wave   each way depending if it's a one or it's a zero 
+I say flip it's a sine wave what you're actually   doing is moving it across half a wavelength so 
+we've actually got some bits of the wave are   unchanged those are the ones and some are offset 
+by a phase of half a wavelength and those are the   zeros we call this key of information by Shifting 
+the phase phas shift keying in this case binary   phase shift keying because we're only sending ones 
+or zeros but what if we had different amounts of   shift what if we wanted to send up to four options 
+quadrature phase shift key we're going to switch   each of these now to be either z01 1 011 but now 
+we need four different phase shifts so what we're   going to do is have them each a quarter of a 
+wavelength apart and this works this is how   phones way back in the day when there were so few 
+G's used to send data but now we've got more G's   we want to send more data so we need to be able 
+to have more different phase offsets and you're   right we could just split each wavelength up into 
+more and more different offsets but what if we did   bring back our friendly amplitude but what if 
+we bring in some more options so yeah I'm just   I'm inside a giant Georgia profile by the way and 
+now for each of our code words that's what we call   just each string of ones and zeros we want to send 
+for each code word we can assign different amounts   of phase change and amplitude change and if we 
+mess around with these you can see the things   we're sending change and yeah well hang on surely 
+there's a really clever way to adjust the phase   and amplitude for each code word to make them more 
+efficient to send and maybe if we pick just the   right values we can have more than four we can go 
+up to 16 wouldn't that be amazing but there would   have to be some very clever values and probably 
+that form of encoding would have a whole different   name quam of course someone's worked out how to do 
+more it's quam quadrature amplitude modulation and   you can do this with different numbers of code 
+words here's the case for 16 code words this is   called 16 quam so we got four bit code words now 
+and these are the various amplitudes and phases   you need to send those and people very carefully 
+worked out exact what combinations of amplitude   and phase work the most efficiently but if you 
+look at it it looks like a mess and this is where   we need a better way to kind of think about and 
+visualize these phases and amplitudes here I am   with the geile I've got a single wavelength that's 
+what we were using to encode each code word and we   were shifting at different amounts for each code 
+word and as you can see it's a sine wave so it   goes from 0 to 360° that's when it's it starts 
+repeating so in fact we can measure the amount   of shift the change in Phase as an angle and you 
+know what else you can measure with angles angles   so on the side over here I've got a that I can 
+move around as I change the angle a is making   to the positive x axis it changes the phase so 
+whatever angle goes up to a is how far we've moved   the sine wave and so before we were encoding uh 
+one we were doing one bit there and then at 180°   over here we were doing the other bit in fact I 
+can turn uh that on so we can see it so there's   we encode a one there we encode a zero there but 
+you can also see that now amplitude is built in   if I move this closer to the origin the wave gets 
+smaller further away it gets bigger we can encode   more data points which is why when we were doing 
+for code words we had them like weirdly spaced out   with 45° well actually 90° between each pair cuz 
+what we had here is uh code with 0 Z's up there   and then 0 1's down there and then 1 Zer and 1 one 
+now these are technically all on a circle they've   all got exactly the same magnitude and what 
+we started to discuss was could we have other   points where we're changing the both the phases 
+an angle and the magnitude is the distance from   the origin to encode different words and you can 
+the 16 I showed you before here is 16 quam and   look at them they form a grid how incredibly 
+cool is that so if you want to send 11 one0   that's the phase and amplitude you send there's 
+0111 and so on so you can pick all of these out   because they're spaced out if there's any you 
+know wavering in the signal when it's received   by a device like if it receives one over here it 
+just goes to the closest one it's like that the   code word and so by plotting these on a phase 
+amplitude diagram it makes the arrangement so   obvious suddenly we can see all the logic behind 
+why we have those phases and amplitudes and we   call this a constellation plot check it out 64 
+quam isn't that amazing it actually goes all the   way up to 256 quam which I'm not going to draw 
+here you know what it looks like it's a lot of   dots on a grid and this is why 5G is so fast 
+it's using quam it can still use the old face   shift keying it's backwards compatible in that 
+regard although it doesn't in quite a clever way   different video but quam is the secret to being 
+able to send so much data so fast just using sine   waves although I may have mildly distracted 
+us with the constellation diagrams I mean I   love them because it's one of those fantastic 
+examples in mathematics where just having the   right way to visualize or to kind of think about 
+something suddenly makes it make sense and the   constellation diagrams are so incredibly useful 
+but we started by looking at adjusting phasee   and I had said we're going to ignore amplitude 
+and we gradually brought amplitude back in again   however it turns out phase almost a distraction 
+it's actually all about the amplitude it's all   about orthogonal amplitudes here I have two sine 
+waves which are 90° out of phase and that's why   we call them orthogonal waves if you just look at 
+the waves you're like how is that orthogonal well   what do we call things that are 90° apart they're 
+perpendicular so which is why this level of phase   difference is called orthogonal waves and you can 
+see on the phase diagram over here why that's the   case cuz a the phase is zero and then B is up 
+here and of course we can move them around as   always but if we plant them on zero and 90 and 
+we only change the amplitude we can actually   get every conceivable other combination of phase 
+and amplitude by adding those two together so if   I turn on the sum of those those two waves in 
+green and now all I do is adjust the amplitude   of a and b so if I bring amplitude of a down and 
+up if I just mess with these I can actually get   that Green Wave to become any wave I want and we 
+have to use negative amplitude is like phase the   other way around totally counts so by using 
+positive and combinations of these two waves   which are orthogonal to each other 90° apart we 
+can generate any wave and this is how quam is   actually encoded you're actually just using the 
+X and Y coordinates of each of the points you put   one of those into each of these waves which is 
+a sine wave and a COS wave you add them together   and that's what gets transmitted from the tower 
+and now for the final bit of plot it's this plot   so this is our 16 quam arrangement of the code 
+words when I first saw this I was like why are   they arranged like that so I looked into it and 
+and they're using something called a gray code   and a gray code is a way you can go from any 
+code word to any other code word and you only   ever change one bit at a time and they're arrange 
+such that all of those gray code Transformations   never go through the origin because if you're 
+sending one signal you got to move continuously   to another one and if it goes through the origin 
+that's zero amplitude that's no signal you don't   want no you don't want a sudden loss of signal 
+just cuz you're switching code words and so by   using this Arrangement or other equivalent ones 
+and only using gray code Transformations one   bit at a time you can change the code word you're 
+sending without going through the origin another   very clever bit of geometry which reminds me I 
+think I'm writing I am I'm writing a book all   about geometry trigonometry data Foria it's 
+incredible you should absolutely check it out   and thank you so much for watching this video uh 
+you can also watch that video uh that that's what   Google thinks you should watch that's not on me 
+whatever that is that's up to you uh up there you   can subscribe I don't know uh we'll put a link 
+in the description down there somewhere you can   pre-order the book uh they're hugely appreciated 
+yeah there you go uh I guess we got a bit more

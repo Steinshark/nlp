@@ -1,0 +1,100 @@
+- microsoft hasn't even
+announced windows 11 but there's three things that tell me it's probably coming soon. number one. they've got an event
+announced for june the 24th, where we're gonna see, what's next for windows. number two. they've actually posted a retirement date for windows 10 on their official website. and number three, i'm holding it. we're gonna install windows
+11 right now. so excited. to tell you about our sponsor, glasswire. instantly see your current and past network activity with glasswire. detect malware and block
+badly behaving apps on any pc or android device
+and use offer code linus to get 25% off glasswire
+at the link down below. (upbeat music) before we begin, (laughs) i gotta admit this label was a lie. and the first thing we need to do is get the windows 11 installer actually onto our usb drive. now, normally you would just
+go on the microsoft website and use the windows media creation tool. but because microsoft has not
+obviously intentionally distributed copies of windows 11, we are gonna have to use a
+different tool called rufus. so let's fire up good old rufus here. and look at that. it automatically picked up our usb drive. and now, look, i'm not gonna aid and abet software piracy or whatever else. so i'm not gonna tell you
+guys where to get an iso, but we got an iso, there it is. let's create a bootable windows installer. i'm actually so excited right now. i haven't looked at any
+of the leaked screenshots or any of the rumors. so, i just get to go
+into it totally fresh. now one of the big controversies
+around windows 11 is that there isn't supposed to be a windows 11. microsoft said outright when
+they launched windows 10 that it was going to be the last windows you would ever need. which people interpreted to mean that they would never need to pay for another windows license and that they would just
+get free upgrades forever. kind of like, well, nothing. nothing works like that. it was gonna be windows
+as a service though. oh, it looks like that's all getting kicked in the head. i wish i could find the
+power button for this test bench. (keys jingling) (indistinct) install it. i don't have the product key. obviously. okay, well we're going pro boys. forward. oh no. we're
+going pro for workstations. ahh. no. no it wasn't that easy. we've now tried this on
+three separate machines. running rise in 3000, intel 7000 series and now intel 10 series. and we can't find a single one that meets the minimum system requirements to install this version of windows. if you were looking closely, you might have noticed that many of the league
+screenshots of windows 11 were at odd ball resolutions like 1600 by 1200. and that's no coincidence. while that would be an extremely uncommon resolution for a desktop or a laptop monitor, it's really common in virtual machines. so that's when you have one operating system running inside another host operating system. there are a ton of reasons
+to test new software by installing it on a virtual machine, rather than on your bare metal hardware. it can be better for security, especially if you don't trust
+the source of the software, it can be quicker to wipe and start over and in the case of windows 11, it may just flat out be
+the only way to do it. because it appears, though we can't find any
+confirmation of this online, that microsoft has
+found a way to lock down the installer so that
+it just won't install on bare hardware. of course. that's not gonna prevent us from just doing it this way then. i'm creating a 500 gigabyte boot drive and i'm just chucking it in my virtual box vms, windows
+11 dot virtual disk, blah, blah, blah thing. and then all i've got to
+do is change my settings so that my storage, here we go has there it is windows 11 mounted to it. let's go ahead and fire this thing up. start. really is that fast (indistinct). pirating windows is thirsty work. lttstore.com. what? it's the perfect
+time to get hydrated. - [cameraman] yes? - right out of the gate
+there's a lot of things i'm expecting to be different. there's supposed to be a
+whole new visual design. and if the last windows 10
+update is anything to go by there's probably gonna be
+a lot more shoving content in ads down my throat. see this thing they added to my task bar? anyway, the point is, it's ready. wow. that is different. all you might as well know where the filthy pirate is from. canada. is this the right keyboard? a yah. secondary keyboard? nah. okay this is basically the same thing, but with a facelift so far. apparently the onscreen keyboard allows you to like customize it and stuff now, which is less relevant for a desktop user, but more relevant for
+a device like this one. you know. are they gonna make me log
+in to microsoft account? sign in with the security key. sign in options. can i just, can i just have a local account? offline account, look at that. no problemo. limited experience. you know what else? i'll sign in. i'll sign in. i'm gonna sign in with an account. let's customize your experience. oh, gaming, creativity, family. you know what? i'd do everything. oh, hey, there it is. ahh. okay. oh my god this is the start menu. it's like a mac. why did that getting
+started thing go away? and why is search a separate button now? the windows button already was search. so wait, does the, does
+this not have search? hello? it does. it totally does. but, there's a delay while it switches over to this search thing. wow, that is really sluggish. okay. part of the problem though is that we're running anything that
+would be gpu accelerated just in software right now. so we shouldn't judge that, also it's an early build, et cetera. are they trying to kill right click? look at this brandon. right clicking on this
+one's works just fine. so that could be just early weirdness. but that slide up when you left or right click also kind of makes sense when you consider that this is supposed to be a complete rethinking of the idea of windows and the design is supposed
+to be intuitive to use with keyboard mouse, touch, stylus or whatever the case may be. file explorer doesn't
+seem to have changed much. hello? there it is. looks pretty similar. these icons though are so different. apparently the microsoft store got a like, total overhaul. but i'm probably not gonna spend
+a ton of time on that because realistically, neither you nor i is
+ever gonna open it again. hey, you can save 60% on pc games. okay, there's a few more cool things that we can talk about though. okay, check this out. widgets. are now apparently a
+much more central part of the experience. so boom. up comes your widgets and we can scroll down. can we, can we move the whole thing around? oh. okay. that's yes. and that's the behavior i would want. now is probably where we're gonna find out if we can actually just install stuff. so from windows 7 to 8, 8.1 to 10, part of the idea behind them has been that while compatibility definitely does need to be worked on by the developer, theoretically, you can just install anything that's compatible with one of them on the others. so we're gonna find out if developers need to explicitly create windows 11 versions of their applications. real quick styles here. you having fun yet? it's new windows.
+- [brandon] yes? - you're gonna be using it. whether you like it or not. unless you're ready to go linux - [brandon] impending doom. - cause you don't need creative cloud. oh, i guess there's always macos. okay. same kind of sign-in paradigm. here's a couple other cool things. apparently there's a better
+voice typing experience although we don't have a microphone plugged into it right now. they've got better camera
+management experience. but we don't have a camera
+plugged into it right now. and this is really cool, on a per display basis, you can have multiple virtual desktops
+that you can switch between. i don't know how to do that just yet. oh, here we go. we can create a new desktop. boom. so they've just got
+the task view down here right on the start menu. i don't your task bar, i guess. can i still call it a task bar? it's i guess, yeah, it's still a task bar. another cool thing is apparently when you unplug and re-plug monitors, it's supposed to be way smarter about putting all the same stuff back
+where it was supposed to be. okay. and then boom we can go to, there we go. so we've got desktop one,
+which we can preview. that's pretty nice. desktop two. i forgot
+the shortcut for this. what is it? yeah, windows tab. and you just use your wait, why does middle click not open a new instance of an application anymore? ooh. that's gonna bother me. so what if i have multiple instances of something open? then what happens? so i mouse over and it gives me the options. but then if i wanna open another one, do i really have to right click and open it again? okay. yup. that looks like a
+mobile app all right. so that's cool. oh right, we never talked
+about the keyboard. okay. this is (keyboard clicking) horrible. (keyboard clicking) it regularly misses the first couple keystrokes that i put in. board. is all i got, out of keyboard. (keyboard clicking) it's just too slow to
+switch from start menu to the dedicated search thing. shoot. i found it. it's a personalization setting whether to show the
+touch keyboard buttons. so i don't see an obvious
+way to bring it up. and anyway that's fine because our top priority (claps) is figuring out if we can game on it. now, obviously if we're on a device that you know has trouble rendering a
+window being dragged around we're gonna have a pretty bad time. but that's okay because we've got some other ideas. (laughs) it takes a truly magnificent test bench to make the one we were running
+before look like a toy. but this is it ladies and gentlemen. so we've got a copy of unraid running on
+this usb drive over here. we're gonna pass through
+our keyboard and mouse to our virtual machine, a massive shout out by the way to nvidia's 20 series for
+having a built-in usb port, so we've got our steam
+drive plugged directly into our gpu that we're gonna pass through to our windows 11 vm and hopefully run games at near native speed. ooh. ooh. and guys the craziest part of this, is this is just the bog standardest os installation process on, unraid. if you can install windows 10 on unraid, you can install windows 11 on unraid. and (keyboard clicking) i am wait how do i even access device man- okay i got to go over here. device manager. my muscle memory is very strong. rtx 2080 ti the driver's just (finger snapping) installed. - [jake] i even activated windows. - you activated windows? - [jake] yeah. - oh wait. i wanna see the, i wanna see the onscreen keyboard then. the other one. touch keyboard button. here we go. show the touch keyboard button. okay. i wanna see this thing cause
+apparently it's been changed. so there's like emojis and gifs powered by tenor. oh oh that means there should be lots of linus tech tips gifs. we have a tenor account. what the, what's the,
+who's this imposter linus? what is this? this is what i think of this. keyboard layout, small split default. nice. we've got a nice
+little split keyboard there. okay, cool. more settings? apparently there's like colors and stuff? keyboard layout. okay. fine. fine. fine. enough. enough. games. this feels pretty darn good. - [jake] did you setup high refresh rate? - no i haven't. this is still 60 hertz. but
+like in terms of responsiveness? - [jake] is it in full screen? - it's good. ah, show the display settings. can we just like, is
+everything just gonna work ? 120 hertz and (lip smacking) gorgeous. it just, like it just works. okay. so what i had wanted to know was if i am pressing windows and then search it. yeah. it's super responsive. it
+switches over right away. i think that's just because we
+were running in virtual box. this is a far more raw experience. so we're running at. oh you can't right click to
+get to task manager anymore? - [jake] uh you right click
+on the windows button. - right click the windows button. aah, that's more work. okay. the point is we're running 10 cores on a rise 9 3900x, we've got an rtx 2080 ti, we've got 20 gigs of ram. this is pretty darn close to what it's supposed to feel like. oh yeah, let's try the new. oh, interesting. that's kinda cute. - [jake] looks nicer. - yeah. it does look nicer. oh that didn't look that
+nice. that's kind of wanko. - [jake] it's not even a beta release. - yeah i know, i know. this is not even a developer preview. this is literally a leaked
+build of the operating system. we should be kind to it but
+instead we're going to run red dead redemption 2. it's just like runs. - [jake] kinda surprised
+how easy it loads. - yeah. i was expecting there to be some kind of fighting with it, you
+know, to get this running. but other than that, it just
+won't install on bare metal. it just, (table banging) it goes. i mean look at
+this red dead redemption 2 ladies and gentlemen. i gotta catch up to dutch here. keep my lantern here. okay. old paint let's go. it's crazy too. that just, the latest nvidia drivers just (fingers snapping) installed. and just like vert io and
+all that kind of crap. just - [jake] yeah it just went on. - wow. one of the things that
+might tell us though is that maybe this update under the hood is not that big and you know, maybe windows 11 isn't because they couldn't turn windows
+10 into this experience. but rather that it was more of a business decision. - [jake] no, to be fair at the start a lot of things that, you
+know, worked on windows 7 worked on windows 10. - yeah. that's that's fair. so, i don't think there's much
+else for us to really say about it at this point, other than very weird but very cool. to be clear, i am not saying that you
+guys should install this on your own hardware, on your own network because you don't know where this iso came from and what's packaged into it. but i'm really glad i tried it. and i hope you guys enjoyed
+coming along for the ride. just like you enjoy coming
+along for our sponsor, manscaped. father's day is just around the corner, so you'll need to hurry
+to find the perfect gift for your dad before it's too late. and hey, maybe you're the kind of
+family that can give your dad personal grooming
+products for father's day. little weird but i'm not gonna judge. manscaped's got you covered
+with their lawnmower 4.0. it's got ceramic blades with
+their skin safe technology to help reduce your dad's
+nicks and cuts on his junk and to let him easily replace
+the blades with a fresh ones. they've got a new wireless charging system that removes the need
+to bring cables with you and is compatible with
+most chi charging pads. it's cordless and wireless and offers 90 minutes of personal grooming in dad's man areas on a full charge. so don't wait. get 20% off plus free
+international shipping using promo code tech at the link in the video description. if you guys enjoyed this video maybe you'll check out one
+of our other os explorations. we checked out windows 9 and also templeos. we have those links for you.

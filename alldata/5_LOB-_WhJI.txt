@@ -1,0 +1,211 @@
+- You just finished
+building your new gaming rig and it looks awesome, but
+there's one big problem. The cables are boring. Sure, Keyboards come with
+generic sleep cables these days and the majority of power supplies have moved on from ketchup
+and mustard to black. But where's the personality in that? How do you set your build apart
+from the rest of it there? Well, don't worry. Custom sleeve cables aren't for
+diehard enthusiasts anymore. And with a bit of know-how you can make your own, just be careful because we're not taking
+any responsibility If you accidentally fry your board, you just spent a couple
+hundred dollars on. But don't worry, right? It's going to be fine. The G. SKILL trident Z Royal
+elite series represents peak DDR for performance and is designed with a beautiful
+crystalline pattern across it's polished aluminum heat spreader. Get yours today using the link below. (Theme song) - So, it's one hell of
+a first-world problem. But right now I'm stuck using
+this super long cable to plug my phone into my car. And it looks awful. Not only is it plain, but the access gets tangled
+up and I can't really close the chummy and it's just
+gross. So let's fix that. Typically, if you only
+need a single cable, you're probably better
+off ordering something from a custom site. But if you like DIY and
+like to have it your own way or building an entire set, then building your own
+cable is a great way to go. If I'm honest, I've
+never done this before. The script says it's easy enough. You just add some para cord
+and some Sutter points. Right? - [Plouffe] Yeah. Technically. - So. Are we just doing it? - [Plouffe] Yeah. - Oh, sick. We're making a USB cable. It's you know, your standard electrical tools, soldering iron carbon filter,
+wire, strippers, and cutters, a heat gun and some wood or metal dowel. We'll explain those last two later. We've also got a pair of helping hands to help keep things in
+place as well as, well... the script says standard lighter. Ours didn't have fuel. So this is what we've got. for materials we've got some USB 2.0 cable para cord sleeving, USBC connectors, and their housing's. USBA connectors and also their housings. So you always need this stuff over here, but for personalization, you can go for just about
+any color of para cord. Heat shrink and tech flags. This nifty purple one
+right here is what I chose because I like it. But the options really
+are pretty much endless. We've got a few examples here
+today, but there are dozens, if not hundreds of different
+patterns available online, we'll decide on the heat shrink color and whether or not I want to
+add any tech flex later on. There are a few things to know
+when ordering your supplies, primarily the size of everything. You can find thinner USB cable, which makes for an easier time sleeving, but you have to make sure
+that you have the right size and shrink ratio for your shrink wrap, or it just won't stay on. And if you're making a
+USB-C to USB-C cable, like I wanted to try and make today, you have to make sure you've
+got at least one end with a 5.1 K ohm resistor on the
+CC one and CC two ports. This helps the host device make
+sense of the incoming signal when using USBC connectors
+with USB two cables. So yeah, I guess our C to C connectors
+didn't arrive in time. Ill kind of show you exactly
+why we can't do it here. So this is the size of the
+pads we're dealing with. And the resistor that we have is, well it's pretty much
+bigger than the connector. So I think he can see why
+that would work. So yeah, because of all of that, we'll be doing a classic USBC
+to type A configuration today. By the way, if you guys love DIY stuff, make sure you're
+subscribed because Linus is DIYing his whole new house right now. It's gonna be sick. (chuckle) Well, I guess if we're doing type A, it doesn't solve my car problems. So I kind of want to just have a long one. - [Plouffe] sure How expensive is this stuff? - [Plouffe] Not very - Not very? - [Plouffe] This role
+was probably 20 bucks for 50 feet or something like that. - Okay. That's not bad. Okay. So now that I have this, I need equal length para cord? Is that what I'm seeing? - [Plouffe] correct Alright. So we just pull these strands out and that's how we're able to
+put our cable in, I guess. So I'm having a bit of
+trouble getting it in. I have just the tip. Do I just keep on going like this? or is there an easier way to do it? - So you want to fix the fray, so this is where the blow torch comes in. Normally we use a lighter. - Oh, okay. - Yeah. So you wanna set that bad boy, fire up and melt it. Oh my God you might have melted
+it a little too closed. Okay, Let's don't breathe that in. - I feel like I made it worse. - Yeah. I feel like you did too. Yeah this definitely
+seems like a lighter job instead of a ... - Yeah that's kind of why
+I was hoping for a lighter - MAPP Gas wasn't working great. We're going to try just a touch of CA. Oh yeah, there we go. - Way better? - So this seems very
+doable for like one cable, but if you want it to do like a 24 pin, how long would this take? - Luckily with 24 pin it's thinner. So the 18 gauge wire that we'll
+be working with when we do the PCIE connector
+later, it's not as hard. This is a thicker cable. So it takes a lot more effort
+to actually get everything all the way through. So there's a USB-C. - Okay. - Here's a USB-A. - All right. - This is a lot easier to solder
+because you just have to do these four channels
+here. Whereas this one, you need to do those four little points. - These are helping hands.
+You don't need them, but they make your life a lot easier. So we do have some flux core
+solder. So you don't need it. But if you want for your
+solder joints to look good, I would recommend putting
+a little bit on there. So what the flux is doing
+is just preventing air from getting in and making
+your like solder joints, all gross and corroded, like, yeah. So Plouffe just brought this up, and I had the same concern
+when I was soldering these, the heat shrink that
+was on them, moved back. And if they touch your device is dead. So are we doing anything to fix that? - Well, we could glue the whole thing. - Oh, I'm there for that. Yeah so I actually do
+this all the time and it's a good idea from
+Plouffe to do it here. When you have just
+something that you soldered, you don't want to have the
+connection, take all the strains. So if you just have a bunch of
+hot glue on there, it's good. So yeah, it doesn't matter
+which cable goes to which one. You just have to make
+sure that on both sides, you do the same one. So we're
+going black, red, green, white. And we could do
+any permutation of those. Doesn't matter, just make sure
+it's the same on both sides or (explosion gesture) Okay so basically touch
+these two together. It makes it be continuity tester, easy. I have no clue which pins
+do which thing, but yeah. So ground is the whole
+housing to this pin. Yep. And then... Alright yeah. We're just plugging it in. I need much finer tips to get in there. This seems like a fire hazard. - So then you hold that part. All right. And we should just be
+able to plug your phone or your keyboard or whatever in. That's okay. I've done it before. Don't touch. Aye look at
+that. Charging. It works. So normally what you can
+do at this point too, is you can like plug it
+into a laptop or something or your computer to make sure
+data transfer works as well. But I think we're good. I'm not concerned about that. Alex has got all his wires going. The only concern I have right now is the exposed wires there so
+we're gonna glue everything together before we heat shrink
+and put all the housing on. - Oh, that'll do. Yeah. I'm quite happy with
+my little cable here, Colton. We don't sell cables
+like this on ltcstar.com, but we do sell cable
+ties and water bottles. Actually, you should get a water bottle - So okay, so what we forgot to do is we forgot to show you
+how to tech flex stuff, and we also forgot to
+show you how to coil stuff if you want to coil. So what this is for is
+it's mostly aesthetic, but it also makes the
+cable a little thicker. - Oh. So the tech flex is just like
+protection for your para cord? - Yeah it's like a protection, And some people like the kind
+of like sheen that it gives. - Oh okay. like I've got a few different kinds. This one's just black, I think. But then there's also a clear guy here. And then this is shimmer
+or maybe this is the black and this is the shimmer. Yeah, this is the shimmer
+sleeving. Yeah right. Too bad. You know you, you
+don't want this on there, right? - No. - Okay, good. You basically just hold it
+with one thumb and then start wrapping it around like that. - All right. Easy. - Yeah. - Cool. Now we just give
+her with the heat gun? - Yeah. one thing to note
+before you start, be careful. If you put too much heat, you can like damage
+the cable first of all, but you can also just damage
+the exterior of the para cord. Or if you're using tech flex, it melts a lot easier
+than this stuff does. And so you want to always
+use the lowest heat on your heat gun when doing this, cause it's really easy on high
+heat to just like basically destroy your cable or
+make it look really bad by giving this big dark black spot on it. - Okay. So I was about
+to give her a 915 degree. - I would not do that. - Don't do that. - I would not do that. Also. This is an aluminum rod. It's gonna get really hot, really fast. - So at this point, normally what you do is you
+would keep this like it is, and then you would let
+it sit for a few hours, ideally, even overnight. And then you can remove the
+tape and the coil should basically retain its form. - Okay, cool. - So we've got a few quails already made. And so once you're done, you end up with something
+kind of like this. Yeah. It doesn't spring. It just adds a little
+character to your cable. Some people like to have the
+cable come out like an inch and then have a coil go across
+most of the keyboard and then the cable comes out.
+Yeah, it looks pretty, but that's about it. - I dig it. Yeah. So now that Alex has finished
+making his nice USB cable, Anthony is going to try his
+hand at making a PCA connector an extension for your power supply. Have you done this before Anthony? - No. - Perfect. I haven't either.
+Unlike the USB cables, which I've made plenty of, I haven't done any extensions for cables. I've been meaning to get into it. And so this is a good opportunity
+for both of us to learn. - All right. So we've got 18 gauge wire, which should handle most graphics
+cards, pretty comfortably. These are okay. Male
+and female connectors. Pretty nice just to have them. Yeah. We've got these terminals. These are the actual ends. These are basically what actually plugs into your graphics card. It's not this that plugs in
+it's this and this is connected directly to the wire inside this. - Thankfully, we've got
+some crimpy boys here. So satisfying. - I've done the ethernet runs
+before lots of ethernet runs. And let me tell you those, the crimpers that don't have
+this ratcheting mechanism do not buy them. They need the ratchet. So I can't help but noticing
+that our wire is all black and that's gonna be
+difficult to distinguish between the different wires. But the great thing about
+extension is that as long as your pins are all lined up properly, you don't have to worry
+about the pin out diagram for each power supply. They
+just go straight through. They're already set up properly. So you're just extending them. The bad thing about extensions though, is that they obviously take
+up more room in your case because there is more actual
+cable. So chances are low. We're going to fry something. Right. But for this, we don't
+need to solder anything. So for some of you, this is
+probably going to be easier. Are we going from more of an
+LTT orange for our para card this time around? So yeah, it should look a little bit better on the inside of your case
+if my estimation is correct. I like orange. So along with the crimpy boys here, we have wire cutters or
+side cutters actually. This here pin extraction tool. If we make a mistake, with sliding those pins
+into these here connectors, we also have where's the
+wire. Yeah, there it is. Wire strippers And most importantly, we have a lighter. And the reason for that is heat shrink, which I'm sure we've
+already gone over, right? - [Plouffe] Yeah. - So yeah, to start we'll
+measure out our cable and sleeving for each terminal, we're just doing an 8 pin connector, so we need eight wires. Always make sure to buy extra materials just in case you need them. And we could easily screw up
+a wire or a terminal or even one of our connectors. So
+we bought extras of each. Also make sure to give yourself some slack for cable management. So
+measure the general path you think you'll be taking
+along the back of your case, and then maybe add an inch on top of that. We're going to just push
+ours straight against our measuring tool. Like so, and give it a snip with the side cutters at the desired length. then you do the same for
+your sleeping material. All right. There's eight,
+mostly equal lengths. So the next step is stripping
+the cables and attaching our terminals. You want to expose about
+three millimeters on each end. So measure and strip. If you
+want to be extra careful, you can mark with a
+knife or something sharp while you've got your ruler out. When you're choosing a wire stripper, make sure that the little
+content's in here that lineup to different wire sizes actually
+match up with your wire. In this case, we've got from
+32 gauge up to 20 gauge, but we need 18 gauge. This is just gonna like
+destroy somebody's cable. These are pretty awesome. They don't always work
+depending on your cable. I know I've tried mine with
+speaker wire and the shielding on that is just way too thick,
+but on something like this, if you just feed in a
+couple of millimeters and you give it a little... Check that out. - Oh, that's awesome. Yeah. It's Super nice. Guess what? They connect. - [] Oh my God. - Un...limited...power! - So wait. We're just
+gonna have a single piece of cable para cord with
+all of these in it? - [Plouffe] Uh, no. So you'll be sleeving each individual wire. - Okay. - So that you have individual
+strands on your extension. Okay. - So yeah. Push that
+through, strip it off. Well, you might want to
+measure and then cut to length. - Screw measuring. Okay. So how much of the Para
+cord should be covering this? - [Plouffe] It shouldn't
+be covering the terminal. It should be covering up until basically where the terminal meets the wire. - Okay. So right about there? - [Plouffe] Yeah. - So if I measure with another terminal... then that should theoretically. - [Plouffe] not if the ends are frayed, we've got a lighter on hand
+so you can melt them up, but it looks too..eh it looks Okay. - Well when it looks all
+right, the other end looks... Well I mean, it looks
+kind of like the black that you'd normally get
+on the end of these. See if it goes in. Nice. It clicked in. - All right. Let's try the other end. Yeah. Now from here, we need to make sure that we're getting into
+the correct orientation. So actually probably what we could do getting together like that. - All right. That's our extension. We're done. We're done. (Laughter) - [Plouffe] One down seven to go. - oh God. (Cheering) - As it turns out, what
+we were doing before, we assumed that female would go to female and we didn't really think
+to question that and like, male will go to male, but
+you know, on second thought, I'm like, is there normally like a, like a little thing sticking
+out of the male end of a PCI express connector. And
+like, I guess it makes sense. Cause it's got to go so
+far into this one. Right? Nothing really clicked. So
+when I said that I didn't, I've never done this before.
+I haven't done this before. And we managed to get this male end in. Specifically, because
+I managed to match that so badly with crimping. So crimp it once only on the four wings. So it should look very much like that. flat on the back, chunky in the front. I got there in the end, but we had Tynan come in and you know, kind of redo everything because I have other things to do today. TLDR, this which this plugs into is in fact male. So it's like a sea horse, I guess. I don't know. (laughter) Anyway, it's reversed from what
+you'd think it is also for those of you playing along at home, we discovered that if this
+little groove on the top of the male end here specifically the female doesn't have
+quite that same key. If that is pinched in any way, you're going to have a bad time. It's not going to lock into place. You might actually like
+straight up, not go in. So yeah, just pinch here. - [Plouffe] It's beautiful, Anthony. So your first one might look like this. Actually, You know what If we
+had multiple different colors, we could just have this
+be a rainbow. You could, you could mismatch the
+lengths on purpose in order to make yourself a nice aesthetic. I mean, this just looks like, I
+don't know a giant Cheeto. - Are you ready to test it Anthony? - Am I ready to test it? hell yeah. Oh man. You know what would be
+a good way to test it? If we have a multi meter? - [Together] Yay. 1... (Laughter) 2... 3... - [Alex] 4! - Okay. - [Alex] 6! 7... - [Plouffe] One more. Come on. 8 ! - We've got a old...I
+think it was a six 80. - Okay. Good luck everybody. Oh, I got a flashing cursor. Oh oh. now blank screen. (Gasp) - No, it works. Yes! - But there's no keyboard
+detected. Oh, what a mess. I'm not happy with it. I wish
+I could go back and redo it. But this is what we're living with now. These connectors are very finicky. they're simple enough to understand they're simple enough to use, but if you don't have a
+little bit of practice getting them just right, you're going to end up
+wasting a lot of wire and other materials. Thankfully those materials
+are not very expensive. And if you can get them for, you know, relatively cheap in bulk
+and presumably from the same supplier, so you don't have to
+pay multiple shipping costs, but it's fun and gratifying
+to sit down and actually make these cables look the way they
+do and you can make them look however you want. And
+I think that's great. You know, just learning
+how to do something new. - The drop PC38X gaming headset was built in collaboration
+with Sennheiser. It features an open back design
+based on the respected PC37X but with some added enhancements. The re tuned drivers
+deliver higher fidelity and better frequency response. The rated impedance is now
+28 ohms for use with gaming controllers or other lower power devices. And the new knit mesh headband
+means less heat retention and better comfort. It includes two sets of
+cables for either your PC or your console and
+two different ear pads, knit mesh or velour. Buy yours today and get $20
+off a pair with code "DROPTHIS" at the link down below. - Do you make your own cables at home? or have you been thinking
+of getting into it? Let us know in the comments
+below and make sure to check out our video on building
+a mechanical keyboard. That was a lot of fun too.

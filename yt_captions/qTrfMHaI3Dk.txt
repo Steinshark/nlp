@@ -1,0 +1,119 @@
+- This is absolutely incredible. It's like I could reach out and touch it. Aah! (glass breaking) This is the Looking Glass portrait. If it looks familiar to you, that's probably because we
+took a look at this technology, not that long ago and
+promised you'd get a chance to check it out in person very soon. The portrait is finally
+the first consumer device that Looking Glass has released following an enormous
+Kickstarter campaign last year that raised over two and
+a half million US dollars. And now that these things are getting into real people's hands, we're going to take a closer
+look at its capabilities. Capabilities, like showing this 3D logo from our sponsors, Seasonic. Never skimp on getting
+a quality power supply for your current or next computer build. Checkout Seasonic to find their
+award-winning power supplies and to try out their wattage calculator to see which one will suit your needs. (upbeat music) Now, it's no secret we're
+starting to hit the point of diminishing returns
+for 2D display technology. So what's the next frontier? It's right here. The Looking Glass
+portrait is a holographic three-dimensional display that does away with technological limitations, like only working for a single viewer or requiring nerdy
+glasses to get the effect. And guys, it's freaking awesome. Now we visited looking glass
+factory out in Brooklyn a couple of years ago and took a look at this same technology back
+when it was in its infancy. Back then, the 4K developer kit costs a tear-inducing 3,000 US dollars. And that was for a product that was unabashedly a dev
+kit with the usual bucks. Now, the portrait here is
+not only 10 times cheaper, ringing in at $300, but it's gotten some major improvements since we last saw it. compared to the first generation, the highly refractive block of material that's in front of the display
+has been completely axed. Thanks to a new lens design. This gives it way more depth to your eye and makes the whole device thinner. And there's more
+horsepower under the hood, including the ability to run headlessly, thanks to the integrated Raspberry Pi 4, which by the way, actually
+makes up the majority of the thickness of the
+device at the back here. The display and lens stack are just millimeters thick on their own with this kind of illuminated frame thing, not actually being
+integral to its function, while the Raspberry Pi 4 and
+the custom display management at the back, fill out the
+rest of the metal case. On the right side, you've got
+three capacitive touch buttons for toggling through
+your hologram library, as well as playing and pausing. And then down below, those
+are two momentary buttons and an indicator LED for
+power and display status. Off on the right side, there's
+USB-C for power and data, HDMI in, and a headphone jack so that you can pipe audio
+out to external speakers. Not that I would necessarily recommend sitting and watching movies on this thing. And there's a little foot
+that clips on the bottom as well as a quarter inch thread if you want to put it on a
+stand and that's about it. It's, I mean, it is just
+a display after all, but like, look at it. The thing is, usually we don't have any way of showing you guys
+this kind of 3D effects, thanks to your flat YouTube
+compressed viewing experience, but because the portrait
+uses a lens system rather than polarized
+glasses, like a theater or individual screens like in VR, the parallax is visible anywhere within its 58-degree viewing cone. So we can just move the
+camera or the device around and see our image from new perspectives. Do you guys remember those
+like kids hologram books or like bookmarks and stuff like that? Well, those are called lenticular books and basically, it's a
+plastic screen filter over top of an image that only displays part of an image underneath
+from certain angles. Well, fundamentally,
+that's how this works, but instead of it having two
+or three or maybe four angles, the portrait can do up
+to 100 angles at once, which makes it appear much more seamless as you're moving around. As impressive as the hardware is, the real wizardry and the
+labor in creating this is the software that goes with
+the Looking Glass portrait. The primary tool is the HoloPlay Studio. So let's fire that up and also hydrate from my LTTstore.com water bottle. (bottle opening) There are four different ways that you can load in a hologram. If your phone has a depth sensing camera, like the iPhone 12 pro, then you can drop a portrait mode photo in and you can make something
+like this one in a flash. And this is really cool, after the fact, you can
+actually adjust the focus and the, I love this, depthiness of it, depending on what looks good to your eye. Let's see how much depthiness do you want. Ooh, that's too depthi, I think. You can also load in an
+RGB-D photo or video. So it has half RGB pixels
+and half depth pixels, a quilt photo, which is a compressed Looking Glass Factory
+light field image format where many views are
+arranged in a specific way to fit the display, and finally,
+a light field photo set, which is essentially an array
+of bullet time, style photos. Once you've got all the
+photos and videos, you like, you just press sync playlist
+and it'll wipe out anything that's already loaded in
+standalone mode and replace it with whatever you've
+got in HoloPlay Studio. Now, here's something that I don't really have
+an answer to right now. The portrait can display a variable amount of lenticular viewing
+angles between 45 and 100. Just how that is done? I'm sure they would never
+tell, but it's got me curious. Are they displaying at a
+hundred angles all the time or are they just up
+sampling 45-angle content? Are they digitally
+adjusting the lens somehow? We don't really know. And the assembly is actually
+specifically calibrated on a device-by-device basis. So we don't have a way to find out without potentially ruining it. So I guess we'll just leave it be then. (laughs) No, I'm just kidding. Let's go ahead and open this thing up. (screw turning) I guess we didn't really talk about the wall mounting option earlier, so you can also wall mount it. So we've got these four screens. Oh, hey, how are you doing? So there's the built-in
+heat sink for the Raz Pi. Okay, so that's cooling our
+CPU as well as our DRAM. And yeah, okay. We're going to need a number one. (screwdriver clipping together) Now, that's interesting. Lifting off this thermal pad confirms this is a two gig Raspberry Pi 4B. We've got a couple of
+custom little PCVs here that route power and HDMI over
+to the front of the device. None of the other inputs are used though, because that's where this comes in. We take out these two
+screws and we can remove this hat daughterboard that's actually, it's ribbon-cabled on. Well, good luck everybody. There we go. That's kind of crazy. So this is like a solid
+40 bucks worth of hardware on this built-in computer for what you would think they would want to make as bare bones as possible
+since it's just a display, but you can actually
+see this daughterboard is bigger than the motherboard. Yeah, so plugged into the USB port, there's a 16 gig, little SanDisk storage. So they curiously, are just using off-the-shelf USB drives
+for the onboard storage instead of soldering
+it right to the board. I mean, not, that that's a good thing. And then there's actually an arm processor right in the middle here. Hold on a second, there's two 16 gig
+storage modules in here. There's a 16 gig micro SD as well. I didn't even notice. What are you? Why...? - Yes. - Maybe like firmware, even? - What we don't know is the
+exact way that these two boards, each with their own
+storage and processing, share the various tasks. But what we do know is that there's clearly no
+digitally-controlled lens. It's gotta be, it's gotta be solid state. I don't know how much else
+this is going to tell us, to be honest with you. - Yeah, cause the whole, like
+it looks thicker than it is. This is not anything. This is just like a
+front illumination thing that makes it look cool. They could have absolutely
+made this thing thinner if they really wanted to, although it might hurt
+the effects somewhat. So the actual total
+thicknesses is like this, that's pretty cool. I'm surprised at how low
+the markup is on this thing. I mean, I know it's $300 for like a six point
+whatever inch display, but that's, that's a 2K
+panel capacitive buttons. There's 32 gigs of storage on like off-the-shelf micro SD and
+USB sticks, a Raz Pi 4B, like, I mean, this is a custom board. What are they doing? (laughing) They're having fun. You know what, I respect that. Even though there's
+not a whole lot in here in terms of expensive hardware, for the price, for the
+amount of development work and how niche this thing is, it honestly looks like a
+pretty compelling value for the right customer,
+which raises the question, who is that exactly? I mean, I could see people
+buying something like this as a flex tier photo frame
+to have on their desk. Then I could see a
+smaller subset of people that might use it for actual work. Like maybe you want to preview
+your designs that you create in Unity or Blender or
+something like that, just, you know, right on your desk without having to put on a headset. But maybe I should just
+let you guys tell me, are you the kind of person
+who needs this product? And if you are, something
+to watch out for is be forewarned, you're
+going to have to have some serious GPU in
+order to run this thing. I mean, rendering 60 FPS
+video, that's one thing. Rendering 60 FPS video for between 45 and a hundred different viewing angles is a whole another can of worms. So even though the
+resolution is relatively low, it can actually be quite demanding to run. Just like I demand only the
+best segues to sponsors. - What, you think you
+don't need a website? Of course you do. It's easy to make and you
+can do almost anything on it using Squarespace. They have award-winning templates that will help make
+your websites stand out instead of looking like
+it's from the nineties. If you're looking to
+open a business online selling products, they
+have you covered there too. Squarespace can help you
+showcase what you're selling in a modern style with
+inventory management and no limit on how many
+items you want to sell. Even we use Squarespace. Both our Linus media group
+and LTX expo websites were built quickly using Squarespace. And if you ever get stuck, they have a 24/7 support
+team ready to help you out. So head to squarespace.com/ltt and you can get 10% off today. (upbeat music) - If you guys enjoyed this video, maybe check and look at our
+Looking Glass Factory tour, where we checked out some of their more commercial-oriented solutions. The big one that runs at 8K, absolutely mind-blowing. - [Male Speaker] And
+they've got a new one. - And they've got a new one? A new 8K? - [Male Speaker] It just came out. - Oh, apparently, it just came out. Oh, that's the email they just sent. - [Male Speaker] That's the one. - Oh wow. Oh, this is awkward timing.

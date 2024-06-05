@@ -1,0 +1,167 @@
+(horn blaring)
+- to celebrate the exciting launch of windows 11, luke and i are challenging each other to ditch windows altogether and replace our windows
+pcs with linux for a month. and if either of us caves, they have to dye their hair in red, green, blue, and
+yellow quadrants permanently. easy, you might say, but i'm not talking
+about our work machines that are basically just
+used for word processing and web browsing. i'm talking about our personal rigs, the ones we both use on a daily
+basis, primarily for gaming. has linux gotten to the point where it's user-friendly enough that any tech nerd can pick it up and run? is game compatibility gonna
+be an instant deal breaker? will any of my other
+applications even run? who would sponsor this madness? instantly see your current
+and past network activity, detect malware, and
+block badly behaving apps on your pc or android
+device with glasswire. use offer code linus and get 25% off glassware
+at the link down below. (upbeat music) embarrassingly, i have never actually
+made an earnest attempt to daily drive linux, and one of the reasons for that is the utterly paralyzing number
+of choices you have to make before you even get started. now, i could just call
+on industry contacts or even use internal resources to make these decisions for me. but the point of this challenge is that, luke and i should be using
+the exact same resources that anyone else would have. and with that in mind,
+right out of the gate, i would forgive the average gamer for making it as far as
+google hit number one for best linux distro for gaming and bailing on the entire deal. i mean, nothing against
+the author of this article, i did pick up some really
+useful information, but it is full of jargon
+that a non-linux enthusiast couldn't possibly be expected to know, not to mention seemingly
+conflicting information. how is it that ubuntu
+can be simultaneously easy to use and beginner-friendly
+and hassle to set up? another big one is that
+customization gets built as this major selling point for linux, and fair enough if that's your thing, but speaking on behalf of normies, i don't want a dozen novel
+ways to do the same thing. i want one fast, easy one. i mean, it's horrible when microsoft scatter system settings all over the place. i think we all agree on that. and so we should all agree that it's horrible when
+anybody else does it. i mean, (sighing) i'm the kind of person who doesn't even rename
+my video game characters because it makes it a nightmare to look anything up if i get stuck. and there are a ton of other red flags. let's move on to hit number two here. this time from techradar. supports several controllers, should not be a selling point
+for a gaming-focused product. it seems to imply that
+most of my stuff won't work and included games are not the reason that anyone chooses an operating system. how, how are these
+articles so out of touch? furthermore, the messaging around what
+makes an individual distro stand out compared to the other ones gets really muddy in some places. like the way that these
+articles are often laid out, it sounds like, if i choose the one with
+support for hybrid graphics, i'm gonna be giving up kernel
+level gaming optimizations. or that if i want broad hardware support, that could cost me the
+customization that i crave. but the truth is that,
+that's not the case. with a bit of elbow grease, the gaming centric features
+and tweaks of one distro could be applied to another, but with some exceptions. the pantheon user interface, for example, is specific to elementary os. and for a more gaming related example, techradar mentions a feature of gamer os, now called chimeraos,
+called the chimera app that sounds super cool. it allows you to easily install
+and manage non-steam games and even roms for a wide
+range of retro consoles. except that if i wanted an os that doesn't support multitasking, i would invent myself a time machine so that i could go back and use it. but wait. hold on. the chimera app can be used
+outside of the chimeraos. there's even a guide. but unless i wanna really
+get into the weeds, i better stick with something
+based on arch by the way, like manjaro or garuda. not that that's gonna be my final answer. in spite of its spectacularly stupid name, pop!_os topped just about
+every listicle that i found and legitimately has some
+compelling selling points, like demystifying the
+notoriously difficult process of getting my nvidia gpu working properly and making installing the apps and tools that i'm gonna need to
+run my windows games, a one-click affair with the pop shop. if it was 10 years ago and i
+was looking for a challenge, manjaro's bleeding edge approach, please forgive the occasional screw up, definitely calls to me, and did i mention it's
+based on arch by the way. but i wanna win this thing without pulling my hair out for a month, and pop!_os looks like a
+really good bet for that. it's ubuntu-based, so if i really want to get under the hood, that's totally an option. but the challenge here is, play games, not get your phd in linux smart-assery. - i, on the other hand,
+after a lot of deliberation, decided to go with the
+daring, the uncompromising linux mint with the cinnamon
+desktop environment. as for how i think that's gonna go, honestly, i'm pretty confident. i've used mint before. i daily drove ubuntu,
+the distro it's based on for about two years back in school. so i'm not scared of figuring out how to install a gpu driver
+or use a package manager. i'm comfortable getting
+my hands dirty with grub, but that doesn't mean
+i'm not a little scared of you (chuckles). i'm pretty technical and i
+work in development every day, but hardcore linux chads
+are absolutely terrifying! you scare me, (chuckling) and i really
+want this to go well, because i still want you to
+like me when this is all over. - got my drive ready and windows couldn't possibly have picked a more
+appropriate time to just, bug the crap out. it's like it knows what's gonna happen. (mouse clicking)
+it won't let me click power. (mouse clicking repeatedly) obviously, i'm not a hundred
+percent committed to this yet. so my plan is to remove my
+existing ssd from the system. it's not a gen4 drive or anything, but i'm not expecting that to matter. i mean, what am i gonna be doing? running direct storage? huh! got them. - [luke] okay. so this is what happened last time. my desktop kind of... you can see where the, where
+it's supposed to sort of end, but it keeps going and my
+mouse can go over there. so i'm gonna right click
+right below the mint logo. nothing shows up, but, there's the menu. if i try the mouse over
+these, i can't select them. but if i move my mouse
+back to below this m, there it is. (laughing) found it. okay. so my mouse has to be right there. i was gonna see if i can do an easy fix of just turning off my monitor here. to be fair, it is not installed yet. this is a live boot environment. let's see if it comes back
+when i turn that back on. display port: no signal. okay. - i was worried that my
+thunderbolt connection, i use thunderbolt to connect
+to a dock for my main display, was gonna cause problems
+with the installer because there's no drivers
+installed or anything. so i hooked up my monitor that's
+here in the server closet, but. [music] tantatatatantaa [music] hey, there it is just like that. my mouse, he no move. oh, wait. where did it go? oh, i thought... oh, wow. oh, the sensitivity is just so high that i couldn't tell it was there. okay then. yep. that's the one. here we go. full name. ah, yes. - [luke] just a quick restart and turned the side monitor off. and it's fixed to the bounds of the screen and the mouse problem is solved. so just installing directly
+from the live environment. so i do want the multimedia codecs. it's nice that mint comes with those. not every district does. i haven't decided which drive
+to actually put mint on. so i'm not entirely sure where it's installing these media codecs, but it's doing something. okay. finished the install. it wants me to remove my flash drive. got it. and then press enter. this is our first login and we're there. check video drivers. i knew i was gonna run into that. installing mint instead of pop_os. but that is a challenge i
+have decided to undertake. it should be okay, but we'll see later. i'm gonna go through this welcome manager. - [linus] first order of business is to get our mouse speed down from over 9,000 to
+something more reasonable. that seems more like it. also, why the hell is this on by default? no obvious indication that any of my hardware
+is not working fully. even my aquantia network
+card picked up just fine. i knew audio was gonna be a challenge because i don't think the
+goxlr has any kind of... oh, this is interesting. output. hello? okay. it appears to be taking
+my input right now, which is my mic over here presumably and turning it into output. blah, blah, blah. yep. that's definitely it. does this work at least? - front left. front right.
+- okay. well i've got the sound at least. i was looking for a simple way to just list all the hardware
+connected to the system so that i could verify if
+my drivers are installed. linux, apparently doesn't
+really work like that, but i can just install this
+utility called hardinfo. not exactly a hardware info substitute, but it's a lot better than nothing. of course, i don't wanna
+get too deep into the weeds on any of this for now because the goal today for
+part one is to pick a distro, get it installed, and run a game. i will definitely need steam. failed to install "steam". warning: you are trying to remove the following essential packages. what are you, what are you talking about? i've done nothing with this, other than install that hardinfo thing. it's hilarious. the last time i tried to
+do anything on ubuntu, i ran into this exact same thing. i was told, "it's super
+simple. you just install it." no, you do not. this is stupid. apparently this is the solution and i have to type, "yes. do as i say," in order to install it. and maybe it will install and launch now. what is the point of having a... oops. hello? my computer just hard reset. (laughing) what? i mean, to be clear, i've seen some broken windows
+behavior on first installed. this is...
+(keyboard keys clicking) he's dead, jim.
+(keyboard keys clicking) - [luke] okay. so we've got the nouveau, or
+however that's pronounced, open-source driver. fantastic. happy they made that. but we are going to try to move to the proprietary nvidia 470 driver. install done. just need to restart. a few more errors than last time, but i think we're still good. genuinely think this is fine. yeah, nice. okay. now linux mint also has an update manager, a new version update manager is available. apply the update. it updates, and then it finds all the
+different updates that we need. - pressing the reset button on
+my computer did not, in fact, allow it to come back to life. let's try and all the
+way off and start again. not that i think that
+we'll do anything different from the reset button. man, if i manage to completely break
+this install in 15 minutes, that might be a new personal best for me. my machine is not even posting now. i have plugged the hdmi
+cable back in here. let's see what happens. hello? (laughing) hey, there we go. okay. so that's back. that's not. my phone battery is only like 6%, but i'm afraid to turn the camera off now because this ride has
+been absolutely wild. pretty low... oh! hey, there we go. hello? oh. oh. wait, what? did i manage to completely
+nuke my desktop environment? like my gooey. how? just logged in and this is what i got. ubuntu comes with absolutely no warranty. i can see why. this was a terrible experience. and i think that's where i'm gonna have to leave it for tonight
+because i found this other post saying, "hey, yeah, i had this problem. this was not easily solvable.
+so i had to fresh install." i don't think i'm going
+with pop!_os again. i mean, that was... you guys were there for the whole thing. that was utterly ridiculous. - [luke] continuing to install updates. i have turned on my side monitor. one minor issue. i can't go over there with my mouse because my mouse has to go, all the way left and then it's over there. so i need to reconfigure the desktops. right click doesn't get me there. so yeah, we'll figure it out. - you know what? no, forget it. the wife's still awake. so i've got, manjaro loaded up here and we're gonna take
+another crack at this puppy. to be clear, it's entirely possible that i did something completely wrong, not knowing what i was doing. and i'm responsible for
+the os getting bricked. i just also think that with
+you guys along for the ride, the things that i did were
+not entirely ridiculous or unreasonable. so you can be mad at me for breaking it, but just at least acknowledge
+that it could have happened to anyone who's not already fully, well-versed in the black
+arts of linux bree. okay. hold on a second. i didn't manage to catch
+the boot selector prompt. it started complaining about usb devices. it feels like the old days, doesn't it. i made a video about our 10
+gig nas using emulex cards maybe like nine years
+ago in this very room. a lot of memories in this house. mixed feelings on moving. manjaro went straight into
+the live boot environment. so we're just gonna launch the installer and good luck everybody. - [luke] i got wine installed
+through the software manager. i needed to get lutris. i didn't find lutris in
+the software manager. so i just went to the lutris website, followed the command line stuff. and i now have lutris, which we'll close for now and use later. the mint software manager had steam. well, i selected install. it made me put in my password twice and now it's removing. it never stopped trying
+to do that removing thing, but i just closed the package manager, clicked on to, i'm gonna call start. i don't know if it's called start here. and steam was (chuckling)
+sitting right there. so i launched it. and it seems to be working. so maybe we're fine. okay. sweet. i'm gonna log in. i'll see you on the other side. - i just want you guys to be here with me for the experience so that if
+i completely explode this one, (laughing) you'll at least know why maybe. and you can leave a "know it
+all" comment under the video. i'm ready. i'm ready. come at me guys. i'm trying here. i'm trying. (mouse clicking repeatedly)
+oh, who needs sound anyway? microsoft has a very broken
+setting situation right now, but this is worse. hey, is my game controller
+picked up just like that? oh, nice. look at that. why are the two columns
+open-source and installed? does this mean... is this proprietary? because that's what i
+think i told it to do. x server settings. where is x server? x server gonna give it to you what? okay. all right. this seems to do kind of
+what we need it to do. i'll figure this out later. let's get steam. let's see if we can get steam. i saw something about steam in that update that made me restart. oh. steam runtime. hello? oh. we're updating again. no problem. - [luke] okay. steam installed. no problems. so i'm gonna quickly go to my settings, go to steam play. enable steam play for all other titles. and then have... i guess we'll do proton 6.3-7. and then i'll go to shader pre caching and allow background
+processing of vulcan shaders. i guess we gotta restart steam real quick. i believe ftl has a native linux version. i'm just gonna install directly and we're gaming on linux boys. there we go. i think i'm done with the first challenge. that wasn't really a challenge. i suspect we will run into
+major challenges down the line. - library. oh yeah. oh, hey, look at that. look at that. look at that. boom linux. now the game i've been playing
+recently is "cave story+". is this linux, just
+like native freaking... let's go boys. oh, wait. my sound still isn't working. yeah. i still have no sound. honestly, i'm kind of
+willing to live with that. let's just... it's on the right. and no dice on the controller, even though it was
+picked up by the system. i guess we need to figure that out now. this video ended up a lot
+longer than i expected. the goal was simple: install
+linux and run a game. and i managed to screw it up, so royally that i'm here, hours later, still (laughing) trying to figure it out. this is a native linux game. let's just, (sighing) let's just play it. and we're gaming. it's running nice and smooth. this is a native game. so this is really not
+that much of a challenge. my sound still isn't working. still have no idea why that
+would be, but we're gaming. and it seems to just
+been a "cave story" issue because my controller,
+(controller slamming on desk) is working just fine. i jump, i haven't ever attacked. yeah, there you go. hopefully luke had an
+easier go of it than i did. the best part of this whole thing, is that we are just getting started. a lot of the games that i wanna run like "supreme commander: forged alliance" appear to have ways to run them. discord, looks like there's
+a way to get it going. it involves a lot of command line. hopefully i won't brick my os, but step two is getting streaming working. both luke and i stream. we both need it working if we're
+gonna run this for a month. so, good luck everybody. thanks freshbooks for
+sponsoring this video. freshbooks is a simple accounting software that's designed specifically
+with you in mind, the small business owner. it features built an automation that allows you to spend less
+time tracking your projects and more time working on them. so whether you're a trades
+person, creative agency or youtuber, you can choose
+a plan that's right for you. they have an award-winning
+toronto based support team, who's always ready to
+help you if you need it. and you can try freshbooks
+for free for 30 days today with no credit card required
+at freshbooks.com/linus. (upbeat music)
+if you guys enjoyed this video you might also enjoy the
+time i switched to mac. it was kind of a minute ago and some things have
+definitely changed since then, but it was quite an experience. by the way, if you've made it this far
+to the very end of the video, i did in fact, figure out
+what happened with pop!_os. for whatever reason,
+apt-get installed steam did all a whole bunch of other stuff. no idea why it did that. i hadn't touched anything. and i did not read
+carefully what it was doing. in my defense, a lot of
+that stuff was jargon that an average user might not understand. and all i was doing was installing steam. i thought this was just stupid
+hoops i had to jump through in order to install
+something from the terminal. i didn't know it was gonna
+remove my gooey, for example. (laughing) whew.

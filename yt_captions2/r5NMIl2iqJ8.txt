@@ -1,0 +1,107 @@
+- pound four pound. these are some of the most powerful gaming computers on the market. but this man, he won't let it happen. holding your own hardware hostage. hey tim, that's a cowardly move. what's the matter? are you scared of us? but for real though. apple's most recent computers
+are absolutely incredible. their custom silicon has elevated arm from mobile to monstrous. and it's an open secret
+that these m1 series chips have powerhouse gps in them. so why don't they show
+off cool stuff anymore like playstation emulators for mac? - again, our goal is to have the best game machine in the world. - why tim? is mac gaming really that bad? well, war thunder
+sponsored this video today to help us explore that. and we're gonna start with
+a look at a handful of games that were made with the mac in mind, or at least ported to the platform. let's start off with the
+thin and light category, where we're gonna compare
+the baseline m1 macbook air against an hp envy x360. war thunder gives us
+one of our best results, which makes sense given that
+it was specifically made using apple's own metal api. we managed playable frame
+rates at 1200p on high, though our poor m1 was
+reaching pretty scary temps, and as expected it handily beat our comparably priced
+and sized hp envy 360 x. a clear win for the m1. but getting into more
+graphically intensive aaa games, like shadow of the tomb raider
+and deus ex: mankind divided, we see the m1's seven gpu
+course start to struggle just barely scraping
+together enough frames for these games to be playable. in fairness it still beats the hp, but by a considerably smaller margin, probably owing to the air's
+lack of a cooling fan. another thing worth noting is that the m1 would
+get absolutely dunked on by any comparably priced
+machine with discreet graphics. but those aren't exactly thin and light. let's step up then to the $2,000 m1 pro equipped macbook pro. we chose the baseline model with an eight core cpu and 14 core gpu since that's the cheapest pro model that gives us extra gpu cores. and that translated to respectable
+numbers in war thunder, then in deus ex and
+shadow of the tomb raider we observed performance that
+was two times and four times the passively cooled m1 respectively. unfortunately these numbers
+do pale in comparison to a gaming focused windows machine like the $1,850 lenovo legion
+7i with a 3060 mobile gpu. the graphs kind of speak
+for themselves here. ouch. now i can hear your cherry
+blues clicking away. click bait. i thought you said these
+were gaming machines. but hear me out for a second. the baseline 14 inch macbook pro might not get the most fps per dollar, but it is still one of, if not the best all around machines on the market with an amazing screen,
+track pad and speakers. and it really says something that even running through
+translation layers and with such low power consumption that these games run at all, let alone at playable frame rates. it's a testament to the
+capability of apple silicon, capability that on the m1
+ultra will match an rtx 3090 if apple is to be believed. spoiler, we don't believe them. subscribe if you don't
+wanna miss our coverage on the new hardware. the big issue here is support. there just aren't that many games being developed for mac specifically. but there are some very usable
+ways to fill in the gaps, like game streaming. stadia, xcloud and geforce now, all work brilliantly in
+chromium based browsers. and the choice really comes down to whether you prefer the rotating lineup and value of xbox game pass, or if you prefer to own
+your games more permanently like with nvidia service. playstation now will also hopefully be a contender in the future. but that won't happen until sony releases a version of their app
+for arm or browsers. the biggest considerations
+with streaming games is your proximity to the
+nearest the data center and the quality of your
+internet connection. also you'll probably want
+a usb c to ethernet dongle for the best experience, and to sign up for a
+notification on lttstore.com if you wanna be the first to get our new screwdriver and backpack. for those who prefer their
+games running locally, well, there are surprisingly
+good options there too. starting with parallel, which
+is the only way to run windows on these m1 chips, at
+least until microsoft loosens the reins on windows on arm. the good news is that i was floored by the sheer number of
+games that are working, not just working but working well, even if you do end up leaving
+some performance on the table due to virtualization limitations. another option is
+crossover by codeweavers. you could think of it kind
+of like the linux windows compatibility and intermediary proton, except for our mac. in fact, codeweavers
+collaborated with valve to develop proton and
+our big sponsors of wine. so we really like what
+this company is doing. the issue with both of
+these solutions though is a, that they're paid, and b, that compatibility
+is spotty at best. codeweavers at least will make
+special game specific tweaks to help improve the situation, but there are only so many
+programs one company can support. thankfully, there are many
+incredible games and experiences that do not require translation layers. let's go to adam's game corner and talk about native mac gaming. - first up is apple arcade. the program is more focused on touch screen based experiences, something that apple
+could better accommodate if they would just put a
+touch screen in their laptops, but there's still a ton of great games that you can get for the price. like fantasian, a classic
+jrpg from hironobu sakaguchi, the creator of final fantasy that takes place on
+these handmade diagrams, and they look so beautiful. or lego builders journey,
+a gorgeous puzzle platform about creativity and parenthood. how about the addictive cartoon, king of eliminate things on a
+grid style games, grindstone. and honestly there's a lot more. or you could spend your time playing numerous incredible indie hits that have imported to the platform, like chicory: a colorful tale. an adventure puzzle that explores the insecurities and self-doubt that comes with being an artist. oh, disco elysium. man, there's not a week that
+goes by where i don't think about that philosophical
+alcoholic cop simulator. or how about tunic? the one part zelda, one part dark souls isometric adventure game. or wildermyth, the procedurally
+generated tactical rpg. wait, where are you going? or timberborn. it's simcity, but with beavers, and don't forget you
+can emulate on dolphin. - obviously, with the ability
+to play so many indies on mac the gaming situation isn't as dire as apple's reputation
+would lead you to believe. but it could be much better. could, if it wasn't for one
+big obstacle, apple themselves, whose apathy towards gaming on
+mac, couldn't be more clear. it kind of makes sense
+though, if you think about it. what's in it for apple? as massive as the gaming
+industry has become, 52% of the revenue comes from mobile, where the boys from cupertino already score 30% of all
+revenue on their platform, earning them more gaming profit than the biggest actual
+gaming companies combined. the truth is this model is so profitable that if apple had their way you wouldn't be able to get mac os apps in games outside of the app store either. steam, gone, browser apps, nope. and as far as i can tell apple only allows this
+kind of freedom on the mac because it's an already existing precedent for their computers. but while it's partly about the money, it's also about control. and when apple can't have control, well, they can get pretty petty. you cannot use an nvidia
+gpu on your $50,000 mac pro just because of a long lasting spat between the two companies. apple actually went out of their way to block nvidia's drivers. now in fairness, nvidia is also notoriously
+difficult to work with. and as far as i can tell, released those drivers
+just to spite apple, but apple also stifles
+development in other ways by continuously refusing to
+support cross-platform apis all in the name of that
+precious, precious control. they won't support vulkan, and they deprecated opengl
+and opencl with macos mojave, leaving support for those standard standing as they were over a decade ago. so now your only option for games on m1 are games that can support,
+or at least be translated to apple's own proprietary metal api. and that's done using
+a tool like moltenvk, a compatibility layer
+between vulkan and metal. a development effort that
+we wouldn't need at all if apple would just support vulkan. you could argue that game
+studios should pick up the slack. but frankly, why should a game developer spend the money to go
+through the expensive process of converting their game to metal when the only people affected
+are 15% of the market at best? but in reality only a
+subset of those users would have devices with the gpu horsepower to run a aaa game. a subset of those users are interested in gaming on their laptops. and a subset of those users wouldn't be happy with
+cloud gaming services, or some of the other things
+we've already talked about. so really it's a story that's getting a bit tired these days. apple engineers incredible hardware, sells at high prices, and finds new and inventive ways to make the experience
+worse for their customer. like non-user removable
+monitor power cables and ssd compatibility high jinks. and until apple decides that they wanna make a real investment in opening their platform, i mean, seriously, rosetta
+2 alongside vulkan, would make developing games
+for mac, very approachable. or a serious investment
+in devouring game studios, all of microsoft and sony kind of like what they've
+done with apple tv+, then macs will remain great gaming devices whose potential will
+never be fully realized. oh, there's potential
+to segue to our sponsor, who is of course, war
+thunder for this video, one of the few excellent competitive games that you can actually
+play natively on the mac, not to mention with great performance even all the way down to
+the m1 based macbook air. you guys can learn more about war thunder at the link in the video description. as much as this video might
+have been a bit of a downer thanks for watching. if you're interested in learning more about the performance of these laptops, check out our reviews of
+the m1 16 inch devices. (upbeat music)

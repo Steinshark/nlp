@@ -1,0 +1,222 @@
+hello and welcome to mcoding. today we're talking about extending
+ python's built-in number system. we'll walk through a class that i've written
+that implements infinite precision complex numbers. more specifically, this implementation models
+what are called the gaussian rationals. these are just complex numbers where both
+the real and imaginary parts are rational. as it turns out, implementing your own number
+type is in some ways easier and in some ways harder than 
+you might expect. python provides a lot of machinery 
+to help you do it. but there are also quite 
+a few gotchas. in particular, making sure this class works with 
+other existing number types like integers is a bit tricky. so let's dive in. the first issue we run into is what 
+to even call this class. calling it a fraction is somewhat misleading. any number can be written as a fraction. pi, for instance, which is irrational, can
+be written as pi divided by 1, which is a fraction. but python already has a 
+built-in fraction type which represents rational 
+numbers, not fractions. so we'll steam ahead and call it 
+a `complexfraction`. but be aware that naming is hard. the next thing to be aware of is that python
+already has a hierarchy of abstract base classes that represent different systems of numbers. their number, complex, real, rational, and integral. with number being the base class
+of all number types, even those that may represent things
+ outside of the complex numbers like quaternions. each of the others
+just add on some operations like complex numbers need to be able
+ to convert the built-in complex. and they need to have real 
+and imaginary parts. and they also tell you that you need to implement
+things like addition and subtraction. the one that makes the most sense for
+ us is to inherit from complex. there is also rational but that's not 
+a good fit for our class. internally our complex fraction is just going
+to store two fractions: the real and imaginary parts. we don't want to allow storing any
+ other attributes onto our class. so, we forced the real and imaginary parts 
+are the only two things we can assign to using slots. this will also make our complex
+ fractions use less memory. next note that we're using
+ `__new__` here, not `__init__`. that's because like all other built-in number types, 
+we want our complex fraction to be immutable. whenever you define a class that's immutable, you 
+have to use `__new__` instead of `__init__`. because although it would be uncommon, `__init__`
+is allowed to be called on the same object multiple times. if `__init__` was the place that the real
+and imaginary parts were set, then that could potentially mutate an
+ existing object which isn't allowed. now, of course this is python. so, there is no
+such thing as true immutability. if someone really wanted to, they could reach
+in and change this underscore attribute. but in python, it's sort of 
+an unspoken rule that if you have an attribute starting
+ with an underscore, it's an implementation detail that
+shouldn't be accessed by the outside world. to give the outside world access to our
+ real and imaginary parts, we just use properties. these properties allow anyone to read the
+real or imaginary part like an attribute. but if they try to assign to it, 
+they'd get an error. also notice this little symbol 
+on the left of my editor. this tells you that i'm overriding
+ something in a base class. in this case, the real and imaginary properties
+are required by our complex base class. next up we have factories and
+ conversion functions. it's really up to you to decide what kind of 
+convenience functions that you want to give your users. currently our `__new__` function takes
+ the real and imaginary parts. we pass each part into 
+the built-in fraction class. this means we're automatically supporting
+anything that the built-in fraction does. in particular, we can handle rationals,
+ floats, strings, and decimals. however, this doesn't cover 
+all of the cases. for instance, we might like to be able to construct a 
+complex fraction from a built-in complex number. or from a string that contains both 
+the real and imaginary parts. so feel free to create whatever
+ factories you think would be useful. and sometimes your users don't
+ necessarily want to deal with your class. in this case, they might prefer to just have 
+a tuple of the real and imaginary part. and it's also good practice to give them
+ a way to convert to the built-in complex type. this is also something that's 
+required for a base class. of course, to find a nice __str__ and
+ __repr__ arithmetic operations. addition, subtraction, and so on. and here's where the first big 
+gotcha comes in. why did i define this `_add` method instead of just making this the
+ implementation of the `__add__` method? if you're not familiar with these double
+ underscore or dunder methods, there are python's way of allowing you 
+to define for your own classes what things like plus, times, 
+divide mean. so if i have two complex fractions, then `x + y` will call 
+this `__add__` with `x` and `y` as arguments. and if we put our implementation in 
+the `__add__` and set our `__radd__` to `none`, then our example appears to work. `1 + 2i + 3 + 4i` gives `4 + 6i`. but if you add a complex fraction 
+to say a built-in complex type, then you might get 
+an unexpected answer. what happened here is this `1.2` got 
+converted into this crazy ratio of integers. now maybe that is what you 
+expected to happen. but what a lot of people would 
+expect to happen and what's in line with how some 
+of the other built-in number types work, you might expect python to recognize
+ that the `y` here isn't a complex fraction. so, we should no longer try to 
+be maintaining this infinite precision. and instead just convert our complex
+ fraction to a normal complex. and do the addition there. this makes the result type a plain 
+old complex number. and the result is much 
+more readable. and there's a subtle other 
+issue lurking here. suppose we take `1 + 2i + 1`. integers in python are exact. so, we're happy 
+to keep the answer as another complex fraction. but if instead of `x + y`, we do `y + x`. now we get an error. when `x` was on the left-hand side, we
+ were calling the complex fraction's `__add__` method. but when `y` is on the left-hand side,
+ we're calling the `__add__` method of the built-in int. the built-in int does not know how to
+ add itself to our complex fraction. resulting in the error. and this is the purpose of 
+our `__radd__`. `__radd__` is supposed to do the same thing as 
+`__add__` but with the arguments in the reverse order. if the built-in int indicates that it doesn't
+ know how to add itself to the other object, python will then go to the other object and ask itself if it knows how to
+ reverse add itself to the int. so `__add__` gets called when self 
+is on the left-hand side. and `__radd__` gets called if it can't use
+ others' add and self is on the right-hand side. the implementation though is exactly the same as the other add just with the argument swapped. in this case, addition is commutative.
+ so, we didn't have to swap them. but in general, like, if you were implementing division,
+ then swapping them is the right thing to do. now we'd like to solve both of our
+ problems at the same time. we have repeated code that's in need
+ of a shared implementation. and we want to implement this behavior of 
+falling back to floating-point arithmetic if we can't do exact operations. so we introduce our `_add` method. we can now implement the `__add__`
+ and `__radd__` methods in terms of `_add`, just adding self other versus 
+adding other self. then we need to add the fallback 
+logic into both methods. now if we just had add an radd, we
+ might just do that manually. but because we're going to 
+need to do this logic for +, --, x, /,  and any other arithmetic
+ operations that you would need, instead we're going to define a function
+ which generates both of those functions for us. and that's what this operator 
+fallbacks does. it takes in the operation that we want to do in the
+ case that we can handle everything in infinite precision. and it also takes in the operation that we want
+ to do if it has to fall back to floating-point arithmetic. in this case, we're just using `operator.add`, 
+which is the built-in add operation. so how does this operator 
+fallbacks work? well, the good news is that the python
+ documentation actually gives us kind of a reference 
+implementation of what to do. all i did was take the function in the docs.
+ and change some of the types here and there. for the forward pass, we check to see if the 
+other argument has a type that we specifically support. in our case, that's any other exact
+ rational number or another complex fraction. otherwise, we check to see if we
+ should fall back to floating-point arithmetic. the way that python lets you signal to
+ let the other argument try its reverse method is by returning `notimplemented` or if this function wasn't defined at all. the integers `__add__` would return `notimplemented` to 
+allow our complex fraction's `__radd__` to be called. instead of `ab`, we use `ba` in 
+the reverse version. this is so we can keep the logic mostly
+ the same but still end up with swapped arguments. once again, we check for things 
+that we specifically support. otherwise, we check if the other 
+thing is a complex number and fallback to floating 
+point in that case. notice however that these cases are
+ not exactly the same though. here we're checking against specific
+ types: float and complex. whereas here we're checking with 
+the abstract interface complex. in the forward pass, we don't want to
+ check against an abstract interface here because that would be a little 
+bit too eager. we wouldn't want to immediately fall
+ back to floating-point arithmetic if `b` happened to implement 
+the complex interface. for all we know, `b` is another kind of
+ exact complex number type that knows about our complex 
+number type. so we would want to give that type a
+ chance to do its reverse operation. we only fall back in the forward pass if we're 
+sure there's nothing more intelligent we can do. i really encourage just reading 
+the documentation here. i don't think explaining it in a video is
+ the right way to catch all the subtleties. but in any case, we define the forward and 
+reverse versions of our operations and then return them. now we understand why it's 
+written this way. we factored out the functionality of all of the 
+cases that we know how to add into this function. otherwise, fall back to the default operation after 
+converting to a floating-point number. repeat for subtraction, multiplication, 
+and division. unfortunately, we have to write exponentiation 
+for ourselves, both forward and reverse. this is because unlike with addition, 
+multiplication, subtraction, and division, a complex fraction to the power of a complex 
+fraction is not necessarily another complex fraction. so we basically just fall back to floating-point 
+arithmetic unless we have an integer exponent. handle the case of 0 separately. if our exponent was negative,
+ then do one over the absolute value. and if we got a positive integer, 
+ then used _fast_pow. i just made a video on _fast_pow. so if
+ you want to hear more about it, check it out. but suffice it to say that it worked 
+with complex numbers. for the reverse version, we're raising some base 
+to the power of ourselves which is a complex number. so we're pretty much always going to have to fall
+ back to floating-point arithmetic in that case. we do make one special exception 
+where if we happen to be purely real, the built-in fraction class that is our real 
+part might have something more sensible to do. although honestly, probably not. positive and negative are pretty 
+self-explanatory. for absolute value, we separate out the
+ case where we're purely real or purely imaginary. in that case, we can give an 
+exact answer. otherwise, we do square root of a
+ squared plus b squared. the a squared plus b squared part 
+is this norm squared. this isn't required by the 
+complex interface. but oftentimes you can use norm 
+squared instead of using absolute value. if so, that's a big win because the norm squared is always 
+going to be an exact infinite precision fraction. whereas the absolute value typically
+ is not because of the square root. then we come down to conjugate. this is required by the interface and 
+it's fairly straightforward. just flip the sign of the 
+imaginary part. then we come to probably the most 
+subtle and confusing part: the hash function. the first time i implemented this class,
+ i didn't realize how subtle this was. i thought, "okay, i need 
+a hash function. why don't i just take the hash of the
+ pair of the real and imaginary parts?" simple enough, right? well, that's no good. the reason that's no good is that i want my 
+complex fraction to work like all the other number types. in particular, complex fraction 
+zero should be equal to zero. it should be equal to 0.0. 
+it should be equal to the fraction zero; and it should be equal to the 
+complex zero. zeros of all the other types compare
+ equal to the integer zero. and more generally, whenever two numbers 
+of different types represent the same theoretical value, they still compare equal. although, due to rounding errors, of course, it doesn't always work out the way 
+that we might think based off of the notation. okay, so this might complicate our
+ equality function. but what does this have to do 
+with the hash? in order for sets and dictionaries to work, 
+equal values must have equal hashes. that means that if i want my complex
+ fraction to compare equal to other numbers, it needs to have the same hash as 
+those numbers if they represent the same value. whether it's zero, float zero, complex
+ zero or complex fraction zero, they all need to have the same hash: 
+the hash of zero. checking equality is very simple. if i see something else implementing
+ the complex interface, then i just compare real and 
+imaginary parts. but how do you come up with 
+this hash function? well, once again it's read 
+the documentation to the rescue. i don't have to come up with 
+my own hash function. the documentation essentially says: if you're implementing a complex
+ number type, use this hash function. i didn't come up with it. i'm just 
+using the one that i found in the docs. at first, i didn't even realize 
+there was an issue. then i thought it was a huge issue. 
+and then the docs just gave me the answer. it was kind of a roller coaster ride to go on. 
+but i'm glad to know that it's been sorted out. moving on we finish up with the boolean conversion operator 
+`__reduce__`, `__copy__` and `__deepcopy__`. we actually didn't need to implement this one. 
+it's actually included in our base class. remember zero is false; 
+non-zero values are true. `__reduce__` is for pickling. for `__reduce__` we return two things. the first is a callable that we'll use to
+ reconstruct the object when we unpickle. and the second is the state. so we essentially pickle the real 
+and imaginary parts separately. and then reconstruct it by passing 
+it to the class to create a new instance. `__copy__` and `__deepcopy__` are kind of 
+interesting since they just return self. remember our class is immutable. so how do we make a copy of
+ something immutable? there's no need to actually make a
+ copy because we're immutable. so, we just return ourselves. we do need to be careful though. if someone subclasses our class, 
+they might not want it to be immutable anymore. so if the type isn't exactly 
+complex fraction, then we should just pass the real and
+ imaginary parts and try to construct a new one. same thing for `__deepcopy__`. our real and imaginary parts are
+ themselves both fractions which are immutable. so, there's nothing to deep copy 
+and we just return self. and with all that we now have our 
+own infinite precision complex fraction type! of course, don't forget to write tests.
+ lots and lots of tests. especially involving hashes and 
+make sure dictionaries work properly. i also wanted to point out one thing
+ that i didn't talk about and that's comparisons. complex numbers don't have 
+a natural order to them. so i didn't define any of 
+the less than, less than or equal to, greater than, 
+or greater than or equal to methods. since they weren't defined, 
+we'll just get type errors. but if you were modeling a subset of the real numbers, 
+you probably would want to define them. if you like my content, then you're also
+ going to love this video sponsor: brilliant.org. brilliant is the leader in terms of curated 
+interactive math, science, and computer science lessons. if you're anything like me, then you'd
+ like to learn something new every single day. and brilliant is the perfect 
+place to do that since they have thousands of high-quality 
+lessons with more coming every month. you can even find courses on python,
+ computer science, and machine learning to supplement what you learn 
+on this channel. so if you'd like to get 
+started for free, visit brilliant.org/mcoding. or click the link in the description 
+and sign up today. the first 200 of you will get 20% off 
+brilliant's annual premium subscription. as always, thank you to my 
+patrons and donors. don't forget to subscribe! :)

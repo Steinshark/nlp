@@ -1,0 +1,165 @@
+- boy,
+(intense music) have i got a fun project
+for you guys today. my parents' new cabin
+is completely off-grid which means that if they
+want anything resembling a modern standard of living, they have got some problems to solve. everything from power generation
+to clean drinking water to where to store sanitary
+waste is going to... okay, well, i guess they
+figured all that out without me. leaving just one thing
+for their first born son, how to get an internet connection from all the way over
+there on the mainland to this point right here. (music abruptly stops) - [andy] not even reaching the sea line! - thankfully,
+(intense music) we've got a backup plan
+and it's gonna be a doozy. and it's brought to you by kiwico. kiwico ships out crates that
+contain hands-on projects for kids to help develop
+their creative confidence and problem solving skills. learn more at the end of this video or at the link down below. (upbeat electronica) (bouncy music) step one of our little project today then just to take our two crews, one that's gonna be stationed at lions bay marina back there, and the other one that gets to ride across the water in my parents' boat with all the equipment
+that we're gonna need. one of our most important
+pieces of equipment of course, is our airfiber 60 lr
+dish/radio system combo unit from ubiquiti. this is what we're gonna use
+to get a 60 gigahertz beam up to one gigabit per second
+straight across the water. in theory, we're gonna have
+similar latency and bandwidth to if we just ran like a
+straight up cat 5e network cable except that we're gonna be going, like, what is it about five clicks? something like that,
+about five kilometers. (energetic music) and now that we're on site, our next challenge is
+to figure out exactly where we're gonna get a clear
+line back to the marina. so jake and i are trying to sort this out. - so unfortunately, due to us being a little time constrained, we had to go grab some stuff
+from the hardware store and come back and by the time we got here, linus had already shipped off
+on the boat to the other side. now, what that means is he
+wasn't able to stand here and tell me where roughly it is. so i'm trying to spot him. he's on that side, like
+jumping, doing jumping jacks, waving his hands, and we're trying to see
+him through the binoculars, but they're not exactly
+the zoom i would want for the six-ish kilometers
+it takes to get over there. so this is gonna be a little tricky, but we're gonna try to
+at least get a rough spot of where he is and then we can move over to try to get the dish on the wall and then tilt it from there. good luck to us. it's so difficult to make it out. like i can't hold the
+binoculars steady enough to see an object. - [linus] do you see me? i'm waving my arms around like a madman. - like he's a pretty small human, so. oh wait, hey, do you see that
+boat going across right now? - [linus] jake, i sent you ping. - do you see the boat? - [linus] negative, there
+is no boat anywhere near me. - is there like some criss-cross lumber, like set up as a support or
+construction or something? - yes, that's the one! criss-cross lumber. how can you not see me? - there's no, or there is? - there is. - there is. i think i see you then. - well, do you see a person
+jumping around or not? hi, can you see this? - are you fingering me? - all right, i think we have contact. - i definitely can't see
+it, but i just assumed. - all right, i'm heading
+back up to the house. (bassy techno music) as you can see, the inside
+is still a construction zone which doesn't prevent my parents from putting up some pictures on the wall. you know, you've got to make it homey. anyway, none of that's our problem 'cause we're gonna be
+out here on the top deck. this is perfect. i couldn't tell from down there, but we have a perfect
+straight shot to the marina. i can see it clear as day. this is gonna be awesome. see that blue kind of like
+shipping container looking thing? bright blue. it's just to the left of that. this is gonna be easy as pie. - i think we are on
+(energetic music) what is the sketchiest
+scissor lift i've ever seen. like, look at this. it's bent to crap, it shakes,
+it's got a little wiggle, brandon really likes it and
+we only have to go that high. like another one of me, so
+it's not gonna be that bad, but it's pretty sketchy. i guess it's better than a ladder though. you ready? (motor hums) oh! oh, it's not that bad. - [brandon] 'kay look,
+just stop testing it. (jake laughs) - [brandon] jake! - i'm not, i have to go over
+here to do this, i'm just. all right, i'm gonna grab the mount. let's just try to walk
+in the middle i guess. - [brandon] i'm not moving. - [jake] you're not moving? - [brandon] i'm not moving. - [jake] i gotta, okay. - time to sit my butt
+on this nice blue chair and do a whole video ladies and gentlemen. we've got some ethernet cable, we've got a jackery just to power things while we're testing, we've
+got a cordless drill, we've got an edgeswitch 10xp, this is a 10 port power
+over ethernet switch. so we plug our included power
+adapter into the back here and then it's gonna provide
+power to our connected devices over these rj45 ports. now these guys over here, these are sfp, they are not gonna be able
+to do power over ethernet, but if for whatever reason,
+we had other sfp gear, we could connect it using that. we've also got this cute little guy. this is the uap flexhd. this is a lovely little
+wireless access point. it's poe powered, it's outdoor rated, so that means that probably
+what we're gonna end up doing is taking this puppy, putting
+it right next to the switch, and i'm willing to bet
+with how open it is here and how little interference there is, i'm gonna get an internet
+connection on this from basically the entire property here. it comes with poe injector if you don't have a poe switch, but we do. so we don't need that. also, i'll need a laptop to
+connect up my gear over here. and of course, ah, yes, the
+big guy, the airfiber 60lr. all right. come on! oh. that's my walkie. so we've got our dish here. we've got the, ah, yes,
+the personal massager. - shower head.
+- the shower head. this is the radio component of it. so this puppy just is gonna go in a little something like that. ah, there you go. oh yeah, you don't even need the manual. who needs manual boys? another poe injector. we won't need that 'cause
+we do have a poe switch. this... okay, we'll check the manual. okay. this clips on here, this pops open here so we can get at the rj45 jack of there, that's where our power over ethernet and of course our data are gonna come in, it runs down this arm, comes out this weather resistant
+thing-a-ma-boober here. and then all that's left is the pole mount that's included in the box. and this. - anyways,
+(upbeat music) so let's talk about mounting a little bit. usually a dish like this
+would end up on the roof of a building, probably like a skyscraper or on a tower of some sort with a pole, but in our case, we're trying to mount it to the side of a building. so we looked at a few different options and it seemed like a satellite dish mount was the best course of action. and surprisingly, it's kind of difficult to get these things in really urban areas because they don't really
+use satellites a lot anymore. but i did find the guy that actually does satellite teardowns and he had a bunch of extra ones sitting in his storage locker. so bada bing, there we go. now we are drilling into concrete which makes us a little more difficult, but it should be okay. we got our hammer drill,
+we got some tapcon screws which are made for concrete. everything should be okay. i just sort of have to plan it out and mark it and hope that that works. do you think like there is good? - [brandon] there is good. - the only thing is once
+i put it on the wall, it's gonna be very
+difficult for me to adjust. i can't look through the
+viewfinder if you know what i mean. linus is like on a deck on that side so he can look through a viewfinder. - ah, oh, oh, you're right, andy. this is the viewfinder. there you are. (upbeat music) - ah, i guess we don't
+really have much choice, so. the hole on the mount is
+actually a little bit bigger than the hole that we need. so i got a little bit of flexibility. is it just me or is that like spinning? whoa. wow, it literally completely stripped it. we are following the instructions. yeah, maybe it's just really
+strong wall or something. i also got some different ones
+that are a little smaller. i did bring another solution. some, like, plugs. having the time of my life right now. okay. wow, i am so glad that we
+were able to get it in there. i was starting to get
+a little worried there. - now let's talk some speeds
+(electronica music) and feeds for this bad boy. this right here, regular
+old gigabit network port, but what's special about it is that it uses 60 gigahertz wireless in order to fully saturate this thing. so that is two gigabit total, one gigabit send one gigabit receive if ubiquiti's specs are to be believed. as for how they get around
+the range limitations of 60 gigahertz, if you guys remember, 60 gigahertz can be
+blocked by a piece of paper if you happen to have wigig in your house. so how's it gonna go five
+kilometers across the water? well, that's because a: there's no piece of paper in between, that's very important and b: because these antennas are
+sending just a narrow beam of data across the water instead of just trying to
+send it in all directions, they're much more focused and they can do up to
+apparently 12 kilometers on this particular model. - we're gonna leave
+(upbeat music) that over there for now. and i wanna talk about
+the mount a little bit. so this is a pretty cool
+piece of kit they include with this dish. it actually has a bunch of very accurate adjustments you can do just by the degree. and then once you figure out, you've done your alignment tool, you've gotten it where you want it to be, you can actually just
+lock them on both axis which is really cool. now what we're probably gonna have to do is clamp this on, get it where we think
+roughly it should be, and it might be a good hour of tilting and screwing around with it until we get it where we want it to be. - got the screwdriver.
+(techno music) lttstore.com. just kidding, we don't have those yet, but the dad hats are coming soon. these are sick. they're awesome. i've got two different screw sizes, andy. i've got the good enough
+to hold it up size and i've got the just in case someone has a couple wobbly pops and decides to try to hang off of it. - [andy] let's go with the big boy. - you want the big boy? all right, you got it. all right, i think we're good now. is everyone happy? i can go ahead and lean off the porch? - [andy] yep. - all right, someone
+gonna pull me back in? i guess i can use the rope. all right, what are we secured to? whoa! that's a real high up boys! okay. - i think this is a ubiquiti
+approved installation method. what do you think brandon? - [brandon] yeah, absolutely. it's in their manual. - there is a viewfinder
+that this thing comes with. linus probably showed you it. this little guy. and you actually clip it
+into the back of the dish, but i don't really have
+a way to look through it. you know, actually maybe
+if i put it on this side, i think it can mount in a couple- oh my god. that was a good catch. the viewfinder they include
+with this kit is really nice because it forces your perspective to be in line with the dish
+and where it's pointed. i thought i was decently lined up, right? but if i look through the viewfinder, i am pointed right at the ocean. so i'm gonna adjust this up a little bit. and then now, i am pointed at the sky which i also don't want. - i got my harness so i'm not too worried about falling to my death at this point. let's go ahead and
+loosen this a little bit. there we go. now we're a little off. we're probably about, i'd
+say, five degrees low. wow, actually. i don't know, actually. we might've freaking nailed it. - all right. i'm gonna leave it right there and we'll have to wait
+until linus is ready to go. - now obviously,
+(upbeat music) the plan would be to power this using something other than
+a portable battery bank. so they're gonna have a
+combination of solar, wind, and then there's actually a little creek that runs through the property that gets water about eight
+months out of the year. so that's the plan for the future, but for today, we're just testing it. so i'm just gonna plug us into this. - as with most of ubiquiti's other stuff, this is poe powered. usually a poe injector like
+this would be mounted inside or you'd have a poe powered switch, but for now we're just gonna have this up on the scissor lift with us
+and i put a really long cable so maybe once it's lined up,
+we can go down to the ground, but that's probably gonna be a while. unfortunately, we weren't
+able to get an isp to run internet here yet. they said it's gonna be a
+couple of weeks lead time. so instead, we brought our little lte puck which is kind of funny
+because you would usually just take the lte puck to the other side and have that as your internet, but no, we wanna test this link so this is gonna act as our router and provide us some internet access so we can actually try this out. pretty easy. bam, we're plugged in. that's all you gotta do. it's working! - [linus] i haven't even connected to the bluetooth thing yet! - you plugged it in? i guess we just light it up. it says our link is about 77% optimal, but it says our capacity
+is two gigabit right now. - [linus] are you kidding me right now? you know, the whole time
+over here i've been like, "this is gonna be cake. this is be cake." and then i was kind of
+setting it up for that moment in the video where linus
+get proven to be wrong, but i mean, was it that cake? - it was pretty cake. it says our capacity is two gigabit. i guess with 78% link, that's enough. - [linus] that is freaking crazy! okay, i think
+(electronica music) i'm just straight up connected to you now. i grabbed the driver and boom. like let me just see. here it is. we're logged into gambier house dashboard, we can see our airfiber 60 lr (b) and (a). so one of them is at lions bay marina, one of them's at the gambier house, they both got their ip
+addresses, their uptime. fantastic. i am in the dashboard on my computer and i am connected to
+the dish on my phone. everything is bueno. - [jake] sweet, did you
+touch the dish at all? - sure didn't. you know what i wonder, if
+it's just people moving around. all right, we gotta wrap
+this up pretty quick here. how do we do the fine tuning thing? - [jake] i'm just tightening
+my mounting bracket down to the j-pole. - it's amazing how much a little bit of wiggle
+wobbling effects things. immediately when you were
+like, "i'm tightening it down," i saw it jump all over the place. honestly, i think we nailed
+it right out of the gate. - i got a little more
+horizontal adjustment to do so give me a minute. i guess, at this distance, like you gotta be adjusting
+it like fractions of a degree. it's crazy how much of a
+difference like a quarter turn of this knob makes in terms
+of where it's actually pointed if you look through the viewfinder. - it's very responsive though. like you can see within
+about a second or two if what you're doing is working. oh, and it's gone. what'd you do, move in
+front of the antenna? - [jake] i actually
+bopped it with my elbow. - this is it, big test time.
+- dual b test. okay, i'm starting. ping is one millisecond. - nice. oh, look at this! look at this! 800, 923 megabit per second
+download, 903 upload. - [jake] it fluctuates a bit, but that's pretty impressively stable. - that's freaking rock solid. oh, that's freaking awesome. i'm stoked. i'm stoked. this is great. so all they gotta do is a
+little bit of cable management, get that cable run into the house, and that's something they
+can handle on their side. and then we're ready to rock. - [jake] pretty exciting. wait, i wanna try a one way test 'cause i think theoretically,
+we can get higher speeds. - oh wow. without the ethernet port as a bottleneck, like this thing is
+actually capable of greater than the network port
+on the freaking thing. so we're going across the water and we're literally
+bottlenecked by the wire. - [jake] there's gotta
+be a metaphor in here. - you know what else
+there's a metaphor for for? - [jake] this segue to our sponsor? - you know it baby! big thanks to kiwico for
+sponsoring this video. kiwico is a monthly subscription service that helps introduce and make
+steam topics fun and engaging for kids of all ages. kiwico believes that if you start learning
+small things today, you can produce world
+changing ideas tomorrow. each crate is designed by experts and contains everything
+you need to complete it with detailed kid-friendly instructions. that means you don't need
+to run off to the store to get extra supplies
+like glue or scissors, it's ready to go. they've got eight different
+subscription lines, each catering to a different age group and different kinds of topics and the crate that we're
+looking at here is at kiwi level for kids ages five to eight that teaches programming and robotics. another one is their eureka level, which is for teens age 14 plus which highlights basic
+engineering and sound practices. kiwico is a great way to keep
+kids, not to mention adults, occupied for hours and they now ship to over
+40 different countries. so don't wait, fight
+summer brain drain today at kiwico.com/ltt to get
+your first month for free. if you guys enjoyed
+(upbeat music) this video, you might enjoy us not doing it quite as successfully. so maybe go check out our last attempt. we did a greater distance that time, but boy, was it ever a
+nightmare to get it working? this is, phew, totally painless. and look how good it looks by comparison. you can see right through the dish. it hardly even obstructs the view.

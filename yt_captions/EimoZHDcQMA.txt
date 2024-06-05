@@ -1,0 +1,129 @@
+How do you convert bytes 
+to a string in Python is one of the most asked, most upvoted,
+ most viewed questions on Stack Overflow. And what better way to hack the 
+algorithm than to answer a question that's already been answered
+ a thousand times before? So welcome to mCoding.
+ I'm James Murphy. Let's talk about strings and bytes, why they're 
+different, and how to convert between them. Strings and bytes look very similar in a 
+number of ways in Python. You can make a string literal between quotes and 
+just add a 'b' in front to make it a bytes literal. You can also use single quotes for either 
+one or single or double triple quotes.   They both support escape sequences 
+like `\n` to make a new line. And they both support putting an 'r' in
+ front to ignore escape sequences. One difference is that there are f-strings
+ that allow you to interpolate variables into strings. But you can't do f-strings with bytes. 
+But that's a pretty small difference. And the types have a huge 
+number of functions in common. Here, I'm calling `dir` to give me all 
+the attributes of the string and bytes types. I convert those to sets and then use the ampersand 
+to get the set intersection, and then print them out. They have so many different things in common, everything 
+from addition to finding, replacing, splitting, partitioning. They both seem to have most 
+of the traditional string functions. Replace the ampersand with a minus to see the 
+functions that string has but bytes doesn't. And it's really just a few. And swap bytes and string here to see
+ just the bytes functions that string doesn't have. There are literally just 
+four functions. But in spite of offering 
+such similar functionality, Python seems to make a 
+point of keeping them very separate. If I open a file in text mode, 
+I have no trouble writing strings. But trying to write bytes 
+will result in an error. If I wanted to write those bytes, I'd have to 
+call `decode` to get a string and then write that. If I open the file in binary mode, 
+then I can only write bytes. This time, attempting to 
+write a string will give me an error. But if I wanted to get this string, I would just call `encode` 
+to get equivalent bytes and then write that. So if strings and bytes are so similar, why is 
+Python insistent on keeping them so separate?   And what's the difference 
+between them anyway? Strings are just made up 
+of bytes after all, right? Well, yes and no. To see the difference, 
+let's take a look at a smiley face. But first, a message from 
+this video sponsor, me. In all my years of working with myself, 
+I can say I truly recommend my own services. My team does Python and C++ consulting, 
+contracting, training, and interview prep. If you have a project that you'd
+ like to get some outside eyes on, check out emcoding.io 
+and reach out to me. Anyway, back to strings 
+and bytes. Hmm, is a smiley face 
+a character? Well, when I run this function, 
+it appears like it is. It seems to act like any 
+other character. I can print it just fine. And Python says that there's just 
+one character in the string. But if we try to do the same thing 
+with a bytes literal, it doesn't allow us. It tells us we can only 
+use ASCII literal characters. Okay, well instead, let's try encoding the 
+string to convert it to bytes and then printing that. `\x` is an escape sequence
+ to give a hexadecimal number. Two hex letters. It's 16 times 16
+ possibilities, which is 256. Otherwise known as one byte. So that means that the encoded form of 
+the smiley face contains four bytes.   We can even loop over the bytes object 
+to see what the four numbers are.   In particular, although the length of the 
+string was one, the length of the bytes is four. And while we're at it, how do we know that 
+these four bytes correspond to a smiley face?   After all, they're just four
+ bytes in memory. How do we know that they don't actually
+ correspond to the integer made up of those bytes? Or we could interpret those four bytes to
+ get yet another integer that those bytes represent? Or maybe there's some kind of 
+floating-point number or a 32-bit pointer. How do we know what 
+those bytes actually mean? The answer is that a sequence of bytes 
+on its own doesn't carry any meaning. If I just gave you 
+a sequence of bytes, there are an infinite number of
+ possibilities for what they could mean. It's completely up to you 
+to determine what the bytes mean. And that is the reason that 
+string and bytes are different. Strings are made up 
+of characters. A smiley face, the letter A, 
+the number seven. These are things that have 
+meaning to us outside of computers. But of course, anything that 
+we actually store on a computer does ultimately have to 
+get translated into ones and zeros. So, a bytes object is meant to store a raw 
+sequence of bytes as it would be stored in memory. But a string stores an interpretation of
+ those bytes in terms of characters. So when I ask Python 
+to decode a bytes object, I'm telling Python, "This isn't 
+just random memory. This is a sequence of characters. Tell me what these bytes mean 
+if you were to interpret them as characters." But there's still a piece of 
+the puzzle missing. Who determined that 
+these numbers mean smiley face and that these numbers 
+mean ABCD? This is the job of what's 
+called the encoding. That's encoding, not mCoding. :) The encoding is a bi-directional map that gives you the sequence 
+of bytes that corresponds to every character. If you don't specify the encoding, Python 
+will use the default, which is UTF-8. UTF-8 is by far the most common encoding 
+across all programming languages. At the time of recording, 
+it has upwards of 97% market share. It's a worldwide standard about 
+how to interpret bytes as characters, or more specifically, what 
+they refer to as code points. And the name stands for Unicode
+ Transformation Format 8-bit. Commonly referred to just 
+as Unicode. It was developed as an extension of
+ the very popular ASCII encoding, so that we could include more characters like 
+letters from many different languages and of course, everybody's 
+favorite emojis. But even though UTF-8 is by far the
+ most common, there are other encodings. And this can be a huge 
+source of frustration. In Python, by default, encoding a string
+ into bytes or decoding a string from bytes will use utf-8 if you don't 
+specify the encoding. But when reading and writing files, 
+it'll actually use the system encoding by default, which on my machine 
+is not utf-8. So if I try to write something 
+that has a smiley face in it, then I get an error. I can fix this issue by explicitly
+ specifying the encoding. Now when I write the file 
+and read it back, everything works. Not specifying the encoding 
+can also be an issue if you write the file on one 
+computer that has one default encoding and then try to read it on another 
+computer that has a different encoding. Let's say I wrote it as UTF-8 but tried to 
+read it as this second most popular encoding.   Very unfortunately, I don't 
+get an exception in this case. I just get a string with 
+garbage on the end. This is one of the worst 
+classes of errors to run into. Because aside from printing things out, 
+I won't have any indication that anything is wrong. And now I may be feeding 
+this garbage data into other functions, which could result in wrong 
+things being displayed to my user or potentially bad data being 
+fed into a calculation. If I switch to yet another encoding, 
+this would be the luckier case where it actually detects that 
+something is wrong. So what I recommend is if there's 
+an option to specify encoding, just always specify it and use UTF-8 
+unless you have a really good reason not to. If you're using 
+Python 3.10 or later, you can run Python with 
+this `-X warn-default-encoding`. Doing so will run your 
+program as normal. Except it will also print out 
+an encoding warning anytime you forget 
+to specify your encoding. Alternatively, in Python 3.7 and later, 
+you could run with the UTF-8 flag. This will basically make Python treat UTF-8 
+as your default encoding, even if it's not.   And fun fact, 
+look up PEP 686. This is an already accepted PEP that's
+ going to make utf-8 the default in Python. The only catch is that it's 
+scheduled to become the default not in Python 3.12, not in 3.13, 
+not in 3.14, but in 3.15. So put that on your 
+Christmas list. Anyway, I hope this has cleared up the
+ difference between strings and bytes for you. A bytes object just represents a literal sequence 
+of bytes in memory with no interpretation. Whereas a string uses an encoding like UTF-8 to interpret 
+those bytes as a sequence of actual characters. Don't forget to slap that like button, 
+leave a comment, and subscribe. As always, thank you to my patrons 
+and donors for supporting me. : )

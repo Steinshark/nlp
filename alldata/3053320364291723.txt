@@ -1,0 +1,21 @@
+from transformers import GPT2Config,GPT2LMHeadModel,AutoTokenizer,GPT2Tokenizer,GPT2TokenizerFast
+import torch 
+
+
+
+
+
+class CustomLanguageModel():
+
+    def __init__(self,vocab_size=1024,input_len=512,embed_len=1024,n_heads=16,n_layers=8):
+
+        configuration               = GPT2Config(vocab_size=vocab_size,
+                                                 n_positions=input_len,
+                                                 n_embed=embed_len,
+                                                 n_head=n_heads,
+                                                 n_layers=n_layers)
+        
+
+        self.model                  = GPT2LMHeadModel(config=configuration)
+        self.device                 = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+        

@@ -1,0 +1,160 @@
+dave it's been a while welcome 
+back to computer file hello   thanks for joining us i thought it'd be worth 
+telling the story of um a little mess around   project that you and i did we were discussing 
+a logo design or a design for something and we   talked about the idea of a wave file or an audio 
+file because audio is why i come to you and um   to cut a very long story short and so so we can 
+get into the actual code of it and everything   we talked about the idea of turning audio from 
+a v from a visual or a wave representation   back into audio so this is kind of like the 
+world's worst sampling project right yes or   how not to sample i think i said one of your one 
+of your most popular videos is uh how not to store   passwords and i i remember saying texting you 
+and saying we should call this how not to sample so let me just talk through the workflow if that's 
+not too grandiose a term for this so i recorded   me saying this computer file so that's what 
+it looked like on the audio recorder i used   you sent me a screen grab of it and you were 
+saying maybe in your logo have a wave and then   you wrote me as a bit of a joke something 
+along the lines oh there'll be extra points   if you can get the audio back out of this 
+wave call it a challenge or something like   that you said it's a challenge and i said all 
+right challenge taken so anyone watching this   who's a great programmer don't judge the code 
+this was a kind of like a 25 minute trying to   quickly rush it out and get you back an audio file 
+as quick as possible so you sent me a high quality   version of it and i kind of i was it was just a 
+bit of fun we were having during uh during 2020.   2020 fun so how did you go about it then what so 
+um if i turn around to the side here a second i'll   i'll uh get onto the screen so basically i'll 
+load up the picture that you sent me so here's   the picture that you sent me and the first 
+thing i wanted to do was get rid of the adobe   audition stuff around it so i put it into 
+photoshop and i kind of got the what the color   of the green of the grid behind and basically 
+removed all of that until it became this so you   can see we're pretty much left with just a black 
+background and the wave so in in a previous video   i think it's my first ever computer file video 
+we talked about how computers sample audio and   basically you're drawing a graph of the uh 
+the pressure waves in the air then that graph   obviously can be shown on the screen and you're 
+sending me a picture of that graph which is   obviously losing a huge amount of detail and then 
+i'm trying to reconstruct an audio file that we   can listen to back from that so i was looking 
+at it and thinking all i'm really interested   in on the kind of like the vertical lines of the 
+picture is to look at where the top and the bottom   pixels are the the the bright points and basically 
+have a min and a max for each vertical line i keep   wanting to say horizontal but it's it's vertical 
+that was my first way of doing it i'm sure there's   loads of ways of doing it and loads of people are 
+going to leave comments saying oh you should have   done it like this and this was just a bit of fun 
+that we we did so i've got here the code i load   in the bitmap the file is called computerfile.png 
+and then i create a new bitmap this is all in c   sharp by the way i create a list of values which 
+is the values i'm going to get out of the bitmap   and then we go around in a loop here for the width 
+of the bitmap so i go from zero to one before the   width and then basically i set what my max and my 
+min and this looks a bit weird because i've got my   mac set to zero and i've got my minimum set to the 
+height which seems like the wrong way around but   that will make sense in a minute so this piece 
+of code here goes up each column of the picture   it's going from the bottom to the top on each one 
+eventually spit out the minimum and the maximum   value of each one so obviously here the minimum 
+is going to be down here and the maximum is going   to be right up here whereas here the minimum is 
+going to be here and the maximum is going to be   here so they're going to be different values 
+in each column in the picture you can see here   that because a lot of it is just a solid block 
+of color there's no actual wave data in that at   all there's nothing we can get from that so all 
+i'm doing is kind of going well i want the bottom   there and the top there i just want to know what 
+those values are and i'm not really interested in   what the shape would be in the middle of that 
+because we don't know that that would just be   guesswork and i fill that in later so the way i 
+do that is with this bit of code here which goes   up each column and basically i set the max to zero 
+and the minimum to the the maximum height and then   we go through and we basically we're challenging 
+the maximum and minimum we're saying well is this   new value pick the new value the smallest one of 
+these two and obviously at the moment our minimum   is set to the maximum it can be the fullest height 
+so if the value i'm getting is smaller than that   then it will reset the minimum and then as you 
+iterate through each pixel you're going to extract   the minimum and the maximum values from here now 
+i'm telling whether a pixel is is the green by its   brightness so i'm going to get the pixel at the 
+point x and y and if the brightness is over 0.5   which is a scale from 0 to 1 then i'm saying it's 
+not part of the background it's part of the graph   for each column i'm saying i want the minimum 
+maximum minimum maximum minimum maximum all the   way across the picture and basically creating a 
+list of numbers you know which is all an audio   sample it's just a list of numbers then i made 
+this kind of a filter here which actually just   passes a moving average over the whole thing which 
+just smooths it out a bit and basically stop the   ringing from the sampling errors i then purely so 
+i can plot the graph i'm going to show you next   output each of the values to a text file here's 
+the text file so you get all of those values here   and then of course we can move over to libra 
+office and actually plot them on a graph which   is there so you that was a way of me checking it 
+was all working and doing what i wanted it to do   of course if i played this if i converted this 
+straight to a wav file it would go clever and   it would be gone whereas you're saying 
+computer file or computer file but it's   a bit fun that would be far too quick because in 
+each one of those columns there's probably a lot   more columns because the picture you gave me was 
+very very squashed in so i needed to stretch it   and of course depending on the picture that 
+you give me and how zoomed in or out it was   that stretch amount will change so i had 
+to experiment with that until i got it to   something that i thought sounded like your real 
+voice so here i open a new file to write out this   wav file i've got a load of wave header stuff 
+going on there the bytes that you write for   the header of away file to say that it's 8 bit 
+or 16 bit or what the frequency is and sample   frequency and everything so and then i've got this 
+stretch value that i've set myself to 9 which will   elongate or squash up the wave as i want and then 
+down here for each of the value as i'm writing   it out i go round in a loop around the amount of 
+stretches i want and i basically add in new data   so if i'm going from this point to this point but 
+i want nine places in between so basically what   you're having is you've got a minimum maximum 
+value and in between you're getting a little   bit of one and a lot of the other and then as 
+you're moving through that increment the the   the proportion between the waiting is going 
+between the two and in this case i'm doing it in a   way that's very very crude you know you might want 
+to do it in a more kind of curved way with signs   but again this was just a quick programming 
+challenge from you over over whatsapp when we   were having a having a conversation so for each 
+of those values i write out value three which   is the intermediate point and i write that out as 
+the file and then finally i set the last value to   whatever the current value is and it goes back 
+around the loop so that it's got the previous   value up here i actually set the last value to 
+zero so i initialize the variable to zero so   it starts at zero and then it closes the file and 
+it it was just that simple and i thought i wonder   whether this could work obviously i didn't write 
+it all in one go like that i wrote out and plotted   the graph and i did it first and heard that it 
+was squashed up and realized i needed to scratch   and stretch it and add it all in i mean there 
+was a it's an iterative process i wasn't just   you know write it all out and once and hit go and 
+it all just worked magically but and much as these   things seem like that sometimes it definitely 
+wasn't but um yeah and i was i was really sort of   blown away by how how well it worked to be honest 
+i didn't expect it to work as well as it did   i've got audacity here i can drag over the 
+newly generated wave file and we can hit play when i first heard this it just reminded me of the 
+sort of sampling that we got in 8-bit video games   back in the day so i remember playing a game on 
+the commodore 64 back in the 1980s which had some   speech synthesis on it and it sounded like that um 
+some of that was was two bit and four bit i mean   they were really really simple i don't know what 
+my acorn electron was running back in the days but   yeah i mean it's it's effectively your your you're 
+in audio terms as as someone who's more of a sort   of an audio engineer in this kind of thing um if 
+i wanted to get that sound let's say i was doing   a recording and someone said i want that sound 
+on my voice i wouldn't code something i'd grab   a bit crusher or something that's going to distort 
+it where it's going to square things off and it's   going to effectively so obviously if you've got a 
+nice smooth wave you want to have as many levels   as possible within that wave so that you've 
+got a nice kind of a gradation of different   different volumes effectively that's what you're 
+measuring of different voltages um and the the   more bits you have to to represent that you know 
+exponentially gets bigger and bigger and the more   the more detail you can have so eight bits is is 
+can is so much worse than 16 bits it's ridiculous   and four bits again is so much worse than eight 
+bits so and we're extracting something here that   realistically i mean i've converted it to 8-bit 
+but whether i was even close to getting that kind   of quality in the first place i mean i i wouldn't 
+i haven't even bothered even thought to try and   work out what the source file bit rate could 
+possibly be the list of numbers straight off   the picture file is presumably a tiny amount 
+of data it's a 35k file with the numbers and   that's of course written in ascii that's not in 
+in in binary which would be yeah a hell of a lot   smaller that was just written in a text file from 
+it to me to whacking to make a spreadsheet but um   i mean i think with all of these things with any 
+format if you're converting data from one place to   another there will be a way that it seems to fit 
+sort of in its smallest sense and more naturally   but there will be um you should be able to 
+represent data in any way i mean i've seen   videos on computer file we've talked 
+about you know storing data in photos   you know we know with with modems 
+and other such things you know that   data all the time is being transmitted via audio 
+and via light with optical signals so whether it's   the most natural format for for that or not is a 
+different thing but bottom line is they all come   down to a list of numbers at the end of the day 
+everything becomes a list of numbers you know   this whole exercise though then brought up a 
+really interesting question uh for me which   which was so let's say i bought a stock photo 
+on a stock photo website of a producer standing   in front of a mixing desk and on the screen 
+behind him he had a picture of a wave file and   i've bought the rights to use that picture and 
+any derivative works from it so if i then reverse   engineer the audio from that picture can i use the 
+audio because it came from the picture which i've   had the rights to get derived works from which 
+could be a real problem for let's say sound on   sound magazine interviewing a famous producer and 
+he's got a multi-track of one of his clients up   on the screen in the background i mean if you had 
+a really high resolution picture of that you know   you might be able to get out some artist single 
+before it's been released to the you know to the   market there's some really interesting questions 
+that come out of this that i think you know in   some ways are more interesting than the quite 
+simple code i suspect that the only one who's   ever going to benefit from that is a lawyer's 
+uh bank balance to be honest well if there's a   lawyer out there that watches this channel then 
+uh then leave us a comment and tell us whether   whether that would uh cause any problems or not 
+we're not going to pay you though we're not paying   you for legal advice if anything this might just 
+expose the accuracy of adobe's wave to graphics   capabilities in the first place that overview 
+i'm using the word overview because that's   what it would be called in in kind of logic or 
+cubase or anything like that but that overview   that they're writing if you've got a really 
+really smooth curve and then you squash it up   and you physically haven't got enough pixels on 
+your screen to represent that um that curve then   you're by doing the zooming of the wave you're 
+basically throwing away information yourself   and reducing the quality of it and then when 
+i restretch it i'm having to fill that in so   we're going to lose high frequency data there 
+also by squashing it that way we're going to lose   um bit depth on it so there's there's 
+so much that's that's lost from that but   the the fascinating thing for me was the 
+fact that what we recovered was still   perfectly audible actually they've done a pretty 
+good job of it yeah yeah i mean it's it has to be   good enough to use and i think like anything when 
+you do when you're designing a piece of software   you want to write something that's going to 
+give you enough of the wave that it's going to   be good enough to the user but not so much of 
+the wave that it's going to eat up processing   power when you're trying to redraw and you 
+want to quickly zoom in and out of stuff so   obviously what what you're seeing there 
+without what you're discussing there is the   natural trade-off between those two things so 
+clearly what they're giving you is good enough   for you to do your work and good enough for us to 
+actually recreate what you said from it you know   which which is good how's that old camera that 
+i uh sold you getting on it's wonderful and   it's so lovely that your older canon c100 is 
+going to make its way back onto computer file   but i am still getting adjusted with looking 
+at the camera and i've got you down here on   whatsapp are used to people not looking at 
+the camera anyway yeah that's fair enough [MANUAL PUBLISH]

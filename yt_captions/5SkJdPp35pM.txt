@@ -1,0 +1,167 @@
+("Toreador Song") - I absolutely love the house I live in, and that's no accident. It's taken me 10 years to get everything just the way I like it. Perfect wifi coverage, a server room with copper
+and fiber-optic cabling running everywhere I need it, VR base stations,
+hard-mounted into my ceiling. And of course, my epic DIY
+air conditioning project that saved me like 20 grand. But then my kids asked,
+very nicely I might add, if they could have their own rooms, instead of all sharing one giant one. So, here I am in my new house that has absolutely no
+technology in it whatsoever. And this very '90s aesthetic. Let's talk about what
+we're gonna be changing and how you guys can
+actually maybe help me here, because I am a little out of my depth. But first I need some help
+from our sponsor, GlassWire. Are you having poor
+quality video meetings? Use GlassWire to instantly see what apps are wasting your bandwidth
+during the meeting and block them. Get 25% off today using offer code Linus at the link down below. (upbeat music) Okay, I lied to you a little bit before there is technology in the house. It's just that, Breaker, this is Big Eagle, the (laughs). This thing is hilarious. The issue is just that, what passes for cutting
+edge home technology has changed a little bit in
+the last two or three decades. So, we've got a, whoa!
+(radio broadcasting) Radio!
+(radio broadcasting) Look at that. So, the first thing we're gonna change is to rip all of these off
+the wall and patch over them. Actually, the first thing we
+did was the opposite of that, ripping open a hole in the wall by removing this built-in speaker. A, to have a look at it and
+see if it's still pretty decent and it's something we can reuse. And B, because the box that
+comes in from the street is right on the other side of this wall. And we needed to use a fish stick to bring in fiber-optic internet. That's right, at least here anyway. The ISP will not come onsite and confirm fiber is
+coming into the building until you have actually taken possession. So, that was one of the first
+things I wanted to check because if I was going
+from gigabit up and down fiber to DOCSIS or ADSL, that would have been a
+pretty crummy downgrade. And I really wanted to know I could do it. Fortunately, I can. It's already going down into the basement, so we can just pop this out. With that very important
+thing out of the way, we're ready to move on. So, obviously for my wife, things like swapping out
+this wonderful blue carpet were very high priorities
+and I'm with her on that. I do wanna do that, but the tech is where I'm
+focusing 98% of my attention. Starting with things like this, built-in bookshelf slash media console that's here in the family room. Now, it's super nice. Really high-quality build, and my goodness, there's
+so much power in it. We've got four outlets in
+here, they've got two in here. The only small problem
+is that it was designed for televisions that were
+a slightly different size and shape than modern ones. I mean, this is cool. Pull up your TV and angle it
+toward the kitchen if you want. The intention is that when the kids have
+taken over the basement, mom and dad will still have somewhere to sit and watch a movie
+and cuddle on the couch. So, we're gonna put a subwoofer in here with some kind of acoustically
+transparent cloth. That'll also act as a passive intake. We're gonna have cooling fans, probably like four 140
+millimeters over here. And then, anything that requires
+cooling like game console or a PC, or whatever
+else is gonna go in here, just rip out these drawers. What I wanna do, this is my perfect world. And hopefully the
+modifications can be made is just rip out all of these shelves and put probably a 77 inch TV in here. And then, so that we can hopefully, mostly reuse the structure. I'll just do some kind of wall mount that has an arm coming off of it. And then maybe some bias
+lighting behind the TV, so that it doesn't look like
+it's sitting in a cavern for no apparent reason. One cool thing is that four
+rooms in the house are already wired up for in-ceiling
+or in-wall speakers. So, I'm definitely gonna wanna reuse that. And I'm just gonna use
+the same Sonos Connect:Amp that I do at my current house. Plug these in and then I'll
+probably run a few more of these to the upstairs. So that the kids can have
+music in their bedrooms and stuff like that. Then obviously another
+high priority for me was a computer room slash
+office for me and my wife. That's gonna be here
+for a couple of reasons, with the biggest one, probably being that we are directly
+above the mechanical room. That's where my server rack is gonna go. So, I think probably in
+this corner over here, we're gonna run a conduit, so that I can have a similar setup to what I have now with
+fiber-optic cabling running between my
+actual desk and monitor, and peripherals in the computer, which is in a separate
+room for complete silence. And to keep temperatures
+in this room under control, so you don't have the computer
+outputting heat in here in the summer when you're gaming or whatever the case may be. One kind of controversial
+changes as beautiful and ornate as it is, I
+think we're going to rip out this built-in desk
+slash storage unit here. Not because it's not really high quality, but it's just really not us. Now, let's head down to the basement. We can have a look at
+that mechanical room. That's actually where I think you guys are gonna be able to help me and talk about some of the cool tech that's gonna go down there. Oh, shoot! Aw! There's no stairs here yet. For whatever reason the
+previous owners decided not to put these stairs in. So, we're gonna have to
+go use the other ones. Smartifying the built-in
+heating and cooling systems in this house is going
+to be a huge challenge. So, heating is handled in
+floor with radiant water tubes. That's super cool. And actually there's no reason from like an efficiency standpoint to have fine granular control over something like this on your smartphone. It's basically set a temperature with it and forget about it. The problem is that this heating system is the only thing that has thermostats positioned around the house. There are 10 zones for
+it, two in the basement, three on the main floor,
+and five on the upper floor each with their own thermostat, which would be great because I
+could just swap all these out with smart thermostats, then I can get some dampers
+and then some smart actuators for the built-in AC, which is forced air. And then I could have
+those smart thermostats communicate to both the
+heating and the cooling, except these are pretty
+much 1950s technology. They have only two wires running to them and they use an actual
+mechanical mercury switch in order to turn them on and off. To my knowledge, there's
+no smart thermostat that will run on two wires. One idea I had was taking
+all of these brown guys here. So, these wires are the ones
+that run to the thermostats with their two conductors. And just putting a simple
+24 volt power supply right on the wall here. And actually only
+powering those thermostats and then doing all the
+communication with them via Z-Wave or Zigbee, and then having maybe Home Assistant tie the whole thing together. I'd have to get smart valves
+for all of the different zones, here's the last two. And I'd have to find a thermostat that is willing to run with just power and only smart communication with the AC and with the boiler. But if you guys have any suggestions, man, please leave a comment because I am, I mean, I love technology and everything, but home automation is
+something that I haven't touched and can be very overwhelming coming in with no experience whatsoever. We are probably going
+to replace this furnace with a high efficiency boiler system. Not because the furnace isn't working and won't continue to work, but because it could actually
+end up saving us money. So, this vent right here is
+what takes the hot exhaust from both the furnace
+and the water boilers, and just kicks it out of
+the roof of the house. Well, because we're gonna be putting solar panels on the roof, we actually need a nice, thick conduit going all the way from here
+in the mechanical room, up to the roof as part of that project. If we switched to a high
+efficiency boiler system, we're only gonna need about
+this much for the boiler, which would free up the
+rest of that for the wiring that we need for solar panels on the roof. So, in the longer term, I think that's gonna work
+out really well for us. The other thing it'll
+do, is it'll allow me to run some kind of like
+cooling system for this room, because I think the server
+racks gonna go in this corner. And I'm gonna want a couple of things. One is you can actually see the water pipe for the irrigation system over here, I'm gonna want to triple that. So, I'm gonna wanna have two more pipes running through the walls,
+one inlet and one outlet. So, that I can actually water cool some of the stuff in the server rack and then exchange the heat outside. That's right ladies and gentlemen,
+whole home water cooling, it's coming. Get subscribed. (rock music) Terrible. This is another room that I'm gonna want your guys' advice on. I mean, I know what I like
+in terms of watching movies and playing games, but what I don't know is
+some of the best practices for building a theater room,
+and this is going to be it. I'm gonna have conduit running along the bottom to a small stage here that is going to have like
+cable management holes coming up through it
+so that, you know, TV, if a friend brings over a
+game console or something, you'll be able to plug in here. And then all of the AV equipment is gonna be over in the mechanical room, which is on the other side of this wall. I'm gonna have power on the wall in case we wanna wall mount the TV, power down there. Obviously, we're wanna run speaker wire for Dolby Atmos and all
+that kind of cool stuff. Since the, I mean it's
+an unfinished basement, so we have a perfect
+opportunity to do that. But guys, if there's any
+sort of guides on, you know, what to know before you
+do a home theater room, I'm obviously more than open to it. From theater room, this
+wall is gonna be closed in and then there's gonna be a double door. And that will take us
+into, the land center. The idea here is that whether
+it's my kids and their friends or whether it's our whole family, we can all sit and play a game together. And my kids really want me
+to try Minecraft with them. And right now, as crazy as it sounds, we don't have enough
+computers in the house to all play together. So, they use mine and my wife's, and then the one that
+we built into that desk and in my kid's room. So, we're gonna do three desks along here, one, two, three. Two more along here and then I think we're
+gonna wire in one more power and ethernet right here. This is gonna be kind
+of like a short wall, like a half wall, kind of like that. And then if, you know, someone brought over
+a laptop or something, we could have a total of
+six people playing in here all at the same time. I'd love to hear suggestions for cool, like if we should do
+some power on the wall and you're like cool, like
+led lighting on the wall over, like, I don't know. I want this to be kind
+of cool and land caving But the main purpose
+is a couple of things, one having everyone in kind of one place when they're using
+computers, and number two, having the stairs come down right behind with all the screens visible so that I can see what's on the screens when I walked downstairs
+without any notice. You know, parent things. All this house turns making me thirsty. I'm just gonna pop in
+here and get a drink. If only I brought a water bottle. lttstore.com. And finally, this is where my
+VR gaming setup is gonna go. We're gonna do yet another console. We'll probably put like
+a pretty modest TV here. And then there'll be
+couches, that are like weigh the crap out here. Weigh the crap out here because
+I want a VR gaming space. That's about as big as what
+I have in my living room now for playing games like GORN. Having the couches and the TV is for a game called Takelings
+House Party, super fun. And then this wall is actually
+gonna, see you later wall. And we're gonna open this up. So, this is gonna be like a games table. We'll have games storage in
+that closet, that's behind Andy. And then this is gonna be
+relocated against this wall, which actually I think starts here. So, it's gonna be rotated 90 degrees. And, you know, that'll be where kids can get their snacks or whatever. So, it'll be right between the land center and the games table, and the VR space. Wireless access points. So, Rawkus generously
+offered to consult with me on the best place to put them. I drafted some in, like
+five or something like that, to make sure I've got coverage when I'm working on a
+project in the garage. I want coverage outside. So, if we're on the patio
+and all that kind of stuff, I think one of them's
+gonna go in this hallway. Anyway, what's also in this hallway is the single control
+for the air conditioner. So, we've got humidity as
+well as temperature control. And this is something that I've gotten very used
+to at our current place, with our mini splits. Being able to control the AC room by room, because A it's a comfort thing. Not everyone likes the
+temperature the same, and B, it's a huge efficiency thing. If the kids are away
+at their grandparents, I can turn off the air
+conditioning in their room, close the door, and save a ton of money. So, I wanna figure out what we can do in terms of altering the
+ducting with dampers, to get room by room control. And then, I wanna replace these. There's a GE switch that, actually this was really generous. The Hook Up, you guys can
+check out his channel here. He's helped me with some
+stuff already, super nice guy. Test it out for me. It's got a motion sensor
+and a switch built into it. And apparently, they've report independently to Home Assistant, which is super cool because
+it means that I can do things like presence detection. So, if nobody's in the basement, according to the motion sensors that are on all of my light switches, I could just turn off the AC. Another thing that's
+gonna be really expensive is installing electric car
+chargers in the garage. So, we wanna have a two
+head one, just in case we change the minivan out
+for something electric in the future. And that's gonna go in here. So, that big old thick cable, instead of running from my
+electrical panel in my garage, which is where it wasn't the old house. To the garage is gonna have to
+run from the mechanical room, which is way over on the
+other side to the garage. Fortunately, we've got
+all the charging we need for these electric cars already. See you later! Thanks to Megapro for
+sponsoring this video. They just announced their new
+24-in-1 precision screwdriver, which is designed specifically for people working with electronics, technology, security,
+jewelry, or any other repair. It comes with 24 of the most
+popular precision bit tips, all conveniently stored in the Megapro patented
+retractable bit cartridge. It's palm saver cap allows
+for fluid rotation of the end, allowing you to seamlessly
+tighten and loosen screws with a single hand. And it's got raised
+rubber grips to provide even further control and comfort, maximizing speed and
+efficiency on any project. Pre-orders are open now,
+so click the link below and grab your precision screwdriver today. Oh God! I hit the stairs.
