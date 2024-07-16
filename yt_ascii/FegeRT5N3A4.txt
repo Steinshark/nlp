@@ -1,0 +1,195 @@
+computers that run the von 
+neumann architecture store   their programs and data in the same memory bank. since both have to travel the same road 
+to get and from the cpu, we find that the   system is ultimately limited not by the cpu or 
+gpu's computational limits but by said road. this is the famous von neumann bottleneck. in a previous video i talked 
+about in-memory computing as   a way to bring a computer's 
+memory closer to the compute. but making a computer that thinks like 
+the brain - a neuromorphic system as   it is called - entails far more than just memory. for this video, a look at these 
+brain-inspired systems and   the fundamental differences 
+between computer and brain. ## why the brain
+first things, first. the brain. computer scientists have long had 
+the desire to replicate the brain.   but why? what is so special about the 
+brain? aren't computers just better? computer scientists have long admired 
+the brain's ability to function at very   low energy. the brain operates at about 12 to 20 
+watts of power - 20% of the body's metabolic rate. the desktop computer on the other hand 
+does about 175 watts. leading edge ai   accelerators like the nvidia h100 
+use anything from 300 to 700 watts. the brain also does not operate at a very fast 
+pace - with a clock frequency of about 10 hertz.   though this varies depending on what the person 
+is doing at the time and their mental state. so the brain does not use a lot of power   and doesn't operate very quickly. 
+and yet it is capable of so much. imagine a bee. a bee's brain has less 
+than a million neurons and runs on   less than a watt of power. and yet it 
+can fly. it can navigate to flowers   and back home. it can socialize 
+and maybe even calculate things. a bee's brain is just as capable as a 
+18 billion transistor system on chip,   and it can do all that with just a 
+million neurons and virtually no power. perhaps we should start using brains and 
+not silicon chips for learning? oh wait ... the biological brain's powerful capabilities 
+- achieved at low power - is the single most   significant motivation for building 
+neuromorphic hardware today. ## insane parallelism
+a brain accomplishes these with parallelism. your brain's 86 billion neurons operate 
+without a central clock. by which i mean   that they fire their signals - referred 
+to as "spikes" - on their own time,   based only on the spikes they 
+receive from their neighbor neurons. measured in floating-point operations per second,   the brain is an exaflop-level compute device 
+on par with the most advanced supercomputers. an nvidia h100 by comparison can only do something 
+like 60 teraflops - depending on the variant. the brain's lack of synchronization is 
+in contrast to digital circuits like a   cpu. a cpu relies on signals from a central 
+clock as a reference by which to coordinate   their calculations. it lets them crunch certain 
+tasks very quickly, but synchronicity has costs. a central clock system costs time 
+and energy to distribute the clock   signals across the system. and there is 
+waste as each system component does not   execute its task until it is told to 
+do so as per the central clock signal. ## chaos as a feature no coordination implies that neural 
+activity is chaotic, to say the least. no doubt about that. but brains make 
+that chaos a feature not a bug. the   neural environment is full of noise - spikes 
+firing from neuron to neuron but going nowhere. when a neuron receives a spike from 
+a synapse, the majority of the time   it does nothing - noise. but there are 
+so many extensive connections - with   so many synapses - that enough spikes get 
+through to the right neurons to carry on. again, in huge contrast to the digital computer, 
+which works hard to make sure that every signal   matters. a modern 3.2 gigahertz intel cpu 
+sends a "noise" signal once every 24 hours. but as always, there are tradeoffs. you use 
+a lot more power to achieve this very low   signal-to-noise ratio. imagine the work you need 
+to put in to synchronize billions of transistors. that is how the brain achieves its efficiency. 
+neurons literally throw things at the wall and   are not afraid to make mistakes. in doing so, they 
+find something that works. i hope that made sense. and by living amidst chaos, brains 
+also become shockingly resilient and   flexible - even in situations of massive damage.   it is not hard to see the value of 
+this for computer hardware systems. ## neuron people who want to copy the brain often 
+start with its fundamental unit - the neuron. neurons are cells in the brain and the rest of 
+the nervous system. when they receive spikes from   their neighbors, they can - if they so choose 
+- send their own spikes on to their neighbors. all neurons share several common 
+features - dendrites, soma,   and the axon. spikes enter the neuron's cell body 
+- formally called the soma - through dendrites. dendrites are the neuron's input pathways. 
+a typical neuron in the outer layer of the   cerebrum - the largest part of 
+the brain - has 10,000 inputs. a typical neuron in the cerebellum - 
+the second largest part of the brain,   but trying hard to get to number one - 
+has up to a quarter of a million inputs. if sufficiently stimulated, the neuron 
+sends a spike to its neighbors. or a   series of spikes - a neural code, though how 
+the code works remains somewhat of a mystery. this spike is sent through an out-path called 
+an axon. the axon's primary goal is to ensure   the signal is forwarded faithfully 
+- though it does not always do this. and then from there, it enters the 
+neighbor neurons' dendrites through what   we call "synapses" - an electrochemical 
+structure for connecting two neurons. such a description understates their 
+role in computation. variations in   synaptic structure over long time periods - 
+a thing referred to as "synaptic plasticity"   can subtly change the neuron spikes and how 
+they are received. we should not ignore them. ## diversity so those are the common structures, but 
+the brain's 86 billion neurons exhibit   incredible diversity. as you might 
+expect with 86 billion of anything. some neurons - due to the complicated 
+chemistries of their axons - can send   signals faster than the taiwan high speed rail. 
+other neurons, slower than a taiwan sea turtle. some motor neurons can stretch up to a meter 
+long. the ones in a giraffe can be multiple   meters long! other neurons on the other 
+hand might just be 0.1 millimeters long. and neurons - just like us - have 
+their own preferred stimuli. in 1981,   david huber and torsten wiesel won half of 
+the nobel prize for medicine for showing that   some neurons fired most rapidly when shown 
+lines going in one direction over others. as i mentioned above, the majority 
+of the time a neuron receives a spike   from a neighbor neuron, things get left on read. so if we are to sum it up enough to get 
+us to the next section of the video,   the brain works by propagating huge, random 
+waves of spikes throughout its billions of   diverse neurons. many of these spikes end up 
+as wasted noise, but many are relevant too. neurons and synapses merge together the 
+work of computation and memory - doing a   bit of both. memories are stored 
+in the relative strength of the   synapses between neurons. but those 
+synapses can do calculations as well. that is why the brain does not suffer the   von neumann bottleneck. that's their 
+secret, cap. they aren't separate. ## going neuromorphic so in order to create a 
+proper neuromorphic computer, we not only have to implement artificial versions 
+of neurons and synapses - but also the way   they very tightly bind together the memory, 
+compute, and communications between the two. now, you might be thinking, "what 
+about artificial neural networks   like those running in chatgpt? 
+can we call those neuromorphic?" it is true that these neural networks started from   our understanding of how the human brain 
+works. so many of the concepts overlap. perceptrons for instance are a simplified 
+mathematical model of the meat neuron. it   approximates the neuron's behavior by taking in 
+a weighted sum of inputs, applying an "activation   function" to mimic the neuron's stimulation, 
+and fires off an output to its neighbors. but virtually all of these artificial neural 
+networks - especially the ones running out there   in the real world - run on von neumann hardware 
+- which means dealing with the bottleneck. changes can be made to the hardware in order 
+to improve performance and power consumption,   of course. that is why we gpu and tpu. 
+but the tantalizing possibility remains of   getting game-changing benefits by running this 
+neural "software" on actual neural "hardware". the neural software - often referred 
+to as "spiking neural networks" to   differentiate from von neumann-style anns and deep   neural networks - shall be discussed 
+some other day. let's talk hardware. ## silicon neurons
+many industrial and academic players have demoed neuromorphic hardware created 
+with traditional cmos transistors. so normal semiconductor manufacturing 
+processes like that for von neumann   computers. let me note a few of these 
+"silicon neurons". many are - like today's   artificial neural networks - programmatic 
+approximations of the neuron's behavior. we have ibm's truenorth project from 
+2014 - the first widely distributed   neuromorphic chip. it is capable of 
+running inference - recognizing that   a person is doing something in 
+a video or controlling a robot. truenorth is a special cmos integrated 
+circuit with 4,096 cores - each with   256 programmable neurons. the whole chip 
+has 256 million programmable synapses. a big point that ibm made was how 
+it uses far less power than most   computer systems - the chip's 5.4 billion 
+transistors consume about 70 milliwatts. other semiconductor companies have 
+shipped silicon neurons of their   own too. intel labs has their loihi 
+and loihi 2 neuromorphic ai hardware. the european human brain project was a massive 
+ten year science project initiated in 2013,   looking to do groundbreaking 
+work in the neural sciences. one of their projects was the brainscales 
+project, which was first released in 2011.   a second version was released in 2020 
+with improved local learning capabilities. it is a mixed-signal asic chip that 
+uses analog electronic circuits to   mimic the spiking neurons of 
+the brain. very interesting   though its analog neurons are not as 
+flexible as its digital counterparts. and then in 2019 we have the tianjic project, 
+a hybrid chip created by scientists at china's   elite tsinghua university. it is a hybrid 
+platform that attempts to run various types   of neural networks - including those 
+designed for neuromorphic hardware. ## crossbar how do we implement a neuron 
+network in hardware? let us   briefly look at how ibm's truenorth does it. truenorth is fabbed on a 28 nanometer cmos 
+process. as i mentioned, it has 4,096 of what they   call neurosynaptic cores. it is capable of running 
+widely adopted convolutional neural networks. each basic truenorth core 
+has 256 axons, 256 neurons,   and synapses fully connecting them in a 256x256 
+crossbar structure, implemented using sram. each of the axons are given a synaptic 
+weight depending on the neuron that   they are connected to. and each 
+neuron has a state or "membrane   potential" as well as a particular 
+threshold for sending on a spike. the system works on cycles. during the cycle,   spikes travel to the neurons through 
+axons, which affects the spike's value.   the neuron collects the incoming spikes 
+into buffers and then evaluates them. they then update their own membrane potentials 
+accordingly. once having done that, they compare   it against their threshold. if the membrane 
+potential meets or beats the threshold, the neuron   sends a spike of its own. spikes can be sent 
+to local neighbors or outside the core itself. just like the real brain, truenorth does not have   a global clock. the elements in each of 
+the cores work asynchronously in cycles,   doing things only in response to events. they 
+also operate at low frequency - 10 hertz. and to implement the neuron's 
+inherent randomness and noise,   each core has a random number generator 
+that can raise the thresholds for creating   a spike. or randomly delay or even halt 
+a spike's transmission through a synapse. it's like that episode of it's always 
+sunny in philadelphia. wildcard! ## cmos shortcomings a significant benefit of building 
+these "silicon neuron" chips using   cmos processes is that we get to 
+draft in the wake of the chip giants. they share some of the benefits of the brain. 
+truenorth for instance looks to be very scalable,   sips relatively lower power compared to gpus,   and can run widely used neural network 
+software to get accurate results. but there are drawbacks. a test of truenorth's 
+performance found tradeoffs between energy   efficiency and accuracy. if we want the 
+model to give us competitively accurate   results - which can make a big difference in a 
+commercial context - we need to use more power. these circuits are also quite large, since each 
+of the cores have to have their own memories.   von neumann machines benefit from having a single, 
+very dense central memory bank. having denser,   higher capacity allows us to accommodate 
+the larger models that are so in vogue. and lastly, the brain is an analog 
+device - digital devices are an ill   fit for replicating their behavior. so we 
+need to incorporate the analog element,   which limits the system's flexibility. these disadvantages have pushed scientists 
+to look beyond cmos for new ways to   implement neuromorphic devices. the most 
+popular such approach is the memristor. ## memristors in 1971, leon chua - then a professor 
+of electrical engineering and computer   sciences at uc berkeley - published an 
+article proposing a new type of circuit. by looking at the relations between 
+the three major circuit elements,   he proposed the existence of a fourth 
+- the "memory resistor" or memristor. this paper was very difficult to read and 
+i will freely admit that i did not get it.   so i am not going to explain any more than that. 
+anyway, the idea fell on the wayside until 2008,   when scientists at hewlett-packard announced 
+a physical implementation of the memristor. the original 2008 memristor was a simple 
+metal-dielectric-metal sandwich with two   terminals, or points of connection. in this case,   the metal electrodes were made from platinum 
+and the dielectric was titanium oxide. if we are to apply a voltage pulse to the 
+memristor, the film can switch its electrical   resistance - flipping between an insulating 
+and conducting state in a non-linear fashion. what is it about the memristor that makes 
+it so suitable for neuromorphic computing?   their key characteristic is that the 
+value of that electrical resistance   is dependent upon the history of the voltage 
+passing through it - ergo the name "memory". even better, it can remember that history 
+even when the power goes off. this makes   the memristor a form of "non-volatile 
+memory" like flash memory or a hard drive. people quickly drew connections between 
+memristor behavior and that of biological   synapses. scientists envisioned them as a 
+non-volatile memory for in-memory computing.   for the past 15 years, such devices have 
+been at the center of neuromorphic study. but there are a few challenges. the first 
+has to do with manufacturability. it can   be very difficult to produce enough 
+of these memristors uniformly and at   scale. can they handle many cycles of 
+resistance switches? and how long can   they store their data? engineers are 
+still working through these questions. also, the changes in the memristor's 
+resistance are non-linear, which makes   it somewhat challenging to program for. 
+new software paradigms in neural network   programming may be needed for memristor-based 
+neuromorphic computing to work. the work goes on. ## conclusion i think the biggest challenge with these 
+neuromorphic systems though is the competition. nvidia and other adherents of "huang's law" 
+are leading the way. according to huang's law,   silicon chips powering ai more than 
+double in power every two years. in the past 10 years, ai inference 
+performance in the gpu has improved   1,000 times. it might be hard to compete 
+against this. but maybe we don't have to.   considering each system's advantages, we 
+might start seeing more hybrid systems. perhaps we can put neuromorphic and von 
+neumann chiplets together so to give us   the best of both worlds. like a mullet. 
+business in the front. party in the back.

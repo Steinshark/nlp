@@ -1,0 +1,168 @@
+tsmc's coming n2 process node 
+is one of its most ambitious. in their 4q2023 earnings call, 
+tsmc mentioned plans for three   new n2 fabs in hsinchu, kaohsiung, and taichung. assuming those all get built, that is a lot 
+of new fabs. but it's more than just that. there is also something special about 
+the transistors for this new n2 process. in 2011, the semiconductor industry 
+transitioned from planar transistors to 3d ones,   the now-famous finfet. over ten years later, tsmc 
+is joining samsung and intel in doing it again. in this video, we are going to 
+talk about the vertically-stacked,   gate-all-around, nanosheet/nanowire 
+metal-oxide-semiconductor field-effect transistor. ## beginnings so what is a transistor? most simply 
+speaking, it is a switch, actively controlled. there is a source and a drain. these are made from   doping regions of silicon with a dopant 
+element implanted using an ion beam. that process is called ion implantation. in between the source and drain, we 
+have the gate and the gate oxide. these sit on top of the channel and control it   through a phenomenon known 
+as "capacitive coupling". when the gate receives a 
+certain voltage - referred   to as the threshold voltage 
+- it turns "on" or "opens". this allows the flow of electrons or   electron holes from the source 
+to the drain along the channel. this control of a material's ability to conduct 
+such particles is known as the "field effect". this is how the semiconductor gets its name. the   semiconductor material conducts only 
+part of the time - ergo the "semi". and the transistor using the "field effect" 
+means we can call it a field effect transistor. some of the first gates were made 
+from metal - though many gates today   are made from polycrystalline 
+silicon, which is not a metal. the metal gate and the gate oxide 
+together give us "metal oxide". so altogether now, we have the "metal oxide 
+semiconductor field effect transistor",   or mosfet. names are surprisingly 
+descriptive in semiconductor land. there are many types and designs of 
+transistors out there with varying   tradeoffs. while the mosfet design 
+is the most common, others do exist. for example, the industry largely used 
+bipolar junction transistors. these are   named for having three regions of alternatively   doped silicon or germanium. three 
+regions, two borders or junctions. in an integrated circuit or ic,   we use transistors to design logic gates and 
+other blocks like for memories. for instance,   the sram that serves as an ic's embedded memory 
+is made up of a varying number of transistors. ## short channel effects in a perfect world, the 
+transistor switches instantly. and when that transistor gate is closed, 
+then there is zero current flowing through   it. and when the gate is open, then there 
+is no resistance slowing down the flow. but our world is imperfect. and though 
+i like to say that that is where much   of its beauty comes from ... when it comes to 
+transistors we do somewhat demand perfection. after decades of shrinking the 
+size of the original planar mosfet,   we started suffering a series of 
+what we call short-channel effects. short channel effects come in two forms. first, threshold voltage, 
+or the voltage at which the   gate opens and creates the current 
+between the source and the drain. when the channel was longer,   the threshold voltage was constant and 
+independent of any external factors. but when the channel got shorter, we discovered 
+that the threshold voltage was no longer constant   and independent. instead, it was decreasing - 
+or "rolling off" - as the channel shortened. this in turn exacerbates something 
+called "sub-threshold leakage". when   the gate's voltage lowers below the threshold,   it is supposed to cleanly shut down the 
+current between the source and drain. it doesn't always, and the residual current - like 
+a dripping faucet - is called the "sub-threshold   leakage". the lower the threshold voltage is, the 
+higher the sub-threshold leakage gets in turn. the second major manifestation 
+of short channel effects in a   transistor is "drain-induced 
+barrier lowering" or dibl. this is where the source and the drain are 
+now so close together that electrons from   the source can diffuse into the drain - often 
+by burrowing under the gate like a rabbit. dibl results in a tiny parasitic current flow,   so the transistor is using power even 
+when it is on "standby" and doing nothing. multiply these two short channel effects over   billions of transistors and you got 
+a serious power consumption problem. ## going multigate short channel effects originate 
+from interference via the electric   fields coming out from the source and the drain. the original planar gate sits on top of 
+the channel - touching it on just one side. an electric field projects from that 
+planar gate in one direction - down   through the channel and into the silicon. 
+this controls the channel's behavior. but the source and drain project 
+electric fields of their own,   and those are now encroaching horizontally into 
+the channel - "stealing" away the gate's control. kind of like loud talk coming from your neighbors   in a bar messing with your attempts 
+to say sweet romantic things to siri. for years, the industry knew this 
+was coming. but for a long time,   they were able to ameliorate short 
+channel effects by lowering the voltage,   heavily doping the channel, or reducing 
+the depths of the source and the drain. another big move was replacing the gate 
+oxide from its prior silicon dioxide to   one with a higher dielectric constant or 
+k. this strengthens the gate's capacitance,   thus making the electric field projected by the 
+gate more powerful so to dominate the channel. famously, intel used high-k dielectrics like 
+hafnium oxide in 2007 for their high-k metal   gate. this use helped pave the way for advanced 
+atomic layer deposition techniques down the line. unfortunately, those methods have run 
+their course and thus an entirely new   structure is needed to wrestle back control 
+of the channel from the source and the drain. in 1984, two japanese researchers sekigawa and   hayashi published a paper proposing what 
+they called "multi-gate" transistors. the authors proposed a transistor with two 
+connected gates. they called it a "double-gate   mos" transistor or xmos since it looked like 
+to them the greek letter xi from the side. this brings us to the finfet, which 
+intensifies the gate's control over the   channel by wrapping it around the channel 
+- the eponymous "fin" - on three sides. the first commercial finfet devices were 
+produced by intel and hit the market in   2011 at the 22 nanometer process 
+node. tsmc and samsung followed a   few years later in 2013 with their 16 
+and 14 nanometer nodes, respectively. for more information about 
+the finfet and its origin,   i did a video about it a little 
+while ago. go check it out. ## gate all around the gaafet iterates on the concept of the finfet 
+by wrapping the gate entirely around the channel. ergo the name, "gate all around" 
+- which first came about in a 1990   paper by jean pierre colinge, m. 
+h. gao, a. romano, and others. actually, the name describes less 
+a specific transistor structure   but rather a whole class of them. the 
+big similarity being that their gates   completely surround the channel 
+rather than on just three sides. within the overall gaafet category we have two 
+big sub-categories: nanowires and nanosheets.   the names describe the shape of the channel - 
+nanowire channels are rounder than sheets. and   for some reason they remind me of steel 
+rods punching through concrete blocks. the nanowire and nanosheet physical structures 
+offer their own trade-offs. for instance,   the nanowires' smaller channels give 
+their gates more control over electron   flow. but it also impedes the flow 
+of electrons when the gate is open. this means that we likely have to stack these 
+nanowires. but only so far because if we stack   too many too high, they might interfere with 
+the interconnect layers built above them. ## fabricating a gaafet the process flow for creating a finfet is largely 
+the same as those for making planar transistors. that's important. the semiconductor   industry on the whole is highly 
+evolutionary, not revolutionary. the most significant new step was making these 
+dense, highly regular bunches of fins. they are   patterned onto the silicon substrate using a 
+certain type of double-patterning lithography. after that, we create the wells that 
+would eventually help make the source   and the drain. we add a temporary dummy gate 
+to help us build the rest of the gate stack,   electrically isolate the transistor, demolish 
+the dummy gate and build the real gate. with this, the front end of the 
+process is done and we can now   start adding interconnects for the back end. i mention all this because the gaafet's 
+process flow evolves again from the finfet's. using a deposition technique called epitaxy, 
+we add several layers of silicon and silicon   germanium on top of the silicon substrate. this 
+is sometimes referred to as a super-lattice. after that, we cut down through those 
+layers of silicon and silicon-germanium   in order to produce a "fin" 
+- much like the finfet's fin. special attention has to be paid to keeping 
+the multilayer stack free of deformations. as   well as giving it a "high aspect ratio" 
+as in height-to-width - very tall and   skinny. these are already important 
+considerations for finfet fins. to prevent electrical cross-talk and also 
+to help make nice fins, we do "shallow   trench isolation". we pattern trenches 
+around the transistor using lithography,   dig them using reactive ion etch, 
+and then fill them with oxide. anyway, when that is done, we can 
+etch away the silicon-germanium,   leaving the silicon layers suspended between the 
+source and the drain. this draws from the world   of mems, where we use "sacrificial 
+layers" to suspend tiny structures. to build the gate and the gate oxide,   we use atomic layer deposition to 
+surround the exposed channel wires. i covered ald in a prior video. 
+it is a precise method of applying   layers of metals or chemicals - 
+one atom thick layer at a time. the big challenge with that is correctly 
+aligning the gate material around the   channel. once this is done, we can 
+build the rest of the gate around the   channels like as with finfet and planar 
+transistors. there, you have a gaafet. ## gains just like when the industry switched 
+from planar transistors to finfets,   the gate-all-around transition offers benefits. one very significant benefit is the power 
+draw. a 2020 study found that - when   it is turned off - a nanosheet 
+gate-all-around transistor draws   about 20-35% less power than a finfet, 
+depending on the device's dimensions. in terms of speed and density, 
+the gains are not as dramatic.   for speed, it is about 10% at 
+constant power. and for density,   it is about 15% depending on your ic's mix 
+of transistors - analog, digital, or sram. i feel like the power gains would be 
+very interesting to chip designers of   mobile and ai processing applications. the 
+former because power is constrained. the   latter because of the sheer amount of 
+compute needed for modern ai devices. no wonder then that tsmc management said 
+that they are seeing "a much higher level   of customer interest and engagement at n2 
+as compared with n3 at a similar stage".   gaafets will likely take existing ai 
+accelerator chips a major step forward. ## race to the gate tsmc has pretty much dominated 
+the 10+ years of the finfet era. so much so that samsung and intel have 
+basically waved the white flag on that,   moving ahead to gate-all-around in 
+an apparent attempt to grab share. samsung really led that drive into gaafet. 
+they have been doing research on it since   at least 2003, with their multibridge-channel 
+metal-oxide-semiconductor field-effect transistor. they first began offering their gaafet 
+process - named sf3e - some time in   mid-2022. while the node did ship some products,   those seemed to have mostly been crypto 
+miner chips. no big digital logic products. later in 2023, samsung released 
+their second-generation gaafet node,   sf3. we shall see the pickup 
+amongst foundry customers. intel's named their gaafet offering "ribbonfet" 
+or "nanoribbon" or whatever have you. the first process node of theirs to use it is 20a,   an internal node scheduled for 
+mid-2024. after that is'a,   the big process node that everyone expects will 
+bring intel back to the leadership position. intel's gaafet processes - 20a and 
+18a - include a second interesting   innovation - backside power. this is where we move   the power lines to underneath the silicon 
+substrates - opening additional space. tsmc's n2 will not have backside power until 
+about a year later with their second generation   n2 processes - n2p and n2x. many people 
+see this as a major advantage for intel. semiconductor industry watchers have long looked   to the finfet-to-gaafet transition as a 
+potential turning point in the foundry   competition. the first to ship with 
+volume wins - or so the story goes. only time will tell, but i do want to note 
+close similarities between the process flows   for the finfet and gaafet. being very good at the 
+former will also help you be good at the latter. ## conclusion the planar transistor lasted 50 
+years as a leading-edge architecture. the finfet lasted about ten years 
+on the leading edge. it is hard to   say how long the gaafet will be. 
+so what is next after the gaafet? the semiconductor industry's 
+premier r&d institute is imec,   located out in belgium. in addition 
+to the gaafet nanosheets or nanowires,   they are looking at other transistor 
+structures to take us even further beyond. one promising design is the forksheet. imagine a 
+bundle of vertically stacked sheets, and then put   a wall down through the middle of those sheets. 
+a forksheet is only a few evolutionary steps   away from the gaafet - which is good - and also 
+offers higher gate control - which is very good. and then after that, imec has presented the 
+complementary fet or cfet - where we fold the   nanosheets or the fins on top of one another. 
+this one would make a true 3d transistor. anyway, the industry has not even started 
+thinking about bringing these things into   production yet. but the work shows that 
+people are forever looking ahead. right   now though we look towards to n2 
+and its brethren. coming in 2025.

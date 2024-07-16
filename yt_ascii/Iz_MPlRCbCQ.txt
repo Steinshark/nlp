@@ -1,0 +1,117 @@
+- we've talked about fiber-optic
+thunderbolt cables before, and these things are crazy cool. they'll do 40 gigabit per second to distances as long as 50 meters. and they're so durable that you can tie them in knots
+and pull on them like this, without them breaking. 50 meters, i mean, that's pretty far, but thunderbolt allows you to daisy-chain multiple docks and peripherals to achieve distances much, much further. we have got six spools of
+50-meter thunderbolt cables, and we are going to be
+hooking up this gpu, almost a thousand feet
+away from our computer. that's right. i'm gonna show you guys the new unit where we're gonna be doing
+some more of our benchmarking and testing and we're gonna run
+the cable all the way there. and it's sponsored by nzxt's bld. so naturally, we're gonna be
+using one of their gaming pcs as our source, except obviously we're gonna
+want to rip that 3080 ti out, put it in an external enclosure and then go for a little walk here. (vibrant music) obviously, before we go off adventuring, we wanna get a baseline for what kind of
+performance we would expect running a normal, just
+three-foot copper cable, from our thunderbolt port to our gpu here. so we're gonna go ahead and fire up shadow of the tomb raider. i'm running at the
+highest settings, 1440p, exclusive fullscreen,
+with motion blur disabled. ah, come on! all right, 60 fps average. now let's see what happens
+when we take it somewhere else. david, do we wanna jump the fence or do we wanna like go around, or what? - [david] jump the fence, baby! - you wanna jump the fence? - [david] heck yeah.
+- all right. let's jump the fence, baby. in that case, i'm gonna
+put the 3080 ti down. these zippers better hold up. (walkie-talkie thuds)
+ooh, crap! i'm having too much fun already. - [colin] you need me
+to hold one end here? - yeah, and go ahead and plug it in. hopefully our neighbors
+don't, like, trip over this. - i hope this works, i only tested it with two cables. (all laugh) - ow, ow, ow, ow, stop! oh my god! this fence is barbed wire, david. oh no, they're backing their truck in. long story. we need to run a cable all the way from this
+building to one over there. you're backing in now, - right?
+- [truck driver] yeah. - and then are you guys done for the day? - oh boy! - if i got it out of your way now, then would we be good
+after that, probably? - [truck driver] yeah. - hey look, it's brian. - hullo. - you're good to plug in, over. (walkie-talkie beeps)
+- we're plugged in. i will go plug in the gpu. why don't you come back
+and fire up tomb raider? where'd it go? - oh, we're gonna make it. - [david] are you sure? - well, no, i'm not entirely confident, because the thing about thunderbolt, it requires very, very tight
+tolerances in terms of latency. at 300 meters, we are
+approaching the point where even at the speed of light, that is a non-negligible amount of latency for something like a
+high-performance graphics card. so i'm hoping we will make
+it the full 350 meters. but this is by no means a guarantee. i actually lied a little because you don't need
+both a hub and the gpu at one node at a time. - so we only need one of these at a time. - we only need one of
+these at a time, yeah. - well that's fine. - we'll test 50 meters first. okay, so is this thing on? hello? oh yeah, yeah, rgb is on, okay. oh man, these hikes back and forth, they're gonna get pretty stupid. - that's a long way around. we got the small... let's go. - we've got a blue screen on the computer, so i'm just restarting it. (walkie-talkie beeps) - okay, good luck. - i unplugged it while
+the game was running and i think it just got a little confused. we are off to a real good start here. ooh, that's very interesting. we've dropped 15% of
+our performance already. (walkie-talkie beeps) - wow! okay, come grab this cable then. 15%! - is that because of the raw distance? is it because of the signal
+translation that's happening, to convert to optical and then back? will it get worse? - i feel like ned flanders, just, - oh, hi there. - [david] hi. - oh, i see you. there's a thunderbolt glory
+hole going on over here. - heh, yeah. my poor new jacket. - all right, so let's go ahead. we're gonna unplug our thunderbolt gpu, plug in our first thunderbolt dock, which is acting as a... hey colin! - hi. - razer in their infinite wisdom doesn't label this bloody thing. does this one support daisy-chaining? - i think so. - let's double check that, 'cause i actually use one of these at home and i think it might not. - and i'm gonna go get
+the rest of what we need. so another hub, another jackery and i will be right back. yeah! - i believe what we've done
+here is supposed to work. now, something to note
+is that external gpu's are really not supposed to be hooked up through a hub at all, let alone five hubs. we have no idea if this is
+gonna work at all, let alone, well, oh, hi there. - hi, neighbor. - would you like like a graphics card? - i would. - and a cable cable
+- and a cable. and a jackery. - oh right. well here, should i just come
+for a little ride with you. - or you're just gonna ride on the cart? - yeah, yeah. i was just gonna - - tell you.
+- scoot it. no! - five bucks, as i scooter with this 3080. - ti, ti.
+- ti. that's something one
+handed, let me tell yah. (blades rolling) okay, we got the 3080 ti, linus scooting in the
+daiquiri and stuff over it. really, we should have
+handed it over the fence. i don't know what we were thinking. in the meantime, we can spool out this cable
+straight down the parking lot. you see how much further
+we can get this line. a lot, oh, nope, there's one more winding. okay, that's another 50 meters. - the building we're going to is this the next complex
+to the right there, and it's unit 120. - 120. - yeah.
+- okay. oh, i totally need a... oh even better. i needed both of these things. make sure it's powered. - [linus] oh boy, it's barbed wire. - no way. - i'm aiming for that spot right there. - [david] oh god! - what could go wrong. yvonne's gonna kill me. (linus thuds) - now that's interesting. (screen taps) i think our performance is
+actually better this time around. i think it might've just been the driver being kind of like bugged out from the sudden disconnection before. - it starting to rain. - so this is my genius idea. we'll just put a
+rubbermaid bin on top of - - garbage bags.
+- [linus] am! - 55 fps. so wait, no, that's worse again. i didn't see any weird stuttering or anything in the gameplay. the performance is a little bit worse. it seems like we're losing, there's a little bit of
+overhead with each of our hubs that we're going through. you know, as much as it might not be as good performance as you
+would expect from a 3080 ti, it's sure as heck running. if our display and our
+peripherals were at the other end. so the computer's got a
+thunderbolt connection and we're gaming over on that side, the run is a hundred meters, but actually it has to go round trip. so you've got your pci express run, going to your gpu over there. and then the gpu actually has to send back the display port information
+all the way back to us here. so it's going 200 meters. you guys are good to unplug. - okay, here we go. so unplug that, yep. you wanna handle carrying
+the graphics card? this is our third 50 meter cable. we're just plug it in willy-nilly. keep it.
+- oh boy. yeah.
+- yup, yup. yup.
+- oh geez. - fiber optic don't mind
+being run over, right. - you're gonna just drive
+over the fiber optic layer. - okay, give it a couple seconds here. but you should see the gpu real soon. let's try and make this faster. we can run the next line while we wait. sorry about the landscaping. those are roses out. ah, okay, we're in unit 120 apparently, i have no idea where that is. do you know where unit 120 is? - [passer-by] which
+address are you talkin'? - i can find out. what address is unit 120 located in? - this is very interesting. i managed to launch the game, but i haven't made it
+past the splash screen. - ooh, we're hitting a limitation. - how close are you
+guys to the new office? - [david] i don't know
+which building we're in. - i see the problem, it
+launched with the wrong gpu. let me see if i can get
+this sorted out on my side. still no information on which
+building i need to go to, classic linus. - the nvidia gpu is not showing up. i'm gonna give the system a quick restart to see if it pops up, but you might wanna give
+me an unplug and replug. - okay, i'll walk back to it now. - how sure are you that you're plugged into the
+correct ports on the razor one? the input is the one on the front. - oh, then i'm definitely
+not plugged in the right one. so, we're in the front port now. - [linus] i think at the
+back, it doesn't matter. - okay. - i wanna make it very clear. and this is not just because corning sent us a bunch of their
+thunderbolt cables. this is far beyond what is
+reasonable for this spec. we just wanna see the limits. i got no gpu showing up yet. - okay, i just unplugged
+and re-plugged it. - it's still not showing up. do you wanna try the same port that i did? (whirling sound) - how much do you wanna bet that he's already coming
+over on a scooter? (all laugh) - it's that building right there - [david] the middle one or the right one? - right, there. - the one with the red awning there. - yep.
+- okay. he said it was down the right side. is it showing up at all? i'm like kind of worried that the cable got mushed
+when someone drove over it. - colin, can you hear me? - i'm expecting, he's
+going to team call me, yep there it is. - my walkie-talkie battery died. - a shocker, okay. someone, myself included and some other guy drove over the cable. so, hopefully it's still intact. i think it will be fine. do you see it on your side? - no. - oh, there should be an led. hold on. okay, yep. okay, we got leds on now. so the gpu is definitely on now. - and my system is locked up. - the gpu just shut up. - let's let's try replacing
+that one cable just to see and we'll go from there. worst case scenario, i'll just take you guys and i'll show you where the new unit is. - aw! aw! aw! okay jamie, plug it in are the leds on? - yeah, i just blue screened again. what did you do colin? - we're trying to turn
+it off and on again. and clearly it also turns
+your off and on again. - no gpu, what do you think colin, can we maybe try to at
+least plug in a usb drive at the new office and i'll
+transfer a file or something? it's the fact that you've
+got this gce device or on the other side, something like usb is not nearly
+as sensitive to latency so. - i have one of those samsung
+t5's fives in my pocket. - maybe just plug in that t5
+and i'll see if it shows up. - okay, let's do that. - ah, come on! - and i'm plugging into the t5. - i only see the seagate firecuda so far. - well, the corning reps did
+tell us this is a bad idea. - i don't think i was i
+was cc'd on that email. - retreads. - are we on all razor docs so far? - there's two docs. there's one on the other side of the fence and then one in the
+middle of the parking lot. - are you plugged into the one that's at a hundred meters, then? - the drive is plugged in at 150 meters. - so you should have one
+more dock then, right? - no, we're plugged in directly
+into the thunderbolt cable. - that won't work
+because there's no power. - ah! you're right. i am, ah, okay, yep! - that's the limitation of optical cables while they can carry data, they need to both be powered and you need to provide separate power for any devices you wanna plug in. so colin had a little moment there and he tried to plug our
+drive directly into the dock, which explains why it wasn't coming up. so he's gonna plug in our third dock at the 150 meter mark. and let's see if this thing shows up. i'm, i'm actually pretty
+hopeful right now. - [david] uh-huh! who's that? - now's as good a time as i need to take a closer
+look at our source here. nzxt bld's build systems, let you configure your pre-built, the way that you would a custom rig. so you can go amd or intel. they've got a two year warranty, with two business they build service and everything else about it is custom. now we actually got an
+amd machine originally, but because everything about nzxt bld is using off the shelf
+like enthusiast grade, custom components, there was absolutely no
+compatibility issues of any sort. we're gonna have a link below, where you can learn all you need to know about nzxt bld and let's check in with how those guys are doing. - people always tell me,
+i look awkward when i run. that's probably the case. hey, we're plugged in. you seeing anything over there, they're going over thunderbolt,
+rest in peace cables. - but it was exciting. - hello. - oh my god, i wasn't on speaker. nope. - nothing, hey. - no dice. and that kind of makes sense because nothing would prevent corning from making a hundred meter or a 200 meter version of their cable, other than if just the
+signaling didn't handle that kind of distance very well and we were crazy to even
+try it in the first place. - i guess there's a limit to
+how far you can go with fibers. we tried though, we really did. - honestly, i'm pretty pleased we even made it to a hundred meters, even though we didn't
+make it to the new office. so why don't we head over there and i'll show you guys the new location, kind of talk about what
+we're gonna do there. so, unfortunately we
+couldn't find another unit in the same complex that we're in, but we really need the additional space because we wanna get our hands on some new testing equipment and stuff, to really take things to the next level, and there's nothing in our complex. so, oh, we saw a for sale sign here. it's only about 150 meters or about 500 feet as the crow flies, from our existing office. but because it's so winding
+and roundabout here, we're probably gonna have to get a handful of electric scooters, so people can kind of scoot back and forth between the two buildings. unfortunately, the possession date isn't for a little bit and the existing owners
+just couldn't be bothered to let us in just to show
+it to you guys today. so, it's this guy right here. unit 120. so it's about 3000 square feet. and obviously we couldn't do any of this without you guys watching and sponsors like nzxt bld. so thanks for sponsoring the video. thanks you guys for watching. see ya! oh, if you're looking for
+something else to watch. the last time we played around
+with fiber optic cabling was in my house, when we had a single server and then fiber optic display port and usb running all over the house so that it could act as the central brain. that was a pretty fun video. there was a dead squirrel,
+which was unfortunate, but yeah, colin found it in the attic.

@@ -1,0 +1,188 @@
+november 1965 saw one of the most widespread 
+power outages in north american history. on   the freezing cold evening of the 9th, the grid 
+was operating at maximum capacity as people   tried to stay warm when a misconfigured relay 
+tripped a breaker on a key transmission line.   the loss of that single line cascaded into a 
+loss of service for over 30 million people in   the northeast us plus parts of ontario in 
+canada. restoring electricity to that many   people is no simple task. in this case, the 
+startup began with a little 12 megawatt gas   generator in southampton, new york. that's 
+about the capacity of four wind turbines,   but it was enough to get power plants in long 
+island back online which were able to power up   all of new york city, eventually returning 
+service to all those 30 million people. the grid is a little bit of a house of cards. 
+it's not necessarily flimsy, but if the whole   thing gets knocked down, you have to rebuild 
+it one card at a time and from the ground   up. restoring power after a major blackout 
+is one of the most high stakes operations you   can imagine. the consequences of messing it up 
+are enormous, but there's no way to practice a   real-life scenario. it seems as simple as flipping 
+a switch, but restoring power is more complicated   than you might think. and i built a model 
+power grid here in the studio to show you how   this works. this is my last video in a deep dive 
+series on widespread outages to the power grid,   so go back and check out those other videos 
+if you want to learn more. i'm grady and this   is practical engineering. in today's episode 
+we're talking about black starts of the grid. this video is sponsored by 
+hellofresh. more on them later. an ideal grid keeps running indefinitely. maybe it 
+sustains localized damage from lightning strikes,   vehicle accidents, hurricanes, floods, and wayward 
+squirrels, but the protective devices trigger   circuit breakers to isolate those faults and keep 
+them from disrupting the rest of the system. but,   we know that no grid is perfect, and occasionally 
+the damage lines up just right or the protective   devices behave in unexpected ways that cascade 
+into a widespread outage. i sometimes use the word   blackout kind of freely to refer to any amount 
+of electrical service disruption, but it's really   meant to describe an event like this: a widespread 
+outage across most or all of an interconnected   area. lots of engineering, dedicated service from 
+linesworkers, plenty of lessons learned from past   mishaps, and a little bit of good fortune have all 
+meant that we don't see too many true blackouts   these days, but they still happen, and they're 
+still a grid operator's worst nightmare. we   explored the extreme consequences that come from 
+a large-scale blackout in a previous video. with   those consequences in mind, the task of bringing 
+a power grid back online from nothing (called a   black start) is frightfully consequential with 
+significant repercussions if things go wrong. the main reason why black starts are 
+so complicated is that it takes power   to make power. most large-scale generating 
+plants - from coal-powered, to gas-powered,   to nuclear - need a fair amount of electricity 
+just to operate. that sounds counterintuitive,   and of course configurations and 
+equipment vary from plant to plant,   but power generating stations are enormous 
+industrial facilities. they have blowers   and scrubbers, precipitators and reactors, 
+compressors, computers, lights, coffee makers,   control panels and pumps (so many pumps): 
+lubrication pumps, fuel pumps, feedwater pumps,   cooling water pumps, and much much more. most 
+of this equipment is both necessary for the   plant to run and requires electricity. even the 
+generators themselves need electricity to operate. i don't own a grid scale, three-phase generator 
+(yet), but i do have an alternator for a pickup   truck, and they are remarkably similar 
+devices. you probably already know that   moving a conductor through a magnetic field 
+generates a current. this physical phenomenon,   called induction, is the basis for 
+almost all electricity generation on   the grid. some source of motion we call the 
+prime mover, often a steam-powered turbine,   spins a shaft called a rotor inside a set of 
+coils. but you won't see a magnet on the rotor   of a grid-scale generator, just like (if you 
+look closely inside the case) you won't see a   magnet inside my alternator. you just see 
+another winding of copper wire. turns out   that this physical phenomenon works both ways. 
+if you put a current through a coil of wire,   you get a magnetic field. if that coil 
+is on a rotor, you can spin it like so. this is my model power plant. i got this idea 
+from a video by bellingham technical college,   but their model was a little more sophisticated 
+than mine. let me give you a tour. on the right   we have the prime mover. don't worry about the 
+fact that it's an electric motor. my model power   plant consumes more energy than it creates, but i 
+didn't want to build a mini steam turbine just for   this demonstration. the thing that's important is 
+that the prime mover drives a 3-phase generator,   in my case through this belt. and the generator 
+you already saw is a car alternator that i   "modified" to create an alternating current 
+instead of a direct current like what's used   in a vehicle. the alternator is connected to 
+some resistors that simulate loads on the grid.   and i have an oscilloscope hooked up to one of 
+the phases so we can see the ac waveform. yeah,   all this is so we can just see that sine wave 
+on the oscilloscope. it could have been a couple   of tiny 3-phase motors; it could even have just 
+been a signal generator. but, you guys love these   models so i thought you deserved something 
+slightly grander in scale. there's a few   other things here too, including a second model 
+power plant, but we'll get to those in a minute. the alternator i used in my model has two brushes 
+of graphite that ride along the rotor so that we   can supply current to the coil inside to create an 
+electromagnet. this is called excitation, and it   has a major benefit over using permanent magnets 
+in a generator: it's adjustable. let's power up   the prime mover to see how it works. if there's 
+no excitation current, there's no magnetic field,   which means there's no power. we're just spinning 
+two inert coils of wire right next to each other.   but watch what happens when i apply some current 
+to the brushes. now the rotor is excited, and i   have to say, i'm pretty excited too, because i can 
+see that we're generating power. as i increase the   excitation current, we can see that the voltage 
+across the resistor is higher, so we're generating   more power. of course, this additional power 
+doesn't come for free. it also puts more and   more mechanical load on the prime mover. you can 
+see when i spin the alternator with no excitation   current, it turns freely. but when i increase 
+the current, it becomes more difficult to spin.   modern power plants adjust the excitation 
+current in a generator to regulate the   voltage of electricity leaving the facility, 
+something that would be much harder to do in a   device that used permanent magnets that don't 
+need electricity to create a magnetic field. the power for the excitation system 
+can come from the generator, but,   like the other equipment i mentioned, it can't 
+start working until the plant is running. in fact,   power plants often use around 5 to 10 percent of 
+all the electricity they generate. that's why a   black start of a large power plant is often 
+called bootstrapping, because the facility   has to pick itself up by the bootstraps. it 
+needs a significant amount of power both to   start and maintain its own creation of power, 
+and that poses an obvious challenge. you might   be familiar with the standby generators used at 
+hospitals, cell phone towers, city water pumps,   and many other critical facilities where a 
+power outage could have severe consequences.   lots of people even have small ones for their 
+homes. these generators use diesel or natural   gas for fuel and large banks of batteries to get 
+started. imagine the standby generator capacity   that would be needed at a major power plant. 
+five percent of the nearest plant to my house,   even at a quarter of its nameplate capacity, 
+is' megawatts. that's more than 100 of these. it's just not feasible to maintain that amount 
+of standby generation capacity at every power   plant. instead, we designate black start sources 
+that can either spin up without support using   batteries and standby devices or that can remain 
+energized without a connection to the rest of the   grid. obviously, these blackstart power plants are 
+more expensive to build and maintain, so we only   have so many of them spread across each grid. 
+their combined capacity can only supply a small   fraction of electricity demands, but we don't need 
+them for that during a blackout. we just need them   to create enough power so that larger base load 
+plants can spin up. hydropower plants are often   used as blackstart sources because they only need 
+a little bit of electricity to open the gates and   excite the generators to produce electricity. 
+some wind turbines and solar plants could be   used as blackstart sources, but most aren't set 
+up for it because they don't produce power 24-7. but, producing enough power to get the bigger 
+plants started is only the first of many hurdles   to restoring service during a blackout. the next 
+step is to get the power to the plants. luckily,   we have some major extension cords stretched 
+across the landscape. we normally call them   transmission lines, but during a blackout, they 
+are cranking paths. that's because you can't   just energize transmission lines with blackstart 
+sources. first those lines have to be isolated   so that you don't inadvertently try to power up 
+cities along the way. all the substations along   a predetermined cranking path disconnect their 
+transformers to isolate the transmission lines   and create a direct route. once the blackstart 
+source starts up and energizes the cranking path,   a baseload power plant can draw electricity 
+directly from the line, allowing it to spin up. one trick to speed up recovery is to blackstart 
+individual islands within the larger grid. that   provides more flexibility and robustness in 
+the process. but it creates a new challenge:   synchronization. let's go back to the model to see 
+how this works. i have both generating stations   running now, each powering their own separate 
+grid. this switch will connect the two together.   but you can't just flip it willy nilly. take 
+a look at my oscilloscope and it's easy to see   that these two grids aren't synchronized. 
+they're running at slightly different   frequencies. if i just flip the switch when 
+the voltage isn't equal between the two grids,   there's a surge in current as the two generators 
+mechanically synchronize. we're only playing with   a few volts here, so it's a little hard to 
+see on camera. if i flip the switch when the   two generators are out of sync, they jerk as 
+the magnetic fields equalize their current.   if the difference is big enough, the two 
+generators actually fight against each other,   essentially trying to drive each other like 
+motors. it's kind of fun with this little model,   but something like this in a real power plant 
+would cause tremendous damage to equipment. so   during a black start, each island, and in fact 
+each individual power plant that comes online,   has to be perfectly synchronized (and this is 
+true outside of black start conditions as well). i can adjust the speed of my motors to get 
+them spinning at nearly the exact same speed,   then flip the switch when the waveforms match 
+up just right. that prevents the surges of power   between the two systems at the moment they're 
+connected. you can see that the traces on the   oscilloscope are identical now, showing that 
+our two island grids are interconnected. one   way to check this is to simply connect a 
+light between the same phase on the two   grids. if the light comes on, you know there's 
+a difference in voltage between them and they   aren't synchronized. if the light goes off 
+and stays off, there's no voltage difference,   meaning you're good to throw the breaker. older 
+plants were equipped with a synchroscope that   would show both whether the plant was spinning 
+at the same speed as the grid (or faster or   slower) and whether the phase angle was a 
+match. i bought an old one for this video,   but it needs much higher voltages than i'm willing 
+to play with in the studio, so let's just animate   over the top of it. operators would manually 
+bring their generators up to speed, making slight   adjustments to match the frequency of the rest 
+of the grid. but matching the speed isn't enough,   you also have to match the phase, so this was a 
+careful dance. as soon as the synchroscope needle   both stopped moving and was pointing directly 
+up, the operator could close the breaker. during a black start, utilities can 
+start restoring power to their customers,   slowly matching generation capacity 
+with demand as more and more power   plants come online. generally, 
+the most critical loads will be   prioritized during the recovery like natural 
+gas infrastructure, communications, hospitals,   and military installations. but even connecting 
+customers adds complexity to restoration. some of our most power-hungry appliances only get 
+more hungry the longer they've been offline. for   example an outage during the summer means all 
+the buildings are heating up with no access to   air conditioning. when the power does come back 
+on, it's not just a few air conditioners ready   to run. it's all of them at once. add that to 
+refrigerators, furnaces, freezers, and hot water   heaters, and you can imagine the enormous initial 
+demand on the grid after an extended outage. and   don't forget that many of these appliances use 
+inductive motors that have huge inrush currents.   for example, here's an ammeter on the motor of my 
+table saw while i start it up. it draws a whopping   28 amps as it gets up to speed before settling 
+down to 4 amps at no load. imagine the demand from   thousands of motors like this starting all at the 
+exact same instant. the technical term for this is   cold load pickup, and it can be as high as eight 
+to ten times normal electrical demands before   the diversity of loads starts to average out 
+again, usually after about 30 minutes. so, grid   operators have to be very deliberate about how 
+many customers they restore service to at a time.   if you ever see your neighbor a few 
+blocks away getting power before you,   keep in mind this delicate balancing act 
+that operators have to perform in order to   get the grid through the cold load pickup for 
+each new group of customers that go online. the ability to black start a power grid quickly 
+after a total collapse is so important because   electricity is vital to our health and 
+safety. after the 2003 blackout in the us,   new reliability standards were issued, 
+including one that requires grid operators   to have detailed system restoration plans. 
+that includes maintaining blackstart sources,   even though it's often incredibly expensive. some 
+standby equipment mostly just does just that:   stands by. but it still has to be carefully 
+maintained and regularly tested in the rare   case that it gets called into service. also, the 
+grid is incredibly vulnerable during a blackstart,   and if something goes wrong, breakers can 
+trip and you might have to start all over   again. utilities have strict security measures 
+to try and ensure that no one could intentionally   disable or frustrate the black start process. 
+finally, they do detailed analysis to make sure   they can bring their grid up from scratch, 
+including testing and even running drills   to practice the procedures; all this cost and 
+effort and careful engineering just to ensure   that we can get the grid back up and running to 
+power homes and businesses after a major blackout. cost and effort are good things to 
+spend on electrical infrastructure,   but i prefer our family dinners to be inexpensive 
+and easy. between juggling naps, chores,   and activities, it gets hard to fit cooking 
+dinner into the schedule. hellofresh saves us   time on the crazy weeknights by making cooking 
+simple and quick. plus it's just a lot of fun. "a tomato..." hellofresh has a lot of recipes that you can 
+choose from each week, and different plans to help   you meet your goals, try something new, or just 
+keep everyone happy, including family friendly,   fit and wholesome, vegetarian, and a bunch 
+of options for side dishes and upgrades. "yeah, really get your thumb in there..." we've been using hellofresh for more than 3 years, 
+and really, it's not because of how convenient,   delicious, and healthy the meals are. it's 
+really just because we enjoy it. hellofresh   is basically a shortcut to a memorable night 
+in, and the meal at the end is an added bonus. "isn't zesting something just peeling 
+it and not throwing away the peel?" they have a new offer if you've been on 
+the fence about giving it a try. if you   go to hellofresh dot com and use code 
+practical18, you'll get' free meals   plus free shipping. i really think you'll 
+enjoy it. that's hellofresh dot com and   use code practical18. thank you for 
+watching and let me know what you think.

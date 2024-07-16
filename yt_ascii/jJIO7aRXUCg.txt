@@ -1,0 +1,155 @@
+asml is a critical supplier of semiconductor 
+lithography machinery for foundries like intel and   tsmc. in my video discussing tsmc's $28 billion 
+capital expenditure, i briefly discussed their   situation. their ceo said in an earnings call that 
+they can make 50 high-end euv lithography machines   a year. that's it. without those machines, 
+the foundries cannot churn out more 5nm chips. so why not make more of these machines? 
+asml itself has thousands of suppliers   making parts that end up into its machines. 
+coordinating and integrating all of these parts   together into a single smooth-running 
+machine is immensely challenging. in this brief video, we will continue our deep 
+dive into asml and look at how the company puts   together centi-million dollar lithography machines 
+for multi-billion dollar semiconductor companies.   and how euv makes it so much harder. you might want to watch my asml explainer 
+video first before starting on this one,   just in case you need a refresher. asml is a global, sprawling company 
+- befitting the nature of its work.   the factory is based in the 
+netherlands but there are   additional manufacturing and r&d sites 
+located in connecticut and california. its products are more like airplanes than you 
+might at first expect. in my video about comac,   i mentioned that boeing and airbus no longer 
+make the majority of the parts that they put   together. instead they have evolved into having 
+a system integrator role where they select,   procure, and put together the outputs 
+of different suppliers in their network. asml is the same. their lithography machines, 
+like those of the twinscan variety, are built   out of independent modules. kind of 
+like the megazord in power rangers. 90% of the components that go into these modules 
+are made by the 500-600 outside companies   within asml's outsourced supplier network. these 
+are extremely critical companies and differentiate   asml's supplier network from its competitors 
+canon and nikon, which tend to do things in-house. 300 of these suppliers are 
+located in the netherlands.   another 100 are in other parts of europe, 
+mostly germany. and the rest are largely   in the united states. coordinating 
+within this global network is critical. just as tsmc leans heavily on asml to provide 
+training and advice on how to use their products,   asml in turn leans heavily on its suppliers 
+on how to best use their components.   for instance, their strategic alliance 
+with german company carl zeiss ag. zeiss is a specialist in precision optics and 
+helps produce the lens - a very critical part. so why outsource? isn't that the reason 
+why boeing can't make good stuff anymore?   isn't outsourcing a scourge of western capitalism? well, asml might from time to time purchase 
+a supplier company to bring critical, unique   expertise in-house. for instance, the acquisition 
+of brion technologies, a us firm specializing in   computational lithography, and cymer, another 
+us firm specializing in lasers. it happens. but for the most part, asml wants to remain 
+in a system integrator role and leave as   much of the actual manufacturing to its 
+suppliers. there are a few reasons for this. first, asml can get its module components without 
+needing to learn how to be the best in the world   in making that specific part. a single lithography 
+stepper can incorporate over 1,600 individual   components. 200 of those are not cheap to 
+procure in terms of cost or production time. the company cannot focus on those components'   minutiae while at the same time 
+maintaining a big picture view. second, this allows asml the flexibility to 
+change and adapt themselves to changing technology   trends. if something happens and asml has to 
+radically change the way it creates its machines,   like as it did with euv, then it has the 
+flexibility to make that change - without having   to deal with the sunk cost of having invested 
+resources to develop a now-defunct technology. third, like with boeing and airbus, asml wants 
+the system integrator role because it puts them   at the capstone of the entire massive 
+enterprise. the gateway that listens   to the customer requirements and has 
+final say on which part goes where. this role allows for the most economic value. 
+indeed, asml is often its suppliers' single   most important customer. it might represent 50% 
+or more of their revenues (though this is not   the preferred situation). thus, asml can exercise 
+strong influence on their operations and planning. many of these suppliers are too 
+specialized to diversify away from asml.   how many customers are out there for 
+high-precision motors or a beam measuring unit? okay, so now that we have a good 
+idea of what the supplier network is,   let us look at how it works. at least, this 
+is how it worked as of the past few years.   might have changed a bit since then. this 
+is the latest information that i have. it starts with the client. intel, samsung, 
+or tsmc plan out their future customer and   product demand. they need to do this a year or 
+more ahead of time, which can be challenging.   they inform asml that they would like to 
+purchase a machine to meet this demand   and when they would like 
+this machine to be delivered. when making that order, the client chooses 
+from over 30 client-specific options,   crafting the end product to meet their own 
+needs. this means that no single machine   that asml puts out is exactly the same 
+as the other. it also explains why tsmc,   intel and samsung can get different 
+results despite sharing the same supplier. once asml knows that it has an order, 
+their supply chain planning department   makes a master production schedule. this mps 
+clarifies when production for this specific,   individual machine starts and ends. 
+it takes into account resource needs,   available workforce hours, component lead times, 
+and of course, customer deadlines. after that,   the suppliers are notified and issued 
+purchase orders to get working. as i explained earlier, each 
+machine is made up of modules.   these modules are built independently in a process 
+step referred to within the company as "assy". the   modules then are integrated together in a step 
+called "fasy" (standing for "final assembly"). after fasy, the machine is tested to see 
+whether or not it meets internal benchmarks.   configurations may be made to help improve 
+performance. this stage is called "test". once the machine is determined to have met 
+asml standards for performance and reliability,   the machine is disassembled and 
+packed for delivery to the customer.   over 80% of asml's customers are located in 
+asia, so this often will be a long flight. once it gets to its destination, 
+asml's technicians work with the   foundry's technicians to install the 
+device into a fab clean room for use.   it is a harrowing, delicate process. if you 
+want to know more about how foundries build   and set up such rooms, i recommend watching 
+my video about tsmc's fab construction work. asml not only has to build and deliver the 
+product, but they also are responsible for   its upkeep and service time. it is not like a 
+refrigerator where they set it up and go home. asml signs service contracts with its foundry 
+customers after the sale with uptime kpis.   such arrangements are normal for large 
+capital purchases between companies.   these service contracts can hold asml financially 
+liable for lost sales due to machine downtime. so the company offers 24/7 support coverage 
+with trained technicians and staff.   these come out of their local technology 
+development and training sites in japan,   korea, taiwan, united states, and 16 
+additional countries around the world. when things do break, it is critical that spare 
+parts go out to customers asap. the company keeps   spare parts at local service warehouses. if a 
+customer needs something that the local warehouse   does not have, then the central warehouse has 
+to ship it over, with a target date of 14 days. better than having fast turnaround on replacing 
+broken parts is to have them not break in the   first place. to do this, asml maintains 
+rigid quality control standards on their   suppliers - a policy of "zero defects". each 
+part is closely inspected on the factory floor   and if anything can go wrong, then it is rejected. asml's supply chain in action is a 
+symphony of chaos and nervous tension.   their planners have to account for parts being 
+rejected on the factory floor due to defects,   possible disruptions, and transport issues. if a rejected or missing part is not all that 
+important, then workers can find a workaround -   usually by replacing the item with a "dummy 
+part" - and continue on schedule. but if the   part is mission-critical, then production can stop 
+entirely and the whole module can be put at risk. it is totally understandable from the 
+supplier's perspective that things can   go wrong. it happens. but asml has to deliver 
+a machine to its customers by the deadline.   and a foundry like tsmc does 
+not want to have to go to apple   and tell them their iphone has to be 
+delayed due to insufficient capacity. furthermore, some of these parts - usually the 
+lens and lasers - need a lot of lead time. longer   than the actual lead time of the final product. 
+a single lens can take up to 40 weeks to be made.   this means that some of the work needs to be 
+started far in advance of actual customer orders.   so it is not like you can ring that up 
+overnight even with all the money in the world. ah yes. money. i have not mentioned 
+cost yet, but that matters too.   part of the reason why it can cost $18 
+billion to build a new leading edge fab   has to do with the rising costs of 
+the latest lithography equipment.   euv equipment can cost $150 million each, as much 
+as a boeing airplane. individual components and   replacements for those machines often cost 
+far in excess of a million dollars each. oh, since we mentioned euv ... extreme ultraviolet lithography is the most 
+advanced lithography technology available today.   its commercialization with the twinscan nxe series   is expected to be more cost-effective 
+than other techniques for sub-10nm nodes. the technology has been around 
+since the 1980s. i have done a   video about it earlier if you 
+want to learn more about that.   i won't repeat myself recounting the long 
+journey. so let's get into some gritty details. euv lithography requires a re-engineering of many 
+traditional semiconductor fabbing principles.   i have heard it described as a revolutionary,   rather than evolutionary technique 
+and i think that is about right.   asml's entire supply chain has to be rejiggered 
+from the bottom up to accommodate these changes. let me give you just one example of this in 
+action. a key challenge for euv lithography   is how to make sure that you can etch 
+enough wafers in a given amount of time   while avoiding substantial yield defects. 
+but the euv mirrors have relatively   low reflective-ness, less than 70%. so 
+they need a very powerful light source. they achieve this by firing a 
+co2 laser at droplets of tin   in order to create clouds of 
+plasma and ultraviolet light. why droplets? because they need to reduce 
+the amount of tin debris from the plasma   so to prevent the contamination of the 
+mirrors collecting and focusing the light. at first they experimented with a rotating 
+cylinder, then they moved to a thin target tape,   and then a spray jet, and then a liquid filament, 
+before finally settling on tiny droplets. the margin of error when it comes to the 
+power source is really tight and this has   had consequences across the entire supply chain. 
+it is common in older lithography methods to use   something called a pellicle, a polymer film 
+just 1 micrometer wide, to prevent particles   from casting a "shadow" discrepancy that gets 
+projected onto the etched wafers and ruins them. in the euv world, however, even the super thin 
+traditionally-used pellicles can absorb and weaken   the euv light. so while asml works to develop 
+a suitable pellicle, earlier generations of   euv machines all across the supply chain now have 
+to adhere to ultra-strict cleanliness standards. a particle just 52 nm wide, the size of a small 
+virus, can contaminate the euv supply component.   maintaining such cleanliness pushes the 
+limits of what is technically possible.   new proprietary detectors were 
+installed at all supplier premises.   particle flushing steps had to be added 
+throughout the whole build process. such challenges are why euv commercialization   was delayed for several decades even after 
+proving the feasibility of the science in the 80s. note. it has recently been announced that 
+pellicles are now available for euv machines.   so it is likely from now on that this cleaning 
+won't need to be a part of the workflow.   but before that, such cleanliness 
+standards were enforced for a few years.   having them now will improve 
+wafer yields and cost. asml's market leadership in this 
+sector is defined in two ways. the first is in the technological superiority of 
+its products. asml products are twice as expensive   as competing products from nikon or canon, but 
+perform much better than the competition. they   can print in more detail and at a higher rate. 
+that's what the customers want more than price. the second has to do with its very 
+strong record of collaboration.   the company works closely with both 
+its customers and its suppliers,   conducting between all of them to deliver 
+a product as demanding as any airplane. this track record and constant 
+process improvement helps to keep asml   at the leading edge of the market, 
+and moore's law humming along.

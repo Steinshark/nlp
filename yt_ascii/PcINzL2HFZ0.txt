@@ -1,0 +1,154 @@
+in mid-january 2024, the semiconductor eda giant   synopsys announced the acquisition of the 
+software firm, ansys, for $35 billion. ansys produces software for 
+computer-aided engineering   or cae. they have a fascinating history. but why buy it? there is a trend 
+going on here and it involves the   new sexy technical trend of the day - chiplets. in this rather wide-spanning video, we look at the 
+intersection of design and computer simulation. ## beginnings in the 1960s, john swanson was working at the 
+westinghouse astronuclear lab in pittsburgh. he went there to work on nuclear-fueled rockets 
+with the goal of going to mars - the nerva   nuclear rockets. his work involved doing 
+stress analysis on various components. to do this, swanson had to model how a structure 
+might function under a particular load. however   trying to mathematically model a big 
+complicated design was challenging. but if you divide that structure 
+down into smaller pieces,   those smaller pieces are easier to 
+predict. tie those pieces together   and you get a far better idea of 
+how the larger structure will act. this is what we now call finite 
+element analysis, or fea. in fea,   we break something like a car design 
+down into millions of little shapes   and use that to predict how that car 
+design might react if it hits a wall. in those days, the fea equations had to be 
+worked out by hand using desk calculators,   which was long, complicated, and error-prone.   so swanson learned how to code and 
+wrote a few programs to do this fea. ## ansys by the late 1960s, it became clear that 
+the nuclear rocket was not going to mars. so swanson left, moved back in with 
+his parents, and founded the company   "swanson analysis systems" to develop 
+the ansys simulation software suite. westinghouse brought swanson back as a 
+consultant, which helped swanson keep   food on the table while he coded up ansys on 
+a time-shared mainframe owned by us steel. ansys - swanson went with the name 
+because the lawyers said it didn't   violate anyone's trademark - was finished in 
+1970, and westinghouse was the first user. over time, swanson and his small team ported   the software to minicomputers like 
+the vax and added crucial features. in 1994, swanson sold majority control of his 
+company - which had annual revenues of about   $30 million - to the private equity 
+firm ta associates and stepped down. they took the company public two years 
+later, changing its name to that of the   flagship product. swanson retired soon after 
+that and has since focused on philanthropy. ## design & simulation ansys' fea tools have since evolved to 
+embrace a variety of cae sub-categories. broadly speaking, cae is about using 
+sophisticated algorithms to simulate,   validate, and solve problems 
+in engineering projects. the name is similar to computer-aided design, 
+or cad, but they are not the same. cad is for   producing the design while cae is for testing how 
+that design performs under certain conditions. this is helpful because engineers can now 
+diagnose and troubleshoot problems in a   design without having to do as much 
+real-world testing. since it can cost   millions of dollars to build a modern plane or 
+car prototype - and certain conditions cannot   be easily replicated in a wind tunnel 
+- this saves a lot of time and money. the rise of more powerful computers - including 
+those within the cloud - has made it more   feasible for users to simulate increasingly 
+complicated designs inside a computer. ## computational fluid dynamics fae is pretty interesting. and it would be fun to use 
+it to simulate what happens   when an integrated circuit hits a 
+brick wall at relativistic speeds. but in a semiconductor industrial context, 
+we want to look at a different major cae   sub-category - computational 
+fluid dynamics, or cfd. cfd   programs help solve the complicated nonlinear 
+equations that govern the motion of fluids. brace yourselves for some mind-blowing 
+stuff but fluids are not like solids. fluids like air or water react to shear stresses 
+differently than solids because their shapes   deform without losing volume. so these fluid 
+dynamics equations are extremely intense. any calculator - human or otherwise - 
+must simultaneously maintain multiple   factors like conservation of mass 
+and momentum in many directions. cfd applies to all sorts of real world 
+engineering situations, but is particularly   big in heat transfer analysis. engineers can use 
+it to track heat sources in a structure, how that   heat conducts or radiates throughout, and how we 
+can carry away that heat using a fluid like air. ## brief cfd software history considering this, we have long sought 
+ways to model these fluid movements. in 1922, the english scientist and 
+mathematician lewis fry richardson   published the book "weather prediction by 
+numerical process". it radically proposed   a set of differential equations 
+for predicting the weather. his book also fantasized about the 
+possibility of a "forecast factory".   in it, you would have many dozens of 
+"computers" - human computers in this   case - calculating these equations 
+for different parts of a world map. that of course was a fantasy, 
+but fun nevertheless. by 1940,   the available analytical models for modeling 
+fluid dynamics were fragmented and in disarray. prior models based on older principles 
+proposed by the mathematicians leonard   euler and lagrange were elegant, but did not 
+match up with what was happening in reality. this situation changed thanks to the urgency of 
+war. in the waning years of the manhattan project,   it became crucial for the americans to track the 
+behavior of shock waves and how they propagated   through things. research continued after the 
+war ended and hydrogen bomb development began. in 1950, robert richtmyer and john von 
+neumann published a paper introducing the   concept of "artificial viscosity". this 
+simplified the equations for computers   while maintaining fidelity to the basic physics. over the decade after that, a team at los 
+alamos led by frank harlow contributed   several foundational cfd algorithms 
+like particle-in-cell or fluid-in-cell. these works together enable the foundations of cfd   as we know it today. professor john 
+chu of columbia coined the term in   1967 in addition to contributing crucial 
+differential equations for the discipline. cfd programs have since evolved to reproduce and 
+visualize all kinds of thermal dynamics. this is   helpful for air conditioning systems, vents, 
+and - interestingly enough, semiconductors. ## 3d-ic in previous videos, i have talked a bit about 
+the growing trend in advanced packaging. one of the major examples of this is amd's 
+flagship ai accelerator chip - the mi300.   this chip has been built up to be some kind 
+of a nvidia-slayer amongst amd enthusiasts.   but whatever you might think about amd and nvidia, 
+it is a magnificent piece of silicon engineering. i quote dylan from semianalysis here. 
+the mi300 is the most incredible form   of advanced packaging in the world. over a 
+hundred pieces of silicon stuck together in   three layers on top of an interposer - which 
+is kind of like a pcb for silicon chips. these silicon pieces are connected 
+using through silicon vias, which   are holes drilled into the die. we can then 
+run copper interconnects through these vias. advanced packaging techniques like these allow 
+us to produce larger, more powerful pieces   of silicon without majorly hurting yields. 
+certain compute chiplets can be made using   advanced nodes while other less advanced stuff 
+like i/o can be done in trailing edge fabs. ## heat problems one of the big issues however 
+with these vertically stacked   semiconductor packages and others like it is heat. chips generate heat. in a traditional 2d 
+monolithic ic, we know how to deal with   this heat. all of the silicon pieces are 
+accessible so heat generated by the chip   can be dissipated out either through the silicon 
+substrate on the bottom or a heat sink on the top. but when you stack more than maybe, 
+two pieces of silicon together,   we can't just throw a big old 
+heat sink on top and call it a   day. that is because we no longer 
+have access to all of the chips. when you consider that the silicon pieces 
+do not all have the same heat profiles and   that heat cannot travel very far, then 
+you end up with local hot spots. these   higher temperatures hurt the chip's 
+performance and overall lifetime. i am compelled to inform you of the fable 
+of the asian giant hornet. if it ventures   too deep into a japanese beehive, the bees 
+tightly surround the hornet and beat their   wings to high temperatures. the poor hornet - 
+which only wants to eat - is cooked to death. likewise for an advanced packaged ic. 
+heat from silicon operations or beating   bee wings can compromise performance. it 
+can fatigue the soldered interconnects,   warp the silicon substrate, or 
+even crack the die entirely. ## taking the heat considering the consequences, it is 
+important that chip designers build   structures into their stacked 
+packages to deal with this. the industry has tried several things 
+- there is a whole part of the industry   dedicated to heat control. we have silicon or 
+software-level measures to take. for instance,   writing code to limit the chip's performance 
+so that we don't overheat the package. there are also packaging-level things we can do 
+like immersing the whole chip in a heat dispersing   fluid or even creating silicon "fins" sticking 
+out from the interposers to shuttle away the heat. there is strong focus on adapting existing 
+technologies to minimize risk of failure.   one example is the solder ball interface 
+between the dies. changing the filling in   between the balls can greatly improve the 
+heat distribution profile of the stack. ## heat simulations regardless of the methodologies 
+employed to deal with the heat,   we are going to want to simulate 
+it out to see if it works. a wafer takes about three to five months to 
+produce and that does not include packaging.   so it could take months to get a complete package 
+to measure, test, and validate its heat profile. but we don't have that much time to wait. 
+advanced chip design takes far too long   as it is. so being able to simulate the thermal 
+profiles of a particular design inside a computer   without needing to go and build a prototype 
+to test in real life is hugely beneficial. that means cfd. for instance, 
+calculating heat transfers from   between two components within a package 
+requires us to know the local fluid   temperature - the temperature of the parts 
+in contact. but as we established earlier,   cfd is extremely difficult to model due to 
+the complicated interplay of various factors. such programs need to produce accurate 
+results that match with real world   experimentation while also being intuitive to 
+use since designers are often time-pressured. for this reason, cfd programs for thermal 
+simulations of electronic packages are very   mature - around for over twenty years. 
+so semiconductor tool and ip ecosystem   providers like tsmc prefer to partner with cfd 
+makers like ansys rather than make their own. in 2021, ansys announced a partnership 
+with tsmc to deliver a thermal analysis   solution for 3dfabric. 3dfabric is tsmc's 
+umbrella of advanced packaging technologies. import a package from an eda software 
+and you can run electrical, thermal,   and structural simulations on it. getting this 
+stamp of approval as well as others from the   world's biggest foundry is a compelling sign of 
+ansys' growing presence in semiconductor design. it does make me wonder if we should allow 
+synopsys to actually buy them. on the surface,   the businesses seem quite separate. but 
+ansys is growing in the industry. and   semiconductor design and simulation 
+are soon to collide - especially as   generative ai makes its way into 
+the design flow down the line. simulations can be a way to validate those 
+designs - like how we use a python runtime   to validate chatgpt's written code. 
+just a random thought. maybe i'm crazy. ## conclusion one more thing. i do think that synopsys 
+being willing to pay $35 billion does say   that heterogeneous integration - i.e. 
+the chiplet approach - is here to stay. expensive ai chips like the mi300 are 
+only the beginning, the leading edge   of the sword. i get the feeling that 
+we are going to be seeing the mi300's   approach trickle out to almost every part of the 
+semiconductor space except maybe the smartphone. considering all the trailing edge 
+semiconductor fab capacity being   built around the world right now, 
+users will want to mix-and-match   process nodes and then just slap it 
+all together with advanced packaging. this means more complex advanced packages. and 
+that is going to present a lot of challenges   because heat isn't the only major challenge 
+for packaging designers to overcome. another   one that comes to mind, for instance, is 
+capacitance - which arguably might be harder. this all in turn incentivizes us to 
+produce better tools for designing and   manufacturing such advanced package designs. 
+synopsys is setting out on that journey,   and is putting down $35 billion to back it.

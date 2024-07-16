@@ -1,0 +1,173 @@
+okay so you just got back from iceland? where 
+you saw some geysers. so i am going to tell you   about a sequence that has a lot of geysers in it, 
+it's called the yellowstone permutation. why it's   called a permutation will emerge in a minute. and 
+in this one you're actually told the first three   terms and then the rules take over. rules are 
+very simple: no term is repeated; always pick   the smallest legal number; the next rule says 
+that the gcd - that the greatest common divisor   of the term you're putting down there then and the 
+previous term has to be 1. in other words, the new   number has to be relatively prime to the previous 
+term. but it must have a common factor with the   term two back. let's do it. so we're told it 
+begins 1, 2, 3 - now what can we put down for the   fourth term? the rule says it has to be relatively 
+prime to 3. okay, so it can't be divisible by 3  but it must have a common factor with 2. 
+well how about 4? 4 is the smallest thing   it could be because we have to always pick the 
+smallest number. so we've got 1, 2 and 3 - the   smallest number we could hope to use is 4, and 
+4 works. now we're missing 5, but we can't put   a 5 here because 5- even though it's relatively 
+prime to 4 doesn't have a common factor with 3.   so we can't put a 5; we need a multiple of 3 in 
+fact to have a common factor with 3. so 6 would   work, except 6 and 4 have a common factor of 2, 
+so we can't put a 6. so 7, 8, 9 - 9 works. 9 and   6 have a common factor of 3 and 9 and 4 are 
+relatively prime and no smaller number works,   so the fifth term is 9. okay, now what? 
+we have to have a common factor with 4.   so 6 is missing, but we can't use 6 because of the 
+9. 9 and 6 have a common factor. so the next even   number after 6 is 8, and 8 works. and then we keep 
+going like that forever. what comes after 8? it's   got to have a common factor with 9. so a multiple 
+of 3- and it can't be 6 because of the 8 - so 3,   6, 9. it can't be a 12 because they have- 
+12 and 8 have a factor, but 15 works. okay,   and what comes next? we need an even number after 
+the 8, and we don't have 6 yet but we can't use   6 because 6 and 15 have a common factor. 2, 4, 6, 
+8 - 8 we have. we can't use 10 because of the 15,   we can't use 12 because of the 15 - 12 and 
+15 are both divisible by 3 - so it can't be 12.   could it be 14? yes it could, so it's a 14 and so 
+on. and it goes like that and- (brady: it's cool)  - yeah yeah. but the interesting thing is that 
+every so often we get a big number. let me see if   we can get to a big number. here is the next few 
+terms: finally we've got- we get the 5 that we've   been waiting for, that was the smallest missing 
+number so i'm glad we got that. and then we can   actually fill in the 6, and then we get 25 and 
+12 and 35. and 16 and 7 and so on. and you notice   all of a sudden, here, we get a number which is 
+three times as big as n. so it erupted upwards. and if you look at the terms between 100 and 
+200 you can see that every so often there's a   geyser that erupts, just as the 35 jumped up. and 
+when that happens actually, they arise because we   had a prime. so this jump here is we hit the 
+prime 61, and then we got twice 61, and then   we got 7 times 61, that was the next term. so it 
+erupted. so that's what the sequence looks like.   now in all of these sequences when you have 
+a rule that says there are no repeated terms,   one of the first things you want to know 
+is, does every number appear eventually?   and this- in this particular case 
+it's not obvious but it's true;   and i would like to prove it because- 
+(can i ask you one more question first?   is- are the geysers like old faithful? do we 
+know how) (regularly they're going to go off   or are they are they scattered intermittently 
+like the primes? are) (they unpredictable?)  - no they're they're predictable in the 
+same sense the primes are predictable.   (so not predictable then?)
+- not predictable. and yet, in a way, predictable.   rather like the primes popping up in the string of 
+real numbers. - (do they- does every prime number   cause a geyser) (or just selected ones?)
+- yes, all primes cause geysers. (okay,   cool. what were you going to prove for us?)
+- well i'm going to prove that every number appears. and it's- i like this proof a 
+lot because it's slightly clever, it's not all   due to me, it's a- this was a collaborative work. 
+it was uh- we ended up writing a six author paper   about this. but the proof is really lovely and 
+slick and what i like about it it doesn't use any   high-powered mathematics, it's just- you could 
+do it in your head, you could do it with your   eyes closed. there's no need to do any integration 
+and so on, no differentiation, no measure theory,   no probability theory. it just works. so the proof 
+that every number appears. that's why it's called   a permutation, because when i've convinced you 
+of the proof you will know that this sequence of   numbers is the same as the sequence above it, 
+it's the sequence of integers but rearranged,   every number appears. okay, 1: step number 1 is- 
+first of all the sequence is infinite. because you   might think after a while we run out of numbers, 
+but in fact there's always a candidate, we could   pick some giant prime that hasn't appeared yet -
+call it q - and take 15 times q. that's definitely   going to be relatively prime to the previous 
+term, and certainly it has a common factor   with the two back. so there's always a candidate, 
+so the sequence is infinite. now the next thing i   need is that some numbers might be missing and 
+some numbers will be present, and right now we   don't know. so let me define- this this is really 
+a subtle point but it's very a very key step. i   want to know when does a number appear? when does 
+8 appear? well it appears as a sixth term. so let   me define w for when, w of m is when m appears. 
+w of 8 is 6, w of 15 is 7 and so on. but suppose   101 is missing; then we define w of m to be -1 
+if m is missing. and i want to define l of m   to be the max, the maximum, of w of 1 up to w of 
+m. the point is that by the time we've gone out to   w of m, every number that appears in the sequence 
+has appeared. this is the maximum you have to go   out to find m. you might- m might not be there 
+but if it is- if it is- so we take the maximum   of w for all the numbers up to m, that's- l stands 
+for last. l is the last chance, l of m is the last   chance you have to see an m. once you've gone 
+out before beyond l of m you're in the outback,   there are no more l of m's. so for n bigger than 
+l of m, a of n is bigger than m. somebody knows,   so that's how far we have to go out there. now we 
+can actually do some reasoning. i claim there are   infinitely many primes that divide the terms 
+of the sequence. proof: suppose not. suppose   prime p on, all primes are missing. and then from 
+then on all the terms are products of primes less   than p. so i want to look at l of p squared okay? 
+i'm going to go out a long way in the sequence;   beyond that point we know every number is at least 
+p squared. so a of n is bigger than p squared;   we don't know what it is but we know it's pretty 
+big. and this argument about it being pretty big   is the key step, that's that's the key step number 
+2 that it says the sequence keeps growing. so go   out beyond the last prime less than p squared and 
+look at what we have. so we get a term a of n,   and we know it's bigger than p squared. we 
+we don't know what the number before it is   or the number two back but we know there was a 
+term before it that had a common factor with it   as by the definition of the sequence. and so that- 
+the linking term, the gcd, is a prime less than p   because from now on there are no other 
+primes. so the gcd here is say equal to q,   say, and we know q is less than p because all 
+the terms in the sequence from then on a product   so primes less than p. so that means that qp is 
+less than p squared - q is less than p, q times   p is less than p squared. but then because this q 
+is less than p we could have used q times p here   instead of p squared. and this is 
+a contradiction to the fact that we   always take the smallest candidate. so by 
+assuming that there was some limit to the   primes that appear we get a contradiction;
+therefore there are infinitely many primes. alright,   brady, now let me move on to the next 
+step. now we know there are infinitely   many primes in the sequence, all right, i 
+can now prove that every prime divides some   term. let's say 17 never divides any term; 
+then i say 19 can't divide any term either,   because the first time you saw a term that was 
+divisible by 19 you could have used 17 instead.   17 didn't appear - if 17 didn't doesn't appear you 
+can't have a 19 because whenever you got to a term   that had a 19 in it, you could have used the 17 
+instead. if 17 doesn't appear, 19 doesn't appear,   23, 101 - none of the primes bigger than 17 
+appear. so that means the only primes in it are 2,   3, 5, 7, 11, 13 and 17. but we know there 
+are infinitely many primes in the sequence,   that was step 3, so we have a contradiction. 
+okay so every prime divides some term.  - (i just want to remind you, you said you could 
+do this with your eyes closed.) yeah i can, i can,   i can easily do it with my eyes closed - 
+it's easier with my eyes closed, really.   because i can then correct myself without 
+making a fuss about it. all right, 5. yes. any prime p divides infinitely many terms. 
+step 4 said every prime divides some term,   so we know that 17 appears at least once. step 
+5 says each prime appears infinitely many times,   and the proof is actually rather tricky; but what 
+you do is you say, suppose not. here are the terms   that are divisible by p, there are only finitely 
+many of them, that's what we're trying to prove   can't happen. suppose it's true; pick a power of 
+p which is bigger than all of them, i will prove   that's in the sequence, because pick a prime - 
+we know there are infinitely many primes - pick   a prime q bigger than p times 10 to the 6. 
+we know that q appears in the sequence. there   will come a time when q will be in the sequence; 
+every prime is going to appear eventually. well   when it appears we could have used p to the 
+million instead, so that's a contradiction.  therefore every poem divides infinitely 
+many terms. we have two steps to go:   every prime appears naked, i.e a of n then equals 
+p not multiplied by anything for some n. we say   suppose it's not true and find a giant. we know 
+there are infinitely many multiples of p, so pick   a huge multiple of p. so let's call it h times p 
+- huge multiple of p. suppose find a of k equal   to a huge multiple of p, then a of k plus 2 is 
+going to be p. once we've got a huge multiple of p there's nothing to stop us taking p itself here. it's the same argument and it's very simple. 
+so, okay, we're ready for the last step.   every number appears in the sequence. so take- 
+suppose k is missing, smallest missing number,   and we know k isn't a prime because we know every 
+prime appears. so let p be a prime dividing k - a   prime factor of k - and go out a long way,
+same argument, go out a long way until we get   h times a huge multiple of p. we know we can 
+do that by going out far enough. so what's to   stop us putting a k here two steps along? the 
+only thing could stop us if this term here   had a common factor with k itself. so we're okay, 
+we're safe, unless this also has a common factor   with k. but then why couldn't we put a k another 
+step on? because this has a common factor with k,   so the only thing that could stop us is that this 
+term had a common factor with k. if we're going to   block- once we get to a huge multiple of p, every 
+term after it has to have a common factor with k.  and if it- as soon as it stops having a common 
+factor with k then the next term we can put k.  so we get- to block k, every term after this has to 
+have a common factor with k; but that's impossible   because we know if we go out far enough we're 
+going to come to some primes, naked primes. there   are infinitely many naked primes so there's 
+going to be a humongous prime sitting here   which is not- does not have a common factor with 
+k. so because of step 6 that can't happen.    q.e.d, end of proof. so every number appears, that's 
+why it's called the yellowstone permutation. this is a graph of the sequence, and i want to put 
+in just as a reference this is the line y equals   x. this is not part of the sequence it's just a 
+marker. and i put down a dot for every term, and   the dots fall on lines, and what happens is that 
+all the primes appear very close to the line   of slope 1/2. but most of the numbers, the 
+non-primes, lie close to the diagonal line. most   of the time, the nth term is about n. the primes 
+are exceptions and certain odd multiples of the   primes are exceptions. some numbers that are three 
+times a prime appear on a different line
+- (geysers?)   yes exactly, the geysers. there are three times p- 
+three times prime geysers, there are five times   geysers - sorry did i say gee-zer? we used to- 
+- (you can say gee-zer or guy-zer, people- people use both.)   oh good, all right yeah. because we used to have a 
+hot water tank when we lived in the isle of wight   that was called a geyser; but in this country the 
+people say guy-ser, so i will try to say guy-ser. as   distinguished from giza - because giza will appear 
+in a different video, an old giza. okay, so the the   graph of the sequence: the primes are special and 
+they appear on a line of slope 1/2. almost all   the other numbers appear either on a line just 
+above the diagonal, or on the line just below   the diagonal, very close. if you want to know to be 
+precise about it, there's a line whose equation is   roughly x times 1 - 1 over 2 log x. it's almost 
+the diagonal y equals x but there's a slight   droopiness to it. all the even numbers appear 
+on this line and all the odd composite numbers,   almost all, appear on a line just above it which is 
+y equals roughly x times 1 + 1 over log x - there's no 2   in it this time - plus ..., roughly 
+speaking. and then there are the geysers; and the   geysers- some of the numbers that are three times 
+primes appear on this line, which is slope 3/2. some of the numbers that are five times primes 
+appear on this line, which has slope 5/2. numbers seven times the prime and the slope is 
+7/2 and then 11/2 and so on. they're   the geysers.
+- (how big can the geysers be? can they-) 
+- arbitrarily high, yes. they come- they become more   and more rare but you- if you go out far enough you 
+will see a very large geyser. this is a description   of what we see when we look at the sequence. we 
+don't actually have a proof that this is correct,   but we do have a theory that explains everything. 
+and i would just like to end up by showing you   this theory. the theory is actually wonderful. if 
+you study the sequence, you find that most of the   time the numbers go even, odd, even, odd, even, odd and 
+so on; they alternate in parity. the first 212 steps   are a little special, but from step 213 on we get 
+a group of five terms. at 213 we get a disruption; twice 101, 101 as you know is a- is a prime. we get 
+uh 275 which is some random odd number, then we get   the prime itself, 101, then we get some random 
+even number which is- turns out to be 198, and   then we get at 505 which is 5 times 101. it's 
+five times this prime and it's the the geyser. so this is the group of five terms that disrupted 
+the progression of even and odd. and using that   we're able to say, well the even numbers appear on 
+the line y is x times 1 minus 1 over twice log x.  look, i don't think anyone's ever going to 
+reach neil sloane's level of sequence expertise, but if you want to lift your game on any area of 
+mathematics or science including sequences then   you really need to check out today's episode 
+sponsor, brilliant. their online lessons and courses are elegantly and lovingly designed; you 
+aren't just a spectator. there are quizzes and  questions and interactive elements like this. get 
+smarter, get thinking, train your brain. brilliant  makes learning so much fun you're gonna wish you 
+started this years ago. and get 20% off brilliant's  premium subscription at brilliant.org/numberphile 
+there it is on the screen, and i'll put   a link in the video description too. check 
+it out now, your brain will thank you later.

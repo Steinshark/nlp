@@ -1,0 +1,160 @@
+maybe more than any other type of infrastructure, 
+railways have a contingent of devoted enthusiasts.   "railfans" as they call themselves; or should 
+say "ourselves"? maybe it's the nostalgia of   an earlier era or the simple appeal of seeing 
+enormous machinery up close. but railroads and   the trains that ride along them are just plain 
+fascinating. train drivers are often known as   engineers, but operating a locomotive is far 
+from the only engineering involved in railways.   in fact, building and maintaining a railroad is 
+a big feat full of complexity. and i'd like to   share some of that complexity with you, starting 
+where the rubber meets the road, or in this case,   where the steel meets the... other steel?  it might sound like a simple topic, but don't  say that to the attendees of the annual wheel rail 
+interaction conference. this stuff is complicated,   so this is the first in a series of videos i'm 
+doing on the engineering behind railways. why   do the rails of railroads have such a weird shape? 
+the answer is pretty ingenious. i'm grady and this   is practical engineering. in today's episode, 
+wer'e talking about train wheels and rails. why do we build railroads anyway? they might seem 
+self-evident now and even kind of elementary. but   modern railroads are the result of hundreds 
+of years of innovation. and like many kinds   of innovation, the development of railroads 
+was really just a series of solving problems.   for example, how can we move upwards of 
+100 tons per vehicle without tearing up   the road in the process? well, instead of 
+compacted gravel, asphalt, or concrete,   we can build the road out of steel. but steel 
+is expensive, so rather than a ribbon, we can   save cost by using two narrow steel rails directly 
+below the wheels. but wooden or rubber tires have   a lot of rolling resistance because they deform 
+under load, and that resistance adds up with each   individual train car. so, we use steel for the 
+wheels too. i built this model to show exactly how   this works. my wheels are plastic and rails are 
+aluminum, but i think you'll still get the point.   steel wheels on steel rails are just so much 
+more efficient than... well, there is the problem of turning, too. 
+just because you put a rail below a wheel   doesn't mean it will follow the same path. you 
+have to have some way for the rail to correct   the direction of the wheel and keep it on track, 
+literally. and, if you look at railway wheels,   the answer is obvious: flanges. the wheels 
+on railway vehicles all have them: a lip that   projects below the rail to guide the wheel as it 
+rolls along, keeping the position side to side.   you could put flanges on the outside of wheels 
+like this, but if a horizontal force like a hard   turn caused one of the wheels to lift, the flange 
+won't help keep the wheel on track. we put flanges   on the insides of wheels so they can keep a train 
+from derailing even if one wheel lifts off the   track. let's put some flanges on my wheels and 
+try that demo again. you can see we haven't fully solved the problem. 
+unlike a wheel that has a tiny contact point with   the rail, a flange is a big surface that 
+creates a lot of friction around every   curve. if you've heard that characteristic 
+squeal of a train going around a corner,   that's the sound of flanges rubbing and grinding 
+along the side of a rail. rails on tight curves   are often made of higher-grade hardened steel 
+compared to straight portions of the track,   and sometimes they're even greased up to minimize 
+friction between flanges and the edges of rails.   but, there's a bigger problem at play in 
+this demonstration than simple friction. instead of independent wheels, most railway cars 
+use solid axles attached to both wheels called a   wheelset. they need that design to withstand the 
+incredible loads each axle carries, but it poses   a problem around bends. a solid axle means both 
+wheels turn at the same rate, but the length of   the outer portion of track in any given curve is 
+longer than the inside of the curve. two wheels of   the same diameter spinning at the same rate will, 
+kind of obviously, have to roll the same distance.   since there's a mismatch between the distances the 
+wheels need to travel, solid-axeled wheelsets with   cylindrical wheels would always experience 
+some degree of slipping around a turn.   that would not only create a 
+bunch of additional friction,   but also keep the wheels from following the 
+curved path, and a flange can only do so much. the trick to railway wheels is something that's 
+not so obvious at first glance. the wheels are   actually conical. the profile of the wheel is 
+wider on the inside next to the flange, and   gently narrows toward the outside of the wheel. 
+a wheelset with conical wheels will naturally   tend to self-center itself between two rails. on 
+a straight section of track, a wheel that rides up   higher on one rail will naturally fall back down, 
+keeping the wheelset roughly centered on the road.   in a sense, conical wheels 
+want to stay on the tracks.   there's always a little bit of wobble (exaggerated 
+here), so trains actually move down tracks in a   sinusoidal side-to-side pattern that you can 
+sometimes feel if you're paying attention.   incidentally, that helps the wheels wear evenly. 
+but where it really counts is on a curve. the turning forces on a train cause it 
+to tend toward the outside track. this   shifts the wheels over as well. the outer 
+wheel will ride on the thicker part of its   tread nearest to the flange, while the 
+inner wheel will ride toward its edge,   which has a smaller circumference. this way, 
+the effective diameter of each wheel changes   in a curve and solves the slip problem 
+that cylindrical wheels would face.   take a look at the way these conical wheels that 
+i 3d printed behave as they make this corner. you   can see the outside wheel rolling on the wider 
+part, effectively increasing its diameter and   thus distance traveled per rotation. conversely, 
+the inside wheel rides on the narrower part of   the cone, and so it has a smaller diameter 
+and travels a shorter distance per rotation. it really is kind of ingenious. most vehicles have 
+a differential gearbox to deal with this challenge   of navigating curves; train cars just use some 
+clever geometry. but that's not the end of the   story. you might even be thinking, "richard 
+feynman already taught me this in the 80s...   it's nothing new." but there's more engineering 
+involved in how train wheels and rails interact,   including the interesting shape of modern rails. 
+think about that taper angle first. one standard   in the us uses a 1:20 ratio. for the main part 
+of the wheel, that means the outside diameter   is roughly a quarter inch or 6 millimeters less 
+than the inside diameter, and that difference has   a big effect on the allowable radius of curves in 
+a railroad. a steeper cone can navigate sharper   curves, since there's a bigger difference in 
+the circumference from the inside to outside.   you can see my wheelset can't navigate this 
+s-curve, despite the exaggerated conicity. this challenge is partly solved 
+with trucks, called bogies in the   uk. you can kind of think of trucks as big 
+rollerskates under each end of a train car.   the trucks can rotate relative to the rest 
+of the car, and they usually have some pretty   serious springs and suspension systems to 
+keep a smooth ride rolling. most trucks keep   the wheel sets parallel, but some can even 
+allow them to ride radially with each curve. however, even with trucks or bogies, wheels can 
+overshoot their optimal orientation on the tracks.   when the simple sinusoidal motion created by the 
+tapered wheels is amplified by the speed of the   car, the oscillation can violently slam the trucks 
+side-to-side on the rails. this is called hunting   behavior. the violent motion can even cause a 
+train to derail. it's worst with empty cars,   and usually only happens at higher speeds, 
+so a lot of engineering goes into developing   wheel profiles and truck designs that raise the 
+hunting onset speed so that it doesn't limit how   fast a train can go. that's a lot of innovation 
+on the wheel side, but what about the rails? just like all parts of a railroad, the 
+rails themselves have evolved over time.   turns out there are a lot of shapes they can 
+take and still serve the same basic function,   but modern railway rails are shaped that way 
+for a reason. weight is equivalent to cost for   big steel structures, so there's nothing on these 
+rails that isn't absolutely necessary. in a sense,   rails are i-beams, a shape that is well-known 
+for its strength and something we see in   plenty of other heavy load bearing steel 
+structures. but there's more to it than that.   the bottom part of the rail, called 
+the foot, distributes enormous loads,   converting the extreme contact pressure of a steel 
+wheel into something that can be withstood by a   wooden or concrete tie. the web elevates the train 
+above the ground, giving clearance for the flanges   of the wheels and keeping everything clear of 
+small debris that might end up on the tracks. the head of the rail with where the action 
+happens. this thick rounded section of steel   takes an awful lot of abuse over its life, 
+and thus experiences the bulk of the wear.   an old rail section, especially on the high side 
+of a curve, looks remarkably different than a   newly forged rail. here's why: theoretically, 
+the speed of a spinning wheel exactly matches   the speed of the rail at a mathematically precise 
+point. but trains don't care about math. for one,   even steel wheels on steel rails deform a little 
+bit as they roll. rather than a single point,   there is a small contact patch between the two. 
+that tiny area, roughly the size of a small coin,   carries all the weight of the train into the rail. 
+but, because the contact patch is spread across   the tapered wheel, the wheel is turning at many 
+different speeds on the same piece of rail. only   the center of the contact patch actually moves at 
+the exact speed of the train. this results in a   small amount of grinding as the train moves along, 
+slowly wearing down both the wheel and the rail.   eventually they start to conform to each 
+other, and that's mostly a bad thing. wheels can wear down to get a vertical face 
+that wants to climb up the rail or a hollow   profile with a quote-unquote "second flange" 
+that takes the wrong direction at a switch.   most rail wheels have some amount of hollow to 
+them, which changes how conical they actually are.   some wheels are even designed to be taken off and 
+machined back into spec to extend their life. the   best way to reduce this wear is to use hardened 
+materials and reduce the size of the contact   patch by curving the top of the rail so that 
+the wheel only touches a tiny part of it as it   rolls by. after that, it's just a decision about 
+how much wear you want before needing to replace   the rail. the more metal you include in the rail 
+head, the more it will cost, but the longer it   will last. in fact, not all rails are equal. the 
+lightest rails are used on straight sections and   small commuter service lines. the largest rails 
+are used on curves and heavy-haul freight tracks.   once they get worn down on the main line, they 
+often get reinstalled for a second life in a   yard or a siding where they can still bear 
+train cars and locomotives at slow speeds. so, rails are shaped in the funny way for 
+a reason: they're bulbous both to reduce   the size of the contact patch and provide enough 
+steel to wear away before needing to be replaced.   and the shape of rails and wheels is 
+still a topic of research and innovation.   just in the past few years, the standard profile 
+of north american freight train wheels was   updated to the new aar-2a standard. just a tiny 
+change in the shape of the wheel was tested to   have 40% less wear than the previous spec. that 
+means trains will start seeing better steering,   lower friction, better fuel consumption, 
+and longer lasting infrastructure. in many ways, railroads might seem like old 
+technology, a solved problem that doesn't need   more engineering. but it's just not true. modern 
+railroad companies use sophisticated software,   like the train energy and dynamics simulator, 
+to keep track of all the complexities involved   in how wheels and rails interact. simulators 
+can let you adjust factors like train makeup,   different track conditions, 
+operating conditions, suspensions,   and more to characterize how trains will 
+handle and how much energy they'll use.   that's the topic of the next video in this 
+series, so stay tuned if you want to learn more. in the 19th century, railway engineering 
+was all about how to build railroads,   finding routes through difficult terrain and 
+efficient forms of construction. modern rail   engineering is all about getting the 
+most out of the system. it might not   look like much when you see a train passing 
+by, but a huge amount of research, testing,   and engineering went into the shape of those rails 
+and wheels and we're still improving them today. research and testing is something that applies 
+to another part of my life, and maybe yours too:   getting kids to eat healthy foods. we recently 
+took a little vacation to a cabin in the woods,   but if you have little ones, you know that 
+vacations can be more work than just staying   at home. that's partly because of 
+all the meal planning and shopping   you have to do. luckily we brought 
+hellofresh, sponsor of this video. this is 3 meals that i didn't have 
+to plan out or shop for. plus the   pre-portioned ingredients meant it 
+saved money, and most importantly,   i didn't have to worry about bringing home 
+extra food when the ice in our cooler was   already melted. that simple box went a long 
+way toward making our trip feel more like the   vacation it was meant to be. i do wish i would 
+have remembered to bring a proper knife, though. hellofresh has a bunch of different 
+plans, and we usually mix it up,   but this time went with the quick & easy 
+options that are simpler and faster to cook:   perfect for a cabin with a limited kitchen. 
+the lack of oven was another unexpected twist,   but i was able to pan fry the crescent 
+roll dough without too much trouble. i tell my friends about hellofresh because we've 
+been using it for more than 4 years, and it makes   our life better, and you might find that's true 
+for you too. go to hellofresh dot com and use   code practical16 for 16 free meals plus free 
+shipping! that offer is for new subscriptions   only and varies by plan across 9 boxes. that's 
+code practical16 at hellofresh dot com for 16   free meals! thank you for watching 
+and let me know what you think!

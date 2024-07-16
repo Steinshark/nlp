@@ -1,0 +1,149 @@
+AMD began as an integrated design manufacturer
+competing directly with Intel - meaning they designed and made their own chips. When the company's internal manufacturing
+operations started to lag behind Intel, the company transitioned into being a fabless
+manufacturer. Even after the transition, its foundry partner
+GlobalFoundries struggled to keep up with the company's technical and yield demands. Eventually the company would turn to the Taiwanese
+giant TSMC for its leading edge processes. Today, TSMC is AMD's closest foundry partner
+and the manufacturer of some of its best products. In the video, we will look at the chip designer's
+move away from its manufacturing roots, its up-and-down relationship with GlobalFoundries,
+and how it came to fab its most advanced products at TSMC. By the late 2000s, AMD needed help. They turned losses for over two years starting
+in 2006. And the company's products were losing ground
+to Intel and the Core microprocessor architecture. This was despite a number of successful anti-trust
+suits against Intel targeting its anticompetitive practices. Intel continued to lead its smaller rival
+in technological prowess and product category dominance. In 2007, AMD's first quad-core chip offering
+codenamed Barcelona lagged its Intel competitor to the market by nine months. The late release - and the product's subsequent
+tepid cost-performance offering - squandered an opportunity to grow its 20%-ish market
+share. Intel seemed to be firing on all cylinders. It announced that all of its foundries had
+moved from a 65nm to 45nm process, a year ahead of AMD. Beyond that, Intel said that its 32nm and
+22nm processes would roll out in their usual 2-year cadence. This model put AMD at even more of a disadvantage,
+as they had to keep up and leading-edge foundries were getting increasingly expensive. As an IDM that did both the design and manufacturing,
+AMD needed to spend millions of dollars building fabs. It needed sales or sales commitments from
+potential customers to get that money. But those potential customers won’t make
+those commitments if they feel that the fab won’t be delivered on time. The result was a chicken and egg dilemma that
+left AMD in a downward spiral. Even with generous tax breaks coming from
+Germany for building its Fabs 30 and 36 in Dresden, the company had to halt construction
+of those Dresden fabs as well as a few New York fabs to conserve cash. In October 2008, AMD announced that they would
+be spinning their manufacturing fabs off into a separate company. Hector Ruiz, AMD's second CEO, exited after
+seven consecutive quarterly losses. The spinoff would allow AMD to focus on being
+a fabless company and get a capital injection. The emirate of Abu Dhabi came in as that white-horse
+investor. They had already bought 8% of the company
+in 2007 as part of an earlier deal. Now they were moving to get more involved. The spinoff would have Abu Dhabi paying $700
+million for 55% of the new FoundryCo (later to be named GlobalFoundries) and another $300
+million to raise their ownership share of AMD to 19.3%. The country continues to be a major shareholder
+in AMD, with 6.9% ownership share as of this writing. The transaction was consummated in March 2009. AMD owned 34% share in GlobalFoundries and
+became its first customer. GlobalFoundries sought to become a leading
+player in the semiconductor space by consolidating other foundries into a single major player
+that can challenge the current market leaders. In acquiring their customers, the idea was
+that the company could pool together enough capital to fund the research and development
+for future processes as well as the immense capital expenditures to build fabs. Six months later, Abu Dhabi took a step towards
+executing on that strategy by purchasing struggling Singaporean player Chartered Semiconductor. I did a video about them previously that you
+should check out. The acquisition instantly made GlobalFoundries
+the third biggest foundry in the market. Things seemed well. In March 2009, GlobalFoundries struck what
+is called a wafer supply agreement that dictated the terms of their relationship. The agreement remains in force to this day,
+binding the two companies together. But over the years, several significant amendments
+have been attached, progressively giving AMD the freedom to pursue business with TSMC. It should be noted that by then AMD and TSMC
+already had a working relationship. In 2006, AMD purchased Canadian graphics chip
+maker ATI in a deal worth about $5.4 billion. ATI had been one of TSMC's biggest customers,
+and that relationship continued for a few years even after the merger. So it would seem that AMD knows the benefits
+that going to TSMC might give them. But the 2009 Wafer Agreement mandated that
+AMD purchase all of its products from GlobalFoundries. The price at which these products would be
+sold was calculated on a cost-plus model, the cost of the goods along with a percentage
+markup. If GlobalFoundries was unable to meet AMD's
+volume demands though, AMD can bring in another foundry to serve as a second source for a
+time. To keep TSMC from being brought in as a second
+source, GlobalFoundries had to capably bring its manufacturing processes to the leading
+edge, matching blows with Intel. The key issue would be the development and
+rollout of its next generation process - 32nm. They were failing at the task. In 2010, just about a year into the new relationship,
+GlobalFoundries found itself seven or eight quarters behind Intel. Santa Clara had already successfully transitioned
+their fabs to a 32nm process, with 28nm on track for 2012. GlobalFoundries was still working out the
+kinks for 32nm, and the delays were hitting AMD's product rollout. In the 2Q 2010 earnings call, then-CEO Dirk
+Meyer said that due to "a slower than anticipated progress of [the] 32nm yield curve", AMD had
+to delay its quad-core 32nm Llano APU product a year to the second half of 2011. To fill the void, AMD brought up the product
+rollout of its dual-core APU product Ontario. (FYI, an APU is an AMD marketing term for
+a system on a chip die that included both a CPU and GPU. At the time, they made up a significant percentage
+of AMD's sales.) Ontario was fabbed at TSMC at 40nm. That node was a troubled one for TSMC. Yes, TSMC is capable of having issues too. Some reports claimed that the 40nm yields
+were as low as 20-30%. The fiasco basically cost TSMC’s then-CEO
+Rick Tsai his job, as he was reassigned and the octogenarian founder Morris Chang took
+over once more. Despite AMD being affected by this - its Radeon
+series 5000 graphics cards were fabbed on 40nm - AMD still chose TSMC to make those
+Ontario chips. GlobalFoundries at the time was digesting
+its Chartered Semiconductors acquisition and did not have the capacity to handle the job. So TSMC took over an AMD CPU product for the
+first time, poured $1.6 billion to increase its factory capacity and Ontario shipped on
+time in January 2011. Compared to how TSMC handled Ontario at 40nm,
+the GlobalFoundries 32nm delay was immensely frustrating and AMD sought to keep it from
+happening again. Thus in April 2011, a few months before the
+Llano APU launch, the two companies announced changes to the Wafer Supply Agreement. This new agreement changed the way AMD paid
+GlobalFoundries for one year. Where before they used the aforementioned
+"cost plus" model to determine the wafer prices, this new agreement changes it to where AMD
+would only pay for "good die". So GlobalFoundries was incentivized to improve
+its yields otherwise it would be eating the cost for bad wafers. If the yields do improve then AMD would pay
+$400 million in bonus payments. Again this would only be in effect for one
+year - presumably by then GlobalFoundries would have their cards straight on 32nm. It appears that the new wafer agreement cost
+GlobalFoundries quite dearly. In Q3 2011, the foundry fired their CEO Doug
+Grose as well as a bunch of other senior people. The company had eaten the costs for bad wafers
+all year long. In 2012, just three years after the spinoff,
+AMD divested its final stake in GlobalFoundries, granting the company full economic independence. In the transaction, AMD gave GlobalFoundries
+$425 million and then amended its wafer agreement once more so to allow AMD to temporarily fab
+some of their 28nm APU products at TSMC. They never really gave a reason why. My bet is because of capacity issues again
+from the Chartered acquisition. Intel by now was already heading to 22nm with
+Ivy Bridge. But things were starting to change. In 2014 AMD appointed a new CEO, Dr. Lisa
+Su, and she began her tenure by emphasizing the primacy of the technology. AMD needed to have chips superior to Intel. In order to do that, they needed access to
+the best process manufacturing technologies. In order to diffuse immense and continually
+rising node development costs, GlobalFoundries teamed up with South Korean giant Samsung
+Electronics. They announced on April 2014 that they would
+work together to bring out their 14nm process by the end of the year or later. The collaboration with Samsung allowed GloFo
+to deliver their next generation 14nm node on time in the first half of 2015. And that got them the nod for AMD's Radeon
+RX 400 Series GPUs. Released in June 2016, it was a good product
+that won awards for its cost-performance ratio. And for what it is worth, GlobalFoundries'
+14nm seemed to have yielded rather well for its customers. But AMD wanted more access to leading edge
+nodes. So in August 2016 it went back to the Wafer
+Supply Agreement with GlobalFoundries and amended it once more, its Sixth Amendment
+to the Agreement. It first established that GlobalFoundries
+would remain the preferred supplier for the next generation 7nm process. The two companies will collaborate on fleshing
+out that process and getting it to work. But at the same time, the amendment would
+allow AMD the possibility of pursuing 14nm and 7nm process jobs with other foundries
+in exchange for financial considerations. In other words, AMD would have to pay GloFo
+for the privilege of not using their process. It is likely that AMD did this in case they
+would need to secure second-sourcing capability for their ground-breaking Zen microarchitecture. At this point, AMD was basically betting the
+company on Zen succeeding. Failing because of a supply issue was unacceptable. GloFo and Samsung continued their technology
+collaboration and that allowed GlobalFoundries to announce its 12nm process in 2017 - an
+iterative improvement on the 14nm. With these excellent, high quality nodes available
+to them, AMD would launch two generations of Zen to great success. Despite this successful launch, however, GlobalFoundries
+was starting to come to terms with its fate. They had plenty of incentives for getting
+to 7nm, but the economics were getting increasingly worse. Going to 7nm means acquiring and mastering
+the next major paradigm in lithography: EUV. For GlobalFoundries to get EUV to work, everything
+from the light source to the recipes had to change - a retooling job that would probably
+cost tens of billions of dollars. GloFo would have to find some way to get that
+kind of capital and its Middle East backers had finally had enough. And on the other side, just how many customers
+really needed EUV 7nm? AMD would be the biggest, but other than that,
+you have just a few flagship big-market customers like Apple, Nvidia, Bitmain, and Qualcomm. Those are demanding, pain-in-the-butt customers
+and GlobalFoundries would have to compete with TSMC and Samsung for them. Why put in the pain and effort when there
+is plenty of business in other processes? So in August 2018, two years into developing
+7nm, the company announced that it was putting development of that technology on hold. Instead, it would focus on those two 14nm
+and 12nm processes - perfectly good for most customers - as well as other speciality processes
+for niche markets. With GloFo exiting the 7nm race, AMD needed
+a new foundry for its upcoming Zen 2 microarchitectures. You see, this new Zen 2 product would be utilizing
+a brand new physical design paradigm as compared to previous Zen generations. They would be moving away from a single monolithic
+design to what is called a "chiplet" design tying together several smaller dies. Smaller dies have better yields and heat distribution. It makes intuitive sense. The bigger a die is, the more chances that
+mistakes and errors can happen. Keeping it small means that you get more "good"
+chips from your foundry process. So thus in January 2019, AMD and GlobalFoundries
+announced a seventh amendment to the wafer supply agreement. It allowed AMD full flexibility to purchase
+7nm node and beyond without any one-time payments or royalties. It also set purchase commitments for GloFo's
+12nm nodes and above - Zen 2 would still use 12nm for I/O die. Since then, TSMC has been AMD's main foundry
+for its leading edge chiplet processors. When Zen 3 was released nearly two years later,
+an enhanced version of TSMC 7nm and GlobalFoundries 14nm again fabbed the chip's die components. TSMC also fabbed the chips for the latest
+Radeon RX series of graphics cards - codenamed "Navi". And TSMC's 5nm process is anticipated to fab
+AMD's upcoming next Zen 4 architecture, scheduled to launch some time next year. While there is some initial talk about AMD
+potentially second-sourcing with Samsung Foundry, nothing has been announced and AMD remains
+one of TSMC's closest and most important partners. Apple and Huawei almost always gets the leading
+edge for the first year or so, but AMD follows thereafter. AMD's path transitioning away from its own
+manufacturing to GlobalFoundries and then to TSMC has been a rocky one. I think it demonstrates the difficulty of
+the whole venture and why so many other companies have dropped out in the race. Now there are just three leading edge chip
+makers left, and just two of them do work for other customers. And for what it is worth, GlobalFoundries
+has not really looked back ever since the 7nm halt. They seem to be doing well financially and
+on track for an eventual IPO. There is a big lucrative business in serving
+customers looking for just-good-enough. AMD's market share has returned to its highest
+levels since 2007, its products praised for outperforming their Intel rivals. Intel is starting to get itself unstuck after
+losing years to manufacturing delays at its 10nm and 7nm level. AMD will continue to rely heavily on TSMC
+being able to produce enough acceptable leading edge product to continue AMD's return from
+the brink.

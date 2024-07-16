@@ -1,0 +1,113 @@
+Although it’s an entirely normal and natural
+process on earth, flooding represents a huge problem for people. Every year we collectively throw billions
+of dollars essentially into the trash because of flood damage to property, buildings, vehicles,
+and equipment. But, it’s not just private property that
+is affected. Nearly every part of the constructed environment
+is vulnerable in some way to heavy rainfall. Culverts, bridges, sewers, canals, dams and
+drainage infrastructure; They all have to be designed to withstand at least some amount
+of flooding. But how do we decide how much is enough, and
+how do we estimate the magnitude of any particular storm event? Hey I’m Grady and this is Practical Engineering. On Today’s episode we’re talking about
+synthetic floods for designing infrastructure. A big portion of the constructed environment
+has at least something to do with drainage. If it’s exposed to the outdoors, and almost
+all infrastructure is, it’s going to get wet or deal with some water. Designers and engineers have to be thoughtful
+about how and where that water will go during a storm. This might seem self-evident, but someone
+had to decide how long to make this storm drain inlet, how high above the river to build
+this bridge, how wide to make this spillway, and how big to build this culvert. And these types of decisions aren’t arbitrary,
+because infrastructure is expensive, and it’s always built on a budget. You can’t waste dollars installing pipes
+that are too big, bridges that are too high, or spillways too wide because then that money
+can’t be used to fund other projects or improvements. But how much is too much? After all, if you can imagine a flood that
+meets the capacity of a given structure, you can probably imagine a bigger one that exceeds
+it. On one hand you have the structure’s cost
+and on the other, you have its capacity, in other words, its ability to withstand flooding. Finding a balance point between the two is
+a really important job, and it usually has to do with statistics. Weather is sporadic; it’s noisy data. Some days it rains, some days it doesn’t. Some years it rains nearly every day, some
+years not at all. But, behind all that noise, there is a hidden
+beauty to weather data which is the relationship between a storm’s magnitude and its probability. Small storms happen all the time, multiple
+times a year. Big storms happen rarely, only every few years. Massive floods occur only once every tens
+or hundreds of years. Their probability of occurring in a given
+year is low. This is all relative of course (especially
+depending on location), but I hope you’re seeing why this matters. Because, if you know the probability a particular
+storm will occur you also know the average number of times it will happen over a given
+period of time. And why does that matter? Let’s use a simple case as an example. Say you have a roadway crossing a stream and
+you want to install a culvert. By the way, if you want to learn a lot more
+about culverts, check out my video on that topic after this! Say you choose a tiny pipe for your culvert
+to save some money. That’s fiscal responsibility right? But every time even a small amount of rain
+comes along, the culvert’s capacity will be exceeded and roadway will overtop and wash
+out. Your cheap pipe actually ends up being pretty
+expensive when you have to replace it every year. On the other hand, you can go for broke on
+a massive pipe that never gets full, even during huge rainstorms. You’ll never have to replace it, but you
+wasted money by building a much bigger structure than was necessary. That might not seem like a big deal for a
+single culvert, but if it’s your policy to do it every time you have to cross a stream,
+you’ll run out of money in a hurry. We can’t just overbuild all our infrastructure
+to avoid any exposure to flood risk. Usually the most cost effective solution is
+somewhere in the middle where you’re willing to accept some risk of being overwhelmed,
+maybe on average it will happen once every 10 years or once every 50 years, to save the
+cost of overbuilding every single piece of drainage infrastructure. This works the same way as the floodplain
+- the area along rivers and coasts most likely to be impacted by flooding. In the U.S. at least, we arbitrarily decided
+to use 1% as the dividing line between at-risk for flooding and not. If the land has a 1% probability or greater
+of being inundated by a flood in a given year, it’s inside the “floodplain,” and the
+storm that would completely flood this floodplain is colloquially called the 100-year flood. That’s a confusing name, and I made a video
+on that topic quite a while back so I won’t rehash it here. This binary approach of drawing a line in
+the sand is also a little misleading because it implies this area is safe and this area
+the reality is that there’s a continuum of flood risk. Those considerations aside, the concept of
+the floodplain is still really valuable. Knowing our vulnerability to flooding helps
+us make good decisions about how to manage or mitigate it. But, actually figuring out that vulnerability
+is pretty challenging. The truth is that the only way we have to
+estimate how vulnerable different areas are to flooding is to look at how they’ve flooded
+in the past. In this U.S., we do have a network of stream
+gages dutifully recording the level of creeks and rivers, and some of them have been doing
+so for over a hundred years now. These instruments record the magnitude of
+floods through history so we can try to understand the relationship between the size of a flood
+and it’s frequency of recurring. But, these stream gages are relatively expensive,
+time-consuming to maintain, and their data is only applicable to the watershed in which
+they are installed, which means not every location where you might want to build something
+has a historical flood record to review. However, there is a type of instrument that
+does exist practically everywhere with long-duration historical records: a rain gauge. Rain gauges are simple and cheap, and luckily,
+in the U.S., our government has seen fit to collect huge volumes of rainfall data, synthesize
+it, and provide the information back to us citizens for our practical application or
+just our curiosity. The latest version of this is called Atlas
+14, and you can use the online web map to get statistical relationships between rainfall
+volume, duration, and probability for nearly everywhere in the U.S. But, estimating the magnitude of a flood doesn’t
+stop with knowing how much rain is falling from the sky. It may not surprise you to know that the 100-year
+storm doesn’t really exist. It’s a synthetic storm event invented by
+engineers and hydrologists. We fabricate it by taking that statistical
+amount of rain for a given watershed and use models to estimate how much flooding will
+result and where that flooding will occur within the landscape. These simulations allow us to understand flood
+risk so we know where not to build our buildings, how big to make our culverts, how tall to
+make our bridges, and how wide to make our drainage channels. But, flooding doesn’t just cost money. It also affects public safety. In fact, some of the worst floods in history,
+like the Johnstown Flood in Pennsylvania, actually occurred because a storm overwhelmed
+a dam, causing it to fail and release a sudden wave of water downstream. In that case, over 2000 people lost their
+lives. With critical infrastructure like this, the
+calculus changes because it’s not just dollars on the other side of the balance, it’s also
+human lives. We are much less willing to accept the risk
+of overwhelming a dam if there are people who could be affected downstream. So how do we know how big spillways should
+be? Turns out there’s another type of synthetic
+flood in the tool box: the probable maximum precipitation. This is the most extreme rainstorm that could
+ever occur given our knowledge of meteorology and atmospheric science. If all the factors perfectly aligned to carry
+and drop the maximum amount of rainfall in the shortest period of time, could our infrastructure
+withstand it? In the case of dams, the answer is usually
+yes. That’s because they’re required to. We’ve spent lots of time, money, and effort
+researching storms to estimate this probable maximum precipitation across the U.S. for
+this exact reason: so we can build spillways big enough to safely discharge it without
+being overwhelmed. The field of engineering hydrology is huge. Many engineers focus their entire careers
+on this one topic that we’ve just dipped our toes into. Flooding is one of the biggest challenges
+of building and developing the modern world. The ways we deal with are constantly evolving,
+hopefully in a direction that puts a greater emphasis on natural watershed processes and
+ecosystem services. But no matter how we deal with it, the first
+step will always be to understand our vulnerability to it. I hope this video gave you a little peek into
+the world of water resources engineering and how we make good decisions about infrastructure’s
+ability to handle flooding. It’s time again for everyone’s favorite
+segment of watching me try to cook while my wife tries to capture that on video, now while
+managing the baby too. I’m not much of a culinary mastermind, but
+I do love to spend time with family in the kitchen. That’s why we’re thankful for HelloFresh,
+the sponsor of this video, for converting cooking from a chore into our favorite thing
+to do on date night. “Well if you mangle it like that! I’m just kidding; that looks good.” HelloFresh delivers seasonal recipes and pre-measured
+ingredients right to your door. We get the vegetarian meals, and they’re
+always delicious. It’s an awesome way to try new foods, especially
+healthy and fresh stuff that we aren’t always great about including in our usual cooking. “Yay Kale!... That’s the only time you’re going to hear
+mommy say those words.” The pre-portioned ingredients mean there’s
+less prep and less food waste, and the packaging is mostly recyclable or already recycled content. HelloFresh also helps us get dinner ready
+quickly on the days we just don’t have time for planning, prep, and shopping, especially
+with how distractable we are these days. “What are you guys doing?” Go try it yourself by using my code 80PRACTICAL
+to get $80 off across 5 boxes, including free shipping with your first box. Supporting our sponsors help support this
+channel. That’s HelloFresh.com and use code 80PRACTICAL. Thank you for watching, and let me know what
+you think.

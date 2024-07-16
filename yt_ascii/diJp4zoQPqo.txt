@@ -1,0 +1,2019 @@
+- we've never bowed down to
+government pressure anywhere in the world, and we never will. we understand that we're hardcore, and actually there is a bit of nuance about how different
+companies respond to this, but our response has
+always been just to say no. and if they threaten to block,
+well knock yourself out. you'll lose wikipedia. - the following is a
+conversation with jimmy wales, co-founder of wikipedia, one of, if not the most impactful websites ever, expanding the collective
+knowledge, intelligence, and wisdom of human civilization. this is the lex fridman podcast. to support it, please
+check out our sponsors in the description. and now, dear friends, here's jimmy wales. let's start at the beginning. what is the origin story of wikipedia? - the origin story of wikipedia? well, so i was watching the growth of the free software movement,
+open source software, and seeing programmers coming together to collaborate in new ways, sharing code, doing that under free license, which is really interesting
+because it empowers an ability to work together. that's really hard to do if
+the code is still proprietary, because then if i chip in and help, we sort of have to figure
+out how i'm gonna be rewarded and what that is. but the idea that everyone can copy it and it just is part of the commons, really empowered a huge wave of creative software production. and i realized that that kind
+of collaboration could extend beyond just software to all
+kinds of cultural works. and the first thing that i
+thought of was an encyclopedia. and i thought, oh, that seems
+obvious that an encyclopedia, you can collaborate on it. there's a few reasons why. one, we all pretty much know what an encyclopedia entry
+on, say the eiffel tower, should be like. you know, you should see a
+picture, a few pictures maybe, history, location, something about the architect, et cetera, et cetera. so we have a shared understanding of what it is we're trying to do, and then we can collaborate and
+different people can chip in and find sources and so on and so forth. so, set up first nupedia, which was about two
+years before wikipedia. and with nupedia, we had this idea that in order to be respected, we had to be even more academic than a traditional encyclopedia, because a bunch of
+volunteers on the internet getting out to (indistinct)
+write an encyclopedia, you know, you could be made fun of if
+it's just every random person. so we had implemented this
+seven stage review process to get anything published. and two things came of that. so one thing, one of the earliest entries that we published after
+this rigorous process, a few days later, we had to pull it because as soon as it hit the web and the broader community
+took a look at it, people noticed plagiarism and realized that it wasn't actually that good, even though it had been
+reviewed by academics and so on. so we had to pull it. so it's like, oh, okay, well, so much for a seven stage review process. but also, i decided that i wanted to try- i was frustrated, and why
+is this taking so long? why is it so hard? so i thought, oh, okay. i saw that robert merton had
+won nobel prize in economics for his work on option pricing theory. and when i was in academia,
+that's what i worked on, was option pricing theory,
+i had a published paper. so i'd worked through all
+of his academic papers and i knew his work quite well. i thought, oh, i'll just, i'll write a short biography of merton. and when i started to do it,
+i'd been out of academia. i hadn't been a grad student
+for a few years then. i felt this huge intimidation because they were gonna take my draft and send it to the most
+prestigious finance professors that we could find to give
+me feedback for revisions. and it felt like being
+back in grad school. you know, it's like this
+really oppressive sort of like, you're gonna submit it for a review and you're gonna get critiques. - a little bit of the
+bad part of grad school. - yeah, yeah, the bad part
+of grad school, right? and so i was like, oh, this
+isn't intellectually fun. this is like the bad part of grad school. - [lex] yeah. - it's intimidating and there's a lot of, you know, potential embarrassment if i screw something up and so forth. and so that was when i
+realized, okay, look, this is never gonna work. this is not something that people are really gonna want to do. so jeremy rosenfeld, one of my employees, had brought and showed me
+the wiki concept in december, and then larry sanger brought in the same, said, what about this wiki idea? and so in january we
+decided to launch wikipedia, but we weren't sure. so the original project
+was called nupedia. and even though it wasn't successful, we did have quite a group of academics and like really serious people. and we were concerned that,
+oh, maybe these academics are gonna really hate this idea and we shouldn't just convert
+the project immediately. we should launch this as a side project. the idea of here's a wiki where
+we can start playing around. but actually we got more
+work done in two weeks than we had in almost two years, because people were able to just jump on and start doing stuff. and it was actually a very exciting time. you know, you could, back then, you could be the first person who typed africa is a continent
+and hit save, you know, which isn't much of an
+encyclopedia entry, but it's true. and it's a start and it's kind of fun. like i, you know, you put your name down. actually, a funny story
+was several years later, i just happened to be
+online and i saw when, i think his name is robert alman, won the nobel prize in economics. and we didn't have an entry on him at all, which was surprising, but
+it wasn't that surprising. this was still early days, you know? and so i got to be the first
+person to type robert alman won nobel prize in economics and hit save, which again, wasn't a very good article. but then i came back two days later and people had improved it and so forth. so that second half of the experience where with robert merton, i never succeeded because it
+was just too intimidating. it was like, oh no, i was
+able to chip in and help, other people jumped in. everybody was interested in the topic 'cause it's all in the news at the moment. and so it's just a
+completely different model, which worked much, much better. - what was it that made
+that so accessible, so fun, so natural to just add something? - well, i think it's, you know, especially in the early
+days, and this, by the way, has gotten much harder
+because there are fewer topics that are just greenfield,
+you know, available. but, you know, you could
+say, oh, well i, you know, i know a little bit about
+this and i can get it started. but then it is fun to come back then and see other people
+have added and improved and so on and so forth. and that idea of collaborating, you know, where people can much
+like open source software, you know, you put your code out and then people suggest revisions and they change it, and
+it modifies and it grows beyond the original creator. it's just like, kind of a fun,
+wonderful, quite geeky hobby, but people enjoy it. - how much debate was
+there over the interface, over the details of how to make that seamless and frictionless? - yeah, i mean, not as much as there probably should
+have been in a way. during that two years of
+the failure of nupedia where very little work got done, what was actually productive was, there was a huge long
+discussion, email discussion, very clever people talking
+about things like neutrality, talking about what is an encyclopedia, but also talking about more
+technical ideas, you know, things back then, xml
+was kinda all the rage and thinking about,
+ah, could we, you know, shouldn't you have certain data that might be in multiple articles that gets updated automatically? so for example, you know, the
+population of new york city, every 10 years there's
+a new official census, couldn't you just update
+that bit of data in one place and it would update across all languages. that is a reality today. but back then it was just
+like, hmm, how do we do that? how do we think about that? - so that is a reality today where it's- - [jimmy] yeah.
+- there's some- - [jimmy] yeah, so wiki data. - universal variables, wiki data. - yeah, wiki data, you can link, you know, from a wikipedia entry, you can link to that
+piece of data in wikidata. i mean, it's a pretty advanced thing, but there are advanced
+users who are doing that. and then when that gets updated, it updates in all the languages
+where you've done that. - i mean, that's really interesting. there was this chain of
+emails in the early days of discussing the details of what is- - [jimmy] yeah, yeah. - so there's the interface, there's the- - yeah, so the interface, so an example, there was some software called usemodwiki, which we started with. it's quite amusing actually, because the main reason we
+launched with usemodwiki is that it was a single perl script. so it was really easy for me
+to install it on the server and just get running. but it was, you know,
+some guy's hobby project, it was cool but it was
+just a hobby project and all the data was
+stored in flat text files, so there was no real database behind it. so to search the site,
+you basically used grep which is just like the basic unix utility to like look through all the files. so that clearly was never gonna scale. but also in the early days,
+it didn't have real logins. so you could set your username,
+but there were no passwords. so, you know, i might say bob smith, and then someone else
+comes along and says, no, i'm bob smith and they both had it. now that never really happened. we didn't have a problem with it, but it was kind of obvious, like, you can't grow a big website where everybody can
+pretend to be everybody. that's not gonna be good for trust and reputation and so forth. so quickly i had to write
+a little, you know, login, you know, store people's
+passwords and things like that. so you could have unique identities. and then another example of
+something, you know, quite, you would've never thought
+would've been a good idea, and it turned out to not be a problem, but to make a link in
+wikipedia in the early days, you would make a link to a
+page that may or may not exist by just using camel case,
+meaning it's like upper case, lower case, and you
+smash the words together. so maybe new york city, you
+might type n e w, no space, capital y, york city. and that would make a
+link, but that was ugly. that was clearly not right. and so i was like, okay, well, that's just not gonna look nice. let's just use square brackets. two square brackets makes a link. and that may have been an
+option in the software. i'm not sure i thought up square brackets. but anyway, we just did that,
+which worked really well. it makes nice links and you know, you can see and its red
+links or blue links, depending on if the page exists or not. but the thing that didn't
+occur to me even think about is that, for example, on the german
+language standard keyboard, there is no square bracket. so for german wikipedia to succeed, people had to learn to do some alt codes to get the square bracket, or they, a lot of users cut and
+paste a square bracket when they could find one, they would just cut and paste one in. and yet german wikipedia
+has been a massive success. so somehow that didn't slow people down. - how is it that the german keyboards don't have a square bracket? how do you do programming? how do you, how do you
+live life to its fullest without square brackets? - that's a very good question. i'm not really sure. i mean, maybe it does now
+because keyboard standards have, you know, drifted over
+time and becomes useful to have a certain character. i mean, it's same thing. like there's not really
+a w character in italian. - [lex] yeah. - and it wasn't on keyboards,
+or i think it is now, but in general, w is not a
+letter in italian language, but it appears in enough
+international words that it's crept into italian, so- - and all of these things are probably wikipedia articles in themselves. - [jimmy] oh yeah, oh yeah. (laughs) - the discussion of square
+brackets determined. - [jimmy] whole discussion, i'm sure. - on both the english and
+in the german wikipedia. and the difference between
+those two might be very, very interesting. so wikidata is fascinating, but even the broader discussion
+of what is an encyclopedia? can you go to that sort of
+philosophical question of- - [jimmy] sure. - what is an encyclopedia? - what is an encyclopedia? so the way i would put
+it is an encyclopedia, or what our goal is, is the
+sum of all human knowledge, but sum meaning summary. so, and this was an early debate. i mean, somebody started
+uploading the full text of hamlet, for example, and we said,
+hmm, wait, hold on a second. that's not an encyclopedia
+article, but why not? so hence was born wikisource, which is where you put original text and things like that,
+out of copyright text, because they said no, an
+encyclopedia article about hamlet, that's a perfectly valid thing. but the actual text of the play is not an encyclopedia article. so most of it's fairly obvious, but there are some interesting
+quirks and differences. so for example, as i understand it, in french language encyclopedias, traditionally it would be
+quite common to have recipes, which in english language
+that would be unusual. you wouldn't find a recipe for
+chocolate cake in britannica. and so, i actually don't
+know the current state, haven't thought about that
+in many, many years now- - state of cake recipes in
+wikipedia, in english wikipedia. - i wouldn't say there's
+chocolate cake recipes. i mean, you might find a
+sample recipe somewhere. i'm not saying they're
+none, but in general, no. like, we wouldn't have recipes. - i told myself i would not get outraged in this conversation,
+but now i'm outraged. (jimmy laughs) i'm deeply upset. - it's actually very complicated. i love to cook. i'm, you know, i'm
+actually quite a good cook. and what's interesting is there's, it's very hard to have a
+neutral recipe because- - [lex] a canonical recipe for cake- - a canonical recipe-
+- [lex] for chocolate cake. - is kind of difficult to come by because there's so many variants and it's all debatable and interesting. for something like chocolate cake, you could probably say, you know, here's one of
+the earliest recipes, or here's one of the most common recipes. but, you know, for many, many things, the variants are as interesting. you know, as you know,
+somebody said to me recently, you know, 10 spaniards, 12 paella recipes. so, you know, these are all
+matters of open discussion. - well, just to throw some
+numbers, as of may 27th, 2023, there are 6 million, 6.66 million articles in the
+english wikipedia containing over 4.3 billion words. including articles, the total
+number of pages is 58 million. - [jimmy] yeah. - does that blow your mind? - i mean, yes, it does. i mean, it doesn't, because
+i know those numbers and see them from time to time, but in another sense, a
+deeper sense, yeah, it does. i mean, it's really remarkable. i remember when english wikipedia
+passed 100,000 articles, and when german wikipedia passed 100,000. 'cause i happened to be in germany with a bunch of wikipedians that night. and, you know, then it seemed quite big. i mean, we knew at that time that it was nowhere near complete. i remember at wikimania in harvard, when we did our annual
+conference there in boston, someone who had come to
+the conference from poland had brought along with
+him a small encyclopedia, a single volume
+encyclopedia of biographies. so short biographies,
+normally a paragraph or so about famous people in poland. and there were some 22,000 entries. and he pointed out that even then, 2006, wikipedia felt quite big. and he said in english wikipedia, there's only a handful of
+these, you know, less than 10%, i think he said. and so then you realized,
+yeah, actually, you know, who was the mayor of warsaw in'73? don't know. probably not in english wikipedia, but it probably might be today. but there's so much out there. and of course what we get
+into when we're talking about how many entries there are
+and how many, you know, how many could there be, is this very deep philosophical
+issue of notability, which is the question of, well,
+how do you draw the limit? how do you draw, you know, what is there? so sometimes people say, oh,
+there should be no limit. but i think that doesn't
+stand up to much scrutiny if you really pause and think about it. so i see in your hand
+there, you've got a bic pen. pretty standard,
+everybody's seen, you know, billions of those in life. - classic though. - it's a classic clear, bic pen. so could we have an
+entry about that bic pen? well, i bet we do, that type of bic pen, because it's classic, everybody knows it and it's got a history. and actually, there's
+something interesting about the bic company. they make pens, they also make kayaks, and there's something
+else they're famous for. so basically they're sort of a definition by non-essentials company. anything that's long and plastic, that's what they make, so- (laughs) - [lex] wow, that's great. - if you wanna find the common ground. - the platonic form of a bic. - but could we have an article about that very bic pen in your hand? so lex friedman's bic pen as of this week. - [lex] oh, the very, this instance- - the very specific instance. and the answer is no, there's
+not much known about it. i dare say, unless you know
+it's very special to you and your great-grandmother
+gave it to you or something, you probably know very little about it. it's a pen, it's just here in the office. and so that's just to
+show there is a limit. i mean, in german wikipedia, they used to talk about the rear nut of the wheel of uli fuchs's bicycle. uli fuchs, well-known
+wikipedian of the time, to sort of illustrate like
+you can't have an article about literally everything. and so then it raises the question, what can you have an article
+about, what can't you, and that can vary depending
+on the subject matter. one of the areas where we
+try to be much more careful would be biographies. the reason is a biography
+of a living person, if you get it wrong, you can actually be quite hurtful, quite damaging. and so if someone is a private person and somebody tries to
+create a wikipedia entry, there's no way to update it. there's not much known. so for example, an encyclopedia
+article about my mother. my mother, school teacher
+later a pharmacist, wonderful woman, but
+never been in the news. i mean, other than me talking about why there shouldn't be a wikipedia entry, that's probably made it in
+somewhere, standard example. but you know, there's not enough known. and you could sort of imagine a database of genealogy having date
+of birth, date of death, and, you know, certain elements like that of private people. but you couldn't really write a biography. and one of the areas this
+comes up quite often is what we call blp1e, we've
+got lots of acronyms. biography of a living person who's notable for only one event is a
+real sort of danger zone. - [lex] oh. - and the type of example
+would be a victim of a crime. so someone who's a victim
+of a famous serial killer, but about whom, like
+really not much is known. they weren't a public person, they're just a victim of a crime. we really shouldn't have an
+article about that person. they'll be mentioned, of course, and maybe this specific
+crime might have an article. but for that person, no, not really. that's not really something
+that makes any sense, because how can you write a biography about someone you don't know much about? and this is, you know, it
+varies from field to field. so for example, for many academics, we will have an entry
+that we might not have in a different context. because for an academic,
+it's important to have sort of their career, you know, what papers they've
+published, things like that. you may not know anything
+about their personal life, but that's actually not
+encyclopedic relevant in the same way that it is
+for member of a royal family, where it's basically all about the family. so, you know, we're fairly
+nuanced about notability and where it comes in. and i've always thought
+that the term notability i think is a little problematic. i mean, it's, we struggled
+about how to talk about it. the problem with notability
+is it can feel insulting. say, oh no, you're not noteworthy. well, my mother's noteworthy. she's really important
+person in my life, right? so that's not right. but it's more like verifiability. is there a way to get information that actually makes an encyclopedia entry? - it so happens that there's
+a wikipedia page about me, as i've learned recently. and the first thought i
+had when i saw that was, surely i am not notable enough. so i was very surprised and grateful that such a page could exist. and actually just allow
+me to say thank you to all the incredible people that are part of creating
+and maintaining wikipedia. it's my favorite website on the internet, the collection of articles
+that wikipedia has created. it's just incredible.
+- thank you. we'll talk about the
+various details of that. but the love and care that
+goes into creating pages for individuals, for a bic pen, for all this kind of stuff
+is just really incredible. so i just felt the love
+when i saw that page. but i also felt, just
+cause i do this podcast and i just, through this podcast, gotten to know a few individuals that are quite controversial. i've gotten to be on the
+receiving end of something quite, to me as a person who
+loves other human beings, i've gone to be at the receiving end of some kind of attacks
+through the wikipedia forum. like you said, when you
+look at living individuals, it can be quite hurtful.
+- [jimmy] mm-hm, yeah. - the little details of information. and because i've become
+friends with elon musk and i've interviewed him, but i've also interviewed
+people on the left, far left, people on the right, some
+people would say far right. and so now you take a
+step, you put your toe into the cold pool of
+politics and the shark emerges from the depths and pulls you right in. - [jimmy] yeah, the boiling
+hot pool of politics. (laughs) - i guess it's hot. and so i got to experience some of that. i think what you also
+realize is there has to be, for wikipedia, kind of credible
+sources, verifiable sources, and there's a dance there because some of the sources are pieces of journalism. and of course journalism operates under its own complicated incentives, such that people can write articles that are not factual
+or are cherry picking, all the flaws they can have
+in a journalistic article. - [jimmy] for sure. - and those can be used as sources. it's like they dance hand in hand. and so for me, sadly enough, there was a really kind
+of concerted attack to say that i was never at mit,
+i never did anything at mit. just to clarify, i am a
+research scientist at mit. i have been there since 2015. i'm there today. i'm at a prestigious, amazing
+laboratory called lids. and i hope to be there for a long time. i work on ai, robotics, machine learning. there's a lot of incredible people there. and by the way, mit has
+been very kind to defend me. unlike wikipedia says, it
+is not an unpaid position. there was no controversy. - [jimmy] right. - it was all very calm and
+happy and almost boring research that i've been doing there. and the other thing,
+because i am half ukrainian, half russian and i've traveled to ukraine and i will travel to ukraine again, and i will travel to russia for some very difficult conversations. my heart's been broken by this war. i have family in both places. it's been a really difficult time. but the little battle
+about the biography there also starts becoming important
+for the first time for me. i also wanna clarify sort of personally, i use this opportunity of
+some inaccuracies there. my father was not born
+in chkalovsk, russia. he was born in kiev, ukraine. i was born in chkalovsk, which
+is a town, not in russia. there is a town called that in russia. but there's another town in tajikistan, which is a former republic
+of the soviet union. it is, that town is now
+called b u s t o n, buston, which is funny 'cause we're now in austin and i also am in boston. and it seems like my
+whole life is surrounded by these kinds of towns. so i was born in tajikistan and the rest of the biography is interesting, but my family is very evenly distributed between their origins
+and where they grew up, between ukraine and russia, which adds a whole beautiful complexity
+to this whole thing. so i want to just correct that. it's like, the fascinating
+thing about wikipedia is in some sense those little
+details don't matter. but in another sense, what i felt when i saw wikipedia page
+about me or anybody i know, is there's this beautiful kind of saving that this person existed. like a community that
+notices you, that says, huh? like a, like a little, you see
+like a butterfly that floats and you're like, huh? that it's not just any
+butterfly, it's that one. i like that one. or you see a puppy or
+something, or it's this bic pen. this one, i remember this one. it has this scratch and you
+get noticed in that way. and that, i dunno,
+that's a beautiful thing and it's, i mean, maybe it's
+very silly of me and naive, but i feel like wikipedia,
+in terms of individuals, is an opportunity to celebrate
+people, to celebrate ideas. - [jimmy] for sure, for sure. - and not a battleground
+of attacks of the kind of stuff we might see on
+twitter, like the mockery- - [jimmy] for sure. - the derision, this kind of stuff. - [jimmy] for sure. - and of course you
+don't wanna cherry pick, all of us have flaws and so on, but it just feels like, to highlight a controversy of some sort. when that doesn't at all
+represent the entirety of the human-
+- [jimmy] yeah. - in most cases.
+- [jimmy] yeah, yeah. - is sad.
+- yeah, yeah, yeah. so there's a few things
+to unpack in all that. so first, one of the things i find really, always find very interesting is, you know, your status with mit. okay, that's upsetting
+and it's an argument and can be sorted out. but then what's interesting is you gave as much time to that which
+is actually important and relevant to your career and so on, to also where your father was born, which most people would hardly notice, but is really meaningful to you. and i find that a lot
+when i talk to people who have a biography in wikipedia is they're often as annoyed by a tiny error that no one's gonna notice. like, this town in tajikistan's
+got a new name and so on. like nobody even knows what
+that means or whatever. but it can be super important. and so that's one of
+the reasons, you know, for biographies we say like,
+human dignity really matters. and so, you know, some of
+the things have to do with, and this is a common debate
+that goes on in wikipedia, is what we call undue weight. so i'll give an example. there was a article i
+stumbled across many years ago about the mayor, or no, he wasn't a mayor, he was a city council member of, i think he was peoria, illinois, but some small town in the midwest. and the entry, you know,
+he's been on the city council for 30 years or whatever. he's pretty, i mean
+frankly, pretty boring guy and seems like a good
+local city politician. but in this very short biography, there was a whole
+paragraph, a long paragraph about his son being arrested for dui, and it was clearly undue weight. it's like, what has this
+got to do with this guy if it even deserves a mention? it wasn't even clear had he
+done anything hypocritical, had he done himself anything wrong, even was his son, his son got
+a dui, that's never great, but it happens to people
+and it doesn't seem like a massive scandal for your dad. so of course i just took
+that out immediately. this is a long, long time ago. and that's the sort of
+thing where, you know, we have to really think
+about in a biography and about controversies to say,
+is this a real controversy? so in general, like one of
+the things we tend to say is like any section- so if there's a biography
+and there's a section called controversies, that's
+actually poor practice because it just invites people to say, oh, i wanna work on this entry. i see there's seven sections. oh, this one's quite short. can i add something?
+- [lex] right. - go out and find some more controversies. now that's nonsense, right? and in general, putting it
+separate from everything else kind of makes it seem worse and also, it doesn't put it in the right context. whereas if it's sort of a live flow, and there is a controversy, there's always potential
+controversy for anyone, it should just be sort of
+worked into the overall article because then it doesn't
+become a temptation you can contextualize
+appropriately and so forth. so that's, you know, that's, you know, part
+of the whole process. but i think for me, one of
+the most important things is what i call community health. so yeah, are we gonna
+get it wrong sometimes? yeah, of course we're humans
+and doing good quality, you know, sort of
+reference material is hard. real question is how do
+people react, you know, to a criticism or a
+complaint or a concern. and if the reaction is
+defensiveness or combativeness back or if someone's really sort
+of in there being aggressive and in the wrong, no, no, no, hold on, we've gotta do this the right way. you gotta say, okay, hold on. you know, are there good sources? is this contextualized appropriately? is it even important enough to mention? what does it mean? you know, and sometimes one of the areas where i do think there is
+a very complicated flaw and you've alluded to it a little bit, but it's like, we know the
+media is deeply flawed. we know that journalism can go wrong. and i would say particularly
+in the last whatever 15 years, we've seen a real
+decimation of local media, local newspapers. we've seen a real rise
+in click bait headlines and sort of eager focus on anything that might be controversial. we've always had that with us. of course there's always
+been tabloid newspapers. but that makes it a little
+bit more challenging to say, okay, how do we sort things out when we have a pretty good sense that not every source is valid. so as an example, a few years ago, it's
+been quite a while now, we deprecated the mail online as a source, and the mail online, you know, the digital arm of the
+daily mail, it's a tabloid. it's not completely, you
+know, it's not fake news, but it does tend to run
+very hyped up stories. they really love to attack
+people and go on the attack for political reasons and so on. and it just isn't great. and so by saying deprecated,
+and i think some people say, oh, you ban the daily mail. no, we didn't ban it as a source. we just said, look, it's probably
+not a great source, right? you should probably look
+for a better source. so certainly, you know, if
+the daily mail runs a headline saying new cure for cancer,
+it's like, you know, probably there's more serious sources than a tabloid newspaper. so, you know, in an
+article about lung cancer, you probably wouldn't cite the daily mail. like that's kind of ridiculous. but also for celebrities
+and so forth, to sort of, you know, well they do cover
+celebrity gossip a lot, but they also tend to have
+vendettas and so forth. and you really have to
+step back and go, hmm, is this really encyclopedic or is this just the daily mail going on a rant? - and some of that requires
+a great community health. like, i mean- - [jimmy] it requires
+massive community health. - even for me, for stuff
+i've seen that's kind of, if actually iffy about
+people i know, things i know about myself, i still feel like a love for knowledge
+emanating from the article. - [jimmy] mm, yeah. - like i feel the community health. so i will take all slight inaccuracies. i would, i love it because
+that means there's people, for the most part i
+feel a respect and love in this search for knowledge. like sometimes, 'cause i
+also love stack overflow, stack exchange for
+programming related things- - [jimmy] yeah, yeah. - and they can get a
+little cranky sometimes to a degree where it's like, it's not as- like you could see, you
+could feel the dynamics of the health of the particular community. - [jimmy] yeah. - and sub communities too,
+like a particularly c# or java or python or whatever. like there's little like
+communities that emerge. you can feel the levels of toxicity, 'cause a little bit of strictness is good, but a little too much is bad. - [jimmy] yeah. - because of the defensiveness. 'cause when somebody writes an answer and then somebody else kind of says, well modify it and they get defensive and there's this tension
+that's not conducive to like improving towards
+a more truthful depiction of like, what that topic. - yeah, a great example
+that i really loved this morning that i saw. someone left a note on my user talk page in english wikipedia saying, it was quite a dramatic headline saying racist hook on front page. so we have on the front page of wikipedia, we have a little section
+called did you know? and it's just little tidbits and facts, just things people find interesting. and there's a whole process
+for how things get there. the one that somebody was
+raising a question about was, it was comparing a very well known us football player, black, there was a quote from
+another famous sport person comparing him to a lamborghini. clearly a compliment. and so somebody said,
+actually here's a study, here's some interesting information about how black sports
+people are far more often compared to inanimate objects and given that kind of analogy, and
+i think it's demeaning to compare a person to a
+car, et cetera, et cetera. but they said, i'm not
+pulling, i'm not deleting it, i'm not removing it. i just wanna raise the question. and then there's this really
+interesting conversation that goes on where i think
+the general consensus was, you know what, this isn't
+like the alarming headline, racist thing on the front
+page of a wikipedia. that sounds, holy moly, that sounds bad. but it's sort of like, actually yeah, this probably isn't the sort of analogy that we think is great. and so we should probably think about how to improve our language and not compare sports
+people to inanimate objects and particularly be aware of certain racial sensitivities
+that there might be around that sort of thing. if there is a disparity in the media of how people are called. and i just thought, you know what, nothing for me to weigh in on here. this is a good conversation. like nobody's saying, you know, people should be banned if they refer to, what was his name, the fridge,
+refrigerator perry, you know. very famous comparison
+to an inanimate object of a chicago bears player many years ago. but they're just saying,
+hey, let's be careful about analogies that we
+just pick up from the media. i said, yeah, you know, that's good. - on the sort of
+deprecation of news sources, this is really interesting because i think what you're saying is ultimately you wanna make a article
+by article decision, kind of use your own judgment. and it's such a subtle thing because there's just a lot of hit
+pieces written about individuals like myself for example,
+that masquerade as kind of an objective thorough
+exploration of a human being. it's fascinating to
+watch because controversy and hit pieces just get more clicks. - [jimmy] oh yeah, sure. - i guess as a wikipedia contributor, you start to deeply become aware of that and start to have a sense, like a radar of click bait versus truth. like to pick out the truth from the click baity-type of language. - oh yeah. i mean it's really
+important and you know, we talk a lot about
+weasel words, you know. and you know, actually i'm
+sure we'll end up talking about ai and chatgpt, but
+just to quickly mention in this area, i think one of
+the potentially powerful tools because it is quite good at this, i've played around with and
+practiced it quite a lot, but chatgpt-4 is really
+quite able to take a passage and point out potentially biased terms, to rewrite it to be more neutral. now it is a bit anodyne and
+it's a bit, you know, cliched, so sometimes it just takes
+the spirit out of something that's actually not bad. it's just like, you know, poetic language and you're like, well okay,
+that's not actually helping. but in many cases i think that sort of thing is quite interesting. and i'm also interested in, you know, can you imagine where you
+feed in a wikipedia entry and all the sources and you say, help me find anything in the article that is not accurately
+reflecting what's in the sources. and that doesn't have to be perfect. it only has to be good
+enough to be useful. - [lex] yeah.
+- to community. so if it scans-
+- [lex] beautiful. - an article and all the
+sources and you say, oh, it came back with 10
+suggestions and seven of them were decent and three of them
+it just didn't understand, well actually that's
+probably worth my time to do. and it can help us, you know, really more quickly get good
+people to sort of review obscure entries and things like that. - so just as a small aside on that, and we'll probably talk about
+language models a little bit or a lot more, but one of the articles, one of the hit pieces about me, the journalist actually was
+very straightforward and honest about having used gpt to
+write part of the article. - [jimmy] oh, interesting. - and then finding that it made an error and apologized for the
+error the gpt-4 generated, which has this kind of interesting loop. - [jimmy] yeah. - which the articles are used to write wikipedia pages.
+- [jimmy] yeah. (laughs) - gpt is trained on wikipedia and then there's like this interesting loop where the weasel words and
+the nuances can get lost or can propagate, even
+though they're not grounded in reality. somehow in the generation
+of the language model, new truths can be created
+and kind of linger. - yeah, there's a famous web comic that's titled cytogenesis,
+which is about how something, an error's in wikipedia and
+there's no source for it, but then a lazy journalist
+reads it and writes the source. - [lex] yeah. - and then some helpful wikipedian spots that it has no source, finds a source and adds it to wikipedia. and voila, magic. this happened to me once. well, it nearly happened. there was this, i mean
+it was really brief. i went back and researched and
+i'm like, this is really odd. so biography magazine, which
+is a magazine published by the biography tv channel,
+prints a profile of me and it said in his spare time, i'm not quoting exactly,
+it been many years, but in his spare time he enjoys
+playing chess with friends. i thought, wow, that sounds great. like, i would like to be
+that guy, but actually, i mean, i play chess
+with my kids sometimes, but no, i'm not, it's not a hobby of mine. and i was like, where did they get that? and i contacted the magazine and said, where did that come from? they said, oh, it was in wikipedia. and i looked in the history, there had been vandalism of wikipedia, which was not, you
+know, it's not damaging, it's just false. so, and it had already been removed. but then i thought, oh gosh,
+well i better mention this to people because otherwise
+somebody's gonna read that and they're gonna add it to the entry and it's gonna take on a life of its own. and then sometimes i wonder if it has, because i've been, i was
+invited a few years ago to do the ceremonial first move in the world chess
+championship and i thought, i wonder if they think i'm a
+really big chess enthusiast because they read this
+biography magazine article, so- but that problem, when we think about large language
+models and the ability to quickly generate very
+plausible but not true content, i think is something that there's
+gonna be a lot of shakeout and a lot of implications of that. - what would be hilarious is because of the social
+pressure of wikipedia and the momentum, you would actually start playing a
+lot more chess just to- not only the articles are
+written based on wikipedia, but your own life trajectory changes because of the wikipedia just
+to make it more convenient. - [jimmy] yeah. - aspire to.
+- [jimmy] aspire to, yes. aspirational. - what, if we could just talk about that before we jump back to some
+other interesting topics in wikipedia. let's talk about gpt-4
+and large language models. so they are in part trained
+on wikipedia content. - [jimmy] yeah. - what are the pros and cons
+of these language models? what are your thoughts? - yeah, so i mean there's
+a lot of stuff going on. obviously the technology's
+moved very quickly in the last six months
+and looks poised to do so for some time to come. so first things first, i
+mean part of our philosophy is the open licensing, the free licensing. the idea that, you know,
+this is what we're here for. we are a volunteer community
+and we write this encyclopedia, we give it to the world
+to do what you like with. you can modify it, redistribute it, redistribute modified
+versions, commercially, non-commercially, this is the licensing. so in that sense, of course
+it's completely fine. now we do worry a bit about attribution because it is a creative commons attribution share-like license. so attribution is important, not just because of our licensing
+model and things like that, but it's just proper attribution is just good intellectual practice. and so, and that's a really
+hard complicated question. you know, if i were to write something about my visit here, i might say in a blog post, you know, i was in austin, which is a city in texas. i'm not gonna put a source
+for austin as a city in texas. that's just general knowledge. i learned it somewhere,
+i can't tell you where. so you don't have to cite and
+reference every single thing. but you know, if i actually did research and i used something very
+heavily, it's just proper, morally proper to give your sources. so we would like to see that. and obviously, you know,
+they call it grounding. so particularly people at
+google are really keen on figuring out grounding.
+- such a cool term. so ground- any text that's generated
+trying to ground it to the wikipedia quality-
+- [jimmy] a source. - source, i mean like
+the same kind of standard of what a source means
+that wikipedia uses. the same kind of source would generate- - [jimmy] the same kind of,
+yep, the same kind of thing. and of course one of the biggest flaws in chatgpt right now is
+that it just literally will make things up just to be amiable. i think it's programmed to
+be very helpful and amiable and it doesn't really know
+or care about the truth. - it can get bullied into-
+- [jimmy] yeah. - it can kind of be
+convinced into- (laughs) - well, but like this morning, i was- the story i was telling earlier about comparing a football
+player to a lamborghini and i thought, is that really racial? i don't know, but i'm
+just, i'm mulling it over. and i thought, i'm going to go to chatgpt. so i said to chatgpt-4, i said, you know, this happened in wikipedia. can you think of examples
+where a white athlete has been compared to a fast
+car or inanimate object? and it comes back with
+a very plausible essay where it tells, you
+know, why these analogies are common in sport, blah blah blah. i said, no, i really- could you gimme some specific examples? so it gives me three specific
+examples, very plausible, correct names of athletes
+and contemporaries and all of that, could have been true. googled every single quote
+and none of them existed. - [lex] yeah. - and so i'm like, well,
+that's really not good. like i wanted to explore a
+thought process i was in. i thought, first i
+thought, how do i google? and it's like, well it's kind
+of a hard thing to google 'cause unless somebody's written
+about this specific topic, it's, you know, oh it's
+large language model. it can, it's processed all this data, it can probably piece
+that together for me, but it just can't yet. so i think, i hope that chatgpt-5, 6, 7, you know, three to five years, i'm
+hoping we'll see a much higher, you know, level of accuracy where when you ask a question like that, i think instead of being
+quite so eager to please by giving you a plausible sounding answer, it's just say don't know. - or maybe display the how much bullshit might be in this generated text. like, i'm really would like
+to make you happy right now, but i'm really stretched
+thin with this generation. - well, it's one of the things
+i've said for a long time. so in in wikipedia, one
+of the great things we do may not be great for our reputation except in a deeper sense for
+the long term i think it is. but you know, we'll all be on notice that says the neutrality of
+this section has been disputed or the following section
+doesn't cite any sources. and i always joke, you know, sometimes i wish the new
+york times would run a banner saying the neutrality of
+this has been disputed. they could give us a, we had
+a big fight in the newsroom as to whether to run this or not. but we thought it's important
+enough to bring it to you, but just be aware that
+not all the journalists are on board with it. ah, that's actually
+interesting and that's fine. i would trust them more for
+that level of transparency. so yeah, similarly chatgpt
+should say, yeah, 87% bullshit. - well, the neutrality
+one is really interesting 'cause that's basically a
+summary of the discussions that are going on underneath. it would be amazing if,
+like, i should be honest, i don't look at the talk page often. i don't, it would be nice somehow if there was a kind of a
+summary in this banner way of like this, lots of
+wars have been fought on this here land for this here paragraph. - that's really interesting. yeah, i hadn't thought of that because we- one of the things i do spend a lot of time thinking about these days and you know, people have found it, we're moving slowly, but you know, we are moving. thinking about, okay, these tools exist. are there ways that
+this stuff can be useful to our community? because a part of it is
+we do approach things in a non-commercial way
+in a really deep sense. it's like it's been great that wikipedia has become very popular,
+but really we're just, we're a community whose hobby
+is writing an encyclopedia. that's first, and if it's popular, great. if it's not, okay, we
+might have trouble paying for more servers, but it'll be fine. and so how do we help the
+community use these tools? what are the ways that these
+tools can support people? and one example i never thought about, i'm gonna start playing
+with it, is, you know, feed in the article and feed
+in the talk page and say, can you suggest some
+warnings in the article based on the conversations
+in the talk page? i think it might-
+- [lex] that's brilliant. - it might be good at that, it
+might get it wrong sometimes, but again, if it's reasonably
+successful at doing that and you can say, oh actually
+yeah, it does suggest, you know, the neutrality
+of this has been disputed on a section that has
+a seven page discussion in the back, that might be useful, dunno. worth playing with. - yeah, i mean some more
+color to the, not neutrality, but also the amount of emotion
+laden in the exploration of this particular-
+- [jimmy] yeah, yeah. - part of the topic. it might actually help you look
+at more controversial pages. like on, you know, a page
+on the war in ukraine or a page on israel and palestine. there could be parts
+that everyone agrees on and there's parts that are just like- - [jimmy] tough.
+- tough. - [jimmy] the hard parts, yes. - and it's hard, it would be nice to, when looking at those
+beautiful long articles to know like, all right, let
+me just take in some stuff where everybody agrees on- - well, i could give an example that i haven't looked at in a long time, but i was really pleased
+with what i saw at the time. so the discussion was that
+they're building something in israel and for their
+own political reasons, one side calls it a wall harkening back to berlin wall, apartheid. the other calls it a security fence. so we can understand quite quickly if we give it a moment's
+thought like, okay, i understand why people would have this grappling over the language. like, okay, you want to
+highlight the negative aspects of this and you wanna
+highlight the positive aspects, so you're gonna try and
+choose a different name. and so there was this really
+fantastic wikipedia discussion on the talk page. how do we word that paragraph to talk about the different naming? it's called this by israelis,
+called this by palestinians. and that, how you explain that to people could be quite charged, right? you could easily explain,
+oh, there's this difference and it's because this side's
+good and this side's bad and that's why there's a difference. or you could say, actually let's just, let's try and really
+stay as neutral as we can and try to explain the reasons. so you may come away
+from it with a concept. oh, okay, i understand what
+this debate is about now. - and just the term
+israel-palestine conflict is still the title of a page in wikipedia, but the word conflict is
+something that is a charged word. - [jimmy] of course, yeah. - because from the palestinian
+side or from certain sides, the word conflict doesn't
+accurately describe the situation because if you see it as a genocide, one way genocide is not a conflict because to that, to people that discuss, that challenge the word
+conflict, they see, you know, conflict is when there's two equally powerful sides fighting. - sure, yeah, yeah. no it's hard and you know,
+in a number of cases- so this is actually speaks to
+a slightly broader phenomenon, which is there are a number of cases where there is no one word
+that can get consensus. and in the body of an article, that's usually okay because we
+can explain the whole thing. you can come away with an understanding of why each side wants
+to use a certain word. but there are some aspects, like the page has to have a title. so you know, there's that. same thing with certain
+things like photos, you know, it's like, well,
+there's different photos, which one's best? a lot of different views on that. but at the end of the day
+you need the lead photo 'cause there's one slot for a lead photo. categories is another one. so at one point, i have no
+idea if it's in there today, but i don't think so, i was listed in, you know,
+american entrepreneurs, fine, american atheist. and i said, hmm, i don't,
+that doesn't feel right to me. like just personally it's true. i mean i wouldn't disagree
+with the objective fact of it. but when you click the
+category and you see sort of a lot of people who are, you might say american atheist activists 'cause that's their big issue. so madeline murray o'hare or
+various famous people who, richard dawkins, who make it a big part of their public argument and persona. but that's not true of me. it's just like my private personal belief. it doesn't really, it's not
+something i campaign about. so it felt weird to
+put me in the category, but like what category
+would you put, you know, and do you need that. in this case i was, i argued that doesn't need that category. that's not, i don't
+speak about it publicly except incidentally from time to time. i don't campaign about it so it's weird to put me with this group of people. and that argument carried the day. i hope not just because it was me, but categories can be like that, where you know, you're either
+in the category or you're not. and sometimes it's a lot
+more complicated than that. and is it again, we go
+back to is it undue weight? you know, if someone who is
+now prominent in public life and generally considered
+to be a good person was convicted of something, let's say dui when they were young. we normally in normal sort of discourse, we don't think, oh this person should be in the category of american criminals. 'cause you think, oh what criminal? yeah, technically speaking
+it's against the law to drive under the influence of alcohol and you were arrested
+and you spent a month in prison or whatever. but it's odd to say that's a criminal. so just as an like example in
+this area is mark wahlberg. marky-mark is what i
+always think of him as, 'cause that was his first
+sort of famous name, who i wouldn't think should be listed as in the category american criminal. even though he did, he was convicted of quite a bad crime when
+he was a young person. but we don't think of him as a criminal. should the entry talk about that? yeah, it's actually, that's actually an important part of his life story. you know, that he had a very rough youth and he could have, you know, gone down a really dark path
+and he turned his life around. that's actually interesting. so categories are tricky. - especially with people, because we like to assign labels to people and to ideas somehow. and those labels stick.
+- [jimmy] yeah. - and there's certain words
+that have a lot of power. like criminal, like political
+left, right, center, anarchist, objectivist. what other philosophies are there? marxist, communist, social democrat, democratic socialist, socialist. and like if you add that as a category, all of a sudden it's like,
+oh boy, you're that guy now. - [jimmy] yeah. - and i don't know if
+you want to be that guy. - well, there's some, definitely
+some really charged ones like alt-right. i think it's quite a
+complicated and tough label. i mean it's not completely
+meaningless label, but boy, i think you really have to pause before you actually put
+that label on someone. partly because now you're putting
+them in a group of people, some of whom are quite, you wouldn't want to be grouped with. so it's, yeah. - let's go into some, you
+mentioned the hot water of the pool that we're
+both dipping a toe in. do you think wikipedia has a
+left leaning political bias, which is something it
+is sometimes accused of? - yeah, so i don't think so. not broadly. and you know, i think
+you can always point to specific entries and talk
+about specific biases, but that's part of the
+process of wikipedia. anyone can come and challenge
+and to go on about that. but, you know, i see fairly
+often on twitter, you know, some, you know, sort of quite
+extreme accusations of bias. and i think, you know, actually
+i just, i don't see it. i don't buy that. and if you ask people for an example, they normally struggle. and depending on who they
+are and what it's about. so it's certainly true that some people who have quite fringe viewpoints and who knows, the full rush
+of history in 500 years, they might be considered to
+be pathbreaking geniuses. but at the moment, quite fringe views. and they're just unhappy
+that wikipedia doesn't report on their fringe views as being mainstream. and that, by the way, goes
+across all kinds of fields. i mean, i was once accosted on the street outside the ted conference in vancouver by a guy who was a
+homeopath who was very upset that wikipedia's entry on homeopathy basically says it's pseudoscience. and he felt that was biased. and i said, well, i can't really help you because, you know, it cites,
+we cite good quality sources to talk about the scientific
+status and it's not very good. so, you know, it depends. and, you know, i think it's something that we should always be vigilant about, but it's, you know, in general,
+i think we're pretty good. and i think any time you go to any serious political controversy, we should have a pretty
+balanced perspective on who's saying what and what
+the views are and so forth. i would actually argue that the areas where we are more likely to have bias that persists for a long period of time are actually fairly obscure things, or maybe fairly non-political things. i just give, it's kind
+of a humorous example, but it's meaningful. if you read our entries
+about japanese anime, they tend to be very, very
+positive and very favorable. because almost no one
+knows about japanese anime except for fans. and so the people who
+come and spend their days writing japanese anime
+articles, they love it. they kind of have an inherent
+love for the whole area. now they'll, of course,
+being human beings, they have their internal
+debates and disputes about what's better or not, you know. but in general, they're quite positive because nobody actually cares. on anything that people
+are quite passionate about, then hopefully, you know, there's like quite a lot
+of interesting stuff. so i'll give an example, a contemporary example where
+i think we've done a good job as of my most recent sort of look at it. and that is the question
+about the efficacy of masks during the covid pandemic. and that's an area where i
+would say the public authorities really kind of jerked us
+all around a bit, you know. in the very first days
+they said, whatever you do, don't rush out and buy masks. and their concern was
+shortages in hospitals. okay, fair enough. later it's like, no, everybody's gotta wear a mask everywhere. it really works really
+well and it's, you know. then now i think it's, the
+evidence is mixed, right? masks seem to help, in my personal view. masks seem to help,
+they're no huge burden. you know, you might as well
+wear a mask in any environment where you're with a giant
+crowd of people and so forth, but it's very politicized, that one. and it's very politicized where certainly in the us you know, much more so. i mean, i live in the
+uk, i live in london. i've never seen kind of
+on the streets sort of, the kind of thing that i,
+there's a lot of reports of people actively angry
+because someone else is wearing a mask, that
+sort of thing, in public. and so because it became very politicized, then clearly if wikipedia- no, so anyway, if you go to wikipedia and you research this topic, i think you'll find more or
+less what i've just said. like, mm, actually after
+it's all, you know, to this point in history,
+it's mixed evidence. like masks seem to help,
+but maybe not as much as some of the authorities
+said and here we are. and that's kind of an
+example where i think, okay, we've done a good job, but
+i suspect there are people on both sides of that
+very emotional debate who think this is ridiculous. hopefully, we've got quality sources. so then hopefully those
+people who read this can say, oh, actually, you know, it
+is complicated. (laughs) you know, if you can get
+to the point of saying, okay, this is, i have my view, but i understand other views and i do think it's a
+complicated question. great, now we're a little
+bit more mature as a society. - well, that one is an interesting one because i feel like i
+hope that that article also contains the meta conversation
+about the politicization of that topic.
+- [jimmy] yeah. - to me it's almost more interesting than whether the masks work or not, at least at this point.
+- [jimmy] sure. - it's like why it became,
+masks became a symbol of the oppression of a
+centralized government. if you wear them, you're a sheep that follows the mass
+control, the mass hysteria of an authoritarian regime. and if you don't wear a mask, then you are a science
+denier, anti-vaxxer. a alt-right, probably a nazi. (laughs) so-
+- exactly. and that whole politicization of society is just so damaging. and i don't know, in broader,
+in the broader world, like how do we start to fix that? that's a really hard question. - well, at every moment, because you mentioned
+mainstream and fringe, there seems to be a tension here, and i wonder what your
+philosophy is on it. because there's mainstream
+ideas and there's fringe ideas. you look at lab leak
+theory for this virus. there could be other things we can discuss where there's a mainstream narrative, where if you just look at the percent of the population or the
+population with platforms, what they say, and then
+what is a small percentage in opposition to that? and what is wikipedia's responsibility to accurately represent
+both the mainstream and the fringe, do you think? - well, i mean, i think we
+have to try to do our best to recognize both, but also to
+appropriately contextualize. and so this can be quite hard, particularly when emotions are high. that's just a fact about human beings. i'll give a simpler example
+because there's not a lot of emotion around it. like our entry on the moon doesn't say, some say the moon's made
+of rocks, some say cheese, you know, who knows? that kind of false neutrality
+is not what we want to get to. like, that doesn't make any sense. but that one's easy. like we all understand, i think
+there is a wikipedia entry called something like the
+moon is made of cheese, where it talks about this
+is a common sort of joke or thing that children
+say or that people tell to children or whatever. you know, it's just a thing. it's a, everybody's heard
+moon's made of cheese. but nobody thinks wow, like
+wikipedia is so one-sided. it doesn't even acknowledge
+the cheese theory. i'd say the same thing about flat earth, you know, again, it's very- - that's exactly what
+i'm looking up right now. - very little controversy. we will have an entry
+about flat earth theory, theorizing flat earth people. my personal view is most
+of the people who claim to be flat earthers are
+just having a laugh, trolling and more power
+to them, have some fun, but let's not be, you know, ridiculous. - of course, for most of human history, people believed that the earth is flat. so the article i'm looking at is actually kind of focusing on this history. flat earth is an archaic
+and scientifically disproven conception of the earth's
+shape as a plane or disc, meaning ancient cultures subscribed to a flat earth cosmography
+with pretty cool pictures of what a flat earth would look like. with dragon, is that dragon? no, angels on the edge. there's a lot of controversy about that. what is on the edge? is it the wall, is it angels, the dragons? - [jimmy] yeah, yeah.
+- is there a dome? - and how can you fly from
+south africa to perth? because on a flat earth view, that's really too far for
+any plane to make it what. - [lex] what i wanna know-
+- it's all spread out. - what i wanna know is what's
+on the other side, jimmy, what's on other side? that's what all of us want to know. - [jimmy] yeah. - so there's some, i
+presume there's probably a small section about the
+conspiracy theory of flat earth. 'cause i think there's a sizeable percent of the population who at least will say they believe in a flat earth. - [jimmy] yeah. - i think it is a movement that just says that the mainstream
+narrative to have distrust and skepticism about the
+mainstream narrative, which to a very small degree is probably a very productive thing to do. it's part of the scientific process, but you can get a little
+silly and ridiculous with it. - yeah. i mean, yeah, it's exactly right. and so, you know, i think
+i find on many, many cases, and of course i, like anybody else might quibble about this or
+that in any wikipedia article. but in general, i think
+there is a pretty good sort of willingness and
+indeed eagerness to say, oh, let's fairly represent all of the meaningfully important sides. so there's still a lot
+to unpack in that, right? so meaningfully important. so, you know, people who are raising questions about
+the efficacy of masks. okay, that's actually a reasonable thing to have a discussion about. and hopefully we should treat
+that as a fair conversation to have and actually
+address which authorities have said what and so on and so forth. and then, you know, there are other cases where it's not meaningful opposition, you know, like you just wouldn't say if- i mean i doubt if the main article moon, it may mention cheese, probably not even because it's not credible
+and it's not even meant to be serious by anyone. or the article on the earth
+certainly won't have a paragraph that says, well, most
+scientists think it's round, but certain people think flat. like that's just a silly
+thing to put in that article. you would wanna sort of address, you know, that's an interesting cultural phenomenon. you wanna put it somewhere. so this, you know, this goes
+into all kinds of things about politics. you wanna be really
+careful, really thoughtful about not getting caught up
+in the anger of our times. and really recognize,
+yes, i always thought, i remember being really
+kind of proud of the us at the time when it was mccain
+was running against obama because i thought, oh, i've got plenty of disagreements with both of them. but they both seemed like
+thoughtful and interesting people who i would have different
+disagreements with. but i always felt like,
+yeah, like that's good. now we can have a debate. now we can have an interesting debate. and it isn't just sort of
+people slamming each other, personal attacks and so forth. - and you're saying wikipedia
+has also represented that? - i hope so, yeah. and i think so in the main. obviously you can always find debate that went horribly wrong
+'cause there's humans involved. - but speaking of those humans, i would venture to guess,
+i don't know the data, maybe you can let me know, but the personal political leaning of the group of people who edit wikipedia probably leans left, i would guess. so to me the question there is, i mean the same is true
+for silicon valley. the task for silicon valley
+is to create platforms that are not politically biased- - [jimmy] right. - even though there is a bias for the engineers who create it. and i think, i believe it's
+possible to do that, you know, there's kind of conspiracy theories that it somehow is impossible and there's this whole conspiracy where the left is
+controlling it and so on. i think engineers for the most part want to create platforms
+that are open and unbiased, that are, that create
+all kinds of perspective. 'cause that's super
+exciting to have all kinds of perspectives battle it out, but- - [jimmy] yeah. - still is there a degree to which the personal political bias
+of the editors might seep in, in silly ways and in big ways? silly ways could be, i think, hopefully i'm correct in saying this, but the right will call
+it the democrats party and the left will call it
+the democratic party, right? - [jimmy] yeah. - like subtle, it always
+hits my ear weird. like, are are we children here? we're like, we're literally taking words and like just jabbing at each other. like, yeah, i could like
+capitalize the thing in a certain way or i can like just take a word and mess with them. and that's a small way
+of how you use words. but you can also, you know,
+have a bigger way about beliefs, about various perspectives
+on political events, on hunter biden's laptop, on how big of a story that is or not, how big the censorship
+of that story is or not. that kind of, and then there's these camps that take very strong points and they construct big
+narratives around that. and they, i mean, it's
+a very sizable percent of the population believes
+the two narratives that compete with each other. - mm, yeah. i mean it's really
+interesting and it feels, but it's hard to judge, you
+know, the sweep of history within your own lifetime.
+- [lex] sure, yeah. - but it feels like
+it's gotten much worse, that this idea of-
+- [lex] yes. - two parallel universes
+where people cannot agree on certain basic facts, feels
+worse than it used to be. and i'm not sure if that's true or if it just feels that way, but i also, i'm not sure what the causes are. i think i would lay a lot
+of the blame in recent years on social media algorithms which reward click bait headlines, which reward tweets that go viral and they go viral because
+they're cute and clever. i mean, my most successful tweet ever by a fairly wide margin, some reporter tweeted at elon musk 'cause he was complaining
+about wikipedia or something, you should buy wikipedia. and i just wrote not for sale.
+- [lex] nice. - and, you know, 90 zillion retweets and people liked it and
+it was all very good. but i'm like, you know what,
+it's a cute line, right? and it's a good like
+mic drop and all that. and i was pleased with myself. i'm like, it's not
+really discourse, right? it's not really sort of
+the what i like to do, but it's what social media really rewards, which is kind of a let's you
+and him have a fight, right? and that's more interesting. i mean, it's funny because
+at the time i was texting with elon who's very pleasant
+to me and all of that. it's like- - he might have been a little bit shitty. the reporter might have
+been a little bit shitty, but you fed into the shitty
+with snarky funny response, not for sale.
+- [jimmy] yeah. - and like, where do you, like what- so that's a funny little
+exchange and you could probably after that laugh it off-
+- [jimmy] yeah. - and it's fun. but like that kind of mechanism
+that rewards the snark- - [jimmy] yeah. - can go into viciousness. - yeah, yeah, well, and we
+certainly see it online, you know, like a series
+of tweets, you know, sort of a tweet thread of 15 tweets that assesses the quality of the evidence for masks, pros and cons
+and sort of wear this, that's not gonna go viral, you know, but, you know, a smack down
+for a famous politician who is famously in favor of masks who also went to a dinner
+and didn't wear a mask, that's gonna go viral. and you know, that's partly human nature. you know, people love to call
+out hypocrisy and all of that. but it's partly what these
+systems elevate automatically. i talk about this with respect
+to facebook, for example. so i think facebook has
+done a pretty good job, although it's taken longer
+than it should in some cases. but, you know, if you have
+a very large following and you're really spouting
+hatred or misinformation, disinformation, they've kicked people off, they've done, you know, some
+reasonable things there. but actually the deeper issue is of this, the anger we're talking about, of the contentiousness of everything. i make of a family example
+with two great stereotypes. so one, the crack pot racist uncle and one the sweet grandma. and i always want to
+point out all of my uncles in my family were wonderful people, so i didn't have a crack pot racist. but everybody knows the stereotype. - [lex] yes. - well, so grandma, she just
+posts like sweet comments on the kids' pictures
+and congratulates people on their wedding anniversary, and crackpot uncle's posting his nonsense. and normally, it's sort
+of at christmas dinner everybody rolls their eyes,
+oh yeah, uncle frank's here, he is probably gonna
+say some racist comment and we're gonna tell him to shut up. or, you know, maybe let's
+not invite him this year, you know, the normal human drama. he's got his three mates down at the pub who listen to him and, and all of that. but now grandma's got, you
+know, 54 followers on facebook, which is the intimate family
+and racist uncle has 714. so he's not a massive
+influencer or whatever. but how did that happen? it's because the algorithm notices, oh, when, when she posts, nothing happens. he posts and then
+everybody jumps in to go, god, shut up uncle frank. you know, like, that's outrageous. and it's like, oh, there's engagement, there's page views, there's ads, right? and those algorithms, i think they're working to improve that, but it's really hard for them. it's hard to improve that
+if that actually is working, if the people who are saying
+things that get engagement, if it's not too awful,
+but it's just, you know, like maybe it's not a racist uncle, but maybe it's an uncle who posts a lot about what an idiot biden is, right? which isn't necessarily
+an offensive or blockable or bannable thing, and it shouldn't be. but if that's the discourse
+that gets elevated because it gets a rise out of people, then suddenly in a society
+it's like, oh, this is, we get more of what we reward. so i think that's a
+piece of what's gone on. - well, if we could
+just take that tangent, i'm having a conversation with mark zuckerberg, second time. is there something you can comment on how to decrease toxicity on that
+particular platform, facebook? you also have worked on
+creating a social network that is less toxic yourself. - [jimmy] yeah. - so can we just talk
+about the different ideas that these already big
+social network can do and what you have been trying to do? - yeah, so a piece of it is, it's hard. so i don't, the problem
+with making a recommendation to facebook is that i actually believe their business model makes
+it really hard for them. and i'm not anti-capitalism. i'm not, you know, great,
+somebody's got a business, they're making money. that's not where i come from. but certain business models mean you are gonna prioritize things that maybe aren't that long term helpful. and so that's a big piece of it. so certainly for facebook, you could say, you know,
+with vast resources, start to prioritize content
+that's higher quality, that's healing, that's kind. try not to prioritize content that seems to be just getting a rise out of people. now those are vague human
+descriptions, right? but i do believe good
+machine running algorithms you can optimize in
+slightly different ways. but to do that, you may have to say actually we're not necessarily
+gonna increase page views to the maximum extent right now. and i've said this to people
+at facebook, it's like, you know, if your actions are, you know, convincing people that you're
+breaking western civilization, that's really bad for
+business in the long run. certainly these days i'll say, twitter is the thing
+that's on people's minds as being more upsetting at the moment. but i think it's true. and so one of the things
+that's really interesting about facebook compared
+to a lot of companies is that mark has a pretty
+unprecedented amount of power. his ability to name members of the board, his control of the company
+is pretty hard to break. even if financial results
+aren't as good as they could be, because he's taken a step back
+from the perfect optimization to say, actually for the long-term health in the next 50 years of this organization, we need to reign in some of the things that are working for us and making money because they're actually
+giving us a bad reputation. so one of the recommendations
+i would say is, and this is not to do with
+the algorithms and all that, but you know, how about just a moratorium on all political advertising? i don't think it's their
+most profitable segment, but it's given rise to a
+lot of deep hard questions about dark money, about, you know, ads that are run by questionable people that push false narratives or, you know, the classic kind of thing is you run- i saw a study about brexit in the uk where people were talking about, there were ads run to animal rights activists saying finally, when we're
+out from under europe, the uk can pass proper
+animal rights legislation. we're not constrained
+by the european process. similarly, for people who
+are advocates of fox hunting to say, finally, when we're out of europe, we can re-implement. so you're telling people
+what they want to hear, and in some cases it's really hard for journalists to see that. so it used to be that for
+political advertising, you really needed to find some
+kind of mainstream narrative. and this is still true to an
+extent, mainstream narrative, that 60% of people can say,
+oh, i can buy into that. which meant it pushed you to the center, it pushed you to sort of try
+and find some nuanced balance. but if your main method
+of recruiting people is a tiny little one-on-one
+conversation with them, because you're able to target
+using targeted advertising, suddenly you don't need consistent. you just need a really
+good targeting operation, really good cambridge analytic style, machine learning algorithm
+data to convince people. and that just feels really problematic. so, i mean, until they can think about how to solve that problem, i would just say, you know what, it's gonna cost us x amount, but it's gonna be worth it to
+kind of say, you know what? we actually think our
+political advertising policy hasn't really helped
+contribute to discourse and dialogue and finding
+reasoned, you know, middle ground and compromised solutions. so let's just not do that for a while until we figure that out. so that's maybe a piece of advice i'd- - and coupled with, as you were saying, recommender systems for the
+newsfeed and other contexts that don't always optimize engagement, but optimize the long
+term mental wellbeing and balance and growth of a human being. - [jimmy] yeah. - but it's a very difficult problem. - it's a difficult problem, yeah. and you know, so in with
+wt.social, wikitribune social, we're launching in a few months time, a completely new system, new domain name, new lots of things. but the idea is to say,
+let's focus on trust. people can rate each other as trustworthy, rate content is trustworthy. you have to start from somewhere. so we'll start with a core
+base of our tiny community who i think are sensible,
+thoughtful people, wanna recruit more. but to say, you know what, actually let's have that as a
+pretty strong element to say, let's not optimize based on
+what gets the most page views in this session. let's optimize on what
+sort of the feedback from people is, this is
+meaningfully enhancing my life. and so part of that is, and it's probably not a good business model, but part of that is say, okay, we're not gonna pursue an
+advertising business model, but a you know, membership
+model where, you know, you can, you don't have to be a member, but you can pay to be a member. you maybe get some benefit from that. but in general, to say
+actually, the problem with- and actually the division i would say is, and the the analogy i would give is broadcast television funded by advertising gives you a different result than paying for hbo, paying for netflix, paying for whatever. and the reason is, you
+know, if you think about it, what is your incentive as a tv producer? you're gonna make a comedy
+for abc network in the us. you basically say, i want something that almost everybody
+will like and listen to. so it tends to be a
+little blander, you know, family friendly, whatever. whereas if you say, oh,
+actually i'm gonna use the hbo example and an old example, you say you know what,
+sopranos isn't for everybody. sex and the city isn't for everybody. but between the two shows, we've got something for everybody that they're willing to pay for. so you can get edgier, higher quality, in my view, content rather than saying it's gotta not offend
+anybody in the world. it's gotta be for everybody,
+which is really hard. so same thing, you know
+here in a social network, if your business model is advertising, it's gonna drive you in one direction. if your business model is membership, i think it drives you in
+a different direction. i actually, and i said this
+to elon about twitter blue, which i think wasn't rolled
+out well and so forth, but it's like, hmm. the piece of that that i like is to say, look, actually, if there's a model where your revenue is coming from people who are willing to pay for the service, even if it's only part of your revenue, if it's a substantial part, that does change your broader incentives to say, actually, are
+people gonna be willing to pay for something that's actually just toxicity in their lives? now, i'm not sure it's
+been rolled out well, i'm not sure how it's going, and maybe i'm wrong about that as a plausible business model. but i do think it's
+interesting to think about just in broad terms, business model drives outcomes
+in sometimes surprising ways, unless you really pause to think about it. - so if we can just
+linger on twitter and elon before i would love to talk to you about the underlying
+business model of wikipedia, which is this brilliant, bold
+move at the very beginning. but let's, since you mentioned twitter, what do you think works and what do you think is broken about twitter? - oof, i mean, it's a long conversation, but to start with, one of the things that i always say is it's
+a really hard problem. so i can see that right up front. i said this about, you know,
+the old ownership of twitter and the new ownership of twitter. because unlike wikipedia,
+and this is true actually for all social media, there's a box, and the box basically
+says, what do you think? what's on your mind? you can write whatever
+the hell you want, right? - [lex] yeah. - this is true by the
+way, even for youtube. i mean, the box is to upload a video, but again, it's just like
+an open-ended invitation to express yourself. and what makes that hard is some people have really toxic, really bad, you know, some people are very aggressive,
+they're actually stalking, they're actually, you know, abusive. and suddenly you deal
+with a lot of problems. whereas at wikipedia, there is no box that says what's on your mind. there's a box that says, this
+is an entry about the moon. please be neutral, please cite your facts. then there's a talk page, which is not come and rant about donald trump. if you go on the talk page
+of the donald trump entry and you just start ranting
+about donald trump, people would say, what are you doing? like, stop doing that. like, we're not here to discuss, like there's a whole world
+of the internet out there for you to go and rant about donald trump. - it's just not fun to do on wikipedia as somehow as fun on twitter. - well, also on wikipedia,
+people are gonna say, stop. - [lex] yeah. - and actually, are you
+here to tell us like, how can we improve the article? or are you just here to rant about trump? 'cause that's not actually interesting. so because the goal is different- so that's just admitting
+and saying upfront, this is a hard problem. certainly i'm writing a book on trust. so the idea is, you know, in the last 20 years we've
+lost trust, you know, in all kinds of institutions and politics. you know, the edelman
+trust barometer survey's been done for a long time and, you know, trust in politicians, trust in journalism, it's come, declined substantially. and i think in many cases, deservedly. so, how do we restore trust
+and how do we think about that? - and does that also include
+trust in the idea of truth? - trust in the idea of truth, like even the concept of facts and truth is really, really important. and the idea of uncomfortable
+truths is really important. now, so when we look at twitter, right? and we say, we can see it,
+okay, this is really hard. so here's my story about twitter, it's a two part story and it's
+all pre-elon musk ownership. so many years back, somebody accused me of horrible crimes on twitter. and i, you know, like anybody
+would, i was like, you know, i'm in the public eye,
+people say bad things, i don't really, you know,
+i brush it off, whatever. i'm like, this is actually really bad, like accusing me of pedophilia. like that's just not okay. so i thought, i'm gonna report this. so i click report and i report the tweet and there's five others and i report, and i go through the process
+and then i get an email that says, you know,
+whatever, couple hours later, saying thank you for your report, we're looking into this. great, okay, good. then several hours further
+i get an email back saying, sorry, we don't see anything here to violate our terms of use. and i'm like, okay. so i emailed jack and
+i say, jack, come on. like this is ridiculous. and he emails back roughly
+saying, yeah, sorry jimmy, don't worry, we'll sort this out. and i just thought to
+myself, you know what, that's not the point, right? i'm jimmy wales, i know jack dorsey, i can email jack dorsey. he'll listen to me 'cause
+he's got an email from me and sorts it out for me. what about the teenager
+who's being bullied and is getting abuse, right? and getting accusations that aren't true. are they getting the same kind of like really poor result in that case? so fast forward a few
+years, same thing happens. the the exact quote, it goes, please help me, i'm only 10 years old and jimmy wales raped me last week. it's like, come on, fuck
+off, like that's ridiculous. so i report him, i'm like,
+this time i'm reporting, but i'm thinking, well
+we'll see what happens. this one gets even worse because then i get same result email back saying sorry we don't see any problems. so i raise it with other
+members of the board who i know and jack and like this
+is really ridiculous. - [lex] yeah. - like this is outrageous. and some of the board
+members, friends of mine, sympathetic and so good for them, but actually got an email back then from the general council
+head of trust and safety saying actually there's
+nothing in this tweet that violates our terms of service. we don't regard, and gave
+reference to the #metoo movement. if we didn't allow accusations,
+the #metoo movement, it's an important thing. and i was like, you know what, actually, if someone says i'm 10 years old and someone raped me last week, i think the advice should be, here's the phone number of the police. like you need to get the police involved. twitter's not the place
+for that accusation. so even back then, by the way,
+they did delete those tweets, but i mean the rationale
+they gave is spammy behavior. - [lex] right. - so completely separate from abusing me. it was just like, oh well they
+were retweeting too often. okay, whatever. so like that's just broken. like that's a system that it's not working for people in the public eye. i'm sure it's not working
+for private people who get abuse, really
+horrible abuse can happen. so how is that today? well, it hasn't happened
+to me since elon took over, but i don't see why it couldn't. and i suspect now if i send
+a report and email someone, there's no one there to email me back. 'cause he's gotten rid of a lot of the trust and safety staff. so i suspect that problem
+is still really hard. - just content moderation at huge scales. - at huge scales is really something. and i don't know the full answer to this. i mean a piece of it could be, you know, to say actually making
+specific allegations of crimes, this isn't the place to do that. you know, we've got a huge database. if you've got an accusation of crime, here's who should call, the
+police, the fbi, whatever it is. it's not to be done in public. and then you do face really
+complicated questions about #metoo movement
+and people coming forward in public and all of that. but it's again, it's like
+probably you should talk to a journalist, right? probably there are better avenues than just tweeting from an account that was created 10 days ago. obviously set up to abuse someone. so i think they could do a lot better. but i also admit it's a hard problem. - and there's also ways to indirectly or more humorously or a more mocking way to make the same kinds of accusations. in fact, the accusations you
+mentioned, if i were to guess, don't go that viral 'cause
+they're not funny enough or cutting enough. but if you make it witty and cutting and meme it somehow-
+- [jimmy] yeah, yeah, yeah. - sometimes actually indirectly- - [jimmy] for sure. - making the accusation-
+- [jimmy] for sure. - versus directly making an accusation. - [jimmy] yeah. - that can go viral and
+that can destroy reputations and you get to watch yourself, just all kinds of narratives take hold. - yeah, no, i mean i remember another case that didn't bother me 'cause it wasn't of that nature, but somebody
+was saying, you know, i'm sure you're you're making
+millions off of wikipedia. and i'm like, no, actually
+i don't even work there. i have no salary. and they're like, you're lying. i'm gonna check your 990 form, which is the us form for
+tax reporting for charities. i was like, yeah, i'm
+knocking, here's the link. go read it and you'll see
+i'm listed as a board member and my salary is listed
+as zero, so, you know. so, you know, things like that. it's like, okay, that one,
+that feels like you're wrong, but i can take that and we can have that debate quite quickly. and again, it didn't go viral
+because it was kind of silly and if anything would've gone
+viral, it was me responding. but that's one where it's
+like, actually i'm happy to respond because a
+lot of people don't know that i don't work there and
+that i don't make millions and i'm not a billionaire. well, they must know that 'cause it's in most news media about me. but the other one i
+didn't respond to publicly because it's like barbara
+streisand effect, you know, it's like sometimes calling attention to someone who's abusing
+you, who basically has no followers and
+so on is just a waste. - and everything you're describing now is just something that all
+of us have to kind of learn. 'cause everybody's in the public eye. i think when you have just two
+followers and you get bullied by one of the followers, it hurts just as much as when you have a large number.
+- [jimmy] yeah, yeah. - so it's not, your
+situation i think is echoed in the situations of millions of other- - [jimmy] yeah. - especially teenagers and kids and so on. - yeah, no, i mean it's
+actually an example. so we don't generally use my picture in the banners anymore
+on wikipedia, but we did. and then we did an experiment one year where we tried other people's pictures. so one of our developers
+and you know, one guy, lovely, very sweet guy and he doesn't look like your immediate thought of a nerdy silicon valley developer. he looks like a heavy metal
+dude 'cause he's cool. and so suddenly here he is
+with long hair and tattoos and there's his sort of say, here's what your money goes for. here's my letter asking for support. and he got massive abuse from wikipedia, like calling him creepy and
+you know, like really massive. and this was being shown
+to 80 million people a day. - [lex] yeah. - his picture, not the abuse, right. the abuse was elsewhere on the internet. and he was bothered by it. and i thought, you know what? there is a difference. i actually am in the public eye. - [lex] yeah. - i get huge benefits from
+being in the public eye. i go around and make public speeches. any random thing i think of i can write and get it published
+in the new york times. and you know, i have
+this interesting life. he's not a public figure. and so actually he wasn't
+mad at us, he wasn't mad. it was just like, yeah, actually suddenly being thrust in the public eye and you get suddenly lots of abuse, which
+normally think, you know, if you're a teenager and
+somebody in your class is abusing you, it's not gonna go viral. so you're only gonna,
+it's gonna be hurtful because it's local and it's
+your classmates or whatever. but when sort of ordinary people go viral in some abusive way, it's really, really quite tragic. - i don't know, i mean,
+even at a small scale, it feels viral when five people- - [jimmy] i suppose you're right, yeah. - five people at your
+school and there's a rumor and there's this feeling
+like you're surrounded and nobody and the feeling
+of loneliness, i think, which you're speaking to,
+when you don't have a plat- when you at least feel like
+you don't have a platform to defend yourself. - [jimmy] yeah.
+- and then this powerlessness that i think a lot of
+teenagers definitely feel, and a lot of people. - [jimmy] i think you're right, yeah. - and that, i think even
+when just like two people make up stuff about you or lie about you or say mean things about you or bully you, that can feel like a crowd. (laughs) - [jimmy] yeah, yeah. no, that's true. - that's a and it's a,
+i mean, whatever that is in our genetics and our biology
+and the way our brain works, that just can be a
+terrifying experience, and somehow to correct that, i mean, i think because everybody
+feels the pain of that, everybody suffers the pain of that. i think we'll be forced
+to fix that as a society, to figure out a way around that. - i think it's really hard to fix because i don't think that
+problem isn't necessarily new. you know, someone in high school who writes graffiti that says becky is a slut and spreads a rumor about what becky did last weekend. that's always been damaging. it's always been hurtful,
+and that's really hard. - those kinds of attacks,
+they're as old as time itself. they precede the internet. what do you think about those technology that feels wikipedia-like, which is community notes on twitter? do you like it?
+- [jimmy] yeah, yeah. - pros and cons, do you
+think it's scalable? - i do like it. i don't know enough about
+specifically how it's implemented to really have a very deep view. but i do think it's quite,
+it's the uses i've seen of it, i've found quite good and in
+some cases, changed my mind. you know, it's like i see
+something and of course, you know, the sort of human tendency is to re-tweet something that you hope is true or that you are afraid
+is true or, you know, it's like that kind of
+quick mental action. and then, you know, i saw something that i liked and agreed with
+and then a community note under it that made me think, oh, actually this is a more nuanced issue. so i like that. i think that's really important. now, how is it specifically implemented? is it scalable or that i don't really know how they've done it, so i
+can't really comment on that. but in general, i do think it's, you know, when you're only mechanisms on twitter and you're a big twitter user, you know, we know the platform and you've got plenty of followers and all of that. the only mechanisms are retweeting, replying, blocking. it's a pretty limited
+scope and it's kind of good if there's a way to elevate a
+specific thoughtful response. and it kind of goes to again, like does the algorithm just
+pick the retweet or the- i mean retweeting, it's
+not even the algorithm that makes it viral. like, you know, if paulo
+coelho, very famous author, i think he's got like, i don't know, i haven't looked lately. he used to have 8 million
+twitter followers. i think i looked, he's got
+16 million now or whatever. well if he retweets something,
+it's gonna get seen a lot. or elon musk, if he retweets something, it's gonna get seen a lot. that's not an algorithm, that's just the way the platform works. so it is kind of nice if
+you have something else and how that something else is designed, that's obviously complicated question. - well there's an interesting thing that i think twitter's doing, but i know facebook is doing for sure, which is really interesting. so you have, what are the signals that a human can provide at scale? like and twitter, it's retweet. - [jimmy] yep. - in facebook, i think
+you can share, i think. yeah but there's basic interactions, you can have, comment and so on. - [jimmy] yeah. - but there's also in facebook
+and youtube has this too, is would you like to see more of this or would you like to see less of this? they post that sometimes. and the thing that the neural net that's learning from
+that has to figure out is the intent behind you saying,
+i wanna see less of this. did you see too much of
+this content already? you like it but you don't
+wanna see so much of it, you already figured it out, great, great. or does this content
+not make you feel good? there's so many interpretations to i would like to see less of this. - [jimmy] for sure. - but if you get that kind of signal, this actually can create a really powerfully curated list of content that is fed to you every day. that doesn't create an
+echo chamber or a silo, that actually just makes you
+feel good in the good way. which is like, it challenges
+you but it doesn't exhaust you. and make you kind of this weird animal. - i've been saying for a long time, if i went on facebook one
+morning and they said, oh, we're testing a new option. rather than showing you things we think you're going to like, we wanna show you some things that we think you will disagree with, but which we have some signals that suggest it's of quality. like, now that sounds interesting. - [lex] yeah, that sounds
+really interesting. - i wanna see something
+where, you know, like, oh, i don't agree with- so larry lessig is a good friend of mine, founder of creative commons, and he's moved on to doing stuff about corruption in politics and so on. and i don't always agree with larry, but i always grapple with larry because he's so interesting
+and he's so thoughtful that even when we don't agree, i'm like, actually i want
+to hear him out, right? because i'm gonna learn from it. and that doesn't mean i always come around to agreeing with him,
+but i'm gonna understand a perspective on it and
+that's really, great feeling. - yeah, there's this interesting
+thing on social media where people kind of
+accuse others of saying, well, you don't want to hear opinions that you disagree with or
+ideas you disagree with. i think this is something that's
+thrown at me all the time. the reality is there's literally almost nothing i enjoy more. - it's an odd thing to accuse you of 'cause you have quite a wide
+range of long conversations with a very diverse bunch of people. - but there, there is a very, there is like a very harsh drop
+off because what i like is high quality disagreement
+that really makes me think. - [jimmy] yeah, yeah. - and a certain point,
+there's a threshold, it's a kind of a gray area, when the quality of the disagreement, it just sounds like mocking and
+you're not really interested in a deep understanding of the topic, or you yourself don't seem to carry deep understanding of the topic. like there's something called
+intelligence square debates. the main one is the british version. with the british accent,
+everything always sounds better. and the brits seem to
+argue more intensely. like they're invigorated,
+they're energized by the debate. those people i often disagree with basically everybody
+involved, and it's so fun. i learned something. that's high quality. if we could do that, if there's some way for me to click a button that says filter out lower quality just today, just sometimes show it to me,
+'cause i want to be able to. but today i'm just not in
+the mood for the mockery. - [jimmy] yeah. - just high quality stuff. even 'cause, even flat earth, i wanna get high quality
+arguments for the flat earth, it would make me feel good. because i would see, oh,
+that's really interesting. like i never really thought in my mind to challenge the mainstream narrative of general relativity, right? of a perception of physics. maybe all of reality, maybe all of all of space
+time is an illusion. that's really interesting. i never really thought about, let me consider that fully. okay, what's the evidence? how do you test that? what is, what are the alternatives? how would you be able to have
+such consistent perception of a physical reality if it's,
+all of it is an illusion. all of us seem to share the same kind of perception or reality. like what, like that's
+the kind of stuff i love, but not like the mockery of it, you know? - [jimmy] yeah, yeah. - that it seems that social
+media can kind of inspire. - yeah, i talk sometimes
+about how people assume that like the big debates in wikipedia or the sort of arguments are between the party of the left and
+the party of the right. and i would say no, it's actually the party
+of the kind and thoughtful and the party of the jerks is really it. i mean left and right, like yeah, bring me somebody i
+disagree with politically. as long as they're thoughtful, kind, we're gonna have a, you
+know, a real discussion. i give an example of
+our article on abortion. so, you know, if you can bring together a kind and thoughtful catholic priest and a kind and thoughtful
+planned parenthood activist, and they're gonna work together
+on the article on abortion, that can be a really great thing. if they're both kind and thoughtful, like that's the important part. they're never gonna
+agree the on the topic, but they will understand, okay, like wikipedia is not gonna take a side, but wikipedia is gonna explain
+what the debate is about and we're gonna try to
+characterize it fairly. and it turns out like you're
+kind and thoughtful people, even if they're quite ideological, like a catholic priest
+is generally gonna be quite ideological on
+the subject of abortion. but they can grapple with
+ideas and they can discuss and they may feel very proud of the entry at the end of the day, not because they suppress
+the other side's views, but because they think the
+case has been stated very well that other people can
+come to understand it. and if you're highly
+ideological, you assume, i think naturally, if
+people understood as much about this as i do, they'll
+probably agree with me. you may be wrong about that,
+but that's often the case. so that's where, you
+know, that's what i think we need to encourage more
+of in society generally is grappling with ideas in a
+really, in a thoughtful way. - so is it possible if the
+majority of volunteers, editors of wikipedia really
+disliked donald trump, are they still able to write an article that empathizes with the perspective of, for a time at least, a
+very large percentage of the united states that were supporters of donald trump and to have
+a full, broad representation of him as a human being,
+him as a political leader, him as a set of policies
+promised and implemented, all that kind of stuff? - yeah, i think so. and i think if you read the
+article, it's pretty good. and i think a piece of that
+is within our community, if people have the
+self-awareness to understand. so i personally wouldn't go and edit the entry on donald trump. i get emotional about it and
+i'm like, i'm not good at this. and if i tried to do it, i would fail. i wouldn't be a good wikipedian. so it's better if i just step back and let people who are more dispassionate on this topic edit it. whereas there are other topics
+that are incredibly emotional to some people where i can
+actually do quite well. like i'm gonna be okay. maybe, we were discussing
+earlier the efficacy of masks. i'm like, oh, i think that's
+an interesting problem and i don't know the answer, but i can help kind of catalog what's the best evidence and so on. i'm not gonna get upset,
+i'm not gonna get angry. i'm able to be a good wikipedian. so i think that's important. and i do think though, in a related framework that the composition of the
+community is really important. not because wikipedia is or
+should be a battleground, but because blind spots. like maybe i don't even
+realize what's biased. if i'm particularly of
+a certain point of view and i've never thought much about it. so one of the things we focus on a lot, the wikipedia volunteers are, we don't know the exact number, but let's say 80% plus male and they're of a certain demographic, they tend to be college educated, heavier on tech geeks than not, you know, et cetera, et cetera. so it, there is a
+demographic to the community and that's pretty much global. i mean, somebody said to me once, why is it only white
+men who edit wikipedia? and i said, you've obviously not met the japanese wikipedia community. it's kind of a joke because
+the broader principle still stands. who edits japanese wikipedia? a bunch of geeky men, right? and women as well. so we do have women in the community and that's very important. but we do think, okay, you know what, that does lead to some problems. it leads to some content issues simply because people write
+more about what they know and what they're interested in. they'll tend to be dismissive of things as being unimportant if it's not something that they personally have an interest in. i, you know, i like the
+example as a parent, i would say our entries on
+early childhood development probably aren't as good as they should be. 'cause a lot of the wikipedia volunteers, actually we're getting
+older, the wikipedians. so the demographic has changed a bit, but- - [lex] that's funny. - you know, it's like
+if you've got a bunch of 25 year old tech geek
+dudes who don't have kids, they're just not gonna be interested in early childhood development. and if they tried to write about it, they probably wouldn't do a good job 'cause they don't know anything about it. and somebody did a look at our entries on novelists who've won
+a major literary prize. and they looked at the male
+novelist versus the female. and the male novelist had longer
+and higher quality entries. and why is that? well, it's not because, 'cause i know hundreds of wikipedians, it's not because these
+are a bunch of biased, sexist men who are like, books
+by women are not important. it's like, no, actually there is a gender kind of breakdown of readership. there are books like
+hard science fiction's a classic example. hard science fiction, mostly read by men, other types of novels, more read by women. and if we don't have
+women in the community, then these award-winning
+clearly important novelists may have less coverage. and not because anybody
+consciously thinks, oh, we don't like what a book by maya angelou like, who cares? she's a poet like, that's not interesting. no, but just because, well
+people write what they know, they write what they're interested in. so we do think diversity in the community is really important. and that's one area where i
+do think it's really clear. but i can also say, you know what? actually, that also applies
+in the political sphere. like to say, actually we
+do want kind and thoughtful catholic priests, kind and
+thoughtful conservatives, kind and thoughtful libertarians, kind and thoughtful marxists,
+you know, to come in. but the key is the kind
+and thoughtful piece. so when people sometimes
+come to wikipedia outraged by some, you know, dramatic thing that's happened on twitter, they come to wikipedia with
+a chip on their shoulder, ready to do battle.
+- [lex] yeah. - and it just doesn't work
+out very well, you know? - and there's tribes in
+general where i think there's a responsibility
+on the larger group to be even kinder and more
+welcoming to the smaller group. - yeah, we think that's really important. and so, you know, oftentimes
+people come in and, you know, there's a lot, when i talk
+about community health, one of the aspects of that
+that we do think about a lot, that i think about a lot
+is not about politics. it's just like, how are
+we treating newcomers to the community? and so i can tell you what our ideals are, what our philosophy is,
+but do we live up to that? so, you know, the ideal
+is you come to wikipedia, you know, we have rules, like one of our fundamental
+rules is ignore all rules, which is partly written that way because it kinda peaks people's attention. like, oh, what the hell kind
+of rule is that, you know? but basically says, look,
+don't get nervous and depressed about a bunch of, you know, what's the formatting
+of your footnote, right? so you shouldn't come to wikipedia, add a link and then
+get banned or yelled at because it's not the right format. instead somebody should go, oh hey, yeah, thanks for helping, but you know, here's the link to how to format. you know, if you wanna keep going, you might wanna learn
+how to format a footnote. and to be friendly and
+to be open and to say, oh, right, oh, you're new and you clearly don't know everything about wikipedia. and you know, sometimes in any community that can be quite hard. so people come in and
+they've got a great big idea and they're gonna propose this
+to the wikipedia community and they have no idea. that's basically a perennial discussion we've had 7,000 times before. and so then ideally you
+would say to the person, oh, yeah, great, thanks. like a lot of people have,
+and here's where we got to and here's the nuanced
+conversation we've had about that in the past that i
+think you'll find interesting. and sometimes people are just like, oh god, another one, you know,
+who's come in with this idea, which doesn't work and
+they don't understand why. - [lex] you can lose
+patience, but you shouldn't. - yeah, and that's kind
+of human, you know? but i think it just does
+require really thinking, you know, in a self-aware manner of like, oh, i was once a newbie. actually we do have, we have a great- i just did an interview
+with emily temple-wood who i, she was wikipedian of the year. she's just like a great
+well-known wikipedian. and i interviewed her for my book and she told me something i never knew. apparently it's not secret,
+like she didn't reveal it to me. but is that when she started
+wikipedia, she was a vandal. she came in and vandalized wikipedia. and then basically what
+happened was she'd done some sort of, vandalized
+a couple of articles, and then somebody popped
+up on her talk page and said, hey, like
+why are you doing this? like, we're trying to
+make an encyclopedia here- - [lex] well, that's nice. - and this wasn't very kind.
+- [lex] yeah. - and she felt so bad. she's like, oh, right, i didn't
+really think of it that way. she just was coming in as,
+she was like 13 years old, combative and you know, like
+having fun and trolling a bit. and then she's like, oh,
+actually, oh, i see your point. and became a great wikipedian. so that's the ideal really, is that you don't just go
+throw a block, fuck off. - [lex] yeah. - you go, hey, you know,
+like, what gives, you know? which is i think the way
+we tend to treat things in real life, you know, if you've got somebody who's
+doing something obnoxious in your friend group, you
+probably go, hey, like really? i don't know if you've noticed, but i think this person
+is actually quite hurt that you keep making that joke about them. and then they usually
+go, oh, you know what? i didn't, i thought
+that was okay, i didn't. and then they stop or they keep it up and then everybody goes,
+well, you're the asshole. - well, yeah, i mean,
+that's just an example that gives me faith in humanity. that we're all capable and
+wanting to be kind to each other. and in general, the fact
+that there's a small group of volunteers, they're
+able to contribute so much to the organization, the collection, the discussion of all of human knowledge. it makes me so grateful to be part of this whole human project. that's one of the
+reasons i love wikipedia, is it gives me faith in humanity. - yeah, no, i once was at wikimania, is our annual conference and people come from all around the world,
+like really active volunteers. i was at the dinner, we were in egypt at wikimania in alexandria, and at the sort of closing
+dinner or whatever. and a friend of mine
+came and sat at the table and she's sort of been in
+the movement more broadly, creative commons, so she's
+not really a wikipedian. she'd come to the conference 'cause she's into creative commons and all that. so we have dinner and it just turned out, i sat down at the table
+with most of the members of the english language
+arbitration committee. and they're a bunch of very
+sweet, geeky wikipedians. and as we left the table, i
+said to her, it's really like, i still find this kind
+of sense of amazement. like we just had dinner with some of the most powerful people
+in english language media, 'cause they're the people who are like the final court of appeal
+in english wikipedia. and thank goodness they're
+not media moguls, right? they're just a bunch of
+geeks who are just like, well liked in the community
+'cause they're kind and they're thoughtful
+and they really, you know, sort of think about things. i was like, this is great, love wikipedia. - it's like to the degree
+that geeks run the best aspect of human civilization brings
+me joy in all aspects. and this is true programming like linux. - [jimmy] yeah. - like programmers- in all kind, like people that
+kinda specialize in a thing and they don't really get caught up into the mess of the bickering of society. they just kind of do their thing. - [jimmy] yeah. - and they value the craftsmanship of it- - [jimmy] yeah.
+- the competence of it. - but if you've never heard of this or looked into it, you'll enjoy it. i read something recently
+that i didn't even know about, but like the fundamental like time zones and they change from time to time. you know, sometimes a country
+will pass daylight savings or move it by a week, whatever. there's a file that's on all, you know, sort of unix based computers, and basically all computers
+end up using this file. it's the official timezone file, but why is it official? it's just this one guy. it's like this guy and a
+group, a community around him and basically something weird happened and it broke something
+'cause he was on vacation. and i'm just like, isn't that wild, right? that you would think,
+i mean, first of all, most people never even think about like, how do computers know about time zones? well they know 'cause
+they just use this file, which tells all the time zones and which dates they
+change and all of that. but there's this one guy and
+he doesn't get paid for it, it's just, he's like, you know, with all the billions
+of people on the planet, he sort of put his hand up and goes, yo, i'll take care of the
+time zones, you know? (laughs) - and there's a lot, a
+lot, a lot of programmers listening to this right now
+with ptsd about time zones. - [jimmy] yeah. (laughs) - and then there, i mean
+there's on top of this one guy, there's other libraries, the
+different programming languages that help manage the time zones for you. but still, there's just within those, there's, it's amazing just the packages, the libraries, how few people build them. - [jimmy] oh yeah, for sure. - out of their own love for building, for creating, for
+community and all of that. - [jimmy] yeah. - i almost like don't want to interfere with the natural habitat
+of the geek, right? (jimmy laughs) like when you spot 'em in the wild, you just want to be like, well careful. - [jimmy] yeah. - that thing needs to be treasured. - no, i met a guy many years ago, lovely, really sweet guy and he was running a bot on english wikipedia that i thought, wow, that's actually super clever. and what he had done is his
+bot was like spell checking. but rather than simple spell checking, what he had done is create a database of words that are commonly
+mistaken for other words. they're spelled wrong, so
+i can even give an example. and so the word is, people
+often spell it wrong, but no spell checker catches it because it is another word. and so what he did is he wrote a bot that looks for these words and then checks the sentence around it for certain keywords. so in some context, this isn't correct, but buoy and boy. people sometimes type
+boy when they mean bouy. so if he sees the word
+boy, b o y, in an article, he would look in the context and see is this a nautical reference? and if it was, he didn't auto correct, he just would flag it up to himself to go, oh, check this one out. and that's not a great example, but he had thousands of examples. and i was like, wow, that's amazing. like i would've never thought to do that and i'm glad that somebody did. and that's also part of
+the openness of the system. and also i think being a
+charity, being, you know, this idea of like, actually
+this is a gift to the world that makes someone go, oh,
+oh well, i'll put my hand up. like i see a little piece
+of things i can make better 'cause i'm a good programmer
+and i can write this script to do this thing and i'll find it fun. amazing. - well, i gotta ask about
+this big bold decision at the very beginning
+to not do advertisements on the website and just in general, the philosophy of the
+business model, wikipedia. what went behind that? - yeah, so i think most people know this, but we're a charity. so in the us, you know,
+registered as a charity. and we don't have any ads on the site and the vast majority of
+the money is from donations. but the vast majority from small donors. so people giving 25 bucks or whatever. - if you're listening to this, go donate. - [jimmy] go donate. - donate now.
+- [jimmy] 25 bucks. - i've donated so many times. - and we have, you know,
+millions of donors every year. but it's like a small
+percentage of people. i would say in the early days, a big part of it was aesthetic, almost as much as anything else. it was just like, mm, i just think i don't really want ads on wikipedia. like, i just think it would be, there's a lot of reasons
+why it might not be good. and even back then, i didn't think as much as i have since about a business model can tend to drive you in a certain place. and really thinking
+that through in advance is really important because you might say, yeah, we're really, really
+keen on community control and neutrality, but if we had an advertising-based business model, probably that would begin to erode. even if i believe in it very strongly, organizations tend to follow the money, in the dna in the long run. and so things like, i mean it's easy to think about some of the immediate problems. so like if you go to read about, i don't know, nissan, car company and if you saw an ad for the new nissan at the top of the page, you might be like, did they pay for this? or like, do the advertisers
+have influence over the content? because you kind of wonder about that for all kinds of media. - and that undermines trust. - undermines trust, right? but also things like, you know, we don't have click bait
+headlines in wikipedia. you've never seen, you know, wikipedia entries with all this
+kind of listicles, you know, sort of the 10 funniest cat pictures. number seven will make you cry, you know, none of that kind of stuff. 'cause there's no incentive,
+no reason to do that. also, you know, there's no reason to have an algorithm to say, actually we're gonna use
+our algorithm to drive you to stay on the website longer. we're gonna use the algorithm
+to drive you to, you know, it's like, oh, you're
+reading about queen victoria. there's nothing to sell
+you when you're reading about queen victoria, let's
+move you on to las vegas. 'cause actually the ad
+revenue around hotels in las vegas is quite good. so we don't have that sort of, there's no incentive for
+the organization to go, oh let's move people around to things that have better ad revenue. instead, it's just like, oh,
+well what's most interesting to the community just to make those links. so that decision just seemed obvious to me, but as i say, it was less
+of a business decision and more of an aesthetic. it's like, oh, like this
+is how i like wikipedia, it doesn't have ads, don't
+really want, you know, and these early days. like a lot of the ads, that
+was well before the era of really quality ad
+targeting and all that. so you got a lot of-
+- [lex] banners. - banners, punch the monkey ads and all that kind of nonsense. and so, you know, but there
+was no guarantee, there was no- it was not really clear
+how could we fund this? you know, like it was pretty cheap. it still is quite cheap compared to, you know, most, you know, we don't have a
+hundred thousand employees and all of that, but would we be able to raise money through donations? and so i remember the
+first time that we did, like really did a donation campaign was on a christmas day
+in 2003 i think it was. there was, we had three servers, database servers and two front end servers and they were all the
+same size or whatever, and two of them crashed. they broke. like, i don't even know, remember now, like the hard drive, it was
+like, it was christmas day. so i scrambled on christmas day to sort of go onto the database server, which fortunately survived and have it become a front end server as well. and then the site was really slow and it wasn't working very well and i was like, okay, it's time
+we need to do a fundraiser. and so i was hoping to raise
+$20,000 in a month's time, but we raised nearly $30,000
+within two, three weeks time. so that was the first proof point of like, oh, like we put a banner
+up and people will donate. like we just explained, we need the money. and people are like, already, and we were very small back
+then and people were like, oh yeah, like i love this,
+i want to contribute. then over the years we've
+become more sophisticated about the fundraising campaigns and we've tested a lot of
+different messaging and so forth. what we used to think, you know, i remember one year we
+really went heavy with, we have a great ambitions to, you know, the idea of wikipedia
+is a free encyclopedia for every single person on the planet. so what about the languages
+of sub-saharan africa? so i thought, okay, we're
+trying to raise money, we need to talk about that
+'cause it's really important and near and dear to my heart. and just instinctively knowing nothing about charity fundraising,
+you see it all around. it's like, oh, charity's always mention like the poor people they're helping. so let's talk about that. didn't really work as well. the pitch that like, this is very vague and very sort of broad, but the pitch that works better
+than any other in general is a fairness pitch of like,
+you use it all the time, you should probably chip in. and most people are like,
+yeah, you know what? my life would suck without wikipedia. i use it constantly and
+whatever i should chip in. like, it just seems like
+the right thing to do. and that, and there's many
+variants on that obviously. and that's really, it works
+and like people are like, oh yeah, like wikipedia, i love wikipedia and you know, i should. and so sometimes people say, you know, ah, why are you always begging
+for money on the website? and you know, i say it's not that often. it's not that much, but it does happen. they're like, why don't you just get google and facebook and microsoft, why don't they pay for it? and i'm like, mm, i don't think that's
+really the right answer. - [lex] influence starts to creep in. - influence starts to creep in and questions start to creep in. like the best funding for
+wikipedia is the small donors. we also have major donors, right? we have high net worth people who donate. but we always are very careful
+about that sort of thing, to say, wow, that's really
+great and really important, but we can't let that become influence, because that would just be really quite, yeah, not good for wikipedia. - i would love to know how many times i've visited wikipedia, how
+much time i've spent on it because i have a general sense that it's the most useful
+site i've ever used. - [jimmy] yeah. - competing maybe with google search. - [jimmy] yeah. - which ultimately lands
+on wikipedia. (laughs) - [jimmy] yeah, yeah, yeah. - but if i were just reminded of like, hey remember all those times your life was made better because of the site. - [jimmy] yeah. - i think i would be much more like, yeah, why did i waste money on site xyz, when i could be like, i
+should be giving a lot here. - well you know, the guardian
+newspaper has a similar model, which is they have ads but they also, there's no paywall but
+they just encourage people to donate and they do that. like i've sometimes seen a banner saying, oh, this is your 134th
+article you've read this year, would you like to donate? and i think that's, i
+think it's effective. i mean they're testing, but also i wonder for some people if they just don't feel
+like guilty and then think, oh i shouldn't bother them
+so much, i dunno. (laughs) it's a good question, i
+don't know the answer. - i guess that's the thing
+i could also turn on. 'cause that would make me- i feel like legitimately
+there's some sites, this speaks to our
+social media discussion. wikipedia unquestionably
+makes me feel better about myself if i spend time on it. like there's some websites where i'm like, if i spend time on twitter
+sometimes i'm like, i regret. there's, i think elon talks about this, minimize the number of regretted minutes. - [jimmy] yeah. - my number of regretted minutes
+on wikipedia is like zero. like i don't remember a time- i've just discovered this, i
+started following on instagram a page, depthsofwikipedia. - [jimmy] oh yeah. - [lex] there's like crazy wikipedia. - [jimmy] oh yeah. - [lex] there's no
+wikipedia page that this-. - yeah, i gave her a media contributor of the year award this
+year 'cause she's so great. - [lex] yeah, she's amazing. - depths of wikipedia is so fun. - so i, yeah, so that's the
+kind of interesting point that i don't even know if
+there's a competitor there. maybe this sort of
+programming stack overflow type of websites, but everything else, there's a always a trade off. there's a, it's probably
+because of the ad driven model because there's an incentive
+to pull you into click bait. - [jimmy] yeah. - and wikipedia has no click bait. - [jimmy] yeah. it's all about the
+quality of the knowledge and the wisdom and so on. - yeah, no, that's right. and i also like stack
+overflow, although i wonder, i wonder what you think of this. so i only program for fun as a hobby and i don't have enough
+time to do it, but i do and i'm not very good at it. so therefore i end up on
+stack overflow quite a lot, trying to figure out what's gone wrong. and i have really
+transitioned to using chatgpt- - [lex] yeah. - much more for that because
+i can often find the answer clearly explained and
+it just, it works better than sifting through threads. and i kind of feel bad about that because i do love stack
+overflow and their community. i mean, i'm assuming,
+i haven't read anything about in the news about it. i'm assuming they are keenly aware of this and they're thinking
+about how can we sort of use this chunk of knowledge
+that we've got here and provide a new type of interface where you can query it with a question and actually get an answer
+that's based on the answers that we've had, i don't know. - and i think stack overflow
+currently has policies against using gpt, like
+there's a contentious kind of tension. - [jimmy] of course, yeah, yeah, yeah. - but they're trying to
+still figure that out. - well and so we are
+similar in that regard. like obviously all the
+things we've talked about, like chatgpt makes stuff up
+and it makes up references. so our community has already put into place some policies about it. but roughly speaking
+there's always more nuance. but roughly speaking it's
+sort of like you, the human, are responsible for what
+you put into wikipedia. so if you use chatgpt,
+you better check it. 'cause there's a lot
+of great use cases of, you know, like, oh well
+i'm not a native speaker of german but i'm kind of am pretty good. i'm not talking about myself, a hypothetical me that's pretty good. and i kind of just want to
+run my edit through chatgpt in german to go make
+sure my grammar's okay. that's actually cool. - does it make you sad
+that people might use, increasingly use chatgpt for something where they would previously use wikipedia? so basically, use it to
+answer basic questions about the eiffel tower? - [jimmy] yeah, no. - and where the answer really
+comes at the source of it from wikipedia, but they're
+using this as an interface. - yeah, no, no, that's completely fine. i mean, part of it is our
+ethos has always been, here's our gift to the
+world, make something. so if the knowledge is
+more accessible to people, even if they're not coming
+through us, that's fine. now, obviously we do have certain business model concerns, right? like if, and we've talked where we've had more conversation about this, this whole gpt thing is new. things like if you ask alexa, you know, what is the eiffel tower? and she reads you the first two sentences from wikipedia and doesn't
+say it's from wikipedia and they've recently
+started citing wikipedia, then we worry like, oh,
+if people don't know they're getting the knowledge from us, are they gonna donate money? or they just think, oh,
+what's wikipedia for? i can just ask alexa. it's like, well alexa only knows anything 'cause she read wikipedia. so we do think about that, but it doesn't bother
+me in the sense of like, oh, i want people to always
+come to wikipedia first. but we are also, you
+know, we had a great demo, like literally just hacked
+together over a weekend by our head of machine learning where he did this little thing to say, you could ask any question. and he was just knocking it together. so he used the openai's
+api just to make a demo. ask a question, why do
+ducks fly south for winter? which is the kind of thing you think, oh, i might just google for that or i might start looking
+in wikipedia, i don't know. and so what he did, he asked chatgpt what are some wikipedia
+entries that might answer this? then he grabbed those wikipedia entries, said here's some wikipedia entries. answer this question based only
+on the information in this. and he had pretty good results and it kind of prevented
+the making stuff up. it's just a, he hacked
+together the weekend. but what it made me think about was, oh, okay, so now we've got
+this huge body of knowledge that in many cases you're like, oh, i'm really, i wanna
+know about queen victoria. i'm just gonna go read the wikipedia entry and it's gonna take me
+through her life and so forth. but other times you've
+got a specific question and maybe we could have a
+better search experience where you can come to wikipedia,
+ask your specific question, get your specific answer
+that's from wikipedia, including links to the articles
+you might wanna read next. and that's just a step forward. like that's just using
+new type of technology to make the extraction of information from this body of text into
+my brain faster and easier. so i think that's kind of cool. - i would love to see a chatgpt grounding into websites like wikipedia, and the other comparable
+website to me will be like wolframalpha for
+more mathematical knowledge, that kind of stuff. so grounding, like taking you to a page that is really crafted. as opposed to, like the moment you start actually taking you to
+like journalist websites, like news websites, starts getting a little iffy. - [jimmy] yeah, yeah. - starts getting a little-
+- [jimmy] yeah, yeah, yeah. - because they have, you're now in a land that has a wrong incentive. - right, yeah, yeah.
+- you pulled in- - and you need somebody to
+have filtered through that and sort of tried to
+knock off the rough edges. yeah, no it's very, i
+think that's exactly right. and i think, you know, i think that kind of grounding is, i think they're working really hard on it. i think that's really important. and that actually, when i,
+so if you ask me to step back and be like very business-like
+about our business model and where's it gonna go for us, and are we going to
+lose half our donations 'cause everybody's just gonna
+stop coming to wikipedia and go to chatgpt, i think
+well grounding will help a lot because frankly, most
+questions people have, if they provide proper links, we're gonna be at the top of that just like we are in google. so we're still gonna
+get tons of recognition and tons of traffic just from- even if it's just the
+moral properness of saying, here's my source. so i think we're gonna
+be all right in that. - yeah, in the close partnership of, if the model is fine tuned
+is constantly retrained, that wikipedia is one
+of the primary places where if you want to change
+what the model knows, one of the things you should
+do is contribute to wikipedia or clarifying wikipedia-
+- [jimmy] yeah, yeah, yeah. no, that's correct. - or elaborate, expand
+all that kind of stuff. - [jimmy] yeah. - you mentioned all of
+us have controversies. i have to ask, do you find the controversy of whether you are the sole
+founder or the co-founder of wikipedia ironic, absurd,
+interesting, important? what are your comments? - i would say unimportant. not that interesting. i mean, one of the things that people are sometimes surprised to hear me say is i actually think larry sanger doesn't get enough credit for
+his early work in wikipedia, even though i think co-founder's not the right title for that. so, you know, like he had a lot of impact and a lot of great work
+and i disagree with him about a lot of things since
+and all that and that's fine. so yeah, no, to me that's
+like, it's one of these things that the media love a falling out story, so they want to make a big deal out of it. and i'm just like, yeah, no. - so there's a lot of interesting engineering contributions
+in the early days. like you were saying,
+there's debates about how to structure it, what the heck- - [jimmy] yeah. - is this thing that we're doing and there's important people
+that contributed to that. - [jimmy] yeah, definitely. - so he also, you said you've
+had some disagreements. larry sanger said that
+nobody should trust wikipedia and that wikipedia seems to assume that there's only one
+legitimate defensible version of the truth on any
+controversial question. that's not how wikipedia used to be. i presume you disagree with that analysis. - yeah, lemme just
+straight up, i disagree. like go and read any wikipedia entry on a controversial topic
+and what you'll see is a really diligent effort to
+explain all the relevant sides. so yeah, just disagree. - so on controversial questions, you think perspectives
+are generally represented? - [jimmy] yeah. - i mean there, 'cause it has to do with the kind of the tension
+between the mainstream and the non-mainstream
+that we're talking about. - yeah, no, i mean for sure. like, to take this area of discussion seriously is
+to say, yeah, you know what, actually that is a big
+part of what wikipedians spend their time grappling with, is to say, you know, how do we figure out whether a less popular
+view is pseudoscience? is it just a less popular view that's gaining acceptance
+in the mainstream? is it fringe versus crackpot,
+et cetera, et cetera. and that debate is what you've gotta do. there's no choice about
+having that debate, of grappling with something. and i think we do. and i think that's really important. and i think if anybody said
+to the wikipedia community, gee, you should stop, you know, sort of covering minority
+viewpoints on this issue, i think they would say,
+i don't even understand why you would say that. like we have to sort of grapple
+with minority viewpoints in science, in politics and so on. but it's, and like this
+is one of the reasons why, you know, there is no magic simple answer to all these things. it's really contextual. it's case by case. it's like, you know,
+you've gotta really say, okay, what is the context here? how do you do it? and you've always gotta
+be open to correction and to change and to sort of challenge and always be sort of serious about that. - i think what happens
+again with social media is when there is that
+grappling process in wikipedia and a decision is made
+to remove a paragraph or to remove a thing or to say a thing, you're gonna notice the one direction of the oscillation of the grappling and not the correction.
+- [jimmy] yeah. - and you're gonna highlight that and say, how come this person- - [jimmy] yeah. - i don't know, i want maybe
+legitimacy of elections. that's the thing that comes up. donald trump maybe- - yeah, i can give a really good example, which is there was this sort of dust up about the definition of
+recession in wikipedia. so the accusation was, and accusation was often
+quite ridiculous and extreme, which is under pressure from
+the biden administration, wikipedia changed the
+definition of recession to make biden look good. or we did it not under pressure, but because we're a bunch of
+lunatic leftists and so on. and then, you know, when
+i see something like that in the press, i'm like, oh
+dear, like what's happened here? how did we do that? 'cause i always just accept
+things for five seconds first. and then i go and i look
+and i'm like, you know what? that's literally completely
+not what happened. what happened was one editor thought the article needed restructuring. so the article is always
+said, so the traditional kind of loose definition of recession is two quarters of negative growth. but there's always been within economics, within important agencies
+and different countries around the world, a lot
+of nuance around that. and there's other like factors
+that go into it and so forth. and it's just an interesting
+complicated topic. and so the article has
+always had the definition of two quarters and the only
+thing that really changed was moving that from the
+lead, from the top paragraph to further down. and then news stories
+appeared saying wikipedia has changed the definition of recession. and then we got a huge
+rush of trolls coming in. so the article was temporarily protected, i think only semi-protected. and people were told go to
+the talk page to discuss. so anyway, it was the dust
+up that was, you know, when you look at it as a
+wikipedia and you're like, oh, like this is a really
+routine kind of editorial debate. another example, which unfortunately our friend elon fell for, i
+would say is the twitter files. so there was an article
+called the twitter files, which is about these
+files that were released once elon took control of twitter and he released internal documents. and what happened was somebody
+nominated it for deletion, but even the nomination
+said this is actually, this is mainly about the hunter
+biden laptop controversy. shouldn't this information
+be there instead? so anyone can, like it takes
+exactly one human being anywhere on the planet to
+propose something for deletion. and that triggers a process
+where people discuss it, which within a few hours, it was what we call snowball closed, ie. this doesn't have a
+snowball's chance in hell of passing. so an admin goes yeah, wrong, and closed the debate and that was it. that was the whole thing that happened. and so nobody proposed
+suppressing the information. nobody proposed it wasn't important. it was just like editorially
+boring internal question. and you know, so sometimes
+people read stuff like that and they're like, oh you
+see, look at these leftists, they're trying to
+suppress the truth again. it's like, well slow down
+a second and come and look. like literally, it's not what happened. - yeah, so i think the
+right is more sensitive to censorship and so they-
+- [jimmy] yeah. - they will more likely highlight, there's more virality to
+highlighting something that looks like censorship
+in any walks of life. and this moving a paragraph
+from one place to another, removing it and so on, as
+part of the regular grappling of wikipedia can make a
+hell of a good article- - [jimmy] oh, yeah.
+- or youtube video. - [jimmy] yeah, yeah, yeah. no, it sounds really enticing
+and intriguing and surprising to most people because they're like, oh no, i'm reading wikipedia. it doesn't seem like a
+crackpot leftist website. it seems pretty kind of dull
+really, in its own geeky way. - [lex] well that's how i- - and so that makes a good story. it's like, oh, am i being misled because there's a shadowy
+cabal of jimmy wales. - you know, i generally,
+i read political stuff. like i mentioned to you that i'm traveling to have some very difficult conversation with high profile figures
+both in the war in ukraine and in israel and palestine. and you know, i read the
+wikipedia articles around that and i also read books on
+the conflict and the history of the different regions. and i find the wikipedia
+articles to be very balanced and there's many perspectives
+being represented. but then i ask myself,
+well, am i one of them leftist crack pots? (jimmy laughs) they can't see the truth. i mean, it's something i
+ask myself all the time, forget the leftist, just
+crack pot in general. am i just being a sheep and accepting it? and i think that's an important
+question to always ask, but not too much. - yeah, no, i agree completely. - [lex] a little bit, but not too much. - yeah, no, i think we always
+have to challenge ourselves of like, what do i potentially have wrong? - well, you mentioned
+pressure from government. you've criticized twitter for the allowing, giving in to turkey's
+government censorship. there's also conspiracy
+theories or accusations of wikipedia being open to pressure from government to
+government organizations, fbi and all this kind of stuff. - [jimmy] right. - what is the philosophy about pressure from government and censorship? - so we're super hardcore on this. we've never bowed down
+to government pressure anywhere in the world, and we never will. and we understand that we're hardcore and actually there is a bit of nuance about how different
+companies respond to this, but our response has
+always been just to say no. and if they threaten to block,
+well knock yourself out, you're gonna lose wikipedia. and that's been very
+successful for us as a strategy because governments know they can't just casually threaten to block wikipedia or block us for two days and
+we're gonna cave in immediately to get back into the market. and that's what a lot
+of companies have done. and i don't think that's good. but we can go one level deeper and say, i'm actually quite sympathetic. like if you have staff
+members in a certain country and they are at physical risk, you've gotta put that into your equation. so i understand that. like, if elon said, actually i've got a hundred staff members on the ground in such and such a country,
+and if we don't comply, somebody's gonna get arrested
+and it could be quite serious. okay, that's a tough one, right? that's actually really hard. but yeah, no, and then
+the fbi one, no, no, like the criticism i saw,
+i kind of prepared for this 'cause i saw people responding
+to your request for questions and i was like, somebody's like, oh, well, don't you think it was really
+bad that you da da da da da. and i said, i actually
+reached out to staff and said can you just make sure
+i've got my facts right? and the answer is, we
+received zero requests of any kind from the fbi or any of the other government agencies for any changes to content in wikipedia. and had we received those
+requests at the level of the wikipedia foundation,
+we would've said, it's not our, like we can't do anything because wikipedia is
+written by the community. and so the wikipedia foundation
+can't change the content of wikipedia without causing, i mean, god, that would be a massive controversy. you can't even imagine. what we did do, and
+this is what i've done. i've been to china and met with
+the minister of propaganda. we've had discussions with
+governments all around the world, not because we want to do their bidding, but because we don't
+wanna do their bidding, but we also don't wanna be blocked. and we think actually
+having these conversations are really important. now there's no threat of
+being blocked in the us. like that's just never gonna happen. there is the first amendment, but in other countries
+around the world, it's like, okay, what are you upset about? let's have the conversation,
+like let's understand and let's have a dialogue about it so that you can understand
+where we come from and what we're doing and why. and then, you know,
+sometimes it's like, gee, like if somebody complains
+that something's bad in wikipedia, whoever they
+are, don't care who they are. could be you, could be the
+government, could be the pope, i don't care who they are. it's like, oh, okay, well our responsibility
+as wikipedia is to go, oh, hold on, let's check, right? is that right or wrong? is there something that
+we've got wrong in wikipedia? not because you're
+threatening to block us, but because we want
+wikipedia to be correct. so we do have these dialogues
+with people and you know, a big part of like what was going on with, you might call it pressure
+on social media companies or dialogue with, depending on, you know, as we talked earlier, grapple with the language
+depending on what your view is. in our case, it was really
+just about, oh okay, right? they wanna have a dialogue about covid information, misinformation. we are this enormous source of information which the world depends on. we're gonna have that conversation, right? we're happy to say here's,
+you know, if they say, how do you know that wikipedia
+is not gonna be pushing some crazy anti-vax narrative. first, i mean, i think
+it's somewhat inappropriate for a government to be
+asking pointed questions in a way that implies possible penalties. i'm not sure that ever happened
+because we would just go, i don't know, the chinese blocked us. and so it goes, right? we're not gonna cave into any
+kind of government pressure, but whatever the appropriateness
+of what they were doing, i think there is a rule for
+government in just saying, let's understand the
+information ecosystem. let's think about the
+problem of misinformation, disinformation in society, particularly around election security, all these kinds of things. so, you know, i think it
+would be irresponsible of us to get a call from a
+government agency and say, yeah, why don't you just fuck
+off, you're the government. but it would also be irresponsible to go, oh dear, government agent's
+not happy, let's fix wikipedia so the fbi loves us. - so when you say you
+wanna have discussions with the chinese government
+or with organizations like cdc and who, it's
+to thoroughly understand what the mainstream narrative is so that it can be properly represented but not drive what the articles are. - well, it's actually
+important to say like whatever the wiki media foundation thinks has no impact on what's in wikipedia. so it's more about saying to them, right, we understand you're the
+world health organization or you're whoever, and part
+of your job is to sort of, public health is about communications. you wanna understand the world. so it's more about, oh, well let's explain how wikipedia works. - so it's more about
+explaining how wikipedia works and like, hey, it's the volunteers. - [jimmy] yeah, yeah, exactly.
+- it's a battle of ideas. and here's how the sources are used. - [jimmy] yeah, exactly.
+- what a legitimate source is and what not a legitimate source is. - [jimmy] yeah, exactly. - i mean, i suppose there's some battle about what is a legitimate source. there could be statements made that cdc- i mean like there's
+government organizations, in general, have sold
+themselves to be the place where you go for expertise. and some of that has been to small degree raised in question over the
+response to the pandemic. - well i think, in many cases, and this goes back to my topic of trust. so there were definitely cases of public officials, public organizations, where i felt like they lost
+the trust of the public because they didn't trust the public. and so the idea is like
+we really need people to take this seriously and take actions, therefore we're gonna put
+out some overblown claims because it's gonna scare
+people into behaving correctly. you know what, that might
+work for a little while, but it doesn't work in the long run. because suddenly people
+go from a default stance of like the center for disease control, very well respected
+scientific organization, sort of, i don't know,
+they've got a vault in atlanta with the last vial of
+smallpox or whatever it is, that people think about them. and to go, oh right, these are scientists we should actually take
+seriously and listen to and they're not politicized
+and they're, you know, it's like okay. and if you put out statements, and i don't know if the cdc did, but world health organization, whoever, that are provably false and also provably, you kind of knew they were false, but you did it to scare people 'cause you wanted them
+to do the right thing. it's like, no, you know what, that's not gonna work in the long run. like you're gonna lose
+people and now you've got a bigger problem, which is
+a lack of trust in science, a lack of trust in authorities who are, you know, by and large,
+they're like quite boring government bureaucrat scientists who just are trying to help the world. - well, i've been criticized
+and i've been torn on this, i've been criticized for
+criticizing anthony fauci too hard. the degree to which i criticized him is because he's a leader. and i'm just observing the
+effect in the loss of trust in the institutions like the nih that where i personally know there's a lot of incredible scientists
+doing incredible work. - [jimmy] yeah. - and i have to blame the
+leaders for the effects on the distrust and the scientific work that they're doing
+because of what i perceive as basic human flaws of
+communication, of arrogance, of ego, of politics, all
+those kinds of things. now you could say you're
+being too harsh, possible, but i think that's the
+whole point of free speech is you can criticize the people who lead. leaders unfortunately or
+fortunately are responsible for the effects on society. to me, anthony fauci or whoever
+in the scientific position around the pandemic had an opportunity to have a fdr moment or
+to get everybody together, inspire about the power of science to rapidly develop a vaccine that saves us from this pandemic and future pandemic that can threaten the wellbeing
+of human civilization. this was epic and awesome and sexy. and to me, when i'm talking
+to people about science, it's anything but sexy in terms of the virology and biology development because it's been politicized. it's icky.
+- [jimmy] yeah. - and people just don't
+wanna, like, don't talk to me about the vaccine. i understand, i understand. i got vaccinated. there's just, let's switch topics- - [jimmy] right, yeah, yeah, yeah. - quick.
+- yeah. well it's interesting 'cause i, as i say, i live in the uk and i
+think it's all these things are a little less politicized there. and i haven't paid close
+enough attention to fauci to have a really strong view. i'm sure i would disagree
+with some things. i definitely, you know, i remember hearing at the beginning of the pandemic as i'm unwrapping my amazon package with the masks i bought 'cause
+i heard there's a pandemic and i just was like, i
+want some n95 masks please. and they were saying don't buy masks. and the motivation was
+because they didn't want there to be shortages in hospitals. fine, but they were also
+statements of masks won't, they're not effective
+and they won't help you. and then the complete about face to you're ridiculous if you're
+not wearing 'em, you know. it's just like no, like that about face just lost people from day one. - the distrust in, and the
+intelligence of the public to deal with nuance, to
+deal with uncertainty. - and this is, yeah, this
+is exactly what, you know, i think this is where the
+wikipedia neutral point of view is and should be, and
+ideally, and obviously every article and everything we could, you know me now and you know
+how i am about these things, but like ideally is to say, look, we're happy to show you
+all the perspectives. this is planned parenthood's view and this is catholic church view and we're gonna explain
+that and we're gonna try to be thoughtful and put
+in the best arguments from all sides 'cause i trust you. like you read that and
+you're gonna be more educated and you're gonna begin to make a decision. i mean, i can just talk in the uk, the government, da da da da. when we found out in the uk that very high level government officials were not following the rules
+they had put on everyone else- i moved from, i had
+just become a uk citizen just a little while before
+the pandemic and you know, it's kind of emotional. like you get a passport in a new country and you feel quite good. and i did my oath to the queen and then they dragged
+the poor old lady out to tell us all to be good. and i was like, we're british and we're gonna do the
+right things and you know, it's gonna be tough but
+we're gonna, you know. so you have that kind
+of dunkirk spirit moment and you're like following the rules to a t and then suddenly it's like, well they're not following the rules. - [lex] yeah. - and so suddenly i shifted personally from i'm gonna follow the rules even if i don't completely
+agree with them. i'll still follow 'cause
+i think we've gotta all chip in together
+to like, you know what, i'm gonna make wise and
+thoughtful decisions for myself and my family. and that generally is gonna
+mean following the rules. but it's basically, you
+know, when they're, you know, at certain moments in time, like you're not allowed
+to be in an outside space unless you're exercising. i'm like, i think i can sit
+in a park and read a book. like it's gonna be fine. like that's irrational rule, which i would've been following
+just personally of like, i'm just gonna do the right thing. yeah. - and the loss of trust i think at scale was probably harmful to science. and to me, the scientific method and the scientific community
+is one of the biggest hopes, at least to me, for the
+survival and the thriving of human civilization. - absolutely and i, you
+know, i think you see some of the ramifications of this. there's always been like
+pretty anti-science, anti-vax people. okay, that's always been a thing. but i feel like it's bigger now, simply because of that lowering of trust. so a lot of people, yeah,
+maybe it's like you say, a lot of people are like, yeah, i got vaccinated but i really
+don't wanna talk about this because it's so toxic, you know? and that's unfortunate,
+'cause i think people should say what an amazing thing. and you know, there's also
+a whole range of discourse around if this were a disease that were primarily, that
+was primarily killing babies, i think people's emotions about it would've been very
+different, right or wrong, than the fact that when
+you really looked at the sort of death rate of getting covid, wow, it's really dramatically different if you're late in life, this was really dangerous
+and if you're 23 years old, yeah, well, it's not great. like, and long covid's a
+thing and all of that, but- and i think some of the
+public communications, again, were failing to properly contextualize it. not all of it, you know,
+it's a complicated matter. but yeah. - let me read you a reddit
+comment that received two likes. - [jimmy] oh. (lex laughs) two whole people liked it. - yeah, two people liked
+it and i don't know, maybe you can comment on
+whether there's truth to it, but i just found it interesting because i've been doing a lot of research on world war ii recently. so this is about hitler.
+- [jimmy] oh, okay. - here's, it's a long statement. i was there when a big push was made to fight bias at wikipedia. our target became getting
+the hitler article to be wiki's featured article. the idea was that the voting
+body only wanted articles that were good pr and especially articles about socially liberal topics. so the hitler article had to
+be two to three times better and more academically researched
+to beat the competition. this bias seems to hold today. for example, the current list
+of political featured articles at a glance seems to have only two books. one on anarchism and one on karl marx. surely we're not going to say there have only ever been two articles about political non-biography
+books worth being featured, especially compared to
+200 plus video games. and that's the only topics with good books are socialism and anarchy. do you have any interesting
+comments on this kind of- - [jimmy] oh yeah. - so featured, how the
+feature is selected, maybe hitler because he is
+a special figure, you know. - i love that, i love that. no, i love the comparison to
+how many video games we did and that definitely speaks
+to my earlier as like, if you've got a lot of young geeky men who really like video games, that doesn't necessarily get you to the right place in every respect. certainly- yeah, so here's a funny story. i woke up one morning to
+a bunch of journalists in germany trying to get in touch with me because german language wikipedia chose to have as the featured
+article of the day, swastika. and people were going crazy about it and some people were saying it's illegal. has german wikipedia been taken over by nazi sympathizers and so on? and it turned out, it's not illegal. like discussing the swastika- using the swastika as a political campaign and using it in certain
+ways is illegal in germany in a way that it wouldn't be in the us because of the first amendment. but in this case it was like, actually part of the point
+is the swastika symbol is from other cultures as well. and they just thought it was interesting. and i did joke to the community, i'm like, please don't put the
+swastika on the front page without warning me, 'cause
+i'm gonna get a lot. now, it wouldn't be me,
+it's the foundation. i don't, i'm not that
+much on the front lines. and so i would say that to put hitler on the front page of wikipedia,
+it is a special topic and you would want to say,
+yeah, let's be really careful that it's really, really
+good before we do that. because if we put it on the front page and it's got and it's not good enough, that could be a problem. there's no inherent reason. like clearly, world war ii is a very popular topic in wikipedia. it's like turn on the history channel. like people, it's a
+fascinating period of history that people are very interested in. and then on the other piece, like anarchism and karl marx? - [lex] karl marx, yeah. - oh yeah, i mean that's interesting. i'm surprised to hear that
+not more political books or topics have made it to the front page. - [lex] now we're taking
+this reddit comment- - i mean as if it's completely valid. - [lex] at it's face value. - yeah, but i'm trusting. so i think that's probably is right. they probably did have the list up. no, i think it's, i think that piece, the piece about how many
+of those featured articles have been video games and
+if it's disproportionate, i think we should, the community should go actually what's gone- like that doesn't seem quite right. you know, i mean you can imagine that because you're looking for an article to be on the front page of wikipedia, you want to have a bit of diversity in it. you want it to be not always something that's really popular that week. so like, i dunno the last couple of weeks, maybe succession, the
+big finale of succession might lead you to think, oh, let's put succession
+on the front page, that's gonna be popular. in other cases, you kind of want, pick something super obscure and quirky because people also find
+that interesting and fun. so yeah, dunno. but you don't want it to
+be games most of the time. that sounds quite bad. - well, let me ask you just as somebody who's seen the
+whole thing, the development of the millions of articles. big impossible question. what's your favorite article? - my favorite article. (laughs) well, i've got an amusing answer, which is possibly also true. there's an article in wikipedia called inherently funny words. and one of the reasons i love it is when it was created early
+in the history of wikipedia, it kind of became like a dumping ground. people would just come
+by and write in any word that they thought sounded funny. and then it was nominated for deletion 'cause somebody's like, this
+is just a dumping ground, like people are putting
+all kinds of nonsense in. and in that deletion debate, somebody came forward
+and said essentially, wait a second, hold on. this is actually a legitimate concept in the theory of humor and comedy. and a lot of famous
+comedians and humorists have written about it. and it's, you know, it's
+actually a legitimate topic. so then they went through
+and they meticulously referenced every word that was in there and threw out a bunch that weren't. and so it becomes this really interesting, and now my biggest disappointment, and it's the right decision to make because there was no source, but there was a picture of a cow, but there was a rope around its head, tying on some horns onto the cow. so it was kind of a funny looking picture. it looked like, you know, like
+a bull, you know, with horns, but it's just like a normal milk cow. and below it, the caption said, according to some, cow is
+an inherently funny word, which is just hilarious to me. partly because the, according to some, sounds a lot like wikipedia. but there was no source, so it went away. and i know i feel very sad about that, but i've always liked that. and i actually, the the
+reason depths of wikipedia amuses me so greatly is because it does like highlight really
+interesting, obscure stuff and you're like, wow, i can't believe somebody wrote about that in wikipedia. it's quite amusing. and sometimes there's a bit
+of rye humor in wikipedia. there's always a struggle. you're not trying to be funny. but occasionally a little inside humor can be quite healthy and- - apparently words with
+a letter k are funny. there's there's a lot of
+really well researched stuff on this page. (laughs) - [jimmy] yeah.
+- it's actually exciting. and i should mention
+for depths of wikipedia, it's run by annie rauwerda. - [jimmy] that's right, annie. - and let me just read
+off some of the pages. octopolis and octlantis-
+- [jimmy] oh yeah, that was- - are two separate non-human
+underwater settlements built by the gloomy octopuses
+in jervis bay, east australia. the first settlement named
+octopolis by biologists was founded in 2009. the individual structures
+in octopolis consist of burrows around a
+piece of human detritus believed to be scrap metal. and it goes on in this way. - that's great. - satiric misspelling,
+least concerned species. humans were formally assessed as a species of least concern (laughs) in 2008. i think hitchhiker's guide to the galaxy would slightly disagree. and last one, just let me
+just say friendship paradox is the phenomena first observed by the sociologist scott feld in 1991, that on average an individual's friends have more friends than that individual. - [jimmy] oh, that's-
+- that's very lonely. - isn't that, that's the kind of thing that makes you wanna- like, it sounds implausible at first 'cause shouldn't everybody have on average about the same number of
+friends as all their friends. so you really want to
+dig into the math of that and really think, oh,
+why would that be true? - and it's one way to feel more lonely in a mathematically rigorous way. - yeah. (laughs) - somebody else on reddit asks, i would love to hear some war stories from behind the scenes. is there something that
+we haven't mentioned that was particularly difficult
+in this entire journey you were on with wikipedia? - i mean, yeah, it's hard to say. i mean, so part of what
+i always say about myself is that i'm a pathological optimist, so i always think everything is fine. and so things that other
+people might find a struggle, i'm just like, oh, well this
+is the thing we're doing today. so that's kind of about
+me and it's actually, i'm aware of this about myself, so i do like to have a few
+pessimistic people around me to keep me a bit on balance. yeah, i mean, i would say
+some of the hard things, i mean there were hard moments like when two outta three
+servers crashed on christmas day and then we needed to do a fundraiser and no idea what was gonna happen. i would say as well, the, like
+in that early period of time, the growth of the website and
+the traffic to the website was phenomenally great. the growth of the community and in fact, the healthy growth
+of the community was fine. and then the wikimedia
+foundation, the nonprofit i set up to own and operate wikipedia
+as a small organization. it had a lot of growing pains. and you know, that was, it was like, that was the piece that's
+just like many companies or many organizations
+that are in a fast growth. it's like you've hired the wrong people or there's this conflict that's arisen and nobody's got experience
+to do this and all that. so no specific stories
+to tell, but you know, like i would say growing
+the organization was harder than growing the community
+and growing the website, which is interesting. - well, yeah, it's kind of
+miraculous and inspiring that a community can emerge and be stable and that that has so much kind of productive, positive output. kind of makes you think, i mean, i don't, it's one of those things you
+don't want to analyze too much. 'cause like you, you don't wanna mess with a beautiful thing, but it gives me faith in communities. - [jimmy] yeah, yeah. - that they can spring up
+in other domains as well. - yeah, i think that's exactly right. and you know, at fandom,
+my for-profit wiki company where, you know, it's
+like all these communities about pop culture mainly,
+sort of entertainment, gaming and so on. there's a lot of small communities. and so i went last year to our
+community connect conference and just met some of these
+people and like, you know, here's one of the leaders
+of the star wars wiki, which is called wookipedia,
+which i think is great. and you know, he's telling
+me about his community and all that and i'm like,
+oh right, yeah, i love this. like, so it's not the
+same purpose as wikipedia of a neutral high quality encyclopedia, but a lot of the same
+values are there of like, oh people should be nice to each other. it's like when people get upset it's like, just remember we're working
+on star wars wiki together. like there's no reason to get too outraged and just kind people, just
+like geeky people with a hobby. - where do you see wikipedia in 10 years, 100 years and 1000 years? (jimmy makes dramatic dun-dun-dun sound) - right, so 10 years. i would say pretty much the same. like we're not gonna have,
+we're not gonna become tiktok, you know, with entertainment, you know, scroll by video
+humor and blah blah blah. an encyclopedia. i think in 10 years we probably will have a lot more ai-supporting
+tools like i've talked about. and probably your search
+experience would be, you can ask a question and
+get the answer rather than, you know, from our body of work. - so search and discovery
+a little bit improved. - [jimmy] yeah, yeah.
+- the interface some of the- - all that. i always say one of
+the things that people, most people won't notice because already they don't notice it, is the growth of
+wikipedia in the languages of the developing world. so you probably don't speak swahili so you're probably not checking out that swahili wikipedia is doing very well, and it is doing very well. and i think that kind of growth
+is actually super important. it's super interesting but
+most people won't notice that. - if we can just link
+on that, if we could. do you think there's so much
+incredible translation work is being done with ai,
+with language models, do you think that can accelerate? - [jimmy] yeah, i do.
+- wikipedia? so you start with the basic
+draft of the translation of articles and then build on top of that. - yeah, so what i used to say is like machine translation for many years wasn't much use to the the community 'cause it just wasn't good enough. as it's gotten better, it's tended to be a lot
+better in what we might call economically important languages. that's because the corpus that they train on and all of that. so to translate from english to spanish, if you've tried google translate recently, spanish to english is what i would do. it's pretty good, like
+it's actually not bad. it used to be half a
+joke and then for a while it was kind of like, well you
+can get the gist of something and now it's like,
+actually it's pretty good. however, we've got a
+huge spanish community who write in native spanish
+so they're able to use it and they find it useful
+but they're writing. but if you tried to do english to zulu where there's not that much investment, like there's loads of reasons to invest in english to spanish
+cause they're both huge, economically important languages. zulu not so much, so for
+those smaller languages, it was just still terrible. my understanding is it's
+improved dramatically and also because the
+new methods of training don't necessarily involve
+identical corpuses to try to match things up, but rather reading and understanding with tokens and large language models and then reading and understanding and then you get a much richer- anyway, apparently it's quite improved. so i think that now, it is quite possible that these smaller language
+communities are gonna say, oh well finally, i can put
+something in in english and i can get out zulu that
+i feel comfortable sharing with my community because
+it's actually good enough or i can edit it a bit here and there. so i think that's huge. so i do think that's gonna happen a lot and that's gonna accelerate, again what will remain to most
+people an invisible trend. but that's the growth in
+all these other languages. so then move on to a hundred years- - [lex] that was starting to get scary. - well, the only thing i'd
+say about a hundred years is like we've built the
+wikimedia foundation and we run it in a quite cautious and financially conservative
+and careful way. so every year we build our reserves. every year we put aside a
+little bit of more money, we also have the endowment fund, which we just passed a hundred million, that's a completely separate
+fund with a separate board so that it's not just like
+a big fat bank account for some future profiting
+ceo to blow through that, you know, the foundation will have to get the approval of
+a second order board to be able to access that money. and that board can make other
+grants through the community and things like that. so the point of all that
+is i hope and believe that we are building, you know, in a financially stable way. that we can weather various
+storms along the way so that hopefully we're not
+taking the kind of risks and by the way, we're not
+taking too few risks either. that's always hard. i think the wikimedia
+foundation and wikipedia will exist in a hundred years, if anybody exists in a
+hundred years, we'll be there. - do you think the internet just looks unpredictably different? the, just the web?
+- i do, i do. i mean, i think right now, this sort of enormous
+step forward we've seen has become public in the last year of the large language models, really is something else, right? it's really interesting and you
+and i have both talked today about the flaws and the
+limitations, but still, as someone who's been around
+technology for a long time, it's sort of that feeling of, the first time i saw a web browser, the first time i saw the iphone, like the first time the internet was like really usable on a phone. and it's like, wow, that's
+a step change difference. there's a few other, you know- - maybe google search. - [jimmy] google search was actually one. - i remember the first search- - because i remember alta vista
+was kind of cool for a while and then it just got more and more useless 'cause the algorithm wasn't good and it's like, oh google search. now, like the internet works again. - [lex] yeah. and so large language model,
+it feels like that to me. like, oh wow, this is something new and like really pretty remarkable. and it's gonna have some downsides. like, you know, the negative use case. i'm, you know, people in
+the area who are experts, they're giving a lot of warnings
+and i don't know enough to, i'm not that worried, but
+i'm a pathological optimist. but i do see some like
+really low hanging fruit, bad things that can happen. so my example is how about some highly customized spam where the email that you receive isn't just like misspelled words and like trying to get through filters, but actually is a targeted email to you that knows something about you by reading your linkedin profile and writes a plausible email that will get through the filters. and it's like suddenly oh,
+hmm, that's a new problem. that's gonna be interesting. - is there a, just on the
+wikipedia editing side, does it make the job of the volunteer of the editor more difficult if, in a world where larger
+and larger percentage of the internet is written by an llm? - so one of my predictions,
+and we'll see, you know, ask me again in five years how this panned out, is that in a way, this will strengthen the value and importance
+of some traditional brands. so if i see a news story and it's from the wall street journal, from the new york times, from fox news, i know what i'm getting and i trust it to whatever
+extent i might have, you know, trust or
+distrust in any of those. and if i see a brand new
+website that looks plausible but i've never heard of it and it could be machine generated content that may be full of errors, i think i'll be more cautious. i think i'm more interested. and we can also talk about this around photographic evidence. so obviously there will be scandals where major media organizations
+get fooled by a fake photo. however, if i see a photo of, the recent was the pope wearing
+an expensive puffer jacket, i'm gonna go, yeah, that's amazing that a fake like that could be generated. but my immediate thought is not, oh, so the pope's dipping
+into the money, eh? partly 'cause this particular pope doesn't seem like he'd be the type. - my favorite is extensive pictures of joe biden and donald trump hanging out and having fun together. - yeah. (laughs) brilliant. so i think people will care about the provenance of a photo
+and if you show me a photo and you say, yeah, this
+photo is from fox news, even though i don't necessarily
+think that's the highest, but i'm like, well it's
+a news organization and they're gonna have journalists and they're gonna make sure the photo is what it's purports to be. that's very different from a photo randomly circulating on twitter. whereas i would say 15 years ago, a photo randomly circulating on twitter, in most cases the worst you could do, and this did happen, is
+misrepresent the battlefield. so like, oh, here's a
+bunch of injured children, look what israel's done. but actually it wasn't israel, it was another case 10 years ago. that has happened, that
+has always been around, but now we can have much more
+specifically constructed, plausible looking photos
+that if i just see them circulating on twitter, i'm gonna go, hmm, just don't know, not sure. like i can make that in five minutes, so- - well i also hope that it's kind of like what you're writing about in your book, that we could also have
+citizen journalists that have a stable, verifiable
+trust that builds up. so it doesn't have to be new york times for this organization, that you could be an organization of one
+as long as it's stable and carries through time and
+it builds up or builds out. - no, no, i agree. but the one thing i've said
+in the past, and this depends on who that person is
+and what they're doing, but it's like, i think my credibility, my general credibility in
+the world should be the equal of a new york times reporter. - [lex] yeah. - so if something happens and i witness it and i write about it, people are gonna go,
+well jimmy wales said it. that's just like if a new
+york times reporter said it. like, i'm gonna tend to think
+he didn't just make it up. truth is, nothing interesting
+ever happens around me. i don't go to war zones, i don't go to big press conferences, i don't interview putin
+and zelenskyy, right? so to an extent, yes. whereas i do think for other people, those traditional models of credibility are really, really important. and then there is this
+sort of citizen journalism. i don't know if you think of
+what you do as journalism. i kind of think it is,
+but you do interviews, you do long form interviews
+and i think people, you know, like if you come and you
+say, right, here's my tape, but you wouldn't hand out a tape. like i just gestured to you as if i'm handing you a cassette tape. if you put it into your podcast, here's my interview with zelenskyy. and people aren't gonna go, yeah. how do we know, that could be a deep fake. like you could have faked that. 'cause people are like, well no, like you're a well known podcaster and you do interview
+interesting people and yeah, like you wouldn't think that. so that your brand
+becomes really important. whereas if suddenly, and
+i've seen this already, i've seen sort of video
+with subtitles in english and apparently the ukrainian was the same and has zelenskyy saying
+something really outrageous and i'm like, yeah, don't believe that. like i don't think he
+said that in a meeting with, you know, whatever. i think that's russian propaganda
+or probably just trolls. - yeah, and then building
+platforms and mechanisms of how that trust can be verified. whether, you know, if something appears on a wikipedia page that means something. if something appears on,
+like say my twitter account, that means something.
+- [jimmy] yeah, yeah. - that means i, this particular human, have signed off on it.
+- [jimmy] yeah, exactly. - and then, the trust you have in this particular human
+transfers to the piece of content. and then each, hopefully
+there's millions of people with different metrics of trust. - yeah. - and then you could see that
+there's a certain kind of bias in the set of conversations you're having. so maybe, okay, i trust this person to have this kind of bias and
+i'll go to this other person, have this other kind of bias
+and i can integrate them in this kind of way, just like you said with fox news and whatever (indistinct). - yeah, washington
+journal, new york times. like they've all got
+their, like where they sit. yeah. - so you have built, i would say, one of, if not
+the most impactful website in the history of human civilization. so let me ask for you to give advice to young people how to
+have impact in this world. high schoolers, college students- - [jimmy] yeah, no. - wanting to have a big
+positive impact on the world. - yeah, right. if you wanna be successful, do something you're
+really passionate about rather than some kind of cold calculation of what can make you the most money. 'cause if you go and try to
+do something and you're like, i'm not that interested, but i'm gonna make a
+lot of money doing it, you're probably not
+gonna be that good at it. and so that is a big piece of it. i also like, you know, so for startups, i give this advice so young- and this is a career startup. any kind of like young
+person just starting out, is like, you know, be persistent, right? there'll be moments when
+it's not working out and you can't just give up too easily. you've gotta persist
+through some hard times. maybe two servers crash on a sunday and you've gotta sort of
+scramble to figure it out. but persist through that. and then also be prepared to pivot. that's a newer word, new for me. but when i pivoted from
+nupedia to wikipedia, it's like, this isn't working. i've gotta completely change. so be willing to
+completely change direction when something's not working. now the problem with these
+two wonderful pieces of advice is which situation am i in today, right? is this a moment when i need to just power through and persist
+because i'm gonna find a way to make this work? or is this a moment where i need to go, actually this is totally not working and i need to change direction. but also i think for me, that
+always gives me a framework of like, okay, let's,
+okay, here's a problem. do we need to change
+direction or do we need to kind of power through it? and just knowing like
+those are the choices and they're not always the only choices, but those are choices. i think can be helpful to say, okay, am i chickening out? like 'cause i'm having a little bump and i'm feeling an emotion and i'm just gonna give up too soon, okay? yeah, ask yourself that question. and also it's like, am i being pigheaded and trying to do something that
+actually doesn't make sense? okay, ask yourself that question, too. even though they're
+contradictory questions, sometimes it'll be one,
+sometimes it'll be the other and you gotta really think it through. - i think persisting
+with the business model behind wikipedia is
+such an inspiring story because we live in a capitalist world. we live in a scary world, i
+think, for an internet business. and so-
+- [jimmy] yeah. - and so like to do things differently than a lot of websites are doing. like what wikipedia has lived through, the successive explosion of many websites that are basically ad-driven. google is ad-driven, facebook, twitter, all of these websites are ad-driven. and to see them succeed, become these like incredibly rich, powerful companies that if i could just have that money, you would think as
+somebody running wikipedia, i could do so much positive stuff, right? and so to persist through that is- i think is from my perspective now, monday night quarterback or whatever, is it, was it the right decision. but boy is that a tough decision. - [jimmy] hmm, it seemed
+easy at the time, so yeah. - and then you just kind of
+stay with it, stick with it. - [jimmy] yeah, just stay
+with it, it's working. - so on that one you chose persistent. - yeah, well, yeah. i mean i always like to
+give an example of myspace 'cause i just think it's an amusing story. so myspace was poised, i would
+say, to be facebook, right? it was huge, it was viral,
+it was lots of things. kind of foreshadowed a
+bit of maybe even tiktok because it was like a lot of
+entertainment content, casual. and then rupert murdoch bought it and it collapsed within a few years. and part of that i think was because they were really,
+really heavy on ads and less heavy on the customer experience. so i remember to accept a friend request was like three clicks
+where you saw three ads and on facebook you
+accept the friend request, you didn't even leave the page. it just like, that just accepted. but what is interesting, so i used to give this
+example of like, yeah, well, rupert murdoch
+really screwed that one up. and in a sense, maybe he
+did, but somebody said, you know what actually he bought it for, and i don't remember the numbers. he bought it for 800 million
+and it was very profitable through its decline. and he actually made
+his money back and more. so it wasn't like, from a
+financial point of view, it was a bad investment in the sense of you could have been facebook, but on sort of more
+mundane metrics, it's like, hmm, actually it worked out okay for him. - [lex] it all matters
+how you define success. - it does. and that is also advice to young people. one of the things i would say, like when we have our
+mental models of success as an entrepreneur, for example, and your examples in your mind are bill gates, mark zuckerberg. so people who at a very young
+age had one really great idea that just went straight to the moon and became one of the
+richest people in the world. that is really unusual. like really, really rare. and for most entrepreneurs, that is not the life
+path you're gonna take. you're gonna fail, you're gonna reboot, you're gonna learn from
+what you failed at, you're gonna try something different. and that is really important because if your standard of success is, well, i feel sad because i'm
+not as rich as elon musk. it's like, well, so
+should almost everyone, possibly everyone except elon musk is not as rich as elon musk. and so that, you know, like realistically, you can set a standard of success even in a really narrow sense, which i don't recommend, of thinking about your financial success. it's like if you measure
+your financial success by thinking about billionaires,
+like that's heavy. like, that's probably not good. i don't recommend it. whereas like i personally, you know, like for me when people,
+when journalists say, oh, how does it feel to
+not be a billionaire? i usually say, i don't know,
+how does it feel to you? (lex laughs) 'cause they're not. but also i'm like, i live in london, the number of bankers that
+no one's ever heard of who live in london,
+who make far more money than i ever will is quite a large number. and i wouldn't trade my life
+for theirs at all, right? 'cause mine is so interesting, like, oh right, jimmy, we need you to go and meet the chinese propaganda minister. - [lex] yeah.
+- oh, okay. that's super interesting. like, yeah jimmy, you know,
+like here's the situation. like you can go to this
+country and while you're there, the president has asked to see you. it's like, god, that's super interesting. jimmy, you're going to this place and there's a local wikipedian who said, do you wanna stay with me and my family? and i'm like, yeah. like that's really cool. like, i would like to do that. that's really interesting. i don't do that all the time, but i've done it and it's great. so like for me, that's
+like, arranging your life so that you have interesting
+experiences is just great. - well, this is more to the question of what wikipedia looks
+like in a thousand years. what do you think is the
+meaning of this whole thing? why are we here, human civilization? what's the meaning of life? - yeah, i don't think
+there is a external answer to that question. - and i should mention
+that there's a very good wikipedia page on the
+different philosophies of the meaning of life. - oh, interesting. i have to read that and see what i think. hopefully it's neutral
+and gives a wide range- - oh, it's a really
+good reference to a lot of different philosophies about meaning. the 20th century philosophy in general from from nietzche to the existentialist to all simone de beauvoir, all of them have an idea of meaning. they really struggled
+systematically, rigorously. and that's what the page- and obviously a shout out to the hitchhiker's guide
+and all that kind of stuff. - yeah, yeah, yeah. no, so i think there's no
+external answer to that. i think it's internal. i think we decide what meaning
+we will have in our lives and what we're gonna do with ourselves. and so when i think, you know, if we're talking about thousand
+years, millions of years, yuri milner wrote a book, he's
+a big internet investor guy. he wrote a book advocating quite strongly for humans exploring the universe and getting off the planet. and he funds projects to
+like send, like using lasers to send little cameras
+and interesting stuff. and he talks a lot in
+the book about meaning. it's like his view is that the
+purpose of the human species is to broadly survive
+and get off the planet. well, i don't agree with
+everything he has to say 'cause i think that's not a meaning that can motivate most
+people in their own lives. it's like, okay, great. you know, like the distances of space are absolutely enormous. so i don't know, what, should
+we build generation ships to start flying places? well, i can't do that and
+i'm not, even if i could, even if i'm elon musk and i
+could devote all my wealth to building, i'll be dead
+on the ship on the way. so is that really meaning? but i think it's really
+interesting to think about and reading his little book,
+it's quite a short little book, reading his book, it made me, it did make me think about,
+wow, like this is big. like this is not what you think about in your day-to-day life, is like, where is the human species
+going to be in 10 million years? and it does make you sort of
+turn back to earth and say, gee, let's not destroy the planet. like we kind of, we're stuck here for at least a while. and therefore we should really
+think about sustainability. and i mean, 1 million
+years sustainability. and we don't have all the answers, we have nothing close to the answers. i'm actually excited
+about ai in this regard while also bracketing. yeah, i understand there's also risks and people are terrified of ai. but i actually think it
+is quite interesting, this moment in time that we
+may have in the next 50 years, to really, really solve some really long-term human problems. for example, in health,
+i think the progress that's being made in cancer treatment because we are able to at scale, you know, model molecules and genetics
+and things like this. it gets huge, it's really
+exciting, you know. so if, you know, if we can
+hang on for a little while and, you know, certain problems that seem completely intractable
+today like climate change may end up being actually not that hard. - and we might, just
+might be able to alleviate the full diversity of human suffering. - [jimmy] for sure, yeah. - and in so doing, help
+increase the chance that we can propagate the
+flame of human consciousness out into the, towards the stars. and i think another important
+one if we fail to do that, for me is propagating and maintaining the full diversity and
+richness and complexity and expansiveness of human knowledge. so if we destroy ourselves, it would, it would make me feel a little bit okay. - [jimmy] yeah, you've just- - if the human knowledge just- - just triggered me to say
+something really interesting, which is when we talked
+earlier about translating and using machines to translate, we mostly talked about small languages and translating into english, but i always like to tell this story of
+something inconsequential really. but there's, i was in
+norway, in bergen, norway, where every year they've
+got this annual festival called buekorps which is
+young groups drumming, and they have a drumming competition. it's the 17th sectors of the city, and they've been doing it
+for a couple hundred years or whatever. they wrote about it in the
+three languages of norway. and then from there, it was
+translated into english, into german, et cetera, et cetera. and so what i love about that story is, what it reminds me is like
+this machine translation goes both ways. and like, when you talk about the richness and broadness of human culture, we're already seeing some
+really great pieces of this. so like korean soap
+operas, really popular. not with me, but with people. and the ability to, you know, imagine taking a very
+famous, very popular, very well known korean drama. and now, i mean, and i literally mean now, we're just about there technologically where we use a machine
+to re-dub it in english in an automated way, including
+digitally editing the faces so it doesn't look dubbed. and so suddenly you say, oh wow. like here's a piece of, you know, it's the korean equivalent of, maybe it's friends as a comedy or maybe it's succession,
+just to be very contemporary. it's something that really
+impacted a lot of people and they really loved it. and we have literally
+no idea what it's about. - [lex] yeah. - and suddenly it's like,
+wow, you know, like music, street music from wherever in the world, it can suddenly become
+accessible to us all in new ways. it's so cool. - it's really exciting to
+get access to the richness of culture in china, in the many different subcultures of africa, south america. - one of my unsuccessful arguments with the chinese government is
+by blocking wikipedia, right? you aren't just stopping people in china from reading chinese wikipedia and other language versions of wikipedia. you're also preventing the chinese people from telling their story. so is there a small festival
+in a small town in china, like buekorps? i don't know. but by the way, the people
+who live in that village, that small town of 50,000, they can't put that in wikipedia and get it translated into other places. they can't share their
+culture and their knowledge. and i think for china, this should be a somewhat influential argument because china does feel
+misunderstood in the world. and it's like, okay, well there's one way if you want to help people understand, put it in wikipedia. that's what people go to
+when they wanna understand. - and give the amazing, incredible people of china a voice. - [jimmy] exactly. - jimmy, i thank you so much. i'm such a huge fan of
+everything you've done. - [jimmy] oh, thank you for
+saying that, it's really great. i'm deeply, deeply, deeply,
+deeply grateful for wikipedia. i love it, it brings me joy. i donate all the time. you should donate, too. it's a huge honor to finally talk with you and this is just amazing. thank you so much for today. - thanks for having me. - thanks for listening to this conversation with jimmy wales. to support this podcast, please check out our sponsors in the description. and now, let me leave you with some words from the world historian daniel boorstin. the greatest enemy of
+knowledge is not ignorance, it is the illusion of knowledge. thank you for listening and
+hope to see you next time.

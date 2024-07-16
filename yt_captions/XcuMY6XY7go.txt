@@ -1,0 +1,61 @@
+It’s Friday afternoon, and you just sent
+your last email of the day. Your eyes move around the room and you slowly
+exhale, leaning back just one… tiny… inch and [crash]. It’s happened to all of us, and there’s
+a simple explanation to why something so clumsy can sneak up on you. I’m Grady, and this is Practical Engineering. On today’s episode, we’re talking about
+static stability, or the study of objects at rest, and how far is too far to lean back
+in your chair. One thing I love about engineering is that
+it gives us the tools to communicate concepts that we already know through intuition. It’s second nature to us that pushing on
+this block will cause it to fall down, or that tall, narrow objects aren’t very stable. Even cats can grasp this. Statics allows us to take our intuitions one
+step further and answer specific questions like how hard can I push this before it falls
+down, or how narrow can this be before it’s unbalanced. Engineers use the same methods to answer questions
+like how many trucks can this bridge support, and how heavy does a dam need to be to resist
+the pressure of all that water? It all starts with Newton’s Second Law,
+which says that a net force on an object will cause it to accelerate. Well, we don’t want our roads, bridges,
+dams, and buildings to accelerate. In fact, the job description of a structural
+engineer is essentially just to make sure that acceleration doesn’t occur. So to keep things static, we need we need
+to balance our forces. Here’s a simple example of how this works. Imagine an object is floating in space…
+any object will do. How about a classic square? Applying a force to this object would cause
+it to accelerate. If you’re an aerospace engineer, your job
+is finished here, but in civil engineering terms, acceleration is bad news. So, we can add another force to make the net
+force acting on the object zero. We’ve achieved static equilibrium, which
+means we keep our job for another day. Stay with me because now it gets fun. What if I take the two forces on this object
+and adjust them so they are not inline with one another. The sum of the two forces is still zero, but
+you intuitively know that this object is not going to be static. It’s going to spin. A rotational force is known as a moment or
+torque. Here’s another intuition you already have:
+torque is the product of the force and its distance from the center of rotation. So a small force with a long lever arm is
+equivalent to a large force with a small lever arm. Static equilibrium requires not only that
+net forces be zero, but also that the moments be zero as well. And that’s really all there is to it. For an object to be at rest, you simply have
+to satisfy these two conditions. Static analysis involves adding up all of
+the forces and moments on an object and making sure they sum to zero. So, let’s take our newfound knowledge and
+apply it to a situation we’ve all been in. But first we need a chair. We all lean back in our chairs. To recline is human, I think, and leaning
+back satisfies not just our need to relax, but sometimes a way to combat boredom. But occasionally the lean is mean, and chances
+are at least once or twice you’ve pushed the limits a little too far and fallen right
+over backwards. How can we be so clumsy? It turns out that leaning back in your chair
+has a very subtle point of no return, and we can see how it works through static analysis. For our purposes, we can assume however hard
+your body pushes down on the ground, the ground pushes up to match it. So, the forces in this system are always balanced. But let’s look at the moments. Your point of rotation is the back legs of
+the chair, and gravity pulling on your body is generating a moment about this point of
+rotation. A human’s center of gravity while sitting
+is somewhere in front of their belly button. With no other forces in the system, you can
+see that your weight would generate a moment that would rotate your forward. But, when we lean back in our chairs, we use
+our feet for support. Your feet and legs create an equal but opposite
+moment about the point of rotation to keep you static. One of the first things you learn in statics
+is that you can’t push a rope. In other words, a rope can act in tension,
+but it’s pretty useless in compression. In exactly the same way, your feet can push
+on the ground, but unless you have been bitten by a radioactive spider (or recently stepped
+in chewing gum), they can’t pull on the floor beneath you. Watch what happens in our diagram as you continue
+to lean back further and further. As soon as your center of gravity passes over
+the point of rotation, the moment that it creates reverses. But, unlike before, there is no way to use
+your feet to counteract this rotation because they can’t pull on the ground. All of the sudden, our moments aren’t balanced. You can kick your legs forward to try and
+move your center of gravity. You can wave your arms to try and counter-rotate
+using conservation of angular momentum. You can even try whatever Beyonce used at
+the Grammy’s this year. But more than likely, if you’ve made it
+this far, there’s no going back. Well, actually there’s only going back. You’re going to fall. It might seem silly, but this is the exact
+same type of analysis engineers use every day to design anything that’s meant not
+to move. A perfect example is a crane. Lifting heavy objects and moving them about
+is just like leaning back in a chair because they both have the same effect of shifting
+the system’s center of gravity. Some cranes even have sensors to monitor to
+the pressure on the outriggers and make sure that center of gravity never gets on the wrong
+side of the point of rotation. Statics is a fundamental skill that is broadly
+applicable not only to engineers, but anyone who has anything that needs to stay put (even
+if it's just their own butt). Thank you for watching, and let me know what
+you think.

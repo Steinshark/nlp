@@ -1,0 +1,189 @@
+in the beginning was the code, and 
+the code was with the computer. but the code stayed with the computer. and if 
+we changed the computer like for an upgrade or   something then we had to rewrite all the code. 
+and everyone agreed that this was wasteful. what we needed was a platform on which we can   develop software. capable of 
+handling different hardware. but also not too expensive. perhaps 
+collectively managed and developed by   a team of volunteers around the world? 
+i wonder if such a thing is possible. the creation and emergence of the operating 
+system unix was one of those special moments   in technology history. in this video, 
+the rise and fragmentation of unix. ## beginnings in 1965, a few scientists at bell labs joined 
+with peers from mit and general electric on a   project called "multiplexed information 
+and computing service", or multics. the idea was to create this general-purpose 
+utility for sharing time on a computer system.   computers were super expensive, 
+so time-sharing operating systems   were developed for multiple users to 
+efficiently share computer resources. over time these time-sharing systems 
+matured into a communications tool   connecting multiple users on the time share, 
+with user public profiles and everything. general electric then had a business selling 
+time shares for their computer systems - and   offered the multics team the use of a ge 645 
+mainframe computer. simulated with a 635 computer. multics experimented with some 
+interesting concepts. for instance,   the idea of having arbitrary file names and 
+directory structures - a virtual memory system. virtual memory is where secondary 
+storage like from a hard drive can   be used like as if it were part of 
+the main memory - the ram. with this,   the computer can handle more data than its ram 
+would otherwise physically allow it to handle. it was a massive improvement over existing file 
+systems of the day and is still used today. the   multics team tried to bring together ideas 
+like these - which previously were floating   around but not implemented - 
+into a single commercial product. ## the end of multics looking back at it, they were 
+probably trying to boil the ocean. progress turned into a slog - too much 
+money spent on too few people following   too vague of a plan. frustrated 
+with the absence of a workable   product, bell labs formally pulled 
+out of the multics project in 1969. soon thereafter ge later decided 
+to exit the computer industry   entirely - selling the division to honeywell. despite this, a few scientists at the bell labs 
+computing science research center - ken thompson,   dennis ritchie, rudd canaday, doug mcilroy, and 
+j.f. ossanna - continued working on the project. however, the end of multics did 
+mean losing the ge 635 computer   that they had been working with 
+up until then. ken thompson had   written up this little space game for 
+that computer called "space travel". space travel was an ambitious game that simulated 
+the movement of the planets in the solar system   and pluto. the player can guide a ship through 
+them and try to land on the planets ... and pluto. a nice and mildly addicting game, but it 
+cost $50-75 to play each time - per the cost   of the computer timeshare. so when thompson 
+found a graphics-capable pdp-7 minicomputer   that another department wasn't using, he 
+decided in 1969 to rewrite the game for it. this turned out to be an ambitious project - 
+more so since thompson had to re-implement from   scratch things like a debugging subsystem 
+and a floating point arithmetic package. the work took some time and had been 
+quite tedious - with the ge computer   os outputting paper tapes that 
+had to be carried to the pdp-7. ## a file system after finishing that, thompson thought 
+to then try implementing some ideas   that he had been banding around 
+with dennis ritchie and canaday. they had been talking about a new type of file 
+system for the ge 635 computer - sketching   ideas for keeping files out of each other's 
+hair. now quite familiar with the pdp-7,   he hacked out an implementation of 
+this file system in a day or two. from there, thompson and others added 
+a series of simple utilities - copying,   printing, deleting, and editing 
+files. as well as a simple command   interpreter - a shell - which was 
+a program that ran other programs. over time, the concept of the "file" 
+coalesced. a file was an interface   through which you can perform certain 
+data operations like reading or writing.   but the file system itself doesn't 
+care what was actually in the file. in doing so, the concept abstracted away the 
+differences between various computer hardwares.   now anyone on any device can make changes to a 
+file - and this became one of unix's killer apps. in the summer of 1969, ken thompson's wife 
+took their newborn son to see her parents,   leaving thompson with a lot of time. by the end of that summer, the whole thing 
+had been rewritten into something separate   from the original gecos operating 
+system this whole journey started on. they wouldn't have called it an 
+operating system back then. back   then it was just seen as this convenient 
+platform for developing software on. some time next year 1970, team member brian 
+kernighan suggested a new name for this system   - "unics" - as a "treacherous pun" on multics. 
+at some point, the spelling switched to "unix". ## the usefulness of unix unix on the pdp-7 offered a decent 
+environment on which you can do programming. but the pdp-7 was an outdated minicomputer - first   introduced back in 1964. not to 
+mention, it wasn't even theirs. so in 1970 they asked the 
+company for a dec pdp-11,   which had then been recently introduced. now, 
+thompson, ritchie and the team have long been   asking for money for a new computer but 
+those requests were always rejected. this time, however, the request was 
+granted. in part because the pdp-11   was a cheaper computer at just $65,000. and 
+also in part the request now had a compelling   pitch attached to it - to apply the file system 
+for the use of creating and editing text files. now with an actual use case, the 
+request was eventually approved.   unix was rewritten for the pdp-11's 
+low level assembly language, now with   a text editor and a typesetting 
+markup language called "roff". with this, the unix operating system was offered 
+to the bell labs patent department. the patent   department chose to use unix over the 
+competing commercial product because   thompson and ritchie quickly endowed "roff" 
+with the ability to do line-numbered pages. what began with just three typists in the patent 
+department became a popular homegrown product   across the whole bell labs organization with 
+multiple versions and its own support group. ## unix spreads unix had only ever been intended 
+as an internal tool for bell labs. however, it quickly escaped the laboratory 
+and started spreading widely throughout   the computing communities. its unexpected 
+popularity can be attributed to a few things. first, unix was born on relatively 
+humble hardware. back then,   the users of the hardware were 
+not the same as those buying it.   programmers of the day had to make do 
+with whatever the budget could afford. a standard unix computer back then 
+- usually a pdp-11/40 - cost about   $50-150,000 in 1977 dollars depending 
+on the memory configuration. considering   a graduate student cost about 
+$10,000 back then it was a lot,   but far cheaper than mainframes which might 
+have cost a half million dollars at the minimum. second, the unix source code 
+was written in an attractive,   higher-level programming language called 
+"c" - the first such os like this. dennis ritchie had produced "c" from "b". 
+ken thompson created "b" when he ported   the basic combined programming language 
+or bcpl by martin richards at mit. it   was far easier to program in c than in 
+low-level machine assembly language. because it was written in c, unix was easy 
+to port to different hardware architectures   outside of the pdp minicomputer family. c 
+also made unix easier to modify and enhance. third and most importantly, unix did not cost an   arm and a leg to acquire. at&t and 
+bell labs sold the unix source code   to nonprofits like universities for 
+something like a few hundred dollars. this was in contrast to other software companies,   which zealously guarded their programs' 
+source code. and even if users were able   to see the code, they were not allowed 
+to modify it. not the case with unix. ## the at&t consent decree this behavior wasn't exactly out of 
+bell labs' and at&t's good heart. back in 1956, at&t settled an anti-trust lawsuit   by the us government - the 
+1956 at&t consent decree. the settlement decreed that in exchange for 
+a legal monopoly on the us telephone system,   at&t would make available all of its 
+inventions to the academic community   at no charge, or license them 
+for fair and reasonable terms. the consent decree also barred at&t from 
+entering the computer business - so a   computer operating system like unix 
+was not commercially useful for them. funny enough, the consent decree had already 
+facilitated the spread of one ground-breaking   electronics invention a few decades earlier - the 
+transistor. and now it has done it for another. whichever university asked for the unix 
+source code from at&t had it ... or more like   had it thrown at them from out the window 
+of a passing truck. wary of violating the   decree, at&t managers shied away from 
+providing support to their licensees. again, another piece of fortune because 
+it encouraged university students with   more cleverness and time than money to work 
+together implementing the features they wanted. by the early 1970s, unix had gone worldwide. 
+university computers in australia,   the united kingdom, belgium, and 
+the netherlands were running it. ## berkeley unix in november 1973, ken thompson and 
+dennis ritchie presented the first   unix paper at the symposium on operating 
+systems principles at purdue university. uc berkeley professor bob fabry was at 
+the talk and obtained a copy. since unix   then only ran on pdp minicomputers, several 
+departments pooled their resources to get one. a few graduates and professors started 
+working with it. and ken thompson himself   joined berkeley as a visiting professor in 
+1975 to help. he helped the team install   the latest unix version - version 6 - on 
+a newly acquired pdp 11/70 minicomputer. two students in particular became quite 
+familiar with this unix - chuck haley   and bill joy. they worked on finishing a 
+pascal implementation that thompson started,   which would allow unix to support 
+this higher level language. it turned out quite well, widely admired 
+because of its excellent error handling.   the pascal implementation thompson had apparently   did not turn out error messages that 
+were all that easy to understand. haley and joy also added a few utilities 
+including a very capable wysiwyg text editor   called "ex" for "extended". ex later became 
+"vim", a text editor that some people like. word got around thanks to how well the pascal 
+compiler recovered from errors and how fast   it compiled. people started requesting their 
+own copies of the berkeley variant of unix. so early in 1977, bill joy put together 
+30 copies of what he called the "berkeley   software distribution" or bsd and sent them 
+out for about $50 per tape. from there it   got quite popular, which made good money 
+for joy since a tape cost like $10 each. a second version, "second berkeley software 
+distribution" or 2bsd, quickly followed. then in 1978, dec introduced a new 
+computer called the vax-11/780,   a 32-bit computer with more memory and 
+compute power. at&t released a version   of their own unix/32v for it, but it did not 
+support the vax's virtual memory capabilities.   this limited processing to the computer's 
+physical memory, diminishing its power. in a game-changing move, bill joy and 
+the turkish grad student ozalp babaoglu   added that virtual memory feature and 
+shipped it in december 1979 as 3bsd. with this, berkeley solidified its position as the   coordinating gateway for new, 
+leading edge unix releases. ## darpa & the internet
+bsd then took another big leap thanks to darpa. up until then, darpa ran on a legacy mishmash 
+of software written in different languages for   different computers. in 1979, darpa 
+sought to consolidate to a single   "universal computing environment" so they can 
+share their software across the organization. they chose unix to be that computing 
+environment because of how it capably   handled different hardware. in 1980, 
+fabry received an'-month contract   from darpa to add some features 
+to the 3bsd release of unix. so he along with bill joy set up a new 
+organization called the computer systems   research group or csrg for this. they had 
+a small group of core programmers - the   "steering committee" - coordinating a 
+global network of volunteer contributors,   working on the 4bsd or bsd unix series. this new unix had to support several 
+of darpa's protocols including those   for the internet. for instance, 4.2bsd 
+fully supported the internet protocol   stack tcp/ip and played a significant role in 
+popularizing the internet as we know it today. 4.2 was very popular. over a thousand 
+licenses were issued just a month after   its official release in april 1983 - 
+more than all of the other previous   distributions combined. momentum was accelerating. ## from hobby to industry prior to that release though 
+- in the summer of 1982 - bill joy announced that he would leave the csrg 
+to join sun microsystems as a full-cofounder. his work at bsd was earning him 
+tens of thousands of dollars,   but he felt the academic university 
+atmosphere at berkeley constrained   efforts to grow. in his own words, "it 
+needed to be a commercial activity". sun microsystems is famous for 
+pioneering and popularizing the   workstation computer which included - unix 
+os with scientific/engineering applications,   the motorola 68000 microprocessor, 
+and other off-the-shelf hardware. they later developed their own closed-source 
+unix variant for their hardware - sunos,   branched off from the 4.2bsd version of unix. a single sun workstation by itself could not match 
+up with a mainframe or even a minicomputer. but   these things were meant to be networked, and 
+in doing so became immensely valuable. sun in   turn reaped the benefits to become one of the 
+fastest growing companies in silicon valley. sun quickly rose above, but they were far from the 
+only company to commercialize unix. for instance,   we have the small, berkeley-based 
+software company mt. xinu. they   sold a commercially licensed version of 
+the bsd for the dec vax minicomputer. the interesting name fits well with its 
+slogan, "we know unix(tm) backwards and   forwards". they handed out some pretty 
+fun posters and calendars at events. other notable unix-based startups 
+include santa cruz operation,   which sold unix variants for 
+x86 computers. and onyx systems,   which marketed a variant of unix 
+for zilog-based personal computers. even microsoft got into the fun with their unix 
+variant for 16-bit microcomputers called xenix. and of course, we have steve jobs' workstation 
+computer startup - next. founded in 1985,   their operating system nextstep was derived 
+from bsd, 4.3bsd tahoe if i recall correctly. ## conclusion unix pioneered these powerful concepts that helped 
+make software the powerhouse industry it is today. its early development and foundations came 
+about through the efforts of people just   interested in it, not really making money from it. but bill joy clearly said the quiet part out 
+loud. as the community grew and its potential   became more apparent, the work surrounding 
+unix needed to be a commercial activity. 1983 marks the end of unix's awkward growth years.   a bounty of wealth laid seemingly 
+ahead for the unix industry - but   who will reap its gains? the stage is set 
+for the blood and fury of the unix wars.

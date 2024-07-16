@@ -1,0 +1,219 @@
+A database stores data, but 
+that is not its main purpose. A cardboard box can also store 
+data - photos, cards, human organs,   what have you. But we would not call this 
+box a database. It is just a data store. But what if we marked and collated the photos and   cards in such a way that lets us 
+summarize them and draw insights? Now, that sounds a bit more like 
+a database. A database helps you   discover and derive new knowledge that 
+did not exist before you ran the query. The most popular database query language is SQL. 
+Today, it and the relational model databases it   works with are very popular. I learned it myself 
+a while ago. You ever wonder where it came from? I did too. In this video, we look at the 
+early history of the database software   industry and the incredible work and 
+debates that led to the creation of SQL. ## Beginnings The first real database software 
+emerged in the early 1960s. The Integrated Data Store or IDS was 
+created by Charles Bachman and Homer   Carney of General Electric. Bachman had 
+been hired from Dow Chemical to work on   a transaction-oriented processing system 
+for GE's Low Voltage Switchgear Department. They wanted something that can process 
+all the transactions coming in day and   night - new orders, new factory feedback, queries. So Bachman put together a series of 
+things that had appeared in previous   research papers. These would be seen 
+as critical pieces of modern databases: A data model that mapped how users will 
+see or interact with the data to how that   data was actually being physically 
+stored within the computer hardware. A data description language that defined 
+the database's structure. So kind of like   a blueprint of how data in the database 
+should be stored and related to each   other. With the constraints defined in case 
+someone tries to insert something wrong. A data manipulation language that allowed users   to manipulate the data. The key actions 
+were STORE, RETRIEVE, MODIFY, and DELETE. Bachman finished the first version of IDS in 
+1961-1962. It was adopted internally in 1963,   and then later distributed free of charge 
+to customers of the GE 200 computer. Remember, this was before IBM 
+unbundled software and hardware,   so few people paid for software back then. The GE-series computers kept on using the IDS 
+even after GE sold their computer division to   Honeywell, and then Bull. Bull computers 
+are still used in the Norway banking   industry. So as of 2009, there are courses 
+teaching Bull IDS/II, an upgraded version. ## IDMS There were a few other major 
+database softwares back in the 1960s. BF Goodrich - yeah, the tire company - 
+their computer division later rewrote the   IMS software to create the Integrated 
+Database Management System or IDMS. Cincom Systems' TOTAL database product was also   quite prominent in the day. Founded 
+back in 1968, the company seems to   be still around today - one of the bigger 
+independent software companies out there. Its founder Tom Nies is the longest 
+actively serving computer industry   CEO. Which is pretty remarkable. Over 55 years! Anyway, the IMS, IDMS and - and I think 
+the TOTAL database too - practiced what   is called the "network model" 
+or "CODASYL model" of databases. In this model, each data record 
+is represented as a node within   space and can have multiple parents and children. Over time, you get a network 
+- which offers a great deal   of flexibility. That has upsides and downsides. In order to get the record you want out of 
+this network, then you needed to write a query   that entered the database at a certain 
+point and "navigate" to the right one. So if you wanted to find a blue-tagged deer 
+in Nara park, then the query would first say   something like "FIND Park in Nara". You 
+then get a set of records of deer in the   park. Now you iterate through them one by one, 
+checking the deer tag records for a blue tag. In 1973, Bachman received the ACM 
+Turing Award - considered by me   to be the Nobel of computing - for 
+"his outstanding contributions to   database technology". He was the 
+first recipient without a PhD. At the acceptance ceremony, he gave 
+a speech titled "The Programmer as a   Navigator". It urged us to think of the 
+database software and its programmer as   navigating this network space, trying to 
+find the right data record for its purpose. ## IMS Another major database software of 
+the day - released in 1968 with its   popular System/360 line of computers - was 
+IBM’s Information Management System or IMS. I know. IDS, IDMS, IMS. It 
+can all get very confusing. IBM originally created the IMS 
+in 1966 at the request of NASA   for the Apollo Space Program. It 
+was used to keep track of the bill   of materials for the two million 
+parts inside the Saturn V rocket. Unlike IDS and IDMS, IMS stored data like trees. Records are organized in 
+parent-child relationships,   starting from the top and going down. We must always enter from the top 
+of the tree and go down from there. A record can have "children" below 
+it containing the extra information   associated with the parent item, 
+which can be accessed using pointers. For more information about how 
+IMS worked and its shortcomings,   I suggest this October 2017 
+article by Two-Bit History. Not unsurprisingly, IMS is still developed 
+and used today in banks, insurance companies,   hospitals and what not. It is one of IBM's 
+top performing products. Probably because   it is very fast and can process hundreds 
+of thousands of transactions each second. So the hierarchical model worked well. But 
+it still suffered limitations. For instance,   it allowed for one-to-many relationships, 
+but not many-to-many relationships. And since we must always enter the data from 
+the top of the tree, we must always traverse   the tree to get to a certain data point. If 
+the tree is deep, then it might take some time. If we wanted to change that, then we would 
+need to plant new trees. Metaphorically. Not   literally. But now that means we have 
+duplicate trees storing the same info,   just in a different order. Which 
+is annoying. What can we do? ## Codd The year IMS made its big debut, 
+a British-born American citizen   named Edgar Frank Codd - he goes by Ted - 
+took a big look around the database world,   was disappointed by what he saw, 
+and decided to try something new. Born in 1923 at the Isle of Portland in 
+Dorset, England, Ted Codd was the youngest   of seven children. His father was a leather 
+manufacturer and his mother, a schoolteacher.   He was educated at Oxford as a mathematician, 
+which later influenced his approach to databases. During World War II, Codd flew bomber 
+planes for the Royal Air Force - likely   rising to the rank of flight lieutenant. His 
+flight training was in the United States,   and he seemed to have enjoyed it there. After 
+the war, he went to the US and joined IBM. In 1953, he transferred to Canada to help set up a   Data Processing Department 
+for IBM. Per his obituary,   his primary reason for doing so was to escape 
+the oppressive atmosphere of the McCarthy era. In Canada, he had a small staff of programmers, 
+and they worked on a program to solve differential   equations for an air-to-air guided 
+missile. His staff remember him as: > "A pleasant and hard working individual   who had high standards for his 
+staff and treated them fairly". He returned to the United States in 1957, 
+earning a PhD at the University of Michigan,   Ann Arbor. After that, he joined IBM's research 
+laboratory in San Jose, which did R&D on disk   drives. There, he began his theoretical 
+work on databases - basically by himself. In 1969, he published a game-changing 
+paper "Derivability, Redundancy,   and Consistency of Relations 
+Stored in Large Data Banks".   That was an IBM research paper 
+that circulated only internally. A year later, he publishes "A Relational Model 
+of Data for Large Shared Data Banks". This 1970   paper is far more well known, but many of 
+its ideas were already in the 1969 paper. In these papers, Codd proposed a new 
+approach for storing and accessing data   within computers - he called it the "relational 
+data model". What is that? Let's talk about it. ## The Relational Model IDS, IMS, and IDMS represented their 
+data using pointers and records. So if we have a set of records for a 
+company's employees and their departments,   we would have a record for a department. The Department record would have that 
+department's name, building number, and so on. Now, we want to store who the 
+Department employs - their Employee. That is held in another set of records,   which contain the Employee's 
+name, salary, birth date, so on. To link the Department with the Employee,   what we would do back then is to set up 
+pointers that link the former to the latter. The database's structure is defined by 
+how all of these pointers are set up.   Which is often done by the database's 
+original architect, per their whims. Remember what I said earlier about the IMS 
+hierarchy tree system? If the information   we want is very deep down the hierarchy, 
+then we might have to traverse through a   whole lot of pointers to get to the 
+info we want. We would also have to   know how those pointers are set up and 
+where they lead. This is all annoying. Codd's relational data model seeks to do away 
+with that. It starts with a single Tenet: > All information in the database is to 
+be represented in one and only one way,   namely by values in column 
+positions within rows of tables. So if we go back to the prior example we just 
+talked about, information relating to the   company's Departments would be put into a table. 
+This use of tables makes the data "structured". Each row in the Department table represents an 
+individual Department. And each column within   that row contains values for that Department 
+- name, building number, what have you. A similar table will exist for 
+Employees. How do we link together   values in the departments and employees 
+tables without the use of pointers? Both   tables would have a shared value column 
+that match up, creating an association. The Department table would have a column with 
+a unique ID on it - "Department Number or ID".   This is what we call the "Primary 
+Key", and it is unique to the row. The Employee would have a column on its 
+table called "Department ID" - the ID of   the department employing the employee would 
+go here. This is called the "Foreign Key",   because it represents a 
+relationship to a foreign table. Through the use of these foreign keys, 
+all kinds of relationships - one-to-one,   one-to-many, many-to-many - can be created. These 
+would be accomplished through the use of JOINs. ## Navigator v. Independence If you recall, Charles 
+Bachman, the creator of IDS,   popularized the idea of the 
+programmer as a navigator. The database - guided by the programmer - needed 
+to traverse networks of links and pointers to   get to the right node of data. This was the 
+concept that won Bachman his Turing Award. Codd did not like this idea. As his colleague 
+Donald Chamberlin later put it, he felt that the   navigational approach required the programmer 
+to really know the database and its network. Like a captain on the stormy seas. Codd - despite having a fish-y name - did 
+not want this. Data queries shouldn’t have   to require the programmer to know 
+the database so intimately and to   keep all that info in their head. The 
+computer should figure that out on its   own. The programmer should only have 
+to tell the computer what they want. So his relational data model separated the 
+data's physical representation from its   logical design. The programmer no longer 
+has to think about pointers or links,   but rather the abstract relationships between 
+things they want - like departments and employees. Codd called this idea "data independence" and 
+believed that it would boost productivity as   the programmer would now only 
+need to internalize a single,   consistent system. And the resulting queries 
+were indeed short and easy to understand. He also pitched it as a way for IBM to sell 
+more hardware. This relational data model   would enable more average people 
+to ask questions about their data,   which translated into more hardware sales for IBM. ## The Birth of SQL Codd's papers reverberated 
+through the academic world,   but did not make a big impact in the 
+commercial space right off the bat. After all, those companies already had 
+their navigational databases. And there   wasn’t actually a software implementing 
+his ideas yet in existence. And Codd had   little interest in the nuts and bolts of 
+software. He preferred being a visionary,   traveling the world promoting his ideas. He did indeed convert people. In 1972,   two IBM employees Donald Chamberlin and 
+Ray Boyce at Yorktown Heights in New York   saw examples of Codd's queries and were 
+won over. But they did feel the ideas   were very math-heavy and not friendly to 
+non-mathematicians. Too many Greek letters. So they took a crack at a data query language 
+to do something like what Codd advocated,   but without all the complicated 
+Greek. The language was called Square,   or specifying queries as relational expressions. By now there were multiple projects across IBM 
+working on Codd’s ideas. At the end of 1972,   IBM management decided to consolidate all 
+the teams on those projects to the San Jose   lab. Chamberlin, Boyce, and others moved to 
+California so they can work with Codd himself. After moving and settling down, Chamberlin and 
+Boyce set out on a redo of their Square language.   Square was good but had these unintuitive 
+subscripts that were hard to type on a keyboard,   and you couldn't really get a sense of what 
+you actually wanted from just reading it. So they went ahead and made a new 
+relational language. One that retained   the notion of mappings, but was based 
+on English keywords that you can type.   Since it followed up Square, they called it 
+Structured English Query Language, or Sequel. Later due to a trademark issue from 
+the British aircraft manufacturer   Hawker Siddeley they had to take 
+the vowels out. Thus, we have SQL. At the May 1974 SIGMOD conference,   Chamberlin and Boyce published and 
+presented the first paper about Sequel. Sadly, a month after presenting that first paper, 
+Ray Boyce died suddenly from a brain aneurysm at   the age of 27/28, leaving behind a wife and 
+child. Don Chamberlin remembers him fondly. ## The Great Debate At that same SIGMOD conference, Charles 
+Bachman and Ted Codd - the leaders of the   navigational and relational models of databases - 
+famously debated - some called it a "discussion". It was a legendary meeting in software database 
+history. It was set up the previous year,   with Bachman fresh off his Turing Award win. 
+At the Montreal Share conference in 1973,   he gave a dry run of his Turing 
+acceptance speech to an audience. Codd had been in that audience and was described 
+as being extremely agitated throughout that talk.   The instant Bachman finished, Codd jumps up to 
+the microphone - a la Kanye West - and says: > I’d like to congratulate Charlie on 
+the Turing Award. That’s really great,   and he deserves it; he’s a very nice guy 
+... None of that affects the fact, however,   that what he is saying in his paper is dead wrong 
+... There are so many things that need to be said   in order to deconstruct Charlie’s argument 
+but it would not be appropriate to do now ... > So instead I would like to issue 
+a challenge that Charlie and whoever   else he wants meet with me, 
+and I’ll have some support,   at the next Share meeting. And we’ll 
+have a formal debate on these matters The debate time was pushed 
+from the next Share meeting   to the aforementioned SIGMOD 
+conference - now SIGMOD/PODS. Codd apparently studied and prepared a 
+great deal for the debate-not-debate,   while Bachman and his acolyte did 
+not. It was set up as presentations   given by the two, with accompanying 
+presentations from their supporters. Codd argued that the Network/CODASYL model 
+- as well as the hierarchy model - was too   complicated to be practical. It would be hard to 
+optimize and too inflexible for most situations. For instance, take a marriage ceremony. 
+Recording a Ceremony would have the IDs   for the bride and groom. Or groom/groom 
+or bride/bride. Whatever have you. But then with a network model database,   we would need to add the minister too. Wrapped 
+up in the network or tree - in the case of IMS. Inadvertently and hilariously making 
+every marriage a 3-way, database-wise. Bachman and his followers argued back 
+that the relational model cannot be   implemented efficiently. Their network 
+model can do tables too. And so on. Who knows how it really turned out but the 
+academics in the audience seemed to have   been more swayed by Codd's logical arguments. At 
+least according to Codd's friends and followers. Michael Stonebraker, database pioneer 
+and inventor of Ingres and Postgres,   had been there and said that neither 
+side made their point very clearly. In 1981, Codd received the Turing Award too - 
+less than a decade after Bachman's. It is an   indication of just how fast the computer and 
+software fields were moving in those days.   Two ideas so opposed to one another getting the 
+same prestigious award so soon, that amuses me. But back in 1974, there was one thing Bachman's 
+side did have at the debate: Real products in   the field. Codd might have presented some 
+fantastic ideas that showed potential,   but relational model database software of 
+the time was seemingly nowhere to be found. ## Conclusion But that was soon about to change. 
+The multi-billion dollar database   software industry was about to take off. There actually were a few relational model 
+database softwares under development at the   time at IBM and UC Berkeley. Slowly 
+working their way through things. But it took the rise of a vicious 
+new competitor in the late 1970s   to open everyone's eyes to the bonanza 
+in front of them. The industry rapidly   adopted the relational data model and 
+SQL thereafter. That commercialization   would create some of the richest men in 
+the world. A story for another video. But the progenitor of those ideas, Ted 
+Codd, did not share in those gainz. Codd   became an IBM Fellow and retired at the age 
+of 61 after suffering injuries from a fall. After that, he did some consulting, 
+making a good living but nothing   like the millionaires and billionaires who 
+became generationally wealthy from his ideas. He passed away in 2003 in Florida 
+at the age of 79 years old. Charles   Bachman passed away in 2017 at the 
+age of 92. Amazing lives. And the   products that have sprung from 
+their ideas live on to this day.

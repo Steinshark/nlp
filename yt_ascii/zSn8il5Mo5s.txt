@@ -1,0 +1,234 @@
+in 1969, ted codd laid out 
+the idea of the relational   model database in a paper. nobody understood it. a year later, he wrote a different 
+paper. and it blew people's minds.   his relational data model structured 
+data into tables, and championed the   idea of "data independence" - shielding the 
+user from how data is physically stored. radical stuff. but codd's papers only 
+laid out how such a software should   work. there were no products yet. 
+and there were so many questions. can such a database process queries 
+efficiently without a supercomputer?   can an automatic system navigate better 
+than a human can? only one way to find out. in this video, we look at the dawn and rise 
+of sql and the relational database industry. ## phase zero when codd's papers came out,   ibm already had a database product - 
+information management system or ims. ims was very good. though ibm was open 
+to alternative database softwares - if   it sold them more machines, more 
+on that later - ims took up the   majority of their focus and resources. 
+relational model work was distracting. so in 1973, ibm management moved all 
+of the various ibm people experimenting   with relational model databases out to 
+the ibm santa teresa lab in san jose,   so that they can work alongside codd himself. there, the team began work on 
+a software implementing codd's   ideas. the first stage of which was 
+called phase zero. why call it that? well, ibm's system/360 designer fred brooks 
+wrote in the famous book "mythical man month":   "plan to throw one away, you will anyway". so 
+this phase zero was meant to be thrown away - a   quick and dirty thing to test the waters 
+and get a sense of what we are dealing with. at the heart of phase zero was an 
+implementation of a new query language   that don chamberlin and ray boyce 
+had recently invented called sequel,   or sql later on. they later released a paper on it 
+and presented it at a famous conference in 1974. anyway, this sequel implementation 
+was written on top of another ibm-made   software called xrm. xrm handled the 
+lower-level stuff - such as the physical   access to the data. it was basically 
+pulled off the metaphorical shelf. phase zero was a limited product. xrm only 
+supported one user at a time. and only certain   sql functions were implemented. for instance, it 
+cannot do "joins", which is a fairly big deal. after having demonstrated the feasibility of 
+creating new tables, the new sql language,   and even briefly test-running it with a user, 
+phase zero was thrown away as planned. then   in 1975, the 12+ member team started on the 
+actual customer-facing product - phase one. ## ingres
+meanwhile at uc berkeley, another effort to build a relational model database 
+software was well under way. in 1971, berkeley professors eugene 
+"gene" wong and michael stonebraker   read the codd papers and loved what they read. so in 1972, they got some grants from 
+the national science foundation and   other organizations to start a little 
+research project called ingres. the name   came from some consultant and stands for 
+interactive graphics and retrieval system. for its data query language, ingres did not use 
+sequel but a new thing that wong designed called   quel, standing for query language. stonebraker and 
+wong read the original sequel paper and hated it. though after a few rewrites, quel and 
+sql became largely similar with the   possible exception in how they handled "joins". by 1975, ingres could run a query. despite having 
+far fewer resources - just 1-2 phd students rather   than a team of 12 - ingres progressed and its 
+adoption grew to 50 or 60 installations by 1977. this was partly due to luck. stonebraker 
+had a dec minicomputer and asked unix   pioneer ken thompson - then doing a stint 
+at berkeley - to come install unix on it. stonebraker likes to say that it was one 
+of the first unix installations outside of   bell labs. probably not true but it sounds 
+fun. might go on a reddit thread someday. anyway, so ingres by way of association became 
+one of the first database softwares to be   on unix. as unix bsd spread to universities 
+around the world, ingres came along with it. ## system r back to ibm. with phase one, the relational 
+database project got a name - system r. the "r" is said to stand for "relations" or   "rufus" - the name of one 
+of the team members' dog. system r was set up in two parts - a higher and 
+lower level part. at the top of the higher level   system is the relational data interface. this is 
+where you submit a query in the sequel language. the lower system was the relational storage 
+system, which replaces xrm. it optimizes   the query and figures out how to access the 
+data. mechanisms were added to make it more   robust against failures and enable multi-user 
+concurrency. which is harder than it sounds. in doing this work on concurrency, system r 
+team member jim gray formalized the concept   of a "transaction". that concept later 
+evolved into what is now acid - atomicity,   consistency, isolation and durability. these concepts guarantee the validity 
+of our data when errors, failures,   and mishaps inevitably happen. without them,   today's e-commerce and other vital electronic 
+transactions cannot be trusted. it is a big deal. for his work on transactions, gray won 
+the 1998 turing award - the nobel of the   computer sciences. sadly, he later vanished 
+while sailing the waters near san francisco. by late 1976, system r got to a state 
+where the team felt comfortable seeding   it to potential customers. early 
+users included pratt & whitney in   connecticut and boeing in seattle. 
+both used it for inventory control. ## competition the two teams at ibm san jose 
+and berkeley knew of each other   of the time. and that injected a bit of 
+a competitive air into the whole thing. they were in contact with each 
+other too. ted codd actually   shuttled between the two to check on 
+progress ... and probably seed ideas.   he felt no particular loyalty to system 
+r after he wasn't placed in charge of it. and the aforementioned jim gray - 
+who got his phd at berkeley - also   helped transmit information between 
+the two teams in the early years.   even bringing the ingres team to 
+the ibm offices and vice versa. so we have system r and ingres. system r was 
+backed by a big company, ibm. but it was not ready   yet and since ibm already had a database product 
+they weren't too much in a hurry to bring it out. ingres on the other hand was out 
+there and spreading along with   unix. but it was not a commercial 
+product - just a research project.   stonebraker did it solely to 
+get famous enough for tenure. thus, we have a big gaping opportunity 
+for a commercial relational product   out there in the market. the seas 
+parting for someone to run through. ## oracle the company now known as oracle has a chaotic 
+history. we shall stick to the main points. the company was founded by 
+larry ellison, bob miner,   and ed oates in 1977 as software development 
+laboratories. they began as a consulting company   developing software for customers, 
+but wanted to pivot into products. at the time, the database industry was booming - 
+with products like adabas by software ag, ims by   ibm or total by cincom. aggregate sales of such 
+software in 1978 was estimated at $130 million. ellison and company thought that people 
+might be interested in a database software   for the growing minicomputer market. then 
+they came across ted codd's papers on the   relational model and ibm's publications 
+on sql. both were in the public domain. ellison immediately saw the potential. compared 
+to the existing products on the market,   the relational model was far easier for 
+less sophisticated users to query their   database. there were data integrity benefits too 
+- since data only existed in just one table row. so ellison changed the name of his 
+company to relational software inc,   or rsi. and with money left over 
+from consulting projects as well as   a pdp-11 loaned from a client, they hacked 
+together version 1 of the oracle database. the oracle name came from a terabit memory product   for the cia that ellison had worked on 
+back when he was at ampex corporation. the name is familiar, right? ampex was the 
+american company that produced magnetic tape   recorders. they make an appearance in the 
+japanese vcr video. go check that one out. anyway, the cia finds out that ellison stole their 
+product name and comes knocking, quite upset.   somehow, ellison sells the heck out of it and 
+signs the cia as the first user of the software! thus in 1979, oracle version 2 comes out. it 
+was a simple but fairly complete implementation   of sql with joins, subqueries, and 
+views. version 1 was never released. ## oracle's principles ellison positioned the oracle product to 
+ride a number of major technology trends. first, the oracle database had to 
+be completely compatible with sql.   he figured that ibm will eventually 
+come out with a sql product of their   own. when that happens then sql 
+would be the industry standard. famously, ellison called the ibm system r 
+team to learn their error codes. he wanted   to make oracle compatible with whatever 
+ibm was building. but ibm management   kept those error codes a secret - the 
+only part of the whole project as such. second, ellison wanted the database to 
+be compatible with all types of computer   hardware. this request originally came from 
+the cia, who wanted the software to run on   all of their various computers. but ellison 
+then turned it into a competitive advantage. the high-level c programming language - then 
+emerging in the world alongside unix - helped   in this regard. oracle version 3 - released 
+in 1983 - was entirely written in c, which   meant that you can compile it for mainframes, 
+minicomputers and even microcomputers or pcs. in late 1977, dec released the vax-11 
+minicomputer. boasting mainframe-like   power at a fraction of the price, 
+the vax was massively successful.   over a hundred thousand were sold 
+over the 10 years after release. the vax-11 helped jumpstart bsd unix's popularity. 
+it also presented a green field opportunity for   oracle. dec did make a database software for 
+their minicomputer, but it was non-relational. so the team ported over oracle version 
+2 - originally written for the older   pdp-11 minicomputer but compatible with the vax. that bridged things until version 3 which ran 
+natively - again thanks to c. as a result,   the oracle database was the 
+only sql software available   for a very popular platform. the vax 
+played a huge part in oracle's rise. but rsi's programmers ported the oracle software   to every hardware platform - pyramid, 
+sequent, data general, apollo, so on. the joke went that oracle ran on everything, 
+but the best platform it ran on was the slide   projector. i don't know how many of you 
+guys are going to laugh at that one. to further build on this second idea 
+of portability, ellison envisioned a   distributed database connected over 
+networks. this well fit the growing   trend of networked computers taking place at 
+the time. little last thing but important. ## head start after nabbing the cia, oracle database 
+quickly found more government users. this included military customers like 
+the wright-patterson air force base   and fort meade. as well as the food and drug 
+administration or fda - which in turn pushed   the private drug-makers to adopt oracle 
+so that they can share data with the fda. the oracle software back then was not that 
+stable. but that was okay at the time. many early   customers were internal departments and small 
+businesses who just wanted to query their data   for insights. they didn't need ims or all that 
+jazz and sql was just readable enough for them. it was the right product for the 
+right customer at the right time.   rsi the company doubled each year 
+for the next ten years. in 1982,   they changed their name to "oracle systems" - a 
+reflection of their flagship product's popularity. ## ingres goes commercial by late 1978 or 1979, ingres has about 
+300 people using it. basically for free. per the license, all someone needed to 
+do to use ingres was to sign a 20 page   licensing agreement and pay $75 to 
+get a big tape with the source code. under that license agreement, 
+anyone can use it - though not   for commercial activities. supposedly a town 
+in maine was using it for counting votes. but then came along serious customers wanting 
+to use it for serious things. in 1977,   the new york telephone company adopted ingres to 
+store information about manhattan telephone lines.   that was when the ingres team really started 
+to learn what it means to service customers. then in 1978, arizona state university 
+wanted to use ingres to keep records   on their 40,000 students. they were 
+willing to adopt unix and deal with   all of its weird ownership issues to 
+do it, but stopped short upon finding   out that there was no version of unix 
+in cobol, and they were a cobol shop. the bitter incident taught a lesson. ingres 
+was an incredible product. but - to quote a   certain someone from my prior unix video 
+- it needed to be a commercial activity. around that time, larry ellison is 
+telling people left and right that   oracle is the greatest thing ever and 
+ten times faster than anything else. so the guys on the ingres team get 
+a copy of oracle database and do a   bake-off. they find that ingres ran 
+many queries faster than oracle can,   and that finally convinced 
+them to start a company. so in 1979, larry rowe - a berkeley 
+faculty member - joins the team with   an eye towards commercializing ingres. the three - wong, stonebraker, and rowe - recruit 
+a fourth cofounder for sales and in 1980 start   relational technology inc with some funding 
+from the reputable sutter hill ventures firm. ## other companies ingres was the most prominent of the relational 
+database startups to enter the market,   but not the only one. two notable names we 
+should bring up are informix and sybase. informix was founded in 1980 by roger 
+sippl, another uc berkeley alumni. early on,   he worked at the construction firm 
+bechtel. he had to use a database   software from hewlett-packard there and hated 
+it. horrible query language, very restrictive. he came across codd's papers - or rather, the 
+books written by codd's disciple chris date, which   were apparently more readable. sippl - honest 
+man - didn't understand codd's early papers. and sippl realized that every business would 
+be needing a database software running on   multi-user unix machines. so he founded a 
+company with $20,000 raised from selling   10% of the startup to an ex-girlfriend. what 
+a girl. they later married, with three kids. moral of the story? women love databases. anyway. informix - the name was derived 
+from "information on unix" - did not   use sql as its data query language 
+but rather a proprietary language   called informer. that would later hold it back. then we have sybase, founded a little later 
+in 1984 by mark hoffman and bob epstein in   the back porch of the latter's berkeley 
+home. they wanted to build a database   software for high performance computers 
+capable of handling frequent transactions. but as they built what would 
+eventually be the sybase sql software,   computers got faster. fast enough that 
+sybase can be run on general-purpose   computers with powerful microprocessors 
+like those from intel, motorola or sun. so sybase sql server targeted sun 
+microsystems' networked workstations,   which gave them substantial traction 
+with wall street and other financial   firms in the mid-1980s as sun 
+skyrocketed towards the ... sun. it also later caught the interest of microsoft. 
+and bill gates came down from his mountain of   money to strike a lucrative, 6-year licensing 
+deal to turn sybase sql into microsoft sql server. ## ibm goes in
+as all of this was going on, everyone knew that the giant ibm had this 
+system r project gurgling in san jose. but will ibm release it? they did. it goes back 
+to a time-sharing company called national css. in 1975 they developed and released a 
+database product called nomad. it was   directly influenced by codd's 
+papers and is often called the   first commercial relational database software. 
+how relational it actually was, hard to say. national css ported nomad to run on 
+ibm's single-processor mainframes and   it was adopted by several big customers. they 
+quite liked it and used it often. however,   nomad was not written to take advantage 
+of ibm's newer multi-processor mainframes,   only the older single processor mainframes. but 
+the latter could not handle larger nomad queries. as a result, two very large customers - bank of   america and chevron in san francisco 
+- ditched ibm for amdahl mainframes. when something big like that happens, 
+the news goes straight up the chain to   the ceo - frank cary. they told him about 
+this new relational technology. and hey,   didn't ibm come up with this 
+concept in the first place? cary asks "is it ours?" and they say yes. right 
+there, he decides to put it into the roadmap. ## ibm goes relational it took two more years for ibm to come 
+out with their first relational product. at this time, ibm was organized 
+into three hardware groups and   operating systems. the biggest 
+and most important was multiple   virtual storage or mvs for the big 
+system/370 and system/390 mainframes. this operating system also housed ims,   ibm's other big database product. creating a 
+relational database product for mvs as well   as educating customers about its 
+differences with ims was tricky. so ibm's first relational database product - which   they called sql/ds - would run on two 
+smaller operating systems - dos/vse and   vm/cms. these were often used by mid-sized 
+businesses to do transaction processing. sql/ds first entered the market in 
+1981. db2 - the flagship relational   model database for the flagship 
+mvs operating system - followed   some two years later in 1983. 
+neither sold well at the start. but ibm kept on iterating, and the second version 
+of db2 released in early 1986 got better traction. ## sql victorious ibm's entry did not wipe out the nascent 
+relational software database industry. in 1984, ibm's ims had 50% share of the total 
+database market but only 20% of new sales. in   other words, they were losing share to relational 
+so they had to respond. it was a defensive move. ibm's going in with sql validated 
+ellison's decision to make the   oracle database compatible with 
+sql. ingres and informix were   going with their own data query 
+languages - quel and informer. just like fetch, it wasn't happening. 
+them not being compatible with ibm - which   means sql - threw them onto their back feet. 
+meanwhile oracle charged ahead into the market. in march 1986, oracle went public. the 
+relational database had transformed them   into a software giant with over $100 million in 
+revenues. with the company mostly bootstrapped,   ellison and his cofounders held onto 
+most of the shares and became very rich. ## conclusion
+ibm created the relational data model, which should have given them 
+prestige and credit no one else had. but at that time, ibm's top managers 
+were still hardware people. for them,   software existed only to 
+help them sell more machines. until it was too late, they did not see the value 
+of porting db2 to non-ibm machines like those from   dec and whatever else was out there. oracle and 
+the other upstarts did. they furiously ported it   like drunk rabbits - helping them grab market 
+share leads that ibm could not weather away. in just about ten years, the relational 
+model database went from some crazy ideas in   a few academic papers to a multi-million dollar 
+industry populated by both giants and upstarts. so long the market was growing, everything would 
+be fine. but that would not last forever. a   clash between these giants of the software 
+database industry loomed on the horizon.

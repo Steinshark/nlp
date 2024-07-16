@@ -1,0 +1,131 @@
+at around 7pm on the balmy evening of saturday, 
+december 3, 2022, nearly every electric customer   in moore county, north carolina was simultaneously 
+plunged into darkness. amid the confusion,   the power utility was quick to discover the cause 
+of the outage: someone or someones had assaulted   two electrical substations with gunfire, 
+sending a barrage of bullets into the high   voltage equipment. around 45,000 customers were 
+in the dark as duke energy began work to repair   the damaged facilities, but it wouldn't be until 
+wednesday evening, four days after the shooting,   that everyone would be back online. that meant 
+schools were shuttered, local businesses were   forced to close during the busy holiday 
+shopping season, a curfew was imposed,   and the county declared a state of emergency to 
+free up resources for those affected. the attack   came as other utilities around the united states 
+were reporting assaults on electrical substations,   including strikingly similar instances in oregon 
+and washington. let's talk about what actually   happened and try to answer the question of 
+what should be done. we even have exclusive   footage of the substations that i'm excited 
+to show you. i'm grady and this is practical   engineering. in today's episode, we're talking 
+about the moore county substation attacks. this video is sponsored by curiosity 
+stream and nebula. more on them later. right in the geographic center of north 
+carolina, moore county is home to just   under 100,000 people. the county is maybe most 
+famous for the pinehurst resort, a historic golf   course that has hosted the us open on several 
+occasions. it also sits nearby fort bragg,   one of the largest army bases in the world. and 
+here's an overlay of moore county's transmission   grid. taking a look at this layout will help us 
+understand this event a little better. by the way,   this information is not secret - it's 
+publically available, at least for now,   in a few locations including the energy 
+information administration website and   open street maps, and i'll discuss the 
+implications of that later in the video. two 230 kilovolt (or kv) transmission lines come 
+into moore county from the southwest and connect   to the west end substation near pinehurst. one 
+of the lines terminates here while the other   continues to the northwest, without making 
+any other connections in moore county. these   two 230 kv lines are the only connection to the 
+rest of the power grid in the area. at the west   end substation, two power transformers drop the 
+voltage to 115kv. from there, two 115kv lines head   out in opposite directions to form a loop around 
+moore county. distribution substations, the ones   with transformers that lower the voltage further 
+to connect to customers, are mostly spread out   along this 115kv loop. so, essentially, most of 
+moore county has two links to the area power grid,   and both of them are at a single substation, west 
+end. and you might be able to guess one of the two   substations that was attacked that saturday 
+evening. interestingly, the other substation   attacked was here in carthage. just looking at a 
+map of the transmission lines, it would be easy   to assume that carthage provides a second link 
+to the 230 kv transmission grid, but actually,   it's just a distribution substation on the 115 
+kv loop. the 230 kv line passes right by it. duke energy (the owner of the 
+substations) hasn't shared many   details about the attack. in their initial press 
+release, they simply stated that "several large   and vital pieces of equipment were damaged in 
+the event." those investigating the attack,   including the fbi, are also keeping details 
+close to their chest. our drone photographer   had to have a police escort just to get this 
+footage. but, we can use photos and clips of   the substations to hypothesize some details of the 
+event. just take what i say with a grain of salt,   because the folks in charge haven't confirmed 
+many details. it really looks like the attacker   or attackers were specifically targeting the 
+transformers. these are typically the largest   and most expensive pieces of equipment (and the 
+hardest to replace) in a substation. they do the   job of changing the voltage of electricity as 
+needed to move power across the network. and,   even more specifically, it looks like the 
+attackers went after the thin metal radiators   of the transformers. just like the radiator 
+in your car, these are used on transformers   to dissipate the heat that builds up within the 
+main tank. but unlike the coolant system in a car,   wet-type power transformers are filled with oil. 
+if all that oil drains out of the transformer   tank, it can cause the coils to overheat or 
+arc, leading to substantial permanent damage. disabling the transformers was presumably 
+the goal of the attack, but obviously,   with power transformers being both so 
+important and so difficult to replace,   they are almost always equipped with protective 
+devices. we don't have to do a deep dive into the   classic recommended practice for the protection 
+of transformers used in industrial and commercial   power systems, but it's enough to say that 
+utilities put quite a bit of thought into   minimizing the chance that something unexpected, 
+whether it's a short circuit or a bullet,   can cause permanent damage to a transformer. 
+sensors can measure oil pressure, gas buildup,   liquid levels, and more to send alarms to 
+the utility when an anomaly like an oil   leak occurs. and, some protective devices 
+can even trigger the circuit breakers to   automatically disconnect the transformer 
+before it sustains permanent damage. whether it happened automatically or manually as a 
+result of an alarm, the two 230 kv transformers in   the west end substation were disconnected from the 
+grid as a result of the shooting, and in doing so,   the entire 115kv loop that goes around moore 
+county was de-energized, turning out the lights   for the roughly 45,000 connected households and 
+businesses. aerial footage taken the day after the   attacks shows the disconnect switches for the 
+230kv lines open, an easy visual verification   that the transformers are de-energized. you can 
+also see some disassembled radiators on site,   presumably to replace the damaged ones on the 
+transformers. it seems that the gunfire only   damaged the transformer radiators, which is a 
+good thing because those can usually be replaced   and put back into service relatively easily. if 
+the windings within the transformer itself were   damaged, it would probably require replacement 
+of the equipment. transformers of this scale are   rarely manufactured without an order, which means 
+we don't have a lot of spares sitting around,   and the lead time can be months or years to 
+get a new one delivered, let alone installed. with at least three damaged transformers, 
+the utility began working 24-hour shifts   on a number of parallel repairs to restore power 
+as quickly as possible. again, they didn't share   many details of the restoration plans, so we can 
+only talk about what we see in the footage. one of   the more interesting parts of restoration involved 
+bringing in this huge mobile substation. it seems   that crews temporarily converted the carthage 
+substation so it could tap into the adjacent   230kv line. the power passes through mobile 
+circuit switches, a truck-mounted transformer,   secondary circuit breakers, voltage regulators, 
+and disconnects to feed the 115kv loop. you can   also see the cooling system of the mobile 
+transformer is mounted at the back of the   trailer to save space. with this temporary fix, 
+and presumably some permanent repairs to the   transformer radiators at west end, duke energy 
+was able to restore service to all customers   by the end of wednesday, about 4 days after all 
+this started. knowing the extent of the damage,   that's an impressive feat! but they still have 
+some work ahead of them. in this footage taken   two weeks after the attack, you can see that 
+one of the 230 kv transformers is back online   while the other is still disconnected 
+with all its radiators dismantled. the fbi and local law enforcement are still 
+working to find those involved in the incident,   and there's currently a $75,000 
+reward out for anyone who can help.   officials have stopped short of calling it an act 
+of terrorism, presumably because we don't know the   motive of whoever perpetrated the act. the local 
+sheriff said this person, "knew exactly what they   were doing," and i tend to agree. it doesn't 
+take a mastermind to take some pot shots at the   biggest piece of equipment in a switchyard, 
+but this attack shows some sophistication.   they targeted multiple locations, they 
+specifically targeted transformers, and   one of the substations they chose was critical to 
+the distribution of power to nearly all of moore   county. it's fairly safe to say that this person 
+or persons had at least some knowledge about the   layout and function of power infrastructure in 
+the area... but that's not necessarily saying much. to an unknown but significant extent, 
+power infrastructure gets its security   through obscurity. it's just not widely 
+paid attention to or understood. but,   almost all power infrastructure in the 
+us is out in the open, on public display,   a fact that is a great joy for people like 
+me who enjoy spotting the various types of   equipment. but, it also means that it's just 
+not that hard for bad actors to be deliberate   and calculated about how and where to cause 
+damage. with its sheer size and complexity,   it would be impossible to provide physical 
+security to every single element of the grid. but,   protecting the most critical components, 
+including power transformers, is prudent. that's especially true for substations 
+like west end that provide a critical   link to the grid for a large number of 
+customers. they already have a new gate up,   but that's probably just a start. 
+i think it's likely that ballistic   resistant barriers will become more common 
+at substations over time, and, of course,   those added costs for physical security will be 
+passed down to ratepayers in one way or another. but it's important to put this event in context 
+as well. attacks on the power grid are relatively   rare, and they fall pretty low on the list of 
+threats, even behind cybersecurity and supply   chain issues. the number one threat to the grid 
+in nearly every place in the us? the weather. if   you experience an outage of any length, it's 
+many times more likely to be mother nature   than a bad actor with a gun. that's not to say 
+that there's not room for improvement though,   and this event highlights the need for making 
+critical substations more secure and also making   the grid more robust so that someone can't rob 
+tens of thousands of people of their lights, heat,   comfort, and livelihood for four days 
+with just a few well-placed bullets. if you grew up around the same time as me, you 
+might remember the excellent educational tv shows   on history channel, discovery, and the science 
+channel. now those networks are filled with   reality shows like everything else, but hopefully 
+you've seen what's been happening over the past   few years. i won't say it about myself, but i 
+will say it about my fellow content creators:   independent producers like brian from 
+real engineering, sam from wendover   productions and half as interesting, jason 
+from not just bikes, and johnny harris are   all making videos that are more fascinating and 
+thought-provoking than any of the old tv shows i   miss. and, no offense to youtube (i love youtube), 
+but there's a better way to watch curated   educational episodes from your favorite creators, 
+and that's nebula. my videos will always be free   to watch on youtube, but they do cost me money to 
+make (for example, the drone pilot we hired to get   the footage for this video). of course, you can 
+help the channel out by watching advertisements   like this one and the ones that youtube places 
+in videos, but an alternative is to pay a small  

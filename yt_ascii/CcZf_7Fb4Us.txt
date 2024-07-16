@@ -1,0 +1,174 @@
+we're going to start with a very natural real 
+world problem and then i'm going to explain to   you a very different problem in pure mathematics 
+that surprisingly solves this real world problem.   you want to buy something on 
+the internet. so here's you   and here is this online store; and between 
+you is this channel we all know and love   called the internet. but the internet is a 
+little bit of a noisy channel, so say if you   want to buy something from this store you might 
+want to send the store 16 numbers - your credit   card. so like 8352 - whatever - 9115.
+- (brady: that's not your credit card?)  - that's not my credit card. but you want to send 
+16 numbers over the internet to this store. or   maybe somebody else is sending 16 numbers and 
+say that your credit card number is 8351...9115 you really don't want the store to receive your 
+credit card number by mistake instead of somebody   else's credit card and charge you. so you want to 
+some way build in redundancy in the way that you   send these numbers so that if there's an error 
+you can first: figure out that there's an error,   don't charge the wrong person; and second of 
+all maybe correct that error, you might hope. (i've heard of this, this is error correction.)
+- this is error correction - i'm going to   explain to you one of the first beautiful 
+examples of an error correcting code. before   we do beautiful examples let's just say, 
+what is the most naive thing you could do? how could you use redundancy to be able 
+to detect when errors occur - any ideas? (i would imagine-   i would imagine sending it twice)
+- oh yeah, send the numbers multiple   times. so if i had this sequence and i sent 
+them multiple times i would send 88335522... 1155. okay, send each number twice so now if one 
+error occurs here i say aha i was expecting each   pair to be equal and here's a pair that's 
+not equal, so error. and now i know. but   that doesn't let me correct the error because 
+i don't know which was right, 2 or 1. so of   course if i wanted to correct it: send each one 
+three times. so if i send each one three times   i'll be able to correct the errors. let me 
+just write that down: 888-333 - i'm actually   writing this down for a reason - it's it's 
+it's a lot more numbers right. so if this one   becomes a 1 now i know it should be a 2 because 2 
+was the was the most common answer in that triple.   but you'll see that this is two times the amount 
+of numbers, or three times the amount of numbers.   and nobody wants to sit on their browser 
+and wait a long time to make a credit card   transaction because you had to send way more 
+numbers; it's unwieldy. so we want a much more   efficient way to build in redundancy to solve 
+this problem. okay i think i want a new sheet. well before i tell you a nice way to solve this 
+problem, now we're going to switch to a totally   different problem in pure mathematics. imagine 
+that you have a collection of random points. so   you could think about these points in the (x,y) 
+plane; so each of these has an x coordinate   and a y coordinate. when i have this random 
+collection of points what i want to do with   it is i want to thread a curve- thread a curve 
+through this collection of points. and as you   can see what i did i really wanted my curve to 
+exactly pass through each one of these points;   it's not something statistical, i actually wanted 
+to pass through each one of those points. and when   i have one of these curves that threads through 
+the points i'll say that this curve interpolates   those points. so the main question that you want 
+to understand for interpolation is how complicated   does this interpolating curve have to be? so you 
+might imagine right if i have more and more random   points, if i want a curve that has to exactly pass 
+through all those points, each time it has to hit   a new point it maybe has to twist a little bit or 
+turn or move. so it has to get more complicated   as the number of points grows.
+- (i intuitively know) (what you mean by complicated but is 
+there a proper definition of complicated?)  - we're getting there, we're getting there. so 
+so exactly for that reason that i want to quantify   this i'm going to switch this problem around and 
+i'm going to turn it on a head and i'm going to   say that i fix some type of curve - and i know 
+this is still very abstract but we're about to   do examples. so fix some type of curve and once 
+i fix this i've fixed how complicated this curve   is already. and then what i ask is, what is the 
+maximum number of random points it interpolates?   so i've just flipped the problem on its head. 
+fix the curve and then say, given how complicated   that curve is, does it have the flexibility 
+to pass through how many types of points?   should we do some examples? let's do the 
+first example; let's suppose i gave you   two points. so what's the least complicated 
+type of curve that you can think of that   interpolates two points? (a straight line)
+- a straight line definitely. so yes, a line   always interpolates two points but if i were 
+to give you three points - and remember i want   my points to be random - they probably won't lie 
+on a line. so 2 is the maximum number of points   that a line interpolates. okay? so now-
+- (i thought a line) (would- i thought a line actually covers 
+an infinite number of points but-)  - oh very very good, very good point, it does 
+cover infinitely many points. you can imagine i   can put some other points onto this line but these 
+are now not random. and remember then in our main   problem we very judiciously required them to be 
+random points. one way you can think about it is   take the points that are on the line and just 
+imagine bumping them all in random directions.   if i were to bump these in random directions 
+like there would no longer be a line, right,   it would have to be some sort of twisty curve that 
+would interpolate all those bumped points. okay so   that was two points, let's try to do more points. 
+next example: let's do three points okay. any idea   for for the simplest type of curve you can 
+think of that interpolates three points? you can   do it with a circle. so these are very classical 
+results; of course euclid knew a line interpolates   two points, he also knew a circle interpolates 
+three points. and euclid didn't have equations   for these curves or anything he only had things 
+you could synthetically construct. so you can   actually construct the circle interpolating three 
+points - it's not going to look good if i freehand   it. - (go on let's see ya- let's see your skills)
+- nope, that looked very elliptical.  - (that is that's a terrible circle)
+- i could have done a much better job with this,   anyhow. so this was- these are these are two 
+very classical results that were known to euclid,   same thing. three random points, if you have four 
+random points they won't lie on a circle. okay so   now i want to describe to you another type 
+of curve but it's built out of polynomials.   so it's built out of a polynomial f of x - let's 
+suppose that we first have a linear polynomial,   so a degree 1 polynomial. so let's say this 
+polynomial is like x plus 2. so when you see   a polynomial like this and maybe you think 
+back to school the first thing you want to do   is you want to start graphing the values of this 
+polynomial in the (x,y) plane - remember my points   are in the (x, y) plane. let's see- when i 
+plug in 0 i get 2, when i plug in 1 i get 3,   when i plug in 2 i get 4 - you see where this is 
+going - if i plug in any more values i i always   just get the straight line right here and this 
+curve that i am making for you you is the graph of   this polynomial f of x. i think i'd like another 
+sheet of paper - i'm sorry i can't write small now we're going to do a degree 2 example, so let's 
+just choose some random polynomial of degree 2   like x squared minus 4x plus 7. so again i'm 
+going to graph the the values of this polynomial   in the (x,y) plane. all right so if i plug in 
+0 i'll get 7, so that's one point on the graph,   if i plug in 1 i'll get 1 minus 4 is minus 3 
+plus 7 is 4. if i plug in 2 i'll get 4 minus   8 plus 7 - i'll get 3 right. and let's do 
+another one, let's do 4. if i plug in 4 i'll   get 16 minus 16 plus 7 so i just get 7 again. 
+so you can see this graph it looks something   like this parabola through those points. so in 
+both of these two problems what i was doing   was i was starting with a polynomial and then 
+i was getting points on a certain type of curve   which is the graph of a polynomial. so i'm now 
+going to flip the problem around, this way that   i've set up the interpolation problem, we fix the 
+type of curve which is the graph of a polynomial   of a certain degree and then we want to know 
+how many general points does it interpolate.   okay so this linear case, it's a line, we already 
+knew how to solve a line - it interpolates two   general points. that means i can specify two 
+points on here; if i pick any two points i can   always find a linear polynomial so that the graph 
+of that polynomial interpolates those two points.   and now this has a very explicit description 
+right; because these points are of the form   some (x value, f of x) what you're trying to do is 
+you're trying to choose some inputs and then find   a polynomial that maps those to specific outputs.
+- (is it almost like saying what's the minimum   number of points i can have and know 
+the- ) (know what my thing looks like?)  - it's very related to that. and i- but 
+i'm asking for a sort of the maximum,   the amount of freedom you have, the maximum 
+number of points you can have and still have   it lie on such a polynomial. so here you could 
+do 2 - for degree 2 any guesses for what it is?  it's 3. um it's sort of like how you went from 
+a line to a circle except a circle is not a   graph of a polynomial, right, because it fails 
+the vertical line test. but it's still 3 here. so you can always do 3; and in fact there's 
+a general result here, this is called the   lagrange interpolation theorem. so if you're 
+given n distinct inputs x1 through xn then i   get to choose any outputs, let's say i want to 
+send x1 to y1 all the way up through xn to yn,   any outputs. then there is a unique 
+polynomial f of x of degree n minus 1   such that it accomplishes this. it sends 
+x1 to y1 and all the way up through xn   to yn. this is the thing that's going to 
+solve our problem from the very beginning.   here's our problem from the very beginning - so 
+remember we're starting with 16 numbers and i   think i'd like to not use specific numbers 
+for these, i'd like to give them names, think think of them as variables so i'm going 
+to call them a1, a2 all the way up through a15,   a16. so here's the key insight that allows 
+us to make this error correcting code,   and these codes are called reed-solomon codes. 
+so this was reed and solomon's insight is to   encode these 16 numbers a1, a2 up through 
+a15, a16 as the coefficients of a degree 15   polynomial. so i use these numbers to make a 
+polynomial, f of x equals a1x to the 15 plus   a2x to the 14 plus plus a15x plus a16. okay? so 
+same data, nothing has changed i still- it's just   the data of these 16 numbers.
+- (what does that curve) (look like?)
+- exactly, that's what we have to do. so let's   let's graph this curve. so if we were to graph 
+this curve- okay this is- i've- this is totally   i'm just gonna - this will just be a schematic. 
+but you imagine there's some graph of this   f of x. and what the lagrange interpolation 
+theorem tells us is that if i know just the   value of this polynomial at 16 different 
+inputs, so like x1 i know it's value,   at some other point x2 i know its value, all the 
+way 16 points on here - that uniquely determines   the polynomial for me. it's the same data 
+as knowing its value at 16 different points. so if you're over here trying to send this 
+information online; if you want to send this   it's exactly equivalent to sending the values at 
+16 different points: f of x1 through f of x 16.   so let me come back to this lagrange interpolation 
+theorem and let me fill it in a little more. this   n here was really the maximum. so if the points 
+x1, y1 through xn, yn are random then this n is   actually the max. you can't specify any more values 
+and still have it lie on the graph of a degree n -1  polynomial. okay so let's use that fact 
+to start detecting and correcting errors. remember   the the thing we have to do is we have to build 
+in redundancy. and so we don't have redundancy   at the moment where- if we just keep track of 
+the values at at 16 points. so let's let's   take this and let's add a little more redundancy; 
+let's send also the value at just one more point, a   17th point. so we're going to add in one extra 
+point. still no problem - it'll be the same degree   15 polynomial whose graph interpolates these 
+17 points. and notice that these 17 points are   not random; random 17 points would lie on no 
+graph of a degree 15 polynomial. okay. but now   the benefit is suppose that there's an error in 
+transmitting this point. instead of transmitting   that value i transmit some other value. now once 
+that happens this graph goes away; i mean you it   no longer interpolates all of these points because 
+it doesn't lie on that graph. and now if you think   about it what i have with this collection - not this 
+one but the erroneous one - these are now 17 points.  and the internet doesn't doesn't have it out to 
+get you. okay? it's not it's not sending a specific   really bad choice of a point, it's some random 
+random error happens in this noisy channel. so   these are a random collection of 17 points which 
+means that probably there is no- i mean with all   likelihood there is no degree 15 polynomial that 
+interpolates these 17 points, because 15 is more   than what you get by lagrange. and so what we have 
+is we have a way to figure out if there was an   error. very easy way to figure out that there was 
+an error, but we don't have a way to correct the   error because we have to know that this point was 
+the wrong point. if we knew that this was the wrong   point we could leave it out and find the curve 
+with the other ones; but we don't know that   so well what do we do? just send one more piece of 
+data, send its value at an'th point. so let me add   one more x here. so we're sending one more value; if 
+we send one more value then we will know that this   is the imposter point because the remaining points 
+will still be 17 points that lie on the graph of   a degree 15 polynomial which is unexpected. 
+lagrange says we should only be able to do   that with with 16 points; and so we can correct our 
+error. so if you look at this over here, this really   bad way of doing it, you have to send two times 
+as many points. but using reed-solomon codes there's this idea you only have to send one extra 
+number or you have to send two extra numbers which   is way better than two times the amount of numbers 
+or three times the amount of numbers. 
+- (so when i) (send my credit card details, my 16 numbers, it's- 
+i'm sending 16 numbers plus two other numbers.)   (are those two other numbers-)
+- to first order. that's 
+the that's the toy model of what happens, yes  (all right yeah. but like they're not- all these graphs 
+aren't being plotted by a computer and and mapped)   (and things like that, that's not actually happening?)
+- oh no it's a it's a very straightforward way   to combine the data of the coefficients and get 
+the values or to combine the data of the values   and get the coefficients. it's very easy, you don't have 
+to graph it, the graphing is just what's happening   behind the scenes in the mathematics. and and 
+let me say it might not seem that impressive   right to 16 numbers - 2 times 16 is 32 or 48 and 
+those aren't that much bigger than 17 or'. but   this 1 or 2 was independent of the number 
+of numbers. so like a million, well 2 million   is much bigger, but a million and 1 is not so much bigger. 
+- so here's a theorem that i proved   with my collaborator eric larson from last year. 
+a curve of degree d and genus g in r dimensions...

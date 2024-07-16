@@ -1,0 +1,245 @@
+from the very beginning, people 
+have wanted their own chips. lsi logic wanted to make that dream come true   on a massive scale. and for a few 
+years, they did manage to do that. founded by fairchild alumni,   lsi logic became one of the hottest and 
+fastest growing semiconductor businesses. but then the market changed under 
+their feet. in this video, we look   at one of silicon valley's now-forgotten 
+pioneers: the master of asics, lsi logic. ## beginnings wilfred "wilf" corrigan was 
+born in 1938 in liverpool,   england. he is the son of a dock 
+worker who served in the british navy. after getting his degree in chemical 
+engineering, wilf took a job at a company   called transistron in boston. solely because 
+it paid the best. that was how he got into   semiconductors. then he joined motorola out in 
+arizona, working in the early days of epitaxy. then in 1968, he went to the iconic fairchild 
+semiconductor. fairchild semiconductor was then   struggling. some of their products were not 
+selling well and competition was heating up. they were also suffering the loss 
+of charlie sporck. sporck had   run a tight and efficient ship until he 
+defected over to national semiconductor. so sherman fairchild, investor and fairchild's 
+owner, decided to hire lester hogan from motorola   semiconductors to run the larger fairchild 
+camera & instrument company. tighten things up. hogan brought along with him eight members of the   motorola team - dubbed "hogan's 
+heroes" after the 1960s tv show. ## running fairchild
+corrigan was one of the "hogan's heroes", and later in 1970 was made the 
+semiconductor division's ceo. there he got a front row seat to the 
+founding of silicon valley. slowly,   fairchild's iconic talents left 
+to found today's iconic companies. robert noyce and gordon moore left to found intel. 
+corrigan recalls that if he could go back in time,   he would have sued intel for taking 
+fairchild intellectual property. then, jerry sanders left to found amd. corrigan 
+recalls how hard he tried to keep sanders,   a sales wizard and his good friend, at fairchild. in 1974, corrigan became ceo of the 
+fairchild parent company. five years later,   that parent company was taken over by schlumberger 
+- the oil services company - for $425 million. corrigan saw the writing on the wall and very 
+quickly got the heck out of dodge. unsurprisingly,   schlumberger had no idea how to run a 
+semiconductor manufacturer and ran what was left   of fairchild into the ground. later, they sold it 
+again to national semiconductor for $200 million. corrigan signed a 1-year non-compete 
+agreement before leaving fairchild.   after a brief flirtation with venture capital, 
+he decided to go start his own company after   his non-compete expired. but what would it do? 
+a memory bubbled up from his time at fairchild. ## custom chips
+in the mid-1960s, the number of diodes, resistors, and such that could fit onto a single 
+integrated circuit or ic was about 20. as one of the technology's early 
+leaders, fairchild had customers   asking them to make integrated circuits 
+customized for certain functions. the value was obvious. these customers 
+were using logic boards with off-the-shelf   processors and ttl chips. if you could 
+replace the whole thing with an ic,   then you can cut cost, size, and 
+increase performance. win-win. fairchild did a few for the big mainframe computer 
+companies, but largely found it uneconomical. it   was most profitable for them to make simple chips 
+at very high volumes. and designing and making a   custom chip using the existing techniques of the 
+time could take up to 2 years. just way too long. but how long could that last? in 1965, gordon 
+moore - then fairchild's r&d head - postulated   a future in which the number of components 
+on an ic would double every' months: moore's plot. it wasn't called moore's law back 
+then. moore reasoned that if his plot held,   then it would have several massive 
+implications for the business. integrated circuits will get very big, 
+very fast. but as they got bigger,   they would have to become more 
+specialized - customized for niche   needs within industry. that's the only 
+way we can use all that new power, right? and because those chips were so 
+customized, the customer would not   need them in huge volumes. so a custom chip 
+revolution meant a whole lot of low-volume,   specialized chips. which would be 
+bad for fairchild, moore reasoned. ## eda this all seemed like a threat to the business. 
+but moore also saw it as an opportunity. one of the first opportunities moore 
+saw was in software. if software tools   can somehow shorten the chip design process,   then custom chips can be more economical. so he 
+founded fairchild's computer-aided design group,   recruiting several experts in electronic 
+computer-aided design from stanford. a notable product was fairsim, a logic 
+simulator written by jim koford. a logic   simulator tries to predict the 
+behavior of digital circuits. once you are happy with the design as simulated 
+by fairsim, you can use fairchild's automatic   placement and routing tools to wire those 
+circuits together and create a layout.   computer tools would also check the layout 
+before you go start making the photomask. so by 1970, we had the first computer-aided design 
+or cad system - sometimes also referred to as   eda or electronic design automation - taking 
+you from end-to-end from logic simulation to   testing. when properly used, it eliminated the 
+need for what was then called a "breadboard" - a   blank construction base for prototyping 
+circuits used in the early days of radio. ## micromosaic to help produce those custom designs, 
+fairchild had a chip called the "micromosaic". you can think of it as like 
+an easily customizable starter   template. integrated circuits 
+are basically collections of   devices connected together with thin 
+metal wires known as interconnects. the micromosaic had about 80-100 
+unconnected logic gates - a gate   array. the devices were printed and etched 
+onto the silicon, but interconnects had   not yet been laid down to connect them. 
+this later step is called metallization. using fairchild's cad tools, you 
+can design a custom chip by making   connections between these various 
+gates. fairchild would then lay   down the interconnects on the micromosaic 
+in order to implement your custom design. these custom-ish chips were suitable 
+for running special calculations.   many micromosaic customers were calculator-makers. today we would call these application 
+specific integrated chips, or asics.   today there are asics designed to do video 
+encoding, bitcoin, or matrix multiplication   very well. but back in the 1960s, they were 
+just called "custom" or "semi-custom" chips. ## struggles so that was the custom chips team at 
+fairchild when hogan's heroes arrived. the new team brought a more conservative approach, 
+and while they appreciated the technology,   the division was losing money. the cad and 
+micromosaic teams explored several ideas   to raise revenue, but the whole industry 
+was going through a downturn at the time. they even tried partnering with intel to 
+produce custom chips. such a partnership   would have been interesting - but those 
+plans fell through due to lack of investment. and then in 1971, intel introduced the 
+first microprocessor. these versatile   chips convinced many people that 
+custom chips would no longer be   necessary. so finally in 1972, 
+fairchild closed the team down. ## changing times as it turns out, the team over at 
+fairchild really had been too early. microprocessors and other products 
+did not demolish customer demand   for smaller volumes of custom chips. 
+competitors like motorola and american   microsystems inc struggled to profitably 
+produce good silicon asics and left. the 1970s saw cheap and powerful computers 
+capable of running computer-aided design   software. commercial cad/eda software vendors 
+started to emerge, and they promoted the asic   design concept. because of course doing so 
+would mean more sales for their software tools. chip manufacturing changed too. namely 
+with the rise of complementary metal-oxide   semiconductors or cmos. cmos is 
+more suitable for very large ics   with 10,000 to 20,000 transistors. while 
+the technology has been around since 1963,   it was not until the mid-1970s that 
+the americans started to adopt it. and finally, the 1970s had created a 
+semiconductor fab glut. governments plowed   hundreds of millions of dollars building fabs 
+in korea, germany, england, and france. decent   fabs that suddenly fell idle and needed stuff 
+to make. it would not cost a lot to get wafers. all of this crafted a new environment far 
+more amenable to a company targeting the   asic business. corrigan decided 
+that 1980 was the right time,   and so started to get the old 
+gang from fairchild back together. ## getting the gang together corrigan recruited extensively from 
+his former colleagues at fairchild. he turned around a lot from back when he ran 
+fairchild. people remembered him as being   "dictatorial" and a tyrant. but he apparently 
+chilled out after leaving, and was much more   savvy. fairchild people were convinced 
+he changed and came back to work for him. one of the first guys he got onboard was 
+rob walker, member of one of the original   fairchild asic teams. walker then puts together 
+the rest of the 1970s team, including jim koford. walker later became a technology historian 
+and wrote pretty much the best book on lsi   logic - silicon destiny. i highly recommend it as 
+one of the few good resources about this company. for marketing and sales, corrigan 
+added bill o'meara, who years earlier   headed up fairchild's mos product marketing group. corrigan then hired mitchell "mick" 
+bohn as the founding cfo. together,   the four of them co-founded lsi logic. the 1970s was a rough decade for the us 
+semiconductor industry. the japanese were   sky-high, and the conventional wisdom was that 
+only the big american companies like intel,   amd, or texas instruments can compete with them. corrigan and lsi logic wanted to prove them 
+wrong. that a silicon startup can compete   without raising billions. lsi logic raised 
+just $6 million at a $10 million valuation. various investors included kazuo 
+inamori, founder of kyocera,   and don valentine, founder of sequoia capital. ## going fabless
+$6 million is a lot of money. i mean, i wouldn't mind having $6 million. 
+feel free to mail me a check. but $6 million   falls far short of what is needed to 
+build a semiconductor fab in the 1980s. so lsi logic became one of the first fabless 
+companies. their founding product was very   similar to the micromosaic. you start 
+with premade, uncommitted gate arrays. these called "masterslices", and they were 
+basically done except for that last metallization   step to build the interconnects between the 
+gates. because these uncommitted slices were   all the same before the customization step, you 
+can make them at high volume to achieve scale. masterslices were made at a partner fab offshore 
+and then shipped to lsi's offices in milpitas,   california. there, lsi connects the 
+gates per the customer's design,   tuning it for performance and yield. 
+so rather than waiting for what had   once been two or so years, a customer 
+can get their chips in just 12 weeks. lsi's first customer was 3h, 
+a power supply tester company.   rob walker later recalled how in 1981 3h 
+wanted lsi to do three designs and they   were exactly the kind of asics nobody 
+wants to do - simple and low volume. walker didn't want to do it too, but beggars 
+can't be choosers and lsi delivered the first   prototypes on christmas 1981. for a long 
+time, 3h was lsi logic's only customer - and   they jokingly complained about having to give so 
+many references to other prospective customers. lsi's first manufacturing partner was japan's 
+toshiba, signing a deal in 1981. at first,   it was mutually beneficial. toshiba 
+had been a laggard in japan. the deal   with lsi would help use their capacity, 
+which at the time laid largely unused. for lsi, toshiba brought 
+cmos manufacturing capacity,   execution, and yields far beyond what 
+a startup would normally be capable of. unfortunately, over time that relationship 
+soured. as lsi's asic business grew,   toshiba started to sense conflict. gradually,   the two turned into competitors, forcing 
+painful price cuts and a breakup. ## putting it together rapidly, the company built up a series 
+of products to offer their customers. to jumpstart their masterslices and eda 
+stack, lsi licensed technologies from other   companies in silicon valley to eventually cobble 
+together the integrated lsi development system. the software was critical to the company's 
+success. it was how customers can bring   their chip designs to the market as 
+fast as possible as well as without   failure. the "without failure" part was super 
+important. walker recalls in a later interview: > at lsi logic, we insisted that our customers 
+complete logic test patterns before manufacturing   ... there were a series of bad designs out 
+there. our competitors were so incompetent progress on the various product lines was 
+good enough that the investors came through   again in march 1982 with a second round 
+of capital - some $16 million in total. ## coming out strong in 1982, lsi logic did 
+about $5 million in revenue,   but unfortunately turned a $3.7 million loss. but that was alright. it took some time to 
+get started. there is a lot of customer trust   involved. since asics are not produced 
+in high volume, the customer is putting   a lot on the line. if the asic supplier does 
+not come through then the team shuts down. some of lsi logic's first big customers 
+were mainframe computer makers like digital   equipment company or dec. demand picked 
+up thanks to lsi's aggressive sales force. in 1983, the company made about $35 million in 
+revenue. that may, they went public on the nasdaq   - getting a $600 million valuation based on a $5 
+million revenue quarter and raising $147 million. the year after that, 1984, revenue more 
+than doubled to $84 million. nice. symmetry! ## going global
+lsi logic had a big market in the united states, but corrigan pushed the 
+company to quickly go abroad. his strategy was to build up japanese and european 
+subsidiaries - nihon lsi and lsi logic limited,   respectively - and have them be run largely 
+autonomously almost like unaffiliated startups. and like startups, lsi sold shares of the 
+subsidiaries to local investors - which not   only raised needed capital but also 
+helped get local skin in the game. revenues continued to grow like a weed. 
+sales went from $84 million in 1984 to $140   million in 1985. the year after that, $200 
+million in revenue. and then $379 million. in the 1980s, the asic business was 10% of 
+the whole semiconductor market. and in 1986,   lsi controlled 25% of that market 
+worldwide and 40% of the american   market. they were kings of 
+the hottest game in town. amazing right? but a funny thing happened 
+on the way to a billion dollars, the company   wasn't making any profits. the company 
+had been most profitable back in 1983.   since then profits have floundered. they 
+actually turned losses in 1989 and 1990. ## decline of the asic as it turns out, the asic business did not last. a   confluence of business factors conspired 
+to take down the asic industry and lsi. the first major happening was the rise 
+of vlsi - a class of higher complexity   chip often classed as having 100,000 logic 
+gates versus just 10,000 in the lsi era. but in order to best take advantage 
+of these rising complexities,   you needed to do more than 
+just one or two metal layers. you needed to go full custom using standard cells 
+- predesigned building blocks for making a logic   function in silicon. this was aided by the big 
+third-party eda companies - like cadence, mentor,   and daisy - which simplified much of the work that 
+previously made standard cell design challenging. second, in 1985 xilinx released the first 
+field-programmable gate array - the fpga.   these were chips that can be programmed 
+and reprogrammed after fabrication. the early fpgas were not very good at the 
+start. but over time, they would enable   customers to turn around certain designs 
+even faster than they could with lsi,   consuming the low end of the custom chip business. and for unknown reasons, lsi 
+never went into that business   themselves. perhaps because they were 
+distracted with a different threat ... which is what we have at the 
+high end of the custom chips   world - the founding of tsmc and the 
+emergence of the silicon foundry.   those foundries worked hand in hand 
+with the third-party eda companies. so now if someone wanted a custom chip 
+- particularly a vlsi one - they did not   have to pay a middleman like lsi logic. instead, 
+they bought a license for eda software plus some   standard cell ip and make a design themselves 
+which they then can take direct to tsmc. ## setback the asic business began a slow 
+decline throughout the 1990s. lsi soon recognized that things really had 
+changed - and that a strategic shift was   necessary. in 1992, lsi logic laid off a 
+thousand employees and closed facilities   in germany and others. the $100 million 
+restructuring caused a big net loss that year. that same year, they also exited 
+sematech, the high profile american   consortium set up back in 1987 to upscale 
+american semiconductor manufacturing. financials were probably the primary reason - 
+but corrigan also believed - as a few others   did - that sematech fell prey to the needs 
+of only the big semiconductor companies like   intel. an los angeles times article 
+quoted president george wells saying: > "we were not too enthralled with the 
+idea of lsi money contributing to the   equipment industry," wells said. he agreed 
+that that was a worthy goal but added that   lsi hadn't joined sematech "to be a venture 
+capitalist for the chip-equipment industry". the company continued to struggle for 
+profits. in an industry that produced   25.4% annual returns for their 
+investors, lsi did just 3.4%. but lsi nevertheless survived - transitioning 
+to a new business - while other asic businesses   like vlsi technology could not. vlsi was 
+acquired in 1999 by philips semiconductor. ## later years
+in 2004, corrigan stepped down from the business. his successor, abhi talwalkar, came from 
+intel. talwalkar continued the path that   lsi logic was making in transforming 
+from an asic maker making chips for all   sorts of applications around the world into a 
+solutions vendor specializing in one industry. this remaking involved the jettison 
+of the remaining fabs, turning the   company into a true fabless company. in 
+2001, they struck an alliance with tsmc,   bringing 30% of their capacity to 
+the now-famous 130 nanometer process. 80% of its revenues came from selling prewired 
+standard ip and chips for consumer gadgets   like dvd recorders, broadband, networking, 
+and video game machines. but by 2006, the   company was driving towards data centers and mass 
+storage, which improved the company's prospects. finally in late 2013, they were acquired 
+by avago - now broadcom - for $6.6 billion.   avago probably - and correctly 
+- saw the opportunity to apply   their private equity-style cost-slashing 
+approach to the very fatty lsi logic. hock tan - avago's ruthless 
+malaysian-american ceo - said at the time: > this combination will increase 
+the company's scale and diversify   our revenue and customer base ... as we 
+integrate lsi onto the avago platform,   we expect to drive lsi's operating 
+margins toward avago's current levels. ## conclusion i want to thank several former lsi logic 
+employees who took the time to speak with   me about their times there. i appreciate your 
+kindness and openness in sharing knowledge. today, lsi logic is mostly forgotten. many years 
+has passed since it was the globe-trotting,   path-breaking fabless startup of the day. there is one more thing that i should 
+mention. lsi logic was the last place   that jensen huang worked at 
+before he co-founded nvidia. joining at the tender age of 22 as a 
+mere application engineer - employee   number 200 or so - he eventually 
+rose to become director of coreware. he recalls in a later oral history about 
+spending his time there working with the   luminaries of silicon valley, trying to 
+help solve their problems. those included: jon rubinstein, who was then at arden computer but 
+would later join apple and help develop the ipod. andy bechtolsheim, who was then 
+trying to start sun microsystems. the founders of silicon graphics, as well as 
+gordon bell, the father of the vax minicomputer. jensen called it the "single best job on 
+the planet." and it indeed seemed like a   great and glorious time to be in silicon valley.

@@ -1,0 +1,179 @@
+Building a dam imparts a stupendous change
+to the environment, and as with any change, there are winners and losers. The winners are usually us, people, through
+hydropower generation, protection from flooding, irrigation for farming, and a stable water
+supply for populated areas. But, we've known for a long time, probably
+since we started building dams in the first place, that many of the losers are fish (especially
+migratory fish) through fragmentation of their habitat. Even in 1890, the state of Washington in the
+US had laws on the books requiring consideration of fish when building dams. And, not just consideration, but specific
+infrastructure that would allow fish around a dam if they were quote-unquote “wont to
+ascend.” I recently took a tour of McNary Dam on the
+Columbia River in Washington (operated and maintained by the U.S. Army Corps of Engineers,
+Walla Walla District) and an aquatic research laboratory at the Pacific Northwest National
+Lab to learn more about the ways we balance our own needs with those of the aquatic wildlife
+impacted by the infrastructure we build. You should check out that video after this
+one if you want to see the whole tour. But one of the biggest pieces to that puzzle
+was the enormous fish ladders that allowed salmon and other migratory fish to swim up
+and over the dam. And it got me wondering: how do engineers
+design a structure like this? So this video is a follow-up, a chance to
+dive a little bit deeper into the intersection between engineering and wildlife. I'm Grady, and this is Practical Engineering. Today we're talking about fishways. You've probably seen a fish ladder before,
+but if you haven't, this one on the Oregon side of McNary Dam is just one of many designs. The way it works is simple in practice: adult
+fish swim upstream toward the dam. The goal is that they don't even realize the
+dam is there. They simply continue upstream through the
+fishway and out into the forebay on the other side. Water flows in one direction—fish flow in
+the other. But, designing a fishway isn't simple at all. In a way, it's like engineering life support
+systems for manned space missions: all the design criteria are biological. How fast can fish swim, and for how long? How are they motivated? How high can they jump? What temperature, dissolved oxygen, pH, and
+salinity can they handle? And how do all these factors vary across seasons
+and species? These are difficult questions to answer, and
+in fact, a big part of my tour at the Pacific Northwest National Laboratory was all about
+how scientists study exactly the limits and preferences of migratory fish. I saw the wide variety of tracking systems
+they use to observe the behaviors of fish in the wild and lots of different ways they
+study fish in a lab as well. From research like that and decades of trial
+and error with the fish passage systems in the real world, engineers and biologists have
+started to zero in on a few designs that work best. All fish are different, which means every
+fishway needs to be specially designed for the particular species that they handle. At McNary, that mainly means salmonids, a
+group of fish species that spend most of their adult lives in the ocean but return to shallow
+freshwater headstreams to reproduce. Fortunately, NOAA Fisheries has a detailed
+Anadromous Salmonid Design Manual that boils a lot of this knowledge down. And I’ve built a scale model of a few fish
+ladder designs in the garage to show you how they work. Salmon encounter all kinds of obstacles in
+natural streams and rivers, even ignoring the human-made ones. They're quite capable of moving upstream in
+a wide variety of conditions like rapids, small waterfalls and even the presence of
+hungry bears. Their species literally depends on it. So, the goal of a salmon fish ladder is to
+mimic natural conditions, to trick the salmon into thinking they're simply making their
+way up a section of the river, if a somewhat steep and concrete one, without delay, stress,
+or injury. Part of that trick is in the flow rate. In fact, the flow of water through a fishway
+is one of the most essential parts of the design. And like every engineering decision, it’s
+a balance. Every drop of water that flows through a fish
+ladder is a drop that isn't stored behind the dam, so it can't be used for hydropower
+or water supply. But the flow of water is obviously important
+to the fish, too. If the flow velocity is too high, the fish
+struggle to swim against it. And if it’s too low, there might not be
+enough water to swim through. But, fish not only need specific flow to swim
+through; they also need it to navigate. If flows through a ladder are too low, fish
+can become disoriented trying to find which way is upstream. And that’s especially true at the entrance. A dam stretches the entire width of a channel,
+but the entrance to a fish ladder usually doesn’t, so there has to be some way to
+draw them to the entrance. That’s called attraction flow. Salmon use the sound and turbulence of flowing
+water to know which direction to swim, so a big part of fish ladder design is simply
+encouraging the fish inside. In fact, the flow of water through the ladder
+itself is often not enough for attraction, so many fish ladders have auxiliary water
+systems. At McNary, two enormous pumps draw water from
+the tail race of the dam up and into the entrance channel just so it can fall back down, creating
+the sound and hydraulic conditions required for salmon to find their way in. In addition, a huge valve and conduit system
+under the fish ladder pulls additional water from the forebay and releases it at an intermediate
+point down the ladder. Both of these systems provide some redundancy
+(since no piece of infrastructure can operate 24/7) and operators some control over the
+conditions along the entire length of the fishway, ensuring it can always mimic ideal
+conditions for the fish. But once they’re in, another challenge begins. Dams are tall. At least, a lot of them are. And most fish can't climb actual ladders. They can't walk upstairs, and although there
+are some fish elevators, they’re a lot more complicated and usually less efficient than
+a system that allows fish to swim in a somewhat natural channel. So, the overall hydraulic design of most fishways
+is to break up that elevation into manageable “chunks” that fish can navigate at their
+own pace. They need to go kind of horizontal, but still
+make their way upward over the dam. A steeper channel is shorter, but it can make
+the water flow too quickly. A shallower channel has slower flow, but it’s
+a longer distance, increasing the cost and complexity of getting up to the top. So, for salmon, at least, the engineers and
+biologists have generally settled on something in between (usually a 10-15% slope) that breaks
+up the total height into passable increments with some kind of baffle. The simplest and oldest fishways are called
+“pool and weir” designs. The idea here is that fish can use a burst
+of energy to swim up the fast moving flow over the weir and then rest in the pool above. When they’re ready, they swim up the next
+one, and so on. Nothing like a grown man playing with fish
+in his garage. Lots of fish can handle this no problem, but
+not all species can manage the challenge of swimming up a high velocity jet of water over
+and over again. Pool and weir designs are generally considered
+one of the less effective designs because they can limit the species and fitness of
+the fish that can ultimately make it through. Many of the newer fishways use more sophisticated
+geometry to try and address that shortcoming. The fish ladder at McNary modifies the concept
+a little bit by breaking the weir into two parts with a non-overflow section in the center
+and including submerged holes through each baffle, called orifices. This design provides a wider variety of flow
+conditions, allowing more types of fish to find their way to the top. McNary even sees a good number of Lamprey,
+a jawless fish species with similar migratory behavior to salmon, pass through the ladder
+each year. Most of the salmon prefer to use the submerged
+orifices rather than jump over the top. My model isn’t quite scaled to my toy fish,
+so I’ll demonstrate that here with some movie magic. This particular configuration is sometimes
+called an Ice Harbor design because it was first implemented at Ice Harbor Dam on the
+Snake River, just upstream from McNary. Both the pool-and-weir and Ice Harbor designs
+have a major limitation in that they’re sensitive to the water level above the dam. Small changes in the forebay can significantly
+alter the amount of flow passing through the ladder just due to the hydraulics of weirs
+and orifices. So the designs only work when the reservoir
+or forebay above a dam is regulated to a tight margin. McNary has several large crest gates that
+can be used to control this, but that’s not always feasible. One type of fish ladder solves it in an interesting
+way. Vertical slot fishways are exactly what they
+sound like. Instead of a weir or orifice, they use a slot
+along the entire height of the baffle. That makes it possible for fish to move upstream
+under a wide variety of flow conditions. When I remove some of the stoplogs in my model
+to lower the level, the vertical slot baffles continue working in essentially the same manner. Plus, the velocity is fairly consistent from
+the top to the bottom of the slot, giving fish ample opportunity to pass through each
+one. The protrusion on the upstream face creates
+a gentle area for fish to rest if they need it. The big question with these designs and all
+artificial fishways is this: how well do they work? Again, a difficult question to answer, especially
+considering that many are designed with a specific group of species in mind. The fish ladders along the Columbia and Snake
+rivers are surprisingly good for salmon. One study found that 97% of Chinook, Sockeye,
+and steelhead that entered a dam tailrace made it up the ladder and into the forebay. But, millions of dollars of engineering, research,
+and testing were put into those structures because of the huge cultural and economic
+value of these fish in the region. The results vary wildly for other species
+or other dams. The primary way we know this is through tagging
+fish, introducing them downstream of a fishway, and measuring how many make it to the upstream
+side. That type of study comes with all kinds of
+complications, and of course, it’s impossible to compare those numbers to how many fish
+might make it upstream if there were no dam in the first place. The Pacific Northwest National Lab showed
+me some of the mind-bogglingly tiny tags that can be implanted into fish and the fascinating
+tools they use to track them, so again, check out that other video if you want to learn
+more about the process. One of the simplest ways we use to measure
+the effectiveness of fishways is to count the number and type of fish that pass through
+them. Many of the largest of these structures are
+equipped with counting stations, often a simple window into one side of the ladder where someone
+watches and marks the fish as they pass by. This is extremely useful data, not just used
+to measure effectiveness but to keep track of overall fish migration year over year,
+and a lot of it is available online. But even this requires a little ingenuity. Most fishways are too wide to see from one
+side to the other in the sometimes murky water, so it’s necessary to funnel fish toward
+the window. Sloped grates called pickets allow water to
+flow through while the fish are corralled to the counting station. Even these pickets can discourage fish from
+continuing upstream, so fish ladder designs have to consider whether they’re really
+necessary. A trash rack at the upstream exit is usually
+installed to keep debris from getting into the ladder and clogging up the baffles. Fish swim through the rack and into the forebay
+to continue their upstream journey. Of course, this is a drop in the bucket of
+all that it takes to manage fish passage. You won’t be surprised that adult salmon
+migrating upstream is a small subset of the vast array of challenges in getting fish around
+the barriers we build. Even McNary has juvenile passage facilities
+for younger fish traveling downstream and another fish ladder on the Washington side
+with a totally different design. Dams worldwide, particularly those installed
+where migratory fish species live, often have significantly different systems custom-designed
+for the species needing through. This is important. It’s not just for biodiversity’s sake,
+although that’s pretty important on its own. We depend on these fish for food, for recreation,
+for cultural identity, and more. So, we’re constantly innovating. I mentioned fish elevators and locks. In some cases, we do the migrating for the
+fish by barging up or downstream. You may have seen viral videos of the Whooshh
+fish cannon that aims to make fish passage possible where traditional ladders aren’t
+feasible. We’ve even tried dropping fish from airplanes. It didn’t work very well, by the way. All this to say, it’s something we care
+deeply about. For better or worse, a big part of engineering
+is fixing the problems we created through engineering of the past when we either didn’t
+know or didn’t care about the impacts our projects could cause. Everyone has a different perspective about
+what it means for humanity to live harmoniously with all the other life we share the planet
+with. I think it’s fascinating how those ideas
+and endeavors trickle down through engineering into the real world. I love talking about the intersection of engineering and and environmental issues, but I definitely
+have to be more thoughtful about how I present the issues compared to the pure engineering
+stuff. Wildlife isn’t the most polarizing issue
+on the news these days, but you might be surprised how stories are covered by different media
+sources, or sometimes, how they’re not covered at all. Here’s an example: A bird flu outbreak that started in 2020 has
+been spreading to other animals, and now scientists are detecting it in seals and sea lions. If you only rely on a few sources for your
+news, you might have missed this story altogether, but Ground News has collected all 31 in one
+place. 50 percent of the outlets reporting on this
+story lean left, while only 11 percent lean right. You can also get a summary of the Factuality
+and Ownership - for this story, 52 percent of the reporting outlets are owned by media
+conglomerates. Most of the reporting is pretty similar, but
+there’s some nuance in the headlines: One right-leaning source focuses on the environmental
+emergency specifically in the US, while left-leaning sources mostly mention the scientists trying
+to stop it. This is all easy to see at a glance with today’s
+sponsor, Ground News, a website and app that aggregates media sources and puts them in
+context. For every story, you get a visual breakdown
+of political bias, factuality, and ownership of sources based on ratings from independent
+news monitoring organizations. One of my favorite features is the blindspot
+feed, which highlights stories mostly covered by only one side of the political spectrum. That’s how I found the story about seals
+and bird flu. I think it’s important to think about how
+the news affects so much of our lives: what we advocate for, what we talk about, and who
+we vote for. With that much power over us, it just makes
+sense to paint those stories in context to make it easier to sift through biases. Ground News makes me feel more confident that
+I’m not living in a bubble controlled by algorithms that only try to show me what I
+want to see. And they’re offering a huge discount right
+now if you use my link in the description. Subscribe to get a more transparent media
+landscape using my link ground dot news slash practicalengineering or click the link in
+the video description for 40% off the Vantage subscription, which includes unlimited access
+to all of their features. Thank you for watching, and let me know what
+you think!

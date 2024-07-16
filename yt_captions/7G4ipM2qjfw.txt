@@ -1,0 +1,204 @@
+On June 4, 2022, a small piece of equipment 
+(called a lightning arrestor) at a power   plant in Odessa, Texas failed, causing 
+part of the plant to trip offline. It   was a fairly typical fault that happens 
+from time to time on the grid. There’s a   lot of equipment involved in producing and 
+delivering electricity over vast distances,   and every once in a while, things 
+break. Breakers isolate the problem,   and we have reserves that can pick up the slack. 
+But this fault was a little bit different. Within seconds of that one little short 
+circuit at a power plant in Odessa,   the entire Texas grid unexpectedly lost 2,500 
+megawatts of generation capacity (roughly 5%   of the total demand), mainly from solar plants 
+spread throughout the state. For some reason,   a single 300-megawatt fault at a single power 
+plant magnified into a loss of two-and-a-half   gigawatts, dropping the system frequency to 
+59.7 hertz. The event nearly exceeded Texas’s   “Resource Loss Protection Criteria,” which 
+is minimum loss of power that requires having   redundancy measures in place. Another 
+fault in the system could have required   disconnecting customers to reduce demand. 
+In other words, it was almost an emergency. If you lived in Texas at the time, you 
+probably didn’t notice anything unusual,   but this relatively innocuous event sent alarm 
+bells ringing through the power industry.   Solar plants, large-scale batteries, and wind 
+turbines don’t produce power like conventional   thermal power plants that make up such a big 
+part of the grid. The investigation into the   2022 Odessa disturbance found that it wasn’t 
+equipment failures that caused all the solar   plants to drop so much production all at once, 
+at least not in the traditional sense. Instead,   a wide variety of algorithms and configuration 
+settings in the power conversion equipment   reacted in unexpected ways when they 
+sensed that initial disturbance. The failure happened just before noon on 
+a sunny summer day, so solar plants around   the state were at peak output, representing 
+about 16% of the total power generation on the   grid. That might seem high, but there have 
+already been times when solar was powering   more than a third of Texas’s grid, and that 
+number is only going up. The portion of the   grid comprised of solar power is climbing 
+rapidly every year, and not just in Texas,   but worldwide. So the engineering challenges in 
+getting these new sources of power to play nicely   with the grid that wasn’t really built for them 
+are only going to become more important. And,   of course, I have some demos set up in the garage 
+to help explain. I’m Grady and this is Practical   Engineering. In today’s episode, we’re talking 
+about inverter-based resources on the grid. Solar panels and batteries work on direct current, 
+DC. If you measure the voltage coming out,   it’s a relatively constant number. This 
+is actually kind of true for wind turbines   as well. Of course, they are large spinning 
+machines, similar to the generators in coal   or natural gas plants. But unlike in thermal 
+power plants that can provide a smooth and   consistent source of power through a 
+steam boiler, winds vary a lot. So,   it’s usually more efficient to let the turbine 
+speed vary to optimize the transfer of energy from   the wind into the blades. There are quite 
+a few ways to do this, but in most cases,   you get a variable-speed alternating current from 
+the turbine. Since this AC doesn’t match the grid,   it’s easier to first convert it to DC. 
+So you have this class of energy sources,   mostly renewables, that output DC, but the grid 
+doesn’t work on DC (at least not most of it). Nearly all bulk power infrastructure, including 
+the power that makes it into your house,   uses an alternating current. I won’t go 
+into the Tesla versus Edison debate here,   but the biggest benefit of an AC grid is that 
+we can use relatively simple and inexpensive   equipment (transformers) to change the voltage 
+along the way. That provides flexibility between   insulation requirements and the efficiency of 
+long-distance transmission. So we have to convert,   or more specifically invert, the DC power from 
+renewable sources onto the AC grid. In fact,   batteries, solar panels, and most wind turbines 
+are collectively known to power professionals as   “inverter-based resources” because they are so 
+different from their counterparts. Here’s why. The oldest inverters were mechanical devices: a 
+motor connected to a generator. This is pretty   simple to show. I have a battery-powered 
+drill coupled to a synchronous motor. When   I pull the trigger, the drill motor spins the 
+synchronous motor, generating a nice sine wave   we can see on the oscilloscope. Maybe you 
+can see the disadvantages here. For one,   this is not very efficient. There are losses in 
+each step of converting electricity to mechanical   energy and then back into electrical energy on 
+the other side. Also, the frequency depends on   the speed of the motor, which is not always 
+a simple matter to control. So these days,   most inverters use solid-state electronic 
+circuits, and look what I found in my garage. These are practically ubiquitous these 
+days, partly because cars use a DC system,   and it’s convenient to power AC devices from 
+them. I just hook it up to the battery, and   get nice clean power from the other end…  haha just 
+kidding. These cheap inverters definitely output   alternating current, but often in a way that 
+barely resembles a sine wave. Connecting a load   to the device smooths it out a bit, but not much. 
+That’s because of what’s happening under the hood.   In essence, switches in the inverter turn on and 
+off, creating pulses of power. By controlling the   timing of the pulses, you can adjust the average 
+current flowing out of the inverter to swing up   and down into an approximate sine wave. Cheaper 
+inverters just use a few switches to create a   roughly wave-like signal. More sophisticated 
+inverters can flip the switches much more quickly,   smoothing the curve into something closer to a 
+sine wave. This is called pulse width modulation.   Boost the voltage on the way in or the way out, 
+add some filters to smooth out the choppiness of   the pulses, and that’s how you get a battery 
+to run an AC device… but it’s not quite how   you get a solar panel to send power into the 
+grid. There is a lot more to this equipment. For one, look at the waveform of my inverter and 
+the one from the grid. They’re similar enough,   but they’re definitely not a match. Even the 
+frequency is a little bit off. I will not be   making an interconnection here, since I don’t have 
+a permit from the utility, but even if I did, this   inverter would let out the magic smoke. A grid-tie 
+inverter has to be able to both synchronize with   the phase and frequency of the grid and be able 
+to vary the voltage of the waveform to control how   much current is flowing into or out of the device. 
+The synchronization part often involves a circuit   called a phase-locked loop. The inverter senses 
+the voltage of the grid and sets the timing of all   those little switches accordingly to match what 
+it sees. So, these are often called grid-following   inverters. They synchronize to the grid frequency 
+and phase and only vary the voltage to control the   flow of power. And that hints at one of their 
+challenges: they only work when the grid is up. I’ve done a video all about black starts, 
+so check that out after this if you want   to learn more, but (in general), 
+inverter-based resources like solar,   wind, and batteries can only follow what’s 
+already on the grid. When the system’s down,   they are too, regardless of whether the sun’s 
+shining or the wind’s blowing. That’s why   most grid-tied solar systems on houses 
+can’t give you power during an outage. There’s another interesting thing that inverters 
+do for solar panels, and I can show you how it   works in my driveway.   I have a solar panel 
+hooked up to a variable resistor, and I’m  measuring the voltage and current produced by 
+the panel. You can see as I lower the resistance,   the output voltage of the panel goes down and 
+the current it supplies goes up. But this isn’t a   linear effect. I recorded the voltage and current 
+over the full range, and multiplied them together   to get the power output. If you graph the power as 
+a function of voltage, you get this shape. And you   can see there’s an optimum resistance that gets 
+you the most power out of the panel. It’s called   the maximum power point. If you deviate on either 
+side of it, you get less power out. In other   words, you’re leaving power on the table. You’re 
+not taking full advantage of the panel’s capacity. What’s even more challenging is that point 
+changes depending on the temperature of the   panel and the amount of sun hitting it. I 
+ran this test again with a few more clouds,   and you can see how the graph changes. So nearly 
+all large solar photovoltaic installations use   what’s called a Maximum Power Point Tracker (or 
+MPPT) that essentially adjusts the resistance to   follow that point as it changes with sunniness 
+and temperature. It’s really a separate device   from the inverter, but often they’re located 
+right next to each other or inside the same   housing. Even this panel came with a charge 
+controller that has this MPPT function,   and you can see it adjusting the flow of 
+current to constantly try and stay at the   peak of the curve while it charges this battery. 
+These can be used for an entire installation,   but in many cases, each panel or group 
+of panels gets its own MPPT because that   curve is just a little bit different 
+for each one. Tracking the peak power   output individually can often squeeze a 
+little more capacity out of the system. Squeezing out capacity is essential to address 
+another challenge associated with inverter-based   resources on the grid: frequency.    The rate at 
+which the voltage and current on the grid swing back and forth is an important measure of how 
+well generation and demand are balanced. If demand   outstrips the generation capacity, the frequency 
+of the grid slows down. Lots of equipment, both on   the generation side and the stuff we plug in, is 
+designed to rely on a stable grid frequency, so if   it deviates too far, stuff goes wrong: Devices 
+malfunction, motors can overheat, generators   get out of sync, and more. It’s so important 
+that rather than let the frequency get too far   out of whack, grid operators will disconnect 
+customers to get electrical demands back in   balance with the available supply of power, called 
+an under-frequency load shed. Things go wrong on   the grid all the time, so generators have to be 
+able to make up for contingencies to keep the   frequency stable. Here’s the quintessential 
+example: an unexpected loss of generation. Say a generator trips offline, maybe because of a 
+failed lighting arrestor like the Odessa example.   The system frequency immediately starts dropping, 
+since power demand now exceeds the generation. And   the frequency will keep dropping unless we inject 
+more power into the system. The first part of   that, called Primary Frequency Response, usually 
+comes from automatic governors in power plants.   If we do it fast enough, the frequency will reach 
+a low point, called the nadir (NAY-dur), and then   recover to the nominal value. The nadir is a 
+critical point, because if it gets too low,   the grid will have to shed load in order to 
+recover. The other important value is called   the rate-of-change-of-frequency, basically 
+the slope of this line. It determines how much   time is available to get more power into the 
+system before the frequency gets too low,   and there are several factors that play into it: 
+How much generation was lost in the first place,   how quickly we can respond, and how much inertia 
+there is on the grid. Thermal power plants that   traditionally make up the bulk of generating 
+capacity are gigantic spinning machines. They’re   basically a bunch of synchronized flywheels. 
+That kinetic energy helps keep them spinning   during a disturbance, reducing the slope 
+of the frequency during an unexpected loss. Maybe you can see the problem with a simple 
+grid-following inverter. It’s locked in phase   with the frequency, even if that frequency 
+is wrong. And it has no physical inertia to   help arrest a deviation in frequency. If we 
+keep everything the same and just increase   the share of inverter-based resources, any 
+loss of generation will mean a steeper slope,   reducing the time available to get backup 
+supplies onto the grid before it’s forced   to shed load. Larger renewable plants, like 
+solar and wind farms, are increasingly required   to participate in primary frequency response, 
+injecting power into the grid immediately when   the frequency drops. And some inverters can even 
+create synthetic inertia that mimics a turbine’s   physical response to changes in frequency. 
+But there’s another challenge to this. Dealing with an over-frequency event is relatively 
+straightforward: just reduce the amount of energy   you’re sending into the grid. But, response 
+to an under-frequency event requires you to   have more energy to inject. In other words, you 
+have to run the plant below its maximum capacity,   just in case it gets called on during 
+an unexpected loss somewhere else in   the system. For a power company, that means 
+leaving money on the table, so in most places,   the energy markets are set up to pay power plants 
+to maintain a certain level of reserve capacity,   either through operating below maximum output 
+or including battery storage in the plant. The last big thing that inverter-based resources 
+have to manage is faults. Of course, you need   protective systems that can de-energize solar or 
+wind resources when conditions on the grid could   lead to damage. These are expensive projects, and 
+there’s almost no limit to the things that can go   wrong, requiring costly repairs or replacement. 
+But, for the stability of the grid, you can’t   have those protective systems being so sensitive 
+that they trip at the hint of something unusual,   like what happened in Odessa. This concept 
+is usually referred to as “ride-through.”   Especially for under-frequency events, 
+you need inverters to continue supplying   power to the grid to provide support. If 
+they trip offline, or even reduce power,   in response to a disturbance, it can lead to 
+a cascading outage. This is kind of a tug of   war between owners trying to protect their 
+equipment and grid operators saying, “Hey,   faults happen, and we need you not to shut 
+the whole system down when they do.” And   reliability requirements are getting 
+more specific as the equipment evolves,   because every manufacturer has their own 
+flavor of protective settings and algorithms. As inverter-based resources continue to grow 
+rapidly in proportion to the overall generation   portfolio, their engineering challenges are only 
+becoming more important. We talked about a few   of the big ones: lack of black start ability, low 
+inertia, and performance during disturbances. And   there are a lot more. But inverters also provide 
+a lot of opportunities. They’re really powerful   devices, and the technology is improving quickly. 
+They can chop up power basically however you want,   and they aren’t constrained by the physical 
+limitations of large generating plants. So   they can respond more quickly, and, unlike 
+physical inertia that will eventually peter out,   inverters can provide a sustained response. 
+There are even grid-forming inverters that,   unlike their grid-following brethren, can 
+black start or support an isolated island   without the need for a functioning grid to rely 
+on. We’re in the growing pains stage right now,   working out the bugs that these new 
+types of energy generation create,   but if you pay attention to what’s happening in 
+the industry, it’s mostly good news. A lot of   people from all sides of the industry are working 
+really hard on these engineering challenges so   that we’ll soon come out with a more reliable, 
+sustainable, and resilient grid on the other end. I build a lot of homemade demonstrations 
+for videos like this one, and I hope it   comes across how much joy it gives me. I love 
+the challenge of making something useful with   constraints on budget and tools. But I’ve 
+never built a hot air balloon! One of my   fellow creators who runs the Neo channel 
+just released a video on this incredible   story of two families escaping East Germany 
+in maybe the most creative way possible. I don’t know about you, but I have to say that 
+almost everything I watch these days is produced   by independent creators. There’s just something 
+really authentic and original about content that   hasn’t had to go through 5 levels of studio 
+executives before it gets made. Neo’s episode   on The Balloon Escape is a perfect example. Just 
+a fascinating story about homemade engineering,   including an interview with one of the 
+men who made the attempt, all set to the   beautiful animations they’re known for. And, if 
+you want to see it, it’s only available on Nebula. You probably know about Nebula now, even if 
+you’re not subscribed. It’s a streaming service   built by and for independent creators. No studio 
+executives deciding what gets the green light,   no algorithm driving the content into 
+a single style, and no ads getting in   the way. We just released a huge update 
+that completely redesigned the home page,   making it easier to find new stuff in addition 
+to your favorites. There's tons of originals, and we’re always adding creators,   so the new categories can help you 
+discover content related to your interests. My videos go live on Nebula before they 
+come out here, and my Practical Construction   series, where I embedded on a construction 
+site for a year, was specifically produced   for Nebula viewers who want to see deeper dives 
+into specific topics. I know there are a lot of   streaming platforms out there right now, and no 
+one wants another monthly cost to keep track of,   but I also know that if you’re watching a 
+show like this to end, there is a ton of   other stuff on Nebula that you’re going to 
+enjoy as well. So I’ve made it dead simple:   click the link below and you’ll get 40% off an 
+annual plan. That means you pay just one time,   30 dollars, for an entire year’s access at 
+nebula.tv/practical-engineering. Or if you have   subscription fatigue, but still want to support 
+what I’m doing, you can get a lifetime membership.   Pay once and have access for as long as you 
+and Nebula last. Hopefully that’s a long   time! If you’re with me that independent 
+creators are the future of great video,   I hope you’ll consider subscribing. Thank you 
+for watching, and let me know what you think!

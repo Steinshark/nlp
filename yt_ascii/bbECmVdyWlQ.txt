@@ -1,0 +1,188 @@
+in january of 2024, right on the heels 
+of a serious drought across the state,   a major storm slammed into the hawaiian islands 
+of oahu and kauai. severe winds caused damage to   buildings, and heavy rain flooded roadways. 
+at the waiau steam turbine plant,   the rain reached some of the generator unit 
+controls, tripping two units and knocking 100   megawatts of power off the tiny grid (roughly 10% 
+of demand). the overcast weather also meant solar   panels weren't producing much electricity, and the 
+colossal battery systems at kapolei  and waiawa were running out of juice. 
+other generating units were out of service due to   maintenance scheduled during the cool winter 
+months when power demands were lowest. then,   the h-power trash-to-energy plant tripped 
+offline as well. by the evening of january 8th,   all of hawaiian electric's power 
+reserves on oahu were depleted,   and it was clear that they weren't going to have 
+enough generation to meet all the needs. and if   you can't increase supply, the only other 
+option is to force a reduction in demand. at around 8:30 pm, the utility implemented rolling 
+outages across the island of oahu to bring power   demands down to a manageable level. for about 2 
+hours, the utility blacked out different sections   of the island for 30 minutes each to minimize 
+the inconvenience. twice since then, as of   this writing, rolling outages have been forced on 
+hawaii island from unexpected trips at generators   and scheduled maintenance at backup facilities, 
+making them unavailable to pick up the slack. when we say "power grid" we're used to imagining 
+interconnections that cover huge areas and serve   tens to hundreds of millions of people. but 
+populated islands need a stable supply of   electricity too. those recent power disturbances 
+highlight some really interesting challenges that   come from building and operating a small 
+power grid, so i thought it would be fun   to use the 50th state as a case study to 
+dive into those difficulties. i'm grady,   and this is practical engineering. today 
+we're talking about the hawaiian power grid. really, i should say hawaiian power grids, 
+because each populated island in the state   has its own separate electrical system. around 
+95% of customers are served by a single utility,   hawaiian electric, which maintains grids 
+on oahu, maui, hawaii island, lanai,   and molokai. kauai is the only island with its 
+own electric cooperative. there have been a few   proposals and false starts to connect the islands 
+through undersea transmission cables and form a   single grid. it is an enormous challenge to 
+install and maintain cables of that depth   and distance. when you add in the volcanic and 
+seismic hazards of the area and the sensitive   ecology of the surrounding ocean, so far, no 
+one has figured out how to make it feasible. so,   each island has its own power plants, high-voltage 
+transmission lines, substations, and distribution   system entirely disconnected from the others. 
+and that makes for some interesting challenges. "reliability" is the name of the game 
+when it comes to running an electrical   grid. it's not that complicated to build 
+generators, transmission lines, transformers,   et cetera. what's hard is to keep them all 
+running 99.9% of the time, day and night,   rain or snow. yeah, some parts of hawaii 
+occasionally get snow.  this is a graph of a typical reliability curve that helps explain why 
+it's a challenge. at the left end of the curve,   you can get big increases with a small investment. 
+but the closer you get to 100 percent uptime,   each increment gets a lot more expensive. 
+it really boils down to the fact that,   in many ways, reliability comes from 
+redundancy. when something goes wrong,   you need flexibility to keep the grid up. but, 
+in practice, that means you have to pay for and   maintain equipment and infrastructure that rarely 
+gets used, or at least not to its full capacity. hopefully, it's clear that the graph i 
+showed is idealized. it's much harder   to put concrete numbers to the question. 
+the random nature of problems that arise,   our inability to predict the future, and the 
+fact that everything in a bulk power system is   interconnected all make it practically impossible 
+to know how much investment is required to achieve   any incremental improvement in reliability. 
+but it's useful anyway because the graph helps   clarify the benefits of a large power grid, 
+also known as a "wide area interconnection." for one, it smooths out demand. one part of a 
+region may have storms while another has good   weather. from east to west, the peak power demand 
+comes at different times. some areas get sun,   some get shade. but overall, demands average out 
+and become less volatile as the grid gets bigger   geographically. larger interconnections also 
+have more redundant paths for energy to flow,   reducing the impacts of major equipment problems 
+like transmission line outages. they have more   power plants, again creating redundancy and 
+making it easier to schedule offline time to   maintain those facilities. and, the power plants 
+themselves can be bigger, taking advantage of the   economies of scale to make energy less expensive 
+and more environmentally beneficial. finally,   larger areas have more resources. maybe it's 
+windy over here, so you can take advantage and   build wind turbines. maybe this area has lots 
+of natural gas production, so you can produce   power efficiently without having to pay for 
+expensive fuel transportation. in general,   a wide area interconnection allows the costs 
+of equipment, infrastructure, resources, and   operations to be shared, making it easier to keep 
+things running reliably. hawaii has none of that. roughly 75% of the electric power in the 
+state currently comes from power plants that   run on petroleum. there are no oil or natural gas 
+reserves in hawaii, which means the vast majority   of power on the islands comes from fuel imported 
+from foreign countries. that makes the state very   susceptible to factors outside of its control, 
+including international issues that affect the   price of oil. each island has only a handful 
+of major power plants and transmission lines.   and when storms happen, they often hit the entire 
+place at once. it's easy to see why retail energy   costs in hawaii are around 3 times the average 
+price paid across the us. every increment of   reliability costs more than the one before it, and 
+each island has no one else to share those costs   with. so, they get passed down to consumers. 
+but, it's not just that the grids are small. the bulk of the remaining roughly 25% of hawaii's 
+electric power not produced in oil-fired power   plants comes from renewable sources: wind, 
+solar, and a single geothermal plant. this   has the obvious benefit of reducing co2 emissions, 
+but it also reduces the state's exposure to the   complexities of the fuel supply chain and price 
+volatility, taking advantage of resources that are   actually available on the islands. but, renewable 
+sources come with their own set of engineering   challenges, particularly when they represent 
+such a large percentage of the energy portfolio. of course, renewable sources are intermittent. 
+you don't get power when the wind doesn't blow   or the sun doesn't shine. that sporadic 
+nature necessitates options for storage   or firm baseload to make up the difference 
+between supply and demand. it also makes it   more complicated to forecast the availability of 
+power to plan ahead for maintenance, fuel needs,   and so on. and, it requires those storage 
+facilities or baseload plants to ramp down   and up very quickly as the sun and wind come and 
+go. but that's not all. solar and wind sources   are also considered "low-inertia". thermal 
+and hydroelectric power plants generally use   enormous turbines to generate electricity. those 
+big machines have a lot of rotational inertia that   stabilizes the ac frequency. the frequency of the 
+alternating current on the grid is basically its   heartbeat. it's a measure of health, indicating 
+whether supply and demand are properly balanced.   if frequency starts to deviate too much, equipment 
+on the grid will sense that something's wrong and   disconnect themselves to prevent damage. the same 
+is true for lots of industrial equipment and even   consumer devices. when conditions on the grid 
+fluctuate - say a transmission line or generator   suddenly trips offline - the rotational inertia in 
+those big spinning turbines can absorb the changes   and help the grid ride through with a stable 
+frequency. solar panels and most wind turbines   connect to the grid through inverters. instead of 
+heavy spinning machines creating the alternating   current, they're basically just a bunch of little 
+switches. that means disturbances can create a   faster and more significant effect on the grid, 
+reducing the quality of power and making it more   difficult to keep things stable. i'm planning a 
+deep dive into how inverter-based energy sources   work, so stay tuned for that in a future video. 
+but, it gets even more complicated than that. of all the renewable energy on the hawaiian 
+islands, about half currently comes from   small-scale solar installations, like those on 
+residential and commercial rooftops. they're   collectively known as "distributed energy 
+resources." this has the obvious benefit   of bringing resources closer to the loads, 
+reducing strain on transmission lines. it also   takes advantage of space that is already developed 
+and builds capacity on the grid without requiring   the utility to invest in new facilities. but, 
+distributed sources come with tradeoffs. most   parts of the grid are built for power to flow 
+in one direction, so injecting electricity at   the downstream end can create unexpected loads 
+on circuits and equipment not designed to handle   it. distributed sources also affect voltage and 
+frequency, since something as simple as a cloud   passing over a neighborhood can dramatically swing 
+the flow of power on the network. the inverters on   small solar installations are generally dumb. 
+and i'm using that as a technical term. they   can't communicate with the rest of the grid; they 
+only respond based on what they can measure at the   point of connection. the grid operator doesn't 
+get good data on how much power the distributed   sources are putting into the grid, and they have 
+little control over those inverters. they can't   tell them to reduce power if there's too much 
+on the grid already or increase power to provide   support. and inverters, especially consumer-grade 
+equipment, can behave in unexpected and unintended   ways during faults and disturbances, 
+magnifying small problems into larger ones. those inverters can also make the grid more 
+vulnerable to cyberattacks since their security   depends on individual owners. it's not hard to 
+imagine how someone nefarious could take advantage   of a large number of distributed sources 
+to sabotage parts of the grid. and finally,   distributed resources affect the revenue that 
+flows into the utility, and this can get pretty   contentious. the rates a customer pays for 
+electricity cover a lot of different costs,   many of which don't really evaporate on a 
+kilowatt-per-kilowatt basis if you remove   that demand from the grid. fixed costs like 
+maintenance of infrastructure still come due,   even if that infrastructure is being used at a 
+lower capacity on sunny days. with net metering,   it gets even more complicated to figure out 
+how much that power injected into the grid is   really saving, not to mention how those savings 
+should be distributed across the customer base. and, these challenges are only becoming more 
+immediate. hawaii's clean energy initiative,   launched in 2008, set a goal of meeting 
+70 percent of its energy needs through   renewables and increased efficiencies by 2030. 
+in 2014, they doubled down on the commitment,   setting a goal of completely eliminating fossil 
+fuel use by 2045. that would take them from one   of the most fossil-fuel-dependent states in 
+the us to the most energy-independent. and,   they've taken some big steps toward that goal. 
+renewable generation has gone from less than   10% to about 25% of the total already, and a 
+host of policies have been changed to create   more opportunities for renewables on the 
+grid. solar water heaters are now required   for most new homes. rebates are available for 
+solar installations. the only coal-fired plant   in the state was controversially shut down 
+in 2022. and, there is a big list of solar,   battery storage, and biofuel turbine projects 
+expected to come online in the near future. for better or worse, hawaii has become a 
+full-scale test bed for renewables and the   challenges involved as they become a larger and 
+larger part of the grid. many consider natural gas   to be a bridge fuel to renewables, a firm resource 
+that is generally cheaper, cleaner, and often more   stable in price than other fossil fuels. but 
+hawaii is hoping to leapfrog the bridge. for   the climate and their own energy security, they've 
+gone all in on renewables, making them a leader in   the world, but also forcing them to work out some 
+of the bugs that inevitably arise when there's no   one ahead of you to work them out first. there 
+are some really cool innovations on the horizon   as hawaii grows closer to its goal. smart grid 
+technologies will add sensors and communications   tools to automate fault detection, recovery, 
+and restoration, and enable power to flow more   efficiently across distributed resources. hawaiian 
+electric is also testing out time-of-use rates to   encourage customers to shift their power use to 
+off-peak hours, hopefully smoothing out demands   and reducing the need for expensive generators 
+that only get used for a few hours per day. that idea really underscores the significant 
+challenge hawaii faces in keeping its grids   operating. improvements and capacity upgrades 
+help everyone, but they cost everyone too,   and they cost more for every additional 
+increment of uptime. there's no reliability menu,   and kilowatt-hours don't come a la carte. 
+if you're a self-sufficient minimalist or   frequent nomad who isn't bothered by the idea 
+of intermittent power, you can't pay a cheaper   rate for less dependable service. and if you use 
+a powered medical device or work a high-powered,   always-connected job at home, you can't pay 
+extra for more reliability. in many ways,   hawaiians are all in it together.  drawing that 
+line between what's worth the investment and   what's just gilding the electric lily is tough 
+already with such a diverse array of needs   and opinions. doing it on such a small scale, 
+multiplied by several islands, and with such a   quickly growing portfolio of renewable energy 
+sources only magnifies the challenge. but it   also creates opportunities for some really cool 
+engineering to pave the way for a more resilient,   secure, and flexible energy future, not just for 
+hawaii, but hopefully all the rest of us too. if there's one thing i learned from researching 
+and talking to people for this video, it's that   hawaiians care a lot about how their state 
+is portrayed in the media. there's a lot of   complexity in the history and culture, and it's 
+easy to miss out on important context if you're   not from there, and i'm not. and that happens 
+a lot for me, actually, even for topics you   think would be strictly about the science 
+and engineering. here's just one example: the private odysseus lander (kind of) 
+successfully landed on the moon a few   weeks ago. there's not a lot of politics in 
+a story like this, but if you look closely,   you can see it through slightly different lenses. 
+more than 289 news outlets covered it. of these   289 news outlets, 35% lean left and 20% lean 
+right. and, while the headlines themselves are   relatively similar across the political spectrum, 
+the articles themselves are a little different.   right-leaning news outlets tended to focus 
+on the private sector aspect of the mission,   while left-leaning outlets ascribed more of the 
+achievement toward the partnership with nasa. with today's sponsor, ground news, it's 
+easy to pick out these little details   and rise above the biases that are inherent 
+in lots of media sources. for every story,   you get a quick visual breakdown of the political 
+biases, factuality ratings, and ownership of the   sources. everything's in one place, so it's easy 
+to compare multiple articles and make sure you   have a well-rounded understanding of the story. 
+for the odysseus story, 49% of the reporting   outlets are owned by media conglomerates. one of 
+my favorite features is the blindspot feed, which   shows you stories that are mostly reported by 
+one side of the political spectrum or the other. i don't think we'll ever get 
+away from biases in reporting,   but reading the same story from different 
+angles gives me context and insights that   would be harder to come by just using my 
+typical sources. ground news makes me feel   more confident that i'm not living in a bubble 
+controlled by algorithms that only try to show   me what i want to see. and they're offering a 
+huge discount right now if you use my link in   the description. subscribe to get a more 
+transparent media landscape using my link   ground dot news slash practicalengineering 
+for 30% off the vantage subscription. that   link is in the description. thank you for 
+watching, and let me know what you think!

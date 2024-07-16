@@ -1,0 +1,194 @@
+if you've ever ridden a bike, driven a car, or 
+operated pretty much any other vehicle on earth,   there's a fact you've probably taken for granted: 
+you can see farther than it takes to stop. within   the span between seeing a stationary hazard 
+and colliding with it, you have enough time   to recognize it, apply the brakes, and come 
+to a stop to avoid a collision. your sight   distance is greater than your stopping distance; 
+it sounds almost silly, but this is a critical   requirement for nearly all human-operated 
+machines. but it's not true for trains. engineers can see just as far as the rest of us, 
+but the stopping distance of a fully laden freight   train can be upwards of a mile. that means if an 
+engineer can see something on the tracks ahead,   it's often already too late. so, trains need a 
+lot of safety infrastructure to make up for that   deficiency. for one: trains almost always have the 
+right-of-way when they cross a road or highway at   the same level, or at grade. the cars have to 
+wait; and, we use a litany of warning devices   at grade crossings to enforce that right-of-way 
+and try to prevent collisions. in most cases,   these devices have to detect the impending arrival 
+of a train and give motorists enough time to clear   the tracks or come to a stop. it sounds simple, 
+but the engineering that makes that possible is,   i think, really interesting, and of course, i 
+built some demonstrations to help explain. this   video is part of my series on railroads, so check 
+out the rest after this if you want to learn more!   i'm grady, and this is practical engineering. 
+today, we're exploring how grade crossings work. it's inevitable that roads cross railroad tracks,   and it's just not feasible to build a 
+bridge in every case. in the us alone,   there are over 200,000 grade crossings where 
+cars and trains must share the same space. a   car to a freight train is an aluminum can 
+to a car: in other words, there's a pretty   big disparity in weight. so we've put a lot of 
+thought into how to keep motorists, cyclists,   and pedestrians safe from the trains that can't 
+swerve or stop for a hazard. you've probably   stopped for a train at a crossing, but you may not 
+have consciously added all the safety features up. of course, the locomotives at the front of trains 
+themselves have warning devices, including bells,   bright headlights, smaller flashing ditch 
+lights, and most noticeably, the blaring   horn. the standard pattern at a crossing is two 
+long blasts, one short blast, and one final long blast. but the crossing has warnings too. passive 
+warning devices don't change with an approaching   train. they include a stop or yield signs, the 
+crossbuck, which is the international symbol for   a railroad crossing, and sometimes a plate saying 
+how many tracks there are so you know whether to   look for one train or many. another crossbuck is 
+usually included as a pavement marking to make   sure you know what's coming up. many low-traffic 
+crossings have only passive safety features,   leaving it up to the driver to look out for trains 
+and proceed when it's safe. but, many crossings   demand a little less margin for error. that's 
+when the active warning devices are installed. a typical grade crossing features both 
+visual and audible warning signals that   a train is coming: red lights flash, a 
+mechanical or electronic bell sounds,   and usually a gate drops across oncoming 
+lanes. that seems pretty simple,   but there's quite a bit of complexity in the 
+task and the consequences if anything goes   wrong are deadly. and the first part 
+is just knowing if a train is coming. detecting a train is important for grade signals 
+(it's also important for signaling trains about   other trains, but that's a topic for another 
+video). it can be handled in a bunch of ways,   but the simplest take advantage of the 
+electrical conductivity of the steel rails   and wheels themselves. a basic track circuit runs 
+current up one rail, through a device called a   relay i'll explain in a minute, and back down 
+the other rail. when a train comes along with   its heavy steel wheels and axles, it creates 
+a short circuit, a preferential path for the   current in the track circuit. that deenergizes 
+the relay, triggering all the connected warning   devices or signals. but why use an ordinary 
+old diagram when you have a model tank car,   and an old railroad relay you got off ebay? let me show you how this works in a real demonstration. on the left, i've hooked up a power supply to the 
+tracks, putting a voltage between the two rails.   on the right side, i've attached a relay. let's 
+take a look inside it to see what it does. i love   playing with stuff like this. at its simplest, 
+a relay is just an electromechanical switch: a   way to turn something on or off with an electrical 
+signal. when i energize the coil (at the bottom),   it acts as an electromagnet, pulling a lever 
+towards it. on the other side of the lever,   you can see the movement interacting with several 
+electrical contacts. it's a little tough to see   here, but these contacts are like switches 
+that can control secondary circuits. some   will be switched on when the relay is energized, 
+and others are switched off. when the relay is   energized or de-energized, it basically flips 
+the switch on these circuits, allowing various   devices, like lights, bells, and gate arms, to 
+be activated or deactivated. in my case, i have   a simple battery and led to indicate whether 
+or not a train is being detected on the rails. when there's no train, current passes through 
+the relay from one rail to the other, energizing   the coil and holding the switch open so the led 
+stays dark. when i put a railcar on the tracks,   the circuit changes. the wheels and axles create 
+a short circuit (or shunt), a low-resistance   path for current to flow, essentially bypassing 
+the relay. the coils in the relay de-energize,   closing the switch and lighting the led to warn 
+any nearby tiny drivers that a train is present on   the tracks. it all depends on the train giving a 
+preferential current path, which can be a problem   if there are leaves or rust on the rails. you can 
+see how shiny and clean tracks look when they're   in frequent use. tracks that haven't seen a train 
+in a day or more often impose a speed restriction   on the first train just in case there is rust that 
+could affect the track circuits along the way. if all this circuitry seems a little convoluted 
+to simply detect the presence of a train, it's   because of how this simple track circuit handles 
+when things go wrong. let's say the track circuit   loses power; what happens? the relay deenergizes 
+and falls back to the safest condition: assuming   a train is occupying the tracks. same thing if 
+a rail cracks or breaks: the relay deenergizes   and the light comes on. this is called failsafe 
+operation, or as the engineers prefer to call it:   fail to a known condition. if anything goes wrong, 
+we want the default assumption to be that there's   a train coming because it might be true. fail 
+safe operation isn't just in the track circuit   but the warning devices too. gates are actively 
+held up with a powered brake. if power is lost,   they fall just by gravity alone. and the bells and 
+lights are usually powered by banks of batteries   that can last for hours or days. most modern train 
+detection systems have moved to more sophisticated   equipment, but relays are still used around the 
+world because of their reliability. in fact,   this is called a "vital" relay because of all 
+the features that make it extremely unlikely   to fail. you can see it acts slowly so that the 
+inevitably noisy signal of a train shunting the   tracks can't cycle it on and off over and over; 
+the armature assumes the de-energized position   even if the spring breaks; the contacts use 
+special materials to keep from welding together;   and they're just really robust and beefy 
+to make sure they last for decades. but even though assuming a train is coming 
+is the safest way to manage problems,   it's not without its own challenges. warning 
+devices depend on trust, and that's an extremely   tenuous confidence to ask of a motorist. we are 
+naturally dubious of automated equipment.   every time a grade crossing activates and 
+no train comes, that trust is eroded,   making motorists more likely to drive around the 
+gates. so failing safe isn't enough; we also need   to make sure that failure is rare. current leaking 
+between the tracks through water, plant growth,   or debris can falsely trigger warning devices. so 
+railroads put a lot of time into keeping tracks   clean and the coarse gravel below the tracks 
+(called ballast) freely draining to prevent   water from pooling up. in addition, even though 
+maintenance workers can manually trigger devices   by shunting current across the tracks, this is 
+done rarely to avoid impacts to road traffic. but maybe you've spotted a flaw in 
+this simple track circuit. if not,   let me point it out. it's all to do with where 
+you put the boundaries. if the circuit is   close to the crossing on either side, there's no 
+warning time. by the time the train is detected,   the motorists wouldn't be able to clear the 
+intersection or come to a stop. but if the   circuit extends far enough beyond the crossing 
+to give adequate warning time, motorists will   have to sit and wait well after the train is 
+past before it comes off the track circuit and   the warning devices turn off. so, instead of a 
+single track circuit, most crossings use three:   two approaches and an island. let me show 
+you how this works with another demo. now i have three track circuits set up with power 
+going to each one. the rails are separated by a   small gap to avoid an inadvertent connection 
+across the circuits. on actual railroads,   you can often identify insulated joints used to 
+isolate the track circuits. they can be hard to   distinguish if the insulating material 
+matches the profile of the rail itself,   but they're often painted to be easy to spot. 
+a three-circuit configuration requires a little   bit of logic to decide when to turn on the warning 
+devices and when to turn them off. so, despite the   fact that i have the coding skills of a civil 
+engineer, i put this demo together using an   arduino microcontroller. the model railroad folks 
+are surely shaking their heads at this. you can   see my leds as i roll the train along the tracks 
+indicating which of the circuits is detecting the   presence of a train; from approach to island to 
+other approach. and here's how the logic works. when a train is detected on either approach 
+circuit, it immediately activates the warning   devices. the lights flash, bell sounds, and 
+gates drop. as the train keeps moving toward   the crossing, it's detected on the island circuit 
+too. the circuit effectively takes over control of   the warning devices. they'll stay on for as long 
+as a train is occupying the island circuit. but   as soon as the island is unoccupied, the warning 
+devices turn off (even though one of the approach   circuits is still detecting a train). you can see 
+how just a little bit of logic makes it possible   to give some warning time for motorists before 
+the train arrives at the intersection without   keeping them stuck behind gates after the train 
+has passed. but, how much warning time is enough? in the us, the minimum requirement is 20 seconds 
+between activation of the warning devices and the   arrival of a train, but it's typical to see 
+30 or 45 seconds. you might think that the   more warning time the better, but it's a balance. 
+too much warning time, and motorists might become   impatient and drive around the gates, so more time 
+can actually make crossings less safe. for the   three-circuit example in the demonstration, the 
+only control you have over warning time is where   to start the approach circuit. the farther away 
+from the crossing it begins, the more warning time   you get. but the exact time depends on the speed 
+of a train. since the approach is fixed in place,   a slow train will provide lots of warning 
+time, and a fast train will provide less.   and a train stopped on an approach circuit before 
+it even reaches the crossing will hold the gates   down indefinitely. so the next step in grade 
+crossing complexity takes speed into account. i put a little acoustic distance sensor on my 
+arduino so i can try to estimate the speed of   an oncoming train. the large cardstock cutout 
+just helps my sensor to 'see' the train a little   better. the arduino measures the distance over 
+time, converts that to an approximate speed,   and guesses how long it will take the train 
+to arrive at the crossing. if the expected   arrival time is longer than the warning 
+time i programmed in, nothing happens.   but if an arrival is expected within the 
+warning time, the devices are activated. you can see if i approach the intersection 
+slowly, the gates don't drop until i'm   relatively close to the crossing.  and if i speed things up, the 
+gates drop when i'm farther away,  anticipating the faster arrival of the train. in 
+theory, this type of sophistication means that   the warning time at a crossing will always be 
+the same, no matter the speed of the train. but   it doesn't just solve that problem. if you 
+have ever sat at a railroad crossing while   a train is stopped on the approach circuit, 
+you know the frustration it causes. a grade   crossing predictor avoids the issue. you can 
+see as i move my train toward the crossing,   the devices activate assuming the train will 
+cross. but when i stop short, the predicted   arrival time goes effectively to infinity, 
+and the controller opens the gates back up. of course, actual crossings don't use sonar to 
+predict the speed of a train. in most cases,   they use track circuits with an alternating 
+current. a train interacts with the frequencies   of the circuit as it travels along the rails, 
+giving the sensors enough information to detect   the presence and speed. sometimes you can even 
+hear these frequencies since they're often in   the audible range. ac track circuits are also used 
+for electric train systems because they are less   susceptible to interference from the traction 
+currents in the rails used to drive the trains. another challenge with grade crossings happens 
+in urban areas where signalized intersections   are present near the railway. red lights form 
+a line of vehicles that can back up across   the tracks. you should never drive over a railway 
+until you know it's clear on the other side. but,   if you're not paying attention, it can be 
+easy to misjudge the available space and   find yourself inadvertently stopped right on 
+top of the tracks. traffic signals near grade   crossings are usually coordinated with automatic 
+warning devices. when a train is approaching,   the signal goes green to clear 
+the queue blocking the tracks. equipment for the most basic track circuits 
+to the most sophisticated, including relays,   microcontrollers, backup batteries, and more are 
+usually housed in a nearby bungalow or cabin that   is easy to spot. in the us, every grade crossing 
+has its own unique identifier, and they all have a   phone number to call if something isn't working 
+correctly. railroads take reports seriously,   so give them a call if you ever see something that 
+doesn't look right. if you want to see a lot of   these grade crossing systems in action, check 
+out my friend danny's channel, distant signal,   for some of the best railfan videos out there. 
+we depend on trains for a lot of things, and in   the opinion of many, we could use a few more of 
+them in our lives. despite the hazard they pose,   trains have to coexist with our other forms 
+of transportation. next time you pull up to   a crossbuck, take a moment to appreciate 
+the sometimes simple, sometimes high tech,   but always quite reliable ways 
+that grade crossings keep us safe. i've talked about what it's like as a motorist 
+at a grade crossing, but i didn't mention how   satisfying it is to be a train passenger, watching 
+those lines of cars wait as you pass by. where   i live, i don't get to take many train rides 
+(to the dismay of my obsessed three-year-old),   but i do have a show that scratches the itch: 
+jet lag is a travel-based game show, created by   my friend sam of wendover productions. 
+each season is this crazy adventure to   complete challenges using different modes of 
+transportation. it's just such a creative idea,   and what i really love is seeing how all 
+types of public transport function around   the world. season 8 is in full swing right 
+now. you can watch a few episodes on youtube,   but if you want to catch each one as it's 
+released, you have to do it on nebula. you've heard me talk about nebula before: it's 
+a streaming platform for independent creators   like me. i love youtube, and it's a perfect 
+home for most of the videos i like to make,   but the platform does drive the types of content 
+that succeed: series don't work very well,   every video has to be optimized for clickability, 
+and everything is ad-supported which constrains   not only the content of the videos, but also 
+how much room there is for experimentation.   just like everything on tv eventually turns into 
+a reality show, it seems like everything on my   part of youtube eventually becomes a 15-minute 
+explainer with flashy graphics and a clickbait   thumbnail. don't get me wrong, i love a good 
+explainer with flashy graphics, but i like   other stuff too. shows like jet lag, and my 
+practical construction series where i embedded   with a contractor for a year while they built a 
+sewage lift station, don't fit that youtube mold,   but they're also too weird for a big studio 
+to greenlight. nebula meets us in the middle. the platform has grown so much since i started 
+releasing videos there with tons of exclusive   content and early access to your favorite 
+creator's videos, all with zero ads. i know there   are a bunch of streaming services right now, and 
+adding another one to your list is a big ask. but,   at only $30 for an entire year of access (if you 
+use my link), this one is not going to break the   bank. at that price, it's easy to give a 
+shot and see if you like it as much as i   do. that link is in the description. thank you 
+for watching, and let me know what you think.

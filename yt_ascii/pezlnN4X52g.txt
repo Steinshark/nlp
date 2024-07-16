@@ -1,0 +1,58 @@
+we're going to talk about sudoku 
+and in particular something   called the phistomefel ring.
+- (brady: phistomefel ring?)  well it's named after a german sudoku constructor 
+called phistomefel who discovered it a couple of   years ago and it's a property that exists 
+in all sudoku puzzles but not many people   know about it and it's it's got a quite a 
+lovely proof and it might blow your mind.  - (it might, all right. is it) 
+(use- like is this like a a secret   that will help people solve sudokus?)
+- it can definitely help help you solve   some sudokus and yeah maybe- shall i show you? 
+so maybe while i'm doing this i'll tell you-   i'm sure everybody watching numberphile knows 
+the rules of sudoku; the idea of sudoku is you   have to put the numbers 1 to 9 just once each 
+into every row, every column, and into every 3x3 box. that is our sudoku. and what i'm going to show 
+you now is something called set equivalence theory. so we know that in this sudoku, if we complete 
+it correctly, there'll be the numbers 1 to 9   once each in every row, column, and box. so i'm now 
+going to highlight some cells in red: so i'm going   to highlight row 3, row 7, this box this 
+whole box here, and box 6. and the interesting   thing about those those four things i just 
+highlighted is because of the properties of   sudoku we actually know- we don't know what the 
+disposition of the digits will be within those   red cells but we do know exactly what those 
+red cells contain altogether. because it's   four complete sets of the digits 1 to 9; one for 
+this row, one for this row, one for this box, and   one for this box. so altogether we know that the 
+red cells here contain four sets of the digits   1 to 9. now i'm going to switch to green and 
+i'm going to highlight a different four sets   of the digits 1 to 0. so i'm going to highlight 
+the whole - oh can we see that that's green? so i'm   going to highlight the whole of column 1, the 
+whole of column 2, the whole of column 8 and the   whole of column 9. okay so now let's describe 
+the the the green set of digits, that's also   four sets of the digits 1 to 9; one for each of 
+the columns. so at this point we know that the   set of the green cells if you like, and the set 
+of the red cells, are identical - each equal to   four sets of the digits 1 to 9. now the trick to 
+understanding the phistomefel ring is to focus on   one of these cells that has two colours in it. so 
+let's look at this cell here and imagine that we   removed it from both the green set and the red 
+set. so let's let's imagine that we we just take   this out - i'll make it blue. so i'm removing this 
+from both the green set and the red set. what can   we say about the remaining cells now in green 
+and red? and the thing we can say is that they   still contain the same set of digits. we don't 
+know now exactly what that set of digits is,  because we don't know what digit will fill in 
+row 3 column 1 in the final solution, but we   do know that the red set and the green set are 
+still equivalent, they're still equal. and we can   do that for every single- every single cell in 
+this puzzle that contains both colours. we can   remove it from both the green set and the red set. 
+let's now focus on what we've got left now. so we   know at this point that the green and the red 
+set sets are still equivalent, and if we look at   the red set you can see 16 cells here ringing 
+the central box of the sudoku. now this is the   phistomefel ring, and we know that that is exactly 
+the same digits as appear in the four corners of   the sudoku - these four 2x2s in the corners. and 
+you can try this on any sudoku you solve on your   train home, fill it in and then ring this central 
+box and compare those digits to the corners 2x2s   and you will find that this works. it works 
+for every sudoku and it's- i think it's quite magical. (one of the questions that pops into 
+my head is, could you make any other shapes or)  (configurations on a grid that have this property?)
+- brady, you are brilliant. yes, you can indeed   and in fact there's a famous dutch constructor 
+called aad van de wetering who- he found another trick.   he found that there's a square in the top left 
+of a sudoku and a square in the bottom right of   the sudoku that have a relationship using exactly 
+this trick. and we've even seen puzzles now where   you can use this feature to create the difference 
+of squares equation in sudoku form - it sounds   completely crazy but you can see it on the screen 
+here. and you can create some mathematics out of   the geometry of sudoku that actually can yield 
+to some really beautiful results. so- and it's very   very much in in sort of really advanced sudoku 
+solving, this equivalence of different parts of   the geometry of the grid is important and can be- 
+it can crack some fiendish puzzles.  check the links on screen and below to see another video  about that mathematical sudoku that simon just mentioned.   and to see simon and his offsider mark solving all 
+sorts of puzzles check out their amazing youtube   channel: cracking the cryptic. 
+again links below. 
+thanks for watching this video, and thank you  to our patreon supporters. you're seeing some of 
+their names on the screen at the moment and you   can also see me signing these unique primes in 
+the post. i'll be mailing these out to most of   our supporters later this month. what prime number 
+will you get? i might even send twin primes to some people...

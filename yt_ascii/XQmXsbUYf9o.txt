@@ -1,0 +1,121 @@
+when tsmc began producing chips with its latest 
+5 nanometer process in the middle of 2020,   the flagship customer who would 
+receive the majority of those chips   was apple. apple was fabbing its 
+cutting edge a14 bionic and m1 chips.   they continue to receive shipments to this 
+day as tsmc's single biggest customer. but there was another smartphone chip company 
+utilizing tsmc's 5nm lines. alongside the a14   bionic was the kirin 9000, a chip made by 
+a fabless company known as hisilicon (??). for several short months, tsmc 
+delivered kirin 9000 chips to hisilicon.   but there was a looming deadline. on the 15th 
+of september 2020, tsmc would have to apply   to the trump administration for licenses to use 
+american technology to keep supplying hisilicon.   and that is because hisilicon is the 
+fabless chip design arm of huawei. in this video, i want to talk a 
+bit about this mysterious company.   hisilicon had been tsmc's second biggest 
+customer, second only to apple, and a key   piece of huawei's beautiful, extremely powerful 
+cell phones. now it is off the tsmc customer list. now before we get going, i first want to say 
+the united states sanctions targeting hisilicon,   huawei and other parts of the chinese technology 
+industry are, to say the least, controversial.   those sanctions are not going to be the 
+central focus here, but i will touch on them.   i will attempt to do so in an objective manner. i know a lot of you are going to have 
+your own opinions about it. so all i ask   is that you guys leave constructive, 
+thoughtful comments and be respectful.   we got enough flamewars out 
+there in the internet world. hisilicon is china's largest fabless designer of 
+chips with annual revenues of about $5 billion.   the company as it exists 
+today was established in 2004,   but it has roots in the huawei integrated 
+circuit design center founded in 1991.   that old ic design center had mostly 
+made chips for huawei's network switches,   which is a piece of networking hardware that 
+connects different devices on computer network. after a 2003 lawsuit by cisco, huawei ceo 
+ren zhengfei resolved to establish a chip   design division so to wean his company off 
+american-designed chips. independent foundries   were making self-designed chips more of a reality 
+and huawei wanted to take advantage of this trend.   ren gave hisilicon president he tingbo 
+immense resources to get started. the company's first chip design was a 3g sim 
+card chip. at that time, the market was rich   for entry. but by the time the project had been 
+completed and the product was ready, the price   of sim card chips had fallen from 10 to just 1 rmb 
+each. the market's profitability in turn vanished. undeterred, hisilicon pivoted to building 
+chips for set-top boxes and video surveillance   equipment. and it is in the latter that they had 
+their first big customer. two video surveillance   companies, hikvision and dahua, chose hisilicon's 
+h.264 video codec chip for their own products. i previously did a video about hikvision 
+and their own rise to prominence.   hikvision remains hisilicon's 
+single biggest outside customer,   making the latter a dominant player 
+in the ip camera chip market. ## kirin in 2009, a year before apple launched its 
+a4 processor, hisilicon brought out their   first mobile phone processor: the k3. it was 
+a low cost chip that targeted low end markets.   stuff that mediatek usually worked 
+in. nobody really bought that one. three years later came the second iteration 
+of that chip, the k3v2, which was fabbed on a   40nm process. the k3v2 was a quad-core chip that 
+implemented the arm architecture. like its apple   contemporary, the a5, the chip licensed the 32-bit 
+arm cortex-a9 processor core by arm holdings. do not confuse the cortex-a9 with the 
+apple a9. i made that same mistake too,   not the same thing. let me 
+explain what this means.   roughly speaking, the cortex-a is like a 
+starter set and developer kit that hardware   companies like hisilicon can customize for 
+their own use and resale. kind of like how   mediatek provides reference designs for finished 
+hardware products, but on a more basic level. incredibly, huawei announced that 
+they would be putting the k3v2,   a second-year product, into their new flagship 
+mobile phone: the huawei ascend d quad xl.   by choosing to go with internal hisilicon designs 
+(again, built on top of arm cpu intellectual   property) rather than adopting qualcomm or 
+mediatek chips like the rest of the market,   huawei sought differentiation 
+in the same way apple did. it took courage, so to steal a line. 
+but at first it did not pay off.   buyers complained that the phone frequently 
+overheated and consumed a lot of power.   users nicknamed it the "warm baby". the 
+phones as a result did not sell well at all. but hisilicon still had its telecoms 
+equipment business to absorb the losses   and was determined to stay in the mobile business.   hisilicon hired over a thousand semiconductor 
+engineers laboring 996 to make the chips better. in 2013, the company released a new iteration 
+called the k3v2e, which powered the huawei p6   mobile phone. the p6 sold well and that was the 
+first taste of processor success for the company. after that, hisilicon rebranded the 
+k3 series to kirin (??). this name   apparently is in reference to a chinese 
+mythical beast. the kirin 910 was their   first "system on a chip" design and integrated 
+4g baseband components. it sold a little better. because hisilicon builds on top 
+of arm cortex microarchitectures   and outsources the manufacturing to tsmc, 
+kirin chips' performance in relation to   its competitors depended on being able 
+to use the latest versions of the two   in a given year. the chips did improve year 
+after year, but progress was uneven and   sometimes fell behind that of competitors 
+like the qualcomm snapdragon series. the   timing tended to align with when arm released 
+versions of its latest ip cores to licensees. kirin's rise coincided with the 
+success of huawei's smartphone line.   these high-end phablet phones compete directly 
+with samsung galaxy s-series phones and are quite   competitive with them. more than a few american 
+youtube tech reviewers have done videos on them.   the mate 10, for example, used the kirin 970 and 
+would sell over 10 million units over 10 months. the last hisilicon chips that tsmc could make,   the kirin 9000 and 9000e, were fabbed on 
+5nm and were released in 2020. it had 8   cpu cores and integrated a gigantic 
+24-core gpu for image processing. when you add to that an on-die modem, you 
+have a large chip die counting over 15.3   billion transistors. huawei says that this 
+is 30% more transistors than the apple a14,   which is technically true but leaves 
+out the fact that it is a bigger chip   overall. not that it should matter, 11 
+billion or 15 billion impresses either way. the 9000 powered the company's mate 40 and 40 pro.   you can say that it was the pinnacle 
+of hisilicon (or tsmc's) handiwork. ## entry into the server market hisilicon's success with the kirin line 
+led it to expand into other chip markets.   in 2018, the company released their first ai 
+chip, the shengteng series or "ascend" in english.   these ai chips utilize a specialized structure 
+to help speed up the training of ai models. but something that really interests me is 
+their entry into the profitable server market.   a year after the shengteng 
+launch, hisilicon launched   a series of arm-based chips called the 
+kunpeng (??), another mythical beast. like with the kirin mobile processors,   the kunpeng chips are built on top of arm ip. 
+they started out as chips for server farms.   the kunpeng 920 powers the 2,000 huawei taishan 
+servers running beijing's e-government system. but recently, kunpeng chips have also 
+started to appear in huawei desktop pcs   sold in china. they have a 24-core kunpeng 920   that favorably compares to intel's chips 
+in certain multi-threading benchmarks. so in a way, hisilicon is a lot 
+like apple, moving away from intel.   unlike with apple though, this move 
+is less tied to the desire for more   in-house control of the product line and more 
+about splitting from american technology ip. another note is that the kunpeng 
+920 was made with tsmc's 7nm node,   so they were no longer available after the 
+september ban unless the us grants a license.   they might be a good candidate for 
+that native n+1 smic process node   that supposedly compares favorably with the 
+tsmc 7nm. we should stay tuned for that. it goes without saying that the us 
+technology ban on huawei and hisilicon   is crippling, but it won't kill 
+the company. for one thing,   huawei probably has ample resources to stay 
+afloat including some form of state backing. furthermore, the company has a history 
+of persevering in the face of difficulty.   their founding story continually 
+emphasizes "struggle" or ??. the   idea of fighting and struggling for 
+survival despite overwhelming odds.   i am pretty sure that they are going to see 
+this as yet another obstacle to overcome. but will it hit their ability to release 
+new, competitive products? let us look at   the example of their latest mobile chip. yes, 
+the kirin 9000 is a fantastic achievement,   the second 5 nanometer chip for the world market. 
+that's amazing, but we all stand on the shoulders   of giants. and the two giants that hisilicon 
+are standing on are tsmc and arm holdings. the trump administration cut hisilicon's access 
+to tsmc and tried to cut its access to arm. arm   stopped for a bit but re-established a connection 
+after it decided that its property was of united   kingdom origin. not sure what happens after 
+nvidia buys them though. maybe china will have   something to say about that purchase like how it 
+nixed the attempted purchase of nxp by qualcomm. to end, i don't really think that 
+the trump administration was hoping   to kill off hisilicon. a few bans 
+will do nothing and they know it. rather, i get the sense that they wanted 
+to genuinely cut hisilicon off from the   benefits of western technology. the history of how 
+countries have gotten ahead in technology races   has many examples of one first learning from 
+(or stealing from) the former leader. and yes,   that includes america too. ending that 
+connection was a critical aspect of the   trump administration's china strategy. we shall 
+see if his successor continues with that strategy   in the years to come. and 
+what that means for hisilicon.

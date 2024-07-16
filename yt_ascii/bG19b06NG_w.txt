@@ -1,0 +1,160 @@
+it is undoubtedly unintuitive that water 
+flows in the soil and rock below our feet.   a 1904 texas supreme court case famously noted 
+that the movement of groundwater was so "secret,   occult and concealed" that it couldn't be 
+regulated by law. even now, the rules that   govern groundwater in many places are still well 
+behind our collective knowledge of hydrogeology.   so it's no surprise that misconceptions 
+abound around water below the ground. and yet,   roughly half of all drinking water 
+and irrigation water used for crops   comes from underneath the surface of the 
+earth. you can't really look at an aquifer,   but you can look at a model of one i built in my 
+garage. and at the end of the video, i'll test   out one of the latest technologies in aquifer 
+architecture to see if it works. i'm grady and   this is practical engineering. in today's episode, 
+we're talking about groundwater and wells. this video is sponsored by curiosity 
+stream and nebula. more on them later. not all water that falls as precipitation runs off 
+into lakes and rivers. some of it seeps down into   the ground through the spaces between soil and 
+rock particles. over time, this infiltrating water   can accumulate into vast underground reservoirs. a 
+common misconception about groundwater is that it   builds up in subterranean caverns or rivers. 
+although they do exist in some locations,   caves are relatively rare. nearly all groundwater 
+exists within geologic formations called aquifers   that consist of sand, gravel, or rock 
+saturated with water just like a sponge.   it just so happens you're watching the number 
+one channel on the internet about dirt,   and there are a lot of interesting things 
+i can show you about how aquifers behave. i built this acrylic tank in my garage to 
+illustrate some of the more intriguing aspects   of groundwater engineering. i can fill it up with 
+sand and add blue dye to create two-dimensional   scenarios of various groundwater conditions. it 
+also has ports in the back that i can open or   close to drain various sections of the model. 
+and, on both sides, there's a separation that   simulates a boundary condition on the aquifer. 
+water can flow through these dividers along their   height. most of the shots you'll see of this have 
+been sped up because, compared to surface water,   groundwater flows quite slowly. depending on 
+the size of soil or rock particles, it can   take a very long time for water to make its way 
+through the sinuous paths between the sediments.   the property used to characterize this speed 
+is called hydraulic conductivity, and you can   look up average values for different types of soil 
+online, if you're curious to learn more. in fact,   different geologic layers affect the presence 
+and movement of groundwater more than any other   factor, which is why there is so much variability 
+in groundwater resources across the world. like all fluids, groundwater flows from areas 
+of high pressure toward areas of low pressure.   to demonstrate this, i can set the left boundary 
+level a little higher than the one on the right.   this creates a pressure differential across the 
+model so water flows from left to right through   the sand. i added dye tablets at a few spots so 
+you can see the flow. this is a simple example   because the pressure changes linearly through 
+a consistent material, but any change in these   conditions can add a lot of complexity. in purely 
+mathematical terms, you can consider this model   a 2d vector field because the groundwater can 
+have a different velocity - that is direction   and speed - at any point in space. because of 
+this, there are a lot of really neat analogies   between groundwater and other physical phenomena. 
+my friend grant of the 3blue1brown youtube channel   has an excellent video on vector field mathematics 
+if you want to explore them further after this. we often draw a bright line between groundwater 
+and surface water resources like rivers and lakes   because they behave so differently. but water 
+is water. it's all part of the hydrologic cycle,   and many surface waters have a 
+nexus with groundwater resources,   meaning that changes in groundwater may impact 
+the volume and quality of surface water resources   and vice versa. let me show you an example. 
+in the center of my model, i've made a cross   section of a river. the drain at the bottom of the 
+channel simulates water flowing along the channel,   in this case leaving my model. if i turn on 
+the pumps to simulate a high water table in   the aquifer, the groundwater seeps into the river 
+channel and out of the model. the dye traces show   you how the groundwater moves over time. if you 
+encounter a situation like this in real life,   you might see small springs, wet areas of 
+the ground, and (during the winter) even   icicles along slopes where the groundwater 
+is becoming surface water before your eyes. likewise, surface water in a river can flow 
+into the earth to recharge a local aquifer.   i've reconfigured my model so the pump is putting 
+water into the river and the outer edges of the   reservoir are drained, simulating a low water 
+table. some of the water in the river flows   back out of the model through the overflow drain, 
+showing that while not all the water in a river   seeps into the ground, some does. you can see 
+the dye traces moving from the river channel into   the aquifer formation, transforming from surface 
+water into groundwater as it does. as you can see,   surface water resources are often key locations 
+where underground aquifers are recharged. this is all fun and interesting, but much 
+of groundwater engineering has more to do   with how we extract this groundwater for 
+use by humans. that's the job of a well,   which, at its simplest, is just a hole into which 
+groundwater can seep from the surrounding soil.   modern wells utilize sophisticated 
+engineering to provide a reliable   and long-lasting source of fresh water. the basic 
+components are pretty consistent around the world. first, a vertical hole is bored into 
+the subsurface using a drill rig.   steel or plastic pipe, called casing, is 
+placed into the hole to provide support so   that loose soil and rock can't fall into the well. 
+a screen is attached at the depth where water will   be withdrawn creating a path into the casing. 
+once both the casing and screen are installed,   the annular space between them and the bore 
+hole must be filled. where the well is screened,   this space is usually filled with gravel 
+or coarse sand called the gravel pack.   this material acts as a filter to keep fine 
+particles of the aquifer formation from   entering the well through the screen. 
+the space along the unscreened casing   is usually filled with clay, which swells to 
+create an impermeable seal so that shallow   groundwater (which may be lower quality) can't 
+travel along the annular space into the screen. wells use pumps to deliver water that flows into 
+the casing up to the surface. shallow wells can   use jet pumps that draw water up using suction 
+like a straw. but, this method doesn't work for   deeper wells. when you drink through a straw, 
+you create a vacuum, allowing the pressure of   the surrounding atmosphere to push your beverage 
+upward. however, there's only so much atmosphere   available to balance the weight of a fluid in 
+a suction pipe. if you could create a complete   vacuum in a straw, the highest you could draw a 
+drink of water is around 10 meters or 33 feet.   so, deeper wells can't use suction to bring 
+water to the surface. instead, the pump must be   installed at the bottom of the well so that it can 
+push water to the top. some wells use submersible   pumps where the motor and pump are lowered to 
+the bottom. others use vertical turbine pumps   where only the impellers sit at the bottom driven 
+by a shaft connected to a motor at the surface. all that pumping does a funny thing to an 
+aquifer. i can show you what i mean in the model.   as water is withdrawn from the aquifer, it 
+lowers the level near the well. the further   away from the well you go, the less influence 
+it has on the level in the aquifer. over time,   pumping creates a cone of depression around 
+the well. this is important because one well's   cone of depression can affect the capacity of 
+other wells and even impact nearby springs and   rivers if connected to the aquifer. engineers use 
+equations and even computer models to estimate the   changes in groundwater level over time, based 
+on pumping rate, recharge, and local geology. one fascinating aspect of deeper aquifers 
+is that they can be confined. my model   isn't quite sophisticated enough to show 
+this well, but i can draw it for you.   a common situation is that an aquifer exists at 
+an angle to the ground surface. it can recharge   in one location, but becomes confined by a less 
+permeable geologic layer called an aquitard.   water flowing into a confined aquifer can 
+even build up pressure, so that when you tap   into the layer with a well, it flows readily 
+to the surface (called an artesian well). it   can happen in oil reservoirs as well, which is 
+why you occasionally see oil wells blow out. a part of the construction of wells that i didn't 
+mention yet is the top. a well creates a direct   path for water to come out of an aquifer, and 
+if not designed, constructed, and maintained   properly, it can also be a direct path into the 
+aquifer for contaminants on the surface. in my   model, i can simulate this by dropping some dye 
+into the well to represent an unwanted chemical   spilled at the surface. say some rainwater enters 
+too, washing the contaminant through the well into   the aquifer. now, as groundwater naturally 
+moves in the subsurface, it carries a plume   of contamination along as well. you can see how 
+this small spill could spread out in an aquifer,   contaminating other wells and ruining the resource 
+for everyone. so, wells are designed to minimize   the chances of leaks. the uppermost section 
+of the annular space is permanently sealed,   usually with cement grout. in addition, the 
+casing is often extended above the surface   with a concrete pad extending in all directions 
+to prevent damage or infiltration to the well. we've been talking so much about how to get water 
+out of an aquifer, but there are some times where   we want to do the reverse. injection wells are 
+nothing new; deep belowground can be a convenient   and out-of-the-way place to dispose of unwanted 
+fluids including sewage, mining waste, saltwater,   and co2. but until recently, it hasn't been 
+a place to store a fluid with the intent of   taking it back out at a later date. 
+aquifer storage and recovery or asr   is a relatively new technology that can help 
+smooth out variability in water resources   where the geology makes it possible. large-scale 
+storage of water is mostly restricted to surface   water reservoirs formed by dams that are expensive 
+and environmentally unfriendly to construct. with   enough pressure, water can be injected through a 
+well into an aquifer. you can see on my model that   introducing water to the well causes the level 
+in the aquifer to rise over time. eventually,   this water will flow away, but (as i mentioned) 
+groundwater movement is relatively slow. in the   right aquifer, you won't lose too much water 
+before the need to withdraw it comes again. taking advantage of the underutilized 
+underground seems obvious, but there are   some disadvantages too. you need a goldilocks 
+formation where water won't flow away too fast,   but is also not so tight that it takes super-high 
+pressure for injection. you also need a geologic   formation that is chemically compatible with the 
+injected water to avoid unwanted reactions and   bad tastes. of course, you always have costs, 
+and asr systems can be expensive to operate   because the water has to be pumped twice - 
+once on the way in and again on the way out. finally, you can have issues with speed. in many 
+places, the surplus water that needs to be stored   comes during a flood - massive inflows that arrive 
+over the course of a few hours or days. a dam is   a great tool to capture floodwaters in a reservoir 
+for later use. injection wells, on the other hand,   move water into aquifers too slowly for that. 
+they're more appropriate where surplus water is   available for long durations. for example, one 
+of the few operating asr projects is right here   in my hometown of san antonio. when water demands 
+fall below the permitted withdrawals from our main   water source, the edwards aquifer, we take the 
+surplus and pump it into a different aquifer.   if demands rise above the permitted withdrawals, 
+we can make up the difference from the asr. you can add more injection wells to increase the 
+speed of recharge, but above a certain pressure,   some funny things start to happen: underground 
+formations break apart and erode in a phenomenon   called hydraulic fracturing or just fracking. 
+breaking apart underground formations of rock and   soil has been a boon for the oil and gas industry. 
+but, just like that texas groundwater in 1904, the   regulation of fracking is mired in confusion and 
+controversy, in no small part because it happens   below the surface of the earth, hidden from public 
+view. i'll save those details for a future video. and if you're eager to see the next practical 
+engineering episode as soon as possible,   you should know that my videos go live on nebula 
+before they're released here on youtube. nebula's   a completely ad-free streaming service built 
+by and for your favorite independent creators   like wendover productions, real engineering, 
+and me. it's a way for us to try new ideas   and longer videos that might not work well on 
+advertising-supported platforms like youtube. and,   we're super excited to continue our partnership 
+with curiosity stream, a service with thousands   of documentaries and non-fiction titles on 
+pretty much every subject you can imagine.   curiosity stream loves independent creators and 
+wants to help us grow our platform, so they're   offering free access to nebula when you sign 
+up at curiositystream.com/practicalengineering.   i know there are a lot of streaming services 
+right now, and if you add them all up it would   be hundreds of dollars a month. that's 
+why this bundle is such an awesome deal.   you get access to two platforms (nebula and 
+curiosity stream) for less than $15 a year.   i love space exploration, and curiosity stream has 
+a bunch of excellent documentaries on the topic,   including this one on building the james 
+webb telescope that recently launched.   or, watch sam from wendover productions try 
+to break the law while evading his production   team in the nebula-exclusive series, crime spree. 
+it's a great way to support my channel and a whole   host of your other favorite educational creators. 
+plus it's just a good deal. do us both a favor and   click that link in the description. thank you 
+for watching, and let me know what you think!

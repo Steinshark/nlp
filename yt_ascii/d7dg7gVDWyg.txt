@@ -1,0 +1,115 @@
+today i have a card trick. i'm going 
+to show you this card trick, here we go. just a bunch of cards and i need someone to pick 
+a card so let's randomly pick a card out of there.  (brady: there we go)
+- there's your card, i haven't seen 
+it, you're memorizing it; and you can stick it   back in the pile here. 
+- (anywhere i want?)
+- anywhere you like. all right and just to be extra   careful that i didn't see anything, it's really 
+mixed up in there, there's no way i could know it. i'm going to shuffle these cards and then now 
+i'm going to deal them out into three piles. and for show i need you to remember 
+this card so that you can mentally   pass along that information to me and 
+we can help that card rise to the top.   okay so you point to which column you see your card.
+- (i see it in this middle one.)
+- this one here? okay perfect. all right so we're going to divide them up again. and i hope you're remembering your card 
+because otherwise this trick might not work. all right and now where do you see it? 
+- (it's in this one here.)
+- okay that makes   me a little nervous but that's all right.
+all right one more time just to be safe. okay so think hard about this card and where is it now?
+- (it is in this one.)
+- this one? uh-oh all right i think that's okay. all right okay so point to four piles for me please.
+- (uh let's go with)   (these four here.)
+- these four here? okay great. and 
+now how about two piles from these ones left? (uh these two on the end, the two on the end.)
+- okay, and one more? - (the one closest to you.)
+- this one? okay.   oh no, i'm feeling nervous! okay, one of these cards please. 
+- (umm middle one.)
+- middle one. how did we do? did we do it? am i- did i not make it?
+- (you got it.)
+- i got it, oh thank god! i was- i was going to get a little nervous. 
+are we going to have to do this again? that was that was very good. right i imagine the people in the in the 
+audience are probably a little more excited that that came out right. maybe i'm a little more relieved. let's break it 
+down. so the first thing we need to know is the   name of this trick is actually the 21 card trick, 
+so the one piece of information i kept from you   is how many cards i have. so i have 21 cards in 
+my hand and so you can really start thinking   about this in terms of modular arithmetic. so 
+i'm thinking about numbers and when i divide   that number by some fixed number like 3 i can 
+ask for which remainder does that number have;  it can have remainder zero, so maybe it's like 
+6 divided by 3 has no remainder, 7   has a remainder 1 so 7 divided by 3 i 
+can get 3 times 2 is 6 plus 1 so i can   get 1 and then i can also have 2 so like 8
+divided by 3 has remainder 2. okay so i can   think about dividing up my numbers, any integer 
+divided by three into these three groups where the   remainder 0, remainder 1, remainder 2. okay so 
+we picked- we picked a card, that was the first thing we did.  (should i do that?)
+- yes please, whatever one you like.
+- (what are we going to get this time? alright so this time - two of clubs.) okay, so everybody knows and it's okay because 
+eventually i already was gonna know that but okay   two of clubs. so we stick it back in and just for 
+show i mixed them up.
+- (this was- this is legitimate?)   (this was a real shuffle?)
+- yeah this is for sure, 
+i'm not doing anything special here just to-   to add to the enjoyment of the randomness of it all.
+- (i could have shuffled them?)
+- you- certainly. my- my dog could have shuffled them i guess. so 
+two of clubs, that's the one we were looking   for. the second step was to divide them up into 
+these columns-
+- (so it could have been anywhere at this point?) the card can definitely be anywhere. 
+but now i'm dividing them up into three columns,   if you recall we discussed modulo arithmetic so 
+we're thinking about dividing up 21 cards by three.  so one of those cards has to be in the column 
+where you could think the remainder is 1, the   remainder is 2 or the remainder is 0. and 
+so we see our card here. 
+- (here it is, okay.)  so the first thing we want to do is make sure 
+that this column has to be sandwiched between   the two other columns. and the reason i'm going 
+to do this is because this one has seven cards   in it - i don't know which card- you know, supposedly 
+i don't know which card it is but i know now it's   somewhere in positions so if there's seven here 
+once i put this one on top of these cards it's   got to be positions 8, 9, 10, 11, 12, 13 or 14. 
+so in positions 8 through 14 lies your card   and then i'm going to add the rest of these cards 
+here, and so that helps me know for sure it's right   in in this section 8 to 14. so when i separate 
+them up again or divide them up into these   three columns, here are the first seven - those 
+are the ones that i stacked on top of my group. (you know i'm not in there?)
+- right. here comes 8 - so 
+maybe i'll kind of go like this so we can see - 8,   9, 10, 11, 12, 13 and 14. so there's that 
+collection of cards where your card has to live   and then i just do the rest of them here. and what 
+happened is i took 8 through 14, i divided it up by   3, and those numbers have to have remainder 
+1, 2 or 0. and so it spread them across   my columns and now the rows that they live in has 
+shrunk. so you can see that whatever your- whichever   card we know that we need to find has to be in 
+row - so this one goes in here just to make it clear -  has to live in row 3, 4 or 5. another 
+way you can think about it is as soon as   i do the- the same thing of sticking whichever 
+column you say your card in, which is here, after   seven cards that means it's in position 8, 9, 10, 11 and possibly 12 because   this one had three rows involved. okay so 
+now i'm looking at positions 10, 11 and 12   that might contain your card. so now i'm going 
+to pick up this column where your card lives,   i'm going to put it between the two columns 
+of seven cards. and now we we're remembering   positions 10, 11 and 12. that's where your card 
+should live. okay so here are the first 7,   8 and 9. here comes 10, 11 and 
+12 - and then the rest of the cards. so i knew your card should be somewhere in 
+positions 10, 11, 12 and once i've divided those   cards up i've spread them across the columns 
+and so now when you point to the column i know   exactly which card it is. it's this one. and now to 
+to make it more exciting, instead of just saying oh   here's your card. what i'm going to do is again 
+take a pile of 7, i'm going to stick it in front   of the pile that contains your card, and then 
+the other seven afterwards - that means 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, here's 
+your card, it will always be in position 11. so all i need to do in this second- the last part 
+of the trick is to count. so there's 3, 4, 5, 6, 7, 8,   9, 10, 11, 12 - there's your card. so as long as i've 
+counted and i remember where the 11th card goes,   now i can finish out my trick and make sure that 
+i remove all the groups, remove all the cards that   are not the 11th card, and at the very end you'll be amazed. 
+- (you told me to pick groups)
+- that's right   (what were you doing there at the end?)
+- i was making sure that whichever group you picked or didn't   pick, it it never removed the card that i wanted 
+you to find. so if you said- i said pick four groups   and so you pick four - maybe you pick these four - i take them away.
+- (you don't tell me before if you're) (going to keep or get rid of what i choose?)
+- not at all because it's- because you're picking it.   (so you told me that you first saw this trick as 
+a result of learning it like with your children?)   that's right. 
+- (did you look at it and straight away 
+think - mathematics! or did you- like how long did it)   (take till you started thinking, hmm this is- this 
+is mathematical?)
+- no i'd say immediately. i mean   it didn't help that the person who showed me the 
+trick is also a mathematician and we were with a   group of mathematicians, so it's already embedded 
+in my brain that there's math involved. but   i know that there are 21 cards, i see three piles, 
+and there are seven cards in every pile and you're   doing it three times; i knew immediately math 
+was involved. 
+- (your youngster who does it,) (does she appreciate the mathematics or 
+has she just memorized- i have to know)  (you know this is- she's just learned the routine?)
+- she- she loves the response,   yeah. she she knows there's math but she's much 
+more excited to get the people to to shout - oh my  goodness - when when she pulls their card out. 
+- (she's just running the algorithm?) 
+- oh for sure. she's- she's   a star she's a superstar, she wants to be on 
+tv, that's her that's her goal. 
+- (we should have   got her to do this!)
+- i think so. i almost actually almost 
+kept one home today from school just in case. i know what you're thinking, you're thinking "gee 
+i could really do with some numberphile playing   cards". well if that's the case, check 
+out the link in the video description.

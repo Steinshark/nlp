@@ -1,0 +1,158 @@
+95% of singapore's electricity comes from burning 
+natural gas. they do not have many alternatives.   not sure if you have heard, but singapore is 
+a small island. no room for sprawling solar   or wind farms. a few rooftop solar panels 
+on residential buildings. that is about it. but what if you were to pipe in 
+the electricity from overseas? the australia-asean power link is a mega-project   looking to bring renewable solar energy 
+from australia all the way to singapore.   it is also referred to as the "sun cable", after 
+the singaporean company developing the project. in this video, i want to dive into 
+how this company intends to bring   clean solar power all the way to the lion city. as announced, the sun cable project 
+proposes a ten gigawatt capacity   solar farm occupying 12,000 hectares 
+in australia's northern territory.   the solar panels would be prefabricated 
+within the country and assembled on-site. the generated electricity would first 
+travel 500 miles (800 kilometers) to   the nearby city of darwin, the largest in 
+the area, and contribute to their renewable   energy goals. the rest would be exported 
+to singapore using an intercontinental   2,300 mile (3,700 kilometers) hvdc 
+underwater power line. more on hvdc later. to meet overnight demand, a battery system 
+near the solar farm has been proposed.   it would store excess power for after 
+sunset. this farm, with the battery storage,   is estimated to cost about $7 
+billion using current cost estimates. the project is still in the planning 
+stages, so details are subject to change.   but that is what we know. and 
+it still sounds super cool. but wait. how are we going to bring this electric 
+power all the way from australia to singapore?   2,300 miles or 3,700 kilometers is almost the 
+entire width of the continental united states!   let us briefly talk about power transmission. electric current can come in 
+two forms: alternating current   (ac) and direct current (dc). ac will flow in one 
+direction for a period, and then reverse to the   other direction for the rest of the period. dc 
+on the other hand, flows in one direction only. most of the systems we use today are ac systems.   the power is generated, transmitted, and 
+consumed in ac. there are reasons for this.   you might have heard about the ac-dc wars 
+and that tesla and westinghouse defeated   thomas edison to have ac become the standard 
+used today. i think there is a movie about it. setting aside dramatic hollywood 
+conflicts, the generally accepted   reason why ac "beat" dc is that ac power 
+transmission systems are more economical. power is often generated far away from where 
+the consumer lives, so you have to transmit it   to them. but before you can do that, you use a 
+transformer to first step up the voltage of the   electricity. the higher the voltage, the lower 
+the energy losses we get during transmission.   once it gets to the consumer we 
+use step down transformers to   dial down the voltage to a level 
+where it can be practically used. ac transformers do all this more efficiently 
+and affordably than equivalent dc equipment.   and that is why they dominate our systems today. there is a catch though and it has to do with 
+long distance transmission. high voltage ac   systems lose a lot of that efficiency the further 
+away the power source is from the power consumer.   there are a number of reasons for this. 
+but a big one is called the "skin effect". what does that mean? it involves your 
+cables. dc flows evenly throughout the   entire width of your cable. alright, fair enough. ac on the other hand, has a tendency to flow more 
+densely at the surface of the cable and much less   so deeper beneath the surface. the result 
+is increased resistance and thus power loss.   it is why you might frequently see multi-strand 
+cables and coils in certain induction systems. high voltage direct current systems were developed 
+and widely adopted to deal with this shortcoming. while experiments in the space have existed 
+since the'80s, the first modern hvdc subsea   cable was implemented in 1954 in sweden 
+by the industrial multinational abb. it linked the island of gotland with the 
+swedish mainland, a span of about 90 km.   since then, the technology has rapidly developed. how does it work? the main difference would 
+be the inclusion of equipment to convert   ac power to dc power and vice 
+versa: converters and inverters. this equipment is expensive and complex, which 
+adds to the overall initial cost. but in exchange,   we get substantially better economics when 
+transmitting power across long distances. it is sort of interesting how 
+the dynamics play out. let us   imagine a cost versus distance 
+graph charting hvdc and hvac. the dc terminal cost is substantially 
+higher than the ac terminal cost. like i said, complex converters and inverters need 
+to be purchased and integrated into the system. but the cost of the line rises faster 
+with ac than dc the further out you get.   this is mostly due to the significantly faster 
+rising energy losses of the line itself. in fact, if you compare two 1,200 
+mile or 2,000 kilometer ac and dc   lines with the same high voltage, you 
+find that the losses for the ac line   are twice as high as the dc line even 
+if it were to carry half the power. dc costs more than ac in short 
+distances like as i said before.   but at the "breakeven distance", roughly about 
+62 miles or 100 kilometers, dc overtakes ac. assuming that electrical losses for hvdc 
+cable are about 3% per 1,000 kilometers,   the sun cable's 3,200 kilometers is estimated to 
+will have about 10% electrical loss in total. an   equivalent hvac line is likely to have over 
+twice that - a substantial disadvantage. without hvdc, a lot of renewable energy sources 
+like offshore wind or hydro would not be so   economically tenable. the three gorges dam 
+for instance uses three overhead hvdc lines   to transport electricity 600 miles or 1,000 
+kilometers to guangzhou and changzhou. it is perfect for undersea infrastructure, where 
+intermediate substations are not practical.   there exists over 6,000 miles or 
+10,000 kilometers of subsea hvdc lines   connecting power sources and consumers. 
+70% of those subsea cables are in europe,   but there are a few notables around the world. in fact, there is already one in australia 
+connecting the island of tasmania to the   state of victoria: basslink. 230 
+miles or 370 kilometers long,   it is, interestingly enough, owned by a 
+company in singapore. more on this one later. so we walked a bit through the technology.   let us look at the challenges of actually 
+implementing it across 2,300 miles of seabed. when laying subsea cables, 
+you have two rules of thumb: one. you want to keep the overall length 
+of the cable as short as possible,   because longer cables cost 
+money to make and maintain. and two, you want to avoid big deep trenches and 
+steep slopes. this is self explanatory. sharks. most existing subsea power cables have been 
+laid in relatively shallow depths (under   0.6 miles or 1 kilometer) and on flat-bottomed 
+seas with thick silty, sandy, pebbled sediments. unfortunately that will not be the case here.   australia is surrounded by 
+steep slopes and deep water. as of this writing, the finalized route has not   yet been provided but we have a 
+good idea of where it will go. the most economical and technically 
+practical route would first start   from darwin and go across the timor 
+sea south of east timor to indonesia. then, it would pass through indonesia either 
+between the islands of bali and lombok   (or lombok and sumbawa) and enter the java sea. then finally it runs up the java sea until 
+you get to singapore at the changi area. for the most part, the proposed route would 
+be quite shallow, less than 600 feet or 200   meters deep. but a 700 mile (1,200 kilometer) long 
+section south of east timor at the timor trough   would see waters over a mile 
+deep. this is a major challenge. it has been done before. the sa.pe.i cable from 
+sardinia to the italian mainland, the deepest   subsea power cable in the world, got to similar 
+depths. but special attention would be required. for instance, the sa.pe.i's deepwater 
+cables were made of aluminum rather   than the more traditional copper. aluminum 
+is cheaper and more plentiful than copper.   but it is not as good at conducting 
+electricity - so that maybe is a wash. but since aluminum cable is also lighter 
+than copper, you can carry and lay more   of it from your cable laying vessel. 
+running deep water ships is expensive   and time consuming so you do not want to 
+have to do more of it than you need to. back to the sun cable. for the shallow bits, the 
+most significant factor to consider is potential   interference. the java sea and singapore strait 
+are some of the busiest water ways in the world.   the java sea already has a bunch of pipelines, 
+fishing trawlers, and communication cables   cris-crossing it. and the singapore strait has 
+thousands of ships passing through each year. for these busy areas, engineers will likely 
+have to trench or bury the cable some 2-5 feet   (0.6-1.5 meters) deep to protect the cable 
+from being dredged up by fishing nets   or damaged by boat anchors and other dropped 
+things. such things can cause blackouts   from cable damage and trigger liability 
+clauses in service operating agreements. finally, a bigger problem than laying the 
+cable is getting it in the first place. the   hvdc cable manufacturing world is pretty niche, 
+the product is complex, and the output is slow.   the sun cable as currently proposed uses 
+two cables of 3,200 kilometers each.   more than the total annual output of all 
+the hvdc cable manufacturers in europe. so additional money and time (a span 
+of 3-5 years) needs to be set aside   to build up capacity from multiple manufacturers   all over the world. speaking of money ... 
+how are they going to pay for all this? the subsea cable portion of the entire 
+sun cable project is projected to cost   about $5.6 billion usd before insurance and 
+administrative expenses. the majority of that,   $4.6 billion, goes to getting the cable itself. that is over 6x the cost of the 
+aforementioned australian hvdc cable basslink,   which cost $670 million usd.   the sun cable installation costs alone would 
+be greater than the entire basslink project. when also taking into account 
+the cost of the solar farm,   the whole thing is likely to run 
+beyond the $10 billion usd mark. seed funding for the privately-owned sun cable 
+corporation has come from an unlikely pair of   australian billionaires. one is the founder of 
+atlassian and the other former ceo of fortescue   metals. but i don't think that they are rich 
+enough to fund the whole thing themselves. what will likely need to happen is some sort of 
+multi-decade service agreement between the company   and the entity purchasing the power. for 
+instance, basslink derives its cash flows   from a 25-year service agreement with the 
+tasmanian energy utility hydro tasmania. that allowed them to raise private money 
+to eventually do the project. those private   investors would undoubtedly be attracted to the 
+regular dividends coming from such a project. side note. basslink can offer a couple lessons 
+that sun cable can learn. less than ten years   after its 2006 commissioning, basslink suffered 
+a brutal outage. it took six months to repair   the cable amid roiling seas. hydro tasmania 
+was pissed and took them to arbitration. the arbiter found basslink to be at fault 
+and in 2020 fined them $30 million usd.   short of what hydro had wanted, but it still is 
+a disappointing outcome for basslink investors. the whole kerfuffle was so bad that i think 
+that cash shortages forced the company into   a technical default. this delayed it in 
+fixing yet another 2-month outage in 2018. i hope the sun cable people can learn from 
+those incidents and try to avoid those mistakes.   considering how these big-name lowest-bid 
+contracts tend to end up, it makes me wonder   about the feasibility of doing infrastructure like 
+this using these public-private type partnerships. the megaproject's sheer size and immense 
+cost make it likely that they break up the   thing into multiple chunks and milestones 
+over many years. but once fully deployed,   the cable will provide up to 20% of singapore's 
+energy needs. that is great for them. but the opportunity spreads far beyond just 
+singapore. from 2015 to 2040, energy demand   from the southeast asian countries is estimated 
+to expand 65%. almost all of it from fossil   fuels unless otherwise. there's ample demand for 
+clean energy. indonesia might sign on to receive   that electricity before singapore. after all, 
+the cable passes through their waters first. there is a lot to gain for australia 
+as well. the country's current economy   is heavily dependent on mining, petroleum, and 
+exports of platypuses. the aussies have gotten   rich off of these vast reserves, but it does not 
+help with the whole global climate change thing. australia has more to offer than its carbon and 
+wallabies. its northern territory is larger than   egypt but has less than 250,000 people as compared 
+to egypt's 103 million. it is also one of the most   solar irradiated areas in the world, offering 
+tantalizing renewable energy possibilities. for australia, the sun cable explores a 
+new and exciting energy export paradigm.   it will help cement better relationships with 
+the southeast asian countries. and it will   help wean the country off its uncomfortable 
+dependence on certain exports to certain areas. according to wikipedia, the project is scheduled 
+to come online some time in 2027. 2027!   that year feels like something 
+out of science fiction. but alas,   less than a decade away. i am looking forward to 
+following its progress and seeing it come alive. thanks for watching. and full credit 
+to asianometry viewer shazmosushi for   suggesting this topic. if you liked this 
+video, please consider subscribing. if   you have any ideas or suggestions 
+for future videos, let me know!

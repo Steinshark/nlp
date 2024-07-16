@@ -1,0 +1,110 @@
+We usually think of the power grid in terms
+of its visible parts: power plants, high-voltage lines, and substations. But, much of the complexity
+of power grid comes in how we protect it when things go wrong. Because of the importance
+of electricity in our modern world, it’s critical that we be able to prevent damage
+to equipment and perform repairs quickly when they’re needed. The grid got its name for
+a reason, it’s an interconnected system, which means that, if we’re not careful,
+small problems can sometimes ripple out and impact much larger areas. So its protective
+systems are thoughtfully designed to work together and minimize the number of people
+affected when faults occur. Hey I’m Grady and this is Practical Engineering. Today we’re talking about power system protection and how blackouts work. This video is sponsored
+by HelloFresh, America’s #1 Meal Kit. Get started with 9 free meals at HelloFresh.com
+by using code Practical9 at checkout. More on that later. Things go wrong on the grid all the time.
+Just like a car or the device you’re watching this video on right now, the grid is a machine.
+It’s a big machine that sits out in all kinds of weather, exposed to a wide variety of
+meddling and destructive animal species and just the general wear and tear that comes
+from providing humanity with an absolutely essential yet extremely dangerous amenity:
+electricity. It shouldn’t come as a surprise that faults happen from time to time. One
+common type of fault on transmission lines comes from sagging. During peak demands, these
+lines move tremendous amounts of energy as electrical current. Well, no wire is a perfect
+conductor; they all have some resistance. So, the more current you try to pass through
+a wire, the less efficiently it works. That energy that doesn’t make it to the end of
+the line is instead lost as heat. And what does heat do to metal? It causes it to expand.
+So the lines get longer, which means they sag lower, and occasionally that brings them
+into contact with tree limbs, creating a path to ground and shorting out the line. So what happens during a short circuit? Electricity
+will take any path to ground that it can find and the lower the resistance of the path,
+the more current that will flow. A short circuit is when a low resistance path to ground happens
+where it’s not supposed to, bypassing the customers and literally shortening the circuit.
+This has a number or unwanted consequences. All that energy is being wasted, for one.
+Arcs created by short circuits can start fires for two. But more importantly, faults create
+massive spikes in current that can overload and damage equipment on the grid. I probably
+don’t need to mention that most pieces of the power grid are expensive, they take a
+long time to install and repair, and they’re important, they’re providing an essential
+utility, so we don’t want them to get damaged. "Easy enough" you might be thinking “Just
+make them strong.” Put all the power lines underground where they’re protected from
+weather and animals. Make them as big as a bridge suspension cables and use indestructible
+alloys. Put the substations in big concrete buildings. Hide the solar panels under the
+ocean. You see what I’m getting at. I don't know how much a car that never breaks down
+would cost, but I’m sure I wouldn’t want to pay for it, and the same is generally true
+for the power grid. Resiliency doesn’t just mean durability. It’s a balancing act between
+making our infrastructure strong enough to resist threats, keeping faults from creating
+further damage, and making it easy to diagnose and repair problems so that equipment can
+be brought back online with minimal downtime. Those last two items are the job of power
+system protection engineers and can be summed up pretty easily in one word: isolate. Engineers
+establish zones of protection around each major piece of the power grid to isolate faults
+and make them easy to find and repair. You can trace these zones of protection from your
+house all the way to the power plant. A short circuit in your coffee maker isn’t going
+to overload the service transformer because there’s a fuse or breaker in between. If
+a car knocks down a pole and grounds out a line, it’s not going to take out the entire
+substation, again because it’s isolated with a fuse or breaker. If a transformer has
+a fault in a substation, it’s not going to melt the transmission lines feeding it
+because it can be isolated using breakers. And if a transmission lines sags into a tree
+limb, the resulting surge in current is not going to destroy the generator at the power
+plant because it has its own zone of protection. Of course, this is a super simplified explanation.
+These zones of protection are thoughtfully considered to balance the complexity and resiliency
+of the grid. But, how do they actually work? There are a wide variety of types of electrical
+faults. Identifying and differentiating them can be a major challenge. The fundamentals
+of electrical devices can be boiled down pretty easily. Electrical current travels from a
+source, through a series of components, and back through a return path that is referenced
+to ground. There really isn’t that much information that protective devices can use
+to identify problems. For example, there’s very little difference between what’s happening
+in your toaster and what happens when you take the live and neutral lines from a socket
+and short them together. The circuit breakers in your house identify faults primarily based
+on electrical current. If you get too many amps moving through the breaker, it assumes
+that something is wrong and shuts off the circuit. That makes sense for a lot of cases,
+since high current can seriously damage equipment and conductors, leading to all sorts of issues.
+But, it’s not the only kind of electrical fault. On the grid, protection is primarily done
+through relays that can measure all kinds of parameters to identify faults and activate
+circuit breakers to isolate equipment and notify utilities of the problem. These relays
+are measuring voltage, current, and power on the lines, like you’d expect. They also
+measure differential current. Even if the current isn’t too high, you want to make
+sure that as much current is going out as is coming in, otherwise you’re losing it
+somewhere else which can be signal of a fault. This is the same principle that GFCI outlets
+in your house use. Relays also keep an eye on the frequency of the grid to make sure
+different components don’t lose synchronization. Certain breakers can also be manually activated,
+like during rolling blackouts, where utilities are forced to shed non-critical electrical
+loads due to lack of generation capacity. These are all types of “managed failures”
+where you have some loss of service at the cost of protecting the rest of the system.
+The goal is that isolating equipment when things go wrong speeds up the process and
+reduces the cost of making repairs to get customers back online. But, there are cases when isolation of equipment
+can actually make things worse. And I’ve built a little demo to show how this works.
+Imagine a series of interconnected transmission lines, all feeding their own service areas,
+represented by the power resistor and LED light in the model. During peak demand, these
+lines might be operating at nearly their maximum capacity. If one line experiences a fault,
+for example shorting out against a tree branch, protective relays will isolate the line. In
+my case, when I short out a line, the fuse blows. But, if not handled correctly, that
+can mean that the entire electrical load gets automatically distributed between the remaining
+transmission lines, pushing them beyond their limit. All of a sudden, you have a cascading
+failure. Much of our grid is designed to avoid this type of failure, but occasionally you
+get the perfect alignment of faults, communication errors, and human factors that lead to massive
+outages, like the one in 2003 that took out much of the U.S. northeast and Ontario. Starting back up from a major blackout like
+this can be really complicated. Even just choosing which equipment to unisolate and
+in what order takes a lot of consideration and engineering. There’s a chicken and egg
+situation because most large power plants actually need some power to operate, so it
+can be difficult to start back up during a wide area outage, also called a black start.
+But, it’s still better than the alternative of having to perform major equipment replacements
+because things spiraled out of control. When your power goes out, it’s easy to be frustrated
+at the inconvenience, but consider also being thankful that it probably means things are
+working as designed to protect the grid as a whole and ensure a speedy and cost-effective
+repair to the fault. Thanks to HelloFresh for sponsoring this video
+and asking us to film ourselves making dinner. “Hold it straight, babe.” Spending time
+in the kitchen is one of our favorite things, and HelloFresh makes it super easy to cook
+and eat delicious meals together. The recipes are great and always include seasonal ingredients
+that are different from the stuff we normally make. “Oh, they’re so seasoned.” And
+it’s completely flexible so we can choose the types of meals we like, skip a week whenever
+we need, and include side items or desserts. Cooking these meals is something I look forward
+to all day, and right now the price starts at $5.66 per serving, which is pretty good
+for a date night. “That one’s yours…” And you know what’s even more reasonable?
+The 9 free meals that HelloFresh is giving to fans of the channel who visit HelloFresh.com
+and enter practical9 at checkout. That’s $90 off your first month of HelloFresh, including
+shipping. Just click the link in the description use code Practical9 at checkout. Thank you
+for watching, and let me know what you think!

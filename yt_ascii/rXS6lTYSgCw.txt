@@ -1,0 +1,161 @@
+in this video, we look at how ibm freed the
+software industry. sit down, my friends. and let me spin you a tale. it is the 1950s and early 1960s, and your
+company just got its first computer. nice, but now what? well we need some software applications for
+that spanking new computer. but how? well, there were a few ways. first and foremost, your company might go
+develop it themselves. in the beginning, computers were rudimentary
+and slow. programming them did not require a particularly
+big team. the original programmers on the eniac was
+a team of six women. the team at ibm that created the fortran programming
+language - one of the dominant languages for scientific computing in the 1950s - had just
+ten people. for many companies, that was how they got
+their software - they made it themselves. but as computer hardware advanced, updating
+and porting all that software to new hardware became time-consuming and expensive. alternative options became necessary. ## cooperation and sharing this growing difficulty led to a few new developments
+in the software industry - cooperative sharing and libraries. in 1955, ibm announced the ibm 704 computer,
+which was capable of executing up to 12,000 floating-point adding operations per second. quite fast in the day. but the 704 was not compatible with software
+written for the previous generation 701. considering this, several companies in california
+- the rand corporation, lockheed aircraft, and north american aviation decided to collaborate
+on scientific applications software in an organization called "share". that organization is still around today! in addition, the hardware makers started maintaining
+libraries of commonly used programs for certain industries. the most well known was ibm's consolidated
+functions ordinary, 1962 - or "62 cfo" - which was for insurance companies. i know, the name is terrible. designed for the ibm 1401 tape computer, 62
+cfo was not a single software but rather a set of applications that processed ordinary
+billing and accounting functions on life insurance contracts. ibm made the software available to their regional
+insurance customers, who often did not have the resources to make their own software from
+scratch. so they took the '62 cfo and adapted it to
+their own internal procedures. soon, that went the other way around - they
+changed their procedures to adapt to the software package. which was what ibm wanted. sperry rand had a library of programming tools
+for their univac computer called the univac program distribution library. univac people can use it as they wished, but
+sperry made it clear that they did not provide documentation not took responsibility for
+the program's functionality. ## the first software companies but what about those computer customers in
+need of a custom software, but cannot afford an in-house programming team? in the 1950s, several companies were founded
+to service this market need. the first widely acknowledged computer software
+company was the computer usage company or cuc. they were founded in 1955 by a pair of ibm
+programmers who wanted to offer their services to others. soon thereafter they expanded and took their
+company public in 1960. the ipo proceeds were invested into the acquisition
+of their own computer. other companies quickly joined the fray, most
+of them 1-2 person shops that sold their services back to their former employers. it didn't take much to start such a company
+- just a notepad, a pencil, and some rented time on a computer. another notable software development company
+was applied data research or adr. founded by seven programmers from sperry-rand
+at roughly around the same time as cuc, they eventually became the first "software product"
+company - selling software packages like as we know it today. rca approached them about a flowchart program
+for making documentation. adr quoted them $25,000, which rca turned
+down. adr eventually took the idea and made autoflow
+- widely seen as the first commercial software package. another interesting product was their version
+control system librarian. ## complete solution despite the scrappiness of the small software
+shops, most customers that didn't make their own software got it from these ibm libraries
+- for free. ibm did not sell their computer hardware directly
+to customers like as someone might for a washing machine or a pet bird. rather, they rented it out on a monthly basis
+as part of a complete solution. that complete solution included free access
+to learning materials like classes as well as engineering and maintenance services. moreover, the customer got a team of system
+engineers who served as "advisors". the systems engineers needed to do "whatever
+it takes" to get the customer to start using the computer. this policy dates back to the punched card
+era. if an ibm customer needed someone to plug
+in the boards and lay out the reports, then the ibm staffers did that for them. if that meant providing and customizing computer
+applications for free, then so be it. of course, it is not like these expenses vanished
+into the ether. ibm considered the cost of these system engineers
+and software libraries as part of marketing. the customer paid for it through the bundle. the result was that many potential customers
+for standalone software packages expected to get it for free. like in the case of adr and the aforementioned
+autoflow, ibm had this free software called ibm flowcharter, which kind of did the same
+thing but with more hassle. this expectation somewhat suppressed adr sales. adr founder martin goetz grumpily recalls
+in a 1985 oral history for the computer history museum: > however, the problem was the user wasn't
+used to paying for software, he was used to getting it free. and he was also used to having ibm come out
+with new software that might meet his needs ... > there was an expectation that ibm, if there
+was enough interest or pressure, would provide what they needed adr and other software companies did do quite
+well and the industry was growing. but they succeeded by finding little niches
+where ibm did not compete in. and many customers still opted not to buy
+that software, but instead wait for ibm to eventually make a version. ## the 360 in 1964, ibm released the system/360, their
+new third generation line of computers. it replaced a vast jumble of older second-generation
+computers with this single offering. in development since 1961, the 360 was ibm's
+most ambitious product yet - the winner of a fierce internal battle between dueling product
+teams. at its announcement, the line had a range
+of six computers spanning the low to high end. a key feature of the system/360 was its scalability. each computer was built on top of the same
+operating system and had the same standard interface. customers can write software for any of the
+360 computers knowing that it will work for all of them. ibm president thomas watson jr. wanted the
+system/360 launch to be its biggest and most well publicized yet. and he succeeded. the system/360 turned ibm into a colossus. in 1966, ibm generated $2.5 billion in rental
+income alone. the other big american computer makers - control
+data corporation or cdc, general electric, and honeywell - generated $500 million combined. ## tension as it does in capitalist society, success
+invited competition. a bit later, rca released their own line of
+computers - the spectra 70. importantly, they also claimed that their
+70 computers would be compatible with applications programmed for the 360. this was big, if true. customers can now switch to rca computers
+and still use their system/360 applications. ibm could not charge those guys for that software
+unless they also charged their own current customers. and that, in turn, cannot be done unless they
+first unbundled the cost of software and hardware. in the end though, the rca spectra 70 computers
+turned out not to be as compatible with 360 software as rca claimed that it would. bullet dodged. ## should we unbundle? despite this, several ibm employees argued
+that ibm should move forward with the unbundling anyway. for one thing, they thought that selling software
+was a massive opportunity. furthermore, developing software was starting
+to get expensive. by the late 1960s, a third of ibm's r&d costs
+was spent on software development. giving it all away did not seem sustainable. but unbundling would also be a tricky thing
+with several unresolved issues. for example, what legal avenues were there
+for protecting ibm software from piracy? patents? trade secrets? copyright? licensing? none of the options were great. the ibm executives were hardware people. they saw everything through the lens of selling
+more hardware. that lens made it difficult for them to see
+what can be possible with selling software. but they weren't stupid. there was also something else. to be more blunt about it, "bundling" was
+how ibm suppressed competition by controlling the prices of their data processing offerings
+- adjusting them as necessary to defeat competitors or raise profits. on the surface, it seems like a "flat price",
+but as needed, ibm can raise profits with "extra shift" charges that hit whenever the
+computer was used for more than a single day or "shift". more shifts, more charges, more profit. furthermore, most of a customer's costs occur
+at the beginning as they get set up. later that effort declines and ibm collects
+substantial profit. they can leverage that profit to fund the
+acquisition and onboarding of new customers. if one customer costs more than usual, that
+is okay because those losses are subsidized. any potential new entrant into the data processing
+market had to do more than just bring the hardware. they needed to build and offer all of ibm's
+software, maintenance services, and education too. and they need to do it for a price that is
+fundamentally uncompetitive because they don't have thousands of massive, profitable customers
+already supporting them. internally, ibm had been looking at the possibility
+of unbundling since 1962. every time, they concluded that unbundling
+would hurt the business. one notable 1965 memo reads: > the single combined price for hardware and
+whatever degree of service an individual customer may require to achieve a successful installation
+always has been one of our greatest competitive advantages > in general, to the extent that ibm unbundles
+its prices, the results would be as follows: > the areas of our line susceptible to attack
+by competition would be multiplied > the number of hardware and service competitors
+would increase. > loss of business would result from higher
+total prices and increased competition in other words, unbundling would raise ibm's
+costs and increase competition by pitting their own hardware on an even ground against
+that of others. and we can't be having that, right? ## antitrust unfortunately, bundling looked suspiciously
+like "tie-in" sales. a tie-in sale is when a seller forces a buyer
+to also buy a secondary product in addition to the one they really want. if you want to take one, you must take the
+other. ibm's competitors had long complained about
+marketplace selling practices like bundling to largely no avail. but as early as 1965, ibm knew that the government
+would likely declare "bundling" illegal under the sherman antitrust act. but as late as the summer of 1968, ibm executives
+still believed that unbundling was a bad idea. then came rumors that the us department of
+justice was investigating a possible lawsuit. based on like, everything we just talked about,
+ibm felt that they were unlikely to win. tired of waiting, in december 1968 one of
+their competitors - the minnesota-based cdc - sued ibm over several market practices that
+it said were illegal. that lawsuit would grind for five years. bundling was one of those bad practices but
+another was selling "ghost computers" - like the system/360 model 92 - in a successful
+attempt to block cdc sales. if cdc won on any of these claims, then the
+us government had to follow. this rang alarm bells inside the ibm hallways. at the same time, the packaged software industry
+had proven the model of selling software. companies like adr, cuc, and hankins - which
+sold payroll software - were making millions of dollars and even going public. ibm executives felt that it would not be so
+crazy for them to start charging for software as well. so with this in mind, and with the goal of
+heading off a doj suit forcing them to unbundle their offerings, ibm decided to go and do
+it to themselves. in the end, they felt that they had no choice. ## the announcement on december 6th, 1968, ibm made a vague announcement
+that it would "make changes in the way it charged for its data processing equipment". later on june 23rd, 1969, ibm said that they
+would unbundle - which meant pricing their system engineering services, hardware and
+software products separately. the new pricing comes into effect in 1970. ibm customers were excited about the new pricing. rumors claimed that the unbundling would cut
+their hardware prices by as much as 25% - now that the software costs were no longer included. but the actual discounts disappointed. ibm basically looked at how many of its 130,000
+employees were programmers - which was about 4,000 or 3%. and that turned out to be the size of the
+hardware discount. the popular response to all of this was - unsurprisingly
+- skeptical. some complained about now paying for what
+they had previously gotten for "free". others argued that even if ibm was doing this
+to satiate the regulators, then all it was doing was making several smaller "submarkets"
+for it to dominate. so savvy, they said. ## a star is born but internally, ibm didn't feel that way
+at all. they didn't want to do it and if they felt
+they had more time then they would have taken it. unbundling popularized and accelerated the
+market perception that software should be worth something. over the next few years, the number of software
+companies exploded. the explosion was particularly noteworthy
+in areas that ibm had once cornered, like insurance. companies like cybertek computer products
+- which employed a member of the original 62 cfo programming team - or tracor computing
+corporation sprouted up right after the ibm announcement in 1969, competing for the lucrative
+insurance software market. these companies at first started off with
+software that extended or complemented the functionality of the venerable '62 cfo - things
+that ibm hadn't built because they hadn't been nagged enough yet for it. but before long, these small software companies
+were providing entirely new services like underwriting automation. by 1972, an industry survey found 81 vendors
+and over 275 software packages. ## conclusion ibm's preemptive move failed. just a few days before lyndon johnson left
+office in january 1969, the us department of justice filed a lawsuit to break up ibm. take that, nixon! united states versus ibm was a brutal trial
+that involved 860 deposition witnesses, ran 104,400 pages of transcript, and cost somewhere
+between $50 to $100 million for both parties. they called it "the antitrust division's vietnam". and after 13 years, the us government simply
+dropped the lawsuit. can't say that was a good look. but look at what it - or rather the threat
+of it - did for america's software industry. as i made clear earlier, the us software industry
+was already on the rise when ibm decided to unbundle. no one can say that it created the industry
+- considering the successes that were already around at the time. but what smashing the ibm monopoly did do
+was to tear off a heavy lid on this growing industry. an industry brimming with energy and ready
+to take on the rest of the world. and so it did.

@@ -1,0 +1,113 @@
+The modern world depends on electricity. It’s not just a luxury we use to power our
+devices and enjoy our free time. It’s not even just a convenience of having
+light, heating, and cooling in our buildings. Electricity is a crucial resource, especially
+in urban areas, providing public security, safety, and health and making possible everything
+from emergency response to modern medical care in hospitals to even the other utilities
+we require like fresh water and sanitation systems. But unlike those other utilities, electricity
+can’t be created, stored, and provided at a later time. The instant it’s produced, it’s used no
+matter how far apart the producer is from the user. And the infrastructure that makes all this
+possible is one of humanity’s most important and fascinating engineering achievements. Hey I’m Grady and this is Practical Engineering. Today we’re talking about the power grid. This video is sponsored by NordVPN. Visit NordVPN.com/practicalengineering to
+get 75% off a 3-year plan. More on that later! Like most people, you probably take the grid
+for granted. Electrical infrastructure is so ubiquitous,
+it’s easy not to notice that the majority of our power grid is out in the open for anyone
+who wants to have a look. I happen to be one of those people who does
+want to have a look, and hopefully by the end of this video series on electrical infrastructure,
+you will be too. This video is geared toward North America,
+but most of the concepts will apply to any other part of the world. And just to give you a sense of scale, there
+are only four distinct electrical grids that service essentially all of North America. You have the two big ones, Western and Eastern,
+and the two electrical separatists: Quebec and Texas. Depending on your definition, an electrical
+grid can be considered one of the world’s largest machines. So how does this machine work? The basic function of generating electricity
+and delivering it to those who need it may seem simple. I can hook up a small generator to a light,
+and boom; electrical grid. With the cost of solar panels reaching record
+lows, many are exploring the possibility of generating all the power they need at home
+and forgoing the grid altogether. But, a wide area interconnection (that’s
+the technical term for a power grid) offers some serious advantages in exchange for increased
+complexity. Here’s a simplified diagram showing the
+major components of a typical power grid, and we’ll follow the flow of electrical
+current as it makes its way through each one. We start with generation, where the electricity
+is produced. There are many types of power plants, each
+with their own distinct advantages and disadvantages, but they all have one thing in common: they
+take one kind of energy and convert it into electrical energy. Most power plants are located away from populated
+areas, so that electricity they create needs to be efficiently transported. That’s handled by high-voltage transmission
+lines. At the plant, transformers boost the voltage
+to minimize losses within the lines as the electricity makes its way to the areas that
+need it. Once it reaches populated areas, transformers
+then step down the power back to a safer and more practical voltage. This is done at a substation, which also has
+equipment to regulate the quality of the electricity and breakers to isolate potential faults. Some energy customers draw power directly
+from transmission lines, but most are served from feeder lines that carry power from the
+substation. This part of the system is called distribution. From the feeders, smaller transformers step
+down voltage to its final level for industrial, commercial, or residential uses before the
+electricity reaches its final destination. Rather than a constant flow of current in
+a single direction (called direct current or DC), the vast majority of the power grid
+uses alternating current or AC, where the direction of voltage and current are constantly
+switching, 60 times per second in North America. The major advantage of AC power is that it’s
+easy to step up and down voltages, a critical part of efficiently and safely moving electricity
+from producer to consumer. The device that performs this important role,
+called a transformer, is as simple as a pair of coils next to each other. A varying voltage in one coil induces a voltage
+in the other coil proportional to the number of turns in each one. If the current doesn’t vary, like in direct
+current, the transformer can’t do any transforming. It’s helpful to think about the grid as
+a marketplace. Power producers bring their electricity to
+the market by connecting to the grid, and power consumers purchase that electricity
+for use in their home or business. The economics and politics of the grid are
+so much more complicated than this, but the important part of the analogy is that, in
+many ways, the power grid is a shared resource. Because of that, it needs organizations to
+oversee and establish rules about how each participant in the producing, transmitting,
+and consuming of power may use it. And there are three overarching technical
+goals that engineers use to design and maintain the power grid. The first one is power quality. Our electrical devices and equipment are designed
+assuming that the power coming from grid has certain parameters, mainly that the voltage
+and frequency are correct and stable. Some devices count the oscillations in the
+AC grid power to keep track of time, so it’s critical that the grid frequency not deviate. Changes in the voltage can lead to brownouts
+or surges that damage connected equipment. One of the benefits of a large power grid
+is electrical inertia. All those huge spinning generators connected
+together provide momentum that smooths out the ripples and spikes that can occur from
+equipment faults or quickly changing electrical loads. The next technical goal of the grid is reliability. If, like most people, you take that constant
+availability of power for granted, that’s by design. Much of the grid’s complexity comes from
+how we manage faults and provide redundancy so that you’re rarely faced with blackout
+conditions. It’s another inherent benefit of a grid
+that electricity can be rerouted when a piece of equipment is out-of-service, whether it
+was planned or otherwise. The final goal of the power grid is simply
+that the supply meet the demand. Power production and consumption happens on
+a real-time basis. If it’s plugged in, the light from the screen
+you’re watching right now was a drop of water in a turbine or a breeze across a windmill
+microseconds ago. And by the way, did you call your utility
+and let them know that you were going to turn on your computer or phone and watch this video? I’m willing to bet you didn’t, which means
+not only did they have to adjust their production up to match the extra load, but they had to
+do it immediately without any warning whatsoever. Luckily having millions of people connected
+to the same grid smooths out the demands created by individuals, but load following is still
+a major challenge. For the most part, electrical demand follows
+a fairly consistent pattern, but factors like extreme weather can make it difficult to forecast. Grid operators balance demand by dispatching
+generation capacity in real time. The cheapest sources of power are used to
+fulfill the base load that’s more consistent, and higher cost sources are used for peaking
+when demand exceeds the base. But it’s not as simple as flipping on a
+switch. Large power plants can take hours, days, or
+even weeks to startup and shut down. Equipment needs to be taken out of service
+for maintenance. Fuel costs fluctuate. Renewable sources like wind and solar can
+have massive and unpredictable variations in capacity, providing irregular sloshes of
+power to the grid. You can see why balancing electricity supply
+and demand is this fantastically complex job of taking into account all these considerations,
+some of which are predictable and some of which aren’t. That’s part of the reason we are trying
+to make the grid smarter by using software, sensors, and devices capable of communicating
+with each other. On the supply side, this can allow computers
+and software to do what they do best: take in tremendous amounts of data to help us make
+decisions about how to manage the grid. But a smart grid can also help on the demand
+side as well. Unlike most of the goods we buy, consumers
+don’t have a keen understanding of power, how much we’re using, or how much it should
+cost depending on the time of day or year. A smart grid can take away some of the obfuscation,
+allowing us to make better decisions about how we use electricity in our day-to-day lives. Ultimately, a smart grid can help us use and
+take care of this huge machine - this shared resource we call the power grid - more efficiently
+and effectively now and into the future. Just like electricity, internet connectivity
+is a resource on which we depend more and more. I work on these videos in my spare time, which
+means I’m connecting to all kinds of sketchy public networks wherever I happen to be. That’s why I use NordVPN. A lot of people don’t realize how vulnerable
+you can be when connecting to unsecured wifi networks at coffee shops, airports, convention
+centers, etc. One stolen password can completely mess up
+your finances or worse. What I love best about NordVPN is that I don’t
+have to balance inconvenience with possibility of having my identity stolen or your computer
+exposed to malware, because it’s so easy to use. I just load the app, click connect and it’s
+done. There’s no limit on bandwidth, and it works
+on all my devices. I have insurance on my car in case I get into
+an accident, I lock the doors on my house in case of an intruder, and I use NordVPN
+(especially when I’m on public wifi networks) to protect myself against hackers and malware. If your privacy and security online is important
+to you, they’re offering an awesome discount to fans of the channel. Visit NordVPN.com/practicalengineering or
+click the link in the description below to get 75% off a 3-year plan. Use promo code PracticalEngineering to get
+an extra month for free. Thank you for watching, and let me know what
+you think!

@@ -1,0 +1,191 @@
+In December of 2020, the Arecibo telescope
+- one of the largest and most iconic astronomical instruments in the world - collapsed. This 57-year-old megastructure not only made
+many incredible scientific discoveries over its lifetime, it was also an emblem of humanity’s
+interest and curiosity about our place in the universe. Its loss was felt across the world. The National Science Foundation, who owns
+the observatory, recently released their report to congress on the cause of the failure and
+the events leading up to it. Why was this telescope so important, how did
+it work, and why did it fail? I’m Grady, and this is Practical Engineering. In today’s episode, we’re discussing the
+Arecibo telescope collapse. The same way we observe visible light from
+celestial objects using our eyes and optical telescopes, we can also take advantage of
+the other parts of the electromagnetic spectrum in astronomy. Most of the gamma rays, x-rays, ultraviolet,
+and infrared portions of the spectrum are blocked out by the atmosphere. But long-wavelength radio waves are not. A radio telescope is basically an antenna
+that can tune in to some frequencies of electromagnetic radiation that emanate from celestial objects. These radio waves can be quite faint, complicating
+the task of separating them from the background noise. You essentially have two options to get high-quality
+radio astronomy data: more time or more space. The longer you focus on an object, the more
+resolution you get. But, there’s only so much time. To speed up observations, you can also gather
+radio waves from a larger area and focus them into a clearer signal. Arecibo took that strategy to the extreme
+with it’s 305-meter (or 1,000-foot) diameter dish - the largest in the world until China’s
+half-kilometer FAST scope took the title in 2016. Located on the Caribbean island of Puerto
+Rico, the Arecibo Observatory was designed and constructed in the 1950s and 60s as a
+department of defense project to detect nuclear warheads in the upper atmosphere. The National Science Foundation took over
+the facility in 1969 to use it for more peaceful endeavors, with help from a few managing partners
+over the years. A big part of Arecibo’s mission is education
+and outreach programs to engage the public’s interest in astronomy and atmospheric sciences. If you grew up in Puerto Rico, you almost
+certainly visited this incredible facility on a field trip or two or three. The most iconic part of the observatory was
+the massive radio telescope. Not only could it receive the faintest of
+radio signals,it could transmit them as well, allowing Arecibo to work as a celestial radar. It could send out radio signals and measure
+the returning echoes from nearby objects in space, including planets and asteroids. Arecibo facilitated some of the most exciting
+astronomical discoveries of our age, including the Nobel-prize winning observation of binary
+pulsars providing the first evidence of gravitational waves. The telescope’s dish was constructed inside
+an enormous circular sinkhole. Although it looks solid from a distance, the
+reflector was a series of aluminum panels carefully suspended on steel cables. Because the dish was fixed to the earth, it
+was constrained to point at whatever part of the sky happened to be overhead. Radio telescopes can be used during the day
+and night - so there’s more sky to look at over the course of a day or year - but
+a telescope that can’t steer is still pretty useless. The designers of Arecibo had a pretty clever
+solution to the problem. Rather than using a parabolic shape for the
+dish that would focus everything to a single point, they chose a spherical curve. Spherical reflectors don’t perfectly focus
+all the incoming rays. That might sound like a bad thing since you
+want to gather and focus as much signal as possible across the entire dish. The beauty of a spherical reflector is that,
+by changing the position at which you measure the reflected waves above the dish, you’re
+measuring those waves from different parts of the sky. You can essentially steer the telescope by
+choosing where to receive radio waves above the dish, allowing you to focus on various
+objects and track them as the earth rotates. Focusing those waves to a narrow area above
+the dish doesn’t do much good unless you have a receiver up there to collect and measure
+them. The Arecibo telescope was designed with a
+triangular platform suspended by steel cables above the dish to support the various instruments
+used to gather radio signals. To keep the platform aloft, three reinforced
+concrete towers, named for their positions on a clock of 4, 8, and 12, supported each
+group of cables. There were originally 4 cables for each corner
+of the platform, 3 inches (or 8 cm) in diameter. Big cables. Additional cables, called backstays, were
+connected to anchorages behind each tower to balance the horizontal forces, similar
+to the way suspension bridges work with their towers and abutment anchorages. Initially the telescope used line feeds, elongated
+receivers that could gather signals within the focal line of the spherical dish. But, they could only measure signals within
+a narrow bandwidth, so line feeds would have to be swapped to change the frequency of the
+telescope. Upgrades in 1997 included the addition of
+the Gregorian dome that uses two additional reflectors to focus radio waves. This dome allowed telescope operators to observe
+a much wider range of radio frequencies. But this Gregorian dome didn’t just add
+capabilities. It also added weight - lots of weight - about
+50 percent of the original platform. All of this extra load required some more
+support. So, two auxiliary cables from the platform
+to each tower were added, plus more backstays to balance the load. In addition to that, the dome was far more
+sensitive to tiny movements. You can imagine the stiffness and rigidity
+of a gigantic wind-catching dome suspended in the air by narrow steel cables - not an
+ideal structural arrangement for a sensitive instrument. To compensate, three tie-down cables were
+added, one for each corner of the platform, increasing the forces even further. A laser ranging system could communicate with
+hydraulic jacks to carefully adjust the tension in these tie-downs and keep the platform perfectly
+stable within the precision of a millimeter. The telescope's last few years were pretty
+rough. The 2017 Atlantic hurricane season sent two
+massive storms - Irma and Maria - across Puerto Rico. Maria was one of the strongest storms ever
+to hit the island and caused nearly 3,000 fatalities and close to 100 billion dollars
+in damage. Arecibo wasn’t spared from that devastation. It suffered a broken line feed that fell from
+the instrument platform and crashed through the dish, among other damage. More consequential than hurricanes, though,
+Arecibo was slowly losing its funding. The National Science Foundation had been trying
+for years to divert Arecibo funds to newer projects. In 2018, the University of Central Florida
+stepped up to take over the management and funding of the observatory, not knowing what
+was soon to come. Only a few years later, in August 2020, one
+of the newer auxiliary cables on Tower 4 broke free from its socket unexpectedly in the middle
+of the night. As the cable failed, it crashed through the
+reflector dish, tearing a gash through the aluminum panels. These sockets, called spelter sockets, used
+to attach the cables to the tower are a common way to terminate wire ropes and cables, but
+they have to be installed correctly. You have to broom the end of the cable, making
+sure that every strand is separated from the others, clean them meticulously, then carefully
+pour molten zinc into the socket to create a permanent wedge that only gets tighter with
+more tension. If done properly, the termination should be
+stronger than the cable itself. In other words, there’s no good reason a
+cable should ever pull out of a spelter socket. And yet, this was not the first incident of
+cables slipping in their sockets at Arecibo. Maintenance staff at the observatory had been
+concerned about the problem for years. This failure was the beginning of the end
+of the telescope, though we didn’t know it yet. The damage from the failed cable was significant,
+but the engineers brought on to assess the structure believed it could be repaired. The suspended platform was designed with some
+redundancy, so losing a single cable wasn’t necessarily catastrophic. Managers put a temporary stop to the science
+at the facility while a remediation project could be installed. But, it had to be designed first. As a first step, engineers developed a structural
+computer model of the platform and towers to evaluate options for repair. One nice aspect of cable-supported structures
+is that you can estimate the tension in each one just by looking at it. All cables sag under their own weight, following
+a curve called a catenary. The more tension in the cable, the tauter
+it becomes, and so the less it sags. If you know the weight of the cable, you can
+use the catenary equation with the measured sag distance to estimate cable force fairly
+accurately. A sag survey was conducted at Arecibo using
+lasers, and this is how the structural model was calibrated. To make sure the model could predict how changes
+in forces would affect the structure, the engineers performed some pretty clever validation
+as well. Since they had measurements of the instrument
+platform before and after the first cable failed, they could remove that cable in the
+model and compare the predicted behavior of the platform to what actually happened. When the first cable failed, that corner of
+the platform dropped by two-and-a-half feet or about a meter, and the model was able to
+predict this within a couple of inches. While all this design was taking place, further
+trouble was just around the corner. In November, only 3 months after the first
+cable broke at Tower 4, a second one failed. This time it was one of the original cables
+installed in the 1960s. It didn’t pull from its socket but simply
+broke. And it broke at a force well below what it
+should have been able to handle (about 62% of its rated strength to be precise). The falling cable again damaged parts of the
+telescope, and again, the platform remained standing. However, optimism about the structure was
+quickly declining. The question went from, “how do we fix the
+telescope?” to “can we fix the telescope?” And there were differing opinions. The engineers used the structural model to
+evaluate options that could relieve the tension in the remaining cables and reduce the possibility
+of a complete failure. They could cut the broken cables since they’re
+pretty heavy and not doing anything useful anymore. They could move the Gregorian dome so that
+the other towers were holding more of its weight. They could loosen the backstays, causing the
+towers to lean inward by 18 inches or half-a-meter. And of course, they can add some temporary
+cables at Tower 4 to take up some of the weight. All of these options showed reductions in
+the forces carried by the remaining cables, but the problem was figuring out how to do
+work safely. At this point, they had two failures, both
+well below the specified breaking strength of the cables. Not only had the telescope lost its structural
+redundancy, but the engineers also didn’t trust the strength of the remaining cables,
+and for good reason. Crews couldn’t access the site due to the
+risk of another cable failing, but nearly all the options to relieve the load on the
+cables would require having personnel on the platform and towers. One of the engineering firms working on the
+problem suggested some last ditch efforts to save the structure. After that, they could perform proof tests
+remotely using the tie-down jacks to check if the remaining cables had at least 10% extra
+strength. If the engineers could gain some confidence
+in the strength of the remaining cables, crews might be able to enter the site and implement
+further measures to save the structure. However, no one could get comfortable with
+the risks of the helicopter work or proof testing the already distressed cables. It is a tough thing to say, when such an important
+and iconic structure is still standing, that there’s no path forward to repair. This quote from the engineer tells the whole
+story. “It is unlikely any of these methods will
+yield sufficient reductions without placing crews in jeopardy...Although it saddens us
+to make this recommendation, we believe the structure should be demolished in a controlled
+way as soon as pragmatically possible.” They wouldn’t get the chance, though. On the morning of December 1st, a third cable
+at Tower 4 broke, starting a chain of events that would quickly collapse the structure. Amazingly, one of the observatory staff was
+flying a drone at the top of the tower when it happened, capturing this incredible footage
+of the event. It happens almost instantly. Two of the main cables are already clearly
+in distress when the video starts. All the chipped paint is from individual strands
+of the cable failing. Observatory staff could hear these breaks
+and knew what was likely imminent, which is why the drone was up there in the first place. The third cable snaps, and the remaining cables,
+forced to bear the additional load, quickly follow. The drone turns around to reveal the platform
+crashing into the side of the dish. The observatory also had a Gopro set up in
+the control room that captured the failure. You can see the cables let go from Tower 4,
+the platform swinging downward, the support cables crashing through the suspended catwalk,
+and the top section of Tower 4 breaking off from the unbalanced force of the backstays. All three towers suffered failures, major
+portions of the dish were destroyed, and the platform and instruments it supported were
+a complete loss. Several buildings, including the visitor center,
+were damaged by falling debris. Thankfully, even though there were people
+on site during the collapse, the engineers had established safe zones away from the structure,
+and no one was injured. Several forensic investigations are still
+underway to examine the causes of the failed cables. Those results could be years away, so we don’t
+yet know for certain why the first two cables gave way when they should have had more than
+enough strength to carry the load. Engineers involved during the event suggested
+the first cable to fail likely was not fabricated correctly. Whether the spelter sockets were installed
+in the field or a shop, there are a lot of details required to do it properly, and it’s
+certainly possible that something was missed. And once those sockets are installed, they
+are difficult to inspect. As for the second cable, the engineers suggested
+a likely failure mode to be corrosion of the steel. The cables were painted regularly and reportedly
+had a dehumidification system that could blow dry air between the strands (although those
+systems usually require an airtight sleeve around each cable). Even so, Arecibo sat nearly 60 years only
+a short distance from the northern coast of Puerto Rico, and exposure to that salty sea
+air could have accelerated the demise of the main cables. Another element worthy of scrutiny is the
+factor of safety used in the original design. This is the quotient of a structure's demands
+and its strength. The whole point of a factor of safety is to
+accommodate uncertainty. We predict the demands on a structure. We compare them to the strength. We recognize that there might be extra forces
+or less strength than expected for a variety of reasons outside our control, so we give
+our structures some margin. The Arecibo suspended platform cables were
+designed to have a factor of safety of two, meaning they were twice as strong as the expected
+static loading from the platform. That might seem like a lot, but consider that
+elevator cables use a factor of safety of 11, and many bridges use safety factors above
+3. In aerospace engineering, where weight is
+critical, they do tons of modeling and testing to build enough confidence in designs to get
+their factors of safety down to around 1.5. Arecibo was a unique facility, unlike any
+other structure in the world. It didn’t go through a rigorous structural
+testing program. And, it was designed before computer modeling
+could be used to accurately characterize all the static and dynamic forces it could experience. I think it’s worth considering whether the
+structure should have been designed with a little extra margin, especially considering
+the possible circumstances in which that margin would be required. A cable failure is a violent event. All the load the failed cable was carrying
+doesn’t just redistribute itself to the other cables evenly and gently. The dynamic loads that occur as the structure
+shakes and vibrates can be significantly higher than the static loads. It wouldn’t be surprising at all to find
+out that the peak stress in the remaining cables on Tower 4 actually did exceed their
+rated strength when that first and second cable broke, even if only for an instant. Despite the collapse, Arecibo Observatory
+is not closed and science continues at the other facilities on site. As of this writing, crews are still working
+to clean up the debris from the collapse, and the National Science Foundation is holding
+workshops to discuss the future of the site. I hope that eventually they can replace the
+telescope with an instrument as futuristic and forward-looking as the Arecibo telescope
+was when first conceived. It was an ambitious and inspiring structure,
+and we sure will miss it. Thank you for watching, and let me know what
+you think!

@@ -1,0 +1,156 @@
+so today i want to tell you 
+a problem that was devised   by a hungarian mathematician called pal turan. and this was something he noticed when he 
+worked in a forced labor camp in world war ii; he was actually forced to work in a brick 
+making factory. his job is you had the kilns,   right, that's making the bricks; and then he 
+would have to load the bricks onto a trolley   and then he would run that trolley on tracks and 
+take it to the storage units. so you could just   run these bricks to and from the storage units. 
+the only problem was when these tracks crossed   because when they crossed the trolleys had a 
+habit of jumping the tracks and spinning the   bricks right - oh no, right, what a disaster. so 
+it did make him think how can we make these tracks   or how can we design this brick making factory 
+so we can minimise the number of crossings? so   that's our problem for today, this is the brick 
+factory problem. all right so we've got kilns and   storage units let's do one kiln and one storage 
+unit just to keep it simple. so that's not going   to be a problem is it? so that's just going to be a 
+track connecting the kiln to the storage unit; not   a problem at all. what if we had one kiln and 
+two storage units? doesn't sound like it's going   to be a problem either does it? and then yes we can 
+just run a track; and we want to connect the kiln   to every storage unit, that's the idea. let's say we 
+had two kilns and two storage units, maybe that's   a little bit more interesting. maybe you have a kiln 
+here and a kiln there and two storage units. now we   want to connect every kiln to every storage unit 
+so that would have to connect, that would have to   connect, that would have to connect. maybe you can 
+see i've got a crossing point here. so if i went   to complete it - i'll just do it - i'm going to have 
+a crossing point. so what do you think? what could   we do to solve that problem? so so we could have 
+our kilns and storage units like before; we could   start to connect them like this, and then instead 
+of crossing the tracks maybe i'll just do a loop.   that would solve the problem. or as another 
+solution maybe i could just put my kilns and   storage units in a bit of a circle like this - kiln, 
+storage, kiln, storage. then i can connect everything   together in a loop like that, now it's another way 
+to solve the problem. the first interesting example   will be three kilns and three storage units; 
+so let's take a look at that. we can connect these   together, so far so good, but then we're going to 
+start getting into problems i think. so i need to   connect to the second storage unit, and i connect 
+to the third storage unit - i think i'm going to   start getting tracks that are crossing. and i'm 
+going to get an answer like this - i think i have 7   crossing points. right, oh, what a disaster. you don't 
+want seven crossing points, you'll be picking up   bricks all day. right, how could we solve that? how
+about- i don't know, best solution i can think of: put them in a circle, let's try that. kiln,storage 
+unit, alternating in a nice hexagon. but we can   connect these up in a nice easy loop can't we? okay. 
+so now we've got six of the lines, there's three   more to connect; essentially i need to connect the 
+kiln to the storage unit that's opposite on this   hexagon. so let's do this one first, that's a 
+nice easy one to connect. this kiln to this storage   unit; i don't want to cross that track, i can go 
+the long way around, nothing wrong with that. and   now this kiln to this storage unit opposite and i 
+will get stuck here, i will have to cross. which is   fine, if i go on the outside i am going to have to 
+cross the track or if i go on the inside i'm going   to have to cross one of the tracks. i hope that 
+convinces you that i can't do it without crossing   a track, but i can do it with one, one crossing. so 
+that kind of minimises the number of crossings.   and how can we do this in general? right, so if 
+you've got let's say k kilns and s storage units,  how can we arrange our factory so 
+that we can minimise the crossings? you might want to have a think about it but i 
+have an answer for you, i can show you a nice   picture that does solve this- let's have a look. 
+so what you want to do is we're going to try and   kind of draw it like a like a graph with an 
+x-axis and a y-axis; i guess a kiln axis and a   storage unit axis. so like this: a horizontal 
+and a vertical. i'm going to put the kilns on   the horizontal axis and i'll try and do half on 
+the left and half on the right - or if it's an odd   number which is fine i'll do as close as i can to 
+half and half. let's say i got six, so i put three   on the left and three on the right. so that's 
+going to be my kilns like that. and the storage   units i'll put on the vertical axis; and this is 
+how i'd lay out the factory. we're going to avoid   the origin, right there in the middle. that's where 
+we're avoiding, no kilns no storage units there.   let's say i do 5 just to show you the odd number 
+version of this as well. so 5 i'll do three   above and two below? yeah. 1, 2, 3 and two 
+below. so i'm claiming that this is a minimum.   let's take a look, let's see what crossings we're 
+going to get. i'm going to take this kiln by kiln,   i'll just work my way on the left hand side here 
+i think. so let's do this first kiln and i'll   connect these three storage units up here. no 
+problem so far, let's do the second kiln. i am   going to get crosses here. i'll do this kiln to 
+the first storage unit, i'm gonna get two crosses,   and connect to that storage unit. connect to the 
+second storage unit, i've got one cross and then if   i connect to the third storage unit that's not a 
+problem, i can get all the way up. so so far i've got   three. i'll do the final kiln as well; we're gonna 
+get quite a few crosses here, let's try and work   it out. i'm going to connect to the first storage 
+unit: 1, 2, 3, 4- four crosses. and to the   next one: 1, 2 and connect and then to the one 
+at the top - that's not a problem i can just connect.   so i've got another six there so i've got nine 
+crosses all together. so i'm gonna get nine on   this side as well when i connect these three kilns. 
+so on the bottom we're gonna get three and we're   gonna get three down here. so all together how 
+many crosses are we going to get? 9 plus   9 plus 3 plus 3: 24. well i'm 
+claiming that's a that's the best you can do - 24   crosses. it's certainly that's what we believe 
+that's the best you can do. it's actually not been   proven that that's the best but we haven't found 
+an answer that can do better. we can also write   this down- out as a formula so you don't have to 
+draw the whole thing. so if you want to work it   out you can work this out as a formula; same sort 
+of thinking, the way i showed you how it works. if   you work it out as a formula looks like this: z is 
+the number of crosses, let's say k kilns, s storage   units. then the formula looks like this: k divided 
+by two - if it's an odd number you can round that   down. multiplied by k minus 1 divided by two - if 
+that's an odd number you can round that down. and   multiply that by s divided by 2 which we can round 
+down and s minus 1 divided by 2 which we can round   down. so there's symmetry in this, i guess there's 
+no difference really between the kilns and the   storage units, not from a mathematical point of view. 
+so you can see the symmetry in there. we can just   double check our result-
+- (brady: let's do it)
+- and what did i have, 6 kilns? 5 storage units. so that's going   to be 6 divided by 2 - we might have to round 
+that down. that's going to be 5 divided by 2 and   round that down. storage units: 5 storage units 
+so that's now a 5 divided by 2, round that   down. and 4  divided by 2, round that down. 
+well 6 divided by 2 is just 3; multiplied   by- this is 2.5, we round it down to 2. same here, 
+2.5 rounded down to 2, and this here that's just   2 that's fine. 3 times 2 times 2 times 
+2 is 24; which is the answer we've got.   so that is a formula that describes this picture. 
+we think that's the minimum. not proven, but it does   mean that your number of crosses - if you're in this 
+situation with your kilns and your storage units -   it's going to be this number or smaller. we know 
+that much. so it's this number or better. we think   that's the minimum. 
+- (i can't believe people aren't 
+all over this one. i can't believe it's not like)   (been cracked.)
+- yeah so they did think they proved 
+this at one point and that was a proof that people   accepted for 11 years - it's one of those stories when 
+they go, oh yeah, that seems right until someone   noticed a mistake. we know this much: so this 
+minimum number of crosses, it's gonna be less than   my little formula and 83% of that. so we're 
+whittling it down, we're sandwiching it between   these numbers. we're getting there, we're trying- 
+trying to hone in on that number. it has been   proven for some numbers. so it's been proven for 
+uh number of kilns less than or equal to 6 and   storage units as many as you like. so arbitrarily 
+many storage units and 6 kilns or less, we know   that is the minimum. so that has been proven. or 
+vice versa because it's all symmetric, if you want   to do it the other way around. but for any values, 
+no, we haven't proven that that's the minimum yet.  and there is applications for this apart from 
+building bricks. yeah you want to use this kind   of idea when you're making computer chips. so 
+you've got your circuitry in your computer   chip, and you don't want them crossing, you want to 
+minimise those crosses because every time those   circuits cross you have to do that in a new layer 
+so that they those circuits don't cross. so it's   important when making things like that. it might 
+be worth talking about complete graphs as well;  a complete graph is the idea where you have these 
+dots. they're not kilns and storage units anymore,   they're just dots and you want to connect 
+everything to everything else. so if i had like   five dots in a pentagon and i will connect 
+everything to everything else - first of all i   can just connect my pentagon up and then connect 
+all the other lines i haven't done yet. so that's   called a complete graph because you've connected 
+everything to everything. that's got five crossing   points on it - can we minimise that? same question. so 
+can we minimise that? yeah you can. so we could have   the high five dots in a pentagon like that; 
+and we can draw that out as a pentagon as well.   so let's do our other lines. so we could have one 
+line there; and we could have one line there. i   think we could have one line sort of going out 
+on the outside like that. one line going on the   outside like that. and what am i missing? this point 
+to this point i'm missing - and i have to cross.  so i do have to cross at one point, so that's 
+me minimising the number of crossings, so i can get   it down to 1. so the question is how do you do 
+that in general? and that's connecting everything   to everything. we think we've got an answer to 
+that as well. it's a really nice answer actually;   let's i'll do the 6 version for this. so for- 
+if i wanted to connect everything to everything   for 6 you draw it as a regular polygon. so i'm 
+going to draw a hexagon out. i then draw in my   edges, there you go, and now i need to draw in the 
+remaining lines. this is the rule: if the slope is   positive it goes on the inside of the polygon. so by 
+positive slope i mean something like this that   has a positive gradient okay, it's sloping upwards. 
+this line has a positive gradient so it stays on   the inside, and this line has a positive gradient 
+it stays on the inside. oh and i should say this   line is also positive, going vertically up, and 
+this line going vertically up is also positive   as well. if your line is zero or negative it goes 
+on the outside. so this point to this point would   be negative, a negative slope, so i'm going 
+to draw it on the outside instead like that. and   this point to this point would be negative so 
+i'm going to draw that on the outside as well. this point here to this point- so i've only got one 
+line left, it's this point connecting to this point   which would have been your zero and that's 
+going to have to cross on the outside.   there. how many crosses do we have? 3 actually,
+there's 2 there on the inside and then there's   1 there on the outside. and that again is what we 
+think is the minimum number of crossings for that.  you can write that out as a formula as well. so 
+if you just have n points connecting everything   to everything; for this diagram this is how many 
+crosses it has - it is one quarter of and then we   do a rounding down of n divided by 2, round down 
+n minus 1 divided by 2, round down n minus 2  divided by 2, round down n minus 3 over 
+2 like that. i did 6 here didn't i? quarter of   6 over 2 rounded down; 5 over 2 
+rounding down; 4 over 2 and 3 over 2. and so it's gonna be a quarter of 3 times 
+that's gonna be 2, that's gonna be a 2 and   that is 1 and a half rounded down which is a 1
+which is going to be yeah 3. which is exactly   what it should be. so that formula is describing 
+that picture; and we think that's the minimum.   again, it's the same problem. we haven't found 
+a drawing that is better, so we think that's   the minimum. and that's useful to know because 
+that's kind of your worst case scenario. because   it's everything connecting to everything else;
+so if you've got a graph which doesn't connect   everything to everything else it's going to be 
+that value or smaller than that value so it's   worth knowing that as well. we have proven that 
+it is a minimum for n less than or equal to 12.   so we do know it's a minimum for that but 
+for the other numbers, still a conjecture.   if you enjoy learning stuff here on numberphile, 
+well you're gonna love brilliant. their custom   made courses, questions, and quizzes will expand 
+your mind and bring a few smiles to your face as   well. everything's so interactive, meaning you 
+don't just look at a screen, you get hands-on   with the material and there's no better way 
+to learn than that. i don't just enjoy the   knowledge on brilliant, i like that it has a 
+bit of personality. sometimes it's quite funny! this course on math history - well it's a favorite 
+of mine. and by the way brilliant has a 30-day free   trial so you could go and do this course right 
+now. and if you do sign up to their annual premium   subscription there's a 20% discount by visiting 
+brilliant.org/numberphile. it's never too late   to learn something new; check out brilliant, 
+there's also a link in the video description. ..for us to be all related to the 
+same ancestors. now you were saying   this is not true to life, and i agree 
+this is not true to life because in   this example i'm just as likely to 
+have two parents who are from paris..

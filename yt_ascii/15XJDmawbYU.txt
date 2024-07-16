@@ -1,0 +1,116 @@
+a surprising amount of engineering is just
+avoiding conflicts. i'm not talking about arguments in the office,
+i mean conflicts when two or more things need to be in the same place. there are a lot of challenges in getting facilities
+over, under, around, or between each other, and there's a specific structure, ubiquitous
+in the constructed environment, that's sole purpose is to deal with the conflict between
+roadways and streams, canals, and ditches. hey i'm grady and this is practical engineering. on today's episode, we're talking about
+culverts. this video is sponsored by nordvpn. more on that later. culverts are one of those things that seem
+so obvious that you never take the time to even consider them. they're also so common that they practically
+blend into the background. but, without them, life in this world would
+be quite a bit more complicated. let me explain what i mean. imagine you're designing a brand new roadway
+to connect point a to point b. it would be nice if the landscape between these points
+was perfectly flat, with no obstructions or topographic relief. but, that's rarely true. more likely, on the way, you'll encounter
+hills and valleys, structures and streams, and you'll have to decide how to deal with
+each one. your road can go around some obstacles, but
+for the most part you'll have to work with what you've got. a roadway has to have gentle curves both horizontally
+and vertically, so you might have to take soil or rock from the high spots and build
+up the low spots along the way, also called cut and fill. but you've got to be careful about filling
+in low spots, because that's where water flows. sometimes it's obvious like rivers or perennial
+streams, but lots of watercourses are ephemeral, meaning they only flow when it rains. if you fill across any low area in the natural
+landscape, you run the risk of creating an impoundment. if water can't get through your embankment,
+it's going to flow over the top. not only can this lead to damage of the roadway,
+it can be extremely dangerous to motorists and other vehicles. one obvious solution to this obvious problem
+is a bridge: the classic way to drive a vehicle over a body of water. but, bridges are expensive. you have to hire a structural engineer, install
+supports, girders, and road decks. it's just not feasible for most small creeks
+and ditches. so instead we do fill the low spots in, but
+we include a pipe so the water can get through. that pipe is called a culvert, and there's
+actually quite a bit of engineering behind this innocuous bit of infrastructure. i know what you're thinking: "just a pipe
+under a road? how complicated could it be?" well, allow me to introduce you to the u.s.
+federal highway administration's hydraulic design of highway culverts, third edition. yes you're seeing that right - 323 pages
+of wonderful guidelines on how to get water to flow under a road. but worry not, because i have taken my favorite
+parts of this manual and built a demonstration so you can appreciate the modern marvel that
+is the highway culvert as much as any red-blooded civil engineer. a culvert really only has two jobs: it has
+to be able to hold up the weight of the traffic passing over without collapsing, and it has
+to be able to let enough water pass through without overtopping the roadway. both jobs are pretty complicated, but it's
+the second one i want to talk about in this video. and it turns out that figuring out how much
+water can pass through a culvert before the roadway overtops is a pretty complicated question. in fact, there are eight factors that can
+influence the hydraulics of a culvert: (1) headwater, or the depth of flow upstream of
+the culvert, (2) the cross-sectional area of the culvert barrel, (3) the cross-sectional
+shape of the culvert barrel, (4) the configuration of the culvert inlet, (5) the roughness of
+the culvert barrel, (6) the length of the culvert, (7) the slope of the culvert, and
+(8) the tailwater, or depth of flow downstream. we don't have time to demonstrate how all
+these parameters affect the culvert flow, but the federal highway administration actually
+has a pretty comprehensive video on youtube (with a much nicer flume than mine) if you
+want to see more. one thing i do want to show is the two primary
+flow regimes for culverts which are outlet control and inlet control. and these are pretty much exactly what they
+sound like. outlet control happens when water can flow
+into the culvert faster than it can flow out. that means flow is limited by either the roughness
+and friction in the culvert barrel or the tailwater depth at the outlet. it's kind of hard to see the movement of
+water here, so i'm blowing some bubbles. notice how the culvert barrel is flowing full. the entire area of the barrel is being taken
+advantage of for flow. in outlet control flow, conditions downstream
+of the culvert can affect the flow rate. for example, if a tree falls across a ditch
+downstream, that can back up water reducing flow through the culvert and causing the roadway
+to overtop. inlet control happens when the culvert inlet
+is constricting the flow more than any of those other factors. everything that affects the amount of water
+passing below the road is happening at the inlet. that means changing the roughness of the inside
+of the barrel or anything downstream won't change how much flow makes it through. it's easy to show this in my model because
+you can see inside the culvert barrel. you can tell that the flow depth in the culvert
+is shallow and the full flow area of the barrel is not being taken advantage of. there are a wide variety of configurations
+that the inlet to a culvert can have. if you pay attention, you'll see all kinds
+of culvert inlets. some common types include projecting, where
+the pipe protrudes from the embankment, mitered where the pipe is cut flush to the embankment,
+and headwall where the culvert begins at a vertical concrete wall, sometimes accompanied
+by concrete wing walls to further direct flow into the barrel. unsurprisingly, each of the multitude of different
+inlet configurations has a different effect on the culvert hydraulics. in my demo, i can do a test of two of these
+inlet configurations to show the difference. first i'm testing the projecting inlet. this is one of the least efficient configurations
+because there's nothing to help train the flow into the culvert. you can see that the headwater elevation is
+quite high, even close to overtopping the headwall in my flume. and, even with all that pressure upstream,
+there's not that much water coming through the culvert. it's only flowing about half full. i'll mark the water level with googly eyes. next i reconfigured the demo to make the culvert
+flush with the headwall. and i also rounded over the inside edge of
+the pipe, giving the flow a smoother entrance. i didn't change how much flow the pump is
+creating, but you can see that the headwater is much, much lower. that means the inlet is more efficient, because
+it takes less driving headwater to get the same amount of flow through the barrel. in fact, as i cranked up the flowrate higher
+and higher, i realized that - even with as much headwater as i could create - this configuration
+was still acting as an outlet-controlled culvert. the smooth and flush inlet was allowing as
+much flow as possible through. of course, there are really elaborate culvert
+inlets that can be extremely efficient, but like all infrastructure, culvert design is
+an exercise in balancing cost with other factors. you can spend a lot of money on a fancy culvert
+inlet that has perfectly smooth edges to guide the water gently into the barrel, or you could
+just bump up to the next pipe size. calculating flow through a culvert can be
+quite complicated, because culverts can transition between inlet and outlet control depending
+on flow rate. and, even within these two major flow regimes
+of inlet and outlet control, there are a whole host of subregimes - each of which has its
+own hydraulic equations. of course we have software now, but back in
+the 1960s and 70s the federal highway administration came up with a whole group of these cool nomographs
+to simplify the hydraulic design of culverts. the way this works is you first find the right
+chart for your situation [7a]. this one is a culvert with a submerged outlet
+flowing full. each one is a little different, but in this
+one you draw a line connecting the culvert length to its diameter. then draw a line connecting the headwater
+depth to the intersection of your other line with the turning line. extend this line to the discharge scale to
+find out the flow rate passing through the culvert. i love little tricks like this that boil down
+all that hydraulic complexity into a quick calculation you can do with a straightedge
+in less than a minute. next time you're driving or walking along
+a street keep an eye out for culverts. and, if it's raining, take a look at the
+flow. see if you can identify whether the culvert
+is outlet or inlet controlled, and be thankful that we have this ordinary, but remarkable,
+bit of infrastructure to let you safely walk or drive right over. a lot of us are working from home these days,
+and if you're like me, your job requires you to connect to the company network through
+a vpn. the it department doesn't trust that i've
+set a secure password on my home router, that i've updated the firmware on my printer,
+or that i'm aware of, let alone have fixed, any number of other vulnerabilities on my
+personal network. and honestly, if the it department doesn't
+trust me, i don't trust me either. that's why i use nordvpn. these days most major websites are already
+encrypting traffic, and many smartphones do the same. but, there are people and organizations constantly
+working to find new vulnerabilities that take advantage of people online. nordvpn encrypts and tunnels my web traffic,
+making it much harder for anyone who would have or could have been a part of that chain
+from seeing my information. i don't have to worry if i'm on a secure
+network, and i don't have to trust my isp to be a good steward of my data. i just click connect and it's done. it works on all my devices and there's no
+limit on bandwidth. i lock the doors to my house when i'm away,
+and i turn on nordvpn when i'm using my computer. not because i think it's likely someone
+is going to take advantage of me, but because it takes no effort at all to do so and and
+it reduces my vulnerability if they ever tried. if that philosophy makes sense to you, they're
+offering a awesome discount. go to https://nordvpn.com/practicalengineering
+or use code practicalengineering to get 70% off a 3 year plan plus 1 additional month
+free. that's nordvpn.com/practicalengineering
+or just click the link in the description. thank you for watching and let me know what
+you think!

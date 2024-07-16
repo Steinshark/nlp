@@ -1,0 +1,139 @@
+A sewage collection system is not only 
+a modern convenience but one also of the   most critical pillars of public health in 
+an urban area. Humans are kind of gross.   We collectively create a constant stream of 
+waste that threatens city-dwellers with plague   and pestilence unless it is safely carried 
+away. Sewers convert that figurative stream   into a literal one that flows below ground away 
+from public view (and hopefully public smell).   There are a lot of technical challenges with 
+getting so much poop from point A to point B,   and the fact that we do it mostly out-of-mind, 
+I think, is cause for celebration. So, this   video is an ode to the grossest and probably most 
+underappreciated pieces of public infrastructure.   I’m Grady, and this is Practical Engineering. 
+In today’s episode, we’re talking about sewers.   This video is sponsored by Curiosity 
+Stream and Nebula. More on that later. As easy as it sounds to slap a pipe 
+in the ground and point it toward   the nearest wastewater treatment plant, 
+designing sanitary sewage lines - like   a lot of things in engineering - is a 
+more complex task than you would think.   It is a disruptive and expensive ordeal to install 
+subsurface pipes, especially because they are so   intertwined with roadways and other underground 
+utilities. If we’re going to go to the trouble and   cost to install or replace them, we need to be 
+sure that these lines will be there to stay,   functioning effectively for many decades. And 
+speaking of decades, sewers need to be designed   not just for the present conditions, but also 
+for the growth and changes to the city over time.   More people usually means more wastewater, 
+and sewers must be sized accordingly. Joseph   Bazalgette, who designed London’s original sewer 
+system, famously doubled the proposed sizes of   the tunnels, saying, “We’re only going to do this 
+once.” Although wantonly oversizing infrastructure   isn’t usually the right economic decision, in that 
+case, the upsizing was prescient. Finally, these   lines carry some awful stuff that we do not want 
+leaking into the ground or, heaven forbid, into   the drinking water supply whose lines are almost 
+always nearby. This all to say that the stakes   are pretty high for the engineers, planners, 
+and contractors who make our sewers work. One of the first steps of designing a sewage 
+collection system is understanding how much   to expect. There are lots of published studies 
+and guidelines for estimating average and peak   wastewater flows based on population and 
+land use. But, just counting the number of   flushes doesn’t tell the whole story. Most 
+sanitary systems are separated from storm   drains which carry away rainfall and snowmelt. 
+That doesn’t mean precipitation can’t make its   way into the sewage system, though. Inflow and 
+infiltration (referred to in the business as I&I)   are the enemies of utility providers for one 
+simple reason. Precipitation finding its way   into sewers through loose manholes, cracks 
+in pipes, and other means can overwhelm   the capacity of the system during storms. The 
+volume of the fabled “super flush” during the   halftime of the Superbowl is usually a drop 
+in the bucket compared to a big rainstorm.   I&I can lead to overflows which create 
+exposure to raw sewage and environmental   problems. So utilities try to limit this I&I to 
+the extent possible through system maintenance,   and engineers designing sewers try to take it 
+into account when choosing the system capacity. Once you know how much sewage to expect, 
+then you have to design pipes to handle it.   It’s often said that a civil engineer’s only 
+concerns are gravity and friction. I’ll let   you take a guess at which one of those makes poop 
+flow downhill. It’s true that almost all sewage   collection systems rely mostly on gravity to do 
+the work of collecting and transporting waste.   This is convenient because we don’t have to pay 
+a gravity bill - it comes entirely free. But,   like most free things, it comes with an asterisk, 
+mainly that gravity only works in one direction:   down. This fact constrains the design 
+and construction of modern sewer systems   more than any other factor, and I’ve built 
+some demonstrations in the garage to show   you how. I’m pumping a slurry of sand and water 
+through this clear pipe which represents a sewer,   and we’ll take a look at the factors 
+engineers consider in designing these systems. We need some control over the flow in a sewer 
+pipe. It shouldn’t be too fast so as to damage   the joints or walls of the pipe. But it can’t 
+flow too slow, or you risk solids settling out   of suspension and building up over time. We can’t 
+adjust gravity up or down to reach this balance,   and we also don’t have much control over the 
+flow of wastewater. People flush when they   flush. The only things engineers can control 
+are the size of the sewer pipe and its slope.   Take a look at what happens when the slope is 
+too low. The water moves too slowly and allows   solids to settle on the bottom. Over time, 
+these solids build up and reduce the capacity   of the pipe. They can even completely clog. 
+Pipes without enough slope require frequent   and costly maintenance from work crews to keep 
+the lines clear. If I adjust the slope of the   line without changing the flow rate, watch what 
+happens. The velocity of the water increases.   This not only allows solids to stay in suspension, 
+but it also allows the water to scour away the   solids that have already settled out. The 
+minimum speed to make sure lines stay clear   is known as the self-cleaning velocity, and 
+you can see why in the demo. It can vary,   but most cities require that flow in a sewer pipe 
+be at least three feet or one meter per second. So far I’ve been using sand to simulate the 
+typical “solids” that could be found in a   wastewater stream. But, you might be interested 
+to know that we’re, thankfully and by design,   only scratching the surface of synthetic human 
+waste. Laboratories doing research on urban   sanitation, wastewater treatment, and even life 
+support systems in space often need a safe and   realistic stand-in for excrement, of which there 
+are many interesting recipes published in the   academic literature. Miso (or soybean) paste 
+is one of the more popular constituents. This   polymer slime toy is as realistic as I want to 
+be while keeping this video family-friendly,   but feel free to take your own journey down 
+the rabbit hole of simulated sewage after this.   I mean that figuratively, of course. The slope of a sewer pipe is not only constrained 
+by the necessary range of flow velocities.   It also needs to consider the slope of the ground 
+above. If the slope is too shallow compared to   the ground, the sewer can get too close to the 
+surface, losing the protection of the overlying   soil. If the slope is too steep compared to 
+the ground, the sewer can eventually become   too deep below the surface. Digging deep holes to 
+install sewer pipes isn’t impossible or anything,   but it is expensive. Above a certain depth, 
+you need to lay back the slopes of the trench   to avoid having it collapse. In urban areas 
+where that’s not possible, you instead have to   install temporary shoring to hold the walls open 
+during construction. You can also use trenchless   excavation like tunneling, but that’s a topic for 
+another video. This all to say that choosing a   slope for a sewer is a balance. Too shallow or 
+too steep, and you’re creating extra problems.   Another topographic challenge faced by sewer 
+engineers is getting across a creek or river. It is usually not cost-effective to lower 
+an entire sewer line or increase its slope   to stay below a natural channel. In these 
+cases, we can install a structure called   an inverted siphon. This allows for a portion 
+of a line to dip below a depressed topographic   feature like a river or creek and come back up 
+on the other side. The hydraulic grade line,   which is the imaginary line 
+representing the surface of the fluid,   comes up above the surface of the ground. But, 
+the pipe contains the flow below the surface.   The problem with inverted siphons 
+is that, because they flow full,   the velocity of the flow goes down. That means 
+solids are more likely to settle out, something   that is especially challenging on a structure with 
+limited access for maintenance. This is similar   to the p- or u-trap below your sink, that spot 
+where everything seems to get stuck. Notice how,   even though the pipe is the same size along the 
+full length, settling is only happening within   the siphon. To combat this issue, inverted siphons 
+often split the flow into multiple smaller pipes.   This helps to keep the velocity up above the 
+self-cleaning limit. A smaller pipe obviously   means a lower capacity, which is partly why 
+siphons often include two or three. You can see   that, even though there’s some settling happening, 
+it’s not increasing over time. The velocity of the   flow in the smaller siphons is high enough 
+to keep most of the solids in suspension. The volume and hydraulics of wastewater flow 
+aren’t the only challenges engineers face.   Sewers are lawless places, by nature. There are 
+no wastewater police monitoring what you flush   down the toilet, thank goodness. However, that 
+means sewers often end up conveying (or at least   trying to convey) substances and objects 
+for which they were not designed.   For a long time, grease and oil were 
+the most egregious of these interlopers   since they congeal at room temperatures. 
+However, the rising popularity of quote-unquote   “flushable” wipes has only made things worse. 
+Grease and fat combine with wet wipes in sewers   to create unsettling but aptly named, “fatbergs,” 
+disgusting conglomerates that, among other things,   are not easily conveyed through sanitary sewer 
+lines. Just to illustrate the issue, this is how   quickly toilet paper breaks down when agitated in 
+a mixer. And this is a wet wipe labeled flushable.   You can imagine the problems 
+this would cause. Conveniently,   most places in the world have services 
+available to carry away your solid   wastes so you don’t have to flush them. But 
+they usually do it in trucks - not pipes. Obviously, this issue is more complicated than 
+my little experiment. The labeling of wipes has   turned into a controversy that is too complex 
+to get into here. My point though, and indeed   the point of this whole video, is that your 
+friendly neighborhood sewage collection system   is not a magical place where gross stuff 
+goes to disappear. It is a carefully-planned,   thoroughly tested system designed to keep the 
+stuff we don’t want to see - unseen. What happens   to your flush once it reaches a wastewater 
+treatment plant is a topic for another video,   but I think the real treasure is the 
+friends - sewers - it meets along the way. If you’re here at the end of the video, I’m 
+guessing that means you’re pretty thoughtful about   the kind of videos you spend your time enjoying. 
+In other words, you probably prefer learning new   things about the world more than run-of-the-mill 
+television programming. You probably also don’t   enjoy watching ads like this one, which is great, 
+because Nebula doesn’t have any. Nebula is a   streaming service built by and for independent 
+creators like MinutePhysics, Real Engineering,   Wendover Productions, and a bunch of others 
+(including me). It’s a way for us to try new   ideas that might not work on advertiser-supported 
+platforms like YouTube. My videos go live there   the day before they publish here, with no ads 
+or sponsorships. And, we’re super excited to   be partnered with CuriosityStream, a service with 
+thousands of documentaries and non-fiction titles   on pretty much every subject you can imagine. 
+CuriosityStream loves independent creators and   wants to help us grow our platform, so they’re 
+offering free access to Nebula when you sign up at   CuriosityStream.com/practicalengineering. I know 
+there are a lot of streaming services right now,   and all those monthly subscriptions can be tough 
+to keep track of. That’s why this bundle is such   an awesome deal. CuriosityStream is taking 
+26% off an annual plan - that makes it only   $15 for an entire year of access to thousands 
+of awesome documentaries on CuriosityStream   AND everything on Nebula as well. You can watch 
+awesome long-form content on CuriosityStream.   I loved this David Attenborough special called 
+Light on Earth about all the different animals   that exhibit bioluminescence. Or, watch Tom Scott 
+pit other YouTubers against each other in his   Nebula-exclusive gameshow, Money. It’s a great 
+way to support my channel and a whole host of   your other favorite educational creators. Plus 
+it’s just a great deal. Do us both a favor and   click that link in the description. Thank you 
+for watching, and let me know what you think!

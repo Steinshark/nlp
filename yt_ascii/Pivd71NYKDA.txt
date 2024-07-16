@@ -1,0 +1,119 @@
+i think that everybody has 
+been asked at least once to   share their data with a company under the promise 
+that the data is anonymous so the problem is that   the data that is collected is very rarely truly 
+anonymous and this is what i'm gonna explain today first of all the intuition of why this is true 
+is that data that is supposedly anonymous can   often be re-identified and a very good example of 
+this was given by an article of the new york times   which was published i think about one year ago 
+where the journalists could get their hands on   a big data set a big location data set about 12 
+billion and 12 million americans so the way   this data set looks like is basically that 
+there are different users so like let's say bob   alice carlos and so on and for each of these users 
+there is a series of location and data points so   for example for bob we have t1 and l1 so time one 
+and location one and so on teach you and so on and   the same for alice and carlos and all the users 
+and of course like we can represent this on a map   as a trajectory so we have the first point for bob 
+which would be t1 l1 and i don't i don't know like   maybe this could be that you know bob was at 
+madison square garden like you know yesterday   at 8pm something like that then bob goes to t2 
+l2 and we have a record for that and so on and   we have of course all of this for all the users 
+in the data set now actually the data set that   the new york times journalists could get access 
+to did not have the names in it it was what we   say is pseudonymous we can consider this like kind 
+of anonymous but however the the journalists   nevertheless could reidentify some people in 
+this data set and follow their movements and   actually some of the people who were reidentified 
+were some collaborators of the u.s president   so now the question is how did they do it 
+how was it possible for them to identify this   data set even though the names were not in it 
+and the intuition of how you could do this is   to use some background information about the 
+person that you are trying to identify and use it   to match it against the records and the 
+trajectories in the data set so this   is precisely the idea behind a study that 
+was published in 2013 by some researchers   which studied this fact from a more formal point 
+of view so what the researchers did was to define   a metric unicity which we call epsilon p which is 
+defined as the fraction of users in the data set   that are unique given p points so at this point 
+we're using this metric they took a data set a   location data set very similar to the one of the 
+the new york times so a location data set about   one and a half million people observed over a 
+period of i think 15 months or something like that   and they computed the unicity values on this data 
+set and what they found was that epsilon 4 was 95   this means that 95 of the times only four points 
+are necessary to uniquely identify an individual   in the data set so in other words if you know 
+you know like where i live where i work where   i had dinner yesterday and maybe where i go 
+to train in the in the weekend then most of the   times these are enough to uniquely identify my 
+trajectory in the data set and once you can find   my trajectory you can see all the other places 
+that i've been visiting for the past 15 months   this study uses a pretty simple attack 
+setting right so basically the adversary   is assumed to have access to four points about the 
+the target the victim and uses these four points   directly to match them against the data in the 
+data set so okay this is a this is a a potential   a potential setting and but you could think of 
+more complex attack settings for example you could   you could assume that the the background 
+information that is available to the adversary   is actually referred to a period which 
+is different previous to the one of the   data set that you are trying to reidentify we can 
+suppose that we have two data sets one from 2018   this data set also contains the names so 
+you know that this one is bob this one is   alice the third one is carlos and so on so you 
+have the location trajectories plus the names   then you have another data set from 2020 which has 
+again you know all the trajectories of all the   users and so on but in this case you do not have 
+the names you just have some pseudonyms so for   example this is user one user two user three and 
+so on now for simplicity we can also assume that   the two data sets contain the same users so we 
+can write this but we do not know which users   correspond to which ones right so it might be 
+for example that bob is u3 and alice is u1 and   carlos is u2 so the attacker doesn't know this but 
+the the aim of the attacker is precisely to find   out the correct maxim between the users in the 
+2018 data set and the users in the 2020 data set   in this case we cannot use the the method that 
+we we used before right because if we try to match   the points in in the data set on the left 
+with the points in the data set of the right   we find no matchings because the time periods that 
+uh this refers to are exactly there is no overlap   exactly so we need to find something more 
+more clever and one possible way to approach   to approach this problem is to proceed with two 
+steps the first step is to find a similarity score   between all the users and the second step is to 
+use all these this scores that we have computed   in order to find a good global matching between 
+all the users on the left and all the users on the   right so we have here matching so i will go now 
+a little bit more in detail for these two steps   i will assume for simplicity that there are only 
+three users in each data set of course this is a   an oversimplified setting right but it's just to 
+to make things clearer the first step is to find   similarity scores between users what you do would 
+be to take alice's record and you once record   and you compute the similarity score between 
+these two and you maybe you find you know like   that this is a 26 percent then you do the same 
+between alice and u2 and you find that this is   i don't know 35 then ali send you three and you 
+find 87 so you know like in this case it looks   quite likely that alice and u3 actually are 
+the same the same person but it's not always so   easy you know like because the problem is that 
+now you have to do the same also for bob and u1   two and three and carlos and you want u2 and 
+your three and sometimes it's quite clear   which one is the right match but sometimes it's 
+not that clear so now the main question for this   step is how do we compute the similarity between 
+two trajectories so there are a lot of ways   to do this one simple one for example here for 
+alice we compute the set of preferred locations   so the locations that alice visits the most often 
+and we do the same for u1 and then we compare them   and the idea is that if the two sets 
+of preferred location kind of overlap then   probably this is a good match and of course 
+like this might not always work right i mean   maybe alice changed the workplace or maybe 
+that italian restaurant that she used to love   had to close down because of brexit whatever but 
+the idea is that on average if the overlapping   is good enough then probably the the matches 
+is a correct okay so and so this this is the   first step the second step is the matching so 
+now we have all the scores between the users   but we need to find what is the 
+correct matching so here the idea is to   select the matching that maximizes the overall 
+similarity between users what you can do is to try   all possible matchings and compute the similarity 
+scores for that so for example we can start   from this very simple matching in the same order 
+we compute the similarity score for this one   and we proceed with the next matching so maybe 
+we can do this one we do this this and this and   we compute the similarity matrix so this would be 
+like similarity one similarity score two of course   this is the similarity again for all the like 
+the sum of all the similarities score for for all   the the users and we proceed like this for all the 
+matchings now the problem is that this strategy   works in theory but it doesn't work in practice 
+if the data set is too big and actually it   doesn't have to be all that big because you 
+know for those of you who love combinatorics   you can see that the number of all possible 
+matchings that you have to try is n factorial   where n is the number of users in the data set if 
+n is just three users then three factorial is just   six so this is totally doable but if the 
+number of users is one thousand for example   then one thousand factorial is a huge 
+number it takes i think 2 500 digits   just to be written down so basically you know 
+computing the global similarity for 1000 users   in this way would be would take forever it would 
+take like you know millions and millions of years   so we cannot do that fortunately at least for 
+the attacker there is there is a there are   well-known algorithms that do precisely this so 
+they compute a maximum weight maximum matching   in in an efficient way so one such 
+algorithm is the hungarian algorithm   i will not go into the details of this algorithm 
+because you know like it's quite complex but   you can find some very good videos online if 
+you're if you're interested so basically once you   once you have this similarities course you 
+use the hungarian algorithm to find the the   maximal matching the the most most likely 
+matching and you use that matching as a guess for   the identification of the the users in the 
+in the 2020 data set and this attack works   pretty pretty well at least when the data 
+set is not too big so a few thousand users   but there are you know like other solutions 
+that are more robust and like you know work also   for for bigger data sets so i hope i gave an 
+idea of why you know anonymous data can often be   re-identified so i talked about location data 
+but actually these kind of attacks work for   most types of of a behavioral data so all 
+social networks and so on credit card data   so now one when you when you see this these 
+attacks you could think that it's really   impossible to to share data to analyze data 
+without compromising privacy and this is   actually a problem because you know sometimes you 
+do want to give the possibility to analyze data   so for example you know you might want to to be 
+able to share health data for medical research   but actually i mean there are there are a lot 
+of examples of how to how one can use data for   for good so the good news is that 
+some i mean many researchers and cryptographers   are you know developing technologies that allow 
+precisely to analyze data without compromising the   privacy of the individuals who who contribute with 
+their data but this is for another video and then   down here for each of the value as i'm writing 
+it out i go round in a loop around the amount of   stretches i want and i basically add in new data 
+so if i'm going from this point to this point any   device which is keeping track of time in that way 
+we'll get really confused and we basically get [manual publish]

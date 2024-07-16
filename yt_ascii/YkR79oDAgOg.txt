@@ -1,0 +1,90 @@
+being able to control the level of water in
+a river is beneficial in quite a few ways. historically, mills relied on water power
+to drive saws, grinding wheels, and other equipment. raising the water level in a river can also
+allow boats and ships to navigate areas that would otherwise be inaccessible. finally, having control of a river can help
+mitigate the damaging impacts of flooding. but, how we do get this type of control over
+the level in a body of water? hey i'm grady and this is practical engineering. on today's episode, we're talking about
+wiers. this video is sponsored by skillshare, the
+best way to learn a new skill online. more on that later. a weir is a small dam built across a river
+to control the upstream water level. weirs have been used for ages to control the
+flow of water in streams, rivers, and other water bodies. unlike large dams which create reservoirs,
+the goal of building a weir across a river isn't to create storage, but only to gain
+some control over the water level. over time, the term weir has taken on a more
+general definition in engineering to apply to any hydraulic control structure that allows
+water to flow over its top, often called its crest. in fact, the spillways of many large dams
+use weirs as control structures. so how do they work? if you watched my previous video on the basics
+of open channel hydraulics, you'll remember that for subcritical flow, that is slow, tranquil
+flow seen in most rivers, the depth is controlled by downstream conditions. that means adding a weir across a river will
+increase the water level upstream. but by how much depends on the flow. this is the equation for flow over a weir. we're not going to do any calculations here,
+but it's important to know the factors that govern the performance of our hydraulic structure. this equation says that the amount of flow
+that passes over the weir depends on three factors: the length of the weir, the height
+of the water level above the crest of the weir, and this coefficient which changes depending
+on the geometry of the weir. the graph of a hydraulic structure's flow
+versus water level is called its rating curve, and this is the rating curve for a typical
+weir. in many cases, a weir is a passive structure,
+meaning once it's installed there's no way to change this rating curve. and that's not always ideal. streams and river are subject to tremendous
+variability in flow rate. a hydraulic structure may normally flow a
+small amount, but in flooding conditions be asked to pass incredible volumes of water. with a passive structure and fixed rating
+curve, that variability in flow means tremendous variability in the water level upstream. during a flood, a weir may back up the water
+badly enough to cause damage upstream. if you're using a weir for the spillway
+on a dam, you might have to build your dam much higher just to handle the water level
+that occurs during very rare but extreme cases, increasing the overall costs of the structure. ideally, hydraulic structures used to control
+water level would have a flat rating curve, meaning over a wide range of flows, you only
+get small changes in level. so how could we flatten this curve? going back to the weir equation, there are
+only two other parameters available to increase the flow for a given water surface. we could improve the geometry of the weir
+to increase its efficiency. different shapes of weirs can pass flow more
+efficiently and thus have a higher discharge coefficient, but this has a practical limit. the most efficient shape for a weir is to
+match the curve that the water would take off of a sharp crest. this part of the flow is called the weir's
+nappe, and the shape that matches it is called an ogee. with ogee-crested weirs, we can get discharge
+coefficients as high as around 4, but that's pretty much the limit. the other parameter we can change is the length
+of the weir, but in many locations, the available footprint for the weir is a fixed size that
+can't be increased. even if the footprint isn't fixed, increasing
+the length of the weir can add significant costs. of course, this challenge is easy to address
+if we allow for structures with moving parts. many dams and spillways have large gates or
+valves to control flow. there are a wide variety of types of controlled
+outlets used on hydraulic structures, including crest gates that act like weirs that can be
+raised or lowered. the benefit is that the structure's capacity
+can be increased while flows are high by opening gates, and then decreased when flows return
+to normal. controlled structures provide more flexibility
+in how water gets released or held back, essentially turning a static rating curve into a family
+of curves which can be selected from to meet the operational goals. of course, controlled outlets come with a
+major disadvantage of increased complexity, and in many cases, requiring an actual person
+be available 24/7 to operate the gates and make releases based on inflows. so what if we could get the benefit of a controlled
+outlet without the disadvantages of increased complexity and operational obligation? well, there's one other trick that hydraulic
+engineers have up their sleeves. remember when before i said that you could
+only fit a certain length of weir within a fixed footprint. that's not completely true. we can actually fold a weir to get more length
+within a given space. this is called a non-linear weir and it's
+used in situations where you want greater discharge within a given footprint but without
+the need for actively controlled outlets. to show how this works, i've built this
+flume and some model weirs. this first weir just goes directly across
+the flume with no bends. i'll mark the water level in the flume first
+using this straight weir. now, with the same flow rate, i'll replace
+the linear weir with the folded version. this has just about twice as much weir length
+in the same footprint. you can see that, even though the weir is
+passing the same amount of flow, the water level is lower, almost half the distance to
+the crest from the original level. we've flattened the rating curve, allowing
+for greater discharge at a lower water level. non-linear weirs with folded cycles like this
+are call labyrinth weirs and they're becoming more common as hydraulic control structures. there are also rectangular versions called
+piano key weirs. it's easy to see how beneficial weirs can
+be, from generating power to improving navigation, controlling floods, and even acting as the
+spillways for dams. with all those benefits, there are definitely
+some downsides as well. impoundments across rivers affect the aquatic
+environment. low head dams can also pose a serious danger
+to swimmers and boaters, a topic i'd like to discuss in the future. in fact, many old weirs that are no longer
+needed are being replaced or completely removed to restore the river to its natural state. but as long as we need to control the flow
+of water in our constructed environment, weirs will continue to be an important tool for
+a hydraulic engineer. thank you for watching, and let me know what
+you think! thanks to skillshare for sponsoring this episode. one of my resolutions for 2019 is to do more
+writing and improve my writing skills. you might not realize it, but before any practical
+engineering video ever starts production, i spend hours and hours researching and writing. of course, there's no college classes for
+engineering youtube video production, but i don't have any formal training in creative
+writing of any kind, and i definitely have plenty of room for improvement. skillshare allows you to learn new skills
+from experts in their fields producing high quality classes, like this one by comedian
+matt bellesai that specifically focuses on writing internet content. i'm almost through this entire course and
+have learned so many best practices and things that i can use to improve in my writing. there's just not another platform where
+you can learn practical skills to improve yourself with an expectation of high quality
+and content that's relevant to you. if you're trying to learn a new skill or
+improve on an existing one, cut through the clutter of online tutorials and click on the
+link in the description below to start learning with skillshare. the first 500 people to sign up will get 2
+months free. again, thank you for watching, and let me
+know what you think!

@@ -1,0 +1,111 @@
+- come here guys, come on. this is 1.2 petabytes. and the last time we built
+a petabyte storage solution, it had to be spread out
+over multiple servers. not anymore, with seagate's
+new 20 terabyte exos x20s, we are gonna be building
+a single 4u server that can hold over a petabyte of raw data. it's gonna be flipping
+crazy and truthfully, it's hard to be that excited because the real reason
+we're building this is because of a data loss in our previous petabyte project that is making it so that we
+have to build a new server to copy all of the data off that server while we attempt to recover it. so, i'm gonna be having fun, but in a, all of this is very sad
+and stressful kind of way. what i'm never sad about is telling you about our sponsor. thanks to signalrgb for
+sponsoring this video. with signalrgb, you can control and sync your favorite rgb
+devices all from one app. best of all, it's free. download signalrgb in the link below. (upbeat music) i mean, it's mind blowing
+if you think about it, 20 terabytes of storage in a single drive. the original 1x server, which was hard drive based by the way, had about 20 terabytes of storage, except that it was an entire
+4u chassis like this one, full of one terabyte drives. - man, 1x server was 20 terabytes up until like two years ago. - one, freaking, drive. and the craziest part is last time we did a petabyte project, we wanted to get a full petabyte of addressable storage
+into a single chassis but we fell short because i wanted a 75-drive
+version of the chassis. so it would be actually
+five of these rows, but there was a bit of a snafu and we didn't end up getting it done. the crazy thing is since then, we've gone from 16 terabytes
+maximum capacity to 20. so we are gonna have exactly
+what we were targeting, (laughing) except in 60 bays instead of 75. now, i couldn't help noticing, jake, that none of the hardware's in this. - well, it's kind of a
+long story. (chuckles) - does it involve these
+bins of hardware over here? - yes, so in there is actually
+the original hardware, if you look there. so i think it's a 26-core
+xeon gold, i think. 512 gigs of ram, it would've had 4 hpas
+in there at one point. but in between the process
+of this server being built and it arriving to us, i kinda decided i wanted our cache drives to be nvme, not sata. and unfortunately there's not really a lot of pcie on here. there's probably enough, we probably could have put some junk four-splitter bifurcation thing in there, but i figured we should go epyc instead. - we're going epyc ladies and gentlemen, need that pcie. it's kinda crazy how like
+as an enthusiast or a gamer, you don't really think about that as amd's advantage over
+intel in the server space, you kinda think of it in terms- - it's kinda huge. - of performance-
+- yeah. - or core count. - i've heard that's important. - or eight channel memory, right? these are all things that
+as gamers we understand. but 128 pcie lanes, when you're plugging this kind of schiz into your cpu, matters a lot. - yeah. what we ended up with is actually the xl-60s turbo variants, so it's got a little bit bigger cpu than the base one. but if you wanted, like us, you could probably ask 45drives and they maybe make you an epyc system, it's just not something that they show on their website. - you probably don't need to, as long as you're just
+running mechanical drives. - yeah. - but because we wanna put
+a bunch of nvme drives in, we do need the extra pcie. now at this stage we've
+got a couple of options. we can work on things together, or we can divide and conquer. but the one thing i'm not flexible on is we need to take this thing and put it on one of those carts. because if we load it up with hard drives and we have to move it again, i'm gonna lose my (beep). - i already brought it
+downstairs it was fine. - no, no but full of drives? - yeah, i brought
+downstairs full of drives. also it's better to carry
+it than put it on a cart, the cart is bad. it was a ipm study, look it up. you got to have- - that was a cross like- - parking's still-
+- parking lot. - lots of bumps and stuff. - oh co ... - it's gonna be fine. look, i get it, you're kind of a small guy, you know. it's okay, it's gonna be fit. if you don't wanna carry it we got other people for that. you know you employ like 50 people. he's not saying anything, he's just putting drives and i think he's given up. should we maybe wait, hold on, hold on. should we do- - oh, now he doesn't want it to be heavy. oh no, i'm sorry, jake. i'm sorry, jake, this not how you wanted the hard drives to go in? oh, oh, oh shoo, oh man, i'm sorry. - i just think we should
+put the motherboard in and make sure that's working. - they just keep going in there. they just slide in so nice. love 45drives mechanism. look at this 20, 40, 60, 80, 100 terabytes just like that. oh yeah. let's actually talk a little bit about the drives that seagate sent over. these are their data center
+enterprise grade drives. they run at 7,200 rpm, they've got 256 megabytes of cache each and they say at six gigabit
+per second interface. they're gonna actually be pretty similar to the 20 terabyte ironwolf pro nas drives in terms of performance. but these have double the rated meantime between failure and almost double the rated annual workload, so they're just designed
+to run a little heavier. they're also $20 more expensive at msrp. but a funny thing that
+we've noticed in the past, is that these xos drives often end up being less expensive once they've been on the
+market for a little bit. so these ones have only been at retail for about a month, month and a half. so the cheapest that we could find these specific drives was $571 each from a newegg marketplace seller. that puts this at, wait, $35,000 worth of drives. (laughs) - and the funny thing is they're actually gonna send four more so we have some cold spare. so that would put us like 3750. - that's a good thing to have with any storage set up that has more than, i mean realistically, a handful of drives. - realistically we
+should have a hot spare. - mechanical devices do fail, it's something that happens
+and it's something that you have to be ready for. holy crap that sexy. (laughing) what? - this is like one of my
+favorite epyc boards for sure. - seven pcies 16x slots. is that a usb type c on a server board? - yeah. it's also, it's all gen 4 too. we originally got this board for the sensible jellyfish fryer, but i think they originally sent the og epyc version. - yeah, the non-gen 4 one. - yeah and then this is the gen 4 one that does rome and milan. - sorry, yvonne, i'm filing the papers. this is my new wife. - what happens when the new one comes out? - well then- - more papers. - off with the old on with the new. (laughing) - jesus. - what kind of epyc
+are we putting in here? - hmm. okay. so it's not a milan 'cause we still can't get any of those. we have two, we finally got two, this is not one of them. this is a 7402p, it's the previous generation rome chip. it's 24 cores which is probably excess for this, honestly. (laughs) but it should be pretty good once it's paired up
+with the 512 gigs of ram we take from the old board. more funny thing's, we don't have a cpu cooler for this that fits in there. we have this one it's a u12, it's a little big. - we'll just run it hot rod for now. - yeah, i think we'll
+just leave the top off. - can we just take a moment and talk about how the molex connector has apparently been
+doing raids? (laughing) (laughing) you see me? - [jake] slack back
+back into the right one. - what is this? it's all about having a steady hand. - if i just, if i just blew right now. - no, you wouldn't. - i would have ruined both of our days, so i'm not gonna do that. just a quick (laughing). - he was telling me
+what a great job i did. - you mean like what a great job i did. - well, someone did a great job. whose name is on the channel again? (laughing) - [jake] oh, okay. - hey look you- - [jake] you got strong strong words. - you started it today,
+you went 100% started it. - fix this, fix your petabytes yourself, you damn it. - you stared it. - i'm done, i'm through. - you started it. - oh god. oh, no. - what, what, what, what? - problem. okay. so to use all the ports we wanna use, we have to move a jumper. - oh no. - so right now they're both on the right. - two and three yeah. - two and three, two and three. so that's where we want it actually. - perfect. well, that was easy. - i don't know if i believe that though. - that's fine, we'll find out soon enough. - worst comes to worst we just have to switch
+it to the other side. - okay. - cause then it would be on one and two, one and two. okay. - easy. - we're hoping that that's right. - okay now epyc has no
+built-in raid functionality. so fortunately truenas has a built-in redundancy function so that you can just install the os simultaneously to both drives. and it's not raid but it's a backup, which is better. - it's that a (indistinct)? - is it as a (indistinct)? - probably just makes a- - oh i didn't even know it was using. oh come on, cool. - this does not feel fine, oh my god. - it feels pretty fine. - can you imagine though? - no i cannot imagine. - i don't think this is built to be tipped like this. - okay. - yeah everything's fine. - [jake] that's horrifying. - so this is cool. these connectors right
+here are super cool. they can be used for
+sas, sata or pci express. so it can cause some confusion 'cause i thought they were u.2 which would be pcie like for nvme drives. but actually they are,
+are they sas or sata? probably just see that. - oh yeah. i think they're sata. so we're just gonna connect this little breakout cable and bippity boppity we'll plug these into our drives here and we're good to go. - that's cool, it passes through the sata power too, you see that? - yeah. - so we actually do need four because story about our nvme drives, they're not here yet. (laughs) in fact not even two of the
+cables we need are here yet. the oculink, wherever that is to u.2 cables are not here yet. they were supposed to arrive today. maybe they're just sitting in logistics, i don't know, anyways. yeah. so we're gonna do two
+8 terabytes sata drives that are from micron and we're gonna do two, 1 terabyte nvmes those are gonna be our intent log for cfs, which is almost kind of like
+a right cache not really and then our level two arc which has just been extended read cache that adds onto the ram cache that zfs uses by default. why didn't you take the.... - well, they're there for in case - mm hmm. - there are there in case, get it? this is the case and they were in it. andy likes it, andy likes it. - andy likes everything. you pay him to like it. (laughing) - i pay you to like it. - i'm just a bad guy. - it's just one of you
+is better at their job. (laughing) - yeah. - [andy] hey, thanks linus. - put her in the first slot there. - there it goes. oh yeah. - look at all that pcie baby. we still got- - that's terrific. - one more slot that works. - yeah. - wow, you mangled this cooler, what the heck? - i did nothing to that cooler. you know i didn't do
+anything to that cooler. (laughing) - [jake] look at that part. - [linus] i didn't touch that. - [jake] this was brand new. - [linus] was it really? - [jake] yeah. - [linus] what happened? - i don't know. probably when you were fumbling it out. probably both of us messed it up a bit. - we might have a big problem, jake. - [jake] what? - i don't know if i can
+plug it in the front io. it's right angle on this board. - [jake] oh, who cares? - i can't get it in. - well, who cares? - okay. we could do it. - i have a new idea. we just take the pins
+and we just bend them up. - i love it. - okay, i'll be back. did you just pop that
+out for no reason at all? - oh i didn't know the
+screw wasn't in yet. - what'd you think i was doing, picking my nose? like- - i mean, usually you're
+not doing too much, so. - really? (laughing) mr. stand there and. - we hit it, we hit a cord here boss. - walks up and unplugs
+what i'm working on. (laughing) - i did the math. - and lttstore.com is a great deal. check it out, we've got this new hoodie. - is that even online yet? - it will be by the time (indistinct) sorry you can finish
+your thought. (chuckles) - i don't even remember what i was saying. - doing the math? - oh, i did the math. so at one gigabyte, a second, which i think is a little- - optimistic. - optimistic for the old volts. (chuckles) especially in a degraded state, it would take seven and a half days. if it's sustained at the whole time, to move 700 terabytes. - so what you're saying is? - so let's say 500 megabytes a second, it'll take 15 hours. - i wanna hear you say it. - it's gonna take a month. you're supposed to just
+tell me i was right. - wherever you ... - you said it was gonna take months i said it was-
+- well to move everything. - gonna take weeks. yeah. - to do it three times. - three times? - twice. i don't want to have
+new volt stuff on here, i want to move it off and then move it back. is that like, is that unreasonable? - i don't know, but i think we're ready
+to fire this thing up. - really? - we ready? are you ready boys? - oh you put the management
+port into it i see. - are you ready? wait what- - let's see what you were saying. - you plugged it into management. - yeah. - that's what you wanted to do. - yeah, okay. - yeah i want you to plug the crap here. - i thought you were just stupid. - it smells like fire. - does not. is it still post coding? - i mean it's a server so like. - yeah it could take a minute. asrock boards are sort
+of middle of the road as far as that goes to the right- - speed. i think it's usually pretty quick. - yeah it's probably gotta
+do memory training though for 512 gigs of ram so. - oh it's running. - [linus] nice. - [jake] 170 seconds it's been going. hey look, look, 63 i think that's right. oh wait, no. - [linus] no, that's not right. - [jake] we're missing some nvme. so we got our two nvmes. oh the sata drive 6.99 terabyte. yeah. so we're missing one of those-
+- so we're missing one of the sata. - and then we're missing two of these. - yeah, theoretical. - oh bananas. - oh i bet use those two. (laughing) you suck at this, you put those in this is your fault. - you distracted me. (laughing) - that, those were very out. oh, i can feel them, they're they're doing stuff now. - okay. - i don't know why this
+boy is not working though. okay but let's. - we are at 65, we are at 65. okay we have more hard drives now. we're just missing. - okay, so tell me if that's the bad one. - i don't know if will. - i guess we could have
+checked the serial. - i don't actually know if it'll ... - oh yeah - it could also be that this cable is bad, these cables suck. i've seen like tons of them fail, so. - well we have another one of them. serial number mismatch it says. - so it did pick up the drive then. - since sata link is
+three gigabit per second. no, no it picked it up, micron 4,300. okay try the, plug the other one in for a second. yeah, that cable might be bunk. - oh, it couldn't be the cable linus. must be a bad micron enterprise drive. yeah, for sure. well, you know, with all the ... with all the crap that has taken place that did not make it into videos, it's probably just as well the volt gets wiped
+points in awhile. (laugh) we back up? - look at that, 66 baby-
+- we got everything. nice. - [jake] so we got 900, 900, those are two nvmes, let me just switch this to 100. we got 6.99, 6.99 and the rest. - [linus] okay. - [jake] now you have to make a pool. - [linus] okay, let's do it. - oasis. - sure. - let's call it a oasis, the data oasis. - [linus] good gravy, you have to select them one by one. - [jake] yeah. but think of how often-
+- i mean i guess. - you're gonna do this-
+- champagne problem. - [jake] i think you can also hold control and just, you know. - raid-z2 gives us two
+drive failures per v dev before we actually sustain
+any permanent data loss. which from our recent adventure we found is not necessarily
+the be all and end all. (laughing) - but cause it doesn't
+save you from bit raid. - well look truenas sets up a scrub for all pools by default monthly. - yeah. - it just does it automatically. - until s had no such functionality. - you can't screw this up. you can, but. (laughing) yeah. all right, anyways. - should be fine. i wanna listen to the initializing. - [jake] the formatting. they're already initialized. the servers on what do. - they're not doing anything. - oh they're going now. - that sounds terrifying. i know it's normal, but. like enterprise drives are- - we are doing data things. - well these are ones are getting kind of warm actually, maybe we should put the top on. - yeah we probably should. - [jake] oh look at that. okay so we have available 895 tebibytes. (laughs) - [linus] 984 terabytes. - okay, so should we remake the array? just raid-z1 so you can see more than a petabyte of usable. - no, that's okay. - raid-z2 is bare minimum for this. - yeah. - we still have 1.2
+petabytes of raw storage plus 32 terabytes of nvme once it's done. - so one point of
+clarification, each v dev, so each grouping of 15 drives is running in raid-z2. so that means we could actually theoretically lose up to eight drives before sustaining any kind
+of permanent data loss. but you'd have to get really lucky. - i'm gonna call it volt three, okay? - new, new vault. - no, i'm not doing it. i have power in this manner and it's volt three. i don't care. - one day i'm gonna come in on a weekend and just change it all. - [jake] you had a network interface like these two are 100 gigs. sweet. one thing that's really smart to do on your storage service, especially one with this mini drives is you can actually set
+up a scheduled smart task. like on all of your drives do a quick smart test like once a month. and you can usually tell like if a drive is gonna die. - yeah. - just based on that, it'll like email you
+the results or whatever. - that's one nice thing
+about mechanical drives is they tend to spit out some warnings before they actually completely give up the go to. it can, not always though. - [jake] do you have
+anything in here that's bad? - [linus] i don't hope so. - [jake] spam log pickle linus. how is it called pickle linus? (chuckles) - i was making up on dale for one of my just like
+random troll streams on floatplane. (chuckles) so i just put that up there. i killed him. (laughing) - oh, there we go-
+- there we go. there it is. - [jake] 895 tebibytes i think. anyways the moral of
+the story is holy (beep) that's a lot of storage. is this a holy (beep) now? - it could be. now it's time for us to
+drop it in the server room and start a week's long data transfer. - it's probably gonna be like two weeks. in a use case where you need more iops that is operations per second, maybe if you're video editing or you have a database running on this, you might wanna do a
+setup that has more vdevs because typically it means you're gonna have better iops performance. in our case, basically everything gonna
+this is sequential af. we're moving like 500 to a terabyte - of footage. - of just straight footage it one go. - see you later buddy. - so it doesn't matter for us. if anything, we just want more capacity while still being safe. - yep. - and this is our middle ground. actually, our it's not really middle it's like on our side ground. you know what i mean? - thanks to privacy.com
+for sponsoring this video. valentine shopping is well underway and privacy.com is here to help. with the growth of technology and ever increasing online fraud, keeping your banking
+information safe and secure is becoming more and more of a concern. and privacy.com lets you shop online even at unfamiliar stores
+with virtual credit cards that offer way more security and control than conventional cards. you never have to worry
+about being billed twice, getting upgraded to another
+service without your consent or having to change your card information in the event of a hack. privacy.com also allows
+you to set spend limits so that you can take
+control of your finances and stick to your gift budgets. their free service
+offers you up to 12 cards and by upgrading to pro you'll
+be able to get 36 cards, more security features
+and even 1% cash back. as a special bonus if you sign up today, you'll get five bucks, it's five bucks. so check it out today
+at privacy.com/linus. that's privacy.com/linus. you guys liked this video? maybe go watch the video on the original petabyte project, it was a cluster. we actually needed a gluster cluster, two different machines in order to reach this same capacity. - [jake] it's less. - it's come a long way.

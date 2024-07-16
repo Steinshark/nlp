@@ -1,0 +1,217 @@
+Imagine this scenario: You have a diesel-powered generator on a stand 
+that is electrically isolated from the ground.   Run a wire from the energized slot of an outlet 
+to an electrode driven into the ground. Don’t   connect anything to the ground or neutral slots. 
+Now imagine starting the generator. What happens?   Does current flow from the energized wire into the 
+ground or not? Your answer depends completely on   your mental model of what the earth represents 
+in an electrical circuit. After all, the idea   of a circuit is just an abstraction of some really 
+complicated electromagnetic processes, and that’s   even more true on the grand scale of the power 
+grid. Grounding is one of the most confusing   and misunderstood aspects of the grid, so you 
+can be pardoned for being a little perplexed. For example, if I run a wire from the 
+positive side of a battery into the ground, nothing happens. But, when an energized power line falls from a 
+pole, there’s definitely current flowing into   the ground then. Cloud-to-ground lightning strikes 
+move huge electrical currents into or out of the   earth, but my little thought experiment of a 
+generator connected to a grounding electrode   won’t create any current at all. I’ll explain 
+why in a minute. Even on a electrical diagram,   ground is just this magical symbol that hangs off 
+the circuit willy nilly. But, connections between   an electrical circuit and the ground serve quite 
+a few different and critical purposes. And I have   some demonstrations set up in the studio to help 
+explain. I think you’re going to look at the power   grid in a whole new way after this, but just 
+don’t try these experiments at home. I’m Grady   and this is Practical Engineering. In today’s 
+episode, we’re talking about electrical grounding. Why do we ground electrical circuits in the 
+first place? Maybe the easiest way to answer   that question is to show you what happens when we 
+don’t. For as much importance as it gets in the   electrical code, it might surprise you that it’s 
+not always such a big deal, and in some cases,   can even be beneficial. After all, lots of 
+small electrical circuits lack a connection   to the ground, even if part of the circuit 
+is literally called, “ground.” In that case,   that term really just refers to a common reference 
+point from which voltages are measured. That’s   one thing that can be confusing about voltage: it 
+doesn’t actually refer to a single wire or trace   or location, but the difference in electrical 
+potentials between two points. For convention,   we pick a common reference point, assume it 
+has zero potential to make the math simple,   and call it ground, even if there’s no reference 
+to the actual ground below our feet. On small,   low voltage devices (like battery powered 
+toys), the difference in potential between   components on the circuit board and the 
+actual earth isn’t all that important,   but that’s not true for high voltage systems 
+connected to the grid. Let me show you why: This is a diagram of a typical power system on 
+the grid. The coils of a generator are shown on   the left. When a magnetic field rotates past 
+these coils, it generates electric current on   the conductors, and (very generally) this is 
+how we get the three phase AC power that is   the backbone of most electric grids today. Look 
+at nearly any transmission line, and you’ll see   three main conductors that (again, very generally) 
+correspond to this diagram. But what you don’t see   here is a connection to ground. Let me put another 
+diagram underneath where distance is equal to   voltage. You can see our three conductors 
+all have the same phase-to-phase voltage,   and they have the same phase-to-ground 
+voltage too. Everything is balanced. But,   in this example, that connection to the ground 
+isn’t very strong, resulting just from the   electromagnetic fields of the alternating 
+current (called capacitive coupling). Watch what happens during a ground fault. 
+This could be a tree branch knocking down   a power line or a conductor being blown 
+into contact with a steel tower or any   other number of problems that lead to a 
+short between one phase and ground. Now,   all of the sudden, that weak coupling force 
+keeping the phase-to-ground voltages balanced   is overpowered, and all the phases experience a 
+voltage shift with respect to the ground. But,   the phase-to-phase voltages don’t change. 
+In fact, a ground fault on an ungrounded   power system usually doesn’t cause any immediate 
+problems. The motors and transformers and other   loads on the system don’t really care about 
+the phase-to-ground voltage because they’re   hooked up between phases. This is one benefit 
+of an ungrounded power system: in many cases   it can keep working even during a ground fault. 
+But, of course, there are some downsides too. In the example I showed, the phase-to-ground 
+voltages of the two unfaulted conductors   rise to almost twice what they would be in a 
+balanced condition. Here’s why that matters:   Higher voltage requires more insulation which 
+means more cost. Especially on large transmission   lines where insulation means literally holding 
+the conductors great distances away from each   other and the ground, those costs can add up 
+quick. It might seem like an esoteric problem   for an electrical engineer, but in practice, 
+it just means that ungrounded power systems   can be a lot more expensive (a problem anyone 
+can understand). But that’s just the start. Look back at our diagram and you can see 
+the faulted phase potential is equal to   ground potential. In other words, their 
+difference is zero. There’s no voltage,   and when you have zero voltage, you also have 
+zero current. No electricity is flowing from   the conductor into the ground. Or at least not 
+very much is. You still have the capacitive   coupling between the unfaulted conductors 
+that allows a little bit of current to flow,   but it’s not much. And that matters 
+because nearly all the devices that   would protect a system from a problem (like 
+a ground fault) need some current to flow. If you know much about wiring in buildings, you 
+might be familiar with the classic example of a   toaster with a metal case. It could be any 
+appliance, but let’s use a toaster. Under   normal conditions, current flows from the live 
+or hot wire through a heating element and into   the neutral wire to return to the grid, completing 
+the circuit. But, if something comes loose inside   the toaster, the live or energized side of 
+your electrical supply could come into contact   with that metal case, making it energized too. 
+This could start a fire, or in the worst case,   shock someone who touches the case. So, many 
+appliances are required to have another conductor   attached to the housing, giving the current a 
+parallel, low-resistance return path. That low   resistance means lots of current will flow, 
+triggering a breaker to shut off the circuit. And, it’s not just the breakers in your house that 
+work this way. Nearly all the protective devices,   called relays, that monitor parts of the power 
+grid for problems rely on fault current to   tell the difference between normal electrical 
+loads and short circuits. The simplest way to   do that is make sure the fault current is much 
+higher than the normal loads. In the case of   the damaged toaster, that fault current flowed 
+through a conductor that is called “ground” (but   is actually just a parallel wire that connects 
+to the neutral in your electrical panel). But,   in the case of substations and transmission lines, 
+the fault current path is the actual ground. Let’s look back at the diagram and convert it 
+to a grounded system. If I add a strong bond   to ground at the generator, things don’t look 
+much different in the unfaulted condition. But   as soon as you add a phase-to-ground short 
+circuit, the diagram looks much different.   First, the other phases don’t experience a 
+shift in their phase-to-ground potential.   But secondly, there’s now a path for fault 
+current to flow through the ground back   to the source. And that’s the answer to 
+the question in the title of this video:   electrical current (in nearly all cases) doesn’t 
+flow into the earth; it flows through the earth.   The ground is really just another wire. Although 
+not a great one. Let me show you an example. I have a narrow acrylic box full of dry sand. I put a copper rod into the sand on either 
+side of the box and connected a circuit   with a lightbulb so that the current has to flow 
+across the sand from one electrode to the other.   When I turn on the switch, nothing happens. 
+It turns out that dry sand is a pretty good   insulator. In fact, soil and rock vary widely 
+in how well they conduct electrical current.   The resistivity changes with soil 
+type, seasons, weather, temperature,   and moisture content. For example, let’s try to 
+wet this sand and see if it makes a difference.   Still nothing. Even completely saturating the 
+sand with tap water, only a tiny current flows.   You can barely see anything in the lightbulb, but 
+the current meter shows a tenth of an amp now. Soil resistivity also changes with 
+the chemical constituents in the soil,   which is why I’m having trouble getting any 
+current to flow through the sand. There just   aren’t enough electrolytes. Even with a layer of 
+standing water on top of the sand doesn’t conduct   much current at all. If I add just a little 
+bit of salt water to that standing water,   immediately you see that the resistivity 
+goes down and the lightbulb is able to light.   And if I let that salt water soak into the soil, 
+now the sand is able to conduct electricity too. This resistivity of soil to conduct current 
+is pretty important. Earth isn’t a great wire,   but what it lacks in conductivity, it 
+makes up for in size. You can kind of image   current flowing from a ground electrode into the 
+surrounding soil as a series of concentric shells,   each representing a drop in voltage between the 
+faulted conductor and the ground potential. Each   shell has more surface area for current to flow 
+and so has lower resistance until eventually   there’s practically no resistance at 
+all. But up close to the electrode,   the shells are spaced tightly together toward 
+a single point or line. That spacing is related   to the resistance of the soil, and it can 
+represent a pretty serious safety issue. Here’s a little demonstration I 
+set up to show how this works. This is a length of nichrome wire connected 
+between mains voltage with a few power resistors   in between to limit the current. When I flip the 
+switch, electrical current flows through the wire,   simulating a ground fault. This length of NiChrome 
+wire is resistive to the flow of current just like   the soil would be in a ground fault condition. 
+You can see it heat up when I flip the switch.   That means the electric potential along 
+this wire is different at every point. I   can show that just by measuring the voltage 
+with a meter at a few different locations. Remember that voltage is the difference 
+in potential between two points,   or in the case of Zap McBodySlam here, 
+between two feet. When Zap steps on the   wire, his legs are are at two different 
+electric potentials, and unfortunately,   human bodies are better conductors than the 
+ground. That difference in electric potential   creates a voltage that drives current up into 
+one leg and down out of the other. In this case,   I just have that voltage turning on a little 
+light, but depending on how high that voltage is,   and how well Zap is insulated from it, this 
+step potential can be a matter of life or   death. In fact, power line technicans are often 
+encouraged to hop on one foot away from a ground   fault to reduce the chance of a step potential. 
+It sounds silly, but it might save their life. Similarly, power technicians often come 
+into contact with the metal cases around   equipment regularly. So, if a ground 
+fault happens on a piece of equipment,   and the resistance of the grounding system 
+is too high, there can be a voltage between   the ground and the metal case, again creating the 
+possibility of a voltage across a person’s body,   called touch potential. The engineers 
+who design power plants, substations,   and transmission lines have to consider what 
+touch potentials and step potentials can be safely   withstood by a person and design grounding systems 
+to make sure that they never exceed that level.   For example, most substations are equipped not 
+just with a single grounding electrode but a   grid of buried conductors to minimize resistance 
+in the earth connection. You might also notice   that many substations use crushed rock as the 
+ground surface. That’s not just because linesmen   don’t like to mow the grass. It’s because the 
+crushed rock, like the dry sand in my demo,   doesn’t conduct electricity well and 
+minimizes the chance of standing water. But, not all power systems use the ground just 
+as a safety measure. There are systems where   the earth is actually the primary return path 
+for current to flow. The ground is essentially   the neutral line. Electrical distribution 
+systems called “Single Wire Earth Return”   or SWER are used in a few places around the 
+world to deliver electrical power in rural   areas. Using the earth as a return path can save 
+cost, since you only have to run a single wire,   but of course there are safety 
+and technical challenges too. Similarly, there are some high voltage 
+transmission lines across the word that   use direct current (like a battery) instead 
+of AC. We’ll save a detailed discussion of   these systems for another day, because there is 
+a lot of fascinating engineering involved. But,   I did want to mention them here, because many of 
+these lines are equipped with really elaborate   grounding systems. Although most High Voltage DC 
+transmission lines use two conductors (positive   and negative), some only use one with the return 
+current flowing through the earth or the sea. And,   even the bipolar lines often include 
+grounding systems so they they can use   ground return during and outage or emergency 
+if one pole is out of service. For example,   the Pacific DC Intertie that carries power 
+from the pacific northwest into Los Angeles   has elaborate grounding systems at both ends. 
+In Oregon, over 1000 electrodes are buried   in a ring with a circumference of 2 miles or 
+3.2 kilometers. In California, the grounding   system consists of huge electrodes submerged 
+in the Pacific Ocean a few miles off the shore. Unlike AC return currents that generally follow 
+a path that matches the transmission line,   DC currents can flow through the entire earth. In 
+essence, the electrodes are completely decoupled.   That does mean they’re susceptible to some 
+environmental issues though. They create   magnetic fields that can affect compass 
+readings and magneto-sensitive fish like   salmon and eels. In ocean electrodes, 
+the current can cause electrolysis,   breaking down seawater into toxic chemicals 
+like chloroform and bromoform. And, stray   electrical currents in the ground can flow 
+into pipelines and other buried structures,   causing them to corrode. This is also a 
+problem with some electric trains that use   the rail as a return path. You may have heard that 
+electricity takes the path of least resistance,   but that’s not really true. Electricity takes 
+all the paths it can in accordance with their   relative conductivity. So, even though a big steel 
+rail is a lot more conductive than the earth,   return current from traction motors can and does 
+flow into ground, sometimes corroding adjacent   pipelines, and occasionally interfering 
+with buried telecommunication lines too. I’ve conveniently left out lightning 
+from this discussion until now.   Unlike a conventional circuit where 
+current is alway moving, lightning   is a type of static electricity. 
+It’s not flowing… until it is. And unlike fault current that 
+only uses the ground as a conduit,   the current from a lightning strike really does 
+just flow into the ground, or most frequently,   out of the ground and into the atmosphere, 
+restoring an imbalance of charge created   by the movement of air or water… or something 
+else. We really don’t understand lightning that   well. But an additional and vital reason 
+we ground electrical systems is so that,   if lightning strikes, that current has a 
+direct path to the ground. If it didn’t,   it might arc across gaps or build up charge in 
+the system, creating a fire or damaging equipment. It’s not just lighting, ground faults, and circuit 
+return current that flows through the earth. Lots   of other natural mechanisms cause current to 
+flow below our feet, including solar wind,   changes in earth’s magnetic field, and more. These 
+are collectively known as a telluric currents,   and they intermingle below the surface with 
+the currents that we send into the ground. A common question I get about the electrical 
+grid is how to know specifically which power   plant serves a city or a building. It’s kind 
+of like asking what tree or plant created the   oxygen that you breath. Technically, it’s more 
+likely to be one close to you than very far away,   but that’s not quite how it works. Power 
+gets intermingled on the grid - that’s why   it’s called the grid in the first place - and 
+it just flows along the lines in accordance   with the difference in potential. And the ground 
+works in a similar way. You can’t necessarily   draw lines of current flow between sources and 
+loads, lightning strikes, and telluric phenomena.   The truth of how current flows in the ground 
+is a little more complicated than that;   it all kind of mixes together down there to some 
+extent. But above the surface, it really isn’t so   complicated. Current doesn’t flow to the ground; 
+it flows through the ground and back up. If there   is electricity moving into the ground from an 
+energized conductor, go back to the source of   that conductor and see what’s happening. For the 
+grid, it’s probably a transformer or electrical   generator, in either case, a simple coil of 
+wire. And, the electrical current flowing   out of the coil has to be equal to the electrical 
+current flowing into it, whether that current is   coming from one of the other phases, a neutral 
+line, or an electrode buried in the ground. I hope you’ve noticed some improvements in 
+Practical Engineering videos over the past year or   two, and that’s all due to the help I have making 
+these videos now! Recently the whole Practical   Engineering team was in town, and rather than take 
+them out to eat, I made them help me make lunch. If you have seen my other videos, you 
+know my partnership with HelloFresh,   the sponsor of this video, who deliver 
+delicious recipes straight to your door. Sometimes it takes a whole team of people 
+just to get lunch made with two wild toddlers,   and HelloFresh makes it so 
+much easier than planning   and shopping for every meal and 
+a whole lot cheaper than takeout. They have a huge variety of recipes, 
+including family friendly options,   vegetarian, plus quick and easy 
+options that are ready in 15 minutes. But for as much convenience as HelloFresh 
+adds to our life, the biggest thing it does   is just get us all in the kitchen, having 
+fun together. The pre-portioned ingredients   take out the tedium of cooking and makes 
+it feel more like a game than a chore. If you want to try it yourself, they have an 
+awesome promotion going right now for fans of   the channel. Go to HelloFresh dot com and use 
+code 50PRACTICAL at checkout for 50 percent off   PLUS free shipping! Just give it a shot and 
+see if it doesn’t make your life better. That’s   HelloFresh.com and use code 50Practical. Thank 
+you for watching and let me know what you think.

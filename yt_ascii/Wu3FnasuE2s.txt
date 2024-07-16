@@ -1,0 +1,433 @@
+founded nearly a hundred years ago, texas 
+instruments has undergone many transformations. over the years they had smoothly 
+evolved from oil exploration company   to military electronics supplier to 
+cutting-edge semiconductor maker. in the 1970s and 1980s, they sought to 
+make their most ambitious transformation   yet - into a consumer electronics 
+company. and a computer-maker. it was a disaster. in this video, 
+we are going to take a look at   ti's ill-fated push into consumer 
+electronics, and the home computer. ## beginnings texas instruments as we know it today emerged out 
+of a small oil and gas exploration service called geophysical service inc or gsi. gsi was founded in 1930 by john clarence karcher   and his good friend eugene mcdermott 
+to commercialize a new technology that   karcher invented for discovering 
+oil - reflection seismography. it kinda works like sonar for the 
+earth's insides. we use a dynamite   explosion or an air gun to create seismic 
+waves. the waves bounce off things and we   can read the responses to detect underground 
+structures like those that might contain oil. so the company's early business model 
+was to send crews of people out into   the field on behalf of the big oil 
+companies to find new oil fields. ## gsi
+the technology worked, but 1930 marked the beginning of one of 
+america's worst economic depressions. oil fell to historically low prices. gsi 
+responded by expanding internationally,   sending crews to venezuela, ecuador, india,   and saudi arabia. this business did quite well 
+before europe fell into war later in the decade. but back home, the exploration crews had 
+nothing to do. so management moved away   from oil exploration/surveying and towards 
+production. eventually the company found   and developed several oil properties in 
+southwest texas, louisiana and alabama. the oil companies did not enjoy the idea of their 
+former partner eventually competing against them. to defuse the tensions, karcher and mcdermott 
+proposed a restructuring. karcher would run the   oil development business - named coronado 
+- and gsi became coronado's subsidiary. ## independence
+but the whole entity still lost money and clients still threatened to cancel 
+over conflicts of interest. so finally in 1941, karcher decided to sell the 
+whole business including its 2,000 barrels of   daily oil production for $5 million to stanolind 
+oil & gas - forerunner of amoco, which is now bp. to do right by gsi's customers, stanolind 
+offered gsi's management the option to   purchase the subsidiary's assets 
+for $300,000. the potential buyers   were eugene mcdermott and his partners cecil 
+green, h. bates peacock, and j. erik jonsson. it was not a slam-dunk decision. 
+the business was losing $10,000   a month. the war raging in europe 
+had curtailed the international oil   exploration business. competition was 
+rising. the future seemed uncertain. cecil green was reluctant at first - even 
+writing a letter threatening to resign - but jonsson eventually convinced him to 
+change his mind. green and jonsson had   to mortgage their personal properties 
+and stocks to pay their $75,000 share. ## war
+the buyout closed in november 1941. a month later was the attack on pearl harbor and the 
+united states entering world war ii. the war meant all of gsi's crews 
+working abroad had to come home.   one gsi crew doodlebugging on the 
+indonesian island of sumatra scrambled   to escape the port of sunbaja ahead of 
+the approaching imperial japanese army. with shots firing on the outskirts of 
+town, two members of the team boarded   a small rubber transport ship which was then 
+hit by a japanese torpedo, sinking all their   possessions. they scrambled into a tiny lifeboat, 
+got picked up by a passing ship and made it home. with no choice, gsi pivoted to defense 
+technology. it came about a funny way.   gsi cofounder mcdermott receives 
+a call from a former colleague at   columbia university about building a thing 
+for the navy. what's that thing? classified. that thing turned out to be 
+a submarine detecting system   called "magnetic anomaly detector" or 
+mad. it looks for submarines by finding   disturbances in the earth's magnetic 
+field created by a large iron body. despite first receiving a faulty circuit design 
+from the national defense research committee,   the machine they built worked 
+perfectly. throughout the war,   gsi became one of the nation's 
+biggest providers of mad equipment. after the war ended in 1945, gsi was keen 
+to continue its pivot towards defense   electronics. jonsson really liked one of the 
+military guys he worked with during the war, a 31-year old at the navy's bureau 
+of aeronautics named pat haggerty.   haggerty wanted to try something 
+new so jonsson offered him a job. ## l&m haggerty joined as the new head of the laboratory 
+and manufacturing division, or l&m division. established in the spring of 1946, 
+the l&m division numbered about 85   people. their goal was to shore 
+up gsi's manufacturing chops to   make them more competitive for 
+military electronics business. meanwhile the end of the war allowed gsi's oil 
+exploration crews to return to saudi arabia,   mexico and brazil. these international revenues   sustained the company as they built 
+out their manufacturing expansion. in 1947, gsi won their first large military 
+contract for a bomb sight. two years later,   they outbid philco for their biggest 
+contract yet. to win the deal,   gsi promised to deliver the aps-31 
+radar system - a thing they never   built before - in just nine months at a 
+fixed price. they nailed it, of course. ## texas instruments
+it was a time of great change for gsi. the korean war was raging and the 
+company's l&m division was rapidly   growing from military contracts for air 
+radar systems and other equipment. the   company was making millions in sales 
+from these products - not from oil. so in 1950, jonsson and haggerty felt 
+gsi needed a new name and organization   that better reflected its current situation. 
+but what name? after a closed door session,   they first came up with general instruments, 
+which was announced in january 1951. but that name happens to be similar to 
+another defense contractor in new york   called general instrument. singular. 
+people got confused and annoyed. so jonsson threw a bunch of people into 
+a room and told them to come up with a   new name. his only instructions 
+were that it should have "texas"   in the name. not soon afterwards, 
+we got texas instruments, or ti. ti did an extensive restructuring, making 
+the gsi oil exploration business one of   its subsidiaries. that business ran 
+alongside all the semiconductor stuff   for actually a pretty long time - it was 
+finally sold off to haliburton in 1988. ## the transistor in june 1948, bell labs announced 
+to the world the discovery of the   first transistor - the point contact transistor. i covered this in a prior video. a transistor is 
+a device capable of either amplifying a signal,   or controlling it like a switch. 
+the point contact transistor was   a legitimate scientific breakthrough, but not 
+rugged enough to be commercially successful. the later junction transistor - also known as a 
+bipolar transistor - offered better stability and   reliability. it is made up of three alternating 
+sections of doped silicon or germanium. those sections are called the emitter, 
+base, and collector. the boundaries   between those areas create the "junctions" 
+that give the junction transistor its name. the transistor will take in a small 
+voltage that is its input signal,   and use that to control a larger current flowing 
+through from the emitter to the collector. advancements in growing pure germanium 
+and silicon crystal allowed bell labs to   create a commercially viable junction transistor. key to that effort was a bell 
+labs technician named gordon   teal. he became one of the world's best at 
+growing crystals and selectively "doping"   them with other elements like antimony to 
+create n and p-type silicon or germanium. ## getting the transistor soon after the 1948 bell labs announcement, 
+haggerty quickly realized that the transistor   would be special and decided to invest 
+in this semiconductor technology. luckily for ti, there existed an avenue 
+to acquire it. at&t's anti-trust deal with   the us government required them to license 
+out their technologies. so throughout 1951,   ti tried to engage bell labs and acquire 
+a license to transistor production tech. the bell labs people did not hide their 
+skepticism about these random cowboys.   jonsson recalled being told by bell executives 
+that ti was unlikely to succeed in transistors. they were not entirely wrong to be skeptical. back 
+then, the value proposition for transistors was   not so clear. vacuum tubes were more battle-tested 
+and cost far less - like 60 cents each tube. each   germanium transistor then had to be made 
+by hand - so they cost about $2-3 each. but ti persisted. they mailed a 
+$25,000 check to pay for the license   fee and haggerty even took graduate 
+physics courses at night. in 1952,   bell labs held a big symposium to discuss 
+how to produce transistors. ti attended. upon returning, ti immediately set upon the work 
+of automating transistor manufacturing - assigning   the task to one of their top guys 
+mark shephard. by the end of 1953,   shephard's team was turning out thousands 
+of grown junction transistors each month. ## going to silicon the beginning of 1953 saw another 
+big milestone - ti hired gordon teal. haggerty and teal had met at the 1952 bell 
+labs symposium. teal was born in dallas,   texas. after working for 22 years at bell 
+labs in new jersey, he wanted to come home.   ti offered him that way home along with a higher 
+salary and a chance to run his own research lab. so in january 1953, teal became 
+a ti assistant vice president and   founding head of ti research lab. 
+soon as he started, he got to work   building a team to produce very pure single 
+crystals of silicon for making transistors. most of the early breakthroughs in solid state 
+physics occurred with germanium. but it soon   became clear that germanium's lower melting point 
+and band gap made its transistors less reliable. when their internal temperatures hit 
+75 degrees celsius, germanium-based   transistors leak electrons and basically 
+fail. silicon-based transistors on the   other hand with their higher band gaps can 
+sustain temperatures of up to 130 degrees. ## silicon dreams the major challenge though would be 
+creating a silicon crystal pure enough. silicon's higher temperature and strong 
+reactivity mean that it easily absorbs   impurities like oxygen as it is being 
+pulled out from the melt. yet within a   year and a half of teal's arrival on april 1954, 
+ti produced silicon grown junction transistors. teal recalls in a later oral history: > it took just the time necessary to 
+get somebody to help turn my suggestions   into pieces of pulling equipment. i gave 
+suggestions ... so they built a crystal   puller based on my suggestions and also 
+[from] looking at crystal pullers that   i was using in bell labs and had 
+already been using for sometime. so anti-climactic. teal first announced the 
+breakthrough in may 1954, at a meeting of   the ire national conference of airborne 
+electronics in dayton, ohio. he recalls: > during the morning sessions, 
+the speakers had unwittingly set   the stage for us. one after the other 
+they had remarked how hopeless it was   to expect the development of a silicon 
+transistor in less than several years. teal listened, knowing that he had a few 
+production silicon transistors literally   in his pocket. then he got up and gave his 
+presentation. two-thirds of the way through,   he dramatically revealed to 
+the audience what they had. stunned, a person in the audience asked "did you 
+say you have silicon transistors in production?"   teal said yes, and demonstrated their temperature 
+resilience by dumping a silicon transistorized   amplifier into hot oil. it still worked, and 
+the audience members rushed to report the news. texas instruments had actually not been 
+first to create a silicon transistor. bell   labs' morris tanenbaum - teal's colleague 
+- first fabricated them in january 1954. but bell labs failed to capitalize 
+on their achievement. they just sat   on it. either because they were already 
+heavily invested in germanium transistors,   or it was not patentable, or just did 
+not think it was all that important. meanwhile, ti rushed their 
+silicon transistors - ti 903,   904, and 905 - to market. and for several years 
+until 1958, they were its only producers. sales   skyrocketed and margins were fantastic. the 
+silicon transistor became ti's big break. the us military was especially 
+interested in silicon transistor   technology. the soviets had recently sent 
+up sputnik, and the silicon transistor's   ruggedness offered the american space 
+program a significant advantage. ## pervasiveness
+as the silicon transistor neared its debut, haggerty in the spring of 1954 decided 
+to make a transistorized radio. making a consumer electronics device 
+might seem like a strange step for a   company with a history rooted in transistors 
+and oil exploration equipment. and indeed,   they just wanted to make transistors 
+and sell them to whoever wanted them. but as his protege morris chang would later say, 
+haggerty always believed in the "pervasiveness" of   semiconductors. these needed to be produced at 
+huge volumes. and to do that, ti needed a high   volume sales channel. the military market was 
+great, but the commercial market was greater. haggerty wanted to demonstrate to other 
+electronics companies still putting   vacuum tubes into their products that transistor 
+technology had matured. and it was ready for them. ## the radio building what would eventually be 
+the regency tr-1 was a regal ordeal. haggerty initiated the program in spring 1954, 
+and wanted the radio on consumer shelves by   christmas. the timeline was very tight. a 
+dozen engineers worked 10-12 hour days on   a circuit board design, trying to balance the 
+right number of transistors and their cost. for instance, the radio might play 
+beautifully with the newly introduced   silicon transistors - but each of those 
+transistors cost $100. and even $30 for the   whole radio was a bit much. so they stuck 
+with germanium. after this crash program,   they had a 4-transistor board. but who was 
+going to manufacture and distribute it? cofounder cecil green recalls: > well, as i say, the major radio 
+companies weren't much interested,   but we found that a small high fidelity instrument 
+making company up in indianapolis named regency. at the time, regency was only eight years 
+old. founded by a few ex-rca engineers,   they were then making tv boosters. they took the 
+job because they were unafraid of anything new,   and crafted a device big enough 
+for a good-quality dress shirt   pocket and with a battery 
+life of about 20-30 hours. the radios went into production in november 
+1954. they sold at neiman marcus for about   $49 each or $510 in 2021. it apparently 
+sold well enough to warrant successors. during its run, regency's parent company   chairman ed tudor said that half 
+of their sales came from radios. a few years later however, japanese companies like 
+sony, hitachi, toshiba, and matsushita/panasonic   flooded the market - capturing 80% share 
+and driving the americans out of the show. for ti, the financial impact was mixed. all in, 
+the program lost about $1.25 million - including   assets bought and r&d spent from 1952 
+to 1955. but the device was a strategic   success. semiconductor sales rocketed, and in 
+1960 hit a staggering $200 million per year. one of those radio buyers was 
+a guy named thomas watson jr.,   president of ibm, and the founder's 
+son. impressed, he struck a highly   coveted licensing deal with ti for their 
+transistor technology in december 1957. then he wrote a memo telling his 
+sprawling organization, "after june 1,   1958, we will build no more machines with 
+electron tubes". haggerty's big bet paid off. ## inventing the ic(?) over time, transistors gave 
+way to the integrated circuit. scientists and industrialists have long envisioned 
+the commercial viability of mass-producing a   miniaturized circuit with various transistors, 
+devices, and critically, their interconnects. in march 1959, ti announced that their 
+researcher jack kilby had produced the   first working integrated circuit 
+or ic. tested on september 1958,   it had a transistor and a few other devices on a 
+slice of germanium. a silicon version came later. ti called it the greatest thing since 
+the commercialization of the silicon   transistor earlier in the decade. 
+and indeed, there was some value in   demonstrating the feasibility of putting all 
+these devices on the same sliver of material. but the reality is that kilby's device was 
+not very practical for commercial use. it   didn't solve the ic's major issue of shrinking and 
+mass-producing interconnects between the devices. six months after kilby's invention, 
+robert noyce - future co-founder of   intel but then working at fairchild 
+- invents a fully integrated ic by   building on top of his colleague jean 
+hoerni's breakthrough "planar process". simply speaking, the planar process 
+leverages a special silicon trait - its   ability to produce a layer of silicon 
+dioxide in the presence of water and   heat. this thin silicon dioxide layer was 
+previously seen as a nuisance and removed. but silicon dioxide is an insulator, 
+and hoerni recognized that they can   use those insulating properties to both 
+protect an ic's various components from   contamination - as well as electrically 
+isolate it to prevent interference. noyce then realizes that the silicon dioxide 
+layer can also prevent the metals in a metal   wire connecting the ic's devices from 
+seeping into and poisoning the silicon. so he creates a step now known as 
+"aluminium metallization" - the back   end process of laying down all of an ic's 
+connecting wires in a single wondrous step. the result is what we now call the 
+monolithic integrated circuit. it   underperformed competing circuits of the 
+time, but it was far more reliable. and   the fact that we can now print and produce 
+it in steps that do not correlate with its   size or complexity allowed for rapid 
+miniaturization and cost scaling. so kilby's thing came first, but noyce's 
+thing was more practical. a long patent   war thus naturally ensued, ending up 
+with the two guys sharing joint credit. and history largely concurs. kilby and noyce 
+would have won the nobel together in 2000 had   noyce not passed away in 1990 at the still-young 
+age of 62. i truly wish i could have met him. if you would like to deep dive 
+into this nerd rap battle,   then there is a very very long 
+wikipedia article you can read. ## the calculators
+throughout the 1960s, us military spending on missile and rocket programs push 
+early ic investment. ti had over   a hundred military contracts for products 
+like transistor-transistor logic or ttl. but haggerty still wanted more. harkening back 
+to the regency tr-1 radio, he decided to try the   tactic again. let us build something with these 
+ics and sell it to the people to stimulate demand. in 1965 while boarding a business flight, 
+he suggests to kilby the idea of a "personal   computer" that can replace big heavy desktop 
+electric calculators and the slide rule. a slide rule predates even my time. 
+wikipedia says that it is a mechanical   calculator consisting of slidable 
+rulers for mathematical calculations. my father used to use one in 
+university and later handed   it down to me when i was little. i 
+had no idea how to use it - still   don't - but nevertheless treasured 
+it and it now sits in my study room. anyway, haggerty throws around a lot of dumb 
+ideas - one other suggestion on that 1965 flight   was to make a lipstick sized dictation machine 
+and that was a stinker - but this one stuck. kilby interpreted haggerty's vague idea 
+to be a digital calculator product that   would cost less than $100, can fit into a 
+coat pocket and do addition, subtraction,   division, multiplication, and maybe a square root. kilby wrangles a team at ti's ic department 
+to build it, which is soon named the cal-tech. the working calculator was shown to pat haggerty 
+a year later in 1966. made from solid aluminum,   it was about four inches wide and 
+six inches long. it had' keys for   input and printed out the results on a paper tape. ti shows the cal-tech to various companies and 
+japan's canon shows interest. the two partner   up to produce the canon pocketronic 
+- released in april 1970 or 1971,   sources differ. we largely consider it the 
+first commercial digital pocket calculator. then in 1972, ti officially enters 
+the calculator market with the ti-2500   datamath single-chip calculator, 
+the sr-10 scientific calculator,   and others. the division became a $100 million 
+business, and a $200 million business the second   year. ti previously had only wanted to 
+make transistors. but money changed that. ## going hard into consumer in 1973, texas instruments had 
+become a $1 billion company. coming off the gleaming success of 
+the consumer calculator program, the   company decided its future was to go deeper and 
+deeper into this consumer electronics strategy. the man chosen to spearhead this push was 
+morris chang. by 1967, he had risen to be   general manager of ti's integrated circuits 
+division - its most important semiconductor   division. he then became vice president 
+of all of ti's semiconductor businesses. after about six years or so there, ti gave morris 
+the consumer business portfolio. at a conference   in 1974, chang laid out the company's 
+thinking behind this push to consumer: > "the most important motivation for 
+vertical integration by semiconductor   manufacturers is the opportunity for higher 
+growth resulting from increased value added   for products where the principal function 
+is already performed by semiconductors" 30-35% of a calculator's business 
+value is in its chip. simply speaking,   morris said that by making better semiconductors,   you can bring more differentiated and 
+valuable products to the market at lower cost. chang mentioned other products 
+with high market opportunity to   be data terminals, electronic watches, 
+point-of-sale systems, and computers. the consumer market - then in the midst of 
+an asian invasion - was a bloody battlefield,   but ti had confidence. at a 
+shareholder conference in 1976,   they officially announced their 
+entry into consumer electronics. ## toys and watches
+at the 1975 consumer electronics show in chicago, ti displayed their next big 
+consumer product - digital watches. these watches had red leds or lcds and 
+were powered by custom ti-made integrated   circuits. in 1976, ti entered the market 
+with a bang - bringing out two high-end   lcd lines selling for over $250 as well 
+as a low-end red led watch for under $20. but the watch market is brutal. 
+other semiconductor makers like   national semiconductor and intel also took 
+the plunge into the watch business. the year   ti came out into the market, there were 
+over 40 different digital watch vendors. ti tried to undercut the market with a $9.95 
+watch, but margins were brutal. after few years,   ti exited in 1981. eventually 
+the traditional watchmakers   reclaimed the market, focusing 
+on luxury and status-signaling. overall, chang did not look back fondly 
+on his years working on ti's consumer   business. in retrospect, the calculator 
+success was perhaps a bit too much of a   sweet success. new ceo mark shepard 
+refused to enter a business unless   it had the potential to be a $200 
+million business within 3 years. things that could have been 
+a decent niche business were   set aside because the market wasn't 
+judged to be big enough. in the end,   ti could only enter super-competitive, bloody 
+red markets - like the digital watch industry. and many of the businesses that ti did end 
+up entering required stretching outside   ti's circle of competence. throughout 
+the 1970s, ti made radio receivers,   digital thermometers, home thermostats, 
+educational video games, and a cb radio. they even opened a retail outlet - the 
+ti store - to showcase their products   to the public. there were ti stores 
+in dallas, italy, berlin, and the uk. one product that chang did seem to 
+be proud of was the "speak & spell",   which used the world's first single-chip speech 
+synthesizer. the product grew out of efforts   to find a commercial application 
+for higher capacity bubble memory. it was the hot toy of 1978, and even had 
+prominent roles in the et and toy story movies. ## the computer ti's final, most costly foray - its'12 invasion 
+of russia - was into the home computer market. ti had been working on single-chip computers for a   while. the speak & spell was built using 
+a tms 1000 microcontroller - which also   powered a variety of machines like microwave 
+ovens, calculators, video games, and so on. but ti largely disregarded the computer 
+and minicomputer market. back then,   such computers were at least the size of cabinets,   which limited their market potential. 
+how many such devices can you sell? what the people at ti and many other 
+companies did not foresee was the   microcomputer - something we now call personal 
+computers. kicked off by the altair 8800 in 1975,   the microcomputer industry spawned new names 
+like apple, commodore, and tandy/radio shack. and when softwares like the 
+visicalc spreadsheet hit the market,   microcomputers became more than just toys. 
+they became valuable record-keeping and   scheduling tools for small businesses 
+like accountants, dentists, and so on. ti realized that this market was 
+not going away. they knew what they   had to do. so throughout 1979, the rumors 
+started to crop up everywhere. the giant,   texas instruments, was going 
+into the home computer business. ## the tms-9000 to power this computer, ti 
+needed a microprocessor. they wanted their offering to be the first 16-bit 
+home computer, meaning that its circuitry can   handle 16 bits at the same time - more memory 
+capacity allowing for more complex tasks. by comparison, the then-dominant 
+apple ii and commodore pet ran 8-bit   microprocessors. so ti's computer would 
+theoretically have a compute advantage. ti had long built custom minicomputers for 
+customers in the oil and scientific industries.   ti vp walden "wally" rhines later recalled in 
+an ieee article that there was a "one company,   one architecture" rule. so 
+they decided to adapt their   minicomputers' 16-bit architecture 
+for this new microcomputer chip. that turned out to be a mistake. the team 
+struggled to get this microprocessor - the   tms 9900 - out. peripherals were limited 
+due to there being no 16-bit chips,   necessitating the weird engineering 
+hack of adding an 8-bit port. but   that compromised any benefits of the 
+processor having a 16-bit architecture. the chip also had 64 pins rather than 
+the traditional 40 pins, limiting its   design wins outside of ti's own products. it would   have done better had it been designed from 
+the ground up as a microcomputer product. in late 1978, rhines gave a presentation about 
+the tms 9900 chip to a small group at ibm in   florida for an unnamed project - the ibm personal 
+computer. unimpressed by the 9900's shortcomings,   boca raton chose the 16-bit intel 8088 for 
+their pc's microprocessor - a fateful choice. ## 800 pound gorilla anyway, it didn't seem like a 
+huge loss at the time because   texas instruments was the 800 pound 
+gorilla of the semiconductor industry. they were the ones that apple, tandy, 
+and other guys feared would enter their   space. then it happened. in 1979, ti 
+brought out their 99/4 home computer. the computer's introductory price was 
+about $1,150 or $4,600 today - which   was high for the time. customers noted 
+the limited selection of peripherals   and software - which focused on education, 
+personal finance and home management stuff. they also complained about 
+the calculator-style chiclet   keyboard - reminds me of apple's issues with their 
+own chiclet keyboard. some things never change. at first, sales grew slowly. so the 
+ti team overhauled their strategy.   they made a better keyboard, more peripherals,   and cut the price by over half. the result 
+was the 99/4a home computer, or just the   ti home computer. it sold to the retailer 
+for about $340 and to the consumer at $550. to sell the 99/4a, ti coopted many of the 
+microcomputer vendors' tactics. they cut   deals with over 5,000 traditional 
+retail stores - toys r us, k-mart,   and such - not the special computer 
+shops they used before. they hired   thousands of teachers to educate 
+customers on how to use the machine. and they also orchestrated an ambitious 
+marketing campaign to get the word out.   they bought a big tv ad campaign featuring 
+bill cosby - bad move looking back at it. ## disadvantages
+but things soon spiraled out of control. a texas monthly article recalls how 
+ti originally wanted to do three   computers - with a high and middle-end 
+computer alongside the low-end 99/4a. however, manufacturing issues and personnel 
+squabbles derailed that effort. the other   business groups felt the consumer group 
+was encroaching on their fiefdoms. the company's engineering-focused culture 
+also gave it a bad case of "not invented   here" syndrome. so they were unwilling to court 
+software partners and share profits with them,   hurting their ability to build a strong third 
+party developer ecosystem around their computer. this especially hurt when ibm quickly captured 
+the professional market with the pc. ti,   commodore, and tandy thus found 
+themselves in the low-end consumer   part of the pool - setting the 
+stage for a bloody price war. nevertheless, ti invited 
+the battle. years earlier,   texas had fought and won the calculator wars 
+- beating commodore in that market so badly   that they nearly filed for bankruptcy. 
+a story for another video, perhaps. semiconductors have always been about dominating 
+the market with scale and low cost. chips were the   key part of the machine, and ti is a chip 
+master. this should be their game right? looking back at it, entering into a price war 
+was the wrong thing to do. they could have   gone for an education niche like with the 
+calculators. the 99/4a was a high-quality,   well-made computer. better designed, more capable,   and more costly to make than its competitors. 
+ti should never have gotten into that octagon. ## war but they did and this time 
+commodore made them pay. their low-end commodore vic-20 
+computer's simpler design combined   with their production lines in 
+asia allowed for far deeper cuts   than ti could sustain. commodore's 
+executives knew this. ti's did not. the vic-20 hit the market at $300. so ti matched.   they cut retail prices on the 99/4a down 
+from $525 at that time to $449 to $300. already at this point, the computer is selling for 
+very little margin. then commodore cuts the vic-20   price down to $200. that pricing situation 
+persisted throughout the spring of 1982. in september 1982, the 99/4a is selling at 
+$300, but the vic-20 is about $100 cheaper.   that is when ti added rebates to cut the 
+price down to $200 - a shot across the bow. sales surged. during the second half of 1982,   ti was selling 99/4as like hotcakes - 150,000 
+units a month in 12,000 retail outlets. ti's   pc business had blown up into a $200 million 
+business almost overnight. books and software   were being written for the computer. 
+large user support groups sprouted up. but even as sales skyrocketed, ti refused to 
+open up the architecture to and share profits   with third party software developers like apple 
+or commodore did - building a lockout chip into   its computer just like nintendo did. ti 
+really did need those software profits,   but it was another missed opportunity 
+to build something long-term. in an attempt to keep up, in december 1982 
+atari cut their 8-bit home computer the atari   400 to under $200. they were a distant 
+third in the segment and fading fast. but commodore had more to give. in january 1983 
+- just as ti were feeling themselves at the peak   of the home computer market - commodore cut their 
+top-end commodore 64 computer down to just $400; and their low-end vic-20 to under $130. ti   in turn matched by cutting retail 
+prices on the 99/4a to just $150. the retailers screamed foul. cosby joked about how easy it was to sell a 
+computer when ti paid you $100 to buy one. atari could not sustain this kind 
+of competition. in february 1983,   they abruptly fired a quarter of their us 
+staff and moved all of their factories to asia. then ti blinked and stumbled. as 
+atari melted down, ti discovered a   serious issue with the 99/4a's power 
+supply transformer - not referring   to the llm architecture - that could 
+potentially cause users to get shocked. nothing yet happened, but nevertheless ti reported 
+the issue and decided to shut down the line to   rework the product. for a few critical months in 
+1983, the 99/4a was not available on the shelves. in april 1983, commodore delivered the 
+final blow. they cut the vic-20 down to $99,   which was about what the 99/4a cost ti 
+to make. ti had no response to this,   and for the first time they did not match. commodore also slashed the 
+commodore 64's retail price   as well as prices on software - the 
+only thing sustaining ti's margins. commodore had won. assembly lines kept 
+cranking out ti 99/4as, but now the   retailers started returning unsold inventory. 
+sales projections missed again and again. ti's accountants realized that the home computer 
+division and its price wars had lost the company   a staggering $200+ million - causing a total 
+$119 million loss in the second quarter of   1983. such a loss, even a giant like ti could not 
+sustain and the stock shed a third of its value. the home computer division head bill 
+turner resigned. and in october 1983,   ti announced their exit from the home 
+computer business. taking into account   both operating losses and write-offs, 
+they had lost a staggering $680 million. looking back again at it, pulling out so abruptly   from the home computer market might 
+not have been the right thing to do   too. it was a good computer. there was a 
+lot of goodwill built up by enthusiasts. with the new 99/2 in development - internally 
+nicknamed the apple killer - a pivot into   education to challenge apple computer might 
+have sustainable. but alas it was not to be. in the wake of this painful withdrawal, ti made 
+a final grasp to the professional market with   the ti professional computer. but ibm was already 
+there with their pc, and ti - again with the not   invented here syndrome - refused to make their 
+product fully ibm-compatible. it failed too. ## conclusion ti's failed foray into the consumer 
+electronics field had lasting implications. it torpedoed morris chang's previously 
+fast-rising career at ti. while he was   promoted to senior vice president, he 
+lost his shot at the coveted ceo spot. put out to pasture, he left for 
+general instrument and then after   that - taiwan. perhaps a bit sour over 
+ti's ventures into consumer electronics,   he later proposed a semiconductor 
+company that would never do such a thing. the home computer failure not only lost 
+ti their place in a growing market,   but also snuffed out the only big end 
+user demand market they had for their   own microprocessors. their digital 
+logic business was never the same. ti has since largely retreated back 
+to their core competencies of making   semiconductors - with a focus on 
+analog, mixed signal and digital   signal processing ics. they remain one of 
+america's biggest semiconductor companies. though they still make calculators. the ti 99/4a remains a classic, 
+and one of the most famous home   computers in american history. 
+its fans remember it quite fondly. for more information about 
+texas instruments' history,   i highly recommend this 2005 book by caleb 
+pirtle iii. they made it for the company's   75th anniversary so it's a bit biased 
+but the pictures and stories are great.

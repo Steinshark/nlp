@@ -1,0 +1,141 @@
+I was reading the "AI Capacity Constraints" post 
+on SemiAnalysis. Good work by Dylan as usual. In it, Dylan and the team profile 
+Nvidia's H100 AI super-accelerator. A   monster of a GPU that costs something 
+like $20,000 and is not for gaming. This GPU uses an interesting new type of 
+memory - High Bandwidth Memory or HBM from   the Korean memory maker SK Hynix. Namely the HBM3 
+variant, the first commercial product to do so. Dylan also mentions that AMD's own forthcoming 
+AI accelerator - the MI300 - also uses HBM. Ever heard of this type of memory 
+before? What is it? And what makes   it the preferred choice for 
+these AI chips? In this video,   a deep dive into the special memory 
+powering the Deep Learning Revolution. ## Beginnings HBM does not refer to a special type of 
+Dynamic RAM memory cell or special chip. Rather, it is a standard - 
+administered by the Joint   Electron Device Engineering Council or JEDEC 
+- for interfacing the DRAM and the compute. HBM introduces the concept of stacking the 
+DRAM dies and running many independent memory   channels through the stack. The goal is to 
+provide very high data rate transfers for   more advanced computing applications like those 
+for AI which are more amenable to parallelism. The vendor can also choose to add a logic base 
+die - as is shown in the JEDEC spec diagram. This   additional logic is for redistributing signals, 
+test logic, and other external communications. JEDEC’s standard defines for the 
+manufacturer how the HBM system   has to work and what features they 
+need to support. It helps with the   commands and signals sent through the memory 
+channels in the DRAM stack for instance. But it does not specify how the 
+vendor might structure the stack,   nor does it specify things outside 
+the stack. This allows various HBM   vendors in the memory industry to 
+offer a differentiated product. HBM buyers can put your HBM stack right on top of 
+your CPU or GPU die. Or do what AMD/Nvidia did -   which is to add a silicon interposer to connect 
+multiple HBM die stacks to your GPU - like a PCB. JEDEC also administers other standards like DDR, 
+LPDDR, or GDDR. DDR is the standard you might be   most familiar with - used for general purpose 
+memory modules like those you put into your PC. The traditional memory interface standard 
+for graphics cards is GDDR or Graphics   Double Data Rate. Right now they are 
+on their sixth generation - GDDR6. There are a few gaming cards using it. ## "Point to Point"
+Why do we need another standard? There are a few things about GDDR that make it less 
+suitable for heavy AI processing. First, while each new GDDR standard 
+does feature higher data rates,   they also employ a point-to-point 
+connection. This means that each   memory channel connects to 
+just one module of memory. This is in contrast to HBM, where channels 
+run through all the modules in the stack.   GDDR's single channel makes it harder to 
+scale the system's total memory capacity   because it means we have to scale 
+that single module's memory capacity. Which essentially requires us to 
+shrink down the DRAM cells even more,   which is hard. I did a whole video about 
+this a while ago discussing the 3D DRAM cell. Future shrinks seem to require new 
+capacitor structures like the pillar,   which may or may not be actually manufacturable. By vertically stacking the modules, HBM 
+makes it conceptually easy to raise the   memory capacity. There are also some 
+physical size gains as well when it   comes to horizontal floor space 
+being taken up by more memory. More capacity is good, because 
+it means we don't have to go to   the secondary memory systems - hard 
+drives, etc - for more data as often. In April 2023, SK Hynix unveiled their latest 
+HBM3 chip with 12 layers and 24 gigabytes   of memory. This is an expansion from the 8 
+layers you had on prior HBM3 configurations. ## "Narrow and Fast ... Wide and Slow" Second has to do with how 
+we do memory "bandwidth". "Bandwidth" refers to the rate at which data 
+can be read from and stored in the memory. It has a few major components 
+in it - the clock frequency,   the number of data transfers within each 
+clock cycle, and the width of the memory bus. So if we want to get a higher rate, then 
+there are a few levers that you can pull   to go about it. You can raise the clock 
+frequency or the width of the memory bus. GDDR features a relatively narrow memory bus, 
+which limits how much data we can send through   at any one time. So GDDR gets a higher 
+bandwidth by ramping up the clock speed. So think of it as kind of like a thin 
+but very fast moving stream. GDDR6's   "narrow and fast" approach is great for 
+tasks that require a lot of sequential   calculations. Streaming data, complex 
+physics calculations, rendering frames. But here's the downside. Higher clock speeds are 
+a formidable engineering challenge and consume   more power. This is in part due to having to 
+distribute clock signals throughout the chip,   and also that the transistors in the memory chips 
+and the memory bus have to switch more frequently. And with higher power consumption, there is 
+also more heat. And of course, electricity   is not free. At some point you are bumping your 
+head against the system's overall power limits. So the approach that HBM takes is referred 
+to as "wide and slow". We widen the memory   bus - 1024 bits per HBM3 stack, compared to DDR5's 
+64 bits - while operating at a lower clock speed. This makes it a slow moving but very wide 
+river. The result is that we are able to   transfer more data while consuming 
+less energy on a per-bit basis. I dug up a 2013 slide from the AMD 
+announcement claiming a 40% decrease   in memory power consumption while 
+boosting system performance by 65%. ## History
+Nvidia is making billions selling AI accelerators. So it’s interesting that the HBM standard 
+that their accelerators use comes from   AMD. AMD started on what would eventually 
+become HBM in the 2007-2008 time period as   they were working through the broader 
+technical issues around die stacking. In a 2015 interview, Bryan Black - senior 
+fellow at AMD and said to be the "Godfather   of the Chiplet" - explained that his team 
+started architecting HBM after seeing the   limits of GDDR - back then GDDR5 rather than GDDR6 
+- especially when it came to power consumption. So in 2011, AMD announced 
+that they were partnering   with SK Hynix to develop something to 
+essentially replace the GDDR standard,   particularly with regards to 
+this power consumption issue. ## TSVs and Microbumps Key to making HBM work are these channels 
+running through the DRAM die stacks. These are made up of what we 
+call Through-Silicon Vias or   TSVs and microbumps. Your typical 
+HBM package has thousands of them. TSVs are basically very small holes 
+drilled into the memory dies in order   to very quickly transfer data down to the 
+interposer and on towards the CPU or GPU. TSVs were chosen because they are shorter 
+and thinner than alternatives like wire   bonding - which also contributes to less parasitic 
+capacitance. These little silicon channels also   take up less real estate. All of this contributes 
+to higher speed and less power consumption. The downside is that TSVs are challenging to 
+manufacture. We generally use Deep Reactive   Ion Etching to produce these, which 
+is a form of anisotropic etch that   cycles through steps of adding 
+etchant and then an inhibitor. There are also substantial packaging and 
+test challenges. It is not easy to test   the ten thousand plus TSVs on the HBM die, 
+and if any fail the test, to repair them. ## Building an Ecosystem
+Despite the challenges around microbumps and TSVs, ultimately what AMD found to be 
+most challenging was the ecosystem. The first commercial product to 
+incorporate the HBM standard came   out in 2015 - AMD's Radeon R9 Fury 
+GPU. Bryan Black related that the   product didn't encounter any single, 
+overwhelming technical challenge. Rather, the biggest problem was working through a   very long list of all the "newness". As in 
+identifying smaller technical challenges,   identifying a solution, and then onboarding 
+technology component partners to overcome them. For instance, SK Hynix provided 
+the HBM for the 2015 GPU. But UMC - the Taiwanese foundry - had to 
+produce a silicon interposer suitable for it. And ASE - one of Taiwan's leading 
+Outsourced Semiconductor Assembly   and Test vendors - had to figure out how to 
+package the whole thing together and test it. Constructing the supply chain and the supply 
+ecosystem surrounding this new product is an   underrated part of commercialization 
+and success in the marketplace. Since then there has been two more 
+iterations of the HBM standard - HBM2   in 2018 and HBM3 in 2020 - with added 
+improvements. The H100 can be equipped   with either HBM3 or HBM2E - which is a 
+later modification of the HBM2 standard. ## Market & Competition
+Prior to ChatGPT and the AI Boom, HBM was not a big market - about 1.5% 
+of the larger Dynamic RAM market. But it is growing. According to market tracker 
+Mordor Intelligence - interesting name - the   HBM chips market is forecasted to grow from 
+$2 billion in 2023 to $6.3 billion by 2028. Currently, there are three major suppliers of 
+HBM memory - two of which are Korean. SK Hynix   is the leading supplier - having pioneered 
+the standard in conjunction with AMD. According to a recent 
+Trendforce report in mid-2023,   Hynix has little over half of 
+the HBM market with 53% share. Second is Samsung - which fiercely 
+competes with Hynix. They are not   standing still. Trendforce pegs their market share   in 2023 at about 38% - though it seems 
+like Samsung's people disagree with that. Both companies are investing a trillion won 
+each to expand capacities at their fabs in   South Korea. SK Hynix's current 
+fabs are in the city of Icheon,   but they are opening new capacity 
+in a fab in the city of Cheongju. Samsung's core HBM line seems to be in the city 
+of Cheonan, which used to host an LCD factory. According to news reports, their goal is to 
+double their HBM3 capacity by the end of 2024. Third is Micron, which is the only American 
+supplier but a significant laggard with only   about 9% market share. In July they announced 
+that they had started sending out samples of   their latest generation HBM3 memory, 
+with also has 12 dies stacked up high. HBM is for the Korean memory makers - 
+like the H100 die is for TSMC - a small,   little bright spot in an 
+otherwise dour memory market. In the second quarter of 2023, SK Hynix turned 
+a loss of about $2.2 billion US dollars. For that same quarter, Samsung announced 
+a 95% decline in operating profit - from   $7.5 billion down to $500 million. Just 
+another day in the volatile memory business. ## Conclusion AMD never envisioned HBM 
+as being a GPU-only thing. At the time of the Hynix 
+collaboration announcement,   they mentioned other uses for 
+HBM's lower power consumption. Think constrained environments 
+like those on the edge. I think   Automotive has a lot of potential - 
+since there is so much optical data   floating around - but price and 
+qualification might be an issue. But in the end, right now it is all 
+about AI. AI has turned this rather   sleepy high-end section of the market 
+into the hottest new thing. The effects   of this impact are still making their 
+way through the rest of the supply chain.

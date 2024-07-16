@@ -1,0 +1,182 @@
+on september 13, 2018, a pipeline crew in the 
+merrimack valley in massachusetts was hard at   work replacing an aging cast iron natural gas 
+line with a new polyethylene pipe. located   just north of boston, the original cast iron 
+system was installed in the early 1900s and due   for replacement. to maintain service during the 
+project, the crew installed a small bypass line   to deliver natural gas into the downstream 
+pipe while it was cut and connected to the   new plastic main line. by 4:00 pm, the new 
+polyethylene main had been connected and the   old cast iron pipe capped off. the last step of 
+the job was to abandon the cast iron line. the   valves on each end of the bypass were closed, the 
+bypass line was cut, and the old cast iron pipe   was completely isolated from the system. but it 
+was immediately clear that something was wrong. within minutes of closing those valves, the 
+pressure readings on the new natural gas line   spiked. one of the fittings on the new line blew 
+off into a worker's hand. and as they were trying   to plug the leak, the crew heard emergency 
+sirens in the distance. they looked up and   saw plumes of smoke rising above the horizon. 
+by the end of the day, over a hundred structures   would be damaged by fire and explosions, 
+several homes would be completely destroyed,   22 people (including three firefighters) would 
+be injured, and one person would be dead in one   of the worst natural gas disasters in american 
+history. the ntsb did a detailed investigation   of the event that lasted about a year. so 
+let's talk about what actually happened,   and the ways this disaster changed pipeline 
+engineering so that hopefully something like   it never happens again. i'm grady, and this 
+is practical engineering. in today's episode,   we're talking about the 2018 merrimack 
+valley natural gas explosions. like many parts of the world, natural gas 
+is an important source of energy in homes   and businesses in the united states. it's a 
+fossil fuel composed mostly of methane gas   extracted from geologic formations using drilled 
+wells. the us has an enormous system of natural   gas pipelines that essentially interconnect 
+the entire lower 48 states. very generally,   gathering lines connect lots of individual 
+wells to processing plants, transmission lines   connect those plants to cities, and then the pipes 
+spread back out again for distribution. compressor   stations and regulators control the pressure of 
+the gas as needed throughout the system. most   cities in the us have distribution systems that 
+can deliver natural gas directly to individual   customers for heating, cooking, hot water, 
+laundry, and more. it's an energy system that   is in many ways very similar to the power grid, 
+but in many ways quite different, as we'll see. just like a grid uses different voltages to 
+balance the efficiency of transport with the   complexity of the equipment, a natural gas network 
+uses different pressures. in transmission lines,   compressor stations boost the pressure 
+to maximize flow within the pipes. that's   appropriate for individual pipelines where 
+it's worth the costs for higher pressure   ratings and more frequent inspections, 
+but it's a bad idea for the walls of   homes and businesses to contain pipes 
+full of high-pressure explosive gas.   so, where safety is critical, the 
+pressure is lowered using regulators. just a quick note on units before we get too 
+far. there are quite a few ways we talk about   system pressures in natural gas lines. 
+low pressure systems often use inches or   millimeters of water column as a measure of 
+pressure. for example, a typical residential   natural gas pressure is around 12 inches (or 300 
+millimeters) of water, basically the pressure at   which you would have to blow into a vertical 
+tube to get water to raise that distance:   about like that, roughly half a psi or 30 
+millibar. you also sometimes see pressure   units with a "g" at the end, like 
+"psig." that "g" stands for gauge,   and it just means that the measurement excludes 
+atmospheric pressure. most pressure readings you   encounter in life are "gauge" values that ignore 
+the pressure from earth's atmosphere, but natural   gas engineers prefer to be specific, since it can 
+make a big difference in low pressure systems. the natural gas main line in the merrimack valley 
+being replaced had a nominal pressure of 75 psi   or about 5 bar, although that pressure could 
+vary depending on flows in the system. just   for comparison, that's 173 feet or more than 50 
+meters of water column. but, the distribution   system, the network of underground pipes 
+feeding individual homes and businesses,   needed a consistent half a psi or 30 millibar, no 
+matter how many people were using the system. the   device that made this possible was a regulator. 
+there are lots of different types of regulators   used in natural gas systems, but the ones in 
+the merrimack valley use pilot-operated devices,   which are pretty ingenious. it's basically 
+a thermostat, but for pressure instead of   temperature. the pilot is a small pressure 
+regulating valve that supports the opening or   closing of the larger primary valve. if the pilot 
+senses an increase or decrease in pressure from   the set point, it changes the pressure in the main 
+valve diaphragm, causing it to open or close. this   all works without any source of outside power 
+just using the pressure of the main gas line. columbia gas's winthrop station was just a short 
+distance south of where the tie-in work was being   done on the day of the event. inside, a pair 
+of regulators in series was used to control   the pressure in the distribution system. one of 
+these regulators, known as the worker, was the   primary regulator that maintained gas pressure. a 
+second device, called the monitor, added a layer   of redundancy to the system. the monitor regulator 
+was normally open with a setpoint a little higher   than the worker so it could kick in if the 
+worker ever failed, and, at least in theory,   make sure that the low-pressure system never 
+got above its maximum operating level of about   14 inches of water column or 35 millibar. but, in 
+this worker/monitor configuration, the pilots on   the two regulators can't use the downstream 
+pressure right at the main valve. for one,   the reading at the worker would be affected by any 
+changes in the downstream monitor. and for two,   measuring pressure right at the valve can be 
+inaccurate because of flow turbulence generated by   the valve itself. it would be kind of like putting 
+your thermostat right in front of a register; it   wouldn't be getting an accurate reading. so, the 
+pilots were connected to sensing lines that could   monitor the pressure in the distribution system a 
+little ways downstream of the regulator station. the worker and monitor regulators were both 
+functioning as designed on september 13, and yet,   they allowed high pressure gas to flood the 
+system, leading to a catastrophe. how could that   happen? the ntsb's report is pretty clear. tying 
+a natural gas line while it's still in service,   called a hot tie-in, is a pretty tricky job that 
+requires strict procedures. here are the basic   steps: first a bypass line was installed across 
+the upstream and downstream parts of the main   line. then balloons were inserted into the main 
+to block gas from flowing into the section to be   cut. once the gas was purged from the central 
+section, it was cut out and removed while the   bypass line kept gas flowing from upstream to 
+downstream. the line to be abandoned got a cap,   and the new plastic tie in was attached to the 
+downstream main. once the tie-in was complete,   the crew switched the upstream gas service from 
+the old cast iron line over to the new plastic   line and deflated the last balloon so that gas 
+could flow. the upstream cast iron line was   still pressurized, since it was still connected 
+to the in-service line through the bypass. but,   as soon as the crew closed the valves on 
+the bypass, the old cast iron line was   fully isolated, and the pressure inside 
+the line started to drop, as planned. what that crew didn't know is that when that 
+plastic main line was installed 2 years back,   a critical error had been made. the main discharge 
+line at the regulator station had been attached to   the new polyethylene pipe, but the sensing 
+lines had been left on the old cast iron   main. it hadn't been an issue for the previous 2 
+years, since both lines were being used together,   but this tie-in job was the first of the 
+entire project that would abandon part of   the original piping. within minutes 
+of isolating the old cast iron pipe,   its pressure began to drop. to a regulator, 
+there's no difference between a pressure drop   from high demands on the gas system and 
+a pressure drop from an abandoned line,   and they respond the same way in both cases: open 
+the valves. in a normal situation, the increased   gas flow would result in higher pressure in the 
+sensing lines, creating a feedback loop. but this   was not a normal situation. it's the equivalent 
+of putting your thermostat in the freezer. even   as pressure in the distribution system rose, 
+the pressure in the sensing lines continued to   drop with the abandoned line. the regulators, not 
+knowing any better, kept opening wider and wider,   eventually flooding the distribution system with 
+gas at pressures well above its maximum rating. by the time things went sideways, the 
+crew at the tie-in had taken most of   their equipment out of the excavation. but 
+as one worker was removing the last valve,   it blew off into his hand as 
+gas erupted from the hole.   the crew heard firefighters racing throughout the 
+neighborhood and saw the smoke from fires across   the horizon. the overpressure event had started a 
+chain of explosions, mostly from home appliances   that weren't designed for such enormous pressures. 
+the emergency response to the fires and explosions   strained the resources of local officials. 
+within minutes, the fire departments of lawrence,   andover, and north andover had deployed well 
+over 200 firefighters to the scenes of multiple   explosions and fires, and help from
+neighboring districts in massachusetts,   new hampshire, and maine would quickly follow. 
+the massachusetts emergency management agency   activated the statewide fire mobilization 
+plan, which brought in over a dozen task   forces in the state,'0 fire departments, and 
+140 law enforcement agencies. the electricity   was shut off to the area to limit sources 
+of ignition to help prevent further fires,   and of course, natural gas service was 
+shut off to just under 11,000 customers. by the end of the day, one person 
+was dead, 22 were injured, and over   50,000 people were evacuated from the 
+area. and while they were allowed back   into their homes after three days, many 
+were uninhabitable. even those lucky   enough to escape immediate fire damage 
+were faced with a lack of gas service   as miles of pipelines and appliances had to be 
+replaced. that process ended up taking months,   leaving residents without stoves, hot water, and 
+heaters in the chilly late fall in new england. ntsb had several recommendations stem from their 
+investigation. at the time of the disaster,   gas companies were exempt from state rules that 
+required the stamp of a licensed professional   engineer on project designs. less than three 
+months after ntsb recommended the exemption   be lifted, a bill was passed requiring a pe 
+stamp on all designs for natural gas systems,   providing the public with better assurance 
+that competent and qualified engineers would   be taking responsibility for these inherently 
+dangerous projects. and actually, ntsb issued   the same recommendation and sent letters to the 
+governors of 31 states with pe license exemptions,   but most of those states still don't require a 
+pe stamp on natural gas projects today. there   were recommendations about emergency 
+response as well, since this event   put the area's firefighters through a stress 
+test beyond what they had ever experienced. ntsb also addressed the lack of robustness of low 
+pressure gas systems where the only protection   against overpressurization is sensing lines on 
+regulators. it's easy to see in this disaster   how a single action of isolating a gas line 
+could get past the redundancy of having two   regulators in series and quickly lead to an 
+overpressure event. this situation of having   multiple system components fail in the same way 
+at the same time is called a common mode failure,   and you obviously never want that to happen 
+on critical and dangerous infrastructure like   natural gas lines. interestingly 
+and somewhat counterintuitively,   one solution to this problem is to convert 
+the low-pressure distribution system to one   that uses high pressure. because, in this kind of 
+system, every customer has their own regulator,   essentially eliminating the chance of a common 
+mode failure and widespread overpressure event. most importantly, the ntsb did not mince 
+words on who they found at fault for the   disaster. they were clear that the training 
+and qualification of the construction crew,   or the condition of the equipment at the winthrop 
+avenue regulator station were not factors in the   event. rather, they found that the probable 
+cause was columbia gas of massachusetts' weak   engineering management that did not adequately 
+plan, review, sequence, and oversee the project. to put it simply, they just forgot to include 
+moving the sensing lines when they were designing   the pipeline replacement project, and the 
+error wasn't caught during quality control or   constructability reviews. nisource, the parent 
+company of columbia gas (of massachusetts),   estimated claims related to the disaster 
+exceeded $1 billion, an incredible cost for   weak engineering management. ultimately, columbia 
+gas pleaded guilty to violating federal pipeline   safety laws and sold their distribution operations 
+in the state to another utility. they also did a   complete overhaul of their engineering 
+program and quality control methods. all those customers hooked up to natural 
+gas lines didn't have a say in how their   gas company was managed; they didn't have a 
+choice but to trust that those lines were safe;   and they probably didn't even understand the 
+possibility that those lines could overpressurize   and create a dangerous and deadly condition in 
+the place where they should have felt most safe:   their own homes. the event underscored the crucial 
+responsibility of engineers and (more importantly)   the catastrophic results when engineering systems 
+lack rigorous standards for public safety. just like natural gas projects require 
+strict oversight to protect the public,   the same is true for aviation. one example is 
+the tenerife airport disaster. why would a fully   loaded 747 venture onto the runway of a small 
+airport in the canary islands without permission,   leading to the deadliest crash in aviation 
+history? my fellow content creator, neo,   recently released a documentary about the disaster 
+with incredible 3d animations to tell the story.   maybe you've noticed what i have over the past few 
+years, which is that all my favorite tv networks   are just running reality shows, and the best 
+video content that i actually enjoy watching   is being made my independent creators. i won't 
+say it about myself, but i will say it about   brian from real engineering, sam from wendover 
+and half as interesting, reallifelore, and johnny   harris. they're all making videos that are more 
+fascinating and thought-provoking than any of   the old tv shows i miss. neos video (along with a 
+ton more excellent content) is only available on   nebula, the streaming platform built by and for 
+independent educations creators, including me. nebula is the answer to the question of what could 
+happen if the best channels on youtube didn't   have to cater to an algorithm. what if viewers 
+supported creators directly instead of supporting   their advertisers? and it just keeps getting 
+better and better: totally ad-free videos from   excellent educational channels, original series 
+and specials that can't be found anywhere else,   and even classes from your favorite creators 
+like devin from legal eagle and thomas frank.   and right now, you can pay just $30 for an 
+entire year's access if you use my link in the   description below. that's less than $3 a month. 
+my videos go live on nebula the day before they   come out on youtube. if watching videos like 
+this one is what you do for fun or to relax,   you should have the best viewing experience on 
+the internet, especially when it's practically   free like it is right now at the link below. thank 
+you for watching, and let me know what you think!

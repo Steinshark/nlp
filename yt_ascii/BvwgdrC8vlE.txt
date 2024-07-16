@@ -1,0 +1,173 @@
+is this the dumbest way of solving a maze? 
+we're starting at this orange point here   and we've got to find, like, how do we get 
+to the exit? and my idea is that i'm going   to let a gas go here and then you know at some 
+point one of the atoms of the gas is going to   reach the exit. (brady: just by sheer luck?)
+- by luck yeah. gonna be basically moving   randomly. if i do more and more 
+molecules than i would expect that   it would get- one would get there faster. 
+i've released a poisonous gas here and then   eventually like a canary dies over 
+here or something. and here they go,   so quite quickly they've spread out and they're 
+going and they've got a few going around here. after a while this is the one that's going to end 
+up winning; it it got out there first, and this   is the path that it took the whole time. spends 
+a bunch of wasted time in here but here you go,  you've got a solution. it does some silly things 
+like going up here when it didn't need to,  but you know   this is basically how to solve this maze.
+- (i love it matt. i love the thought of there)  (was that one molecule there that was destined 
+for greatness and it it didn't even know it   would be) (the one.)
+- right, yeah.  - (you know what it reminds me of? sperm 
+going to the egg. which sperm will become) (a human?)
+- it's totally like that,   yeah. and it's just pure luck right? i think 
+there's various metaphors that you can draw here,   like, you know everybody is just bumping around 
+randomly but the one person that you know   became a billionaire or something, 
+they wrote their autobiography,   how i got here all the great decisions i 
+made to beat everybody - it was just random. it's a bit of a sort of inside joke in that in 
+computer science there's all these different   algorithms for doing things efficiently and, 
+you know, solving mazes is a big example of   like where you might apply these algorithms.
+- (like the lightning algorithm we did in a   previous video?) right, exactly; and that was you 
+know finding the shortest path, like you find it   efficiently and what you get is the shortest path 
+from the cloud that seeds the lightning all the   way down to the ground. but here, well one thing 
+i've done is i've said the maze is actually going   to be this physical thing i don't- i've forgotten 
+about the concept of like cells of the maze and   their adjacency, like where you can get to from 
+each; and i've just said well there's a little   tiny molecule in there somewhere and it's moving 
+around it doesn't even know when it's left one   cell and it's gone into the 
+other. it's sort of a joke about   there might be like the most efficient way to do 
+something but, hey this works. and maybe it's not   the dumbest way because it does work right?
+you could either create a computer, like   write all the code to solve this program, 
+encode it in the transistors of the computer;   or i'm saying you know just release like a bad 
+smell. you could maybe take this solution that we   found and improve it. imagine that this orange 
+squiggly path is actually a piece of string,   just pull it tight and then it would be a 
+much better solution to the to the maze. (it would also be interesting to see if you 
+pulled that tight how long it is. how much)   (longer a path did it take than it had to?)
+- yeah, one thing about this this maze is   that it doesn't have any kind of loops around it,   and that's kind of by design. and that 
+means that works particularly well for   the string pulling type thing because 
+you're not going to get a knot anywhere  and you're just going to prob- you'll get the- you 
+will get the shortest path if you pull it tight.   another thing you could do is model the 
+interactions between molecules. each one is its   individual little thing, it doesn't know about all 
+the other molecules and it's just moving around;   in real life you might have some bouncing of those 
+and that's i guess is like pressure and that would   help it expand out from the beginning and give 
+you an even better solution, but obviously that's   harder to program because you gotta- am i bumping 
+into this one? am i bumping into that one? that   would be inefficient. and then another thing you 
+could do is like do some kind of fluid dynamics   maybe? so if you had like some wind, just blow 
+a hair dryer in here, it might help guide the   molecules out and the air from the hair dryer has 
+to escape out here eventually because of pressure.   that might give you a faster solution. the first 
+step is figuring out how to create a nice maze,   and i wanted that property where there's a 
+path between every single point in the maze   and there's not going to be any loops. 
+going to have a network of points on a grid;   eventually i want to figure out what are the walls 
+but i'm actually first going to think about what   are the paths that create the maze. what i 
+want is to say that there's a path between   all points and i'm just going to just start and 
+create random ones. so like, if i start drawing   in things here, what i'm doing is i'm adding edges 
+not randomly - i'll add an edge if it's not going to create a loop anywhere and i also want to 
+make sure that i reach every single point.   you know, maybe i go here and i have- go down here 
+and then here. these are paths; and now the walls   i could create walls that make these 
+valid paths but they're going to be   on a grid that's sort of offset from this 
+one. so for example i better have a wall   here, otherwise i should have had a line that 
+connected those two. i need a wall here -  i'm just blocking the stuff off that needs to 
+be blocked. but you can't go from here to here   without going around here, so there should be 
+a wall there as well. likewise there should be   a wall here, wall here; and now i'm just going 
+to enclose the whole thing. and then i'm going   to add a little like goal at the end. maybe you 
+start here, and so the maze is actually kind of an   artifact of me having found this network 
+of where you can go to from each point   which is called a tree. tree is just a network 
+where there's no loops in it. it means that you   end up having a nice maze, because if you have too 
+many edges then you don't have very many walls. in the code is i pick a width 
+and a height and i create this   fully connected graph here, so that is-
+i'm just saying like what is the grid graph? that   means a graph where everything is connected to 
+thing to the left, above, to the right, and down   but just for some fixed rectangular size. and then 
+i assigned a random number to each of those edges   and then i asked mathematica to find the tree 
+that spans all of those points - meaning it visits   all of the vertices there that has the smallest 
+total weight on all the edges. that's just a way   for it to come with a random maze each time. 
+so for example, this was a potential edge i   could have picked but maybe it had a weight of 
+100; that means it had a cost basically of 100   whereas this one had 1 so that's why i picked, you 
+know, these these ones, not that one. so if we do   that can you see we get this network of all 
+the paths that you can take from each point?   i then have a nice guarantee that i can put a 
+goal here and a start point there and i know   there's going to be a solution, because you can 
+get to anywhere in the maze from anywhere else.   so now i've just got to figure out the step i did 
+here when i went from the green pen to the brown   pen - what are the walls that make- make that? 
+not too much more code and you get this picture   here. so side by side here we've got the network 
+and we've got the walls that should create that   network. you can kind of see it looks right; so 
+for example here we've got a path from this point,   you can't get directly there you've got to go 
+up and around and down which is correct - yeah,   up and around and down. so that's how we've 
+created the the walls. now all we've got to   do is simulate molecules inside this environment.
+- (is that hard or easy?) uh it's just - yeah. it   is hard or easy. there's a few tricks you gotta 
+do to make it not just take forever; on the other   hand like i just gotta make one animation and 
+post it on my twitter so i don't really care if   it takes too long. so it's a bit of one of those 
+things where i could optimise it and make it very   fast or i could, you know, solve the maze in a 
+dumbest way. so i switched over to python to start   stimulating the molecules; here's a code that does 
+that. imagine at each point i'm trying to figure   out, i've got a molecule here i'm just going to 
+add a totally random direction. so each time it's   going to like take a tiny step in a new direction. 
+and i just- i need to make sure that i'm not going   to cross a wall. i end up here and then if i 
+go over here, hey that's a problem, i'm now   intersecting with the wall so i've got to go back.
+- (so these aren't like your) (famous bouncing balls that only change 
+direction when they hit a wall? they can   change direction) (whenever they want?)
+- they're moving every time step and that   that is what's called brownian motion or just a random walk. you know, molecules 
+dancing around; and then in real life that might   be because they're actually bouncing into smaller 
+molecules, like these might be some heavier gas   in just the air bumping into the small molecules 
+of the air, just making it look like hey they're   jittering around all the time. but i've got 
+jittering around randomly all the time, but also   i've got to make sure - don't go into a wall. if 
+it looks like you're going to go into a wall, just   reverse your direction and you won't hit the wall. 
+so i programmed it so that each point i know what   are the nearby walls around there, and then i do 
+some maths to say, hey am i actually intersecting?  so this block of code here, i'm saying i've got a 
+point p and i've got some sort of structure that   tells me what are the walls that i've got going 
+on, and i'm saying am i going to clip into the   walls or not? now i run the code and it will just 
+keep on simulating again and again and again. i   do them in big batches and then the first batch 
+that has a winner in it i just stop computation.   so i'll show you what that looks like.
+- (but surely every batch will   eventually have a winner?)
+- right, but i only- i do each batch for a fixed-   for a maximum length of time and then move on to 
+the next batch. so there i've kind of guessed.   i've said, you know, 10,000 steps or whatever 
+is probably going to be enough - or i've   kind of set a goal and i'm just going to 
+simulate enough until i get to a solution.  - (because presumably if you do an infinite 
+number of batches eventually you'll get)  (one particle that just by luck, just perfectly)
+- just goes the exact way, yeah, totally. i could   for example reject some of those solutions and 
+say ah that's not good enough, and keep going keep   going keep going - i'll leave my computer running 
+overnight. if i just run this, hopefully it still   works. i'm simulating a batch of i think 64 points 
+for 45,000 time steps and i've got a progress bar   saying this is how long it's going to take. we're 
+doing some screen recording to capture that,   so this is much slower than it usually 
+is, but yeah i mean i would just run this,   leave it - computer beeps when it's 
+find something and then i would bring   it back into mathematica and do the animation.
+let's look at how we do the- like draw everything   and draw the back trace and stuff. once we've 
+found a solution, my code there just outputs,   like here's all the paths, and i know that one of 
+them won in the end. so first of all i've got to   figure out what what is the molecule that won? and 
+also i've got to just draw them all going around   and everything like that. i'm loading in solutions 
+that were found. we ended up running'56   molecules would be in the animation, one of 
+them got to the end. what i did was i set   it up so that this is the y = 0 line; so i find a 
+solution just one that reaches a negative y value,   that's kind of an easy test for me. and 
+then this code here is doing the animation.   each molecule obviously just gets drawn as a 
+little point here. and then we've done that check   to see which is the one that reaches a negative 
+y value, and then that's the one that we've   realised is the winner and we trace it back to 
+the beginning. some people are like, well how do   you know that one was gonna win? like how did you 
+know to like put a circle around it? well actually   i just kept running this program and i logged 
+everything. when i'm creating these frames i'm   not running the simulation i'm just displaying the 
+simulation. the simulation as you say is a file   that has logged all the other movements.
+- (so you could open up like, you know,   a spreadsheet or a log) (that would 
+show the winning molecules path?)  - yeah that's right, i basically stored a 
+spreadsheet where i've got'56 different   molecules; and then for each one of them got 4500 
+(x,y) coordinates - just massive loads and loads   of numbers. - (you know what my question- next 
+question is don't you?) (i want to see the- i   want to see its log. i want to see the log of the 
+winning ball - is that even) (possible to find?)  - the log of the winning ball? yeah yeah 
+that's that's possible to find.  - (does he have a) (name or 
+a number that winning ball?)  - yeah he's got an index, so it's 
+1836. so if i look at the'36th  thing here - here are all the points that, so 
+the starting point was (1, 9) and then at the   end it's got a negative y value.
+- (that's his path.) - so it won.
+- (that's- that doesn't look very   complicated) (for how wiggly his path was.)
+- i've cut out 4489 other points. and you can see 
+that because here is its path.  - (yeah, got a bit stuck there 
+for a while) (didn't he?)  - totally stuck there. pick another number, 
+we could we could compare how it did?   (how did ball 1 do?)
+- yeah good good idea.   red is the winner and blue is the first one.
+- (so ball one got stuck up there and just   hung around there for ages.)
+- yeah that's right. ball 2 did that, ball 3 did this, and obviously 
+i kept simulating, kept simulating,   eventually i got to ball'36 in the last batch. 
+here's'35 - did that. each one is just totally   random. so if i change this slider, click, 
+here's all the different paths that were found.   (let's see if we can find a really 
+funny one where he got stuck badly.)  - that's not a great one,
+looks like it came down, was doing pretty straight   line stuff and then hung around in that area. 
+the other one didn't get very far, the scale is   changing because it's fitting, but it's obviously 
+just in the first 1, 2, 3, 4, 5, 6, 7, 8, 9ish.   (that's fascinating.)
+- and the winner.   the winner looks- i mean it's 
+still doing something pretty dumb. look at these people in the 
+gym, endlessly preening,   posing, and hopefully improving their bodies. go on big man! but do they ever give their 
+brain a workout? if so, their mental gymnasiums   should be this: brilliant. these courses, quizzes, 
+and collections of problems are barbells for your   brain. they're interactive, carefully designed, 
+and unlike a normal gym they're lots of fun.   so don't just sit there and let your brain 
+turn to mush; give it a workout with brilliant. there's new content being added all the time 
+and you can get 20% off a premium subscription   by going to brilliant.org/numberphile. you can 
+also give brilliant as a gift to other people.   they're great people at brilliant, and we 
+also appreciate that they love supporting us   here at numberphile, so thank you very much.

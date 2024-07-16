@@ -1,0 +1,156 @@
+a diamond is a carbon crystal. each carbon atom 
+inside is bonded to four other carbon atoms. this strong bond gives the 
+diamond its famous hardness as   well as its league-leading thermal conductivity. small impurities or lattice distortions in 
+the crystal give the diamond its colors. isolated nitrogen atoms make the diamond yellow. pairs of nitrogen atoms make 
+it brown, green, or violet. and distortions in the lattice crystal structure 
+give pink diamonds their wondrous pink. in the wild, diamonds are formed deep within 
+the earth - about 150 to 700 kilometers - over   a long period of time. they are then brought to 
+the earth's surface through volcanic eruptions. for millennia, the only way to get a 
+big pretty diamond was to randomly pick   them out of geological formations. panning the 
+rivers in the hope of finding something lucky. today, we can make a big, beautiful, perfect 
+diamond in a piece of semiconductor equipment.   in this video, we explore mpcvd processes for 
+diamond production. for gemstones and more. ## a brief history of synthetic diamond i covered the history of diamond 
+synthesis in the previous video. i recommend that you check that video 
+out but here is a drastic summary. in 1797 we discovered that diamonds were just 
+carbon, so scientists tried to heat charcoal   into diamond. that failed because we could 
+not get hot enough. happens to all of us. then in the early 1910s, we realized 
+that we did not have to replicate   all the conditions of the earth's 
+mantle to make a diamond. rather,   we can use high pressure in combination 
+with high heat to make a diamond. general electric first pioneered 
+what we now call the high pressure,   high temperature method or hpht in 1955. this method requires us to subject carbon to 2,200   degrees celsius of heat and pressures 
+of 1.5 million pounds per square inch. hpht methods started off quite crude,   but have gradually improved in both quality 
+and yield. by the 1990s, we had large,   gem-quality hpht diamonds in various colors 
+- though most come out yellow-orange. the hpht method remains the most economical 
+way to produce just any diamond. and there is   still a lot of research on it being 
+done. nevertheless, its high defect   rate and long cook time meant that it did not 
+much damage the natural gem diamond industry. ## cvd chemical vapor deposition or cvd 
+takes precursor materials in a   gaseous phase and deposits it onto a substrate. the semiconductor industry can use it to deposit   single-crystal layers of pure silicon 
+onto wafers. why not for diamonds too? to make cvd diamonds, we start with a gas-phase 
+carbon precursor, usually methane gas. this methane is mixed with hydrogen or oxygen. 
+this stabilizes the diamond's surface and   prevents the diamond from converting 
+into unwanted graphite impurities. then, we use some form of energy to "activate" 
+the precursor gases - basically decomposing   them into atomic parts. this energy can 
+be delivered in a variety of ways - heat,   flames, microwaves, or something else. so the gases decompose ... and then somehow, the carbon atoms recompose 
+themselves on the surface of a substrate - usually   a seed diamond introduced for this very 
+purpose - in the form of mire diamond. i say "somehow" because we remain not exactly 
+sure what is going on behind the scenes to cause   this and why. in part because we haven't yet 
+developed tools to observe it as it happens. how does it all work? nanomachines, 
+son. let's just accept it and move on. ## output and economics scientists have been demonstrating the growth 
+of diamond crystals with cvd since the 1950s. the prevailing issues are 
+output quality and scale. there is a quality gradient of cvd diamond 
+available. the highest quality are called   "optical" or "electronic" grade. 
+these are pure enough for us to take   advantage of the diamond's special 
+electrical and thermal properties. on the far other end, we have far 
+cheaper industrial-use diamond. today,   hpht-made diamond grit can be made for 
+less than $1 per carat. dead cheap. whatever we would use this diamond for, 
+we need to make it at scale. it is easy   to use some lab equipment to produce one 
+or even a few diamonds. the issue comes   about when we want to scale that up, which 
+brings new technical problems to overcome. in many ways, it is quite similar to 
+semiconductors. it is easy to make   a single perfect integrated circuit. the problem   is when we want to make millions 
+of perfect ics at a good price. the first successful deposition of diamond 
+at a practical rate - meaning more than   a micrometer an hour - occurred in the 
+mid-1970s by the soviet scientist b.v.   derjaguin. his success using a variety 
+of methods raised eyebrows in japan. the japanese took those methods and eventually 
+identified two of the major cvd methods used   in the lab-grown diamond industry today 
+- hot filament and microwave plasma cvd. ## hot filament
+let's discuss the first one. hot filament cvd injects energy into 
+the precursor gas mix using a very hot   tungsten filament - heated to something 
+like 2000 degrees celsius. there are a   variety of setups and arrangements for these 
+filaments - leading to a diversity of designs. hot filament cvd does work and is a pioneering 
+method. but there were several serious problems.   first, while it represented a breakthrough leap in 
+formation speed, it was still initially too slow. the first experiments produced a 
+growth rate of about 1 micrometer   per hour. assuming that you wanted a 
+nice gem diamond about 5 millimeters   tall - generally about 2 carats - that 
+will take 5,000 hours or 208 days. to speed things up, scientists 
+introduced nitrogen to the process.   but as i mentioned earlier, nitrogen 
+atoms make diamonds come out yellow. not that there's anything wrong with that.   yellow diamonds deserve the same 
+rights as all other diamonds. but a yellow diamond is not as 
+useful for electronics applications,   which was what the team at the time was going for. last and most seriously, there were concerns 
+about the filament. over time it might be   affected by carbon corrosion and heat. it 
+might start to warp and bend, affecting the   deposition rate. worse yet, the filament material 
+- tungsten - can contaminate the growing diamonds. ## mpcvd so today, the cvd method most often used 
+to create lab-grown diamonds is microwave   plasma cvd or mpcvd, representing 
+about 50% share of the market. one of the big benefits of the mpcvd method is   that it avoids the contamination issues 
+of having a filament inside the reactor. to make a diamond, we start with the substrate 
+- little seed diamonds that we will grow the   final thing on top of. they look like little 
+plates, but they indeed also made from diamond. a single chamber can accommodate up to 
+18 seeds all at once. the seeds all go   inside the reactor chamber, which 
+is then filled with the precursor   gas mix. we then bombard that mix 
+with high frequency microwaves. early prototypes used the same 
+2.45 gigahertz waves used for   commercial microwave ovens - largely due to the 
+availability of the tubes. i find that amusing. the microwaves ionize the gases' atoms, meaning 
+that they either lose or gain an electron as   those electrons energize. when a significant 
+percentage of the gas atoms become ionized,   we get a plasma. during deposition, we completely 
+immerse the substrates in this ball of plasma. if the substrate surface conditions are heated to 
+and maintained at a sufficiently high temperature,   then the precursors will settle on 
+it and then a diamond will grow. after a few days - how long it takes 
+depends on how large a diamond you   want - the diamonds come out in these silver 
+and clear platter-chunks. there are crusts   on their edges and sides. that 
+is all diamond dust and grit. you then use a laser to cut the 
+diamond platter into smaller pieces,   leaving you with these raw cubes. 
+these cubes are ready to go to a   jeweler for cutting and polishing 
+into a finished brilliant stone. speed of growth - especially pure, 
+defect-free growth - remains an   issue. but it is getting faster thanks 
+to improved reactor designs. furthermore,   we can ameliorate this by growing 
+diamonds in batches in parallel. ## gems? today, 2-carat diamond rings cost anywhere 
+near $5,000 or so a pop in costco. costco mentions that all of their diamonds 
+are "natural", which i presume to mean   "mined". it implies that only mined diamonds are 
+natural. but that should no longer be the case. in 2018, the us federal trade commission 
+amended its definition of "diamond" for   its jewelry guides. previously, the guides used 
+to include the word "natural" in the definition. but mpcvd and other lab-grown 
+diamonds have the same optical,   electrical, and physical properties as 
+the mined stuff. the ftc has decided that   adding the modifier "natural" 
+in there is no longer useful. the ftc also allowed for the use of the word 
+"cultured" to describe lab-grown diamonds. the   mined diamond industry fought this, recommending 
+that the ftc only reserve that word for pearls. they know what cultured pearls 
+eventually did to the natural   pearl industry. 99% of pearls sold today 
+are cultured - i did a video about it. widely accepted, cheap, perfect 
+cultured diamonds could similarly   overwhelm the mined diamond industry 
+and their substantially higher costs. in 2022, the global gemstone industry 
+generated about $30 billion in total   value. admittedly my sources for 
+this number are not the best. but the number seems pretty 
+reasonable considering that de beers,   the world's leading diamond company, 
+generated $6 billion in revenue in 2022. anyway, my point is that there is a lot 
+of money to be made here. and every year,   cvd diamond makers are improving the speed 
+and scale of growth. at the same time,   the public is warming up to these stones. the gap in prices between mined and cultured 
+gem diamonds is growing. people want cheaper   diamond jewelry, and cultured diamonds can take 
+them there. eventually the price gap will become   too compelling for consumers to ignore. and 
+i wonder what will happen to the market then. in a previous video, i mentioned that de 
+beers sees the writing on the wall. they   are transitioning from once controlling a raw 
+diamond cartel to controlling a jewelry brand.   in their vision, consumers will buy brands, 
+not stones. that is where the value will be. ## other applications considering the ongoing price pressure 
+issues in the cultured diamond market,   why study cvd diamond technology at all? right now, there are university 
+and industrial teams all over the   world still investing significant 
+money into diamond production. not because they want gemstones. but because 
+there is a larger opportunity in exploiting   the diamond's extreme electric, optical 
+and thermal properties. the first major   commercial use case for cvd diamonds 
+was not for rings, but heat spreaders. cultured, single-crystal diamond has the 
+highest known thermal conductivity of any   room temperature solid. in some cases 
+outperforming traditional materials   like copper and silicon carbide 
+by a factor of three or more. this makes them very useful for heat 
+sinks and heat spreaders. these are   structures for transferring heat away from 
+its source to cooler areas elsewhere. since   heat is the single biggest reason for 
+electronics failure, it's a big deal. at&t commissioned the first cvd-diamond based 
+heat spreaders for cooling high-powered laser   diode arrays, which send signals through 
+under-sea optical cables. cvd diamond heat   spreaders helped shrink the package 
+and extend its operating lifetime. this funded the development of 
+new techniques to polish and cut   cvd diamonds as well as metallization 
+techniques - which involves applying   metal layers onto the diamond for 
+mounting into electronic devices. the heat spreading benefits of cvd diamond 
+have been mooted for advanced packages in   semiconductors as well. considering 
+the massive thermal issues associated   with today's 3d stacked chips, i would not 
+be surprised if the semiconductor-makers   aren't already sniffing around cvd 
+diamond heat spreaders for options. if you don't think it's a big opportunity,   then i just want to remind you that 
+synopsys paid $35 billion for an eda   software modeling thermal interactions in such 
+3d stacked chips. there is something here. ## conclusion before we conclude, i want to thank ropac, 
+a taiwanese company based in taichung,   for giving me access to their 
+mpcvd equipment for filming. as well as their openness in answering questions. 
+an incredible experience to see it all in action. if you are interested in their technology, 
+and maybe even buying one of their mpcvd   reactor tools for your diamond 
+lab, get in touch with them. for guys like ropac, cvd diamonds have more 
+potential than just rings and even heat spreaders. cvd diamonds offer tantalizing possibilities 
+in things as varied as power semiconductors,   precision optical lens for lasers,   and even detector materials for 
+fusion plasma measurement tools. the key goal is to find an end-user 
+application that can only be made   possible with cvd diamond. not one that 
+merely replaces an existing material. that   would be the true diamond in the rough that 
+all the equipment-makers are searching for.

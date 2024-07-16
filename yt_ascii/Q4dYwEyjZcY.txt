@@ -1,0 +1,131 @@
+the era is the early 1990s. i was aware of sgml - aware of, if you like, the very 
+technical usage of it in things like the text encoding initiative. i'd heard about tim berners-lee's usage of sgml 
+technology for web page markup, in the unfortunately named 'html'. so much better if he'd called it just 'hypertext 
+markup', htm, or even, as somebody said, 'tim's own tagset', 
+tot - how about that! but not 'ml' at the end! you have to remember that at exactly the same time,
+almost, in the early '90s, pdf came about. and i was doing a lot of work with adobe. so there was this 'european hypertext' meeting in
+september 1994, sponsored by the association for computing machinery, 
+which is basically our professional body in the states. and i thought: "wwell, it's all going to be about sgml, 
+html, and all this kind of thing, but just to say that there are other notations for documents, 
+and other things where you can embed hyperlinks, even, i want to talk about pdf!" because my group here was, i think, the uk's first ever beta 
+test site for pdf. we've got a lot of experience. and i thought: "just as balance, i'll put in a paper about 
+the use of pdf", and it was accepted, so, i think the organisers realised you needed a bit of 
+a balancing discussion. i gave my talk and it went down very well, although i think some of the more 'who cares about 
+appearance?' brigade were... "pdf, it's so messy! it looks beautiful, but inside 
+it's a mess! it needs more structure!" they just wanted the markup. the fact that whether you want to do it in times roman 
+or palatino or optima, "that's for graphics artists to worry about. all we're concerned is... y'know ... it's a heading." so at the end of my talk, i had a lot of very interesting 
+questions - because pdf was pretty new technology. but marching up the aisle towards me - and i did recognise 
+him from photographs, it's the only time we've ever met - was tim berners-lee, 
+now sir tim. he came up, shook my hand, said "i really enjoyed that." he said, "you know, it won't go down well with everybody here, but i think we're in for a document universe where we've got 
+to try and make detailed, tight appearance, co-exist with structure, and it's going to be a struggle." how right he was! we're still struggling with those 
+20, 30 years later. so he said, "you know all this flak i've been getting about 
+calling it html, and why couldn't i've done my homework more thoroughly 
+before i defined it? we're having a panel session, we're going to try and 
+get all these issues sorted out, would you like to come along?"
+so i said "yeah, sure, fine." so i went into this big hall and there were parallel 
+panel sessions, but this was by far and away the most popular. believe me, viewers, i was there. it was wonderful! at the front were... people... two rival armies almost! standing up at the front, making their pitch. and i classified them straight away as either being "theologians" or "browser pragmatists". and you've got to remember that this was two years 
+after tim first did the html thing. and companies like netscape, who were the leaders 
+at the time, and, getting in on the act, internet explorer from 
+microsoft, saw immediately the potential of this standardised 
+markup, which they hoped really was standardised -- or maybe they didn't hope, because it became very clear that netscape and ie 
+[internet explorer] having got hold of this, would love to be in a market-dominant position. you know, extra tags were needed inside this html it's good for a start, but there's all sorts of 
+things you could do with it. let's add a few more tags! and it goes without saying that the netscape additions were totally different 
+to the internet explorer additions, and this whole thing that we covered in the last 
+video about the underlying technology of sgml allowing you to omit tags so long as you thought 
+it was safe to do so - well, guess what? netscape and internet explorer had different 
+omitability specifications. and one way or another, it meant that a thing 
+that worked beautifully in netscape was going to fall over - all over the place! -
+in internet explorer. what was to be done about this?
+there was no standards body at the time. so... they were doing their own thing, 
+but in the meantime, the opposing army was a bunch of people 
+who'd been with sgml ever since day one, 
+and loved it dearly, and were very fond of carrying around this book, ['sgml handbook' - charles f. goldfarb]
+as if it was a sort of... some kind of precious 
+holy book. ['sgml handbook' - charles f. goldfarb]
+this had the full spec. ['sgml handbook' - charles f. goldfarb]
+things really started going downhill when one of the theologians held this up, pointed 
+at the chap from netscape and said, "if only you'd read this carefully from cover to 
+cover before you wrote a single line of code, we'd be in a lot better state than we are now!" oh boy, yes!
+and of course, there was the immediate response, saying "some of us, buddy, don't have ten years 
+to take in all of this stuff!" and then it got even worse, because they said, "the difficulty that you people are in, ie 
+and netscape with all this, you know, it took tim a while for us to convince him, you must give a spec of when tags are omissible,
+you must give the spec of what's a legal tag" we call this a dtd - a document type definition. "such a shame that people never thought to write 
+one of these properly before they started to code!" and so the guy said, "look, are you seriously saying that it's not just checking whether this markup 
+inside the web page forms a tree and a sequence, you want us to be looking, all the time, at the 
+tagset spec to see what's omissible, and what isn't?" "yes, of course!" said the theologians -
+you know, in unison - "of course! you keep the dtd with you while you are parsing."
+the man from netscape did a john mcenroe! voiceover (mcenroe): "you can't be serious, man.
+you cannot be serious!" >> dfb: "you cannot be serious! you want me to be looking 
+over my shoulder all the time at the language spec while 
+i'm just trying to display something?" "oh by the way..." said lead theologian,
+"something else we ought to mention. "when you get a partly correct web page, but with mistakes... ...you're displaying part of it to people!
+don't do that!" total disbelief from the other camp,
+jaws dropping - "what do you want us to do?" "easy! behave like a compiler. issue an 
+error report. say, 'error in web page:  tag omitted 
+when this is not allowed' or something like this. just like a compiler, 
+you know." "above all," said the high priest, "you display nothing! because if you display something, when it's 
+incorrect, it leads to bad habits." [laughing] and i think as you've said to me many a time, 
+sean, what kind of real world were these people living in? because, of course, with this being an interpreted 
+system, everybody's very excited about web pages, you are going to go for the browser manufacturer 
+who tolerates your inadequacies, because we're talking about hand-coded web pages now. if it tolerates you and gives you some idea of 
+what's happening and you can sort of see where i must've gone wrong, fine! but to sort of end up with a great long list of 
+compiler error messages saying "your page is deficient. try again. recompile",
+and so on, it's obviously not gonna go down well. >> sean: i can imagine if safari, firefox or chrome 
+just didn't display anything because there was a mistake on it,
+i'm not gonna use that browser. >> dfb: no! exactly so! and i mean the other thing that the high priests 
+were getting really upset about was - we all know that inside a well-constructed 
+web page - you open a , and you close a 
+[with a forward stroke] for a paragraph. but inside that, you say,
+"oh i want all of this to be in bold." so you open up a bold tag, and you should 
+close the bold tag. but what happens if you do it in the wrong order? you open a , you open a ,    
+but then instead of closing  and closing ,    
+ 
+...you do that.    
+ 
+that's called an overlapping hierarchy - you turn off 'paragraph' before you turn off 'bold',
+it should be the other way around. again, absolute fury from the theologians -
+"you are allowing overlapping hierarchies! 
+just ignoring..." ...and all this kind of stuff(!)
+i mean... oh, it was wonderful! and to my great dismay, i actually had to leave 
+the meeting early. believe it or not, later that day, i was flying down 
+from edinburgh to birmingham because i was down, somewhere, to give a talk about pdf. it was essentially a very similar one to the one 
+i'd given in edinburgh. so i went away and just thought, "this is incredible",
+but realising this was a watershed. it was really the meeting to be at and when you 
+looked at the title of it, y'know  - 'is it poison or panacea', html? panacea, of course, is a greek word, i think,
+for a cure-all, isn't it? >> sean: yeah, that's it, yeah.
+>> dfb: yeah 'cure for all ills', i think, 
+is what it means, and it was a very good choice of title, and it 
+was the most significant confrontation i've think 
+i've ever been to in my life. and i think tim sent me an email afterwards, or 
+maybe somebody told me about this, but anyway, i got a message but i had to go to birmingham, cursing 
+having to get the plane. and i sort of said, "what happened?" he said: "easy!" [inhales] "told them all they were all 
+correct, and took them off to the pub, and bought lots of pints of beer. we had a very good meeting that went on into the evening." and what tim asked was for jon bosak of sun microsystems and tim bray, a very respected sgml user and guru, to please lead a committee of experts -
+first of all, actually for html itself - "please will you write me a dtd?
+i know i should've done one, but is it possible to write a dtd that makes 
+it sgml compliant? but then, can you tackle the problem of saying 
+sgml is problematical because it allows omitted end tags?" plus all sorts of other things, minor things. can you within' months, no more, do a very quick report 
+on how to do a subset of full sgml that's cleaner, which insists on end-tags being there, which doesn't allow - as sgml does - for the fact that  
+in capitals as being treated the same as  in lower-case, this is a hangover from punch card days, you see, 
+where everything tended to end up in upper case anyway, and all sorts of horrendous things - you could put pointy 
+bracket comments in the middle of a tag declaration?" various other more specialised nightmares which i'll 
+put out for you in accompanying notes to go with this video. and basically, it was agreed - "we've got to get this 
+out quickly" - what came to be known as xml. and they were as good as their word. i think it was 
+1996 when the first xml draft spec was delivered. they came up with two things: xml - which is a subset, 
+the clean, abstract subset - but the second thing they did while they were at it was 
+to say "right, we've done you a dtd for the sgml version of html, "we wrote you the dtd, tim, that you should've years ago, "but just notice how much cleaner and nicer the tag set 
+spec is when we do it with xml and we don't let omitted end tags happen, ever!"
+and everybody was convinced, and said, "oh, who cares about extra disk space? 
+it doesn't cost anything these days." >> sean: these kind of conferences and panel discussions 
+and confrontation, do they accomplish as much as a night in the pub? >> dfb: [laughs] i think you needed both. you needed the full and frank exchange of opinions, but then you needed a calming-down period with lots 
+of beer in the pub, and i think the assertion that actually there was 
+right on both sides is absolutely correct, a lot of good lessons were learned from that, yeah. i think it was tim and others, but they chose well in 
+asking jon bosak of sun, and tim bray, some very respected authorities to actually try and 
+get the basic tagset technology sorted, the xml to be a proper subset of sgml, and in one of the requirements spec it says,
+"brevity is to be of minimal importance." in other words: "don't go bananas about missing out 
+all your end tags because it halves the size of your files. we don't care any more. if they're tough to parse, fine." and the thing they ended up with in xml was what the browser 
+people wanted all along. to say, "i don't need to know the full tag set spec in 
+the first instance, i just want to check if what you've given me - that  all 
+the tags match and it's a tree? i don't care what it says in the tags, but do they match 
+up correctly to form a tree structure? i don't need to have the dtd to tell if it's a tree 
+structure, whereas with sgml you did." so there we are. the power of several pints of beer, 
+isn't it wonderful?

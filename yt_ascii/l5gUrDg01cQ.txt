@@ -1,0 +1,119 @@
+this is part two of a video about two candles in a 
+cake, i imagine it will make more sense if you've   seen part one, so check out those links. real 
+cakes are not linear, unless they're battenberg   cakes and then they've got a battenberg- 
+the linear thing and there's a tradition of   mathematical puzzles with battenberg cakes; but 
+anyway real cakes look more like this, this is a   nice lemon drizzle i appreciate your choice.
+- (we did- by the way) (everyone,   we did buy a battenberg. we did buy a 
+battenberg, we're not using this one.)  - we'll solve some other mathematical puzzles 
+with that one or just eat it. i wanted to upgrade-   because the- like the original puzzle was twigs 
+and you don't upgrade a twig to a two-dimensional   twig, so it's nice to comment that upgrading a 
+puzzle purely for aesthetic things to set it as   a nice puzzle also had mathematical consequences. 
+i've got to put a random candle and a random cut   on a two-dimensional surface and then suddenly 
+it's less obvious to me how you put a candle   or a cut on a two-dimensional thing. before i had 
+many panics about this, i thought, i'll just run   a simulation rather than trying to solve it on a 
+two-dimensional cake. so i got a geogebra file to   do a square cake. it was easier to draw before 
+you criticise my model. in hindsight i'm going   to mention very carefully how i chose where the 
+random things go, but i didn't think hard about it   at the start, i just picked a random x coordinate 
+a random y coordinate for each of the candles and   for the cut i picked a random x and y and a random 
+angle. that's definitely a random cut and i was   fine with that and i ran my simulation; which i 
+haven't i haven't made it look particularly pretty   but if i do run it again it ends up converging 
+to about a third again. and i was like, well,   what's really nice about the one dimensional 
+one, it upgrades to a two dimensional one and   cakes work and this is this is just above a third 
+at the moment but it's 0.3 something- fine. and i   went and did a talk about this at mathsjam annual 
+weekend and everyone was nice about it we had nice   conversations. and in the back of my head i was 
+like, this is a little mathematical bug saying   are you sure you know what you mean by random 
+when you're in not just a uniform distribution?   and i wasn't sure and i didn't think about it 
+because i was kind of naively lulled into a false   sense of security because the number was what 
+i wanted. but it turns out there are other ways   to randomly assign a cut, and if this is sounding 
+familiar with something i've alluded to earlier,  your conversation with grant about bertrand's 
+paradox was precisely about pick a random cut   or chord on a circle. so forget the square cake, 
+which we could go and do the model with again,   but let's upgrade to a real cake, definitely 
+a circle and i've got to put the candles on   at random. and actually i'm happy enough that 
+choosing a place for these to go at random is   actually doable, although you can do it in several 
+methods and it's not obvious which one's best. let's just spray points on like i did 
+before, random x and random y coordinate,   and if they're outside the circle reject them. so 
+we'll get a random point on the cake and that's a   good way of uniformly spreading the points out. 
+but it's the cut that's a problem, because what   we're doing is randomly choosing a chord. pick two 
+random end points like this point and this point   that would define that cut, because any chord is 
+defined by the two endpoints. alternatively though   you could pick a random point in the circle, a 
+bit like i did with a candle like this one, and   say that's the midpoint of a chord and any point 
+uniquely defines a chord in that way. but it's a   different distribution of cuts and this is where 
+you start getting into deep water. the nature of   random is not as simple as you want it to be,
+go and watch grant's video for a big discussion   about it. but what i did do was simulate the 
+cake and candles cut problem with round cakes   and several different choices of how to do a 
+random chord. i really enjoyed the conversation   you had with grant because you were annoyed that 
+it wasn't well defined and i think mathematicians   do have that sense of annoyance, you want things 
+to be neat, but probability questions are often   more philosophical than we want them to 
+be. so this is a video of me choosing   the two endpoints on the circumference and the 
+orange trace is where the chords gone- i don't   know why i picked this colour scheme but i liked 
+it and i ended up just mesmerized by the image.   the thing is the distribution is is maybe not what 
+you expected, it's kind of clustering towards the   edges and the middle is slightly less sparse but 
+it is quite uniform, so maybe this is arguably   a good way of getting uniform cuts. but there's 
+another way of choosing the cut; it's not a third,   it's actually settling down to be about 0.16, 
+that was after 10,000 attempts. so i believe this,   if you choose a cut by this method - which if 
+we're gonna do it for real life the real context   would be like we'd put a spinner, we'd do a couple 
+of spinners in the middle, and wherever it pointed   to we mark an end point and we cut there. it 
+looks like we get- about 0.16 of the time we'd get   a candle on each piece. and that's not a third. 
+it's not even close. which kind of upsets me- (brady: it's almost a half of a third.)
+- it's almost a half of a third.   is it near to an eighth as well? but this is why 
+the monte carlo methods and the simulations don't   give you that sort of theoretical- they confirm 
+theory quite nicely but this time it means my   theoretical thing has just not matured enough to 
+sort it out. and if you run different simulations,   here are just the pictures of what happens if you 
+choose the cuts in different ways. so this cut is   where you choose a random midpoint for the chord, 
+and you see it hardly ever cuts or just less often   cuts near the middle. and that's a good reason why 
+we're getting different probabilities, this one   ends up being settling down to about 0.19. this 
+one over here is choosing a random radial point,   so that's choosing some distance along a radius 
+and there's some angle around the centre to   go and using that as the midpoint. different 
+distribution again. and this one's doing what i   did on my naive version of the square, a random 
+point and random angle adding more randomness.   this one ends up to be 0.3, close to a third but 
+not close enough. this one ends up being 0.325.   my main conclusion of this is that i don't know 
+what's going on. and it's sometimes nice to be   mystified as a mathematician and realise that 
+the real world of random distributions in two   dimensions, and in situations like grant discusses 
+in this video, is more complicated than you want   it to be. we need to be careful about probability. 
+i think in summary though, what i liked about this   problem is that we took a basic twig, turned it 
+into a cake problem, there's a nice lesson about   solving things in two ways but there's also 
+deeper water. and you get a glimpse of how   mathematicians work, they start with a simple 
+problem and you realise that you tweak one part   of the model and things get more complicated. hey, 
+that's where we get our fun out as mathematicians.  - (it wouldn't be super hard for 
+one to do the mathematics of) (what the probabilities are once 
+you decide your definition?)  - correct. i mean-
+- (you haven't done that?)   i just haven't done it yeah.
+- (but the problem is,   which definition is truly random.)
+- yeah and that's the alarming thing,   it feels like surely that one of these is 
+better, but it's not clear that it is. you   need to be precise about how you're modelling the 
+real world because the real world is complicated.   (what's your what's your personal preference for 
+what counts as the truly random cut of the cake?)   let me answer that by the pictures. if you look 
+at these it doesn't feel like this is distributing   cuts fairly, maybe what we call uniformly? it 
+feels like a random method, and that's the random   midpoint. this one- they're subtly different, 
+this one is clustering towards the edges a   little bit but not as much as this one; whereas 
+this one feels like it's coloured in the circle.  and that was me picking a random point by some 
+method and a random angle, and maybe that double   random application makes it look more uniform. it 
+also backs me up and says it's roughly a third.  but i'm really aware you're saying that's 
+the correct one because it's tempting to-   you want to believe the answers that you 
+think are consistent and there's no guarantee   the reality works like that.
+- (and who's to say that when you   cut a cake randomly into all 
+the cuts there wouldn't be like)   (a little hole in the middle like?)
+- and actually this is where probability   questions-
+- (and maybe) (the knife would touch the 
+middle less often when you-)  - it depends how you're going to randomly cut 
+it. if you've got without- briefing people on   the complexities here, you just gave them a 
+knife and a cake and said, right i want you to   repeatedly cut it at random, how would they do it? 
+i think they'd hold it from one side and then just   like hack at it and we know actually that it's not 
+going to be random, because it's all going to come   from probably this end point and we're going to 
+be spinning around here. if they thought about it   maybe they'd do the double spinner approach and 
+pick two end points but that feels like a lot   of work; or you get a - what do they call it - a 
+lazy susan? put the cake on it, spin that round,   stop it and then go - if this was cranked up to 
+about 90 miles an hour it would be a more random   demonstration of picking a random angle to cut. 
+shall i close my eyes and wait until i have no   idea where the candles? how long are we waiting?
+- (hang on i'll do a turn you haven't seen as   well just to random up a bit more.)
+(all right let's see, there we go.)  - the lengths we go to for maths.
+- (go ahead.) if i slice this down and miss and just   break your turn table how's that gonna-?
+- (slice gently, make sure you hit the cake.)  say when - when - we're done. ah - we're 
+between the candles! what are the chances?   don't answer that.
+- (just, only just.)  - yeah the the point candle 
+model was nearly not sufficient. now ben's got a deep video, and i mean 
+really deep, about how he visualised and   programmed some of this stuff on his own 
+channel. if you'd like to check it out  well there'll be links on the screen, down 
+in the description, all the usual places. and you might like to reflect on why that
+is, but i really like- this is- i just really   like the way this looks. to be honest this is 
+what i was going for in the entire video here.

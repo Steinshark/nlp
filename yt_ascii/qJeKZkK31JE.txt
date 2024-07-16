@@ -1,0 +1,114 @@
+(machine popping) - go on,
+get on in there little doggy. - (laughing) what? - get on in there little doggy. - we're back at my new house. aka the construction zone with another big update for you guys. we've talked about smart-ifying the hvac, the lighting. i mean, heck, we've even talked about energy monitoring, leak detection. which probably leaves you guys wondering, when are you gonna to show off your sick freaking wi-fi setup? (light, energetic music) today. with the help of ruckus, who sent over not only this, but another five of their wi-fi six access points and ubiquiti, who provided the poe switch that's gonna power it all. we are going to be installing
+what is quite possibly the sickest possible wi-fi set up in my new place. like seriously, this is like over 10 grand of the best wi-fi gear that money can buy. just like money can buy this
+sponsor spot from glasswire. with glasswire you can
+keep track of weird stuff that's connecting to your pc,
+even when you're not using it. if a strange device joins your wi-fi, you'll be notified instantly. so don't wait. get 25% off today using code "linus" at the link in the video description. (pop music growing louder) this is the biggest wireless access point i think i've ever seen. and look at the cooling on the back of it. it can suck back what? 55 watts - something like that, with
+the poe output on. yeah. - (laughing) that's crazy. - do you need an adult
+to hold it up for you? - but before we get into the new gear, i need to give you guys
+a bit of backstory. literally six years ago, i treated myself to a
+thousand dollar ruckus r700 with the intention of it being my end game wireless access point. i basically just set it up with the super bare bones
+configuration it had when it was not controlled
+by their management hardware. and i never touched it again. it was that rock solid. i seriously got more
+enjoyment out of that thing than i would have out of
+a titan graphics card. fast forward to last year though, and i had been getting a
+little fed up with running a single ap and not really
+having usable reception in either my front or my backyard. so i bit the bullet and along with overhauling
+my 10 gig networking, i installed a completely overkill ubiquiti unifi wi-fi setup. that was supposed to be endgame 2.0. unfortunately, this newer setup ended up having connectivity issues, particularly on certain
+devices like my lg smart tv. so after replacing some of the devices, updating all the firmware, replacing a whole bunch of the cables, i just i give up. the best experience
+i've ever had with wi-fi has been with ruckus. so we're going to keep
+using unifi at the office, but here at home, unifi switches, unifi cameras, they make really great stuff, but for wi-fi, (knocking roof) we're cranking it up to 11. this is full 11 boys. of course, you're probably wondering what kind of wi-fi upgrade vlog is this, if you've already
+installed the access point? well, here's the thing. my old house was around 2000 square feet and was easily serviced with
+two of ubiquiti's xg series, or before that, a single ruckus r700. my new house is more
+than three times the size with a big backyard, a long front driveway that i'm going to want
+wi-fi reception from, so that i can control
+my smart garage doors. and, on top of all of that, concrete between each of the floors
+due to the in-floor heating, which tends to seriously
+reduce your signal strength. which raised the question, how do you even figure out
+how much access point you need for a space like this, aside from just making an educated guess? well, there are a few online tools that allow you to upload a
+floor plan of your house, trace out the walls and then play around with the positioning
+of your access points. ruckus' tool, unfortunately,
+was a bit cludgie, so we actually ended up using ubiquiti's unified design center and settled on a plan with
+two aps on the upper floor, two on the ground floor, one in the basement, one in the garage and two outside, bringing us to a grand total of, oh, i got the number wrong before, eight. eight access points. (quiet laughing) sheesh. let's start with our
+outdoor access points. we settled for t710s due
+to availability issues for the t750, with the
+main drawback being that, okay, it can only support, what is it about 500 clients
+instead of a thousand clients? - and it's wi-fi 5. - and it's wi-fi 5 rather than wi-fi 6. but this thing is still absolutely crazy. so you can decide, okay, do you want to have power over ethernet and do your networking and power that way? do you want to run sfp to it and then plug it into ac power? these things are designed really more for like stadium wi-fi,
+- or like a transit station. - yeah or something like an airport. - (laughs) yeah. - so we'll be putting
+one of these in the front and one of these in the back of the house. these are all about getting that range without the brick or concrete in the walls interfering with the signal strength. - you put the twisty on the, on the cord. you wrap it in the nubbin. - obviously it would be a big problem if water got into this connection here - (laughs) - that's putting it mildly. - there you go. - now with the rubber stopper on here, you click in the ethernet cable. there we go. then push in the rubber stopper and tighten this boy up. we're still going to want
+to leave a little bit of kind of a loop at the bottom of the cable. that's gonna allow any, uh, you know, rain or condensation
+or any kind of moisture that gets on this cable,
+whether it's here or here to drip off the cable,
+rather than making its way up into the connection and
+causing it to corrode. i am so glad we had a low
+voltage contractor come in and wire this place up, man. there's like, what is it like 50, 60 runs? (high-pitched robotic tune) what is that? (laughing) - we have a tone and test kit that we use to trace cables at the office, but the toner is dead. i forgot that the fluke can do tones and it has like a selection of songs. (high-pitched robotic song) - all right, all right, all right, let's trace the cable. - they're like such nice songs. that's one's like (siren wailing). - all right, let's go find it. - well the only way we're
+not going to find this is if it doesn't come down here yet. (laughing) (quiet machine buzzing) - not looking that great so far. - there's a whole other bundle. chill out. (quiet machine buzzing) - hey. - because we're in the mechanical room, we're going to terminate
+to a female connector. so this is going to go on a patch panel when there's a rack in here at some point in the future. so it's just a bit of a different process. let me just get one of them in there. then we can go ahead and
+line up all the rest of them. (machine clicking) oh, actually, no, we
+don't need the tester. we can just plug this
+right into the switch. do you have a patch kit? yes, you do. awesome. thank you. - speaking of switch, we actually already had
+this one lying around. you're going to get a different one, but - oh.
+- we need more ports. - ah, that makes sense. - you use the right hand ports. - ugh yeah. so these are poe plus plus. let's go back up and give it a shot. okay. the power leds blinking now. it's i think it's just booting up. - okay here. - sick. - it's drawing 4.4 watts right now. - cool. - i think we can see it
+in the unleashed one yet. oh, i think so. (inaudible) it says
+it's offline right now. - yeah it might just need a bit. yeah i think it's just booting up ruckus unleashed was something that didn't exist back
+when i bought my r 700, but basically it's their response to lower cost site, wi-fi management, like unifi. so it doesn't have the
+same level of control as if you had a zone controller, but it's not the kind of thing that you'd need for a home or even a small or medium-sized
+business, in many cases. and it means that you don't
+have to buy a zone controller or pay for any ongoing costs. it's just the cost of the
+hardware. and then that's it. okay, so where do we
+want this stupid thing? - well, you're you're on a pot light now. - no, no, i got this. - sometimes, do you wish
+you were a taller guy? - no, i wish i had a
+taller ladder. that's all. (drill buzzing) (man grunting) oh it's not that straight. you guys, - it looks pretty
+straight from, from here. - i can't believe i put that
+on the front of my house. okay my wi-fi from here better be amazing. - (laughs) that's so (tone beeping) ugly. 700 up. i got to walk
+down the street though. okay. we're probably a good 50 feet from the house right now. i see i have three
+instead of four bars now. this is on 5g mind you. (laughs) how's 400 down from here? (laughing) let's go further. - holy bananas. - holy crap. your neighbors are going to hate you. 280? 285. (shouting) 290. you can definitely see that our phone is starting to be part of the problem. our upload is only 170 download 300. he's still going. let's go. - we're on 2.4 gigahertz. obviously, at this kind of range, i got 151 milliseconds of jitter here. - really? - point three megabit per second. but hey, we're like almost a block away. (laughing) i'm so glad the indoor ones look better than the outdoor ones. - pretty sure - these are fine. not only are they better looking, they're like way smaller. so these are ruckus r 750's. these are their top of the line. so these are wi-fi 6, capable of sustaining like a
+thousand clients per device. and what we're expecting
+is single client speeds in the neighborhood of like 7, 800 megabit per second. what we could have done was taken the three floors and gone one for this floor on the side, one for this floor on this side and one for this floor on this side. if we were trying to save a buck that would have totally gotten us covered. - but that's lame. - but, if we want every room in the house to have balling wi-fi, i think what is it? two, two, and then one or something like that. - there's eight access points. two outside
+- yeah. - six inside. (both laughing) tone generator. analog tone. all right. (robotic music) - yes.
+- yeah. - hey, there it is. this is nice cable. it's
+really easy to work with. - and it's color-coded properly. - actually, we owe infinite
+cables a shout out anyway, in this video, don't we? - yeah.
+- yeah they gave me a discount on the cabling for my house.
+- i just think this is a bit of an understatement. - thanks. infinite cables. appreciate you fam. (machine popping) go on get in there little doggy. what? - get on in there little doggy. - and it's lit. - so we got to do two more. - have these already been - it'll auti- okay the cool thing about unleash is it automatically adopts ap's. - it'll just grab them?
+- it'll just grab them. so now that we have one
+set up as our master and then it's got automatic fail over, it will just grab these new ones. as soon as we plug them in. - this is awesome. it just shows up. boom. online. no clients. so one challenge there's supposed to be
+a wireless access point at the other end of this hallway. is that right?
+- no, there's one supposed to be one right here.
+- oh, just right outside. - but it's not punched through right now. - but it it's not through the ceiling yet. um, so we were kind of thinking maybe we'll just hook up to
+this one, as a place holder or we could use that one? - or should we mount it? - we could just put it like. just, here. (drilling) good enough. - aw, come on. - you want me to get the stool? - no, i got this.
+(laughing) i will not be defeated by this. - you ever wish you were
+just like, six inches taller? - okay (laughing) - wait, this isn't even
+anywhere close to reaching that. - that's why there's a patch cable. that's why we're putting
+the female end on it. - ah. there ya go. (man humming) (slow music) (machine whirring) - i wish i (tone beeping) put them here. i took the tone off. (giggles) (machine whirring) (robotic high-pitched song) - got it. - very close actually. (shouting) okay. (shouting) i got it. - there we go. - there you go. see you later. - until the master, you know what? the living room grabbed
+both of us right now. so i should have a look at what our speed would be like if we didn't put a second ap down here. - i'm still not entirely
+convinced that the concrete actually makes that much
+of a difference, but. - all right. here we go. i mean, it's pretty thick. it's like a few inches thick. oh, hold on. here we go. okay.
+- (laughing) well this might not be the most
+necessary access point ever. - should we just leave it then? - i don't know. - we'll go try it over there. (man imitating siren wailing) - yeah. we're over 400 down in this corner over here. (laughing)
+(slow music) okay. but what about the theater room? - i don't know. - yeah. we're like 90, a hundred in here. - only 90? - yeah, because of the shape of the house, - right. - it's actually going through like dirt. now it's time for the final test. there's still two aps missing. one in the garage. and one in the living room, but we've got six up and we're ready to before and after, compare to our stock wi-fi
+access point from telus. oh wow. even downstairs. like not that far from it. it's only 200 (laughs) - and it's insane. it's like right there. now i'm at the other end of
+the house on the main floor. oomph. those concrete floors, they're a killer. now i'm chilling in bed
+in the master bedroom. and actually these results are about as good as what i got one floor down on the other side of the house, which is kind of surprising given where the ap is. finally, i'm on a video call in the backyard getting a whopping. nope. uh, just kidding. (laughing) i'm not going to be on a video call. (shouting) okay jake light it up. we're going to switch over
+to the ruckus aps now. this is going to be awesome. am i making video calls from the yard? that was going to be a big fat. yes. ladies and gentlemen. half a gigabit from the
+edge of the property line. yes, please. master bedrooms alright, too. it seems pretty decent. wow. this hallway is like, got that big wi-fi energy. and theater room. here we go. woo. it's a little faster than the telus box. i mean, to be clear, this is like racing a tesla model s plat against a horse. but i've got one more big challenge. i'm going to start a speed test. and then i'm going to run around the house and see what happens. ready? here we go. you don't have to keep up, andy. i got the camera. i'm moving around as fast as i can. okay. we're going all the
+way up the stairs here. moving around uninterrupted. okay. now we're uploading. going down another stairwell.
+see you later, andy. okay. uploading it. oh man. i couldn't even 1% loss ripping around
+the house like that. obviously the speeds
+aren't as good as if i let it settle and grab the best you know, nearest access point. so you can see i'll run it again here. i'm not screen recording right now, but there you go. it's better if i'm sitting still. now there's one other thing i want to try before we wrap this up. ruck has suggested that one of their aps in the center of the house probably would have been fine and they might be right, but there's only one way
+to find out for sure. so i'm going to disable
+the five gigahertz radio on all, but one of the aps and see if i still get five gigahertz throughout the house. you really
+don't have to keep up andy - alright - gonna start in the living room. we're heading all the way upstairs. how much wi-fi are we going
+to have in the bedroom? oh wow. it's still like 200. what about in this bedroom? (man panting) oh, yeah. that's still 200. this bedroom. oh. only like 50. yeah, definitely want the other ap for that one. this bedrooms got like 50. it definitely wouldn't
+have done the outside, but honestly they probably have a point when it comes to the interior space. head in' down into that basement. oh yeah. yep. if we're willing to settle for 200 to 300 megabit per second, that one ap in the family room would have easily
+covered this whole house. this is why i love their stuff. all right. you can't see me at all. but i'm down here in the theater room now. oh yeah. land center. yeah, it would have been, it would have been fine. oh man. even outside this thing slays. (shouting) hey jake. - (shouting) hi. - i'm getting 260 from here. - (tone beeping) off. (laughing) - 260 down. a hundred up. okay ruckus. you proved your point. i could have done a 6,000 square foot house with just the one ap, but i still like my way better where i'm getting like, maximum speed over every square inch of
+the inside of the house. so (shouting) yeah. thanks for sending those over and thanks to you guys for watching, if you enjoyed this video. thanks to backblaze for sponsoring this video. backblaze is a cloud storage solution that is easy to use and affordable starting at just $7 a month. they offer unlimited data backup at a fixed price. that's it. you can back up almost anything and restore your files from anywhere. they've got a mobile app, so you can access them on the go. you can directly download
+them from the web. you can even restore them by mail. that's right. you purchase "restore via hard drive", they will overnight
+fedex your data to you. you copy it all off the hard drive. then you return it to them for a refund. they've restored over 50 billion
+files for their customers and have over an exabyte
+of data backed up. so why wait? get a fully featured 15 day free trial with no credit card required
+at backblaze.com/ltt. try it out and start protecting yourself from potential bad times at the link in the video description. you know what? for a blast from the past, go check out my original
+review of the ruckus r 700, because the best thing about these isn't the throughput actually on a per client basis, we've seen aps that'll do more throughput. where they really shine
+is with multiple clients. so in that video, i start, i just kept loading up with
+clients streaming video until access points choked, and the ruckus stood out head
+and shoulders above the rest.

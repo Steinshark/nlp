@@ -1,0 +1,139 @@
+>> sean: we are kicking off a bit of a 
+mini-series on things that programmers find essential, and it'd be great to find out
+what you think is essential.
+>> bwk: sure.  lots of things that are essential.  do you want to
+narrow the scope of that a little bit? i mean, coffee is essential.
+>> sean: so within programming, i mean, you want to tell us about some kind of array -- is that true?
+>> bwk: yes, i guess i would say that i wanted to talk primarily about associative
+arrays which are in other contexts called hash tables or sometimes in a
+language like python they're called dictionaries.  the idea is an array which
+has as its subscripts not integers from 0 or 1 up to something, but rather any
+arbitrary thing is the subscript of the array.  and so this gives you a great deal
+of flexibility; you can build really interesting things with associative
+arrays.  i will call them associative arrays.  if you think hash table if you're
+a java or javascript programmer, let's say, or if you think dictionary for
+python people, it's the same basic thing. so the idea is instead of having
+subscripts which go from let's call it zero up to something, you have arbitrary
+subscripts, and for simplicity let's just call them strings of characters, just
+text: words like "sean" or "dave" or "steve". 
+>> sean: so let's get people context there -- we have
+our our film crew in full effect. so if i understand rightly, then that
+means instead of keeping track on you know number 13 was the number that i
+gave to the number of whatever then instead it can say nails or screws or whatever 
+>> bwk: correct.  one of the classic examples that this thing is that you
+want to keep track of, for example, oh your groceries that you might buy.  so we
+are buying things like beer and pizza and coffee and chips, this sort of
+thing.  and so what you'd like to do is have an array where the subscripts are
+beer and pizza and chips and coffee or whatever else.  and then the values of
+those array elements can be whatever you want, but they might be for example
+how much you spent on beer and pizza and coffee.  and so you could write a very
+simple program that would simply say "i have pizza ten pounds, beer 20 pounds, coffee two pounds, beer 20 pounds" and i would like to
+just add up all of the things for the pizza, all of the things for the beer
+separately, and so on.  and so i would simply add that, add numeric values to
+what you see in the array, add those subscripts that are instead of being
+numbers are just the strings: beer, pizza. i think it's a lot easier in many
+respects and so easy to use this stuff, very natural i think for many people, and
+it turns out the implementation is actually quite simple as well.  it took i
+imagine in computer science a while for people to realize how to do it well and
+now i think people really do understand how to make effective, efficient
+implementations of associative arrays.  so i don't know whether i could perhaps
+draw a picture that would be useful that would give somebody an idea of how do
+this.  let me try.  
+>> sean: sure.
+>> bwk: let's suppose i have an array, let's just call it x
+because i have no imagination and i would like to say, okay, the element here
+is pizza.  and i could say how much pizza did i buy?  well 20 pounds worth of pizza or
+something like that, or maybe it was 20 pizzas -- doesn't matter.  and so i can say x
+of beer equals 10, and so on.  and then i could later on say well, x of beer equals x
+of beer plus 15.  so this is the way that you would use these in a program
+with all of the advantages and they would look just like the subscripts that you
+would find if these were integers instead, like pizza were 1 and beer were 2
+and so on, but this is a lot more natural. so that's kind of the use of this.  how
+would you actually build one of these things?  the internal representation is
+often, and this is where really hash table is probably the right way to think
+of it, suppose we have in memory somewhere an honest to god array of the
+sort that we're familiar with where the subscripts go from 0, 1, 2,
+dot dot dot up to whatever, some number n like this.  this is going to be the
+hash table where you can find things.  and what happens is if i want to find the
+particular place in this table where elements associated with let's say pizza
+are stored, then what i do is i take pizza and i run it through a hash which
+scrambles it up in some way and produces a number which is between 0 and in this
+case let's call it n.   ok?  so the hashing takes this, scrambles it, you
+could imagine doing just by adding up the letters, treat them as numbers, add
+them up, and you get some value, and then you use the modulus function to reduce
+it so that it's in this range.  that tells you the pizza stuff is going to be
+stored here, but you don't store it in the table; what you do is that you have
+typically something that says i'm pizza and my current value is 20.  this is
+getting a little too small.  and this simply points to it.  okay?  so now somebody
+comes along later on and wants to say where is pizza stored in the array?  what
+i do is same process i say ok take pizza, run it through the hash function,
+gives me a number, let's call it in this case 2, and i say oh ok the pizza guy is
+there.  okay?  so that's the basic thing. but what happens if something else by
+accident of the hashing collides with pizza.  maybe beer collides with pizza.  i
+mean they go well together. so what happens there is that the data
+structure is really a linked list and so if it turns out that by accident beer
+also, when run through the hash, comes out as 2, so this is called a hash collision.
+so what you have to do there is to say well there's really a data structure a
+little more complicated and it points off to something that says beer, which is at
+this point 25 let's say.  and so when i want to look up beer, i simply start at
+the front here and i say pizza no that's not beer; ah there's beer, and now i'm all
+set.  and there's also something that says there's no more in this list.  and if
+another thing comes along that happens to also collide with this, then no
+problem, we just make the list longer.  so then what you have to do, this hashing
+function here has to have the property that you give it a bunch of different
+things like beer, pizza, coffee, coke, whatever, it should spread those things
+fairly uniformly across the table so that you don't get everybody piling up
+in this particular element but you get mostly these little chains of things
+about the same length.  and that means that the access to the information in
+this table, it's sort of constant time. you do the hash function, it tells you
+where to go, and there's usually only one or two elements in any given chain of
+things that happen to have the same hash value.  you know, suppose that this is
+small, maybe n is only 10 and you've got hundreds of different things in the
+table, n has to be bigger.  and so what you can do at that point is you can
+actually grow the table.  you can say okay let's just rehash everything in sight
+and make a new table.  i'm going to switch to a new page here so we could see it.
+>> sean: fanfold is going to throw you now. >> bwk: fanfold has thrown me.
+i remember fan-fold from my youth. so here we have this hash table that
+went from 0 up to some old value of n like this and we've got things in it
+like my pizza and my beer and so on.  and suppose that it's gotten very crowded at
+this point; if n was small and i've got lots of things, it's going to get crowded
+necessarily.  so what i can simply do is to say well let me make a new table let's
+twice as big, four times -- doesn't matter, something that's a lot bigger, and simply
+take every element that i find here, whatever it might be,
+compute its new hash value and just stick it into this table instead.  and so with a
+different value here, might find that pizza is here but beer is down here;
+they're no longer linked together -- quite possible because this value would
+determine where they're put and so if i changed so that this is let's say a
+table of 2 n or something like that, they might hash differently.  might
+hash the same too.  and so now you can see that on the average, the chains are going
+to be half as big and only do this once in a while when the table starts to get
+full, and maybe i make it four times as big.  and so at all times the accessed
+information in this hash table is pretty much constant time -- you come in, you hash
+it, and very short look down a list and you're done.  once you've made this new
+table of course, then you can throw away the information from that one.
+>> sean:  so the modulo or the amount to be modulo by will be n.
+>> bwk: yes,
+right, exactly.  yeah, i mean i've been careless because we started at zero and
+we went up to n, and so that's really n plus one elements.  you have to be a
+little cautious there, that's a classic kind of error that programming,
+programmers -- other programmers -- might make. i would never do that.  but but that's the
+idea.  and and then of course the details of what's a good hashing function and
+how to make that really spread arbitrary information around -- it's still kind of a
+you've got to be careful to get it right, but there's an awful lot of good
+guidance and so for the most part it just works fine.  and and this is very
+simple to implement; the amount of code in pick your favorite programming
+language is probably a few tens of lines of code at most.  it's very compact, very
+easy to do -- you do it once and then you say okay, now i understand how that stuff
+works.  you don't have to think about it. you can use somebody else's implementation 
+>> sean: so they're saying so some of this is you write yourself but that
+will probably be libraries out there.
+>> bwk:  yeah right if you're in java there's a class
+what is it, hash table or something like that i think; i've forgotten exactly.  in
+python there's the subscript dictionary that looks like that.  in perl there's a
+hash -- literally hash and so on.  these kinds of things, i've got too many of
+them in my head, they blur, especially under pressure, and so i would have to go
+and look to be sure but that's the essence of it. self-publication is a recipe for having things disappear
+without a trace.  and so the first edition did sort of disappear without
+much trace.  the second edition was published by princeton university press
+who also has an arrangement with oxford university press, and so i'm hopeful that
+the book gets a lot more publicity.

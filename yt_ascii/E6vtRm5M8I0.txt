@@ -1,0 +1,108 @@
+>> sean: arno says "could you say 'hello world' for us?
+>> bwk:  hello world 
+>> sean: fantastic! >> sean: [reading out a viewer question]
+did the dominant linguistic theories of
+the time consciously or unconsciously influence the design of certain
+programming languages? 
+>> bwk: i suspect the answer is 'yes' in some ways.  i'm not sure
+that i'm enough of a historian to know for sure, but for example languages like
+c derived from languages like, in particular bcpl, which of course were
+influenced - sometimes positively, sometimes in a sort of reactionary way
+to algol, which was really really fundamental. but also fortran, which was, i
+would say, less theoretical in every respect but very much more pragmatic in
+a way.  so things are influenced by what went before and sometimes it's: "wow we need more of that!", and sometimes it's "... hmmm, we need less
+of that", and do something different.  so those would be examples.  c++ would be
+another one, influenced by the wonderful engineering that went into c -- efficiency,
+obvious mechanisms, and so on, but at the same time taking what came from simula,
+the idea of classes in particular. simula is a language that, i think, didn't get
+the recognition that it [deserved].  when nygaard got the turing award for it, that was
+recognition, finally.   but c++ [was] clearly influenced by those two streams coming
+together.  more modern example: go, which the pragmatic part of it, the syntax, the
+minimalism and so on very strongly influenced by c, but on the other side
+the module structure influenced by all of the things that came from algol
+through [ni]klaus wirth -- modula, pascal, modula, oberon, all of those things. and
+then the 'communicating sequential processes' work of tony hoare.  so those
+three streams come together and certainly tony hoare's view of this was,
+let's call it a theoretical approach.  so all of these things come together. so,
+it's not like things come full-blown from the head of zeus.  they are based on
+what has gone before. 
+>> sean: i've got a few people saying just pass on thank you.
+so, thank you! 
+>> bwk:  thank you all >> sean: what are your thoughts on writing
+'secured by design' software in c today? is it better, as a result, for
+inexperienced programmers to use something higher level - something else? 
+>> bwk:  i think writing secure software 
+you should do it by design.  if you don't [i.e.] glue it on
+afterwards -- that won't work.  you have to think very carefully about what you do. i
+think the problem with c is that the language itself doesn't provide you with
+many mechanisms for making sure that your code is secure. so, there's lots of
+ways in which you can inadvertently make a mistake and the compiler is not able to
+help you.  and so for many purposes, a higher-level language would probably be
+wiser because some of them may offer -- array overflow is an obvious example.
+buffer overrun is one of the common things that goes wrong with c programs.
+it doesn't go wrong, at least in that sense, with any language which is
+manipulating strings or arrays for you, in keeping track of the bounds of them.
+so, it's possible to screw up in any language - absolutely -  but i think c is by
+design a very, very sharp tool. and you can cut yourself as well as cutting through things.  
+>> sean: tabs or spaces? 
+>> bwk: tabs or spaces. i started out with tabs because
+that's the way that unix was done.  ken thompson and dennis ritchie used tabs,
+everybody used tabs, there was no notion of spaces, and this was partly the
+minimalism -- why type 4 characters when you could type one?  but the problem
+is that things tend to get wide after a while, and especially in a language
+like java which is intrinsically wide. i think spaces are a better fit for most
+people, and so i think now, when i'm writing my own code, i mostly use spaces
+and every once in a while i get bitten because there's a tab when there should
+have been a space, or vice versa.  some languages, in particular go, enforce a
+standard format, period.  and the standard format uses tabs, and that's it.
+but you can display the tabs as any number of spaces, so that the visual
+effect is right. >> sean: "sinful [citrus]" would like to know what you're
+involved in now? innovations or recreational ... comp sci?
+>> bwk: i'm glad you qualify it because recreational, my wife and i are on
+vacation in england and having a wonderful time, thank you.
+technically, at the moment i am trying to gear up for a class in the fall,
+where i'm going back after a several year layoff to the class that i've been teaching
+for non-technical people.  and i did that for a long time, probably fifteen
+years or more.  i can put in a plug for the book, called "understanding the
+digital world"; please buy many copies for yourself and your friends (!)  but i had a
+three year layoff on that and so i'm back to doing that in the fall.  and of
+course the world changes and so there are things that i didn't cover properly,
+i think, or enough, in previous go-arounds that i want to include this time.   the
+obvious things are things related to machine learning, big data, natural
+language processing, and so what is all of that stuff?  how do you explain
+that for people who are not technical but are probably going to be making
+decisions on behalf of those who are technical?  and so on. that's one of the
+things that i'm worrying about at the moment.  the other thing that i've been
+playing with off and on, really as a dilettante, is issues in and around the
+digital humanities.  we had talked earlier about how computing spreads into lots
+and lots of different areas.  so digital humanities is basically doing with
+[a] computer the kinds of things of analyzing data and drawing inferences
+from it and making it available to other people and so on that you do with any
+other kind of data.  but the data comes from really, really interesting sources,
+often somewhat elderly.  this goes back to my interest in history.  and so i have
+been over the last couple of years, i had run computer science seminars, that is,
+seminars for computer science students who are doing independent work in
+digital humanities, studying datasets from all kinds of weird things.  and i'm
+in addition supervising independent work -- one semester and senior thesis work -- for
+undergraduates on digital humanities. and so i keep going on that, but very much as
+a dilettante.  i could talk for a long time about it but it would become obvious
+that i didn't what i was talking about.  so that would
+be fine and so that's another aspect.  and of course the same kinds of things about
+machine learning and natural language processing and so on show up very much
+in digital humanities.  there's a wonderful thing here in england.
+it's called oldbaileyonline.org and it's basically some university
+consortium, i guess, digitized all of the records of the old bailey from the late
+1600s until the early 1900s. these had been court records, right;
+transcriptions had been taken from, as i say, the late 1600s right into the early
+1900s and they were all digitized, put together in xml format, and now you can
+search them and find out things like, well there was probably some guy named
+sean riley in the 1700s who was hanged for stealing a pig, or something like
+that.  it's just absolutely a wonderful amazing database.  it's  close to two
+hundred thousand cases, very carefully documented with the names of the perp[etrator]s and
+the victims and the witnesses and the judges, and the what happened to the
+people when they were convicted?  one of the things i had not realized until i saw
+this was -- you've heard of transportation -- you know if you had been, if you'd done
+something bad, you were transported and of course everybody thinks
+transportation meant australia.  no. transportation before 1776 meant you were
+shipped off to the united states, which wasn't the united states at that point;
+it was just the colonies.  and that might explain all kinds of things.

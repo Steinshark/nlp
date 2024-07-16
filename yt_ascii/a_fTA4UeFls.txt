@@ -1,0 +1,147 @@
+new york city home to some absolutely fantastic 
+architecture although even here some buildings are   cuboids i mean look at that one how embarrassing 
+a cuboid it's just a cube but it's not even a nice   neat cube it's stretched out it's a rectangular 
+prism how embarrassing whereas over there you   can just see it behind those cuboids it's the one 
+world trade center anti- prism and that is a much   more exciting shape so a regular prism is when 
+you've got two parallel polygons and you join up   the matching sides with rectangles in the case 
+of a cuboid it's a rectangular prism it's the   worst of the worst whereas an anti- prism you take 
+those two parallel polygons you give them a twist   so they're perfectly offset and instead of using 
+rectangles use triangles twice as many triangles   there are some amazing anti prism shapes out there 
+and in this case we have a square antiprism it's   such a good shape i'm actually in new york because 
+tonight i'm doing my evening of a necessary detail   show which is why i'm joined by my maass friend 
+laura tman who are maass professor yes at james   madison university and you're doing part of 
+the show tonight yeah i'm going to talk about   computational knitting so good i'm so excited 
+but that's not why we're here laura is also   very well known for her 3d printing so if 
+several of my videos have featured things   you' have printed including the scoid video 
+scoids but that's that's somewhere between   a pris and it's kind of like half half and half 
+yeah we're not going into that so because we're   doing show this evening we thought it'd be fun to 
+do a day trip today and go and have a look at the   world's biggest [music] antiprism we've traveled 
+to the other side of manhattan because here it's   possible to get a much closer look at the building 
+this has forked my question for the video cuz i   wanted to ask the question is anti- prising a 
+building is that like does that increase the   volume or decrease the volume but now we've got 
+a second issue because you can see on the model   the top is smaller than the bottom so now we got 
+two questions later on we're going to answer   what is the actual volume of the anti prism as 
+built my question now however is if we ignored   this tapering effect so if we imagine the top is 
+the same size as the bottom it's a true antiprism   does that increase or increase the volume compared 
+to the original prism i mean i feel like that's   an obvious question what has more volume the 
+prism or the anti prism well the question is   obvious i don't the answer is obvious i what 
+do you think the answer is i don't you made the   point earlier that if they were the same we would 
+know that we would know we would know you could   google it yeah and we would know it would be 
+a fun fun fact did you know right a prison man   and anti prism have the same volume no one has 
+written that on the internet that i can see so   it's false says proof by not on the internet m so 
+it's bigger or it's smaller yes when you twist it   and connect with triangles instead of not twist it 
+and connect with rectangles rectangles i feel like   it's going to be bigger i disagree good good for 
+narrative purposes that's really useful so what's   your logic for for for for less my logic for less 
+is that if you took the cuboid and you twisted it   like a lot like more that it would get all i 
+imagine it would get all small in the middle   cuz my thinking was in the exact middle ignoring 
+the tapering it's going to be a regular octagon   or it's going to be a regular eng gon that's twice 
+the end of the top and bottom and just by proof by   thinking about it for a minute i feel like the the 
+octagon in the middle will have a bigger surface   area the cross-sectional area than the square at 
+the base it's not a bad theory cuz like honestly   if you take this off that this isn't quite the 
+octagon slice but it's close and even with the   frusty bit it this is pretty big compared to this 
+like if it hadn't been decreasing at the top would   that be bigger this would actually be quite large 
+but if that octagon is a smaller area then i think   the total volume is smaller yeah yeah so so all we 
+have to do is calculate the area of that octagon   which we genuinely have not done in advance 
+we met up this morning and we're like i wonder   what the area is and now we're going to work it 
+out yes the paper was out and we quickly got to   work trying to calculate how big that octan is and 
+everyone got involved producer nicole was doing   some working out a camera assistant truman turns 
+out we only hire people with a math background but   after a while and a lot of trying to visualize 
+triangles in 3d we had a bit of a breakthrough   my argument was if you've got cuz you you look 
+at the whole silhouette yeah if you look at from   the side there's your base of one of the triangles 
+it goes all the way up to the peak at the top and   back down again it shouldn't make a difference how 
+tall or short the antiprism is right the octagon   is always going to be halfway up and that similar 
+triangles is going to be half the base exactly oh   nice so that's just going to be well if if it's 
+a square of size one that's half and so we we   just need to work out the area of an octagon 
+with sides half a square which is got a bigger   volume and there is an equation for the area of an 
+octagon i'm about to look up on the internet i did   indeed just look up the equation and i put in the 
+length side to calculate the area of the octagon   relative to the base square but other people 
+got real obsessed we're trying to derive the   equation for the area of an octagon from first 
+principles feel free to have a go yourself but   we're going to move on laura had something she 
+wanted to say h matt was right i'm as surprised   as anyone i'm not that surprised i'm not i'm not 
+used to this he was right it seems to get bigger   in the middle in the non frustr me yeah well and 
+then we worked out the area and the area is 20.7   1% bigger kind of a lot bigger actually 1 plus 
+root2 on two yeah yeah 20% yeah to recap we were   trying to answer the question if you take this 
+anti-prism and you compare its volume to just a   regular prism so this has exactly the same surface 
+area in the bottom that's the same size as that   and it's ex actly the same height there and it's 
+got the same area on the top so that is the same   square as that it's just rotated around by 45degrees 
+which is why we get the triangles and that's what   makes it an antiprism so we were looking at what 
+happens if you look at the cross-sectional area   right in the very middle here which is a bit hard 
+to see on the anti prism i mean it's the same on   the prism it's consistent the whole way up what i 
+can do is i can duplicate this one so if we get a   second antiprism and then what i'm going to do 
+is just just make the top bit here transparent   i think that's it okay there we go you can now 
+see that's the exact cross section there and it's   a perfect octagon so what we showed is that the 
+area of this octagon is 20.7% bigger than the area   of this square which means unlike the regular 
+prism where it's the same cross-sectional area   the whole way up over here on the anti prism it 
+starts with this area gets gradually bigger and   bigger and bigger until the exact middle when it's 
+the oct on and then it gradually gets smaller and   smaller and smaller back up there so that means 
+that the total volume of this antiprism must be   more than this prism there you are yeah okay the 
+volume's more but now we want to have a closer   look at it i think we need to go and measure 
+the base mhm and then we got to see if we can   work out the volume of a anti-prism frustum and 
+figure out exactly how that frustum thing works   yeah yeah we're going to do it use the word frust 
+a few times that just means a prism where it gets   more narrow at the top because if if it doesn't 
+you can see these side triangles they lean out   that's because the very very top like the corners 
+now stick out from above the base and you may not   want that when you're making a building so the 
+one world trade center is designed so the top   exactly fits inside the base so it's been reduced 
+in size and that means that the sides of these are   perfectly vertical this is an antiprism this is 
+an anti frustum so we walked across to the base   of the one world trade center and said about 
+measuring it i counted my steps i know how big   my shoes are and i just counted how many steps 
+all the way across whereas laura used a knitting   stitch counter to count the number of panels in 
+the ground from one side to the other and then   we just had to measure one panel and multiply it 
+up we then dropped by our friends at jane street   who have an office nearby so we can sit on their 
+balcony and do some working out right we need to   work out how long the side was how long the side 
+is what did you get well i got that it was 82   panels long and we measured that those panels 
+were 30 in so that's 2,460 in or 205 205t that's   my panel estimation right i had 12.6 in per foot 
+time 190 oops 12.6 in per foot time 196 ft is well   it looks similar 2 4 69 divide that by 12 25.8 
+ft oh is it like the price is right where yeah   i'm i am8 of a foot high nicole looked it up what 
+is it what is it 200 200 all right round number   well done here you go so our question now is what 
+is the volume of our antifom right not including   there's a straight bit the cube is trivial we're 
+going to ignore that we want to know the volume   of this now you put something else to this are 
+we i did you like to see so think this is a   really difficult shape right i had a hard time 
+uh visualizing what was missing and so i thought   maybe i could visualize it better if i had it 
+in four pieces because you know if i could just   compute the volume of one of these pieces then you 
+know multip by four so so okay so now the problem   is compute the volume of that yes so it's it's a 
+cuboid mhm with that missing mhm and how much of   that is that is that a quarter what's that is 
+that well that's what i wondered too and so   in this program tinker cad you can move these 3d 
+pieces around y okay so i thought you know maybe   there's some other way to move them around so that 
+it would be obvious what you're missing and it   turns out if you assemble them kind of inside 
+out like this so now it's the same square top   and bottom yeah now it's the same void and this 
+pyramid fits right inside so what's missing is   if you take one out you can see it just like that 
+see what's missing is this pyramid exactly see so   the volume of the frustum frustum anti prism the 
+anti prism is the volume of this minus the volume   of this these are both really easy shapes to find 
+the volume of yeah so i think we're golden so   the volume is just the cubid trial minus this and 
+what's that that's a third a third of the cubid   yeah i think that's true and the area is probably 
+half well wait it's it's it's a third of the half   the area yeah yeah so it's a third of the little 
+keyb do you want to draw a picture so people can   see what you're i know what you're talking about 
+this is what i'm trying to say yeah is the big   square is the base the small square is is the top 
+and it fits so each of those corners is directly   above the middle of that edge so these surfaces 
+are straight up and down which is lovely and if   you imagine this if you split that up into the 
+quarters each of this is equals that and so that   smaller square that whole internal square there 
+is half of this one and so the volume of the   whole original cuboid is the bottom area times the 
+height mhm and the volume of the missing pyramid   cuz the volume of a pyramid is a thir time the 
+base time the height so that's going to be plus   a3 times the area of the base which is a on 2times 
+the height so what's that going to be future mat   here past mat had done too much walking in rope 
+plus instead of subtract so the total is 56 of   the base area multiplied by the height that's 56 
+of the volume of the big cuboid now we just need   to plug in some numbers okay so 1183 is the 
+height height times 200 * 200 * 5 / 6 equals correction 39,43 3 ft cubed doesn't this say 39 m433 
+, 333 whoops more what's three orders of   magnitude you're right that wouldn't be a lot 
+that wouldn't be a very big it's smaller yeah   yeah yeah yeah wow it's closer than i thought okay 
+so 39 million yeah there you are 39 million cubic feet i'd like to thank this video sponsor 
+jane street whose summer internship program   is currently accepting applications so if 
+you're studying at university and you're   considering a job in the financial world or 
+doing something with programming then this is   a paid internship where you can work somewhere 
+where your mind truly matters if you've enjoyed   solving ridiculous puzzles like the volume of an 
+antiprism frustrum you will blend right in at jan   street i always enjoy visiting jane street and 
+i often give a talk when the interns are in so   you may see me no promises but you can apply at 
+j street.com internships and you can choose any   of the offices they're in hong kong they're in 
+london and they're in new york and you know with   the new york office is it's downtown manhattan 
+i genuinely realized we were going to be like a   block that way at the one world trade center 
+tower and we could just come here and i can   ask them very nicely if we can come up to their 
+balcony and do our filming so a huge thanks as   always to j street and thanks to laura talman 
+so it was very kind of it to come along print   all those things at james madison university 
+her jmu experimental mathematics lab has the   3d printers which meant that we could print 
+those fantastic models and without those to   be honest i don't think we would have got to 
+the bottom of the volume of an anti frustrum   so huge thanks to the gem math lab for making 
+that possible and finally thanks to me i   mean thanks to evening of unary detail that's the 
+show that's why i'm in new york by the time this   video comes out we should have some new dates 
+for even necessary detail in the us and we've   always got shows coming up in the uk i will 
+link to all the details below and thanks for [music] [music] [applause] [music] watching

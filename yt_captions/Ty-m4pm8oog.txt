@@ -1,0 +1,131 @@
+On March 23, 2021, the massive container ship Ever 
+Given ran aground in the Suez Canal. The wedged   vessel obstructed the entire channel, blocking 
+one of the most important trade routes in the   world for nearly a week. The cause and details 
+of this event are still under investigation,   but there’s a lot we already know. 
+How could something like this happen,   and why did it take so long to fix? I have 
+two demonstrations to help us understand.   I’m Grady and this is Practical 
+Engineering. In today’s episode,   we’re exploring some of the engineering 
+principles behind the 2021 Suez Canal obstruction. Before we get into the event itself, let’s 
+learn a little bit about the Suez Canal.   Built in the 1860s, the Suez Canal 
+is a constructed waterway in Egypt,   allowing shipping and other maritime traffic 
+to go from the Mediterranean Sea to the Red   Sea and vice versa. This means ships don’t need to 
+navigate all the way north around the European and   Asian continents or all the way south around the 
+African continent to travel between the Atlantic   and Indian oceans. It’s basically a global 
+shortcut. That makes it one of the most important   routes for global commerce, handling roughly 
+ten percent of the entire world’s ocean trade. For as important as it is to the global economy, 
+the Suez Canal is a relatively straightforward   structure: essentially a trapezoidal channel cut 
+through the sand of the low-lying Suez Peninsula   and taking advantage of the existing Great Bitter 
+Lake at the center. Unlike the Panama Canal which   uses locks to raise vessels up for transit, 
+the Suez Canal is entirely at sea level with   no gates or locks. Minor differences in level 
+between the Mediterranean and Red Seas create   gentle currents in the canal, but they’re 
+not strong enough to trouble the ships.   In 2016, an expansion to the Suez 
+Canal opened, essentially doubling   its capacity. The project involved adding a 
+second shipping lane to part of the canal,   and deepening and widening some of the 
+choke points so larger ships could pass   through. It’s now about 200 meters (700 feet) 
+wide and about 24 meters (80 feet) deep. All ships passing through the Suez Canal are 
+required to have a Canal Authority pilot to help   navigate each step. These pilots aren’t 
+fully responsible for the safety of the   ship during transit, but they have special 
+knowledge about the processes, procedures,   and challenges required to navigate 
+these massive vessels through the canal.   It’s tricky, and ships have been stuck in the 
+canal before, including a 3-day blockage in 2004.   So, each ship’s Master (sometimes called the 
+captain) and the canal authority pilot work   together to maneuver the ship through. It takes 
+about half a day to get from one end to the other,   and on average, about 50 ships make 
+their way through the canal each day. Navigating through the Suez Canal is a careful 
+dance since some parts of the channel only have a   single shipping lane with no room to pass. That’s 
+why ships are required to go through in convoys.   Early each morning, the convoys line up to enter 
+the canal. The southbound group begins their   journey from about 3AM to 8AM at Port Said, 
+following the western channel. At around the   same time, the northbound convoy enters the 
+canal at Suez. On a normal day, everything   is carefully timed so that the two convoys 
+can pass each other in the Great Bitter Lake   and the dual lane section of the canal without 
+any stopping or interruptions. Unfortunately,   March 23rd was not a normal day. One of the first 
+ships in the northbound convoy, the Ever Given,   had barely entered the canal at Suez when it 
+veered into the eastern bank, smashing its   bow into the sandy embankment and wedging the 
+massive vessel diagonally across the channel’s   entire width. Amazingly, there was not a single 
+injury and the cargo was completely unharmed. As I mentioned, the exact reason the ship 
+ran aground is still under investigation.   Some reporting suggested the Ever Given 
+experienced a loss of power, but that was denied   by the ship’s technical manager. Sources also say 
+that there was an ongoing dust storm that morning   creating high winds and limited visibility. Many 
+have suggested that the Ever Given’s unscheduled   and unfortunate landing in the canal may have 
+been hastened by a hydraulic phenomenon unique   to vessels transiting through shallow water called 
+the Bank Effect. Luckily I have an acrylic flume   in my garage, and I can try to demonstrate how 
+this works. But first a little info on this ship. Leased and operated by international 
+shipping company Evergreen,   the Ever Given is one of the eleven 
+Golden Class container ships,   all confusingly named “Ever” combined with a 
+seemingly arbitrary g-word. Weird names aside,   these ships are truly massive. In fact, the 
+Ever Given will never get a chance to go   through the Panama Canal because it’s too 
+long for the locks at 400 meters (or over   1,300 feet long). This is a cross-sectional view 
+of the Suez Canal and the Ever Given to scale. The   ship’s beam is 60 meters (or nearly 200 feet) with 
+a fully-loaded draft of 15 meters (or 48 feet).   You can see how small the margin for error 
+is with a ship this size in the canal. If you remember your lessons on 
+buoyancy, you know that a ship   displaces its own weight in water. That means 
+for every pound of steel and cargo aboard,   a pound of water below the ship has to 
+get out of the way. For the Ever Given,   that is hundreds of thousands of tons of liquid 
+being pushed to either side of the ship as it   cuts through the water. On the open sea, that’s 
+not a problem. The displacement forms a wake, but   the water otherwise doesn’t have trouble finding 
+a new place to go. In a shallow canal, though,   things are a little different. 
+Let me show you what I mean. My flume isn’t long enough to simulate a boat 
+moving through a canal, but if you switch your   frame of reference to that of a ship, it can 
+simulate the movement of water passing by.   In a shallow canal, all the water displaced by 
+a ship has to essentially squish through the   small areas along the sides and bottom 
+of the vessel. The smaller the area,   the faster the water has to move to get out 
+of the way. I’m using some brick pavers as   my surrogate shipping vessel. Watch what 
+happens when I drop them in the flow. The water builds up at the bow (or front) of the 
+ship. As the water accelerates through the narrow   gaps on either side, its level drops. Obviously, 
+this demo is exaggerated from a real situation,   but this is a well-known phenomenon that creates 
+some unusual effects on ships. That’s because,   in accordance with Bernoulli’s law, a fluid’s 
+pressure goes down when its speed goes up.   When traveling in a shallow area, the squished 
+and sped-up flow below the hull creates a suction   force pulling the ship further into the water, a 
+phenomenon known as “squatting”. One massive ship   even used the effect by speeding up as it went 
+below the Great Belt Bridge in Denmark to create   some extra margin above the deck. But, the exact 
+same effect can happen on the side of a ship as   well. If a vessel gets too close to the bank of 
+a shallow canal, the water it displaces on that   side essentially has nowhere to go. It has to pick 
+up speed as it squishes through the narrow gap,   lowering the pressure, and thus pulling the ship 
+toward the bank. It seems pretty straightforward   when you exaggerate it in a demo like this, 
+but in reality the Bank Effect is not that well   understood. Research is ongoing to better 
+characterize how depth, distance, speed,   propellor action, and other factors can affect 
+the way a ship moves in a restricted waterway.   We still have a lot to learn both in an 
+academic sense and in nautical practice,   a fact made very clear when this massive 
+vessel found the edge of the Suez Canal. Images of the first responder to the accident, a 
+tiny excavator removing soil from the Ever Given’s   gigantic hull, circulated around the internet like 
+wildfire. The yawning gap between the machine’s   assignment and its capability was just too ripe 
+for parody - you could hardly check a single   social media feed without being overwhelmed by 
+the memes. In a long period of collective unrest   and despondency during a global pandemic and the 
+seemingly constant uncertainty surrounding who or   what to believe about so many complicated issues, 
+here was a story that anyone could understand:   A boat was stuck in a canal. It was in the 
+way of other boats that needed to get through.   Simple as that. So why did 
+it take so long to dislodge? Humanity has a long and storied history of 
+driving stuff into the ground so it will stay   put, from the small (like tent stakes) to the 
+massive (like the earth anchors used to hold guy   wires for antenna masts). It’s pretty intuitive 
+how this works. The pullout force is resisted by   the friction between the soil and anchor. This 
+ability to resist pullout is a function of the   pressure against the soil and the surface area 
+of the anchor. And when your anchor is a ship   the size of a skyscraper, you obviously have both 
+of those in abundance. It’s really no wonder that   salvage crews struggled to unstick the Ever Given. 
+But, there is a geotechnical phenomenon that I   suspect made things even worse. And just a warning 
+that I’m straying a little into speculation here,   since the geotechnical details of the 
+extraction have not been widely reported. Soils with large grains, like sand, have 
+an interesting property called dilatancy.   Essentially, when they’re deformed, they expand 
+in volume. Watch what happens when I strike the   top of this sand in my beaker. Notice how the 
+sheen of water on the surface disappeared?   If you’ve ever walked on the beach, this 
+is probably something you’ve seen before.   The water disappears from the surface because it 
+soaks into the extra space created when the sand   was deformed. This dilation occurs because 
+the grains of sand, which were interlocked,   rotate and lever against each other, pressing 
+outwards as they do. This would not be a major   issue except for one detail about the Ever Given’s 
+hull: the bulbous bow, a feature included on many   large ships to reduce drag. The hydrodynamics 
+of bulbous bows are definitely worth discussing   in a future video, but here is why it was such 
+a problem for the Ever Given. Unlike if only   the triangular hull was wedged in the sand, the 
+bulbous bow was surrounded by soil on all sides.   Essentially, the Ever Given put its appendage 
+into a gigantic finger trap toy. Any movement   of the ship would dilate the sand, effectively 
+clamping down harder on the bulbous bow. Ultimately it was impossible to simply pull the 
+ship out. Removal took a much more extensive   operation of dredging the sand from around the 
+hull and lightening the ship by releasing ballast   water, both to relieve the friction from the 
+soil. Even the moon joined in on the operation,   raising the tide in the canal to give a 
+little more buoyancy to the foundered ship.   After six days aground, the Ever Given was finally 
+dislodged and traffic through the canal could   resume. At the time, there were about 400 vessels 
+waiting to make their pass and many more that had   already diverted around the Cape of Good Hope. 
+With a capacity of only around 90 ships per day,   the backlog took about a week to clear up. That 
+doesn’t mean the problem is resolved though.   A weeklong disruption in such a big portion of 
+global shipping traffic doesn’t untangle itself so   quickly. The investigation into the exact cause 
+of the incident is ongoing, and I’m sure many   insurance claims are as well. In the meantime, I 
+hope this video helps you understand a few of the   engineering challenges associated with navigating 
+massive ships through tiny canals and what can   happen when they run aground. Thank you for 
+watching, and let me know what you think!

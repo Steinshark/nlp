@@ -1,0 +1,104 @@
+- thermal management companies
+like noctua spend thousands of hours optimizing their
+cooling solutions to make as little noise as possible. but what if we didn't
+care about that at all. (air blowing) this is a vortex tube cooler, and it can deliver up
+to 820 watts of chilling in an extremely small
+and efficient package. so get strapped on ladies and gentlemen because this thing is about to blow away literally everything, (loud screech) including your mind, just like our sponsor. - thanks to cable mod for
+sponsoring today's video. cable mod's new keyboard
+cable configurator is the easy way to complete
+your keyboard look. customize almost anything and receive your handmade cable in two weeks or less. check it out at the link below. (upbeat music) - the time is now one hour ago. and all i know is that alex informs me we're about to cool a
+cpu with a vortex cooler and i haven't even opened
+the box on this thing yet. so what the hell am i looking at? we got a piece of metal. - so that's the silencer - shut up? this is an actual silencer. - [alex] yeah. that's a silencer. - that's what, oh my god it is a silencer. our cooler needs a silencer. how awesome is this? we got a piece of cheap tubing. - i don't know what that's for - some hose barb fittings and this, what is this? - it's a vortex cooler. we'll explain exactly how it works later - hey alex, that's not
+information i didn't already have. - true. yeah. - vortex cooling. but what is it? - it uses some thermodynamic,
+quirks and magic and probably a deal with
+the devil to make hot air come out this side, cold air at that side. apparently 90 psi means the hot air is at 200 degrees celsius and the
+cold air is at negative 50. - wait, what? - yeah. - okay. you still haven't
+explained to me how it works. where's your damn whiteboard. - okay. i have a whiteboard. - i have expectations alex.
+we have standards around here. - the compressed air goes in, the hot air because
+it's denser or something goes to the outside and dumps
+kinetic energy or something. it stagnates here. the molecules lose energy
+coming back through the hot air. - and then the cold air - shoots out there
+- shoots out here. there's a control valve, which does what? - changes, how much hot
+air comes out or something. - you just have question marks on here. - yeah. the question mark-- - cold air and profit? - i watched like five videos. i read a bunch of stuff. none of it makes sense. it all is just kind of like, a thing happens here. cold air. yay. - so unless we have a
+phd in thermodynamics we're not gonna understand
+it, but we can play with it. - we can definitely play with it. - [brandon] alex. where'd
+you get that thing? - oh, i got off of mcmaster-carr. i just searched up electronics
+cooler and it came up. it was $550. - shut up for this piece of metal. - yeah. - why is it so expensive? - from what i've heard? it's because of the deal with the devil, but it might just be because
+it's industrial only and you can use it for like 20 years and never do anything like maintenance wise, the psi doesn't matter too much where we're gonna be
+putting like 110 through it just cause that's what our shop is at. it's more so the airflow
+and you can change that using the little nozzles there. 10 cfm is the lowest. that's 190 watts of cooling - and you can go all the way to 40 cfm which is 820 watts of cooling. at minus 50, this could be dangerous. - oh yeah. - like really dangerous. - well, we can't really do the 40 cfm. so our air compressor, which is quite a good air
+compressor, by the way. it's good for about 19 cfm at 175 psi. so we can probably do the 25 cfm one. we can maybe use the 40
+for a short amount of time. - [linus] okay. - this is our control system. - oh, is this part of
+the like $500 i spent - no, you spent this a while ago when we did the potato cannon. - got it. - that planted trees. - i'm finally getting
+another use out of it. - yeah. - hey, why don't we explain what it is? - this is a solenoid. very simply you switch the solenoid with this button right here. it's not plugged in right now but it will go click when you click that that allows us to not just
+use it 100% of the time. we can turn it off with this. it's way easier than like
+using the ball valve up there. - this is so stupid. - you're not wrong - [brandon] but it's an alex video - i know. alex. you've got kind of
+a thing going on here. - i'm pretty sure that
+when we complete this video all of the ideas that i had on
+my resume, we will have done. - really? - yeah. - wow and it only took
+five and a half years. oh. i thought you had opened it already. - [alex] no (air blows) - excuse me. oh, there goes my lunch. - [alex] geez. careful with the laptop there. - oh man. is this the cfm bit thing? - yes - i got 15 r - 15's a good one to start at. that's the one we'll probably be using. we could also start with
+either the smallest one at 10. - let's start with the smallest one. which one? wait, which
+one's the cold end again? would you say 200 degrees? - yeah. - so you want it more open, more close? what am i, what am i working with here? - i don't know. just open it a tiny, tiny bit and we'll see what happens. - okay. - finally, there's no way with
+our temperature range options in the flir, it's always going to be at least one of them is
+outta range, but whatever. - i know the answer to this, but just for the people we are using
+filtered oil free air, right? - yeah, we are. - yes we are. - oh yeah. in our explanation, did i even say that the vortex in here is over a million rpm? - well, that explains where
+the heat's coming from. (air blows) - oh, it cold. it's definitely cold. and that is definitely warm. what i'm right out is i'm
+putting electrical tape on the device to make
+it easier for us to get a measurement of it with the flir because when you try to
+get a thermal reading off of something that is reflective what you're actually getting
+is the thermal reading of whatever is reflecting off of it. - [alex] the plastic nozzles at like minus 30, minus 40. should we try adjusting this
+a bit? see what happens? - sorry what? yeah, yeah, yeah. there's a lot of moisture here. - oh yeah. - like my hands are wet. - that makes sense. - yeah. - the 15 should be good for
+about 300 wats of cooling. - theoretically. that's
+getting dangerously close to cpu cooling capacity. - yep. - the debbie downer, kyle is this is like the coolest thing ever. - [kyle] what? i'm just saying, how are you gonna use the cold air? - doesn't matter. it's cool. it's literally cool. well, brandon, you can
+see the benchmark part but we are gonna need
+the thermal camera to see the heating up part. wow. this is going up like a
+degree every few seconds here. - i just wanna shout out flir
+for sending us this camera. this thing is like $30,000. it's wicked. - yeah. and it's enabled us to make
+better content for you guys. so yeah. flir. hey how you guys doing - [alex] currently? at 37 degrees. (air blowing) - bring on the fps - now it's sub ambient. four. oh, come on. subzero. subzero. there we go. - subzero phone cooling, baby. holy crap. that's chilly. wait, your score is better than 87% scores for the
+samsung galaxy z fold 3. well, we should cool it the whole time and do another run and see if we can like. - oh yeah. oh wow, when you move off of it, you can immediately see the soc. - oh, that's cool. can i see? - yeah - yeah, there it is! what did we have last time? - 57-58. - okay. well we got another 25 points. oh, the silencer. - you undo this thing and put it on there. - oh, we got some frost this time boys. - oh, we did? - we did. but like i said remember how it was like, oh, it's so weird. the condensations only on
+the outside of the nozzle. all the frost is only on
+the outside of the nozzle. - yeah. - what kind of black magic is that? that way it can never get jammed but how did they do that? while we're at it do you wanna switch to the big dick nozzle? - yeah. i was thinking, just
+go all the way to the big one. - right? we can only run that momentarily. - yeah. until our tank is gone. - got it. the silencer though. so do we teflon tape that? and then what? this goes here. i don't , i actually do not understand how this is supposed to be. - it goes in the same spot as before. - oh, and the silencer's
+on the other side of it. yeah. got it. look at this guy. okay. is there anything that looks cooler than someone wearing sunglasses
+through a thermal camera? i can definitely see the soc
+it's hitting about 20 degrees. (air blowing) that is definitely colder. can confirm. - i feel like it worked better before. without the silencer. - let's take the silencer off. - yeah. - wait. hey. hey, get back here. (high-pitched air blowing) - [alex] oh yeah. that's cold. that's real cold. - i don't think our
+compressor can keep up though. - no. - okay. let's dial it back to what our compressor can handle then. and i think it's time to cool a cpu. - i think cinebench is
+gonna be the most fun. - okay. cinebench. - thermals for a hundred degrees. - what is this? is it 12900 k? - yeah. ks. - ks. oh, okay. and how much wattage can
+we do with this nozzle? 450? - that one's 300. - 300 watt. that's it? - that's it. - okay. well, good luck everybody. i'm taking this fan off boys. - all right. cinebench run? - yeah. i'm ready for it. (air blowing) how we doing? - it's slower. - it's worse? - yeah, 'course. - i guess the problem
+is i just i can't apply all of this cooling directly to the cpu. - should we just aim it
+like directly at the cpu? - i could try that, but the problem is that we don't have any surface area there. we might as well just aim it directly at the die at that point. - should we try that? - okay. ready? 3, 2, 1, go. (air blowing) - [alex] get closer. - [linus] do we want the
+thermal compound off? - i don't know. - [linus] okay. i got
+it, i got it, i got it. - [alex] this poor cpu. yeah. it's pretty hot right now. oh yeah. it's going real slow. - are you running the benchmark? - yes. - alex, we gotta get the
+thermal compound off! - oh. - oh my god. you are getting it everywhere. how's the cpu temps doing? - 93 degrees. - okay. i'm on it. (air blowing)
+- [alex] so our cpu, is currently at 40 degrees, at idle. could i try and run cinebench? - okay. - okay. it's immediately
+thermal throttling. it's going real slow. - stop the benchmark. stop the pain. - okay. - let's talk about what happened there. i don't know if it'll work. i think the 12900 ks is just too much, too much heat
+and too small, a spot. - i'm really surprised blowing
+it on this didn't work. - me too. especially with how cold these
+heat pipes felt to the hand. - yeah. - like they were chilly heat pipes. let's talk about what these
+are actually used for then. shall we? - there's for loads of things. most of it's in industrial
+applications, like large plants. so if you have like a gas tank for a car that you just
+welded, it needs to cool down. and maybe it would take three minutes if it's just in the air, stick one of these on now
+it's a minute and a half and you can make heaps more of them. or you can put this on like the end of a welding torch to cool that down. - oh, that makes a ton of sense. now there are other ways to turn power into cooling and heating. for example, peltier modules. kind of,
+fundamentally do the same thing. you add power, not to compress air but rather just you power the thing and you get hot out one
+side and cold out the other but those consume a ton
+of power compared to this. and it's not as easy
+to direct that cooling and direct that heat on whatever part it is that you wanna cool or heat. - another thing these are great
+for is electronics cooling but when it has to be away
+from a bunch of things like completely sealed off. so this way you can
+have compressed air in, hot air goes out, electronic
+is cooled very precisely in a completely isolated area. - got it. so not for this, basically. - no, i'm kind of sad that it didn't work. - yeah. i kind of thought it would do more than it did at very least. we need a better air compressor. - we do. yeah. - and we can put the
+big nozzle on and like. - angus ol rand hit us up. - also shout out our sponsor. - vessi! vessi footwear is
+known for being lightweight easy to pack, comfortable and
+most importantly waterproof. vessi's everyday move shoes are here and actually they're on my feet and they're designed to keep you moving with advanced breathability
+and added support. this style is perfect for the
+adventurous or those looking for something sportier,
+featuring a pull tab to take them off and put them on with ease. i love slip-ons. vegan sue lace cages,
+extra mid sole cushioning and the same waterproof
+dyma-tex technology. you wanna wear them everywhere. the dual climate knit
+material keeps your feet warm during the winter and
+cool during the summer. so stay dry and get your vessi shoes today at vessi.com/linustechtips, get 25 bucks off using the code
+linustechtips at checkout. - if you guys enjoyed this video, you clearly like watching
+me and alex fail. so you might also enjoy the
+one where we accidentally bought a car radiator and
+then shenanigans en sued. when we tried to use it
+to cool a computer, not our finest work, but i mean you did say you enjoyed this one. so. clearly your standards pretty low.

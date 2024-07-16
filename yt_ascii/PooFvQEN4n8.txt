@@ -1,0 +1,171 @@
+i am in orlando at the
+kennedy space center visitor complex. this is where they launch humans to the moon
+and continue to do launches to this day. behind me is the rocket garden
+and, kind of, visitor centre which is why there are school groups
+and inspirational music but we're going to ignore all of that for today. we're going to look at orbital mechanics. these rockets behind me were originally 
+developed to put things in orbit. so i'm going to derive the equation you need to know,
+to keep something up in space. to do that, i need two things: first of all, i need a flip chart so i can do
+all of my working out in a nice orderly fashion; and secondly, i need something that's been in orbit. so welcome to stand-up maths: it's chris hadfield. - thank you for coming along. it's uh--
+- three times i've been in orbit. - it's three times?
+- three times! how many orbits do you do per...? i've done about 2,600 orbits or so,
+so around the world lots of times. yep. okay so, two and a half kilo-orbits in.
+we're going to... [laughs]
+"kilo-orbits". what better use of an astronaut
+than doing some working out? so let's do this. so do you want to set us up,
+like the earth with you orbiting it? - i've chosen blue for the blue planets.
+- going for blue. nice work. and then over here i'm going to start an equation. i'm going to go: force equals mass times acceleration. - okay. is this the centre of the...?
+- centre of the earth. - okay, so let's call earth, big m mass.
+- okay. great. and then where are you in this? i'm orbiting the world going this way.
+is that gonna be okay? that seems about right. so you orbit-- - if this was the north pole looking down?
+- north pole looking down. - you orbit around...
+- yeah. - okay, okay.
+- we go with the rotation of the earth. so i'll draw myself as a dot here. [markers scratching on paper] - i've given you mass little m if that's okay?
+- that's fine. i'm happy with little m. good good, and how far up are we talking here? well, we're about 400 kilometres above the surface but of course we want to measure it
+from the centre of the earth so we can put this whole thing right out to there... so it's the the radius of the earth plus our orbital altitude. - okay, let's call the whole thing r.
+- r, okay. all right, uh... r squared. so i've just put in the classic... gravitational force, the gravitational constant g. mass of the earth, m. mass of chris and everything else
+that's keeping you alive up there. and then this is our distance r squared, so that
+gives us the force that the earth is pulling you down. and we now need to work out...
+well we know m. well we got m. we need to know the acceleration. so to do that, let's start with the velocity you're travelling. okay, so i'm going this way at a certain speed,
+a certain velocity, right? okay. shall we call that... do you wanna call that v? - sure, which v?
+- uh, 1... and it's a vector so i'm going to put
+a squiggly line under there. - okay, that's fine.
+- bit of a perfectionist. we're now going to have a look at you,
+a very small moment of time in the future. okay, so over here somewhere. - same thing, same radius.
+- that's it. - no change in radius.
+- okay, that's kind of the trick to staying in orbit is this has to stay the same? yep, basically and now we want another one here, okay. always parallel to the earth's surface - and that's another v... okay.
+- let's go v2. and so i've done, up here, i've just written that
+their magnitudes are the same. - and so actually i'm just going to call it v for shorthand
+- yep. - 'cause you don't want your speed to slow down
+- correct. i guess that's kind of the definition of being in orbit. you're not getting lower. you're not slowing down. we're just going, like the moon,round and round and round. perfect. okay, so now i'm going to add in... - a little angle here. this is going to be theta.
+- theta. alright. and then we've got the distance you've travelled,
+so you've gone from there to there. - and that's going to be...
+- yeah. - i mean...
+- proportionate to time. yeah, so let's say over this tiny angle, tiny amount of t so i'm going to put in delta t times
+whatever velocity you're moving at. - we're now going to...
+- sure. move these vectors, and i'm going to
+ redraw them over here. - so i'm going to borrow your red.
+- alright. okay, so i'm going to bring v1 over here
+ and zoom in on it like that. that's our v1 vector and then
+i've just moved that straight across. and this one is now on an angle down. - so if i bring it over there, that's v2. 
+- yeah. and as you go around, i guess by the time 
+you come all the way back to where you started... velocity is once again going perpendicular. yeah at our altitude it takes
+about 92 minutes to go all the way around. - 92 minutes per lap.
+- yep. - and then, so theta will go through a full 360.
+- 360. so actually this angle, this has just tipped your v down.
+- right. - actually gone down by theta.
+- yeah, same amount, yup. yeah, and now that's the difference there so... i don't know if you do a lot of vectors, as an astronaut? do you have to do much math as an astronaut? you have to understand how it all works but real-time you're mostly
+just solving the practicalities of it. like how do i get my spaceship from here to there? and we let the computer do the...  the burn calculations. you have to have a sense of
+how it all supposed to make, most of work but we don't real-time do a lot of math in public. so i'm watching and bowing to your expertise. no, no, i mean i guess you've got
+a very pragmatic, you know the math - so you understand what's meant to be happening.
+- yeah. and then you trust the computers
+and just kind of sense-check - as you go along.
+- yes. well, in which case, you may not have done
+similar triangles too recently. but that's what we're going to do - because we've got two triangles with the same angle.
+- sure. they're both isosceles 'cause that length
+ is equal to that length, as up here. that's equal to that which means the ratio between any two matching sides should be the same. so the ratio here between change in velocity divided by this side, change in t times velocity equals that divided by that so that's uh... well the length of that is just v,
+divided by the length of that is r. we've got a v down here we don't really need
+so we're going to move it over there. so i'm going to multiply both sides by v.
+so that's now over there. - yup.
+- and dv dt: rate of change, our velocity,
+that's acceleration. so there we go. so there's our acceleration,
+is this which is v squared on r so i'm going to fill that in here.
+so it's mass times v squared on r. this is actually just the centripetal force that we've worked out so a lot of times when you see this taught,
+ people just start here. they go "there's your f equals m a"
+and then you fill this in. - that's kind of nice. 
+- that's beautifully elegant. yeah and intuitive. it's so good. so good and given you were up on this dot, that feels appropriate. okay, so now, let's do the grand finale in brown because we can cancel some stuff out.
+ we've got an r down there. and we've got an r-- two r's over there. - so we get rid of one of those.
+- yep, multiply both sides by r. okay, we can get rid of an m from both sides. - i'm afraid your mass now doesn't matter.
+- right. and i'm going to-- so this side is only v squared.
+oh, that's handy. so now we've got v squared equals--
+so i've just moved it over here and this is... these are both constants. so i'm
+going to put g and m over there and then this is 1 over r. yep. and... and that's it. - beautiful.
+- that's our equation. so this basically shows us, if you square the velocity... you'll be able to orbit at a height r. and because this is 1 over r, it's an inverse relationship. you know what's intriguing to me out to this, is that the radius you are from the earth determines the velocity you have to go
+to be staying in orbit. that's the really key and intriguing thing
+out of this to me. for every radius from the earth, there is a specific speed
+that will hold you at that altitude. so if you decide i want to put
+either humans in a certain orbit, i want to put a satellite in a certain orbit, 
+you then work out the specific v - which equates to that distance?
+- right. and it doesn't matter what mass that thing is,
+it's just purely an almost geometric thing. how far away are you? that tells you
+how fast you have to go. and you were in low earth orbit? yeah, i didn't get above
+about 420 kilometres from the surface. so the radius of the earth plus 420. - that's not bad. that's more than most people.
+- [laughs] it is. - and the radius is like 6,000 kilometres, right?
+- right. so you're like a tiny, like maybe four/five percent... if you were to hold a globe and bring your eyeball down
+to maybe like a thumb-width above that's how far we were from the surface of the earth. it seems like a long way when you're there,
+but it's actually still quite close. and how fast did you have to go?
+what was your v for that orbit? well, depending which units: about 25 times
+the speed of sound, mach 25. if you put it in miles an hour,
+about 17,500 miles an hour. about 28,000 kilometres an hour. those numbers are so big,
+intuitively it's better if you go per second. so about five miles a second,
+or eight kilometres a second. in order to stay at that altitude in that orbit:
+five miles a second, eight kilometres a second. - eight kilometres a second?!
+- yes. - 8,000 metres every second.
+- yeah. - that's absolutely...
+- imagine if one of these rockets was right here and one second later, it was eight kilometres away. that's how fast we had to be
+to be that little dot right there. and how long does it take between when you launch
+and when you get to that orbit? the rockets have to burn and accelerate you
+up to the right speed and the right angle. it takes somewhere just a little less than nine minutes. from sitting here in florida on the pad,
+laying on your back to the engine shutting off
+and being there weightless in orbit: little under the time it takes to drink a cup of coffee. that's absolutely incredible. so in fact,
+if people want to give it a go, if you get the values for g and m--
+gravitational constant, mass of the earth-- and we've talked through the rough distance up you are, you can put them in and you should
+get out the other side, roughly 8,000, which is 8,000 metres per second. cool or you could put in the mass for any planet
+and everything else still works. oh, yeah, that's true. we've not assumed earth.
+ this could be absolutely anywhere. so that you can start to figure out
+just how fast you go to go around jupiter, around the moon or whatever. kinda neat. okay, so we'll put some free resources
+in the description below. we'll have a copy of this in case you want to recreate it. but now, there's this interesting relationship between... how far up you are and it's inversely proportion
+to the speed you're travelling which i suspect has some interesting implications
+for actually navigating in orbit. and i believe somewhere here is a vehicle
+that you've flown in orbit. yeah, it is indeed. yeah. atlantis is here. so we're gonna go find that
+and have a chat about the implications of this. [stand-up maths theme] you flew on this space shuttle. i did it my very first time to space,
+i was part of a crew of five people and we took this vehicle, flew it up
+and docked with the russian space station mir. and that's not like an automated process.
+you don't just hit the dock button and it all happens? no, there's no standard orbit, mr sulu.
+it's all sort of manual. i mean you have primitive computers on board,
+a huge amount of help from earth, but primarily flying a spaceship
+to dock with a space station... is a manual operation, especially with something
+as big and ponderous as a spaceship. so i've always known on paper:
+a lower orbit higher velocity, higher orbit less velocity. what does it actually mean
+if you're trying to manoeuvre this and you're going to connect that bit to a very specific bit on another space station. so picture this matt. you have to dock
+ that docking system to mir. you have to do it inside a two-minute window because you have to be over the right part
+of the earth for communications. you have to do it at exactly the right speed otherwise if you come in too fast then you'll break mir and kill the three people on board. if you come in too slow
+then the springs in there will bounce you off. and plus, you've got to hit it exactly in the centre. because if you hit a little bit off-centre,
+the mechanism will bottom out and break. so our target was about as big as uh,
+ maybe a coffee saucer. so all those constraints and you're flying it manually. and so an extremely difficult ballet
+to make all those things happen at once. and as you say, you're trying to negotiate
+orbital mechanics while it's happening. so what are you doing?
+are you just using the thrusters or do you have to take into account,
+if you go up or down your speed's going to alter? we try and solve that mental problem of the difference of speeds with different orbit heights by breaking your docking into phases. when you're far away, you hardly even... acknowledge that that the mir is there. you're just a vehicle going around the world
+and you're going to change your orbit. and so if you-- if you're going this way and you fire the big engines to accelerate that way then the energy is going to raise your orbit. you're going to end up in an orbit
+that is further from earth. and once you get up there, you'll be
+sort of going at a slower speed like, the moon takes a month to go around. so you fire the rockets... yeah. you don't speed up. well, you do sort of accelerate forwards
+ but that energy ends up-- because you're going around the world, that energy
+sort of takes you away from the world a little higher - until everything balances back out.
+- and once you're higher and balanced out now in fact your speed is lower. it turned, sort of, that kinetic energy
+into potential energy. so now you're further away. i always remind myself:
+the moon is way out there. it takes a month to go around the world. and like a ball and a string the shorter the string, the faster
+you have to spin it to keep the ball going. and so your strings just getting shorter and shorter. so you fire your engines
+and you coast to where you are. but once you see mir, and now
+you fire your engines to get higher, suddenly it becomes non-intuitive. 'cause we fire our thrusters to go this way
+ and we're watching intently at mir... and we get a little closer to mir
+because we move up here. - and then we start drifting back.
+- because you're higher than it? - because we're higher, now we're slower, drifting back.
+- because you're slower. so we're playing with our speeds as we go until we finally get close enough that we say "okay, we can no longer pay attention to orbital mechanics now. we're just going to brute force it." - we call it proximity operations or prox-ops.
+- "proximity operations." and once you're in prox-ops, all you do is say, more a little forward, or a little aft, and just keep firing the thrusters to hone it in so that you can dock under exactly the right conditions. you're just compensating on the fly. it's sort of like, if you were driving
+two boats across a lake. yeah. and once you get-- and you're trying to touch
+two parts of the boats to each other very carefully. from a distance, you'll just sort of make a rough guess and where to set your throttle. and you might even just set the throttle
+and not even move it for a while. just catch up. then as you get close
+you're going to fine-tune your throttle a little. but once you're nudging up against that other one,
+you're going to be all over the steering wheel. you don't care about the current
+or the wind or the surf. you're just trying to get docked. sorta like that. sometimes if i'm doing working out,
+and i know i'm near the answer... it's just, that's my proximity operation zone. - [laughs] just brute force it.
+- yeah, exactly. you run a simulation, you end up
+where you're meant to go. so, excellent. thank you so much for joining us and having a chat. well, that's a lot of space maths.
+thanks for watching the video. there is also some engineering and some science
+which goes into something like this. so as well as my videos,
+you want to check out the videos by professor lucie green
+over on the cosmic shambles network. yes, we made some fantastic videos looking at
+what goes into making the space shuttle fly. the work that's done on it. a bit of space weather
+from an astronaut's perspective as well. so huge thanks to chris hadfield for giving up his time to tell us about this amazing technology. and we'll have links to those below. it was actually the cosmic shambles network
+who put this whole trip together so huge thanks to them, chris of course, and let's not forget that the kennedy space center
+and nasa were also slightly involved. [stand-up maths theme]

@@ -1,0 +1,151 @@
+- the internet is convinced that the nintendo switch 2
+is right around the corner. so let's put that to the test, this is an nvidia developer kit, and supposedly it is the hardware that the next generation
+switch is being built on. now, i will say that none of this has been officially confirmed by nintendo. fun fact, they're actually quite good at keeping a lot of their secrets. however, we have spent the last few weeks diving deep on the rumors. we've gotten our hands on this, the closest thing to a switch
+2 dev kit we're going to get. i mean, super switch.
+(upbeat music) switch ultra. the 2d switch. i like that one, the 2d switch.
+(all laughing) so this is an nvidia
+jetson orin nx dev kit. now, i'm not gonna make (upbeat music continues) an assumption here, but nx was the codename for
+the switch before it came out. - right there! coincidence, i think not! - coincidence? almost certainly. as you can see, this is using
+the jetson orin nx module. so you actually can purchase that module directly from nvidia for $700. however, it's pretty much useless without a board to plug it into. so this is a kit which
+has everything we need to get this to be a fully
+functional linux computer. $900 is not cheap. but, as a dev kit, that
+actually isn't crazy. oh my god, it's a whole switch! nah, just kidding, it's a
+little computer (laughs). this is very similar hardware to what i believe could
+actually land in the switch 2. look at that, it's magnetic. okay, that's that's neat. i'm gonna unscrew it. i just really wanna see what the actual chip itself looks like. you're gonna break the $900-
+- i'm not gonna break it! why does everyone always
+think i'm gonna break it? did we wait a long time to get this very expensive
+little board, yes. am i going to immediately open it up to see what's inside, absolutely. there we go. so that, my friends, if you look past the thermal
+paste is our orin nx processor. so inside this, you'll see
+not only eight cpu cores, an nvidia ampere gpu, as
+well as 16 gigs of ram. but you can imagine something like that, (clicks) looks pretty good. however, i am almost entirely positive that when nintendo actually get around to making their version of this chip, and shrinking it down to the switch, it's probably gonna be a lot smaller, and therefore a lot more
+affordable to produce. with my dev kit expertly reassembled, let's plug it in, and see what happens. you know, i probably
+should have booted it up before i took it apart, oh, hey nvidia! why don't we actually take a
+little bit of a closer look at what this orin nx is all about. (switch whooshing)
+(upbeat music) i'll say, it is really neat that nvidia will just sell this to anyone, but it's clearly not designed for gaming. the jetpack os flavor of
+linux that's pre installed works great if i was stuffing
+this in my battlebot. but linux on arm has
+basically zero proper support for modern aaa games, or benchmarks. in fact, it doesn't have
+support for a lot of anything, it's why it's made for
+developers, not for actual users, so we had to get creative. the main thing i want
+to wrap my head around is the performance level. we were able to get a couple
+of benchmarks up and running. geekbench 5 on the cpu side, and gravitymark for the gpu. now, i will admit, this is hardly as
+comprehensive as i'd like, but the main thing i wanna
+know is fairly straightforward. if this really is the hardware that nintendo are using in the switch 2, what kind of performance
+are we looking at? that is why we built this, a windows pc that we
+tried our best to tune to get in the ballpark
+of the scores we hit with the orin nx. it's running an
+eclectic mix of hardware, including an eight-core amd ryzen 7 2700x, specifically with the smt turned off to make sure it's true eight cores, and it has been underclocked
+at 2.25 gigahertz, which as you can see,
+is actually pretty close to the benchmarks we were
+able to get on the nx. we also opted for an nvidia gtx 1650, that again, has been heavily
+underclocked and undervolted to match the gpu score of the orin nx. ideally, we would've used a
+more modern graphics card, like the rtx 3050, which is on the exact same
+ampere architecture as the orin, but unfortunately, when we tried that, it became unstable when we
+really tried to underclock it to match the dev kit. so, 1650 it is. (soulful flamenco music)
+(man sings in spanish) i really do wanna stress,
+this is not a scientific test. i'm just really curious
+about this hardware, that i think could give us a real glimpse into what the switch
+2 might be capable of. so let's fire a couple
+of games up, shall we? so, with our pc that we have tuned as closely as possible to the dev kit, let's run a couple of games
+versus the original switch to see how it stacks up. to start out with, i have "the witcher 3" running both on a switch oled
+as well as on our custom pc. the switch is supposedly
+running "the witcher 3" at 720p at 30 frames per
+second in docked mode, and 544p in handheld. there's a lot of stuff that
+the developers have done to make this vaguely in the ballpark of what "the witcher" is
+supposed to look like. and i will say, for the class
+of hardware it's terrific. but if you move over to our pc, we're able to crank the
+resolution from 720 on the switch up to a proper 1080p. we're also getting a
+much better frame rate. so the switch is running at 30-ish, it's usually way less than that. this, we're actually now
+running between 40 and 50 fps, which makes a big difference,
+and on top of that, we're actually able to turn
+the graphic settings up. so if you do a little side by side here, the water looks terrific, the ground looks significantly better, there's so much more detail on, i always say it wrong,
+i always say gerald. - not gerald, geralt.
+- oh! (clears throat) - but there's a massive difference
+between the two of these. so why don't we actually play
+and see what it looks like? so i'll start with the switch. i will say it looks a little bit better when you're running it in handheld mode, because the smaller screen kind of helps to hide some of the image imperfections. but, between the blurry image quality, and especially the
+latency, so i'll show you, so if i'm gonna go left,
+right, left, right, there's a significant amount
+of input latency on the switch. understandable, not the best way to play. whereas, if they come over to the pc, where now, again, we're
+running at 45, 50, 52 fps, and the settings have
+actually been turned up a reasonable amount. now, it shouldn't be a surprise. the fact that the switch is able to run a lot of these
+games at all is impressive. but even with a, let's say,
+modest upgrade in performance, it makes a huge difference
+to barely running the game to running it at what i would say is a perfectly reasonable level. next up, we have "apex legends." this is a game which
+also runs on the switch, although i will say that
+it's not quite as impressive from a technological
+standpoint as "the witcher" is. so they claim that it runs
+at 512p in handheld mode and 720p on docked, again at 30 fps. and i will tell you that while those numbers
+might be vaguely true, the level of settings that they have to run the
+switch on is nowhere near that. i'm gonna try to (grunts) myself
+on the switch and spectate. so essentially it should be a
+perfect one-to-one on the pc compared to the switch. oh, we're in trios, we're
+about to ruin someone's day. if you ever thought that
+i was bad at one game wait until you've seen me
+play two at the same time. but i mean you can immediately
+see a huge difference in the level of detail. you can see a difference in
+the actual graphic settings, and the fact that the pc's
+actually doing fairly well. we're actually pretty much
+capped at 60 fps right now. i do have vsync on, and generally when i've been trying this, it actually is able to keep
+up a fairly consistent 60 fps. please wait, i need to find
+a cliff to jump off of. trust me, this is gonna be a great, ah, no, no, goodbye switch. okay, now i'm good.
+(upbeat music) not only can you see
+farther into the distance with some levels of detail, but it just looks so much sharper. look at how on the pc,
+we've actually got grass, and there's like actual levels
+of detail going up the hill, the switch, it looks like a ps2 game. like it really is just no comparison. so just like "the witcher," if we have this level of
+performance with the switch 2, it is gonna be absolutely
+transformative for pc games. let's try "fortnite,"
+(upbeat music) because i'll actually
+say out of all the games we're gonna try here "fortnite" probably is gonna be the one that's best optimized for the
+switch, at least technically. "fortnite" is a game that actually runs at 880p in actual docked mode, and 660p in handheld, much better than the other two games. and you can see immediately that while there are differences the switch version of "fortnite"
+really is not terrible. now, mind you, while the settings
+might look sort of similar may i direct your
+attention to the frame rate the switch, 30 fps, our pc 120 to 144 fps on this fairly consistently, but it's important to keep in mind that the settings on the pc
+are still set to fairly low. and importantly, we're
+not taking advantage of the higher end things
+like ray-tracing and whatnot which technically that switch 2 hardware may be capable of. but if you take it at pure face value what we are getting is
+a higher resolution, we're getting better
+settings, and importantly, a far better frame rate, but regardless, i think it's important to keep in mind that the switch 2 can't just be, "oh it runs switch games,
+but a little bit better." it needs to be essentially
+a generational leap to keep the switch relevant for the next five, six,
+seven years or even more. some rumors are suggesting
+that the switch 2 will be based on the top of the line orin agx developer kit,
+an $1,800 module that is, let's say, a little more powerful
+than i think is practical. there are several models of the orin with different
+levels of performance though. think about the difference
+between a core i3 and a core i9, they're both in the same family, but they definitely deliver a very different level of performance. if you take the idea of the switch 2 using that agx silicon at face value, we're talking about an
+incredible level of power. that would be dope, but there is no shot that they'll be able to pull something that ambitious off. the most credible one
+seems to be the nintendo will be using nvidia's tegra t239. (upbeat music) this is a custom version of the tegra t234 inside of our orin nx developer kit. what this likely means is
+that nintendo and nvidia have used this as the base, but customize it to be
+more ideal for switch use, probably by tossing out some
+of the more ai focused features to save a few bucks. as we all know, it's
+nintendo we're talking about. while we don't know that the tegra 239 is what they're making for nintendo, we do know it's a real chip, thanks to not only an nvidia employee accidentally confirming the t239 exists along with linux actually being updated with support specifically for the t239. to be clear, this orin nx dev kit is not a 100% match what i think
+will be in the next switch, but if we do use it as the
+basis for next generation, it makes a ton of sense. it's based on the same ampere architecture found in the rtx 30
+series of graphics cards. that means support for
+all the modern goodies, ray-tracing, nvidia's
+excellent, dlss upscaling and modern apis such
+as directx 12 ultimate, even though they'll
+probably still use vulkan. tech like dlss can go a long way in helping the switch 2 to run
+games at lower resolutions, and then upscaling to something that looks a lot more acceptable without completely
+destroying your battery life. inside the orin nx
+configuration that we have here there are eight arm cortex a78 cpu cores, 1024 ampere gpu cores and 16 gigabytes of lpddr5 ram. safe to say all of this is a huge upgrade over the quad core cpu, four gigs of ram, and relatively puny graphics
+on the existing switch. if nintendo really are able to load up the almost $2,000 orin
+agx level of performance in the next generation of
+switch, i would love that. i mean, that would be more
+than twice the performance of what we're seeing here, but i just don't believe that nintendo are going to push the
+envelope that hard on price, and especially power consumption. the orin nx that we have here is a much more reasonable estimate. there's a ton of headroom for it to be running more gaming focused software and likely some silicon level tweaks. and if we focus on this, there are a couple of
+takeaways from this video. the idea of a next generation switch coming out in the next
+year, maybe year and a half, makes a lot of sense to me, and if you buy into that idea, i think it's a no-brainer for
+nintendo to tap nvidia again with that mysterious tegra t239. but what the steam deck,
+and rog ally are showing is that with a bit more
+performance on board, there's essentially no limit to what could run on a
+hypothetical switch 2. my educated guess after
+testing the orin nx will be something in the neighborhood of three to four times the
+performance of the switch, or the same ballpark as the steam deck likely enough for nintendo
+to add 4k support, even though most games
+would still likely target something closer to 1080p, but with modern tech such as dlss, and nvidia's excellent developer tools if this really is the
+hardware we're working with, i think it is a big enough
+leap to give the switch 2 the performance it needs to keep up with this generation's
+heavy-hitting games. if you enjoyed this video, definitely be sure to
+hit that subscribe button and let me know in the comments below what do you want out of the switch 2? i want it to exist.
+(upbeat music)

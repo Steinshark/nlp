@@ -1,0 +1,99 @@
+On Sept 3rd, 2023, we held a symposium. In this video, I want to do a brief recap
+of what happened and invite you to the next one. The idea for the symposium first popped up
+when Dylan told me that both he and Doug O'Laughlin of Fabricated Knowledge were coming to Taipei
+in September. Dylan and I had held a small meetup back in
+May. That was a blast. So now that all three of us are here, we should
+have something a bit bigger. And thus came about the AI and Semiconductor
+Symposium. Dylan did his magic and found some amazing
+guests, which we will talk about later. And we booked a venue in early August. It was a beautiful ballroom at the NTU Hospital
+International Convention Center. We made the first announcement a week later
+and by the time sales closed, we had over 400 signups. I am not going to lie, I was incredibly anxious
+in the days before the event - setting up seating options, coordinating slides between
+all the participants, so on. It felt like being back in university. And then if we are not lucky enough, we have
+Typhoon Haikui approaching Taiwan. For a few days we worried over what would
+happen if the storm hit Taipei head on. But fortunately (for us) the storm turned
+south. ## Day of the Event The day of the event, we all met at a wonderful
+cafe in Beitou called INTRO Kitchen. I highly recommend it to everyone. Go check it out. Now, I should mention that Dylan sprained
+his ankle last week whilst drunk dancing. He has been walking around on it for the past
+whole week and now it's not doing well. So with the event starting about an hour and
+a half away, we take him to the traditional Chinese medicine clinic to treat his foot. The doctor says it will take 20 minutes, and
+now I am really freaking out. I show up at the Room at 12:30 PM and there
+are already 30 people waiting. We go up and down the aisles, marking the
+seat sections so people can sit down. Meanwhile, we are taking attendance outside. Our esteemed Master of Ceremony Rita arranges
+a maniacal car ride back from Beitou to the NTUH Convention center. Dylan arrives 20 minutes late and now we are
+off and running! ## Frankwell Lin Our first talk was by Frankwell Lin, Chairman
+and CEO of Andes Technology Group. He also serves on the board of the RISC-V
+International Association. Andes Technology Group is a semiconductor
+IP company providing IC design services for other companies. They also develop a series of hardware and
+software products. Frankwell discussed AI accelerators including
+those using photonics and their strong position in RISC-V. He also went over potential methods to continue
+realizing performance improvements in digital electronics - Moore's Law. New materials and devices, which take time. Or architectural specialization and something
+Frankwell calls "extreme heterogeneity". The use of very specialized chips for certain
+applications - as aided by the newly released chiplet standard - Universal Chiplet Interconnect
+Express, or UCIe. It was a great and informative talk about
+a company more people should know. ## Dylan Patel Dylan did our second talk. He opened with a metaphor discussing just
+how computationally expensive AI can be. If you printed out the parameters of a good
+but not leading edge model like BERT onto a piece of paper, then that stack of paper
+would go all the way from Philadelphia to Chicago. GPT-4 on the other hand would go all the way
+to the Moon and back, 10 times over. Dylan's talk was on model requirements for
+hardware and future scaling, as well as future model architecture and what hardware those
+models might need. He walked through the memory hierarchy, and
+some of the training costs for the largest leading edge models. He also compared the costs of running ChatGPT
+and a Google Search, which was pretty interesting. By the way, I find it funny how every time
+he shows a new slide, a bunch of people lift their phones to take a picture of it. ## Warren Lau After that, the third talk was by Warren Lau
+- senior analyst from the Hong Kong-based Aletheia Capital. He walked us through some of his fund's theses
+especially with regards to the AI boom and the AI supply chain. Making these new AI products like ChatGPT
+and Microsoft Copilot mean buying and installing lots of AI servers. Nvidia is the most prominently featured of
+these suppliers, but there are many others. A high-end AI server is estimated to cost
+some $180,000 - with the GPU capturing about 89% of that. There was also some discussion of AMD's upcoming
+MI300 processor - the first CPU+GPU combo - comparing them to the H100 accelerator. Overall, I felt it was an insightful journey
+into the massive network of vendors feeding into ChatGPT. ## Doug O'Laughlin Doug is a brilliant analyst and he really
+brought some fire to the show. He talked about China's big push into the
+lagging edge semiconductor industry. This has been something a lot of people and
+myself have been thinking about for a long time. I was going to do a video about it. He went over his supporting items for the
+thesis. There is a great wave of digitization in the
+car industry happening right now, and that requires more car silicon. China holds a substantial cost and market
+advantage in EV production, and they are leveraging these advantages to generate immense capacity
+to flood the market with EV exports. Many of these EV makers are vertically integrated. They are building these Fabs for their own
+internal use, which distorts the systems' whole economics. And with the Chinese no longer able to import
+leading edge semiconductor manufacturing equipment, it has completely shifted them towards dominating
+the lagging edge. What this means is that traditional automotive
+semiconductor OEMs will be hit hard by this new wave of competition and capacity. Very provocative thesis and I think more than
+a few friends in the audience were quite moved by it. ## Me For my talk, I shared a story about American
+lithography companies. The video containing the full version of the
+story will be shared a bit later so wait for that. But let me share the little story I told at
+the start. I remember when I first started at the channel,
+I made my first video about TSMC early on. The video did better than others that I have
+done and I thought I struck gold! But then I looked at the search terms that
+were bringing people to the video and noticed one of the top terms was "TSMC Minecraft". And I was like "What?" Turns out, there is a very large YouTuber
+called TSMC Minecraft and he makes Minecraft tutorials. A not insignificant portion of views coming
+to the channel were not interested in TSMC the chipmaker at all, but TSMC the Minecrafter. That was pretty amusing. ## Panel Q&A After this, Dylan had not yet finished his
+slides so we started the panel a bit early. It was also very nice to get Jordan Schneider
+of ChinaTalk up on the forum too. He was a bit jet lagged but I loved having
+him on there. We used a service called Slido to collect
+questions. People could upvote the questions they wanted
+to answer. We could not possibly get through all the
+questions that we received though, sadly. There were some very entertaining moments. Dylan was asked about a possible AI server
+bust and he cooked up a big rant about how Jensen likes to go all with the chip double
+orders when the going is good. Dylan then goes on to say that will eventually
+lead to a bust and a subsequent write down in inventory. You can’t say Dylan isn’t afraid to speak
+his mind. ## Dylan 2 Dylan went up again the second time, talking
+about his "GPU-Poor" concept that he brought up in a prior newsletter. In it, he focused on Google and their massive
+computing advantage. There were some very fun references to Google's
+MEMS-based optical switches and how they dynamically reroute traffic. A friend of mine who worked at Google before
+came to the show and told me via chat that "everything he is saying about Google is pure
+Google thinking". And of course, he showed the now-infamous
+chart that got Sam Altman calling him Google marketing/recruiting on TwitterX. With Elon his X-ness himself replying to said
+Tweet. ## Mingling and End And with that, we were done! Despite the late start, we finished exactly
+on time at 5 PM. Since we had the room until 6 PM, there was
+extra time to mingle. Naturally, they all ran for the stars of the
+show - Doug and Dylan. These two guys are legitimate celebrities. My favorite part was when someone brought
+a real wafer - a binned one, it seems - for us three to sign. I am told that when Dylan was signing it,
+he was able to identify what the chips were. Crazy. I was suffering from back spasms that day
+- thanks to the stress of putting this whole thing on. But regardless, it was a pleasure to talk
+to each and every one of you. I had a blast learning about what you guys
+do. ## Conclusion Nearly 200 people showed up despite short
+notice and a raging typhoon outside. I am stunned and grateful for all of you who
+came out. To those people, you are the real MVPs. For those who were not able to make it, I
+am sorry to have missed you. Come by for the next one ... whenever it shall
+happen.

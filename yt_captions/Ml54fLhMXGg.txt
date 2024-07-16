@@ -1,0 +1,157 @@
+When TSMC first opened its doors in February
+1987, it leased a factory and staff from Taiwan's Industrial Technology Research Institute. The Taiwanese government had invested about
+$100 million at the start. But Founder Dr. Morris Chang said that the
+government never invested another dollar after that. TSMC also had a new, unproven business model. At their founding, they were the only semiconductor
+company solely dedicated to manufacturing. There was no market for it. I am excited about Dr. Chang's upcoming autobiography. So in this brief video, we are going to look
+at TSMC's early years. Was it a win right off the bat? What did they do that was 
+so special? ## The Concept The idea of providing custom chips for customers
+who wanted them, but can't afford the volume is not original. Fairchild Semiconductor - the Big Daddy of
+all semiconductor companies - had an interesting product in the 1960s called the "Micromosaic". It was a logic chip with about 150 logic gates
+connected together with aluminium interconnects. By customizing those connections right at
+the end of the fabbing process you can create a custom chip. Oh, by the way Fairchild used a computer to
+determine how to place and route these interconnects. So along the way they just casually invented
+Electronic Design Automation. Fairchild eventually wound down the Micromosaic,
+but some of the team later founded LSI Logic - which made a business of providing these
+custom chips. Famously, Jensen Huang worked there before
+he founded Nvidia. ## Texas Semiconductor Manufacturing Company? In March 1976, Chang mentioned the idea to
+Texas Instruments management in a strategic planning conference document. He proposed that TI aggregate outside customer
+demand in order to strengthen its own leading manufacturing capability. TI passed on the idea, because frankly it
+made little sense to them that they should open up their fabs to their potential competitors. In fact they went the opposite path. Three years after Morris Chang's memo, Texas
+Instruments started making consumer electronics products of their own - directly competing
+with its own customers. Some people have said that the T in TSMC could
+have stood for “Texas”. Makes for a great social media post, but a simplification. Morris himself said that the foundry concept
+could not have happened without the revolutionary work of Carver Mead and Lynn Conway. Without their ideas to use abstraction, hierarchies
+of systems and sub-systems, and the use/reuse of common "blocks" to wrestle the complexity
+of semiconductor design, splitting chip design and manufacturing would have been impossible. ## Finding a CEO Morris Chang will forever be known as TSMC's
+founder and long-time CEO. But at the start, Chang was only the company's
+chairman. For most Asian companies including those in
+Taiwan, the chairman has a more active role in the company - serving as its representative
+in certain corporate affairs - but is not involved in everyday operations. So the company's first CEO was actually James
+E. Dykes, who joined in March 1987 from General Electric. Dykes had been the VP in charge of all of
+GE's semiconductor work, integrating RCA's factories after GE bought them in 1985. After two years of closing RCA's old factories,
+Dykes was tired of the job. They had basically put him out to pasture,
+allowing him to collect a paycheck while he looked for a real job. Times sure were different back then. The Taiwan government wanted Morris to find
+a foreign investor and a top-flight executive to run the TSMC startup. Morris wanted Dykes. Dykes first said no over the phone, but Chang
+flew over to North Carolina and walked him through the idea. And it convinced him. Dykes worked at TSMC for a few months, overseeing
+the construction of the company's first actual fab - now called Fab 2. After that was done, he completed his contract
+and returned to the United States. Dykes later passed away in Florida in 2013
+at the age of 75. He was remembered for his kindness, compassion
+and his love for hamburgers. ## Spare Back then, there was no such thing as a "fabless"
+industry. Most people didn't care for this newfangled
+company out in backward Taiwan. So from 1987 to 1991, TSMC survived by providing
+extra capacity in trailing edge products. One of these first customers - maybe their
+very first - was Intel. Morris Chang had known Robert Noyce and Gordon
+Moore for a long time. So in 1988, Andy Grove visited Taiwan to see
+TSMC's Fab 1 and its 3 micrometer node. Morris Chang recalls in a 2011 interview: > I showed him we were getting good yields
+on 3-micron technology, which was 2﻿1/2 generations behind Intel and Texas Instruments,
+but we were getting yields and he was impressed. He said, 'Maybe Intel can use you.' The Taiwanese ITRI fabs had been getting yields
+superior to those found in the West ever since the RCA technology transfer days. So Grove went back to the United States and
+asked his engineers to try and make something work. During the accreditation phase, Intel found
+200 issues. TSMC resolved them one by one, and was thus
+certified to produce processors and chipsets. Other American IDMs struck deals with TSMC
+as well - basically for anything that was popular at the time but they didn’t have
+capacity for. For instance, TI and TSMC struck a 256K Dynamic
+RAM production deal in 1988. At the time, the leading edge was 1 megabit. ## Fab 1 That fab which so impressed Andy Grove - Fab
+1 - could produce about 12,000 150-millimeter wafers a month. To make sure the line is always up and producing,
+the guys at Fab 1 put face stickers - emojis essentially - on the equipment. A smiling emoji sticker shows the machine
+is working fine and is being actively used right at that moment. A sleeping emoji sticker means that the machine
+is working fine but nobody is using it right now. A sleeping machine is not making money. A hurt face emoji shows that the machine is
+down right now for repair and someone needs to be working on it. And finally, my favorite. A skeptical face emoji with one raised eyebrow
+means that the machine is not right and that an engineer is or should be looking at it. We want all the machines on the line to be
+showing the happy sticker face. There is some psychological gaming going on
+there for everyone to jump on any sticker other than a smiley face. Soon after the company was founded, TSMC began
+working on their second Fab - Fab 2 - which was dedicated in 1990. Fab 2 is a 500 nanometer node fab capable
+of producing 30-40,000 150 millimeter wafers each month. TSMC closed down Fab 1 in 2001. It remains the only factory TSMC has ever
+closed. They like to say that they never closed down
+one of their fabs. And it is Technically correct, since they
+didn't build Fab 1. ## Beating the Japanese Why was the sticker system so important? How did TSMC get these impressive yields? Cycle time. Cycle time refers to how long it takes for
+a lot of wafers - typically 25 or more - to go through the entire wafer fabrication stage. All 600-1,000 steps of them. In a 1989 interview, CEO Dykes laid out TSMC's
+plan for out-manufacturing the Japanese: > "We are going to have a very fast cycle
+time here; we're talking about 20-25 days from input to output. That's much faster than the Japanese. The area where the Japanese are worst is cycle
+time. If they tell you 40 days, they are running
+closer to 55 ... I think that's going to be one of our strong points" Peter Thiel wrote that every great business
+is built around a hidden secret. From the very beginning, TSMC's manufacturing
+secret is "cycle time". I wish I can remember where I read this, but
+TSMC has long said that it focuses on cycle time as much as it focuses on yield. The shorter the cycle time, the faster they
+are running wafers through the system. And the faster they can run the wafers through
+the system, the faster they can learn how to raise yields. In 1998, Morris Chang hand-wrote TSMC's top
+priorities. Short cycle time from wafer start to finished
+wafer is number 4. ## Foundry And it is when compared with the Japanese
+that the power of TSMC's curious business model becomes most apparent. In the early 1990s, if you wanted a "silicon
+foundry" you went to the Japanese. The big Japanese semiconductor manufacturers
+had the capacity and some technology. For instance, FPGA-maker Xilinx fabbed their
+first products at Seiko Corporation. But the Japanese companies wanted something
+in return. Seiko wanted and got exclusivity in the Japan
+market for Xilinx products. The Japanese also wanted product information
+about the chip you were fabbing. Maybe because they wanted to know how to help
+you make it better ... or maybe because they were feeding that info back to their own designers. Dykes was very clear about TSMC's position
+on this. They don't compete with you and they don’t
+have any incentive to steal designs. Unlike with TI or the Japanese, TSMC enshrined
+this value right into the company charter. ## Talents In 1991, Don Brooks joined TSMC as its third
+president. He replaced Klaus Weimer, who went on to run
+Chartered Semiconductor in Singapore. Brooks had worked for 22 years at TI as an
+associate of Morris and really admired him, calling him one of the top semiconductor managers
+in the 70s and 80s. He also talked about the plethora of Asian
+talents: > "I have been always energized about Asia
+- the ability there to pull together a trained, loyal workforce and the financial means for
+a venture. The environment there is so positive" In a later oral history, Brooks adds: > [Taiwan] is homogeneous ... it's the US
+a little bit of the 50's, you know. It's a team effort ... The pressures that
+go with that on a social level are just incredible. If one of the people doesn't pull their weight,
+it jeopardizes the bonuses and the profit sharing of the other people This was a common theme about the Taiwanese
+workers. Wages and cost were of course a factor. Brooks explains that the lower base salaries
+meant that you can put 2 times more engineers to a task than you would be able to in the
+West. Note I said "base salaries". Later on, engineers and workers enrolled in
+the TSMC profit sharing plan were earning TSMC stock worth hundreds of thousands of
+dollars a year. But, low wages were far from why Taiwanese
+workers were so well suited for semiconductors. Otherwise, TSMC's China fabs would have had
+far superior economics to the Taiwan fabs, but they don't. Quality, retention, and education matters
+so much too. Founding CEO Dykes observed that TSMC benefitted
+from pulling from a very good talent pool. Two of Taiwan's top universities are nearby
+and graduates there feed right into TSMC. And unlike with the Japanese, many Taiwanese
+had worked or studied in the United States. In 1987, over 32,000 of the 130,000 foreigners
+getting advanced degrees in the United States were from Taiwan. So Taiwanese were familiar with the West and
+can speak English. ## Going Fabless Things started to turn around in 1991 with
+the rise of the fabless industry. Semiconductor fabs were getting more expensive. Adding a new line might cost $200 million
+even back then. It not only squeezes the startups, but also
+the middle class semiconductor makers. For those guys making between $100 million
+and $1 billion in revenues, adding a new line risks putting them into an over-capacity situation. But what if they were to always be able to
+tap capacity at a foundry that's interested in their success? News of TSMC winning business from prestigious
+customers like Intel and TI brought the Taiwanese design houses to their door. These design houses were small companies with
+little capital but plenty of ideas for chips in everything from video games to computers. The emergence and growth of the fabless industry
+- first in Taiwan and then in the US - fueled TSMC’s growth far better than being a second
+source supplier for someone else. ## The Unexpected Success Interestingly enough, while Brooks and Dykes
+both recall being incredibly compelled by the foundry idea from the very beginning, Morris was the most negative on it. And he was the guy who recruited them there! Brooks remembers that when he joined in 1991,
+Morris told him with regards to the foundry business: > In fact, he told me we're building fab two
+... but Don I wouldn't anticipate there being a fab three, don't get your hopes up ... So,
+when he speaks of being this visionary about this business, I don't think he had any idea
+what he was getting started Remember, that Chang was still working on
+things in at TSMC's founding commercial technology institute ITRI - he didn't leave that post
+until 1994. Furthermore, Dr. Chang was still serving as
+Chairman of Vanguard Semiconductor, another foundry. He held that position until 2003. So he was not involved in the day-to-day at
+TSMC. They basically saw him once a month. Brooks on the other hand saw the numbers. He saw the incredible yields at the fabs,
+and the economic power of scaling those fabs to huge sizes. And having worked in the American semiconductor
+industry for so long, he had sat in customers' chairs and understood their pains. So Brooks ignored his friend's words and got
+to work. And TSMC grew 54% a year throughout the six
+years he served as President. And then suddenly: > [Morris had] always been a conservative
+man, a contrarian. I think he always told me the business was,
+you know, going to crap out and you're over-investing and everything, but he didn't get in my way
+when it came down to doing it ... > So I think when he looked up in '95, '96,
+and saw what a success it was going to be and how important it was to Taiwan, I think
+he was just as surprised as anyone. > Now I think when I told him I wanted to
+come back, I think he seized that opportunity to place himself as president and get some
+of the rewards that he thought he was due, and boy he's done that. Brooks recalls these words with a bit of wistful
+bitterness. After a while, he wanted to go home to the
+United States and originally was supposed to work at an office there. But Morris eventually changed his mind and
+Brooks resigned. He later joined TSMC's big rival UMC, which
+did seem to have ruffled a few feathers with his old colleagues. He later passed away in Texas in 2013 at the
+age of 74. ## Conclusion In an interview, Morris Chang said that he
+used to read Ecclesiastes 9:11 while he was at Harvard. It goes in part: > The race is not to the swift or the battle
+to the strong, nor does food come to the wise or wealth to the brilliant or favor to the
+learned; but time and chance happen to them all The business histories make it seem like as
+soon as the idea for TSMC fell out of Morris Chang's head, it sprouted into an overnight
+success. It has never been like that for anything. But particularly here. The reality seems to be that Morris Chang
+founded TSMC based on just one idea out of many. By then Taiwan was already on its way to becoming
+a successful semiconductor-producing power. TSMC then critically relied on a mix of hard
+working Taiwanese, American-educated Taiwanese, and foreign semiconductor veterans to climb
+up the value chain and carve out a brand new industry niche for itself. Time and chance happens to us all. TSMC came at the right time and had the right
+chance. And they made the most of it.

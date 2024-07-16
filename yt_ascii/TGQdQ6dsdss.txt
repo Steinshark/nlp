@@ -1,0 +1,110 @@
+- hey guys, this is austin. this is the 2018 macbook air. and for $1,200, there's
+been a lot of controversy about the performance of this laptop, and on top of that, just exactly
+what's inside this thing. so, of course, the question
+is how powerful is it really? interestingly, there's only
+a single processor option for the macbook air this year. it is a dual-core core i5 8210y. this is an 8th generation
+y-series processor, which does give it a dual-core
+chip with hyper-threading. and the clock speeds actually
+aren't all that impressive. it has a 1.6 gigahertz base
+and a 3.6 gigahertz boost, a far cry from a lot of
+the quad-core systems that you can often find
+at this price point. so there's some interesting
+things with this chip. first of all, it has uhd 617 graphics, something i've never seen in
+any kind of intel chip yet. and also interestingly,
+this is a 7-watt tdp. so what that means is that most
+of these y-series processors are used in things like
+the 12-inch macbook. now, that does not have any kind of fan. and, originally, i was actually
+told at the apple event that this macbook here is fan-less. however, a lot of reports have shown that this actually does have a fan. also, i updated it and heard the fan. so let's open it up and see
+what's actually inside. (laughs) i thought we had to, like,
+clarify that i heard a loud fan. it's usually a pretty good
+indicator there's a fan inside. just sayin'. take this off and immediately
+we see that there is a fan. so it shouldn't be a big surprise. so what's kind of interesting
+about the macbook air this year is that this is
+one of the smallest fans i've ever seen for cooling in a laptop. now, this is actually
+not strictly necessary. if they would have gone
+for a slightly lower-end y-series processor with a
+lower, like, 5-watt tdp, for example, the fan would
+not have been necessary. but on the flip side, that
+means that you're really reliant on a lot of other issues with cooling. so say you were in a very hot environment. the actually chassis of the computer really can't dissipate as much heat, where even a small fan
+like this should make a big difference, and it
+gives you the added benefit of getting a couple extra watts of tdp, which will give you a
+little bit more performance. i will say, it is a
+very, very clean layout. so not only do we have the trackpad here, but we also have our three battery cells. and what's interesting
+about this battery is that, at least based on the rumors,
+and certainly taking a look at it seems to sort of back that up, is that unlike most macbook
+pros that are current where you kind of have
+to replace a large chunk of the laptop to be able to
+get rid of the batteries, with this, it looks like you could probably swap these out pretty easily. you also see the fairly large speakers, and then we've got what is
+a pretty small motherboard, and i assume that's probably
+our t2 chip underneath here. hey, look at that. the apple t2 chip. so this is actually very
+similar to some of the socs that you'll find inside an iphone, but this handles a lot of the
+sort of lower-end processes on the macbook, including
+encrypting the ssd, running your touch id. it's got the secure enclave; it's got the isp which runs the webcam. there's a lot of very smart
+things that are on the iphone that all run from this
+tiny, little t2 chip. all right, so with the
+computer put back together, let's actually see how it performs. starting out with, we do have geekbench, which is the classic. all right, there we go. 4301 on single-core
+and 7725 on multi-core. it is an upgrade over the
+last generation macbook air, but it is not a big upgrade
+over, well, much anything else. i mean, sure, it's decent as a dual core, but we really have moved on to quad-core across the board for the most part. next up, we have the
+geekbench compute test. this one's kind of interesting, because this does have a unique gpu. i've never seen the 617 available. now, it is one of the
+intel uhd series gpus, so it's probably not going
+to be anything crazy, but maybe somewhat faster. maybe they added two more
+numbers to the last one i tested. this is 22135. that actually is a little faster. now, to be fair, i'm
+running metal right now, but that's actually pretty decent. so that's a fair bit over
+the 615, and that's closer to what you would find with
+the full uhd 620 graphics. i've gotta say, we're
+just getting in the video, and i've already found
+some interesting stuff with this macbook. let's keep going and get into
+a little bit of cinebench. so what's interesting
+here is i actually think the y-series processors have
+been changed this generation. so not to get too far into nerd town, but traditionally,
+y-series on the intel side means it's their very, very low tdp chips, which are traditionally
+used in fan-less designs. now, obviously, this is slightly higher and it is, of course,
+using a very small fan, but instead of getting the
+traditional dual-core chip with the low-end gpu, we're
+getting the same low-end cpu, so obviously we need to keep that tdp low, but we are getting that bigger gpu. so, for context, the 12-inch
+macbook is $100 more expensive, and, with that, you get the core m3, and that's not even
+really going to be on par with what we're getting out of this. you really would need to
+bump up to something closer to the core i7 to get
+equivalent clock speeds, and i don't think you're
+gonna get anywhere near that same gpu performance. all right, so 121 on single-core
+and 250 on multi-core. that's not that impressive,
+to be totally honest. it's fine, but it's basically what i would expect
+out of a y-series chip, like the 12-inch macbook, for example. the gpu, though, that's what
+i want to see right now. 32, yeah, there we go again. so with the 12-inch macbook,
+you're looking at a score roughly around 25, 24,
+something like that, so 32 is a pretty decent bump. now, all of this being said, this is not an incredibly
+powerful laptop, right? i mean, this is still a macbook air. it's still got a dual-core processor. especially on that gpu
+side, i'm pretty impressed. next up, let's test the ssd
+performance on the macbook air. now, we do have the base model, which has a very, very
+tiny 128 gigs of storage, kinda not even cool at this point, but, well, okay, that's
+pretty decently fast. so 1,917 megabytes per second on the read and 476 on the write. that's pretty solid. so, for context, that's faster than any other 128 gig drive i've tested and it's not too far off
+of the 13-inch macbook pro with the 256 gig drive. this is a very fast ssd. next up, we have something
+a little bit more intense: a full 4k video edit
+inside final cut pro x. so, for reference, this is a project from the this is channel, so it's almost exactly five minutes long and it's a mix of prores, a lot of graphics and stock footage, and it's about, i don't
+know, 70% rendered or so. so i kinda scrolled through here. its performance actually
+holding up reasonably well. oh, and just so you guys know, i am editing off of a samsung t3 ssd mostly because there's not
+enough storage on the macbook to fit, well, anything, but especially not a bunch of 4k video. (laughs) (video playing) i mean, that's not bad. it's definitely able to play it back. what i'm curious about is what the actual export times will be. so with a fully rendered
+timeline of prores 422, let's see how long this five-minute
+4k video takes to export. so, settings are correct. this is h264. all right, ready, set, go. (heavy rock music) all right, so just over
+six-and-a-half minutes to render a five-minute timeline. now, no, you're not going to want to spend a lot of time editing on the macbook air, specifically with 4k
+footage, but it is possible. however, we have a
+slightly different method for speeding things up. in true building the ultimate fashion, the macbook air supports
+full thunderbolt 3, which means that we can
+add an external gpu, because why not? so this is the gigabyte gaming box with a full amd rx 580 gpu inside. now, recently, final cut
+has received full support for external gpus. and especially with such a thin
+and light laptop like this, i'm curious to see just
+how well it performs. now, no, we don't have any kind of crazy scientific tests here. what i do have is, well, the curiosity of how far we can actually push it. so, specifically, with final cut, it does look like the gpu is being used. it's hard to benchmark exactly how much of a difference it makes. but just for some reference here, this is all playing
+back at higher quality, and i am running it at full
+4k in unrendered timeline, and the computer's able to
+keep up reasonably well. so we were going to try fortnite running on the internal gpu of the macbook, but i don't want to be here all night, so let's get the external gpu going. (groans) why do we ever try to
+play fortnite on mac? this is always such a
+disaster of just waiting and crashing and just being garbage. so the new macbook air is
+a little bit more powerful than i expected, but it is definitely... did it just switch? did it just start loading? what? are you serious? it actually took 20 minutes to... oh. (ken laughing)
+oh, okay. all right, hopefully you
+guys enjoyed this video. the 13-inch macbook air is
+a little bit more powerful than i expected, and you
+can do some stuff with it, but don't get your hopes up, like playing a game of
+fortnite or anything. if you're bored, though, you can feel free to check out this is where's
+there's lots of videos that aren't boring. if you'll excuse me, i'm going
+to go be really frustrated at why this has taken 20 minutes to load and then logs me out.

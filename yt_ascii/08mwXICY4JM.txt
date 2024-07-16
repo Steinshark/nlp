@@ -1,0 +1,193 @@
+this february of 2021, a major winter storm
+made its way through the u.s. central plains, setting all-time records for low temperatures
+across the country. one of the biggest impacts of the storm happened
+here in texas where people across the state suffered extended outages of electricity and
+water. it was one of the worst winter weather events
+in history, creating loss-of-life and economic impacts that will take years to unfold. when disaster strikes, the flurry of political
+positioning and fingerpointing can make it difficult to understand what really happened. this is especially true for the complex systems
+of infrastructure like the power grid where most people really need a little more context
+and background than can be provided in a 500-word news story, but a little more boiled down
+than the discussions between economists and electrical engineers on twitter. so - for the first time ever on this channel,
+by the way - i'm talking about a current event. this is a developing story, and we're still
+learning the details and consequences of what happened during the storm. but, i've received a lot of requests for
+a video like this, and i hope it can provide some clarity and technical knowledge to elevate
+the dialogue surrounding this disaster. i'm grady and this is practical engineering. today's episode is the story of the 2021
+texas power grid emergency. before diving into the chronology of events,
+i want to provide just a quick overview of some important technical topics. i actually have a series of videos explaining
+the power grid in greater detail linked below, so check that out if you want to learn more. a wide-area interconnection, which is the
+technical term for a power grid, is the solution to the number one problem of the supply and
+demand of electricity: volatility. there aren't many feasible ways to store
+large quantities of electricity, so for the most part, the supply and demand have to be
+matched simultaneously. electricity is produced, transmitted, and
+consumed all in the exact same instant. managing those ebbs and flows is a very difficult
+thing to do unless large groups of power producers and users are connected together, smoothing
+out the volatility of demands (making them more predictable) and the supply (making it
+possible to have larger, more efficient generation facilities). interconnection increases the efficiency and
+reliability of electricity supply, and the majority of texans are served by a single
+interconnection that covers most of the state. i'll be referring to it as the texas power
+grid. just because there are so many power producers
+and users interconnected doesn't mean that there is no volatility in supply and demand. these are some example demand curves on the
+texas grid. you can see that demand is always changing
+throughout the day. when power demand drops due to mild weather
+or at night when people are asleep, we need generators to shut down. otherwise, the frequency of the ac power will
+speed up above 60 hertz. when demand spikes, we need generators spun
+up to match it. otherwise, the extra load will bog down the
+physical generators, and frequency of the ac power will fall below 60 hertz. the consequences of the ac frequency deviating
+by too much are massive because every generator in the entire system is magnetically coupled. if parts of the system lose synchronization,
+both generators and equipment connected to the grid can tear themselves apart. because of that, most parts of the grid (including
+generation facilities) have breakers that trip to isolate equipment if the frequency
+deviates too far. the breakers in your house monitor electrical
+current. if you plug in too many things to one circuit,
+the breaker will trip. these work the same way except they monitor
+frequency. and unlike in your house where restoring power
+is a quick fix, large power generating stations don't turn on and off with a flip of the
+switch. so, matching supply and demand to maintain
+a stable frequency is the most critical part of managing the power grid. in texas, the entity in charge of this task
+is ercot, the electric reliability council of texas. this is a non-profit corporation with board
+members representing basically every segment of the electricity market from generators
+to utilities to consumers. ercot's job is to oversee the entire system. they don't own or operate any facilities
+themselves, but they tell the operators of generation facilities when to start and stop
+running depending on the electrical demand. ercot also manages scheduled outages. owners have to have approval from ercot before
+they take facilities offline for maintenance. finally, ercot manages the wholesale market
+of electricity by setting prices and handling the transactions between power sellers and
+buyers. the week before valentine's day 2021 had
+already been a wintry one in many parts of texas, but as the weekend drew near, the forecasts
+started to make clear that the next week would be extraordinarily cold. on february 8, a full week before things really
+hit the fan, ercot had already started issuing public communications about very high expected
+electrical demands across the state. they canceled or delayed approval for a large
+number of scheduled outages to make sure as much electrical infrastructure as possible
+would be in service in anticipation of the storm. they worked with the texas railroad commission,
+which confusingly is in charge of the oil and gas industry, to increase the priority
+of delivering natural gas to power plants. they also worked with the u.s. department
+of energy to get permission for some power plants to temporarily exceed their emission
+limits from the epa during peak needs for electricity. all this to say, the folks managing the power
+grid were expecting exceptional strain on the system and had already started working
+the week beforehand to prepare. when the storm did hit on valentine's day,
+it really was one for the history books. three major facts to illustrate this point:
+first, it was extremely cold. this figure from the national weather service
+shows the departure from normal temperatures for three historical winter weather events
+in the southern u.s. plains. the one on the right is the 2021 event. essentially the entire southern u.s. had average
+temperatures more than 25 degrees fahrenheit or 15 degrees celsius below normal. all-time low temperature records were set
+in nearly every city across the region. it was the coldest many places had practically
+ever been. the next point which you can also see in this
+figure is that it was not just a local event. the storm had significant impacts across the
+entire state of texas and beyond. finally, the duration of frigid temperatures
+was just so long. this figure from the national weather service
+shows that large portions of the state were below freezing for more than 7 continuous
+days. that might not sound like a lot to those of
+you in northern climes, maybe even a welcome respite. but, in most parts of texas, that is unheard
+of. the state started sunday with about a quarter
+of its total electrical capacity already out of service, mainly due to weather the week
+before. these outages were about half wind power and
+half natural gas generators. even with that lack of capacity, as night
+began to fall that sunday, texas hit its all-time winter peak electrical demand of nearly 70,000
+mw, and it met that full demand. the previous peak was 66,000. everyone in the state was running their heaters
+to the max trying to stay warm. as the evening continued, though, it became
+clear to ercot and utilities that the amount of electricity available on the grid may not
+be able to continue to meet the demand. an advisory was issued that electrical reserves
+were low at around 11:30 pm. not long after that, generation facility after
+facility started to trip offline reducing the capacity to meet the high demand. texas has a diverse portfolio of power generators. the largest segment of that is natural gas
+making up about half of the capacity. the second segment is wind turbines at about
+30%. the rest of the generation fleet is made up
+mostly of coal powered plants, nuclear plants, and solar farms. this graph shows the outages of each generation
+type during the winter storm. you can see that wind and natural gas make
+up the majority of the lost capacity but no type of power plant was spared during the
+storm. the most important part of this figure is
+the natural gas line. plant after plant went offline to the tune
+of 15,000 mw of capacity within the span of 8 hours. all the details are still coming out about
+what really happened, but there was a lot we know that went wrong. natural gas wells and pipelines are particularly
+vulnerable to cold temperatures. not only does a gas stream contain water vapor
+that can freeze by itself, that water vapor can also combine with hydrocarbons to create
+hydrates that solidify at temperatures well above freezing. combine this with the fact that many roads
+were completely impassable during the storm, it was nearly impossible for some gas suppliers
+to keep things flowing. that despite the fact that the wholesale price
+of natural gas during the storm skyrocketed to more than 100 times its normal price due
+to the incredible demand, with power plants competing with residential homes that use
+gas for heat. at that price, suppliers were doing essentially
+everything in their power to deliver gas to customers, but it just wasn't enough. or, in some cases, it was enough, but the
+generators couldn't afford to operate their plants with such a high cost for fuel. but it wasn't just gas power plants that
+struggled, and it wasn't just about fuel. wind turbines were shut down due to icing. solar panels were covered in snow. one of the few nuclear units in texas tripped
+offline because of cold weather issues with its water supply. basically, the entire system was ill-prepared
+for a storm of this magnitude. texas does have a few connections to other
+power grids to help alleviate supply problems during emergencies, but those grids were suffering
+under similar conditions without much extra electricity to spare. this graph shows the total outages during
+the event. with that huge spike of generators going offline
+the morning after valentine's day, the state had nearly half of its total capacity gone
+during one of the highest periods of electrical demand on record. without any remaining reserve of resources,
+ercot had only one option left to keep supply and demand in sync: shed load. this is the technical term for what is essentially
+turning off parts of the power grid (in other words, disconnecting customers) to reduce
+total demands on the system. here's a simplified version of how it works:
+ercot tells the transmission operators they need to take x megawatts off the grid. those megawatts are distributed roughly evenly
+between the operators you may have heard of, like oncor, centerpoint, cps energy, austin
+energy, etc. based on their share of the total load. each operator has a plan in place for how
+to shed load within their own system when required. it's not something they decide on the fly. certain circuits critical to public health
+and safety like hospitals are prioritized. the other non-critical circuits are usually
+shut off in a rolling manner at 15-30 minute intervals. that way the inconvenience of lost service
+is spread out more evenly across the entire service area. of course, in many places during the storm,
+that is not what happened. and, this graph is the key to why. as more and more resources tripped offline
+so quickly, the frequency of the texas power grid began to drop. ercot continued ordering additional load to
+be shed from the system trying to keep up with both the rising demand from the cold
+weather and the quickly failing power plants. at about 1:50 am, the frequency fell below
+59.4 hertz. it doesn't sound that significant, but this
+is a critical threshold for grid stability. power plant controls are set to automatically
+disconnect if the frequency stays below 59.4 hertz for more than 9 minutes. in such a situation, as each generator trips,
+the frequency would quickly plummet until just about every circuit breaker on the grid
+had disconnected. four minutes and 37 seconds is all that separated
+texas from a complete grid collapse. without the urgent action to continue shedding
+load from the system, many might still be without power in texas a month later. that's because recovering from a complete
+collapse, called a "black start" of the power grid, is an immense technical challenge. so much equipment would need to be inspected,
+repaired or replaced from the damage caused by the collapse. only then could we start bringing generators
+and customers online slowly but surely to maintain balance between supply and demand
+throughout the process. if anything goes wrong during a black start
+and frequecy deviates too far, breakers will trip to protect the equipment and you have
+to start all over. i am not an economist, but the energy market
+is an important part of this story, so i'll do my best to summarize the key points here. unlike other markets that pay generators to
+secure capacity for the future, the wholesale electricity market in texas is energy-only. that means if you put power on the grid, you
+get paid for it. you get no extra points for having generation
+capacity when it wasn't needed. the only reason it's feasible to invest
+in future capacity is the scarcity pricing of wholesale electricity. when demand is high, the price goes way up. in theory, this incentivizes generators to
+not only make short-term investments to ensure their facilities are up and running during
+peak demands but also long-term investments in plants that can spin up during these times
+when prices are sky high to capitalize on the energy scarcity. this type of price model also favors intermittent
+sources of electricity like wind and solar which would struggle to compete in a market
+that valued firm capacity. while it normally varies between $30 and $50
+per megawatt-hour on an average day, the wholesale electricity price went up to the cap of $9,000
+per megawatt-hour during the storm and stayed that high for days. the result was that providers spent more money
+on wholesale electricity in a week than would normally be spent in 4 average years. that's with the extreme load shedding that
+occurred and doesn't include the incredible prices that some utilities paid for natural
+gas. most energy users won't see those massive
+costs, at least not right away. that's because nearly every retail provider
+offers a fixed or at least tiered rate for electricity to their customers, bearing the
+dips and swings of the wholesale price using a wide variety of financial tools and long-term
+contracts to try and hedge against the extreme volatility. prudent planning can only take you so far
+in an event like this, though, and at least one utility has already filed for bankruptcy
+protection after the extreme energy bill came due. other retail energy providers used a different
+strategy to manage the market unpredictability: pass the risk on to their customers by offering
+direct access to wholesale energy rates for a monthly fee. the idea is that some users may prefer to
+manage their own demand, cutting back on electricity usage when rates are high and shifting usage
+to times when rates are low. unfortunately, many of these customers were
+misled about or misunderstood the incredible volatility of the wholesale energy market
+to which they were being exposed, and there are many reports of residential energy bills
+in the thousands of dollars. during the peak of the event, ercot ordered
+20,000 mw of load to be shed from the system. that's the equivalent of turning off half
+of texas on a normal day. and the load shed orders lasted for three
+days straight from early morning on the 15th to the end of the'th. what should have been rolling outages couldn't
+roll because many utilities just didn't have any non-critical circuits on their system
+left to turn off. the result was that millions of texans were
+plunged into darkness, in some cases for days, without heat or light during one of the coldest
+winter storms on record. my house lost power in the middle of the second
+night of outages, and it was already 42 degrees fahrenheit (6 degrees celsius) that morning
+before we relocated to a family member's house. and, we were the lucky ones. many were not so fortunate to have friends
+or family with power nearby or even to have roads clear enough to safely make the trek. the selection of which circuits were left
+on versus off seemed arbitrary or even capricious to many. water utilities started losing service, both
+because of frozen lines and lack of power available for pumping, reducing the availability
+of yet another basic human necessity to huge swaths of the population. even though we had avoided the catastrophe
+of a total grid collapse, we did not avoid a crisis. many lives were lost, and the economic impacts
+of this emergency are untold. i have my own opinions about what could have
+or should have been done better during the storm and by whom, but this is not the place. my goal with this video is to try and summarize
+the facts of this tragic event in a way that is approachable by people who don't have
+a working knowledge of the intricacies of the power grid. many are still recovering from the storm and
+will be for years to come. please feel free to share your thoughts and
+opinions in the comments below. all i ask is that you please be kind and respectful
+to one another. thank you for watching, and let me know what
+you think!

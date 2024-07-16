@@ -1,0 +1,135 @@
+we have spent the day here with a square 
+bridge that can roll because despite the   fact it is a square cross-section it's 
+on a very specific mathematical path   which means it can roll without center of 
+mass going up and down this is an all new   path this has not been done before so this 
+is the mathematics of the cody do rolling [music] bridge this is cody dock in the east end of 
+london which is traditionally a very industrial   kind of area but over time the kind of water-based 
+industry has been gradually leaving and this has   been you know revitalized and there's more 
+community coming in and so they decided to   renovate this disused bit of water here to provide 
+more large boat docking where there's not space   for on the main river so over there that's like 
+the main river that joins onto the temps however   at the moment there's no way to get a boat from 
+out there into the moring over there so if they're   going to fix this up and they want to get boats in 
+this big they have to get rid of this dam which is   the current pedestrian bridge and this is a very 
+pedestrian heavy area so if they want to get rid   of this they have to put in a new bridge that 
+can move out of the way to let the boats in and   out and originally they got planning permission 
+for like an off-the-shelf you know caner lever   up and down bridge you can basically buy it in 
+a box from somewhere in the netherlands but the   artists who've moved in down here were like hang 
+on that's a bit boring we can do so much better   than that and one day one of them was talking 
+to an architect design friend of theirs named   thomas randall page who thought they had a much 
+better idea so i knew that you could have cogs   which weren't circular that could interface as 
+long as you had the kind of ins and outs on the   cogs that corresponded with one another 
+and then i also had seen this square wheeled   bicycle that this mathematician stan wagon had 
+demonstrated could run on a track made of a series   of conary arches and it was it was from kind of 
+combining those two ideas that the the idea of a   rolling square came about there were an enormous 
+amount of technological challenges i mean i i was   very naive and thinking that it was quite an easy 
+thing to do because i'd made a model that worked   and then as soon as we kind of up the scale 
+and all the forces get larger all the weights   get bigger and you you know friction and wind and 
+all these things start to really play quite major   roles and then there was also some unexpected 
+uh mathematical complexity because although   a a pure square rolling with sharp corners rolls 
+on a series of perfect conary arches in order   to make this work we rounded the corners so 
+you're not rolling on the point of the square   at any point it kind of there's a there's a fillet 
+uh a radius fillet between the straight sections   and this produced two geometries the caner arch 
+geometry which rolls along the straight edge of   the square and then another geometry where you're 
+rolling around this fillet which turned out to be   an elliptical integral which i didn't know 
+anything about that's all news to me and   working with the engineers luckily we had a very 
+uh young graduate who took it upon himself to try   and solve and the the this this geometrical 
+conundrum at the corner it was important for this   project to be hand powered and although often 
+when i show it to people and i tell them it takes   20 minutes to open and they say why don't 
+you just motorize it why don't you just put an   electric motor on it and for me there's a poetry 
+in the fact that it's hand powerered and there's   work to be done in opening it it doesn't need to 
+open very regularly maybe once a week maximum so   there's a kind of ritual aspect there's a 
+kind of like you know you turn this handle for   20 minutes to do it and it's very low energy in 
+that way in terms of i mean there's a lot of human   energy but you're not using electricity or an 
+engine and there's also a lot less to go wrong   when you have an engine or you have motors they 
+don't know when something's going wrong whereas   when you're turning a handle it suddenly gets 
+harder or there's a weird squeaking noise you   stop and you kind of so you can do away with 
+all the sensors and all of the tech complexities   and and for me there's poetry in that because 
+as the shape rotates it center of mass doesn't   go up and down that means we can roll that way 
+and we're technically not doing any work as in   we're not lifting the mass up or lowering it down 
+carefully of course there's friction it's reality   but the point is in theory it should roll nice and 
+smoothly the problem is we need a sensible center   of mass for that to work and the actual platform 
+of the bridge is a lot heavier than the rest of   it so it means the top of these this is full of 
+concrete and left over bits of steel rebar to try   and get enough mass up there this is a hollow i 
+think and then you got the platform so the center   of mass ends up somewhere sensible and we can roll 
+it that way and here it goes they made a special   exception because we were there at the same time 
+as an engineering open day which meant first   of all they rolled the bridge for no practical 
+purpose other than the beauty of the mathematics   and the engineering and it also meant that as 
+well as tom the designer we got to meet the   structural engineer alfred a bit of a nuance that 
+we only realized quite late in the fabrication   processes is when you add the rounded corners 
+to the square hoops and that was a bit of a new   mathematical challenge that we hadn't anticipated 
+and the issue with that is that the equation that   you use to derive the cery is usually based 
+on the idea of having four straight lines define   your square and that describes the movement that 
+the square then has to take roll along this track   but as soon as you add a rounded corner over that 
+region your equation changes you're no longer   dealing with a straight line you're dealing with 
+effectively a small offset circle rotating about   a center of gravity which is not in the geometric 
+center of that circle and when you plug it all   through the differential equation you end up 
+with some quite nasty integrals and so we've   got elliptic elliptic integral result and 
+um we used a script to numerically integrate   that and understand exactly what the rotation of 
+the bridge was going to be over that portion and   and from that we were able to sort of stitch 
+together two results so one from the cery result   for the straight section and then one from 
+the rounded corners and that's how you end   up with the overall shape that you have here to 
+help understand why the rounded corners were so   difficult mathematically i made my own animation 
+here of a square wheel rolling on a cenery surface   the animation is not great but you get the idea 
+the point is the center of mass is not going up or   down as the square rotates because it's a cenery 
+underneath and we know the equation of a cenery   easy to solve but those pointy corners are a bit 
+of an issue in terms of the engineering and so   they decided to round them off using sections of 
+circles so now when the square bridge is rolling   on the flats its ceries and once it hits the 
+corners that should be easy now it's just rolling   on a circular wheel we understand that except that 
+circular wheel at the bottom is the bit that's   rolling but the center of mass is still up here so 
+you got to kind of imagine the wheel as having a   sticky out bit with the bulk of its mass way over 
+there and now it's got a roll on a surface such   that that center of mass doesn't go up and down 
+even though it's all the way over there and that's   what alfred had to solve numerically cuz there's 
+no nice neat equation for that j remember earlier   when thomas mentioned stan wagon who was the first 
+person to make a square wield trike well stan saw   what alfred was doing numerically here and thought 
+well hang on what would the rest of that curve   look like and so stan actually worked out the 
+complete curve that a circular wheel can roll   on such that a displaced center of mass does not 
+go up or down and yeah roll is a bit generous here   because it's kind of adhered to the track but the 
+wheel can go through the track but that red dot   is the contact point and while this is lovely in 
+general all alfred had to do was numerically work   out a little bit of the bottom sections of the 
+curve and then put that in the gaps when the wheel   section of the bridge needed to roll an incredible 
+solution and that wasn't even the only bit of   mathematics that often had to do everything's 
+uh interacting here geometrically and you've got   you know the length of the trap which needs to 
+match the perimeter of the bridge that rolls on it   and then obviously the teeth need to intersect so 
+once you have a set of equations that describe   the movement of your bridge what you can do 
+which was quite a nice result you realized is   take the track and effectively roll it around 
+the bridge and the same way the bridge would roll   around the track you do an inverse transformation 
+of the track around the bridge and every time the   track intersects with the outside perimeter of 
+the bridge you can you can make a cut out so you   know that when the bridge then rolls it's going to 
+miss the pins and you're going to have cutouts   in exactly the correct positions so we took 
+all our translations ations applied them to the   pipe sections and then sort of wrapped it around 
+the bridge and that's what gave us the the tooth   profile of the bridge just before fabrication 
+when the fabricator david who works for a company   called cake was comparing the total length of the 
+track which as i said should match up with the   length of the bridge that rolls on that track and 
+he noticed that there was 17 mm difference between   the two and he he kind of flagged this i think 
+it was boxing day or day after boxing day while i   was watching tv with my family at christmas and 
+um and he kind of asked where where's this where's   this difference coming from and so we had to do a 
+bit of digging around into the math to understand   where where that discrepancy was coming from and 
+it was it was because of that different equation   around the corners that we spoke about but that 
+kind of yeah took us a little bit by surprise and   and you kind of had to trust the maths go through 
+the process derive the new shape and then when we   finally matched it up with the new equations 
+there was only a.1 mm difference which we put   down to the tolerance of the numerical integ 
+ation effectively at the end of the day after   everyone had left we had the pleasure of putting 
+the bridge back into its original walkway position   i can say that this thing is very much true 
+to its victorian era ancestors and that it can   be powered just by a human it's definitely a 
+nonzero amount of effort for the record you   can come to visit the bridge you can walk across 
+the bridge you can marvel at the bridge but you   can't wind the bridge you can't just show up and 
+start cranking it you've got to contact people   in advance and in theory once it's actually an 
+open bridge and ships are coming through ships   have to phone ahead and people will come out and 
+do this properly but do visit the bridge it's very cool not normally an applied 
+mathematician [applause] before you go a quick announcement so this 
+bridge is a fantastic example of taking an   interesting bit of mathematics and finding an 
+unusual use for it and there's a competition   on the moment to take an unusual bit of 
+mathematics and find interesting uses or   applications of it and the bit of mathematics 
+specifically is the hat the ap periodic monti   that was discovered recently in fact it's the 
+entire uncountably infinitely many family of   aoic mon tiles you need to find an unusual use 
+or application for them so just recently there   was a thing in oxford called hat fest which was 
+to celebrate this discovery and they announced   this competition which is sponsored by jane 
+street they're my fantastic financial friends   who are also sponsoring this video yes it's 
+a sponsor message so as well as sponsoring   my videos and my channel there is now prize 
+money in two different categories so if you   can find a use be it tactical artistic or just 
+downright crafty for the hat tile or any other   member of the aioic tiling family there is one 
+category for school students who are in the us   or the uk and a separate open category for 
+anybody i'm sure there are people watching   this video and come up with some fantastic and 
+unusual applications of the hat tile so thank   you so much to jane street for sponsoring the 
+competition and my videos and thank you to all   of you for watching right to the end and some 
+of you i'm sure will enter that competition [applause]

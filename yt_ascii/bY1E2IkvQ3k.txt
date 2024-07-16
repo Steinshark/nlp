@@ -1,0 +1,158 @@
+in 2015, an unusual incident happened on the 
+construction site for a sewage lift station   in british columbia, canada. worksafebc, the 
+provincial health and safety agency, posted a   summary of the event on youtube. a steel caisson 
+had been installed to hold back soil while the   lift station could be constructed. one worker on 
+the site was suddenly pulled into a sinkhole when   the bottom of the caisson blew out. the cause of 
+the incident was related to groundwater within the   soils below the site. we don't all have to live in 
+fear of the ground opening up below our feet, but   engineers who design subsurface structures do have 
+to consider the impact that groundwater can have.   the solutions to subsurface problems are almost 
+always hidden from public view, so you might never   even know they're there. this video is intended 
+to shed some light on those invisible solutions   (including what could have been done to prevent 
+that incident in bc). i'm grady and this is   practical engineering. in today's episode, we're 
+talking about how groundwater affects structures.  this video is sponsored by hellofresh, 
+america's number 1 meal kit. more on that later.  groundwater has always been a little mysterious 
+to humanity since it can't easily be observed.   it also behaves much differently than surface 
+waters like rivers and oceans, sometimes   defying expectations, as i've shown in a few of my 
+previous videos. one of the most important places   where groundwater shows up in civil engineering 
+is at a dam. that's because groundwater flows   from high pressure to low pressure, and a 
+dam, at its simplest, is just a structure   that divides those two conditions. and what do 
+you know, i've got an acrylic box in my garage   full of sand to show these concepts in real life.
+you can imagine this soil sits below the base of   a dam, and i can adjust the water levels on either 
+side of the structure to simulate how groundwater   will flow. blue dye placed in the sand helps show 
+the direction and speed of water movement below   the surface. a higher level on the upstream side 
+creates pressure, driving water in the subsurface   below the dam to the opposite end of the model. 
+i'll be the first to say it: this is not the most   mind-blowing revelation. you probably could have 
+predicted it without the fancy model. but to a   civil engineer, this is not an inconsequential 
+phenomenon, and for a couple of reasons.  first, water seeping below a dam 
+can erode soil particles away,   a phenomenon called piping. obviously, you don't 
+want part of your structure's foundation to be   stolen from underneath it, and piping can create 
+a positive feedback loop where failure progresses   rapidly. i have a whole video on piping that 
+you can check out after this one. the second   negative effect of groundwater is less obvious. 
+in fact, until around the 1920s, dam engineers   didn't even take it into account (leading to 
+the demise of many early structures in history).  the engineering of a dam is largely an 
+exercise in resisting hydrostatic pressure.   water in the reservoir applies an enormous force 
+to the upstream face of a dam, and if not designed   properly, that force can cause the dam to slide 
+downstream or overturn. the hydrostatic force is   actually pretty simple to approximate. pressure 
+in a fluid increases with depth, so you get a   triangular distributed load. once you know that 
+load, you can design a structure to resist it,   and there are a lot of ways to do that. one of 
+the most common types of dam just uses its own   weight for stability. gravity dams are designed 
+to be heavy enough that hydrostatic forces   can't slide them backwards or turn them over. 
+but, to the dismay of those early engineers,   pressure from the reservoir is not 
+the only destabilizing force on a dam.  take a look at this pipe i've included in the 
+model that shows the water level between the two   boundaries. if the base of a structure was below 
+the water level shown here, the groundwater would   be applying pressure to the bottom, counteracting 
+its weight. we call this uplift pressure. remember   that the only reason gravity dams stay put is 
+because of their weight, so you can see how having   an unanticipated force effectively subtracting 
+some of that weight would be a bad thing. many   concrete gravity dams have failed because 
+this uplift force was neglected by engineers,   including the st. francis dam in california that 
+killed more than 400 people when it collapsed in   1928. many consider this to be the worst american 
+civil engineering disaster of the 20th century.  unlike the hydrostatic force of a reservoir, 
+uplift pressure from groundwater is a much more   complicated force to characterize. it exists 
+in the interface between the structure and   its foundation, in the cracks and pores of the 
+underlying soil, and even within the joints of   the concrete structure itself. the flow of 
+groundwater is affected by soil properties,   the geometry of the dam, the water 
+levels upstream and downstream,   and even the subsurface features. how these 
+factors affect the uplift pressure can be pretty   challenging to predict. but engineers do have 
+to predict it. after all, we can't build a dam,   measure the actual uplift force, and add weight 
+if necessary. it's gotta work the first time.  one way to characterize groundwater flow around 
+structures is the flow net. this is a graphical   tool used by engineers to estimate the volume 
+and pressure of seepage in the subsurface.   in simple terms, you divide the flow area into 
+a curvilinear grid, where one axis represents   pressure and the other represents flow. if this 
+looks familiar, you might notice that a flow   net is essentially a 2d solution to the laplace 
+equation, which also applies to other areas of   physics including heat flow and magnetic fields. 
+developing flow nets is almost an art as much as   a science, so it's probably a good thing that 
+groundwater problems are mostly solved using   software these days. but, we can still use flow 
+nets to demonstrate a few of the ways engineers   combat this nefarious uplift force on gravity 
+dams. and one common idea is a cutoff wall.  if water flowing below a dam causes so many 
+problems, why not just create a vertical wall   to cut it off? we do it all the time. but, how 
+deep does it need to be? some dams might have a   convenient geological layer into which a cutoff 
+can be terminated, creating an impenetrable   envelope to keep seepage out. but, many don't. 
+cutoff walls can still reduce the volume of   flow and the pressure, even if seepage can still 
+make its way underneath. let's take a look at the   model to see why. i've added a vertical wall 
+of acrylic below the upstream face of my dam,   and we'll see how it affects the flow. the 
+groundwater flow lines adjust to go under the   wall and back up to the other side of the model. 
+if you look closely you'll see a slight decrease   in the uplift measurement pipe below the dam. the 
+only thing i changed between this model and the   last one was adding the cutoff wall. so why would 
+the pressure decrease on the downstream side?  the flow of groundwater is described with a 
+fairly simple formula known as darcy's law.   besides the permeability of the soil, the only 
+other factor controlling the speed water flows   is the hydraulic gradient, which consists of the 
+difference in pressure over the length of a flow   path. by adding a cutoff wall, i didn't change 
+the difference in pressure between one side of the   model and the other, but i did increase the length 
+of the flow path water had to take below the dam,   reducing the hydraulic gradient. i can sketch 
+a flow net over the model to make this clearer.   the black lines are equipotentials; they connect 
+areas of equal pressure. the blue lines show the   directions of flow. without a cutoff, the flow 
+paths are shorter, and thus the equipotential   lines are closer together. with the cutoff wall, 
+the equipotential lines are spread out. that means   both the volume of seepage and the uplift pressure 
+at the base of the structure have been reduced.  cutoff walls on dams have a long history of 
+use, and nearly all large gravity dams have   at least some kind of cutoff. it can be as simple 
+as excavating a wide area of the dam's foundation   before starting on construction, and that's 
+a popular choice because it gives engineers   a chance to observe the subsurface conditions 
+and make sure there are no faults or problems   before the dam gets built. another option is to 
+excavate a deep trench and fill it with grout,   concrete, or a slurry of impermeable clay. for 
+smaller or temporary structures, sheet piles can   be driven into the subsurface to create a cutoff. 
+one final option is to inject high pressure grout   to create an impenetrable curtain below the dam.
+the other way to deal with seepage and uplift   pressure are drains. drains installed below a dam 
+do two important jobs. first, they filter seepage   using sand and gravel so that soil particles can't 
+be piped out from the foundation. second, they   relieve uplift pressure by removing the water. 
+let's see how this works in my model. upstream   of my uplift monitor, i've added a hole through 
+the back of the model with a tube to drain seepage   out. instead of flowing all the way downstream, 
+now some of the seepage flows up to and through   the drain, and you can see this in the streamlines 
+of dye flowing in the subsurface. again, the   effect is subtle, but the uplift pressure monitor 
+is showing a slight decrease in pressure compared   to the original configuration. there is less 
+pressure on the base of the dam than there would   be without the drain. plotting a flow net over the 
+model, you can see why it behaves this way. the   drain relieves the uplift on the base by creating 
+an area of low pressure below the dam. you can   also note that the drain actually increases the 
+hydraulic gradient by shortening the flow paths,   so there's actually more seepage happening 
+than there would be without the drain. however,   because the drains are installed with 
+filters to reduce the chance of piping,   that additional seepage is often 
+worth the decrease in uplift pressure.  many concrete dams include a row of vertical 
+drains into the foundation, and some even use   pumps to depress the groundwater level further, 
+minimizing the uplift. i can simulate this by   lowering the downstream level as if a pump was 
+removing the water. watch how the flow lines   adjust when i make this change in the model. like 
+drains, these relief wells create more seepage   below a dam because of the greater difference 
+in pressure between the two sides, but they   can significantly reduce the uplift pressure 
+and thus increase a structure's stability. i've been using dams as the main 
+example of managing groundwater flow,   but lots of other structures have similar 
+issues. retaining walls and temporary shoring   have to contend with groundwater challenges, 
+including caissons, which are watertight chambers   sunk into the earth to hold back soil during 
+construction. remember the worker i mentioned   in the intro? he was on a site near a caisson. 
+it's typical to dewater a structure like this,   meaning the water is pumped out, creating a 
+dry area for construction crews to work. let's   take a look at how this works in the model. i'm 
+simulating the act of pumping water out of the   caisson by draining out of the model at the bottom 
+of the structure. when a caisson is dewatered,   it is essentially working like a dam, separating 
+an area of high pressure from low pressure within   only a short distance between them. and, as 
+you know, distance matters when it comes to   groundwater, because the shorter the flow paths, 
+the greater the hydraulic gradient, and thus the   higher the volume and velocity of seepage.
+if you look closely, you can see the sand   boiling up as the seepage exits the soil into the 
+bottom of the caisson. this elevated pressure in   the subsurface and high velocity of flow means 
+that the soil particles themselves aren't being   strongly held together. all it takes is a little 
+agitation for the soil to liquefy and flow into   the bottom of the caisson, creating a sinkhole 
+that can easily swallow anything at the surface.   one way of mitigating this hazard is dewatering 
+the soil outside the caisson. construction crews   use well points, small evenly spaced wells 
+and pumps, to draw water out of the soil so it   can't seep to areas of lower pressure. caissons 
+can also be driven deeper into the subsurface,   creating a condition similar to a cutoff wall 
+on a dam. they can even go deep enough to reach   an impermeable layer, creating a better seal that 
+prevents water from flowing in through the bottom.  thankfully for the worker in bc, his 
+colleagues were able to rescue him before   he was consumed by the earth. next time 
+you see a dam, retaining wall, caisson,   or any other subsurface construction, there's a 
+good chance that engineers have had to consider   how groundwater will affect the stability. 
+even though you'd never know they're there,   some combination of drains and cutoffs were 
+probably installed to keep the structure   (and the people around it) safe and sound.  speaking of sounds, here is the peaceful 
+sound of a napping toddler while my wife   and i prepare a home-cooked meal from 
+the sponsor of this video, hello fresh.  "what do you call that?"
+"hot raisin water"  hellofresh has kid-friendly recipes for 
+picky eaters but this one is just for   us. the meals take about 30 minutes to 
+prepare which is perfect for nap time   because it's really hard to film yourself 
+preparing lunch while chasing a toddler at   the same time, especially when the 
+photographer is 9 months pregnant.   but... our little helper just couldn't stand to be 
+left out of the fun, so he woke up early anyway.  they also have different plans to meet your 
+various nutritional or dietary goals, like   pescatarian, fit and wholesome, or vegetarian 
+which is what we usually get. it's a perfect way   to make a change or try something new. and this 
+is not us being mean, he really loves lemons.  and here's the most important thing: hello 
+fresh meals are delicious. we've done this   for quite a while now, and there isn't a single 
+recipe that we haven't enjoyed. actually we got   invited to a party at the last minute, so we 
+ended up combining the portions of this meal   and bringing it to share, and it was a huge hit.
+"this might be the best one you've made yet"  go try it yourself at hellofresh.com, and if you 
+use code practical16, you'll get up to 16 free   meals plus 3 surprise gifts. i wouldn't recommend 
+it if i didn't think you would love it. that's   hellofresh.com and use my code practical16. thank 
+you for watching and let me know what you think.

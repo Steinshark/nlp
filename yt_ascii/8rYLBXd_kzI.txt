@@ -1,0 +1,157 @@
+why- why would you make this? what is the point of- 
+they're the same, they're just different colors.   (brady: 1, 2 and 3 and then some have got 
+circles around them. some-)
+- and there's a 4 over  there. (oh there's a 4, we have got a 4)
+- in a triangle, yeah. 
+- (4, triangle)
+- triangles and circles yeah. not not super   obvious what it's for
+- (no it's not popping into my head)
+- all right well maybe somebody's figured it   out by now. this- these are simultaneously 
+4-sided 3-sided and 2-sided diced, at   the same time. so at the same time you make one 
+roll and you get an answer on a 4-sided die and an answer on a 3-sided die and an answer 
+on a 2-sided die. so, again, first world problem   but you've got you have to carry fewer dice 
+around; you don't have to carry a coin. i mean   who who has money anyway these days? so anyway, 
+so okay so how do you read them? so the one in   the middle, or the 1 it turns out in the middle 
+is the answer for your 3-sided die. so there's   a ring of four 1s around here and then you turn 
+this way there's a ring of four 2s around here,   and there's a ring of four 3s around here.
+so well the shape here is based on a rhombic    dodecahedron but it's sort of rounded off at the- 
+at some of the corners. so we have these three   rings of numbers which give you the result for 
+the the d3, the 3-sided die. 
+- (1, 2 or 3) 1, 2 or 3. and you know 12 total and they're
+split into three sets of four. when it lands on   one of these things you you get a circle and a 
+triangle on the top as well; and the circle and   the triangle - if you think about the shape of this -
+these are on the sort of vertices with three   sides around them and those are arranged at the 
+vertices of a cube if that makes sense. so there's   eight of them arranged at the vertices of a cube 
+that you can sort of imagine being encased inside   of the shape. and so whenever it lands you get two 
+of the vertices of the cube up...and we have circles   on four of those eight vertices of the cube to 
+represent the coin, so that's the two-sided die,   and triangles represent the four-sided die because 
+the standard- you know shape of four-sided die is   the the tetrahedron so that's the triangle and 
+those are on the other four corners of that   that cube that's inside. 
+- (is every permutation or combination equally likely?)
+- excellent question. so   or another way to phrase it would be are the 
+are the dice rolls independent, right? so you know-   well so the answer is not quite. so the 3-sided 
+die is independent of either the 2 and the 4; but the 2 and the 4 are not independent. so- and in 
+fact you can see that. suppose you you you say well   what if i get a a 4 on my 4-sided die, then 
+what are the possibilities for the 2-sided die?   well there's a 1 there or you could get a 1
+there or you could get a 2. so if you're going to   get a 4 on your 4-sided die then you're more 
+likely to get a 1 on your 2-sided die than you   are to get a 2. you can't separate them out, there 
+aren't enough dimensions or something but almost.  i can't imagine what sort of gambling game would 
+involve rolling the die and taking all the different   results and mixing them up but but yeah that's the 
+one thing to be careful of. 
+- (okay nice)
+- all right so   that's that. so again what are these for? 
+and this is not at all easy, this is very hard i   would say to figure out what these are for. they 
+go together, obviously they're not the same. this   is just a 3-sided die with 1, 2 and 3.
+whoops - almost - cliffhanger on the edge. so that's   a 1 because it's the one- you can see the 1 is 
+is sort of at the top. and if it landed this way   that would be a 3. and the way the shape is it 
+can't land on any of the ends cos it just it just   falls over. there we go, so that's just a 3-sided 
+die. this is an ordinary dodecahedron but the numbers   are weird. for example there are two 6s. so 
+again, why would we go to the effort and expense   of making this thing? what is the point?
+- (is 6 the only number that's repeated?)
+- there's another   repeated number. 
+- (4 is repeated-)
+- there's two 4s..
+- (nah it's impossible)  so this is- hello? all right, it's a poltergeist. so the idea with these is you roll them together, you 
+add up the numbers - this is a 1 and a 4 so   we got 5 - and when you do that the probability, 
+the distribution, of the sum of those two numbers   is the same as if you roll two ordinary 6-sided dice 
+and added them together. this is a different way   to roll two d6.
+- (that- that's pointless)
+- of course but-
+- (that's properly pointless) thank you, yes. as a pure mathematician it is it is my inalienable right to do pointless things because they're fun and because you can. when you roll two d6 and 
+you add them together, how likely is it to get each   different number? so you just make a grid with six 
+slots here for the first die and six slots here and   we can just fill it in. 7 is the most common 
+thing you can get out of two d6 and then it gets   less and less likely as you go the other direction. 
+so the the different possible outcomes are: you've   got a 2, one outcome out of 36 because there are 
+6 times 6 possibilities that you get. the 3,  so there's like a thing here this is 2 out of 36, 
+the 4 you're getting 3 out of 36 and and   so on. the 5 is 4 out of 36, 6 is 5 out of 36, 
+7 is 6 out of 36. so you have a 1 in 6 chance - 6 out of 36 - of getting 7 on on two d6 and then it goes back 
+down again. so all we have to do is come up with   some sets of numbers on the dice which have the 
+same numbers when you do this. there's a version of   this for two cubical dice which is not the 
+standard numbering but also does the same thing   and and these are called sicherman dice. right so 
+the numbering on the the sicherman dice are 1, 2, 2, 3, 3, 4 and 1, 3, 4, 5, 6 and 8. so again not the standard 
+numbering obviously but now we can just add it up.   another way to number two ordinary cubical 6-sided dice - let's 
+just do a spot check. you're supposed to get   six 7s and 1, 2, 3, 4, 5, 6. so you you- 
+- (oh they're not in the same- they're not in the same nice rows that) (they were in on the other die.)
+- well right, because 
+i mean it's it's a bit messier. so so let's   do this one. 
+- (what have you called this?)
+- so so we called these recast 2d6. so 2d6 being notation for   take two 5 sided dice add them together. recast as i 
+don't know, cast is sort of like you cast your dice?   whatever
+- (i think you need some marketing help)
+- yeah well. so all right and then we need 12 here, all   right. so this this is 1, 2 and 3 that's easy. 
+so we know that there better be a 1 somewhere   on there, right, so there's a 1. because we have 
+to get 2 right? and the total has to be 2. and   we've definitely got a 2. this is very dangerous, 
+i could screw this up. well you can kind of figure   it out because so far this is just doing this 
+standard thing here. so i've got all of my 4s already yeah; and i've got two of my 5s and 
+i've got a 6. anyway so 4- there are two 4s. there we go 4, 4; there are two 5s,
+5, 5; and then there are two 6s. there is a   7 and there's an 8. so there's an 8 and 
+there's a 9 - yeah i think this is correct. all right   so let's do it - so in fast forward i'm sure. 
+[very fast speech]  so we get the same thing. this is maybe a 
+little prettier than this, i don't know? you   imagine like contour lines right that the're that 
+they're climbing up and this is very sort of like   you know flat plane climbing up and these are 
+all a little bit more wonky somehow. 
+- (i know you) (do this as a bit of a side business; is 
+anyone buying that? has anyone bought them?)  uhh i don't know. i couldn't tell you. i mean who is the 
+market? i mean there's certainly the marketing-   the market of like you know sort of gamer types. 
+probably this is not terribly popular with the   gamer types but there's also you know math 
+nerds and some of them like these weird-  (i know a few math nerds. all right, all right)
+- so these are 4-sided dice right? you   can see, well this is a 1 and that's a 4
+and that's a 3 but the shape is kind of interesting. so what is the shape for? so maybe 
+you've seen things that look like this; these   not dice but these were i think produced 
+by maths gear, so matt parker's thing. 
+- (ah, shapes of constant width) they are shapes of constant width. so if you 
+have a book you put on there then you get a   nice- yeah yeah got to get a nice book. 
+- (okay so all right a book-)
+- and then you go- oh. okay, lovely. same thing with these. so um-
+so there is a bit of a story here and where   these came from and the shape and all that sort of stuff. 
+- (so the book is always staying at the)  (same height above the table?)
+- yes yes. so if you did 
+this with ball bearings or spheres then you would   expect that yeah it just sort of smoothly rolls 
+around and it's the same thing with with these   shapes. even though these are not spheres it still 
+stays con- constant height and and stable and it   does so for these things as well. so i first 
+heard about these like constant width 4-sided   dice on the grand illusions channel, they had some 
+of these dice that somebody had 3d printed. this   guy, shaun bentley had 3d printed these shapes and 
+so we said, oh that's a great idea, why don't we   mass produce these things rather than 3d printing;
+so you know we talked to him and and he gave us   our blessing and and so on and so forth. now there's 
+interesting things going on with the shapes; so if   you look at the maths gear tetrahedra, the reuleaux 
+tetrahedra and these constant width things, not   all the edges are the same as each other. maybe 
+you can see like this shape is kind of sharp   whereas this one is rounded; and that you know 
+works for the constant width property but   it's not good for the fairness of the die right?
+the- it's got to have all the symmetry and the   edges that are different you know in principle 
+it's going to be easier to roll over this edge   than it would be to roll over a sharp edge. so 
+these are not going to work. so this guy shaun came up with a constant width shape that has all 
+the edges being the same. so you know they're all   rounded in the same way, rather than some of 
+them sharp and some of them rounder and so this   you know this works and this was the design he 
+went with. and we looked at this and thought, well   hold on a second there's another problem that we 
+need to solve. when you're making a dice for mass   produced injection molding, part of the process 
+the mold comes together in multiple parts and   the plastic kind of squeezes out there's like 
+little bits of rough stuff. and they put it in   like a tumbler to smooth out all the you know 
+the imperfections and make your nice you know   shiny dice. problem is that the tumbling process is 
+going to do different things to that sharp corner   at the top than it is to other places on the die. 
+the shape would be changed different amounts in   different places in the tumbling process so we 
+couldn't use it. i should i should mention   by the way these are prototypes, these are not- 
+this is this is sneak preview, nobody nobody has   ever seen these before. hopefully soon these 
+will be out, these are the prototypes. so what are   the- what are the things we need? we need the 
+the shape to be symmetric, it needs this you   know all the faces all the sides - the shape is- 
+well it doesn't have faces anymore, it's sort of rounded. but it needs to have that that same 
+tetrahedral symmetry. it can just be a sphere   and the the the edges needed and the corners 
+needed to be rounded off. and so we asked around   a little bit and eventually somebody put us 
+onto this paper or by brendan guilfoyle and   wilhelm klingenberg - sorry if i'm messing 
+up their names - which did exactly what we needed.   so 'on c2 smooth surfaces of constant width'. so 
+c0 just means continuous, yeah, if it wasn't c0   then like there'd be jumps or like it will 
+be broken apart. c1 means that the tangent   directions match up; it doesn't look sharp 
+but it's not as smooth as it could be. and   c2 is saying that if you imagine like the 
+the graph of x cubed has got that nice sort of   smooth thing down there, that's the kind of 
+smoothness that you're getting. so it's not   completely completely smooth but it's visually 
+um you know quite smooth. and and the hope was   that with the tumbling process, because it's got 
+this extra smoothness it wouldn't get tumbled   down so much. and yeah somewhere in here in 
+this paper eventually there's a nice picture   of exactly what we needed. oh, this is looking 
+good, that's looking familiar right? there's all   kinds of fancy stuff in here and then yeah this 
+is this is like right; this is what we need. spend   a little bit of time trying to read their paper 
+and figured out and there was like, why don't i   just email them? and turns out they were like, oh yeah, 
+oh please you know have have a go at this and   then so they gave us the code and then- and 
+then here they are. and hopefully available soon. thanks for watching this video. be sure to 
+check out the video description for links to   more of our videos about dice, more videos with 
+henry, and also links to the dice you've seen   today. you can buy them, you can check them out. i'll 
+include all the information you could want. again,   that's in the video description. 
+- there's a drill as well with and it's got- it uses that triangle...

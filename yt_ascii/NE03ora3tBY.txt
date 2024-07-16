@@ -1,0 +1,100 @@
+>> sean: just to remind people here who, perhaps,
+haven't seen our earler videos with you, brian.  so, you worked at bell labs and at at&t.
+i mean you did research there. you were looking to the future! how right were you?
+how wong were you? can you tell us?
+>> bwk:yeah, so i was at at&t.  i went there for a couple of
+summers, starting in the in the late 1960s and i stayed there, essentially
+full-time, until 2000. i was in bell labs. so at the time at&t was a very big
+company. it was well over a million people. it was the biggest company in the
+country and it provided communication services - telephone - for essentially all
+of the united states. and bell labs was the research arm of that. so that's
+the part that in theory is looking at the future, trying to improve the services
+that they have and build the technology, in all kinds of ways, that
+will make it easy for -- or make it possible to improve -- telecommunications
+services. and so at&t did things like the transistor and the laser and
+miscellaneous other things that were useful. and also a lot of computing-related 
+things as they gradually realized that computers were here to
+stay. and that a lot of mechanical things like relays, and so on, could be replaced
+by electronic devices and then controlled by programs, running on
+general-purpose computers. in some sense the golden age for me was probably the
+1970s. i had just gotten out of school and with the early days of computing
+there were a lot of really interesting work going on and that was when unix was
+developed, in the  early 1970s, and the c programming language and a variety of
+other things. and it's also when i played with programming languages as well. so
+that was definitely a good time. sort of behind your question, i think, is: "well,
+how good were you at seeing the future?" and the answer is: "pretty awful!".  i think
+most people are pretty awful at seeing the future and i'm quite - i could hardly
+deny it so i'm perfectly willing to admit it - i don't think we had and i
+wouldn't say all my colleagues and friends at bell labs. had much of a clue of
+how the world would change. we i guess knew about moore's law. moore's law, i
+think came from i think he published that paper in 1965 based on a fairly
+a short period of data, like maybe five years. and i don't think - certainly not i -
+but i don't think many people realized the implications of an exponential rise
+in capability at a fixed price, if applied for 40 or 50 years. i don't think we
+realized any of that 
+>> sean: so, nobody believed it? nobody took it that seriously for this
+period of time?
+>> bwk: i don't know whether i would say: "nobody believed it", but i don't think
+people realize the implications. certainly i did not realize the
+implications and we were, i think, often surprised when we discovered that
+something we had done had actually been noticed in the outside world. i remember
+at one point dennis ritchie saying to me something like: "we have arrived!",  because
+he had found in the new york times, which was still running classified ads for
+programmers, they'd wanted a programmer who knew unix. and this was, i
+would guess, in maybe late 70s or something like that. and this was us [saying]:
+"boy, what we've done has actually had some influence in the outside world", in a way
+that was completely unpredictable. >> sean:  so is there anything you can think
+of that you think should have made it but didn't? i'm kind of putting you on the spot here!
+>> bwk: yeah! that's definitely on the spot. it's hard to say. one gets the feeling
+that a lot of things that were obvious to us have been kind of lost in going
+forward. one [is] unix, the operating system; c the programming language. many of the
+tools. those all had a flavor of minimality, of being small and compact
+and good for their particular purpose,. and not with too many bells and whistles
+and very carefully written, and so on. and as moore's law came along and we got
+more and more processing power and more and more memory capacity people sort of
+forgot the merits of simplicity, perhaps. and so things became rather more baroque
+or rococo or - pick your architectural period - and i think that that is in some
+ways to everyone's detriment that systems are very complicated. the other
+thing is that at one point there was really only one - let's call it unix -
+system and so things were fairly compatible. and another
+thing that i think we've lost is compatibility -  that it's harder to get
+things to work together perhaps than it was. but in some ways perhaps that's
+necessary. you think the big change in a lot of things has been the rise of
+networking: the idea that computers are not self-contained things any more but,
+rather, they are devices that talk to other devices using a variety of
+networking technology - internet itself. and of course increasingly phones. the
+phone system. and in fact there's no real difference between the phone system and
+the internet in some sense, it's kind of an accidental separation that will
+disappear over time. and as different things talk to each other what
+happens there gets more and more complicated. there are more ways that things
+can break. you need standards but the standards aren't necessarily there. and so,
+yeah, i think that's the place where we need the most improvement in some sense.
+it's ways to make things work better together and make them simpler and i
+guess those are related. 
+>> sean: i think there's a kind of irony, as well, that
+you've got this massive phone company effectively pushing forward on computer
+technology, and now the many computer people use is  the phone in their pocket! 
+>> bwk: yes, right, i think that's again something that people didn't predict. there's a
+famous story that a consulting company in the united states, mckinsey, did a
+study for at&t and told at&t that there was basically no market for cell phones;
+that people didn't want portable phones. and this i think is a triumph of how
+consultancy can go wrong and yet not suffer for it. in any sense. but at&t
+didn't back that stuff as well - a lot of the early work on mobile telephony was
+done at at&t. absolutely. they figured out this the
+notion of cells and how you would pass conversations from one cell to another
+something that's completely invisible to people today but all of that was in fact
+invented originally at at&t. and then of course evolved tremendously by other
+people over the years. and again cell phones today profit from moore's law.
+that you've got incredible power in a very, very compact device, would not have
+been possible thirty years earlier.
+>> sean: and the last thing they're used for 
+     is phone calls
+>> bwk: it's hard to say. you're hinting that people don't use
+their phones to talk and i think that's true. as far as i can tell
+students that i deal with in the united states use their phones primarily for
+texting each other and perhaps for checking their facebook pages - or
+whatever the modern equivalent is. and this is so foreign to me that i don't
+actually know how to use a phone in many ways. i had an extended discussion with
+dave [brailsford], earlier this morning, about how you deal with with phone numbers and whether
+you need a 44 and not a zero or is it ... ? hopeless! and that was the reason i had trouble communicating with him this morning. so
+culture shock in some sort of way.

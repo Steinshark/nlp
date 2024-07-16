@@ -1,0 +1,160 @@
+early in 2023, tsmc presented some details about 
+their new set of n3 - or 3 nanometer - nodes. one   of the things that jumped out at me and 
+other people is the static ram, or sram. tsmc has two n3 nodes - n3b and n3e. the 
+former is a dead end reserved mostly for   apple's use. the latter, n3e, is the one most 
+other customers like nvidia and amd will use. tsmc's presentation said that their n3e sram 
+bitcell or just cell will be the same size as   that of their n5 nodes. in other words, no sram 
+scaling from the n4 to the n3 node generations. there has been a lot of concern and 
+ink spilled over this revelation. but   what is sram anyway? and how big 
+of a deal is this? in this video,   we take a look at one of the most 
+important parts of the integrated circuit. ## beginnings before we talk about sram, we must 
+talk about the memory hierarchy. there are a whole lot of memory technologies 
+out there. the hierarchy sorts them by their   response time. at one end, we have 
+very fast memory - level-1, -2,   or even -3 caches which are oft right on the chip. this is where sram often is on the hierarchy. 
+it is very fast - it can pull out data within   a few nanoseconds. but the drawback is that it 
+is expensive to manufacture, and if that sram is   "embedded" - meaning that it is placed on the chip 
+- then it takes up precious space on the silicon. on the other side, we have things like dynamic 
+ram. and even further down - flash memory,   and hard drives. these memory systems are 
+far cheaper and have much more data capacity. but they are "off-chip" - usually sitting 
+on the motherboard - meaning that to access   their data takes more time 
+and will cost more energy. modern systems like those on an ic require fast 
+access to memory. as one of the memories closest   to the system, sram is hugely important to an ic's 
+overall cost and functionality. it's a big deal. ## history the first sram design was patented in 1963 
+by robert norman of fairchild semiconductor. he designed it on his friend's breakfast 
+room table in a few hours at ibm's request.   ibm demanded that fairchild sign over 
+their patent, but the latter held firm. that first design used bipolar transistors. a 
+year later, fairchild patented another design   using mos transistors, a different 
+structure that is far more scalable. in 1970, a 256-bit ttl sram produced by 
+fairchild was used for a computer main   memory for the first time - a burroughs 
+illiac iv. a year later, ibm shipped a   system/370 model 145 computer with a 128-bit 
+version bipolar sram. sram has since been one   of the most widely manufactured memories since, 
+and a default choice for integrated circuits. ## how it works like its cousin dram, sram is 
+a volatile memory. this means   that when you lose the power, they lose the data. unlike its cousin however, sram does not use 
+a capacitor to store its bits of data. thus   there is no need to periodically refresh the 
+capacitor's charge to maintain data integrity. the most common cell design is the 
+6-transistor sram cell. it uses what   is awkwardly called a "bistable 
+latch". "bistable", because it   has two stable states representing 
+the 1s and 0s of a bit of data. the latch is made up of a pair 
+of inverters. an inverter is   a single input and output device that 
+toggles a signal to its opposite state. so if a low signal - a "0", in 
+digital parlance - comes in,   then the inverter device turns it into 
+a high signal - a "1". and vice versa. we put two inverters together to 
+create a feedback loop - the output   of one inverter connecting to the input 
+of its lovey-dovey partner. an inverter   is made up of two transistors each, 
+so that is four transistors in total. the other two transistors in the sram 
+cell - formally called the "pass gate   transistors" - are for reading or writing 
+the value of the data bit inside the latch. pulling back, we have many memory cells 
+strung up in a row. each cell in the row   is connected to a horizontal line that we call the   "wordline" - as well as two vertical 
+lines that we call the "bitlines". the wordline is used to select 
+a row of cells. once selected,   the cells can interact with their two bitlines. ## sram shrinkage
+modern high performance system on chips or socs have demanded increasingly 
+better embedded memories. in some cases, embedded srams consume a major 
+portion of the chip's area. back in the mid-2000s   for some high-performance cpus, sram percentage 
+took up as much as 71% of the whole die. today,   there are some systems with 90% of their 
+surface area covered in embedded memory. note, that high percentage isn't always 
+the case. portable devices for instance   have less embedded memories. 
+not only for spacing reasons,   but also because sram cells use power and we want 
+to minimize power draw on the limited battery. but i digress. my point here is that systems are 
+always craving memory. but that memory doesn't   always scale down as fast as everything else. why 
+is that? the sram cell is made up of transistors,   but shrinking it is far more challenging 
+than just making those transistors smaller. ## power leakage the first major challenge 
+has to do with power leakage. traditionally, sram cells use the most 
+energy when they are switching - "dynamic   power". and that certainly was the case 
+back when the transistors were larger. but as cells got more dense 
+and the transistors shrank,   focus shifted from reducing dynamic energy 
+usage to leakage. power leakage is when the   charge flows through the gate in the 
+transistor, but the gate is closed. this happens for several reasons but the two most   significant are sub-threshold 
+leakage and gate tunneling. okay, sub-threshold leakage. an 
+open transistor gate closes when   its voltage hits a threshold. that 
+threshold is low but not quite zero. so when the transistor hits the 
+threshold voltage and closes,   it can still conduct a very tiny current even 
+in its "sub-threshold" state. kind of like a   faucet that you close but it keeps on dripping 
+because you did not turn it tightly enough. as we scale down the gate size, the threshold 
+voltage lowers to reduce overall power   consumption. but as that threshold voltage 
+lowers, the sub-threshold leakage rises like   yeast in a warm room - as in, drastically. 
+about 10 times for every 0.1-volt decrease. the second is more intuitive. this 
+is where the transistor gate has   gotten to be so thin that the charge 
+carriers like electrons and holes can   quantum-tunnel right through the 1 or 
+2-nanometer thick gate oxide layer. and as the gate gets smaller,   it gets thinner. which in turn makes the 
+quantum tunneling effect more prevalent. these two effects were not really a 
+problem going up to the 130 nanometer   node, but suddenly took a big leap 
+starting at the 90 nanometer node. ## going finfet this power leakage is a problem 
+for anything not connected to a   fusion reactor. but a particularly thorny 
+issue for things depending on batteries. there are a few things that designers do to help 
+eliminate some of the leaks. a notable one is the   gated vdd technique, where we add more transistors 
+to shore up the gate and prevent further leakage. another major solution has been the 
+introduction of new transistor gate   designs like the finfet. i have mentioned it 
+before, but the finfet is a type of 3d gate   that covers the channel on three out of four 
+sides, giving it more control over the current. finfets do indeed offer better power leakage and 
+density. the old itrs roadmap on semiconductors   predicted that if nothing changed then by 
+2014 some ics would be 94% covered with just   sram. finfets helped avoid us this dark future by 
+introducing more miniaturization and efficiency. however, finfets are harder in general 
+to produce. there is greater risk of   getting it wrong and ending up 
+with defective products. that   leads right into our next major 
+challenge - process variations. ## process variation
+there are two types of yield - functional yield, which represents the fraction of 
+ics that work in the first place. and then there is parametric yield, which measures 
+the variability in how the chip performs in speed   and power. as a fab like tsmc or samsung goes 
+through its process steps producing the chip,   very very small variations from the recipe can 
+eventually impair the product's final performance. these variations are extremely minute, but 
+can generally be traced to difficulties   in controlling lithography lines 
+and the roughness of those lines. so the channels' width, length, 
+or threshold voltages being just   a bit off can lead to performance 
+deterioration. and unfortunately,   process defects do not scale down with size, 
+making their impact on the product far greater. we measure this using something 
+called static noise margin,   or snm. the sram cell is very busy, 
+subject to a lot of electrical noise.   sometimes that noise can cause the cell 
+to "flip", losing its stored bit of data. snm is a simple measure of how resistant the 
+sram cell is to flipping. in other words,   its resiliency and stability against noise. we can plot variations in length, width,   and threshold voltage in each of the 
+six transistors inside the cell against   the resulting snm to get what is called a 
+"butterfly curve". which look pretty cool. for the most part, the best way to avoid these is 
+for the foundry to simply do better. of course,   easier said than done. but hey, that's 
+why we pay $20,000 a wafer right? ## alt designs
+okay, so if the dram cell with 1 transistor has been so successful. then why keep 
+the 6-transistor sram cell design? there are other designs with more or 
+fewer transistors. the problem is that   each design offers its own tradeoffs. 
+and density isn't always the ideal.   that's the problem with memory - the dual 
+mandate between capacity and performance. for instance, there exists a 5-transistor sram 
+cell design, having just one access transistor   and one bitline connected to it. it is more geared 
+for density - taking up 15-20% less space but at   the cost of less static noise margin. in 
+other words, the cells are less stable. way on the other side of the spectrum, we 
+have the chonk 10-transistor schmitt-trigger   sram cell design. it replaces the traditional 
+inverters with what is called a schmitt trigger,   named after otto schmitt who 
+came up with them in 1934. it takes up twice as much area as the 5-transistor 
+design but gives you a far more stable sram cell.   10 transistors might be too much, but we might 
+be seeing more schmitt trigger-based designs   down the line. its additional stability 
+makes it suitable for very advanced nodes. there are also 8 and 9 transistor designs. but,   the 8-transistor design gives you great process 
+stability but suffers from unacceptably bad   power leakage. this hasn't been a 
+good trade off for manufacturers. the 9-transistor gives improved 
+power leakage and stability over   the 6-transistor design. but at the cost of 
+more area consumed and a fairly complicated   design. same as with the 8-transistor 
+design, this is not a good tradeoff. in the end, the 6-transistor design is most often 
+used because it is simpler, has acceptable power   leakage, consumes less area, and has fewer noise 
+issues. it strikes a balance in the criteria. ## stacking? i will be derelict in my 
+duties if i do not mention   anything related to advanced packaging at the end. the aforementioned challenges with sram 
+cell scaling have caused companies to try   stacked ram arrangements. amd and 
+other chip companies are adopting   stacked sram solutions where we put 
+the sram die on top of the logic. for instance, amd's 3d v-cache which involves a 
+bunch of sram dies stacked on top of an existing   level-3 cache. this allows us to add even 
+more level-3 cache. and as we all like to say,   more memory is as good as i remember. just 
+kidding, nobody says that. i made it up just now. the more sram gets harder to scale down, 
+the more people will be pushed towards   advanced packaging solutions. and i think 
+that's the right direction going forward. ## conclusion but can sram itself keep scaling? 
+it looks like tsmc hit some limits   on what can be done using the 
+current finfet architecture. observers have posited that tsmc bit 
+off more than it can chew with n3b,   which is said to have had yield 
+issues. i feel like reversing   the sram density numbers like they did 
+with n3e is a good indicator of that. but it is not and should not be the end of 
+the line. something about an ic being 90%+   sram just doesn't sit right with me. logic 
+dies should have logic circuits on them. i   hope i am not offending anyone when i say 
+that. figure out a way around the sram,   and there is still so much more headroom to go. and as for the future of sram itself. next we have 
+the move to gate-all-around fet gate or nanosheet   designs. this is where the gate wraps around the 
+channel on all four sides for even more control. samsung is already making these. intel,   tsmc and smic are working towards it. a 
+recent paper hints that these structures   might improve sram performance in other ways 
+but shrinkage itself might not continue. imec seems to suggest that forksheets, 
+another type of transistor gate with a   different structure, would be better suited 
+for continued scaling down. these are kind   of like the gate-all-around but adds an 
+additional layer of dielectric cutting in   between. needless to say, these are 
+going to be very very hard to make. sram will always have a role in the ic. but it 
+is looking to me quite clear that squeezing out   more fast cache memory with sram is a steadily 
+losing game. we will need alternative solutions.

@@ -1,0 +1,189 @@
+A human hair is about 50,000 
+to 100,000 nanometers wide. A virus is about 20 to 300 nanometers wide. And a fingernail grows 1 nanometer each second. When an ASML machine positions 
+a wafer for DUV or EUV exposure,   precise machinery must hit the exact 
+right position to within a few nanometers. These margins of error boggled 
+my mind and inspired this video. So how does an ASML lithography machine hold and   move a wafer? It's magnets. If you want 
+to know more, let's dive in together. ## Beginnings
+All right, people, let’s do this one last time. An optical lithography machine is 
+essentially a $150 million camera   that uses high energy light to 
+transfer a very complex chip   design pattern onto a wafer - which is 
+usually made of silicon but not always. The workflow goes like this. First, we 
+apply the photoresist - a complicated   light-sensitive polymer chemical - onto 
+the wafer using the spin-coating method. After a few other preparatory steps 
+which are important but I won’t mention,   it goes into the lithography exposure tool. Inside the tool we have several sub-components 
+- the light source, the condenser lens,   the photomask, and the objective lens. Together, the light source and the condenser lens 
+makes up the illumination system or illuminator.   Its job is to deliver light widely, evenly, and 
+at adequate intensity to transfer the pattern. Illumination is very important, which is 
+why ASML dedicates multiple mirrors in   its EUV machine to illumination at the 
+cost of significant power reduction. That illuminated light then passes through 
+or bounces off of the photomask or reticle,   which contains the chip design pattern. In the early days of the semiconductor industry,   the whole mask contained the whole design. 
+But as designs got more complicated,   the industry started using "reticles", which 
+represent a portion of the whole chip design. Nowadays, since almost all masks are reticles, the 
+terms are used interchangeably. Like the wafer,   the reticle is placed on a positioning table 
+so they can be moved to compensate for natural   errors. A robot automatically handles the 
+work of exchanging the reticle when needed. After the reticle/mask we have 
+the objective lens. It collects   and properly focuses the light, 
+and then shrinks down the image. The light then goes on to strike the 
+resist-coated wafer. When done right,   we now have a 3D relief of a portion 
+of the chip's design on the substrate.   Later, we can make that design 
+permanent using etch processes. ## Challenge Statement
+The wafer and its stage are pretty heavy. Fully loaded with a 300 millimeter 
+wafer, the stage weighs about 15   kilograms - which for illustration is the 
+average weight of a Grizzled Tree-Kangaroo. The platform has to be able to 
+move these wafers and their stages   extremely quickly. But it also has 
+to be capable of abruptly stopping   and holding absolutely still - if 
+needed during the exposure stage. And at the exact right place too - just nanometers 
+of margin. Machines need to have good "overlay",   meaning the relative position of any 
+pattern layer relative to the others. Calculated as a percentage of the feature 
+size, overlays can get to be just a few   nanometers. Errors will damage the device's 
+capabilities and maybe cause short-circuits. Overlay requirements get even more strict when we 
+are executing multi-patterning. That is where we   use multiple exposures - positioned just right 
+- to create lines smaller than before possible. Inside the machine, the wafer stage can 
+accelerate to as much as 20 G-forces,   twenty times the force of Gravity. 
+Three times the maximum force on a   Formula 1 car. Or twice the maximum 
+permitted force in a jet fighter. At the same time, the system has 
+to execute these fast movements   and changes in movements without 
+causing vibrations. This is for   obvious reasons - vibrations throw off 
+the precision targeting and cause errors. ## History
+ASML evolved from Philips in the Netherlands. Philips has been building semiconductors for 
+many years. Their machines reflect this heritage. Their products were first developed in Eindhoven 
+at Philips' NatLab ("Natuurkundig Laboratorium").   There, the lab produced its pioneering 
+lithography machine - the Silicon Repeater. Some of Philips' first wafer steppers 
+like the PAS 2000 used "hydraulic   linear motors" to move their wafer 
+stages around. These systems use a   high pressure pump to push oil through 
+hoses and valves to generate movement. Hydraulics worked well from 
+a precision-standpoint,   but lacked the necessary reliability. 
+With all the pumps and oil around,   any leak would be utterly 
+devastating in a cleanroom fab. So the Philips engineers built 
+strong seals to prevent leakage,   which bulked up the device. Semiconductor 
+customers nevertheless refused to accept the   product - in part contributing 
+to ASML's rough early years. It is an example of over-engineering to 
+fix a problem that shouldn't have existed   in the first place. After a high profile lab 
+incident involving a burst hydraulic oil pump,   the team decided to explore 
+electrically-driven systems. To build that system, Philips tapped 
+their experience in producing the   precursors of today's optical disk 
+technologies like the Compact Disc. Earlier, Philips wanted to build 
+a gramophone-like product but for   video. But since video is so much more 
+data-dense than audio, they replaced the   gramophone's stylus - which physically touched 
+its disk - with a contact-less optical laser. This approach required the creation of 
+small precise linear motors to control   the unit reading the information 
+reflected back from the disk. Linear motors are motors that directly 
+convert electricity to movement without   the use of a rotor. They do so using the 
+Lorentz Law, exploiting how electric and   magnetic fields interact with each 
+other to generate motion forces. NatLab engineers realized that they 
+can apply these same technologies to   position the silicon wafer. Such 
+systems were widely successful,   and ASML machines are particularly 
+known for their precise maneuvering. As we moved into the 2000s, 
+the industry also moved from   200 millimeter to 300 millimeter wafers 
+while also shifting to a smaller node. The lithography machines had to be 
+re-engineered for multiple criteria.   They had to accommodate larger 
+and heavier wafers but at the   same speeds and demands. They also 
+needed to process smaller features. While pondering a way to 
+handle all of these issues,   ASML created the TWINSCAN platform - 
+their main brand of lithography machine. ## Meet the TWINSCAN We call it the TWINSCAN because the machine runs 
+on a dual-stage cycle - measurement and exposure. During operation, there is a wafer on 
+each stage - clamped and secured using   electrostatic forces. The chuck has 
+tens of thousands of burls to reduce   direct contact to just 2% of the wafer 
+surface area, cutting contamination risk. At the start, we load or unload 
+the wafer into the machine using   a robot called the wafer handler. They 
+start off with the measurement stage. In the measurement stage, the machine runs through 
+a series of scans. These scans help the computers   prepare how to align the wafer in relation to the 
+reticle to ensure good focus and accurate overlay. Then the machine swaps the stages, rotating the 
+wafers. The measured wafer now goes under the   lens, and the machine turns on the light source 
+until we hit the required dose of light exposure. During the swap, the machine can use 
+the downtime to exchange the reticle,   though doing so requires a 
+new reticle alignment step. In the TWINSCAN, these wafer 
+movements are coordinated by   Control Architecture Reference 
+Model motion control platform,   or CARM. These are powered by a bunch of FPGAs 
+and process controllers in a cabinet rack outside. This whole setup seems a bit obvious. 
+But lithography machines prior to the   TWINSCAN ran all the measurement, alignment, and 
+exposure steps sequentially on a single wafer. Pulling off the dual stage setup was a major 
+engineering project. The tool's architecture   had to be reworked to re-balance all the 
+new weight and mass on the machine's frame. Not to mention handling all the 
+vibrations from two processes   running at the same time. It required the 
+lens and metrology equipment - mounted on   what we call the metrology frame - to 
+be isolated from the rest of the tool's   main frame using air-bearings - which use 
+highly pressurized gas to cut friction. Key to hitting throughput benchmarks 
+is not the exposure stage, but rather   the measurement stage. A DUV machine 
+handling 175 wafers per hour - average,   in the market - exposes each wafer for 
+just 20 seconds of a 2 minute cycle. The rest of the time is spent 
+on measurement. I am reminded   of one of my favorite documentaries - "Jiro 
+Dreams of Sushi" - sushi master Jiro says: > [Customers] think the staff in the kitchen have 
+it easy. And they think the master making sushi   has the hardest job. But in reality, the sushi is 
+95% complete before the fish is brought out to me. In the TWINSCAN, the exposure stage is sexy and 
+where all the economic value is added to the chip. But when the machine sends 
+the wafer into exposure,   the sushi needs to be pretty much complete. So 
+for ASML, figuring out the right sequence of   actions during measurement is crucial 
+in shipping a competitive machine. ## TWINSCAN Today Today, the TWINSCAN name has a 
+number of product categories. "NXE" TWINSCAN machines do EUV lithography, "NXT" 
+machines run with 193-nanometer ArF DUV light,   and "XT" machines use 248-nanometer KrF DUV light. The NXE:3350 EUV machine can 
+process 125 wafers an hour,   so one every two minutes. Sophisticated 
+DUV machines can even do 200-300 wafers. The numbers in the machines’ name 
+correspond to their optics systems   and lens. The machines themselves 
+are built in a modular fashion per   the customer's requirements 
+- kind of like how PCs are. This is because machines are expected 
+to run in customer fabs for decades,   they are set up to receive upgrades to keep 
+up with modern requirements. For this reason,   there is a vast diversity 
+even within the same category. ## Fine and Coarse The typical lithography machine 
+has two movement systems inside. Systems transporting the wafer from one 
+work station to the other are referred to   as the "coarse stage". The motors handling 
+these are referred to as "long-stroke"   because they are designed for extended 
+range - about 1 meter - and high speed. Then we have the "fine stage" - because they 
+value precision over distance. As you might guess,   we use what are called "short-stroke" actuators 
+- often voice coil motors - to handle this. To get this wide range of movements, 
+systems are often stacked on top of   each other. So the fine stage on 
+top of the coarse stage. This is   known to have caused weight issues as 
+more stacking and movements are needed. ## Generating Movements It is interesting to review how precision movement 
+technologies have progressed inside the machine. Early machines like the old Philips 
+Wafer Stepper moved their wafers   around using mechanical systems - like the 
+aforementioned hydraulic linear motors. Tools like Canon's FPA-2000 photolithography 
+machine - for the 500 nanometer process node,   introduced in 1992 - used mechanical 
+guides. Kind of like rails,   stacked one on top of the other for movement. But such computer-controlled 
+systems suffered unexpected   alignment errors due to friction - 
+forces that act on the stage prior   to motion. These little errors 
+added up to create big problems. Worse, over time that friction wears 
+down the mechanical bearings. They   then needed to be replaced - requiring 
+expensive downtime and human intervention. In response some time during 
+the 1990s and early 2000s,   the industry implemented "aerostatic 
+systems". This means that they created   a thin film of extremely dry air between 
+the wafer stage and a granite slab. It is kind of like the puck on an air 
+hockey table. This air cushioning cuts   friction and reduces vibrations 
+from the wafer stage's movements. For these machines, ASML used interferometers 
+to track the stage's positioning, essentially   lasers - mounted on sharks of course - reflecting 
+off a mirror mounted on the side of the stage. The precision guidelines are tight. So 
+tight, that additional calculations were   needed to compensate for the refractive 
+index of the air, which changed as the   stage moved around. It threw off things by as 
+much as 1 nanometer, which was unacceptable. Nevertheless, Air-based systems did a fine job 
+for many years. But as lithography continued to   advance, cleanliness benchmarks like those for EUV 
+would eventually require the presence of a vacuum. Air systems are not viable in a vacuum. 
+So in preparation for this, ASML in the   late 2000s began switching over to suspending 
+their wafer stages using magnetic levitation. ## Magnets Magnets. How do they work? According to a 2017 presentation by a vendor, 
+the wafer stage sits on top of a 1,400 kilogram   magnet plate array with over 2,200 magnets 
+- precision placed to within 20 micrometers. 1,457 of those magnets are arranged in a 
+Halbach array, which is a special arrangement   that strengthens the field on one side 
+while canceling it out on the other. For metrology purposes, ASML switched 
+from lasers bouncing off the sides of   the wafer stages to lasers firing down 
+from a grid mounted over the stages. Now for NXT immersion systems 
+which are not in a vacuum,   the metrology lasers don't have to travel so 
+far - 15 millimeters versus as much as 300   previously. This simplified the air refractive 
+index calculations and improved overlay. Some of the challenges of the design 
+include having to deal with errant   magnetic fields interfering with 
+the wafer. As well as cooling,   which might require the use of umbilical 
+cords or hoses impeding movement. I have seen some interesting proposals 
+to use a single mag-lev system for   generating both short and long-stroke 
+movements. Such a system would get   rid of the stacked fine/coarse stage 
+system - saving on space and weight. It is a compelling idea and a lot of 
+demonstrations are floating around,   but the latest documentation that I 
+have seen still shows the presence of   separate electromagnetic motors 
+for these different movements. ## Conclusion An ASML machine has to position a 15 kilogram 
+wafer stage with below-nanometer accuracy. I on the other hand wear T-shirts because I 
+have trouble buttoning my collars. Ergo it is   a bit difficult for me to comprehend the 
+insane precision necessary for this work. Something that I did not appreciate as much going   into the project was just how big of a 
+role software played. From 1989 to 2000,   the number of CPUs and sensors in ASML's 
+tools grew six and eight times, respectively. That 1989 stepper - the PAS5000 - had a 
+total of 200 million source code lines,   including comments. The 2003 TwinScan 
+has 1.25 billion lines. I know, I know,   you can't judge complexity by lines 
+of code, but that caught my eye. This aggressive leveraging of 
+software - the former CEO said   that the team doubled in size every 
+four years - is probably a key driver   behind their strong performance. 
+Worth looking down the line.

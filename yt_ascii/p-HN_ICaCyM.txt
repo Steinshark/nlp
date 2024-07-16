@@ -1,0 +1,112 @@
+okay today i will tell you about 
+this very fascinating number: 420514 upon 7, that's the fraction. now these are a 
+special class of sequences called somos sequences   and they go as follows; this is really a 
+very fascinating story. in general it's   called somos-k sequences where k can be a 
+number. so let's say you start from somos-1, it's just a string of 1s. you can predict 
+that the algorithm is simply a_n+1 is a_n, a_n equals 1. it's very very simple, nothing magical 
+is happening here, it's very not interesting.  now somos-2: i'm going to give you the algorithm 
+and we'll look at the sequences. and there is a   pattern in this- in this algorithms that 
+will that will get clear in a minute.   so once i start writing enough of these you'll go, 
+ah that's the algorithm! and you're starting from   this, and you're saying a_0 is 1 and since it's 
+somos-2 which means that a_1 is also 1. if you   want to compute a_2 your sequence right now looks 
+like this: you have 1 and 1. a_2 will be a_1 times   a_1 divided by a_0 which will just be 1. now look 
+at what happens for a_3: you get a_2 times a_2   divided by a_1, which again is 1. so, you can 
+believe me that you only get a string of 1s.  now the sequence is not very interesting but 
+the algorithm is getting juicier. now let's go to   somos-3. the algorithm is a_n is a_n-1 a_n-2
+divided by a_n-3. our seed is going to   be a_0 is 1, a_1 is 1, a_2 is 1. all right? so your 
+sequence is starting from three 1s, now a_3 is   a_2, a_1, a_0. this is 1.
+- (brady: i'm getting pretty sick of 1s!)
+- well you need to wait slightly longer. so you have a_4; now, since you're already sick of 
+1s, you'll see another 1 because you have a_3   a_2 a_1 - so sorry, you have 1 again, and 1 
+again. it'll continue to be a string of 1s.   now you see these are pretty boring at the moment,
+so the statement is that the first three terms   of this this different somos-k sequences, 
+which means that somos-1, 2 and 3   are all just strings of 1s. nothing interesting 
+happening but it just gives you a feel of where   the algorithm is going. now we go to somos-4, will 
+we see something interesting there is the question?   - (i hope the answer's yes)
+- so the algorithm is a_n 
+is - now i'll write it as a fraction - numerator   is going to be a_n-1, a_n-3 plus a_n-2 squared 
+upon a_n-4 with a_0 is   1, so it now has a string of four 1s in the beginning.
+- (and what numbers does that spit out?)   okay so a_4 is going to be a_3, a_1 plus a_2 
+squared, a_0: 1 plus 1 divided by 1 which is 2. (oh we got a new number!)
+- exactly. now what's happening with a_5? if you do a_5 it's going to be   a_4 a_2 plus a_3 squared upon a_1;  
+3. so things are starting to move. (still integers though, we're still getting-)
+- still integers!  now look at this, there is no reason that 
+this should give you integers right? so   let's do another one.
+- (see if we get a fraction.) 
+- yep that's that's the idea. you have a_5 a_3   a_4; now you could say that i'm cheating because 
+all the denominators have so far just been 1,   you'll say that a bit longer because a_2 is also 
+1. what is this going to give us? 3 plus 4 divided   by 1 and you get a 7. we got 4 strings of 1, 
+that was already given, and then you have 2, 3 and   7. now let's go on and maybe i will introduce you 
+to the first term which has a denominator that is   not 1 so that you know i'm not cheating and maybe 
+now you can take my word for it that the next one   will be 23. a_8 will be 69 plus 49 divided by 
+2. so you have 118 divided by 2 which is 59. you see? even when the denominator is 2 you still got an integer! 
+- (no fractions yet) 
+- no fractions yet. now this goes on, this goes on for the whole 
+sequence that you'll never get a fraction.   right, and the next one is 314, 
+1529 and so on. it's doing   two things, it's not giving you a fraction but the 
+number is also growing, it's growing pretty fast.   okay, now you can say well that's a bit too 
+much of a coincidence. okay, one can check it   and there is good reason that it's not giving 
+you a fraction. okay, now i'll introduce you   to another non-trivial thing - and i won't go 
+through the computations but i'm guessing you can   believe me at this point - i have earned your 
+trust. you have somos-5. so you just start with   five 1s. now you can see what's happening, 
+if it's somos-4 it starts from four 1s,   if it's somos-5 you start from five 1s. and 
+this is very important because if you don't start   with all 1s then you do get a fraction. but 
+then it's not really somos, it's not really the   magic of all these sequences so if you want the 
+magic, stick to the rule that first however number   of 1s you need to get you always need to 
+stick to that one. it'll be 2 and 3, but it won't be the same as somos-4 of course; 
+you'll get a 5 and it'll go to 11, 37, 83, 274, 1217, and it goes on.
+- (integers.)
+- yep always integers. so somos-4, all integers; 5, all integers. so what's really happening? it's curious 
+enough that it's always giving me integers   but then the question is how far is it going 
+to keep giving me integers? does it break? is there some god-given rule? what's happening? 
+so somos-6 - again, all integers, no fractions.   somos-7, all integers, no fractions. somos-8, 
+something happens or not? that's the thing, okay   i'll just write it down. somos-8, it 
+starts with a string of eight 1s, and what is   the algorithm? you have a_n-1, a_n-7, a_n-2, 
+a_n-6, a_n-3, a_n-5,  a_n-4 squared divided by a_n-8. so you see,
+the algorithms are also growing, they're growing    very nicely but there's a nice pattern going 
+on there. these are all 1s up to this point, so   what's the next digit? ah, it is 4. now you go on, 
+you have a 7, you have a 13, 25, 61,'7, 775, 5827, 14815 - and this is a_16. 
+- (still all integers!)
+- still all integers. clearly i know   what i'm doing, so what is the 17 digit? okay let's 
+do it. so you have the 16th term times the   10th term, 15th times 11th, 14th times 
+12th, 13 squared divided by 9. which is   this term, the last one, times 13. the next one is
+5827 times 25, so it's the term before the last   one times 25. now you see the pattern: you have 
+the multiplication of this, multiplication of this,   and the next one is 775 times 61 which 
+is these two, and then there is'7   squared which is sitting right in the middle. 
+all divided by 7 which is a_9 which is   the guy here. and that will equal 420514 
+divided by 7, and it's not divisible by 7.   - (so it's a fraction!) 
+- exactly! the rule has been broken! 
+- (ah no, we got so far.)   (that was the fraction you showed us at the 
+start of the video?)
+- yeah, and that's the first   fraction that appears in these sequences.
+- (so the other ones went- all the ones before went all) (the way to infinity without a fraction?)
+- without a fraction; but in the somos-8 sequence   you get a fraction. 
+- (is that the only fraction?)
+- no. that's the interesting part, now you can continue   and you get - so let me write this down -  
+420514. we'll give this a special box,   because it's the first fraction it deserves 
+its own box, and then you got 28670773   divided by 91. fraction, not an integer! and 
+this goes on, you get quite a lot of fractions.   it's not very clear if you'll find an integer 
+somewhere but up to the first 30 digits or so you   never get an integer again. 
+- (all right okay, so this is where it breaks.)
+- yeah. (so what happens with somos-9 and 10 and 11?)
+- same thing. you'll think you'll get 
+integers in the beginning but you'll eventually   see fractions. and there is an interesting thing 
+also about which term is a fraction. somos-8,  the 17th term breaks. now what happens for somos-9? 
+it is the 19th term and for 10 it's the 20th term.   so it's almost twice as whatever the number you're getting here. 
+- (what happened? what changed)  (that made it break all of a sudden when it was 
+doing so well and always staying as integers?) that's a hard question. there is quite 
+a lot of deep understanding of these-   the algorithms that i wrote down. 
+those are very very important for   all sorts of things. so for example the 
+somos-5 algorithm, which was this guy, this comes out as some discrete 
+integral system, that's the buzzword.   so there is a good reason why these 
+are just integers, but i don't know   why it breaks at a higher order. but when it 
+doesn't break we have some understanding of what's   behind them, so there are these things called 
+cluster algebras which are associated to them,   there is all sorts of very very nice mathematics 
+that is also very recent. so that's one of the   reasons that these are super exciting. 
+- (that's exciting, that number there. 420514 over 7.) the troublemaker?
+- (yeah troublemaker number!)
+- or the trendsetter?  (oh yeah, that's true as well,) (yeah, it's a more positive spin.)
+- the trend-setting number for all these sequences.  (nah, i like trouble-maker.)
+- so there is this constant 
+somewhere out there in the world of numbers   with this formula, which will give you every 
+prime number - in order as well, not missing one.

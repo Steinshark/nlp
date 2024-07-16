@@ -1,0 +1,148 @@
+- did we just get a really unlucky ps5? do you think this is all worth it? - no.
+- definitely not. - no. - i almost didn't post this video. so about a month ago we took a look at the brand new ps5-1200. it completely redesigned internal upgrade to the playstation 5 and what we saw were
+some major differences. the smaller motherboard,
+significantly smaller heat sink, and yet, the results that
+we saw when we did things like thermal and power
+testing, didn't make sense. you'd think that with less
+cooling, it would be hotter or take it more power, but that
+just simply wasn't the case. that new ps5 was actually better. that didn't make sense to me. i had since spent a full
+month trying to understand exactly what's different about the 1200 and ultimately i failed, but also we did get to the bottom of it. so the story begins with our friends over at creative electron who run some of the most badass x-ray
+machines in the business. so what we bought are the motherboards as well as the heat sink assemblies. what you can see is that we have the 1000, which was the launch model. we have the 1100, which
+was the first revision, and then the 1200, which
+is the brand new one that's just come out. now, my main concern here is that while i would love to see exactly why this is pulling less power, 'cause it's pulling like 20 watts less, the problem is it's
+they're using liquid metal. so as soon as we take this apart, we can put it back together, but we can't do any further testing 'cause we won't be able to get
+that same liquid metal seal. - definitely, yeah, we can
+just pop it in the machine and see what it looks like. so we've actually already
+done a whole video at creative electron, which
+actually should be out soon, so make sure to subscribe, but the tech they're using
+here is incredibly cool. so this is what the original
+launch model of the ps5, the 1000, looks like. so we actually can see even
+through those copper heat sinks a little bit in the heat pipes, huh? yeah dude, that detail level is insane. so we can pretty clearly
+see the actual soc. so these are the cpu cores, the gpu cores, and these individual pads around it are where the memory modules live to actually feed the bandwidth to the ps5. so for context, you can see
+how much we're zoomed in here. i mean, what we're looking on the x-ray is probably like what, a slice like this big or so of everything. - [man] yeah, roughly. - can we turn the down
+exposure a little bit? i wanna try to get, let's
+see those memory module. so there's one, two, three,
+four, five, six, seven, eight. what i wanna have is a baseline for what the ps5 1000 model shipped with to see if it is actually
+any different with the 1200. while it's a little hard
+to see in some of the video that we've got here,
+but we actually do have the full res images that
+creative electron sent across which you can feel free to go download at the link in the description. so now we are moving on to the 1100
+model motherboard of the ps5. i'm expecting this to be very similar, but let's see if we can spot anything. immediately, i'm seeing the same four-plus-four pads for the memory. you still see six heat pipes, which i believe is the
+same even on the 1200 'cause you can see that externally. so what's really interesting
+about what we're seeing here is that because the 1100
+has less like copper and less of a heat sink,
+it's actually easier to see through so we can
+get an actual clear image. - [man] so we can tried the last one. - let's put the 1200
+in, the moment of truth. the question is how different
+have they really made it and where is our phantom power? okay, so first thought, even clearer with even less copper
+and whatnot in the way. sony are just making our job easier with every ps5 they come out with. so i'm immediately counting
+the eight memory modules that are all the way
+around, which makes sense. vrm does look a little bit
+different, but not hugely. i think these capacitors
+might look a touch smaller. now the question is, "is
+that chip any different?" - [jared] what's the
+dark, perfect rectangle? this is where the problems began. while we got some incredible x-ray images of the 1200 motherboard and the heat sink, the only part of this entire thing we couldn't get a clear sort of vision on was the actual chip itself. now we could see that the
+socket was the exact same, but because they do have
+this very thick heat spreader right over the top of the cpu, you just can't see through that, and so it looks the exact same, right? it's not the same. if it's different, it
+might be slightly smaller but it's tough to really say. if this was like if this was
+like a proper slim version where they had shrunk down to
+like a six nanometer process or something or five, i think it would be more obvious. we'll go and actually pixel count and see, but it doesn't look like there's
+an actual new chip in here. i think the mystery's gotten deeper. i think we've got a lot
+more work ahead of us. in the first video, we
+connected each of the ps5s to a kilowatt to see exactly
+how much power is running in the very simple test
+of astro's playroom. so today, i wanna spend
+a little bit more time with three kilowatts. we have one for the 1000, one for the 1100 and for the 1200. see exactly how much power
+these systems are using in a variety of circumstances. let's get our baseline
+by measuring the power that each of these ps5s draws
+doing absolutely nothing besides sitting on the menu. so the 1000 is staying very
+consistently at 51 watts. next up we'll go to the 1100, which is pulling 54 watts, 55 watts. wow, that's actually kind of high. and then the 1200 is
+pulling 49 watts exactly. it does seem like what we're seeing here lines up with our original test. either the 1100, because it runs warmer, is just requiring more
+power and more voltage, or it could be a thing where
+the 1100 just lost the lottery and it's just a badly
+binned chip that still works and still completely functions
+but requires more power and runs at a warmer sort of heat output. - [jared] 10% difference
+is pretty big difference. - especially doing nothing, that to me, i don't wanna get too ahead of ourselves, but that's a lot of extra power
+sitting here doing nothing. now, let's take a look to see
+how the ps5s handle youtube, so i'm gonna load up. the new ps5 is better on all three. 1000's bouncing between 71 and 72 watts. i'll say at 72. the 1200 is also exactly 72, and 1100 is 78, 77. the 1100 is taking more power. but now that we're seeing the 1000 and the 1200 run so close together, it really makes me think that
+out of the three of these, the 1100 is just more power hungry. the 2021 model of the ps5,
+clearly pulling more power. did we just get a really unlucky ps5? to be fair, when we did our initial test, it was in gaming and that is
+gonna show us the ps5 working in its absolute maximum to really see what kind of differences are
+between the three consoles. so for our game testing, we're going to start
+out with genshin impact. so each of the ps5s is
+logged in and loaded up in basically the exact same spot, looking at the exact same thing. everything between all three consoles should be pretty much
+identical at this point, so let's take a look at the power. so starting with the 1000, we are seeing it is
+running at about 223 watts. so that's our baseline. now if we come over to the 1100, woo! 253 watts, that's a lot of power. and we come to the 1200,
+208 watts, 209 watts. - [jared] oh my god. - the 1200 is running like
+20% less power than the 1100. i mean that is a 43 watt difference. so the most irritating
+part of this whole process has been in trying to get clean data. now every ps5 is gonna
+be a little different. totally makes sense, right? they're doing different bins,
+they wanna try to use as many of these chips as possible,
+but what we're seeing out of the 1100 doesn't make sense. it's worse than the 1100
+that we tested last year. and to be clear, the
+1100 that we've got here is a brand new model that
+we've opened up out of the box to use for this test. because it's so far off, there's really only one
+more thing left to do. i have purchased yet another
+ps5 to know what's wrong. i'm so tired of this. so this is the horizon
+edition, but importantly, cfi-1115b, aka, the most
+important thing, this is an 1100 and it is a digital model to
+keep it completely consistent. do you guys have any guesses on if i'm a giant idiot or-
+- giant idiot. what, giant. - it's the first like guess. - so the 1100, the original
+one that we tested, pulling a little bit
+less watts than before, but it's about 235, 237,
+something like that. the 1200, again like before,
+pulling about 210 to 211 watts. the 1100 that we just
+purchased is pulling, it's 216 watts. (crying loudly) we just wasted all this
+time testing this ps5, which for some reason
+just pulls way more power. i mean on one side i am happy that we bought yet another ps5, yep, to confirm the numbers because it shows that the ps5 we were
+testing with, the 1100, was a terrible, terrible chip. and while it looks exactly
+the same on the surface and it looks exactly the
+same on the model number, it was clearly taking up way more power than an average ps5 needed. - it's still kind of crazy
+that no matter what model ps5 you buy, there could
+just be a 20 watt difference in the amount of power it draws. - but the thing is-
+- the same console. - there's always been
+differences between the ps5s. like every single ps5
+we've ever taken a look at has just a complete lottery
+of different fans and stuff, like sony does mix and match components and i can believe that that's the case, but clearly the newest
+ps5 is the best model. do you think this is all worth it? - no.
+- definitely not. - no. - so fast forward to today, i was ready to give up
+on this entire video. we didn't have an answer. we spent all this time, then a light came through the clouds, the angels started singing, and
+an answer fell into our lap. i was watching the digital foundry show where they were discussing the ps5 and they mentioned that
+someone had actually already figured out what we could not. angstronomics took a deep dive
+on the actual chip itself, and while the physical external dimension, the ones that we saw on
+the x-ray were the same, the actual chip, the real logic behind it, was slightly smaller, that was it. that was the smoking gun. it is in fact a six nanometer shrink of the original seven nanometer chip, aka, it's slightly smaller and
+would therefore be cheaper, produce less heat and take up less power. exactly all the things
+we were looking for, except we lacked the smoking gun to explain what was different. and i think i kind of guessed
+this at the very beginning and then when we couldn't
+see through the heat spreader at creative electron,
+i completely moved on and never second guessed
+my decision whatsoever. if it's different, it
+might be slightly smaller, but it's tough to really say. if this was like a proper slim
+version where they had shrunk down to like a six nanometer
+process or something, or five, i think it would be more obvious. i said it! i said it! i said it! i said it's a six nanometer chip in creative electron a month ago. good job, austin. you nailed it and then
+you completely **** it up. something i did not want
+to do is to completely take apart the ps5 1200
+we had, first of all, because it's very expensive
+and we can't get another one if we wanted to do any other test, but also i didn't see any reason to do it. we had the extra images to
+show everything we needed and if we took it apart, again,
+we can put it back together, it will function, but it
+will be completely useless for testing from that point forward. there's no reason to do that, right? it's not like it's an
+actually smaller chip and we couldn't see it 'cause
+the x-ray image kept us from seeing the only part that was actually super important, oops. so now what is time to do what
+we should have done weeks ago and take apart our ps5 1200. so it is still, all the screws are out, but it should just pop loose now. although, i know, having
+done this in the past, gotta fight us a lot. there we go. so my friends, this is
+the ps5 1200 motherboard side by side with the 1000. you could really see
+how much smaller it is. the main thing i wanna
+do is measure the chips. look at the size difference, though. look how much smaller this
+motherboard really is. it's one thing to see it on x-ray. you're trying to tell me that they couldn't make ps5 slim today by just dropping it in there. that's tiny, man. you know what really irritates me? do you know what tripped me up
+from the very beginning? on the x-ray, you can't see
+the actual chip in the middle. you can only see the socket. it is exactly the same, 45.7, 45.7. the socket is exactly the same. the difference is the actual
+chip inside that socket. and of course the little
+heat spread right here is exactly the right size
+to cover that part up. well, let's just do this. so the ps5 1000 is 23.5
+by 13.8 millimeters. the 1200 is, be real careful here cause i don't wanna get liquid
+metal all over the place. 21.8 by 12.3. that's it, it's a six nanometer chip. it's a smaller physical chip. takes less power. it's cheaper for sony to produce. they can put a whole lot
+more of these on a wafer than they can this. i wish i would've done this a month ago. here look, let's look on the bright side. now we have proof that sony's
+ready for their ps5 slim. this board is like ready to go. - [ken] all right, well
+here's your redemption arc. make your own mini ps5. - i never wanna look at the
+inside of a ps5 ever again. part three coming soon, subscribe. (upbeat music fading)

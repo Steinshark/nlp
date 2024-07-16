@@ -1,0 +1,255 @@
+i have driven for days through the unimaginably
+vast australian outback in western australia we have covered over one and a half megameters
+that's over one and a half million meters roughly a thousand miles to be here in the
+middle of nowhere underneath the earth's sun which is an incredibly bright object and a
+blasts light in every direction through the solar system the solar system including the
+moon so the moon casts a shadow and roughly every year and a half that shadow hits the
+earth right here which is why everyone has gathered there are people here just to enjoy
+it a lot of people have brought like amateur astronomy things scientific instruments in
+fact my wife is here with a proper scientific experiment she's setting up as we speak and
+i thought well i want to get involved i want to collect some data but not with an off-the-shelf
+telescope oh no with my own handmade telescope and so that's a project that i gave to past
+matt past matt here to make the telescope yes i've got a beard timer circular and we
+need a few three key import units in a telescope first of all we need a tube so we've gone
+and got a whole bunch of postage tubes that should do us for the tube at one end
+you've got to put some optics maybe the other end too like a mirror have to get the exact
+details some level of optics and then you need a sensor so actually we're going to start
+with the sensor i've ordered one to this box so it literally arrived today i'm very excited
+let's get it open here it is look at that it's a light meter [ __ ] i'm using a carry
+okay this is gonna be the most professional telescope ever that's our sensor it's a single
+pixel people get real obsessed with having loads and loads of pixels to capture the image
+coming in through the optics i think no one pixel that way number one always stays in
+focus number two you'll need any optics you'd put your single pixel sensor at the end of
+a tube telescope done okay so now we've got a single pixel working this will tell me
+on the screen exactly how many how many photons are hitting it i guess how bright it is and
+we just put this at the end of a tube and it becomes a telescope the tube assembly process
+was taken on as a project by my producer nicole and camera person alex and my goodness they
+did not hold back on the artistic flair handing it in very delicate oh look at that it's got
+oh you got the it's already been labeled look at that all right that's great so it's the
+parkerscope i thought we're going to call it the parker solar probe what do you mean
+that's already been used honestly by who nasa never heard of her okay so so it's called
+the parkerscope as you can see it's always in focus one of the many many features and
+uh what's that one by one resolution 0.00001 megapixels focal length infinity magnification
+zero optics nope all of these are for show only they do they do nothing i assume they're
+just going to make i mean look more respected and less likely to be laughed at by the other
+other astronomers at the eclipse we then cut down the parkerscope to a much more manageable
+size and cut out a notch so that the light sensor could sit neatly inside the safety
+of the tube with no tube that's picking up five 40 5 30. there we go that's good enough
+it's still giving me 270. so we've lost half half the brightness but in theory if i'm at
+the eclipse pointed up at the sky mount that there somewhere plug it into a laptop to log
+all the data this way anyone kind of moving near it it's not going to pick up that it's
+just going to pick up the changing changing brightness of the sky so there you are that
+is my gift to matt in australia ah amazing let's set it up what i'm thinking is i don't
+want the telescope pointing at the sun because then the brightness will change just because
+the sun will move in and out of shot so i'm going to have a pointing like away from the
+sun to just get like the ambient brightness because that's frankly all we've got the resolution
+for just the actor walking past change the value that's not a good sign this changes slightly if i stand here you
+know i'm just going to tape off that slot am i playing with the parkerscope was simple
+to leave it running for the entire three hours of the eclipse so i can get a complete plot
+of the brightness of the sky throughout the entire eclipse the parkerscope is running
+largely as planned i've got the light sensor in the tube it's all held together final the
+knobs are still on the side it then goes into the handheld unit which as we said before
+is usb into the laptop now that took a bit of programming thankfully my brother steve
+is a much better programmer than me and he actually worked out the way that you can you
+know query this and get the data back and it's in a ridiculous format it's actually
+base 10 digits but they encode them as as a hex so you've got to take the binary that
+comes off turn to hex tech that's ridiculous i'll link to the code below if anyone else
+has to battle with one of these we've solved the problems code below all the turbo bits
+i wrote good bits steve wrote so on my screen over here is putting up the values as they
+come in both the original bits of hex and i'm decoding them it's all being saved as
+we go along and i can't help but say what a professional looking outfit the parkerscope
+is and how it does not look out of place next to actual scientific equipment with my wife
+here professor lucie green so lucie what is what is your actual kid doing i like it
+comes from the university of aberystwyth and it's a telescope that they designed and
+built which ultimately collects data that allows us to measure the density of the gas
+in the atmosphere of the sun so what we've got is a lens on the front and then a camera
+system which has in it a polaroid filter basically so the light that we're measuring from the
+atmosphere of the sun is polarized then we know the polarization of the light coming
+through it's important to know that because if we measure it we can work out that ultimately
+the density of the gas in the atmosphere of the sun and what's really nice is the name
+of the telescope is cip the coronal imaging polarizer but it's a welsh telescope and cip
+means glance in welsh which is really lovely so glancing at the sun during the total phase
+whereas parkerscope means having a look at giving it a go but the important thing is
+it looks like a real bit of scientific kit i think they're indistinguishable thank you
+i've got more glue and tape and type hey i had the parkerscope running before the eclipse
+had officially started so i could get a nice baseline brightness reading and just to recap
+some of the terminology during an eclipse we've got the moon coming towards the sun
+so far no eclipse yet first contact is when the very edge of the moon touches the very
+edge of the sun and now we're in eclipse town we carry on the moon gradually covering more
+and more of the sun second contact is when that leading edge of the moon touches the
+far edge of the sun in our case we were going to have to wait for an hour and a half after
+first contact before we got second contact but now it's totality this is the dark part
+of the eclipse this is going to last about a minute for us before we have third contact
+that's where the trailing edge of the moon touches the edge of the sun and after that
+it gets bright again and an hour and a half later of watching the sky get gradually brighter
+and brighter we have fourth contact which has been moon leaves the sun the whole thing
+is about three hours from beginning to end if the parkerscope serves me well i should
+have a plot of the brightness of the sky a curve of how much light there is from the
+entire process so what shape do we think that curve might look like well one way to approximate
+it would be to take a unit disc gradually cover it with another slightly bigger disc
+because of our perspective with the sun and then just track the total area we can see
+and of course we can run that in python first i use python to give me a white disk to represent
+the sun and then i've got a black disc for the moon which is scaled to the apparent sizes
+we had during the eclipse the moon was actually 1.092 percent bigger from our point of view
+the magenta by the way has no impact on the simulation i put that in afterwards just so
+you can see where the moon is easily at all points in time and you can see i'm tracking
+the percentage of the sun that's still visible what i actually did was count all the pixels
+in the original disk and then i've just got the percentage the fraction of the pixels
+you can see for every frame as the moon covers it up and yes there's a analytical way i could
+have just calculated each of these but this makes a simulation a bit more flexible which
+is going to come in handy in a moment although the sun is not a uniformly bright disc it
+actually gets dimmer the further out you go so we could compensate for that with an unevenly
+colored in disc that then we cover with the moon and you know i did that here's my simulated
+sun that gets darker as you go further out now the actual physics behind why that happens
+is a bit complicated is because when you're looking at the middle of the sun you can actually
+look further into the sun because when you look at the edges of the sun you're looking
+at it like a glancing blow and so you can only look so far into the sun because of the
+optical depth or rather that's where the photons are emitted from the plasma and the ones on
+the side have to go through more plasma to get to us so we're actually looking at ones
+that are closer to the sun's surface and they actually produce less photons because they're
+cooler the point is it tapers off as you get to the edge and i've used this formula as
+an approximation for that process yes and different frequencies of light actually have
+different u values in this approximation i've picked a u of 0.7 which is pretty good across
+the range of visible light we're looking at if anything it's a little bit higher than
+you'd expect so i've got the sun about 40 brightness at the edge which is slightly more
+limb darkening than you'd expect but i thought i'd go for something that makes it a bit more
+visually obvious what's happening and hopefully if we look at the values i'm getting out of
+this simulation and now i'm adding up all the fractional values of the pixels that are
+still visible it will be sufficiently different when we compare it to the first simulation
+and what about the fact we're just pointing it at the sky i'm sure people who know more
+about the atmosphere are yelling things involving refraction and scattering and yes i know it's
+not a perfect metric and of course the sun is moving during this so it's getting like
+closer to the point of the sky i'm pointing it i guess it's going to be complex i think
+we we can still pull out some kind of nice curve finally after all this waiting around
+second contact happened and we had totality this is the main bit of the eclipse this is
+why everyone was there this is the bit where lucy could take the cover off her telescope
+to record her polarized light data she only cared about the photons arriving during the
+total eclipse because she just wanted to see the sun's atmosphere now that all of the photosphere
+was finally blocked post eclipse and i have a mild problem because the sun's move so much
+and i didn't put enough thought into where i put the marcus coop originally the sun is
+now actually going into the tube which means i'm getting crazy high readings down here
+like way higher than i got before more than would be justified by just like the sun moving
+around in the sky so even though it's going to kind of ruin the data i'm going to move
+it if i didn't move it the data would be ruined as well so i think the only thing i can do
+is shift it into a new like equivalent spot in the sky and hopefully that'll fix the data
+problem you could do that that's a more realistic
+uh value on the thing down here but what i'm worried about is if people walk by it changes
+so i'm just going to walk by i don't think that's adjusting because of
+me i'm going to go with that as my best option so i sadly it's now pointing a lot more kind
+of horizontal and i did the change at 12 minutes past 12. and so we now just had to wait for
+the end of the eclipse i'm not gonna lie most of the people left after totality people just
+packed up and they were on their way but not us we were going to wait there patiently get
+all of that delicious data however you don't have to wait because you're watching this
+in the future and i know someone who's already got all of the final data and is able to show
+us what the results look like future matt here i'm back in perth now and i've both got
+all the data from the parkerscope onto my laptop and i thought it'd be fun to film the
+data processing bit in the sun so i've come down the beach hopefully the sound really
+is very loud waves hopefully the sound of that's not gonna be a problem i i had the
+plot and i'll show it to you and here it is check it out that's that's the data isn't
+it incredible so you can see i mean straight out of the box you can see here i repositioned
+the parkerscope that's when oh life's happening now little sun going in to the tube and that's
+obviously reflecting onto the sensor the sensor's very sensitive that's why it's called the
+sensor short for sensitive and and so i repositioned it here you can see the adjustment
+and then all this noise i'm pretty sure that is people walking past reflecting light
+onto my incredibly sensitive scientific equipment and then here flat does flatten out post a
+clip so i have got the post baseline but you know what i've got such a good beginning bit
+so this is before the eclipse all the way into the eclipse there's totality that little
+bit there and then it comes out afterwards this is where the sun starts hitting it so
+you know what it's symmetric we're just going to use the first half now one thing you may
+have noticed there's a few spikes in my data so this is like outliers like anomalies in
+the datas now this bike here i've actually got a zoom in of just that section you can
+see that there's there's the recordings we should be getting as it's getting darker suddenly
+boom i'm naturally low value and then back up again now the new line here is actually
+slightly lower so i could get rid of that where's that small one there it is there so
+if i was to delete delete those two bits of data there we go shift up there we go okay
+now you can see there's the before drop and after so my theory is this is when i mean
+either someone walked over into something weird when i wasn't paying attention to the
+parkerscope or this is when it was switching scales going from one scale like one range
+of value to the next range down and maybe it doesn't perfectly line up before and after
+who knows but what i did was i just i've removed the outliers i just straight up deleted them
+i didn't try and do anything else clever around it so you can still see little steps little
+step function there where i've taken out that and i've only got the the four of the eclipse
+and then i've got totality and ever so slightly after two things to note here one you can
+see one you can't the one you can see is the lead-in this is before we had the eclipse
+even starting this should be perfectly normal day like like any other day and sadly it's
+changing it's gradually going up and that's because the sun's moving in the sky and that's
+changing the intensity of what the parkerscope's looking at and secondly if you look at the
+totality so if i zoom in where's totality here it is look at that so here it is the
+light is coming down down down down down and then it goes flat and there's a tiny like
+such a small value of like residual light that's going on and that i guess is either
+light that's being reflected in from the atmosphere elsewhere or it's from the corona i don't
+know but is a trivial like point one percent of what we've got to start with left but even
+that is very very slowly going up so even over the one minute duration of the absolute
+totality part of the eclipse even though there's barely any light you can still see it ever
+so gradually changing because the sun and the moon are still moving in the sky and so
+there's still that one weird change let's assume that's what's happening and so what
+i did was i took the lead-in data this is like the if you go back to the whole plot
+this is just this section up here before the eclipse has started at all you take the lead-in
+data i approximated that as a linear curve just like a straight line and i worked out
+what that is and i worked out then what i'd have to do to remove that from the data if
+you do that with a simple linear correction you go from the blue line that's before i've
+corrected it down to the orange line that's now see they have a perfect flat start here
+the totality is is better but not perfect it's still got a very slight increase on it
+but i'll have to do something far more complicated to fix that now if you're thinking surely
+there's a better way to do this then just you know really naive linear approximation
+of what was going on you're correct i could have done a much better job and there's a
+lot of reasons why i didn't and what i tried they're all a bit too much for this video
+so i'm going to make a bonus patreon only video because it's my fantastic patreon supporters
+who meant that i got to go and do all this at the eclipse anyway so on patreon there's
+a video where i explain other things i tried to do to calibrate fix compensate the data
+and we look at two cheeky mysterious spikes oh one that i haven't talked about in the
+main video so if you want to check that out i'll link to it below and at a minimum have
+a moment to appreciate the patreon supporters who make these videos possible what we're
+going to do now is compare what i've got here the orange line to the simulations where i
+was moving the discs in front of the sun here's the first one this was the full sun with no
+limb darkening and there there you go you can see fully bright i've just normalized
+everything to be one and then it dips down totality goes back up again those are the
+numbers that you saw in the previous simulation video that i had and if i add on now the dim
+sun you can see it's a subtly different line actually no if i drag that down you can have
+a bit of a closer look at it so you can see it's exactly the same idea the purple one
+is the no limb darkening and you can see the green one where there's limb darkening first
+of all it stays a little bit brighter for longer because it's the dimmer bit that's
+being covered and if it gets all normalized to the initial brightness in both cases so
+it all lines up and then it then it overtakes and then it's below so without limb darkening
+the drop-off is a lot more straight linear with limb darkening it first of all it goes
+out and then it comes down i think it's a little more flamboyant which is kind of fun
+so the question now is where did the data in the parkerscope land well i got it so first
+of all i took the simulation data i converted it to be the same range as what i had off
+the parkerscope i then took the parkerscope data and normalized it to be one as well so
+it all lines up i put it together and it looks like this and now you can see there's no limb
+darkening in the purple there's the actual data in the orange and there's with dim darkening
+so the the actual data is slightly above it but the same shape as the darkening they all
+crossed at about the same place give or take and then down here look at that match look
+at it that's so i mean there's the bit where i took the spike out and things kind of adjust
+so i'm just going to assume that all the stuff over here on the left actually you can see
+there it steps off ah all of that i think that's an issue with the sensor and that should
+be dropped down perfectly onto the green which i considered doing but i was like that's too
+close to fudging the data so this is this is the actual raw data with our one linear
+correction that i think that should be a little bit lower and look at the bottom there look
+at that match and it's just a little bit on the inside so if you remember when did the
+limb darkening i went like more in the dark direction than i heard on more darkness rather
+than less and i'm now just inside that so actually this gives us some insight into the
+sun because the reason you get the limb darkening is because of the gradient of the temperature
+in the plasma under the photosphere in the sun and because of the optical depth of how
+far the photons could move and if you didn't have this gradient and temperature that changes
+the photon production you wouldn't have any limb darkening but we do have limb darkening
+the parkerscope has managed to prove that there is limb darkening on the sun which means
+you can use the data from the parkerscope to deduce roughly the nature of the temperature
+gradient of the plasma inside the sun as it goes below the photosphere that's that is
+a fundamental insight into the nature of our star to an eclipse ah i'm so pleased i mean i was
+braced for this to not show anything and it'd be a bit of a bit of a laugh you know a vague
+curve and once again i like to model the idea that you just you give things a go you try
+it and you don't need fancy equipment you just give it a go and i gave it a go and i
+was able to show something about the fundamental physics of the sun ah oh i'm so proud i'll
+hand you back over to past matt at the eclipse we now have all of our data i hope you enjoyed
+whatever i managed to do with it we're going to pick up the parkerscope now save it for
+the next eclipse and head home i just want to thank all my patreon supporters who make
+this possible i know it looks like it's just me larking around on holiday which kind of
+is but there's a lot that goes on behind the scenes a lot of costs and teams and editing
+and all sorts of things it's all enabled on my patreon supporters so thank you so much
+to each and every single one of you you mean i can make videos like this and these days
+there are so many incredible math youtubers out there making all sorts of videos how long
+between when it started and when it ended then we can actually determine the reason
+you're the only youtuber here making a mathematics video so thank you so much here are the names
+of all the people you should be grateful to foreign [music] [music] thank you [music] thanks for all your support
+foreign

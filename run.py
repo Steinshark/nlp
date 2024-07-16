@@ -16,7 +16,9 @@ import math
 import argparse
 from torch.nn import CrossEntropyLoss
 import torch
+from matplotlib import pyplot as plt 
 
+_KEYTOKENS  = []
 
 def keytoken_weighted_loss(inputs, logits, keytoken_ids, alpha=1.0):
     # Shift so that tokens < n predict n
@@ -27,9 +29,9 @@ def keytoken_weighted_loss(inputs, logits, keytoken_ids, alpha=1.0):
     loss = loss_fct(shift_logits.view(-1, shift_logits.size(-1)), shift_labels.view(-1))
     # Resize and average loss per sample
     loss_per_sample = loss.view(shift_logits.size(0), shift_logits.size(1)).mean(axis=1)
-    return loss_per_sample.mean()
+    #return loss_per_sample.mean()
     # Calculate and scale weighting
-    weights = torch.stack([(inputs == kt).float() for kt in keytoken_ids]).sum(
+    weights = torch.stack([(inputs == kt).type(torch.float) for kt in keytoken_ids]).sum(
         axis=[0, 2]
     )
     weights = alpha * (1.0 + weights)
@@ -37,7 +39,6 @@ def keytoken_weighted_loss(inputs, logits, keytoken_ids, alpha=1.0):
     weighted_loss = (loss_per_sample * weights).mean()
     return weighted_loss
 
-from matplotlib import pyplot as plt 
 
 DEVICE      = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 T_TYPE      = torch.bfloat16
@@ -65,7 +66,8 @@ class GPTSteinshark(GPT2LMHeadModel):
                                              n_head=n_head,
                                              activation_function=act_fn,
                                              resid_pdrop=.1,
-                                             torch_dtype=T_TYPE)
+                                             torch_dtype=T_TYPE,
+                                             layer_norm_epsilon=1e-5)
 
         #Create the model
         super(GPTSteinshark,self).__init__(self.config)
@@ -87,7 +89,8 @@ class GPTSteinshark(GPT2LMHeadModel):
               lr=.0002,
               warmup_lr=.0001,
               wd=.01,
-              warmup_ratio=.02,
+              warmup_steps=2048,
+              abbrev_steps=32768,
               sample_text='my cat is',
               grad_accumulation_steps=16,
               ):
@@ -100,12 +103,14 @@ class GPTSteinshark(GPT2LMHeadModel):
         self.warmup_bs          = warmup_bs
         self.nominal_lr         = lr
         self.wd                 = wd 
-        self.warmup_ratio       = warmup_ratio
+        self.warmup_steps       = warmup_steps
         self.warming_up         = True
         self.ds_root            = ds_root
         self.train_iters        = n_iter
         self.samples_trained    = 0
-        
+        self.grad_accumulation_steps    = grad_accumulation_steps
+        self.abbrev_steps       = abbrev_steps
+        self.bs                 = bs
         #Send model to device and prep for training 
         self.model              = self.model.to(DEVICE)
         self.model.train(True)
@@ -117,7 +122,7 @@ class GPTSteinshark(GPT2LMHeadModel):
         dataset.print_stats()
 
         #Create the optimizer
-        self.optimizer          = torch.optim.AdamW(self.parameters(),lr=warmup_lr,weight_decay=wd,betas=(.9,.999))
+        self.optimizer          = torch.optim.AdamW(self.parameters(),lr=warmup_lr,weight_decay=wd,betas=(.96,.9999))
 
         #Track loss 
         self.warmup_losses      = [] 
@@ -125,9 +130,9 @@ class GPTSteinshark(GPT2LMHeadModel):
         visited                 = set()
 
         #Print training params 
-        print(f"\tparams:\t{sum([p.numel() for p in self.model.parameters()])//1_000_000:.2f}M params")
-        print(f"\ttrainset:\t{len(dataset.tokenized_text)} tokens")
-        print(f"\twarmup ratio:\t{self.warmup_ratio}")
+        print(f"\tparams:\t\t{sum([p.numel() for p in self.model.parameters()])//1_000_000:.2f}M params")
+        print(f"\ttrainset:\t{len(dataset.tokenized_text)/1_000_000:.1f}M tokens")
+        print(f"\twarmup steps:\t{self.warmup_steps}")
         print(f"\twarmup lr:\t{self.warmup_lr}")
         print(f"\ttrain lr\t{self.lr}")
         print(f"\twarmup bs:\t{self.warmup_bs}")
@@ -137,6 +142,7 @@ class GPTSteinshark(GPT2LMHeadModel):
 
         #Run the training n_iter times 
         self.iter                       = -1
+        self.accumulate_flag            = False
         while self.samples_trained < self.n_iter:
 
             for i, batch in enumerate(self.dataloader):
@@ -145,19 +151,19 @@ class GPTSteinshark(GPT2LMHeadModel):
                 #Update training parameters
                 self.iter                   += 1
                 self.update_training_params()
+                self.accumulate_flag        = False
 
                 #Prep data 
                 tokens                      = torch.stack(batch)
-                tokens                      = tokens.to(DEVICE).type(torch.long)
-                tokens                      = tokens.t()    #100% unsure why this needs to happen.... bad looks
-               
+                tokens                      = tokens.to(DEVICE).type(torch.long).t()#100% unsure why this needs to happen.... bad looks
+                               
                 #Send forward
                 next_prediction             = self.model(tokens,labels=tokens)#attention_mask=masks
                 self.samples_trained        += next_prediction.logits.shape[0]
 
                 #Gather loss
-                loss                        = next_prediction.loss 
-                loss                        = loss / grad_accumulation_steps
+                loss                        = next_prediction.loss #keytoken_weighted_loss(tokens,next_prediction.logits,_KEYTOKENS) #next_prediction.loss 
+                loss                        = loss / (self.grad_accumulation_steps if not self.warming_up else 1)
                 torch.nn.utils.clip_grad_norm_(self.model.parameters(),1.0)
 
                 #Send back
@@ -165,52 +171,56 @@ class GPTSteinshark(GPT2LMHeadModel):
 
                 #Track loss
                 if self.warming_up:
-                    self.warmup_losses.append(loss.mean().item()*grad_accumulation_steps)
+                    self.warmup_losses.append(loss.mean().item())
                 else:
-                    self.train_losses.append(loss.mean().item()*grad_accumulation_steps)
+                    self.train_losses.append(loss.mean().item()*self.grad_accumulation_steps)
 
                 #Optimize net over grad accum steps
-                if (i+1) % grad_accumulation_steps == 0:
+                if self.samples_trained % self.grad_accumulation_steps == 0 or self.warming_up:
                     self.optimizer.step()
                     self.optimizer.zero_grad()
+                    self.accumulate_flag        = True
+                    plt.cla()
+                    plt.plot(self.warmup_losses,label="Warmup loss",color='dodgerblue')
+                    plt.plot([0 for _ in self.warmup_losses] + self.train_losses,label="Train loss",color='goldenrod')
+                    plt.title(f"Model Loss - {sum([p.numel() for p in self.model.parameters()])/1_000_000:.2f}M params - [{self.samples_trained}/{self.n_iter}]")
+                    plt.legend()
+                    plt.draw()
+                    plt.pause(.01)
 
 
                 #Sample every .1%
-                if int(1000*self.training_percent) not in visited:
+                if self.samples_trained % 1024 == 0:
                     self.model.eval()
-                    print(f"iter [{self.samples_trained}/{self.n_iter}]")
-                    with torch.no_grad():
-                        text                = sample_text
-                        encoded             = self.tokenizer.encode(text).ids
-
-                        #Produce the max number of tokens without giving up context
-                        while len(encoded) < self.n_positions and not "<|endoftext|>" in text:
-                            inputs              = torch.tensor(encoded).to(DEVICE)[-self.n_positions:]
-                            mask                = torch.ones(len(encoded)).to(DEVICE)[-self.n_positions:]
-                            logits              = self.model.forward(inputs,attention_mask=mask).logits[-1,:]
-                            probs               = torch.nn.functional.softmax(logits,dim=-1).detach().cpu().numpy()
-                            choice              = random.choices(list(range(len(probs))),weights=probs,k=1)
-                            text                = text + self.tokenizer.decode(choice)
+                    print(f"iter [{self.samples_trained}/{self.n_iter}]\tgrad_acc [{self.grad_accumulation_steps}]")
+                    text = ''
+                    if self.samples_trained % 2048 == 0:
+                        with torch.no_grad():
+                            text                = sample_text
                             encoded             = self.tokenizer.encode(text).ids
 
-                    text        = f'\n{text}'
+                            #Produce the max number of tokens without giving up context
+                            while len(encoded) < self.n_positions and not "<|endoftext|>" in text:
+                                inputs              = torch.tensor(encoded).to(DEVICE)[-self.n_positions:]
+                                mask                = torch.ones(len(encoded)).to(DEVICE)[-self.n_positions:]
+                                logits              = self.model.forward(inputs,attention_mask=mask).logits[-1,:]
+                                probs               = torch.nn.functional.softmax(logits,dim=-1).detach().cpu().numpy()
+                                choice              = random.choices(list(range(len(probs))),weights=probs,k=1)
+                                text                = text + self.tokenizer.decode(choice)
+                                encoded             = self.tokenizer.encode(text).ids
+
+                        text        = f'\n{text}'
                     print(f"loss={(self.warmup_losses[-1] if self.warming_up else self.train_losses[-1]):.4f}\tlr={self.lr if not self.warming_up else self.warmup_lr:.5f}\tprogress={100*self.training_percent:.1f}%\n{text}")
                     self.model.train(True)
                     visited.add(int(1000*self.training_percent))
                 
                     #Create local directory if it doesn't exist and save checkpoint
-                    if not os.path.exists("models"):
-                        os.mkdir("models")
-                    torch.save(self.state_dict(),f"models/{self.name}")
-                    print(f"Saved model at iter{self.iter} to models/{self.name}\n\n\n\n")
+                    if self.samples_trained % 16384 == 0:
+                        if not os.path.exists("models"):
+                            os.mkdir("models")
+                        torch.save(self.state_dict(),f"models/{self.name}")
+                        print(f"Saved model at iter{self.iter} to models/{self.name}\n\n\n\n")
 
-                plt.cla()
-                plt.plot(self.warmup_losses,label="Warmup loss",color='dodgerblue')
-                plt.plot([0 for _ in self.warmup_losses] + self.train_losses,label="Train loss",color='goldenrod')
-                plt.title(f"Model Loss - {sum([p.numel() for p in self.model.parameters()])/1_000_000:.2f}M params")
-                plt.legend()
-                plt.draw()
-                plt.pause(.01)
 
         plt.cla()
         plt.plot(self.warmup_losses,label="Warmup loss",color='dodgerblue')
@@ -222,17 +232,19 @@ class GPTSteinshark(GPT2LMHeadModel):
         input(f"finish training")
 
 
-    def test_ground(self,tokenizer:GPT2Tokenizer):
-        text        = "This is a sample text that is rather not long. Will it work?"
-
-
     def update_training_params(self):
+
         #Get percent of way through
         self.training_percent   = self.samples_trained / self.train_iters
 
-
+    
         #After warmup 
-        if self.training_percent > self.warmup_ratio and self.warming_up:
+        if self.samples_trained < self.warmup_steps:
+            self.warmup_lr             *= 1.016
+            self.warmup_lr             = min(self.warmup_lr,self.lr)
+            pass
+
+        elif self.samples_trained >= self.warmup_steps and self.warming_up:
             
             print(f"Switiching to non-warmup mode\n\n\n")
             #Set to non-warming up
@@ -250,9 +262,13 @@ class GPTSteinshark(GPT2LMHeadModel):
             #Show losses
             plt.plot(self.warmup_losses)
             #plt.show()
+        
+        elif self.accumulate_flag:
+            pass
             
-
-        self.lr                 = self.lr
+        if self.samples_trained >= self.abbrev_steps and self.dataloader._dataset.train_i < 1:
+            print(f"\n\tTrain on full dataset")
+            self.dataloader._dataset.train_i    = 1.
         
 
     def generate(self,prompt):
@@ -297,29 +313,29 @@ if __name__ == "__main__":
     argparser   = argparse.ArgumentParser()
     argparser.add_argument('--load_model',default='True')
     argparser.add_argument('--load_vocab',default='True')
-    argparser.add_argument('--train_dir',default='C:/gitrepos/nlp/yt_captions2')
+    argparser.add_argument('--train_dir',default='C:/gitrepos/nlp/yt_ascii')
     args    = argparser.parse_args()
 
 
     #Training/Model Settings 
-    warmup_bs   = 8
-    train_bs    = 8
-    warmup_lr   = .00002
-    train_lr    = .0002
+    warmup_bs   = 16
+    train_bs    = 16
+    warmup_lr   = .0000002
+    train_lr    = .00002
     wd          = .01
-    warmup_ratio= .005
-    input_size  = 256+128
-    vocab_size  = 16384
-    embed_size  = 768
-    n_layers    = 12
-    n_heads     = (16+8)
-    batch_mult  = 32/train_bs
-    train_root  = args .train_dir
-    sample_text = 'hello world, im everett and this is practical python. today we are going to learn about functions and'
+    warmup_steps= 2048
+    input_size  = 32
+    vocab_size  = 8192
+    embed_size  = 256+128
+    n_layers    = 8
+    n_heads     = 12
+    batch_mult  = 64
+    train_root  = args.train_dir
+    sample_text = 'welcome back to practical python. today we are going to learn about functions and how they work. well start'
     
 
-    print(f"building vocab: {args.load_vocab == 'True'}")
-    print(f"building model: {args.load_model == 'True'}")
+    print(f"loading vocab: {args.load_vocab == 'True'}")
+    print(f"loading model: {args.load_model == 'True'}")
 
 
     #Create Tokenizer
@@ -332,7 +348,11 @@ if __name__ == "__main__":
     else:
         tokenizer               = ByteLevelBPETokenizer().from_file(vocab_filename="stein_tokenizer_bpe/vocab.json",merges_filename="stein_tokenizer_bpe/merges.txt")
     
-    
+    #Make keytokens 
+    for keyword in ["list","data","define","javascript","object","class","statement","variable","html","rust","python","coding","code","project","video","guys",'learn','function',"method","model","developer"]:
+        keytoken    = tokenizer.encode(keyword).ids[0]
+        _KEYTOKENS.append(keytoken)
+
     #Create model
     model                       = GPTSteinshark(input_size=input_size,vocab_size=vocab_size,n_embed=embed_size,n_layer=n_layers,n_head=n_heads,tokenizer=tokenizer,act_fn='gelu_new').to(DEVICE)
     model.name                  = "steinshark1.model"
@@ -346,13 +366,13 @@ if __name__ == "__main__":
 
     #Train
     model.train_stein(train_root,
-                      n_iter=1_000_000,
+                      n_iter=128*1024,
                       warmup_bs=warmup_bs,
                       bs=train_bs,
                       warmup_lr=warmup_lr,
                       lr=train_lr,
                       wd=wd,
-                      warmup_ratio=warmup_ratio,
+                      warmup_steps=warmup_steps,
                       sample_text=sample_text,
                       grad_accumulation_steps=batch_mult)
     

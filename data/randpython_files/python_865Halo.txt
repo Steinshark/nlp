@@ -1,0 +1,110 @@
+"""
+Halo.py - Halo object containing all output data from RockStar Halo Finder.
+@author: Greg Dooley gdooley@mit.edu
+@date: 3/29/2012
+"""
+import numpy as np
+#### Details of Halo object from Rockstar's /io/io_internal.h
+#struct halo {
+#  int64_t id;
+#  float pos[6], corevel[3], bulkvel[3];
+#  float m, r, child_r, mgrav, vmax, rvmax, rs, vrms, J[3], energy, spin;
+#  int64_t num_p, num_child_particles, p_start, desc, flags, n_core;
+#  float min_pos_err, min_vel_err, min_bulkvel_err;
+#  };
+
+##NOTE TO SELF: PUT UNITS ON EACH VARIABLE
+class Halo:
+    """
+    Halo Object
+    @type file: string
+    @param file: full path to file
+    """
+    def __init__(self, file):
+        self.file = file
+        self.offset = None #: location in file in bytes of first particle ID
+        ## variables from Rockstar
+        self.id = None #: Halo ID number
+        self.pos = None #: x,y,z position. (Mpc/h) (comoving). 1x3 array
+        self.corevel = None #: core velocity. vx,vy,vz. (km/s) (physical). 1x3 array
+        self.bulkvel = None #: bulk velocity. vx,vy,vz. (km/s) (peculiar). 1x3 array
+        self.m = None #: total mass (Msun/h)
+        self.r = None #: virial radius (kpc/h) (comoving)
+        self.child_r = None #: don't know
+        self.mgrav = None #: don't know
+        self.vmax = None #: don't know
+        self.rvmax = None #: don't know
+        self.rs = None #: scale radius (kpc/h) (comoving)
+        self.vrms = None #: rms on velocity
+        self.J = None #: angular momentum Jx,Jy,Jz (Msun/h)*(Mpc/h)*(km/s) (physical). 1x3 array.
+        self.energy = None #: energy (Msin/h)*(km/s)^2 (physical) 
+        self.spin = None #: spin
+        self.num_p = None #: number of particles in halo
+        self.num_child_p = None #: don't know
+        self.p_start = None #: don't know
+        self.desc = None #: number of descendants. -1 if no descendants. Use merger tree for proper information
+        self.flags = None #: don't know
+        self.n_core = None #: number of particles in core
+        self.min_pos_err = None #: position error
+        self.min_vel_err = None #: velocity error
+        self.min_bulkvel_err = None #: bulk velocity error
+
+        ## additional computed quantities
+        self.subHaloList = None #: list of all subhalos of halo. (Halo object list)
+        self.hostHalo = None #: reference to Host halo
+
+    def equals(self, haloB):
+        """
+        @param haloB: Halo object
+        @return: true if input halo = haloB, false otherwise.
+        """
+        return self.id == haloB.id
+
+    def distanceTo(self, haloB):
+        """
+        @param haloB: Halo object
+        @return: distance between centers of input halo and haloB in Mpc.
+        """
+        dist = np.sqrt( (haloB.pos[0]-self.pos[0])**2 + (haloB.pos[1]-self.pos[1])**2 + (haloB.pos[2]-self.pos[2])**2 )
+        return dist
+        
+    def distanceTo(self, pos):
+        """
+        @param pos: [x,y,z] position in Mpc/h
+        @return: distance between center of halo and pos in Mpc /h
+        """
+        dist = np.sqrt( (pos[0]-self.pos[0])**2 + (pos[1]-self.pos[1])**2 + (pos[2]-self.pos[2])**2 )
+        return dist
+
+    def getParticleIDs(self):
+        """
+        @return: a list of particle IDs in the Halo
+        """
+        f = open(self.file)
+        np.fromfile(f,'c',count = self.offset)
+        #print self.num_p
+        particleIDs = np.fromfile(f,np.int64, count = self.num_p)
+        f.close()
+        return particleIDs
+
+    def numParticlesOutsideVr(self):
+        particles = self.getParticleIDs()
+        
+
+    def printHalo(self, full = False):
+        """
+        Print Halo information
+        @type full: boolean
+        @param full: option to turn on/off full info
+        """
+        print "Printing Halo #: ", self.id
+        print "ID: ", self.id
+        print "Pos: ", self.pos
+        print "Num Particles: ", self.num_p
+        print "Mass: ", self.m
+        print "Radius: ", self.r
+        print "Energy: ", self.energy
+        print "Spin: ", self.spin
+        print "Num P in core: ", str(self.n_core)
+        if full:
+            print "rest of info should be printed - didn't write it in yet"

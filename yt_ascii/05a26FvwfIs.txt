@@ -1,0 +1,105 @@
+- hey guys, this is austin. i built the ps5. well, sorta. (electronic music) so this is everything we should need to build ourselves the
+xbox scarlett or ps5. now to start out with, we
+have amd's ryzen 7 3700x. now this is the exact same zen 2 core as they're in both of the
+next generation of consoles and based on what we know
+about the playstation 5 with an 8-core configuration, this is a very close match. with a few tweaks, i think we can get it
+really, really close. next, we have the radeon rx 5700. now this is the very
+first of the navi gpu's which again, will be found in both the ps5 as well as the next generation xbox. this should give us a very good idea of how these next generation
+consoles will perform. take a grain of salt and we can see just how close we can get to playing games at a
+full 4k60 or even beyond. technically, this does
+support 8k resolutions. these are very much the building blocks for the next generation of consoles so let's get this thing put
+together in the test bench and see just exactly how well it performs. now sony and microsoft
+will almost definitely be using a proprietary ssd, so this is not going to be an
+apples to apples comparison. what it is is by far the fastest option that we have available and should give us a good
+idea of the performance, specifically the load
+times that we can expect out of these new consoles. so with the test bench assembled, i now have windows installed, all of our games and drivers
+and updates all ready to go. now there are a couple
+of configuration things which will definitely be
+different with the consoles. so number one is going to be memory. so right now, i have 16 gigs and 3400 ddr4 feeding the cpu and the gpu has eight gigs of gddr6. now, because the consoles
+will take advantage of an apu style like the current consoles, the cpu and gpu will be on the same die, so that's going to give
+a bunch of power savings and of course, on top of that, they are going to be
+sharing very similar memory. so likely it will be gddr6, but there's a lot of
+sort of ifs and maybes because there's a lot of
+customization they could do. maybe sony decides to put
+16 gigs instead of 12. maybe microsoft decides to
+throw some ddr4 in there to speed up the cpu. that is all way up in the air so to keep things as fair as possible, i'm trying to be conservative
+and give it the most amount of bandwidth and
+the most amount of memory that i think it could realistically use. so we have horizon 7 3700x here, as well as the rx-5700. now to start, i'm going to just run a series of benchmarks and tests, with everything stock because obviously, this has a advantage of being an open air test bench, but this is sort of
+the best case scenario. plenty of power, plenty of cooling, and then we'll start tweaking from there. so to start out, let's have the good old standard geekbench. now this is not going to
+be the most demanding test for the cpu, but this should give us a good ball park, specifically on how horizon stacks up to, well i mean now are
+the current consoles, but like core i7's and stuff. oh wow, that's fast, okay. so for context, that's actually ahead of a core i-7-9700k multi-threaded. it's not too far behind
+on single threaded. that's a big, big step up from old ryzen. we do know that sony and
+microsoft have opted to go for an amd navi based gpu. so because of that, i've
+chosen to go with the 5700, which is the middle of the range option. so sony and microsoft will
+definitely customize this, so they might actually go
+up toward a higher spec such as the xt version of this guy, or because of power strain,
+so they might actually go a little bit lower performance and they're gonna customize
+it with extra stuff like ray tracing that tracing
+that this card doesn't have so it's a little bit of a guess, an educated guess, but it's sort of, i'm hoping
+that this middle of the range configuration is doable
+for these consoles. so first off, we have time spy, so this should give us a pretty good idea of the performance, although again, this is
+just for the first testing. we also have a bunch of games installed that i wanna see if we
+can actually get to 4k60 or 144144, or whatever the case is. okay, so for the graphics we
+have our benchmark to beat, 8,154, which if i check this chart here is pretty similar to say rtx 2070. i actually don't think i'm going to tweak the graphics card too much. i think this is going to be
+fairly close to what we'll get, but i do think that there's
+a lot of room to bring our clocks and specifically
+our power down on the cpu side. 8-cores i think is
+basically a lock for the ps5 and likely for the xbox, but they will probably be
+running at a little bit closer to say, three ish gigahertz. my next step is to
+underclock our processor. so since obviously a console
+has much more limited thermal as well as power
+constraints compared to a pc, i'm going to not only lower the voltage but also lower our clock speed to get this in the same kind of realm as something you could expect to find in the ps5 or the xbox scarlett. so for testing, i'm using
+amd's ryzen master software, which props to them is super useful. i start at 160 watts and again, that's for the entire system, so there's probably 70ish watts that has nothing to do with the cpu. but i've already come
+from 160 down to 135. so i think if we keep this going, we'll probably be in the right realm for what the consoles can handle. this is basically the same
+thing as overclocking, except it's in reverse. so if we lower too much voltage, it will start crashing
+just the way it would if we try to push the system too far. so we have now crossed into
+my magic green threshold of that's actually roughly console spec. i can probably get a little
+bit more power out of it. even though i'm lowering the power, we're still running at the
+same clock speed, right? so this is literally getting
+the exact same performance but just undervolting the cpu. we're down to 34 watts. that's gotta be good. i think a console can
+pretty easily sustain that. okay, so i think a speed like 3.2 is very, very doable on a console. so what i'm going to do now is i'm gonna validate it a little bit more and make sure that we're not going to see any additional crashing. and from there, it's time to actually test to see how well this games
+with the console spec cpu. so let's take a couple of
+games that are out right now on current generation consoles and see what it takes to
+get them running at 4k60, maybe even 120 frames per second. all right, so metro exodus is
+actually a fairly modern game, so i'm just gonna jump
+it straight to 4k, ultra. so where we're at right now is that this is the ryzen 7 3700x which is running at 3.2 gigahertz which is, i think, pretty
+close to the console spec and we have our 15 frames per second. mm. mm. mm. oh, are you recording right now? okay, so i'm in the
+middle of testing metro and i'm getting some really weird numbers and now i'm getting some crashing. which makes me think maybe i
+was a little bit too aggressive with my underclock. there's definitely some
+weirdness with metro exodus but we are able to get
+frame rates that are what i would consider to be well above what we can get on the
+current generation of consoles without any real penalties. i mean, right now, say like
+1440p seems like it's probably going to be the sweet spot here. if we really do wanna aim for
+that 60fps plus experience. so that is actually pretty solid. so i'm gonna put metro
+exodus aside for a second since that's given me lots of weird errors and the numbers just don't make any sense, but in shadow of war,
+we've actually got 4k60. we got a 64 frame per second run. now mind you, that is
+turning the settings down to medium, so running
+on full ultra settings, it's closer to 40 frames per second. but this is still a big step
+up over current consoles. that's reassuring. i feel better about
+this entire project now. 'cause it would suck, i'm like, "this is gonna be the ps5!" and then i put it together,
+and it's like, "oh, wait. "this sucks." so the next thing i'm gonna try is hitting 120 frames per second. so both of the consoles should in theory support it and some tv's such as the
+vizio that we recently took a look at do
+support a full 120 hertz. it's super smooth and
+i think as long as we probably bump things down to 1080p, we actually might be able to hit it. oh, look at that. wow. so literally bumping down to 1080p, we're well above 120 frames per second. 155, 160. and this is very much cpu dependent because generally speaking, with the current generation of consoles, hitting those higher frame rates is very difficult with their weak cpu's. with ryzen here, even with
+it being underclocked, we're having no problems going well, well above 100 frames per second. that is awesome, that's
+actually better than i thought. and honestly, i think it's a
+perfectly reasonable trade off. if you want the higher
+quality you can run it at 4k and get your decent frame rates, but if you do have a display which can take advantage
+of 120 frames or more, then actually bumping the resolution down to something like 1080p
+seems totally reasonable. you can see all the marketing stuff of, "oh, it supports
+120 frames per second, "or 60 or 4k, whatever, blah, blah, blah." but this is actually real numbers. now obviously, all of this video has to be taken with a big grain of salt. but we are working with
+a very similar cpu, and the graphics, as far as i'm concerned, are probably going to be pretty similar to what we can expect with this next gen console. we have the pcie 4.0 ssd, which, side note, all of these benchmarks and games and stuff have
+been loading really fast. but this is very much in the sort of realm of what i think we can
+really expect to see when these consoles go on sale next year. and that's super exciting. the witcher 3 is not a brand new game, but when you start cranking it up at 4k, it actually does get fairly demanding even for very high end pc's. and with the 4k resolution, everything set to ultra, ultra, ultra, this is probably going to be tough to run. i don't think we're going
+to get a 4k60 on this. we'll see, but, i don't have what? what? oh my god, are you serious right now? great. my benchmarks start with a fresh new save. we're getting here 47
+frames per second here, 44. (laughs) all right, nevermind,
+i'm glad that we started with the beginning of the game. you will be able to hit 4k60 if game developers wanna
+aim for that, right? so that's a big question. they still might opt to go for either slightly higher resolutions or more higher quality effects at 4k30. but 4k60 very much seems possible. so now, of course, time
+for the most important test of them all. fortnite. because come on, let's face it, fortnite's gonna be on the ps5. seems to run fine. i don't know what i'm doing right now. we're in the 35 to 40ish fps range but this is full epic settings. i think if we, why don't we
+just notch it down to high it'll probably be okay. medium at 4k, we're at
+90 frames per second. so some combination of
+medium and high settings seems to be what we need. who's shooting me right now? oh, all right. this is not the ps5, but as far as i'm concerned, it is the closest look that we'll have to the level of performance
+of the next generation until the end of 2020. bottom line, from what i've
+been able to see today, 4k at a locked 60 frames per second seems totally doable with this
+next generation of consoles. now whether or not we see high frame rates and all the other bells and
+whistles remains to be seen. but if they're anything like this, and i have really strong suspicion that this is a pretty decent look at the next generation consoles then there is a lot to be excited about.

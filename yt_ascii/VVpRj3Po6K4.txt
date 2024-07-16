@@ -1,0 +1,131 @@
+>> sean: what's the newest language you use?
+>> bwk: i would say the newest language i use is go, and that is sort of 10 years old at this point.
+languages last longer than you think. fortran, which dates from the late 50s, is
+still very much alive and still very much used by a lot of people, as is cobol. algol lives on in its derivatives; basic
+lives on its derivatives.  so all these languages never die, but then there are
+brand new languages that come along.  i think that of languages that anybody
+might have heard of that i use today, yeah, go would probably be the newest.  i
+have experimented with other languages briefly, mostly to try and understand
+them just enough that i can say something in class.  rust is newer than c [go]
+but not enormously so, so i've done that. scala -- i don't even remember the dates
+but it's, call it contemporaneous with go.  i've done one program in that,
+one in lua.  i -- newer languages like kotlin, no, i've never tried. sorry, i'm a late
+follower, not an early adopter.   >> sean:  any functional stuff?  i've seen your views 
+on functional before but it'd be interesting to capture. >> bwk: yeah.  functional languages
+are really really important, i think, because what they are - have proven to be -
+is a proving ground for ideas in programming.  so a lot of the things that
+we take for granted in modern languages -- mainstream languages, mainstream compiled
+languages like, let's say, c++ or java or go, whatever.  many of the good ideas, the
+new ideas in those, came from functional languages.  for example, recursion
+originally is a lisp idea and it shows up everywhere.  functions as first-class
+citizens, pattern matching kinds of things -- all of these show up in functional
+languages and then move into the mainstream in some way.  i have never
+gotten over the hurdle of really internalizing a functional language well.
+i have tried haskell.  it was a desperate, desperately bad time.  it took me two
+weeks to write a program that took me probably an hour to write in lua, another
+language i had never tried in my life.  i am not cut out; there's something wrong
+between my brain and haskell.  i can't do it.  but that's not to say that haskell
+is a bad idea; it has many neat ideas and it undoubtedly is providing something
+that will help people in the future in programming.  but i think mainstream use
+is probably always going to be dominated by the more conventional compiled,
+imperative sorts of languages. 
+>> sean: the chap who asked the question about newest
+language goes on to say what would you like to see created, which i think is a
+tricky thing but, you know, what would you take the best of from, and is there a
+way to answer that? 
+>> bwk:  i think the way i would answer it is to say that in many
+cases the way we make progress in all of these language-related things is when
+we get to the stage where what we're trying to say is so mechanical you can
+almost say it mechanically.  and once you get to that stage and we say, well let's
+mechanize it so we'll add something whether it's a language or a library or
+something like that, so that a whole class of things that used to require us
+to do it over and over again have now become something where you have a
+specification, or a very simple language, and the language is taking care of a lot
+of it.  that has the advantage you understand it better.  it's much more
+likely to be right if a computer is doing it for you.  and it's probably
+easier to teach it to other people as well.  and sometimes those languages are
+declarative, sometimes they're procedural, but fundamentally i think that's the way
+we make progress: we understand more of it what it is we want to do and how to
+express how to do that, and then we put that into a program; we mechanize it.
+>> sean:  john read asks: "if you could start from scratch today and build a new processor
+architecture and operating system with what we know today, where would you begin and
+what would it look like?"
+>> bwk: i would begin by getting somebody who actually knows what
+that's all about.  sorry.  i mean, it's true; it's not my thing, i'm no expert.
+>> sean: it's fair answer and he goes on to ask a second question: "will block-based
+drag-and-drop programming like scratch eventually replace traditional text-based programming?" 
+>> bwk:  that i at least have opinions on.  i think the answer
+is 'no'.  i played briefly with scratch or at least a derivative.  there was a
+program or a system that google provided called app inventor.
+the idea was that it was basically scratch but with primitives that made it
+possible to build android apps very easily.  and my experience with it was
+that for anything that fit within the model for which they had provided the
+blocks [it] was perfectly fine but very, very, very clunky.  i tried to build something
+that would navigate around a building, for example, and doing a distance
+computation with blocks was just -- you had this much block to say give me the
+square root of x squared plus y squared. it was hopeless.  so i think using
+languages like scratch as they were constituted when i did this -- this was a
+while ago, so maybe it's moved on -- but i think the problem with them is it's
+trying to ... sort of like trying to get to the moon by climbing a tree.  you know, the
+first 10 or 20 feet is really good.  now you're stuck!.  can't get anywhere.
+i think the same thing is true.  now that's for me as a sort of professional
+programmer trying to do things.  as a way to introduce programming to kids -- absolutely
+great.  there's amazing stuff that people do with scratch and languages like that.
+could you do something that would use the block space part as something that is
+a nice way to get started with aspects of it, and then extend it in other ways?
+that's what i was trying to do when i was playing with app inventor and it
+just, it foundered on the technology there. but i think something like that might be
+useful.  so they have their place but it's not gonna replace other languages.
+>> sean:  what do you think about -- this is such a wide wide brief -- what do you think about the
+future of computer science?  will the manipulating bits era become obsolete in
+a few years or basics will never change? >> bwk: i think basics will always be there; in
+some sense we will always have to worry about how much memory we have, how much
+processor time we have.  we'll have to worry about whether the programs are
+correct or not, whether they're safe and secure or not, so all of that is going to
+be with us i think in perpetuity, and i think and, as a nominally computer
+science educator, that's something that we want to make sure those so that
+students in computer science courses, let's say at university, should actually
+understand the basics at that point.  they should understand how the machines work,
+what the limitations and realities are of making them do things.
+they should also understand some of the theoretical limitations: some
+things are hard to compute intrinsically and that's important and sometimes
+useful.  so all of that kind of thing is going to be there.  so let's call that
+core computer science. and then there's all the things that computer science
+gets applied to, and that's the place where all the growth is in some sense.  i
+used to say to students in one of my classes for non-technical people, "i don't
+care what your major or field is; you'll find a use for computing, unless maybe
+you're a religion major".  and then i realized this is nonsense -- religion
+majors do really, really interesting analysis of texts written in ancient
+languages and they did the same kind of authorship questions that showed up in
+more recent issues like the federalist papers.  all of these kinds of things.  so i
+don't care what your field is; it has computing in it, the more you know about
+that the better off you'll be able to do things in your field.  
+>> sean: that's a fantastic answer.  
+i'm gonna ask you on the silly ones now.  what is the proper way to
+pronounce caramel? is it 'car-mel' or 'car-a-mel?  
+>> bwk: i think it's a three syllable
+word, 'caramel', to me, but i think so. i don't know now that you asked me.  
+>> sean: not necessarily silly ones but very difficult to answer in a concise way: "what are your
+favorite books or what are your top few books?"  this came up a couple of times.
+>> bwk: yeah.  when i think about what i read and let's call it reading for pleasure as
+opposed to reading for work.  i think what i find myself reading mostly is either
+junky detective stories.  one of the wonderful things about spending time in
+england is charity shops.  there are charity shops everywhere in every town,
+no matter how big or small, and you can go in there and buy for a pound a really
+really interesting junky detective story that you hadn't read already.  and then in
+the next town, having read it, you drop it off at the charity shop and pick up a
+new one.  so i read a lot of those kinds of things, probably half to two-thirds by
+british authors and the rest by american authors.  so i read those.  the other
+thing that i read, and probably this is more at home, tends to be history of one
+sort or another. the princeton library has a great
+collection of history books and so i find myself reading that.  reading things
+on the second world war just before i left.  i'm carrying a copy of 'a distant
+mirror' which barbara tuchman wrote years ago about the calamitous era of the 14th
+century and so on, which has a lot of english and french and crusades.  so
+lots of these things -- that's, that's what i read for fun as opposed to for work.  i
+think i don't do very much reading of technical books, other than occasionally
+i will buy a book on something like: "how do you use react?", or "how do you program
+for androids?", or i got one on ocaml recently because in spite of saying i
+don't know anything about functional languages, i figure i ought to learn
+something and unfortunately i'm not sure i've opened it yet.  so technical books, i
+know i don't read as much as i probably should.

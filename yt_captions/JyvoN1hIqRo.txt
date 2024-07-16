@@ -1,0 +1,69 @@
+Last month we talked about the damaging effects
+of water hammer, but there’s another state of H2O equally if not more dangerous when
+put in pipes. Hey I’m Grady. Today on Practical Engineering we’re talking
+about steam hammer and differential shock. This video is sponsored by Skillshare. More on that later. Unless you live in an home with an older radiator
+or work in certain industrial settings, you probably aren’t as familiar with pipes that
+carry steam as those that carry water. We don’t normally need access to steam in
+our everyday lives like we do to its liquid analog. That’s not to say, though, that we don’t
+rely on steam. In fact, it plays a critical role in our modern
+society. We use steam for heating, cleaning, cooking,
+and a vast array of industrial processes. About 90 percent of all electric power produced
+in the world is through the use of steam turbines. If you didn’t see my previous video about
+water hammer, here are the basics: water is heavy and incompressible. If you suddenly stop water while it’s moving
+through a pipe, it can create a massive spike in pressure and break stuff like this pressure
+gauge. Unlike water, steam is compressible. It’s “springy” and can absorb sudden
+changes in velocity without a big change in pressure. The danger with steam is when it doesn’t
+want to be steam anymore. In most places on earth, water exists naturally
+as a liquid. Under the ambient temperature and pressure
+conditions we consider habitable, most steam that happens to exist will condense. In a steam pipe, the water that forms from
+condensation (also known as condensate) is the real danger. And I mean danger in the truest sense of the
+word. Many lives have been lost in tragic accidents
+resulting from misunderstanding or misapplication of good engineering principles for steam systems. There are several problems that condensate
+can create, and we’ll talk about two of them in this video. The first one is thermal shock. Imagine this: you open a valve allowing steam
+to flow into a steel pipe. As the steam comes into contact with that
+cold steel, it condenses. The problem is that steam takes up about 1600
+times more volume than its equivalent mass as a liquid. So, when it condenses, it literally shrinks. In a closed container like a pipe, or this
+glass bottle that just came out of my microwave, that collapsing steam can lead to catastrophic
+damage. Water rushes to fill the vacuum created by
+condensation, cooling the steam even further and creating a runaway situation. This can happen extremely fast, and all that
+water can accelerate and decelerate violently, hence the name steam hammer. If it’s violent enough, it can rupture the
+pipe leading to an explosion like the one that happened in New York City in 2007. Check out Nick Moore’s video linked below
+if you want to see this demo in slow motion. Thermal shock is a dangerous form of steam
+hammer, but it’s easy to mitigate. When starting up a steam system, engineers
+and operators expect condensation as the pipes warm up. So start-up procedures will include running
+at reduced pressure with bleed valves open to make sure that condensation can’t form
+a vacuum. The bigger danger happens during normal operations,
+but to show how it works, first we need a steam pipe. Condensation in a steam pipe is always occurring
+just from normal transfer of heat to the outside air. And this is roughly what that might look like. I’m using compressed air here in lieu of
+steam for the obvious safety implications. Engineers manage this condensate by sloping
+steam pipes and by installing devices that can get rid of condensate from the pipes called
+steam traps. Steam traps are a fascinating topic on their
+own, but occasionally they can get clogged or malfunction, allowing condensate to build
+up. When water and steam flow together in the
+same pipe, it’s known as biphase flow. In this situation, the velocity of the steam
+is usually much higher than the velocity of the flowing liquid water. If there’s only a little bit of condensate
+in the pipe, that’s really not a big issue. But, if condensate is accidentally allowed
+to pool up, things can get dangerous. The steam passing over the top of the liquid
+can create turbulence and waves. If those waves get high enough, the liquid
+can create a complete seal inside the pipe with the full pressure of the steam behind
+it. This seal of water becomes a slug or piston
+and accelerates down the pipe like a the barrel of a cannon, picking up more condensate as
+it travels. This slug of liquid eventually slams into
+the end of the pipe, resulting in a dangerous pressure spike known as differential shock. Just like thermal shock, many people have
+tragically lost their lives in steam pipe explosions caused by this phenomenon. Engineering of steam systems is an incredibly
+complex topic in mechanical and chemical engineering, and I’ve just scratched the surface in this
+video. Whether you realize it or not, many of our
+modern conveniences are a direct result of steam systems, most notably electricity. So it’s critical that engineers can design
+steam systems to be safe from dangerous phenomena, including thermal and differential shock,
+also known as steam hammer. Thank you for watching, and let me know what
+you think. Thanks to Skillshare for sponsoring this video. You probably won’t be shocked to learn that
+Practical Engineering isn’t produced by a team of skilled writers, cinematographers,
+editors, and artists. For the most part it’s just a nerd in the
+garage, me. And they don’t teach this stuff in civil
+engineering school, so I’m slowly improving my video production skills on my own. Skillshare is an online learning community
+for creators with more than 17,000 high quality classes from experts working in their fields. I’ve been watching the DIY cinematography
+class by Ryan Booth, and using it to improve how I use light and camera angles in my videos. If you’re trying to learn a new skill or
+improve an existing one, click on the link in the description below and start your free
+trial today. The first 300 people to sign up will get their
+first 2 months free. Again, thank you for watching, and let me
+know what you think!

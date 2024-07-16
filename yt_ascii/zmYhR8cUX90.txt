@@ -1,0 +1,115 @@
+>> sean: we have had a few questions in from our
+computerphile viewers - our loyal viewers. there are some obvious joke ones, which
+we may get to at the end, but starting with: "how did you start programming? where did you start?"
+>> bwk: it goes back a very long way.  i think this would go back into the early
+1960s, or something like that, and therefore memory is both dim and rosy.  i think my first programming was probably
+[in] fortran. i tried it when i was in,
+probably, my third year at university, so it was a long, long time ago,
+and i don't remember very much about it. one thing i do remember is: you read the
+book, you read the manual. this is mccracken's fortran books, which are
+really, really  good. and you read them and you think you understand it completely.
+and then you set finger to whatever, in this case key punch, and you say: "wait a
+minute - what do i do? i don't know how to get started!"  and i
+think that conceptual hump of 'how you get started' is still there for an awful lot
+of people. you sort of know the rules of the language but you don't know how to say
+anything. once you're over that then it's easy and that's sort of true then for
+all subsequent languages.  but that first step was hard.  so i think my first
+language was fortran; it was probably at university; and i also spent a summer
+working at what was, at the time, imperial oil, which is a branch of esso, and so on,
+in toronto, and i wrote cobol there.  i was probably the world's worst cobol
+programmer.  indescribably bad. and i haven't actually written any
+cobol since but those were the kind of early days.  i think i didn't really learn
+to program properly until i went to princeton as a graduate student and then
+i actually wrote fortran programs that did something, and that was more useful.
+>> sean: that was how you started programming.  this kind of leads on nicely from that.  what
+did you think of c when you first encountered it? 
+>> bwk: again it's one of those
+things where i don't remember and it was also special in that i kind of snuck up
+on it because i was in the environment where it was going on, i had written a
+little ... i had spent one summer at mit when i was a graduate student.  i was
+there as, in effect, a summer intern.  and at that point i had written in a
+language called mad, the michigan algorithm decoder,
+which a lot of the ctss system had been written in.  it was really nice
+because it was so much cleaner and neater than fortran.  and then at the labs
+i wrote a little bit of b, which was a precursor to c.  b was kind of like a
+stripped-down version of bcpl, which was done by martin richards at cambridge.  and
+i never, i think i never wrote any bcpl, but i wrote a little bit of b and it was
+kind of neat and i liked it.  and then when c came along, it was at that point
+a relatively easy transition into using it, and i pretty much have repressed all
+of the details but i wrote programs early on that were doing text
+processing, and although c's not the greatest language in the world for text
+processing, at the time it was a lot better than any of the alternatives that
+were available to me and i think period. and so i would i found it quite
+comfortable and actually enjoyed it at that point and stayed that way for many many
+years. 
+>> sean: let's move on to the hardest challenge.  so what has been the hardest
+challenge for you in your life as a computer scientist, which helps narrow it
+down somewhat. 
+>> bwk: yeah. geez.  i, i mean what are the problems
+in computing are: "how do you write programs that work" and then "how do you
+make it possible for other people to write programs that work?".  and it's sort
+of those are the kinds of things i've been interested in all along.  so i want
+to write my own programs and know that they work in some reasonable way.  and
+that leads to, you know, building better languages, building better tools for
+helping programmers, and so on.  so that's one aspect of it.  and the other is how do
+you help other people write their programs too, because programming is hard
+to do, programs are hard to use sometimes, and so that leads to, let's call it
+the documentation side of life: writing books about programming. so that's
+roughly what i would say.  those are hard problems, they're not solved yet.  i think
+most people have the same kinds of problems in various ways.  and programming
+is different today than it was say 40-ish years ago, in the early days of unix.
+in the early days of unix you had a very self-contained environment.  things were
+relatively small because you didn't have much computing power to deal with.  you
+didn't have any networking issues so you didn't have to worry about things far
+away not working or attacking you or anything like that.  so life was
+simpler and in some ways it was more fun because you could build really
+interesting things -- not huge but interesting useful things fairly quickly,
+fairly small.  today a lot more programming is enormous collections of
+libraries that you have to .... basically what you're doing is gluing together
+things that other people wrote, and then you're going to stack overflow to see
+why they don't work. and then you're adding somebody else's random glue into
+your own glue.  and it's in some ways not nearly as much fun, i think.
+>> sean:  leading on
+from a question before about programming languages and how it was
+when you encountered c, which programming language is the best successor of c or
+the most influential?  
+>> bwk:  those are different questions or they have different answers.
+"best" is a loaded word so i'll probably ignore it but there's some obvious
+things that derive from c.  first, c++, which has been enormously
+influential.  it was done by bjarne stroustrup while he was at bell labs.  lots of
+people say that c++ is too big and too complicated, and etc., etc., but in fact it
+is a very powerful language and pretty much everything that's in there is in
+there for a really sound reason.  it's not somebody doing random invention; it's
+actually people trying to solve real-world problems.  and a lot of the
+programs that we take for granted today, that we just use, are c++ programs.  if
+you use anything from microsoft's office suite, for example, those are c++ programs.
+you pick your favorite browsers, those are c++ programs. so c++ is in some ways,
+i would argue, one of the most important and influential derivatives and it's the
+first of the derivatives.  another is java, which in some ways is a reaction to c++.
+because c++ is big complicated, etc., and so java was an attempt to simplify what
+was in c++, to make more of the decisions for the programmers, so that the
+programmer didn't have to make them himself or herself.  it also took
+advantage of kind of ten years of hindsight, because java came along the
+early 90s; c++ is the early 80s, so there's a decade of improvement both
+in our understanding of what we're doing, but also a decade of moore's law, giving
+us, you know, an order of magnitude or so of resources to work.  and therefore java could use a virtual machine, which c++
+was never able to do.  so there's another example of a derivative of c which, very
+important, very influential, an awful lot of the services that you use at all of
+these big websites, are written in java as opposed to c++.  what is another
+one?  i guess the obvious next one would be javascript, which takes the surface
+syntax of c, as many other languages do, but takes the surface syntax, makes some
+decisions differently -- still an interpreter for the most part -- but
+shares that c heritage in a lot of ways and then goes off on its own direction.
+and javascript is, in terms of just lines of code being executed per day,
+probably dominates all the others.  and then a tiny bit of
+self-serving, the awk language that al aho and peter weinberger and i did,
+takes the surface syntax of c and then wraps it up in a different style.  it's an
+interpreter but it looks like c with some variations to make it possible to
+do other interesting things.  so at least those.  oh! and then [a] more modern one: 'go', for
+example, a language that dates at this point from, i think, 2007, so it probably
+hit the streets in 2009. so, call it a decade old.   and so go in many ways looks
+like a modern c; some people call it 'c for the 21st century', and it has its own
+nice properties and so on.  and one of the things that it retains that some of the
+other languages don't is more the minimalism that c had originally.  so
+big spectrum of languages that came from c, inspired positively, negative
+reactions, whatever, but all from that single source.

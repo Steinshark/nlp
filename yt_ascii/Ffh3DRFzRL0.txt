@@ -1,0 +1,211 @@
+by 1984, there were over 100,000 unix systems
+running on everything from microprocessors to mainframes. through organic growth and a strange quirk
+of history, unix had come to deeply enmesh itself into the computer industry. but the result of that un-curated organic
+growth has been a sprawling ecosystem of unintelligible os'es. a babel of unixes. then suddenly its creator at&t decided to
+try and leverage this magnificent tool to make their way into the computer business. those efforts were chaotic ... to say the
+least. in this video, a chronicle of what we call the unix wars. ## the breakup in 1983, ma bell broke up. nearly a decade earlier, the united states
+government had sued at&t once more over its production of telephone equipment for its
+telephone monopoly. in response, the company proposed that it relinquish that monopoly
+and break itself up. the breakup would end the 1956 consent decree
+that kept at&t from selling computers. they had long wanted to offer what are known as
+"enhanced services" - communication services beyond just the simple transmission of data.
+they wanted to get involved in that data's content. as this breakup plan percolated, at&t started
+to take steps towards making unix a commercial venture. in 1975, bell labs produced the version
+6 of unix. it was the first version of unix crafted with an eye for outside sale. at&t started to sell commercial licenses for
+version 6 through its subsidiary western electric. they charged about $20,000 to run unix on
+the first machine, and another $8,000 for each additional one. the price apparently came about because the
+guy in charge of this at at&t had real work to do and so chose a number that he thought
+would be so high nobody would bother him about it. but people paid it, because unix had found
+for itself a real market out there. ## fragmentation two major trends drove this commercial market
+for unix products. first, you had programmers using the bsd unix
+coding environment during their time in university. they enjoyed it and wanted to keep on using
+it after graduation. ergo, unix's strong point was in the engineering/scientific/technical
+applications space. second, you had this market trend of cheap
+but powerful workstation computers hitting the market. systems like those from sun microsystems,
+which positioned unix at the heart of their systems. the first wave of companies servicing this
+need were porting houses - companies that simply changed unix to run on another piece
+of hardware. examples were unisoft, santa cruz operation, and so on. but over time, larger companies joined in.
+companies like dec, data general, and even ibm started offering versions of unix for
+their own hardware. often with changes made for their own differentiation. with unix's creator at&t largely out of
+the market, it ended up a huge mess. despite sharing up to 90% of the code, applications
+written for one unix variant cannot run on all the others. the community did not have a leader. many
+of the variants were not allowed to call themselves unix - because at&t owned the trademark - but
+it worked similarly to unix. the whole thing confused users and the marketplace. ## system v a year before the at&t breakup, ma bell had
+combined their various versions of unix into a single system which they called unix system
+iii. a few additional features - including a number
+from bsd - were then added to create system v. this unix product received its own division
+within at&t - at&t information systems. later, unix system laboratories or usl. system v was announced as a commercial product
+in january 1983 at the unicom conference in san diego. the licensing terms were a bit
+pricey, with a commercial license for the source code costing $43,000. more if you wanted
+add-ons. at&t wanted to make their version of unix
+- this system v - the standard unix operating system to be adopted by everyone. ## the first clash so in 1983, system v made up one major branch
+of the unix tree, with official backing from at&t. the other branch was bsd unix, which was then
+a significant player in the university market and the foundation for many commercial systems. that same year, the computer systems research
+group - which maintained bsd - released 4.2bsd which included popular extensions like tcp/ip
+internet networking. this struggle between system v and bsd makes
+up the first stage of the unix wars. users like hardware makers had to decide which of
+the two to adopt. some like ibm and hewlett-packard decided
+to use the system v unix. while others like sun chose to extend bsd - namely the 4.2 variant
+that bill joy last worked on - for their sun os. and they were different. system v at the start
+did not support internet networking like 4.xbsd. nor did it have bsd's berkeley fast file system,
+which was seen as an improvement on the old file system. or the virtual memory system
+that made it so well suited for 32-bit vax minicomputers. the struggle also pitted two different cultures.
+at&t was seen as the evil big business, and the berkeley people as the ragtag group of
+underdog rebels. the famous mt. xinu posters reflected this culture. but since bsd unix was ultimately just a few
+helpful extensions to existing at&t code, people needed to first get a very pricey at&t
+source license before using it. this became a big obstacle for bsd's commercial
+adoption. throughout the 1980s, former bsd vendors and users switched over as system
+v adopted bsd's features. they might as well if they had to get an at&t license anyway. the license requirements - along with at&t's
+increasingly tight grip on them - had other repercussions. university professors previously
+had unix content in their classes as a "teaching tool" for operating systems. this content
+was purged and became more theory based. textbooks too were under at&t's control since
+they contained unix source code. one famous such textbook was the "lions commentary on
+unix", a cherished text. eventually down the line, at&t's grip will squeeze too tightly. ## at&t's computer business on march 27th 1984, at&t formally entered
+the computer business. they hit the market with a range of computers
+from desktop pcs to "super-minicomputers" - targeting customers producing their own
+applications. one of at&t's key assets in that push would be unix. an article at the
+time mentioned: > at&t for the past year has been pushing
+to have unix adopted as an industry standard and today it claimed that it has been "very
+successful." but at&t's line of unix computers struggled
+to gain widespread acceptance. ordinary users found at&t's unix pcs hard to use compared
+to alternatives like ms-dos on ibm pcs. and application developers found it hard to
+write software for unix because of all the variants and the slight differences between
+them. why not write for microsoft with their more consistent and larger ecosystem? by 1985, ms-dos had five times the number
+of applications than unix. without the applications, customers and users were shy to adopt at&t's
+platforms. chicken and egg situation. in 1986, at&t took a $1.2 billion loss - losses
+in the computer market comprised of about half of that. they laid off over 24,000 people, closed plants,
+offloaded some of the pc business to olivetti and shifted their strategy to selling computer
+systems for the telecommunications industry. if at&t wanted unix to turn around their computer
+business, then they had to unify this sprawling, mess of a family tree. but how to do that?
+that is when sun came knocking. ## at&t and sun in 1987, at&t and sun joined forces. sun microsystems was the largest unix vendor
+- with their os built on top of 4.2 bsd. they and at&t felt that by combining their forces,
+they could unify the platform and build it into a formidable challenger. by october of that year, they had a deal.
+at&t received an option to buy 20% in sun and a seat on the board. and the two would
+merge together their versions of unix - along with microsoft's xenix system - to create
+system v release 4. so sun would issue a new version of sunos
+with one based on this new release of unix. sun in turn would receive preferential treatment
+as at&t built out the software. sun and at&t envisioned this new unix as an
+"open" technical standard that anybody in the computing industry can use. at&t apparently
+at the time felt that they needed sun's marketing heft to complement their technical chops. ## the hamilton group but hardware vendors like dec, ibm and hewlett-packard
+panicked. rival hardware makers used unix as a foundation
+on which they can lay on their own features - making unix a public utility essentially.
+at&t's move was alarming because it seemed like they were going to wipe away all those
+value-adds and impose their own standard. not to mention that sun was their direct competitor.
+and shortly before the at&t announcement, sun had just announced their own homegrown
+risc microprocessor - sparc. if unix became a market standard and unix was optimized to
+work best on sparc, then sun gets a massive leg up on everyone. in january 1988, representatives of independent
+unix ecosystem members like apollo, dec, honeywell, bull and hewlett-packard began to talk about
+uniting in opposition to the sun-at&t alliance. at first, they called themselves the hamilton
+group, because they met at dec's western research laboratory on hamilton ave in palo alto, california.
+first they met with the man in charge of at&t's computer efforts - vittorio cassoni - with
+little result. at&t essentially told them to pound sand. so in may 1988, they invited ibm and together
+founded the open software foundation or osf. osf would pool its members' unix variants
+and work towards the eventual release of an at&t-free unix. on a more amusing note, osf put together two
+hated rivals - dec and ibm. at the osf announcement, a wall street journal reporter said that he
+and nobody else present had ever recalled dec cofounder ken olsen ever sharing a stage
+with an ibm executive before. when unix originator ken thompson heard about
+this whilst traveling in australia, he turned to dennis ritchie and said, "just think, ibm
+and dec in one room. we did it!" ## osf versus unix international sun's ceo scott mcnealy did not appreciate
+it as much. he called osf the "oppose sun forever foundation". soon after this, sun and at&t founded unix
+international - whose members also included intel, toshiba, unisys, and motorola. they
+agreed to build products around their version of unix. over the next few years, osf and unix international
+worked to fulfill their promises, signing up over 200 various members to their coalition.
+osf co-opted much of sun's "open" language, appealing to themes of liberty and justice
+to get the hype rolling. but osf's realities struggled to meet their
+idealistic language. many of its members - apollo excepted - were in the mainframe market and
+they were competitors. it was like herding cats, bogged down in politics. for instance, osf had to start with ibm's
+aix variant of unix. this apparently was one of ibm's conditions for joining the coalition.
+so the whole thing turned out to be a true product-by-committee process. two years later in 1989, osf had an interesting
+user interface called motif but little else. and worsening economic conditions destabilized
+its member companies. the mainframe market was shrinking. hp ended
+up buying apollo and was circling around bull. dec, ibm and others were losing money in computers. by 1992, osf had abandoned the big idealistic
+goal of releasing a at&t-free unix os. with the sponsors struggling to keep afloat, the
+organization eventually lost its funding and shriveled away. at least sun managed to get sunos out during
+this period of time, and it turned out be a pretty good product. and they adopted motif
+too. ## bsd splits from at&t by the late 1980s, bsd unix no longer had
+commercial viability as an operating system. but bsd still had value. at&t was raising
+the costs of its licensing fees. back in 1979, a commercial license cost $20,000. by the
+end of the decade, those fees had climbed to a staggering $100,000. in 1993 they would
+be double that. users wanting to build standalone tcp/ip products
+had to pay at&t for a license for non-at&t code. so they asked to split out bsd's networking
+code from the at&t code. this was completed in 1989 as networking release
+1 or net/1. keith bostic at crsg then pushed for a total
+purge of at&t's copyrighted code.' months later in 1991, work on what was called networking
+release 2 or net/2 version of bsd had been completed. the team tried to identify everything they
+saw to be at&t code and reimplemented it using what was called the "clean room" method. and
+they were largely successful with the exception of six files in the kernel judged too difficult
+to do. ## the lawsuit aware that they had something interesting,
+several former members of the crsg broke off. in 1992, they founded a commercial entity
+called berkeley software design inc, or bsdi. with the university's permission, they started
+selling a new variant of net/2 bsd called 386bsd but with those six files added back
+in. all these names, wow. bsdi sold 386 bsd at a 99% discount on usl
+unix licenses. and they advertised it as a product that did substantially the same thing.
+the phone number on the ad was even 1-800-its-unix. at&t obviously did not like that. they asked
+them to amend the marketing, which bsdi did. but at&t - through its usl subsidiary - sued
+them anyway to halt the distribution. as is always the case, the trial dragged on
+and on. bsdi agreed that the six files were on them, but the other 16,000 or so files
+were already being distributed by berkeley. what's the deal? the judge agreed and asked
+usl to amend the complaint. at&t realized that six measly files would
+not make for a very strong case. so they refiled the lawsuit but now they added the university
+of california - asking to halt the net/2 bsd distribution as well. near the end of 1992, a judge heard the arguments.
+he denied the injunction and threw out all but two of the complaints. the university
+of california filed a countersuit, arguing that at&t had incorporated berkeley's code
+into system v without proper credit. the lawsuit was highly covered in its time. ## the wars end in december 1992, at&t sold the unix subsidiary
+usl to novell, an utah-based software company. novell had pioneered the local area network
+or lan in the 1980s, and wanted to integrate unix into their netware network operating
+system. ray noorda, novell's co-founder and ceo, said
+that he would rather compete in the marketplace rather than the courtroom. usl and the university
+of california backed away from the courtroom. though a settlement wouldn't come until 1994,
+largely in berkeley's favor. at&t selling unix to novell put the first
+damper on the unix wars. but the chaos had massive repercussions. i mentioned in an earlier
+video about sun microsystems that it allowed windows nt to invade unix's turf in workstations
+and higher computing. released in late july 1993, windows nt 3.1
+offered a "business-oriented" operating system - more high powered than its traditional desktop
+computer os. many features were inspired by unix - 32-bit, networking, file-sharing for
+multi-user collaboration, and so on. microsoft recognized that what businesses
+and developers ... developers ... developers truly wanted was a consistent experience with
+unix-like features. and that is what microsoft produced for them. nt combined with microsoft's formidable marketing
+firepower scared the industry into finally ending the unix wars. in march 1993, members from both osf and unix
+international banded together to create the common open software environment, or cose. cose's goal was to finally build a common
+environment across the fractured unix space. novell handed the unix brand name to the organization
+running cose - x/open - so that compliant os variants can receive the brand. ## gnu/linux another beneficiary of the unix wars was linux
+... or gnu/linux - i know there is a naming controversy here
+but i am going to leave it aside. in the early 1980s in response to at&t's attempts
+to monetize unix, an mit professor named richard stallman started working on an operating system
+project called gnu. the goal was to create a package of truly
+free software compatible with a set of standards set up by the institute of electrical and
+electronics engineers (ieee) posix working group. posix was a set of us government approved
+standards defining the apis that all "operating systems" needed to be able to support. anyway, over time a lot of software for gnu
+was written except the kernel. the kernel is at the core of the operating system. it
+manages memory, processes, disk space, and more - so it is quite important. this kernel eventually came about through
+the efforts of a finnish undergraduate named linus torvalds. he had been inspired by an
+educational unix os called minix to write what eventually ended up being an operating
+system kernel. in 1991, he posted about it in the minix newsgroup,
+and the combined project quickly gained contributors from that ecosystem. a year later, we have
+linux. the linux community's approach took some parts
+of unix's way of operating. volunteer contributors around the world working on a common code
+base - pushing changes. but linux has a natural leader - its founder
+linus. this helped keep the community from fragmenting like unix's did. with the founder
+acting as a curator of code changes, linux was able to ship updates and fixes at a very
+rapid pace. furthermore, linux's source code was from
+the very beginning open to everyone - a true public utility. so you avoid another situation
+like when at&t changed the terms of the deal and started aggressively monetizing the software. thus over time, linux overtook unix as the
+primary "open" operating system particularly for scientific and technical applications.
+they made especially great gains in the two years when bdsi and at&t had been embroiled
+in their courtroom drama. ## conclusion the unix wars were wars of conquest. that
+conquest failed. i feel for at&t's position here. they must
+have felt like they hit the jackpot. this thing that they thought they owned had turned
+into one of the core foundations of a thriving part of the computer industry. but their attempts to monetize unix in these
+days is a reflection of that line bill gates reportedly said to chamath back during their
+facebook days: > a platform is when the economic value of
+everybody that uses it, exceeds the value of the company that creates it. then it's
+a platform unix the platform made a lot of value for
+the community using it. at&t - not unfairly - felt entitled to a larger share of that
+value as the creator of said platform. but in doing so, they would have to centralize
+and organize a delicate community of users. those users had viable alternatives. when
+pressed, the community eventually fled to greener grass. unix is still around of course. the branches
+of unix have famous descendants. oraclesolaris, hp-ux, freebsd, and openbsd are notables. and i should also mention, the very popular
+macos and ios are very distant descendants via nextstep - which was an offshoot of 4.3bsd
+among others. if you want to see it that way, unix's family
+exceeded everyone's expectations. but the story of the unix wars leave many to wonder,
+what could have been.

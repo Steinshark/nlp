@@ -1,0 +1,184 @@
+look at these things you do for these mathematicians. there is some famous footage from space 
+of a handle spinning but it's unstable. it occasionally flips backwards and forwards and recently derek, of veritasium fame, made a video where they tried to come up with
+an intuitive explanation for why this happens. so if i've got a book and i try and spin it around,
+let's say end-on axis like that. that's quite stable.
+it will only spin in that one direction. if i spin it this way, it's stable. it just flips the same way. but the intermediate axis of rotation is unstable. as well as spinning that way
+it flips around in other directions. now in derek's video their intuitive explanation... well, let's just say i have
+an engineer and mathematics friend who had some issues with it, which is why i'm here at
+cambridge university to visit hugh hunt. and derek-- who i love by the way, 
+fantastic guy-- i'm going to take their challenge. we're going to try and find a more complete explanation possibly involving some maths,
+which is still equally or more intuitive. i would like to thank the sponsor
+of this episode, my patreons who pay for these videos so you don't have to. more about them at the end of the video. as promised i'm joined by hugh hunt, 
+mechanical engineer and occasional mathematician. and i've tried to set up derek's argument where we've got a book which is meant to be, -what would you call this in engineering?
+-but a lamina. -a lamina! so it's thin and of negligible mass, but rigid.
+-yep. we've also then put on some large
+point masses at the distant ends and some much smaller point masses
+on the closer axis. okay, so that kind of means that the... -if we're to spin about this axis, yeah?
+-this way here. yeah. -these masses are the ones that are really important.
+-they're moving loads. -so there's a...
+-and these are on the... [both] they're on the axis. so that means it has a large
+moment of inertia, a large angular mass. -whereas if i spin about this axis...
+-oh, yeah, look at that. -it's--
+-these are on the axis now. these are moving, okay. so this is a small moment of inertia and -this is a large moment of inertia. 
+-and this this one's even bigger. -that's even bigger cause all the masses are moving.
+-got it. so where does the argument fall down for you? well, the argument is that
+if we're spinning about, say this axis: then these little masses here are not doing 
+anything because they're on the axis. it's only these masses that are doing stuff. but if if you perturb it a bit,
+if you slightly wobble it, then there's a centrifugal force. -which kind of, yeah.
+-we're not going to unpack that right now, but yeah. but there's a centrifugal force caused by the fact
+that these little masses have gone off axis. right, and that's what causes it to then
+come unstable and it races off. i will link to derek's video below. it's definitely
+worth a watch. there's some great stuff in there. but then i'm slightly bothered that if we spin it about -that axis instead
+-same argument. then these ones are doing all this all the work. but if it goes off axis, then these ones 
+have that same centrifugal force -and it's the same argument
+-it's the same argument. -it's, if...
+-but this one's stable. that one's meant to be stable. it is stable. -so, what that...
+-something is missing. and it's missing and i looked and
+i thought i must be just not quite... i'm too occasional a mathematician, but it just bothered me. so i thought you know what, i'm going to ask matt whether it bothers him too and i think it does. it did and what i found interesting was, derek's video is based on explanation from terence tao which is what made me nervous because-- one of my heroes, one of the
+greatest living mathematicians. however terence went back and edited their old answer
+in light of this new video coming out. -because i wasn't the only one to--
+-you were not the only one who pointed this out. i'll link to terence's updated answer below but we can agree it's no longer intuitive. it's not the easy to understand
+ explanation that we were promised. so we're gonna try and do something equivalent. possibly more thorough and
+we're going to use some mathematics. yeah. and we're going to start looking into ellipsoids. and ellipsoids are a bit like ellipses,
+but in three dimensions. right, so first of all, a crash course in ellipsoids. an introduction to ellipsoids: the shape 
+which is as fun to say as it is to draw. a circle is all the points which are the same distance r, the radius, away from the centre. using pythagoras we can get the equation for a circle: the x-coordinate squared plus the
+y-coordinate squared equals the radius squared. we could of course divide both coordinates squared
+by the radius squared and that would equal one. which looks like a more
+complicated equation to start with but it does now mean we can change the radius
+in each direction separately, sort of. instead of a radius, we now have
+two different semi-axes a and b. this gives us a more generalised circle: the ellipse. and fun side fact: the area of a circle is pi r squared and the area of an ellipse is pi a times b. the circle is just the case where a equals b. in three dimensions, it is all pretty similar. if all three coordinates, each squared, sum to give
+some constant, the surface is a sphere. but divide each by their own semi-axis and suddenly you are in ellipsoid town. fun side fact here: the volume of a sphere is four-thirds pi r cubed. the volume of an ellipsoid is
+four-thirds pi a times b times c. and as you can see changing a, b and c
+ gives an incredible range of ellipsoids. ellipsoids! okay, now it's working out time. everyone's favourite part of a matt and hugh video. so what have we got? well, a quick recap -on energy and momentum.
+-okay, yup. okay now just linear momentum. so if i have a mass, the momentum -is mass times velocity.
+-got it. -and the kinetic energy
+-oooh, yep. is a half m v squared. so if i'm moving at a speed v -that's momentum and kinetic energy.
+-linear velocity gives you linear momentum and linear kinetic energy. as always we're going to start rotating things. yes. so now imagine i've got some kind of spinning object like this. -does that look like a spinning object?
+-yup, nice disc. and let's suppose it's rotating
+with some angular velocity. that's an omega. and let's yeah, that's an omega,
+and let's suppose it's got a moment of inertia. and you'll see why i chose this
+shortly, but i'm going to say the moment of inertia is capital a. and the moment of inertia is the rotation version of mass. if you want more details on that, watch almost
+any other video involving myself and hugh. -links below. 
+-there we go. so moment of inertia and
+what it means is that angular... momentum and you kind of think, well if
+mass times velocity is linear momentum then angular mass times angular velocity
+is angular momentum. -so this a... is the...
+-that's great. moment of inertia. and it's, if you like, the angular mass. and omega is the angular... so it's half moment of inertia
+by angular velocity squared. so if you just substitute moment of inertia and angular velocity every time
+you see mass and velocity, they're kind of angular and it all works. but they they coexist side by side. now. -when we're tossing a book up in the air
+-yep. -or the the the wingnut or the whatever it is,
+-anything. we're in three dimensions. now when you go into three dimensions we've got three angular velocities. -i've got this one.
+-yep. and i've got this one. and i've got this one. so this is just for one of them.
+so you've got to sum all three. i've got to add them up. just like i've got three linear velocities, i've got this one this one and this one. now. i'm going to write down without too much fanfare, i'm going to write down the angular momentum and the
+kinetic energy in three dimensions. i think we're ready. go! so let's start with the kinetic energy. 3d. okay. and this is angular kinetic energy? -yes, angular due to spin.
+-from here in everything is angular. yeah. and it's going to be, well, we saw we've got a half a omega, i'm going to do omega 1. because there's three different angular velocities. and as the moment of inertia might be different in the three directions, so what i've got this. so now let me draw a little diagram here:  i've got a bookie-type thing here and i'm going to say that this axis has got an angular velocity -i'll call it omega 1.
+-that's one. -yeah, this is the axis where the moment of inertia is a.
+-got it, that one. and this axis: -call it this one here.
+-the intermediate axis. oh, yeah. well, this is, i've got a moment of inertia b
+with an angular velocity omega 2. -and the third axis, call it c.
+-the biggest of the three. this has an angular velocity omega 3. -so they're my three axes, but...
+-got it. yep. are we happy that this thing here is our kinetic energy. -i'll draw a big box around it.
+-i'm very happy. because i want you to notice something. do you remember what the equation
+for an ellipsoid was? yes... is this an ellipsoid? to recap, each of the three directions x y and z correspond to the three different axes of rotation. if an object is rotating in 3d space, it will have
+a set amount of rotational kinetic energy which can swap between axes,
+ but must be conserved overall. this ellipsoid surface represents all the combinations of possible rotations which sum to the same total kinetic energy. so this is indeed an ellipsoid. and i'm going to call it the energy ellipsoid.
+-the energy ellipsoid. just to give it a name, and um... that's great. now, i want to see
+if i can find another ellipsoid. [dramatic music] the other ellipsoid is to do with angular momentum. now, angular momentum in 3d -i'm going to give it a symbol, i'm going to call it h.
+-okay. and i'm going to put a tilde underneath it because angular momentum is a vector, a vector quantity. so kinetic energy is a scalar. you have a certain amount of energy. -it's like how much heat is there in this block of metal.
+-but there's no direction. -no direction, but angular momentum just like--
+-or any momentum. momentum has a direction. i could be traveling northwards on the road 
+with a certain momentum. but if i turn left and go westward on a different road,
+my angular momentum has changed direction. got it, but not magnitude? not magnitude. so i'm going
+to write my angular momentum -as being--
+-some vector h. yeah. a omega 1 in the i direction plus b omega 2 in the j direction plus c omega 3 in the k direction. -so you remember that i, j and k were my three axes. 
+-they're your unit vectors. unit vectors and omega 1 is a spin about the i axis and omega 2 is a spin about the j axis
+and omega 3 is a spin about the k axis. -it's not ellipsoid yet.
+-no. and then a with my three--
+a, b and c are my three moments of inertia,. but this is annoying because it's a vector thing. i'd like to have a nice non-vector thing. so what i'm going to do is,
+i'm going to take the magnitude of h -and square it.
+-which would be some constant. now, the magnitude of a vector thing is a square root -of the sum of the squares of the components.
+-correct. but if i do the square of that magnitude is no longer the square root, it's the sum of the squares. it's pythagoras, but in 3d. so this is going to be a squared omega 1 squared -plus b squared omega 2 squared
+-aha! -plus c squared omega 3 squared!
+-now i see an ellipsoid! and the unit vectors are gone
+because they're one in magnitude. which is the momental... that's nice and it's different! different ellipsoid. it's a different ellipsoid. we still have the same three directions 
+representing the three axes of rotation. but this time the ellipsoid surface is all the combinations of rotations which have the same combined
+magnitude squared of momentum. because momentum is always conserved, 
+so is the square of its magnitude. let's recap. we've got our kinetic energy. -the energy ellipsoid.
+-yeah. this kinetic energy is conserved
+because when you toss the book in space energy is not... -no friction, no energy's lost.
+-it's not coming in or out of the book. and then we've got the momental ellipsoid and
+likewise, when you toss something in space angular momentum is conserved. so now you could imagine that--
+so these are heavy masses. -these are light masses
+-yup. so i could spin really fast -about this axis.
+-yep. and that's a certain amount of angular momentum here. and that's one point on the ellipsoid? yeah. now i could rotate around like this and spin really slowly about this axis and have the same amount of
+angular momentum about that axis. but i'll have a different kinetic energy. so that's a different point on
+the angular momentum ellipsoid, but it might no longer be on the energy ellipsoid. so the only allowable points are
+where these two ellipsoids intersect cause they're points on both of them? from the both of them. the only combinations of omega 1,
+omega 2 and omega 3 that satisfy both conservation of energy and
+ conservation of angular momentum have to be on both ellipsoids so we need to look at where the two ellipsoids intersect. and what kind of-- that's going to be a line. well, it's a really interesting thing. so imagine just for the sake of argument,
+ i've got a perfect sphere. -and that's an ellipsoid.
+-yep. now let's let's just try and visualise
+the way these ellipsoids intersect because the intersection is quite important. so firstly imagine an energy ellipsoid,
+which is kind of this size and we imagine a momental ellipsoid
+ which is kind of mostly inside the energy ellipsoid, but with just
+a couple of tiny... the tips of it -poking out.
+-just poke out. their only intersection point, you can imagine
+there's a couple of tiny little circles where they intercept, the two ellipsoids intersect. and the book can work its way
+around those little circles. -yes.
+-and that would be the system where it's spinning. i'm going to take off our masses because
+ the book has actually got its own mass. that would be the system where it's spinning around a stable axis. so if you imagine that i'm spinning about this axis. well, it'll spin quite fast about that axis -but it's just going to...
+-oh, it's still got a little bit of a wobble to it. -well, if you do it perfectly you won't have a wobble
+-but if it's a bit off it's stable... -yeah, and you can see...
+-just! you can kind of see it. it is wobbling. here is a larger energy ellipsoid with a smaller
+skinny momentum ellipsoid barely inside it. one option is that the momentum ellipsoid just touches the energy ellipsoid at two points. this is when the book is perfectly
+rotating on that one axis. if the momentum ellipsoid pokes out
+each side, then there will be two circles. these are the cases where there is a wobble
+to the rotation, but a stable one. one circle is it rotating one way and the other circle is the same case
+but rotating in the opposite direction. these are two possible scenarios. the shapes of the ellipsoids change based on
+the physical shape and mass of the object rotating as well as how much starting kinetic energy
+and momentum it is given. we can now look at some other possibilities. -i tossed the book, well...
+-it is there, it is there. it is hard to see but that's because there's 
+so many-- it's all the corners and stuff. it's hard. here we have a similar case but this time the momentum ellipsoid
+is the bigger of the two and the energy ellipsoid barely pokes out. the circles are positioned on a different axis but we have the same situation
+of rotation with a bit of a wobble. it's all stable. the system is confined
+to one of these two small circles. so far, so boring. but those are the cases where you've got 
+these little circles that we're going around. so the one case is where the energy ellipsoid is big and the momental ellipsoid just sits inside it and touches at a couple of extremities. the other case is where the momental ellipsoid is big and the energy ellipsoid just sits inside it
+at a couple of extremity, extreme points. and so that corresponds to the the biggest moment of inertia rotation? -and the smallest.
+-and the smallest. now what happens when you rotate about
+this intermediate moment of inertia is the two ellipsoids intersect -in a much more cozy another lot...
+-a lot more overlap. a lot more overlap. they're well and truly
+ entwined with each other. and that's where we get this crazy path. and you get this crazy path and what it means is that you can be spinning about this axis and then you look, well where else could i spin? -oh i could spin...
+-all the way around here. look at this! whoa, i can go all the way over to there. don't worry, we're going to show you
+what that looks like. when an object is set spinning on the intermediate axis the two ellipsoids can be shaped so that they fit together very snugly and this is the intersection path which can result. the book is now free to tumble all over the place. and so concludes today's readings. so this is where i get to the thing where i think this helps to illustrate why it is, for sure that the smallest and the largest
+moments of inertia are stable because there is no path away from these endpoints. it illustrates then the intermediate moment of inertia -has the potential to be unstable.
+-there's a path to get away. -there's a path to get away.
+-and if you do throw it that way it didn't take at that time. no, so if i'm careful
+it won't-- oh it did take it. -nope, it didn't.
+-you need practice. i'm trying to spin it so it's not going sideways as well. yeah. well, so yeah, so yeah, and it's interesting.
+-so it is possible to flip it and it won't go sideways. i'm trying to, so if i spin this
+really fast you can see pretty-- if i spin this really fast you can see that -this side here stays on that side.
+-yeah it doesn't go over like that, okay. it might wobble around a bit, but it doesn't flip. likewise here it's not doing any flipping, so if i flip it like this: ah, i mean, it's... -it really is...
+-that's because there's a path formed by the intersection of the energy ellipsoid and the momentum ellipsoid
+which allows it to move around and you only get that for the rotation
+ around the intermediate one because in the two extreme cases they're so different, you just get these
+two little circles and it's on one of those. there you go. now if that's not intuitive, i don't know what is. you can get a book yourself,
+make sure it's sealed closed and throw it around to see
+what we've been talking about today but to see it clearly you'd really need to do this in zero g. but for that to happen we'd need to put someone
+either in space or on a parabolic flight. funny story: you may have noticed
+this book is by my friend helen czerski and she was heading over to esa
+to go on a parabolic flight to do some videos for the cosmic shambles network. i'll link to her other videos below and while she was there i said hey if you've got some time would you mind taking a book with you and doing us a favour? [intercom] egyptian. everyone else behind me on this flight
+is doing very serious experiments but hugh and matt have problems
+with a youtube video so i'm going to spin a book. to get them back, it's my book. so first of all, we're going to do it this way around. then we're gonna do it this way around. [intercom] twenty. and then we're gonna do it this way around. so three ways. [intercom] twelve. i'm gonna go this way first. and then this way, oh, that's-- let's try that again not as keen on that. and this way is nice and easy. look at these things you do for these mathematicians. flying bubbles, floating bubbles! there you go. you see those cool ellipsoid animations, 
+they were made for me by ben sparks in geogebra. i will link to the files they used below
+if you want to check them out as well as some numberphile videos
+that ben has made. over there you can also see
+helen czerski, still in zero g. it turns out they made a whole series of videos with esa and they are on the cosmic shambles network.
+do check them out, amazing videos. i'll link to them below and in a moment,
+ you know those little like clickable video things? one of those will appear over there in front of helen. but forget those people because sure, 
+hugh did some maths, ben did some animations, helen went into zero g, but the real heroes are those people up there. look at them! they are my patreon supporters
+and they make all of this possible because-- no, look, i fully appreciate a lot of people
+ can't give financially, that's fine. you can enjoy all these videos on youtube for free. but thanks to people like that,
+i can make ridiculous maths videos. thank you each and every one of them and also things like cosmic shambles,
+that's crowdfunded as well. they've got a patreon, i'll link to that below. so thank you so much
+those of you who make it possible. everyone else, enjoy it guilt-free. don't worry. they've got you, look at them. champions. oh and over there, okay there's the link
+if you want to check out helen's video, do do that or just continue saying your thanks to these heroes.

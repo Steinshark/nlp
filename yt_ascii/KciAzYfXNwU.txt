@@ -1,0 +1,226 @@
+on august 14, 2003, a cascading failure of 
+the power grid plunged more than 50 million   people into darkness in the northeast us 
+and canada. it was the most significant   power outage ever in north america, with an 
+economic impact north of ten billion dollars.   calamities like this don't happen in a bubble, and 
+there were many human factors, political aspects,   and organizational issues that contributed to the 
+blackout. but, this is an engineering channel,   and a bilateral task force of energy experts 
+from the us and canada produced this in-depth   240-page report on all of the technical causes of 
+the event that i'll try to summarize here. even   though this is kind of an older story, and many of 
+the tough lessons have already been learned, it's   still a nice case study to explore a few of the 
+more complicated and nuanced aspects of operating   the electric grid, essentially one of the 
+world's largest machines. i'm grady, and this is   practical engineering. in today's episode, we're 
+talking about the northeast blackout of 2003. nearly every aspect of modern society 
+depends on a reliable supply of electricity,   and maintaining this reliability is an enormous 
+technical challenge. i have a whole series of   videos on the basics of the power grid 
+if you want to keep learning after this,   but i'll summarize a few things here. and 
+just a note before we get too much further,   when i say "the grid" in this video, i'm really 
+talking about the eastern interconnection   that serves the eastern two-thirds of the 
+continental us plus most of eastern canada. there are two big considerations to keep in mind 
+concerning the management of the power grid. one:   supply and demand must be kept in balance 
+in real-time. storage of bulk electricity   is nearly non-existent, so generation has to 
+be ramped up or down to follow the changes in   electricity demands. two: in general, you can't 
+control the flow of electric current on the grid.   it flows freely along all available paths, 
+depending on relatively simple physical laws.   when a power provider agrees to send electricity 
+to a power buyer, it simply increases the amount   of generation while the buyer decreases their 
+own production or increases their usage.   this changes the flow of power along all the 
+transmission lines that connect the two. each   change in generation and demand has effects on the 
+entire system, some of which can be unanticipated. finally, we should summarize how the 
+grid is managed. each individual grid   is an interconnected network of power generators, 
+transmission operators, retail energy providers,   and consumers. all these separate entities need 
+guidance and control to keep things running   smoothly. things have changed somewhat 
+since 2003, but at the time, the north   american electric reliability council (or nerc) 
+oversaw ten regional reliability councils who   operated the grid to keep generation and demands 
+in balance, monitored flows over transmission   lines to keep them from overloading, prepared 
+for emergencies, and made long-term plans to   ensure that bulk power infrastructure would keep 
+up with growth and changes across north america.   in addition to the regional councils, there were 
+smaller reliability coordinators who performed   the day-to-day grid management and oversaw 
+each control area within their boundaries. august 14th was a warm summer day that started out 
+fairly ordinarily in the northeastern us. however,   even before any major outages began, conditions 
+on the electric grid, especially in northern   ohio and eastern michigan were slowly degrading. 
+temperatures weren't unusual, but they were high,   leading to an increase in electrical 
+demands from air conditioning. in addition,   several generators in the area weren't available 
+due to forced outages. again, not unusual. the   midwest independent system operator (or miso), the 
+area's reliability coordinator, took all this into   account in their forecasts and determined that 
+the system was in the green and could be operated   safely. but, three relatively innocuous events set 
+the stage for what would follow that afternoon. the first was a series of transmission 
+line outages outside of miso's area.   reliability coordinators receive lots 
+of real-time data about the voltages,   frequencies, and phase angles at key locations 
+on the grid. there's a lot that raw data can   tell you, but there's also a lot of things it 
+can't. measurements have errors, uncertainties,   and aren't always perfectly synchronized with each 
+other. so, grid managers often use a tool called   a state estimator to process all the real-time 
+measurements from instruments across the grid   and convert them into the likely state of the 
+electrical network at a single point in time,   with all the voltages, current flows, and 
+phase angles at each connection point. that   state estimation is then used to feed displays 
+and make important decisions about the grid. but, on august 14th, miso's state estimator 
+was having some problems. more specifically,   it couldn't converge on a solution. 
+the state estimator was saying,   "sorry. all the data that you're feeding me 
+just isn't making sense. i can't find a state   that matches all the inputs." and the reason 
+it was saying this is that twice that day,   a transmission line outside miso's area had 
+tripped offline, and the state estimator   didn't have an automatic link to that information. 
+instead it had to be entered manually,   and it took a bunch of phone calls and 
+troubleshooting to realize this in both   cases. so, starting around noon, miso's 
+state estimator was effectively offline. here's why that matters: the state estimator feeds 
+into another tool called a real-time contingency   analysis or rtca that takes the estimated 
+state and does a variety of "what ifs."   what would happen if this generator tripped? 
+what would happen if this transmission line went   offline? what would happen if the load increased 
+over here? contingency analysis is critical   because you have to stay ahead of the game when 
+operating the grid. nerc guidelines require   that each control area manage its network to avoid 
+cascading outages. that means you have to be okay,   even during the most severe single contingency, 
+for example, the loss of a single transmission   line or generator unit. things on the grid are 
+always changing, and you don't always know what   the most severe contingency would be. so, the 
+main way to ensure that you're operating within   the guidelines at any point in time is to run 
+simulations of those contingencies to make sure   the grid would survive. and miso's rtca tool, 
+which was usually run after every major change   in grid conditions (sometimes several times per 
+day), was offline on august 14th up until around   2 minutes before the start of the cascade. that 
+means they couldn't see their vulnerability to   outages, and they couldn't issue warnings to their 
+control area operators, including firstenergy,   the operator of a control area in northern 
+ohio including toledo, akron, and cleveland. that afternoon, firstenergy was struggling to 
+maintain adequate voltage within their area. all   those air conditioners use induction motors that 
+spin a magnetic field using coils of wire inside.   inductive loads do a funny thing to the power on 
+the grid. some of the electricity used to create   the magnetic field isn't actually consumed, 
+but just stored momentarily and then returned   to the grid each time the current switches 
+direction (that's 120 times per second in the   us). this causes the current to lag behind the 
+voltage, reducing its ability to perform work.   it also reduces the efficiency of all the 
+conductors and equipment powering the grid   because more electricity has to be supplied than 
+is actually being used. this concept is kind of   deep in the weeds of electrical engineering, 
+but we normally simplify things by dividing   bulk power into two parts: real power (measured 
+in watts) and reactive power (measured in var).   on hot summer days, grid operators need more 
+reactive power to balance the increased inductive   loads on the system caused by millions of 
+air conditioners running simultaneously. real power can travel long distances on 
+transmission lines, but it's not economical to   import reactive power from far away because 
+transmission lines have their own inductance that   consumes the reactive power as it travels along 
+them. with only a few running generators within   the cleveland area, firstenergy was importing a 
+lot of real power from other areas to the south,   but voltages were still getting low on their part 
+of the grid because there wasn't enough reactive   power to go around. capacitor banks are often used 
+to help bring current and voltage back into sync,   providing reactive power. however, at least 
+four of firstenergy's capacitor banks were   out of service on the 14th. another option 
+is to over-excite the generators at nearby   power plants so that they create more reactive 
+power, and that's just what firstenergy did. at the eastlake coal-fired plant on lake erie, 
+operators pushed the number 5 unit to its limit,   trying to get as much reactive 
+power as they could. unfortunately,   they pushed it a little too hard. 
+at around 1:30 in the afternoon,   its internal protection circuit tripped and 
+the unit was kicked offline - the second key   event preceding the blackout. without this 
+critical generator, the cleveland area would   have to import even more power from the rest 
+of the grid, putting strain on transmission   lines and giving operators less flexibility 
+to keep voltage within reasonable levels. finally, at around 2:15, firstenergy's control 
+room started experiencing a series of computer   failures. the first thing to go was the alarm 
+system designed to notify operators when equipment   had problems. this probably doesn't need to be 
+said, but alarms are important in grid operations.   people in the control room don't just sit and 
+watch the voltage and current levels as they move   up and down over the course of a day. their 
+entire workflow is based on alarms that show   up as on-screen or printed notifications so 
+they can respond. all the data was coming in,   but the system designed to get an operator's 
+attention was stuck in an infinite loop. the   firstenergy operators were essentially driving on 
+a long country highway with their fuel gauge stuck   on "full," not realizing they were nearly out of 
+gas. with miso's state estimator out of service,   eastlake 5 offline, and firstenergy's 
+control room computers failing,   the grid in northern ohio was operating on the 
+bleeding edge of the reliability standards,   leaving it vulnerable to further contingencies. 
+and the afternoon was just getting started. i'll show the next events on this map of the 
+highest voltage transmission network around   cleveland and akron. these are only the 345 kv 
+lines, but there are lower voltage transmission   lines in the area as well. transmission lines heat 
+up as they carry more current due to resistive   losses, and that is exacerbated on still, hot 
+days when there's no wind to cool them off. as   they heat up, they expand in length and sag lower 
+to the ground between each tower. at around 3:00,   as the temperatures rose and the power demands 
+of cleveland did too, the harding-chamberlin   transmission line (a key asset for importing power 
+to the area) sagged into a tree limb, creating a   short-circuit. the relays monitoring current 
+on the line recognized the fault immediately   and tripped it offline. operators in the 
+firstenergy control room had no idea it happened.   they started getting phone calls from customers 
+and power plants saying voltages were low,   but they discounted the information because 
+it couldn't be corroborated on their end.   by this time their it staff knew about 
+the computer issues, but they hadn't   communicated them to the operators, who 
+had no clue their alarm system was down. with the loss of harding-chamberlin, the remaining 
+transmission lines into the cleveland area   took up the slack. the current on one line, the 
+hanna-juniper, jumped from around 70% up to 88%   of its rated capacity, and it was heating 
+up. about half an hour after the first fault,   the hanna-juniper line sagged into a tree, 
+short circuited, and tripped offline as well.   the firstenergy it staff were troubleshooting 
+the computer issues, but still hadn't notified   the control room operators. the staff at miso, 
+the reliability coordinator, with their state   estimator issues, were also behind on realizing 
+the occurrence and consequences of these outages. firstenergy operators were now getting phone 
+call after phone call, asking about the situation   while being figuratively in the dark. call 
+transcripts from that day tell a scary story. "[the meter on the main transformer] is bouncing 
+around pretty good. i've got it relay tripped up   here...so i know something ain't right," said 
+one operator at a nearby nuclear power plant. a little later he called back: "i'm 
+still getting a lot of voltage spikes   and swings on the generator... i don't know 
+how much longer we're going to survive." a minute later he calls again: "it's 
+not looking good... we aint going to   be here much longer and you're 
+going to have a bigger problem." an operator in the firstenergy 
+control room replied: "nothing   seems to be updating on the computers. i 
+think we've got something seriously sick." with two key transmission lines out of service, 
+a major portion of the electricity powering the   cleveland area had to find a new path into 
+the city. some of it was pushed onto the less   efficient 138 kv system, but much of it was 
+being carried by the star-south canton line   which was now carrying more than its rated 
+capacity. at 3:40, a short ten minutes after   losing hanna-juniper, the star-south canton line 
+tripped offline when it too sagged into a tree   and short-circuited. it was actually the third 
+time that day the line had tripped, but it was   equipped with circuit breakers called reclosers 
+that would energize the line automatically if the   fault had cleared. but, the third time was the 
+charm, and star-south canton tripped and locked   out. of course, firstenergy didn't know about the 
+first two trips because they didn't see an alarm,   and they didn't know about this one either. they 
+had started sending crews out to substations to   get boots on the ground and try to get a handle on 
+the situation, but at that point, it was too late. with star-south canton offline, flows in the lower 
+capacity 138 kv lines into cleveland increased   significantly. it didn't take long before they too 
+started tripping offline one after another. over   the next half hour, sixteen 138 kv transmission 
+lines faulted, all from sagging low enough to   contact something below the line. at this point, 
+voltages had dropped low enough that some of the   load in northern ohio had been disconnected, but 
+not all of it. the last remaining 345 kv line into   cleveland from the south came from the sammis 
+power plant. the sudden changes in current flow   through the system now had this line operating 
+at 120% of its rated capacity. seeing such an   abnormal and sudden rise in current, the relays 
+on the star-sammis line assumed that a fault had   occurred and tripped the last remaining major 
+link to the cleveland area offline at 4:05 pm,   only an hour after the first incident. after 
+that, the rest of the system unraveled. with no remaining connections to 
+the cleveland area from the south,   bulk power coursing through the grid tried 
+to find a new path into this urban center.  first overloads progressed northward into 
+michigan, tripping lines and further separating   areas of the grid. then the area was cut off to 
+the east. with no way to reach cleveland, toledo,   or detroit from the south, west, or north, a 
+massive power surge flowed east into pennsylvania,   new york, and then ontario in a counter-clockwise 
+path around lake erie, creating a major reversal   of power flow in the grid. all along the way, 
+relays meant to protect equipment from damage saw   these unusual changes in power flows as faults and 
+tripped transmission lines and generators offline relays are sophisticated instruments 
+that monitor the grid for faults   and trigger circuit breakers when one is 
+detected. most relaying systems are built   with levels of redundancy so that lines 
+will still be isolated during a fault,   even if one or more relays malfunction. 
+one type of redundancy is remote backup,   where separate relays have overlapping zones 
+of protection. if the closest relay to the   fault (called zone 1) doesn't trip, the next 
+closest relay will see the fault in its zone   2 and activate the breakers. many relays have a 
+zone 3 that monitors even farther along the line. when you have a limited set of information, it 
+can be pretty hard to know whether a piece of   equipment is experiencing a fault and should be 
+disconnected from the grid to avoid further damage   or just experiencing an unusual set of 
+circumstances that protection engineers may   not have anticipated. that's especially true 
+when the fault is far away from where you're   taking measurements. the vast majority of lines 
+that went offline in the cascade were tripped by   zone 3 relays. that means the zone 1 and 2 relays, 
+for the most part, saw the changes in current and   voltage on the lines and didn't trip because 
+they didn't fall outside of what was considered   normal. however, the zone 3 relays - being less 
+able to discriminate between faults and unusual   but non-damaging conditions - shut them down. 
+once the dominos started falling in the ohio area,   it took only about 3 minutes for a 
+massive swath of transmission lines,   generators, and transformers to trip offline. 
+everything happened so fast that operators had   no opportunity to implement interventions 
+that could have mitigated the cascade. eventually enough lines tripped that the outage 
+area became an electrical island separated from   the rest of the eastern interconnection. but, 
+since generation wasn't balanced with demands,   the frequency of power within the island was 
+completely unstable, and the whole area quickly   collapsed. in addition to all of the transmission 
+lines, at least 265 power plants with more than   508 generating units shut down. when it was 
+all over, much of the northeastern united   states and the canadian province of ontario were 
+completely in the dark. since there were very few   actual faults during the cascade, reenergizing 
+happened relatively quickly in most places.   large portions of the affected area had 
+power back on before the end of the day.   only a few places in new york and toronto 
+took more than a day to have power restored,   but still the impacts were tremendous. 
+more than 50 million people were affected.   water systems lost pressure forcing boil-water 
+notices. cell service was interrupted. all the   traffic lights were down. it's estimated that 
+the blackout contributed to nearly 100 deaths. three trees and a computer bug caused a major 
+part of north america to completely grind to   a halt. if that's not a good example 
+of the complexity of the power grid,   i don't know what is. if you asked anyone 
+working in the power industry on august 13,   whether the entire northeast us and canada 
+would suffer a catastrophic loss of service   the next day, they would have said no way. 
+people understood the fragility of the grid,   and there were even experts sounding alarms about 
+the impacts of deregulation and the vulnerability   of transmission networks, but this was not some 
+big storm. it wasn't even a peak summer day.   it was just a series of minor contingencies that 
+all lined up just right to create a catastrophe. today's power grid is quite different than 
+it was in 2003. the bilateral report made   46 recommendations about how to improve operations 
+and infrastructure to prevent a similar tragedy in   the future, many of which have been implemented 
+over the past nearly 20 years. but, it doesn't   mean there aren't challenges and fragilities in 
+our power infrastructure today. current trends   include more extreme weather, changes in the 
+energy portfolio as we move toward more variable   sources of generation like wind and solar, growing 
+electrical demands, and increasing communications   between loads, generators, and grid controllers. 
+just a year ago, texas saw a major outage related   to extreme weather and the strong nexus between 
+natural gas and electricity. i have a video on   that event if you want to take a look after this. 
+i think the 2003 blackout highlights the intricacy   and interconnectedness of this critical resource 
+we depend on, and i hope it helps you appreciate   the engineering behind it. thank you for 
+watching and let me know what you think.

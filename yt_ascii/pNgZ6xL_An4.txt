@@ -1,0 +1,124 @@
+- this truck runs totally on hydrogen. as it goes down the highway, it is producing nothing but water. that is certifiably awesome. but hydrogen technology has
+gotten quite a bit of hate in the past couple of years. hate i don't think is warranted. so let's deep-dive this thing. where does hydrogen power
+makes sense? where does it not? and should you buy a toyota mirai? okay, the answer to the
+last one is basically no. but it's early days! it's so early, i haven't even
+segued to our sponsor yet. - [linus] thanks to amd
+for sponsoring this video. for a limited time, you can get one month of xbox game pass for pc when you buy select amd ryzen processors, or radeon graphics cards. learn more today at the link down below. (energetic techno music) - there are two ways you can
+use hydrogen to make a car go. internal combustion
+and fuel cell electric. on the surface, internal
+combustion sounds pretty sweet. literally.
+(car motor rumbles) you just take a direct-injection engine, replace the injectors with hydrogen ones, and with a very non-trivial
+amount of tuning later, you're off to the races. toyota did this with the
+engine from the gr yaris, and entered a 24-hour endurance race, to middling results. there are quite a few problems with hydrogen internal combustion engines, the biggest being efficiency. only about a quarter
+of the energy available is turned into making your car go. which brings us to fuel
+cell electric vehicles, like the truck we saw earlier, and this right here, the
+second-generation toyota mirai. these work similarly to
+a battery electric car, with normal electric motors
+providing your acceleration. the difference is, though, that when you hit the gas, i really appreciate that
+i can still say that here, hydrogen is allowed to
+flow from the storage tank to the fuel cell stack. inside the fuel cell, oxygen, like just from the air around you, is allowed to enter. and hydrogen, which is just
+a single proton/electron, really wants to bond with
+that oxygen to create water. unfortunately for that hydrogen, toyota placed a proton-exchange membrane between the hydrogen and the oxygen, which only allows the
+proton to pass through, leaving the electron behind. this causes the electron
+to have massive fomo, like you, if you don't
+shop at lttstore.com so it will happily do the
+sprint around a conductor to meet up with the hydrogen and oxygen, creating electricity and powering the vehicle in the process. the largest benefit of this is that hydrogen can be put into your car in just a couple of minutes, through a process that is very similar to filling your car with gas. but is this actually
+(snaps fingers) that easy? there are two ways to store hydrogen: liquid and compressed. liquid hydrogen is nice because
+it's super-easy to pump, and easy to store a bunch of it. no pressure vessel required. unfortunately, hydrogen becomes a liquid at negative 252.8 degrees celsius. getting that cold takes a lot of energy, adding to the already high price. liquid hydrogen is
+promising for use in planes and some trucks, but for cars it's just too expensive, and the general public does not want to deal with cryogenics. instead, what we have here is compressed hydrogen at 10,000 psi, which honestly sounds kind of freaky. how is it to fill your car with it? jeez, really hope this works. so the last time we did this,
+we were not very successful, and a kind young missus had to come over and show us how to do it. the first thing you'll notice with these is that they're really cold,
+and normally pretty wet. this is a different
+connector than i used before, maybe this one's easier. oh wow, it is. if we knew what we were doing, this was honestly really easy. and here we go, we've already pumped $5, which, oh my god, this
+is $16 per kilogram. that's so much more expensive
+than the last one we had. i guess that's why they give you the mirai with like $15,000 gas card. jeez. disconnect. okay, this connector's awesome. i like this one. honestly, at that station,
+with that connector, it was actually easier than gas, really. we have a full tank, and we're good to go. now, while i've been filling the mirai with a highly compressed,
+highly flammable gas, you've probably been
+thinking about the other time there was a bunch of
+hydrogen in one place. fortunately, i don't think
+that will happen here. the high pressures actually
+make the whole thing safer. like, think about it. at a normal gas station pump, if you want, you can just go all zoolander and spray gasoline everywhere. but with compressed hydrogen, it's really easy to
+detect if a leak is there by the pressure drop. also, hydrogen is super-light. so if the tank is ruptured, instead of pooling under the car, it just quickly depressurizes,
+and all the gas floats away. toyota even has footage of one
+of these tanks getting shot. like, they lit a car
+on fire, shot the tank, and the footage is really boring. they found that the tank
+depressurizes so fast, the hydrogen doesn't even
+really have a chance to explode. so that's nice. heh. hydrogen has another problem, though. and this is the point that critics will really
+try to hammer home. it can never be as efficient
+as a battery electric car, and on a price-per-kilometer
+basis, it will always lose. for a battery electric vehicle, getting from generated
+power to your car moving is pretty simple. the electricity is generated, gets sent through the
+grid, real efficient. and then it goes (mimics
+zip) into your car's battery. some ac to dc conversion there, and the whole process is
+like 70 to 90% efficient, depending on a couple of variables. for hydrogen, the process is more complex. the cheapest way to
+produce it is by, well, burning a bunch of natural gas, which kind of defeats the whole purpose. this means electrolysis is preferred, which is essentially
+the same process we use to get the mirai to go, except in reverse, using electricity to turn
+water into oxygen and hydrogen. that hydrogen then needs to be compressed, which uses more energy, and transported via pipe or
+truck to its final location. then the final step, taking that hydrogen and turning
+it back into electricity, is only about 50% efficient. with all of those steps, you're looking at roughly
+25, 35% efficiency, total. and since electricity is being used to make the hydrogen in the first place, it will always cost more per kilometer than a battery electric car. but battery electric vehicles
+have a problem: physics. at the end of the day, f equals m-a. so if you want to accelerate
+several tons of vehicle, or tens of tons in this case, you're going to use a lot of energy. like, sure they could fill
+this area with batteries instead of hydrogen tanks, but then you're not only adding mass, but also greatly
+increasing the charge time. and sure, battery charging
+rates are going to improve, and electric motors will
+become more efficient, but it will never be able to
+beat this nozzle right here. let's do some math. so each one of these ports can transfer 60 grams of hydrogen per second, which works out to about
+7.2 megawatts of energy. since efficiency is less
+than battery electric, we can say it has an
+effective charging rate of 3.6 megawatts. to achieve that with an 800 volt battery, like most electric vehicles use, you would need 4,400 amps. unless you built a literal power station, you cannot do that. also, the charging cable would have to be like this big. (laughs) using hydrogen for a truck has
+loads of other benefits, too. although most of these are shared with battery electric vehicles. instead of' gears, these only need two. it has a prius shifter. wow. there's way less vibrations, and they create almost no noise. also at the port of l.a., truck drivers aren't allowed
+to idle while in queue, to reduce emissions, which can result in some very
+toasty cabins in the summer. in a hydrogen truck, though, they can just keep it
+running the whole time. ac all day. awesome. for whatever reason, people seem to think there
+can only be one winner, hydrogen or battery electric. but why not both? i alluded that musk was wrong
+at the start of this video, but akio toyoda has been just as bad. in the next 10 years, battery electric will be the clear winner. even if the infrastructure
+isn't quite there, people have electricity in their homes. and for shorter commuting,
+it just makes sense. if the use case requires going over about 400 kilometers regularly, is for heavy vehicles, or a vehicle that requires
+near-constant use, hydrogen is going to be the winner. for me personally, i think hydrogen vehicles
+are going to happen, and the important question isn't if it will happen,
+but how it happens. here's the environmentalist
+pie-in-the-sky pitch. in the future, almost all
+electricity is renewable. so solar, wind, water,
+and so on is what we use. but the problem with these is that they don't output
+a consistent amount. this means that there
+are times like right now, where it's really fricking windy and a bunch of these
+windmills have their brakes on 'cause there's more
+electricity supply than demand. instead of just applying the brakes, we could convert that into hydrogen. some of it can be turned
+back into electricity, and what's left over is
+used to power our cars. wicked. i love this future. a more cynical take is that currently 90%
+of the world's hydrogen is produced through
+steam-methane reformation, the process i mentioned earlier, that's basically burning
+a bunch of natural gas, creating loads of carbon
+dioxide in the process. this could be excellent for oil producers, since they're still able to
+make heaps of money off of you while you drive your "zero emissions" car. pretty much the only thing that gives me hope this will end well is the department of energy's earthshot, which is basically the us government putting $400 million a year behind the goal of making
+renewably-sourced hydrogen available for $1 per kilogram by 2031. if the earthshot and
+hydrogen trucks happen, i think we'll be in pretty good shape. currently, if you're a massive
+industrial plant or whatever, you're buying hydrogen in bulk, and you are not paying the
+$16 per kilogram we did. if more hydrogen starts getting bought to power these trucks and cars, the price will drop, simply
+because of buying in bulk. and the ability to produce
+hydrogen on location will likely be a huge
+benefit to many companies, also helping bring the price down. this all leaves us with
+one final question. do you want to drive a hydrogen car? like is the mirai any good? (uplifting music) honestly, me and andy both really like it. it's built on the same
+platform as the lexus ls, and it features ride quality that just does not exist in electric cars anywhere near this price point. it's much lighter, which means that they didn't have to really stiffen up the suspension. so it can absorb all of the little bumps while not getting too
+wallowy over the big ones. compared to a model 3? night and day. it's also, you know, basically a lexus. so seats are comfy,
+driving position's good, and it's even rear-wheel drive to boot. so it's kind of fun to huck into corners. my biggest problem with the mirai, though, is that it is slow. oh, let's look here. it trottles from 0 to 60
+in about nine seconds. uh, toyota, come on. if your car is 50 grand, it should not be getting
+chopped by a base civic. like, it might lead a lot of people to think that hydrogen cars are slow. they don't have to be. it's just an electric motor. there's already a battery in here. if you can't supply enough
+energy with the hydrogen, you can just make it up with the battery. (lively music) (door opens) toyota says these weak electric motors were to allow them to hit
+their target price point. but frankly, i think that's stupid. this is never going to be a practical car. you can only use it if you
+live in l.a. or san francisco, and why not just make it fun? please, just stick a lexus badge on it, give it 500 horsepower,
+and price be damned. this car has proved that
+hydrogen power works, and is a genuine marvel of engineering. but no youngsters are
+putting it on their wall. and i think that's a sin. oh, and at the start of this video, i asked if you should buy one of these. no, absolutely not. we're down in orange county,
+not even that far from l.a., and most of the hydrogen
+stations don't have hydrogen. there's a shortage or something. so the couple that do are mirai car meetups,
+with like a dozen in line. it took us like 40 minutes
+to get hydrogen last night. oh, it does pee, though. watch this. (door opens) (car emits a ding tone) it do it? darn, it didn't, you'll have to trust me. anyway, do you know who
+also pees a little bit? our business team, when they find out this is my segue to our sponsor. - thanks, freshbooks for
+sponsoring today's video. freshbooks is the easy-to-use
+accounting software that helps you do your business. you can impress your clients with professional-looking invoices that detail the work you've done. you can use automated payment reminders if invoices get past due. you can easily track expenses, and use their time tracker to log every minute of billable hours, so you don't have to think about it later, and you can keep everyone on the same page with their projects feature, which makes it easy for clients,
+your team, and contractors to collaborate, share files, and comment. choose a plan that's right for you, and start your free trial of
+freshbooks for 30 days today, no credit card required,
+at freshbooks.com/linus - so huge thanks for watching this video. we hope to do loads more
+on-location car shoots like this one. hope you liked it. and if you want to watch something else, maybe watch our xc40 review. toyota, we saw your bzx4 in camouflage. we want to actually try it. (laughs) - [crew member] please.
+- please. it looks really cool.

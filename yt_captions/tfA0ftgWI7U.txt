@@ -1,0 +1,195 @@
+Imagine the room you’re in right now was filled 
+to the top with gravel. (I promise I’m headed   somewhere with this.) I don’t know the size of 
+the room you’re in, but if it’s anywhere near   an average-sized bedroom, that’s roughly 70 tons 
+of material. Fill every room in an average-sized   apartment, and now we’re up to 400 tons. Fill up 
+an average-sized house. That’s 900 tons. Fill up   30 of those houses, that’s roughly 25,000 tons 
+of gravel. A city block of just pure gravel.   Imagine it with me… gravel… chicken soup for the 
+civil engineer’s soul. And now imagine you needed   to move that material somewhere else several 
+hundred miles away. How would you do it? Would   you put it in 25,000 one-ton pickup trucks? 
+Or 625 semi-trucks? Imagine the size of those   engines added together and the enormous volume of 
+fuel required to move all that material. You know   what I’m getting at here. That 25,000 tons is 
+around the upper limit of the heaviest freight   trains that carry raw materials across the 
+globe. There are heavier trains, but not many. I’m not trying to patronize you about 
+freight trains. It’s not that hard to   imagine how much they can move. But 
+it is harder to imagine the energy it   takes. Compare those 625 semi trucks 
+to a handful of diesel locomotives,   and the difference starts to become clear just by 
+looking at engines and the fuel required to move   that mountain of material. We’re in the middle 
+of a deep dive series on railway engineering,   and it turns out that a lot of the engineering 
+decisions that get made in railroading have to do   with energy. When you’re talking about thousands 
+of tons per trip, even the tiny details can add   up to enormous differences in efficiency, so let’s 
+talk about some of the tricks that railroads use   to minimize energy use by trains. And I even 
+tried to pull a railcar myself. I’m Grady,   and this is Practical Engineering. In 
+today’s episode we’re running our own   hypothetical railway to move apartments full 
+of gravel (and other stuff too, I guess). By energy, I’m not just talking about fuel 
+efficiency either. If it was that simple,   do you think there would be a 160-page report 
+from the 1970s called “Resistance of a Freight   Train to Forward Motion”? I’ll link it below for 
+some lightweight bedtime reading. Management of   the energy required to pull a train affects 
+nearly every part of a railroad. Resistances   add up as forces within the train, meaning they 
+affect how long a train can be and where the   locomotives have to be placed. Resistances vary 
+with speed, so they affect how fast a train can   move. Of course they affect the size and number 
+of locomotives required to move a train from one   point to another and how much fuel they burn. And 
+they even affect the routes on which railroads   are built. Let me show you what I mean. Here’s 
+a hypothetical railroad with a few routes from   A to B. Put yourself in the engineer’s seat 
+and see which one you think is best. Maybe   you’ll pick the straightest path, but did you 
+notice it goes straight over a mountain range? If you've ever read about 
+the little engine that could,   you’re familiar with one of the most 
+significant obstacles railways face:   grade. A train moving up a hill has to 
+overcome the force of gravity on its load,   which can be enormous. Grade is measured 
+in rise over run, so a 1% grade rises 1   unit across a horizontal distance of a hundred 
+units. There’s a common rule of thumb that you   need 20 pounds or 9 kilograms of tractive effort 
+(that’s pull from a locomotive) for every ton of   weight times every percent of grade. By the way, 
+I know kilograms are a unit of mass, not weight,   but the metric world uses them for weight so I’m 
+going to too in this video. And metric tonnes are   close enough to US tons that we can just assume 
+they’re equal for the purposes of this video. A wheelchair ramp is allowed to have a grade 
+of up to 8.3 percent in the US. Pulling our   theoretical gravel train up a slope that 
+steep would require a force of more than   5 million pounds or 2 million kilograms, way 
+beyond what any railcar drawbar could handle.   That’s why heavy trains have locomotives 
+in the middle, called distributed power,   to divide up those in-train forces. But it’s 
+also why railway grades have to be so gentle,   often less than half a percent. Next time 
+you’re driving parallel to a railway,   watch the tracks as you travel. The road 
+will often follow the natural ground closely,   but the tracks will keep a much more consistent 
+elevation with only gradual changes in slope. You might think, “So what?” We’ll spend 
+the energy on the way up the mountain,   but get it back on the other side. Once the 
+train crests the top, we can just shut off   the engines and coast back down. And that’s 
+true for gentle grades, but on steeper slopes,   a train has to use its brakes on the way down 
+to keep from getting over the speed limit.   So all that energy that went into getting the 
+train up the hill, instead of being converted   to kinetic energy on the way down, gets wasted 
+as heat in the brakes. That’s why direct routes   over steep terrain are rarely the best choice for 
+railroads. So let’s choose an alternative route. How about the winding path that avoids the 
+steep terrain by curving around it? Of course,   the path is longer, and that’s an important 
+consideration we’ll discuss in a moment,   but those curves also matter. Straight sections 
+of track are often called tangent track. That’s   because they connect tangentially between curved 
+sections of rail that are usually shaped like   circular arcs. Outside the US, curves are measured 
+by their radius, the distance from the center of   curvature and the center of the track. Of course, 
+in the US, our systems of measurement are a little   more old-fashioned. We measure the degrees of 
+curvature between a 100-foot chord. A 1-degree   curve is super gentle, appropriate for the highest 
+speeds. Once you get above 5 degrees, the speed   limit starts coming down, with a practical 
+limit at slow-speed facilities of around   12 degrees. In an ideal world, you only have 
+to accelerate a train up to speed once, but on   a windy path with speed restrictions, slowing and 
+accelerating back up to speed takes extra energy. But those curves don’t just affect the 
+speed of a train, they also affect the   tractive effort required to pull a train around 
+them. Put simply, curves add drag. As you might  have seen in the previous video of this series, 
+the wheels of most trains are conical in shape.   This allows the inside and outside wheels to 
+travel different distances on the same rigid   axle. But it’s not a perfect system. Train 
+wheels do slip and slide on curves somewhat,   and there’s flange contact too. Listen closely 
+to a train rounding a sharp curve and you’ll   hear the flanges of each wheel squealing as they 
+slide on the rail. A 1-degree curve might add an   extra pound (or half a kilogram) of resistance 
+for every ton of train weight (not much at all).   A 5-degree curve quadruples that resistance 
+and a 10-degree curve doubles it again. When   you’re talking about a train that might weigh 
+several thousand tons, that extra resistance   means several thousand more pounds pulling 
+back on the locomotives. It adds up fast. So,   depending on the number of curves along the route, 
+and more importantly, their degree of curvature,   the winding path might be just as expensive as 
+the one straight up the mountain and back down. Sometimes terrain is just too extreme to conquer 
+using just grades and curves. There comes a point   in the design of a railroad where the cost 
+of going around an obstacle like a mountain   or a gorge is so great that it makes good sense 
+and actually saves money to just build a bridge   or a tunnel! Many of the techniques pioneered for 
+railroad bridges influenced the engineering of   the massive road bridges that stir the hearts 
+of civil engineers around the world. And then   there’s tunnels. You know how much I like 
+tunnels. There are even spiral tunnels that   allow trains to climb or descend on a gentle 
+grade in a small area of land. I could spend   hours talking about bridges and tunnels, but 
+they’re not really the point of this video,   so I’ll try to stay on track here. 
+Hopefully you can see how major   infrastructure projects might change the math 
+when developing efficient railroad routes. Of course, I’ve talked about grades, curves, 
+and acceleration, but even pulling a train on   a perfectly straight and level track without 
+changing speed at all requires energy. In a   perfect world, a wheel is a frictionless device 
+and an object in motion would tend to stay in   motion. But our world is far from perfect. I doubt 
+you need that reminder. And there are several   sources of regular old rolling resistance. 
+Let me give you something to compare to. I put a crane scale on a sling and hooked it to 
+my grocery hauler in the driveway to demonstrate.   This car just keeps showing up in demos on 
+the channel. Doing my best to pull the car   at a constant speed, I could measure the rolling 
+resistance. With no friction, my car would just   keep rolling once I got it up to speed, but those 
+squishy tires and friction in the bearings mean   I have to constantly pull to keep the car moving. 
+It was pretty hard to keep this consistent, so the   scale jumps around quite a bit, but it averages 
+around 30 pounds or 14 kilograms. Very roughly,   it’s about a percent of the car’s weight. 
+I put half the car on the gravel road to   compare the resistance, and it took about twice 
+the force to keep it rolling.  60 pounds (around 2% of the car’s weight) is a little much for 
+a civil engineer, so I had to get some help pulling. We tried it with a lighter car, but 
+the scale must not have been working right. At slow speeds like in the demo, drag mostly 
+comes from the pneumatic rubber tires we use on   cars and trucks. They’re great at gripping the 
+road and handling uneven surfaces or defects,   but they also squish and deform as they 
+roll. Deforming rubber takes energy,   and that’s energy that DOESN’T go into 
+moving the load down the road. It’s wasted   as heat. At faster speeds, a different 
+drag force starts to become important:   fluid drag from the air. I didn’t demo that 
+in my driveway, but it’s just as important   for trains as it is for cars. Let’s take a look 
+back at that 1970s report to see what I mean. One of the most commonly used methods for 
+estimating train resistance is the Davis Formula,   originally published in 1926 and modified in 
+the 70s after roller bearings became standard   on railcars. It says there are three main types 
+of resistance in a train for a given weight.   The first is mechanical resistance that only 
+depends on the weight of the train. This comes   from friction in the bearings and deflections of 
+the wheels and track. Steel is a stiff material,   but not infinitely so. As a steel wheel rolls 
+over a steel track, they squish against each   other creating a contact patch, usually around 
+the size of a small coin. The pressure between   the wheel and track in this contact patch 
+can be upwards of 100,000 psi or 7,000 bar,   higher than the pressure at the deepest places 
+in the ocean. There is an entire branch of   engineering about contact mechanics, 
+so we’ll save that for a future video,   but it’s enough to say that, just like the 
+deformation of a rubber tire down a road,   this deformation of steel wheels on 
+steel rails creates some resistance. The second component of resistance in the Davis 
+formula is velocity dependent. The faster the   train goes, the more resistance it experiences. 
+This is mainly a result of the ride quality of   the trucks. As the train goes faster, the cars 
+sway and jostle more, creating extra drag. The   final term of the Davis formula is air resistance. 
+Drag affects the front, the back, and the sides of   the train as it travels through the air. This 
+is velocity dependent too, but it varies with   velocity squared. Double the speed, quadruple 
+the drag. Add all three factors together and you   get the total resistance of the train, the force 
+required to keep it moving at a constant speed. But why use an equation when you can just 
+measure the real thing. I took a little trip out to the Texas Transportation Museum 
+in San Antonio to show you how this works in   practice. Take a look at these classic Pullman 
+passenger cars. You can see the square doors on   the bearings where lubrication would have 
+been added to the journal boxes by crews.   This facility has a running diesel locomotive, 
+a flat car outfitted with seats for passengers,   and a caboose. This little train’s main job 
+these days is to give rides to museum patrons,   but today it’s going to help 
+us do a little demonstration. First [choo choo] we had to decouple the car 
+from the caboose. Then we used the locomotive to move the flat car down the track. This car was built in 1937 and used on the Missouri Pacific   railroad until it was acquired by the museum in 
+the early 1980s. The painted labels have faded,   but it weighs in the neighborhood of 20 
+tons empty (about 15 times the weight of   my car). So I set up a small winch with 
+the force gauge and attached it to the   car. The locomotive provides an ideal anchor 
+point for the setup. But on the first try,   the scale maxed out before the car started 
+to move. It turns out the rolling resistance   of a rail car is pretty high if you don’t fully 
+disengage the brakes first. Who would’ve thought? Now that the wheels are allowed to turn, 
+it’s immediately clear that the tracks   aren’t perfectly level. Even without the car 
+rolling at all, it’s pulling on the scale   with around 100 pounds or 45 kilograms. 
+Once I start the winch to pull the car,   the force starts jumping around just like 
+the car, but it averages around 150 pounds   or 68 kilograms. If I subtract the force from 
+the grade, the rolling resistance of the car,   the force just required to keep it moving at 
+a constant speed, is just about 50 pounds or   32 kilograms. That’s about the same force required 
+to move my car on the gravel road even though this   car is 15 times its weight. And it’s not far off 
+from what the Davis Formula would predict either. We tried this a few times, and the results were 
+pretty much the same each time. This is an old   rail car on an old railway, so there’s quite 
+a bit of variation to try and average out of   the results. Little imperfections in the wheels 
+and rail make a huge difference when the rolling   resistance is so low. A joint in the track 
+can double or triple the force required to   keep the car moving, if only for a brief moment. 
+Kind of like getting a pebble under the wheel of   a shopping cart: It seems insignificant, but 
+if it’s happened to you, you know it’s not. Watching the forces involved, I couldn’t help but 
+wonder if I could move the car myself. But there   was no safe way for me to start pulling the 
+car once it was already moving. I would have   to try and overcome the static friction first… 
+aaaaand that turned out to be a little beyond my   capabilities. If you look close, you can see the 
+car budging, but I couldn’t quite get it started.   On a different part of the track with the wheels 
+at a different position, maybe I could have moved   it, but considering most of the working out I do 
+is on a calculator, this result might not be that   surprising. Those joints between rails don’t only 
+add drag, but maintenance costs too, but that’s   the topic of the next episode in this series, so 
+stay tuned if you want to learn more. It’s still   remarkable that the rolling resistance between 
+a 20 ton freight railcar and my little hatchback   is in the same ballpark. And that’s a big part of 
+why railways exist in the first place. Those steel   wheels on steel rails get the friction and drag 
+low enough that just a handful of locomotives can   move the same load as hundreds or trucks with 
+a lot less energy and thus a lot less cost. I’ve never shipped anything by rail, and there’s 
+a good chance you haven’t either. But, freight   trains dominate in an important part of the 
+transportation market. For large loads that need   to move long distances overland, it’s often going 
+to be cheaper than using trucks. I love breakeven   analysis like that, and today’s sponsor Henson 
+is a perfect example. You buy a razor that’s   more expensive than what you find at the grocery 
+store, but the blades cost pennies. So, depending   on how often you shave, it basically pays itself 
+off after a year or two. Henson offered to sponsor   a video around this time last year. I said send 
+me a razor, I’ll try it out, and then decide. And   I never switched back. In fact, I lost mine for a 
+a week recently after I got back from a trip, and   had to shoot the end of a Practical Construction 
+video looking like this. What a scruff! Is a new razor going to change your life? Probably 
+not. But, shaving’s a chore (at least to me),   and using a precision tool makes it feel 
+less like a chore, and instead a part of   my day that I actually enjoy. I had never 
+used a safety razor and figured they were   old technology. Totally not true - these are 
+made in an aerospace machine shop. I also   figured there would be a learning curve, but that 
+also wasn’t true. The Henson is so easy to use,   I don’t think I could ever go back to a cartridge 
+razor with their flexible blades and difficulty in   rinsing out. If you’ve ever been on the market 
+for a tool and splurged on the nicest brand,   this is that, except, it's not really a splurge. 
+The blades for the Henson razor are so cheap you   could probably put a new one on for every shave 
+and still save money. And in fact, if you use my   code PRACTICALENGINEERING at checkout, you can 
+get a 100-pack of blades on me. Just make sure   both the razor and the blades are in your cart, 
+enter the code, and the discount will be applied   right away. There’s no subscription service or 
+a monthly fee, it’s just a cool razor that I   really like and I think you will too. Thank you 
+for watching and let me know what you think.

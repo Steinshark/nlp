@@ -1,0 +1,350 @@
+
+# coding: utf-8
+
+# ## ***Plotting brightness temperatures in a Lambert Conformal Conic map projection***
+
+# In this notebook we're going to continue working with http://clouds.eos.ubc.ca/~phil/Downloads/a301/MYD021KM.A2005188.0405.005.2009232180906.h5.  We will also need to go to Laadsweb and do a wildcard search on
+# the filename:
+# 
+# `MYD03.A2005188.0405.*`
+# 
+# which will produce the geometry file which can be downloaded and converted to hdf5 to get
+# 
+# http://clouds.eos.ubc.ca/~phil/Downloads/a301/MYD03.A2005188.0405.005.2009231234639.h5
+# 
+# The MYD03 file contains the lat/lon for every
+# pixel and is described at http://modaps.nascom.nasa.gov/services/about/products/MYD03.html  
+# 
+
+# Recall that we read and converted the channel 31 radiance:
+
+# In[1]:
+
+from __future__ import print_function
+import os,site
+import glob
+import h5py
+from IPython.display import Image
+import numpy as np
+from matplotlib import pyplot as plt
+#
+# add the lib folder to the path assuming it is on the same
+# level as the notebooks folder
+#
+libdir=os.path.abspath('../lib')
+site.addsitedir(libdir)
+import h5dump
+
+
+# the glob function finds a file using a wildcard to save typing (google: python glob wildcard)
+
+# In[2]:
+
+h5_filename=glob.glob('../data/MYD02*.h5')
+print("found {}".format(h5_filename))
+
+
+# In[5]:
+
+h5_file=h5py.File(h5_filename[0])
+
+
+# **Read the radiance data from MODIS_SWATH_Type_L1B/Data Fields/EV_1KM_Emissive**
+
+# **note that channel 31 occurs at index value 10**
+
+# In[6]:
+
+index31=10
+
+
+# **the data is stored as unsigned, 2 byte integers which can hold values from 0 to $2^{16}$ - 1 = 65,535 **
+
+# In[7]:
+
+chan31=h5_file['MODIS_SWATH_Type_L1B']['Data Fields']['EV_1KM_Emissive'][index31,:,:]
+print(chan31.shape,chan31.dtype)
+
+
+# In[8]:
+
+chan31[:3,:3]
+
+
+# ** we need to apply a
+# scale and offset to convert to radiance (the netcdf module did this for us automatically**
+
+# $Data = (RawData - offset) \times scale$
+# 
+# this information is included in the attributes of each variable.
+# 
+# (see page 36 of the [Modis users guide](http://clouds.eos.ubc.ca/~phil/courses/atsc301/text/modis_users_guide.pdf) )
+
+# **here is the scale for all 16 channels**
+
+# In[9]:
+
+scale=h5_file['MODIS_SWATH_Type_L1B']['Data Fields']['EV_1KM_Emissive'].attrs['radiance_scales'][...]
+print(scale)
+
+
+# **and here is the offset for 16 channels**
+
+# In[10]:
+
+offset=h5_file['MODIS_SWATH_Type_L1B']['Data Fields']['EV_1KM_Emissive'].attrs['radiance_offsets'][...]
+print(offset)
+
+
+# In[11]:
+
+chan31=(chan31 - offset[index31])*scale[index31]
+
+
+# now convert this to brightness temperature
+
+# In[12]:
+
+def planckInvert(wavel,Llambda):
+    """input wavelength in microns and Llambda in W/m^2/micron/sr, output
+    output brightness temperature in K  (note that we've remove the factor
+    of pi because we are working with radiances, not fluxes)
+    """
+    c=2.99792458e+08  #m/s -- speed of light in vacumn
+    h=6.62606876e-34  #J s  -- Planck's constant
+    kb=1.3806503e-23  # J/K  -- Boltzman's constant
+    c1=2.*h*c**2.
+    c2=h*c/kb
+
+    Llambda=Llambda*1.e6  #convert to W/m^2/m/sr
+    wavel=wavel*1.e-6  #convert wavelength to m
+    Tbright=c2/(wavel*np.log(c1/(wavel**5.*Llambda) + 1.))
+    
+    return Tbright
+
+
+# In[13]:
+
+chan31_Tbright=planckInvert(11.02, chan31)
+
+
+# In[14]:
+
+#get_ipython().magic(u'matplotlib inline')
+
+
+# **histogram the calibrated radiances and show that they lie between
+# 0-10 $W\,m^{-2}\,\mu m^{-1}\,sr^{-1}$ **
+
+# In[15]:
+
+import matplotlib.pyplot as plt
+out=plt.hist(chan31_Tbright.flat)
+
+
+# **Read MYD03 Geolocation Fields**
+
+# note that the longitude and latitude arrays are (406,271) while the actual
+# data are (2030,1354).   These lat/lon arrays show only every fifth row and column.
+# We need to get the full lat/lon arrays from the MYD03 file
+
+# In[18]:
+
+geom_filename=glob.glob('../data/MYD03*.h5')
+print("found {}".format(h5_filename))
+
+
+# In[19]:
+
+geom_h5=h5py.File(geom_filename[0])
+
+
+# In[16]:
+
+h5dump.dumph5(geom_h5)
+
+
+# In[20]:
+
+the_long=geom_h5['MODIS_Swath_Type_GEO']['Geolocation Fields']['Longitude'][...]
+the_lat=geom_h5['MODIS_Swath_Type_GEO']['Geolocation Fields']['Latitude'][...]
+
+
+# In[21]:
+
+print(the_long.shape,the_lat.shape)
+
+
+# In[19]:
+
+print('===================================================')
+print('Size of Longitude: {}'.format(the_long.shape))
+print('Longitude Range: {} ~ {}'.format(np.min(the_long), np.max(the_long)))
+print('===================================================')
+print('Size of Latitude: {}'.format(the_lat.shape))
+print('Latitude Range: {} ~ {}'.format(np.min(the_lat), np.max(the_lat)))
+
+
+# In[22]:
+
+def reproj_L1B(raw_data, raw_x, raw_y, xlim, ylim, res):
+    
+    '''
+    =========================================================================================
+    Reproject MODIS L1B file to a regular grid
+    -----------------------------------------------------------------------------------------
+    d_array, x_array, y_array, bin_count = reproj_L1B(raw_data, raw_x, raw_y, xlim, ylim, res)
+    -----------------------------------------------------------------------------------------
+    Input:
+            raw_data: L1B data, N*M 2-D array.
+            raw_x: longitude info. N*M 2-D array.
+            raw_y: latitude info. N*M 2-D array.
+            xlim: range of longitude, a list.
+            ylim: range of latitude, a list.
+            res: resolution, single value.
+    Output:
+            d_array: L1B reprojected data.
+            x_array: reprojected longitude.
+            y_array: reprojected latitude.
+            bin_count: how many raw data point included in a reprojected grid.
+    Note:
+            function do not performs well if "res" is larger than the resolution of input data.
+            size of "raw_data", "raw_x", "raw_y" must agree.
+    =========================================================================================
+    '''
+    
+    
+    x_bins=np.arange(xlim[0], xlim[1], res)
+    y_bins=np.arange(ylim[0], ylim[1], res)
+#    x_indices=np.digitize(raw_x.flat, x_bins)
+#    y_indices=np.digitize(raw_y.flat, y_bins)
+    x_indices=np.searchsorted(x_bins, raw_x.flat, 'right')
+    y_indices=np.searchsorted(y_bins, raw_y.flat, 'right')
+        
+    y_array=np.zeros([len(y_bins), len(x_bins)], dtype=np.float)
+    x_array=np.zeros([len(y_bins), len(x_bins)], dtype=np.float)
+    d_array=np.zeros([len(y_bins), len(x_bins)], dtype=np.float)
+    bin_count=np.zeros([len(y_bins), len(x_bins)], dtype=np.int)
+    
+    for n in range(len(y_indices)): #indices
+        bin_row=y_indices[n]-1 # '-1' is because we call 'right' in np.searchsorted.
+        bin_col=x_indices[n]-1
+        bin_count[bin_row, bin_col] += 1
+        x_array[bin_row, bin_col] += raw_x.flat[n]
+        y_array[bin_row, bin_col] += raw_y.flat[n]
+        d_array[bin_row, bin_col] += raw_data.flat[n]
+                   
+    for i in range(x_array.shape[0]):
+        for j in range(x_array.shape[1]):
+            if bin_count[i, j] > 0:
+                x_array[i, j]=x_array[i, j]/bin_count[i, j]
+                y_array[i, j]=y_array[i, j]/bin_count[i, j]
+                d_array[i, j]=d_array[i, j]/bin_count[i, j] 
+            else:
+                d_array[i, j]=np.nan
+                x_array[i, j]=np.nan
+                y_array[i,j]=np.nan
+                
+    return d_array, x_array, y_array, bin_count
+
+
+# **now regrid the radiances and brightness temperatures on a 0.1 x 0.1 degree regular lat/lon grid**
+
+# In[23]:
+
+xlim=[np.min(the_long), np.max(the_long)]
+ylim=[np.min(the_lat), np.max(the_lat)]
+chan31_grid, longitude, latitude, bin_count = reproj_L1B(chan31, the_long, the_lat, xlim, ylim, 0.1)
+tbright_grid,longitude,latitude,bin_count=reproj_L1B(chan31_Tbright, the_long, the_lat, xlim, ylim, 0.1)
+
+
+# In[24]:
+
+chan31_grid=np.ma.masked_where(np.isnan(chan31_grid), chan31_grid)
+bin_count=np.ma.masked_where(np.isnan(bin_count), bin_count)
+longitude=np.ma.masked_where(np.isnan(longitude), longitude)
+latitude=np.ma.masked_where(np.isnan(latitude), latitude)
+longitude.shape
+
+
+# **Plot this gridded data without a map projections**
+
+# In[26]:
+
+fig=plt.figure(figsize=(10.5, 9.5))
+ax=fig.add_subplot(111)
+ax.set_xlim(xlim[0], xlim[1])
+ax.set_ylim(ylim[0], ylim[1])
+image=ax.pcolormesh(longitude, latitude, chan31_grid)
+
+
+# **Now replot using an lcc (Lambert conformal conic) projection from basemap** at http://matplotlib.org/basemap/users/examples.html
+
+# In[27]:
+
+from mpl_toolkits.basemap import Basemap
+
+
+# In[28]:
+
+lcc_values=dict(resolution='l',projection='lcc',
+                lat_1=20,lat_2=40,lat_0=30,lon_0=135,
+                llcrnrlon=120,llcrnrlat=20,
+                urcrnrlon=150,urcrnrlat=42)
+
+
+# In[29]:
+
+proj=Basemap(**lcc_values)
+
+
+# In[30]:
+
+# create figure, add axes
+fig=plt.figure(figsize=(12, 12))
+ax=fig.add_subplot(111)
+## define parallels and meridians to draw.
+parallels=np.arange(-90, 90, 5)
+meridians=np.arange(0, 360, 5)
+proj.drawparallels(parallels, labels=[1, 0, 0, 0],                  fontsize=10, latmax=90)
+proj.drawmeridians(meridians, labels=[0, 0, 0, 1],                  fontsize=10, latmax=90)
+# draw coast & fill continents
+#map.fillcontinents(color=[0.25, 0.25, 0.25], lake_color=None) # coral
+out=proj.drawcoastlines(linewidth=1.5, linestyle='solid', color='k')
+x, y=proj(longitude, latitude)
+# contourf the bathmetry
+CS=proj.pcolor(x, y, chan31_grid, cmap=plt.cm.hot)
+# colorbar
+CBar=proj.colorbar(CS, 'right', size='5%', pad='5%')
+CBar.set_label('Channel 31 radiance ($W\,m^{-2}\,\mu m\,sr^{-1})$', fontsize=10)
+CBar.ax.tick_params(axis='y', length=0)
+
+
+# **repeat for brightness temperature**
+
+# In[31]:
+
+# create figure, add axes
+fig=plt.figure(figsize=(12, 12))
+ax=fig.add_subplot(111)
+## define parallels and meridians to draw.
+parallels=np.arange(-90, 90, 5)
+meridians=np.arange(0, 360, 5)
+proj.drawparallels(parallels, labels=[1, 0, 0, 0],                  fontsize=10, latmax=90)
+proj.drawmeridians(meridians, labels=[0, 0, 0, 1],                  fontsize=10, latmax=90)
+# draw coast & fill continents
+#map.fillcontinents(color=[0.25, 0.25, 0.25], lake_color=None) # coral
+out=proj.drawcoastlines(linewidth=1.5, linestyle='solid', color='k')
+x, y=proj(longitude, latitude)
+# contourf the bathmetry
+CS=proj.pcolor(x, y, tbright_grid, cmap=plt.cm.hot)
+# colorbar
+CBar=proj.colorbar(CS, 'right', size='5%', pad='5%')
+CBar.set_label('Channel 31 Brightness temperature (K)', fontsize=10)
+CBar.ax.tick_params(axis='y', length=0)
+plt.show()
+
+# In[28]:
+
+
+

@@ -1,0 +1,178 @@
+today we are going to be making an nft and 
+i'm really excited to take you along this   process with me as it's the first nft i'm actually 
+making as well and when i'm doing this tutorial   it's i've read it the tutorial before but i've 
+never actually taken it so i wanted to make this   video to go through the process of simply that's 
+the key word here simply making nft that anyone   can make i've left down in the description a few 
+requirements you will need before we get started   one being you will need to install vs code 
+it's super simple to install i will link it   down in the description the other being you will 
+have to have node installed which once again   super simple and i linked it down the description 
+i chose this tutorial because it was very simple   to follow along very clear so whether you have 
+a ton of experience with coding or next to none   it's something that you can still follow along 
+with and build also i've linked the tutorial down   in the description so make sure to go check it out 
+it's from free code camp and i think they just did   a really wonderful job creating this tutorial 
+before we get into it though make sure to hit   that subscribe button for more tech coding 
+related videos leave in the comments if you   like the style of video going through tutorials 
+together and okay let's just jump right into it okay first things first before we even 
+get started or write any lines of code   we need a free virtual wallet to manage 
+our addresses or our ethereum addresses   for this tutorial they recommend using 
+metamask which we are going to use   it's a super simple chrome extension that we can 
+easily download so let's go ahead and do that   first things first i'm going to click download 
+now and we are going to use for chrome okay we got it running that was our first 
+step and i'm sure all of you were able to   successfully do that too so we are off to 
+a good start also it's important to note   we're not going to do this at this specific 
+step but you also need to download their   mobile app as well so if you want to pause and 
+do that now or we can do that together later on you can see here we have our meta mask we went 
+through the basic steps and we have made an   account next up we need some test ethereum 
+to play around with so for that it's really   cool they have a lot of different test net 
+account addresses that you can or type it put   in your address i should say and they will 
+give you test ethereum to play around with   for this one in this tutorial we are using 
+broxton robston i'm sorry for butchering that   ethereum faucet so first of all we need to 
+toggle the network to the test network and   then also get our account address so let's go 
+do that okay so you can see here that right   now we're on the ethereum mainnet but if we 
+toggle down we can see roxton test network   if you're not seeing this it's simply because 
+you need to go show hide test networks   and then ensure test networks is turned on from 
+there you can toggle simply to the test network   and then we go back to account and then we will 
+copy our account number here and then go to   fawcett.robstenbropston i feel 
+like i'm butchering this i'm so sorry   roxton and enter in your account address once 
+you've done that click send me test either no while we are waiting patiently i have a feeling 
+that we have to put real ethereum in here   because it's taking so long i'm assuming it's 
+because so many people are using this right now   which is pretty cool but anyways continuing 
+on for now our next step is to interact   with the ethereum network and to do so we 
+need to be connected to an ethereum node   that kind of reminds me of known node no 
+i've never really put two and two together   so what we have to do now is use alchemy as our 
+node provider okay now once you're done signing   up and going through the process i just did 
+everything for the free version which i'm sure you   do or will do as well you will now see what i have 
+on my screen which is the dashboard essentially   from there we are going to need to retrieve a key 
+which we will will use later on according to the   tutorial but for now let's get it so to do that 
+we need to click on view details and then view key and it says here to save the http key somewhere as 
+we will need it later so make sure to do just that i feel like we're doing pretty good here you 
+know we're we're learning together we're doing   this together it feels nice and i'm sure if 
+you are following along with this to just like   build stuff together especially 
+when it's your first time or   you're rather new to it just to feel like 
+you're not alone going through the process   and then as you know i'm just following a tutorial 
+as well but if you have any questions or get stuck   on anything feel free to leave them in the 
+comments i can't guarantee i can problem solve   what you are facing but i will do my 
+absolute best to through the comments   okay next up comes in my opinion the fun parts 
+we are going to start doing some coding actually   and to start with we will be using node so 
+if you don't have node installed i will leave   some directions down below to install node 
+i already do and i'm not going to make this   part of this tutorial but once you have 
+node installed we can do the following we   need to first initialize the project so first 
+we need to make a directory so in that case now they want us to make another directory   ethereum inside of the nft project we are 
+already inside the project as you can see i'm just entering for all of this okay next they want us to install hard hat 
+which is essentially a dev tool that they say   makes it easy to deploy and test your ethereum 
+software so let's go ahead and do just that i feel like this takes forever while it's 
+installing we could like make up a dance   or something how's it going what's going on i'm 
+just kidding i'm just kidding this might be weird   okay we're almost there oh sir come on some npm packages honestly take like 
+forever to install so i shouldn't be   complaining about this one okay we got it 
+going next up we need to do mpx hard hat okay so what do you want to do   we want to create an empty hard hat 
+config.js so we just use the arrow keys arrow key we just use the arrow keys to 
+get down to that and then we go enter   okay so for this tutorial they are going to 
+use next js so we need to go back to the   root directory of the project nft project and 
+initialize boilerplate next.js app called web   so let's cd back into the root directory okay there we go success now we can finally 
+finally get into some real coding so next up   they are saying we need to define our environment 
+variables one being the alchemy key that we   saved if you remember we saved that the https key 
+from our from our test project earlier so we're   going to run the following commands to make an 
+environment ins environment folder inside of our   ethereum directory or file sorry so we need a cd 
+out of the web folder and then back into ethereum okay so i'm pulling up here visual studio 
+code because the next step we need to do   is to actually go into our environment 
+file and then add in a few different things so we need the alchemy key our meta 
+mask private key and metamask address   i'm not going to obviously show you all my 
+keys and addresses but they do give really   good instructions to follow to grab 
+the private key as well so make sure to   follow those and if you have any questions 
+about that let me know down in the comments   okay we got the coffee we have the fuel to 
+continue to build our nft i'm really excited   about this i was telling paul that i was who is 
+filming he came with me for coffee that we were   building an nft and i mean i think that's all he 
+pretty much hears from me recently is about like   blockchain nfts crypto just because i think it's 
+so interesting as i know many of you do as well so   back to film back to the dungeon back to the 
+dungeon okay we are back so next what we   need to do is get everything set up for the smart 
+contract portion of the nfts so to do that we also   need to make a few more folders one for contracts 
+and one for scripts so let's do just that okay next up they want us to install open 
+zeppelin which is an open source library   with pre-tested reusable code to make smart 
+contract development easier i can't speak   today apparently the only thing i can do 
+is code so we better stick with the coding finally we are going to be able to start 
+writing the smart contract for our nft   so we're going to navigate to our 
+contracts directory and create a file   titled emotionalshapes.sol but obviously 
+you can name it whatever you choose okay and then if we go to take a look at this okay so in the project they talk all 
+about the different pieces of the code   so feel free to read about it more too i'm 
+not going to in this video or else i feel   like we'll be here for ever but the next 
+step is building the metadata for our nft next up we are going to make another folder 
+um in web on web and then inside the pages   so we are going to do that just in vs 
+code here i'm going to make a folder   so let's do that i told you we are doing 
+literally doing this together new folder pages okay and then here we are 
+going to make a dynamic route okay i'm not gonna lie i just spent the last 
+like 10 minutes debugging only to realize when   i created when i was installing some dependencies 
+i accidentally made a new folder called my app   within the web folder so when i was going to do 
+npm run dev and it was failing it was because i   was in the wrong folder this is the reality 
+sometimes it takes you way longer than you   want to do the most simplest things so if you are 
+struggling with npm rum dev make sure you can   check if you already if you did the same thing as 
+me and created an extra folder and in which case   i cd into my app and then did npm render okay you 
+can see here now we are successful in compiling   and we have we're inside i just did one dot js 
+inside my as you can see here web my app and   then this fla this file here 1.js and then as 
+you can see here whatever you put in this object   will show up on screen as the metadata so i'm 
+going to show you my screen here so for me i just   literally put for the metadata right now a board 
+triangle but feel free to put whatever you want   okay so as you can see this is the metadata 
+in here and it's a super easy thing to   do just go to localhost 3030 api into your 
+folder erc and then your folder your file id   okay next up when i'm going through the tutorial 
+we need to expose the metadata for our nft and   one of the things they say is because our app is 
+hosted locally other apps cannot access it so we   need to use a tool such as ngrok ngrok 
+maybe i don't know to expose it locally   to a publicly accessible url so we need to 
+make this accessible this url accessible   to expose the metadata so let's go ahead 
+and sign up for this and then once we have   signed up there is some instructions we need to 
+follow first thing being we need to go the   dashboard and get our auth token story and 
+then go to the terminal and run the command   so we have to download first for mac and then 
+once you're done downloading get your auth token   and then i've already ran these commands so 
+i'm just going to put on screen once you have   got to the page which is on my screen these are 
+the two commands they are saying to run so one get   your auth token and run the first which i will put 
+up here and then the second run this command   they say to create a tunnel to your web app 
+hosted on localhost 3000 which you can see here   okay on your terminal they give you an example 
+of what you should see i see mine but obviously   i'm not going to share it with you because i don't 
+want to share you my address and all of that but   i will put up on screen what they are sharing most 
+importantly let's go to it though to make sure our   endpoint is working correctly okay so you can see 
+here we still see the metadata and the description   this is good i know it doesn't seem very exciting 
+at this point but these are big steps we're making   okay we're getting close last thing we need 
+to do is to deploy our nft so first we need   to change the base uri function and put in 
+our nj rock address so let's go do just that   so you see here just put in below your address 
+which i'm hiding mine but you get the idea   okay they are saying to deploy our nft 
+we need to compile it using hard hat   so they are going to they say we need to 
+install ethers.js so let's do just that okay now they're saying to 
+update the hard hat config   i'm just going to copy the code they 
+have provided for us and do just that next up we need to run mpx hard hat compile make sure when you are running the mpx hardhat 
+compile you are still in the ethereum folder   i actually cd out of it and was trying to 
+run this and getting back to the beginning   but anyways make sure you are in the right folder   okay so we are creating a deploy.js file in 
+our scripts folder in the ethereum folder   once again going to copy the code they provide 
+us thank you free code count for being amazing   so now let's start seeing hopefully we can view 
+the nft on the blockchain so they say to run   the deployment script okay so when i run this 
+command for me and maybe for you too it might   say insufficient funds which i'll put on screen 
+if that is the case it's simply because your   test ethereum is still in queue i can see mine 
+i'm number four so i'll finish this video and view   the nft on the blockchain hopefully very soon once 
+we get that test ethereum into our account okay   so once you run this command when you have fake 
+ethereum in your test ethereum in your account   you should be able to get an address where you 
+can add to the rest of the url which is right here   and when you do that you should be able to see 
+your freshly deployed nft congratulations it's a   big deal it's pretty exciting when i first saw it 
+i was pretty pumped to small things so next thing   we need to do as i mentioned is mint nft which is 
+only a few steps we are almost there okay so first   thing we need to do is install ethers package 
+in the scripts folder followed by once again   just populating the mint js file with this code 
+provided in the tutorial okay one thing i want to   add is where it says your nft address that's the 
+one thing you are going to need to change within   this file so where to find your nft address is 
+go to this url here that you already went to   where you put in your the end piece of the address 
+from there click on where it says your hash your   hash it will say there'll be information of from 
+and to click on where it says to and the contract   the contract number that is where you put in 
+your nft address from there run this command   here that will give you a hash which you can 
+then enter in this url here and there you go   now it's time to put it on our phone okay you can 
+see here we have downloaded metamask onto my phone   and as well ensure you are on the test network if 
+you aren't on the test network you can just toggle   by clicking the top there and ensure you are from 
+there navigate to nfts and then you are going to   click on import nfts enter in the contract address 
+as well as the id for example i started with id 1   because in the nft metadata we have id 1 id2 
+and id3 once you have those two done click   import i'm not going to show you my address 
+but you get the idea and from there we have   our first nft mine is still loading but you get 
+the idea pretty cool okay we finished building the   nft seeing it come up on my phone was so rewarding 
+not gonna lie the second it did i was showing paul   i took screenshots and showed my family it was 
+pretty simple to do but it just felt really cool   to know that building this can be so simple and 
+straightforward and once again we just followed   along a tutorial but you can really modify this 
+and make your own nfts based on this based on   the nft metadata we used i'm curious to know your 
+feedback and thoughts on these kind of videos if   you like these more technical walk-through 
+videos please leave this video a thumbs up   also leave in the comments if you want to see more 
+of these videos more tech kind of walkthroughs or   coding walkthroughs and if there's any specific 
+technologies you want to see me go through if you   haven't already make sure to hit that subscribe 
+button for more tech and coding related videos   shout out to some of these subscribers here i see 
+you i love you you all are amazing thanks everyone you

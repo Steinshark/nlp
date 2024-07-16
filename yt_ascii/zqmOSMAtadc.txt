@@ -1,0 +1,170 @@
+one of the most common attributes folks imagine 
+when they think of trains is the clickety-clack   sound they make as they roll down the tracks. 
+the thing is, most trains don't make that sound   anymore. or really, i should say, most rails 
+don't make that sound anymore. trains are   still pretty clickety-clacky, but they're far 
+less so than they used to be. and here's why:   those rhythmic clicks and clacks came from 
+joints in the tracks.  those joints were a solution to a transportation problem: you can only roll out a length of rail so long before   it gets difficult to move them around. it's 
+easier to have short segments of rail that   can be bolted together in place. but, they 
+were also a solution to a thermal problem. you might be familiar with the idea of an 
+expansion joint: a gap in a sidewalk or   handrail or bridge deck or building meant to 
+give a structure room to expand or contract   from changes in temperature. i actually made a 
+video on that topic a few years back. the joints   on railroads were bridged by fish plates, 
+but with a gap, so on hot days, the rail   would have room to grow. but look for a joint on 
+modern railway, and you might have a hard time. we're in the middle of a deep dive series on 
+railway engineering, so don't forget to check   out the other videos after this one. a lot of new 
+track these days uses continuous welded rail or   cwr that eliminates most joints. large structures 
+subjected to swings in temperature that don't   account for thermal expansion and contraction 
+can run into serious problems or even fail. so   how do modern railways get away with it? i have 
+a bunch of demonstrations to show you. i'm grady,   and this is practical engineering. today 
+we're talking about continuous welded rail. as much as i enjoy a good conspiracy, the 
+railroad companies don't have access to some   kind of special steel that doesn't expand or 
+contract. rails really do experience thermal   contraction and expansion. in the us, they would 
+be installed in roughly 39-foot sections. in   general, tracks would be laid out so that on 
+the hottest days, the gap between sections   would just barely close. but, this style of 
+jointed rail (although it solved some of the   practical problems of railroad construction) 
+had some serious drawbacks, too. first,   it was noisy! the famous clickety-clack of 
+railroads was caused by each wheel passing   over each joint on the track. i'm a simple man. 
+i grew up listening to that clickety clack,   or as they say in korean, "chikchikpokpok". 
+it brings a certain nostalgia. but when you   consider how long a train is, and the fact 
+that most cars have at least eight wheels,   and that train journeys can be hundreds of 
+miles long, that's a lot of clicks and clacks. the railroad companies might say too many, because 
+noise is just a symptom. each time a wheel clacks   over a joint in the rail, that impact batters 
+the steel, eventually wearing it down at each   location. try as they might, railroads could 
+never make these joints quite as rigid as the   rest of the rail, meaning that (in addition to 
+the extra wear) they would create additional   load on the ballast below, and the flexing 
+would cause freight cars to rock side-to-side   in a phenomenon called rock and roll. all this 
+creates a maintenance headache, increasing the   cost of keeping railroads in service. and it's why 
+most modern railroads use continuous welded rail:   it's a huge reduction in the maintenance costs 
+associated with the wear and tear from joints.   in cwr, rail segments are welded together using 
+electric flash butt welding, arc welding, or in   some cases, thermite welding. these welds have 
+much higher stiffness than the old joints and,   of course, are ground smooth, so they lack 
+clickety clacks. but they still expand and   contract with changes in temperature like most 
+materials do. let me show you how this works. i've set up an aluminum rod on the 
+workbench with one end clamped down   and the other free to move. i put a dial 
+indicator at the end so we can observe even   tiny changes in the length of the rod. 
+you can see on the thermal camera that   we're already starting at a fairly warm 
+temperature; that's texas for you. but,   rather than wait for the weather to get even 
+warmer, i'll speed things up with my sunny day simulator.  notice the dial on the indicator 
+climbing steadily as the heat is applied. this is an example of unrestricted thermal 
+expansion. that just means nothing is keeping   the rod from growing under the increase 
+in temperature. and, engineers can predict   the change in length from most materials 
+with a pretty simple formula. multiply the   difference in starting and ending temperatures by 
+a coefficient of thermal expansion that's easy to   look up in a table. this aluminum rod expands 
+by about 0.002% for every degree celsius it   increases in temperature. steel is about half 
+that. structures like bridges with expansion   joints and jointed rail are designed to allow 
+unrestricted thermal expansion. when the hot day   comes, the materials expand into the gap. that's 
+usually a good thing. the structure doesn't build   up stress and stress is what breaks things. but, 
+part of the reason cwr can get away from expansion   joints is that changes in temperature aren't the 
+only way to change the dimensions of a material. i've set up another demo using that same 
+aluminum rod. this time i put it inside   this length of pipe and put a nut and washer on 
+both sides. i put the dial indicator on the end,   just like before. now, watch what happens when i 
+turn one of the nuts. well, if you're not careful,   the whole rod twists. but if you can keep the 
+rod centered in the pipe, and the nut on the   other end from twisting, you can see the dial 
+indicator registering the rod getting longer.   there's no change in temperature here; this is a 
+totally different phenomenon: elastic deformation.   turning this nut applies a tension force to 
+the rod, and it stretches out in response. just as all materials have a mostly linear 
+relationship between temperature change   and length change, all materials also have a 
+similar relationship between stress and change   in length (often called strain). if you stress 
+a metal too far, it will undergo a permanent   (or plastic) deformation. but within a certain 
+range, the behavior is elastic. it will return   to its original length if the stress is removed. 
+and just like the slope of the line for thermal   expansion is the thermal coefficient, the slope 
+of the elastic part of a stress/strain curve   is called the elastic modulus. and this is 
+part of the secret to continuous welded rail:   restrained thermal expansion. you can overcome one 
+with the other. let me show you a demonstration. here you can see me using a hydraulic press in a 
+way that's not exactly how it was designed. first,   i get this iron pipe set up in the press with 
+enough pressure to hold it tight between the   cylinder and table, about 3 tons. then i heat up 
+the pipe with the sunny day simulator. what do you   think will happen? will the hydraulic press break 
+as the steel expands, or something else? well,   it wasn't quite as dramatic as i was hoping, 
+but that little movement in the gauge still   corresponds to about a quarter of a ton of 
+additional force in the hydraulic cylinder.   you can kind of think of this in two separate 
+steps: the steel expanded from the heat,   but then the additional force from the hydraulic 
+press unexpanded it back to its original size. the   thermal and elastic deformations canceled each 
+other out and the pipe stayed the same size. in   reality, the force required to counteract thermal 
+expansion should have been more than that, so i   think the frame of my hydraulic press wasn't quite 
+stiff enough to hold the ends perfectly rigid. but   you still get the point: you can trade temperature 
+changes for stress and keep the material from   changing in size. with a little recreational 
+math, we can combine the two equations to   get a single one that gives you the stress in a 
+restricted material from a change in temperature. so that's just what railroads with cwr do: 
+they connect the rail at each tie to hold   it tight and restrict its movement, allowing it 
+to build up tensile or compressive stress as its   temperature changes. of course, too much stress 
+can fail a material, but steel can handle quite   a bit before it gets close to that. railway 
+here in texas can range in temperature from   below freezing to over 100 degrees f or 40 c. 
+that means every mile of steel wants to be more   than 2 feet longer on the hot days than the 
+cold ones. in metric, every kilometer of rail   would expand by roughly half a meter, if it wasn't 
+restrained. using the formula we developed here,   we can see that fully restraining the rail 
+across that temperature range results in a   stress of about 15,000 psi or 100 megapascals, way 
+below the tensile or compressive strength of any   modern steel, especially the fancy alloys they 
+use these days. but it's not quite that simple,   particularly for compression. just because a 
+material has a high compressive strength (and   steel does), that doesn't mean it won't fail under 
+compressive loading. let me show you another demo. we're back to the aluminum rod, but this time 
+i clamped both ends to create a restricted   condition. now watch what happens when i apply the 
+blowtorch. our equation says the rod should build   up stress so that the elastic strain is equal 
+to the thermal expansion. but that's not what   happens. instead, the rod just deflects sideways, 
+an effect known as buckling. even though aluminum   is relatively strong under compression, the long 
+skinny shape of the rod (just like the rails on   tracks) is particularly prone to buckling. 
+obviously, if a rail buckles on a hot day,   it's a pretty serious problem. the material 
+itself doesn't fail, but the track does fail   at being a railway since trains need rails 
+to be precisely spaced without crazy curves.   many train derailments have happened because a 
+continuous welded rail got too hot and buckled,   an effect colloquially known as sun kink. 
+so railroad owners have to be really careful   about compressive stress in a rail, and in the us, 
+safety regulations require them to follow detailed   procedures for installing, adjusting, inspecting, 
+and maintaining continuous welded rail. one of   the tricks they use to manage buckling is adding 
+restraint. i've got one more formula and one more   demo for you. the formula for the critical force 
+required to buckle a structural member like this   is pretty simple. notice that the force goes 
+up in inverse relation to the length of the   structural member squared. this is much clearer in 
+a demonstration. i have a length of welding wire,   and i can apply a force with my finger that 
+is measured by the scale. you can see it takes   about 375 grams to buckle the rod. but watch 
+what happens when i restrain the rod at the   centerpoint, effectively halving its length. 
+i can still buckle it, but it takes a lot more   force from my finger. it happens right around 
+1500 grams, exactly what is predicted by the   formula. halve the length, quadruple the critical 
+force for buckling. the spacing of railroad ties   is really important because it affects whether or 
+not a rail will buckle under thermal stress. and   one of the most important jobs of all that 
+crushed rock, called ballast, is to hold   the ties in place and keep them from sliding 
+horizontally and allowing the rail to buckle. the other way railroads use to manage buckling is, 
+i think, the most clever: just keeping rails from   undergoing compression at all. any continuous 
+welded rail has a neutral temperature which is   essentially the temperature it was the day 
+it was installed. it's the temperature at   which the rail experiences no stress at all. 
+if it's colder than the neutral temperature,   the rail experiences tensile stress, and if 
+it's hotter than the neutral temperature,   the rail experiences compressive stress. the 
+secret is that railroads use a really high   neutral temperature to ensure the rail 
+almost never undergoes compression.   the central florida rail corridor has a neutral 
+temperature of 105 f or just over 40 c. they   only install rail on hot days, and if they 
+can't do that, they use heaters to bring the   temperature up. and if they can't do that, they 
+use massive hydraulic jacks to induce enormous   tensile forces in the rails before they're welded 
+together. on cold days when stresses are highest,   they have to go out and inspect the rails 
+to make sure they haven't pulled apart,   but a small break in a rail is nothing compared 
+to a buckled track when it comes to the risk of   derailment, so it just makes sense to use as high 
+a neutral temperature as you can get away with. of course, you always get to the end of 
+a continuously welded section at a bridge   or older length of jointed rail. to keep 
+the cwr from buckling at these locations,   you need something more than a small gap. 
+instead, expansion joints on rails (sometimes   called breathers) use diagonal tapers. 
+this oblique joint allows train wheels   to transition smoothly from one section of rail 
+to another while still leaving enough room for   thermal movement. and joints are also needed to 
+break up the electrical circuits used for grade   crossings and signals. so railroads often use 
+stiff plates surrounded by insulation material   to electrically isolate two sections of rail 
+while keeping it stable in the field. we'll   cover track circuits in a future video 
+of this series on railway engineering. even with its challenges, continuous 
+welded rail extends the life of rails   and wheels and makes for a much smoother 
+and quieter ride. even if you're nostalgic   for the soothing clickety-clack 
+of jointed rail, it's comforting   to know that railways are continuously 
+innovating with continuous welded rail. this video had quite a bit of math to explain 
+what goes into designing railways for thermal   effects. i do my best to stay out of the weeds 
+when it comes to formulas and equations, but i   do like to give you a peek behind the curtain 
+and show what engineers actually do sometimes.   i don't want anyone to feel intimidated, but 
+the truth is that even simple math and algebra   form the basis of engineering, and if you want to 
+understand the topics that i cover more deeply,   knowing a bit of math will take you a long 
+way. today's sponsor brilliant.org makes   that not only really easy, but also free, with 
+fun and interactive lessons from the basics to   really advanced topics. brilliant has been 
+sponsoring practical engineering videos for   six years now. it's the longest partnership i 
+have. and i think the biggest reason for that   is people watching this channel just keep finding 
+value in learning new things in this interactive   way. that and they keep adding new lessons every 
+month. brilliant looks a lot different now than   it did back when they first started sponsoring 
+the channel, and by that i mean a lot better. i   keep finding new topics to brush up on, like 
+this series on creative coding that uses a   built in interpreter to show you how to connect 
+visual elements with code. we learn best not by   reading or hearing but by doing, and that's why 
+i love brilliant. the lessons just stick better   when you're actually using the information 
+while you learn. you can try this completely   free for 30 days and see if it's something 
+that can help you get ahead in your career,   get better at a hobby, or just enjoy the 
+process of learning something new. go to   brilliant.org/practicalengineering or click 
+on the link in the description below. i really   like this product and i think you will too. thank 
+you for watching, and let me know what you think.

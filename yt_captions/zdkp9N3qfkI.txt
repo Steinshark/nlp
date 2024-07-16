@@ -1,0 +1,125 @@
+Engineering nearly always involves
+assumptions and simplifications there are just too many variables in the real
+world to keep track of them all so we simplify we neglect the variables that
+don't matter and we make assumptions about the variables we can't measure or
+predict but what happens when one of those assumptions is wrong one of the
+most basic assumptions made by engineers who design pipelines is that those
+pipelines only carry the fluid that's intended but that's not always the case
+hey I'm Grady and this is practical engineering on today's episode we're
+talking about airlock in pipe systems this video sponsored by hellofresh
+America's number one meal kit is it hell of fresh calm a use code practical 10
+for 10 free meals more on that leader put simply airlock is a constriction and
+flow that happens when gas gets trapped inside a pipe that's the answer to the
+title of this video but it's not very satisfying on its own in fact if you're
+as curious as I am it just leads to more questions the first three that come to
+mind are where does the gas come from how does it get trapped and why should I
+care we don't normally get to see inside pipelines and observe how they work so I
+built a little model here in my garage we can use to talk about air lock how it
+happens and why it matters the first question is where does the gas come from
+it might surprise you to learn that getting gases like air in liquid
+pipelines is somewhat inevitable sometimes they sneak in by being
+dissolved into the liquid like carbon dioxide is dissolved in a coke most
+liquids have at least some dissolved gases even the water coming out of the
+tap often has a certain amount of dissolved air this gas can come out of
+solution when the fluid is warmed or agitated or if it goes through a
+chemical reaction another potential source of gases in liquid is leaks
+through damaged areas or loose fitting joints if these occur in an area of the
+pipe with a pressure below the ambient air pressure air can leak from outside
+the pipe into the line but I haven't mentioned the most obvious source of air
+after all when you buy a pipe from a manufacturer it doesn't come pre filled
+with liquid it starts out empty or more accurately
+it starts out full of air when you add liquid to a pipe that's full of air
+whether it's for the first time or after the pipe was drained for maintenance
+that's a perfect opportunity for it to be trapped which leads me to the second
+question how does gas get trapped this one's a little easier to answer because
+gases are so much less dense than liquids they almost always float that
+means any high spot in a pipe is susceptible to trapping bubbles and
+unfortunately avoiding these Heights is often easier said than done take the
+example of an irrigation line on a farm these lines can't be buried because they
+need to be moved from time to time so they sit on the surface of the ground
+and as such follow the natural contours with low spots and valleys and high
+spots over hills and embankments these high spots are perfect traps for air
+even if the pipes can be buried like water or petroleum pipelines it's not
+always feasible to avoid undulations after all the deeper you dig the higher
+the cost often it just makes sense to follow a ridge or hill up and back down
+rather than going straight through in buildings and houses fresh water and
+heating lines have to avoid all sorts of obstacles which often means routing them
+in ways that create high spots which can trap air bubbles the same is true in
+industrial settings for a wide variety of types of pipelines
+you might be thinking big deal air gets trapped where it's not supposed to all
+the time that's why we have burps and farts and
+bleed valves on brake lines but the thing you have to remember is that air
+takes up space it doesn't necessarily seem like it out
+in the open but when it's trapped in a pipe it's taken up cross-sectional area
+that could otherwise be used by flow it's a constriction just like a kink in
+a rubber hose which means it can cause a serious reduction in flow rate pipes can
+be expensive and the bigger they are the more they cost so engineers try to use
+the smallest pipe possible to meet the specific need if you've got a bunch of
+air trapped in your pipe that's taking up valuable space without any
+contribution to the flow rate designing pipes is an exercise in managing energy
+the fluid starts at one end with a certain amount of it and the flow rate
+depends on how much energy gets lost as it makes its way to the other end
+Engineers use a graphical tool called the hydraulic grade line to show this
+visually the line represents the potential energy available in the fluid
+at any point along the pipe it's also the level the liquid would reach if you
+were to tap in a vertical stand pipe at any location along the pipe the
+hydraulic grade line slopes downward along pipes as the fluid loses energy to
+friction it also drops steeply at sharp bends and vows which can cause
+turbulence in the flow and you know it also causes a loss of energy airlock in
+fact as the bubble grows and grows in the pipe you end up with a condition
+called waterfall flow you can see why it's called that in the demonstration in
+this case you lose the energy equivalent to the height of the waterfall which is
+easy to see on the hydraulic grade line unlike friction or turbulence in the
+pipe this doesn't depend on flow and it adds up every undulation in a pipe with
+a trapped bubble of air is going to rob the fluid of this energy and if the
+hydraulic grade line drops below the outlet of the pipe you won't get any
+flow at all that's the definition of airlock also called vapor lock a pipe
+that doesn't flow is not very useful so we've come up with a bunch of ways to
+deal with this problem the simplest but not necessarily the
+cheapest is to deal with the airlock with a bigger pump you can be okay
+knowing you'll always have trapped gas in your pipe if you can use more
+pressure to overcome the energy losses associated with airlock that's not
+always feasible though consider a long pipeline with lots of undulations if you
+use a single pump to overcome all that air lock the pressure rating of the pipe
+near the pump will have to be enormous the second option is just to design
+pipelines that don't trap air if the flow of the fluid in your pipeline is
+fast enough trapped air will just be blown out and if there aren't any high
+spots in your pipes there won't be anywhere for it to be trapped in the
+first place again that's not always feasible consider a pipeline moving
+water from one end of a hill to another drawing a straight line between points a
+and B is easy but digging a trench this deep to install the pipe or worse
+tunneling it is not an inexpensive endeavor the other option is to bleed
+the gas through a valve pretty simple in some cases but not necessarily in all
+cases cities don't want to send out technicians to bleed the air out of
+pipelines every day so many pipelines are equipped with automatic air release
+valves these are a simple but clever solution for releasing air from the high
+points without any human intervention I built an example of this by gluing the
+float to a check valve when there's no air in the pipe the float holds the
+clothes but when a big enough air bubble grows in the pipe the float acts like a
+weight and pulls the valve open venting the air from the pipe
+keep an eye out for these type of valves when you're perusing the constructed
+environment and now you'll know how they work the job of an engineer is to take
+the signs and knowledge we have and apply that to design completely new and
+sometimes untested systems it almost always involves making assumptions and
+if you make bad assumptions you get bad answers and ultimately bad designs
+that's certainly true for airlock where if you assume that gases don't get into
+pipes or that they can't constrict the flow you might design a pipeline that
+doesn't work luckily for engineers this is a well-known phenomenon in pipe
+systems it's just one of the many complexities that come with the job and
+we've developed a lot of creative ways to overcome it
+thanks to hello fresh for supporting practical engineering this is not a
+cooking channel and I'm an engineer not a chef but one of my wife's and my
+favorite thing to do is spend time together in the kitchen hello fresh
+delivers seasonal recipes and pre-measured ingredients right to your
+door it turns the chore making dinner into something that we look forward to
+all day oh my gosh it's like somebody's been stirring in that pot with a fork the pre-portion ingredients means
+there's less prep and less food waste I want you to do mine in the shape of a
+heart and our favorite part is that the recipes are things that we either
+haven't tried before or wouldn't have chosen on a normal meal plan things are
+getting here if that sounds like something you'd like to try hellofresh
+is offering a special discount to fans of the channel visit hellofresh calm and
+use code practical 10 a check out for 10 free meals including free shipping yeah
+pour it really slow and seriously if you sign up try to get this bibimbap recipe
+because it is one of the best meals that has ever come out of this kitchen oh
+they're so pretty again that's hellofresh calm and use
+code practical ten thank you for watching and let me know what you think

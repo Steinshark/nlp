@@ -1,0 +1,215 @@
+i like rugby but i'm not a good player at it; 
+there are some interesting consequences of the   rules i want to explore, and this is actually 
+a famous piece of applied maths about a real   world sporting problem. and i'll explain some 
+of the rules here just for clarity; you can   score points by putting the ball down over a line -
+it's called a try - very like in american football   a touchdown. point about this though is that once 
+you've scored a try in rugby you then also get a   chance to get some bonus points with what they 
+call a conversion where you kick over the posts. so full disclosure, in american football you put 
+the ball down over the- as a touchdown, you   then get to take the kick from in front of 
+the post. is that right? i think that's right?  never played american football but i'm 
+reliably informed. in rugby you cannot do that;   you have to take the conversion kick somewhere in 
+line with where you put the ball down. so if you   put the ball down right at the edge of the pitch, 
+like close to the the touch line - which is quite   common because people are sort of bleeding you out 
+there as you get tackled - you have to take a kick   really close to the touchline, but you can choose 
+how far back to take it. that is our question: if   you have the choice, which you do every time you 
+score a try, how far back should you take the kick?  if you are really close if you like then you can 
+imagine the post being at a weird angle; but if you   go really far back - i mean technically i think you 
+can go to the other end of the pitch but i don't   think it would be clever for a range of reasons. even 
+if you are a good kicker, unlike me.
+- no we can't! (brady: it's in!) (first time)
+- the real issue is that maybe your 
+advice would change. so let's get this one   thing out of the way; if you put the try down 
+under the posts you have to take the kick in   line with that. and there isn't really a problem 
+here, you just go back far enough that you can get   it over the bar; and there's no worry because the 
+further back you go the narrower the angle looks   because you're further away. obviously if you 
+try and take it from the try line itself you're   going to struggle to clear the thing. but it's the 
+first modeling thing i want to get out of the way,  is that let's just assume that under the post 
+is not a problem, you take it close enough and   you're fine. if you put a try down to the side 
+of the posts - and this is where i want to show   you on the diagram. so here's a picture of rugby 
+pitch, i've got a nice 3d model, i think you   might recognise the software, this is geogebra.
+so this point here is where it's called the   try, i need to take a kick somewhere 
+in line with that. and if i move this point   the line moves up. we just talked about 
+going under the posts, no big deal. so   if you're to the side of the post you 
+can imagine taking the kick from over here, looks a bit difficult if i sort of zoom the view 
+around - like it's a terrible angle. but if you take   the kick from really really far away it's arguable 
+that maybe you've got a better angle but the range   starts to become an issue. and if you go really 
+far away, like way down the other end of the pitch,   the goal is just a really long way away. and 
+even if the range isn't a problem the angle   is narrowing because you're getting further away 
+from it. so the question i have here is how do you   best get the angle of the posts to be maximized, 
+because that's going to be what matters for your   accuracy of the kick. there are some other things,
+like can you clear the crossbar? we've talked about   that a bit - if you're too close it's going to be 
+tricky. incidentally there is- there's a five metre   line on the rugby pitches here. and i think a good 
+rule of thumb is that at the angle most people kick   at, about 30 degrees they say, as long as you're 
+a distance the other side of that line you're   likely to be able to clear the crossbar so we 
+can just dodge that part of the model.    (you're saying if you're closer than that it's almost too steep?)
+- yeah you're going to have to sort of   do a proper chip and actually that's really hard 
+to give any power anyway, and it's just unnatural. i looked up apparently 30 degrees is roughly 
+what a good kicker will kick at, and at about 26   metres per second goes a long way-
+- (you mean 30 degrees up, not 30 degrees angle?)
+- 30 degrees elevation   yeah. everyone thinks that 45 degrees is the 
+best but it turns out if you as a kicker, if you   kick and aim to do 45 degrees you lose a lot of 
+power because it's not the way your your leg   moves. so this is the real model, look at the 
+rugby players and they kick it about 30 degrees. and that also is going to solve a problem 
+with range, is that if they do that and they're   professionals they can kick a long way, like maybe 
+beyond 30 metres. which means even if you went to   the halfway line there's still a chance that you 
+could get it long enough if you could- i'm aware   that i should probably go and try this but i 
+don't think i could do that. but that means the   modeling is really how do you get the best angle? 
+and the extremes are - i know you like thinking   about extremes - if you're really close to the try 
+line the angle is going to be really narrow, we saw   on there, and if you're really far away it's 
+also going to be narrow. somewhere in the middle is   an optimum, and that sounds like a task for maths.
+so that's our job. the first thing to do is to draw   some diagrams, so i'm going to show on here a angle. 
+here is the angle, they call it the angle subtended;   most people have never heard that word unless 
+they remember some circle theorem from school, but   it's the angle that the posts make to your point 
+here. and you see that actually the measurement   here, if i'm really close to the try location,
+the angle's down to three degrees. that's a super   narrow angle, and if you're really far away 
+it goes down to single digits as well but   somewhere in the middle i'm into double digits, 
+10.11 degrees angle - that's looking like a best   place. but where is the best place? and does it 
+change when you move your try location around?  yes. and i don't think it's obvious. so i- if you 
+interview rugby players about where they do it   i am sure that they are solving this problem every 
+day without doing a hefty amount of maths. but if   you got down to it, and this is now big business 
+in sport, getting those margins optimised; even   if there's a place that you should take it from 
+and then you adjust for your range and the wind   distance and how tired you're feeling it would 
+be good knowledge and i think we should solve   it. let me draw a rugby pitch; those are- this is my 
+idealised goal posts and let's say we're working   here and you score try there, this is the line 
+that you are allowed to take a kick from. and just   to clarify, let's say you take the kick from here 
+then this angle is what we're trying to maximise.   call it theta, let's call it theta. really close 
+in, the angle is going to be tiny; really far away   the angle gets smaller as well - there must be 
+some optimal thing, how do we find it? now you   could do this the long way. i recommend it as 
+an exercise for any interested parties, you'd   need some calculus because we're optimising, we're 
+maximising something, and it gets super messy so   don't do it unless you're brave. there's a better 
+way - and this is quite common in mathematics, is   that sometimes you just need to draw a better 
+picture. there's a few things you should know,   this is the distance between the posts, actually 
+i think it's 5.6 metres. if you change the rules   of rugby though we can still work with d. and the 
+distance we score the try at i'm going to call x   and that's to the middle of the post. so it feels 
+like a good place to measure where you score the   try. so that's our variable x, and what we're 
+trying to decide is this distance here, let's   call it y.
+- (how far should you pace back with the ball and take your kick.)
+- yeah so mathematically   we're trying to find a function of x - so y 
+equals something to do with x - practically you   said exactly the same thing, which is how far
+should you go back from where you put it down.   any three points you put on paper, or anywhere 
+else, you can draw a circle through, a unique circle   through three points. and there are three points 
+we care about here, which is quite important: the   left post, the right post, and your kick position 
+that you may or may not choose. wherever you choose   there is a circle that goes through those three. 
+there's a thing that people learn in schools about   circles, with a whole bunch of circle theorems. 
+circles have beautiful properties and one of   those properties is in play right here because 
+this circle crosses the blue dotted line there, that's why i went through that, but it also crosses 
+here. and if i draw the other angle from there we've got in the uk, a gcse level circle 
+theorem going on here, we've got a segment   or rather a chord across a circle, the segments 
+the other side of it, subtending an angle on the   edge of the circle. and the theorem says that angles 
+subtended off the same chord are the same. now this   is nothing to do with where you've kicked from, 
+but it's showing us that if you chose to kick from   there you would get the same result. which means 
+whatever distance you choose there is another   place where you get the same angle. maybe this 
+is not a surprise; close in it's going to be   narrow, and really far away is going to be narrow. 
+so you're seeing those pairings and the circle is   backing us up. but here's another observation: so 
+if the circle is really big you can have a long   thin angle coming out here and the angle is going to 
+be small; if the circle is small then the angle is   going to be bigger. what we want to do is minimise 
+this circle, and you might begin to see from this   diagram how you could do that. it's easier to see 
+if we make it move, so let me show you on on the   moving version here. turn on the circle here - that's 
+the same circle you can see that i drew and you   see that it's drawn both angles i've got. so let's 
+make these angles even more separate, you can see   if the angle is really small the sort of pairing 
+angle is further away. i mean i don't want to   drop the spoiler in here but maybe brady you have an 
+instinct about how to make that angle bigger? like   what what would you want to be true about these 
+two angles for that to be as big as possible? (well i feel like it should be the point where 
+they're on top of each other, where the circle)  (touches the line, yeah there.)
+- yeah bingo. i mean certainly if you look at the numbers we're at   nine degrees there, it's going down that way and it 
+goes up back nine then it goes down again that way.  (there must be one angle that doesn't appear twice 
+or that's the same angle to us?)
+- and it's exactly   what you said about touching, technical maths 
+word, tangent, that where that line is a tangent   to the circle is going to be where the top two 
+versions of the angle coincide and we've got the   biggest possible outcome. and that means we've 
+got a really simple geometry problem to solve, and that's it. so let's solve it. it's quite 
+hard to actually draw this because it's not   obvious to me where the circle is that you said 
+needs to just touch it, but it's got to be sort   of just touching here, so eyeballing it some- 
+something like that? sort of touching isn't it.  yeah, it's close enough for numberphile sketches. what- have i said this before on numberphile? maths is the   art of reasoning from dad drawings. so the angle 
+here, the the point that we're after, is the angle   where there's the point where both of these 
+angles have coincided. this has got to be just   touching which also means we get a- another circle 
+theorem kicking in which mean that the radius   of the circle is at right angles to the tangent.
+that's another circle theorem you learn age   16 roughly in the uk. and there's one other fact 
+which is now true that wasn't true before which   is that that distance x is now the radius of 
+the circle. which means any other line from the   centre to the edge is also a radius and also x 
+so in particular that line there is x. and if i   draw one extra line- we mentioned before this 
+this centre of the post is really kind of the   centre of everything so if that's on here you 
+realise that this is a right angle triangle.   and we know some things: we know this distance 
+is d over 2 - in actual practice it's 2.8 metres. this distance here is y, it's the sort of parallel 
+version here, and we know that part of the triangle   is now x. and that's crucial because we've got 
+a right angle triangle, we know all three sides,   pythagoras is waiting for us. i'm just going to 
+write down pythagoras' theorem on this triangle,   we've got x squared equals y squared plus d over 
+2 squared. and we kind of want it the other way  around, we want y in terms of x so that you put 
+the try down, you know x, how far do you go with   y? you get y equals - i'm doing it in one step 
+and the viewers may be horrified, i'm going to   take the this one over and square root everything. so 
+it's the square root of x squared minus d over 2   squared. that is the formula which every rugby 
+player when they score a try does not use.    (just to be clear here; so the distance i walk back to 
+take my kick is where i scored the try from)  (the centre line squared, minus half the width 
+of the goals squared, all square rooted?) 
+- yeah   i think that's quite tough to do in 
+your head, even if you memorise the width of the   goals. and and i am really keen to point out 
+before anyone's like just knocks me down for   being stupid, nobody would ever really want to do 
+that calculation. so the art of modeling things   is to get some sort of rule of thumb which is 
+maybe a good way to get that calculation done   approximately. and i think approximately is all 
+we're after here. the reason they don't use it,   and this is something which i haven't heard talked 
+about lots although i'm sure people have noticed   it, is that there's a much quicker way to get very 
+close to that answer. the art of modeling things   is to get some sort of rule of thumb which is 
+maybe a good way to get that calculation done   approximately and i think approximately is all 
+we're after here because there's going to be wind   and i'm going to be tired and kicking a ball;
+everything's going to change, the spin of the   ball in the air, all sorts of things are going 
+to change it but we've got a starting point.   but let's have a quick look at what it looks like 
+if i plot it. so on my diagram here i've got 'show   locus of best spot' by which i mean as i move 
+the try location around, the best spot location -   which i'm going to turn on as well - so the best 
+spot you can see actually- let's just move around   so you can see. your earlier instincts were 
+pretty good. that's our kick spot, the blue one   is marking the best spot. so- and you can see the 
+red circle is the one that we sketched just now,   it's the tangent circle. but if i show you how that 
+point moves as you drag the try location around; unsurprisingly it's getting close to the 
+goal as you get close, but then something   funky happens there that's hard to tell. so 
+let's just trace this point which is this,   the yellow line is the locus of the best points. 
+it is not a straight line, it has a funky curve here.   in fact this is a hyperbola, it's a rectangular hyperbola-
+- (it looks straight from here.)
+- it is   kind of straight, if i spin this round 
+or maybe view from the top, you can see   if i zoom out that it has this this curve 
+as you get close. but then it does look like   it's pretty straight, and there's a reason for 
+that, because the hyperbola has an asymptote.   you probably recognise a hyperbola and i'm 
+sure you don't need me to point out, but let's   point it out anyway, the graph of one over x 
+looks like this. in fact there's another one   down here. it's that sort of shape we're after, 
+it has asymptotes going on here. in fact the   one we're looking at is a little bit more 
+like it's heading off in that direction as if that's the centre of the of the posts.  but the- the point is the hyperbola has 
+an asymptote and it is a straight line   as you go in the long distance. and here's the 
+catch, if you look back at the formula, if x is   big here then as you increase x this d just never 
+increases and so you could maybe arrange for x to   be super big it would just dominate this thing - 
+and basically it's irrelevant. if you cover that   up you've got y equals the square root of x 
+squared - otherwise known as y equals x - which   is a 45 degree line. which means if i go back 
+to my diagram and sketch the 45 degree line it's pretty much that line. in fact if i show 
+the rule of thumb which is me just plotting a   45 degree line on here, this red line running 
+down here is pretty much exactly the same. in   fact it's overlapping for most of the pitch, 
+the only place where it doesn't overlap and   the curve kicks in is really close to the goal 
+and my advice is you're too close to the goal   anyway at that point. so here's the rule of thumb, 
+and i don't actually know if rugby players are   thinking this, but 45 degrees from the centre 
+of the goal posts. which means pacing, which   is what you said earlier, is dead simple. if you 
+paced out 10 paces where you put the try down,   pace out 10 paces. there's a few catches though.
+because modeling is- this is assuming all   sorts of things like that you can kick it far 
+enough - and i think if you start to get into the   realms of like asking me to kick it, then maybe 
+my actual range would start to mean that   if even if that's the best angle it'd be much 
+better for me to be closer because i'm rubbish.  what's the wind doing? and there's a big 
+kicker which we haven't pulled down, i'm not   going to do it, but we're in a 3-dimensional 
+world and we've been doing it as if we're just   looking down flat and actually the angle we want 
+to measure to the posts is not flat on the ground,  it's up a bit.
+- (because the crossbar?)
+- because the crossbar. you've got to clear the crossbar as well.   and i think that would change the analysis. i think 
+it does- doesn't change the outcome very much but   this is what modeling does,  you start to include 
+the complexities; life gets a lot harder and you   maybe only make a tiny incremental gain in advice. 
+and i think at this point the inaccuracy is out on   a pitch when you're tired and the wind's blowing 
+means that 45 degree rule of thumb is a pretty   good way forward and that's what i'm going 
+to do every time i play badly rugby from now on. why not brush up on all things angle 
+related with this trigonometry   course from brilliant? i feel like 
+i shouldn't admit this, but i can't   really remember how sine and cosine and tan 
+work; never mind, brilliant has me covered.   and their courses are so interactive, you can see 
+what i mean here, love this stuff. brilliant's just   bursting with courses, lessons and questions to get 
+your brain buzzing, and they're adding more stuff   all the time. they cover all manner of complexity 
+and ability; whatever you want you're gonna find   it. and if you're already using it, why not give 
+brilliant as a gift to that learner in your life?  there's a 20% discount when you sign up with our 
+url, brilliant.org/numberphile - that's down in the   description - and they also have a 30-day trial so 
+you can give it a test run, see what you think. i've   met numerous people who work at brilliant 
+and they're all so passionate about these creations, about making people smarter; and i also 
+appreciate them sponsoring this numberphile video. ...so as i just discussed, that this should be more 
+than twice this. and so now we can compute the the   cross ratio for these four points, and for these 
+four points, and i should get the same answer.   so that's as quick as it can happen, so say now 
+there's a red card we could research a fact   about that red card, say it might be the player's 
+eighth red card, only two players have got more...

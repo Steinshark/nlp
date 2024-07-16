@@ -1,0 +1,74 @@
+- hey guys, this is austin. today we're going to be building myself a brand new gaming pc rig. it has been quite a
+while since i've actually built a system that's
+going to be for my own personal gaming exploits,
+and it seems like a good excuse to do
+another pc build tutorial. to better hone my fortnite skills, dave, we've got some pretty high-end hardware. most of that is thanks to intel who were awesome enough to sponsor this video. first of all, we have
+the 32gb optane module. we're actually going to be doing something kind of cool with this a little bit later with our steam drive,
+but we also have this; the holy grail of gaming cpus, the core i7 8086. what separates this from
+a standard core i7 is while it's still going to have that same six-core design, it's going
+to be clocked even higher. the boost clock on this guy is 5ghz and that's out of the box. as a k-series processor, we can overclock it even farther, although 5ghz is pretty fast. for the case, i'm using the nzxt h700i. this is a very large case;
+it actually does support eatx motherboards, as i almost
+cut myself with the knife. that would've been bad. but one of the main
+reasons why i wanted to go with this is because
+this is my new build that i actually wanna use for a while and i wanna be able to
+have plenty of expansion. with my setup currently as-is at home, space really isn't an
+issue, so it should be no problem to be able to fit this guy underneath the desk. before we get too far into the build, one of the first things i wanna do is start swapping out some fans. this case actually does have quite a few. it has three 120-millimeter fans up front. the problem is is that they're not rgb, and of course we need rgb. the next step of the
+build is the motherboard, so we are using the asus prime z370-a. asus generally makes
+some pretty solid boards, in fact they make some of
+the best boards period. and on top of that, we're also trying to unify everything around aura sync. whether we'll actually
+get everything onboard is another story, but
+this should do the job. one of the nice things about going with a z370 board like this is that we're going to be able to support not only our m.2 ssd, we
+can also take advantage of optane at the same time. we're going to be using
+optane in a little bit of a different method than usual. typically speaking, you
+would pair this with a standard mechanical hard drive, you would run windows,
+absolutely everything on it, and the advantage is that
+this is going to give you a much, much faster
+response time on things that you're going to be using
+on a regular basis. think about windows, your main programs. anything that the system sees that you're constantly using, it will keep stored in the optane cache. but for this video, we're
+actually going to be taking advantage of this
+for a steam library. inside this very plain
+box, we have what is a pretty plain-looking hard drive. but this, my friends, is
+something kind of special. this is a full 14-terabyte
+toshiba hard drive. not only is this basically
+the biggest hard drive that you can get your hands on today, but this paired with
+optane means that we're going to have 14 terabytes of some very, very fast storage. if we really wanted to go
+crazy, we could've picked up 14 terabytes-worth of ssds, but that's going to be ridiculous and it's also going to
+be really expensive. and yeah, that 14tb
+hard drive isn't cheap, but at $550 plus the
+cost of an optane module which is really reasonably priced, we're going to be getting
+a lot of the speed, but in a much, much simpler and much less expensive package. installing optane memory is going to be very straightforward. we just need to line it up and then, if we use a single screw,
+we can hold it into place. the only thing you need to keep in mind is whether or not your
+motherboard actually does support optane memory. what are you doing? oh, okay, okay. in addition to being
+useful when you're building your own pc, optane is
+available in pre-built systems such as desktops and
+laptops, some of which i've already taken a look at very recently. for the rest of our system storage, we're going to be using
+a samsung 970 pro ssd. this is not going to
+be strictly necessary. technically we could run everything off of the 14tb optane setup,
+but what's not to like about a little bit of extra
+overkill in our lives? now comes the sad part;
+cutting the factory seal on one of the very few 8086's that are left in the wild. it's going to a good place. try to be very, very gentle with this. with the 8086 onboard,
+it's just a matter of lining it up with our processor, not using the super cool asus tool, and we should be good to go. we also have some memory, by the way, in case anyone cares. we've got 16 gigs of g.skill sniper x, which should give us plenty of speed, especially considering this is actually rated up to 3400mhz. progress. we have our motherboard inside the system. we also do have our cooler. because we do have such a high-end cpu, we did opt for a 240-millimeter
+all-in-one cooler, so this is going to be
+the corsair h100i pro with extra rgb because ken thought rgb would be a good idea for this system. on top of that, we also do have our 14tb hard drive installed. it's going to be tucked around back, so it's gonna be right here. but the important thing is is that you don't wanna look at that, you wanna look at the
+cool stuff like this; the gtx 1080 ti, which was graciously
+donated for three days by a good friend of ours
+who shall not be named. he wanted to be anonymous. this is the rog poseidon platinum edition of the 1080 ti. what's interesting about this card is it actually has built-in cooling for not only water, but also liquid. wait, did i just say
+water and liquid? (laughs) because this is a hybrid
+card that can be used with liquid or air cooling, it should be pretty easy
+to integrate in the build. with that, we have what is basically the completed build. all that's left to do now is tidy up the cable management, put
+the case back together, and see if this actually is going to work. my favorite part of any pc build. after a night of windows updates and cable management,
+the next step is to get intel optane memory up and running. the first thing we need
+to do is make sure that everything is set up in the bios. not only do we have our 14tb drive showing up here, but
+importantly we also have intel rapid storage technology turned on. then you just need to install the intel optane utility,
+and after a quick restart, we're going to be able to
+see that not only is our optane module showing
+up, but we also have our sata drive, which in this
+case is the 14tb guy. so now if i just hit enable, (laughs) this is so unnecessary. they did not have to make the
+(laughs) animation so cool. we now have an intel optane volume with 13,039 gigabytes. windows just sees it as a single drive, which is one of the advantages of optane, so you don't need to do any kind of switching back and forth. it's going to be able to do
+everything in the background. if we just go ahead and
+create a new volume, should be able to ... just mount it there. okay, we're formatted. if i open up our drives, there we go. we've got our optane drive, which looks like it's
+gonna be totally fine. right now i'm just copying
+over a single steam game which is going to be pubg, but one of the advantages
+of having 14 terabytes for our steam drive is
+we can install, what, like 175 75-gigabyte games. that's like all the games. and with that, my new
+pc build is complete, unless you count jay's graphics card, which i should probably give him back. but luckily for us, there's going to be a new graphics card soon, so maybe stay tuned for that. give me a little bit of time to download 14 terabytes of games. i can do a part two to this video, right?

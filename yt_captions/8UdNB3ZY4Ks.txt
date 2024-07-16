@@ -1,0 +1,190 @@
+In mid-October 2023, the Japanese company
+Canon announced their FPA-1200NZ2C nanoimprint lithography or NIL machine. The technique works like a stamp. Canon says that it can print features suitable
+for a 5-nanometer class chip. But how does NIL work? And what is the catch? In this video, let's do a deep dive into nanoimprint
+lithography. ## Beginnings Optical lithography is one of the steps of
+the semiconductor manufacturing process. It is called optical because we use high-energy
+light, a sophisticated optics system, and a light-sensitive chemical called a resist
+to stencil a pattern onto a wafer. After that we do etch to make the pattern
+permanent. Lithography is not the only step in the process
+- the test and metrology guys send me passive-aggressive emails to remind me. But it is frequently seen as having the most
+economic value because it often establishes the limit of how well the design performs. Optical lithography is not the only lithography
+out there. But going optical offers compelling benefits. Yes, it gives you high resolution and tight
+pitches, which are obviously important as we scale down Moore's Law. But other lithographies can give you that
+too. For instance, electron beam lithography has
+feature sizes below 10 nanometers. But it is slow. Optical lithography can offer throughput - meaning
+it can process a whole lot of wafers in a period of time. ASML's optical lithography machines can do
+anywhere in the range of 200 to even 300 wafers per hour. And that matters because these machines are
+constantly depreciating. These machines are costing the fab-owner money
+every second. So the more productive they are, the more
+likely the owner can produce profit. ## Invention NIL as a technology and a phrase were first
+proposed in 1995 by Professor Stephen Y Chou. He was then at the University of Minnesota. Now he is at Princeton University. In his 1995 paper, Chou describes his team's
+setup. First, he applied a layer of plastic about
+55 nanometers thick onto a substrate. This serves as our resist. Next, the mask. Chou's team produced the mask from silicon
+dioxide on top of a substrate of silicon. The mask was patterned using electron beam
+lithography and then etched into the silicon using Reactive Ion Etch. The paper notes that you can make the mask
+from metals, dielectrics, or whatever - but it should be properly chosen to avoid sticking
+to the plastic resist. Both the mask and the resist are then heated
+up to beyond its glass transition temperature - the temperature at which a hard, brittle
+plastic turns into more of a flexible, rubbery state. Then press the mask into the plastic at about
+1,900 pounds per square inch and hold it there until both items cool below the glass temperature. Then you pull the thing away like a bandage. Voila you have your stenciled chip design. After this, you can go run etch to make that
+design permanent. In 1999, Professor Chou founded a startup
+company around this technology - Nanonex. ## Inspirations For inspiration, Chou cited "imprint technology
+for compression masking of thermoplastic polymers". Essentially, it is where you take a pre-heated
+plastic material, put it into a heated mask cavity and then close the mask. The plastic resist is forced into the mask's
+shape - ergo the name "compression masking". Most notably, we use it to produce Compact
+Discs, or CDs. For those who may not be familiar, CDs are
+kind of like an offline Spotify playlist that you cannot edit - taking the physical form
+of a small, silver-colored frisbee. My father still uses them to play his 1980s-era
+Cantonese music. Researchers have also pointed out several
+other inspirations. One notable cousin is LIGA, which is a microfabrication
+technique first developed in the early 1980s at the Karlsruhe Institute of Technology in
+Germany. The process is very similar. We use traditional lithography via ultraviolet
+or synchrotron radiation to pattern and eventually produce a metal mask. We can then stamp it like as explained before. It is used for a variety of things from MEMS
+to micro-lens to fabricating micro-sized spinnerets for the textile industry. ## Variant: UV-NIL Other variants of the technique started popping
+up. The method that Chou demonstrated in 1995
+was referred to as "hot embossing", but an alternative variant of NIL that quickly emerged
+a year later was "UV-NIL". It was first presented in November 1996 by
+a team at Philips in the Netherlands led by Jan Haisma. UV-NIL has a transparent mask - they call
+it a stamp but I will say mask just to be consistent - and a liquid-ish, photosensitive
+resin which serves as our resist. Instead of stamping and heating under high
+pressure like we do for hot-embossing, we use ultraviolet light. We press the mask into the resist and then
+flash ultraviolet rays through the stamp. The resist reacts to the UV light and solidifies. This is all done without much pressure and
+at room temperature - so no need to heat up everything like with hot-embossing. UV-NIL offered some advantages over Chou's
+original hot-embossing concept. First, we get to use photo-sensitive resist
+chemicals, which integrates well with existing semiconductor technologies. Second, using UV to cure the resist frankly
+worked better. You have to imprint the mask many times, stamping
+across the wafer. UV-curing is faster overall because we get
+to skip the cooling process. And heating is likely to cause temperature
+distortions in the resist that damage the pattern transfer especially at nanometer scale. ## Variant: SFIL and JFIL Another significant variant is the Step-and-Flash
+and Jet-and-Flash nanoimprint lithography. Step-and-Flash was first invented at the Texas
+Materials Institute at the University of Texas, Austin some time in the late 1990s, early
+2000s. The Semiconductor Research Corporation had
+provided early funding and seed support for the work. Step-and-Flash has a transparent mask and
+a photo-sensitive resist. The mask has a relief of the chip design engraved
+into it, again using traditional semiconductor methods. You position the mask above the resist with
+a small gap between them. Then you inject the liquid resist, which then
+gets pulled into the gap between the mask and the wafer via the capillary effect. After that, you do the UV light flash to cure
+the whole thing. You pull the mask off like you are in a Mission
+Impossible movie and go about your day. Later, the UT Austin team reworked the Step-and-Flash
+- I just love the double entendre - to the Jet-and-Flash or the JFIL lithography process. Here is how it works. First, you coat the silicon wafer with the
+photosensitive resist. This is done using an inkjet device to deposit
+very small droplets - picoliters, they say! - of said resist onto the wafer. These droplets are arranged in a way to accommodate
+the chip's design patterns. You can then align the transparent mask over
+the wafer using those droplets. Then you use air pressure to bend the mask
+in such a way that it makes contact with the wafer at the middle. You continue to lay the rest of the mask from
+the middle outwards. Do it carefully to avoid making bubbles but
+also quickly because every second costs money. After that, you go about the UV flash to cure
+the resist and transfer over the pattern. After that is done, you separate the two in
+a way that does not shear the mask. From there on, you can go into the etch processes. In 2001, two UT Austin professors - S.V. Sreenivasan and C. Grant Willson - founded
+a company to license this technology from the university and commercialize it - Molecular
+Imprints, Inc. ## Entering the Roadmap NIL offered significant upsides as compared
+to photolithography. For one thing, there is no need for a fancy
+exposure tool. The optics system with super-flat mirrors
+made with multiple atomic layers of molybdenum and beryllium? No need for that. The multi-million dollar EUV light source
+where we have to hit a tin droplet with a laser twice? Toss it into the trash! You can use simple mercury arc lamps. Such lamps were leading edge in the 1960s! We also get to skip one of the lithography
+steps - the post-exposure bake. After the wafer goes through the UV light,
+we cook it for some time to solidify the resist. With NIL, we already did this, so we don't
+have to do it now. On the basis of these upsides, Chou, Molecular
+Insights and other supporters of NIL proposed for it to be included into the semiconductor
+industry's roadmaps for process nodes below 50-nanometers. They held it as a possible alternative or
+next-generation successor to DUV lithography, which was then widely adopted by the industry. In 2003, the MIT Technology Review named NIL
+as one of the "ten emerging technologies to change the world". And then very significantly, it appeared on
+the International Roadmap for Semiconductors as a possible next-generation lithography
+candidate for the 22 nanometer node. Other candidates included 157 nanometer lithography,
+EUV, Electron projection, and X-ray Projection. So on. This was an incredible sign of confidence
+that NIL really can enter the semiconductor supply chain in a major way. Several startups joined Nanonex and Molecular
+Imprints in the race to commercialize their variant of the technology. These included Obdurate, and EV Group. In the end, however, the industry decided
+to stick with immersion lithography for that node. And later on, they consolidated on EUV as
+the next generation lithography. NIL did not make it to the final rounds. What happened to NIL? There were a number of serious challenges. Let us go through some of them. ## The Mask The quality of the mask is the single biggest
+success factor for NIL. The mask has to be a 1-to-1 perfect replica
+of the chip design. This is different from photolithography, where
+you can make the masks a bit larger than the real chip. Because you use the lens to optically shrink
+the design down by some amount. Can't do that with NIL. So we have to produce near perfect masks as
+well as ways to inspect them for possible defects. This is difficult, since we talking about
+features just 10-20 nanometers large. EUV struggled with this in a major way. At great cost, they managed to develop actinic
+inspection tools that used production-grade EUV light to find mask defects. These have yet to be fully developed for NIL. Based on these factors, we should expect these
+masks to cost a lot of money. Leading edge semiconductor mask sets can cost
+tens of millions of dollars. ## Mask Damage This high cost leads right into our second
+major issue - damage to the mask. Early on in the 1960s, the industry used contact
+lithography or contact printing to transfer the chip design. You press the mask onto the wafer and light
+it up. The big drawback with this was that hard particles
+and the like on the wafer can get onto the mask and cause permanent damage to it. This sucks. Not only because the masks themselves are
+expensive, but also because damaged masks print defects onto the wafers. These types of errors are called "repeaters"
+and strike fear into the hearts of fab operators. And it can happen with NIL too. To deal with this, Molecular decided to do
+what they called "Template Replication". This is where you can use a single master
+mask to make many cheaper clones - maybe a hundred or so. These clones are used for a certain lifetime
+and then discarded. ## Image Transfer One of the major early issues with nanoimprint
+had to do with the image transfer. There were times when the mask's design did
+not transfer to the resist - leaving defects. For instance, the resist might not properly
+fill the mask's grooves and trenches - making bubbles. This is particularly the case if the design
+is full of large and irregular features. This is called a "non-fill" defect. Or when you are pulling the mask off the resist,
+you will create shear forces that damage the transferred pattern, tearing or hurting the
+lines. These are called "separation defects". There is also a mechanical challenge with
+overlay. Molecular Imprints - due to the defect issue
+- chose to make a smaller, industry-sized mask. Then built their machine to "step across"
+the wafer using that mask like with traditional photolithography machines. In order to be competitive with photolithography,
+you have to position and lay down the stamp very quickly but with nanometer accuracy. You don't want to accidentally overlay one
+design with another. Here’s why. With photolithography, if you make an overlay
+error, you can essentially go back and flash the wafer again. But with NIL you don't have that because you
+already baked the resist. You have to take the wafer out and scratch
+off the resist before trying again. This obviously very intensely raises the cost
+of error. Here was a question I was thinking when I
+read this. So why not just stamp the whole wafer all
+at once? This had been one of the great dreams for
+NIL's potential. Unfortunately, a larger field like that had
+serious defect and quality control issues that were too hard to solve with current resources. ## Business Issues The final issues with NIL had to do with economics. There was a major throughput issue. As I mentioned, some of ASML's fastest machines
+can handle 200-300 wafers per hour. At the higher end of the range, that is five
+wafers every minute. NIL's steps make it challenging to do it that
+fast. Simply because we are dealing with liquids
+and semi-liquids. You can try having multiple stations working
+in concert, but NIL can be tough to parallelize. Now a wafer-per-hour number is not the end-all,
+be-all. We do need to account for the cost of the
+machine. A slower machine is not a gamebreaker if it
+is also significantly cheaper, but the headlining numbers do matter. Finally but perhaps most significantly, the
+people backing NIL did not have the resources that the other next-generation candidates
+had. Next generation candidates like EUV or electron
+projection had big, well-known corporations supporting them. And with that, millions of dollars and hundreds
+of really smart people solving issues and problems associated with the technology. Molecular Imprints raised at least $60-70
+million from VC, industry, and government. But on the whole, NIL development was being
+handled by startups, which negatively affected its reputation. ## Other Applications So Nanoimprint lithography failed to enter
+the mainline semiconductor industry back then, but it was not a failure. In the 2010s, it caught the interest of the
+magnetic tape industry for something they are working on: Patterned media. Patterned Media, or Bit Patterned Media, is
+a potential future hard drive technology. Basically, it changes how hard drives store
+data. Hard drives back then stored data using hundreds
+of magnetic grains continuously spread across the surface of the hard drive's disk, or platter. A bit is represented by a cluster of grains
+- maybe 20 to 30. Patterned media switches it up to create magnetic
+"islands" just a dozen or so nanometers large. Each island contains 1 bit. We need to use lithography to deposit these
+islands - which the industry had never done before. Demos implied that NIL can be good here and
+it is one of their core strategies. However, the hard drive industry ultimately
+used technologies like perpendicular magnetic recording, and later Heat Assisted Magnetic
+Recording. Patterned Media remains on the roadmaps eventually
+down the line, however, so NIL still has a chance. Other non-semiconductor applications for the
+technology included optical devices, biotech and MEMS. We will set discussion of those aside for
+another day. ## Canon Nevertheless, Molecular Imprints continued
+solving problems and finishing their stepper tools. In late 2010, they shipped their first tool
+- the Imprio500 J-FIL, with a throughput of about 20 wafers per hour. At some point, it seems like they struck a
+partnership with Canon to build this stepper for high volume. Later in 2014, Canon acquired Molecular Imprints
+and made them the foundation of their Canon Nanotechnologies division. Together, they continued working on the machine. They have been presenting the results of their
+work. In 2017, they reported on their overlay tools
+and progress in speeding up the process - with throughput approaching 80 wafers per hour. To deal with the mask damage issues, Molecular
+and Canon developed a template replication tool - the FPA-1100-NR2 - which they see as
+a key enabling technology for NIL. The eventual long term goal is that each mask
+"clone" lasts for 1,000 wafer runs or more. A 2019 report says that one customer Toshiba
+Memory has gotten to about 340 runs. To deal with the alignment challenges, they
+produced a very complicated system that is ... pretty intense. They peer through the mask - which is transparent
+- to align it using marks on the wafer. This way, they can align at a precision of
+1 nanometer. Just for context. 1 nanometer is 10 atoms wide, on average. To deal with the defect issue, Canon has implemented
+systems to keep particles away from the masks. This includes high performance filters and
+an "air curtain" to direct particles away from the mask and resist. Eventually, they must have gotten it to a
+point where they felt comfortable taking it to the next level. Makes sense, Canon has been working on it
+for nearly a decade now. ## Conclusion So in conclusion, can nanoimprint lithography
+challenge EUV and traditional photolithography? Not in the immediate term, but most people
+know that. Canon wants to eventually get there but right
+now they recognize that there are big problems - particularly with the defect issue. So they are going to start slow. Right now, their strategy is to first target
+the semiconductor memory industry - namely the flash memory industry. Those guys still need very small feature sizes
+- 15 nanometers or smaller. But memory products have more redundant structures,
+which are easier to imprint. They are also more forgiving of defects. For the logic-makers, I think Canon is going
+to eventually pitch a hybrid-approach. Lots of their documentation and papers adopt
+industry-wide standards, emphasizing the idea of integration into process flows alongside
+photolithography. I think that’s the right approach. I can easily see a logic fab using NIL for
+a few special particular layers or chip types someday down the line. We shall see how long before that happens.

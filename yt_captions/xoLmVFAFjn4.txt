@@ -1,0 +1,77 @@
+You might know that most liquids are incompressible
+(or least barely-compressible), which means no matter how much pressure you apply, their
+volume doesn’t change. This can be really useful, like in hydraulic
+cylinders, but that lack of “springiness” can also lead to catastrophic failure of pipe
+systems. Hey I’m Grady, and this is Practical Engineering. On today's episode, we’re talking about
+hydraulic transients, also known as Water Hammer. It’s easy to forget how heavy water is,
+since we hardly ever carry more than a few ounces at a time. But if you add up the water in the pipelines
+of your city or even just the pipes in your house, it makes up quite a bit of mass. And, when all that water is moving through
+a pipe, it has quite a bit of momentum. If you suddenly stop that movement—for example,
+by quickly closing a valve—all that momentum has nowhere to go. Since water isn’t compressible or springy,
+it can’t soften the blow. You might as well be slamming concrete into
+the back of the valve and the walls of your pipe. Instead of being absorbed, that sudden change
+in momentum creates a spike in pressure that travels as a shockwave through the pipe. Sometimes, you’ll even hear this shockwave
+as banging in your walls when you close a faucet or run the washing machine, hence the
+superhero-esque nickname, Water Hammer. Banging pipes inside your walls can sound
+a bit spooky, but for large diameter pipelines that can be hundreds of kilometers long, that
+surge in pressure from a change in momentum can cause major damage. Let’s do a quick calculation: if you have
+pipeline carrying water that is 1 meter in diameter and runs for 100 kilometers (a fairly
+average-sized pipeline), the mass of water in the pipe is about 80 million kilograms. That’s a lot of kilograms. In fact, it’s the equivalent of about 10
+freight trains. Imagine you’re an operator at the end of
+this pipeline in charge of closing a valve. If you close it quickly, you’ve essentially
+slammed those trains into a brick wall. And the pressure spike that results from such
+a sudden change in momentum can rupture the pipe or cause serious damage to other parts
+of the system. There’s actually another term for when a
+large spike in pressure ruptures a sealed container: a bomb. And water hammer can be equally dangerous. So, how do engineers design pipe systems to
+avoid this condition? Let’s build a model pipeline and find out. Here’s my setup. I’ve got about 100 feet (30 meters) of PVC
+pipe connected to the water on one end and a valve on the other. I also have an analog and digital gauge so
+we can see how the pressure changes and a clear section of pipe in case anything exciting
+happens in there. I mean civil-engineering-exciting, not like
+actual exciting. Watch what happens when I close this valve. It doesn’t look like much from the outside,
+but look at the data from the pressure gauge. The pressure spikes to over 2,000 kilopascals
+or 300 psi. That’s about 5 times the static water pressure. It’s not enough to break the pipe, but way
+more than enough to break this pressure gage. You can see why designing a pipeline or pipe
+network can be a little more complicated than it seems. These spikes in pressure can travel through
+a system in complicated ways. But we can use this simple demonstration to
+show a few ways that engineers mitigate the potential damage from water hammer. This is the equation for the pressure profile
+of a water hammer pulse. We’re not going to do any calculus here,
+but the terms of this equation show the parameters that can be adjusted to dial back these damaging
+forces. And, the first one is obvious: it’s the
+speed at which the fluid is moving through the pipe. Reducing this is one of the simplest ways
+to reduce the effect of water hammer. Velocity is a function of the flow rate and
+the size of the pipe. If you’re designing a pipeline, the flow
+rate might be fixed, so you can increase the size of your pipe to reduce the velocity. A smaller pipe may be less expensive, but
+the flow velocity will be higher which may cause issues with water hammer. In this case, my pipe size is fixed, but I
+can reduce the flow rate to limit the velocity. Each time I reduce the velocity and close
+the valve, the resulting spike in pressure decreases. Next, you can increase the time over which
+the change in momentum occurs. One common example of this is adding flywheels
+to pumps so they spin down more slowly rather than stopping suddenly. Another example is just to close valves more
+slowly. If I gently shut the valve rather than allowing
+it to snap shut, the pressure changes are more subtle. On large pipelines, engineers not only design
+the components, but develop the requirements for operation of the equipment. This will almost always include rules for
+how quickly valves can be opened or closed to avoid issues with water hammer. The final parameter we can adjust is speed
+of sound through the fluid, also known as the wave celerity. This describes how quickly a pressure wave
+can propagate through the pipe. The wave celerity is an indirect measure of
+the elasticity of the system, and it can depend on the compressibility of the fluid, the material
+of the pipe and even whether or not it’s buried in the ground. In a very rigid system, pressure waves can
+reflect easily without much attenuation. I’ve got flexible PVC pipe sitting on the
+ground free to move which is already helping reduce the magnitude of the water hammer. I can increase the flexibility even more by
+adding an anti-surge device. This has an air bladder that can absorb some
+of the shock and reduce the pressure spike even further. Anti-surge devices are very common in pipe
+systems, and they can be as simple as a spring-loaded valve that opens up if the pressure gets too
+high. In water distribution systems for urban areas,
+water towers help with surge control by allowing the free surface to move up and down, absorbing
+sudden changes in pressure. Plumbing is one of the under-acknowledged
+innovations that has made our modern society possible. When you harness the power of water by putting
+it in pipes, it’s easy to forget about that power altogether. Water can be as hard as concrete when confined,
+and if you bang two hard things together, eventually something’s going to break. If you’re an engineer, your job is to make
+sure it’s not the expensive infrastructure you designed. Part of that means being able to predict surges
+in pressure due to water hammer and design systems that can mitigate any potential damage
+that might result. Thank you for watching, and let me know what
+you think! Thanks to Blue Apron for sponsoring this video. Blue Apron delivers all the fresh ingredients
+you need, right to your doorstep, in exactly the right proportions to create delicious
+recipes at home. We are really loving it at our house, and
+having a lot of fun cooking these meals together (not to mention eating them). If that sounds like something you'd be interested
+in, the first 100 people that click the link in the description will get 3 meals free with
+their first order. Again, thank you for watching, and let me
+know what you think!

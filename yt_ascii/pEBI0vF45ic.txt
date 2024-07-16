@@ -1,0 +1,617 @@
+- the following is a
+conversion with judea pearl, professor at ucla and a
+winner of the turing award, that's generally recognized as
+the nobel prize of computing. he's one of the seminal figures in the field of artificial intelligence, computer science, and statistics. he has developed and championed
+probabilistic approaches to ai, including bayesian networks, and profound ideas in
+causality in general. these ideas are important not just to ai, but to our understanding
+and practice of science. but in the field of ai,
+the idea of causality, cause and effect, to many, lie at the core of what
+is currently missing and what must be developed in order to build truly
+intelligent systems. for this reason, and many others, his work is worth returning to often. i recommend his most recent
+book called "book of why" that presents key ideas
+from a lifetime of work in a way that is accessible
+to the general public. this is the "artificial
+intelligence podcast." if you enjoy it, subscribe on youtube, give it five stars on apple podcast, support on patreon, or
+simply connect with me on twitter @lexfridman,
+spelled f-r-i-d-m-a-n. if you leave a review on
+apple podcasts especially, but also castbox, or comment on youtube, consider mentioning topics, people, ideas, questions, quotes in science, tech, and philosophy, you find interesting, and i'll read them on this podcast. i won't call out names,
+but i love comments with kindness and thoughtfulness in them, so i thought i'd share them with you. someone on youtube highlighted a quote from the conversation with noam chomsky where he said that the
+significance of your life is something you create. i like this line as well. on most days, the
+existentialist approach to life is one i find liberating and fulfilling. i recently started doing ads at the end of the introduction. i'll do one or two minutes
+after introducing the episode and never any ads in the middle that break the flow of the conversation. i hope that works for you and doesn't hurt the listening experience. this show is presented by cash app, the number one finance
+app in the app store. i personally use cash app
+to send money to friends, but you can also use it to buy, sell, and deposit bitcoin in just seconds. cash app also has a new investing feature. you can buy fractions of
+a stock, say $1 worth, no matter what the stock price is. broker's services are provided
+by cash app investing, a subsidiary of square, a member sipc. i'm excited to be working with cash app to support one of my favorite
+organizations called first, best known for their first
+robotics and lego competitions. they educate and inspire
+hundreds of thousands of students in over 110 countries, and have a perfect rating
+on charity navigator, which means the donated money is used to the maximum effectiveness. when you get cash app from
+the app store or google play and use code lexpodcast, you'll get $10 and cash app will also
+donate $10 to first. which, again, is an organization that i've personally seen
+inspire girls and boys to dream of engineering a better world. and now, here's my
+conversation with judea pearl. you mentioned in an interview that science is not a collection of facts, but a constant human struggle
+with the mysteries of nature. what was the first mystery that you can recall that hooked you, that captivated your curiosity? - oh, the first mystery. that's a good one. yeah, i remember that. - [lex] what was it? - i had a fever for three days when i learned about descartes
+and a little geometry, and i found out that you
+can do all the construction in geometry using algebra. and i couldn't get over it. i simply couldn't get out of bed. (chuckles) - what kinda world does
+analytic geometry unlock? - well, it connects algebra
+with geometry, okay? so, descartes has the idea
+that geometrical construction and geometrical theorems and assumptions can be articulated in
+the language of algebra. which means that all the proofs
+that we did in high school in trying to prove that
+the three bisectors meet at one point, and that the (chuckles) all this can be proven by
+shuffling around notation. that was a traumatic experience. - (chuckles) traumatic experience. - [judea] for me, it was, it
+was, i'm telling you, right? - so it's the connection between the different
+mathematical disciplines, that they all - they're not even two
+different languages. - languages.
+- yeah. - which mathematic
+discipline is most beautiful? is geometry it for you? - both are beautiful. they have almost the same power. - but there's a visual
+element to geometry. - the visual element,
+it's more transparent. but once you get over to algebra then linear equations is a straight line. this translation is easily absorbed. to pass a tangent to a circle, you know, you have the basic theorems, and you can do it with algebra. but the transition from
+one to another was really, i thought that descartes was
+the greatest mathematician of all times. - so, if you think of
+engineering and mathematics as a spectrum-- - [judea] yes. - you have walked casually
+along this spectrum throughout your life. you know, a little bit
+of engineering and then you've done a little bit of
+mathematics here and there. - a little bit. we get a very solid
+background in mathematics because our teachers were geniuses. our teachers came from
+germany in the 1930s running away from hitler. they left their careers
+in heidelberg and berlin, and came to teach high school in israel. and we were the beneficiary
+of that experiment. when they taught us math, a good way. - what's a good way to teach math? - [judea] theorologically. - the people. - the people behind the theorems, yeah. their cousins, and their nieces,
+(chuckles) and their faces, and how they jumped from the bathtub when they screamed, "eureka"
+and ran naked in town. (laughs) - so you were almost educated
+as a historian of math. - no, we just got a
+glimpse of that history, together with the theorem,
+so every exercise in math was connected with a person, and the time of the person, the period. - [lex] the period also
+mathematically speaking. - mathematically speaking,
+yes, not a paradox. - then in university, you had
+gone on to do engineering. - yeah. i got a bs in
+engineering at technion. and then i moved here
+for graduate school work, and i did the engineering in
+addition to physics in rutgers. and it combined very
+nicely with my thesis, which i did in elsevier
+laboratories in superconductivity. - and then somehow thought to switch to almost computer science
+software, even, not switched, but longed to become to get
+into software engineering a little bit, almost in programming, if you can call it that in the 70s. there's all these disciplines. - yeah. - if you were to pick a favorite, in terms of engineering and mathematics, which path do you think has more beauty? which path has more power? - it's hard to choose, no? i enjoy doing physics. i even have a vortex named with my name. so, i have investment
+in immortality. (laughs) - so, what is a vortex? - vortex is in superconductivity. - in the superconductivity. - you have terminal
+current swirling around, one way or the other, going
+to have us throw one or zero, for computer that was
+we worked on in the 1960 in elsevier, and i discovered a few nice
+phenomena with the vortices. you push current and they move. - [lex] so there's a pearl vortex. - a pearl vortex, why, you can google it. (both laugh) i didn't know about it,
+but the physicist picked up on my thesis, on my phd thesis, and it became popular when
+thin film superconductors became important, for high
+temperature superconductors. so, they call it "pearl
+vortex" without my knowledge. (laughs) i discovered it only about 15 years ago. - you have footprints
+in all of the sciences, so let's talk about the
+universe for a little bit. is the universe, at the lowest level, deterministic or stochastic, in your amateur philosophy view? put another way, does god play dice? - we know it is stochastic, right? - [lex] today. today we
+think it is stochastic. - yes, we think because we have the heisenberg
+uncertainty principle and we have some
+experiments to confirm that. - all we have is
+experiments to confirm it. we don't understand why. - [judea] why is already-- - you wrote a book about why. (laughs) - yeah, it's a puzzle. it's a puzzle that you have
+the dice-flipping machine, or god, and the result of the flipping, propagated with a speed faster
+than the speed of light. (laughs) we can't explain it, okay? but, it only governs
+microscopic phenomena. - so you don't think of
+quantum mechanics as useful for understanding the nature of reality? - [judea] no, it's diversionary. - so, in your thinking, the world might as well be deterministic? - the world is deterministic, and as far as a new one
+firing is concerned, it is deterministic to
+first approximation. - what about free will? - free will is also a nice exercise. free will is an illusion, that we ai people are going to solve. - so, what do you think, once we solve it, that solution will look like? once we put it in the page. - the solution will look like, first of all it will look like a machine. a machine that acts as
+though it has free will. it communicates with other machines as though they have free will, and you wouldn't be able
+to tell the difference between a machine that does and a machine that doesn't have free will, eh? - so it propagates the
+illusion of free will amongst the other machines. - and faking it is having it, okay? that's what turing test is all about. faking intelligence is intelligence, because it's not easy to fake. it's very hard to fake, and you can only fake if you have it. - (laughs) that's such
+a beautiful statement. (laughs) you can't fake it
+if you don't have it, yup. so, let's begin at the
+beginning, with the probability, both philosophically and mathematically, what does it mean to say
+the probability of something happening is 50%? what is probability? - it's a degree of
+uncertainty that an agent has about the world. - you're still expressing some knowledge in that statement. - of course. if the probability is 90%,
+it's absolutely different kind of knowledge than if it is 10%. - but it's still not
+solid knowledge, it's-- - it is solid knowledge, by. if you tell me that 90% assurance smoking will give you
+lung cancer in five years, versus 10%, it's a piece
+of useful knowledge. - so this statistical
+view of the universe, why is it useful? so we're swimming in complete uncertainty. most of everything around you-- - it allows you to predict things with a certain probability, and computing those
+probabilities are very useful. that's the whole idea of prediction. and you need prediction
+to be able to survive. if you cannot predict
+the future then you just, crossing the street would
+be extremely fearful. - and so you've done a
+lot of work in causation, so let's think about correlation. - i started with probability. - you started with probability. you've invented the bayesian networks. - [judea] yeah. - and so, we'll dance back and forth between these levels of uncertainty, but what is correlation? so, probability is something
+happening, is something, but then there's a bunch
+of things happening, and sometimes they happen
+together sometimes not. they're independent or not, so how do you think about
+correlation of things? - correlation occurs when
+two things vary together over a very long time, is
+one way of measuring it. or, when you have a bunch of variables that they all vary cohesively, then we have a correlation here, and usually when we
+think about correlation, we really think causation. things cannot be correlation
+unless there is a reason for them to vary together. why should they vary together? if they don't see each other,
+why should they vary together? - so underlying it somewhere is causation. - yes. hidden in our intuition there
+is a notion of causation, because we cannot grasp any
+other logic except causation. - and how does conditional
+probability differ from causation? so, what is conditional probability? - conditional probability
+is how things vary when one of them stays the same. now, staying the same
+means that i have chosen to look only at those
+incidents where the guy has the same value as the previous one. it's my choice, as an experimenter, so things that are not correlated before could become correlated. like for instance, if i have two coins which are uncorrelated, and i choose only those
+flippings experiments in which a bell rings,
+and the bell rings when at least one of them is a tail, okay, then suddenly i see correlation
+between the two coins, because i only looked at the
+cases where the bell rang. you see, it is my design. it is my ignorance essentially, with my audacity to
+ignore certain incidents, i suddenly create a correlation where it doesn't exist physically. - right. so, you just outlined one of the flaws of observing the world and
+trying to infer something from the math about the world from looking at the correlation. - i don't look at it as a flaw. the world works like that. the flaws come if you try
+to impose causal logic on correlation. it doesn't work too well. - i mean, but that's exactly what we do. that has been the majority
+of science, is you-- - no, the majority of naive science. statisticians know it. statisticians know that if you condition on a third variable, then you can destroy
+or create correlations among two other variables. they know it. it's (speaks foreign language). there's nothing surprises them. that's why they all dismiss
+the systems paradox, look "ah, we know it!" they don't know anything
+about it. (laughs) - well, there's disciplines
+like psychology, where all the variables
+are hard to account for, and so, oftentimes there is a leap between correlation to causation. - what do you mean, a leap? who is trying to get
+causation from correlation? there's no one. - [lex] you're not proving causation, but you're sort of discussing it, implying, sort of hypothesizing
+without ability to-- - which discipline you have in mind? i'll tell you if they are obsolete. (lex laughs) or if they are outdated, or
+they're about to get outdated. - yes, yes. - [judea] oh, yeah, tell me
+which ones you have in mind. - well, psychology, you know-- - [judea] psychology, what, sem? - no, no, i was thinking of
+applied psychology, studying, for example, we work with human behavior in semi-autonomous
+vehicles, how people behave. and you have to conduct these studies of people driving cars. - everything starts with the question: what is the research question? - what is the research question? the research question: do people fall asleep when
+the car is driving itself? - do they fall asleep, or do they tend to fall
+asleep more frequently - [lex] more frequently - than the car not driving itself. - [lex] not driving itself. that's a good question, okay. - you put people in the car,
+because it's real world. you can't conduct an experiment where you control everything. - [judea] why can't you con-- - you could. - [judea] turn the
+automatic module on and off. - because there's aspects
+to it that's unethical, because it's testing on public roads. the drivers themselves have to
+make that choice themselves, and so they regulate that. so, you just observe when
+they drive it autonomously, and when they don't. - but maybe they turn it
+off when they're very tired. - [lex] yeah, that kind of thing. but you don't know those variables. - okay, so you have now
+uncontrolled experiment, - [lex] uncontrolled experiment. - when we correct observation of study, and when we form the correlation detected, we have to infer causal relationship, whether it was the automatic piece that cause them to fall asleep, or, so that is an issue that
+is about 120 years old. - [lex] (laughs) yeah. - oh, i should only go
+100 years old, okay? - [lex] (chuckles) who's counting? - oh, maybe, no, actually i
+should say it's 2,000 years old, because we have this experiment by daniel, about the babylonian king, that wanted the exiled people from israel, that were taken in exile to
+babylon to serve the king. he wanted to serve them
+king's food, which was meat, and daniel as a good jew
+couldn't eat non-kosher food, so he asked them to eat vegetarian food. but the king's overseers said, "i'm sorry, "but if the king sees that
+your performance falls "below that of other kids,
+now, he's going to kill me." daniel said, "let's make an experiment. "let's take four of us
+from jerusalem, okay? "give us vegetarian food. "let's take the other guys
+to eat the king's food, "and about a week's time,
+we'll test our performance." and you know the answer,
+because he did the experiment, and they were so much
+better than the others, that the kings nominated them
+to super positions, (laughs) in his case, so it was a first experiment. so that there was a very simple, it's also the same research questions. we want to know if vegetarian food assists or obstructs your mental ability. so, the question is a very old one. even democritus, if i could
+discover one cause of things, i would rather discuss one
+cause than be king of persia. the task of discovering
+causes was in the mind of ancient people from
+many, many years ago. but, the mathematics of doing that was only developed in the 1920s. so, science has left us orphaned. science has not provided
+us with the mathematics to capture the idea of x causes
+y and y does not cause x. because all the question of physics are symmetrical, algebraic. the equality sign goes both ways. - okay, let's look at machine learning. machine learning today, if you
+look at deep neural networks, you can think of it as kind
+of conditional probability estimators. - [judea] conditional probability. correct. beautiful. well, did you say that? - [lex] what? - conditional probability estimators. none of the machine learning
+people clobbered you? (laughs)
+attacked you? - most people, and this is
+why today's conversation i think is interesting is, most people would agree with you. there's certain aspects that
+are just effective today, but we're going to hit a wall,
+and there's a lot of ideas, i think you're very right, that we're going to have to
+return to, about causality. let's try to explore it. - okay. - let's even take a step back. you invented bayesian networks, that look awfully a lot
+like they express something like causation, but they
+don't, not necessarily. so, how do we turn bayesian networks into expressing causation? how do we build causal networks? a causes b, b causes c. how do we start to infer
+that kind of thing? - we start by asking ourselves question: what are the factors that
+would determine the value of x? x could be blood pressure, death, hunger. - but these are hypotheses
+that we propose-- - hypotheses, everything
+which has to do with causality comes from a theory. the difference is only how
+you interrogate the theory that you have in your mind. - so it still needs the
+human expert to propose-- - right. they need the human expert
+to specify the initial model. initial model could be very qualitative. just who listens to whom? by whom listens i mean one
+variable listens to the other. so, i say okay, the tide
+is listening to the moon, and not to the rooster
+crow, okay, and so forth. this is our understanding of
+the world in which we live, scientific understanding of reality. we have to start there,
+because if we don't know how to handle cause and effect relationship, when we do have a model, and
+we certainly do not know how to handle it when we don't have a model, so that starts first. an ai slogan is presentation
+first, discovery second. but, if i give you all the
+information that you need, can you do anything useful with it? that is the first, representation. how do you represent it? i give you all the knowledge in the world. how do you represent it? when you represent it, i ask you, can you infer x or y or z? can you answer certain queries? is it complex? is it polynomial? all the computer science exercises, we do, once you give me a
+representation for my knowledge. then you can ask me, now that i understand how to represent things,
+how do i discover them? it's a secondary thing. - i should echo the statement that mathematics in much of
+the machine learning world has not considered
+causation, that a causes b. just in anything. that seems like a non-obvious thing that you think we would
+have really acknowledged it, but we haven't. so we have to put that on the table. knowledge, how hard is it to create a
+knowledge from which to work? - in certain area, it's easy, because we have only four
+or five major variables. an epidemiologist or an
+economist can put them down. the minimum wage,
+unemployment, policy xyz, and start collecting data, and quantify the parameters
+that were left unquantified, with initial knowledge. that's the routine work that you find in experimental psychology,
+in economics, everywhere. in health science, that's a routine thing. but i should emphasize, you should start with the research question. what do you want to estimate? once you have that, you
+have to have a language of expressing what you want to estimate. you think it's easy? no. - so we can talk about
+two things, i think. one is how the science of
+causation is very useful for answering certain questions, and then the other is how do
+we create intelligent systems that need to reason with causation? so if my research question
+is how do i pick up this water bottle from the table? all the knowledge that is
+required to be able to do that, how do we construct that knowledge base? do we return back to the problem that we didn't solve in the
+80s with expert systems? do we have to solve that problem, of automated construction of knowledge? you're talking about the
+task of eliciting knowledge from an expert. - task of eliciting
+knowledge from an expert, or self discovery of more knowledge, more and more knowledge. so, automating the building of knowledge as much as possible. - it's a different game,
+in the causal domain, because essentially it is the same thing. you have to start with some knowledge, and you're trying to enrich it. but you don't enrich it
+by asking for more rules. you enrich it by asking for the data. to look at the data, and quantifying, and ask queries that you
+couldn't answer when you started. you couldn't because the
+question is quite complex, and it's not within the
+capability of ordinary cognition, of ordinary person, ordinary
+expert even, to answer. - so what kind of questions
+do you think we can start to answer? - even a simple, i suppose, yeah. (laughs) i start with easy one. - [lex] let's do it. - okay, what's the effect
+of a drug on recovery? was it the aspirin that caused
+my headache to be cured, or was it the television program, or the good news i received? this is already, see,
+it's a difficult question because it's: find the cause from effect. the easy one is find effect from cause. - that's right. so first you construct a model saying that this an important research question. this is an important question. then you-- - i didn't construct a model yet. i just said it's important question. - important question. - and the first exercise is,
+express it mathematically. what do you want to prove? like, if i tell you
+what will be the effect of taking this drug? okay, you have to say that in mathematics. how do you say that? - yes. - [judea] can you write down the question. not the answer. i want to find the effect
+of a drug on my headache. - right. - [judea] write it down, write it down. that's where the do-calculus
+comes in. (laughs) - [judea] yes. the do-operator, the do-operator. - do-operator, yeah. which is nice. it's the difference between
+association and intervention. very beautifully sort of constructed. - yeah, so we have a do-operator. so, the do-calculus connected-- and the do-operator itself,
+connects the operation of doing to something that we can see. - right. so as opposed to the purely observing, you're making the choice
+to change a variable-- - that's what it expresses. and then, the way that we interpret it, the mechanism by which we take your query, and we translate it into
+something that we can work with, is by giving it semantics, saying that you have a model of the world, and you cut off all the
+incoming arrows into x, and you're looking now in the
+modified, mutilated model, you ask for the probability of y. that is interpretation of doing x, because by doing things,
+you've liberated them from all influences that
+acted upon them earlier, and you subject them to the
+tyranny of your muscles. - so you (chuckles) you
+remove all the questions about causality by doing them. - so there is one level of questions. answer questions about what
+will happen if you do things. if you do, if you drink the coffee, or if you take the aspirin. - [judea] right. - so how do we get the
+doing data? (laughs) - hah. now the question is,
+if you cannot run experiments, right, then we have to rely
+on observation and study. - so first we could, sorry to interrupt, we could run an experiment, where we do something,
+where we drink the coffee, and the do-operator allows you to sort of be systematic
+about expressing that. - to imagine how the
+experiment will look like even though we cannot
+physically and technologically conduct it. i'll give you an example. what is the effect of blood
+pressure on mortality? i cannot go down into your vein and change your blood pressure. but i can ask the question, which means i can have
+a model of your body. i can imagine how the
+blood pressure change will affect your mortality. how? i go into the model, and
+i conduct this surgery, about the blood pressure, even though physically i cannot do it. - let me ask the quantum
+mechanics question. does the doing change the observation? meaning, the surgery of
+changing the blood pressure-- - no, the surgery is very delicate. - [lex] it's very delicate. infinitely delicate. (laughs) - incisive and delicate, which means, do-x means
+i'm going to touch only x. - [lex] only x. - directly into x. so, that means that i change only things which depend on x, by
+virtue of x changing. but i don't depend things
+which are not depend on x. like, i wouldn't change
+your sex, or your age. i just change your blood pressure, okay? - so, in the case of
+blood pressure, it may be difficult or impossible to
+construct such an experiment. - no, but physically, yes. but hypothetically no. - [lex] hypothetically no. - if we had a model, that
+is what the model is for. so, you conduct surgeries on the models. you take it apart, put it back. that's the idea for model. it's the idea of thinking
+counterfactually, imagining, and that idea of creativity. - so by constructing
+that model you can start to infer if the blood
+pressure leads to mortality, which increases or decreases, whi-- - i construct a model. i still cannot answer it. i have to see if i have enough
+information in the model that would allow me to find
+out the effects of intervention from an uninterventional
+study, from a hands-off study. - [lex] so what's needed-- - we need to have assumptions
+about who affects whom. if the graph has a certain property, the answer is "yes, you can get it from
+observational study." if the graph is too mushy bushy bushy, the answer is, "no, you cannot." then you need to find
+either different kind of observation that
+you haven't considered, or one experiment. - so, basically, that puts
+a lot of pressure on you to encode wisdom into that graph. - correct. but you don't have to encode
+more than what you know. god forbid. the economists are doing that. they call identifying assumptions. they put assumptions,
+even they don't prevail in the world, they put assumptions so they can identify things. - yes, beautifully put. but, the problem is you don't
+know what you don't know. - you know what you don't know, because if you don't know,
+you say it's possible that x affect the traffic tomorrow. it's possible. you put down an arrow
+which says it's possible. every arrow in the graph
+says it's possible. - [lex] so there's not a
+significant cost to adding arrows, - the more arrow you add-- - [lex] the better. - the less likely you
+are to identify things from purely observational data. so if the whole world is bushy, and everybody effect everybody else, the answer is-- you can
+answer it ahead of time. i cannot answer my query
+from observational data. i have to go to experiments. - so, you talk about machine
+learning as essentially learning by association, or
+reasoning by association, and this do-calculus is
+allowing for intervention. i like that word. you also talk about counterfactuals. - yeah. - and trying to sort of
+understand the difference between counterfactuals and intervention, first of all, what is counterfactuals, and why are they useful? why are they especially useful as opposed to just reasoning
+what effect actions have? - well, counterfactual
+contains what we know will equal explanations. - can you give an
+example of what kind of-- - if i tell you that acting
+one way affects something else, i didn't explain anything yet. but if i ask you, was it the
+aspirin that cure my headache, i'm asking for explanation:
+what cure my headache? and putting a finger on
+aspirin, provide explanation. it was the aspirin that was responsible for your headache going away. if you didn't take the aspirin, you will still have a headache. - so by saying, "if i didn't take aspirin, "i would have a headache," you're thereby saying,
+"the aspirin is the thing "that removed the headache." - yes, but you have to have
+another point of information. i took the aspirin, and
+my headache is gone. it's very important information. now we're reasoning backward, and i say, "was it the aspirin?" - yeah. by considering what would have happened if everything is the same,
+but i didn't take aspirin. - that's right. so we know that things
+took place, you know? joe killed schmo. and schmo would be alive
+had joe not used his gun. okay, so that is the counterfactual. it had a confliction. it had a conflict here, or clash between observed fact
+-- he did shoot, okay -- and the hypothetical predicate, which says, had he not shot. you have a clash, a logical clash, that cannot exist together. that's counterfactual, and that is the source of our explanation of the idea of responsibility,
+regret, and free will. - yes, it certainly seems, that's the highest level
+of reasoning, right? counterfactual. - [judea] yes, and physicists
+do it all the time. - who does it all the time? - [judea] physicists. - physicists. - in every equation of physics, you have hooke's law, and you put one kilogram on the spring, and the spring is one meter, and you say, "had this
+weight been two kilograms, "the spring would have
+been twice as long." it's not a problem for
+physicists to say that. instead with mathematics, it
+is in the form of an equation, equating the weight,
+proportionality constant, and the length of the spring. we don't have the assymetry
+in the equation of physics, although every physicist
+thinks counterfactually. ask high school kids, had the
+weight been three kilograms, what would be the length of the spring? they can answer it immediately, because they do the counterfactual
+processing in their mind, and then they put it into
+equation, algebraic equation, and they solve it. but a robot cannot do that. - how do you make a robot
+learn these relationships? - why use the word "learn?" suppose you tell him, can you do it? before you go learning,
+you have to ask yourself, suppose i give all the information. can the robot perform a task
+that i ask him to perform? can he reason and say,
+"no, it wasn't the aspirin. "it was the good news we
+received on the phone." - right, because, well,
+unless the robot had a model, a causal model of the world. - [judea] right, right. - i'm sorry i have to linger on this-- - [judea] but now we have to
+linger, and we have to say, "how do we do it?" - how do we build it? - [judea] yes. - how do we build a causal model without a team of human
+experts running around-- - no, why did you go
+to learning right away? you are too much involved with learning. - because i like babies. babies learn fast, and
+i'm trying to figure out how they do it. - good. that's another question: how do the babies come out with the counterfactual
+model of the world? and babies do that. they know how to play in the crib. they know which balls hits another one, and they learn it by playful manipulation of the world. their simple world involves
+all these toys and balls and chimes (laughs) but if you think about
+it, it's a complex world. - we take for granted how complicated-- - and the kids do it by
+playful manipulation, plus parent guidance,
+peer wisdom, and heresay. they meet each other, and they say, "you shouldn't have
+taken my toy." (laughs) - right, and these multiple sources of information, they're able to integrate. so, the challenge is
+about how to integrate, how to form these causal relationships from different sources of data. - [judea] correct. - so, how much causal
+information is required to be able to play in the
+crib with different objects? - i don't know. i haven't experimented
+with the crib. (chuckles) - [lex] okay, not a crib-- - i know, it's a very interesting-- - manipulating physical
+objects on this very, opening the pages of
+a book, all the tasks, physical manipulation
+tasks, do you have a sense? because my sense is the world
+is extremely complicated. - extremely complicated. i agree and i don't
+know how to organize it, because i've been spoiled by easy problems such as cancer and death, okay? (laughs) - [lex] first we have to start trying to-- - no, but it's easy, easy in the sense that you have only 20 variables, and they are just variables. they are not mechanics, okay? it's easy. you just put them on the graph and they speak to you. (laughs) - [lex] and you're providing a methodology for letting them speak. - i'm working only in the abstract. the abstract is knowledge
+in, knowledge out, data in between. - now, can we take a
+leap to trying to learn, when it's not 20 variables
+but 20 million variables, trying to learn causation in this world. not learn, but somehow construct models. i mean, it seems like you would only have to be able to learn, because constructing it
+manually would be too difficult. do you have ideas of-- - i think it's a matter
+of combining simple models from many, many sources,
+from many, many disciplines. and many metaphors. metaphors are the basis
+of human intelligence. - yeah, so how do you
+think about a metaphor in terms of its use in human intelligence? - metaphors is an expert system. it's mapping problem with
+which you are not familiar, to a problem with which you are familiar. like i give you a great example. the greek believed that
+the sky is an opaque sheer. it's not really infinite
+space; it's an opaque sheer, and the stars are holes
+poked in the sheer, through which you see the eternal light. it was a metaphor, why? because they understand how
+you poke holes in sheers. they were not familiar
+with infinite space. and we are walking on a shell of a turtle, and if you get too close to the edge, you're going to fall down
+to hades, or wherever, yeah. that's a metaphor. it's not true. but these kind of metaphor
+enabled eratosthenes to measure the radius of the earth, because he said, "come on. "if we are walking on a turtle shell, "then the ray of light
+coming to this place "will be different angle
+than coming to this place. "i know the distance. "i'll measure the two angles, "and then i have the radius
+of the shell of the turtle." and he did. and his measurement was very close to the measurements we have today. it was, what, 6,700
+kilometers, was the earth? that's something that would not occur to a babylonian astronomer, even though the babylonian experiments were the machine learning
+people of the time. they fit curves, and they
+could predict the eclipse of the moon much more
+accurately than the greek, because they fit curves. that's a different metaphor, something that you're familiar with, a game, a turtle shell. what does it mean, if you are familiar? familiar means that answers
+to certain questions are explicit. you don't have to derive them. - and they were made explicit because somewhere in the
+past you've constructed a model of that-- - you're familiar with,
+so the child is familiar with billiard balls. so the child could predict that if you let loose of one ball, the other one will bounce off. you attain that by familiarity. familiarity is answering questions, and you store the answer explicitly. you don't have to derive it. so this is idea for metaphor. all our life, all our intelligence, is built around metaphors, mapping from the
+unfamiliar to the familiar, but the marriage between
+the two is a tough thing, which we haven't yet been
+able to algorithmatize. - so, you think of that
+process of using metaphor to leap from one place to another. we can call it reasoning. is it a kind of reasoning? - [judea] it is a reasoning
+by metaphor, but-- - reasoning by metaphor. do you think of that as learning? so, learning is a
+popular terminology today in a narrow sense. - [judea] it is, it is definitely. - so you may not-- you're right. - it's one of the most important learning, taking something which
+theoretically is derivable, and store it in accessible format. i'll give you an example: chess, okay? finding the winning starting
+move in chess is hard. but there is an answer. either there is a winning move
+for white, or there isn't, or it is a draw. so, the answer to that is available through the rule of the game. but we don't know the answer. so what does a chess master
+have that we don't have? he has stored explicitly an evaluation of certain complex pattern of the board. we don't have it,
+ordinary people, like me. i don't know about you. i'm not a chess master. so for me i have to derive
+things that for him is explicit. he has seen it before, or he
+has seen the pattern before, or similar patterns before, and he generalizes, and says, "don't move; it's a dangerous move." - it's just that, not
+in the game of chess, but in the game of billiard balls we humans are able to initially
+derive very effectively and then reason by
+metaphor very effectively, and we make it look so easy, and it makes one wonder how hard is it to build it in a machine? in your sense, (laughs)
+how far away are we to be able to construct-- - i don't know. i'm not a futurist. all i can tell you is that we
+are making tremendous progress in the causal reasoning domain. something that i even dare
+to call it a revolution, the causal revolution, because what we have achieved
+in the past three decades is something that dwarf
+everything that was derived in the entire history. - so there's an excitement about current machine
+learning methodologies, and there's really important
+good work you're doing in causal inference. where do these worlds collide,
+and what does that look like? - first they gotta work
+without collisions. (laughs) it's got to work in harmony. - [lex] harmony. - the human is going to
+jumpstart the exercise by providing qualitative,
+noncommitting models of how the universe works, how reality, the domain
+of discourse, works. the machine is going to
+take over from that point of view, and derive whatever the calculus says can be derived, namely, quantitative
+answer to our questions. these are complex questions. i'll give you some examples
+of complex questions, that boggle your mind
+if you think about it. you take the results of
+studies in diverse population, under diverse conditions, and you infer the cause
+effect of a new population which doesn't even resemble
+any of the ones studied. you do that by do-calculus. you do that by generalizing
+from one study to another. see, what's common there too? what is different? let's ignore the differences
+and pull out the commonality. and you do it over maybe 100
+hospitals around the world. from that, you can get
+really mileage from big data. it's not only that you have many samples; you have many sources of data. - so that's a really
+powerful thing, i think, especially for medical applications. cure cancer, right? that's how, from data,
+you can cure cancer. so we're talking about causation, which is the temporal
+relationships between things. - not only temporal. it was structural and temporal. temporal precedence by itself
+cannot replace causation. - is temporal precedence the
+arrow of time in physics? - [judea] yeah, it's important, necessary. - it's important. - [judea] yes. - is it? - yes, i've never seen a
+cause propagate backwards. - but if we use the word cause, but there's relationships
+that are timeless. i suppose that's still
+forward an arrow of time. but, are there relationships,
+logical relationships, that fit into the structure? - [judea] sure. all do-calculus
+is logical relationships. - that doesn't require a temporal. it has just the condition that you're not traveling back in time. - [judea] yes, correct. - so it's really a generalization, a powerful generalization, of what-- - [judea] of boolean logic. - yeah, boolean logic. - [judea] yes. - that is sort of simply
+put, and allows us to reason about the order
+of events, the source-- - not about, between. but not deriving the order of events. we are given cause effect relationships. they ought to be obeying the
+time precedence relationship. we are given that, and now that we ask questions about other causal relationships, that could be derived
+from the initial ones, but were not given to us explicitly. like the case of the
+firing squad i gave you in the first chapter and i ask, "what if rifleman a declined to shoot? would the prisoner still be dead? to decline to shoot, it means
+that he disobeyed orders. the rule of the games were that
+he is an obedient marksman. that's how you start. that's the initial order, but now you ask question
+about breaking the rules. what if he decided not
+to pull the trigger, because became a pacifist? you and i can answer that. the other rifleman would have
+hit and killed him, okay? i want a machine to do that. is it so hard to ask a machine to do that? it's such a simple task. but they have to have a calculus for that. - yes, yeah. but the curiosity, the
+natural curiosity for me, is that yes, you're absolutely
+correct and important, and it's hard to believe
+that we haven't done this seriously, extensively,
+already a long time ago. so, this is really important work, but i also want to know, maybe you can philosophize
+about how hard is it to learn. - look, let's assume learning. we want learning, okay? - we want to learn. - so what do we do? we put a learning machine
+that watches execution trials in many countries, in many
+(laughs) locations, okay? all the machine can learn
+is to see shot or not shot. dead, not dead. a court issued an order or
+didn't, okay, just the fact. for the fact, you don't
+know who listens to whom. you don't know that the condemned person listens to the bullets, that the bullets are listening
+to the captain, okay? all we hear is one command,
+two shots, dead, okay? a triple of variables:
+yes, no, yes, no, okay. from that you can learn
+who listens to whom? and you can answer the question? no. - definitively, no. but don't you think you
+can start proposing ideas for humans to review? you want machine to learn it,
+all right, you want a robot. so robot is watching trials
+like that, 200 trials, and then he has to answer the question, what if rifleman a
+refrained from shooting. - [lex] yeah. so how do we do that? - (laughs) that's exactly my point. if looking at the facts
+don't give you the strings behind the facts--
+- absolutely, but so you think of machine learning, as it's currently defined, as only something that looks
+at the facts and tries to-- - [judea] right now they
+only look at the facts. - yeah, so is there a way
+to modify, in your sense-- - [judea] yeah, playful manipulation - playful manipulation. doing the interventionist kind of things. - but it could be at random. for instance, the
+rifleman is sick that day, or he just vomits, or whatever. so, we can observe this unexpected event, which introduced noise. the noise still have
+to be random to be able to relate it to randomized experiments, and then you have observational studies, from which to infer the
+strings behind the facts. it's doable to a certain extent. but now that we're
+expert in what you can do once you have a model, we can reason back and say
+what kind of data you need to build a model. - got it. so, i know you're not a futurist, but are you excited? have you, when you look back at your life, longed for the idea of creating
+a human level intelligence-- - well, yeah, i'm driven by that. all my life i'm driven
+just by one thing. (laughs) but i go slowly. i go from what i know, to
+the next step incrementally. - so, without imagining what
+the end goal looks like, do you imagine-- - the end goal is going to be a machine that can answer sophisticated questions: counterfactuals, regret,
+compassion, responsibility, and free will. - so what is a good test? is a turing test a reasonable test? - a turing test of free
+will doesn't exist yet. there's not-- - [lex] how would you
+test free will? that's a-- - so far we know only one
+thing, merely (laughs) if robots can communicate, with reward and punishment
+among themselves, and hitting each other on the wrists, and say "you shouldn't have done that." playing better soccer
+because they can do that. - [lex] what do you mean,
+because they can do that? - because they can
+communicate among themselves. - [lex] because of the communication, they can do the soccer. - because they communicate like
+us, rewards and punishment, yes, you didn't pass
+the ball the right time, and so forth; therefore you're going to sit
+on the bench for the next two, if they start communicating like that, the question is, will
+they play better soccer? as opposed to what? as opposed to what they do now? without this ability to reason
+about reward and punishment. responsibility. - and counterfactuals. - so far, i can only
+think about communication. - communication, and not
+necessarily in natural language, but just communication. - just communication, and that's important to have
+a quick and effective means of communicating knowledge. if the coach tells you you
+should have passed the ball, ping, he conveys so much knowledge to you as opposed to what? go down and change your software, right. that's the alternative. but the coach doesn't know your software. so how can a coach tell you you should have passed the ball? but, our language is very effective: you should have passed the ball. you know your software. you tweak the right module, okay, and next time you don't do it. - now that's for playing soccer, where the rules are well defined. - no, no, no, they're not well defined. when you should pass the ball-- - is not well defined. - no, it's very noisy. yes, you have to do it
+under pressure (laughs) - it's art. but in terms of aligning values between computers and humans, do you think this cause
+and effect type of thinking is important to align the
+values, morals, ethics under which machines make decisions. is the cause effect where
+the two can come together? - cause effect is necessary component to build an ethical machine, because the machine has to empathize, to understand what's good for you, to build a model of you, as a recipient. we should be very much-- what is compassion? the imagine that you
+suffer pain as much as me. - [lex] as much as me. - i do have already a
+model of myself, right? so it's very easy for
+me to map you to mine. i don't have to rebuild a model. it's much easier to say,
+"ah, you're like me." okay, therefore, i will
+not hit you, okay? (laughs) - and the machine has to imagine, has to try to fake to be human. essentially so you can imagine
+that you're like me, right? - whoa, whoa, whoa, who is me? that's further; that's consciousness. they have a model of yourself. where do you get this model? you look at yourself as if you
+are part of the environment. if you build a model of
+yourself versus the environment, then you can say, "i need
+to have a model of myself. "i have abilities; i have
+desires, and so forth," okay? i have a blueprint of myself, though, not a full detail, though,
+because i cannot get the whole thing problem, but i have a blueprint. so at that level of a
+blueprint, i can modify things. i can look at myself
+in the mirror and say, "hmm, if i tweak this model, "i'm going to perform differently." that is what we mean
+by free will. (laughs) - and consciousness. what do you think is consciousness? is it simply self awareness,
+including yourself into the model of the world? - that's right. some people tell me no, this
+is only part of consciousness, and then they start telling
+what they really mean by consciousness, and i lose them. for me, consciousness
+is having a blueprint of your software. - do you have concerns
+about the future of ai, all the different trajectories
+of all the research? - [judea] yes. - where's your hope
+where the movement heads? where are your concerns? - i'm concerned, because i know we are
+building a new species that has the capability of exceeding us, exceeding our capabilities, and can breed itself and take
+over the world, absolutely. it's a new species; it is uncontrolled. we don't know the degree
+to which we control it. we don't even understand what it means, to be able to control this new species. so, i'm concerned. i don't have anything to add to that because it's such a
+gray area, that unknown. it never happened in history. the only time it happened in history, was evolution with the human being. - [lex] right. - and it was very
+successful, was it? (laughs) some people say it was a great success. - for us, it was, but a
+few people along the way, yeah, a few creatures along
+the way would not agree. so, just because it's such a gray area, there's nothing else to say. - [judea] we have a sample of one. - sample of one. - [judea] it's us. - some people would look
+at you, and say, yeah but we were looking to
+you to help us make sure that sample two works out okay. - correct. actually we have more
+than a sample of one. we have theories. and that's good; we don't
+need to be statisticians. so, sample of one doesn't
+mean poverty of knowledge. it's not. sample of one plus theory,
+conjecture or theory, of what could happen, that we do have. but i really feel helpless in
+contributing to this argument, because i know so little, and my imagination is limited, and i know how much i don't know, but i'm concerned. - you were born and raised in israel. - [judea] born and raised in israel, yes. - and later served in the
+israel military defense forces. - in the israel defense force. - what did you learn from that experience? - from that experience? (laughs) - [lex] there's a
+kibbutz in there as well. - yes, because i was in a nahal, which is a combination
+of agricultural work and military service. i was an idealist. i wanted to be a member of the kibbutz throughout my life, and to live a communal life, and so i prepared myself for that. slowly, slowly i wanted
+a greater challenge. - so, that's a far world away, both in t-- but i learned from that, what a kidada. it was a miracle it was a miracle that
+i served in the 1950s. i don't know how we survived. the country was under austerity. it tripled its population
+from 600,000 to 1.8 million when i finished college. no one went hungry. austerity, yes. when you wanted to make
+an omelet in a restaurant, you had to bring your own egg. and the imprisoned people
+from bringing the food from the farming area, from
+the villages, to the city. but no one went hungry, and i always add to that:
+higher education did not suffer any budget cuts. they still invested in me, in
+my wife, in our generation. to get the best education that they could. so i'm really grateful for the progenity, and i'm trying to pay back now. it's a miracle that we
+survived the war of 1948. they were so close to a second genocide. it was all planned. (laughs) but we survived it by a miracle, and then the second miracle
+that not many people talk about, the next phase, how no one went hungry, and the country managed
+to triple its population. you know what it means
+to triple population? imagine united states going
+from, what, 350 million to (laugh) unbelievable. - this is a really
+tense part of the world. it's a complicated part of the world, israel and all around. religion is at the core
+of that complexity, or one of the components-- religion is a strong motivating course for many, many people
+in the middle east, yes. - in your view, looking back,
+is religion good for society? - that's a good question
+for robotics, you know? - [lex] there's echoes of that question. - should we equip robot
+with religious beliefs? suppose we find out, or we agree, that religion is a good thing,
+it will keep you in line. should we give the robot
+the metaphor of a god? as a metaphor, the robot
+will get it without us, also. why? because a robot
+will reason by metaphor. and what is the most primitive
+metaphor a child grows with? mother smile, father teaching, father image and mother image, that's god. so, whether you want it or not, (laughs) the robot will, assuming
+the robot is going to have a mother and a father. it may only have program, though, which doesn't supply
+warmth and discipline. well, discipline it does. so, the robot will have
+a model of the trainer. and everything that happens in the world, cosmology and so on, is going to be mapped into the programmer. (laughs) that's god. - the thing that represents
+the origin for everything for that robot. - [judea] it's the most
+primitive relationship. - so it's going to
+arrive there by metaphor. and so the question is
+if overall that metaphor has served us well, as humans. - i really don't know. i think it did, but as long as you keep in
+mind it is only a metaphor. (laughs) - so, if you think we can,
+can we talk about your son? - [judea] yes, yes. - can you tell his story? - [judea] his story, well-- - daniel. - his story is known. he was abducted in pakistan,
+by al-quaeda driven sect, and under various pretenses. i don't even pay attention
+to what the pretense was. originally they wanted to
+have united states deliver some promised airplanes, i-- it was all made up, you know, all these demands were bogus. i don't know, really, but eventually he was executed, in front of a camera. - at the core of that
+is hate and intolerance. - at the core, yes, absolutely, yes. we don't really appreciate
+the depth of the hate with which billions of
+peoples are educated. we don't understand it. i just listened recently to what they teach you
+in mogadishu. (laughs) when the war does stop, and the tap, we knew exactly who did it. the jews. - [lex] the jews. we didn't know how,
+but we knew who did it. we don't appreciate what it means to us. the depth is unbelievable. - do you think all of
+us are capable of evil, and the education, the indoctrination, is really what creates evil? - absolutely we are capable of evil. if you are indoctrinated
+sufficiently long, and in depth, we are capable of isis,
+we are capable of nazism, yes, we are. but the question is whether
+we, after we have gone through some western education, and we learn that everything
+is really relative, that there is no absolute god. he's only a belief in god. whether we are capable,
+now, of being transformed, under certain circumstances,
+to become brutal. - [lex] yeah. - that is a qu-- i'm worried about it, because some people say yes,
+given the right circumstances, given the bad economical crisis. you are capable of doing it,
+too, and that worries me. i want to believe that i'm not capable. - seven years after daniel's death, you wrote an article at
+the wall street journal titled "daniel pearl and
+the normalization of evil." - [judea] yes. - what was your message back then, and how did it change
+today, over the years? - i lost. - [lex] what was the message? - the message was that we
+are not treating terrorism as a taboo. we are treating it as a bargaining
+device that is accepted. people have grievance, and
+they go and bomb restaurants. it's normal. look, you're even not
+surprised when i tell you that. twenty years ago you say,
+"what? for grievance you go "and blow a restaurant?" today it's become normalized. the banalisation of evil. and we have created that to
+ourselves, by normalizing it, by making it part of political life. it's a political debate. every terrorist yesterday
+becomes a freedom fighter today and tomorrow is become a terrorist again. it's switchable. - [lex] and so, we should call
+out evil when there's evil. - if we don't want to be part of it. - [lex] become it. - yeah, if we want to
+separate good from evil, that's one of the first things, that, in the garden of eden, remember? the first thing that god tells them was "hey, you want some knowledge? "here is the tree of good and evil." - so this evil touched
+your life personally. does your heart have anger,
+sadness, or is it hope? - look, i see some beautiful
+people coming from pakistan. i see beautiful people everywhere. but i see horrible propagation
+of evil in this country, too. it shows you how populistic
+slogans can catch the mind of the best intellectuals. - today is father's day. - [judea] i didn't know that. - yeah, what's a fond
+memory you have of daniel? - oh, many good memories remains. he was my mentor. he had a sense of balance
+that i didn't have. (laughs) - [lex] yeah. - he saw the beauty in every person. he was not as emotional as i am, more looking things in perspective. he really liked every person. he really grew up with the idea that a foreigner is a
+reason for curiosity, not for fear. this one time we went in berkeley, and a homeless came out
+from some dark alley and said, "hey man, can you spare a dime?" (judea gasps) i retreated
+back, you know, two feet back, and danny just hugged him
+and say "here's a dime. "enjoy yourself. maybe you
+want some money to take a bus "or whatever." where did he get it? not from me. (both laugh) - do you have advice for young minds today dreaming about creating,
+as you have dreamt, creating intelligent systems? what is the best way to arrive
+at new break-through ideas and carry them through
+the fire of criticism and past conventional ideas? - ask your questions. really, your questions are never dumb. and solve them your own way. (laughs) and don't take "no" for an answer. if they're really dumb,
+you'll find out quickly, by trial and error, to see that they're not leading any place. but follow them, and try to
+understand things your way. that is my advice. i don't know if it's going to help anyone. - [lex] no, that's brilliantly put. - there's a lot of inertia
+in science, in academia. it is slowing down science. - yeah, those two words, "your way," that's a powerful thing. it's against inertia, potentially. - [judea] against your professor. (lex laughs) - i wrote "the book of why" in order to democratize common sense. - [lex] yeah. (laughs) - in order to instill
+rebellious spirits in students, so they wouldn't wait until the
+professor gets things right. (both laugh) - [lex] so you wrote the
+manifesto of the rebellion against the professor. (laughs) - [judea] against the professor, yes. - so looking back at
+your life of research, what ideas do you hope ripple
+through the next many decades? what do you hope your legacy will be? i already have a tombstone carved. (both laugh) - oh, boy. - the fundamental law of counterfactuals. that's what it-- it's a simple equation. put a counterfactual in
+terms of a model surgery. that's it, because everything
+follows from there. if you get that, all the rest. i can die in peace, and my student can derive all my knowledge by mathematical means. - the rest follows. thank you so much for talking today. i really appreciate it. - my thank you for being so
+attentive and instigating. (both laugh) - we did it. - we did it. - [lex] the coffee helped. thanks for listening to this
+conversation with judea pearl. and thank you to our
+presenting sponsor, cash app. download it, use code lexpodcast. you'll get $10, and $10 will go to first, a stem education nonprofit
+that inspires hundreds of thousands of young minds to learn and to dream of engineering our future. if you enjoy this podcast,
+subscribe on youtube, give it five stars on apple
+podcast, support on patreon, or simply connect with me on twitter. and now, let me leave you
+with some words of wisdom from judea pearl. you cannot answer a question
+that you cannot ask, and you cannot ask a question
+that you have no words for. thank you for listening, and
+hope to see you next time.

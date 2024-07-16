@@ -1,0 +1,157 @@
+in late august 2023, huawei quietly-not-so-quietly 
+started selling its own phone chips again. without much fanfare, the huawei mate 60 pro 
+went on sale in its online store. and what   everyone's talking about is the phone's soc: the 
+kirin 9000s (??9000s), a 7-nanometer class chip. huawei didn't say who made this soc,   but it is most likely our old friend smic. the 
+whole thing has turned into a real kerfuffle. in this video we are going to talk about 
+the mate 60 pro and its kirin 9000s. ## another note a note before we start, this is a current event. more news will break, and that news may invalidate 
+what i will have to say in this video. i talked to   a few people for their thoughts but the only 
+information i have is what everyone else has. again like last time, i am not interested in 
+"american failure" doomers, china triumphalism,   or any other general nastiness. i want to remind 
+you. one day we are back. the next day it's over. i also want to politely remind you 
+that 7 nanometers, 5 nanometers,   and other such labels have no bearing 
+on the transistors' actual sizes. these are marketing names assigned to classes 
+of chips. the transistors are not actually   7 nanometers apart. the name signals a 
+class of performance. okay that's that. and finally, please be civil in 
+the comments. if you are angry,   take a deep breath, and go do 
+something else. life is too short. now that we have acknowledged all of this 
+... again ... let us break this down together. ## the phone and the chip the mate pro 60 is a very nice phone. according to techinsights, the kirin 
+9000s is a 107 square millimeter die. this is about 2% larger than kirin 9000 and   kirin 9000e - which were the last 
+leading edge chips huawei shipped. that chip was briefly produced 
+using tsmc's 5 nanometer process   until american sanctions ended that association. this new 7 nanometer class chip is about 5-6 years 
+behind the leading edge. tsmc has been shipping   3-nanometer class chips throughout this year in 
+preparation for the september iphone 15 launch. teardowns and speed tests imply that the 
+kirin 9000s supports 5g connectivity. however,   huawei seems like they are trying to hide that. in a recent press release mentioning the phone,   they did not bring up 5g support. and the 
+phone os itself reports 4g on the surface. i am curious why huawei seems to be 
+hiding the 5g functionality. we know   apple has been trying to ninja their way around 
+qualcomm's modem patents for a very long time. if i were qualcomm, i would give 
+this phone to my best patent lawyers. the soc's cpu core is a customization 
+on top of arm ip. the gpu appears to be   a new custom design done by huawei or hisilicon. the new design caused weird texture 
+errors when playing popular games   like genshin impact. those of 
+course will be fixed in time. everyone is talking about the 
+yields and indeed that's the big   thing we all want to know. dylan 
+patel of semianalysis wrote that   smic's early yields with this node are 
+likely to be far higher than we expect. yields always start low, but ramp up 
+as the fab improves. tsmc scaled n7's   yields far enough to supply an iphone launch. the   same for smic. the more phones huawei 
+sells, the faster that will happen. all in all, we know very little about this 
+chip. very little has been released and i   suspect that that is more a feature than a bug. 
+we will probably learn more later but let me   be clear. this 7nm chip is real and the node 
+that made it looks to be really, really good. ## why are we surprised? the first thing that i thought when i first heard 
+about this was: why are we all so surprised? in the last video i did on this, i 
+said that we should not be surprised   to see a hisilicon chip coming with 
+this 7nm smic n+2 process node. i should have been more clear in 
+the video that hisilicon is huawei.   so i was saying that we should expect 
+a 7nm chip for a huawei phone soon. furthermore, early last month, 
+nikkei asia mentioned offhandedly   that smic was working with huawei 
+on a new 5g chip. now it is here. we first heard news of the smic n+2 
+process in july 2022. at the time,   the process node was being 
+used for a bitcoin miner. this makes sense to me because 
+bitcoin miners have repetitive   structures so they are good use 
+cases for improving the node. a phone soc like the kirin 9000s on the 
+other hand is a far more complicated chip   to produce. the fact that they have been able 
+to do it and do it so well shows the tremendous   progress that co-ceo liang mong-song and smic 
+have been able to produce in just about a year. ## more chips are coming second thing, we should not be surprised 
+to see even more advanced chips coming. in january 2022, legendary tsmc r&d director 
+dr. burn lin - the father of 193 nanometer   immersion lithography and a colleague of 
+liang mong-song - said in an interview that   smic can fab even 5 nanometer-class 
+chips with only multi-patterning. immersion lithography is the key technology 
+here. it is maybe 1-2 decades old but they   still are perhaps the best lithography machines 
+in the world. they matter more than we think. the united states banned euv lithography exports, 
+but that was perhaps a red herring. i have been   thinking recently about slowing euv lithography 
+insertion. perhaps euv as we know it today lacks   the throughput, power, and cost requirements 
+to be competitive for full utilization. in such a case, 193-nanometer immersion 
+machines like the twinscan nxt 2000i and   higher will still do 70-80% 
+of the litho work for intel,   tsmc, and samsung in their latest nodes. 
+perhaps even for the foreseeable future. the administration stopped short of a 193i 
+ban at the time apparently because they   felt that japan and the netherlands would 
+not come along. it was not until june 30,   2023 - a year later - that the 
+netherlands and japan finally   joined together with the united states 
+to impose these export restrictions. and asml was definitely unhappy about 
+it. they are trying to sell all the duv   immersion machines they can 
+before the end of the year. what this means is that smic still 
+has plenty of these machines to ramp   up 7 nanometer production and make the 
+move for 5. keeping in mind that these   machines do break down, need spare parts, 
+maintenance, sanctions can expand, etc. ergo, i fully expect a 5-nanometer class huawei 
+chip coming down the line - probably in 1-2   years. no doubt that they already have 
+it specced out in some huawei/smic lab. and when that news breaks, i will probably 
+have to make this exact same video again. ## a china-only supply line is emerging this mate 60 phone is more than 
+just a great, high-performing chip. it is also ensconced within an ecosystem 
+of domestic chinese suppliers and they   have come together to create a phone 
+that is feature-parity with the market. bloomberg mentioned the phone's many domestic 
+suppliers. this includes the radio frequency   front-end module and the satellite communications 
+modem for the phone's satellite calls feature. with the exception of the memory which 
+seems to have come from sk hynix - oh whoops how did that happen?? - the whole 
+phone is basically a china-only ecosystem. the pieces are set for a complete, 
+self-contained ecosystem within the   people's republic of china to produce all sorts 
+of domestic electronics - smartphone socs,   cpus, edge ai npus, gpus ... and ai 
+accelerators. and therein lies the rub. ## ai is the next big move at the end of it, a phone 
+chip on par with something   released five years ago is not a huge deal. well, it is probably going to be 
+a huge deal for qualcomm, apple,   and mediatek. ming-chi kuo posted that qualcomm 
+sells tens of millions of chips for huawei phones. these sales are likely to be replaced by the   new kirin 9000s and others 
+like it. and as dylan notes,   every non-chinese semiconductor maker and apple 
+will lose business to this new domestic chip. smic will probably be busy fulfilling huawei 
+orders for the next year or so. but if i were   them i would be immediately looking to find new 
+n+2 node customers in high powered computing. a partner to make a domestic 
+ai accelerator - a chinese   version of the nvidia a100 or tpu, so to say. so i fully expect to hear news of a chinese 7 
+nanometer ai accelerator coming in 1-2 years. perhaps designed by biren, baidu, alibaba 
+cloud or tencent. unless sanctions intervene. ## what china does next now what should china do next? the chinese are building up their native 
+semiconductor and technology ecosystem   and it is real. their work deserves praise, 
+especially after being so hard hit by sanctions. the main goal - from a semiconductor 
+manufacturing perspective - should   be widely distribute this phone to as many 
+people as possible. scale means everything. millions of units are being sold right 
+now, but we need millions more. they need   to be selling this phone and its chips 
+not only to chinese domestic consumers   but also to europeans, australians, 
+southeast asians, and latin americans. this might be challenging since 
+huawei phones don't ship with   google products. but huawei has been 
+doing a lot of influencer marketing,   trying to get the word out to people on how 
+to put google products back on huawei phones. every export sale not only is a loss for western 
+phone makers, but also strengthens smic. the more   chips sold, the more chips smic makes. the more 
+chips they make, the faster they can raise yield   and achieve profitability. and with that, they 
+can more quickly fund their move to 5 nanometers. also, smic should start reviewing and replicating   the advanced packaging technology 
+stack. in the packaging world,   phone chips emphasize thinness and heat. so they 
+use thinner things like chip scale packaging. but if we want to get to what is next 
+- which is advanced ai - then there   are other things to consider like 
+data bandwidth. these require new   packaging architectures like chiplets and 2.5d 
+die-stacking. again, not impossible for them. the chinese government will also 
+need to shore up their domestic   semiconductor manufacturing equipment 
+ecosystem. that means replacing asml,   applied materials, tokyo electron, lam 
+research, and all the metrology guys. every piece of foreign equipment 
+probably has a kill switch back   home. i am pretty sure that asml does. 
+so better start writing those checks. ## what america does next now how should the united states respond? for more, i'm bringing in guest 
+correspondent and us-china tech   relations expert jordan schneider of 
+chinatalk. i'm a longtime fan of his   work and i think you'd all enjoy his 
+popular podcast and youtube channel in the rollout to the october 7th restrictions, 
+the commerce department's bureau of industry and   security laid out the justification for cutting 
+off foreign support for "advanced semiconductors,   defined as logic ics at 16/14nm or below or 
+using non-planar transistor architecture." > "the restrictions implemented in this 
+rule follow extensive united states   government consideration of the 
+impact of advanced computing ics,   "supercomputers," and semiconductor manufacturing 
+equipment on enabling military modernization,   including the development of weapons of mass 
+destruction (wmd), and human rights abuses." translation: the us government 
+has intelligence that makes clear   that china getting the ability to 
+manufacture advanced logic chips   has significant implications for the 
+regional military balance of power. given the progress smic and huawei have 
+made, on the current trajectory if the   us government believes that a chinese 
+7 nanometer node remains an eventual   threat to its national security ... well then 
+they might try a little harder to stop it. this requires a better understanding 
+of what semiconductor manufacturing   equipment is still coming through. 
+smic depends on foreign equipment   for this node. domestic suppliers remain 
+years behind - no matter the propaganda. today, equipment companies like applied, lam 
+research, tokyo electron and kla are able to   sell pretty much their entire suite 
+of tools. most tools for deposition,   etch, metrology, epitaxy and so on used for 7nm 
+and even 5nm can also plausibly be used in 28nm. these tools are being sold to the likes 
+of smic ostensibly for use at lagging edge   nodes though they are almost certainly being 
+repurposed to make chips like the kirin 9000s. it's not too late to ensure that china isn't 
+able to develop leading edge capacity at   scale. the us government, in cooperation with 
+allies in japan, the netherlands, and germany, should consider tighter export controls that 
+target the tools currently being repurposed,   like argon fluoride immersion 
+lithography, mask, and cmp equipment,   as well as far less liberal use of licenses 
+to firms like smic on the entity list. thanks jordan for your thoughts. ## conclusion in my video about korean 
+semiconductors, i mention that in 1986, samsung shocked the japanese with 
+their 1 megabit dram chip, closing   the korean-japanese semiconductor 
+gap from 5 years to just one. two years later in 1988, samsung then brings 
+out their 4 megabit chip - pulling them to   parity with the japanese. japan 
+from there on began to crumble. the kirin 9000s is like that. a visible 
+mark on technology history. a shock in   the ecosystem that ripples far beyond 
+this small semiconductor neighborhood. the people's republic of china is taking 
+the korean approach to semiconductor   manufacturing. it worked for south korea. 
+it is working for china too. so now what?

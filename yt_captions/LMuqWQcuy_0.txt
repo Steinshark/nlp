@@ -1,0 +1,185 @@
+In 1971, the UC Berkeley professor 
+Leon Chua published a paper proposing   a new circuit which he called the "memristor". At the time, it was a strange proposal - steeped 
+in theory - and most people forgot about it. Over 30 years later, with the AI revolution 
+in full swing, scientists are exploring   how to use these memristors and their unique 
+conductive properties in analog AI accelerators. In this video, an introduction into these strange   and controversial circuits as well as 
+their potential in the world of AI. ## Beginnings Chua's 1971 paper began by laying 
+out some interesting connections   between the three fundamental, 
+two-terminal circuit elements. “Two-terminal”, meaning that there are two 
+connections. The current flowing through from   one connection to the other. By comparison, 
+the transistor is a 3-terminal device. These three elements were also 
+passive, meaning that they did not   use energy. This is again in contrast to the 
+transistor, which requires a voltage to work. Anyway, these three passive elements were 
+the resistor, capacitor, and inductor. And you can describe their behaviors 
+using relationships between two of   four electrical variables - voltage, 
+current, charge, and magnetic flux. The capacitor was first invented in 1745, 
+when two scientists produced the Leyden Jar.   A capacitor stores and discharges electrical 
+energy. Thus, it relates charge and voltage. The resistor can be said to be have been 
+invented in 1827 - when Georg Simon Ohm   laid out Ohm's Law, which relates 
+voltage and current. The resistor   limits or regulates the flow of an 
+electrical current in a circuit. And then we have the inductor. In 1831, 
+Michael Faraday discovered electromagnetic   induction. In his experiment, 
+he wrapped a paper tube in wire,   attached a galvanometer to the wire's ends, 
+and moved a magnet in and out of the tube. The inductor stores electrical energy in 
+a magnetic field when a current is passed   through it. Thus, it relates current and changes 
+in the magnetic field - called flux linkage. This relationship is described by 
+Faraday's Law of Induction. Through it,   we can also draw a relationship 
+between voltage and flux linkage. ## The Pitch for a Memristor Upon drawing out these relationships 
+between the three circuit elements   and the electrical variables, Chua 
+felt that there was a missing piece. A fourth circuit element that should connect 
+magnetic flux linkage and charge. Thus,   Chua proposed a "memory resistor" 
+or memristor to fill the gap. His student Sung-Mo "Steve" 
+Kang later wrote a second paper   clarifying the concept. The memristor 
+is a resistive device with inherent   memory. Chua and Kang's equations 
+are to help us predict its behavior. The memristor is similar to the resistor. But how 
+resistive the memristor is at a given point of   time depends on the history of electrical 
+current and voltage passing through it. This history is unique, which is what 
+differentiates the memristor from the   aforementioned resistor. A resistor's 
+resistive value is fixed all the time. A memristor’s value - the relationship between 
+its inputs and outputs - changes over time in   a non-linear way based on some internal 
+value. Double the input, don't get double   the output. Ergo, the memristor is called 
+a Non-linear electronic component device. ## Be Like Water Electrical engineers like to use 
+water metaphors to describe their   work. Imagine a pipe with a flow 
+of river water passing through it. The flow of water is the current. The voltage is the pressure 
+compelling the water to flow. The pipe facilitates the flow of water,   kind of like how a conductor 
+conducts a current through it. You can think of the memristor as being something 
+like a sand filter inside that pipe. It is   a device that impedes the flow of water. But 
+selectively, and in a way that changes over time. The more river water flows through the 
+filter, passing around the sand grains,   the more debris and detritus from the 
+river get stuck in between those grains. No, it does not store water. That's a bucket, 
+or a capacitor if we extend out the metaphor.   By definition, a bucket remembers how much water 
+it has - because the water is in it. On the other   hand, our memristor pipe remembers how much water 
+has passed through it without actually storing it. ## HP Comes Along Are we really sure that the 
+memristor is a fundamental circuit? A few people pointed out that 
+the memristor and the resistor   are quite similar. Both are about 
+resistance values. It is just that   the memristor has a non-linear output. 
+Does that really make it fundamental? Nevertheless, Chua published the 
+idea as a curiosity amongst other,   more significant mathematical work done in 
+non-linear circuits. And since no device existed,   people appreciated it as a nice piece of theory. Then in the 2000s, researchers at Hewlett Packard   were playing around with oxide materials 
+and the physics of resistive switching. Resistive switching is a known phenomenon where a   material abruptly changes its resistance 
+value when exposed to an electric field. So HP had invented this two-terminal, 
+two-layer semiconductor made from two   platinum electrodes separated by 
+a thin film of titanium dioxide. Titanium dioxide is widely used as 
+a critical ingredient in white paint   and also sunscreen. Normally, 
+it is a very high resistor. But. If while depositing a layer of titanium 
+dioxide, you withhold some oxygen, then the   resulting layer's crystal lattice has a region 
+with some oxygen vacancies. We say that this   region of titanium dioxide is "doped". Usually 
+you might think "doping" means to add something,   but if you think about it - we are adding 
+vacancies. So it works. Roll with me here. When you apply a voltage, then 
+a current starts to pass through   this titanium dioxide. But in doing so, this 
+current must pass through two regions - one   that is "undoped" and is a good resistor. As 
+well as a doped layer with less resistance. The device's final resistive 
+value is an agglomeration of   the resistances of the doped and undoped regions. The boundary line between these two regions 
+can "drift", causing the memristor to change   its final resistive value depending 
+on how much current passed through it. So the HP team saw these 
+very strange relationships,   and went into the literature. They came across 
+Chua's memristor papers and realized that his   equations broadly - though not precisely 
+- fit the boundary's drift behavior. Thusly in 2008 the HP team and 
+R. Stanley Williams announced   that they had an implementation of the memristor. ## The Controversy The announcement has generated some 
+mixed feelings. Devices are invented   all the time. The issue is that we want one 
+that matches the equations - an "ideal". Critics argued that the HP memristor 
+does not match Chua's equations. Thusly,   the ideal memristor had not actually been invented 
+in 2008 and might in fact be unachievable. One of the louder critics was Blaise 
+Mouttet, an ex-US Patent officer. He   called HP's claims of the memristor's 
+invention as a "propaganda campaign by   HP to take credit for emerging memory 
+devices invented by other companies." He also added that in 1960, Bernard Widrow 
+coined the term "memistor" or memory-resistor.   It is a three-terminal device that also 
+has "memory" and exhibits resistance value. Widrow created a physical implementation 
+of the memistor - though it does not look   anything like a chip. First, 
+there is a two-terminal wire   immersed in a bath of chemicals. You 
+can send a current through the bath. If you apply an electric current to the bath 
+through the third terminal, then metals can   form on the pathway via electroplating, 
+affecting the resistance wire's resistance. The memistor and memristor are pretty similar,   but there are two critical differences. First, 
+there are three terminals rather than two. And second, it was not a solid-state 
+device, which was prerequisite for the   device to ever become useful and scalable in 
+semiconductor production. So despite being   used for some neural network research in the 
+1960s, it ended up largely being forgotten. There are other examples even further back in the 
+history. For instance, one claim of memristors   accidentally being invented in a carbon 
+arc lamp discharge experiment back in 1801. For what it is worth, Chua has declared the 2008 
+HP semiconductor to indeed be a memristor. But he   changed his previous definition to do so - calling 
+all memory devices based on resistive switching   "memristors" regardless of the relationships 
+between charge and magnetic flux and all that. ## Types of Memristors There have been a number of 
+different proposed memristors. They mostly share a similar structure 
+to the HP 2008 titanium dioxide   memristor - a metal-insulator-metal or 
+MIM sandwich. Like with edible sandwiches,   the ingredients have a major 
+effect on the MIM's performance. Commonly used metals include inert metals like 
+copper, platinum, tungsten, silver, and gold. But   more exotic things like titanium nitride ceramics 
+or even carbon nanotubes have also been tried. The metals are important and can participate 
+in the resistive behavior. However,   the most important part of the sandwich 
+is the insulator sitting in the middle. There are two types of insulators - organic 
+and inorganic. The former are cheaper to use,   prepare, and can be very flexible, as 
+in we can fold them like with OLEDs. Inorganic material on the other hand tend to give   you better resistive switching behaviors 
+and can be compatible with traditional   semiconductor manufacturing processes 
+- a big bonus. It is all a balance. ## Memristor Crossbars Memristors have many interesting 
+applications to computation. But we are here to talk about AI, so 
+let us talk about how we can use these   to do neural network calculations 
+as a compute-in-memory solution. This is done by first connecting 
+together these bad boys in a crossbar   pattern - essentially rows of MIM memristor 
+sandwiches wired together in two ways. At the top, each sandwich is connected to a bar 
+of metal running horizontally - left to right. On the bottom of the sandwich, 
+the memristors are connected to   another bar of metal - this time 
+running up and down vertically. When we want to read the 
+data value of one memristor,   we run a sensing voltage - specifically tuned 
+for measuring things - through the top wire. That voltage travels into the memristor 
+and then through it into the bottom wire,   which we can measure in order to get 
+the memristor's resistance value. Writing a data value is done similarly. Each 
+memristor has a threshold. You activate the   top and bottom wires - each one at half that 
+threshold. Only the target memristor - the one   that touches both top and bottom wires - receives 
+a voltage high enough to cause it to change. Once the memristors are "programmed" 
+with their unique resistive values,   we can use them to run the AI calculations. ## Running Analog AI Computations When we run inference on a 
+model, what the hardware is   doing is performing many vector 
+matrix multiplication operations. The model is made up of parameters 
+- numbers that we obtain through   training. We take those parameters as 
+well as the numbers from our data input,   and then multiply and sum 
+together many many times over. A memristor crossbar can perform these using 
+what is called analog computations. Analog   is a different paradigm than digital. It 
+involves continuous values modeled on the   real world - rather than the abrupt 
+1's and 0's from the digital world. The memristor crossbar lets us use 
+fundamental laws in electrical engineering   to do multiplication and summation 
+across a whole row of memristors. Each memristor in the row has its own special 
+resistance value - representing model parameters. If we apply a voltage across the whole 
+row, then that signal interacts with   each of the memristors' unique resistance 
+values to create a current. If you recall,   the voltage is like pressure and it causes 
+water, which is like current, to flow. That current is a unique value produced by 
+the voltage multiplied by the memristor's   conductance - which is the inverse of 
+its resistance value. Higher conductance,   higher current for the same voltage. We then read out all the currents in the 
+whole row as a single value. The result is   the literal, physical manifestation of 
+the result of our multiply-add action. Because we performed all the matrix 
+multiplication calculations right   inside the memory cells where the parameters 
+are stored, we call this "compute-in-memory". It skips right over the power and latency 
+issues associated with the Von Neumann   bottleneck. We do a whole round of vector 
+matrix-multiplication operations in a single,   low-power step. We save a lot of time and 
+energy against existing digital AI accelerators. The difference can be formidable 
+especially at larger sizes. If   your numbers - the matrix - fit into the 
+crossbar, then the calculations will be   done in the same amount of the time - a 
+concept referred to as "constant time". ## CMOS-Memristor Hybrids These crossbars likely work best 
+for inference - the times when you   are actually running the model in the real world. Training a larger, commercial-class neural 
+model requires more precision than what   modern analog systems can provide and are 
+compute-intensive. So right now, it makes   more sense to train the model the usual way, and 
+then transfer it into the memristor crossbar. Memristors are CMOS compatible. This means that 
+we can make these memristors on top of silicon   wafers using traditional semiconductor 
+manufacturing techniques - deposition,   photolithography, etch, the works. This opens up the possibility of CMOS-Memristor 
+hybrids. One example from a March 2023 Nature   article had the CMOS part stabilizing the 
+various levels of readable resistance in   the chips. The authors note that these 
+would be more suited for edge solutions. CMOS-compatibility offers a 
+few major benefits. First,   we can make the memristors very small - with 
+layers each about 10 nanometers thick. We can   even stack them in a 3D manner. This means more 
+memory capacity for potentially better models. Second, we get to drift in the wake 
+of the massive investments made by   the larger semiconductor industry. We can tap the   existing ecosystem to quickly scale 
+up production of an advanced product. The big catch, however, is defectivity. Normal 
+defects in the manufacturing process can cause   the memristor to work below its expectations 
+or break down - especially after just a few   cycles. And since analog calculators so 
+fundamentally depend on their physical   interactions to do their work, defects matter 
+doubly more here than with digital systems. New metrology and test tools will need 
+to be developed in order to detect and   fix these issues throughout and after production. ## Conclusion Memristors don't have a monopoly 
+on analog computation for neural   networks. There are many more implementations. For instance, IBM recently published an 
+analog-AI chip based on similar analog   computation principles. This one however 
+uses a different type of non-volatile memory   called phase-change memory, which relies on 
+phase changes in a material induced by heat. And in a previous video, I covered 
+another analog AI accelerator that   used the interactions of light to 
+perform neural network calculations. I do think memristor-based systems have 
+some potential - especially considering   how they can tap the existing CMOS 
+ecosystem like MEMS do. Though I do   wonder if there is the 10x leap forward 
+in performance that paradigm-shifting   technologies need to have in order 
+to overcome their limitations. But the market is there. I hope to someday   see some memristor-based accelerators 
+hitting the market in the near future.

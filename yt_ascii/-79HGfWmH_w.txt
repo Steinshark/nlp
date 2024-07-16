@@ -1,0 +1,160 @@
+hello and welcome i'm james murphy from m coding 
+and today we're talking about the single most   important feature coming soon in python 3.10 i'm 
+talking about structural pattern matching and the   match statement depending on when you're watching 
+this video python 3.10 might already be out   but at the time of recording which is march 17 
+2021 python 3.9 is the latest version i just   saw that pep634 on structural pattern matching 
+was accepted so i had to download my own copy   of the latest branch of python compile it and try 
+running it for myself as you can see down here in   my python console i am running a version of python 
+3.10 you can see here the exact git commit hash   of the commit that i'm using so i couldn't wait to 
+check out this new feature i had to just compile   it myself and i thought i'd make a video about 
+it so here it is basically in prior versions of   python we already had some very primitive versions 
+of pattern matching so if i have for example   x comma y i can say x comma y is equal to one 
+comma two now what does this mean well python   is smart enough to figure out that well this 
+is a sequence of length 2 and this looks like a   sequence of length 2 so it figures out to assign x 
+to 1 and y to 2. this new syntax through the match   statement takes it to a whole new level let's 
+take a look at some examples so all throughout   this video you can look on your left to see the 
+new syntax and on the right how you would have   to write it or what might be the simplest way to 
+write it without using the match statement so of   course python is a turing complete language so 
+the match statement doesn't really add anything   new in terms of what programs can be written what 
+it adds is a new way to think about programs so   on the left is going to be the new match syntax 
+and on the right is going to be the old way of   doing it first up we have this function command 
+split which takes in a command which is let's   say a string we'll do a command split and that 
+will break up the string into a list of strings   and then we want to do different things based 
+off of what those things are so you can imagine   this would be useful if you're like writing a 
+shell just for demonstration purposes i have a   few different commands here so you can see we're 
+going to match what does this command dot split   look like and then the syntax is you have a match 
+and then the thing that you want to match and then   a bunch of cases that it could look like so the 
+way that it works is python will compute this   and then try each case one after another until 
+it finds a match if it doesn't find a match it's   kind of like an if false where it just wouldn't 
+execute anything in the body this is similar to   a switch statement but on steroids so you can see 
+that on the left we have a much more declarative   style than on the right well first off the code 
+on the right is terrible i mean can anyone look   at this and just read what it's doing probably not 
+you have to go through every single one and check   you know is the length two and the first one 
+zero you have to really read every single line   whereas on the left it's a much more declarative 
+style where you just say this is what it looks   like does it match so let's just slowly go 
+through a few different cases and then you'll   sort of get the idea of how the match statement 
+works so in this first case we're matching   a list with one element whose only thing in it is 
+the word make that's pretty self-explanatory now   technically speaking when you do a match like 
+this it doesn't have to be a list that you're   matching against it can be any sequence type so if 
+i passed in a tuple it would still match a list in   the second case we're saying we have a sequence 
+of two elements the first of which is make   and then we just put in the name of a variable 
+here similar to the way a for loop works   this cmd does not have to be already defined this 
+is a name and we are binding whatever value is in   the sequence at that point to this name now if 
+you read the documentation it is very careful to   always use the word bind rather than assign which 
+you might you know colloquially think of we're   going to assign the value here to the variable 
+cmd but for technical reasons it is not actually   assigning the next case is just another single 
+element restart we've already been over that   this next case is the word rm remove followed by 
+any number of extra arguments so this is similar   to a star args situation here where there can be 
+zero or more things here and this files variable   will then be a tuple containing all of those 
+extra things so you can see on the right hand   side what it's actually doing it's going to be 
+checking if the length is right if it sees the rm   and then assigning or technically not assigning 
+but i'm going to slip up and use that word   it's going to be assigning files to whatever 
+is left and then finally this underscore is the   python way of saying a wildcard anything 
+so case underscore will match any pattern   so in the comparison with a switch statement this 
+is kind of like your default case if nothing else   matches then this case will be executed now if i 
+didn't have this wildcard case here and i passed   in something that doesn't match any of the other 
+things then just nothing would be printed if it   doesn't match it doesn't execute and you can see 
+on the right hand side how this compares the wild   card is much like an else so let's go ahead and 
+just put in some test cases to see what they do   and you know run it to prove that 
+i actually compiled the python   so you can see command split make we do a make a 
+make clean a restart remove abc and then something   that doesn't match and you can see we do a 
+make make clean so we say found command clean   and then a restart and then deleting the files abc 
+and so you see files was passed here as a list and   then the wildcard statement okay let's move on to 
+the next example so in the last example we were   matching on a command dot split i just wanted to 
+put this in so you can see that you can actually   match on a variable itself you don't have to 
+match on some sub-expression so this is just   almost a simpler example i can match a variable 
+against certain specific values so in this case   it will check to see if they're equal 
+by using the equals equals operator   unless of course you're using true false or 
+none in which case they'll be compared with   the is operator so in this case i think 
+i might actually prefer the old syntax   and of course if we add in a little use case 
+here then we can see that it matches the 42.   okay let's move on in this example we see that you 
+can use the pipe operator to give alternatives for   the same case so in this case i take in a command 
+and i can either say north or go north and both   of those will have the same effect you can even 
+do it when you're binding a variable even if the   position of the variable is different from case 
+to case so you can see in this case i can say   get object or pick up object or pick object up 
+and all of those will match notice how simple   this syntax is if i wanted to do the exact same 
+thing this is what it looks like in python 3.9 say   much more complicated on this side much easier to 
+be read on this side and on the right side we have   code duplication which means a chance for error 
+especially if something changes in the future   so you can see if i add these two use cases 
+then both of these match in the expected way   so i said go north and pick up sword this 
+example is short and sweet but it really   shows off the important feature of structural 
+pattern matching it's composable in any pattern   i can put another pattern as part of the 
+pattern so you can see in this case i'm matching   i have a list the first element is go 
+and the second element is this pattern   so it can be north south east or west so i can say 
+go north go south go east or go west when i have   alternatives like this i'm not necessarily going 
+to know which one of that sub-pattern matched   so python also allows you to use this as and 
+then the name of the variable to capture the   value of that match you can see that with these 
+test cases see going north going east direction   gets first north and then east this next 
+example shows off guards in match statements   so this is similar to when you have a list 
+comprehension you say something for something   in something if and then you give a condition 
+and it only goes through the elements where that   condition is true so you can have a case and then 
+say this case only applies if this condition holds   so in this situation you have a command which is 
+like telling a character which direction to move   and then you're also passing in a list of exits so 
+if there's an exit on the north but there's a wall   on the east then you can't go to the east you 
+could only go to the north something like that   so i'll say go direction but only if the direction 
+is in the set of allowable directions and if i   match something which is go and then here's 
+the use of a wild card go and then anything   that didn't match this then i just say you can't 
+go that way so if i give these two examples go   north and go north both times but if the exits 
+are east and south in the first case and the north   and the second case then we should expect that 
+it is only able to go north in the second case   and indeed when we don't have a north exit 
+when we say go north we get can't go that   way but when there is then we get going north 
+for this next example imagine that we have some   kind of event-driven architecture we're receiving 
+events and they're getting passed to this function   and our events can be clicks they can 
+be key presses or it can be a quit event   now you're really going to like this one because 
+this massively simplifies the code makes it   way easier to read i hope you appreciate how 
+nice this pattern matching is in this instance   so i take an event and i'm matching 
+on the event the match statement cases   can use the following syntax you can 
+put in for a case the name of a class   and you can fill in some of its attributes so 
+in this case i've filled in the attribute button   and i've given it a value so this case is 
+matching is the event an instance of the click   class so is it a click whose button is left and 
+then notice position x y, x and y aren't defined   here so x and y are going to be variables that 
+get assigned the value of these positions you   might think that this syntax is going to construct 
+a click and in any other place in python that is   what would happen but specifically inside a match 
+statement next to a case just like this if you   write what looks like the constructor of 
+a class what you're actually saying is   match something that is an instance of 
+that class with those particular attributes   so you can see this case i'll match any 
+left click this will match any other   click in this case i'm matching a key press 
+but i'm specifying capital q or lowercase q   as a positional argument not as a keyword argument 
+like here i'm saying keyname equals up arrow or   here i'm effectively saying keyname is capital 
+q or lower q if you want to match any instance   of a class you just give it like this with an 
+empty constructor and finally here this is kind   of another wildcard case except i'm giving a name 
+to it i'm saying if you reach this case it will   match anything and we'll bind the name other event 
+to that value now of course i already had access   to the variable event so it's kind of pointless 
+to give it another name other event but if this   was some kind of asynchronous framework i might do 
+something like you know event.get at which point   i no longer have access to this as a variable so 
+this would allow me to capture it at that moment   but for now let's just get rid of that so 
+here are the test cases for that function   we're going to do a left click at zero zero and 
+then a quit and then something that doesn't match   so you see we have a left click and then 
+quitting and then we caught the exception so   it didn't match in the other case now before 
+we move on i just want to point out again   look how much more readable the left hand 
+side is compared to the right hand side   even though my syntax highlighting isn't 
+working properly on the left-hand side   for obvious reasons pycharm doesn't know about 
+3.10 syntax but still on the left hand side   i can easily read through know what case is 
+going to be matched and what's going to happen   whereas the right hand side you really just have 
+to read line by line the last thing that i want to   show off is dictionary matching so let's match 
+on an event which you should be imagining that   you have some kind of web api and you just got 
+some json and now you want to act on that json   based off of certain properties of it so you 
+say what kind of json event does this look like well if you have a dictionary like object 
+you can match it as a dictionary you can say   does this thing have a key called transport 
+with value http and then you can act on that   now it's fine if there are other keys in the 
+dictionary so i could have transport http   and then some other value floating around 
+in there it only matches on the things that   are present in this case you can see that we can 
+have multiple keys multiple values and what this   is saying here with this n which again is not 
+defined this is like the variable in a for loop   we are going to define it at that moment it's 
+saying is the key page number present and if so   assign or bind its value to the name n so let's 
+just add in that test case i'm going to pass in   a get request for the articles page and i want 
+page 5 and there is some extra info in there   which is not going to affect the match statement 
+and you can see let me get that article for you   on page five so that's the match statement i know 
+that they're going to be heavy heavy debates about   where it is most appropriate to use a match 
+statement you know is this good code style   what is good code style for this you know new kind 
+of statement there are going to be lots of debates   on when and where it is most appropriate 
+to use a match statement but i think that   at least we can take away from this video that in 
+some situations a match statement can take totally   unreadable code and make it readable at a glance 
+so although i think that the match statement it's   not really necessary as a programming language 
+feature i do think that it will find its place   in the python community and it will find its use 
+cases so that's my take on structural pattern   matching the match statement what i think is 
+going to be the single most important new feature   introduced in python 3.10. let me know if you find 
+any other interesting uses for the match statement   or even better if you think that there's something 
+else new in python 3.10 which is even better than   the match statement so i hope you enjoyed this 
+sneak preview of what's coming ahead in python   3.10 if you like the video don't forget to like 
+comment and subscribe see you in the next one

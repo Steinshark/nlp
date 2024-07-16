@@ -1,0 +1,99 @@
+yes so we're going to talk about l-functions. i want to give you an example first of all of one l-function that i
+think you probably would recognize and this is the riemann zeta function, which
+depends on a complex number s is x+iy. 'i' here is the square root
+of -1, and you can define it either by a sum over the integers, all the integers, all the positive ones. or, this is a great discovery of euler: i can write it as a product over the
+prime numbers. and so the zeta function encodes information about the primes. it
+contains all the primes and if you can unravel how the information in the zeta function is encoded you can determine properties of the primes. that's one of
+the l-functions, and let me tell you a little bit more about the riemann zeta
+function because that's gonna be part of the story. so the riemann zeta function is
+defined as a sum over the integers or a product over the primes, and these
+formuli work if x is greater than one. but it turns out you can find formuli
+that match these when x is greater than 1. when x is less than one work as well.
+and here's what the riemann zeta function looks like. so these formuli work to the
+right of the line x=1. so they work out here. and they tell you the value of
+the zeta function anywhere in this in this region. now it turns out the zeta function has this amazing symmetry which was discovered by riemann, which say that the line that i have drawn in blue there
+that passes though the point one half, that's a symmetry line of the riemann zeta
+function. if i know the value the zeta function at some point here, i reflect
+that point through the blue line to get a point here and know its value here. i can deduce that very easily. so riemann reflection formula, the symmetry formula, tells us
+that because i know he zeta function in this range i also know in
+this range as the reflection so that just leaves this strip which we don't
+understand. this trip is where the function is really mysterious. we know that in this strip, there are infinitely many points where the zeta function takes the value 0. the belief is - and this is the riemann
+hypothesis - that these points where the zetas function takes the value zero, all lie exactly on
+the symmetry line, and this is called the riemann hypothesis. and this is one of
+the great mysteries of mathematics. riemann hypothesized this in'59 and it's
+been tested hugely since. brady: professor, it's well-known in mathematics that if any mathematician can prove the riemann hypothesis, he or she is destined
+for greatness. prof: yeah. brady: why? prof:  well, because the riemann zeta
+function encodes information about the prime, so if we know the positions of the
+zeros, that tells us really important information about the prime numbers. brady: what information? what does it tell you that you don't already know? prof: it tells us things we already suspect, because we sort of believe the riemann hypothesis is true, but there are things we can't prove. so for example, how many primes are there up to a trillion? we have a formula that we believe is true but we can only prove that formula if we know
+the riemann hypothesis is true. brady: so it's like a whole bunch of houses would suddenly have a foundation. prof: absolutely, and there are whole books written assuming the
+truth of the riemann hypothesis, so the foundations of our understanding of the primes would disappear if the riemann hypothesis turned out to be false. it's
+known there are infinitely many zeros of the riemann zeta function inside the
+critical strip, and it's known that at least 40% of those do lie on the
+symmetry line. it is known, and this is a result of hugely extensive computations
+that the first 10 trillion zeros lie exactly on the symmetry line. that's the first ten thousand billion. it's known that batches of zeros, much higher up, beyond the 10 trillion, lie on the line, so i think the world record at the moment is there's a batch of zeros up beyond the 10^36th zero, that is the billion billion
+billion billion-th zero, somewhere up there there's a whole batch which we know
+lie exactly on the line, so people have put a pretty huge effort into this, and there's
+a long history of this: alan turing, when he built the first electronic
+computer, one of the first things he did was compute the zeros of the zeta function. he found about the first 1000 lie on the line. brady: professor, if a mathematician one day finds a zero in the strip but not on the line, is that mathematician gonna be a hero or a pariah? prof: [laughs] well they would certainly be very famous, and i think mathematicians very sanguine about this, they'll just accept the truth, they want to know the truth, that person would be famous,
+but i think it would be a kind of ugly kind of fame, not a beautiful kind of fame. so we got these properties and this is what i want to emphasize: we can write the zeta function as a sum over the integers,
+or as a product over the primes, and the zeta function has a symmetry line, reflection symmetry line, and we believe that all the zeros of the zeta function around that line lie exactly on that. this is one of the great
+mysteries in mathematics, and people have spent 150-odd years
+thinking about this. and one natural way if you're given a mystery is to try to
+understand: well, is this a more general property? so are there other functions which look like the riemann zeta function? and maybe by finding lots of those functions and comparing them that tells you the essential properties that make the
+riemann hypothesis true. maybe it allows us to prove it. so an example would be:
+if you think about evolution, darwin wanted to establish evidence for
+evolution, so he goes to the galapagos islands, and he has to find lots of
+finches that're all very similar but not identical, and by making comparisons of
+the similarities and the differences you then understand the essential properties
+that led them to evolve as they did. so we want to find the cousins of the
+riemann zeta function. to see whether there are any, what might you do? well you might look at this sum over the integers, and you might change some of these plus
+signs into minus signs and see, well, can you have any combination of
+pluses and minuses here? and it turns out it's very rare that by changing some of
+these plusses into minusses you can write this sum, the resulting sum, as a product of the primes but be slightly different to this product
+but would resemble it. and you'd have something that had a symmetry line that's very
+very rare that that happens. to there is one example of one. let me go back to the
+riemann zeta function going to split the primes up into two classes: 2 will
+always be special believe that is it is but the odd primes will either be - if you divide them
+by 4 - either remainer of 1 or 3. so you divide 3 by 4, the remainders 3.
+divide 5 by 4 the remainder's 1. because 5 is 4 + 1. 7: divide that by 4, the remainder is 3. 11 is 3. and 13 is 1. so the ones that are divisible where the remainder's 3 will flip their
+sign, so we put that one there we'll put a 1 there, a 1 there, and we'll do the other 2. and that gives you an l-function which has a symmetry property to expand these products out
+you get a sum of the integers exactly like the reiman zeta function so this is an
+example of a function which is an l-function. a lot of these were discovered in the
+nineteenth century. there are infinitely many of them brady: you said they were rare ya ya ya, um. despite the fact that there are many they're extremely rare amongst all possible combinations of plusses and minusses that you can have there. so we know there are infinitely many other functions that look like the reimann zeta function. you can write them as a sum of the integers, you can write them as
+a product of the primes - they have a symmetry line - and we believe they all
+have a riemann hypothesis. so that was the 19th century then in the 20th century
+people found other examples of functions that have those properties you can write them as sums over the integers, or products over the primes, they have a symmetry line, and we believe that they a reimann hypothesis. and one of the heroes in this story's ramanujan. sir ramanujam was studying the following function: x times (1- x) to the power of 24. (1-x squared) to the power of 24. times (1-x cubed) to power 24
+times (1 - x to the 4th)^24 etc you get the point and what he discovered
+was that he could write this as a sum of powers of x. (1 times x) minus (24
+times x squared) you can do at home multiply this thing out. that's 24 times x
+squared plus 252 times x cubed minus 1472 times x power 4 etc... and this keeps going on and you get these beautiful whole numbers coming out now here's the miracle. 2 times 3 = 6 -24 times 252 = -6048. so these numbers have the property that for example three times
+five is 15 and if i go out to the 15th number in this series the the coefficient there, the integer that appears is 252 times 4830. this meant you could
+associate an l-function with these things. so here's what you do you write 1 - 24 over 2^s, +  252 over 3^s, minus 1472 over 4^s, + 4830 over 5^s, et cetera and this series follows from ramanujan's observation a couple more observations that i won't sort of explain in more detail it follows that you can
+write this series as a product over primes just as we did for the riemann
+zeta function you can plot that in the complex plane and he has a symmetry line
+exactly like the riemann zeta function does and the zeros of this function are
+believed to satisfy riemann hypothesis. now these functions are a class of functions called modular forms. they have certain symmetry properties which we believe
+give rise to the kinda general patterns that you see in the riemann zeta
+function there is a symmetry line and zeros on that line a riemann hypothesis.
+and these have been studied throughout the twentieth century and andrew wiles in
+his great work on fermat's last theorem used this connection between modular
+forms that its functions like this and l- functions that its functions like
+this to proove fermat's last theorem. for all these l-functions we believe there's a
+riemann hypothesis so the big goal is to say well can we find a pattern can we see any similarities that would
+give us a clue as to why the riemann hypothesis is true, for any of them? and one of the things that's been done recently is to produce a huge database
+of millions of these l-functions with all the properties tabulated in a very
+clear and simple way and basically the idea is to throw this out to the world
+and say can you help us find the pattern? and what you'll find there is the
+riemann zeta function, you'll find ramanujan's l- function, you'll find the
+l functions that andrew wiles studied, you'll find even more exotic and weird l-functions that we believe all have a riemann hypothesis. and you go to this
+website you find these zeros, you'll find plots of these l-functions ... what's the pattern? brady: if i go to this database though, i'm not gonna make a breakthrough, am i? surly this is only a resource for
+mathematicians well... it's originally for mathematicians, but i think
+these properties are accessible to a wide range of people this database is
+set up so if you click on any technical word, up comes an explanation of that word now you put some mathematics to understand that but looking at the
+pictures i something anyone can do and somewhere in there is a pattern that
+mathematicians haven't spotted. so it may well be that somebody else spots it. not
+likely but it is possible too big for this the right knees
+heavyset said it and i'll say it again this is a prime between and into an
+agreement did precisely that he explained how to extend the this
+function to all possible values except for one so there's only one billion
+there is nothing you can do

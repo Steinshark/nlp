@@ -1,0 +1,186 @@
+so we're doing this series graham - thank you
+for coming back to computerphile - about the most important thing in computing, or one of
+the most important things; have you got something for us? yeah, i think so. so maybe
+it's not the most important, but it's certainly one of the most interesting, and one of
+the weirdest ideas in computer science, and that is the y combinator. the
+background to this, is that in the last video we did an introduction to the
+lambda calculus, and this generated quite a lot of discussion and comments, which
+was very nice, but it turned out that the top comment was "can we have more on the
+y combinator?" so that's what we're going to do today. so what the y combinator
+actually is, is a way of doing recursion in a language which doesn't have any
+recursion, or any looping mechanism at all. so what we'll start off with is a
+quick refresher about what recursion actually is. so recursion is the idea of
+defining things in terms of themselves, and a simple example of this is the
+well-known factorial function, so let's have a little look at this. the way
+factorial works is you give it a number like 3, and it's going to count down from
+3 to 1, and multiply up all the numbers in between. so for example, factorial of 3
+then would be 3 times 2 times 1, which would give us the result 6. and then we
+can think how do we actually define this function? and it turns out that the
+factorial function has a very simple, and a very natural definition, using
+recursion - defining things in terms of itself. so let's see how we can do that.
+if you give the factorial function a number n, it's going to make a choice
+between doing one of two things. if the number you give it is already 1, which is
+the point where you're trying to count down to, then there's nothing to do. so if
+the number equals 1, then we just return the result 1. otherwise, what we're going
+to do, is we'll take the number you're given, and we'll multiply it by the
+factorial of its predecessor. so for example, if n was 3 we would take 3
+times the factorial of 2. so this is a recursive function because we're
+defining factorial in terms of itself - the factorial of any number n is defined
+in terms of the factorial of n minus 1. so you can see the way that this is
+going to work - if you give it a number like 3, it's going to loop round - two,
+one, and so - on until it eventually gets to one, and then it will stop and do
+all the multiplies. so let's do a little example of this running, to see that we
+know how it actually works. if we take factorial of 3 - so factorial of any
+number that's not 1 is going to be that number times the factorial
+of its predecessor - so we'll take 3 times the factorial of 2.
+and then what do we do now? well, we just do the same thing again. we've worked out
+what factorial of 3 is, now we need to work out what factorial of 2 is, and
+we just run the definition again, recursively. so we copy down what we had
+before. we have 3 times, and then we have 2 times factorial of 1. and then the
+final step is the base case - this is where the recursion stops - because
+the factorial of 1, according to our definition, was just 1. so we're going
+to get 3 times 2 times 1, which is 6. so that's a simple example of a recursive
+function, and how it may run. so what we were looking at in the last video was
+the lambda calculus, which is a minimal language for defining functions. and it's
+only got three things in it - it's got variables, like x, y and z; it's got a
+way of building functions, that's the lambda notation that we saw last day;
+and it's got a way of applying functions, that's just putting two things next to
+each other. and everything else in the lambda calculus is encoded in terms of
+these three basic things. so an example which we did last day was the logical
+values true and false, and i'll just refresh your memory about how we did
+this last day. the two logical values are true and false, and how do you represent
+these, or encode these, in the lambda calculus? you do it very simply as two
+functions. so true is going to be encoded as the function that takes two things, x
+and y, and just gives you back the first one, x. and then false is the opposite - it
+takes two things, x and y, and it gives you back the second one. and these
+encodings can then be used to define any other function which you'd like on the
+logical values. like, i think last day, we looked at not, and we looked at and, and
+we looked at or. so any other function can be defined in terms of these two
+encodings. and these encodings are very natural - they express the
+idea that, in programming, true and false are often used to choose
+between two different things. so if one thing is true, you do something; and if
+it's false, then you do something else. and these two definitions just encode
+this idea of choosing between one thing, or another thing. what we're thinking
+about today is recursion. and you can ask yourself, if we have our definition like
+the factorial function here, the key thing in the definition is that it's
+recursive - we're defining the factorial function in terms of itself, recursively.
+so how do we encode recursion in the lambda calculus, which doesn't have any
+sophisticated feature like that at all? so let's start off by reducing the
+problem a bit. let me write down the very simplest recursive definition which i
+can think of. and the simplest possible recursive definition is just a program
+that loops - it doesn't do anything at all. so here would be the program. so i just
+say loop equals loop. and if you think about running this thing, we say what's
+the value of loop, or how do you execute loop? well, you just go to the right-hand
+side, and you say, well it's loop. so you go back to the left-hand side, and it's
+just going to go around like this forever - it's just going to kind of spin
+on the spot, without doing anything at all. so this is the simplest recursive
+program which you could write down. so how could i encode this behavior in the
+lambda calculus? and the key to this is something called self application - it's the
+idea of applying something to itself - or in this case, applying a function to
+itself. so let me show you how to encode loop. so the way this works is we will
+define loop to be this function here. so the first thing to observe is that we
+have two functions in here, and in fact two copies of the same function. if we look
+at this function here, and this function here, they're both exactly the same. so
+what we're doing here is we're applying this function to itself - it's the idea
+of self application. and this actually occurs at another level as well. if we
+look at what each of these functions actually does, it takes an input called x,
+and then applies x to itself; so again, this is the idea of self application -
+we're taking something in here, and then we're applying it to itself, and the
+same is happening over here. and it turns out that this idea of self
+application is the key to how you do looping, or recursion, in a
+language which doesn't have support for that feature. so let's actually
+check that this thing actually has the behavior that we'd like - check that it
+actually performance looping. if we write down the same thing again, we have lambda x,
+x x, and then we have lambda x, x x. let's think about how we can actually run this
+thing. so we need to remember what a function actually does. so a function
+takes an input, like x, and then it tells you what to do with it - so in
+this case it takes an x and just makes two copies of it side by side. and
+in this case, the x is this thing here - this is the argument, or the input, to the
+function - we're applying it to itself. so what's going to happen is that this
+input is going to be plugged in, or substituted, for x and then we'll just
+get two copies of the thing in the box. so that's how you would run the function.
+so if we write this down, we're going to get two copies of the box, and inside the
+box will be exactly the same thing. and what you see here, is that in going from
+here to here, we've got exactly back to where we started. we started with this
+expression here, which was the definition of loop, and we've ended up with exactly
+the same thing. and of course if we do the same thing again, if we say this is a
+function, this is its input, let's plug it in, in the two places where we see x, then
+we'll get exactly the same thing again. so this thing is just going to go around
+in circles. it will never get anywhere - every time you run one step of it, it
+will go back to exactly the same point, so it encodes the idea of looping. so
+that's a simple example. let's have a more general example of recursion. so
+here's a little recursive definition. i'm going to define a function called rec,
+for recursion, and it's going to take another function as an input, and what
+it's going to do is apply that function to rec of f. so what does this definition
+actually do? well, first of all, we can see that it's recursive, because rec of f is
+defined in terms of rec of f. but it's not just looping around all the time -
+it's got a function f here, sitting in the way. so if you think about unwinding
+this definition, what you'll get is f of f of f of f, forever. if you run this recursive
+program, it's just going to apply the function f infinitely often. and this
+turns out to be the idea of what's called general recursion in computer science -
+this is the most general pattern of recursion you can have, and any other
+recursive function can be encoded in terms of this one. so if we can encode
+rec in the lambda calculus, we can encode any recursive function. but let me set
+you a couple of exercises at this point. using the definition of rec, which is
+recursive, how do you program loop? define, or redefine, loop to be rec of some
+function. so you've got to figure out what function to apply rec to here. it's
+actually a very, very simple function - it's probably the simplest, or it is the
+simplest function, you could write down in the lambda calculus, so don't try and
+over complicate it - write down the simplest function you can here, work
+through the definition of rec, and you'll see that it actually has the looping
+behaviour. a slightly more interesting exercise, and a bit more challenging, is
+how to define the factorial function using rec? and i'll give you a bit of a hint on
+this one - what you need to do is pass it lambda f, lambda n, and then you need to
+figure out what you write for the question mark here, okay. and what you'll
+find, is that the function that you write in here is not recursive - it's the non-
+recursive part of the factorial function. okay, so that's a bit of a challenging
+exercise. this one's quite easy, this one's a little bit more challenging,
+but you'll learn a lot about the way recursion works in the lambda calculus
+if you do these two exercises. so what we've reached now is the point where,
+if we can encode rec, which is general recursion - any other recursive function
+can be encoded in terms of that, or defined in terms of that - if we
+can encode rec, then we're done, because that lets us do everything. so
+it's a bit of a mouthful, so i haven't tried to memorise it - i've just got
+a copy pre-prepared here. here is the definition, or one possible definition,
+of rec in the lambda calculus. and this is what's known as the y combinator. and if
+you look at this, i mean it looks like a jumble of symbols, but it's actually very
+similar to loop. if we look back to see the definition of loop, it had the idea
+of self application, so we applied a function to itself. and the function we
+applied was lambda x, x x. and we saw, how when you run that, it will actually
+achieve the looping behaviour. if you look at the definition of the y combinator,
+which is defined here, it's got exactly the same structure. here we have a function,
+and here we have another copy of the same function, so it's exactly the same
+idea of self application. the only difference here, we haven't got lambda x,
+x x, we've got an f in the way, and that's the f which we're going to be kind of
+repeatedly applying when we do the recursion. so this is the y combinator.
+it's not recursive, but it encodes recursion. and this is a very simple but
+powerful idea, and you can do this in most programming languages, unless you
+have some kind of type system which would stop you from doing this. this
+gives you a way of doing recursion in a language which doesn't have any
+recursion at all. if you want to know where it comes from, it was invented by
+a mathematician from the united states - haskell curry, and this is the haskell
+who gives his name to the haskell programming language. so if anyone asks
+you about the y combinator, this is what it is. if you want to know a bit more
+about the y combinator, you can of course look online, and there's a very
+nice wikipedia page about this, where you can find more details about these kind
+of things, and see how to do some of the calculations and proofs of some of the
+things which i have been saying. but actually, it's interesting that the top
+hit on google for y combinator is not this stuff. it's actually a company which
+is called y combinator. and you think, well why would anyone call their company y
+combinator? if you look at the company's web page, they've got a frequently asked
+questions list, and one of the questions is - why did you choose the name y
+combinator for your company? and they say a number of things here - so y combinator
+is one of the coolest ideas in computer science, and of course i'm going to agree
+with this, and i think this is a very nice, very interesting, fundamental idea
+about how you do recursion in a language which doesn't have recursion. and it's
+also a metaphor for what this company does. so the y combinator is a
+way of having programs that run other programs, and in this case it's a
+way of doing recursion in a language which doesn't have recursion. and that's
+basically what their company is doing - they're a company that helps start
+companies - they're a startup incubator in silicon valley, and it's the same kind
+of self application idea. they want to help someone to make a company,
+and it's the same thing here - we want to have programs that run other
+programs. so for me, this is certainly one of the coolest ideas in computer science. this is alonzo church, who was a mathematician
+at princeton university in the united states, and he was the person who
+invented the lambda calculus, and what he was interested in, is what
+is the notion of a function...

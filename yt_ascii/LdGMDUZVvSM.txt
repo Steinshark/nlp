@@ -1,0 +1,145 @@
+hi sean really great to be back on computer file 
+we are in the lab again i think a few or maybe   about a year ago you were down here i can't quite 
+recall if the instrument was running at the time   but what we're actually going to talk about today 
+is based very much on this paper i wish i could   say it's or a paper it's not our paper it's by 
+a group led by this guy alex could turian sorry   alex if i've got your name for not pronounce your 
+name incorrectly at least you're not stuck with   moriarty for a surname interconnected single atoms 
+could make a quantum brain and we're going to talk   about this there's an awful lot of physics we 
+need to get through and sean hangs his head back   in pain the camera's not drooping oh 
+sorry we'll try and condense our physics down last video we did shows on neuromorphic 
+computing which is about trying to take the   type of computing that happens in here rather than 
+the sort of on neumann architecture which is what   happens in there and use that to do processing 
+because there are certain things our brain does   incredibly well that silicon doesn't do so well 
+and vice versa when this particular title popped   up in my physics world institute of physics 
+feed it obviously repeat my interest directly   they've basically made neurons out of single 
+atoms which is really really quite remarkable   not only have they done that they've got single 
+atom neurons and then they've also controlled the   connections between those atoms and the way those 
+atoms talk to each other so they've also built   artificial synapses again effectively using single 
+atoms so this is really quite remarkable we've got   neuromorphic computing pushed all the way down to 
+the atomic level and that work is is based around   an instrument called the scanning tunneling 
+microscope now we've talked a little bit about   this before i bored brady harren's ears off over 
+on 60 symbols about scanning tunneling microscopes   this is a scanning tunneling microscope all the 
+stainless steel surrounding it is because it's in   an ultra high vacuum we're manipulating individual 
+atoms we want to have this controlled environment   as possible we don't want lots of contamination 
+we're actually working with silicon and if you   were to prepare silicon in air it will oxidize in 
+a fraction of a fraction of a fraction of a second   so we have everything in ultra high vacuum and a 
+pressure comparable to that you have on the moon   and actually in real time what you're seeing 
+here these are atomic rows of silicon these   little holes are where atoms are are missing and 
+we along with a number of other groups have been   embedding machine learning approaches like 
+convolutional neural nets and there have been   lots and lots of videos on computer file about 
+convolutional neural nets we've also actually had   a number of very helpful conversations with mike 
+pound who i know many of you will be familiar with   on taking machine learning ideas embedding them 
+into the scanning probe microscope and instead of   us sitting there laboriously preparing that probe 
+we're training the instrument using reinforcement   learning and strategies along those lines to 
+actually get the tip in a state where it gets the   best possible image without us having to sit there 
+and babysit it for hours days weeks months on end   in a nutshell sharp probe atomically sharp 
+you bring it in close to a surface and when   i say close i mean within an atomic diameter 
+or so there is a means of doing that 60 symbols   you move it back and forth and you measure 
+some type of interaction be that a current   and the tunneling in scanning tunneling microscope 
+comes from the fact that it's a quantum mechanical   effect called tunneling that happens on the 
+atomic scale or a force and we're now at the   point where you can measure the force and not just 
+measure but exploit the force between single atoms   and that's what they've done here they've imaged 
+and controlled right down to the single atom level   after that long introduction we're going to 
+talk about this particular paper and what i'm   going to do is try and summarize it down to what 
+the key ideas are so the paper itself is here   nature nanotechnology an atomic boltzmann 
+machine capable of self adaptation   so what's a boltzmann machine well boltzmann 
+is an incredibly important physicist   mostly because he thought about the 
+statistics of physics he thought about   matter in terms of its component atoms and the 
+dizzying bewildering array of gazillions upon   gazillions of atoms you you know try to count 
+up the molecules in this room so that makes it a   statistical problem in terms of how those atoms 
+interact because you know trying to follow the   trajectory of an individual atom or an individual 
+molecule if you have to do that for 10 to the 23   some of you might know where that 10 to the 23 
+number comes from in terms of a mole of material   if you have to do it for that number of molle it's 
+an impossible task so you think about it in terms   of statistics and that was boltzmann's genius was 
+to think about the atomic draw comparisons between   i'm not sure comparisons raw parallels between 
+statistics the atomic nature of matter and also   how energy is distributed and that's absolutely 
+key his ideas were soundly rejected by some   of the key figures in physics at the time 
+particularly boltzmann was one of the first to   really accept the reality as would wear 
+of atoms we've been vindicated long before   those images appeared in terms of the evidence 
+for atoms but you know he would be blown away   we're seeing individual atoms on the screen we're 
+seeing rows of atoms there so where does the   boltzmann machine's idea come from the boltzmann 
+machine idea is really clever and physicists   really like it because it involves taking the 
+ideas from physics in terms of the distribution   of energy and feeding that into a machine learning 
+process in physics you have what we'd call an   energy landscape the simplest possible energy 
+landscape is think of two hills with a valley   in between we have a ball it's at the top of 
+the hill we let go of that ball what happens it   falls down the hill to get to its lowest energy 
+state and actually there are very very few physics   questions that cannot be answered with well the 
+system wants to reach its minimum energy state   if you want to use that at dinner party at some 
+point or in the pub please feel free to do that   pretty well any question can be answered with that 
+of course the devil is always in the details but   it's the system wants to get to its lowest energy 
+or what we call the ground state you can think of   much more complicated landscapes energy landscapes 
+with lots and lots of hills and valleys and it   doesn't just have to be gravitational potential 
+energy if we're talking about atoms and molecules   for example it'll be a type of energy that 
+describes how electrons behave which is very   much not gravitational energy and so what we do 
+with a boltzmann machine is we take that idea of   minimizing the energy and we couple it across so 
+we draw a parallel with trying to find the optimal   solution to a problem so we have a particular 
+energy cost or an energy gain associated with   following some trajectory or other and what we're 
+searching for in both cases is the minimum energy   state or the optimal solution and that's that's 
+where the boltzmann machine idea comes from we're   borrowing from ideas from physics and importing 
+those into machine learning what we want to do is   we want to model the brain what do physicists do 
+physicists are very reductionist and for example   this is a big wet squishy thing with lots of very 
+strange weird stuff happening so what we want to   do is reduce down so the question to ask yourself 
+is what do we have in the brain we have neurons   and we have synapses could we have a neuron which 
+is basically one atom so we want something whose   state we can change so how do you change the state 
+of an atom though is an atom's an atom an atom is   an atom but what's inside that atom inside are the 
+electrons so you can change for example a really   simple ways you could have a potassium atom or you 
+could have a potassium ion where you've added or   subtracted a charge or you can rearrange how 
+the electrons are organized in that atom you   can change the electronic configuration 
+leave it neutral but change the electronic   configuration that's a brilliant question 
+shown because that's exactly what they've done   in this paper they've changed the state of the 
+atom by changing the electronic configuration now   so what we have is the possibility of having a one 
+or a zero but also we can flicker back and forth   between those two we can go once it runs stay in 
+one state go to the zero state for a little while   go to the one states do the zero state these are 
+individual cobalt atoms we don't need to go into   the gory detail of this what we have here are 
+individual cobalt atoms what we're imaging here   with our scanning probe microscope is actually 
+effectively how the electrons are distributed so   although it's an atom and you might think of an 
+atom as a little billiard ball actually what the   stm is sensitive to is the configuration of the 
+electrons can you give us a two sentence what's   in an atom for people who haven't like me have 
+forgotten so the the traditional model of the atom   two sentences is showing you asking me for two 
+sentences on the atom physicists like to reduce yeah the typical model of the atom which 
+is called the bohr model which is unbelievably   wrong but it's helpfully wrong is that you've got 
+the nucleus at the center of the neutrons on the   protons and you've got the electrons spinning 
+around outside it's not how it works quantum   mechanically we don't have these well-defined 
+orbits but we certainly have that nucleus at the   center and then the best way of thinking about it 
+is you've got some distribution of that electronic   charge right which is effectively like a cloud 
+around that nucleus what they're doing here by   is by using the tip and changing the voltage 
+on the tip they're changing that that cloud   with that electron cloud and effectively what 
+you're imaging there is that electron cloud so   they basically have a two-state system they've 
+left to its own devices it flips back and forth   between zero and one right so now with about equal 
+probability our energy landscape in this case   is like that right so we've basically got the 
+zero state and the one state in terms of what   the atom is and the configuration of the atom is 
+bouncing back and forth between those two states   which is why you're getting high current 
+low current high current low counter high   current logan and to use the physicist term 
+it's stochastic or it's random it's bouncing   back and forth between those two states and so 
+in one state let's see call this the zero state   it looks like this in the other state it looks 
+like this and that's because the configuration   the electrons in the atom is changing so this 
+is our basic model of a neuron right but that's   one so when you bring two of those atoms together 
+like this what they then find is that you have a   larger number of different current values or basic 
+unit our basic neuron is a single cobalt atom   and that cobalt atom can be in either a zero or 
+a one state we're measuring and monitoring what   state that is in by looking at how current flows 
+through it from the tip that's above it the zero   state we get a low current in the one state we get 
+a high count it doesn't matter which way around   we label those now when you bring those you 
+bring two of those atoms together they start to   to affect each other they affect the probabilities 
+and now you've got instead of having just two   choices you've got two atoms you've got four 
+choices they can both be in the zero state   this one can be in the zero state this can one 
+can be in the one state this can be in the one   state this can be in the zeros here or it can both 
+be in the one state you've got two bits right so   effectively you've got two bits and indeed that's 
+what they see they now see that the current   has four distinct levels or a number of distinct 
+levels yeah four distinct levels which is what   they've plotted out then you can add more and you 
+can i build up the complexity of your system but   physicists love this idea because it links to 
+boltzmann and b it's as reductionist as you get   it's we've broken it down to single atoms instead 
+all that wet floppy stuff with gazillions of   bloody atoms widely flopping around in molecules 
+we've got an atom on a surface in ultra high   vacuum that we can probe right down to you know 
+the electronic configuration that's the type of   thing that physicists love and when that connects 
+to computing it's really neat they've even gone   a step further so that's our neurons what they've 
+then done is they've basically built in artificial   synapses which is nothing more than an additional 
+atom and they bring that additional atom   in and that controls the linkages the weighting 
+of the link between those those two neurons   and then they've even gone on further and they've 
+actually got this thing to learn to some extent   in that it can detect or remember the voltage 
+that's been applied to it by the tip because   that changes the weightings of the connections 
+between the neurons it changes the synapses   so that the system can learn 
+about its previous experiences and so on we can't do a lot of interesting things 
+with this image after just one set of convolutions   but we're getting there so this 
+one is starting to be transformed   some of them are noisier than others purity atoms 
+in that sample what happens in the real sample   is you have a voltage and 
+that generates an electric [manual publish of auto captions]

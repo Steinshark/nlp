@@ -1,0 +1,234 @@
+in march of 1989, earth experienced one of 
+its strongest geomagnetic storms in modern   history. it all started when scientists 
+observed a cluster of sunspots-active,   magnetic areas on the sun's surface-emerging 
+on its horizon. over the next few days,   the sun slowly rotated until the region began 
+to point directly at earth. just as it did,   two solar flares erupted from the sunspots. 
+accompanying the flares were coronal   mass ejections: huge bursts of solar wind, 
+essentially charged particles from the sun.   the coronal mass ejections eventually 
+crashed into the earth's magnetic field,   causing it to squish and compress and ultimately 
+induce electric currents at the surface. in quebec, canada, the rapid changes in magnetic 
+fields would have mostly gone unnoticed by people,   but they didn't go unnoticed by the 
+power grid. the region's unique geology,   a shield of hard rock that is a poor conductor 
+of electricity, kept these induced currents from   dissipating into the ground. so they found 
+another path: the electrical transmission   lines. the geomagnetic storm ended up blacking 
+out a large part of the hydro-quebec power   grid for nine hours. and the first domino of the 
+collapse (or rather the first seven) were pieces   of equipment known as static compensators. but 
+to understand how static compensators work and   why a solar flare could trip them offline, 
+you kind of have to start with the basics. you might know that most parts of all modern power 
+grids use alternating current or ac. the voltage   and current on the lines slosh back and forth, 
+50 or 60 cycles per second, depending on where   you live. if you love power electronics, that 
+low, dull, ac hum might be music to your ears.   but if this is kind of new to you, alternating 
+current can be a little bit mysterious. what's   even weirder is that, even though the current 
+constantly alternates its polarity, electrical   power only moves in one direction... under ideal 
+conditions. and geomagnetic storms aren't the only   thing that can make the grid behave in funny ways. 
+there are devices even in your own home that force   the grid to produce power and move it through the 
+system, even though they aren't even consuming it.   let's go out to the garage, and i can show you 
+what i mean. i'm grady, and this is practical   engineering. in today's episode, we're talking 
+about how power actually flows on the grid. i've built a model power grid here in the 
+shop. (not the first time i've said that,   and it probably won't be the last.) i'll 
+keep it simple at first and build up the   complexity as i explain these concepts. and zap 
+mcbody slam is back in the shop to help out.   my grid has one power source, right now just a 
+battery, a transmission line to carry the power,   and a load (in this case, an incandescent light 
+bulb). it's probably not the most interesting   circuit you've ever seen. but like i said, 
+understanding the basics of power flow is   essential to understanding the more complicated, 
+and i think, the more interesting aspects of   how it works on a huge scale. so, here's a 
+one-minute refresher on electrical circuits: there are really only four numbers 
+that matter the most in a circuit.   first is voltage, the difference in electric 
+potential between two locations. in the classic   pipe analogy, voltage is the pressure that 
+drives water to flow from one side to the   other. in my circuit, the battery is supplying 
+about 10 volts across the bulb. next is current,   the flow of electric charge. in the pipe analogy, 
+this is the flow rate of the water. in my circuit,   i can measure the current as 1.2 amps. third is 
+resistance, the opposition to the flow of current.   it's the size of the pipe. incandescent bulbs 
+actually change their resistance depending on   voltage, so it can't be measured directly with 
+a meter. that's okay, though, because all three   of these values are related to each other. that 
+relationship, called ohm's law, is about as simple   as it gets. voltage is equal to current times 
+resistance. if you know two, you can find the   other one with some basic math. for example, 10.1 
+volts flowing at 1.2 amps means the resistance of   my lightbulb is around 8 ohms. the final number we 
+care about is power, the transfer of energy. power   does the actual work, in this case, creating 
+light and heat in the bulb. calculating power   is as simple as multiplying the voltage and the 
+current together. 10 volts times 1.2 amps tells   me that this bulb is dissipating 12 watts. 
+that's electrical engineering in a nutshell,   and it's relatively straightforward for a 
+circuit like this that uses direct current or dc,   because none of our important numbers change. 
+but, as i mentioned, that's not true on the grid. let me swap out the battery with a transformer 
+plugged into an outlet and see what happens.    at first glance, there's no change. the bulb is still 
+lighting, just like it did with the battery. i can   measure the voltage by switching my meter to ac: 
+8.4 volts, not too far from the dc circuit. i can   measure the current with this clamp over meter: 
+1.2 amps, same as before. but those are just   simplifications of what's really happening on the 
+lines. to see that, we need a different piece of   equipment. this oscilloscope measures voltage over 
+time and plots it as a graph on the screen. and   i can insert a resistor into the circuit and 
+use a second probe to plot the voltage across   that resistor as a simple way of measuring 
+current. "so the yellow will be the voltage,   and the green will be the current." you can 
+see that neither the voltage nor the current   are constant... unless you trip over all the 
+cords. they're switching directions over   and over again. this might not be too 
+surprising to you yet, but watch what   happens if i switch out the lightbulb with a 
+different kind of load. let's try a capacitor. this is a device that stores energy in an electric 
+field between two plates. you see them everywhere   in electrical circuits, and they do a funny 
+thing on the grid. when i insert the capacitor   to my circuit, the graph of voltage and current 
+looks different because they're no longer in   phase. "hey... that worked perfectly." the current 
+waveform is leading the voltage; the current peaks   happen before the voltage ones. that's because the 
+current has to flow into the capacitor before the   voltage between the plates rises. it takes time 
+for the capacitor to charge and discharge, which   results in a delayed response in the voltage. now, 
+let's try another type of load called an inductor. an inductor is basically a coil of wire. 
+like a capacitor, an inductor stores energy,   but instead of an electric field, it stores 
+that energy in a magnetic field. this is just an   electromagnet like you might see in a scrapyard. 
+if i swap in an air-core inductor, you can hear   the screwdriver rattle against the table as the 
+magnetic field rapidly changes direction.   and, we get the opposite effect of the capacitor when 
+the inductor is inserted into the circuit. this   time, the current waveform is lagging the voltage. 
+that magnetic field resists changes in current,   so it creates a delay, this time in the current 
+waveform. i can even vary this inductance and   thus the lag in the current by moving this 
+ferrite rod in and out of the core. all this   is interesting on its own, but these little shifts 
+in a graph have serious implications on the grid,   and have even resulted in numerous 
+blackouts across the world. here's why: remember, that the power consumed by an electrical 
+load is just the voltage multiplied by the   current. we can do that for any point in time 
+across this graph. for a purely resistive load,   like the lightbulb, the current and voltage 
+are in sync. when one is positive, the other   is positive. when one is negative, the other 
+is too. so when you multiply them together at   any point along the graph, you always get 
+a positive number. the power fluctuates,   but it's always moving in one direction. for a 
+reactive load (the term used for inductors and   capacitors), that's no longer the 
+case. there are times in the cycle   when the current and voltage are opposite 
+polarity, meaning, instead of being consumed,   power is actually flowing out of the load. in 
+fact, for a purely capacitive or inductive load,   there's no power consumption at all - no work 
+being done. it's just stored in a magnetic or   electric field and returned. but there's 
+still current flowing, and that matters. of course, most things connected to the 
+power grid aren't purely reactive. but   lots of devices that we plug in 
+have some amount of inductance.   look around your home for any big motors. 
+air conditioners, refrigerators, washers,   dryers, large power tools, and more primarily use 
+induction motors because they're cheap, simple,   and last a long time. and inside an induction 
+motor is a series of wire coils used to create   magnetic fields that spin the rotor, just like 
+the inductor i used in the demo. part of the   power that flows into those coils just gets sent 
+back out onto the grid. you might be thinking,   "so what? nothing wrong with storing a little 
+bit of energy, as long as i give it back in   less than a sixtieth of a second afterwards." 
+but, the grid still had to produce that power,   and more importantly, deliver that power 
+to your home and carry it back away. the electric meter at your home, in most cases, 
+only tracks the power you actually consume. so,   you don't pay for the reactive power that flows 
+into your devices and back out again. but that   doesn't mean it doesn't come at a cost. it 
+still has to flow through the power network,   where some gets lost as heat from resistance 
+in the lines. so, the generators have to make,   and the transmission lines have to move, more 
+power, in some cases a lot more power, than is   actually being used in the system. reactive power 
+can make up a big part of the total load on the   system, even though it's not doing any work. just 
+having the infrastructure in place to handle it   is also costly. the conductors, transformers, 
+and generators on the grid have to be sized   for the total current that needs to move through 
+the system, not just the current that does work.   and that stuff is expensive.  it's like if you were a photographer and bought a bunch of props   for a shoot from a company with a generous 
+return policy. after you take your photos,   you return everything back to the store. those 
+props were useful, even necessary to you, but only   for a period of time. and there was a real cost 
+to warehousing, transporting, and restocking them,   even if you didn't bear it. imagine if there were 
+a hundred photographers that did the same thing.   it wouldn't be long before such a store wasn't 
+very profitable. but unlike at your home, where   the utility is generous in their return policy, 
+lots of industrial and commercial customers   do get charged for reactive power that uses up 
+capacity on the grid without doing any real work. even though the oscilloscope graphs just show 
+a shift between the two waveforms, with some   clever math, you can actually separate the real 
+power actually being used from the reactive power   that oscillates on the grid into two parts, 
+and treat them like they flow through the   grid independently. i'm going to do my best to 
+avoid that math here partly because it involves   imaginary numbers but mostly because it's not 
+needed to understand the practical impacts.   (this is already a lot to wrap your head around.) 
+but out of that math comes this visualization:   the power triangle. this leg is the 
+real power that actually gets consumed,   measured in watts or kilowatts that you're 
+probably used to. this leg is the reactive   power that is returned instead of used, measured 
+in volt-amps-reactive or var. by convention,   we usually say that inductive devices "consume" 
+reactive power and capacitive devices "supply"   it. the hypotenuse of the triangle is the 
+apparent power, the total amount of power that   flows through the grid, measured in volt-amps. if 
+you divide the real power by the apparent power,   you get this ratio, called the power factor, 
+a number that will be important in a minute. take a look at the distribution transformer that 
+connects your home to the grid, and you might see   a rating on the side. that number is not in watts 
+or kilowatts like what you might see on a toaster   or microwave, but in kilovolt-amps because it 
+includes the flow of real and reactive power.   large users of electricity, like factories and 
+refineries, usually have a low power factor   because they use lots of big induction motors. 
+they need comparatively robust and high-capacity   connections to the grid, even if they actually 
+consume only a portion of the energy that flows   through. so the electric utility installs a meter 
+that can track power factor, or they just come out   every once in a while to measure it, so they can 
+put it on the bill. instead of free returns on   reactive power, like we usually get at our homes, 
+those customers have to pay a rental charge on   the power they store, even though it goes right 
+back out. but, it's not just a matter of keeping   track of costs. the stability of the entire grid 
+depends on managing the flow of reactive power. if you've watched some of my other videos on 
+the power grid, you know how important it is to   closely match power generation with demands as 
+they go up and down. if not managed carefully,   the frequency of the grid, which needs to stay 
+within a very tight tolerance, can deviate. and   if it goes too far, the whole thing can collapse. 
+that's what almost happened to texas during the   winter storm in 2021. but, it's possible for the 
+grid to collapse even if there's enough generation   to meet the demand because you still have to move 
+that power to where it's needed over transmission   lines. engineers use a pv curve to keep an eye 
+on this challenge. it relates the power flowing   to a load on the system to the voltage it sees. 
+as you would expect, the more power that flows,   the more the voltage drops, since more power 
+is lost on the transmission lines on the way   to the load. it's the same reason the lights dim 
+in old houses when the air conditioner kicks on:   current goes up, voltage goes down. if you 
+combine ohm's law and the power equation,   you can see that the power lost on a transmission 
+line is related to the current squared. double the   amps; quadruple the power lost as heat. but the 
+further along this curve that the system operates,   the more dangerous things get. there is a point, 
+the nose of the curve, beyond which greater demand   on the system actually reduces the amount of 
+power that can be delivered, all while the   voltage continues dropping. the generators may 
+have the capacity to supply more power, but it   can't reach the load because of the limitations of 
+the system. operating below the nose is unstable   because generators lose control of their speed, 
+like a rubber tire losing its grip on a road. infrastructure is expensive, and building new 
+power plants and transmission lines always comes   with legal and environmental challenges too, so 
+we're often forced to use the grid to the very   limits of its capacity. but, grid managers 
+need to make sure to operate with enough   margin that any contingency, like a generator 
+going offline or a transmission line faulting,   doesn't push the system over the electrical 
+cliff. here's where power factor comes in.   loads with lower power factor shift the nose 
+of the pv curve down and to the left. that   reduces the margin and lowers the voltages 
+in the system for a given power demand,   making a voltage collapse more likely if some 
+part of the system goes down. so we use several   ways to supply reactive power to provide 
+voltage support and shift the curve back up. power plants can adjust their operating 
+parameters to supply reactive power,   but transmission lines have their own inductance 
+that consumes the reactive power as it travels   through. so, it is usually more efficient 
+to address the problem on the load side,   and there are several types of infrastructure that 
+make this possible. synchronous condensers are big   motors that aren't attached to anything. 
+instead of converting electrical power   to mechanical power, they basically spin freely, 
+but with some clever circuitry, they can generate   or absorb reactive power from the grid. they 
+can also help stabilize fluctuations in the grid   with the inertia of their heavy rotating mass, 
+something that is becoming increasingly important   as we transition more to renewable sources 
+that use inverters to connect to the network. another option, and one you're more likely 
+to spot, are shunt capacitor banks connected   across the lines. sometimes you can see them 
+in substations, but many capacitor banks are   installed on poles out in the open for anyone 
+to have a look. like the capacitor in my demo,   they increase the power factor and boost the 
+pv curve up. that can actually become a problem   during off-peak hours by boosting the voltage 
+above where it should be, so many capacitor banks   are switched on or off depending on system 
+conditions. looking back at the pv curve,   you can see how leaving the capacitors off during 
+periods of low demand keeps voltage within limits,   and having them on when demand is high 
+provides more margin and more voltage.   some run on timers to come on during the highest 
+demands of the day, and many are operated at a   utility's discretion to accommodate the varying 
+conditions on the grid. they're usually either   all the way on or all the way off, so deciding 
+when to throw the switch is an important one. a third option for reactive power supply, 
+called a static var compensator or svc,   addresses that challenge. these use electronics 
+to rapidly switch inductors and capacitors on or   off to constantly adjust to conditions in the 
+system. that switching happens automatically   and quickly, making them much better suited to 
+the dynamic changes that happen on the grid. that's why hydro-quebec had them installed on 
+their system in 1989. the long transmission   lines between the hydroelectric power plants in 
+the north and the load centers, like montreal,   in the south require careful control of 
+the voltage to avoid instability. but the   geomagnetic storm threw a wrench in the works.  the induced currents in the transformers and along   those transmission lines seriously increased the 
+reactive power demand of the system. the resulting   distortions in the voltage and current waveforms 
+hadn't been considered when the equipment was   installed. the svcs weren't configured to handle 
+the dynamic conditions affecting the system, so   relays designed to protect them tripped, pulling 
+the equipment out of service. without the svcs,   the voltage on the grid dropped, the frequency 
+increased, and chaos ensued. the grid operators   couldn't disconnect customers fast enough 
+to keep things stable, and within seconds,   the rest of the system collapsed. lots 
+of equipment was permanently damaged,   and millions woke up that frigid morning with no 
+real power, reactive power, or apparent power,   shutting down basically the entire province for 
+half-a-day and requiring costly and expensive   repairs. they learned a lot of lessons that 
+day, and adjusted a lot of relay settings   since then. it's just one of many case studies 
+on the importance of understanding and managing   this hopefully a little-less-perplexing 
+idea of reactive power on the grid. one of the biggest challenges as renewables become 
+a much more significant proportion of electricity   sources is controlling swings in voltage 
+that can happen when the sun or wind suddenly   change. and one of the countries preparing 
+to meet, at least for short periods of time,   100 percent of electrical demands using renewable 
+sources is australia. one idea they're exploring i   thought was really cool is repurposing old fossil 
+fuel generators into synchronous condensers that   can stabilize those swings, keeping reactive 
+power flowing. pretty creative solution, pretty   cool country. and if you want to see some of the 
+coolest parts of it, my friend sam of wendover   productions just kicked off the next season of 
+jet lag, a travel-based game show. they're going   across the entire country trying to claim as many 
+regions as possible by winning challenges. it's a   super creative concept in its tenth season, and 
+every episode gets released early on nebula. you probably know about nebula now. it's a 
+streaming service built by and for independent   creators. there are no studio executives deciding 
+what gets the green light, no advertisements,   and no algorithm driving the content into a 
+single style. it's just independent creators   making stuff they're excited about with as 
+few barriers and distractions as possible   between you and us. the website just got a huge 
+update that completely redesigned the home page,   making it easier to find new stuff 
+in addition to your favorites. my videos go live on nebula before they come 
+out here, and my practical construction series   was specifically produced for nebula viewers who 
+want to see deeper dives into specific topics. i   know there are a lot of streaming platforms 
+out there right now, but there aren't many   this cheap or where you know your money is 
+going to support your favorite creators. and   we have a 40% off deal right now. pay just 
+one time, 30 dollars, for an entire year's   access at nebula.tv/practical-engineering. 
+or if you have subscription fatigue,   but still want to support what i'm doing, 
+you can get a lifetime membership. pay   once have access to everything nebula will ever 
+offer, including a bunch of very cool originals   coming soon. if you're with me that independent 
+creators are the future of great video,   i hope you'll consider subscribing. thank you 
+for watching, and let me know what you think!

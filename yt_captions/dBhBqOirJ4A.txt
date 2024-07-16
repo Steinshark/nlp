@@ -1,0 +1,157 @@
+It has been a week and thanks to 
+tests by a few Chinese scientists,   we can probably say that LK-99 isn't 
+a room temperature superconductor. The hype has largely died down. LK-99 has vanished 
+off people's social feeds and science news. I suppose we can still keep on waiting 
+but the right now it's so over. Oh well, it wouldn't have done anything 
+for the semiconductor industry anyway.   I did some follow-up work since the last video. Even if we hit the jackpot tomorrow and find 
+a True Blue room temperature superconductor,   it will be nice but hardly 
+a revolution. In this video,   some irresponsible thoughts about 
+superconductors and semiconductors. ## Interconnects The first thing I thought about when I thought   about superconductors for 
+chips were interconnects. In an integrated circuit, 
+interconnects are wires for   transmitting the electrical signals between 
+the transistors and other circuit elements. These interconnects are usually but not 
+always made from low-resistance metal,   so we call them "metal layers". The wires are surrounded by dielectric 
+material - "intermetal dielectric layers"   that serve as insulators. For a long time, 
+we used trusty silicon dioxide for this. These layers sit all jumbled about on top of the   silicon transistors like how 
+stratum look like in geology. Generally speaking, an IC has two types 
+of interconnects - local and global. Local interconnects occupy the chip's 
+lowest levels and connect local circuit   blocks. The wires are very short so 
+designers are less concerned about   line resistance than they are 
+about other factors like heat. So I don't think a room-temperature 
+superconductor - which would be quite   sensitive to heat - makes sense here at all. Global interconnects are higher up in the 
+stratum. They connect distant parts of the chip   - delivering important signals like synchronizing 
+clock signals or power to run the transistors. For this reason, they have great 
+size. They look thick. Solid. Tight. The distance they have to 
+span also means that they   must be made from low-resistance 
+metals like aluminum or copper. ## Superconductive Interconnects? I was very curious about this. In today's most advanced AI accelerators - like 
+the Nvidia H100s we use for massive models like   ChatGPT - some 80-90% of the power budget is spent 
+on simply transferring data around rather than   actual computation. Will superconducting 
+interconnects simply wipe that out? So I asked MIT PhD Alex Sludds for a few thoughts. 
+He is a photonics researcher with a background in   semiconductor devices and interconnects. And 
+of course, he is a good friend of the channel. I did a video about his work in neural 
+networks and photonics a while ago. Alex said: > At short lengths of wire, 
+having a superconducting wire   will help significantly decrease the energy 
+consumption to transmit a zero or a one. When he mentions "short", he means as 
+in the context of wires on the chip or   between multiple chips like in a chiplet scenario. > However, this energy will not become free,   since wires will still have a 
+capacitance and an inductance   that stores in the electrical/magnetic field of 
+the current flowing through the superconductor. What I think Alex is saying - if I get it wrong 
+it's because I'm too dumb to understand his   words - is that even if the interconnects suddenly 
+possess superconducting superpowers, its electric   current will still interact with its surrounding 
+environment in a way to cause it to leak power. When you push a current through a wire, that wire 
+creates an electric field around itself. Some of   the current's energy gets stored in that electric 
+field, causing loss. This is "capacitance". The wire will also produce a magnetic field,   and that magnetic field will store some of the 
+current's energy too. This is "inductance". So in terms of energy consumption, there’s going 
+to be some improvement. That will especially be   the case for global interconnects for transmitting 
+power rather than communication signals. But   the power consumption gains might not be as 
+dramatic as I might have initially thought. ## Speed What about computing speed? A substantial portion of the computer's cycle 
+time is spent waiting for data to arrive. So,   if the interconnects can carry the data 
+around faster then that's great. But   there are fundamental limits 
+on how fast we can make this. The absolute ceiling in signal speed - 
+the fastest that anything can possibly   travel through any medium - is the 
+speed of light. And unfortunately,   signals cannot travel at light's full 
+speed because the wire is not a vacuum. Additionally, we need to consider a 
+form of interconnect delay known as   "Resistance-Capacitance" Delay or RC 
+Delay. Like as I mentioned earlier,   the interconnects store charge. These delay the 
+electric signal's transmission to the receiver. Capacitance depends on the dielectric material 
+surrounding the wire. That material has a   dielectric constant, called k-value. It has 
+little to do with superconductors. So even if   we cut the line resistance to zero, we still 
+have to deal with the capacitance part of the   delay equation. I wonder if the speed gains 
+will be as significant as I initially thought. ## Current Density There is one last thing about the 
+interconnect thing that I want to mention. Remember in the first superconducting 
+video when Kamerlingh-Onnes - the   discoverer of superconductivity - tried testing 
+superconducting lead wire to generate electricity? He discovered that superconductivity requires 
+not only a low enough temperature but also a   low enough magnetic field and 
+a low enough current density. After the discovery of High Temperature 
+Cuprate superconductors, people   investigated using them for interconnects 
+in superconducting integrated circuits. Such superconducting interconnects - when 
+matched with the right circuits - can   indeed get very fast. The concern 
+however is the current density ... Which is defined as the electric current divided 
+by the superconductor's cross-sectional area. As it turns out, the cuprates' critical current 
+density limits are not very high. So in order   to run integrated circuit operations and stay 
+under those limits, the interconnects have to   be very wide. Perhaps even a centimeter wide, 
+which for most digital circuits is unfeasible. This is why the cuprates never made headway 
+into the integrated circuit arena. LK-99 or   any room temperature superconductor 
+may suffer the same issues. If so,   then it is just a scientific curiosity 
+and copper retains its dominance. ## Manufacturability Even if the new superconductor somehow 
+miraculously fits into the current IC "box",   we have the manufacturability concerns. I asked Dylan Patel - chief Analyst at 
+SemiAnalysis - to say a few thoughts. He said: > While LK-99 seems to show some promise as 
+either an extremely low resistivity material   or in fact even potentially a superconductor the 
+manufacturability of it is still in question. > While it does seem to be a fairly 
+simple process for a low purity,   low volume amount, scaling this at 
+high volume at high purity with less   than 1 part per billion defect is 
+going to be a tremendous challenge Dylan has a very good point. TSMC has 
+said that a single integrated circuit   can use over 100 kilometers of copper wiring. 
+They produce billions of chips every month. To me, this is the biggest issue. Any room 
+temperature superconductor will be a complex   alloy and those tend to not scale. How can we 
+integrate it into the existing process flow? It took 15 years for IBM to crack the complicated   materials engineering issues 
+surrounding copper interconnects. And that's copper. We have been 
+playing around with copper for   10,000 years. Any room temperature superconductor 
+will have been known for far shorter. ## Josephson Effect In 1962, the British physicist Brian 
+Josephson - then a grad student just 22   years old at Cambridge - wrote a paper predicting 
+a phenomena that we now call the Josephson Effect. The effect occurs when you put two superconductors 
+next to one another with a certain thin insulating   barrier in between them. Very thin, 
+as in just a few atomic layers thick. The Josephson Effect produces what is called 
+a "supercurrent", where a direct current flows   through from one side of the device to the other 
+despite the physical presence of an insulator. The supercurrent flows without resistance and 
+with little energy loss. This is in contrast   with traditional transistor gates, which generate 
+heat as they switch. That heat must be dissipated. The Josephson Effect is one of the few examples   of quantum mechanics - quantum tunneling - 
+that we can observe. So that is pretty cool. Josephson later won a Nobel Prize for this. Man, 
+they just handing out Nobels for superconductors!   No really, they are. Superconductivity 
+research has won a tenth of all the   physics Nobel prizes awarded 
+since its discovery in 1911. ## Josephson-junction Electronics A year after Josephson's thesis came out, P.W. Anderson and J. Rowell of Bell 
+Labs produced an experimental circuit   based on this theory, creating 
+the Josephson Junction Switch. There are a variety of implementations. 
+The most popular uses niobium as the   superconductor and aluminum oxide as the 
+insulator, creating a sandwich structure. They can switch on or off in just 
+a few picoseconds, or a trillionth   of a second. We take advantage of this by 
+encoding the data into very rapid pulses,   allowing processing speeds 
+of 100 Gigahertz or higher. I don't think anyone disagrees that 
+these can get very fast. But there   are major issues. Josephson Junctions 
+require big compromises and suffer   shortcomings in certain aspects. 
+Let me go through a few of them. ## Memory & Complexity IBM worked on producing Josephson 
+Junction-based computers for two decades,   eventually closing their efforts in 1983. One of the major reasons why they finally ended 
+the project was that they struggled with producing   a proper superconducting memory circuit. 
+Memory is basic and essential to a computer. The largest Josephson-only memory unit 
+ever produced was a 4-kilobit unit   produced in 1990 by NEC. The reason 
+the memory issue exists is that it   is extremely difficult to produce 
+these junctions in large densities. Similarly, this is why the most successful 
+Josephson-based systems have been analog   systems and the like. Analog systems 
+handle real world signals like power   or sound or the like. They have only 
+a few components so it’s easier for   superconductor-based integrated 
+circuits to compete with them. Sensors too, Alex pointed out that we can 
+use superconducting circuits to produce   some of the most sensitive photon detectors - 
+superconducting nanowire single photon detectors. Digital systems on the other hand are built 
+with millions and billions of consistent   transistors. It will be far harder to produce 
+a competitive superconducting digital system. Something that might make the most sense would be 
+like a semiconductor-superconductor hybrid module,   like AMD's chiplets. This is where we combine   semiconductor-based memory systems with 
+superconductor-based processing systems. ## Freezing Concerns So even if we get a True Blue, Real 
+Deal room temperature superconductor. And it fits in the IC critical limits box. And 
+it can be manufactured in sufficient purities.   And we figure out how to make dense bunches of 
+Josephson junctions with it. And maybe we do   that hybrid semiconductor-superconductor modules 
+we talked about to overcome the memory problem ... it still doesn't mean that we get to throw off 
+the freezing equipment like Prometheus's chains. As a superconductor approaches its 
+upper limit transition temperature,   the number of Cooper pairs in 
+the superconductor declines.   If you recall, Cooper pairs are essential 
+to making superconductivity work. The less Cooper pairs we have, the 
+more unstable the circuits will be   in the real world. Rule of thumb 
+per BCS theory is that we want to   keep the system's operating temperature 
+at half of its transition temperature. That is why existing superconducting 
+Josephson circuits made from Niobium are   kept at 4-5 Kelvin despite Niobium's 
+transition temperature being 9.3 K. LK-99's claimed transition temperature 
+is around 400 Kelvin. So its practical   working temperature would be around 200 Kelvin. Or around -99.67 degrees Fahrenheit, or -73 
+degrees Celsius, or 360 degrees Rankine,   or -9.055 degrees Wedgwood, or 179 degrees Leiden If we want a true blue room-temperature 
+superconducting chip without the freezing   equipment, we need to find something more 
+like an oven-temperature superconductor.   With a transition temperature of 600 
+Kelvin or 620 degrees Fahrenheit. Refrigeration remains the single biggest 
+limiting factor in superconductor-based   computers - adding a big energy 
+usage cost on top of the system. The dream that we all have - the tech-optimist’s 
+fantasy - is that superconductivity at room   temperature is now possible once we get 
+the room temperature superconductor.   I was heartbroken when I 
+learned that it wasn’t so. ## Conclusion If LK-99 is the real deal, it will 
+be a historic scientific landmark. It might also do impressive things for the power 
+transmission and energy industries in the real   world. Though I am just saying that off the top 
+of my head without having done the research. But superconductors aren’t serious candidates for 
+disrupting existing semiconductor technologies. At   the risk of being made an idiot later, I am saying 
+that I don’t believe that any superconductor-based   computer will become commercially 
+competitive at any time in the future. But hey, the hype was a 
+blast for about a week or so.

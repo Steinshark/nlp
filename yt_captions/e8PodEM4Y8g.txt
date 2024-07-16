@@ -1,0 +1,148 @@
+In May of 2021, inspectors on the Hernando
+de Soto Bridge between Arkansas and Memphis, Tennessee discovered a crack in a major structural
+member. They immediately contacted emergency managers
+to shut down this key crossing over the Mississippi River to vehicle traffic above and maritime
+traffic below. How long had the crack been there and how
+close did this iconic bridge come to failing? I’m Grady and this is Practical Engineering. In today’s episode we’re discussing the
+Memphis I-40 bridge incident. The Hernando de Soto Bridge carries US Interstate
+40 across the Mississippi River between West Memphis, Arkansas and Memphis, Tennessee. Opened for traffic in 1973, the bridge’s
+distinctive double arch design gives it the appearance of a bird gliding low above the
+muddy river. I-40 through Tennessee and Arkansas is one
+of the busiest freight corridors in the United States, so the Mississippi River bridge is
+a vital east-west link, carrying an average of 50,000 vehicles per day. Although it was built in the 70s, the bridge
+has had some major recent improvements. It’s located in a particularly earthquake-prone
+region called the New Madrid Seismic Zone. Starting in 2000 and continuing all the way
+through 2015, seismic retrofits were added to the bridge to help it withstand a major
+earthquake and serve as a post-earthquake lifeline link for emergency vehicles and the
+public. ARDOT and TDOT share the maintenance responsibilities
+for the structure, with ARDOT in charge of inspections. On May 11, 2021, a climbing team from an outside
+engineering firm was performing a detailed inspection of the bridge's superstructure. During the inspection, they noted a major
+defect in one of the steel members below the bridge deck. The crack went through nearly the entire box
+beam with a significant offset between the two sides. Recognizing the severity of the finding, several
+of the engineers called 911 to alert local law enforcement agencies and shut the bridge
+down to travel above and below the structure. This decision to close the bridge snarled
+traffic, forcing cars and trucks to detour over the older and smaller I-55 bridge nearby. It also created a backup of hundreds of barges
+and ships needing to pass north and south on the Mississippi River below the bridge. Knowing how significant an impact closing
+the bridge would be on such a vital corridor, how did engineers know to act so quickly and
+decisively? In other words, how important is this structure
+member? To explain that, we need to do a quick lesson
+on arch bridges. There are so many ways to span a gap, all
+singular in function but remarkably different in form. One type of bridge takes advantage of a structural
+feature that’s been around for millennia: the arch. Most materials are stronger against forces
+along their axis than those applied at right angles (called bending forces). That’s partly because bending forces introduce
+tension in structural members. Instead of beams that are loaded perpendicularly,
+arch bridges use a curved element to transfer the weight of the bridge to the substructure
+using almost entirely compressive forces. Many of the oldest bridges used arches because
+it was the only way to span a gap with materials available at the time (stone and mortar). The Caravan Bridge in Turkey was built nearly
+3,000 years ago but is still in use today. Even now, with the convenience of modern steel
+and concrete, arches are a popular choice for bridges. When the arch is below the roadway, we call
+it a deck arch bridge. Vertical supports transfer the load of the
+deck onto the arch. If part or all the arch extends above the
+roadway with the deck suspended below, it’s a through-arch bridge like the Hernando de
+Soto. Arches can be formed from many different materials,
+including steel beams, reinforced concrete, or even stone or brick masonry. The I-40 Mississippi River bridge has two
+arches made from a lattice of steel trusses. One result of compressing an arch is that
+it creates horizontal forces called thrusts. So, arch bridges normally need strong abutments
+at either side to push against that can withstand the extra horizontal loads. So why do the arches of this bridge sit on
+top of spindly piers? Just from looking at it, you can tell that
+this support was not designed for horizontal loading. That’s okay, because the Hernando de Soto
+uses tied arches. Instead of transferring the arch thrusts into
+an abutment, you can tie the two ends together with a horizontal chord. This tie works exactly like a bowstring, balancing
+the arch’s thrust forces with its resistance to tension. Tied arch bridges don’t transfer thrust
+forces to their supports, meaning they can sit atop piers designed primarily for vertical
+loads. This tension member is the subject of our
+concern. The crack in the Hernando de Soto bridge went
+right through one of the two arch ties on the eastern span. Watch what happens if I simulate a crack in
+my homemade bridge model. It’s hard to understate the severity of
+the situation. These ties are considered fracture-critical
+members - those non-redundant structural elements subject to tension whose fracture would be
+expected to result in a collapse of the entire bridge. Obviously, this member did fracture without
+a collapse, so there may be a dispute about whether it truly qualifies as fracture-critical,
+but suffice it to say that losing the tie on a tied-arch bridge is not a minor issue. So why would a tension member like this crack? Let me throw in a caveat here before continuing. Structural engineering is not an armchair
+activity. Forensic analysis of a failure requires a
+tremendous amount of information before arriving at a conclusion, including structural analysis,
+material testing, and review of historical information. Without such an investigation, the best we
+can do is speculate. A detailed forensic review will almost certainly
+be performed, and then we’ll know for sure. With all that said, there’s really only
+one reason that a steel member would crack like what’s shown in the photos of the I-40
+bridge. When steel fails, it is usually a ductile
+event. In other words, the material bends, deforms,
+and stretches. But, steel can experience brittle failures
+too, called fractures, where little deformation occurs. And the primary reason that a crack would
+initiate in a steel tension member of a bridge is fatigue. Fatigue in steel happens because of repeated
+cycles of loading. Over time, microscopic flaws in the material
+can grow into cracks that open a small amount with each loading cycle, even if those loading
+cycles are well below the metal’s yield strength. If not caught, a fatigue crack will eventually
+reach a critical size where it can propagate rapidly, leading to a fracture. Bridges are particularly susceptible to fatigue
+because traffic loads are so dynamic. This bridge sees an average of 50,000 vehicles
+per day. That is tens of millions of load cycles every
+year. Fatigue is common on steel members that have
+been welded because welding has a tendency to introduce flaws in the material. When weld metal cools, it shrinks generating
+residual stress in the steel. These stress concentrations are where most
+fatigue cracks occur. And the box tie member at the I-40 bridge
+is a built-up section. That means it was fabricated by welding steel
+plates together. It’s a common way to get structural steel
+members in whatever shape the design requires. But, if not carefully performed, the welds
+have the potential to introduce flaws from which a fatigue crack can propagate. Of course, these ties aren’t purely tension
+members holding the two sides of the arch together. If they were, the load cycles would probably
+be a lot less dynamic. The ties don’t support these lateral beams
+below the road deck - that’s done by the suspender cables hanging from the arch above
+- but they do have a rigid connection. That means when the deck moves, the tension
+ties move with it, potentially introducing stresses that could exacerbate the formation
+of a crack. Again, without a detailed structural model,
+it’s impossible to say how the dynamic cycles of traffic forces are distributed through
+each member. We can’t say whether the original design
+or the seismic retrofits had a flaw that could have been prevented. Fatigue and fractures are difficult to characterize,
+and in some cases inevitable given the construction materials and methods, even with a good design. That’s why inspections are so important. One of the biggest questions everyone is asking,
+and rightly so given the severity of the situation, is “how long has this structural member
+been cracked?” National bridge standards require inspections
+for highway bridges every two years. Bridges with fracture-critical members, like
+this one, are usually inspected more frequently than that, and inspection of those members
+has to be hands-on. That means no drones or observations from
+a distance - a human person has to check every surface of the steel from, at minimum, an
+arm’s length away. Given those requirements, you would think
+that this crack, discovered in May of 2021 did not exist the year before. Unfortunately, ARDOT provided a drone inspection
+video from 2 years earlier, clearly showing the crack on the tie beam. Although it hadn’t yet grown to its eventual
+size, the crack is nearly impossible to miss. And it could have been there well before that
+video was shot. One amateur photographer who took a canoe
+trip below the bridge in 2016 shared a photo of the same spot, and it sure looks like there’s
+a crack. Bridge inspections are not easy. Even on simple structures they often require
+special equipment - like snooper trucks - and closing down lanes of traffic. Complicated structures like the I-40 bridge
+require teams of structural engineers trained in rope access climbing to put eyes on every
+inch of steel. And even then, cracks are hard to identify
+visually and can be missed. Inspectors are humans, after all. But, none of that justifies this incident,
+especially given how large and obvious the fracture was. ARDOT announced that they fired an unnamed
+inspector who was presumably responsible for the annual inspections on this bridge. We don’t know many details of that situation,
+but I just want to clarify that it’s not a solution to the problem. If your ability to identify a major defect
+in a fracture-critical member of a bridge hinges on a single person, there’s something
+very wrong with your inspection process. Quality management is an absolutely essential
+part of all engineering activities. We know we’re human and capable of mistakes,
+so we build processes that reduce their probability and consequences. That includes quality assurance which are
+the administrative activities of verifying that work is being performed correctly such
+as making sure that bridges are inspected by teams and that inspectors are properly
+trained. It also includes quality control, the checks
+and double-checks of work products like inspection reports. And, quality management should be commensurate
+with the level of risk. In other words, if an error would threaten
+public safety, you can’t just leave it up to a single person. Put simply and clearly, there is absolutely
+no excuse for this crack to have sat open on the bridge’s tie member for as long as
+it did. This story is ongoing. As of this video’s writing the bridge is
+closed to traffic indefinitely. But, that doesn’t mean the incident is over. There’s a chance that, as the forces in
+the bridge redistributed with the damage to this vital member, other structural elements
+became overloaded. The second tension tie may have taken up much
+of its partner's stress and the pier supporting the arch may have been subject to a lot more
+horizontal force than it was designed to withstand. In addition, bridges are full of repetitive
+details. If this crack could happen in one place, there’s
+a good chance similar cracks may exist elsewhere. The Federal Highway Administration recommends
+that, when a fatigue crack is found, a special, in-depth inspection be performed to look for
+more. That will involve hands-on checking of practically
+every square inch of steel on the bridge, and probably non-destructive tests that can
+identify defects like using x-rays, magnetic particles or dyes that make cracks more apparent. The repair plan for the bridge is already
+in progress. Phase 1 was to temporarily reattach the tie
+using steel plates to make the bridge safe for contractors. The design for Phase 2 will depend entirely
+on the findings of detailed structural analysis and forensic investigation. In the meantime, it’s clear that ARDOT and
+TDOT have some work ahead of them. Most importantly, they need to do some reckoning
+with their bridge inspection procedures, and thank their lucky stars that this fracture
+didn’t end in catastrophe. There’s no clear end in sight for the inconvenienced
+motorists needing to cross the Mississippi River, but I’m thankful that they’re all
+still around to be inconvenienced. Thank you for watching, and let me know what
+you think.

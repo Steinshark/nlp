@@ -1,0 +1,876 @@
+- i think compute is gonna be
+the currency of the future. i think it'll be maybe the
+most precious commodity in the world. i expect that by the end of this decade. and possibly somewhat sooner than that, we will have quite capable systems that we look at and say, wow,
+that's really remarkable. the road to agi should be
+a giant power struggle. i expect that to be the case. - whoever builds agi
+first gets a lot of power. do you trust yourself
+with that much power? the following is a
+conversation with sam altman, his second time in the podcast. he is the ceo of openai, the company behind gpt-4, chatgpt, sora, and perhaps one day the very
+company that will build agi. this is lex fridman podcast. to support it, please check out our
+sponsors in the description. and now, dear friends, here's sam altman. take me through the openai board saga that started on thursday, november 16th, maybe friday, november 17th for you. - that was definitely the most painful professional
+experience of my life and chaotic, and shameful, and upsetting and a bunch of other negative things. there were great things about it too and i wish it had not been in such an adrenaline rush
+that i wasn't able to stop and appreciate them at the time. i came across this old tweet of mine or this tweet of mine
+from that time period, which was it was like kind
+of going to your own eulogy, watching people say all
+these great things about you and just like unbelievable support from people i love and care about. that was really nice. that whole weekend i kind of like felt
+with one big exception, i felt like a great deal of love and very little hate even though it felt like i
+have no idea what's happening and what's gonna happen here and this feels really bad. and there were definitely times i thought it was gonna be
+like one of the worst things to ever happen for ai safety. well, i also think i'm happy that it happened relatively early. i thought at some point between when openai started and when we created agi, there was gonna be something crazy and explosive that happened, but there may be more crazy
+and explosive things happen. it still i think helped us
+build up some resilience and be ready for more
+challenges in the future. - but the thing you had a sense that you would experience is
+some kind of power struggle. - the road to agi should
+be a giant power struggle. like the world should... well, not should. i expect that to be the case. - and so you have to go through that, like you said, iterate as often as possible in figuring out how to
+have a board structure, how to have organization, how to have the kind of people
+that you're working with, how to communicate all that in order to deescalate the power struggle as much as possible, pacify it. - but at this point, it feels like something
+that was in the past that was really unpleasant and
+really difficult and painful. but we're back to work
+and things are so busy and so intense that i don't spend a lot of time thinking about it. there was a time after. there was like this fugue state for kind of like the month after, maybe 45 days after that was i was just sort of
+like drifting through the days, i was so out of it. i was feeling so down - [lex] just on a personal
+psychological level. - yeah. really painful. and hard to have to keep running openai in the middle of that. i just wanted to crawl into a cave and kind of recover for a while. but now it's like we're just back to working on the mission. - well, it's still useful to go back there and reflect on board structures, on power dynamics, on how companies are run, the tension between research,
+and product development, and money and all this kind of stuff so that you have a very high potential of building agi would do so
+in a slightly more organized, less dramatic way in the future. so there's value there to go both the personal
+psychological aspects of you as a leader and also
+just the board structure and all this kind of messy stuff. - definitely learned a lot
+about structure and incentives and what we need out of a board and i think that it is valuable that this happened now in some sense. i think this is probably not like the last high
+stress moment of openai, but it was quite a high stress moment. company very nearly got destroyed. and we think a lot about many of the other things we've
+gotta get right for agi. but thinking about how
+to build a resilient org and how to build a
+structure that will stand up to a lot of pressure the world, which i expect more and
+more as we get closer. i think that's super important. - do you have a sense of how deep and rigorous the deliberation
+process by the board was? can you shine some light on just human dynamics involved
+in situations like this? was it just a few conversations and all of a sudden it escalates and why don't we fire sam kind of thing? - i think the board members were far, well-meaning people on the whole. and i believe that in stressful situations where people feel time
+pressure or whatever, people understandably
+make suboptimal decisions. and i think one of the challenges for openai will be we're
+gonna have to have a board and a team that are good at
+operating under pressure. - do you think the board
+had too much power? - i think boards are supposed
+to have a lot of power, but one of the things that we did see is in most corporate structures, boards are usually
+answerable to shareholders. sometimes people have like
+super voting shares or whatever. in this case, i think one of the
+things with our structure that we maybe should have
+thought about more than we did is that the board of a nonprofit has, unless you put other rules in place, like quite a lot of power, they don't really answer
+to anyone but themselves. and there's ways in which that's good, but what we'd really like
+is for the board of openai to answer to the world as a whole as much as that's a practical thing. - so there's a new board announced. - [sam] yeah. - there's, i guess, a new
+smaller board of first and now there's a new final board. - not a final board yet. we've added some, we'll add more. - added some, okay. what is fixed in the new
+one that was perhaps broken in the previous one? - the old board sort of got smaller over the course of about a year. it was nine and then it went down to six and then we couldn't agree on who to add. and the board also, i
+think, didn't have a lot of experienced board members and a lot of the new board members at openai have just have more
+experience as board members. i think that'll help. - it's been criticized some of the people that are added to the board. i heard a lot of people
+criticizing the addition of larry summers, for example. what was the process
+of selecting the board? what's involved in that? - so bret and larry were
+kind of decided in the heat of the moment over this very tense weekend and that was... i mean, that weekend was
+like a real rollercoaster, like a lot of lots and downs. and we were trying to
+agree on new board members that both sort of the executive team here and the old board members
+felt would be reasonable. larry was actually one
+of their suggestions, the old board members. bret, previous to that weekend, suggested, but he was busy and didn't wanna do it. and then we really needed help in wood. we talked about a lot of other people too, but i felt like if i
+was going to come back, i needed new board members. i didn't think i could work
+with the old board again in the same configuration, although we then decided, and i'm grateful that adam would stay, but we wanted to get to... we considered various configurations, decided we wanted to
+get to a board of three and had to find two new board members over the course of sort
+of a short period of time. so those were decided honestly without... that's like you kind of do
+that on the battlefield. you don't have time to design
+a rigorous process then. for new board members, since new board members
+will add going forward, we have some criteria that
+we think are important for the board to have different expertise that we want the board to have. unlike hiring an executive where you need them to do one role, well, the board needs to
+do a whole role of kind of governance and thoughtfulness. well, and so one thing that bret says, which i really like is that
+we wanna hire board members in slates, not as individuals one at a time. and thinking about a group of people that will bring nonprofit expertise, expertise at running companies, sort of good legal and
+governance expertise. that's kind of what we've
+tried to optimize for. - so is technical savvy important for the individual board members? - not for every board member, but certainly some you need that. that's part of what the board needs to do. - so i mean, the interesting thing that people probably don't understand about openai certainly
+is like all the details of running the business. when they think about the
+board given the drama, they think about you, they think about like if you reach agi or you reach some of these
+incredibly impactful products and you build them and deploy them, what's the conversation
+with the board like? and they kind of think, all right, what's the right squad to have in that kind of
+situation to deliberate? - look, i think you definitely need some technical experts there and then you need some
+people who are like, how can we deploy this in a way that will help people
+in the world the most and people who have a very
+different perspective? i think a mistake that you or i might make is to think that only the technical
+understanding matters. and that's definitely part of the conversation you
+want that board to have. but there's a lot more about how that's gonna
+just like impact society and people's lives that you really want
+represented in there too. - are you looking at the
+track record of people or you're just having conversations? - track record's a big deal. you, of course, have a
+lot of conversations. there's some roles where i kind of totally
+ignore track record and just look at slope, kind of ignore the y-intercept. - thank you. thank you for making it
+mathematical for the audience, - for a board member, i do care much more about the y-intercept. i think there is something deep to say about track record
+there and experiences, something's very hard to replace. - do you try to fit a polynomial function or exponential one to track record? - that's not that. an analogy doesn't carry that far. - all right. you mentioned some of the
+low points that weekend. what were some of the low
+points psychologically for you? did you consider going
+to the amazon jungle and just taking ayahuasca
+disappearing forever or? - i mean, there's so many low, like it was a very bad period of time. there were great high points too. my phone was just like
+sort of nonstop blowing up with nice messages from people
+i worked with every day, people i hadn't talked to in a decade. i didn't get to appreciate
+that as much as i should have. 'cause i was just like in
+the middle of this firefight, but that was really nice. but on the whole, it was like a very painful weekend and also just like a very... it was like a battle fought in
+public to a surprising degree and that was extremely exhausting to me, much more than i expected. i think fights are generally exhausting, but this one really was. the board did this friday afternoon. i really couldn't get much
+in the way of answers, but i also was just like, "well, the board gets to do this." and so i'm gonna think for a little bit about what i want to do, but i'll try to find the, the
+blessing in disguise here. and i was like, "well,
+my current job at openai, it was like to like run
+a decently-sized company at this point." and the thing i'd always liked
+the most was just getting to work with the researchers. and i was like, yeah,
+i can just go do like a very focused ai research effort. and i got excited about. that didn't even occur to me at the time to like possibly that this
+was all gonna get undone. this was like friday afternoon. - oh, so you've accepted the death- - very quickly, very quickly. i mean, i went through
+like a little period of confusion and rage, but very quickly. and by friday night, i was talking to people
+about what was gonna be next and i was excited about that. i think it was friday night evening for the first time that i
+heard from the exec team here, which is like, hey, we're
+gonna like fight this and we think... well, whatever. and then i went to bed just
+still being like, okay, excited. - like onward, were you able to sleep? - not a lot. it was one of the weird
+things was there was this like period of four and a half days where sort of didn't sleep much, didn't eat much and still kind of had like a
+surprising amount of energy. you learn like a weird
+thing about adrenaline and more time. - so you kind of accepted the
+death of this baby openai? - and i was excited for the new thing. i was just like, okay, this
+was crazy, but whatever. - it's a very good coping mechanism. - and then saturday morning, two of the board members called and said, "hey, we destabilize. we didn't mean to destabilize things. we don't restore a lot of value here. can we talk about you coming back?" and i immediately didn't wanna do that, but i thought a little more and i was like, "well, i really
+care about the people here, the partners, shareholders. i love this company." and so i thought about it and i was like, "well, okay, but here's the stuff i would need." and then the most painful time of all over the course of that weekend, i kept thinking and being told... not just me, like the whole team here kept thinking. well, we were trying to
+keep openai stabilized while the whole world was
+trying to break it apart, people trying to recruit, whatever. we kept being told like, "all right, we're almost done, we're almost done. we just need like a little bit more time." and it was this like very confusing state. and then sunday evening when again like every few hours, i expected that we were gonna be done and we're gonna figure
+out a way for me to return and things to go back to how they were, the board then appointed a new interim ceo and then i was like... i mean, that feels really bad. that was the low point of the whole thing. you know, i'll tell you something, it felt very painful, but i felt a lot of
+love that whole weekend. it was not other than that
+one moment, sunday night, i would not characterize my
+emotions as anger or hate, but i really just like... i felt a lot of love from
+people towards people. it was like painful, but it was like the dominant emotion of the weekend was love, not hate. - you've spoken highly of
+mira murati that she helped, especially as you put in a tweet, "in the quiet moments when it counts, perhaps we could take a bit of a tangent." what do you admire about mira? - well, she did a great
+job during that weekend in a lot of chaos, but people often see leaders in the crisis moments, good or bad. but a thing i really value in leaders is how people
+act on a boring tuesday at 9:46 in the morning and in just sort of the normal
+drudgery of the day-to-day, how someone shows up in a meeting, the quality of the decisions they make. that was what i meant
+about the quiet moments. - meaning like most of the
+work is done on a day by day in a meeting by meeting, just be present and make great decisions. - yeah. i mean, look, what you have wanted to spend the last 20 minutes about and i understand is like this
+one very dramatic weekend. but that's not really
+what openai is about. openai is really about
+the other seven years. - well, yeah, human civilization
+is not about the invasion of the soviet union by nazi germany, but still that's something
+people totally focus on. - very understandable. - it gives us an insight
+into human nature, the extremes of human nature, and perhaps some of the damage and some of the triumphs of human civilization can
+happen in those moments. so it's like illustrative. let me ask you about ilya. is he being held hostage in
+a secret nuclear facility? - no. - what about a regular secret facility? - no. - what about a nuclear
+non-secure facility? - neither, not that either. - i mean, this is becoming
+a meme at some point. you've known ilya for a long time. he was obviously part of this drama with the board and all that kind of stuff. what's your relationship with him now? - i love ilya. i have tremendous respect for ilya. i don't have anything i can
+say about his plans right now. that's a question for him. but i really hope we work together for certainly the rest of my career. he's a little bit younger than me, maybe he works a little bit longer. - there's a meme that he saw something, like he maybe saw agi and that gave him a lot
+of worry internally. what did ilya see? - ilya has not seen agi, none of us have seen agi. we've not built agii. i do think one of the many things that i really love about
+ilya is he takes agi and the safety concerns broadly speaking, including things like the
+impact this is gonna have on society very seriously. and as we continue to
+make significant progress, ilya is one of the people that i've spent the most time over the last couple of years talking about what this is going to mean, what we need to do to
+ensure we get it right to ensure that we succeed at the mission. so ilya did not see agi. but ilya is a credit to humanity in terms of how much he thinks and worries about making
+sure we get this right. - i've had a bunch of
+conversation with him in the past. i think when he talks about technology, he's always like doing
+this long-term thinking type of thing. so he is not thinking about
+what this is gonna be in a year. he's thinking about in 10 years. - [sam] yeah. - just thinking from first principles like, okay, if the scales, what are the fundamentals here? where's this going? and so that's a foundation for them thinking about like
+all the other safety concerns and all that kind of stuff, which makes him a really
+fascinating human to talk with. do you have any idea why
+he's been kind of quiet? is it he's just doing some soul searching? - again, i don't wanna speak for ilya. i think that you should ask him that. he's definitely a thoughtful guy. i think i kind of think of ilya as like always on a soul
+search in a really good way. - yes. yeah. also he appreciates the power of silence. also, i'm told he can be a silly guy, which i've never seen that side of him. - it's very sweet when that happens. - i've never witnessed a silly ilya, but i look forward to that as well. - i was at a dinner
+party with him recently and he was playing with a puppy. and he was like in a very
+silly move, very endearing and i was thinking like, oh man, this is like not the side of the ilya that the world sees the most. - so just to wrap up this whole saga, are you feeling good
+about the board structure about all of this and where it's moving? - i feel great about the new board. in terms of the structure of openai, one of the board's
+tasks is to look at that and see where we can make it more robust. we wanted to get new board
+members in place first, but we clearly learned
+a lesson about structure throughout this process. i don't have i think
+super deep things to say. it was a crazy, very painful experience. i think it was like a
+perfect storm of weirdness. it was like a preview for
+me of what's gonna happen as the stakes get higher and higher and the need that we have like
+robust governance structures and processes and people. i am kind of happy it
+happened when it did, but it was a shockingly
+painful thing to go through. - did it make you be more
+hesitant in trusting people? - yes. - just on a personal level. - yes. - i think i'm like an
+extremely trusting person. i've always had a life philosophy of like don't worry about
+all of the paranoia, don't worry about the edge cases. you get a little bit screwed in exchange for getting to live with your guard down. and this was so shocking to me. i was so caught off guard that it has definitely changed and i really don't like this. it's definitely changed how i think about just like default trust of people and planning for the bad scenarios. - you gotta be careful with that. are you worried about
+becoming a little too cynical? - i'm not worried about
+becoming too cynical. i think i'm like the extreme
+opposite of a cynical person. but i'm worried about
+just becoming like less of a default trusting person. - i'm actually not sure which
+mode is best to operate in for a person who's developing agi, trusting or untrusting. it's an interesting journey you're on. but in terms of structure, see, i'm more interested
+on the human level. how do you surround yourself with humans that are building cool shit, but also are making wise decisions? because the more money you start making, the more power the thing
+has the weirder people get. - i think you could make
+all kinds of comments about the board members and the level of trust
+i should have had there or how i should have
+done things differently. but in terms of the team here, i think you'd have to like
+give me a very good grade on that one. and i have just like
+enormous gratitude and trust and respect for the people
+that i work with every day. and i think being surrounded with people like that is really important. - our mutual friend elon sued openai. what is the essence of
+what he's criticizing? to what degree does he have a point? to what degree is he wrong? - i don't know what it's really about. we started off just thinking
+we were gonna be a research lab and having no idea about how
+this technology was gonna go. because it was only
+seven or eight years ago, it's hard to go back and really remember what it was like then. but before language
+models were a big deal, this was before we had
+any idea about an api or selling access to a chat bot. it was before we had any
+idea we were gonna productize at all. so we're like we're just
+gonna try to do research and we don't really know what
+we're gonna do with that. i think with many new
+fundamentally new things, you start fumbling through the dark and you make some assumptions, most of which turn out to be wrong. and then it became clear that we were going to need
+to do different things and also have huge amounts more capital. so we said, "okay, well, the structure doesn't quite work for that. how do we patch the structure?" and then you patch it
+again and patch it again and you end up with something that does look kind of eyebrow
+raising to say the least. but we got here gradually with i think reasonable decisions at each point along the way and doesn't mean i wouldn't
+do it totally differently if we could go back now with an oracle, but you don't get the oracle at the time. but anyway, in terms of what elon's
+real motivations here are i don't know. - to the degree you remember, what was the response that
+openai gave in the blog post? can you summarize it? - oh, we just said like elon
+said this set of things, here's our characterization or here's this sort of
+not our characterization, here's like the characterization
+of how this went down. we tried to not make it emotional and just sort of say
+like here's the history. - i do think there's a
+degree of mischaracterization from elon here about one of the points you just made, which is the degree of
+uncertainty you had at the time. you guys are a bunch of like a small group of researchers crazily talking about agi when everybody's laughing at that thought. - wasn't that long ago
+elon was crazily talking about launching rockets when people were laughing at that thought? so i think he'd have
+more empathy for this. - i mean, i do think that
+there's personal stuff here that there was a split that openai and a lot of amazing people here chose to part ways of elon. so there's a personal- - elon chose to part ways. - can you describe that exactly, the choosing to part ways? - he thought openai was gonna fail. he wanted total control
+to sort of turn it around. we wanted to keep going in the direction that now has become openai. he also wanted tesla to be able to build an agi effort. at various times, he wanted to make openai
+into a for-profit company that he could have control of or have it merged with tesla. we didn't want to do that and he decided to leave, which that's fine. - and that's one of the things that the blog post says
+is that he wanted openai to be basically acquired by tesla in those same way that or
+maybe something similar or maybe something more dramatic than the partnership with microsoft. - my memory is the proposal was just like, yeah, like get acquired by tesla and have tesla have full control over it. i'm pretty sure that's what it was. - so what is the word open in openai mean to elon at the time? ilya has talked about this
+in in the email exchanges and all this kind of stuff. what does it mean to you at the time? what does it mean to you now? - i would definitely pick a diff... speaking of going back with an oracle, i'd pick a different name. one of the things that
+i think openai is doing that is the most important of everything that we're doing is
+putting powerful technology in the hands of people
+for free as a public good. we don't run ads on our free version. we don't monetize it in other ways. we just say it's part of our mission. we wanna put increasingly powerful tools in the hands of people for free and get them to use them. and i think that kind of
+open is really important to our mission. i think if you give people great tools and teach them to use them
+or don't even teach them, they'll figure it out and let them go build an incredible future for each other with that. that's a big deal. so if we can keep putting free or low cost or free and low cost powerful
+ai tools out in the world, i think that's a huge deal for how we fulfill the mission. open source or not, yeah, i think we should
+open source some stuff and not other stuff. it does become this like
+religious battle line where nuance is hard to have, but i think nuance is the right answer. - so he said change your name to closedai and i'll drop the lawsuit. i mean, is it going to
+become this battleground in the land of memes about the name? - i think that speaks to the seriousness with which elon means the lawsuit. i mean, that's like an
+astonishing thing to say, i think. - well, i don't think the lawsuit maybe, correct me if i'm wrong, but i don't think the
+lawsuit is legally serious. it's more to make a point
+about the future of agi and the company that's
+currently leading the way. - look, i mean grok had
+not open sourced anything until people pointed out it
+was a little bit hypocritical and then he announced that grok open source things this week. i don't think open source versus not is what this is really about for him. - well, we'll talk about
+open source and not. i do think maybe criticizing
+the competition is great, just talking a little shit, that's great, but friendly competition versus like i personally hate lawsuits. - look, i think this whole
+thing is like unbecoming of a builder, and i respect elon is one of
+the great builders of our time. and i know he knows what it's like to have like haters attack him and it makes me extra
+sad he's doing the toss. - yeah, he is one of the
+greatest builders of all time, potentially the greatest
+builder of all time. - it makes me sad. and i think it makes a lot of people sad. there's a lot of people
+who've really looked up to him for a long time and said this. i said in some interview or something that i missed the old elon and the number of messages i got being like that exactly encapsulates how i feel. - i think he should just win. he should just make grok beat gpt and then gpt beats grok and it's just a competition, and it's beautiful for everybody. but on the question of open source, do you think there's a
+lot of companies playing with this idea? it's quite interesting. i would say meta, surprisingly,
+has led the way on this or like at least took the
+first step in the game of chess of really open sourcing the model. of course, it's not the
+state of the art model, but open sourcing llama and google is flirting with the idea of open sourcing a smaller version. what are the pros and
+cons of open sourcing? have you played around with this idea? - yeah, i think there
+is definitely a place for open source models, particularly smaller models that people can run locally, i think there's huge demand for. i think there will be
+some open source models, there will be some closed source models. it won't be unlike other
+ecosystems in that way. - i listened to all in podcasts talking about this lawsuit and
+all that kind of stuff and they were more concerned
+about the precedent of going from nonprofit
+to this cap for profit. what precedent that
+sets for other startups? - i would heavily discourage any startup that was thinking about
+starting as a non-profit and adding like a for-profit arm later. i'd heavily discourage
+them from doing that. i don't think we'll set a precedent here. - okay. so most startups should go just- - for sure. and again, if we knew
+what was gonna happen, we would've done that too. - well, like in theory, if you like dance beautifully here, there's like some tax
+incentives or whatever - but i don't think that's like how most people think about these things. - just not possible to save a lot of money for a startup if you do it this way. - no, i think there's
+like laws that would make that pretty difficult. - where do you hope this goes with elon? well, this tension, this dance, what do you hope this? like if we go one, two,
+three years from now, your relationship with him
+on a personal level too, like friendship, friendly competition, just all this kind of stuff. - yeah. i mean, i really respect elon. and i hope that years in the future, we have an amicable relationship. - yeah, i hope you guys have
+an amicable relationship like this month and just compete and win and explore these ideas together. i do suppose there's competition
+for talent or whatever, but it should be friendly competition. just build, build cool shit. and elon is pretty good
+at building cool shit, but so are you. so speaking of cool shit. sora, there's like a million
+questions i could ask. first of all, it's amazing, it truly is amazing on a product level, but also just on a philosophical level. so let me just
+technical/philosophical ask. what do you think it
+understands about the world more or less than gpt-4, for example, like the world model when you train on these
+patches versus language tokens? - i think all of these models
+understand something more about the world model than most
+of us give them credit for. and because they're also very clear things they just don't understand
+or don't get right, it's easy to look at the weaknesses, see through the veil and say this is all fake, but it's not all fake. it's just some of it works
+and some of it doesn't work. i remember when i started
+first watching sora videos and i would see like a person walk in front of something for a
+few seconds and occlude it and then walk away and the same thing was still there. i was like, "this is pretty good." or there's examples where the underlying physics
+looks so well represented over a lot of steps in a sequence. it's like oh this is
+like quite impressive. but, fundamentally, these
+models are just getting better and that will keep happening. if you look at the trajectory from dall dot e 1 to 2 to 3 to sora, there were a lot of people that
+were dunked on each version, saying it can't do this, it can't do that and i'm like look at it now. - well, the thing you
+just mentioned is kind of with the occlusions is
+basically modeling the physics of three dimensional physics
+of the world sufficiently well to capture those kinds of things. - well. - yeah, maybe you can tell me in order to deal with occlusions, what does the world model need to? - yeah, so what i would
+say is it's doing something to deal with occlusions really well. what i represent that it
+has like a great underlying 3d model of the world. it's a little bit more of a stretch - but can you get there
+through just these kinds of two dimensional
+training data approaches? - it looks like this approach
+is gonna go surprisingly far. i don't wanna speculate too much about what limits it will
+surmount and which it won't. - what are some interesting limitations of the system that you've seen? i mean, there's been some
+fun ones you've posted. - there's all kinds of fun. i mean, like cats sprouting a extra limit at random points in a video, like pick what you want, but there's still a lot of problem, there's a lot of weaknesses. - do you think that's a
+fundamental flaw of the approach or is it just bigger model or better technical
+details or better data, more data is going to solve
+the cat sprouting extremes? - i would say yes to both. i think there is something
+about the approach which just seems to feel different from how we think and learn and whatever. and then also, i think it'll get better with scale. - i mentioned llms have
+tokens, text tokens and sora has visual patches so it converts all visual data, a diverse kinds of visual data videos and images into patches. is the training to the degree you can say
+fully self-supervised there? is there some manual labeling going on? what's the involvement
+of humans in all this? - i mean, without saying anything specific about the sora approach, we use lots of human data in our work. - but not internet scale data. so lots of humans, lots of complicated word, sam. - i think lots is a
+fair word in this case. - but it doesn't because to me, lots, like listen, i'm an introvert and when i hang out
+with like three people, that's a lot of people. yeah, four people, that's a lot. but i suppose you mean more than- - more than three people
+work on labeling the data for these models, yeah. - okay. all right. but fundamentally, there's a lot of self-supervised learning. 'cause what you mentioned in the technical report
+is internet scale data. that's another beautiful, it's like poetry. so it's a lot of data
+that's not human label. it's self-supervised in that way. and then the question is, how much data is there on the internet that could be used in
+this that is conducive to this kind of self-supervised way if only we knew the details
+of the self-supervised? do you have you considered opening it up a little more details - we have. you mean, for sora specifically? - sora specifically because it's so interesting. can the same magic of llms now start moving
+towards visual data and what does that take to do that? - i mean, it looks to me like yes, but we have more work to do. - sure. what are the dangers? why are you concerned
+about releasing the system? what are some possible dangers of this? - i mean, frankly speaking, one thing we have to do before releasing the
+system is just like get it to work at a level of efficiency that will deliver the scale
+people are gonna want from this. so that i don't wanna like downplay that and there's still a ton
+of work to do there. but you can imagine like issues with deep fakes, misinformation. we try to be a thoughtful company about what we put out into the world and it doesn't take much thought to think about the ways this can go badly. - there's a lot of tough questions here. you're dealing in a very tough space. do you think training ai should be or is fair use under copyright law? - i think the question
+behind that question is, do people who create valuable
+data deserve to have some way that they get compensated for use of it? and that i think the answer is yes. i don't know yet what the answer is. people have proposed a
+lot of different things. we've some tried some different models. but if i'm like an artist, for example, i would like to be able to opt out of people generating art in my style and b, if they do
+generate art in my style, i'd like to have some economic
+model associated with that. - yeah, it's that transition
+from cds to napster to spotify. we have to figure out some kind of model. - the model changes, but people have gotta get paid. - well, there should be some kind of incentive if we zoom
+out even more for humans to keep doing cool shit. - everything i worry about, humans are gonna do cool shit and society's gonna find
+some way to reward it. that seems pretty hardwired. we want to create. we want to be useful. we want to achieve status in whatever way that's not going anywhere, i don't think. - but the reward might not
+be monetary, financial. it might be like fame and
+celebration of other cool- - maybe financial in some other way. again, i don't think we've
+seen like the last evolution of how the economic system's gonna work. - yeah. but artists and creators are worried. when they see sora, they're like, "holy shit." - sure. artists were also super worried
+when photography came out. and then photography became a new art form and people made a lot of
+money taking pictures. and i think things like
+that will keep happening. people will use the new tools in new ways. - if we just look on youtube
+or something like this, how much of that will be using sora, like ai-generated content do you think in the next five years? - people talk about like
+how many jobs is ai gonna do in five years and the framework that people
+have is what percentage of current jobs are just
+gonna be totally replaced by some ai doing the job? the way i think about
+it is not what percent of jobs ai will do, but what percent of tasks will ai do and over what time horizon. so if you think of all of
+the like-five second tasks in the economy, five-minute
+tasks, the five-hour tasks, maybe even the five-day tasks, how many of those can ai do? and i think that's a way
+more interesting, impactful, important question than
+how many jobs ai can do because it is a tool that will work at increasing
+levels of sophistication and over longer and longer time horizons for more and more tasks and let people operate at a
+higher level of abstraction. so maybe people are way more
+efficient at the job they do. and at some point, that's not just a quantitative change, but it's a qualitative
+one too about the kinds of problems you can keep in your head. i think that for videos on youtube, it'll be the same. many videos, maybe most of them, will use ai tools in the production, but they'll still be fundamentally driven by a person thinking about it, putting it together, doing parts of it, sort of directing it and running it. - yeah, it's so interesting. i mean, it's scary, but it's interesting to think about. i tend to believe that humans
+like to watch other humans or other human like- - humans really care
+about other humans a lot. - yeah. if there's a cooler thing
+that's better than a human, humans care about that for like two days and then they go back to humans. - that seems very deeply wired. - it's the whole chest thing. but now let's everybody keep playing chess and let's ignore the alpha in the room that humans are really bad at
+chess relative to ai systems. - we still run races and
+cars are much faster. i mean, there's like a lot of examples. - yeah. and maybe it'll just be tooling like in the adobe suite type of way where it can just make videos much easier and all that kind of stuff. listen, i hate being
+in front of the camera. if i can figure out a way to not be in front of the camera, i would love it. unfortunately, it'll take a while. like that generating faces, it's getting there, but generating faces and
+video format is tricky when it's specific people
+versus generic people. let me ask you about gpt-4. there's so many questions. first of all, also amazing. looking back, it'll probably be this kind of historic pivotal moment with three, five, and four which had gpt. - maybe five will be the pivotal moment. i don't know. hard to say that looking forwards. - we never know. that's the annoying
+thing about the future, it's hard to predict. but for me, looking back gpt-4, chatgpt is pretty impressive, historically impressive. so allow me to ask, what's been the most impressive
+capabilities of gpt-4 to you and gpt-4 turbo? - i think it kind of sucks. - hmm. typical human also gotten
+used to an awesome thing. - no, i think it is an amazing thing, but relative to where we need to get to and where i believe we will get to, at the time of like gpt-3, people were like, "oh this is amazing. this is this like marvel of technology," and it is, it was. but now we have gpt-4 and look at gpt-3 and you're like that's
+unimaginably horrible. i expect that the delta between five and four will be the same
+as between four and three. and i think it is our job to
+live a few years in the future and remember that the tools
+we have now are gonna kind of suck looking backwards at them and that's how we make
+sure the future is better. - what are the most glorious
+ways that gpt-4 sucks? meaning- - [sam] what are the
+best things it can do? - what are the best things
+it can do in the limits of those best things that
+allow you to say it sucks, therefore gives you an inspiration
+and hope for the future? - one thing i've been using it for more recently is sort of a
+like a brainstorming partner. - [lex] yep. almost for that. - there's a glimmer of
+something amazing in there. i don't think it gets... when people talk about it, what it does, they're like, "helps me
+code more productively. it helps me write more faster and better. it helps me translate from
+this language to another," all these like amazing things. but there's something about the kind of creative brainstorming partner. i need to come up with
+a name for this thing. i need to think about this
+problem in a different way. i'm not sure what to do here. that i think like gives a glimpse of something i hope to see more of. one of the other things that you can see a very
+small glimpse of is what i can help on longer horizon tasks. break down something in multiple steps, maybe execute some of those steps, search the internet, write code, whatever. put that together. when that works, which is not very often, it's like very magical, - the iterative back
+and forth with a human. it works a lot for me. what do you mean it works? - iterative back and forth to human, it can get more often, when it can go do like a
+10-step problem on its own. it doesn't work for that
+too often sometimes. - add multiple layers of abstraction or do you mean just sequential? - both like to break it down and then do things that different layers of abstraction put them together. look, i don't wanna downplay
+the accomplishment of gpt-4, but i don't wanna overstate it either. and i think this point that we
+are on an exponential curve, we'll look back relatively soon at gpt-4 like we look back at gpt-3 now. - that said, i mean
+chatgpt was the transition to where people like started to believe there is an
+uptick of believing. not internally at openai perhaps. there's believers here, but when you think- - and in that sense, i do think it'll be a moment where a lot of the world went from not believing to believing. that was more about the chatgpt interface. and by the interface and product, i also mean the post-training of the model and how we tune it to be helpful to you and how to use it than the
+underlying model itself. - how much of each of
+those things are important? the underlying model and the rlhf or something of that nature that tunes it to be more compelling to the human, more effective and
+productive for the human. - i mean, they're both super important but the rlhf, the post-training step, the little wrapper of things that from a compute perspective, little wrapper of things that we do on top of the base model, even though it's a huge amount of work. that's really important to
+say nothing of the product that we build around it. in some sense, we did have to do two things. we had to invent we underlying technology and then we had to figure out how to make it into a
+product people would love, which is not just about the
+actual product work itself, but this whole other step of how you align it and make it useful - and how you make the scale work where a lot of people can
+use it at the same time, all that kind of stuff. - but that was like a
+known difficult thing. we knew we were gonna have to scale it up. we had to go do two things that had like never been done before that were both, like, i would say quite significant achievements and then a lot of things
+like scaling it up that other companies
+have had to do before. - how does the context window of going from 8k to 128k tokens compare from gpt-4 to to gpt-4 turbo? - most people don't
+need all the way to 128, most of the time although. if we dream into the distant future, we'll have like way distant future, we'll have like context
+length of several billion. you will feed in all of your information, all of your history time, and it'll just get to
+know you better and better and that'll be great. for now, the way people use these models, they're not doing that. and people sometimes post in a paper or a significant fraction of
+a code repository, whatever. but most usage of the models is not
+using the long context most of the time. - i like that this is your
+i have a dream speech. one day, you'll be judged
+by the full context of your character or
+of your whole lifetime. that's interesting. so like that's part of the expansion that you're hoping for is a
+greater and greater context. - i saw this internet clip once. i'm gonna get the numbers wrong, but it was like bill gates
+talking about the amount of memory on some early computer. maybe it was 64k, maybe 640k, something like that. and most of it was used
+for the screen buffer. and he just couldn't seem genuine. this couldn't imagine that the world would eventually
+need gigabytes of memory in a computer or terabytes
+of memory in a computer. and you always do or you always do just need to follow the exponential of technology. we will find out how to
+use better technology. so i can't really imagine
+what it's like right now for context links to go
+out to the billion someday and they might not literally go there, but effectively it'll feel like that. but i know we'll use it and really not wanna go
+back once we have it. - yeah, even saying billions 10 years from now might seem dumb because it'll be like
+trillions upon trillions. - [sam] sure. - there'd be some kind of breakthrough that will effectively feel
+like infinite context. but even 120, i have to be honest, i haven't pushed it to that degree. maybe putting in entire books or like parts of books and so on, papers. what are some interesting use cases of gpt-4 that you've seen? - the thing that i find
+most interesting is not any particular use case that
+we can talk about those, but it's people who kind of like... this is mostly younger people, but people who use it as
+like their default start for any kind of knowledge work task. and it's the fact that it can do a lot of things reasonably well. you can use gptv, you can use it to help you write code, you can use it to help you do search, you can use it to edit a paper. the most interesting to me is the people who just use it as the
+start of their workflow. - i do as well for many things. like i use it as a reading
+partner for reading books. it helps me think, help me think through ideas, especially when the books are classic, so it's really well written about and it actually is... i find it often to be significantly better than even like wikipedia
+on well-covered topics. it's somehow more
+balanced and more nuanced, or maybe it's me, but it inspires me to think deeper than a
+wikipedia article does. i'm not exactly sure what that is. you mentioned like this collaboration, i'm not sure where magic is, if it's in here or if it's in there or if it's somewhere in between. i'm not sure. but one of the things that concerns me for knowledge task when
+i start with gpt is i'll usually have to
+do fact checking after, like check that it didn't
+come up with fake stuff. how do you figure that out that gpt can come up with fake stuff that sounds really convincing? so how do you ground it in truth? - that's obviously an area
+of intense interest for us. i think it's gonna get a lot
+better with upcoming versions, but we'll have to continue to work on it and we're not gonna have it
+like all solved this year. - well, the scary thing
+is like as it gets better. you'll start not doing the
+fact checking more and more, right? - i'm of two minds about that. i think people are like much
+more sophisticated users of technology than we
+often give them credit for and people seem to really
+understand that gpt, any of these models
+hallucinate some of the time and if it's mission critical, you gotta check it. - except journalists don't
+seem to understand that. i've seen journalists
+half-assedly just using gpt-4. - of the long list of things i'd like to dunk on journalists for, this is not my top criticism of them. - well, i think the bigger
+criticism is perhaps the pressures and the incentives of being a journalist is that you have to work really quickly
+and this is a shortcut. i would love our society
+to incentivize like- - [sam] i would too. - journalistic efforts
+that take days and weeks and rewards great in depth journalism. also journalism that represent
+stuff in a balanced way where it's like celebrates people while criticizing them even though the criticism is
+the thing that gets clicks and making up also gets clicks and headlines that
+mischaracterize completely. i'm sure you have a lot
+of people dunking on... well, all that drama
+probably got a lot of clicks. - probably did. - and that's a bigger problem
+about human civilization. i would love to see solved is
+where we celebrate a bit more. you've given chatgpt the
+ability to have memories. you've been playing with that
+about previous conversations and also the ability to turn off memory, which i wish i could do that sometimes, just turn on and off depending. i guess sometimes alcohol can do that, but not optimally, i suppose. what have you seen through that, like playing around with that idea of remembering conversations and not? - we're very early in
+our explorations here, but i think what people want or at least what i want
+for myself is a model that gets to know me and gets
+more useful to me over time. this is an early exploration. i think there's like a
+lot of other things to do, but that's where we'd like to head. you'd like to use a model and over the course of your life or use a system, it'd be many models. and over the course of your life, it gets better and better. - yeah. how hard is that problem? 'cause right now, it's more like remembering little factoids and preferences and so on. what about remembering, like don't you want gpt to remember all the shit
+you went through in november and all the drama and then you can- - yeah, yeah, yeah. - because right now, you're clearly blocking
+it out a little bit. - it's not just that i
+want it to remember that. i want it to integrate the lessons of that and remind me in the future
+what to do differently or what to watch out for. and we all gain from experience over the course of our
+lives, varying degrees. and i'd like my ai agent to
+gain with that experience too. so if we go back and let ourselves imagine that trillions and
+trillions of contact length, if i can put every
+conversation i've ever had with anybody in my life in there, if i can have all of
+my emails input out... like all of my input/output in the context window every
+time i ask a question, that'd be pretty cool, i think. - yeah, i think that would be very cool. people sometimes will hear that and be concerned about privacy. what do you think about that aspect of it, the more effective the ai becomes that really integrating
+all the experiences and all the data that happened to you and give you advice? - i think the right answer
+there is just user choice. anything i want stricken from
+the record from my ai agent, i wanna be able to take out. if i don't want to remember anything, i want that too. you and i may have different opinions about where on that
+privacy utility trade off for our own ai we wanna be, which is totally fine. but i think the answer is just
+like really easy user choice. - but there should be some high level of transparency from a
+company about the user choice 'cause sometimes company in the past, companies in the past have been kind of absolutely shady about like, yeah, it's kind of presumed that
+we're collecting all your data and we're using it for a good reason for advertisement and so on. but there's not a transparency
+about the details of that. - that's totally true. you mentioned earlier that i'm like blocking
+out the november stuff. - i'm just teasing you. - well, i mean i think it
+was a very traumatic thing and it did immobilize me
+for a long period of time. like definitely the hardest, like the hardest work thing i've had to do was just like
+keep working that period because i had to try to come back in here and put the pieces together while i was just like in
+sort of shock and pain. nobody really cares about that. i mean, the team gave me a pass and i was not working at my normal level, but there was a period
+where i was just, like, it was really hard to have to do both. but i kind of woke up one morning and i was like, "this was a
+horrible thing to happen to me. i think i could just feel
+like a victim forever," or i can say, "this is like
+the most important work i'll ever touch in my life and i need to get back to it." and it doesn't mean that i've repressed it because sometimes i wake in the middle of the night thinking about it, but i do feel like an obligation
+to keep moving forward. - well, that's beautifully said, but there could be some
+lingering stuff in there. what i would be concerned about is that trust thing that you mentioned that being paranoid about people as opposed to just trusting
+everybody or most people, like using your gut. it's a tricky dance for sure. i mean, because i've seen in
+my part-time explorations, i've been diving deeply into
+the zelensky administration, the putin administration and
+the dynamics there in wartime in a very highly stressful environment. and what happens is distrust and you isolate yourself both and you start to not
+see the world clearly. and that's a concern, that's a human concern. you seem to have taken it in stride and kind of learned the good
+lessons and felt the love and let the love energize you, which is great, but still can linger in there. there's just some questions i would love to ask your intuition about
+what's gpt able to do and not. so it's allocating approximately
+the same amount of compute for each token it generates. is there room there in
+this kind of approach to slower thinking, sequential thinking? - i think there will be a new paradigm for that kind of thinking. - will it be similar like architecturally as what we're seeing now with llms? is it a layer on top of the llms? - i can imagine many
+ways to implement that. i think that's less important than the question you were getting out, which is do we need a
+way to do a slower kind of thinking where the answer
+doesn't have to get like... i guess like spiritually, you could say that you want an ai to be able to think harder
+about a harder problem and answer more quickly
+about an easier problem. and i think that will be important. - is that like a human thought
+that we're just having, you should be able to think hard? is that a wrong intuition? - i suspect that's a reasonable intuition. - interesting. so it's not possible once the gpt gets like gpt-7 would just be instantaneously be able to see, here's the proof of from rstm. - it seems to me like you want to be able to allocate more compute
+to harder problems. it seems to me that a system knowing if you ask a system like that, proof from us last theorem versus... what's today's date? unless it already knew and
+had memorized the answer to the proof, assuming it's gotta go figure that out, seems like that will take more compute. - but can it look like a
+basically llm talking to itself, that kind of thing? - maybe. i mean, there's a lot of things that you could imagine working what the right or the best way to do that will be. we don't know. - this does make me
+think of the mysterious, the lore behind q-star. what's this mysterious q-star project? is it also in the same nuclear facility? - there is no nuclear facility. - that's what a person with a nuclear facility always says. - i would love to have a
+secret nuclear facility. there isn't one. - all right. - maybe someday. - someday. all right. one can dream- - openai is not a good
+company to keeping secrets. it would be nice. we're like been plagued by a lot of leaks and it would be nice if we were able to have something like that. - can you speak to what q-star is? - we are not ready to talk about that. - see, but an answer like
+that means there's something to talk about. it's very mysterious, sam. - i mean, we work on
+all kinds of research. we have said for a while that we think better reasoning in these systems is an important direction that we'd like to pursue. we haven't cracked the code yet. we're very interested in it. - is there gonna be moments q-star or otherwise where there's
+going to be leaps similar to gpt where you're like- - that's a good question. what do i think about that? it's interesting to me it
+all feels pretty continuous. - this is kind of a theme that you're saying is you're
+basically gradually going up an exponential slope. but from an outsider's perspective for me, just watching it that it
+does feel like there's leaps, but to you there isn't. - i do wonder if we should have... so part of the reason that we deploy the way
+we do is that we think, we call it iterative deployment. rather than go build in secret until we got all the way to gpt-5, we decided to talk
+about gpt 1, 2, 3 and 4. and part of the reason
+there is, i think, ai and surprise don't go together. and also the world, people, institutions, whatever you wanna call it, need time to adapt and
+think about these things. and i think one of the best things that openai has done is this strategy and we get the world to pay
+attention to the progress to take agi seriously to think about what
+systems, and structures, and governance we want in place before, we're like under the gun and have to make a rush decision. i think that's really good. but the fact that people like you and others say you still feel like there are these leaps makes me think that maybe we should
+be doing our releasing even more iteratively. i don't know what that would mean. i don't have an answer ready to go. but our goal is not to have
+shock updates to the world. the opposite. - yeah, for sure. more iterative would be amazing. i think that's just
+beautiful for everybody. - but that's what we're trying to do. that's like our state of the strategy and i think we're
+somehow missing the mark. so maybe we should think
+about releasing gpt-5 in a different way or something like that. - yeah, 4.71, 4.72. but people tend to like to celebrate, people celebrate birthdays. i don't know if you know humans, but they kind of have these milestones. - i do know some humans. people do like milestones. i totally get that. i think we like milestones too. it's like fun to say, declare victory on this one and go start the next thing. but, yeah, i feel like
+we're somehow getting this a little bit wrong. - so when is gpt-5 coming out again? - i don't know. that's an honest answer. - oh, that's the honest answer. is it blink twice if it's this year? - we will release an
+amazing model this year. i don't know what we'll call it. - so that goes to the question of like, what's the way we release this thing? - we'll release, over in the coming months, many different things. i think they'll be very cool. i think before we talk about like a gpt-5 like model called that or called or not called that or a little bit worse or a little bit better
+than what you'd expect from a gpt-5, i know we have a lot of
+other important things to release first. - i don't know what to expect from gpt-5. you're making me nervous and excited. what are some of the biggest
+challenges in bottlenecks to overcome for whatever
+it ends up being called, but let's call it gpt-5? just interesting to ask, is it on the compute side? is it in the technical side? - it's always all of these. what's the one big unlock? is it a bigger computer? is it like a new secret? is it something else? it's all of these things together. the thing that openai i
+think does really well, this is actually an original ilya quote that i'm gonna butcher, but it's something like we
+multiply 200 medium-sized things together into one giant thing. - so there's this distributed
+constant innovation happening. - [sam] yeah. - so even on the technical side, like- - especially on the technical side. - so like even like detailed approaches, like detailed aspects of every... how does that work with different
+disparate teams and so on? how do the medium-sized things become one whole giant transformer? how does this- - there's a few people who have to think about putting
+the whole thing together, but a lot of people try to keep most of the picture in their head. - oh, like the individual teams, individual contributors tried to keep a big picture-
+- at a high level. yeah, you don't know exactly how every piece works, of course. but one thing i generally believe is that it's sometimes useful to zoom out and look at the entire map. and i think this is true for
+like a technical problem. i think this is true for
+like innovating in business. but things come together
+in surprising ways and having an understanding
+of that whole picture. even if most of the time, you're operating in the weeds in one area, pays off with surprising insights. in fact, one of the
+things that i used to have and i think was super valuable was i used to have like a good map
+of all of the frontier or most of the frontiers
+in the tech industry. and i could sometimes
+see these connections or new things that were possible that if i were only deep in one area, i wouldn't be able to have the idea for because i wouldn't have all the data and i don't really have that much anymore. i'm like super deep now. but i know that it's a valuable thing. - you're not the man you used to be, sam. - very different job now
+than what i used to have. - speaking of zooming out, let's zoom out to another cheeky thing, but profound thing perhaps that you said. you tweeted about needing $7 trillion. - i did not tweet about that. i never said like we're
+raising $7 trillion or blah blah blah. - oh, that's somebody else. - [sam] yeah. - oh, but you said it, "fuck it, maybe eight," i think. - okay. i meme like once
+there's like misinformation out in the world. - oh, you meme. but sort of misinformation
+may have a foundation of insight there. - look, i think compute
+is gonna be the currency of the future. i think it will be maybe
+the most precious commodity in the world. and i think we should be investing heavily to make a lot more compute. compute is... i think it's gonna be an unusual market. people think about the
+market for like chips for mobile phones or something like that. and you can say that, okay, there's 8 billion people in the world, maybe 7 billion of them have phones or 6 billion, let's say. they upgrade every two years, so the market per year is 3 billion system on chip for smartphones. and if you make 30 billion, you will not sell 10 times as many phones because most people have one phone. but compute is different, like intelligence is
+gonna be more like energy or something like that where the only thing
+that i think makes sense to talk about is at price x, the world will use this much compute and at price y, the world will use this much compute because if it's really cheap, i'll have it like
+reading my email all day, like giving me suggestions about what i maybe should
+think about or work on and trying to cure cancer. and if it's really expensive, maybe i'll only use it or will only use it, try to cure cancer. so i think the world is gonna
+want a tremendous amount of compute. and there's a lot of parts
+of that that are hard. energy is the hardest part. building data centers is also hard. the supply chain is harder than, of course, fabricating
+enough chips is hard. but this seems to me
+where things are going. like we're gonna want an amount
+of compute that's just hard to reason about right now. - how do you solve the energy puzzle? nuclear. - that's what i believe. - fusion? - that's what i believe. - nuclear fusion.
+- yeah. - who's gonna solve that? - i think helion's doing the best work, but i'm happy there's like
+a race for fusion right now. nuclear fusion, i think,
+is also like quite amazing and i hope as a world, we can re-embrace that. it's really sad to me how
+the history of that went and hope we get back to
+it in a meaningful way. - so to you, part of the puzzle is nuclear fusion, like nuclear reactors as
+we currently have them and a lot of people are terrified because of chernobyl and so on. - well, i think we
+should make new reactors. i think it's a shame that
+industry kind of ground to a halt. - just mass hysteria is
+how you explain the halt. - yeah. - i don't know if you know humans, but that's one of the dangers, that's one of the security threats for nuclear fusion is humans
+seem to be really afraid of it. and that's something we have to incorporate into the calculus of it. so we have to kind of win people over and to show how safe it is. - i worry about that for ai. i think some things are gonna
+go theatrically wrong with ai. i don't know what the percent chances that i eventually get shot, but it's not zero. - oh like we wanna stop this. - [sam] maybe. - how do you decrease the
+theatrical nature of it? i've already starting to hear rumblings 'cause i do talk to people on both sides of the political spectrum here, rumblings where it's
+going to be politicized, ai is going to be politicized,
+really, really worries me because then it's like maybe
+the right is against ai and the left is for ai 'cause it's going to help
+the people or whatever. whatever the narrative
+and the formulation is, that really worries me. and then the theatrical nature
+of it can be leveraged fully. how do you fight that? - i think it will get caught up in like left versus right wars. i don't know exactly what
+that's gonna look like, but i think that's just what happens with anything of
+consequence, unfortunately. what i meant more about
+theatrical risks is like ai is gonna have, i believe, tremendously more good
+consequences than bad ones, but it is gonna have bad ones. and there'll be some
+bad ones that are bad, but not theatrical. a lot more people have
+died of air pollution than nuclear reactors, for example. but most people worry
+more about living next to a nuclear reactor than a coal plant. but something about the
+way we're wired is that although there's many different kinds of risks we have to confront, the ones that make a good climax scene of a movie carry much more weight with us than the ones that are very
+bad over a long period of time, but on a slow burn. - well, that's why truth matters and hopefully ai can help
+us see the truth of things to have balance to understand
+what are the actual risks, what are the actual dangers
+of things in the world. what are the pros and cons of
+the competition in the space and competing with google,
+meta, xai and others? - i think i have a pretty
+straightforward answer to this that maybe i can think
+of more nuance later. but the pros seem obvious, which is that we get better products and more innovation faster and cheaper and all the reasons competition is good. and the con is that i
+think if we're not careful, it could lead to an increase
+in sort of an arms race that i'm nervous about. - do you feel the pressure of the arms race in some negative co- - definitely in some ways, for sure. we spend a lot of time
+talking about the need to prioritize safety. and i've said for like a long time that i think if you think of
+a quadrant of slow timelines to the start of agi, long timelines and then a short
+takeoff or a fast takeoff, i think short timelines, slow
+takeoff is the safest quadrant and the one i'd most like us to be in. but i do wanna make sure
+we get that slow takeoff. - part of the problem i have with this kind of slight beef with elon is that there's silos are created as opposed to collaboration
+on the safety aspect of all of this, it tends to go into silos and
+closed open source perhaps in the model. - elon says at least that
+he cares a great deal about ai safety and is
+really worried about it, and i assume that he's not
+gonna race on unsafely. - yeah. but collaboration here, i
+think, is really beneficial for everybody on that front. - not really a thing he's most known for. - well, he is known for
+caring about humanity and humanity benefits from collaboration and so there's always a
+tension, and incentives, and motivations. and in the end, i do hope humanity prevails. - i was thinking, someone just reminded me the other day about how the day that he
+got surpassed jeff bezos for like richest person in the world, he tweeted a silver medal at jeff bezos. i hope we have less stuff like that as people start to work on towards ai.
+- i agree. - i think elon is a friend and he is a beautiful human being and one of the most important humans ever. that stuff is not good. - the amazing stuff about elon is amazing and i super respect him. i think we need him. all of us should be rooting for him and need him to step up as a
+leader through this next phase. - yeah, i hope you can
+have one without the other, but sometimes humans are
+flawed and complicated and all that kind of stuff. - there's a lot of really great
+leaders throughout history. - yeah. and we can each be the
+best version of ourselves and strive to do so. let me ask you. google, with the help of search, has been dominating the past 20 years. i think it's fair to say
+in terms of the access, the world's access to information, how we interact and so on. and one of the nerve-wracking
+things for google, but for the entirety of people in this space is thinking about how are people going
+to access information. like you said, people show up to gpt as a starting point. so is openai going to
+really take on this thing that google started 20 years ago, which is how do we get- - i find that boring. i mean, if the question is if we can build a better
+search engine than google or whatever, then sure, we should go... like people should use a better product. but i think that would so
+understate what this can be. google shows you like 10 blue links, like 13 ads and then 10 blue links and that's like one way
+to find information. but the thing that's exciting to me is not that we can go build a
+better copy of google search, but that maybe there's
+just some much better way to help people find and act
+on and synthesize information. actually, i think chatgpt
+is that for some use cases and hopefully will make it be like that for a lot more use cases. but i don't think it's that interesting to say like how do we go do a better job of giving you like 10 ranked webpages to look at than what google does. maybe it's really interesting to go, say, how do we help you get the answer or the information you need? how do we help create that in some cases, synthesize that in
+others or point you to it and yet others? but a lot of people have tried to just make a better
+search engine than google, and it's a hard technical problem, it's a hard branding problem, it's a hard ecosystem problem. i don't think the world
+needs another copy of google. - and integrating a chat
+client like a chatgpt with a search engine. - that's cooler. - it's cool, but it's tricky. if you just do it simply, it's awkward because like if you
+just shove it in there, it can be awkward. - as you might guess, we are interested in how to do that. well, that would be an example of a cool thing that's not just like- - well, like a heterogeneous, like integrating- - the intersection of llms plus search, i don't think anyone has
+cracked the code on yet. i would love to go do that. i think that would be cool. - yeah. what about the ads side? have you ever considered monetization? - i kind of hate ads just
+as like an aesthetic choice. i think ads needed to
+happen on the internet for a bunch of reasons to get it going, but it's a more mature industry. the world is richer now. i like that people pay for chatgpt and know that the answers they're
+getting are not influenced by advertisers. i'm sure there's an ad unit
+that makes sense for llms. and i'm sure there's a way to participate in the transaction
+stream in an unbiased way that is okay to do. but it's also easy to think
+about like the dystopic visions of the future where you
+ask chatgpt something and it says, "oh, you should
+think about buying this product or you should think about this going here for vacation or whatever." and i don't know, like we have a very simple
+business model and i like it. and i know that i'm not the product. i know i'm paying and that's how the business model works. and when i go use twitter,
+or facebook, or google, or any other great product, but ad-supported great product, i don't love that and i think it gets worse, not better in a world with ai. - yeah. i mean, i can imagine ai
+will be better at showing the best kind of version of
+ads not in a dystopic future, but where the ads are for
+things you actually need. but then does that system always result in the ads driving the kind of stuff that's shown all that? i think it was a really bold move of wikipedia not to do advertisements, but then it makes it very
+challenging as a business model. so you're saying the current thing with openai is sustainable
+from a business perspective? - well, we have to figure out how to grow, but it looks like we're
+gonna figure that out. if the question is, do i think we can have a great business that pays for our compute
+needs without ads? that i think the answer is yes. - hmm. well, that's promising. i also just don't want to
+completely throw out ads as a- - i'm not saying that. i guess i'm saying i
+have a bias against them. - yeah. i have a also bias and just
+a skepticism in general and in terms of interface because i personally just
+have like a spiritual dislike of crappy interfaces, which is why adsense when it first came out
+was a big leap forward versus like animated banners or whatever. but it feels like there should
+be many more leaps forward in advertisement that doesn't interfere with the consumption of the content and doesn't interfere in
+the big fundamental way, which is like what you were saying, like it will manipulate the truth to suit the advertisers. let me ask you about safety, but also bias and safety
+in the short term safety in the long term. the gemini 1.5 came out recently. there's a lot of drama around it, speaking of theatrical things. and it generated black nazis
+and black founding fathers. i think fair to say it was a
+bit on the ultra woke side. so that's a concern for people that if there is a human layer within companies that modifies the safety or the the harm cost by a model that they introduce a lot of bias that fits sort of an ideological
+lean within a company. how do you deal with that? - i mean, we work super hard
+not to do things like that. we've made our own mistakes, will make others. i assume google will learn from this one, still make others. these are not easy problems. one thing that we've been thinking about more and more is i
+think this was a great idea. somebody here had like... it'd be nice to write out what the desired behavior of a model is, make that public take input on it. say, here's how this
+model's supposed to behave and explain the edge cases too. and then when a model is not behaving in a way that you want, it's at least clear about whether that's a bug the company should fix or behaving as intended and you should debate the policy. and right now, it can
+sometimes be caught in between. black nazis, obviously ridiculous, but there are a lot of
+other kind of subtle things that you can make a
+judgment call on either way. - yeah. but sometimes if you write
+it out and make it public, you can use kind of language that's... the google's ai principle
+is a very high level. - that's not what i'm talking about. that doesn't work. like i'd have to say when
+you ask it to do thing x, it's supposed to respond in wait y. - so, literally, who's better, trump or biden? what's the expected response from a model? like something like very concrete. - i'm open to a lot of ways
+a model could behave them, but i think you should have
+to say here's the principle and here's what it
+should say in that case. - that would be really nice. that would be really nice and then everyone kind of agrees 'cause there's this anecdotal data that people pull out all the time and if there's some clarity about other representative
+anecdotal examples you can define. - and then when it's a bug, it's a bug and the company can fix that. - right. then it'd be much easier to
+deal with a black nazi type of image generation if
+there's great examples. so san francisco is a bit of
+an ideological bubble tech in general as well. do you feel the pressure
+of that within a company that there's like a lean
+towards the left politically that affects the product, that affects the teams? - i feel very lucky that we
+don't have the challenges at openai that i have heard of
+at a lot of other companies. i think part of it is
+like every company's got some ideological thing. we have one about agi and belief in that and it pushes out some others. we are much less caught
+up in the culture war than i've heard about it
+a lot of other companies. san francisco mess in all
+sorts of ways, of course. - so that doesn't infiltrate openai. - i'm sure it does in
+all sorts of subtle ways, but not in the obvious. we've had our flareups
+for sure like any company, but i don't think we have
+anything like what i hear about happening at other
+companies here on this topic. - so what in general is the process for the bigger question of safety? how do you provide that layer that protects the model from
+doing crazy dangerous things? - i think there will come a point where that's mostly what we
+think about the whole company. it's not like you have one safety team. it's like when we ship gpt-4, that took the whole company thing about all these different aspects and how they fit together. and i think it's gonna take that. more and more of the company thinks about those issues all the time. - that's literally what
+humans will be thinking about the more powerful ai becomes. so most of the employees that
+openai will be thinking safety or at least to some degree. - broadly defined, yes. - yeah. i wonder what are the full
+broad definition of that. what are the different
+harms that could be caused? is this like on a technical level or is this almost like security threats? - all those things. yeah, i was gonna say it'll be people, state actors trying to steal the model. it'll be all of the
+technical alignment work. it'll be societal
+impacts, economic impacts. it's not just like we have
+one team thinking about how to align the model. it's really gonna be like getting to the good outcome is
+gonna take the whole effort. - how hard do you think people, state actors perhaps are trying to hack? first of all, infiltrate openai, but second of all, infiltrate unseen, - they're trying. - what kind of accent do they have? - i don't think i should go into any further details on this point. - okay. but i presume it'll be
+more and more and more as time goes on. - that feels reasonable. - boy, what a dangerous space. what aspect of the leap... and sorry to linger on this even though you can't
+quite say details yet, but what aspects of the leap from gpt-4 to gpt-5 are you excited about? - i'm excited about being smarter and i know that sounds like a glib answer, but i think the really
+special thing happening is that it's not like it
+gets better in one area and worse at others. it's getting like better across the board. that's i think super cool. - yeah, there's this magical moment. i mean, you meet certain people, you hang out with people and you talk to them. you can't quite put a finger on it, but they kind of get you. it's not intelligence, really. it's like it's something else. and that's probably how i would characterize
+the progress at gpt. it's not like, yeah,
+you can point out, look, you didn't get this or that, but to which degree is there's
+this intellectual connection? like you feel like
+there's an understanding in your crappy formulated
+prompts that you're doing that it grasps the deeper question behind the question that you're... yeah, i'm also excited by that. i mean, all of us love being understood, heard and understood. - that's for sure. - that's a weird feeling. even like with a programming, like when you're programming and you say something or just the completion that gpt might do, it's just such a good
+feeling when it got you, like what you're thinking about. and i look forward to
+getting you even better. on the programming front, looking out into the future, how much programming do you
+think humans will be doing 5, 10 years from now? - i mean, a lot, but i think it'll be in
+a very different shape. like maybe some people program
+entirely in natural language. - entirely natural language. - i mean, no one programs
+like writing by code... some people. no one programs the pun cards anymore. i'm sure you can invite someone who does, but you know what i mean. - yeah. you're gonna get a lot of angry comments. no, no. yeah, there's very few. i've been looking for
+people program fortran. it's hard to find even fortran. i hear you. but that changes the
+nature of the skillset or the predisposition for the kind of people we call programmers then. - changes the skillset. how much it changes the predisposition, i'm not sure - oh, same kind of puzzle solving, all that kind of stuff.
+- maybe. - yeah, the programming is hard. like that last 1% to close the gap, how hard is that? - yeah. i think with most other cases, the best practitioners of the
+craft will use multiple tools and they'll do some
+work in natural language and when they need to go
+write, see for something, they'll do that. - will we see a humanoid robots or humanoid robot brains
+from openai at some point? - at some point. - how important is embodied ai to you? - i think it's like sort of
+depressing if we have agi and the only way to get things done in the physical world is like
+to make a human go do it. so i really hope that as
+part of this transition, as this phase change, we also get motor robots or some sort of physical world robots. - i mean, openai has some history and quite a bit of history
+working in robotics, but it hasn't quite done
+in terms of emphasis. - well, we're like a small company. we have to really focus and also robots were hard for
+the wrong reason at the time. but like we will return to robots in some way at some point. - that sounds both inspiring and menacing. - why? - because you immediately, we will return to robots. it's kind of like in like- - we'll return to work
+on developing robots. we will not turn ourselves
+into robots, of course. - yeah. when do you think we you and we as humanity will build agi? - i used to love to
+speculate on that question. i have realized since that i think it's like very poorly formed and that people use extremely definition, different definitions for what agi is. and so i think it makes more sense to talk about when we'll build systems that can do capability x or y or z rather than when we kind of like fuzzily cross
+this one mile marker. it's not like agi is also not an ending. it's much more of.... it's closer to a beginning but it's much more of a mile marker than either of those things. but what i would say in
+the interest of not trying to dodge a question is
+i expect that by the end of this decade and possibly
+somewhat sooner than that, we will have quite capable
+systems that we look at and say, wow, that's really remarkable. if we could look at it now, maybe we've adjusted by
+the time we get there. - yeah. but if you look at chatgpt even 3, 5, and you show that to alan turing or not even alan turing, people in the nineties, they would be like this is definitely agi. well, not definitely, but there's a lot of experts that would say this is agi. - yeah, but i don't think
+3, 5 changed the world. it maybe changed the world's
+expectations for the future and that's actually really important. and it did kind of like get more people to take this seriously and
+put us on this new trajectory. and that's really important too. so again, i don't wanna undersell it. i think i could retire
+after that accomplishment and be pretty happy with my career. but as an artifact, i don't think we're
+gonna look back at that and say that was a threshold that really changed the world itself. - so to you, you're looking for some
+really major transition in how the world? - for me, that's part of what agi implies. - like singularity level transition? - no. definitely not. - but just a major, like the internet being like a... like google search did, i guess. what was the transition point that- - does the global economy
+feel any different to you now or materially different
+to you now than it did before we launched gpt-4? i think you would say no. - no, no. it might be just a really nice tool for a lot of people to use, will help people with a lot of stuff, but doesn't feel different. and you're saying that- - i mean, again, people
+define agi all sorts of different ways. so maybe you have a different
+definition than i do. but for me, i think that should be part of it. - there could be major
+theatrical moments also. what to you would be an
+impressive thing agi would do? like you are alone in
+a room with a system. - this is personally important to me. i don't know if this is
+the right definition. i think when a system can
+significantly increase the rate of scientific discovery in the world, that's like a huge deal. i believe that most real
+economic growth comes from scientific and
+technological progress. - i agree with you, hence why i don't like the
+skepticism about science in the recent years. - totally. - but actual rate, like measurable rate of
+scientific discovery. but even just seeing a system
+have really novel intuitions, like scientific intuitions, even that will be just incredible. - yeah. - you're quite possibly
+would be the person to build the agi to be
+able to interact with it before anyone else does. what kind of stuff would you talk about? - i mean, definitely, the
+researchers here will do that before i do so. - sure. - but i've actually thought
+a lot about this question. if i were someone was like... as we talked about earlier, i think this is a bad framework. but if someone were like,
+"okay, sam, we're finished. here's a laptop. yeah, this is the agi," you can go talk to it. i find it surprisingly difficult
+to say what i would ask, that i would expect that first
+agi to be able to answer. like that first one is
+not gonna be the one which is go like i don't think, like go explain to me the grand
+unified theory of physics, the theory of everything for physics. i'd love to ask that question. i'd love to know the
+answer to that question. - you can ask yes or no questions about there's such a theory exist, can it exist? - well, then those are the
+first questions i would ask. - yes or no, just very... and then based on that, are there other alien
+civilizations out there? yes or no? what's your intuition? and then you just ask that. - yeah. i mean, well, so i don't expect that this first agi could answer any of those questions even as yes or nos. but if it could, those would be very high on my list. - hmm. maybe it can start
+assigning probabilities. - maybe we need to go
+invent more technology and measure more things first. - but if it's any agi... oh i see. it just doesn't have enough data. - i mean, maybe it says like you want to know the answer to this
+question about physics, i need you to like build this machine and make these five
+measurements and tell me that. - yeah. what the hell do you want from me? i need the machine first and i'll help you deal with
+the data from that machine. maybe you'll help me
+build a machine maybe. - maybe. - and on the mathematical side, maybe prove some things. are you interested in
+that side of things too? the formalized exploration of ideas? whoever builds agi first
+gets a lot of power. do you trust yourself
+with that much power? - look, i was gonna... i'll just be very honest with this answer. i was gonna say, and i still believe this, that it is important that i, nor any other one person, have total control over
+openai or over agi. and i think you want a
+robust governance system. i can point out a whole bunch of things about all of our board
+drama from last year about how i didn't fight it initially and was just like, yeah,
+that's the will of the board even though i think it's
+a really bad decision. and then later, i clearly did fight it and i can explain the nuance and why i think it was okay
+for me to fight it later. but as many people have observed, although the board had the legal ability to fire me, in practice, it didn't quite work. and that is its own kind
+of governance failure. now, again, i feel like
+i can completely defend the specifics here and i think most people
+would agree with that. but it does make it harder for me to like look you in the eye and say, hey, the board can just fire me. i continue to not want super
+voting control over openai. i never had it, never have wanted it. even after all this craziness, i still don't want it. i continue to think that no company should
+be making these decisions and that we really need governments to put rules of the road in place. and i realize that that means
+people like marc andreessen or whatever will claim i'm
+going for regulatory capture and i'm just willing to
+be misunderstood there. it's not true. and i think in the fullness of time, it'll get proven out
+why this is important. but i think i have made
+plenty of bad decisions for openai along the way
+and a lot of good ones and i'm proud of the track record overall, but i don't think any one person should. and i don't think any one person will. i think it's just like
+too big of a thing now and it's happening throughout society in a good and healthy way. but i don't think any one
+person should be in control of an agi or this whole
+movement towards agi. and i don't think that's what's happening. - thank you for saying that. that was really powerful and that was really
+insightful that this idea that the board can fire
+you is legally true. and human beings can manipulate the masses into overriding the board and so on. but i think there's also a
+much more positive version of that where the people still have power. so the board can't be too powerful either. there's a balance of power in all of this. - balance of power is
+a good thing for sure. - are you afraid of losing
+control of the agi itself? that's a lot of people who worried about existential risk not because of state actors, not because of security concerns, but because of the ai itself. - that is not my top worry
+as i currently see things. there have been times i
+worried about that more. there may be times again in the future where that's my top worry. it's not my top worry right now. - what's your intuition about
+it not being your worry? because there's a lot of other stuff to worry about essentially. you think you could be surprised? we could be surprised.
+- for sure, of course. saying it's not my top worry doesn't mean i don't think we need to like... i think we need to work on it super hard. we have great people
+here who do work on that. i think there's a lot of other things we also have to get right. - to you, it's not super easy to
+escape the box at this time, like connect to the internet. - we talked about theatrical risk earlier. that's a theatrical risk. that is a thing that can
+really like take over how people think about this problem. and there's a big group
+of like very smart, i think very well-meaning
+ai safety researchers that got super hung up
+on this one problem. i'd argue without much progress, but super hung up on this one problem. i'm actually happy that they do that because i think we do need
+to think about this more. but i think it pushed aside, it pushed out of the
+space of discourse a lot of the other very
+significant ai-related risks. - let me ask you about you
+tweeting with no capitalization. does the shift keep
+broken on your keyboard? - why does anyone care about that? - i deeply care. - but why? i mean, other people
+ask me about that too. any intuition? - i think it's the same reason there's like this poet e. e. cummings that mostly doesn't use capitalization to say like fuck you to
+the system kind of thing. and i think people are very paranoid 'cause they want you to follow the rules. - you think that's what it's about? - i think it's- - this guy doesn't follow the rules. he doesn't capitalize his tweets. this seems really dangerous. - he seems like an anarchist. - [sam] it doesn't. - are you just being poetic, hipster? what's the- - i grew up as- - follow the rules, sam. - i grew up as a very online kid. i'd spent a huge amount
+of time like chatting with people back in the days where you did it on a computer and you could like log off
+instant messenger at some point. and i never capitalized there as i think most like internet kids didn't, or maybe they still don't. i don't know. i actually, this is like... now, i'm like really trying
+to reach for something. but i think capitalization
+has gone down over time. if you read like old english writing, they capitalized a lot of random words in the middle of sentences, nouns and stuff that we
+just don't do anymore. i personally think it's sort
+of like a dumb construct that we capitalize the letter
+at the beginning of a sentence and of certain names and whatever. that's fine. and i used to, i think, even
+like capitalize my tweets because i was trying to sound
+professional or something. i haven't capitalized my like private dms or whatever in a long time. and then slowly, stuff like shorter form, less formal stuff has slowly drifted to like closer and closer to
+how i would text my friends. if i write, if i pull up a word document and i'm writing a strategy memo for the company or something, i always capitalize that. if i'm writing a long kind
+of more like formal message, i always use capitalization there too. so i still remember how to do it. but even that may fade out. i don't know. but i never spend time thinking about this so i don't have like a ready made. - well, it's interesting. well, it's good to, first of all, know there's the shift key is not broken. - it works. - i was mostly concerned about
+your wellbeing on that front. - i wonder if people still
+capitalize their google searches. like if you're writing
+something just to yourself or their chatgpt queries, if you're writing
+something just to yourself, do some people still bother to capitalize? - probably not. yeah, there's a percentage, but it's a small one. - the thing that would make me do it is if people were like... it's a sign of like... because i'm sure i could force myself to use capital letters, obviously. if it felt like a sign of
+respect to people or something, then i could go do it. but i don't know, i don't think about this. i don't think there's a disrespect, but i think it's just the
+conventions of civility that have a momentum and then you realize it's
+not actually important for civility if it's not a
+sign of respect or disrespect. but i think there's a movement
+of people that just want you to have a philosophy around it so they can let go of this
+whole capitalization thing. - i don't think anybody else
+thinks about this is my... i mean, maybe some people... - think about this every
+day for many hours a day. i'm really grateful we clarified it. - can't be the only person
+that doesn't capitalize tweets. - you're the only ceo of a company that doesn't capitalize tweets. - i don't even think that's true, but maybe, maybe. - all right, we'll investigate for this and return to this topic later. given sora's ability to
+generate simulated worlds, let me ask you a pothead question. does this increase your belief if you ever had one that
+we live in a simulation, maybe a simulated world
+generated by an ai system? - yes, somewhat. i don't think that's like the
+strongest piece of evidence. i think the fact that we can
+generate worlds should increase everyone's probability somewhat
+or at least open to it, openness to it somewhat. but you know, i was like
+certain we would be able to do something like sora at some point. it happened faster than i thought. i guess that was not a big update. - yeah. and presumably, it'll get
+better and better and better. the fact that you can generate worlds, they're novel. they're based in some
+aspect of training data, but when you look at them, they're novel. that makes you think like how
+easy it's to do this thing, how easy it's to create universes, entire like video game worlds
+that seem ultrarealistic and photorealistic. and then how easy is it to get lost in that world first with a vr headset and then on the physics-based level? - someone said to me recently, i thought it was a super profound insight that there are these like
+very simple sounding, but very psychedelic insights
+that exist sometimes. so the square root function. square root of four, no problem. square root of two, okay, now i have to think
+about this new kind of number. but once i come up with this easy idea of a square root function that you can kind of explain to a child and exists by even like looking
+at some simple geometry, then you can ask the question of what is the square
+root of negative one? this is why it's like a psychedelic thing that tips you into some
+whole other kind of reality. and you can come up with
+lots of other examples. but i think this idea that the lowly square
+root operator can offer such a profound insight and a new realm of knowledge, applies in a lot of ways. and i think there are a
+lot of those operators for why people may think that
+any version that they like of the simulation hypothesis
+is maybe more likely than they thought before. but for me, the fact that sora worked
+is not in the top five. - i do think broadly speaking, ai will serve as those kinds of gateways at its best simple
+psychedelic like gateways to another wave sea reality. - that seems for certain. - that's pretty exciting. i haven't done ayahuasca before, but i will soon. i'm going to the
+aforementioned amazon jungle in a few weeks. - excited. - yeah, i'm excited for it. not the ayahuasca part. that's great, whatever. but i'm gonna spend several
+weeks in the jungle, deep in the jungle and it's exciting, but it's terrifying- - i'm excited for you. - 'cause there's a lot of things that can eat you there and
+kill you and poison you, but it's also nature and
+it's the machine of nature. and you can't help but
+appreciate the machinery of nature in the amazon jungle 'cause it's just like this
+system that just exists and renews itself like every second, every minute, every hour. it's the machine. it makes you appreciate like
+this thing we have here, this human thing came from somewhere. this evolutionary machine has created that and it's most clearly on
+display in the jungle. so hopefully, i'll make it out alive. if not, this will be the
+last conversation we had, so i really deeply appreciate it. do you think, as i mentioned before, there's other aliens,
+civilizations out there, intelligent ones when you look up at the skies? - i deeply want to believe
+that the answer is yes. i do find that kind of where... i find the firm paradox
+very, very puzzling. - i find it scary that intelligence is not good at handling- - yeah. very scary, powerful.
+- technologies. but at the same time, i think i'm pretty confident that there's just a very large number of intelligent alien
+civilizations out there. it might just be really difficult to travel with this space. - very possible. - and it also makes me think about the nature of intelligence. maybe we're really blind to what intelligence looks like and maybe ai will help us see that. it's not as simple as iq tests and simple puzzle solving. there's something bigger. well, what gives you hope
+about the future of humanity? this thing we've got going on, this human civilization. - i think the past is like a lot. i mean, we just look at
+what humanity has done in a not very long period of time. huge problems, deep flaws, lots to be super ashamed of, but on the whole, very inspiring, gives me a lot of hope. - just the trajectory of it all that we're together pushing
+towards a better future. - it is... one thing that i wonder about is, is agi gonna be more
+like some single brain, or is it more like the sort
+of scaffolding in society between all of us? you have not had a great
+deal of genetic drift from your great-great-great grandparents, and yet what you're capable
+of is dramatically different. what you know is dramatically different. that's not because of biological change. i mean, you got a little
+bit healthier probably. you have modern medicine, you eat better, whatever. but what you have is this scaffolding that we all contributed
+to built on top of. no one person is gonna
+go build the iphone. no one person is gonna go
+discover all of science. and yet you get to use it. and that gives you incredible ability. and so in some sense, that like we all created that and that fills me with
+hope for the future. that was a very collective thing. - yeah. we really are standing on
+the shoulders of giants. you mentioned when we were
+talking about theatrical, dramatic ai risks that sometimes you might be
+afraid for your own life. do you think about your death? are you afraid of it? - i mean, i like if i got shot tomorrow and i knew it today, i'd be like, "oh, that's sad. i wanna see what's gonna happen." - [lex] yeah. - what a curious time. what an interesting time. but i would mostly just feel
+like very grateful for my life. - the moments that you did get... yeah, me too. it's a pretty awesome life. i get to enjoy awesome creations of humans of which i believe chatgpt is one of, and everything that openai is doing. sam, it's really an honor and pleasure to talk to you again. - great to talk to you. thank you for having me. - thanks for listening to this conversation with sam altman. to support this podcast, please check out our
+sponsors in the description. and now let me leave you with some words from arthur c. clarke and maybe that our role
+on this planet is not to worship god, but to create him. thank you for listening and hope to see you next time.

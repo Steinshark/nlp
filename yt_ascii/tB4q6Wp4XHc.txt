@@ -1,0 +1,150 @@
+at 7:58 am on april 3rd, 2024, taiwan experienced
+a big earthquake, measured at magnitude 7.2. as of this writing, there are thirteen dead
+and nearly a thousand are injured - mostly due to rockfalls. there are a few trapped, for whom rescue efforts
+are ongoing. life is precious, and my heart goes out to
+the victims and their families. of course, people want to know about the fabs. they are fine. tsmc and other semiconductor companies across
+taiwan are reporting that the financial impact will be minimal. it is a huge contrast to the last big earthquake
+back in 1999, which staggered the hsinchu tech companies and made the world news. what changed? in this video, we look at the measures that
+tsmc and other semiconductor companies undertook in wake of the 1999 earthquake to keep their
+fabs and people safe. ## beginnings taiwan's most infamous earthquake in recent
+memory occurred in september 1999 - the 921 earthquake. it was a magnitude 7.3 quake that hit the
+central area of nantou. over 2,400 people died and 11,000 were injured
+- the second most in taiwan's history after another quake in 1935. tsmc, umc, and other major electronics companies
+were then highly concentrated within hsinchu. they were unprepared for the earthquake and
+it brought the chipmakers to a standstill. in the end, tsmc reported that 17,000 wafers
+were lost as they were inside process equipment at the time - about 50% of their total monthly
+production. no one else reported official numbers on wafer
+losses. worse yet, the earthquake came as suppliers
+were ramping up for a holiday in the midst of a secular rising trend. demand for tsmc silicon in 1999 was up 40%
+from 1998, leading to shortages for pc and electronics companies in japan and the us. total damages for the taiwanese semiconductor
+industry - at a time when tsmc was only responsible for 7% of global ic production - were $10
+billion or about $18 billion today. but this number is more nuanced than what
+you might think. ## the fab back in 1999, the fabs owned by tsmc and other
+semiconductor makers in taiwan featured a double-shell structure. on the outside, you have a fab shell. the fab shell is a simple one-story structure
+with long-span roof trusses. this just means that the roof is built to
+span wide distances without the need for interior supports. inside the shell is a multi-story interior
+structure made from reinforced concrete. the cleanroom sits on the top floor, with
+a second clean "sub-fab" below it to house supporting equipment. there is an air gap between the shell and
+interior structure to shelter the cleanroom from micro-vibrations coming from the outside
+winds. both structures sit on a concrete foundation
+about 2-3 meters thick. again, this is to minimize vibrations from
+nearby cars or construction. piles might be driven into the soil as needed. the civil construction is about 3-5% of the
+fab's total cost. as mentioned, the vast majority - 75-80% - goes
+to the equipment inside. this means a little bit of extra investment
+can go a long way. ## bad vibrations the 1999 earthquake's epicenter was about
+100 kilometers away from hsinchu, where the science park is based. peak ground acceleration or pga - the acceleration
+of the ground at the earthquake's worst - was measured at 0.1 to 0.15 g-forces. this is as expected for a 7.2 earthquake about
+100 kilometers away from the fabs. for reference, the taiwan government measured
+the april 2024 earthquake's impact on hsinchu similarly. based on this map and my eyeballing, hsinchu
+experienced a pga of about 140 centimeters per seconds squared or 0.14 g. the pga in tainan - where tsmc's biggest manufacturing
+complexes are located - was even lighter - 25 centimeters or 0.025 g-forces. ## vibing in the case of 1999, structural damage was
+reported as minimal with the exception of one hsinchu site sitting on an ancient lakebed. mostly minor cracking of external tiles as
+well as cracks in the internal walls. inside the structures, it is estimated that
+the amount of acceleration needed to move an average piece of equipment sitting on the
+cleanroom floor was measured to be 0.2 g-forces. this implies that friction alone would keep
+most unanchored tools grounded. observation reports found that most tools
+were unanchored except for those containing hazardous chemicals. since the cleanroom sits on top of a multi-story
+concrete structure, there is a chance of vibrations intensifying like a jenga tower. furthermore, there is a chance of secondary
+quake damage. wafer processing requires the use of poisonous
+and hazardous chemicals like hydrofluoric and sulphuric acid. leakages can cause massive problems to the
+cleanroom. but modern semiconductor facilities have systems
+that shut down pipes when unnatural vibrations are detected. these worked as expected. no problems there. apparently there were reports of some wet
+etch tools - basically chemical baths where you dip wafers into to etch them - splashing
+their chemicals during the shaking. but those flowed into the disposal system
+and little damage was reported. and then it was reported that the sprinklers
+went off in one factory at hsinchu - unclear which company's - and that ruined one photolithography
+machine and significantly damaged another. ## equipment damage: furnaces the most significant equipment damage from
+the 1999 earthquake was to the vertical diffusion furnaces. as the name indicates, these are furnaces
+used to diffuse impurities into the silicon. these are often used during the doping part
+of the semiconductor manufacturing process. the "vertical" part of the name indicates
+that it stands up vertically - allowing us to process batches of wafers all at once. they can be up to 3 meters tall. 90% of these furnaces were damaged by the
+1999 earthquake - with damage defined as silica tube damage, position gaps, or wafers falling
+off their securings. apparently because the furnace itself is so
+tall and thin, it is quite susceptible to shaking. in 2013, the japanese construction company
+taisei corporation reported that they installed a seismic isolation tool to deal with this. it is basically like a roller-ball-on-rail
+system that you put under the row of furnace devices. the furnace pulls in gas and electricity from
+a secondary system underneath the floor, so the seismic isolation system includes a flexible
+pipe system to ensure the connections underneath the floor do not break. that same year, tsmc reported in a case study
+that they had installed a similar seismic isolation platform for their vertical furnace
+tools. ## stockers a major cause of wafer damage during the 1999
+quake occurred through damage to the stockers. work-in-progress wafers do not travel around
+the fab exposed. they are enclosed within pods called foups,
+front opening unified pod. when waiting for their next process step for
+whatever reason, the wafers and their foups are stored on vertical shelves called stockers. they are typically 4-5 meters tall and made
+from aluminium. during the 1999 earthquake, many of the wafers
+fell out of their stockers and foups and were lost. so the chipmakers apparently installed stoppers,
+braces and dampers - which are items to reduce shaking - to secure the stockers. then in february 2016, there was the southern
+taiwan earthquake - measured at 6.4. it was relatively shallow - 23 kilometers
+- and the epicenter was in kaohsiung, not that far away from the tainan fabs. that tainan earthquake, because of its proximity
+to tsmc's core fabs, delayed some 120,000 wafers in fabs 6 and 12a by about 10-50 days. during that earthquake, the fabs' peak floor
+acceleration experienced about 0.3 g-forces. but because the stockers are tall and bolted
+to the floor, the acceleration forces experienced by the foups were double that. wafers collided and some fell out. new research suggests that it makes more sense
+to install the dampers near the top of the stockers rather than putting them between
+neighboring shelves as was previously suggested. it is not clear if tsmc adopted this, though
+their 2017 case study suggests they did reinforce their tower stockers with additional stoppers. ## dampers the 1999 earthquake made it clear to tsmc
+and other companies that older fabs had to be retrofitted. retrofits of course are challenging. the sub-fab floor is already full of equipment,
+leaving limited space for new equipment. moreover, retrofits cannot affect ongoing
+semiconductor production - no way they stop the fab line. we cannot use gas, welding, and must avoid
+generating dust particles. so tsmc engineers used what are called "viscous
+dampers". these are hydraulic pistons installed into
+the gap between the external fab shell and the interior structure. during an earthquake, the viscous dampers
+absorb some seismic energy, dissipating it. computer simulations of earthquakes at pgas
+of 0.3 g-forces - remember, the 1999 earthquake ranged at 0.1 to 0.15 - showed reduced stress
+on supports and cut acceleration of cleanroom floors by 20%. this is good, but it is warned that dampers
+will not have a significant impact if the building is hit by a major earthquake - especially
+one more severe than what it is currently designed for. newer semiconductor fabs built thereafter
+can be built with modern anti-seismic technologies. this includes raised floors to add a void
+for seismic isolation, and floating piles to dissipate seismic energy in the soil foundation. these were also detailed in the 2017 tsmc
+case study. ## early warning after a damaging earthquake in hualien in
+1986, taiwan developed at least three networks of earthquake sensors located throughout the
+island. these are operated by various government and
+university-affiliated organizations. my best guess is that tsmc adopted the network
+set up by the national center for research on earthquake engineering, or ncree, one of
+taiwan's national research labs. when an earthquake hits, seismic waves travel
+outwards from the epicenter like ripples in a pond. first comes the primary waves or p-waves - which
+are low-intensity. after that are secondary-waves or s-waves,
+large surface acoustic waves that travel across the surface. they are slower than the p-waves but cause
+more damage. i mentioned these waves during my video on
+saw rf filters. surface acoustic waves from earthquakes contributed
+to the early learnings on the science behind those rf products. the early warning network is made up of several
+dozen stations across taiwan. sensors measure the peak ground acceleration
+for 1-3 seconds and send a signal to the central server. the server determines whether there is an
+earthquake using an algorithm and sends the alert out. seismic waves can travel 80 kilometers in
+15 to 20 seconds. if the early warning system works as planned,
+then it can give people or a fab about 3-17 seconds of warning. depending on where the epicenter is. it was originally used to give early warning
+to taiwan's schools, but in late 2015 or early 2016 tsmc had a system installed as well and
+it seemed to have played a significant role during the southern earthquake that february. i should note that with this 2024 earthquake,
+a few early warning systems did not trigger. i live in taipei and did not get an cellphone
+alert. ## the real damage so if the 1999 earthquake didn't do that much
+physical damage to the fabs, then how did it end up so financially damaging? as it turned out, the most financially significant
+damage wasn't from the quake itself, but from interruptions of power to the fabs in the
+wake of the quake and its aftershocks. in the weeks after the quake, the taiwanese
+government struggled to get the power situation in hsinchu back under control. this was despite a stated priority to supply
+the science park with power over even residential homes. when the power to the equipment cuts out,
+the voltage suddenly drops, creating a situation known as "voltage sag". abruptly pulling the plug on your pc causes
+damage to it. not hard to imagine the same thing happening
+for a $50 million duv lithography machine. voltage sags do happen from time to time even
+without earthquakes - tsmc memorably froze all production just before january 1st, 2000
+because they were worried about the y2k bug cutting power. after the main earthquake, power interruptions
+continued for another two weeks. the fabs had built emergency measures for
+voltage sag, but these items were not meant to power the fabs for extended periods of
+time. so when the power cuts out, the fab people
+first have to wait until the power comes back to learn the situation. work-in-process wafers have to be discarded. and another 2-3 days are spent to repair and
+recalibrate the machines. thus, 95% of the reported $10 billion damages
+suffered were not from actual physical damage to equipment and facilities, but lost revenues
+from infrastructure cuts and business interruptions. in 2024, taiwan's power utility taipower shut
+down four power generation units for checks and cut power in the eastern half of the island. but on the west side, the grid has so far
+held on. perhaps due to recent buildouts of solar and
+wind energy. ## conclusion restarting production will take time and care. nikkei asia gives a hint about the work needed
+to get everything back on line. wafers need to be inspected, the machines
+need to be tested, and procedures have to be run. it could be a few weeks before everything
+is 100%. it is an all-hands-on-deck kind of thing. and taiwanese media reports on full parking
+lots late into the night in the wake of the earthquake. i know that for some people, the earthquake
+is only another reminder that taiwan - or japan - shouldn't be relied upon for semiconductors. i can see the comments now. yes, tsmc and the rest of the taiwanese semiconductor
+industry have been lucky. there hasn't been a serious quake in hsinchu
+since a 6.0 aftershock of the infamous april 1935 earthquake. but earthquakes are a natural phenomena, and
+can hit anywhere. we just had an earthquake hit the new york
+city area. the bright side is that because they are natural,
+they can be ameliorated through good engineering, best practices, and training. taiwanese people have been dealing with earthquakes
+for decades. they know what to do. i wish the best for the families who have
+lost loved ones in the 2024 earthquake. i hope they find peace.

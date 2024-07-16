@@ -1,0 +1,181 @@
+Do you remember the summer of 2022 when a 
+record drought had gripped not only a large   part of the United States, but most of Europe 
+too? Reservoirs were empty, wildfires spread,   crop yields dropped, and rivers ran dry. It 
+seemed like practically the whole world was   facing heatwaves and water shortages. 
+But there was one video that warned   against hoping for rain, at least not for 
+big storm right at first. Rob Thompson,   a meteorologist and professor at the University 
+of Reading, shared a little backyard experiment:   cups of water being inverted on top of grass 
+with varying moisture levels in the soil. The   results seemed to show that the dry soil absorbed 
+the water much more slowly than the wet grass or   normal summer conditions. This video was shared 
+across the internet as a viral reminder that,   contrary to what you might think, droughts 
+can increase the impact of flooding.   But is that actually true? Does dry soil 
+absorb moisture more slowly than wet soil,   and could a storm after a drought cause more 
+runoff and worse damage than if the ground was   already wet? No matter what your intuitions say, 
+the answer’s a little more complicated than you   might think. And of course, I built some garage 
+demonstrations to show why. I’m Grady, and this   is Practical Engineering. Today we’re exploring 
+the relationship between droughts and floods. Of all of the natural disasters we face, floods 
+are among the worst. There have been more than   30 floods in the US since 1980 that caused over 
+a billion dollars in damages each! And that’s   not including hurricanes. In fact, floods are so 
+impactful that I’ve already made a whole series   of videos about how dangerous they are and many of 
+the ways that engineers work to reduce the risk of   flooding or at least reduce the damage they cause. 
+Many of those flood infrastructure projects are   based on a “design storm,” essentially a made 
+up flood used to set the capacity or height of   a structure. For example, the storm gutters 
+on your street might be designed to carry   the 25-year storm. Many spillways for dams 
+are designed for a flood that is unlikely to   ever occur called the Probable Maximum Flood. 
+Of course, we just can’t run full-scale tests   on flood infrastructure. Despite architects and 
+contractors saying we always rain on the parade,   civil engineers can’t call down a flood of 
+a particular magnitude and duration from   the heavens. And even if they could, 
+it would be an ethical gray area. So,   engineers who design water infrastructure 
+instead use models to help estimate various   magnitudes of flooding and predict how 
+the built environment will respond. There are all kinds of hydrologic models that 
+can simulate just about every aspect of the water   cycle you could imagine, but modeling basic storm 
+hydrology is actually pretty simple. It’s usually   broken into three steps. Precipitation is exactly 
+what you would expect: how much rain actually   falls from the sky and hits the surface of the 
+earth? Transformation describes what actually   happens to those raindrops as they run along the 
+ground and the timing of how they combine and   concentrate. But in between precipitation 
+and transformation, there’s a third step.   Because not all those rain drops run off and 
+reach a river or stream. Some of them get stuck   in puddles and ponds (called abstractions), 
+some evaporate, and some soak into the ground. I say all this to point out that the engineers 
+and scientists who study flooding have put a   great deal of thought and research into the how, 
+where, how much, and why rainfall soaks into the   ground. It’s the third leg of the “estimating how 
+bad floods can be” stool (a stool, by the way, I   spent a good part of my education and professional 
+experience sitting on). And of course,   there’s a litany of factors that affect how much 
+precipitation is lost to infiltration into the   earth versus how much runs off into rivers and 
+creeks: temperature, vegetation, season, land use,   soil type, and more. But one of the factors is 
+more important than any other: soil moisture.   And it shouldn’t be that surprising. How much 
+water is being held between those tiny grains   of silt, sand, or clay plays a pretty big 
+role in how much more water can flow in. Maybe you’re starting to see what I’m getting at 
+here (and I promise the demos are coming but I   think it’s important to know the theory first). 
+One of the most beloved mathematical expressions   of hydrologists everywhere is Horton’s 
+equation. Looks a little intimidating,   but it’s much simpler as a graph. This logarithmic 
+curve shows the infiltration rate we can expect   during a rain event of a given magnitude 
+over time. At first, when the soil is driest,   the rate of infiltration is highest. 
+As rainfall continues to soak the soil,   less water is absorbed, and the infiltration 
+rate slowly approaches a steady state. The inputs to Horton’s equation are fine 
+for a laboratory, but they’re not really   easy to estimate in a real world scenario, 
+so most hydrologic models don’t use it.   One of the simpler infiltration models actually 
+used in engineering is the Curve Number method,   originally developed by the Soil Conservation 
+Service in the 1950s. Here, instead of esoteric   laboratory variables, infiltration rates are tied 
+to actual soil types and land uses we can estimate   in the field, and this is meant to be dead simple. 
+You too can be a civil engineer by simply picking   the right number from a table and feeding 
+it into a model. In fact, let’s try it out.   My backyard is an open space, 
+I would say in good condition,   with mostly clay which is hydrologic soil 
+group D. So my curve number should be 80. I won't make you go through the calculations, 
+because we can make the computer do them. This   is the Hydrologic Modeling System, a free 
+piece of software available from the US Army   Corps of Engineers. I’ll plug in my backyard curve 
+number, plug in a storm with a constant rainfall   over a day, and push go. The bars show the total 
+amount of precipitation for each time step. The   red portion shows the losses and the blue portion 
+shows the runoff. At first, all the precipitation   goes toward losses as the rainfall gets caught 
+in abstractions. But once the puddles fill up,   some runoff starts to occur. You can see 
+that, for a constant rate of precipitation,   runoff increases over time, and infiltration goes 
+down, just like we saw with Horton’s equation.   I know we’re in the weeds just a bit, but I think 
+it’s important to know that we have technically   rigorous ways to describe our intuitions of how 
+floods work. The Curve Number method (along with   many others) are used across the world by 
+engineers to characterize floods and even   to calibrate hydrological models to actual 
+floods. Of course models are never perfect,   but at least they’re based on real science. 
+Water fits into the spaces, the interstices,   between soil particles. The more water 
+there already, the harder it is for more   water to flow in. But you don’t need 
+a graph. You can see it for yourself. I hammered a clear tube into my Curve 
+Number 80 backyard, and we can watch   the water flow into that clay soil with grass of 
+quote-unquote “good condition.” This is actually   a crude version of an actual scientific 
+test apparatus called an infiltrometer,   but this isn’t strictly scientific. The real 
+test involves hammering the tube deeper to   prevent lateral spread and maintaining a constant 
+level to remove water pressure as a variable.   But, hey, this is just a youtube demo, 
+and I wanted to push my kid on the   swing instead of babysitting the water 
+level in a clear tube for 45 minutes. I did take the time to graph the water 
+level for the duration of the experiment   so you can see the results more clearly. The 
+level drops quickly at first and slows down   to roughly a constant rate, just as the 
+theory predicted. Some of that slowdown   is because of the decreased water pressure 
+over time, the variable I didn’t control,   but it’s mostly because the soil became saturated, 
+making it harder for water to infiltrate. Just for fun, I ran another experiment in the 
+garage with a tube full of sand. FYI, that’s   roughly equivalent to “Natural Desert Landscaping” 
+with an associated curve number of 63. Are you   feeling like an expert at this yet? It’s a little 
+harder to tell in the sand because the water flows   so quickly, but it does in fact flow more quickly 
+at the beginning before the sand is saturated.   Once it saturates, the infiltration is more 
+or less constant, just like we would expect.   The reason for the sand demo is this: we’ve 
+left out a key consideration so far which is   the initial conditions. How much water is in the 
+soil at the start of the event? If it’s a lot,   you would assume there would be less 
+infiltration. If the soil is dry,   you would assume infiltration would be 
+greater. Is it true? Let’s try it out! Again, the sand is maybe a little bit 
+too porous for this demonstration,   and my method for adding the water isn’t so 
+precise either. But, just paying attention   to how quickly the tube fills up with water with 
+the valve fully opened, the dry sand takes longer.   That’s because more of the water is 
+infiltrating into the soil. The wet   sand is like starting halfway down the Horton 
+curve. But that wasn’t a super satisfying result,   so I put some potting soil into the tube 
+next (Curve Number 86). I ran it once dry,   then ran it again after the soil was saturated, 
+and lined the shots up side by side. This time you   can clearly see the difference. Water infiltrates 
+into the unsaturated soil much more quickly,   but once it does, it infiltrates about 
+the same rate as the already wet example. We have a word for this: antecedent conditions. 
+Most of the factors we talked about that affect   infiltration rates don’t stay the same over 
+time. They change. Many hydrologic models use   average conditions as a starting point, but 
+the real world isn’t very average. Vegetation   is seasonal; temperatures fluctuate; watersheds 
+experience fires and droughts (hint hint). How   wet a watershed was before the storm is an 
+important factor in determining how much   runoff will occur. According to all the 
+theory and practical examples I’ve shown,   a wet watershed will absorb less 
+precipitation, so flooding will be worse.   And the opposite is true for a dry one. More water 
+will soak in, making flooding less impactful. But,   that seems contrary to the video I showed in 
+the introduction, and do you really think I   would make a video called “Do Droughts Make 
+Floods Worse” if the answer was just, “no”? It turns out that certain kinds of 
+soil, when they become very dry,   also become hydrophobic. They actually repel 
+water. This is not a super-well-understood   phenomenon, but it seems that under very dry 
+conditions, waxes, plant root excretions,   and the action of bacteria and fungi 
+create a layer at the surface that reduces   a soil’s affinity to water. If you’ve ever 
+forgotten to water a houseplant for a while,   you may have experienced this yourself. It’s 
+hard to get the water to soak in at first,   and many gardeners will actually fully 
+submerge a potted plant to properly water it. Because it’s a finicky phenomenon, I had 
+a little trouble creating water repellent   soil in the garage, but luckily, hydrophobicity is 
+interesting enough to be a fun kids toy. I bought   some hydrophobic sand and put a layer of it on 
+top of my regular sand to simulate this effect   of soil water repellency. You can see clearly that 
+the repellent layer slows down the infiltration of   the water. It still gets through, but it happens 
+a lot more slowly compared to if it weren’t there.   So, why doesn’t this effect show up in the 
+theory (or least the theory of flood modeling)? There are a few reasons: number 1 is that 
+most hydrophobic soil effects disappear   pretty quickly after the soil gets wet. It 
+just doesn’t last that long, as you know   if you’ve dealt with it in your potted plants. 
+Number 2 is that it’s a phenomenon that hasn’t   been well-characterized in terms of what soils 
+experience repellency and under what conditions.   There’s no nice table for an engineer to look 
+up values. But number 3 is the biggest one:   there are other antecedent factors that just end 
+up being more important. Very high soil moisture   before a flood is much more likely to lead to 
+severe flooding than very low soil moisture   in most cases. The extreme example of this is 
+rain-on-snow flooding, which contributed to the   2022 flooding in Yellowstone National Park. But 
+there is one big exception to this rule: fires. When organic stuff burns, some of that 
+volatile material creates hydrophobic   properties in the underlying soil, reducing 
+its ability to absorb rainfall. That effect   plus the loss of vegetation on the surface 
+means that the potential for flooding after   a fire increases dramatically. Storms after 
+wildfires are known to create massive floods,   mudslides, and erosion, so there is a lot of 
+research into understanding this phenomenon. So what’s the answer? Are floods worse after 
+a drought? Dry conditions do kill plants and   grasses that slow down runoff, they create 
+hydrophobic soils that briefly keep water   from soaking into the ground. And, they often 
+make fire conditions worse which in turn,   can lead to more impactful floods. But droughts 
+also leave the soil drier than average,   increasing its ability to soak up rainfall. 
+In many cases, a flood after a good soaking   rainfall is going to generate far more 
+runoff than a flood after a drought. Rob told me he was completely surprised by the 
+response to his video, especially since he only   spent a few hours making it. His goal was to show 
+that, under certain conditions, flash floods can   be worse when the underlying soil is very dry. But 
+I suspect if his demo lasted a little bit longer   (and his setup was a little more rigorous), the 
+results may have looked a little different. And   on the other hand, most models used by engineers 
+to estimate floods assume that infiltration always   goes up as soil moisture goes down, completely 
+neglecting the fact that some soils lose their   affinity for water at very low moisture 
+levels. One statistician famously said that,   “All models are wrong, but some are useful.” 
+And even something as simple as the flow of   water into the soil has so many complexities 
+to keep track of. Like most answers to simple   questions in engineering and in life: 
+the answer is that’s it’s complicated. Questions like this always seem so 
+straightforward, but the deeper you dig,   the more you realize not only how important 
+context is, but also the limitations of your own   knowledge. I do a lot of reading and researching, 
+but this channel is called Practical Engineering   for a reason: I want you to see where the 
+rubber meets the road and how all this theory in   textbooks is actually applied in the real world. 
+So when I need to learn something new, reading   and research usually aren’t enough. That’s why 
+I use Brilliant.org, the sponsor of this video. Brilliant has a huge library of courses that are 
+almost sure to cover whatever you’re trying to   learn. There’s a brand new one I really 
+loved called Explaining Variation about   correlations and regressions. Just like this 
+video, it’s about putting some mathematical   rigor over the top of seemingly unrelated 
+data. Of course, the lessons are in there and they're great,   but what I find far more important is that each 
+one is interactive. Most people, including me,   learn better when they combine seeing, reading, 
+and doing, and that’s why I start with Brilliant   when I want to master a new skill. It’s 
+usually faster, and it’s always more fun. If that sounds useful to you, you should 
+go try it yourself and see if you agree at   Brilliant.org/PracticalEngineering. It’s 
+totally free to try for an entire month,   and you can get through a lot of courses in 
+that time. But if you do find yourself coming   back like I did, the link below will get you 
+20% off an annual premium subscription. They   even have an app so you can try this on your 
+phone. I think everyone has some part of their   life that could benefit from mastering a 
+new skill. Brilliant makes that easy to do,   and it supports the channel too. Thank you 
+for watching, and let me know what you think!

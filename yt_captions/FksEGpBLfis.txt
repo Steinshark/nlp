@@ -1,0 +1,188 @@
+Late in the morning of April 28, 1958, the USS 
+Boxer aircraft carrier ship was about 70 miles   off the coast of the Bikini Atoll in the Pacific 
+Ocean. The crew of the Boxer was preparing to   launch a high-altitude helium balloon. In fact, 
+this would be the 17th high-altitude balloon to be   launched from the ship. But this one was a little 
+different. Where those first 16 balloons carried   some instruments and dummy payloads, attached to 
+this balloon was a 1.7 kiloton nuclear warhead,   code named Yucca. The ship, balloon, and 
+bomb were all part of operation Hardtack,   a series of nuclear tests conducted by the United 
+States in 1958. Yucca was the first test of a   nuclear blast in the upper limits of earth’s 
+atmosphere. About an hour and a half after the   balloon was launched, it reached an altitude of 
+85,000 feet or about 26,000 meters. As two B-36   peacemaker bombers loaded down with instruments 
+circled the area, the warhead was detonated. Of course, the research team collected 
+all kinds of data during the blast,   including the speed of the shock 
+wave, the effect on air pressure,   and the magnitude of nuclear radiation 
+released. But, from two locations on the ground,   they were also measuring the electromagnetic 
+waves resulting from the blast. It had been   known since the first nuclear explosions 
+that the blasts generate an electromagnetic   pulse or EMP, mainly because it kept frying 
+electronic instruments. But until Hardtack,   nobody had ever measured the waves generated from 
+a detonation in the upper atmosphere. What they   recorded was so far beyond their expectations, 
+that it was dismissed as an anomaly for years.   All that appears in the report is a casual mention 
+of the estimated electromagnetic field strength   at one of the monitoring stations being around 
+5 times the maximum limit of the instruments. It wasn’t until 5 years later that the US 
+physicist Conrad Longmire would propose   a theory for electromagnetic pulses from 
+high-altitude nuclear blasts that is still   the widely accepted explanation for why they are 
+orders of magnitude stronger than those generated   from blasts on the ground. Since then, our fears 
+of nuclear war not only included the scenario of   a warhead hitting a populated area, destroying 
+cities and creating nuclear fallout, but also   the possibility of one detonating far above our 
+heads in the upper atmosphere, sending a strong   enough EMP to disrupt electronic devices and even 
+take out the power grid. As with most weapons,   the best and most comprehensive research on 
+EMPs is classified. But, in 2019, a coalition   of energy organizations and government entities 
+called the Electric Power Research Institute (or   EPRI) funded a study to try and understand exactly 
+what could happen to the power grid from a high   altitude nuclear EMP. It’s not the only study 
+of its kind, and it’s not without criticism from   those who think it leans optimistic, but it has 
+the most juicy engineering details from all the   research I could find. And the answers are quite 
+a bit different than Hollywood would have you   believe. This is a summary of that report, and 
+it’s the first in a deep dive series of videos   about large-scale threats to the grid. I’m 
+Grady, and this is Practical Engineering. In   today’s episode, we’re talking about the impact 
+of a nuclear EMP on our power infrastructure. This video is sponsored by CuriosityStream 
+and Nebula. More on them later. A nuclear detonation is unwelcome in 
+nearly every circumstance. These events   are inherently dangerous and the physics of 
+a blast go way beyond our intuitions. That’s   especially true in the upper atmosphere where 
+the detonation interacts with earth’s magnetic   field and its atmosphere in some very unique 
+ways to create an electromagnetic pulse. An   EMP actually has three distinct components 
+all formed by different physical mechanisms   that can have significantly different impacts 
+here on Earth’s surface. The first part of an   EMP is called E1. This is the extremely fast and 
+intense pulse that immediately follows detonation. The gamma rays released during any nuclear 
+detonation collide with electrons, ionizing   atoms and creating a burst of electromagnetic 
+radiation. That’s generally bad on its own,   but when detonated high in the atmosphere, 
+earth’s magnetic field interacts with those   free electrons to produce a significantly stronger 
+electromagnetic pulse than if detonated within the   denser air at lower altitudes. The E1 pulse 
+comes and goes within a few nanoseconds,   and the energy is somewhat jokingly 
+referred to as DC to daylight,   meaning it’s spread across a huge 
+part of the electromagnetic spectrum. The E1 pulse generally reaches anywhere 
+within a line of sight of the detonation,   and for a high-altitude burst, this can 
+cover an enormous area of land. At the   height of the Yucca test, that’s a circle 
+with an area larger than Texas. A weapon   at 200 kilometers in altitude could impact a 
+significant fraction of North America. But,   not everywhere within that circle experiences 
+the strongest fields. In general, the further   from the blast you are, the lower the amplitude of 
+the EMP. But, because of earth’s magnetic field,   the maximum amplitude occurs a little bit south 
+of ground zero (in the northern hemisphere),   creating this pattern called a smile diagram. 
+But no one will be smiling to find out that   they are within the affected area 
+of a high altitude nuclear blast. Although a weapon like this wouldn’t 
+damage buildings, create nuclear fallout,   be felt by humans, or probably even be visible 
+to most, that E1 pulse can have a huge effect   on electronic devices. You’re probably familiar 
+with antennas that convert radio signals into   voltage and current within a conductor. Well, for 
+a strong enough pulse spread across a huge range   of frequencies, essentially any metallic object 
+will act like an antenna, converting the pulse   into massive voltage spikes that can overwhelm 
+digital devices. And, the E1 pulse happens   so quickly that even devices meant to protect 
+against surges may not be effective. Of course,   with just about everything having embedded 
+electronics these days, this has far reaching   implications. But on the grid, there are really 
+only a few places where an E1 pulse is a major   concern. The first is with the control systems 
+within power plants themselves. The second is   communications systems used to monitor and record 
+data to assist grid operators. The EPRI report   focused primarily on the third hazard associated 
+with an E1 pulse: digital protective relays. Most folks have seen the breakers that protect 
+circuits in your house. The electrical grid has   similar equipment used to protect transmission 
+lines and transformers in the event of a short   circuit or fault. But, unlike the breakers in your 
+house that do both the sensing for trouble and   the circuit breaking all in one device, those 
+roles are separate on the grid. The physical   disconnecting of a circuit under load is done 
+by large, motor controlled contactors quenched   in oil or dielectric gas to prevent the formation 
+of arcs. And the devices that monitor voltage and   current for problems and tell the breakers when to 
+fire are called relays. They’re normally located   in a small building in a substation to protect 
+them from weather. That’s because most relays   these days are digital equipment full of circuit 
+boards, screens, and microelectronics. And all   those components are particularly susceptible 
+to electromagnetic interference. In fact,   most countries have strict regulations about 
+the strength and frequency of electromagnetic   radiation you can foist upon the airwaves, rules 
+that I hope I’m not breaking with this device. This is a pulse generator I bought off eBay 
+just to demonstrate the weird effects that   electromagnetic radiation can have on 
+electronics. It just outputs a 50 MHz   wave through this antenna, and you can see 
+when I turn it on near this cheap multimeter,   it has some strange effects. The 
+reading on the display gets erratic,   and sometimes I can get the backlight to turn 
+on. You can also see the two different types   of E1 vulnerabilities here. An EMP can couple to 
+the wires that serve as inputs to the device. And   an EMP can radiate the equipment directly. 
+In both cases, this little device wasn’t   strong enough to cause permanent damage to the 
+electronics, but hopefully it helps you imagine   what’s possible when high strength fields 
+are applied to sensitive electronic devices. The EPRI report actually subjected digital 
+relays to strong EMPs to see what the effects   would be. They used a Marx generator 
+which is a voltage multiplying circuit,   so I decided to try it myself. A Marx generator 
+stores electricity in these capacitors as they   charge in parallel. When triggered, the spark 
+gaps connect all the capacitors in series to   generate very high voltages, upwards of 80 or 90 
+kilovolts in my case. My fellow YouTube engineer   Electroboom has built one of these on his 
+channel if you want to learn more about them. Mine generates a high voltage spark 
+when triggered by this screwdriver. Don’t try this at home, by the way. I didn’t design an antenna to convert 
+this high voltage pulse into an EMP,   but I did try a direct injection test. This cheap 
+digital picture frame didn’t stand a chance.   Just to clarify, this is in no way 
+a scientific test. It’s just a fun   demonstration to give you an idea of 
+what an E1 pulse might be capable of. The E2 pulse is slower than E1 because 
+it’s generated in a totally different way,   this time from the interaction of gamma rays 
+and neutrons. It turns out that an E2 pulse is   roughly comparable to a lightning strike. 
+In fact, many lightning strikes are more   powerful than those that could be generated by 
+high-altitude nuclear detonations. Of course,   the grid’s not entirely immune to lightning, 
+but we do use lots of lightning protection   technology. Most equipment on the grid is 
+already hardened against some high voltage   pulses such that lightning strikes 
+don’t usually create much damage. So,   the E2 pulse isn’t as threatening to our power 
+infrastructure, especially compared to E1 and E3. The final component of an EMP, called E3, 
+is, again, much different from the other two.   It’s really not even a pulse at all, because 
+it’s generated in an entirely different way.   When a nuclear detonation happens in the upper 
+atmosphere, earth’s magnetic field is disturbed   and distorted. As the blast dissipates, the 
+magnetic field slowly returns to its original   state over the course of a few minutes. This is 
+similar to what happens when a geomagnetic storm   on the sun disrupts earth’s gravity, and large 
+solar events could potentially be a bigger threat   than a nuclear EMP to the grid. In both cases, 
+it’s because of the disturbance and movement of   earth’s magnetic field. You probably know what 
+happens when you move a magnetic field through   a conductor: you generate a current. We call that 
+coupling, and it’s essentially how antennas work.   And in fact, antennas work best when their size 
+matches the size of the electromagnetic waves. For example, AM radio uses frequencies 
+between down to 540 kilohertz. That   corresponds to wavelengths that can 
+be upwards of 1800 feet or 550 meters,   big waves. Rather than serving as a place to 
+mount antennas like FM radio or cell towers,   AM radio towers are the antenna. The entire metal 
+structure is energized! You can often tell an AM   tower by looking at the bottom because 
+they sit atop a small ceramic insulator   that electrically separates them from the ground. 
+As you can imagine, the longer the wavelength, the   larger an antenna has to be to couple well with 
+the electromagnetic radiation. And hopefully you   see what I’m getting at. Electrical transmission 
+and distribution lines often run for miles, making   them the ideal place for an E3 pulse to couple 
+and generate current. Here’s why that’s a problem. All along the grid we use transformers to change 
+the voltage of electricity. On the transmission   side, we increase the voltage to reduce losses 
+in the lines. And on the distribution side,   we lower the voltage back down to make it 
+safer for customers to use in their houses   and buildings. Those transformers work 
+using electromagnetic fields. One coil   of wire generates a magnetic field that 
+passes through a core to induce current   to flow through an adjacent coil. In fact, the 
+main reason we use alternating current on the   grid is because it allows us to use these 
+really simple devices to step voltage up or   relationship between how much current flows and 
+the strength of the resulting magnetic field. But,   this relationship breaks down at the saturation 
+point, beyond which additional current won’t   create much further magnetism to drive 
+current on the secondary winding. An E3 pulse   can induce a roughly DC flow of current through 
+transmission lines. So you have DC on top of AC,   which creates a bias in the sine wave. If there’s 
+too much DC current, the transformer core might   saturate when current moves in one direction but 
+not the other, distorting the output waveform.   That can lead to hot spots in the transformer 
+core, damage to devices connected to the grid   that expect a nice sinusoidal voltage 
+pattern, and lots of other funky stuff. So what are the implications of all this? For the 
+E1 pulse damaging some relays, that’s probably not   a big deal. There are often redundant paths for 
+current to flow in the transmission system. That’s   why it’s called the grid. But the more equipment 
+that goes offline and the greater the stress on   the remaining lines, the greater the likelihood 
+of a cascading failure or total collapse. EPRI did   tests simulating a one megaton bomb detonated 
+at 200 kilometers in altitude. They estimated   that about 5% of transmission lines could have 
+a relay that gets damaged or disrupted by the   resulting EMP. That alone probably isn’t enough 
+to cause a large-scale blackout of the power grid,   but don’t forget about E3. EPRI found that the 
+third part of an EMP could lead to regional   blackouts encompassing multiple states because 
+of transformer core saturation and imbalances   between supply and demand of electricity. 
+Their modeling didn’t lead to widespread   damage to the actual transformers, and that’s a 
+good thing because power transformers are large,   expensive devices that are hard to replace, 
+and most utilities don’t keep many spares   sitting around. All that being said, 
+their report isn’t without criticism and   many believe that an EMP could result in far 
+more damage to electric power infrastructure. When you combine the effects of the E1 pulse and 
+the E3 pulse, it’s not hard to imagine how the   grid could be seriously disabled. It’s also easy 
+to see how, even if the real damages to equipment   aren’t that significant, the widespread nature 
+of an EMP, plus its potential impacts on other   systems like computers and telecommunications, 
+has the potential to frustrate the process of   getting things back online. A multi-day, 
+multi-week, or even multi-month blackout   isn’t out of the question in the worst-case 
+scenario. It’s probably not going cause a   hollywood-style return to the stone age for 
+humanity, but it is certainly capable of   causing a major disruption to our daily lives. 
+We’ll explore what that means in a future video. But if you have trouble waiting for 
+the next Practical Engineering video,   you should know that they go live on Nebula 
+before hitting YouTube, and you can watch them   without any ads. If you haven’t heard about 
+Nebula by now, it’s a streaming service built   by creators that uses a different model than 
+YouTube. Instead of being supported by ads,   you just pay a small subscription fee. That sounds 
+like a small difference, but the result is a   huge distinction in content, including videos 
+that just don’t work well on YouTube and lots   of original series from your favorite creators 
+like Wendover Productions and Real Engineering. And, we’re super excited to continue our 
+partnership with CuriosityStream, a service with   thousands of big-budget documentaries on pretty 
+much every subject you can imagine. Curiosity   Stream loves independent creators, so they’re 
+offering free access to Nebula when you sign   up at CuriosityStream.com/practicalengineering. 
+I know it’s a little hard to keep track of all   the streaming services out there right now, but 
+this bundle is so cheap that you barely have to   even consider it. You pay one time, 15 bucks, to 
+get an entire year of access to CuriosityStream   PLUS you get a free year of access to Nebula too. 
+If you’re looking for more about the power grid,   the How Cities Work series on CuriosityStream has 
+a whole 50 minute episode dedicated to just that.   Or, catch Sam from Wendover Productions traveling 
+around the world in his hit gameshow series,   Jet Lag, on Nebula. It’s a great way to 
+support my channel and a whole host of   your other favorite educational creators. Plus 
+it’s just a good deal. Do us both a favor and   click that link in the description. Thank you 
+for watching, and let me know what you think!

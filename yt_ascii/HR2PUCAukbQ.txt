@@ -1,0 +1,201 @@
+at the heart of it, a large language 
+model or llm is just two files. the first file is like about 
+500 lines of c-language code. the second file is just hundreds of billions 
+or trillions of seemingly random numbers,   the "parameters". but this 
+is where the magic happens. based on current evaluations - which have their 
+shortcomings, yes - the more parameters the   model has, and the more tokens they are 
+trained on, the more capable they get. the models themselves are economically 
+valuable. they carry proprietary trade   secrets and - when separated from their safety 
+systems - can exhibit malicious capabilities. the data that helped train those 
+models is also valuable. nowadays,   good and useful llm data is produced at 
+considerable cost, often by educated workers. if more and better data creates better models,   then there is significant commercial incentive for 
+state actors, smaller and less ethical ai labs,   or even just hacktivists to bootstrap their 
+performance by stealing from a leader. what if someone stole gpt-4? we should be 
+talking about this risk. in this video,   a few thoughts about protecting 
+these llms from theft. ## big the first and most defining trait of these 
+llms and their training data is that they are   extremely large and girthy. that size 
+defines their cybersecurity profile. in the case of the models, gpt-2 
+has about 1.5 billion parameters,   and comes in at over 5 gigabytes. gpt-3 has 
+175 billion parameters and is 800 gigabytes. openai hasn't released gpt-4's parameter 
+count, but it is probably over a trillion.   do some crude math and the model easily 
+works out to be a terabyte or two. the training data set for these models 
+are also just as chonk. commoncrawl - the   largest publicly available training set on the 
+internet - crawls the web and provides data   archives for training. before compression, 
+the whole archive is about 45 terabytes. for the attacker, the "big" challenge is getting 
+these big models out the metaphorical door. ## data exfiltration techniques exfiltration attack techniques are well studied 
+by cybersecurity professionals. one of the most   popular ways for doing it is the attacker 
+encoding the stolen data within sent content. you embed sensitive information within images 
+and video files. the encoded image looks the   same as the original, thanks to techniques 
+that hide the stolen data inside pixels. you can hide a 50,000 line csv into a 5 mb 
+png file, which adds about 21 mb to the file's   size. zip that, and you can easily attach 
+it to an email and send it out to someone. or important data can be encoded 
+within the headers of an email;   or within the options field of the 
+tcp/ip protocols - which is used   to optimize the connection. the max 
+size that can be encoded is 40 bytes. to prevent these exfiltration activities, 
+companies can employ heuristics scanning   to observe the behavior of traffic passing 
+across the network or even look into the   data packets themselves - matching against 
+targets and flagging anything suspicious. there have been situations where gigabytes and 
+even terabytes of data have been exfiltrated   outside a network. it happens. but 
+to be frank, it might take a lot of   time and effort to exfiltrate even gpt-3, 
+let alone gpt-4, through email headers. something else might be needed. and that's where 
+the second major nature of llms come into play. ## deeply embedded
+if llms are to fulfill their promise, then they must be deeply embedded 
+into people's everyday lives. this means wide distribution. microsoft is really   at the leading edge of this - rolling out 
+llms across the whole organization with   gpt-4 powered products like microsoft 
+copilot, copilot studio, and so on. per a comment by ceo satya nadella in 
+a recent shareholder conference call,   these ai products all run on top of 
+the same core foundation gpt-4 model. now because those models are too 
+large for any single gpu machine   to store in its secondary memory, it 
+needs to be split up and distributed   over two dozen or so gpus. regardless, 
+there are a lot of copies of this model   floating around inside a data center. such 
+devices are vulnerable to exfiltration. ## in use
+data can exist in one of three states. first, the data can be at rest, meaning that it is 
+being stored somewhere on a disk - doing nothing. technically, we know how to secure 
+that. you can encrypt the data with   some very strong encryption algorithm 
+and then split it up into different   storage spaces - all of which are 
+isolated from the larger network. second, the data can be in transit, 
+meaning that it is traveling from the   disk to another location - either 
+over the internet, or otherwise. the security risks here are greater. for 
+instance, a man-in-the-middle attack as we   send the model's data from its providers 
+to the devices we are running it on. but we also largely know what to do for that. the 
+de facto standard for connecting remote machines   is ssh, or secure shell. the transmitter 
+and receiver use automatically-generated   key pairs to encrypt the connection. the data 
+can also be encrypted before transmission. so for the most part,   i think we have widely-accepted ways 
+to protect data at rest and in transit. the final state however - data in use 
+- is one that has not been so much   explored. how do we secure the llm and 
+its data while the model is being used? ## llms in use the work of running these models in the wild 
+is called "inference". during such a job,   you run the model over and over again - 
+generating and then appending new tokens. during inference, the llm's data is 
+primarily stored inside the gpu's   memory - moving in and out of the register. 
+there, it is often out in the open. someone   with physical access to the gpu can pull out 
+the model's data using a variety of attacks. in a memory bus monitoring attack, the adversary 
+is trying to directly intercept the data as it   travels along the memory bus between the 
+gpu's memory and its processing cores. similar to that is the memory probe, which makes 
+me think of alien abductions or spy movies. this   is where the attacker tries to illicitly 
+retrieve the model out of the system's ram. we never give much thought to the 
+idea of attacking and pilfering   valuable data while it is in use 
+because of the fact we need to   have physical access to the hardware. just 
+keep people away from the devices, right? so for a long time, no one really worked 
+on this problem except for those really   concerned about someone pulling out ip 
+from a piece of hardware. most notably,   the movie studios or game console makers, "drm". ## going cloud but things have changed. in the era of 
+cloud computing, the model's providers   often do not actually own the servers and 
+gpus that they are running their models on. more likely, they are renting cloud compute time 
+from a third party vendor like aws, microsoft,   or oracle. often, it is the only way for 
+these smaller companies to gain economic   access to otherwise prohibitively 
+expensive ai accelerator hardware. now, malicious state and non-state actors won't 
+have to breach the lab's actual premises in order   to get access to their data and models. they 
+breach the third party cloud compute centers. one might argue that large cloud 
+providers have more incentive to,   are more capable of, and have 
+the resources to follow the   best security practices. that is true. 
+but data centers are big organizations. employees - even low-level ones 
+and temporary workers - can end   up with unsupervised access to 
+customer servers. particularly   during special and chaotic events like the 
+installing and decommissioning of servers. ## tradeoffs protecting data while it is "in use" 
+is tricky because the most obvious   and widely used protections 
+negatively affect performance. for instance, your iphone has something 
+apple calls a "secure enclave". it is   a dedicated subsystem inside the 
+ios system-on-chip - creating this   trusted environment that runs alongside 
+the main system but isolated from it. isolation works. but what people quickly 
+discovered is that marching so much data   in and out of isolation creates 
+bottlenecks. and we already have   enough trouble running data fast enough 
+through the von neumann bottleneck. another way to thwart something like a memory bus 
+monitoring attack is to encrypt the gpu's memory.   but if you do that, you substantially 
+hurt latency - sometimes by up to 50%. people already complain about 
+chatgpt being too slow. if our   cybersecurity theft measures 
+restrict performance too much,   then the product itself starts losing value. 
+i don't think companies will accept that. i want to do a more detailed dive into 
+the problem of physical access attacks   sometime down the line. so stay tuned for that. ## confidential computing with all these considerations in mind, 
+it has been interesting to look at a   new consortium launched back in 
+2019 - confidential computing. the consortium's founding members 
+included alibaba, arm, huawei,   intel, microsoft, and red hat. 
+google, nvidia, samsung, meta,   and others have since joined. the project and 
+community sits within the linux foundation. the consortium seeks to bring 
+out hardware-based solutions for   handling data in use across multiple 
+environments. at the heart of this   solution is what they are calling the 
+"trusted execution environment" or tee. the tee does two things. first, it 
+can host the application inside an   environment isolated from 
+the rest of the hardware. something like the aforementioned secure 
+enclave for the apple silicon chips. this protects the application from external access 
+by those even with high levels of privilege. the second aspect of the tee is that it 
+can issue verifiable "attestations" about   the programs running inside itself - kind of 
+like a letter of credit. outside parties can   use them to gain trust in the application, 
+knowing that it has not been compromised. these aspects all extend from a single piece 
+of hardware sitting on the silicon die - the   root of trust. it is a standalone module 
+containing the cryptographic keys that enable   a secure boot. kind of like the foundation of 
+a building, everything else flows from there. most of the first tees were for 
+cpus. first from intel and amd. later, arm produced a specification of their own. these confidential computing cpus can separate 
+entire virtual machines. their memory management   units are configured with an encryption engine 
+that isolates certain pages of memory. if anything   other than the right virtual machine tries 
+to access that memory page, it page-faults. gpu adoption of the confidential computing 
+model came later. the a100 had some aspects   of confidential compute, but it would 
+not be until the now-legendary nvidia   h100 that the company first provided 
+a confidential compute gpu solution. the h100's memory is split into protected 
+and unprotected parts. when the gpu is in   its confidential compute mode, nothing 
+can enter the protected memory area.   and programs inside the tee cannot easily 
+write outside of the protected memory area. this requires the cooperation of the cpu. so 
+if you want to run a confidential workload,   then you need to use a compatible 
+cpu that can connect to the gpu and   verify its tee's attestations before 
+starting the workload. once done,   all the communications between 
+the gpu and cpu are now encrypted. impressively, the h100 can do all of this without 
+a significant loss in performance. in fact,   the h100 showed a massive step-change 
+up from the prior a100. many security   experts especially those at ai labs have 
+high hopes for confidential computing as   a way to shore up what has long 
+been a critical vulnerability. ## model extraction there is a subset of security 
+concerns unique to llms and their   peculiarities - attackers remotely 
+extracting the model's parameters. the goal is to extract enough information in 
+order to recreate the target llm. in other words,   you are basically training a student model that   learns from the master through a 
+series of questions and answers. many commercial foundation models have api 
+endpoints. the attacker can fire inputs to   the api and use the result for the training set, 
+building out its student model as time goes on. now, replicating the whole model might take 
+a long time and many queries. access to the   api might get cut before the attack is 
+complete. but if you know what you want,   it does not take a whole lot of data inputs 
+and outputs to get a decent approximation. i read an interesting paper from lancaster   university discussing the 
+concept of model leeching. with this, the researchers selected a 
+specific topic and generated a question   and answer dataset using a far smaller 
+llm - about 100 million parameters. over the span of 48 hours, they ran 83,335 
+api requests at the cost of $50. with just   76,000+ responses, they were able 
+to generate a model that generated   answers with about 75% to 87% similarity 
+to the original model, which was gpt-3.5. ## extracting training data
+somewhat related to that, you don't even need to extract all the training data 
+to properly attack the llm. there is a class of attacks that try to 
+determine whether a certain data set is   present - assuming that said data was not 
+internally or automatically generated.   this type of attack is referred to 
+as a "membership inference" attack. since it is known that many llms memorize 
+their training data and can spit it back   out despite themselves, attackers can 
+craft attacks to pull out snippets. on the basis of ai model theft, knowing 
+the composition of the target model's   training data can be enough for 
+another party to replicate that   model's performance. you can go buy 
+that data set or scrape it yourself. but membership inference attacks can also be 
+serious privacy data problems. imagine if we   deploy a model to diagnose a particular 
+condition, trained on private medical   data. the right attack can reveal whether a 
+person's data was included in the training set. and lastly, it can also bring copyright headaches 
+for the llm provider. it is somewhat of an open   secret that training sets are augmented 
+with illegally acquired copyrighted works. the laws around such data use remains murky - but   lawsuits have been filed over a 
+certain work being in the dataset. ## insider attacks insider attacks are always a concern,   particularly when we talk about 
+assets of interest to nation states. when attacking these organizations, 
+nation-states are likely to build on   current systems of asset recruitment. this means, 
+recruiting individuals they have leverage against. these insider attacks have happened. for instance,   the fbi's 2019 case that highlighted 
+how the saudi authorities recruited   two twitter employees to access and pass over 
+internal company information on dissidents. similarly, i want to call out government distrust 
+about chinese-americans in academia and government   organizations - with stories of individuals 
+being questioned about where their loyalties lie. insider attacks are a concern, but i 
+want to be clear. america and american   companies are strengthened by the 
+contributions of immigrants. many   ai leaders were born in china, have family 
+in china, and are rightfully proud to be   chinese. we want things to be built in 
+america, not necessarily by americans. i should also note that the 2023 data 
+breach investigations report released   by verizon notes that 83% of data 
+breaches are instigated by outsiders.   the goal for amelioration is 
+through vetting, encryption,   and good cybersecurity practices that don't 
+place inherent trust in any individual. ## conclusion
+the cybersecurity best practices and measures specifically regarding llms 
+are still being built out. but if you look at the history, one of the big ai 
+labs - anthropic, openai, or someone else - will   eventually get hacked. all the cybersecurity 
+elites have been hacked at one time or another. the cia. the us government (a lot). 
+the israeli army. everyone. china and   iran won't talk about any attacks, but 
+they probably have suffered them too. there is nothing special about ai. data will be 
+pilfered. perhaps some or most of the weights   or training data. and the llms themselves might 
+make it far easier for attackers to do their job   at scale, enabling greater productivity 
+of existing practices like phishing. because such a scenario is virtually inevitable, 
+we should consider the ramifications of such   an event and what havoc it might cause to our 
+society. what can happen if gpt-4 or something   like it is stolen? if it is openly released? the 
+time is probably coming sooner than you think.

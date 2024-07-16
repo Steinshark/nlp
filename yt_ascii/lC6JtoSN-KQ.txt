@@ -1,0 +1,40 @@
+hello everyone, i'm james murphy and as you can 
+see i am on python.org with some huge news. python   4.0 has just been released. let's take a look. 
+pep401 outlined some of the major changes coming   in python 4, and here are the big ones: we have 
+new old print syntax, mandatory static typing,   and stack overflow integration. i've 
+already taken a quick look at these   but i'm just going to go through sort 
+of the abstract reasoning and sort of   give you my impressions as we read through 
+it. so let's just read through it together.   okay so it's going to tell us about 
+the new features coming in python 4. the 4.0 series is reserved for groundbreaking 
+changes in the python language and this is   nothing less than that. okay good. ever since 
+the original breaking changes made in the 2.7-3.0   transition the community has been primarily split 
+down version lines, agree, surveys have found   the average python programmer spends over fifty 
+percent of their work time converting two to three   with over ninety percent of that time putting 
+parentheses around print statement arguments,   definitely. in python 4, the old print syntax 
+is going to be reintroduced so that you don't   have to change that old code anymore. it will 
+just start working again. that's awesome,   and of course the newer print function is going 
+to still be supported. next we have a fundamental   change to the type system. python was initially 
+developed as a dynamic type system, but it was too   flexible to allow offline optimizations by 
+optimizing the compilers. in python 4 type   annotations will become mandatory on all function 
+arguments, return types, and variables that cannot   be statically deduced. the standard library will 
+be typed completely with the exception of the   explicit "duck" type and so most code depending 
+solely on standard library functions and types   will not need much change. this is a huge change, 
+it's completely overhauling the type system. type   annotations are now mandatory, but what do we get 
+for this? an average speed increase of over 30   000 percent and memory usage decrease of 50 
+percent across the entire standard library. again,   huge change, huge benefit. finally, python has 
+long been known for how easy it is to develop,   and yada yada yada, we're partnering with stack 
+overflow to bring automated stack overflow report   yields uh, in short, any time an unhandled 
+exception reaches the interpreter, the source   code, accessible state of the stack and heap, all 
+variables and values in scope will automatically   be uploaded and published to stack overflow along 
+with the relevant stack trace as a question to a   dedicated python overflow section of the site for 
+other users to debug. that means when you have   an error you don't even have to post it on stack 
+overflow anymore. it's already covered. and like   i said before, this was just accepted last night, 
+apparently it was a unanimous vote by the python   language committee and it's coming soon to a 
+python near you. this just all happened so fast. i   mean, there are so many new features coming, huge 
+changes coming, i'm not even sure exactly what   to say. i mean, it all sounds really really good 
+so i just wanted to give you my take, uh, my first   impression on these changes. it's probably going 
+to be like a year before, you know, the release   actually happens um, but i'm always looking ahead, 
+always looking forward to that next release. so   let me know what you think of these changes down 
+in the comments. don't forget to like, comment,   and subscribe, i'll see you next april fools! 
+... yes obviously this is an april fool's joke.   there is no python 4, yet, and none of these 
+things are ever going to be implemented in python.

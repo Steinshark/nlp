@@ -1,0 +1,73 @@
+From the 1940s to the 1960s, the US Army Corps
+of Engineers built a scale model of the entire Mississippi river basin; a huge part of the
+continental United States scaled down to the size of a large park. Their goal was to understand how flooding
+affected communities along the river, and how damage could be reduced through the use
+of man-made structures like levees. Now surrounded by Buddy Butts park outside
+Jackson, Mississippi, you can still go visit the tiny engineers who live and work there. Not really. Actually the model was only used for a few
+years before it was decommissioned. It simply wasn’t feasible to continue operating
+such a massive facility, especially because in the 1970’s, another way to simulate river
+hydraulics started to become available. I’m Grady, and this is Practical Engineering. In today’s video, we’re talking about
+computational hydraulic river modeling. Computational because it’s on a computer
+as opposed to a physical model like the one in Jackson. Hydraulic because we’re trying to understand
+how water moves through the system. And river model because we’re creating a
+representation of the real world. There are a bunch of software packages available
+that can perform hydraulic computations along rivers, but one specific model is ubiquitous
+in the water resources engineering industry, at least in the US: the River Analysis System,
+or RAS for the cool kids. The reason for its popularity is simple: it’s
+free. RAS is developed by the US Army Corps of Engineers,
+and luckily our federal government sees fit to release it without charge. RAS has grown from a rudimentary, command-line
+based program to a sophisticated software package capable of performing extremely complicated
+simulations. You can go on HEC’s website and download
+RAS for yourself, but why would you? No seriously, why do do we care about river
+hydraulics, and what are the questions that engineers try to answer with a model of a
+river system? Let’s use RAS to find out. And by the way, most of the demonstrations
+in this video are from example data that comes with the software.The places are real but
+the situations are not. My apologies in advance if you live in Munsie. The number one use of hydraulic river models
+is to estimate flooding. For riverine flooding, engineers can follow
+a drop of water from inside a storm cloud to inside someone’s house. First you have to know how much rain falls
+and then how much of that rain makes its way into the creeks and rivers. That’s hydrologic analysis. Once you know how much water enters the river,
+you need a hydraulic model to find out how much the river rises as a result. This process is called floodplain mapping,
+and it helps us characterize which areas are at the highest risk of flooding so that we
+can be prepared if and when it happens. Another way we can use models is to evaluate
+projects. Putting a levy on a river may help flooding
+in one location but make it worse downstream. Models help to represent a real world situation
+without the cost and complexity of actually performing the test at full scale. Obviously we can’t create a flood just to
+see what happens, so models allow us to test out hydraulic structures like dams and levees
+to make sure they work as anticipated before spending millions of dollars on construction. Another use for river models is simulating
+systems of reservoirs. When you have a number of dams along a river,
+all with different operating guidelines and all trying to accomplish different objectives
+like water supply, navigation, and flood control, things can get complicated in a hurry. A hydraulic river model can perform simulations
+of these complex scenarios to help with planning and optimization of operations. For example this model shows how two navigation
+dams on the Mississippi river manage the locks and gates during a flood situation. A model can also be predictive, helping operators
+anticipate conditions before they even happen. Finally, we use hydraulic models to perform
+breach analyses for dams. If a dam fails, it can release a tremendous
+amount of water in a short period of time. In fact some of the worst engineering disasters
+in history have been dam failures. In a situation like this, emergency managers
+don’t have much time to react, so many dams are required to have emergency action plans. Part of these plans is mapping out the areas
+that might be affected in the event of a breach so that emergency officials can coordinate
+evacuations as quickly as possible. A dam breach is an extremely dynamic phenomenon,
+so engineers rely on sophisticated hydraulic models to predict the inundation zones. This model demonstrates what might happen
+in the event of a levee failure. Sorry Munsonians. Speaking of catastrophic flood waves, another
+purpose for hydraulic models is fluvial geomorphology, or the study of how rivers form and evolve. Geomorphologists study streams in some of
+the most unlikely places, including Earth’s red neighbor, Mars. The Kasei Valles is one of the largest outflow
+channel systems on Mars, almost 20 times the width of the Grand Canyon, and several kilometers
+deep. Scientist believe that billions of years ago,
+liquid water may have flowed on the surface and in underground aquifers on Mars. As the planet cooled, the water on the surface
+froze, creating an impermeable cap to a deeper layer of pressurized liquid groundwater, just
+like the top to a bottle of soda. Scientists think that tectonic movement or
+volcanic activity may have melted the subsurface ice, "popping the top" on the cryosphere and
+releasing a massive flood wave of pressurized groundwater. These massive floods are what likely created
+many of Mars’s outflow channels like the Kasei Valles. But what’s an earthbound geomorphologists
+to do when trying to learn about a river that’s 50 million kilometers away and hasn’t seen
+water since maybe several billion years ago? Make a hydraulic model, of course. Since I’m not a planetary geologist, and
+because RAS doesn’t have a way to change the gravitational acceleration, this model
+has about as much scientific rigor as a peanut butter and jelly sandwich. But let’s ignore that for a moment and just
+enjoy the technical beauty of being able to recreate the massive flood that may have created
+the kasei valles. There are lot of other uses for hydraulic
+river models that can be simulated using RAS including bridge scour, pump stations, sediment
+transport, and even water quality analysis. If you want to learn more, you can download
+RAS for yourself. And next time you see a river, you can always
+know that some civil engineer probably has a model of it on his computer, carefully constructed
+and ruthlessly flooded over and over again for your safety and maybe a few times just
+for fun. Thank you for watching, and let me know what
+you think!

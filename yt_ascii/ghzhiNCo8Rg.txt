@@ -1,0 +1,147 @@
+- hello and welcome to-
+- it's the wrong channel. - okay.
+- hello and welcome to our fine sponsors, micro center, where we have a challenge. matt and i have three
+hours and six minutes to build a gaming pc that can both stream, as well as record, as well as an entire studio
+setup using the wide variety of creator tools available
+here at micro center. 12:00 pm today, we're
+recording a "this is" live in the store with gear
+that we have to find off the shelf and put together. - i'd be worried about that, but we have that extra six minutes, i think we're gonna be good. (austin laughing) i'm like a kid in a candy store, except the candy is recording equipment. - audio gear. look at the microphones! - they have every microphone.
+- look, i talk into all of microphones, none
+of them are connected, but they all i'm sure sound really cool. do you wanna start with mics? i mean, they have, obviously, cameras and have everything here. - what we have to figure
+out is whether we want to, we want this to be able to stream, that's not how we
+normally do a this is. like, do we want this to be
+a little bit more versatile? do we want it to be just for streaming? - 'cause the other thing
+is we have to consider is that while matt is gonna
+be building the studio, i'm gonna be building the pc, we have a very limited amount of space since we're gonna be in the store and people will be here in like an hour. so what do we actually
+have on the studio setup that i need to build a pc around? - so we're gonna be using three
+cameras that are 4k ready. we're gonna have two microphones. i'm gonna simplify it and
+have a single audio interface that's gonna be a mixer
+that both mics go into, so that's just a single usb-c there. - okay.
+- and then, the same with the cameras, i'm gonna do a physical
+switcher with that- - [austin] thunderbolt? - it does not have to be thunderbolt. - excellent.
+- it actually spits out just a regular usb-c signal. everything that we need is
+right here at micro center. so we have a bunch of sony options here. - yeah.
+- and like, so zv-1, which is basically the
+little brother of the camera that we're using now, it's gonna be pretty plug and play with what we already have. - we're not gonna be able to redo our exact setup at the office, but we can actually get,
+i think, relatively close. i'm sorry, you can get relatively close. i'll go build a pc. (upbeat music) look, i feel so confident right now. matt's over there struggling to figure out how he's going to put an
+entire studio set up together. i gotta build a simple pc. i can do that in my sleep. three hours? i built a pc in three hours literally blindfolded
+at micro center before. remember that i was just like this? okay, wow, that's a lot of boards. so what i wanna do is i wanna build a moderately powerful system that is somewhat small form factor. so i think the way i'm gonna start is i'm gonna go with this msi
+mag b650 mortar wifi board. so this is a microatx. so it's a midsize board, which means that i can hopefully downsize my case a little bit without sacrificing the
+expandability and the performance. so i'm gonna do this because i really think that
+ryzen's 7000 is my move. again, theoretically, i will not need a huge
+amount of cpu performance, but having six or
+realistically eight cores will make a big difference if matt throws some giant files at me. so if i was building a gaming pc, the graphics card selection
+would be incredibly important. but because this is much more meant for streaming and recording, i actually don't need a
+huge amount of performance. well, it's obviously nice to say, "oh, i've got a 4090 whatever," complete and total overkill. realistically, i just need like
+maybe like a 30-series card that is gonna have nvenc, which is nvidia's very quite high-quality encoding engine built into the gpu, which, again, is going to help me stream, record, whatever i need to do. so i've got my components picked out, the next choice is the case. ideally, i want something smaller, maybe even something with a handle, and all i need is
+something that's microatx, which is actually gonna probably lean me toward a little bit of a cheaper case. oh, hello, what is this little lancool? this might be my move. something like this lian li lancool might actually not be a bad move. fairly small, especially
+'cause this will support a full microatx motherboard, this actually might be the move. now, the configuration on the inside is a little bit unorthodox, but importantly it does
+have a lot of ventilation. it's also only 85 bucks,
+which is pretty solid. so i think i have all of the components i need for my pc picked out. let's go check in with matt and see if he's made any
+progress on the studio setup. - okay, so i got my pile of goodies and there's one that i'm really excited for because it's not yet out. - what are you using for cameras? this is the e10s? - okay, so i know originally we said we were gonna do the zv-1f, which is a wonderful little camera, but it's got a fixed lens and i mean you're paying for it. so instead, i got the zv-e10, which is the big brother to it. - 'cause that's aps-c, right?
+- this is aps-c. - it's interchangeable lenses.
+- yeah. - you've chosen the atem mini pro here, which is a really interesting thing. i'm surprised that micro center sell this. so this is essentially a live streaming, like, a lot of the things
+you could do in obs, this does in hardware. so around back you can connect
+up to four hdmi sources, you can connect usb out. so essentially to the computer, this looks like you've just
+got a usb webcam plugged in. however, this is going to be
+able to do all of the stuff. you can change your actual cuts, you can do picture in picture,
+all kinds of wild stuff, which is really nice because i wasn't sure that you were actually gonna
+give me something like this, so i slightly overbuilt my pc assuming that i needed a
+bunch of capture cards. but i don't, which means
+that my life is way easier. what is this? - this here, i don't know. - what do you mean you don't know? - i saw this in a sneaky
+part of the store. this, as of recording, is not out yet, but this is the mackie-
+- are you breaking an embargo right now?
+- shh, well. - did you clear this with micro center? - [matt] well.
+(fist pounding on door) - [fbi] fbi open up! (alarm blaring) - this here is an all-in one mixer, interface recorder from mackie. i'm a huge fan of mackie stuff. coming from an audio background, i loved a lot of their products. so the fact that i found this, i'm really excited to
+get my hands on this. we're gonna be controlling this ourselves. i don't wanna deal with software when i'm recording a video. i wanna be able to physically, like, touch the faders.
+- wait, we don't have kinsey? - no. - what?
+- no, i left kinsey behind. - nani?!
+- your setup i will say looks quite nice, a little overkill i might say, because i was very reasonable. look at how small this is. i've got myself a ryzen 7 7700 8-core. i've also got 32 gigs
+of t-force ddr5 memory, 32 gigs, 24 gigs more than i
+really need, but it's fine. i also have myself the msi
+mag b650 mortar wifi board, and an msi ventus 2x rtx 3050 with a crucial p5 plus ssd, two terabytes. - can i ask you why you went with a 3050 as opposed to a 4090 ti? - so here's the thing, i respect our kind
+sponsors at micro center. i don't walk into the store and go, "i need the best or i'm leaving! this just needs 4090s or else!" i'm gonna be reasonable and only build what we actually need. and i don't need 73 inputs on my creator when we have two microphones. if this was a year or two ago, you would not have been able to buy half of this at micro center. like, they've really invested a lot in building a lot more
+stock of creator gear. so if you want to be streaming, if you want to be creating
+a studio or something, you can get a ton of stuff
+here at micro center, and a streaming pc to go along with it. we have an hour and 45
+minutes to build all this. we should probably stop
+talking and start building. - i feel like i'm gonna be done before you're done with that pc. - bet.
+- bet? (upbeat music) so the longest part for me is gonna be building out these lights. - i used to use those a long time ago and it's like building like
+a little tent or something? - yeah, oh, these came pre... feeling pretty good about my decision. they came pre-built.
+- yeah. my main concerns are twofold. one of which is working
+with this hardware, especially this case that
+i'm not familiar with. the other one is a little
+bit more existential, which is i have a large
+number of bits of software, windows and whatnot,
+and drivers to install, which i need to do very quickly. - a lot of my setup is very physical, but i'm just powering through it, unlike austin who's just making excuses. "i've never used it before." bro's been building pcs
+since before you were born. and it is 10:37. - [austin] we have an
+hour and 23 minutes left? are you serious? - he is now pulling out the
+power supply and motherboard, thus undoing everything he just did. - okay, all i'm doing is i'm
+just changing my routing here. so, again, this is an unfamiliar case, so i'm figuring it out live. i'm like legitimately
+feeling the pressure. like, we've done a lot
+of like goofy challenges at micro center, but this is the first one in a long time where like i don't know if we're actually gonna be done in time. - (laughing) he's so confused. - well, so the problem is, like, there's no space in the
+bottom of this at all. - i think someone's just making excuses. this is ready to go, to power it on. it's waiting for a computer to plug into. ah, we're waiting on you, austin evans. - yeah, i noticed, so the
+problem is i literally just took this out and
+now it won't go back in, and i think i'm really stupid
+and i'm getting frustrated. - [matt] i mean, you are. - i'm gonna do what i never wanna do. - [matt] read the manual. - [austin] which direction
+does the fan bracket go in? - [matt] really that's the level? which direction a fan goes? okay. - [austin] the bracket doesn't fit, matt. - [matt] okay. - my problem is, is that
+while this is a terrific case on the outside and the
+size is excellent for the, you know, the min maxing
+of the components, the configurations are quite finicky when it comes to actually fitting things. and since i have so little time, i'm just going to simplify it. - would you say this is a great pc for someone who knows what they're doing? - i'm not gonna answer that, 'cause i know where you're gonna, i'm not gonna walk into that joke. i am almost done. i've just had to be a little creative with my fans and how
+many of 'em i'm using. i am almost ready to
+actually do my first boot. - are you cable managing?
+- i don't have windows, so no. - 'cause, like, you see here,
+my cables are immaculate. - you're immaculate.
+- okay, okay, joanna. - so i have committed the
+cardinal of pc building, which is to put all of
+my side panels back on before test booting the system. so if i press this power
+button and it doesn't work, i'm gonna be big, sad boy. yo, let's go! ryzen 7 7700, 32 gigs of ram, yes! my pc is done and i will
+say it is 11:30 exactly. i've never put the side panels on a pc before test booting in my life. i'm really happy that that worked. yo!
+(matt laughing) look how big the screen is too. - this is a proper console.
+- ah! - couple of the benefits to this is not only is it like xlr
+mixer with a usb interface and being able to record, but you could actually hook
+this up and do like call-ins. so you can have someone
+call into this system and you could do like, i don't know whether it's skype or, do people still use skype? do people still use skype?
+- some people do, but most zoom or whatever.
+- basically, yeah, you could do audio call-ins
+through this thing, which is really dope. on the back here, four
+combo xlr 1/4-inch ports, which we're gonna be using
+two of the xlr for this, but you have plenty of expandability, four headphone outputs. here's your output to the computer. you can actually hook this
+up directly to ethernet. - [austin] that's great. - [matt] and i believe you
+can hook up an ssd to this and record directly there or through a microsd card.
+- damn. - and then, one thing that i'm, it's sad that this is
+like one of the things i'm most excited about
+with a product like this, there's actually a proper on/off switch. oh, ho-ho! power up the dlz!
+- oh, that's hot! - that screen is massive. we're gonna check-check real. we're gonna check-check here. just found the absolute
+best feature of the mackie and that is a full keyboard on here, all right.
+- oh my god. so one of the things we were doing when we're working through this, this doesn't come out until tomorrow. so what we found out is that
+we actually need to download both the drivers, as well as the firmware, which if you pull this out of the box, you can do in about three seconds. but because we're doing
+this the day before, we need to make sure that it's actually fully set up and working. mind you, it will work out of the box if we wanna record via microsd, but we want to send it
+over to the computer. - correct.
+- so we need to make sure that that's all set. for the record, we have 45 seconds. (hands clapping) okay, so dlz shows up,
+i'm not getting signal. and it is exactly 12 o'clock. - well, we gotta hit record. (intense electric guitar music) i also don't see a camera on in obs. - so right now we got a-cam up, and then no c-cam and no b-cam. so we only have one camera
+fed through obs right now. that's not right. but on the bright side,
+my pc is working great. so i'll take a dub when i can get one. i'm just gonna do my little wiggle. - at the moment, i do
+not have a answer for... - [narrator] if they ask you how you are, you just have to say that you're fine when you're not really fine. - so you can tell matt's stressed. he's dropped his like video voice, and now he actually did
+a serious voice like, "oh, i actually don't
+know how to fix this." (tone beeps) oh, look at the time! matt, it only took us one
+extra minute past the due date. - it's 1:45. one, four, five. take one and add 45 to it. - an hour and 45 minutes
+past our self-imposed date to finish.
+- we will. i was set, i was good. - so it's blame time?
+- yeah, it's blame time, because you just like,
+"oh, i'm gonna come in here and i'm gonna take, hold on, where are those fans? where are those fans?" - hey, guess what? the pc's working flawlessly. can i direct your attention to obs? look at this, this is a-cam.
+- huh-huh. - this is b-cam.
+- huh-huh. - c-cam.
+- huh-ha! - back to a-cam, all running
+on the atem mini pro. - so instead of having three capture cards for each of our cameras, we can straight up just go to this here. i'm just realizing that i'm
+pretty sure that these cameras actually can just be
+their own interface now that i'm thinking about it.
+- what? the fact that we were
+able to build this setup entirely using gear that
+we got from micro center less than a few hours
+ago is very impressive. but we're not done yet. - no, our day is just starting, because we are about to record the worst thing that we've ever done, a "this is" live. - we're gonna shoot a live "this is" using this setup at micro center. make sure to subscribe to "this
+is" and check the video out. and, of course, huge
+thank you to micro center for sponsoring this video. if you're interested in any of the pc or various gear that
+we used in this video, the links will be in the description. - i'm gonna keep playing
+with the mackie dlz. - should we hit the record button and start the "this is" now?
+- huh-ha!

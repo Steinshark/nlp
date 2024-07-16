@@ -1,0 +1,61 @@
+have you ever wanted to import python 
+code directly from the internet like from a github repo? well now you can using the magic of cloud imports forget the fuss of creating a requirements 
+txt and installing your dependencies just import cloud_imports add your github or other 
+remote repository and whamo bamo it just works this is the real deal folks i haven't secretly pre-installed this 
+prime number library in the background if i remove the repo from cloud 
+imports i get an import error put it back and we're back in business there are absolutely no downsides to 
+running code directly from the internet it's fast it's efficient it's bleeding edge 
+and there are no security risks whatsoever so for the low low price of $39.99 a month ... okay hopefully by now you've 
+caught on that this is a joke and importing code directly from 
+the internet at runtime is   at best a horribly horribly misguided idea and at worst a complete 
+performance and security nightmare but this code is real it works it actually downloads 
+files from github at runtime dynamically creates modules 
+and runs the correct code you can use the inspect 
+module to see the source code and to your boss's horror if you ask for the   module's file it gives you the url 
+where the file was downloaded from so the real question for this 
+video is "excuse me, what??" and to answer this very articulate question 
+we need to learn about python's import system you're no doubt already familiar 
+with how imports normally work but did you know that python's import 
+system is accessible from python itself and it allows you to customize 
+what the import statement does this is the purpose of the built-in importlib to understand importlib there's 
+just three things you need to know: finders, loaders, and the system meta path the overview is that you register 
+finders in your meta path and python tries each finder in 
+turn until either a finder succeeds or it runs out of finders in which 
+case you'd get an import error if a finder succeeds it gives 
+a specification for the module that includes the loader that should 
+be used to actually create the module then python uses the loader to 
+create and initialize the module take a look at the meta path as it is now the first item in the meta 
+path is a built-in importer which is used for finding modules built into   the python interpreter itself 
+like itertools, sys, and time then there's this frozen importer which is used in   cases where the interpreter 
+is embedded into a binary like if you're using pyinstaller 
+you can ignore that for this video and the third path finder one implements the usual 
+logic looking in directories in the system path which is how python would find 
+modules in the current directory modules installed into your virtual env and built-in modules that were written in 
+python rather than compiled into the interpreter like the json or inspect modules all we have to do to get cloud imports 
+is to add another finder to the meta path as a fallback for when python 
+wouldn't find the module any other way that's all this add repo function does, 
+add another entry to the meta path finders just need to implement 
+one method "find_spec" which takes the dotted name of the module and needs to return a module 
+spec if it can find the module or none to let the next finder 
+in the meta path have a try a module spec just holds the loader and some extra   info like the module name and 
+whether this module is a package we implement the cloud finder by replacing 
+dots in python imports with slashes in urls and appending that onto the base url 
+that the finder was constructed with like the github repo url we go out to the internet and download those 
+urls and see if we find valid python source we check both for ".py" files as well as 
+for "__init__.py" files one directory down so that cloud imports work with multiple files and 
+packages as long as they're written in pure python if we find a valid python file at one of the 
+urls then we return a spec for the module that has a custom cloud loader 
+holding the downloaded source code in the loader we need to implement 
+"create_module" and "exec_module" which are kind of like "__new__" 
+and "__init__" but for modules in create module we create a blank module 
+and add it to the system module cache or we get it from the module 
+cache if it already exists in exec module we initialize the 
+module by executing the source   code we downloaded within the module's dictionary this "get_source" isn't required but it allows the   inspect module to find the 
+source of the module as well and that's it add some convenience functions for adding 
+different kinds of repos and you're set zooming out it's surprisingly little code under 100 lines to completely 
+change how python imports work again cloud imports are a mind-bogglingly bad idea but i think understanding how 
+to write a cloud importer really   helps you understand how the import system works and in particular how customizable it actually is see the import lib docs for more i'm james murphy from mcoding 
+where we do software consulting check us out at mcoding.io as thanks for making it to the end if you'd like 
+a chance to win a license to a jetbrains ide make a comment including #mcoding thank you to my patreon subscribers and 
+other donors for supporting the channel slap that like button an odd number of 
+times and i'll see you in the next one

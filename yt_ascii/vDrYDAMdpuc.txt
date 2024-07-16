@@ -1,0 +1,55 @@
+hi everyone. quite often we need to access information
+in one script from another script, or we need something happening in one script to trigger
+a method in the other script. let's look at a simple example where we have
+a player script, and a userinterface script. say the player script has a health variable,
+and the ui script wants to access this variable so that it can display a health bar. we'll
+need to get a reference in the ui class to the player script. there are several ways
+to do this. for example, if we know the name of the object that the player script is attached
+to in the scene, we could use the gameobject.find("") method. we would pass the name of the object
+into the method, and it would return a reference to that gameobject. then, by using the getcomponent
+method, we could get the attached player script. similiarly, if we add a player tag to the
+player object, we could instead find the object with gameobject.findobjectwithtag(""); the
+most straightforward way, however, would be to use the findgameobjectoftype method, and specify
+player as the type. this will search the scene for the object to which the player script
+is attached, and return a reference to that instance of the player script. once we
+have a reference to the player using any of the above methods, we can access its public health variable, and use this value
+to draw the health bar. all right, so that's simple enough; let's
+look at another case. say that inside the player's update method, we have a check to
+see if the health variable has fallen below zero, at which point the player script will
+destroy the object it is attached to. now the player's death obviously signals the
+end of the game, so we want the ui script to be notified when the player dies so that
+it can display the words game over on the screen. we could start by creating a gameover
+method in the ui class to write these words, but this method still needs to be called from
+somewhere. the simplest solution would be to get a reference
+to the ui class inside of the player script, just before the object is destroyed. this
+reference could then be used to call the ui's gameover method, which would of course then
+need to be made public. so this approach works fine, but it's not
+really a great solution. to understand why, let's consider the relationship between the
+player class and the ui class. the ui class is responsible for displaying information
+about the player, so it makes sense that the ui class has a reference to the player. however,
+the player class shouldn't really have to care about the existence of the ui class. put another way, if we were to delete the
+player class from the project, it makes sense that the ui script would no longer work - its
+purpose was to display information about the player, and the player no longer exists. however,
+if we keep the player class and instead delete the ui class, it is bizarre that the player
+class should no longer work, just because the ui has disappeared. with that in mind, let's look at events. events
+are actually a relatively advanced topic, and we'll be exploring them in some depth
+later on. i think it's an important concept to be aware of from the beinning though, so
+i'm just going to show you enough to solve this basic problem. in the player class, i'll start by importing
+the system namesapce, which will give us access to a thing called an action. we can now create
+a public event action, and call it onplayerdeath; when the player is about to die, we can invoke
+the action, as though it were a method, simply by writing its name followed by parentheses.
+now for the interesting part. inside the ui class, our reference to the player gives us
+access to the onplayerdeath event. we can now write player.onplayerdeath += gameover;
+this is called subscribing the gameover method to the onplayerdeath event. what happens now is that when onplayerdeath
+is invoked, all methods that have been subscribed to the event will be called. in this case
+that's just the gameover method. what's great about this is that the player
+doesn't care who, if anyone, is subscribed to the event. it is just responsible for triggering
+the event at the appropriate moment. so, if we now imagine that we delete the ui class,
+the player class still works fine, it never knew about the ui's existence in the first
+place. there is one small thing we have to be careful
+of though. if nothing is subscribed to an event, then the event will be null. this means
+that if we try to invoke it, it will cause an error. to prevent this, we simply add an
+if statement checking that the event is not null, before we invoke it. alright, so hopefully you have a picture now
+of the two main ways in which we can have classes interact with one another. either
+by a direct reference, or with the help of an event.
+until next time, cheers.

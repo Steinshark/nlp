@@ -1,0 +1,162 @@
+self locating strings are to do with
+decimal places of irrational numbers so we need a number with an infinitely long
+decimal expansion that is irrational of course
+so we're basically gonna do pi you probably guess we're going with pi
+so these are the first few digits of the decimal expansion of pi and what we want
+to do for these self locating strings is to label each position after the decimal
+point so we're going to start with the the first number so this is the first
+position the second position the third and then the question you ask yourself
+to find the self locating string is you want the number to match its position in
+the decimal expansion so here we've got our first one straight away the very
+first digit number one is in the first place so that would be our first self
+locating string and then what we want to do is continue along through the numbers
+and see if we can find any others of course the expansion is infinite so
+we're going to hope that there should be some more so if the second number there
+had been a two that will work as well whether it's a four or so exactly so if
+this is a this would need to be a two this would need to be a three four five
+six seven so none of these work yet and the other thing is once we of course get
+to double digit or triple digit positions if we were for example
+considering the twelfth number of the decimal expansion we would need the 12th
+position to be a 1 and in next to it the 2 so you actually would need a 1 in the
+12th position and a 2 in the 13th position if you think about that a
+little bit you're probably that sort of most common near the beginning when you
+just have one number that needs to be in one fixed position and then when you get
+to two digit 3 digit 4 digit you have several requirements that need to happen
+in a row so your probability gets smaller so for position 1 million you
+would need position 1 million to be a 1 and then the next six positions after
+that to all be 0 exactly so that's very very unlikely let's be honest right
+compared to just having let's say you know a 7 at position 7 or something if
+the numbers are truly random which is generally what we assumed in the
+expansion of pi they each one appears approximately equal probability
+if that is indeed true then you know you're gonna see or expect to see more
+of the lower down self occasion digits compared to the higher up ones further
+along we've got a first one to a good start so what we now need to do is i
+need to write out more digits of pi so i'm gonna have to load this up i'll be
+honest that that's about as good as it gets for me as i'm doing pi what people
+want for seven decimal places you know you don't really need more than seven
+decimal places 100 there we go the first 100 digits of pi that was painful we've
+got our first self locating string here at position 1 and what we can now do is
+continue to look through these numbers and we're not even doing this i can
+already tell you there aren't any more the next ones are really really far away
+so after one right at the very first digit we get ourselves a casing string
+it's super exciting we think they're gonna be really common they're not the
+next one is at sixteen thousand four hundred and seventy so i'm definitely
+not writing out 16,000 digits of pi back that's that's a job for the viewer and
+then after that we then jump up to forty four thousand eight hundred and ninety
+nine then we go up to the big one at 79 million eight hundred and seventy three
+thousand eight hundred and eighty four so that's our first one in the very
+first position then we go to our second one at sixteen thousand the third one
+forty four thousand and then the fourth self locating string at 79 million (tom
+would you guess that there are an infinite number of these) i'm
+inclined to say yes with with the idea being that pi is an infinite string of
+decimals and you you might expect that because it's infinite you would hope
+that every string of numbers should be in there at some point but then you've
+got this extra condition that not only does the number have to appear to appear
+in a certain place so that's why these are quite rare it's a difficult question
+for sure it's a good question all right there's another way to look at this
+there is indeed so and this is the reason why i did write
+the first 100 so i'm gonna take a different color because you may have
+wondered why i labeled the first position here the one as as index one
+because you could also of course completely you know it could be
+completely valid to label this as zero so if we call this now the zeroth spot
+and then this one the first and the second and of course we continue in the
+same way we now have a slightly different index we're going to 0 1 2 3 4
+5 6 bingo so we've got our first one now at the
+6th position indexing from 0 and then if we carry on 7 8 9 10 11 12 13 14 15 16
+17' 19 20 so there's a 2 in position 20 but then there's a 6 so it doesn't
+work 21 22 23 24 25 26 27 we have a 2 and then we've got a 7 so we've actually
+found our second self locating string in positions 27 or 28 we've got 6 we've got
+27 and then we jump up to a number kind of near sixteen thousand thirteen
+thousand five hundred and ninety eight is our next third self locating string
+so it's not too far away from the 16,000 on index well then we go up to forty
+three thousand six hundred and eleven again maybe it's a coincidence maybe
+it's not but it's quite similar to what we saw before and then finally this one
+is is less close but at least has the same number of digits we get 24 million
+six hundred forty three thousand five hundred and ten and that is the final
+that's going to be what five so we actually have one more self locating
+string in the first 100 million digits of pi when doing it indexing zero so as
+i said there isn't a convention between index 0 or 1 but we're gonna now stick
+with index 1 from now on just just to be clear and that perhaps more interesting
+question about these it's super cool finding them and you should totally go
+away and try find your own but the other interesting thing you can do is ask the
+question of do these things loop back around on themselves so what i mean by
+that is if i pick starting point for example 169 that
+suppose it's my favorite number well actually let's suppose it's the favorite
+number of dan sikorsky who is the guy found this out so this is dan's favorite
+number and what we do is we then look for where where does the number 169
+appear in the decimal expansion of pi and we should be able to spot it there
+it is 169 is down here and because i did this earlier this is going to come in at
+position 40 starting here so the number 169 so we've got 48th 41st 42nd appears
+in position 40 so now you say we started with 169 and that is sort of taken us to
+position 40 in the expansion so then you say well now where does 40 appear in the
+expansion of pi so we're going to try and create some kind of pathway through
+this infinite decimal expansion i mentioned 40 appears all over the place
+exactly so we're gonna look for the first occurrence of 40 that's sort of
+this the lowest down one that's the idea so 40 is going to appear at the 70th
+position so the fours are 70 and the zeros are 71 so we started at 169 40th
+position we looked for 40 that's taking us to the 70th position so now we look
+for 70 that's the idea so 70 is coming in right now on the bottom and this is
+why i wrote out a hundred digits so 70 is down here in position 96 is the
+starting number so we've gone 169 244 72 96 and now we're going to look for 96
+and we're going to carry on and we're going to see where we end up so 96 is
+going to take us miles away to'0 then we go this is a pretty long route we
+then go through 3664 then we look for that number which appears in the 24,000
+717 position then we go to 15,000 492 then we go 84,000 198 so i think this is
+the highest point of our path that descend into the madness of the decimal
+expansion of pi so that then goes back down to 65 4 8 9 3 7 2 5 there is a
+point to this i promise then we get to 16 9 7 441 702 3 7 8 8 5 7 5 7 1958 14
+six oh nine six two eight nine two forty four seven four five and then we go to
+nine three eight five and finally we get one six nine again so we loop back round
+to 169 which appears in the fortieth position so the mathematical question
+here is given any random starting number that we just choose have any number of
+digits do we always get a loop that's the the mathematical so it seems
+like a bit of fun but there's like a really deep mathematical question into
+this do you always get this loop that's going to happen given any starting
+number will you always find a loop the loop can be of any length it could be
+very short it could be quite long it could but you know as long as it's not
+infinite length then you would loop back around and we have no clue as far as i'm
+aware this is just a sort of puzzling question and but there is one thing that
+we can say which is that not every number will have an infinite loop
+because this is where we come back to the self locating strings and my new
+favorite thing at the moment because if you end up at a self locating string so
+if you somehow come across one or sixteen thousand four hundred and
+seventy you don't move because one is in position 1 so you get to one and then
+you just loop back around or you get to 16 thousand 470 and loop back around so
+they're like dead ends or they're basically dead ends so that's our the
+self locating strings stop these loops from happening and i do have an example
+of one loop which which terminates at one if we start at 211 so a random
+starting number this appears actually back in here at position here two one
+and then one down here so annoyingly over two lines but we've got a number
+here 211 and this is at position 93 this one here the 93rd position so we go 211
+to 93 where does 93 appear 93 but there's an earlier one
+hey there's good so you always go to the earliest this is the the it's just a
+rule you it's an arbitrary rule and you could change the rules but for purpose
+of our loops we're going to the first appearance of that number so you're
+completely correct but this is going to be the one and this is at position
+fourteen and now where does fourteen appear in pi i think you know this one
+brady may be right at the beginning so fourteen is in position one so we've
+gone 211 293 to 14 and then we've gone to one and then
+we just loop back around forever and we're stuck at one so one our self
+locating string here is the dead end you either have this big loop that goes
+or you know some size of loop where you just keep going round around in circles
+you either reach your dead end as you called it the self locating string which
+just circles back to itself forever or can we find a path and there's again far
+as i'm aware no one has found such a path where you just keep going forever
+and ever and ever as far as i'm aware there's no point to this this is i said
+i found this on the pi search page it's recreational maths but then it does lead
+to quite a deep question the patterns of numbers within the
+expansion of pi so whilst even if we were able to answer that question it
+probably wouldn't tell us much about pi itself but the the methods and the
+techniques you're going to use to do such a proof are going to probably be
+brand new and lead to all kinds of other awesome stuff it's like the classic case
+of you know trying to climb a particular peak there's not really that much at the
+peak but it's everything all the other peaks you scale to get to that one it's
+all your the new stuff you discover then has all these other amazing uses and
+loads of really big results in maths come from recreation or playing around
+with numbers this kind of thing this is the first five million digits of pi
+printed on two thousand pieces of paper and if you would like your very own
+piece of pie i'm gonna be signing these and sending them out to numberphile
+viewers to find out how to get one have a look in the video description or go to
+patreon.com/crashcourse member so we say it's not just great in the one it's much
+greater than one so sort of a thousand and above turbulence and your equations
+so we've got rid now

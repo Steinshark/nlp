@@ -1,0 +1,140 @@
+I was recently in Antwerp, Belgium 
+for IMEC's event ITF World 2024. IMEC is widely known as the semiconductor 
+industry's watering hole, a neutral ground   where all the animals on the Savannah can 
+get together to work on major problems. One reason why I attended the show 
+- and I paid my own way there - was   because I have never been to this part 
+of Europe before. It was fun visiting. Another is to learn about the 
+state of leading edge research in   semiconductors and what people have 
+been working on and thinking about. In this video, I want to share a 
+bit of that. What I am hearing,   and a reflection on the show in general. ## 40 Years The show opened with a series 
+of headlining presentations. 2024 marks 40 years since IMEC's founding   in 1984. So I feel like they put 
+particular effort into this one. I was at the Gala dinner - where 
+I met a few friends of the show. The dinner was set in an impressive 
+location and we were treated to a   very fun dance show. I wonder how much it cost. And for the information sessions, IMEC got 
+some very prestigious people to come out to   Belgium to present. It is a demonstration of 
+IMEC's stature within the overall industry. There were these booths with teams 
+demonstrating new technologies. I   only got a chance to talk to a few 
+of them - much of them seemed to   have involved medicine or biology - but the 
+teams I did get to talk to were impressive. Alright let’s talk about 
+some takeaways from the show. ## Context The great context of the show from people 
+is that we are in a new era of scaling. During the 1980s and 1990s, the industry was 
+spoiled by rich gains from lithography. It   was easy to shrink the designs because 
+we just switched to a new wavelength.   This was so effective that it drowned 
+out many other alternatives to scaling. But then in early 2000s, we got 193 
+nanometer lithography and progress   down the wavelength ladder massively slowed 
+down to a turtle’s crawl. Intel and others   chased 157 nanometers for a while but that 
+never made it to high volume production. But even as the industry was going through that,   they knew in the back of their mind that 
+there was another wavelength coming: EUV. Now, EUV is here. It has been running 
+for several years and it is now a mature   technology. But nobody is credibly talking 
+about doing another wavelength in the future. Without the biggest arrow in the 
+quiver, we need to find other ways   to achieve scaling. Nothing will ever 
+be as good as what we had back then. But as the song goes: You 
+can’t always get what you want,   but if you try sometimes you get what you need. ## Advanced Packaging is Real But ... Advanced packaging is a real thing. There are   substantial products out there 
+and that is a major advancement. There are also substantial flaws that we need to 
+review and engineer our way around. A traditional   silicon die is on a single plane. It’s all there 
+for you to look at, inspect, and dissipate heat.   2.5D integration where you put things on top 
+of a silicon interposer keeps a lot of that. But 3D integration is where people want to 
+go. And we are not ready to handle the heat   and inspection problems associated with that. 
+Multiple people I talked to mentioned this. I   stumbled across a few companies trying 
+to solve the problem but it is early. For this reason as well as the fact 
+that heterogenous integration adds   substantial complexity, the industry 
+largely holds that it can only be one   tool amidst a bunch of others to help 
+make better chips. It is not a panacea. ## Machine Learning is Hitting 
+Semiconductor Manufacturing The AI Boom remains a thing. It is often mentioned 
+as a significant demand driver for the industry. However people here in Europe do not seem 
+to be as "scale-pilled" as they are in the   Silicon Valley. Whether it has to do with 
+their focus on social issues or privacy or   because it is all happening far away from them, 
+I can feel more pessimism from the people here. Setting that aside however, it is also 
+undeniable that machine learning will   continue to revolutionize and open new 
+avenues for semiconductor manufacturing. Machine learning is already responsible 
+for turning Optical Proximity Corrections   from simple logical tickmarks that we add to 
+the design into what is essentially abstract   art. That sort of work will continue 
+to bleed in, though I doubt that any   foundry will be using GPT-5 or something 
+due to a general air of conservatism. ## Going Green Maybe it is because we are in Europe, but 
+sustainability is a major discussion point here. There are two big themes within this space that 
+caught my eye. First, because semiconductor   manufacturing is so energy intensive, it is 
+responsible for a great deal of carbon emissions.   Fabs run 24/7, which means they have to draw a 
+lot of power and from carbon-intensive sources. For this reason, IMEC estimates that semiconductor 
+manufacturing - work done after the wafer is   created - is more carbon-intensive than 
+beef production or even flight travel. But those are just estimates. 
+The key thing is that we do not   have any information since semiconductor 
+companies are so unwilling to share data. So IMEC is working on a cryptological platform 
+that lets those guys confidentially share   information that we can manipulate and compare 
+without actually revealing it. Its applications   are not necessarily carbon or semiconductor 
+specific, but are nevertheless intriguing. Second, something more recently appearing in 
+my field of view. The semiconductor industry   has been paying more attention to "forever 
+chemicals" or PFAS. Companies like ASML are   starting to drill down into their supply chain 
+to learn about their exposure to these chemicals. This is not just a European thing, a great policy 
+paper published by ChinaTalk mentioned this as   well - presenting it as a commercial 
+opportunity for the US CHIPS Act's new   semiconductor R&D institute - the National 
+Semiconductor Technology Center or NSTC. By the way, I wish they had a 
+different name for the NSTC. Between Taiwan's National Science and Technology 
+Council, The US's NIST - the National Institute   of Standards and Technology - and NTSC - 
+a video format standard - it is confusing. At least Sematech had "sem" in the name. Anyway, with regards to semiconductors and 
+the PFAS or forever chemicals in particular,   there are two major concerns. First has 
+to do with photoresist - the very special   chemicals that are exposed to ultraviolet light 
+in order to transfer the pattern onto the wafer. These basically use PFAS in huge quantities,   and are absolutely fundamental to 
+the semiconductor process. So for   a long time, this was a major and seemingly 
+insurmountable roadblock to PFAS elimination. However, there has been some recent 
+new developments. The emergence of   new EUV photoresists like Metal Oxide 
+Resists present the first possible   alternatives to the old compounds. So 
+there are some glimmers of hope there. But then we have the second point 
+- the fact that these chemicals are   extraordinarily prevalent. We use them 
+in everything. There are many dozens   of chemicals in this category. They are 
+literally everywhere and removing them   means having to make difficult choices 
+because there are few alternatives. I think this topic deserves a more complete video   down the line. I hope to work 
+on something like this later. The semiconductor industry is making these moves 
+because they apparently feel like that government   regulators might do something about this down 
+the line. So organizations like the SIA are   starting to collect information on this, 
+perhaps to build a roadmap down the line. ## Hyper-NA Might Be a Thing Former ASML President and CTO Martin 
+Van Den Brink gave a short but very   dense and informative speech about lithography. It will require a lot of processing 
+which has to be done later but something   I noticed is how he happened to 
+slip Hyper-NA EUV near the end. With High-NA EUV, the NA is 0.55. With Hyper-NA 
+EUV, the NA again rises to 0.75. Last year,   van den Brink had asked a few questions 
+about the technology in an interview, saying: > Theoretically, it can be done. 
+Technologically, it can be done.   But how much room is left in the market for even 
+larger lenses? Could we even sell those systems? But here we are now at this presentation 
+and van den Brink is putting Hyper-NA EUV   on the roadmap to come out in 2032 
+about eight or nine years from now.   Maybe it's just a final troll since he's retiring. I agree that it can be done. 
+There is nothing stopping ASML   from putting a Hyper-NA EUV system 
+out there. I really do worry just   how economically feasible it is to 
+ratchet up the NA again and again. But - and this is something I 
+have been hearing many times   during this trip - the other options 
+are not that great. There is no other   option for optical lithography. 13.5 
+nanometers is the end of the line. Perhaps we should start re-evaluating 
+electron beam projection lithography,   electron beam direct 
+lithography, or something else? Ok on to the next topic. ## Photonics is Hot But ... I talked to a lot of people who are working 
+in the silicon photonics space here. One thing that I keep hearing again and again 
+is that the industry still needs to find the   technology's killer app to build up volume 
+and stimulate more research in the ecosystem. Kind of like how the emergence of mobile 
+smartphones and their need for skinnier   SOC packages stimulated investment in what we 
+now call chip-scale packaging technologies. People seem to think that there might be 
+"something" in the interconnect space. And   indeed light is a less lossy and more power 
+efficient way of delivering communications   signals. And there is industry precedence 
+in light replacing copper. But again,   nothing so far. Either the 
+R&D or demand isn't there yet. Perhaps TSMC's recent continued 
+investments in their Photonic   Engine technology COUPE might 
+crack the nut? We shall see. ## The EU CHIPS Act News came out during the show about some 
+money - like $2-3 billion - allocated by   the EU CHIPS Act to various research labs 
+for advanced semiconductor development.   IMEC of course will receive some of that money. The EU CHIPS Act has not received the same 
+amount of attention that the US CHIPS Act   or the major policy initiatives 
+in Korea, Japan and China have. There have been a mix of reactions from 
+the people I talked to. More than a few   are skeptical. For instance, there is a broad 
+recognition that Europe does not host many of   the major demand drivers like mobile phones or 
+data centers - other than automotive of course. On other hand. There are a few people who 
+realize that, but nevertheless insist that   we still should build advanced semiconductor 
+fabs for national security reasons. Europe   is already spending a lot of money on 
+things. Why not semiconductors too? Deciding whether or not Europe should 
+spend billions of dollars of taxpayer   money on semiconductor manufacturing is beyond my   pay grade. But the division 
+of opinions is fascinating. ## Conclusion I want to thank IMEC and my helper Jade 
+for the opportunity to attend the show.   They were great hosts during 
+my visit the next day as well. I also want to thank the various people I was 
+able to meet while I was there. I felt like I   was constantly meeting new people. And though I 
+wanted to have deeper conversations with them,   we all too quickly had to move on. 
+I apologize for the brusqueness. A few people hag on Europe for a seeming lack of 
+semiconductor progress. But from my perspective,   Europe is doing very well on the 
+technology and research side. I   got to see a whole lot of really smart 
+people work on really far-out there tech. Much of this stuff will never see the light 
+of day. But that is why we have nonprofits,   universities, and grad students working 
+on that stuff and not expensive R&D   personnel. Part of learning what 
+works is learning what does not.

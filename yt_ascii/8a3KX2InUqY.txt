@@ -1,0 +1,135 @@
+so yeah i thought we could talk about the kidnap 
+robot problem today so kidnap robot problem is a   problem that is defined for mobile robots where 
+you take a robot from a known location and put   it in the space somewhere where the robot 
+doesn't know where it is and it tries to   relocalize itself to find where it is in that 
+space and basically a mobile robot tries to solve   a couple of problems which is the one one that 
+is maybe the underlying question is where am i don't know if there's any scope in explaining 
+what it is this is a toy mobile robot   and it has actuators motors here which would 
+drive these wheels and it has several sensors   such as sonar sensors here infrared sensors 
+here color sensor that looks in the ceiling   because this robot was trying to find this 
+way looking at some landmarks on the ceiling   and what this robot could try to do in its 
+life would be to navigate to a certain location   to move around to maybe clean up a space 
+and so on and the kidnapped robot problem   is when i take this robot from the known 
+location from the known map and put it   somewhere else and it will need to figure out 
+where it is in this known area so we have   in several algorithms in robotics where the robot 
+could also try to create the map while trying   to localize itself but the kidnapped robot 
+problem can be conceptualized within a known map   as well and this is the simplest way to probably 
+start explaining about what this with robotics   what we differ from ai is we really live 
+in a very dynamic and real world and   ai and robotics have been discussed in 
+conjunction with each other from 5th days on   because robotics has been an application 
+area of ai for quite a while even now but the problems that robotics focuses on 
+are more difficult because they are more   real and the constraints are more real time 
+so for example if you utilize computer vision   for this robot for example if you had cameras 
+you wouldn't train it or you would train it with   static images but you wouldn't 
+work with static images you would   work with a dynamic scene and the robot would 
+need to probably leverage that this leverage   is movement capabilities to get a better view 
+of the scene maybe dynamically change it and   do it in real time so the problems 
+of the robot is typically harder and   it's is buried in with a lot of uncertainty about 
+what it can do and what the world is about because   the robot starts with the representation of the 
+world let's say a map so in this area because this   is a two-dimensional robot you could create these 
+the scene with certain obstacles and it would   probably use its sensors to create an obstacle 
+map so it would say that here are probably some   obstacles and i'm saying probably because you 
+can't really trust anything on the robot these   sensors they may be broken they may if working 
+even working properly have uncertainty in readings   they have sensitivity especially with these kind 
+of cheap robots they have range they have limited   capabilities and the motors as well you think for 
+example i would actuate this robot this wheel what   wheels with the same velocity and let's say this 
+one wheel is actually not as large as the swamp   for example and you would have a small drift 
+and then that would actually change how your   how you're moving so the robot might think that it 
+is moving one meter forward but it might be maybe   drifting and these drifts these areas accumulate 
+over time which makes this localization problem a   very hard one because it needs to correct every 
+time so drift is one of the major problems because   when you think about programming a robot you could 
+maybe come up with the idea that i would just   actuate the motors i would make it draw a square 
+and you would expect it to draw a perfect square   oh this is a quite difficult task because 
+if i try to for example draw a square here   i would look at the paper and i would try to make 
+it look decent and even with my very good sensors   my actuation is not very robust and i couldn't 
+really draw a very solid square but when you   think of it if i close my eyes and if i try to 
+do the same task again i would do even worse   so this is my attempt with the closed eyes that's 
+pretty good actually that's pretty good actually   but anyways because this is not actually fully 
+open loop so there's these two concepts closed   loop and open loop in this one i was 
+actually correcting the motion through   looking at it so i'm having this measurement the 
+sensing to correct the motion and in here i shut   down one of my sensory modalities i didn't shut 
+everything because i still have proprioception   where i know where my hand is in space so i have a 
+rough idea that i'm drawing nicely so if you think   about maybe walking around with closed eyes in 
+a complex trajectory you would possibly get lost   and the robot is not different because there is 
+i say a lot of uncertainty in the internal system   of the robot but also within the world if it is 
+walking or it is driving on a sand scene then it   would drift more if it is really slippery it would 
+also drift and so on that's why these robots are   typically employed with these sensors and in 
+modern robotics we try to compensate for the   uncertainties of the sensing the actuation and the 
+environment by merging information by supporting   information so that you leverage the extra 
+information that you acquire from your sensors   from known things in the environment by to make 
+your movement better and to eventually obtain   localization which brings us to the kidnapped 
+robot problem if the robot is in a complete open   area with no landmarks and so on the localization 
+problem is very difficult and when you think of   it if you have this massive area which is empty 
+like this area for example you like this room it   has quite a lot of landmarks it can be anywhere 
+so if i place this robot for example in here   and if it only has this distance sensors 
+it would probably be wouldn't be able to   understand whether it is here here here all 
+of them are the same information for the robot   for the specific case because it only has these 
+frontal sensors if this robot has for example some   vision system if i did put it here then it would 
+see maybe certain things on the floor and then it   would know that it's probably not in this area 
+because you don't actually expect any of these   landmarks in that area but it wouldn't be sure 
+because you can't trust the sensor there is still   a possibility that you're seeing a black frame but 
+maybe your sensor is wrong so what you're seeing   is incorrect and we incorporate that kind of 
+information when we try to self-localize the robot   do you move the robot several times there how does 
+it you know how does it cope with that yeah   well it would have to move around and look so 
+it's a single sensory measurement it would have   for example we actually have a nice example here 
+if i put my robot here or here or here actually   the scene looks very very similar so if the robot 
+is actually here it would probably it would say   that i might be here i might be here or i might be 
+here and we do represent this true probabilities   in modern robotics so this idea of probabilistic 
+robotics has been the dominant approach to program   robots at the moment and what we do is we use 
+mathematical formulations the solid statistical   formulations to refine the uncertainty so that 
+we have a better belief about our decisions and   in the specific case the location of the robot 
+so what would this robot do in this situation is   this is actually quite a textbook example 
+so we have our robot here which is   maybe moving in this direction and 
+there are three doors in front of it and   let's put it a little bit far away for adding more 
+interest and what the robot does is it actually   continuously updates this belief over the state 
+of all positions and in the beginning you may   think that robots have an equal probability of all 
+locations so we start with a uniform distribution   saying that within this positional space it can be 
+equally anywhere and then it takes a measurement   let's say this is the first step and with 
+the measurement it would then have data   enough to update this belief then you would 
+know that it's so a door in front of it   so the belief would be updated to 
+say that i'm probably here here   or here add it onto this probability distribution 
+function through the use of three gaussians and   giving me this three peaks in the distribution 
+showing probably where i am and i'm not killing   these probabilities of being for example here 
+because as i say your sensor could be wrong   but this is not good enough because i still 
+don't know where i am and i still have a lot   of possibilities so i have to refine this and in 
+order to define this i would make the robot move   and the movement actually brings in a lot of 
+more information this is one of the powers   of the robots that they can actually change 
+their location they can start gathering more   information so by moving you actually 
+introduce uncertainty into the motion   into the probability distribution belief because 
+your motors your actuators they can be wrong as   well and that information would be used to again 
+collect more information through measurements   and in here after the moment what we do is we 
+shift our beliefs so this is the second step   and this is again the belief and i knew that i 
+was here and i will be moving maybe up till this   point my probable locations will be moving one 
+meter forward as well however these probabilities   are a little bit wider than this ones because i 
+have brought in some more uncertainty through the   movements and after this step i'm still in the 
+similar position where i don't know where i am   and what i would do is i would take 
+another measurement and this is once again   used to update my belief and what i saw here 
+is luckily i came in front of another door   so i would be once again here because everything 
+could have been wrong up till this point but probably i'm not here because i have seen 
+actually two doors and i trust my sensory   information so that probably i would have a better 
+belief here i could have been still here because   there was some probability over there and then 
+i could have been here as well so i'm probably   in front of the door even with two steps in the 
+story problem but iterating these over and over   sensing and updating the belief and then 
+moving and updating i would get a much better   posterior belief about where i am and presumably 
+adding other sensors in and more movement   and different dimensions is all possible yes you 
+can add multiple sensors especially and they do   often help as long as you confuse the 
+information nicely and typically in   robotics applications we do make use of many 
+sensors even in this robot we have quite many   for example in outdoor robotics you can use gps 
+to correct some of the motions that information   is not once again correct but if you're on a road 
+for example you have that constraint if you move   you would have that constraint and that would be 
+used to perfect your positioning although we all   know that for example when we are tracing our card 
+information is not always the perfect one but it's   a probabilistically good one if the space looks 
+very much alike then you're kind of in trouble   because this algorithm which uses a base filter 
+actually uses the similarities in space so the   robot always tries to find something that can be 
+distinguishable that looks like it works well for   a scene that the robot has already seen i've seen 
+that it's seen an area that it already knows okay   what happens if you put it somewhere it's 
+not seen before well in that case we it would   need to create the map as well and that is done 
+through this slam algorithm typically which is   simultaneous localization and mapping so it 
+would gather the information to create the   map as well as to localize itself so it would 
+wander around the environment and would try to   eventually find a space a location that can close 
+the loop and say that oh i've been here before   so this is how the map should be so at every 
+step it's actually fixes the map a little bit   cool slime wouldn't sound like another video yeah 
+probably char char is a bit like a hash function   in the sense that it takes a block of data and it 
+mixes it up and it uses that for its key stream   so we have a block and we'll talk about what 
+goes in there in a moment jacobson one of   the great creators of the internet he's one of 
+the men who made the internet work and helped autocaps manual publish

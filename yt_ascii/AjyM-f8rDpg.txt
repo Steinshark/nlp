@@ -1,0 +1,101 @@
+today i thought i'd talk about a paper fairly recent. it was last year a paper called "concrete problems in ai safety" which is going to be related to the stuff i was talking about before with the "stop button". it's got a bunch of authors; mostly from google brain google's ai research department, i guess.. well a lot of it's ai research, but
+specifically google brain and some people from stanford and berkeley and
+opening iearn. whatever... it's a collaboration between a lot of different
+authors the idea of the paper is trying to lay out a set
+of problems that we are able to currently make progress on like if we're
+concerned about this far-off sort of super intelligence stuff.. sure; it seems
+important and it's interesting and difficult and whatever, but it's quite
+difficult to sit down and actually do anything about it because we don't know
+very much about what a super intelligence would be like or how it
+would be implemented or whatever.... the idea of this paper is that it... it lays
+out some problems that we can tackle now which will be helpful now and that i
+think will be helpful later on as well with more advanced ai systems and making
+them safe as well. it lists five problems: avoiding negative side effects, which is
+quite closely related to the stuff we've been talking about before with the stop
+button or the stamp collector. a lot of the problems with that can be framed as
+negative side effects. they do the thing you ask them to but in the process of
+doing that they do a lot of things but you don't want them to. these are like
+the robot running over the baby right? yeah, anything where it does the thing
+you wanted it to, like it makes you the cup of tea or it collects you stamps or
+whatever, but in the process of doing that, it also does things you don't want
+it to do. so those are your negative side effects. so that's the first of the
+research areas is how do we avoid these negative side effects.. then there's
+avoiding reward hacking, which is about systems gaming their reward function. doing something which technically counts but isn't really what you intended the
+reward function to be. there's a lot of different ways that that can manifest
+but this is like this is already a common problem in machine learning
+systems where you come up with your evaluation function or your reward
+function or whatever your objective function and the system very carefully
+optimizes to exactly what you wrote and then you realize what you wrote isn't
+what you meant. scalable oversight is the next one. it's a problem that human
+beings have all the time, anytime you've started a new job. you don't know what to
+do and you have someone who does who's supervising you. the question is what questions do you ask and how many questions do you ask
+because current machine learning systems can learn pretty well if you give them a
+million examples but you don't want your robot to ask you a million questions, you
+know. you want it to only ask a few questions and use that information
+efficiently to learn from you. safe exploration is the next one which is
+about, well, about safely exploring the range of possible actions. so, you will
+want the system to experiment, you know, try different things, try out different
+approaches. that's the only way it's going to find what's going to work but
+there are some things that you don't want it to try even once like the baby.
+right, right.. yeah you don't want it to say "what happens if i run over this
+baby?" do you want certain possible things that it might consider trying to
+actually not try at all because you can't afford to have them happen even
+once in the real world. like a thermonuclear war option; what happens if
+i do this? you don't want it to try that. is that the sort of thing that.. yeah, yeah..
+i'm thinking of war games.. yes, yeah.. yeah. global thermal nuclear war . it runs through a
+simulation of every possible type of nuclear war, right? but it does it in
+simulation. you want your system not to run through every possible type of
+thermonuclear war in real life to find out it doesn't work cause you can't.. it's
+too unsafe to do that even once. the last area to look into is robustness to
+distributional shift. yeah it's a complicated term but the
+concept is not. it's just that the situation can change over time. so you
+may end up; you may make something. you train it; it performs well and then
+things change to be different from the training scenario and that is inherently
+very difficult. it's something humans struggle with. you
+find yourself in a situation you've never been in before
+but the difference i think or one of the useful things that humans do is, notice
+that there's a problem a lot of current machine learning systems. if
+something changes underneath them and their training is no longer useful
+they have no way of knowing that. so they continue being just as confident in
+their answers that now make no sense because they haven't noticed
+that there's a change. so.. if we can't make systems that can just react to
+completely unforeseen circumstances, we may be able to make systems that at
+least can recognize that they're in unforeseen circumstances and ask for
+help and then maybe we have a scalable supervision situation there where they
+recognize the problem and that's when they ask for help. i suppose a simplified
+simplistic example of this is when you have an out-of-date satnav and it doesn't seem
+to realize that you happen to be doing 70 miles an hour over a plowed field because somebody else, you know, built a road there. yeah, exactly. the general
+tendency of unless you program them specifically not to; to just plow on with
+what they think they should be doing. yeah. it can cause problems and in a large
+scale heavily depended on , you know , in this case, it's your sat-nav. so it's not
+too big of a deal because it's not actually driving the car and you know
+what's wrong and you can ignore it as ai systems become more
+important and more integrated into everything, that kind of thing, can become
+a real problem. although, you would hope the car
+doesn't take you in  plowed field in first place. yeah. is it an open paper or does it leave us with any answers? yeah. so the way it does all of these
+is it gives a quick outline of what the problem is. the example they usually use
+is a cleaning robot like we've made this. we've made a robot it's in an office or
+something and it's cleaning up and then they sort of framed the different
+problems those things that could go wrong in that scenario. so it's pretty
+similar to they get me a cup of tea and don't run over the baby type set up. it's
+clean the office and, you know, not knock anything over or destroy anything. and
+then, for each one, the paper talks about possible approaches to each problem and things we can work on, basically. things
+that we don't know how to do yet but which seem like they might be doable in
+a year or two and some careful thought this paper. is this one for people to read? yeah, really good. it doesn't cover anything like the range of the problems
+in ai safety but of the problems specifically about avoiding accidents,
+because all of these are these are ways of creating possible
+accidents, right? possible causes of accidents. there's all kinds of other
+problems you've been having in ai that don't fall under accidents but within
+that area i think it covers everything and it's quite readable. it's quite... it doesn't
+require really high-level because it's an overview paper, doesn't require
+high-level ai understanding for the most part. anyone can read it and it's on
+archive so you know it's freely available. these guys now working on ai
+safety, or did this then they've hung their hat up. they've
+written a paper and they're hoping someone else is gonna sort it all out. these people are working on ai safety right now but they're not the
+only people. this paper was released in summer of 2016, so it's been about a year
+since it came out and since then there have been more advances and some of the
+problems posed have had really interesting solutions or well.. not
+solutions, early work, that looks like it could become a solution or approaches
+new interesting ideas about ways to tackle these problems. so i think as a
+paper, it's already been successful in stirring new research and giving people
+a focus to build their ai safety research on top of. so we just need to watch this space, right? yeah, exactly..

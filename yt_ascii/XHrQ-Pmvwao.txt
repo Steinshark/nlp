@@ -1,0 +1,354 @@
+building a few houses isn't enough to 
+make a neighborhood. you also need to   build the roads and sidewalks to connect them. same with an integrated circuit. you can 
+stick a billion transistors on an ic,   but they are useless if you 
+cannot also connect them. that is what interconnects are for. they 
+are wires for transmitting the electrical   signals between transistors 
+and other circuit elements. for over 30 years, we used to make these 
+interconnects and their insulating layers   from aluminium and silicon dioxide, respectively. but by the late 1990s, it became 
+technically necessary to use new   materials. big technology transitions 
+are opportunities for certain companies   to pull ahead of the rest. in this 
+case, that certain company was tsmc. in this video, we are going to look at another one 
+of the semiconductor industry's major transitions:   the transition to copper/low-k interconnects. ## metallization since these interconnects are made from metals,   the industry calls the process of 
+laying these down "metallization". as a "back end of the line" process,   we do this metallization after we make 
+the transistors on the silicon wafer. the step where we produce 
+those silicon transistors is   called - what else? - "the front end of the line". so at the start of metallization, we have 
+the wafer with its transistor circuitry   etched into silicon. to get our 
+interconnects, we then put on layers   of fine metal wiring - called "metal 
+layers" - on top of the transistors. the metal layers are separated by 
+layers of an insulating dielectric   material. the technical term for 
+these is "intermetal dielectric   layers" - which is as literal a 
+name as you can possibly hope for. we will also need to cut holes into 
+the intermetal dielectric layers   to connect together multiple metal 
+layers. we call these cuts "vias". so initially, you might think of 
+an integrated circuit as this flat,   idyllic landscape of silicon circuitry. wrong, my dudes. today's advanced ics are 
+more like hong kong's old kowloon walled   city. layers and layers jumbled on top of 
+one another, intricately interconnected. ## rc delay we just want our interconnects to work. is that   too much to ask? apparently 
+not, because reality sucks. we need to talk about something known as rc delay.   the "rc" in rc delay stands 
+for resistance-capacitance. all wires have resistance in 
+them. resistance impedes the   flow of electrons through the metal - 
+degrading the signal and losing energy. a wire's resistance is dependent on its 
+material and proportional to its length. so,   thicker, shorter, and wider 
+wires have less resistance. and then there is capacitance - which refers 
+to objects' abilities to store charge. because the wires are so physically 
+close to each other and have these   insulating dielectric layers in between 
+them, the whole setup stores charge. why? it is because the setup mimics a real-life   capacitor - two conductors 
+with a dielectric between them.   this higher, unwanted capacitance slows down 
+the interconnect's ability to carry signals. so resistance and capacitance join up to create 
+something called rc delay. it is the extra time   for an electric signal to travel through 
+an interconnect. the longer the rc delay,   the longer it takes for signals 
+to propagate throughout the chip. a way that i have seen it explained is like 
+filling a bucket of water. resistance is like   how fast we can put water into the bucket. 
+and capacitance refers to the bucket's   literal size. how fast it takes to fill the 
+bucket with water, that is our rc delay. ## local interconnects a single microchip has several 
+types of interconnects within them. the lowest layers of metal wires to go on top   of the transistors are referred 
+to as the "local interconnects". as the name implies, local interconnects 
+connect local "blocks" of adjacent elements.   kind of like the small roads and 
+streets in your neighborhood. since these interconnects don't have to go so far,   we can make them thinner and put them 
+closer to each other. but since they are   so close to the transistor layer, they 
+also need to be more heat-resistant. we commonly produce these local 
+interconnects from materials   like poly-silicon, tungsten or aluminium. ## global interconnects higher up on the chip, we have 
+"global interconnect" layers. these are larger, longer connections that span 
+large portions of the chip. so you can imagine   that they are like city avenues or even highways 
+- connecting together large neighborhood blocks. these global interconnects are also used 
+to deliver other signals necessary for chip   operation. clock signals to synchronize the chip's 
+different parts. power to operate the chip. so on. because they have to cover 
+large distances within the chip,   we want their resistance to be 
+as low as possible. so we make   them to be as thick as possible and use 
+low-resistivity metals to produce them. in between the global and local metal layers, 
+we have medium-distance metal layers. these   have a variety of names like semi-global 
+interconnects or intermodule interconnects. so on. ## logic versus memory you tend to find more metal layers 
+on logic chips than memory chips. memories might have perhaps 3-5 metal layers. 
+there are a few reasons for this. first,   memory has a repetitive, very dense structure 
+that doesn't need a lot of interconnects. second, memories tend to have a bumpy 
+structure. there might be things   like trench capacitors - deep holes in the 
+silicon used for storing electrical charges. logic chips on the other hand are 
+much more irregular, with less   device density. but it is more important 
+that they are connected the right way,   so we generally need more interconnects 
+and more metal layers. sometimes 10-15. ## materials in the beginning, we used silicon dioxide 
+for the intermetal dielectric layer and   aluminium for the interconnects 
+- especially the global ones. the primary reason for this is that 
+both silicon dioxide and aluminium   are very easy to work with in manufacturing. you can easily lay down a good, 
+thick layer of silicon dioxide   in between the metal layers thanks 
+to chemical vapor deposition tools. and as for aluminium, the metal has the 
+fourth lowest resistance behind silver,   copper, and gold. it also works well with the 
+silicon dioxide in a manufacturing context. here is how we do it, we start 
+with a layer of silicon dioxide. now we lay down a plain thick layer of 
+aluminium on top of the silicon dioxide. we then use lithography to transfer the 
+pattern over to the aluminium metal layer. and then simply etch away the parts we don't 
+need. there, we have a metal layer done. if we still have more layers to do, 
+then we need to deposit another layer   of intermetal dielectric on top of the this metal,   polishing it down so that we can start 
+again with a smooth, flat surface. aluminium and silicon dioxide suit each other. 
+when you lay down that aluminium metal layer   on top of the silicon dioxide dielectric, the 
+two react to create aluminium oxide or alumina. this alumina layer acts like a protective 
+sheath, preventing the rest of the aluminium   atoms from diffusing into the rest of 
+the silicon dioxide. for the first 30   years of semiconductor technology, this 
+process worked quite well until it didn't. ## getting denser over time, chips got more dense. transistors got smaller. we were 
+putting more of them onto a single chip. more transistors means more 
+interconnects. generally,   semiconductor designers scaled the 
+interconnect system in two ways. they first shrank the size of 
+the interconnects. for instance,   pitch or the distance between two parallel wires. but this raises the electrical resistance of the   wires. more resistance means more 
+rc delay, slowing down the chip. so engineers responded by simply making 
+the wires relatively taller. but there is   a limit to how much taller these wires can 
+stand up over the rest of the landscape. this step-like structure is difficult to 
+work with in manufacturing. just imagine   trying to coat and etch such 
+even angles at nanometer scale. not to mention, denser clusters 
+of wires leads to more unwanted   capacitance. more capacitance means 
+more rc delay, slowing down the chip. so let's just add more more metal layers right? 
+well, this has its own set of process challenges.   these layers still have to go through the 
+semiconductor game loop of depositing thin   layers, transferring the pattern onto 
+them using lithography, and then etch. the more stacked metal layers there are,   the more chances we have to mess things 
+up. the more chances to mess things up,   the worse the yield will be. and bad yields 
+make the chip less economically viable. ## the big problem in the beginning, manufacturers and 
+designers did not much care about rc delay. this is because the rc delay was smaller than 
+the delays from the circuit devices themselves. but as time progressed and chips 
+have gotten more complicated, rc delay has become a more significant 
+contributor to the chip's final speed. by the mid-1990s it became clear that things 
+could not progress the same way they had before.   in 1978, ibm reported that the interconnect 
+pitch for the second metal layer - called   m2 - was about 20 micrometers. remember m2 
+is a local interconnect, so the thinnest. by 1994, the interconnect pitches on the highest   global layers - which are supposed to 
+be the widest - were 1.8 micrometers. new technological changes convinced the industry 
+to use aluminium interconnect technology for one   more generation - the 250 nanometer node which 
+started ramping up in 1996. but the end loomed. looking ahead at the 100 nanometer 
+process node scheduled a few years away,   it would take six times as long to 
+transmit a signal through a 1-millimeter   long interconnect as it would to send it 
+through an equivalent-sized transistor. lame. they might as well put 
+the signals on a mail pigeon. ## copper & low-k so we need to figure out a way to 
+fix this rc delay issue. the way   the scientists came up was to replace 
+the interconnect system's materials. first, we change the low-resistivity metals in the 
+interconnects themselves from aluminium to copper. this was an obvious choice. copper lines have 35% 
+less resistance than their aluminium counterparts. second, we can cut unwanted capacitance 
+by changing the material in the insulating   dielectric layer from silicon dioxide 
+to another one that carries less charge. we measure a substance's ability 
+to store charge using a factor   called "dielectric constant" or "k-value". so this new material needed to have a k-value 
+lower than that of the traditionally used   silicon dioxide - 3.9 - it was referred 
+to as "low-k dielectric". creative. together, a copper & low-k solution lets 
+manufacturers do fewer metal layers and   thinner wires - potentially cutting 
+the rc delay time by a factor of four. ## ibm's big announcement in september 1997, ibm shocked the semiconductor   world when they announced that they had 
+successfully produced copper interconnects. they had been working on the problem for 
+15 years. as the project - code-named   "red aluminium" - ramped up, a team of ibm 
+engineers worked' hours a day in secret. engineer ron goldblatt recalled 
+standing at the ibm parking lot   at 3 am, wondering if he should 
+bother driving home. he says: > "there was a real period of time when we 
+lost all track of time ... they couldn't   pay someone enough to make them do it. it 
+has to be a different sense of motivation" it was a triumphant achievement, capped 
+by one of the most famous images in   semiconductor history. six layers 
+of copper interconnects. beautiful. ibm said that they intended to mass-produce 
+copper-wired wafers by "early" 1998 - with   the first chips going to its critical 
+customer apple computer for their power macs. ## copper problems ibm's announcement was such a big deal because 
+copper has some serious manufacturing problems. aluminium and silicon are good friends,   manufacturing-wise. this is 
+not the case with copper. first, copper atoms can quickly 
+diffuse into silicon or silicon   dioxide and accumulate there like 
+mercury in a tuna. this hurts how   well the chip can perform. they don't 
+call it "copper poisoning" for nothing. so the semiconductor manufacturer must 
+produce what is called a "diffusion   barrier" to block off the copper 
+from entering into the silicon. this barrier has to have special 
+properties. it must stick to both   the copper and low-k insulation layers. 
+it must not corrode. and we must be   able to easily and evenly lay it down. we 
+usually use materials made from tantalum. ## damascene perhaps most troublingly, you can't etch copper. copper does not have a suitable etchant. this 
+means that - unlike with aluminium - we cannot   just deposit a layer of copper and 
+etch away the parts we don't need. so we have to do something else. ibm decided to   reverse the traditional sequence. 
+rather than subtract, we shall add. we start by first laying down 
+the intermetal dielectric layer. then we do lithography to 
+transfer the interconnect   patterns - including the trenches 
+and vias - onto the dielectric. after that, we etch the pattern into 
+the dielectric layer. so far, so good. next, we apply the aforementioned diffusion 
+barrier - our protection to keep the copper   from slipping away. it is usually made from 
+tantalum or some chemical compound with it. after this, we fill our trench with copper. this 
+would be done using a method like electroplating   - an electrochemical deposition process that ibm 
+knew to be its secret sauce. more on that later. but we are not done! no, no. before we finish, 
+we have to sand off any excess copper and then   apply a capping layer on top of the copper 
+to keep it from diffusing where it shouldn't. because this method kind of reminds you of the 
+fancy metal inlay techniques they used back in   the middle ages, this whole roundabout process 
+was named after damascus, the capital of syria. the damascene method. sounds complicated 
+and unintuitive? it is. semiconductor   manufacturing is literally black magic. 
+all of this just barely works, man. ## the copper road behind ibm's ground-breaking announcement was a 
+series of cumulative technological advancements. we needed to have first discovered tantalum and 
+tantalum nitride as having good diffusion barrier   properties. research on this started in the late 
+1980s and progressed through the early 1990s. and we needed to have 
+invented the damascene method,   which was not particularly intuitive. 
+ibm invented this some time around 1985. but the biggest sticking point 
+was how on earth were they going   to fill the empty trenches and vias with copper. ibm tried various traditional semiconductor 
+manufacturing methods like sputtering,   physical vapor deposition, 
+and chemical vapor deposition. all of these methods left defects. this was 
+because they steadily applied copper atoms on the   trenches' side surfaces until the copper growth 
+met in the middle. you end up with seams or voids. finally in 1989, a small group came 
+across the idea of "super-filling" or   "bottoms-up growth". here, we fill 
+the trench from the bottom-up like   as if it were a regular liquid. this 
+was only possible with electroplating. in 1993, a small team at ibm mixed this 
+winning combo of diffusion barriers,   damascene, and electroplating to 
+produce multi-level copper wires.   this was the first inkling that we 
+can use copper instead of aluminium. however, this first damascene production method 
+was not economically viable. the throughput   and yields - particularly with the vias - 
+did not meet ibm's internal requirements. another ibm team led by dan edelstein 
+re-engineered the process recipe. it includes what is called a "dual 
+damascene" methodology that produced   both the trenches and vias 
+together at the same time. in 1995, this new recipe passed internal 
+requirements and ibm committed to bringing it   to high volume production. after two more years 
+of development, they made the big announcement. ## bringing it to the fab but announcements of this or that breakthrough are 
+a dime a dozen. show it to me working in the fab. doing it in high volume would be 
+a formidable task for ibm's chip   foundry, which had suffered from 
+cost-cuts throughout the 1990s. since copper can poison the silicon and 
+cause defects, we must keep it out of the   rest of the fab. so tools on the copper lines 
+- lithography, metrology, otherwise - should   be isolated. a tricky task to pull off since 
+many fabs share tools across different lines. oh also, copper easily dissolves into 
+water. copper in water is quite toxic   so we need to install new waste disposal 
+technologies in the fab in order to handle it. ## rumblings at the time of the november 1997 announcement,   newspapers and others in the media declared ibm 
+to some 1-3 years ahead of their competitors. then just 2 weeks after ibm's announcement, 
+motorola announced in early october 1997 that   they too had produced copper interconnects. 
+how did everyone catch up so fast? before 1989, ibm was the only company in the 
+industry investigating copper interconnects.   but after then, the whole industry realized 
+the deficiencies of aluminium interconnects   and that something else had to replace 
+it. copper was an obvious choice. people also sensed through ibm's published 
+papers and other subtle signs that big blue   was working on "something" with copper. 
+so the other companies slowly got into it. motorola started their copper work in 1990 - 
+having caught wind of it through their alliance   with ibm for the powerpc chip. ibm never told 
+them anything, but motorola guessed through   changes that ibm made to the powerpc design rules 
+that some sort of copper breakthrough was nigh. amd, some time in 1995. they were slow but quickly 
+ramped up. and at&t - bell labs - around the same   time. interestingly, at&t developed their entire 
+copper interconnect stack separately from ibm. perhaps most surprisingly, intel didn't start 
+their copper interconnect program until 1997. and that is despite their own researchers having   published a paper on using electroplating to 
+produce copper interconnects back in 1989. ## rapid catch-up so in the few years before ibm's big announcement, the number of published articles on copper 
+interconnect technology steadily rose. much of this research was done through 
+sematech. sematech is an r&d consortium   that helps coordinate public-private 
+partnerships around the united states. many executives at those companies also have 
+positions at sematech. inspired by ibm's releases,   they directed public r&d funds to universities to 
+study the technology. the findings were released   into the public domain and the semiconductor 
+companies hired grad students from those teams. so while ibm tried very hard to keep certain 
+details of their work a secret - particularly   the copper fill part of it - the rest of the 
+semiconductor industry rapidly caught up. ##'0 nanometers as i mentioned, the next leading edge node was'0 
+nanometers - scheduled for high volume in 1999. this major node saw a large series 
+of technical changes. first,  '0 nanometers - they called it 0.18 
+microns at the time - not only had   the copper interconnects but also another 30% 
+reduction in feature size as per moore's law. second, it was about the same time the 
+fabs started receiving new 193-nanometer   duv excimer laser lithography tools. so 
+they were learning these at the same time. and third, the 300 millimeter wafer transition 
+was supposed to happen with this node too. but   considering all the things that were 
+already going on, intel and the rest   of the industry opted to push that back 
+1-2 more years to the 130 nanometer node. in 1998, ibm kicked off the'0 nanometer 
+generation with the powerpc 750cx. the copper interconnects indeed sped up 
+these chips from 300 to 400 megahertz,   leapfrogging ibm to first place 
+in the technological race. coming up close behind them was motorola. 
+they decided to do a half node in between   250 and'0 nanometers, rolling out 
+a 220 nanometer node in late 1998. the first chips to come out with 
+this were the powerpc g4 chips,   which powered apple's classic titanium 
+powerbook g4 and ibook g4 laptops. it is important to note that the semiconductor 
+manufacturing industry had far more players back   then. everyone had their own variant 
+of the'0 nanometer "generation",   and so people picked and chose what parts of the 
+spec they wanted to adopt for their own variant. an example of this is that intel's'0 nanometer 
+process did not use copper interconnects. this was   for two reasons. first, like i mentioned 
+earlier, they were late to copper. and second, intel needed a process that they can 
+scale - rapidly scale - to massive quantities   for their pc cpu monopoly. about 112,000 
+200-millimeter wafers per month by the year   2000. and at the time there were not enough 
+copper tools coming out of the suppliers. intel would not implement copper interconnects 
+until november 2000 with the following 130   nanometer node. and even then those chips had 
+just six layers out of the seven made from copper. ## tsmc and umc across the pacific, we have the asian foundries - 
+the largest of which were tsmc and umc in taiwan. they had started from even further behind 
+the american companies. until 1997,   they never even seriously considered 
+copper. now they had to very quickly learn. tsmc had struggled with their 250 nanometer 
+process, leaving the door open for their fierce   rival. umc was rapidly catching up. their 
+revenue growth from 1995 to 1999 exceeded   tsmc's - putting the two companies neck to neck 
+in terms of foundry market share - 30% to 27%. and critically, umc was catching up in 
+terms of capacity. at the end of 1999,   umc had 1.7 million 8-inch wafers of capacity 
+compared to tsmc's 1.9 million 8-inch wafers. umc ceo john hsuan said: > the trends indicate that we will pass tsmc 
+in revenue sometime next year ... right now   it's a capacity game, and if we want to pass 
+them, we have to increase our capacity ... > tsmc has stayed fairly 
+flat for the past few years,   while we are growing significantly 
+... we will catch them very soon tsmc chairman and ceo morris chang wasn't going 
+to let that happen on his watch. while ramping   up 250 nanometers, he cycled through three vps 
+of r&d before one guy finally got the job done: dr. chiang shang-yi, who joined in mid-1997 and   worked day and night for 
+over four straight months. hitting the next node -'0 nanometers - 
+would require copper, but neither tsmc nor   umc had any experience in it. how 
+were they going to learn about   this? the two companies opted for different paths. umc decided to join an ibm-sponsored 
+research consortium - i believe it   was the semiconductor research 
+corporation - to collectively do   research on copper interconnects. so 
+they benefitted from ibm's patents. tsmc, on the other hand decided to go it 
+alone. a team of six elite semiconductor   scientists led a crash-effort to develop a 
+tsmc-only copper interconnect implementation.   the team was burn lin, yang guanglei, 
+chiang shang-yi, jack sun, douglas yu ... and of course, dr. liang mong-song (???). i did 
+a video about him a while back. go watch it. both methods worked to some extent. in 
+1999, both umc and tsmc started shipping  '0-nanometer chips to fabless customers with 
+the top two metal layers made with copper. this lagged behind ibm's'0-nanometer copper 
+chips - which had six out of the seven layers   made from copper - but nevertheless it was a 
+commendable step towards full copper-ization. ## the low-k problem now i want to shift gears a bit. for a while now, i have been talking about copper.   copper copper copper. those of you 
+who paid attention at the start,   you might have noticed that i have so 
+far ignored one other piece of the story. copper is just half of the 
+interconnect system - the   half for addressing increasing wire resistance. we still need a good low-k material for the   intermetal dielectric layers for 
+cutting down unwanted capacitance. the big problem was that the semiconductor 
+industry did not have a really good low-k   material to replace silicon dioxide. 
+particularly, one that fit well into the   process flow. the materials just kept falling 
+apart or failed the reliability metrics. what makes the low-k dielectric situation so 
+tricky compared to the copper situation was   that with copper, we know what we are dealing 
+with. working with copper was challenging,   but ultimately it was just a 
+materials engineering problem. but with low-k we don't even 
+know what we need to engineer. ## tsmc spins around the semiconductor industry 
+tried to do low-k three times. first at the 250 nanometer node, they doped the 
+traditional silicon dioxide with fluorine to   create fluorinated silicon glass, or fsg. fsg's 
+k-value was just slightly lower than traditional   silicon dioxide - about 3.5 versus 3.9 - and 
+you applied it with chemical vapor deposition. at the'0 nanometer node, the industry 
+tried another substance called hydrogen   silsesquioxane or hsq. it has a lower 
+k - about 2.8. they would try applying   this hsq material onto the wafers 
+using a technique called spin-on. spin-on is exactly what you might think 
+it is. you spin the wafer very quickly   and then pour on the low-k dielectric 
+such that it spreads out over the wafer.   it was seen as a cheaper way 
+to produce a good, even layer. the hsq spin-on technique passed all the internal 
+tests, but in high volume production it failed to   scale. apparently because spin-on combined 
+with the high temperatures of fab production   stressed the hsq layer and caused it to 
+distort beyond acceptable parameters. this was a major problem. tsmc 
+immediately freaked out and typed   "git reset --hard". except it wasn't 
+that easy in real life. chiang recalls: > we found out at the last moment, 
+after we already went to production.   and then it was around christmas time and 
+we immediately tried to put the fsg back,   so again we worked days and at night, no 
+break for christmas, no break for new year,   no break for chinese new year. all the 
+way and under very high pressure ... they were not alone in this grief. 
+texas instruments suffered through the   same situation as well. and even with all their 
+efforts, tsmc still shipped'0 nanometers late. ## the legendary 130 the next major node after'0 
+nanometers - tsmc did a minor 150   nanometer node in between - was 130 
+nanometers. 130 would be legendary. here, the industry expected to have completed 
+the copper interconnect transition and also have   a "true" low-k dielectric layer material. the big 
+question again was, what material should they use? umc, ibm, and infineon worked together on their 
+130 nanometer node variant. on april 2000, ibm   again announces another technical breakthrough. 
+they would be adopting a proprietary new low-k   material from dow chemical called silk - 
+applied again with the spin-on technique. silk had a dielectric constant or k-value of 
+2.6 and maybe even 2.2 - which would fulfill   fabs' needs for until the 65 nanometer node 
+generation. it was a bold technological choice. but several in the industry - including 
+texas instruments - argued for another path.   ti favored a different low-k dielectric 
+material called "black diamond" from   applied materials. its k-value 
+was about 2.8, similar to silk. the catch was that black diamond 
+was exclusive to chemical vapor   deposition. you cannot apply it onto 
+the wafers with the spin-on technique. makes sense. it is applied materials,   after all. they'll use cvd to butter their 
+breakfast croissants if they had the choice. so the larger semiconductor industry split into 
+two over this decision of which low-k dielectric   to go with for their flavors of the 130 nanometer 
+node. ibm, umc and their affiliates, silk. texas instruments chose to go with 
+black diamond - which sounds like a   fast race horse or a particularly pungent perfume. tsmc as well. in their case, 
+literally just because dr.   chiang personally swore that he would 
+never again touch the spin-on technique. intel for their part apparently 
+chose to stick with the older,   second-generation fsg technique. again 
+because of their larger capacity needs. in the end, the silk + spin-on setup failed. ibm 
+failed to ship a product with it. umc's customers   failed to ship a product with it - a technical 
+decision with a dear financial and strategic cost. on october 2001, tsmc became the first to ship   130 nanometer chips with both copper 
+interconnects and low-k dielectric. to ensure customers like nvidia got their chips, 
+tsmc offered an alternate fsg dielectric version.   tsmc's primary fabs for this node 
+were fabs 6 and 12 in hsinchu. it took some time. yields for 
+products like nvidia's nv30   started off in the teens - but by late 
+2002 they got them to 70% and higher. at the end of 2001 - soon after tsmc started 
+shipping - umc signaled defeat. they defected from   ibm and infineon, dropping silk for a cvd process 
+from novellus systems. it was a costly bad choice. strangely, ibm said nothing about this 
+until 2002. when one of their biggest   fabless customers xilinx very publicly announced   that their higher-end fpgas would be 
+delayed specifically because of silk. their president willem roelandts 
+later called them out in a 2003   business week interview - saying that 
+while ibm was strong in technology,   it needed to improve its manufacturing 
+skills and move faster. a loss of face. ibm eventually switched to cvd too. 
+their team defended the silk decision,   with their cto bernie meyerson saying in 2003: > quite bluntly, there were a lot of 
+reasons to run with silk ... on the surface,   it looked like it had the potential 
+to have a lower dielectric constant.   no one else was doing it at the time, and 
+we just made a decision. we ran with silk > instead of throwing rocks at us, the 
+industry should be saying 'thanks guys,   you saved us from this' a disappointing close to a promising start. 
+ibm micro's inability to capitalize on its   first hard-won innovative 
+breakthrough would cost it. ## conclusion tsmc's monumental 130-nanometer node set the 
+taiwanese giant apart from everyone else. the taiwanese government awarded tsmc's 
+r&d team - "?????", or "the six r&d   horsemen" - the 2003 outstanding scientific and 
+technological worker award for their success. for years, tsmc was seen as a simple factory 
+for meeting excess demand. in other words,   producers not innovators. people did not 
+particularly respect their r&d chops. the 130 nanometer node changed 
+everything. from then on,   people in the industry now knew that 
+tsmc was a force to be reckoned with.

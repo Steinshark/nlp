@@ -1,0 +1,103 @@
+in the past, power generating plants were
+only able to serve their local areas. electricity didn't have far to travel between
+where it was created and where it was used. since then, things have changed, and most
+of us get our electricity from the grid, huge interconnected areas of power producers and
+users. as power plants grew larger and further away
+from populated areas, the need for ways to efficiently move electricity over long distances
+has become more and more important. stringing power lines across the landscape
+to connect cities to power plants may seem as simple as connecting an extension cord
+to an outlet, but the engineering behind these electric superhighways is more complicated
+and fascinating than you might think. hey i'm grady and this is practical engineering. on today's episode we're talking about
+electrical transmission lines. this episode is sponsored by hello fresh. more on that later. generating electricity is a major endeavor,
+often a complex industrial process that requires huge capital investments and ongoing costs
+for operation, maintenance, and fuel. electric utilities only earn revenue on the
+power that makes it to your meter. they aren't compensated for energy lost
+on the grid. so if we're going to go to the trouble of
+producing electricity, we want to make sure that as much of it as possible actually reaches
+the customers for whom it's intended. the problem is most power plants are usually
+located far away from populated areas for a variety of reasons: land is cheaper in rural
+areas, many plants require large cooling ponds, and most people don't like to live near
+large industrial facilities. that means that massive amounts of electricity
+need to be transported long distances from where it's created to where it's used. power lines are the obvious solution to this
+problem, and sure enough, stringing wires (normally called conductors by power professionals)
+over vast expanses of rural countryside is, in general, how bulk transport of electricity
+is carried out. but, if we want this transport to be efficient,
+there's more to consider. even good conductors like aluminum and copper
+have some resistance to the flow of electric current. you even can see this at home. we can measure a small drop in voltage when
+a hair dryer is plugged directly into an outlet and turned on. trying this again at the end of a long extension
+cord, the drop in voltage is much more significant. this difference in power represents energy
+lost as heat from the resistance of the extension cord. in fact, this lost power is pretty easy to
+calculate if you're willing to do a little bit of algebra (which i always am). electrical power is the product of the current
+(that's the flow rate of electric charge) and the voltage (that's the difference in
+electric potential). for a simple conductor, we can use ohm's
+law to show that the drop in voltage from one end of a wire to the other is equal to
+the current times the resistance of the wire measured in ohms. substituting this relationship in, we find
+that the power loss is equal to the product of current squared and resistance. so if we want to reduce the losses in a power
+line, we have two variables to play with. we can reduce the resistance of the conductor
+by increasing its size or using a more conductive material, but look what matters even more:
+the i-squared term. reducing the current by half will cut the
+lost power to one-fourth and so on. going back to ohm's law, we can see that
+the only way to reduce the current and still get the same amount of power is to increase
+the voltage. so, that's just what we do. transformers at power plants boost the voltage
+up to 100,000 volts and sometimes much higher before sending electricity on its way over
+transmission lines. this lowers the current in the lines, reducing
+the wasted energy and making sure that as much power as possible makes it to customers
+at the other end. this simple demonstration illustrates the
+concept. if i try to power a hair dryer using these
+thin wires, it is not going to work. the current required to power the dryer is
+just too high. it creates so much heat that the wires completely
+melt. that heat represents wasted energy. but, if i first boost the voltage up using
+this transformer and step it back down on the other side of the thin conductors, they
+have no problem carrying the power required to run the dryer. we've essentially swapped high current for high voltage,
+making the conductors more efficient at carrying power. what we've also done is make things much
+more dangerous. you can think of voltage as electricity's
+desire to flow. high voltages mean the power really wants
+to move and will even find a way to flow through materials we normally consider non-conductive,
+like the air. the engineers designing high voltage transmission
+lines have to make sure that these lines are safe from arcing and other dangers that come
+with high voltage. most long distance power lines don't use
+insulation around the conductors themselves. insulating in this way would have to be so
+thick that it wouldn't be cost effective. instead, most of the insulation comes from
+air gaps, or simply spacing everything far enough apart. transmission towers and pylons are really
+tall to prevent anyone or any vehicle on the ground from inadvertently getting close enough
+to conductors to create an arc. bulk electricity is transmitted in three phases,
+which is why you'll see most transmission conductors in groups of three. each phase is spaced far enough from the other
+two to avoid arcing between the phases. the conductors are connected to each tower
+through long insulators to keep enough distance between energized lines and grounded pylons. these insulators are normally made from ceramic
+discs so that if they get wet, electricity leakage has to take a much longer path to
+ground. these discs are somewhat standardized, so
+this is an easy way to get a rough guess of a transmission line's voltage. just multiply the number of discs by 15. for example, this line near my house has 9
+discs on each insulator, and i know it's 138 kilovolt line. you'll also often see smaller conductors
+running along the top of transmission lines. these static or shield wires aren't carrying
+any current. they're there to protect the main conductors
+against lightning strikes. high voltage isn't the only design challenge
+associated with electric transmission lines. just selection of the conductors alone is
+a careful balancing act of strength, resistance, and other factors. transmission lines are so long that even a
+tiny change in the conductor size or material can have a major impact on the overall cost. conductors are rated by how much current they
+can pass for a given rise in temperature. these lines can get very hot and sag during
+peak electricity demands, which can cause problems if tree branches are too close. wind can also affect the conductors, causing
+oscillations that lead to damage or failure of the material. you'll often see these small devices called
+stockbridge dampers to absorb some of the wind energy. high voltage transmission lines also generate
+magnetic fields that can induce currents in parallel conductors like fences and interfere
+with magnetic devices, so the height of the towers is sometimes set to minimize emf at
+the edge of the right-of-way. in certain cases, engineers even need to consider
+the audible noise of the transmission lines to avoid disturbing nearby residents. even with all those considerations, the classic
+model of the power grid with centralized generation away from populated areas is changing. the cost of solar panels continues to drop
+making it easier and easier to produce some or all of the electricity you use at your
+own house or business and even export excess energy back into the grid. this type of a local generation happens on
+the distribution side of the grid, often completely skipping large transmission lines. on the other side of that coin, the energy
+marketplace is changing as well, and grid operators are buying and selling electricity
+across great distances. electrical transmission lines may seem simple
+- the equivalent of an extension cord stretched across the sky. but, i hope this video helped show the fascinating
+complexity that comes with even this seemingly innocuous part of our electrical grid. this is a segue between electrical infrastructure
+and my favorite meal delivery kit, hellofresh. and this is my wife and i trying to film ourselves
+making dinner. spending time in the kitchen is one of our
+favorite things to do together, and hellofresh makes it super fun to cook and eat dinner
+together without the chore of planning meals and shopping for groceries. the recipes are so delicious and always include
+seasonal ingredients that are different from the stuff we normally make. hellofresh comes right to your doorstep with
+fresh, pre-measured ingredients and easy-to-follow recipe cards, and it's flexible so you can
+add extra meals, side items, or desserts to your order, and right now the price starts
+at $5.66 per serving, which is pretty reasonable for a date night. and you know what's even more reasonable? the 8 free meals that hellofresh is giving
+to fans of the channel who visit hellofresh.com and enter practical80 at checkout. that's $80 off your first month of hellofresh. just click the link in the description use
+code practical80 at checkout. thank you for watching, and let me know what
+you think!

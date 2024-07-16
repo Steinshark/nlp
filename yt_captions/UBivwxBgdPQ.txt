@@ -1,0 +1,171 @@
+This is a map of the Mississippi River drafted
+by legendary geologist Harold Fisk. It’s part of a fairly unassuming geological
+report that he wrote in 1944 for Army Corps of Engineers, but the maps he produced are
+anything but run of the mill. They’re strikingly beautiful representations
+of not just the 1944 path of the Mississippi, but of all the historical paths it’s cut
+through the landscape over thousands of years. Although astonishing to see on a map, that
+meandering path represents a major challenge, not just for the people who live and work
+near the river, but the people around the world who depend on the goods and services
+that it supports. And that’s a lot of people. What the native Americans called the “Father
+of Waters” is one of the most important freight corridors in the entire United States,
+and a huge proportion of the grains we export to other countries is transported on barges
+along the Mississippi. A change in the river’s course could bottleneck
+freight traffic, cripple the economy, and potentially even result in a global food crisis. In the 80 or so years since Harold Fisk’s
+report was written, we’ve spent billions of dollars on infrastructure just to coerce
+the mighty Mississippi to stay within its current channel. And that’s only a single case study in a
+battle that’s happening nonstop, around the world between human activity on Earth
+and the dynamic nature of the rivers that form its landscape. Even though the natural shifting and meandering
+of rivers and streams can seriously threaten our infrastructure, our economy, and even
+the environment, it’s not something that many people pay attention to or even know
+about at all! Because the timescale is slow and gradual,
+you don’t see it in the headlines until it becomes a serious problem. And the factors that affect how rivers move
+don’t really follow our intuitions. So, we’ve teamed up with Emriver, a company
+that makes physical river models called stream tables to create a two part-series on the
+science and engineering behind why river channels shift and meander, and what tools engineers
+use to manage the process. We’re on location at their facility in Carbondale,
+Illinois, and I’m so excited to show you these models. I’m Grady, and this is Practical Engineering. On today’s episode, we’re talking about
+fluvial geomorphology, or the science behind the shape of rivers. If someone asked you to engineer a channel
+for water to flow between two locations, what path would you choose? Probably a straight line between them, right? It’s the simplest and most cost effective
+choice. So why doesn’t mother nature choose it? This river table is full of media that represents
+earthen materials like silt, sand, and gravel. Each particle size has a different color to
+make it easier to differentiate. (And the online video compression algorithms
+love this stuff.) Water flows in at the top of the table and
+out at the bottom, so we can witness the actual physical processes that happen in real rivers. In the real world, this river system would
+be tens or hundreds of miles long, and what happens in this model over the course of a
+few hours might take hundreds or thousands of years as well. Let’s create that straight path in the earth
+connecting the inlet and outlet of the stream table, set the water flowing through it, and
+just see what happens. Did the river behave like you expected,
+or was the formation of the meandering path a little bit unintuitive? Hopefully by the end of this video, it will
+make perfect sense. We learn about the process of erosion even
+when we’re really young. Wind and water carve at the earth, transporting
+the material from one location to another. In most places, erosion happens so slowly
+that you could never watch it in action, like growing grass or drying paint. But take a look at a river and you immediately
+see erosion underway. All you have to do is dip below the surface
+of the water and look. We usually think of rivers as highways for
+water, but they also transport another material in enormous quantities: sediment. All that silt, sand, gravel, and rock that
+erodes from the earth cascades and concentrates in rivers and streams, where it’s carried
+through valleys and eventually out to the lakes and oceans. Because of their power to move rock and soil,
+the shape of earth’s landscape, the geomorphology, is hugely influenced by river systems. Maybe because the processes themselves happen
+so slowly, it took a long time for science to develop around how and why rivers change
+their paths through the landscape. But, in the 1950’s, a civil engineer and
+hydrologist by the name of Emory Lane quit his job at the US Bureau of Reclamation to
+serve as a professor at Colorado State University. Through his time at the Bureau, he worked
+in hydraulic laboratories studying the interactions between water, soil, and rock. By the time he accepted his appointment, he
+was well on the way to developing a unified theory of sediment transport. In 1955, he published his landmark equation
+that is still used today by engineers, geologists, and other professionals in the river sciences. And just like a lot of the most famous equations
+in history, it doesn’t look too complicated. It says that, in a stable stream, the flow
+of water multiplied by the slope of that stream is proportional to the flow of sediment in
+the stream multiplied by the size of that sediment. It seems simple - just four parameters - but,
+you know, it’s also a funny looking equation with zero context, so maybe you’re not feeling
+like an expert just yet. But, with the help of the stream table, I
+can show you the beauty of this relationship and how simple it makes predictions about
+how rivers will behave. Let’s just look at some examples. Say that a large area is hit by wildfire that
+burns all the trees and vegetation. Where before you had a lush and verdant landscape
+with plants, bushes, and trees to stabilize the soil, now it’s mostly just bare earth. When it rains, the water that runs off the
+burned area erodes the unprotected landscape, washing more sediment into the river than
+it would have before the fire. We can demonstrate this by simply adding media
+to the upstream part of the stream table. Can you predict how the river will respond? Let’s look back at Lane’s Equation. We’ve increased the flow of sediment in
+the river, but we haven’t changed any of the other variables. We didn’t change the size of the sediment,
+we didn’t change the flow in the river, and we didn’t change its slope. That means the two sides are imbalanced. Lane’s Equation no longer holds true, and
+the river is out of equilibrium. In other words, this is no longer a stable
+channel. In fact, we can convert Lane’s equation
+into a diagram to make this much simpler to understand. On one side of this balance is the sediment
+load and the other side is the volume of flow in the stream. Add more flow and you can transport more sediment. Reduce the flow of water, and you reduce the
+flow of sediment accordingly. Pretty straightforward, right? But we still have to include the other two
+parameters, sediment size and stream slope. Now you can see how things get a little more
+complicated to keep in balance. Any disturbance to any of these four parameters
+causes the scale to get out of balance, affecting the stream’s equilibrium. When that happens, you have short term consequences,
+and long term ones too. For the wildfire example where we increased
+the sediment load in the stream, the top of the balance swings left toward deposition. There’s not enough water to keep the sediment
+in suspension, so it’s going to deposit within the bed of the river like we’re seeing
+here in the model. The flow in this example just can’t hold
+all the sediment we’re washing into it, so it accumulates in the bed and banks of
+the channel over time. Here’s another example of a natural disruption
+to a river system that’s easier to demonstrate in the flume. Beavers build a small dam across the channel,
+creating a pond that slows down the flow. As the velocity of the stream reduces, heavier
+sediment settles out. That means that the water below the beaver
+dam only carries the fine particles of silt and clay downstream. You can see the lighter white particles being
+carried away while the darker, heavier ones get caught behind the dam. Let’s take a look at Lane’s Balance to
+predict what will happen to the stream. When we reduce the size of the sediment load
+in the river, it shifts the left side of the balance inward, and again we lose our equilibrium. But this time, instead of deposition, we can
+expect the stream to erode downstream, and downstream of a dam, human- or beaver-made,
+is a common place to find erosion occurring. Let’s look at one more example of a natural
+disturbance to a river, changes in the flow. After all, rivers rarely carry a constant
+volume of water. Their flows change with the seasons and the
+weather with tremendous variability. That includes floods where heavy precipitation
+within a watershed converges toward valleys to swell the rivers and streams. We can simulate a flood in our model channel
+just by turning up the flow, and hopefully at least this parameter matches your intuitions. You can easily see the sediment being carried
+downstream by the increased flow of water. The banks of the river erode and the material
+is carried away by the flood. Looking at our diagram, it’s easy to see
+why. If we increase the flow of water, the scale
+is out of balance, leading to erosion of the channel. These disturbances to a channel’s equilibrium
+seem relatively benign, and even beautiful, in the stream table, but they can represent
+a serious threat to property, infrastructure, and even the environment. Erosion can cause rivers to shift, washing
+away roads, underground utilities, and even destabilizing structures. I worked on a project once with a river running
+alongside a cemetery. Imagine the haunting headlines that a little
+erosion could create. On the other hand, deposition in a river channel
+can also create serious issues. Sediment can choke a navigation channel, reducing
+its capacity for freight traffic, and fill up reservoirs, reducing their storage volume. It can damage the habitat of native fish and
+other wildlife. And, deposition can reduce the ability of
+a river channel to carry water, increasing the impacts and inundation during a flood. Of course, floods and many other disturbances
+to channels are usually short term events, so the scale naturally balances itself once
+the river returns to normal conditions. But consider something longer term, like a change in climate where a river is receiving more and more or less and less flows
+year over year. In this case, Lane's Balance will shift toward erosion
+or deposition and stay there, but a central part of Lane’s theory is that over time, factors will naturally
+adjust themselves to bring the river back into equilibrium. That’s mostly a result of the fourth parameter
+that we haven’t touched on yet: slope. Erosion and deposition have a natural feedback
+mechanism with the slope of a river. But how can a river change its slope? After all, the starting and ending points
+are relatively fixed. Slope is defined as the length of a line divided
+by its change in elevation (the rise over the run if you remember from algebra class). A river really can’t change the rise (or
+fall) between its source and mouth, but it can change the run, its length. Consider the original example I gave you at
+the beginning of the video. Its Lane balance was all out of whack. Too much water and too much slope created
+a situation where it eroded out significantly at first. But over the course of a few hours, a new
+pattern started to emerge. The river started to meander, to lengthen
+itself by curving back and forth, creating a sinuous path from start to finish. That lengthening led to a reduction in the
+river’s slope, naturally bringing the channel back closer to its equilibrium condition. But look closely and you’ll still see sediment
+moving. It erodes from the outside of bends where
+flow is most swift, called cut banks, and it deposits on the inside of bends where the
+flow is slower, called point bars. This creates natural meandering of rivers
+and geographic features like oxbow lakes where a river cuts itself off at a bend, leaving
+a curved depression behind. You also see natural aggradation where a river
+discharges into an ocean or lake where sediment falls out of suspension, called a delta. These phenomena happen for most rivers and
+streams, even those that are quote-unquote “balanced” according to Lane’s theory. In reality, there’s no such thing as a static
+state for a river. All the variables are changing over time. Floods, droughts, fires, debris jams, animal
+activity, and many other natural processes ping the balance this way and that, and we
+haven’t mentioned the human activities that affect rivers at all. That’s the topic of the next video in this
+series (by the way) so make sure you subscribe so you don’t miss it. In addition to the constant shifting of flow
+and sediment load, the natural processes that pull a river toward equilibrium are not very
+precise or predictable as we can easily see in the stream table. In reality, Lane’s scale is always in motion,
+bouncing between erosion and deposition states at every point along a river or stream. We call this a dynamic equilibrium because
+even when all the factors of sediment transport are in balance, rivers still shift and meander. In that way, Lane’s equation is more a way
+to characterize the magnitude of change than a binary measure of whether a stream channel
+is in motion or not. And of course, it’s a simplification. I’ve been calling it an equation, but there’s
+no equal sign to be found. It’s really just a qualitative relationship
+that can’t tell you exactly how fast a river will meander or to what extent. There are also factors that it doesn’t consider
+like vegetation or pulsed flow. For example, imagine a scenario where the
+climate shifts toward more extreme periods of droughts and floods. Lane’s relationship looks at averages. So, if one river has a relatively constant
+flow while an identical river has pulses of high and low flows, as long as their average
+flow is the same, Lane’s relationship would assume they would behave identically. Well, we decided to try it out. See if you can see the difference. Even if Lane would predict similar behavior
+between the two models, it’s easy to see that the pulsed flow model experiences much
+more erosion and faster movements of the channel. Clearly, we still have progress to make in
+our understanding of how rivers and streams behave over time under the wide variety of
+conditions that rivers face. From the tiniest urban drainage ditches to
+the mighty Mississippi, rivers and streams have enormous consequences for humans. And, like pretty much everything in life,
+rivers are complicated. Even when all those conditions are perfectly
+balanced, they never stop moving and changing. One of the cool things I learned at Emriver
+is that they make not only the stream tables and flumes but the electronic equipment used
+to control and meter the flow of water through the system. And it seems like everywhere I look, people
+and business that have nothing to do with electronics are having to learn to how to
+incorporate them in their careers and industries. Even for this lowly civil engineer, a bunch
+of the demos I make for the channel involve circuits or electronics. Today’s sponsor, Keysight, makes electronic
+test equipment and software, but they actually do a lot more than that. They are super involved in helping people
+of all experience and skill level learn more about electronics. Hopefully you’ve seen them sponsor other
+engineering YouTubers like my friend Medhi’s channel, Electroboom. But, another way they help the community is
+through their virtual events, called Live from the Lab, where Keysight experts share
+their experience with anyone who wants to learn more. Plus they’re giving away a lot of cool equipment,
+including this pro-grade 8-channel oscilloscope, and if you sign up using the link below, you’ll
+get an extra entry into the giveaway. It’s totally free. If you’ve ever tried to go deeper than surface
+level engineering in a new topic, you know how valuable it can be to learn from an expert. This is that opportunity, and you’ve got
+to sign up quick because the first event is on March 14th. Whether you’re an expert already or an electronics
+newbie, this livestream, I really think, is something you don’t want to miss. Again, that link is in the description. Thank you for watching, and let me know what
+you think.

@@ -1,0 +1,236 @@
+The hard disk drive used to be the 
+most expensive part of a good PC. And it remains a wondrous piece of 
+technology. Magnetically enabled heads,   literally flying over glass platters 
+- writing or reading gobs of data. How can such a technical miracle also be such 
+a graveyard for profits for years on end? In this video we look at the birth, boom, 
+and bust of the Hard Disk Drive industry. ## Beginnings In 1952, IBM asked a former high school teacher   named Reynold B. Johnson to lead 
+a new research lab in San Jose. Johnson was a talented inventor. Early 
+in his life in the 1930s, he invented   a machine that could grade pencil-marked 
+multiple choice tests. Yes. The bubbles. Soon IBM bought the rights 
+to his machine and hired him.  After inventing several new things,   IBM asked him to go out to San Jose and 
+work on some new interesting projects. Back then, San Jose was a small agricultural 
+city of about 100,000. IBM chose to put its new   research lab there largely because it was between 
+major customers in Los Angeles and Seattle. Johnson had wide leeway to hire 30-50 
+people and work on whatever interested   him. They took on a variety of 
+projects, but one stood out:   A random access processing system to 
+replace something called "tub files". Now, I have never heard of a tub file before. 
+It is a part of a punched card system that   very quickly helped you access certain 
+information out of the whole. It worked   okay in some use cases, but not so much 
+in others like invoicing and inventory. Tub files are a form of "random access" - 
+meaning that we can access any arbitrary   piece of information in a sequence 
+at roughly the same amount of time. This is different from sequential 
+access, where you have to cycle   through everything in the sequence 
+first to get to the thing you want.   When it comes to memory systems, 
+random is better than sequential. ## Disks The IBM team decided to explore magnetic recording 
+systems to provide this random access function. A magnetic recording system stores 
+data on some form of magnetic media.   A mounted head would then read or 
+write that data off that media. The IBM team evaluated several forms 
+of magnetic media - magnetic tape,   magnetic drums, magnetic plates, 
+and even magnetic wires and rods. Johnson eventually used a stack of rotating 
+magnetic disks, with each accessible using   read/write heads mounted on a common actuator. He 
+liked this format because of how much surface area   it gave you for the size as well as the potential 
+to access data on multiple disks at once. In an early prototype, they took about 120 
+aluminum disks and stacked them together on   a shaft. Each disk was about two feet 
+wide and spaced about a quarter of an   inch apart. The whole array spun 
+at about 3,600 times each minute. ## Buiding RAMAC
+There were two major technical issues to overcome. First, they needed to figure out 
+how to evenly and smoothly apply   the iron oxide paint onto 
+the surface of the disks. One engineer suggested spinning the disks at 
+a high speed, and then pouring the paint - the   same paint used for the Golden Gate Bridge, 
+by the way - at its center so that it spread   uniformly across the whole surface. This 
+technique is now known as "spin-on". The second major problem had to do with wobble. 
+The disks will wobble as they spin. How do you   keep all of the heads at least a thousandth of an 
+inch above the disks' surface if there’s wobble? A team led by Bill Goddard and John Lynott 
+integrated an air nozzle into the head.   So then we can use air pressure to 
+push air through the head nozzles,   creating an air cushion that kept the 
+head stable. Mounted on a single arm,   it would move up and down to the 
+right disk to stick the head in. In 1956, IBM introduced the 305 “Random 
+Access Method of Accounting and Control”   or RAMAC. RAMAC is a transaction processing system   built around what is widely acknowledged 
+as the first hard drive as we know it. The drive was made up of 50 iron oxide-coated 
+disks, each about 61 centimeters wide. It cost   a quarter of a million dollars, held about 4.4 
+megabytes, and was the size of two fridges. These stats might sound ridiculously comedic 
+today, but back then it was an engineering   marvel. Particularly mechanically - being 
+able to retrieve data in less than a second. In his RAMAC product announcement 
+on September 4th 1956, IBM President   Thomas Watson Jr. said that it was the 
+"greatest product day in IBM's history". Production ramped up in the San Jose 
+factory. The first RAMAC was shipped   to the Zellerbach Paper Company 
+a short whiles away. In 1959,   Soviet leader Nikita Khrushchev visited 
+the RAMAC factory as part of his US tour. ## An Industry is Born IBM made the disk drive a necessary part 
+of the computer and an industry was born. First, the other computer makers 
+like General Electric and Burroughs   started producing their own hard disk drives. Then independent disk companies - 
+Bryant Computer Products and Data   Products - popped up. They offered third 
+party hard disk drives to those computer   makers lacking the expertise or 
+capital to produce their own. During the mid-1960s, Japanese players 
+like NEC, Fujitsu, and Hitachi started   producing their own hard drives too. 
+Being vertically integrated players,   what they made was only for internal consumption. Then in 1966, IBM introduced its 2314 
+File Facility and their disk packs.   It not only offered more speed and performance,   but its 29-megabyte disk pack format made it 
+easier for people to swap storage in and out. A new wave of independent companies 
+copied the disk pack format and marketed   those products to IBM customers as being 
+"plug compatible" with their hardware. ## Winchester
+Throughout the 1960s, IBM continued to come out with world-leading innovations 
+in hard disk drive storage. Their crowning moment came about in 1973 
+when they first introduced the Winchester   drive. The name derives from a comment by 
+IBM San Jose manager Kenneth E. Haughton. The original project spec was to 
+have two spindles of 30 megabytes   each. Haughton heard people calling it 
+a "30-30" and said: "If it's a 30-30,   then it must be a Winchester". 
+The project nickname stuck. Up until then, the disks in the packs 
+or the HDDs had been removable and   accessible. But this accessibility came 
+with particle contamination issues. So IBM sealed off the disks, their individual 
+arms, and motors inside a dust-proof container.   This not only fixed the contamination issues, 
+but also gave the disks more storage capacity. That's because it let them cut the distance 
+between the head and the disk surface to a   thousandth of what it had been with the RAMAC. 
+The closer the head, the more data-dense   the disks can be. So the Winchester cut the 
+cost-per-megabyte over competing designs by 30%. The Winchester design became an 
+industry standard. IBM set the   blueprint for all other such devices 
+since. For a long time thereafter,   people didn't call HDDs "hard drives". 
+They called them "Winchester Drives". ## Shugart One of the guys working on the Winchester's 
+early development was a guy named Alan Shugart. Born during the Great Depression, 
+Shugart graduated from the University   of the Redlands and went to work 
+for IBM at the San Jose lab. There Shugart led various memory 
+projects. One of which was a small,   cheap read-only device for transferring very small 
+programs from one computer to another. IBM called   it the "Type 1 Diskette" at its release in 1973, 
+but nowadays we more know it as the floppy disk. Anyway, Shugart would have stayed at IBM his 
+whole career. But then IBM transferred him   to New York. He did not want that. So badly he 
+literally commuted back to San Jose on weekends. Thus he quit in 1969 and joined a company called 
+Memorex, a memory tape maker, for three years. Then after that, he started his own 
+company - Shugart Associates. But he   clashed with his fellow cofounders 
+over direction and equity and left. Shugart Associates went on to dominate the 
+eight inch and then the 5.25 inch commercial   floppy drive markets. Xerox acquired them 
+in 1977 for $41 million. Not a bad exit. ## Shugart 2 After leaving the company with his name on 
+it, Alan Shugart tried some other stuff. Did some salmon fishing. Ran a bar or 
+whatever. In the end, he decided to come   back to memory and found another company 
+in Scotts Valley in Santa Cruz County. The company's original name 
+was Shugart Technology,   but that was too similar to Shugart 
+Associates. So Alan tried to think   of a different name - with an S at the 
+start, T at the end, and a G in the middle. He went with Seagate. In founding 
+Seagate, Shugart sought to adapt   the IBM Winchester drive for the then-burgeoning 
+microcomputer - what we today would call the PC. PC-makers had adopted Shugart Associates' 
+5.25 inch floppy drive. Seagate decided to   build a hard disk drive that can fit in the 
+same space but also offer far more capacity. By the way, the 5.25 inch floppy itself 
+came about at the behest of the brilliant   Dr. An Wang of Wang Laboratories. 
+Wang felt that the original 8-inch   floppy was too big and expensive 
+and had asked for a cheaper version. Anyway, in 1980 Seagate announced 
+their ST506 hard drive. Its 5   megabytes of storage far outclassed a 
+floppy disk's 160 kilobytes of data. Despite being priced at over $1,000 each, 
+the HDD was an immediate hit. The company   made $9.8 million revenues in 1981. And then $40 
+million and $110 million the years after that. ## Engineering Marvels We should take a pause to catch our breath and 
+revisit the technologies behind the 5.25 inch HDD. The core concept had not changed all 
+that much from the days of the floppy   disk or RAMAC. There are four key sub-components: The platters, motors, read-write 
+heads, and the supporting electronics. Bits of data are stored on tracks 
+written onto these double-sided platters,   which today are made from glass substrates. We mount the platters on spindles and use the   motors to spin them 3,600 
+to 7,200 times per minute. The data is then accessed by the heads,   which "fly" over those platters 
+- positioned by actuators. Electronics help position and support these 
+items. They monitor the heads' movements as   they align and un-align. They feed 
+information back to the actuators. So yeah, HDDs today work the same way 
+as the RAMAC. But that is kind of like   saying that the Ford Model T shares 
+the same core concept as the Lexus LS   400. The engineering to achieve the core 
+concept has been completely overhauled. Even that first 5-megabyte Winchester 
+HDD from Seagate was an engineering   marvel. Seagate's engineering VP Doug 
+Mahon remarked then that it was like   a Boeing 747 flying at Mach 4 
+just an inch off the ground. That was back then. Today, the heads fly as 
+little as 3 nanometers above the disk surfaces. Producing these machines requires lots of capital 
+expenditure to build or source the components,   assemble them inside expensive cleanrooms, and 
+test them before shipping out to the customer. ## Commoditization So how did the market turn all this 
+amazing engineering into a commodity? There have been a few reasons. Computer memory 
+- particularly secondary memory - is generally a   commodity. The customer always wants more storage, 
+and is willing to jump to someone else to get it. "Brand value" never really gained traction 
+in the HDD industry. PC users upgrade their   systems because of something new. Like a new 
+version of the Windows OS or an Intel CPU. I   cannot imagine many people would buy a new PC 
+because Seagate or Quantum released a new HDD. As a result, PC assemblers played each HDD 
+maker off each other - buying whoever met   the spec for the lowest price. IBM is 
+notorious for this. They sourced almost   all of the HDDs for their rapidly growing PC 
+business in the early 1980s from startups. In 1983, IBM released their PC-XT - the 
+followup to the legendary first PC. It   had a 10 megabyte HDD sourced largely from 
+startups - Seagate, MiniScribe, and IMI. IBM demanded heavy qualification 
+programs and second-sourcing from   those suppliers. They also refused 
+to enter into long term contracts,   rightly thinking that it did not make sense 
+to when the market was moving so fast. ## Piling In So that is from the customers' perspective. 
+Let us talk a bit about piling in. The HDD itself is a modular device. The 
+four components are precisely engineered,   but separate. And only two contribute to storage   capacity and other performance metrics 
+- the platters and the read/write heads. So new HDD firms can tweak one of these two 
+critical parts to create a new improvement.   Then integrate those bits and quickly bring a 
+new product to a market hungry for innovation. Furthermore, the HDD firms did 
+not at first protect their trade   knowledge and innovations 
+with patents. The community   of HDD researchers was small and ideas 
+flowed freely from one firm to another. But whenever a new firm managed 
+to come out ahead by deriving a   new hit format or technology, the 
+competition very quickly pulled   together something of their own. That 
+then sucked out any profit to be had. For instance, in 1983 the Scottish firm 
+Rodime first produced - and more importantly,   patented - a 3.5 inch HDD format. They were one   of the few European HDD startups 
+to be seen as a relative success. The 3.5 inch format did not gain 
+substantial popularity until 1986,   when another company called Conner Peripherals 
+started selling it in large quantities to Compaq. The new format's popularity invited massive 
+competition and Rodime could not keep up with   their competitors' scale and capability. They 
+filed for bankruptcy twice in 1989 and 1991,   and evolved into a patent troll. Which is sad. Here is a later example. Giant 
+magnetoresistance or GMR is a   Nobel-winning quantum effect discovered in 
+Germany and France. It revolutionized the   HDD's read/write head, allowing for 
+more area density and thus storage. Despite being discovered in Europe, an 
+American firm IBM first commercialized   GMR in 1997 with a 16.8 Gigabyte 
+HDD. American competitors Seagate   and Read-Rite had their own GMR 
+heads two years later in 1999. And then there were the Japanese, 
+who rapidly licensed and bought their   own GMR technology. Toshiba announced 
+their first GMR-equipped HDDs in 1998. One of Toshiba’s later products was a tiny 1.8 
+inch HDD. Famously, they had no idea what to do   with it. But Steve Jobs and Jon Rubinstein 
+did, using it for the Apple iPod in 2002. ## Venture Capital
+This wave of new firms crashing into the market was funded by a flood of 
+hot venture capital money. The end of the 1970s saw changes in the 
+capital gains tax rates and pension fund   investment regulations, which enabled 
+the rise of venture capital or VCs. Seagate went public in September 1981, a 
+little over a year after first launching   their HDD in 1980. They raised $26 million, and 
+the market assigned them a favorable multiple. Seagate's VCs made good money. After the IPO, 
+their $1 million investment was worth over $32   million. It paved the way for how VCs would 
+invest and cash out their investments today. By mid-1983, there were 12 VC-backed 
+HDD manufacturers publicly traded   on the stock market, and their 
+total market cap was $5 billion. The market was hot. So VCs raised big funds and 
+poured that money into the disk drive industry,   recruiting smart people from established 
+companies to found these startups. From 1977 to 1984, 43 different disk drive 
+manufacturers raised $400 million. In 1983   and 1984 alone, 21 startups raised over 
+$270 million over 51 rounds of funding. By then there were something like seventy 
+firms in total. So when the PC market first   pulled back in 1983 and 1984, it triggered a huge 
+shakeout. Many of the startups did not survive. Nevertheless, this Zerg rush of entrants vastly 
+changed the market. In 1978, 84.8% of the market   was held by the old vertically integrated 
+HDD companies. A little over ten years later,   the Old Guard had just 7.9% share. They 
+were essentially driven out of the market. ## Globalization In the beginning, US firms dominated the 
+industry. But competition came in from abroad. Japanese and European companies 
+did enter the market. The four   big Japanese computer makers - Fujitsu, Hitachi,   NEC and Toshiba - originally produced their HDDs 
+for internal use only but shifted to an OEM model. However, despite some interesting innovations they 
+initially failed to make serious headway into the   market. That is because the Americans themselves 
+aggressively globalized their manufacturing. In 1984, Seagate began outsourcing the assembly   of its HDDs to Singapore. Several 
+other American HDD-makers followed. This move was facilitated by the Singapore 
+Government's Economic Development Board in   one of the most famous cases of 
+Asian industrial policy. By 1990,   Singapore was the world's largest producer 
+of HDDs with 55% share of shipments. When Singapore's labor costs also rose, low-value 
+work like assembling the actuator arm holding the   read/write head emigrated to other Southeast Asian 
+regions like Malaysia or Thailand. Singaporeans   took on new tasks like fabricating the platters 
+or assembling more specialized HDD systems. For information about this, I did 
+a video a long time ago about the   history and challenges of Thailand's HDD industry. The Japanese did eventually "cache up", 
+outsourcing their production abroad as   well. And in the early 2000s they even 
+captured majority share of the HDD market   when Hitachi merged with IBM before competition 
+and mergers again eroded their advantage away. ## Responses This intense competition and globalization 
+created enormous benefits for the consumer. From 1976 to 1987, the HDD's 
+data density grew 20 times over. In 1977, a megabyte of data storage cost 
+$560. In 1986 it was $11.89. By 1990,   that had fallen to just $6.86. 
+And then 1998, 4.3 cents. Cents! But that was a situation that 
+cannot sustain. The technology   matured and companies began exiting the market. There is a whole Wikipedia page 
+about all the defunct hard drive   firms and when they exited the market. It is long. The number of HDD firms peaked in 1990 with 66. 
+The next four years saw the number of firms cut   in half to 33. Failures included companies 
+we never heard of like Peripheral Memories,   Comport, PrarieTek, Priam, and Tulin. By 
+1998, there were “only” 16 firms left. Yet even after that vicious shakeout, the 
+market still had too many players. Between   2006 and 2015, the top four HDD vendors 
+had total average market share of 52.5%. So four more major HDD firms exited 
+the market from 2000 to 2010 - Quantum,   IBM, Maxtor and Fujitsu. They were 
+laggards and with the market maturing,   saw no way forward other 
+than to combine to grab size. Even IBM - the HDD's inventor - decided to exit. 
+While they made some money from patent-licensing,   their own HDD division struggled to gain 
+more than 25% of the market. In 2002,   they merged their HDD operations with 
+Hitachi's. A sad end to a storied history. ## Conclusion Today, there are three major HDD makers in the 
+market - Seagate, Western Digital and Toshiba. They continue to manage their market 
+share as the HDD fades into history,   replaced by new items like Solid State 
+Drives. It is unlikely that they will   ever be totally replaced, but the growth 
+- and the innovation - is largely gone. Looking at this crazy boom and bust in HDDs,   it is interesting to look at how the 
+American firms' aggressive globalization   allowed them to retain significant market 
+share in the face of competition from Asia. By the mid-1990s, there were no more HDD assembly 
+factories in the United States. But higher-paying   American jobs in R&D, head manufacturing, and 
+gimbals have remained - essentially saved. I do wonder what could have been different to 
+avoid such a brutal knife fight in the industry.   Maybe an architectural decision here, or there. 
+Or maybe that is how it was fated to play out.

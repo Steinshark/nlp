@@ -1,0 +1,158 @@
+in february 2021, a winter storm that swept 
+through texas caused one of the most severe   power crises in american history. the cold 
+weather created shockingly high electricity   demands as people tried to keep their homes 
+warm. but it also caused problems with the   power supply because power plants themselves 
+and their supporting infrastructure weren't   adequately protected against freezing weather. 
+the result was that texas couldn't generate   enough power to meet demand. instead they 
+would have to disconnect customers to reduce   demands down to manageable levels. but before grid 
+operators could shed enough load from the system,   the frequency of the alternating 
+current dropped as the remaining   generators were bogged down, falling 
+below 59.4 hertz for over 4 minutes. it might not seem like much, but that is a 
+critical threshold in grid operations. it's 1%   below nominal. power plants have relays that keep 
+track of grid frequency and disconnect equipment   if anything goes awry to prevent serious damage. 
+if the grid frequency drops below 59.4 hertz,   the clock starts ticking. and if it doesn't 
+return to the nominal frequency within 9 minutes,   the relays trip! that means the texas 
+grid came within a bathroom break from   total collapse. if a few more large 
+power plants tripped offline or too   few customers were shed from the system in 
+time, it's likely that the frequency would   have continued to drop until every single 
+generator on the grid was disconnected. thankfully, that nightmare 
+scenario was avoided. still,   despite operators preventing a total collapse, the 
+2021 power crisis was one of the most expensive   and deadly disasters in texas history. if 
+those four minutes had gone differently,   it's almost impossible to imagine how serious 
+the consequences would be. let's put ourselves   in the theoretical boots of someone waking 
+up after that frigid february night in texas,   assuming the grid did collapse, and find out. 
+i'm grady, and this is practical engineering.   in today's episode, we're talking about the 
+impacts of blackouts on other infrastructure. every so often some loud noise 
+wakes you from your sleep:   a truck backfiring on the street outside, a 
+baby crying, a cat knocking something off a   shelf. but it's a very different thing 
+altogether to be awoken by silence,   your unconscious mind telling you that the 
+sounds you should be hearing are gone. it only   takes a groggy minute to piece it together. the 
+refrigerator is silent, no air is flowing through   the heating register, the ceiling fan above your 
+head is slowly coming to a stop. the power is out. you check your phone. it's 4am. nothing you can   really do but go back to sleep and 
+hope they get it fixed by daylight. most of us have experienced a power outage at some 
+point, but they're usually short (lasting on the   order of minutes or hours) and they're mostly 
+local (affecting a small area at a time). a   wide area interconnection - that's the technical 
+term for a power grid - is designed that way on   purpose. it has redundancies, multiple paths that 
+power can take to get to the same destination,   and power users and producers are spread 
+out, reducing the chance that they could   be impacted all at once. but having everyone 
+interconnected is a vulnerability too, because   if things go very wrong, everyone is affected. 
+we're in the midst of a deep dive series on wide   scale outages to the power grid, and a mismatch 
+between supply and demand (like what happened   in texas) is only one of the many reasons that 
+could cause a major blackout. natural disasters,   engineering errors, and deliberate attacks can 
+all completely collapse a grid, and - at least   for the first few hours of an outage - you might 
+not even know that what you're experiencing is any   more serious than a wayward tree branch tripping 
+the fuse on the transformer outside your house. you wake up 3 hours later, cold, sunlight 
+peeking in through your bedroom window.   the power is still off. you grab your cell 
+phone to try and figure out what's going   on. it has a full battery from charging 
+overnight, and you have a strong signal   too. you try to call a friend, but the call 
+won't go through. you try a few more times,   but still, nothing more than a friendly 
+voice saying "all circuits are busy." there is a vast array of pathways that 
+information flows between people across   the globe, and they all use grid power to 
+function. fiber networks use switches and   optical terminals distributed throughout the 
+service area. cable tv and dsl networks have   nodes that service around 500 to 1000 customers 
+each that require power. cellular networks use   base stations mounted on towers or rooftops. 
+major telecommunications facilities are usually   on prioritized grid circuits and may even have 
+redundant power feeds from multiple substations,   but even during a blackout where the entire grid 
+is completely disabled, you might still have   service. that's because most telecommunication 
+facilities are equipped with backup batteries   that can keep them running during a power 
+outage for 4 to 8 hours. critical facilities   like cellular base stations and data-centers 
+often have an on-site backup generator. these   generators have enough fuel to extend the 
+resiliency beyond 24 to 48 hours. that said,   major emergencies create huge demands on 
+telecommunication services as everyone is   trying to find and share information at once, 
+so you might not be able to get through even if   the services are still available. in the us, the 
+federal government works with telecommunications   providers to create priority channels so that 
+911 calls, emergency management communications,   and other matters related to public safety can 
+get through even when the networks are congested. since you're trying to make a personal call and 
+you aren't enrolled in the telecommunications   service priority program, you're not getting 
+through. just then, an emergency alert appears   on your screen. it says that there's a power grid 
+failure and to prepare for an extended outage. the   reality of the situation is just starting to set 
+in. since most people have a cell phone, wireless   emergency alerts have become an important addition 
+to the emergency alert system that connects   various levels of government to tv, radio, 
+satellite, and telephone companies to disseminate   public warnings and alerts. during a blackout, 
+sharing information isn't just for likes on social   media. it's how we keep people safe, connect 
+them with resources, and maintain social order.   two-way communications like cell phones and the 
+internet might not last long during a grid outage,   so one-way networks like radio and television 
+broadcasts are essential to keep people informed.   these facilities are often equipped with more 
+backup fuel reserves and even emergency provisions   for the staff so that they can continue to 
+operate during a blackout for weeks if necessary. jump ahead a couple of days.your circumstances 
+start to dictate your experiences heavily. even   an outage of this length can completely upend your 
+life if you, for example, depend on medication   that must be refrigerated or electrically-powered 
+medical equipment (like a ventilator or dialysis   machine). but for many, a blackout on the 
+order of a day or two is still kind of fun, a   diversion from the humdrum of everyday life. maybe 
+you've scrounged together a few meals from what's   remaining in your pantry, enjoyed some candlelit 
+conversations with neighbors, seen more stars in   the night sky than you ever have in your life. but 
+after those first 48 hours, things are starting to   get more serious. you ponder how long you can stay 
+in your home before needing to go out for supplies   as you head into the kitchen to get a glass of 
+water. you open the tap, and nothing comes out. a public water supply is another utility highly 
+dependent on a functioning electrical grid.   pumping, cleaning, and disinfecting water 
+to provide a safe source to everyone within   a city is a power-intensive ordeal. water is 
+heavy, after all, and just moving it from one   place to another takes a tremendous amount of 
+energy. most cities use a combination of backup   generators and elevated storage to account for 
+potential emergencies. those elevated tanks,   whether they are water towers or just ground-level 
+basins built on hillsides, act kind of like   batteries to make sure the water distribution 
+system stays pressurized even if pumps lose power.   but those elevated supplies don't last forever. 
+every state has its own rules about how much is   required. in texas, large cities must have at 
+least 200 gallons or 750 liters of water stored   for every connection to the system, and half 
+of that needs to be in elevated or pressurized   tanks so that it will still flow into the pipes 
+if the pumps aren't working. average water use   varies quite a bit by location and season, but 
+that amount of storage is roughly enough to last   a city two days under normal conditions. combine 
+the backup storage with the backup generation   system at a typical water utility, and maybe they 
+can stretch to 3 or 4. without a huge mobilization   of emergency resources, water can quickly become 
+the most critical resource in an urban area   during a blackout. but don't forget the related 
+utility we depend on as well: sewage collection. lift stations that pump raw sewage and treatment 
+plants that clean it to a level where it's safe   to release back into the environment are energy 
+intensive processes as well. most states require   that lift stations and treatment plants have 
+backup power supplies or enough storage to avoid   overflows during an outage, but usually those 
+requirements are for short-term disruptions. when   power is lost for more than a day or two, these 
+facilities won't be able to continue functioning   without additional fuel and maintenance. 
+even in the best case scenario, that means   raw wastewater in the sewers will have to bypass 
+treatment plants and be discharged directly into   waterways like rivers and oceans. in the worst 
+case, sewers and lift stations will overflow,   exposing the people within cities to raw 
+sewage and creating a public health emergency. flash forward to a week after the start of 
+the blackout, and any fun from the change   of pace is long gone. you still keep your 
+cell phone battery charged from your car,   but you rarely get a signal and phone calls 
+almost never connect. plus, your car's almost   out of gasoline and the fuel at filling stations 
+has long been sent to backup generators at   critical facilities. you are almost certainly 
+running low on food and water after a week,   even if you've been able to share or barter with 
+neighbors or visit one of the rare stores that was   willing to open their doors and accept cash. 
+by now, only the most prioritized facilities   like hospitals and radio stations plus those 
+with solar or wind charging systems still have   a functioning backup power supply. everything 
+else is just dead. and now you truly get a sense   of how complex and interconnected our systems of 
+infrastructure are, because there's almost nothing   that can frustrate the process of restoring power 
+than a lack of power itself. here's what i mean: power plants are having trouble purchasing fuel 
+because, without electricity to power data centers   and good telecommunications, banks and energy 
+markets are shut down. natural gas compressors   don't have power, so they can't send fuel to 
+the plants. railway signals and dispatch centers   are down, so the coal trains are stopped. public 
+roadways are snarled because none of the traffic   signals work, creating accidents and reducing 
+the capacity at intersections. even if workers   at critical jobs like power plants, pipelines, and 
+substations still have gas in their vehicles, they   are having a really hard time actually getting 
+to work. and even if they can get there, they   might not know what to do. most of our complicated 
+infrastructure systems like oil and gas pipelines,   public water systems, and the electrical grid 
+are operated using scada - networked computers,   sensors, and electronic devices that perform a 
+lot of tasks automatically... if they have power.   even if you can get people to the valves, 
+switches, pump stations, and tanks to help   with manual operations, they might not know 
+under which parameters to operate the system.   the longer the outage lasts, the more reserves of 
+water, fuel, foods, medicine, and goods deplete,   and the more systems break down. each of these 
+complicated systems are often extremely difficult   to bring back online alone, and nearly impossible 
+without the support of adjacent infrastructure. electricity is not just a luxury. it is a 
+necessity of modern life. even ignoring our   own direct use of it, almost everything we 
+depend on in our daily lives, and indeed the   orderly conduct of a civil society, is undergirded 
+by a functioning electrical grid. of course, life   as we know it doesn't break down as soon as the 
+lights go out. having gone without power for three   days myself during the texas winter storm, i have 
+seen first hand how kind and generous neighbors   can be in the face of a difficult situation. 
+but it was a difficult situation, and a lot of   people didn't come through on the other side of 
+those three days quite as unscathed as i did. natural disasters and bad weather 
+regularly create localized outages,   but thankfully true wide-scale blackouts have 
+been relatively few and far between. that   doesn't mean they aren't possible, though, 
+so it's wise to be prepared. in general,   preparedness is one of the most important roles 
+of government, and at least in the us, there's a   lot we get right about being ready for the worst. 
+that said, it makes sense for people to have some   personal preparations for long-duration power 
+outages too, and you can find recommendations   for supplies to keep on hand at fema's website. 
+at both an institutional and personal level,   finding a balance between the chance of disaster 
+striking and the resources required to be prepared   is a difficult challenge, and not everyone 
+agrees on where to draw the line. of course,   the other kind of preparedness is our ability 
+to restore service to a collapsed power grid and   get everyone back online as quickly as possible. 
+that's called a black start, and it sounds simple   enough, but there are some enormous engineering 
+challenges associated with bringing a grid up   from nothing. that's the topic we'll cover in 
+the next practical engineering video, so make   sure you're subscribed so you don't miss it. thank 
+you for watching, and let me know what you think.

@@ -1,0 +1,315 @@
+- this might be the biggest
+update for windows ever. so there's a lot to talk about here. not only a brand new
+lineup of the surface pro, as well as the surface
+laptop, but on top of that, a huge update to not
+only the software side but also what you can do with windows. so there's a few things that
+we're gonna talk about today. copilot+ pcs are a big one. but beyond that, it is a
+fundamental sort of rewrite of windows and what you
+can do with windows. it is a brand-new chip,
+with the snapdragon x elite, and on top of that, a lot
+of very cool new features. now, i'll be honest with
+you, going into this event, i've spent the last couple of weeks trying to really try to
+wrap my head around things, and there was clearly a
+big ai sort of reckoning coming to windows, and
+that sounds nefarious, but there's a lot of cool
+features that could have come. and what we've seen here is something that's a little
+bit more thoughtful, maybe, than i had originally expected. and a lot of very cool
+features that are being enabled by not only the snapdragon x elite silicon but also the way that
+windows is sort of evolving because, i think, a lot
+of rumors going into today where that we're gonna see, "oh, windows 12 and this and that," and that's not what we're seeing, right? this is windows 11, but it
+is a much, much bigger update than it might look like on the surface. get it? i made a surface pun.
+there are a lot of takeaways, but one of the biggest
+things to understand is the new name, copilot+ pcs. thankfully, it's a really
+clear, easy-to-understand name that definitely won't confuse
+anyone. (clearing throat) except, like, everyone who
+already bought a copilot pc. that doesn't count anymore, need copilot+. but here's the thing, this
+is a new class of laptops that you're gonna be hearing a lot about in the coming months. so the copilot and the ai stuff is absolutely a big
+component of everything. but as far as i'm concerned, an equally big part is what enables it: the snapdragon x elite. now, qualcomm has been
+making chips for windows for a few years now. they haven't been all that great. you know, the promise is good. you know, all-day battery
+life, 5g built-in, good performance. except that the good performance
+really wasn't very good. now, part of this is down to
+the fact that the 8cx line from before just was kind
+of generally underpowered. an equally big issue,
+though, was with apps. probably the biggest difference with snapdragon chips is the architecture. unlike the x86 backbone that intel and amd have been using for
+decades, snapdragon uses arm, which is the standard on
+macs, phones, and tablets, but it hasn't really
+gained traction on the pc. that app support really
+is the big problem. every windows app, since the dawn of time, has been made with x86 in mind. and unlike apple, who had the luxury of just
+announcing to the world that the mac was switching
+to apple silicon, and if you wanted to stay on
+mac, you had to figure it out. well, in the end, microsoft still have
+to support everything. qualcomm is not replacing intel or amd, they are all going to coexist. so microsoft approaching this in two ways: one is just to encourage developers to support arm processors,
+such as the snapdragon x elite. now, this is the ideal setup
+to get the most performance, and it does seem like they
+made some decent headway here. a lot of major apps, such as
+chrome, photoshop, and resolve, and many, many more, either
+have already added support or are currently working on it. now, microsoft made a very
+interesting claim to me that 90% of average use
+minutes would be native. that sounds great depending
+on what kind of user you are. because apps that are not optimized include basically every game ever and years and years of older apps that either just aren't
+ever going to be updated or maybe they just have
+too small of a team to deal with arm just yet. so for that, there is the prism emulator. now, this is very similar in
+nature to the rosetta 2 layer that apple use to do the exact
+same thing on the mac side, emulating older intel
+apps on apple silicon. and in fact, microsoft actually
+claimed that performance is essentially the same as rosetta. so what this does is essentially emulate pretty much any older app on
+a snapdragon-powered device. now, this isn't strictly
+a brand-new thing. x86 and x64 emulation for arm has been a thing for a little while, but it's been a significantly
+worse experience. this is for a couple of reasons. the emulation left a little bit
+of performance on the table, and the previous chips
+were, well, kind of slow. both of these things have been improved, meaning that, according
+to microsoft, at least, thanks to the raw power of x
+elite and improved emulation, unoptimized apps should
+perform roughly on par with a last-generation core i7. now, of course, i definitely wanna spend some hands-on time for myself
+because i'm almost positive that there'll be some weird edge cases or apps that will work or whatever. but in theory, as long as
+apps run pretty quickly, it'll be essentially
+seamless to the end user. and when you happen to be
+running an optimized app, which more and more are
+coming online every day, they'll be just that much quicker. all of this is a lot of work,
+but the upside is significant. you should be getting the performance but also 5g built into some devices and importantly, significantly
+better battery life. so i'm here with the surface pro, and let me give you a little demo of some of the ai features. so there are three main
+ones to talk about. the first and probably the
+most impressive is recall. now, recall requires a
+little bit of explanation. so the way that recall works is that using the power of the npu, it is always paying attention
+to what you're doing, is going to help you find stuff that you've done in the past. now, that sounds reasonable enough. maybe a little bit creepy. but
+let me show you how it works, and i'll show you how you don't have to be too concerned, (laughs) hopefully. so, this is recall. so, this is the basic page,
+so i can scroll through. and the neat part is, as i scroll back, i can see pretty much
+everything i've done. now, this is obviously not
+my device, this is a demo, but you can see i can
+go back to yesterday, i can go back to the day
+before, the day before. this will save for as long as you want, provided that you have
+the storage space for it. so, the way this works is that the npu is taking a screenshot of
+whatever's on your screen every little while. so it's smart, so it's going to be able to only take a screenshot
+when it detects motion. but what it does is it can determine whatever i am looking at. so, this is inside of
+an excel spreadsheet. so if i wanted to, i'd copy
+any text or whatever over, or i can just automatically
+open it up using this button, and it will pull that exact file up. so the way to think about this
+is the computer's constantly keeping a record of what you're doing, and say i want to go back and find something i did
+two or three days ago or a week or a month ago,
+theoretically, it will do it. so, say i want to go look for bread. i know that i was looking at some photos of bread
+last week or whatever. well, you can see just
+how fast it shows up. so, i have a couple of different matches. i have text match, so i could
+pull up any of these things, and the word "bread" was listed. so you can see here it
+automatically highlights that, so i can find that. it'll also give visual matches. so, if i go right here, i can see that it can tell
+that this is a photo of bread. now, this, i don't
+probably need to tell you, is a really cool idea. because it is constantly
+taking screenshots of your actual system,
+you can do this for chats, you can do this for websites,
+you can do this for apps. pretty much anything that
+windows can take a screenshot of, it can save here. now, probably big question you have is, "yikes, that's kind of creepy." now, there's certainly some
+privacy concerns with this, but let me explain to you
+the way i understand it, and maybe it might make you
+feel better, or maybe it won't. when you come up here,
+to the options menu, you can go into the settings. so it's actually built into
+your privacy and security. there are a number of settings
+that you have to play with. so, first of all, you can
+just turn this feature off. now, this is going to be
+only on copilot+ devices with the npu. so the reason for that is that this is all
+happening locally on device. so, none of this goes up to the internet, microsoft can't see
+it, it's all encrypted. you can imagine a lot of privacy concerns if that was not the case. so, first of all, you
+can just turn this off. second of all, you have the
+ability for the storage, and you can change that. so right now, with the last
+two weeks, or whatever, it's only taking about 56 megabytes. and the reason for that, it is not doing a constant
+video recording of your screen. it takes a screenshot every little while. it's not always taking screenshots. so the way it works is when it determines that there's
+some new text on screen, that there's enough
+pixels that have changed, it'll take a quick
+screenshot and save that. but if you want, you can set the maximum
+storage for your snapshots. i was told that 25 gigs, depending on how much you use your system, could be several months
+of content, which is cool. but you can change that
+to be whatever you want, so you can go up to 150 gigs if you want. on top of that, you can also
+delete anything you want. so, say you were just doing
+something on your system, you don't wanna keep the snapshot, well you can delete the
+last hour, last day, last month, whatever you wanna do. and importantly, and something i would 100%
+do, is set some filters. so you can say, "hey, don't
+take snapshots of edge. "i don't want you to see
+what i'm doing on edge "because if you see that i'm watching "hours and hours of denki videos, "then i don't want anyone to know that." so, i'm gonna go ahead and block out edge. don't take any screenshots. on top of that, if you wanna
+be a little bit more specific, you can add specific websites. so, i'm gonna add youtube. don't keep track of my
+youtube search history. thank you very much. and as long as you're using
+a browser that's supported, it will not do that. this is a big feature. honestly, one of the bigger
+features that this enables. and i understand that
+there's probably gonna be a lot of people who are
+concerned about this from a privacy perspective. the way i understand it is
+happening 100% on-device. at no point does any of this
+information go to the cloud. so it is encrypted for
+you on your local device. on top of that, you can use it as much or as little as you want. we will see how robust the system is. i would be completely lying to you if i said that i was
+1,000% confident in it, at day one, right? but this is a feature that, i think, has a lot of practical benefits. if i wanna go back
+through and find an email that i was working on
+a couple of weeks ago. if i want to find a screenshot. or i just literally wanna
+type in the word "car," 'cause i know i watched a
+car video three weeks ago, and it will find that, like, that's a really powerful feature. paint is not the most
+exciting app in the world, however, it's actually
+got a major new feature in cocreator. so the way this works is really neat. so, again, this is
+running locally on device. so if i want to, i can just say, "car in a tunnel at sunset." so, normally, and you've been
+able to do this in the past, you can just put in a prompt like that, and you'll get something spit out. but the way this works instead
+is it actually uses that in addition to what you want to draw. so if i start drawing this... i'm gonna have a lot of
+confidence in my drawing ability. okay. so, if i give that just a second, what you'll see here is that my scribble is obviously terrible, but on this side, this
+is actually not bad. the idea here is that not only
+is this being done in device, so this is using the npu of the system. the only reason you actually need an internet connection for
+this is a kind of silly one. they wanna make sure that you're not doing any nefarious-ness with this. so what happens is when
+you give it the prompt, it goes out to the server to make sure that you're
+not asking it to do anything too nefarious, but shall we say? so you do actually need an
+internet connection for this, but all the actual processing
+is happening on device. so if i turn that creativity back up, you can see that the image
+that i'm getting here, even though this is a terrible scribble, look at that, that looks sick! that is incredibly cool! so if i actually click
+it, boom, there we go. live captions is a windows-level feature that, again, leveraging the power of the npu on board of the system, allows you to caption anything
+that windows can hear. so, let me actually
+show you how this works. so, i'm going to turn on microphone audio, and if you look at top here, you will now tell you what i'm saying. so, hello, my name is austin,
+and this is what it looks like as you see the live captions being put onto the screen at this time. the cool part about this is that not only does it
+work with my microphone, it obviously will work with
+anything that i'm listening to. junk that's refurbished
+that also doesn't work. so the way this works is really cool, is able to use that, and importantly, it will
+do live translation. so we got a demo earlier of someone who fluently has moved
+between english and spanish, it pauses, like, 1/2 a second, and immediately started
+translating that spanish. these are just some of the
+things that are made possible with an npu. you gonna hear that so much. but the idea that you
+have real ai horsepower running locally on-device
+at super low power. so, if i actually pull up task manager, you can actually see how
+little power it takes. so my cpu, my gpu are essentially not
+even being used, right? so i've got 4% on my cpu, 1% of my gpu, and the npu is doing what, 3%, 4%? it's almost nothing to
+be able to do something as you'd think complex as doing live captions and translation. so these are just some of the ai features that are being built in. but importantly, these are just the ones that are built into windows on day one. because the npu is now a
+first-class citizen in windows, there are so many more things that i'm sure will be
+coming down the pipeline, and, of course, so many third-party apps that can leverage this kind of tech to do all kinds of stuff
+with almost no latency, and to be able to do it with theoretically quite a lot of security. as a baseline, microsoft is branding and spending a lot of money to promote these as the gold standard of pcs. to get the copilot+ branding, you'll need a couple of things: 40 tops or more on your npu
+and 16 gigabytes of ram. which, of course, you'll find
+on the new surface models, as well as a number of other
+oems who are also taking part. now, as of right now, this basically means that the
+system needs to be powered by a qualcomm snapdragon x elite device, but soon, there will be other
+snapdragon and amd options, as well as intel coming
+a little later this year. now, if 40 tops on your npu
+doesn't mean much to you, well, you're probably not alone. honestly, it's probably worth
+me making an entire video breaking down tops and,
+neural processors, and why you're gonna be
+hearing these phrases everywhere going forward. but the short answer is this: just like how, in the past,
+when you're shopping for a pc, two of your biggest considerations when it comes to performance
+are your cpu and your gpu, well, it's time to add
+the npu to that list. so, when it comes to hardware,
+there is a lot to go over. so, let's start with these
+brand-new surface devices. so, we have two. we have the brand new surface pro. technically, this is
+just the new surface pro, although it is really the 11th gen, as well as we have the new surface laptop, which is the seventh generation. so, there is a much more
+substantial redesign of the laptop. so, it now has a much
+larger screen-to-body ratio. you can see just how
+small these bezels are. and i'll be honest with
+you, the 13.8-inch version looks sick. 'cause i've always liked
+the surface laptop, but it's kind of been a little bit big and chunky, but now... this is the 15. but even the 15 is significantly smaller. now, what's really interesting
+about both of these devices is that they are snapdragon only. in the past, there was a
+little bit of a mix between. you could have amd on
+certain options, intel, there was the 8cx before,
+all of that is gone. it is just snapdragon x across the board. now, both these devices
+start with the plus, although, if you upgrade,
+you do get the elite, which is basically the same
+chip, 10-core versus 12-core, a little bit of extra performance. now, that, i think, is very telling when it comes to how
+strongly microsoft feel, not only about the copilot+ initiative but also just about what they're getting with qualcomm and snapdragon. because you can think
+about the the conversations that are being had with
+some of the other partners, such as amd and intel. and while there, of course,
+will be additional copilot+ pcs, snapdragon and qualcomm, i
+think, should be very happy that they're getting this sort of shine because there's a lot of emphasis on the surfaces going snapdragon first, at least with these devices. so, let me break it down. i'll go over the actual pro itself. so you have a few options here. so there's an improved webcam. you also now have an oled if you upgrade. so, the base model still is an lcd, but if you go up to the elite
+model, you do get an oled. there's also the actual
+keyboard, which has been changed. so this version is the
+slightly higher-end version, which has, if i can carefully take it off without knocking it over, it
+actually works wirelessly now. so, there's actually three keyboards, which is slightly confusing. there's the base keyboard, there's the keyboard with the pen storage, and then there's this, which will allow you to
+not only use it via bluetooth, but it also folds up nice and neat here. it's a cool feature, although it's a little
+bit on the pricey side. and i'll continue to state forever that i wish that every surface came with the keyboard in the box because i can't imagine who would buy this without a keyboard. now, outside of that,
+the hardware's actually relatively similar looking on the surface. it is still with a fan inside. it's actively cooled, even when you've got
+the snapdragon silicon. but it makes sense, right? this one, straightforward. the laptop, i think, is a
+little bit more interesting. so you've got a really
+nice port selection. so you've got a couple of
+usb4, you've got usb-a, aux. thank you for keeping the aux. as well, as you've got
+yourself the surface connector. and on the 15, you've
+got yourself a microsd. that alone is great. it also does have the upgraded touchpad, as does the high-end
+keyboard on the surface pro. you've got a quite nice
+keyboard, i will say. on the laptop, it feels pretty good. and the display. so it's 120hz display. i'll be honest with you,
+when i first saw it, i was like, "oh, man,
+that oled looks great." and then they told me, "nope, it's lcd." i am legitimately surprised. it is a very nice-looking
+display, very bright. if i crank up this brightness, it is going to probably
+clip the camera real hard. like, it is properly bright. now, a big reason why this
+is lcd, i think, is price. both the surface pro, as well
+as the laptop, start at 999. and that's not some, like,
+super basic configuration. they come with these snapdragon x plus and importantly, 16 gigabytes of ram and 256 gigs of storage. one of my traditionally biggest issues with the surface lineup has
+been that the base models were next to useless
+because eight gigs of ram is just not enough for anybody, especially when it comes to windows. so both of these models
+come with 16 gigs, 256. honestly, a very usable spec. of course, it'll be a
+little bit more expensive once you start upgrading the ssds and you go up to the oled
+and blah, blah, blah. but, like, you're not gonna be able to get either of these configurations in any kind of, like, terrible
+unusable state, right? and i think that is
+something to be applauded, even though upgrade pricing
+could be a little bit cheaper. something else i think is
+really worth mentioning is upgradeability and repairability. so, the surface pro still
+has a little upgrade door for the ssd, which is nice. now, the surface laptop has no such door. it does have an upgradeable ssd that will void your warranty. but you can actually get at it, of course, by voiding your warranty, so you should do it 366 days later. the feet are actually magnetic. so instead of using, like,
+glue to keep the feet on, they're actually magnetic. they come off, and then
+the screw's underneath, and you pop off that back panel. one of the only things
+i've actually removed is a little bit of a weird one. it no longer supports the
+pen on the surface laptop. now, i think a big reason for that is that you actually had to have these little tiny wires across
+the screen for the actual pen for the capacitive touch and whatnot. it's still touchscreen, mind you, but it is no longer
+compatible with the pen. so it's just a small note. of course, if you really
+wanna use the pen, you should be using the
+actual surface pro 9. "9?" 11. yikes, i'm a couple years behind. now, the last thing i wanna talk about when it comes to hardware
+is the actual breadth and depth of the ecosystem. yeah. so, on top of these surface devices, which, of course, we're
+getting an early hands-on of, there are going to be
+a number of other oems, including samsung,
+including lenovo and dell, and all kinds of people, asus, who are gonna be announcing devices probably around the time
+this video goes live. the only one i could personally speak to is the lenovo yoga 7x. now, hypothetically, i may have been able to
+spend some time with this before the embargo, and this is also a
+snapdragon-powered device. now, my sample is very, very, very early, so i'm gonna not speak on it a lot. besides the fact that a
+lot of these same features, a lot of these same sort of advantages, in using the snapdragon
+silicon, do come across to that. so even though these surfaces
+look very impressive. and i will say that the price point is worth really reiterating, right? i think they're being very aggressive with $1,000 configurations of laptops that are actually good, unlike previously, where you had to spend
+$1,300, $1,400, $1,500 to get something usable. but i will say that that
+yoga 7x, stay tuned. i'm gonna be taking a look at that once it's not quite so
+(laughs) in such beta form. but the time that i've spent
+using the snapdragon x elite, it's the real deal. i think that's kind of
+sort of my general thought. that there's a lot of performance there. you have obviously all the
+cool windows ai features. but on top of that, it
+just feels snappy and fluid in a way that typically you only get when you're running with, you
+know, a big beefy cpu and gpu, and yada, yada, yada, right? like, what you're getting
+here is performance. you're getting a lot of
+really cool features. and importantly, devices that the fans are almost never kicking on. a battery that is actually
+legitimately all day. so when apple silicon dropped in 2020, it was an absolute game changer. it wasn't just about the performance leap, which is really substantial, it was also about the
+incredible battery life, paired with the fact that
+you got full performance even when you're unplugged. as much as you may or may
+not wanna actually use a mac, since 2020, macbooks really
+have set a new benchmark. now, are these snapdragon-powered systems going to give us that same leap? well, in all honesty, probably
+not, at least, immediately. my understanding is that you'll still see some power management from windows when you're running on battery, which will cut performance
+a bit when you're unplugged. but this is a massive step forward. the competition between
+qualcomm, intel, amd, and apple is an arms race where we, the consumers, are the real winners. in the past few years, we've seen more improvements
+to laptop performance and battery life than in the
+entire decade beforehand. and believe me, when i say that microsoft didn't rebuild
+huge chunks of windows just for a few random snapdragon laptops. it really does seem like
+arm-powered windows devices are the future, and we'll
+likely see everyone from nvidia to amd join the party
+before too much longer. i mean, who doesn't want a laptop with performance and battery life? now, are there concerns? absolutely. my hands-on time with the x elite has been limited by very
+unfinished software and hardware. so, while my initial impressions
+are really promising, we absolutely have to wait
+for the final products before i can make a definitive judgment. there are a lot of questions, and there's also a lot
+of legitimate concerns, specifically when it comes to
+the emulated app performance and really how quickly developers actually want to embrace arm. not to mention, there's probably
+gonna be a lot of hesitancy with a lot of, i don't wanna
+say, like, average consumers, but, like, a lot of people
+are used to buying laptops with an intel or an amd sticker on it, and as soon as you drop
+a snapdragon badge, well, that doesn't necessarily mean a lot to a lot of people. so, my expectation is that it might be a little bit of a
+slow ramp on these things. but here's the thing, microsoft
+is betting big on arm, and they're really the last holdouts. mobile and mac have been
+switched over for a while, and it seems natural that windows is the last domino to fall here. now, i'm not saying you
+should drop everything and toss your existing laptop
+in the garbage just yet, especially because intel and amd are not only improving
+things at an impressive rate, but they also will have
+their own copilot+ pcs that have all the ai goodies
+that you ever hoped for. but here's the thing, this is a big deal that is really worth keeping an eye on because things are moving at
+an incredibly rapid rate. so that, my friends, is
+a look at what you've got with these brand-new copilot+ pcs. if you really break it
+down, it's very simple: these devices are going to have significantly
+better battery life, they're more efficient, they're going to run cooler, quieter, and there's still gonna be tons and tons of performance on tap. on top of that, there's also
+a huge amount of new features when it comes to the windows ai stuff. so, you know, you think
+about some of the stuff, you know, this is sort
+of the one of, right? like, we're gonna see more and more apps take advantage of the npu. we're also going to see more
+and more features in windows to take advantage of this sort of overall architecture change. you know, there's a lot to sort of wrap your head around here, but sort of at a core level, this is a very big moment for windows. it's a very big moment for microsoft. and while i'm sure there
+are gonna be people who are like, "hey, why
+wasn't it windows 12?" i think the main reason for
+that is that you kind of do need this npu to enable these features. and i can't imagine microsoft
+bringing out windows 12, and it only works on these
+brand-new systems, right? so i think that's the reason
+why we've seen this first step. but you gotta assume that the
+next major version of windows is gonna take all of this for granted and add a ton of additional features. so let me know what you
+think in the comments below. i'm very curious. make sure to subscribe to the channel and ringling the dingling button. but until next time, my friends, i'm gonna go creatively
+borrow some devices. you know, it's fair game if i
+want to do an extended test, and i'll see you back at the office when i am, you know,
+able to (clears throat) give you a full review of the devices that i'm gonna give back, eventually.

@@ -1,0 +1,93 @@
+ben sparks: let's say, you're in britain
+on a dual carriageway. i'm gonna try and draw this.
+two lanes, and we'll both go in this direction and there's a blue car on the left,
+and it's going at 70 miles per hour which is the legal limit on motorways
+and dual carriageways in this country. brady haran: they're doing the right thing. ben: yeah, and so they should be. trouble is, you could be doing the right thing,
+and other people on the roads might not. there's a guy overtaking the blue car.
+it's gonna be the red car. brady: it's always the red car! ben: it's always the red car, and he's going faster. in fact, i'm gonna draw him in
+at the moment he overtakes and he's going -- as i'm sure it's happened to me,
+in the blue car i hasten to add i've been in the blue car, and someone comes
+barreling past me going at 100 miles an hour. certainly it could happen,
+whether it's on a motorway or dual carriageway. now, they're not going the same speed,
+but there is a moment when they're neck-and-neck and that's the moment i want to freeze time
+and ask you about what happens next. because at this moment when they're neck-and-neck,
+they see in front of them a tree or some barrier which is unexpected,
+and so they both need to break and we're going to assume lots of things,
+like is always the case with a mathematical question. we have to model it to keep it simple enough to answer. so the models here might be that,
+let's assume have same cars. let's assume reaction times are not part of this. we could add those things in later
+if we want to complicate the model. let's assume they both slam on the brakes
+at the same time, and they break at the same rate and by the time he gets there,
+the blue car has sort of just stopped in time. so that's the blue car, who's got smaller apparently... he has stopped with millimeters to spare,
+which is good. brady: so the blue car just,
+just stops as it gets to the tree. ben: no crash for the blue guy.
+he slammed on the brakes just in time. what i'm gonna claim, it's obvious
+that the red guy is in trouble. the red guy is moving quicker.
+he brakes at the same time, at the same rate. i think he's definitely gonna crash. no one seems
+to argue about whether the red guy's gonna crash. what's really crucial, and here's the puzzle for you is that, it matters what speed you crash at. right, if you crash at one mile an hour,
+no one's gonna really worry. if you crash at a thousand miles an hour,
+you're in trouble. now, he's not gonna crash at thousand miles an hour.
+he's gonna crash slower because he started braking. but, at what speed does he hit the tree?
+and that's the puzzle. there's some intuition to get involved here,
+there's also some maths to check it out and the answer is-- well, it surprised me. brady: # do do do do-do do do # # the girl from ipan-- #
+(ben laughs) brady: alright.
+ben: we're back! so the red guy has crashed. i just feel like i missed my chance to draw a crash. so this is the red guy. he's in pieces all over the place. because your intuition doesn't work well
+with speed questions and this is why i got a bit surprised about this. the first thing to notice is that,
+a lot of people think the answer is 30 miles an hour. it's really 'sensible' to think about the difference in
+speed, which is 30 miles an hour at the start and to think, if everything else is the same,
+surely that's the speed it's got left over. there are lots of reasons why it's not correct,
+and one of the reasons you'll probably think is i wouldn't be asking this question if it was 30, fine! another intuition thing to ask though, is do you think it's slower than 30,
+or do you think it's quicker than 30? because if it's not 30, it's one of the two. and i'm gonna tell you the answer,
+and i'm gonna justify it, because when someone told me the answer,
+i just bawled. it was... i was surprised. i was also a bit shocked
+and dare i say it, sobered and maybe i changed
+my driving habits a little bit, because the red guy hits the tree assuming all that stuff we assumed, at approximately 71 miles per hour. brady: seventy-one!
+ben: seventy-one. he has not even reached the speed
+that the blue guy started braking at and he's hit the tree at that speed. there's the difference between
+not crashing at all, well done blue guy and hitting a brick wall, or a tree in this case,
+at 71 miles an hour. and that was from a difference of 30 miles an hour
+to start with, and everything else is the same. it's pretty easy to justify this, but the answer is sobering enough. so i think we should justify it before i leave you to go and change your driving habits,
+and myself on my way home. there are many ways to solve this and maybe if you've solved it a certain way,
+try solve it another way. you can use things called the suvat equations. i've heard people make up nice rhymes to remember these things. they're to do with constant acceleration
+equations to do with speed, distance, and time. but there's another way
+which gets you the answer more quickly. so maybe you should go and try this suvat thing but if you think about kinetic energy this actually is quite easy. so i'm gonna imagine that they i'm gonna do lots of slightly dodgy things here but you have to imagine that
+i'm just getting a ballpark for this model. the kinetic energy for the blue guy
+is gonna be to do with several things. there's a formula for kinetic energy,
+which looks like this. there's a half in there
+for reasons i'm not going to go into there's the mass of the car
+which we're going to assume is the same for both cars and there is its velocity. now, if we're gonna actually work out the kinetic energy we'd work this out in meters per second,
+because that's the units that kinetic energy works in. i'm just gonna dodge that.
+so i'm actually gonna say that it's kind of kinetic energy is proportional to this,
+because i'm just gonna work with 70's. but i hope you forgive me for this dodge because i'm gonna do the same with the red car
+so we can compare them. so the blue guy has got 1/2m, whatever the m is,
+and we've got 70 squared. that's its velocity in miles per hour, and
+we won't worry about it being in meter per second. red guy, easy enough calculation has a kinetic energy at the start of a 1/2m. we're going to see that's the same mass
+because it's the same car but this time we've got a 100 squared,
+because that's his velocity to start with. and i'm gonna claim that in braking,
+you're getting rid of kinetic energy. i don't think that's controversial and the blue guy's got rid of all of it,
+so there's none left. so what we need to work out
+is how much energy that is and if actually i calculate -- the only number
+in here is 70 squared, and if the so i'm gonna say, this is proportional
+to 70 squared, which is 4900 amount of energy. it's not in joules because
+i'd need to have the units changed. but the red guy is proportional to 100 squared which is 10,000. so even if the red guy gets rid of all the energy
+the blue guy's got rid off which he would if everything else is the same i just need to do 10,000 take away 4900 which is 5100 of whatever units we're using left which is more than the blue guy started with and if you square root this, you get 71 point something and that's it. the red guy's doomed and it gets worse, because we haven't
+even considered what'd happen if they maybe take a tiny bit of time to react to the tree. if they take the same time to do it,
+the blue guy has traveled less far than the red guy so it's looking even worse. one other thing to bear in mind is maybe you brake quicker when you're moving quicker
+because there's more friction but that doesn't counteract the fact
+that the red guy is now doomed. the first time i heard this story, i had to go on a course about speed, being aware of speed on the roads. brady: why were you doing that course?
+ben: i had, well i... it was a good idea. i think it was a good idea for me to do that
+and avoid a massive fine. but they were telling me all this stuff about
+driving slowly is important and i'd just heard this,
+and this completely sobered me up and they were telling me a lot of other facts,
+which had no effect, so i tried to tell them this, they didn't appreciate that. but it is powerful. it made me slow down and the crucial thing to take away is that,
+it's the square of your speed that affects all your energy and that's the bit our intuition is really bad at. i'm gonna patent this one day. no stealing, brady. if speedometers in a car,
+instead of going 10, 20, 30, 40, 50... if they went up with gaps that were
+proportional to the square of those numbers then you'd get this lovely intuition that
+going from 70 to 100 is like doubling your energy instead of just going up to 30 miles an hour. car manufacturers haven't taken this one on board yet but, one day. brady: i hope one of the things this video shows is that in mathematics, sometimes
+rather than just plugging numbers into equations it's good to really understand
+what's going on under the hood. see what i did there? "under the hood." wrote that myself. but seriously, the quizzes and puzzles
+at brilliant.org give you these insights. they really help you see how everything fits together.
+they encourage critical thinking. don't just think "what formula do i use,"
+but understand the concepts that are at play. go check out brilliant.org/numberphile
+and get 20% off brilliant's premium membership. the first 71 people to do it
+will be eligible for that discount. and brilliant doesn't just cover math. they have all sorts of cool physics,
+astronomy, computer science, logic. that's 20% off, at brilliant.org/numberphile and our thanks to them for supporting this video. alright, let's really speed things up here! i know i'm not supposed to be encouraging speeding but it's okay a racetrack, isn't it? this is a controlled environment. oh! crashed...

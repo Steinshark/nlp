@@ -1,0 +1,129 @@
+- windows 11 is coming,
+but the compatibility is a nightmare. so we have spent the last few
+days digging into windows 11. and well, microsoft, we got to talk. 'cause this (oof) makes no sense. if you're using a pc that's
+more than three years old, odds are, it is not
+compatible with windows 11. everyone pause. cut the music. let me just say that one more time. if you were using a pc
+that's just three years old, you might not be able to upgrade to the new version of windows. now to put things in context,
+this is a massive shift. you can run windows 10
+on nearly 20 year old, pentium 4 processor. now don't just think that you can stick on windows 10 forever either. microsoft have already set october 2025 as the end of life support for windows 10. the real story here is that
+even if you have a brand new pc personally, i think
+there's a very good reason to be concerned. before we get our pitchforks out let's try to understand
+what's going on here. windows 11 is a fairly major upgrade, one that's free and not only
+is there a fresh coat of paint on the design side, but there are welcome
+changes under the hood for what really is the first
+brand new version of windows since 2015. now we talked about some of this in our first windows 11 video which certainly wasn't based
+on a leaked build or anything. and i actually discussed a
+lot of these with panos panay, the chief product officer of both devices and importantly windows
+on the most recent episode of my podcast, "the test
+drivers" shameless plug. so reading into this a little closer, microsoft claims that
+windows 11 is a big step up with regards to security,
+almost more so than performance. of course, windows has had a long history of being very heavily targeted
+by malware and viruses. so when you look at it from that side, it makes sense, right? this is a more secure
+version of windows 11. and if you're running 11 on your system, you need to have all of these
+hardware security features built in. this seems like a play
+toward clearing the decks on older, less secure hardware, which does somewhat explain why they're currently targeting
+pretty much all systems that run windows 10 to run windows 11. but as soon as you take a closer look at these specific cpu's
+that are supported, well, it's a pretty short list. according to microsoft to run
+windows 11 as of right now, you will need an eighth gen
+intel core processor or newer. ryzen 3000 or newer and qualcomm
+850 and higher right now. now to be fair, they are
+testing seventh gen intel core and ryzen 1000 right now, but even so that is a pretty
+damn limited selection of cpus. for context, one of my favorite statistics is looking at this steam hardware survey. as of right now, 96% of steam
+gamers are running windows 10. now unfortunately,
+steam doesn't break down the exact cpu models,
+but over 50% of people have either a dual or quad core processor. and considering that the
+most popular graphics card is five-year-old gtx 1060, i bet you that the majority
+of those gaming pcs are just simply too old to run windows 11. so technically, any system
+with a one gigahertz, dual core 64 bit processor,
+four gigabytes of ram, and 64 gigabytes of storage, should be capable of running windows 11, which is slightly above what
+you need for windows 10, but there is a big but. you also need a tpm 2.0 chip on board. now this is a little security chip, either built into your cpu or motherboard, and it's used for things
+like securing passwords, encryption, making sure
+you have device integrity, and it's standard on
+pretty much any system from the last few years. where you won't find
+it is on older systems. and that is the major
+reason why so many computers just simply will not be able to upgrade to windows 11 right now. i don't think it's a stretch. that if microsoft doesn't back down from these system requirements and specifically that tpm 2.0 requirement, windows 11 could be
+something like windows 8, an update that a lot of people skip. and eventually it causes people to just completely sour on the idea of upgrading to windows 11 entirely. so why would you want to
+upgrade to windows 11? so the first and most obvious this thing is certainly some of the new stuff on the look side of things. so for now i've installed
+the windows 11 developer, insider build on this
+microsoft surface laptop go. this is by no means a high-end
+system, but importantly, it does meet all of the minimum specs, including having that all
+important tpm 2.0 module. now, something that if you've only seen, some of those the leaked builds that we certainly didn't do anything on, but theoretically were
+floating around the internet, - [ken] yeah theoretically. - theoretically, you would
+kind of miss some of the stuff that's actually done on the ui side, because that was a very early build. so one of the things
+that i really appreciate is the additional attention to detail when it comes to things
+like animations, right? so i'm gonna go full screen,
+i wanna go to the left, i wanna go to the right, everything is in a much more fluid manner than it was on windows 10. with something like the
+systems setting screen has been entirely
+redesigned for windows 11. there are a lot of nice improvements here, but i think one of the things
+that's most interesting to me is the kind of hardware
+that you can run this on. this is a surface laptop go. however, something else that
+can actually run windows 11 is this, the hp stream. - [ken] oh god. - so the hp stream is quite
+literally the minimum spec allowed by windows 11. you got a dual core,
+1.1 gigahertz processor, four gigs of ram and 64 gigs of storage. now of course though, the
+important thing to keep in mind is that this has that
+all-important tpm 2.0 chip, which means that with some patience, i was able to get windows
+11 up and running on here without any real difficulties. and my immediate thought is
+this feels essentially the same performance wise as windows 10. there's nothing here that makes me go, oh my god, it's so slow any
+more than it did before. there's no scenario that i can imagine. the microsoft can make the argument that they're dropping support for devices like this surface pro 5, which believe me, we tried to install windows 11 on, but because even though it
+has a seventh gen processor, it doesn't have the tpm support. it didn't work. there's no scenario that you can tell me. their performance is the
+reason why so many systems are going to lose
+compatibility with windows 11. so ken, why do you think the tpm is going to revolutionize
+my windows 11 experience? - let's talk about this from what we have out here today, right? let's say you wanna go to a
+store and buy a ryzen 5000 cpu latest and greatest and
+supported motherboard. tell the audience what our biggest problem is here in the office, going to a store like
+microcenter or best buy today and getting our hardware to work. - it would be installing your cpu, trying to get your computer
+to boot for the first time and it doesn't work
+entirely because the bios is not supporting that particular cpu. you can update it, but then
+you have to swap the chip. you have to take off your cooler. it's a bit of a mess and it's something we have to deal with a lot. - and we have to deal
+with that a lot today. now imagine, a consumer goes into a store, buys ryzen 5000, let's say
+in the best case scenario, their motherboard works. but if it took this long
+from the launch of 5000 to have some motherboards have
+the bios to make that work, imagine, having windows 11 needing this to be a necessary thing in these boards to be enabled by default. and you're waiting for all
+of the motherboards in stock to be cycled and actually have that
+automatically enabled. otherwise the consumer has to
+do a lot of work on their own, which i mean look benefit of the doubt, a lot of people that
+will build their own pcs might find a way to make that work. but there are multiple
+points in this chain where this change is a lot. - one of the biggest sort of things to me, when you look at the contrast here with the support for windows 11 is to look at what apple is doing. obviously, phones, computers
+are a little different, but the iphone 6s is now
+going into its seventh year of support, right? mac os is right around that same time. even with the mac pro it's actually closer to like eight or nine years. the reason, and i believe this, that apple drop support for older devices is because they don't
+think that the performance is going to be up to the task for whatever kind of features they add. now you can agree or disagree with that. i think there are certainly an argument to be made that every operating system should just let you do your thing. it might not be recommended, but if i wanna try to load up
+the latest version of mac os just let me do it on an
+old system and if it sucks that's on me, right? i do kind of subscribe
+to that train of thought. but if you're gonna remove older systems, do it for good reason like performance not for some arbitrary reason,
+like "better security". which, what? - as you mentioned earlier in the video, when an hp stream, that is probably one of
+the wimpiest computers that we've ever seen, for sale today, is more better supported for windows 11 than a 1000 series ryzen. - it's crazy town. - it's absolutely crazy. and just because of one little tiny chip, and they haven't even clearly defined the whole security thing is with tmp. so it's like tpm, - it's fine. it's fine. - i don't even, it doesn't even matter. - we're like 30 minutes in this video and we still can't keep it straight. - i hate this whole thing. it's just... - look. i'm gonna just lay
+my cards on the table here. i don't think this is a big surprise. i don't think this
+policy is going to hold. i think microsoft is getting
+way more backlash on this than they're gonna be
+willing to sort of take. and my thought is, they're
+going to relax the restriction. they're gonna recommend tpm 2.0, maybe some features will be locked behind it. - this is more trouble than it's worth. - absolutely. - like granted, again, this is all coming up on
+the fact that we're talking about something that
+isn't even in beta yet. this is just dev preview. - but the operating system
+itself is actually pretty close to the rtm like release. a lot of what i think they're
+doing between now and october, whenever windows 11 comes out is more of like the little
+bug fixing and the patches, but like the actual core operating system, as far as i understand, is pretty close to what
+will be shipping later. - yeah. - just, look, if you're microsoft, you've been riding a great wave
+of positivity lately, right? and i mean, we both said it after watching the
+windows 11 launch event, wow, there's a lot of great stuff coming. they have so many of these good guy moves of like all their stuff they're doing with the android apps and
+with the microsoft store, or windows store and everything. why would they throw
+that away on something as arbitrary as this. - consumers will just see
+this version of windows does not work with my computer. in worst case, you bought that computer or built that computer this
+year, and it just doesn't work. these things aren't cheap either. - no. like a pc should last
+you five years minimum, 6, 7, 8 years. i mean, these are all
+totally what the hardware is capable of. and it's totally what i mean, you look at something that
+launched with windows 10. i mean, that was 2015. like stuff is old and yet
+still runs it completely fine. like it's not a performance thing. it's a completely boneheaded policy thing. - and let me throw a
+thing that matt thrown in in another conversation that
+we were having about this. this is the worst time to
+do stuff like this, right? it's not easy to buy
+computer hardware period. whether it's a laptop or desktop, the chip shortage is crazy all around. and we're not even talking about how much these tpm
+modules cost in the aftermarket. - even if your system is
+capable of taking one, 'cause a lot of systems,
+is a little questionable on whether your motherboard supports it, whether your cpu supports it. it gets very, very complicated to actually know if this is
+all gonna be up and running. most be like whatever. so very curious, what do
+you think about windows 11? and do you think microsoft
+will stick with this decision or will they backtrack and allow anyone to essentially install windows 11? i'm very curious to see what you think in the comments below. also make sure to go
+and check out my episode of the test drivers with panos panay where unfortunately we recorded with him before learning all this stuff. i'd love to ask him about
+it now, but check that out. and until next time,
+ken, will you play us out with a wonderful ode to
+windows of ye olden days? (mimics windows shutdown sound) that was beautiful. - thank you. - there's a tear in my eye now.

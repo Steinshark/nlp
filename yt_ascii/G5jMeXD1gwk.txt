@@ -1,0 +1,89 @@
+- hey guys this is
+austin and today at wwdc, we can finally say goodbye
+to the trashcan mac pro, and hello to a new brand
+new modular design, that is sure to cost at
+least a kidney and a half. so that's get start with the specs first, inside you can spec all the way up to a 28 core intel xeon processor up to ridiculous 1.5 terabytes of ram. as well you can go four vega gpus and it all is being powered
+by a 1,400 watt power supply. yeah, this thing's extra, but
+in like the best possible way. the design is reminiscent of
+the old cheese grater mac pro and that is definitely not a bad thing. so it's an entirely stainless chassis and while we're able
+to get a lot of footage unfortunately we weren't able
+to shoot inside the computer but i was able the to have a look at it and essentially the entire top comes off and there is a tube frame on the inside, kinda looks like some cool pc cases, and what you'll find there is pretty much everything
+you would expect. power supply, you've
+got a giant motherboard which is a custom form factor,
+you've got a ton of cooling, and importantly, it does
+have a full eight pci slots. so even though this is a mac pro you can in theory pretty much plug in anything that is supported
+by mac os and it will work. graphics cards, expansion
+cards, you name it. not only does it have the handles built in but you can even buy
+wheels for the mac pro if you wanna be extra cool. and at this point pretty
+much all modern macs thermal throttle to some degree however apple's been pretty clear that should not be the
+case with the mac pro. so this thing can move
+300 cubic feet of air per minute through the system
+and that is in large part because it has some
+very large fans up front as well as a series of heat sinks for the cpu, the gpu,
+and that kind of thing. now the cpu itself is
+actually really interesting. with that 28 core xeon it is rated for up to 300 watts of tdp which in theory means that
+even with the full 28 cores you should still be well
+into turbo boost consistently which is really nice to see, especially considering that
+a lot of these mac pros are going to be sitting
+around is like render farms that will be going at 100% for 24 seven. unlike most macs right now, this should actually run at full speed. cpu, gpu, you've got the power and importantly you have the cooling. now i was able to take a look
+at some of these mac pros which were running some
+fairly intensive 8k workloads and they sounded quiet
+and they were quoting it should be somewhere around the imac pro as far as levels of noise
+which is very quiet. so if they're able to
+pull this off with like 1,400 hundred watts of heat dissipation that's gonna be pretty cool. the graphics are also a big step up. so we do not sadly have
+any nvidia gpu options yet. however by default it will
+have a radeon pro 580x, nothing all that special to be honest but you can configure this with a brand new radeon pro vega 2 which i don't even think
+has been announced yet. now the cool part about it is that it's all going into an add-in card which in theory you can have up to four of these gpus running at one time. so apple calls this the
+mac pro expansion module and to be very clear you
+don't have to use these, you can plug in standard
+graphics cards and it will work but these expansion modules
+will allow you to incorporate two gpus into one module. but the nice thing is that
+with two of these modules you're getting something
+like, what was it, 128 gigs of ram on your 4 vega gpus. yeah, this thing's got a lot of memory. although fun fact, even though you can get like 1.5 terabytes of ram and like 128 gigs of graphics memory this thing by default chips
+the tomb in 56 gig ssd. - [cameraman] you can
+have like the big arms but like though really like scrawny legs. - the mac pro is like spongebob. it's like you inflate your arms but you still have a little scrawny legs, yeah, that's exactly
+what the mac pro's like each of these modules has a 500 watt tdp and one of the things i
+really like about this is sort of the best of both worlds. so you get the apple magic
+with the thunderbolt backplate and the multiple gpus in one card, that's a loud plane, may we continue? but on top of that, if you don't want to use any of that stuff just throwing your own graphics card. as long as there are
+drivers that are supported that's all you need to
+make sure this mac pro will be working for a long time to come. and in fact apple really
+it reiterated that and that this should be the mac pro chassis that we
+see for quite a while, right. so they want to have this
+with maximum flexibility, not only for you as the user
+but for them as a company. so as new things come out it's really simple for
+them to swap out a new xeon or put in a new graphics
+card or whatever the case is, there's plenty of expansion
+here for the future. we live in a new era where
+computers get updated every year. now in addition to the graphics modules there are a couple of other add-on cards which are direct from apple
+that will be available soon. so first of all there's the afterburner, this is very much focused
+on the video side of things. so it's a programmable fpga which specifically in
+something like final cut can allow you to do something stupid like a triple stream 8k video playback with like effects and stuff. now this is probably a little bit over the top for most people but there are also some
+other add-on cards, like one that is probably
+gonna come maybe not stock but at least going to come
+on most configurations which in addition to the two thunderbolt 3 and two usb-a that are
+on top of the system will give you an additional
+two thunderbolt, two usb, as well as a headphone jack on the back. although to be clear, this actually is not a standard feature and you can still buy a mac
+pro without a headphone jack. but, pretty sure everyone's
+gonna get that one 'cause that seems pretty important. what's nice about the new mac pro is that it is modular
+for an actual reason. so unlike the last generation mac pro which was a clever design but really wasn't quite fully fleshed out this is something which i do
+think will have a lot of legs and will be able to be very
+usable into the future. which makes sense because
+as i mentioned earlier it does not come cheap. speaking of expensive,
+apple also announced their brand new pro display xdr, which is a very awkward name, but this is a 6k monitor which
+will work with the mac pro as well as things such as the macbook and i assume other
+devices with thunderbolt a little bit later. but unfortunately, this
+display starts at $5,000. and that's not counting the $1000 stand. to be fair, that stand is
+not directly important, you can put it on other stands, but this thing does not come cheap which to me makes a little
+bit of a niche option. and when you compare it to something like a high-end reference monitor which can cost literally 30, 40, $50,000, this actually stacks up fairly well. but for most people like you and i who want to use like a
+5k thunderbolt display which is a very, very nice panel, it's still significantly cheaper. john, why?
+- sorry, buddy. - mac pro, thoughts? - yeah, it's awesome.
+- okay, cool. - looks like a cheese grater.
+- yeah. - can you buy me one?
+- no. - you can, mystery tech. - no, no, no, no no no no, no, no no no. so the new mac pro goes
+on sale later this year starting at a mere $6,000 and that my friends is
+for the eight core model. if you want to upgrade
+to this vega graphics and like the million core xeon processor and a terabyte and a half of ram expect this to cost the
+same price as a compact car. but i've got to say, i'm
+still really excited. now do i need a mac pro? absolutely not, do i
+need that new monitor? totally not, i can edit on my macbook pro like this video that
+i'm editing right now. but uh, do i want one?

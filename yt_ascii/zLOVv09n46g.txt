@@ -1,0 +1,316 @@
+on march 26, 2024 (just a few weeks ago, if you're 
+watching this as it comes out), a large container   ship struck one of the main support piers of 
+the francis scott key bridge in baltimore,   maryland, collapsing the bridge, killing 
+six construction workers, injuring one more,   and seriously disrupting both road and marine 
+traffic in the area. there's a good chance you   saw this in the news, and hopefully you've seen 
+some of the excellent content already released by   independent creators providing additional context. 
+i got a lot of requests to talk about the event,   and i usually prefer to wait to discuss events 
+like this until there are more details available   from investigations, but i think it might 
+be helpful to provide some context from an   engineering perspective about how we consider 
+vessel collisions in the design of bridges   like this one, and why the francis scott 
+key bridge may have collapsed. i'm grady,   and this is practical engineering. today we're 
+talking about vessel collision design for bridges. the francis scott key bridge was a steel 
+arch-shaped continuous through truss bridge.   i'm working on a video that goes into a lot more 
+detail about the different kinds of bridges and   how they're classified, but this bridge had kind 
+of a medley of structural styles, so let me hand   it off to our special guest correspondent, 
+road guy rob, to break that terminology down. well, grady, i'm in long beach, california 
+today, standing on top of this brand new   bridge that replaced an old arch/truss 
+bridge that used to be right there. it   kind of looked like a baby key bridge, and the 
+port of long beach is happy that it's gone. the gerald desmond bridge was a truss 
+bridge. instead of having one big large beam,   a truss has lots of smaller connected 
+structural members all attached together. this creates a rigid structure that's 
+much lighter weight than a big heavy beam,   and that makes trusses efficient and clever when 
+they work. both the key bridge and the old bridge   that used to be here were "through-truss" 
+bridges. it's a sort of arch shape,   and the driving deck is suspended below the 
+truss, so you sort of drive through the arch,   but it's not an actual arch with like a keystone 
+and all the pieces pushing horizontally to hold   each other together. no, this through-truss bridge 
+has no hinges or joints at the main supports,   nothing that breaks it up into sections. so 
+that's why engineers called the key bridge a   continuous truss bridge. it's all one big piece, 
+and it's all bolted and welded into a single rigid   truss across its entire length. and then that load 
+distributes across all three spans of the bridge. now, the approach roads on each side are 
+entirely separate bridges, even though they   link together. they just look like concrete 
+roads sitting on top of simple girder spans. well, you ask, what happened to that baby key 
+bridge in long beach? well, the only way you're   going to see it now is to turn on grand theft 
+auto five and look at the fictionalized version   of it immortalized in los santos for all time. 
+because when this bridge opened, the port of long   beach demolished the old bridge and the last 
+scraps of it got all the way back in october. in its place, this new, fancier 
+looking cable-stayed bridge,   the long beach international gateway. and what 
+the port of long beach did in studying to build   this bridge and the list of improvements they 
+came up with might give us some clues what   baltimore might want to end up doing when 
+they replace the key bridge down the line. and we'll talk about that in just a moment. when the dali container ship lost power 
+and drifted into the southwest pier,   the support collapsed, and most of the truss 
+and deck fell with it. both the southwest and   central spans fell roughly vertically with the 
+loss of support from the damaged pier. part of   the truss on the northwest side separated 
+from the unsupported section and rotated   toward the northeast span, taking several 
+of the approach spans with it. thankfully,   the ship had put out a mayday call before 
+the impact, allowing police officers at   either end of the bridge to close it to traffic. 
+tragically, it wasn't enough time to get the crew   of eight construction workers off the structure 
+before it fell, six of whom lost their lives. just dealing with the salvage and removal of 
+the steel and concrete debris left over from the   collapse has been a massive undertaking. within 
+a week, engineering teams were on-site measuring,   cutting, lifting, and floating away huge chunks 
+of the wreckage in separate salvage operations for   the main bridge, approaches, and the vessel. as of 
+this writing, they're still working hard on it. at   least seven floating cranes were involved, 
+including the famous weeks 533 that pulled   us airways flight 1549 from the hudson river in 
+2009. this was essentially a massive jenga tower:   the order of operations and the precision of 
+each cut and each lift mattered. with so much   debris underwater, they had to map it out to 
+understand how everything was stacked together.   access was a major challenge, and the stresses 
+in the wreckage were hard to characterize,   so it's been a slow and deliberate process 
+requiring careful planning and tons of skill   to do safely. fortunately for baltimore, there 
+are large industrial facilities in the port that   can process the thousands of tons of material 
+that will ultimately be removed. of course,   reopening the port to shipping traffic is a huge 
+priority. a small channel was marked out under   one of the approach bridges for smaller vessels 
+like tug and barges traffic, and the army corps   of engineers is making good progress on opening 
+up the main channel, but it isn't clear when   full-scale operations at the port will be able to 
+resume. shipping traffic isn't the only traffic   affected either, the bridge carried thousands 
+of road vehicles per day that now have to be   re-routed. there is a tunnel under the harbor that 
+provides a decent alternate route, but trucks with   hazardous materials aren't allowed through, 
+requiring an enormous detour around the city. it's been more than a month since the event, 
+but it will likely be a year or more before   we get an official report documenting the 
+probable cause of the failure. in the us,   events like this are investigated by 
+the national transportation safety   board or ntsb. this independent government 
+agency is extremely diligent. and often,   diligent also means slow. but events like this 
+are how the field of engineering evolves. human   imagination isn't limited to past experiences, 
+but in many senses, engineering is. we just don't   have the resources to answer the millions of 
+"what ifs" that might coalesce into a tragedy,   so we lean on the hard lessons learned from 
+past failures.  when something terrible happens, it's really important that we collectively get 
+to the bottom of why and then make whatever   changes are appropriate to our engineering 
+systems to prevent it from happening again. but, at the risk of stating the 
+obvious, the failure mode in this   case is pretty clear. you probably don't need an 
+engineer to explain why a massive ship slamming   into a bridge pier would cause that bridge to 
+collapse. i think what's less obvious is how   engineers characterize situations like this so 
+that bridges can be designed to withstand them.   collisions with bridges by barges and ships 
+are not a modern problem. technically they're   called "allisions" since a bridge isn't 
+moving, but that term is used more in the   maritime industry than by bridge engineers. 
+between 1960 and 2014, there were 35 major   bridge collapses resulting from vessel impacts. 
+and,' of those were in the us. we just have   such a big network of inland waterways, 
+and that means we have a lot of bridges. two spans of the queen isabella causeway bridge 
+in texas collapsed in 2001 when barges collided   with one of the piers. a year later, a bridge 
+carrying i-40 over the arkansas river in oklahoma   was hit by barges when the captain lost control, 
+collapsing a major portion of the structure. in   2009, popp's ferry bridge in mississippi collapsed 
+after being struck by a group of barges. in 2012,   the eggner's ferry bridge in kentucky fell 
+when a cargo ship tried to go through the   wrong channel. before any of those, though, 
+the sunshine skyway bridge in florida put a   major focus on the problem. in 1980, a bulk 
+carrier ship lost control because of a storm,   crashing into one of the piers and collapsing the 
+entire main span of the southbound bridge, killing   35. the event brought a lot of new awareness and 
+concern about the safety of bridges over navigable   waterways. but piers aren't the only parts of a 
+bridge at risk from ships. i'll let rob explain. the key bridge got into trouble because 
+of a horizontal allision. that's where a   ship moves side to side in the wrong way 
+and hits something it's not supposed to. here in long beach, that really wasn't 
+their concern, primarily because the old   bridge columns were way inland here, so there 
+was no way for a ship to exit the waterway   and hit the column because the column was in 
+lots of dirt. and the new replacement bridge   takes no chances at all. look how much 
+farther onshore those columns are now! now, the port of long beach were far 
+more worried of the old gerald desmond bridge   getting hit vertically. the old bridge was 155ft 
+tall. that's like a 15 story building. and if that   sounds pretty tall to you, it sounded pretty tall 
+to them back in 1968 when they built the bridge.   but as we now know, ships are getting bigger and 
+fatter and taller and 155ft wasn't cutting it for   some of the modern ships that were trying to get 
+into the back part of the port, where there's a   lot of cranes and action happening over there. 
+so the new bridge adds another 50ft, takes it   over 200ft. that's like a 20 story building to 
+get up from the waterline to that new bridge. and this new, taller, long beach international 
+gateway helps the port scratch off one designation   they didn't want - having the shortest bridge 
+over a port in the united states. well,   that's gone now, and thankfully in a less tragic 
+manner than what's happening on the east coast. in the aftermath of the sunshine skyway collapse, 
+the federal government and the professional   community, both from the engineering and maritime 
+sides, invested a serious amount of time and   investigation into the issue. one culmination was 
+updated bridge codes that included requirements   for consideration of vessel collisions. for 
+highway bridges in the us, those specifications   are put out by an organization called the american 
+association of state highway and transportation   officials (or aashto), but there are similar 
+requirements worldwide, including in the eurocode. a lot of infrastructure is designed for 
+worst-case scenarios, but at a certain point,   it just isn't feasible. this is something 
+i've talked a lot about in previous videos:   you have to draw a line somewhere that 
+balances the benefits and the costs. if   the code required us to design bridges with 
+armageddon meteorite or godzilla protection,   we just wouldn't build any bridges. it would be 
+too expensive. and that's kind of true for ship   collisions too. the mass and kinetic energy 
+of the cargo vessels today is tough to even   wrap your head around. we just couldn't afford 
+to build bridges if they all had to be capable   of withstanding a worst-case collision. instead, 
+for what engineers call "high consequence, low   probability" events, codes often set the standard 
+as some acceptable amount of risk. there's always   going to be some possibility of an event like 
+this, but how much risk are we as a society   willing to bear for the benefit of having easy 
+access across navigable waterways? in the u.s.,   that answer, at least according to aashto for 
+critical structures like the key bridge, is   0.01 percent probability in a given year. for some 
+perspective, it's roughly the chance of rolling a   yahtzee (five-of-a-kind) in a single throw. but 
+it's an annual probability, so you have to roll   the dice once every year. if you did it forever, 
+it would average out to once every 10,000 years,   but that doesn't mean it couldn't happen twice 
+in a row. so an engineer's job is to design   the structure not to survive in a worst-case 
+scenario but to have a very low probability of   collapsing from a vessel impact. and there's 
+a lot that goes into figuring that out. this is the general formula for the annual 
+probability of bridge collapse due to a ship   collision. you have all these factors that get 
+multiplied together. the first one is just the   number of ships that pass under the bridge in a 
+year. and there's a growth factor in there for how   that number might change over time. then there's 
+what's called the probability of vessel aberrancy;   basically, the chance that one of those ships 
+loses control. aashto has some baseline numbers   for this based on long-term accident statistics in 
+the us, and the designer can apply some correction   factors based on site-specific issues like water 
+currents and navigation aids. then, there's the   geometric probability of a collision if a ship 
+does lose control. when a vessel is aberrant,   you don't know which way it's going to 
+head. this gets a little complicated,   but if you're familiar with normal distributions 
+it will make perfect sense. you can plot a normal   distribution curve centered on the transit path 
+with one standard deviation equal to the length   of the aberrant ship to give you an approximation 
+of where it might end up. the area under that   curve that intersects with the bridge piers is the 
+probability that the ship will impact the bridge   if it loses control. and this is really the first 
+knob an engineer can turn to reduce the risk,   because the farther the piers are from 
+the transit path, the lower the geometric   probability of a collision. and this factor can 
+be modified if ships have tethered tugs to assist   with staying in the channel, something that 
+wasn't required in baltimore at the key bridge. but, even if there is a collision, that doesn't 
+necessarily mean the bridge will collapse. this   is where the structural engineering comes into 
+play. the probability of collapse depends both   on the lateral strength of the pier and 
+the impact force from the collision. but,   that force isn't as simple as putting a 
+weight on a scale. it's time-dependent,   and it varies according to the size and type 
+of vessel, its speed, the amount of ballast,   the angle of the collision, and a lot more. 
+usually, we boil that down to an equivalent   static load. and based on some testing, 
+this is the equation most engineers use.   it's just based on the deadweight tonnage 
+(basically how much the ship can carry) and   its velocity. it's interesting that they settled 
+on deadweight, which doesn't include the weight   of the ship itself. but again, this analysis is 
+pretty complicated, especially because you have   to do it for every discrete grouping of vessel 
+size and bridge component, so some simplifications   make sense, and since this one assumes every ship 
+is fully loaded, it's relatively conservative. just for illustration, the ship that hit the 
+sunshine skyway bridge had a deadweight of   34,000 tonnes. the ntsb report doesn't estimate 
+the speed at which it hit the bridge, but let's   say around 5 knots. that would be equivalent to 
+a static force of around 56 meganewtons or 13   million pounds if the ship was fully loaded, which 
+it wasn't (but there's no way to account for that   in this equation). the dali has a deadweight of 
+117,000 tonnes and was traveling at roughly 5   knots on impact. that's equivalent to more 
+than 100 meganewtons or 24 million pounds,   again, assuming the ship was fully loaded (which, 
+again, it wasn't). but you can validate this with   some back-of-the-envelope physics. force 
+is equal to mass times acceleration. we   know the mass of the ship and its cargo from 
+records: about 112,000 metric tons. to decelerate   that mass from 5 knots to a standstill over 
+the course of, let's say, 4 seconds requires,   roughly, a force of 72 meganewtons or 16 
+million pounds. even as a rough guess,   that is a staggering number. it's 5 spacex 
+starships pointed at a single bridge pier. designing a bridge to handle these forces 
+is obviously complicated. it's not just the   pier itself that has to survive, but every 
+element of the bridge along the entire load path,   including the foundation, and (assuming the pier 
+isn't perfectly rigid), the superstructure too.   again, it's not impossible to design, but it 
+gets pricey fast, which is why designers have   more knobs to turn to meet the code than just 
+the strength of the bridge itself. one of those   knobs is pier protection systems. fenders can be 
+installed to soften the blow of a ship impact,   but for ships of this size, they would have to 
+be enormous. islands can be built around piers   to force ships aground before the hit the bridge. 
+but islands create environmental problems because   of the fill placed on the river bottom, plus they 
+get really big for deeper channels, so the bridge   span has to be wider to keep the channel from 
+being blocked. islands can even affect currents   in the water and the bridge structure, creating 
+additional load on the foundation as they settle   after construction. another commonly used 
+protection structure is called a dolphin. this   is usually a circular construction of driven sheet 
+piles, filled with sand or concrete. dolphins can   slow a ship, stop it altogether, or redirect 
+it away from critical bridge elements like   piers. the new sunshine skyway bridge used islands 
+and dolphins to protect the rebuilt span, and   actually, the key bridge had four dolphins, one on 
+either side of each main support. unfortunately,   because it came at an angle, the dali slipped 
+past the protection when it lost control. it's important to point out that everything 
+i've discussed is a modern look at how engineers   consider vessel impacts to bridges. when the 
+francis scott key bridge was finished in 1977,   there were no requirements like this, and 
+the bridge never had a major rehabilitation   or repair that would have triggered adherence 
+to the newer codes. container ships the size   of dali didn't even exist until around 
+2006. and we don't know what the ships   of the future will look like. it's easy 
+to say with hindsight that a bridge like   this should have been better protected against 
+errant ships, but if you say it for this one,   you really have to say it for all the bridges 
+that see similar maritime traffic. and that   represents an enormous investment of resources 
+for, potentially, not a lot of benefit to the   public, given how rare these situations are. 
+that's not me saying it shouldn't be done;   it's just me saying that a decision like that 
+is a lot more complicated than it might seem. i   don't expect we'll see bridge design code changes 
+come out of this event, but vessel collisions will   certainly be on the minds of the designers for the 
+replacement in baltimore. i'll let rob explain. when you take a look at photos of the key bridge, 
+it looks like maryland was doing a good job taking   care of their bridge. so if the ntsb report comes 
+back and says the bridge was in good shape, it's   100% the ship that's at fault, well, i don't think 
+any of us are going to be really that shocked. but for the old gerald desmond bridge here 
+in long beach, that used to be right here,   well, the environmental impact report, where they 
+studied to build this new replacement bridge, the   port staff really didn't seem too concerned about 
+a maritime navigation failure. of a structural   failure? let's just say engineers scored bridges 
+out of 100 points. so you have a brand new bridge,   it gets 100 points. on that scale, the old 
+gerald desmond bridge that was right here   scored a 43. i mean, anything below 80 points, 
+you get federal money to work on the bridge   to try to rehab it and get it back into good 
+shape. and anything, anything under 50 points,   it's so bad the federal government starts throwing 
+money in trying to help you replace the bridge. that's how bad off the gerald desmond bridge was. 
+salt from the air of the sea and decades of it   sitting above sea water and all of that, just nice 
+salt in the air, eating away at the paint. well,   that paint was rated very poor on the 
+old gerald desmond bridge. and, you know,   paint protects all the bridge members, all the 
+metal from rusting out. and as grady points out,   every single member of a truss is 
+really important if you, you know,   want the bridge to stay in good 
+shape and not fall down, right? engineers also conducted a load analysis. 
+they tested to see as trucks drove over it,   how the bridge was holding up. and they found 
+members of the arch main span were overstressed   for all design trucks. so that didn't matter 
+if you drove a big truck or a little truck.   they were all causing problems with the bridge. 
+and the concrete that those trucks drove on? it   was all cracking up. it was rated critical. the 
+port had to install big nets to catch big chunks   of pavement that were falling off the bridge 
+and could hit somebody on the head down here. so, long beach had four objectives that this new 
+bridge needed to meet in order to build it. and   those goals may mirror some of the ones baltimore 
+may want to have when building their replacement   bridge. 1. this bridge had to have a design 
+life of 100 years. say, stay structurally sound   for that long. 2. long beach wanted to reduce the 
+approach grades on both sides, even getting up to   155ft before. sometimes you were driving up a 6% 
+grade and now that this thing is over 200 ft high,   that would be way too steep. so they instead 
+built these huge freeway viaducts that go on   and on for like a quarter of a mile to lift people 
+and trucks gently up to that new bridge height.   baltimore's bridge already has some very long 
+approaches to it, so i don't know whether they're   going to replace the, uh, ramps approaching the 
+bridge or not. it'll be interesting to see what   they end up deciding to do. 3. provide sufficient 
+roadway capacity to handle future car and truck   traffic. the old bridge here was two lanes 
+in each direction. four lanes. this widens   it to six. the key bridge in baltimore was also 
+only four lanes. but this bridge handles twice   the traffic every day. you know, compared to 
+the key bridge back when it was open, right? and both the key bridge and the old gerald 
+desmond bridge had no shoulders for emergency   vehicles and stalled cars to pull off to the 
+side. and as you can see, the new bridge has   these excellent shoulders on both the outside 
+and the inside of travel lanes. so that makes   the road a lot safer, because you're not going to 
+run into the back of a stalled truck in the dark. it's also a lot safer if you're not in your 
+car, because this bridge has a way you can   cross it without being in a car. they've added 
+this 12ft wide pedestrian and bicycle pathway,   which is about 12ft wider than what they 
+had before. used to be on the old bridge,   the only way across was inside a car. it's a 
+good start, certainly not perfect. right now,   the path just hits this gate and stops. the city 
+of la owns the next harbor bridge down that way.   it's called the vincent thomas bridge. it's also 
+old, so it doesn't have a pedestrian walkway,   so this pathway sort of just ends at the 
+city limit because there's nowhere for it   to go. but adding in a multi-use path like 
+this one onto the new key bridge would be   such a no-brainer. it could take a four mile bike 
+ride from like, hawkins point to sparrows point,   down from four miles with the bridge 
+path from 22 miles right now, without it. and finally the fourth goal: providing vertical 
+clearance for new generation of larger vessels,   which the new bridge certainly has. 
+and that must make the port very happy.   and i'm willing to bet that baltimore will 
+take that goal and maybe turn it on its side   and talk about horizontal clearance and insist on 
+a design that eliminates the risk of an allision,   like what happened on march 26th 
+from ever happening again, grady. thanks rob. if you love deep dives 
+into transportation infrastructure,   go check out his channel after this. but, 
+it's important to point out that this wasn't   just a bridge failure; it was a bridge failure 
+precipitated by a maritime navigation failure.   obviously, engineers who design bridges 
+don't have a lot of say in the redundancies,   safety standards, and navigation requirements 
+of the vessels that pass underneath them. but   if you look at the whole context of this tragedy 
+and ask, "how can our resources best be used to   prevent something like this from happening 
+again?", reducing the probability of a ship   this size losing control has to be included with 
+the structural solutions like pier protection   systems. i don't know a lot about that stuff, 
+so i couldn't tell you what that might include,   but i'm sure ntsb will have some recommendations 
+when their report eventually comes out. having   tugs accompany large ships while they 
+traverse lightly protected bridges seems   like a prudent risk reduction measure, but 
+that's just coming from a civil engineer. and, speaking of risk reduction, i have to say 
+that using risk analysis as a tool for design   is really not that satisfying. we humans are 
+notoriously bad at understanding probabilities   and risks, and engineers are not that great 
+at communicating what they mean to people   who don't speak that language. that's how we get 
+confusing terminology like the hundred-year flood.   and it's unsettling to come face-to-face with 
+the idea that, even if our bridges are designed   and built to code, there's still a chance of 
+something like this. everything's a tradeoff,   but the people driving over the bridge (or working 
+on it) had no direct say in where the line was   drawn or whether it applied retroactively, even as 
+ships got bigger and bigger. but i hope it's clear   why we do it this way. the question isn't "can we 
+design bridges to be safer?" the answer to that   is always "yes." the real question is, "how much 
+risk can we tolerate?" or put in a different way,   "how much are we willing to spend on any 
+incremental increase in safety?" because the   answers to those questions are much more complex 
+and nuanced. and if all bridges were required   to survive worst-case collisions with ships like 
+dali, we would just have a lot fewer bridges. but   sometimes it takes an event like this to remind 
+us that risks aren't just small numbers on a piece   of paper. they represent real consequences, and 
+my heart goes out to the families of the victims   affected by this event. i hope we can honor them 
+by learning from it and making improvements,   both to our infrastructure and our maritime 
+systems, so that it doesn't happen again. the key bridge collapse is a really interesting 
+case study because it combines two really   different areas of understanding. obviously, 
+i can approach it from the bridge engineering   perspective, but there's just as much, if 
+not more, to understand from the maritime   side. ships and marine navigation are 
+literally a whole different world,   and my friend sam from wendover productions 
+has an awesome video specifically about   the crazy sophistication of the commercial 
+fishing industry. i find it so fascinating   to learn about the little details behind 
+industries i know nothing about, so honestly,   this entire series, "the logistics of x" is 
+so good, and it is only available on nebula. you probably know about nebula now, even if 
+you're not subscribed. it's a streaming service   built by and for independent creators. no studio 
+executives deciding what gets the green light,   no advertisements, and no algorithm driving 
+the content into a single style. it's just   independent creators making stuff their excited 
+about with a few barriers and distractions as   possible between you and us. the website just 
+got a huge update that completely redesigned   the home page, making it easier to find 
+new stuff in addition to your favorites. my videos go live on nebula before they come 
+out here, and my practical construction series   was specifically produced for nebula viewers who 
+want to see deeper dives into specific topics.   i know there are a lot of streaming platforms 
+out there right now, and no one wants another   monthly cost to keep track of, but i also know 
+that if you're watching a show like this to end,   there is a ton of other stuff on nebula that 
+you're going to enjoy as well. so i've made   it dead simple: click the link below and you'll 
+get 40% off an annual plan. pay just one time,   30 dollars, for an entire year's access at 
+nebula.tv/practical-engineering. or if you have   subscription fatigue, but still want to support 
+what i'm doing, you can get a lifetime membership.   pay once and have access for as long as you 
+and nebula last. hopefully that's a long   time! if you're with me that independent 
+creators are the future of great video,   i hope you'll consider subscribing. thank you 
+for watching, and let me know what you think!

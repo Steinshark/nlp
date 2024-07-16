@@ -1,0 +1,194 @@
+- ow!
+(jake laughing) damn it! what is that? a total 128 cores? - 64, but good try. - and a terabyte of memory. - that's 256 gigs. - oh. supermicro told us that we're not allowed to build this server ourselves. they have to build it for us. naturally, we said no. so we are gonna be taking one
+of the thin 1u storage servers from the petabyte flash project and see just how fast we can drag race it with a handful of kioxia cd6 drives, optane acceleration, 64 epic course, the fastest we can get, and is this 200 gigabit
+per second networking? - it's 200 gigabit. - and 256 gigs of memory. - the pin's just for boot. - thing's gonna be crazy fast, almost as fast as i can
+take to our sponsor. - glasswire. are you having poor
+quality video meetings, use glasswire and instantly see what apps are wasting your bandwidth
+during your meeting and block them. get 25% off today using code
+'linus' at the link below. (upbeat music) - in a way, a server is
+a lot more like a laptop than it is like a commodity desktop native off the shelf components, because they tend to be way more tailored to a specific use case, and they're not really as flexible. say you'd wanna build a storage server. there's a dozen different
+ways to skin that cat. (cat meowing)
+pardon the expression. for example, here at linus media group, our primary concern is getting
+as much capacity as possible at the lowest possible price. - yeah. - so we're willing to give up some compute in favor of stuffing more
+drives into a single chassis. that's why our storage
+servers tend to be this thick or this thick. the reality is that 4k
+or even 8k video editing is pretty demanding, especially if you've got
+10 or a dozen editors working off the server at once compared to enterprise or
+scientific applications. it's not you even close. so, that is why any good server deployment starts with the chassis. this right here is the
+supermicro super server, 1124us. and it is all about density, not storage density, because if we went with a 2u, remember that dual layer one? - oh yeah. old whonnock. - they absolutely could
+pack in more drives, but they choose not to because you're going to run
+into performance bottlenecks if you don't have enough compute. and that's the density
+that we're increasing here by going with these 1us. each layer of this, 12 drives, yes, but two cpus. so no bottlenecks, right? - that's the idea. - supermicro only sells these as a complete system these days, meaning that it must leave their warehouse with a minimum of two cpus, four sticks of ram, and at least one storage drive. and the intention there is for them to be able to ensure
+quality and compatibility. and then as a side benefit, obviously, they make
+some money off the parts, but because of petabyte flash project, we were able to get our hands
+on some bare bones ones. so let's take a closer look. wow, built in on board. you've got dual sfp ports. are those 10 gig or? - [jake] all four of those are 10 gigs. - all four of these ports, rj45 and sfp are 10 gig, dual usb three, see we've got an ipmi
+management port serial, vga, i love that vga, as well as two pcie 16x slots back here, and what have we got for power? - [jake] there's more, there's three. - there's three. oh, there's a third one. oh, look at that. - oh, wait, there's actually four. there's one more like hidden inside. we'll see that later. - oh, cool. okay. let's have a look at our power supply. obviously, dual up to 64 core cpus. wow. 1200 watt power supply. - [jake] geez. - strictly speaking, this, they didn't actually send us a bare bones, they sent us a completed one and we took it apart. - oh, do i ever have the story for you. on a call for this project, the supermicro guy was like, "you know, taking out a
+pcie card, that's easy, "but you know, get to a cpu there's, "there's pins and thermal paste." i'm like, "bro, "i have probably taken out slash installed "at least a thousand cpus." - yeah. is it wrong for me to just love
+looking at thermal solutions for super thin systems like this? - really, you know what i'm looking at? the ram slots, it's like 60% of the width of
+the server is just ram slots. - it's a forest of memory slots. why aren't we putting more memory in then? - erm...
+- fetch me more memory. - no, no, no, no, no. the thing with epyc is we wanna have all of
+the channels filled out, so that's eight per cpu.
+- yes. - but once you add more, it can be harder to hit the
+same speeds in the same latency, so-
+- and speed and latency of your memory is super, super important if you're running software raid, which is exactly what we're
+gonna be doing with zfs. we're using zfs, right? - well, for now. just to test it. but the actual deployment's
+gonna be using wekafs, which is a different thing that costs hundreds of
+thousands of dollars, but seems to be software raid too, so yeah, i guess. - whoa! - but, oh, what the hell? - that's cool. - you dropped something. it comes out as one big
+fat mammoth of a module. - [jake] here.
+- i love it. - i don't know where that is from - raaaaaaaaa! now, this is a fun fact. small fans, not great
+at moving a ton of air because they got little bit tiny planes. but what they are really good at is generating a ton of static pressure, which is really important
+in a deployment like this. see, look at the front of this chassis. it's gonna be all full of
+drives in there, right? and in order to fill it with drives, you've gotta have a back
+plane for them to connect to. well, that back plane has hard pcb, and you can see that there's
+only tiny little gaps in it. wherever they were able
+to get a little hole to draw air through the
+front of this chassis. they need to generate
+enormous static pressure in order for there to be enough air flow, to force over the cpu's memory, power supply, and pci express cards. did i say power supply? power supply is up, they're redundant in the
+event that one fails, and it's also super useful
+for connecting your server to two independent power sources, in case your power source fails. side note, jake, i think this might be the
+thickest pcb i've ever seen. - holy (beep). - i mean you want rigidity obviously, especially somewhere where there's gonna be mechanical
+strain on the device. - that's like two sticks of ram. - yeah.
+- thickness. - here, let's get a shot
+of this, just for context. here's a stick of memory. i think it's more like three, jake. - what? that pcb is almost 1/8 of an inch thick. - that's crazy.
+(jake laughing) oh, this is interesting. you can see that in
+order to avoid recycling any of the hot air back to the other side, they've got these little
+like rubber curtain things anywhere where cables have to pass between the front of the
+chassis and the back. and that's not the only
+cable management trick it's got up sleeve, power runs up this side, but the front enclosures also
+need pci express connection for the nvme drives. and all of those are flat connectors. check this out, that run right in between
+these memory slots, to these sick freaking pcie connectors that go into the motherboard, and do they have any cards for them? no, they just all come
+directly off the board. - yeah, there's the
+little ones over here too. - of course, you can add
+even more nvme storage if you wanted to. there's the three, excuse me, four pcie slots here at the.. wow, this is- - see this little guy, he is right here. - oh, there it is. - that's where we're gonna put our optane. oh wait, actually no, it doesn't fit. - ah.
+- oh god. - no, it's fine. oh, cool. okay. so this is a dual riser, on this side. you've got a simple pcie 16x to 16x slot, and knowing amd epyc, it's probably running at full speed. - it's running at full speed. - actually, all of this is just gonna be full speed pcie gen four. and then over on this
+other side, we've got, i believe this is a pcie 32 x slot. oh, that is crazy. jake, it is a 32x slot, and you can see they've
+actually got the pins that correspond to each of the 16x slots, silk screened onto the pcb. - look, if you think that one's crazy, look up here. - that's amazing, i love it. - there's one 16, another 16, and then a, what is that? 8x.
+- that's an 8x. right over here. - so i think some of the
+nvme is run off of this. - oh, you know what? the 8x is running these
+sfp ports at the back. - oow! - no bottlenecks. - and then one slot, and then those are two
+more 8x nvme connections different ones.
+- running to the front, yep. there's so much pcie in microservers. - and again, very purpose built, right? - yeah. - you can put a gpu in here though. oh look, gpu power. if you wanted like an na100 or something. again, if you had a very purpose
+built, specific use case. oh my god. - i mean, we did see a
+storage deployment recently where gpu acceleration was
+used for raid parity data. - i have a bit of an update on that one. - wendell, informed us that
+there could be some issues with that particular solution. - we tested it. there is an issue. - ooh. (jake laughing) - basically, we stopped the array, edited one of the drives, i think we edited 32 bytes of
+it to be something different, started it up, and it didn't fix it. - it just has no error
+handling whatsoever. - it is. it is depending on the drive to tell it that there's an error. - jake, i just realized something. i was trying to figure out why the front of the slot was over here. and i was like, "right, that's
+where the power pins are." - [jake] yeah. - so it's got normal size power pin, and then these itty-bitty
+higher density data pins. - now the goal today is to see
+how the system would perform if you were just to set it up yourself with something like zfs but even with a more optimized and actually specifically
+built for nvme file system, like wekafs, you still need a lot of cpu compute to handle things like networking, the actual connection to
+the nvme drives themselves and any sort of networking overhead. fortunately, amd stepped up to the plate and provided 12 of their
+7543 epyc processors. so those are 32 core each, for a total of 64 cores in
+each of our six servers. these are configurable
+to a max tdp of 240 watts and a max boost clock of 3.7 gigahertz. they're not quite as fast as the 75f3s we had in the g-raid server, but there's still plenty potent for what we're trying to do here. so, let's get them installed. i gotta prove supermicro right here. i know how to do this, david. i swear. i swear i can put a cpu in. - [david] i don't know, jake. - watch me screw this, no. - [david] oh. (jake laughing nervously) - you saw nothing. you know, my hands quite
+aren't what they used to be. (upbeat music) all right, david, i'm doing the most dangerous
+part here, thermal paste. oh, don't wanna mess this up. oh, oh, i already messed it up. - [david] is there treasure under that? - look at these bad boys. it's crazy to think that this
+could handle a 280 watt cpu. like there's just underneath here. there's gonna be a massive vapor chamber that just spans the entire thing. - now it's time for the tedious process of installing all of
+these sticks of memory. the dimms are made by samsung. they are 16 gigs each, and they run at 3,200
+mega transfer per second, but the most important thing about them is that they're qualified by supermicro for this particular server. and i get it, you know? who would wanna run unqualified memory in their mission critical server? it's like drinking from a non ltt store
+qualified water bottle. crazy. i think the craziest thing
+about this memory setup is that it's not even that crazy. 256 gigs of ecc error correcting memory would be mind blowing for a desktop, but for a server, this is pedestrian. this is a storage server. we don't actually need to put
+enormous data sets in memory for these cpus or gpu's to crunch away at. these are to make sure that each of our cpus gets two full fans worth of dedicated airflow
+blowing through them. in our final deployment, as part of our petabyte
+flash storage project, oh, we're gonna have six
+of these acting as nvme over fabric posts. and it's kind of similar to iscsi in that your storage is
+in one box over here, and then there's connected vn networking to your compute box. but nvme over fabrics
+was designed specifically with nvme devices in mind. so, it's way more performant, but to push that kind of speed, you need to make decent
+use of the drives, right? and that requires a lot of networking. a hundred gig? ha, can i get a ha? - i don't have my mic on. hold on. ha. - 400 gig is what we're targeting with dual nvidia connectx-6 series cards, and i couldn't help
+noticing that one of these has a half height bracket on it. oh, you want it on this side? - yeah. - it's for cooling, for more cooling. get them separated. - it's just gonna hang there. - the teamwork in it. i'll go at it from one side, you go at it from the other. - yeah, i think they called that a (beep). - [david] ew, no. (jake laughing) - i thought you wanted to
+put this one on this one. - it doesn't fit. - oh.
+- yeah. it's fine. we can just stick it- - too much, too much cable. - ooh, careful. - yeah, we really need
+to not break any of these if we're gonna hit our
+petabyte flash storage, - well, and also,
+- target. - we don't want them to be
+able to say, "i told you so." - they did tell us not to bother them. (jake laughing) this may be the most overkill
+boot drive of all time. (jake laughing) - like doesn't.. - it's not redundant though. so it's like actually
+not that great (laughs). - in fact, many server motherboards, most even have an internal usb port that is exactly for that. that is what it's for.
+- really? - yeah. it's for just
+running an os off of usb, but just using a cheap thumb
+drive and plugin it in. a lot of them also have an internal, like little powered inserted thing, and that's what we'll
+be using for this one. where is that?
+- in the real deployment. - yeah.
+- let's take it out. - oh, well where does it go? oh, is it the super dome one here? - yeah. something about that doesn't look right. - yeah. i did not put this in right. yeah. - oh, oh god. every time. you didn't screw this in? - oh, i forgot. oh, i can still access it. where'd the screws go. just gonna-
+- is there a through hole? - yeah, so like a- - oh, god.
+- just a- - what about this side?
+- there's a bit of flux. no, that one i screwed. oh, i didn't screw that one in either. - last but not least, storage. the actual deployment of this cluster is gonna be making use of 12 cd6, 15 terabyte drives per server. but because those drives already have like specific demo data,
+- right. - assigned to specific slots, we had to be very careful
+about taking them out. did you see my little diagram? - oh no, i didn't. - oh. oh yeah, baby. - oh my gosh. - [jake] it's perfect. - [linus] okay. i mean... - i labeled the drives. i didn't wanna screw it up. - that's fair.
+(jake laughing) that's fair. - because that would be catastrophic. so instead we're gonna be
+using these seven terabyte cd6s that we already had laying around, and we're gonna be installing
+true to run zfs on them. just to see like if you
+were to buy this server and these drives.
+- yeah. - how much could you get without spending $400,000
+on a file system. - yeah, that. i mean, we're expecting
+really impressive results even without the fancy file system, because these are pcie gen four drives that are capable of an excess of... what is it?
+- there's like six gigs. - like over six gigs a second? gigabyte.
+- these are exactly six gigabytes. - six gigabytes a second of throughput. - so put together that's
+around 75 gigabytes a second. the interesting thing
+is the 15 terabyte ones are a little bit slower. i think they're five and
+a half gigabytes a second, so it works out to be closer to like 65 gigabytes a second, which is a lot closer to
+the 50 gigabytes a second that our network can do. - shout out supermicro, by the way, for these toolless sleds, this was so fast compared to when i built that simply double server that had- - did you have to screw them all in? - all of them. - oh.
+- even with one screw, boy, does that ever add a lot of time. - but you kind of have to do two. so that's like, oh, 96 screws. he's not even doing it
+right and he is complaining. (jake laughing) oh, are we done? - that was it. - that's it? wow, it's so cute. - fricking crazy. - i mean, cute is like not
+giving it enough credit. - 400 gigabit per second. okay. - shall we plug her in captain? it's gonna complain that i
+only plug in one of these. - and then we'll tell it to shut up. - this one doesn't have a shut up port, but it does have a shut up function called unplugging the power supply. (server humming) - oh, well we could just plug it in. here we're gonna plug the
+power supply into our server. oh, that was a little rough. oh, i got the wrong power cable. one moment please. when i was living at yvonne's house. - like with her parents? - yeah. i had a gpu make that noise when i forgot to plug in
+the pcie power connector. - oh yeah, like an 8,800 or something. - and it made her dog throw up. (jake laughing) this thing is surprisingly quiet for a 1u. i mean, i know it's idling, but still. - i guess if it's not doing anything. - yeah. well, it's nice to not have
+to hear it just whining. - some of them, their power supplies... (server humming) - no, nevermind. i spoke too soon.
+- that's still not bad. 232 core processors. all right, we see 13 drives, looks good. we got our boot drive and our 12, seven-ish terabyte drives. it's time to make our pool. should we do realistic or
+should we do full send? i actually don't think a stripe is gonna be that much faster, honestly. we might be best to just
+do like two raidz ones. - two raidz one pools would allow us to have two drive failures before we actually
+experienced any data loss, and the way jake's going to configure it is with two six drive vdevs that we will then combine
+into a single pool. - [jake] all right. what
+do you wanna call this? iamspeedd, 69 tebibytes. you know what, it's even dot 84. like that's double 420, you know? (jake laughing) we gotta make a couple tweaks here. they've actually updated it so atime is off by default. - what is atime? - it's like, it records the
+access time of the data. you only need that for like
+very specific use cases. - or diagnostics, i would think. - yeah, but you don't want it. it's not good for performance
+unless you actually need it. we're gonna go from 128 to one meg, 'cause that's kind of
+closer to our use case of like the video, which is big files. - yeah. - if you were to host like
+a database or something, where you have lots of
+random reads that are small, like especially like
+a text based database, you would probably want
+a smaller record size. but for us one mega is good. - 128 is the default for a reason. - yeah. - that's excellent for a mixed use case. - yeah. okay, and we wanna do one more thing. we're gonna set at the arc, that is the ram cache of
+zfs to just be metadata only if you use it for files as well, when you have such vast backend storage, you can actually lose performance. - yeah. - so setting it to metadata only, gives us a little bit
+of acceleration from it, but not the same kind that
+arc would for hard drives. so we're running an iodepth of 32, which is somewhat unrealistic, but two threads per mbme. so 24 threads total at a 128k block size. - you make the server go fast your way, i'll make it go fast my way. here we go, ready? ah. - did you just unplug the network? - oh. maybe. - maybe? - but i did it really fast. - yeah, i think you did
+just unplug the network. cool. well, it's fine now. 15, 17, 20. - now we've done, you know?'20 gigabytes a second
+on a zfs pool before, but what you have to consider now is that we've done that on servers that were generally double the thickness. so, in a clustered deployment
+where density is key, you're able to get effectively
+double the performance of your drives by having true one use, by adding all of that compute. that's the point of this, and that's what made these ideal for our petabyte flash project. - whoo, we're ramping up baby, almost 30 gigs per second. - oh wow. - look at the cpu usage, those cores are, - they're going.
+- ahead. i bet you if we switch our
+test to a 128 block size, leaving the array at one meg, this is gonna go even faster. yeah, there's 22, 20. see if it ramps up even higher. - five threads at 100%. - well, there's more than that if you look at it like realistically. so this is a right test? sequential right? we're looking at around 20
+gigabytes second as well. - what that tells us is that
+we are still cpu limited because in theory, these drives don't write
+as fast as they read. these are a more read
+optimized data center drive. that's actually really
+impressive considering that we're dealing with
+parity data here though. - and zfs. bump the threads up a bit. - man, i am excited to
+see what this thing can do when there's another five
+of them in a cluster. - yep. okay, so this is a random
+read 4k block size. we're doing four threads
+per drive and a 64 q depth. - this is not only gonna
+be a petabyte flash. it's gonna be the highest
+performance setup that i, - look at how,
+- might ever see. - dog crap that is. - oh, that's a shame. 150,000 iops individually. these drives they'll do more than that. - even a million.
+- yeah. - they'll do a million each. that's that one meg record
+size kind of hurting us. geez. look at our cores they're just banged. - wow. - yep. - 47 threads at a 100% right now. poor thing. - and what about our random write. it's poor drives are just abusing them. oh, that's embarrassing. - 20,000 iops? this is literally slower
+than a hard drive, but
+- no, it's not. - a hard drive sequentially. if we were doing 4k random
+writes to a hard drive, it would be,
+- you'll get like 10 iops. - way slower than this. so that's something you gotta keep in mind about these numbers. it's not as simple as
+just megabytes a second. the kind of data that you're hitting
+your storage device with is what makes an enormous difference. really that brings us back to what was kind of the whole point
+of this video, doesn't it? - yeah. - that servers have to be designed for the application that
+they're intended for. and these are absolutely perfect for what we will be doing with them, but not perfect for what we do with our regular servers here. like we wouldn't replace new, new whonnock with one of these. - that's the thing with software man, random reads and writes are just not it. but you know what is it? (jake laughing) - our sponsor. - manscaped. the new manscaped ultra premium collection is an all in one skin and hair
+care kit for the everyday man and covers you from head to toe. there's the two in one
+shampoo and conditioner, their body wash with cologne scent, hydrating body spray, deodorant, and a free gift, moisturizing lip balm. ooh (lip licking) your man maintenance just got easier. and best of all, all manscaped products in
+the ultra premium collection are cruelty-free, paraben-free and vegan. visit manscaped.com/tech or click on the link below for 20% off and free shipping. - if you guys enjoyed this video, go check out part one where we got into more depth about the complete configuration, including taking a close
+look at the 8-gpu server that is gonna act as the head controller for the six of these that
+we're gonna have stacked up- - oh, i wanna do a video
+like this on that server. - you should. - like booted into
+windows just for (beep). - nvidia specifically
+told us not to mine on it, but
+- i might just do it. - like could they hate
+us anymore at this point? - yeah.

@@ -1,0 +1,132 @@
+when the covid-19 pandemic was just getting 
+started in early 2020, every major city,   state health department, and federal agency 
+involved built out data dashboards you could   access online to check case counts and trends. 
+public health officials could constantly be   heard asking everyone to "flatten the curve," that 
+curve being a graph of infection rates over time.   but how do you get such a graph? by and large, 
+our measure of the pandemic came through   individual case counts confirmed with laboratory 
+testing and reported to a data clearinghouse like   the local public health department or the cdc. 
+there was a lot of confusion about testing,   positivity rates, how that information applied 
+to the greater population, and how it could be   used to implement measures to slow the spread of 
+disease. the limitations of individual testing   data - including test shortages, reporting delays, 
+and unequal access to healthcare - made public   health decisions extremely challenging. 
+much of the controversy surrounding mask   mandates and stay-at-home orders was provoked 
+by the disconnect between what we could reliably   measure and the reality of the pandemic on the 
+ground. public health officials were constantly   on the lookout for more indicators that could help 
+inform decisions and manage the spread of disease. one of these measures didn't really show up 
+in the online data dashboards, but it was   and continues to be, used as a broad 
+measure of infection rates in cities.   it's a topic that combines public health, 
+epidemiology, and infrastructure that didn't   get much coverage in the news. and there are 
+both some interesting privacy implications   and some really fascinating applications on 
+the horizon. i'm grady and this is practical   engineering. in today's episode, we're talking 
+about wastewater surveillance for public health. this video is sponsored by brilliant,   the best way to learn math and science 
+through problem solving. more on them later. if you are unfamiliar with the inner workings of 
+a modern municipal wastewater collection system,   boy do i have the playlist for you. but, if you 
+don't want to watch 5 of my other videos before   you watch this one, i can give you a one-sentence 
+rundown: wastewater flows in sewers, primarily   via gravity, combining and concentrating as it 
+continues to a treatment plant where a number   of processes are used to rid it of concomitant 
+contaminants so it can be reused or discharged   back into the environment. just like a watershed 
+is the area of land that drains to a specific part   of a river or stream, a "sewershed'' isn't an 
+outhouse but an area of a city that drains to a   specific wastewater treatment plant. the largest 
+sewersheds can include hundreds of thousands, or   even millions of people, all of whose waste flows 
+to a single facility designed to clean it up. wastewater treatment plants regularly collect 
+samples of incoming sewage to characterize   various constituents and their strengths. after 
+all, you have to know what's in the wastewater   to track whether or not it's been sufficiently 
+removed at the other end of the plant. in the   early days of sewage treatment, sampling consisted 
+only of measuring the basic contaminants such as   nutrients and suspended solids. but, as our 
+testing capabilities increased, it slowly   became easier and less expensive to measure other 
+impurities, sometimes known as contaminants of   emerging concern. these included pharmaceuticals, 
+pesticides, personal care products, and even   illicit drugs. it didn't take too long to realize 
+that tracking these contaminants was not only a   tool for wastewater treatment but also a source 
+of information about the community within the   sewershed, the gathering of which is a notoriously 
+difficult challenge in the field of public health. rather than coordinating expensive and arduous 
+survey campaigns where many people aren't always   truthful anyway or going through the hoops 
+of privacy laws to gather information from   healthcare providers, we can just take a sample 
+of sludge from the bottom of a clarifier, send   it off to a lab, and roughly characterize in hours 
+or days, the dietary habits, pharmaceutical use,   and even cocaine consumption of a specific 
+population of people. if you're a public   health researcher or public official, that is 
+a remarkable capability. to quote one of the   research papers i read, "wastewater is a treasure 
+trove of biological and chemical information." think about all the stuff that gets washed down 
+the drain and all the things you consume that   might create unique metabolites that find their 
+way out the other side of your excretory system.   although wastewater surveillance is a relatively 
+new field of study, we're already able to measure   licit and illicit drugs, cleaning and personal 
+care products, and even markers of stress,   mental health, and diet. that's a lot of useful 
+information that can be used to monitor public   health, but one particular wastewater constituent 
+took center stage starting in early 2020. of   course, for decades, we've tracked pathogens in 
+wastewater to make sure they aren't released into   the environment in treatment plant effluent, 
+but the covid19 pandemic created a vacuum   of information on virus concentrations 
+that had never been experienced before. we realized early in the pandemic that the 
+sars-cov-2 virus is shed in the feces of most   infected people. even before widespread 
+tests for the virus were available,   many public health agencies were sampling the 
+wastewater in their communities as a way to   track the changes in infection rates over time. 
+realizing the importance of coordinating all these   separate efforts, many countries created national 
+tracking systems to standardize the collection   and reporting of virus concentrations 
+in sewage. in the us, the cdc launched   the national wastewater surveillance system in 
+september of 2020, complete with its own logo   and trademarked title. let me know if i should 
+try to license this design for my merch store. individual communities can collect 
+and test wastewater for sars-cov-2,   and then submit the data to the cdc 
+for a process called normalization.   virus concentrations go up and down with 
+infections, but they also go up and down with   dilution from non-sewage flows and changes 
+in population (for example, in sewersheds   with large event venues or seasonal tourism). 
+normalization helps correct for these factors   so that comparisons of virus loads between 
+and among communities is more meaningful. there are some serious benefits from tracking 
+covid-19 infections using wastewater surveillance.   it's a non-intrusive way to monitor health 
+that's relatively impartial to differences   in access to healthcare or even whether 
+infections are symptomatic or not. next,   it is orders of magnitude less expensive than 
+testing individuals. nearly 80% of us households   are served by a municipal wastewater collection 
+system, so you can get a much more comprehensive   picture of a population for just the cost of a 
+laboratory test. it can also provide an earlier   indicator of changes in community-wide infection 
+rates. individual tests can have delays and miss   asymptomatic infections, and hospitalization 
+counts come well after the onset of infection,   so wastewater surveillance can provide the first 
+clue of a covid-19 spike, sometimes by several   days. finally, now that vaccination programs 
+are widespread and there is significantly   less testing being carried out, wastewater 
+surveillance is a great tool to keep an eye   out for a resurgence in covid-19 infections, and 
+it can even be used to monitor for new variants. of course, wastewater surveillance has some 
+limitations too, the biggest one being accuracy.   the science is still relatively new, and there 
+are lots of confounding variables to keep in mind.   in addition to changes in dilution from 
+other wastewater flows and sewershed   population mentioned before, the quantity 
+of viruses shed varies significantly between   individuals and even over the course of any one 
+infection. right now, wastewater surveillance   just isn't accurate enough to provide a count of 
+infected individuals within a population, so it's   mostly useful in tracking whether infections are 
+increasing or decreasing and by what magnitude. there are also some ethical considerations to keep 
+in mind. that term "surveillance" should at least   prick up your ears a little bit. monitoring the 
+constituents in wastewater at the treatment plant   averages the conditions for a large population, 
+but what if samples were taken from a lift station   that serves a single apartment complex, school, or 
+office building? what if a sample was taken from   a manhole on the street right outside your house? 
+could the police department use the data to deploy   more officers to neighborhoods where illicit drugs 
+are found in the sewage? could a city or utility   provider sell wastewater data to private companies 
+for use in research or advertising? that's a lot   of hypotheticals, but i wouldn't be surprised 
+to see a black mirror episode where some tech   company provides free trash and sewer service just 
+to collect and sell the data from each household.   if you wanted to open a new coffee shop, how much 
+would you pay to learn which parts of town have   the highest concentrations of caffeine in the 
+sewage? maybe it would be called brown mirror. the truth is that public health professionals 
+have put a tremendous amount of thought   into the ethics and privacy 
+concerns of wastewater surveillance,   but (as with any new field of science), there 
+are still a lot of questions to be answered.   one of those questions is, "what comes next in 
+this burgeoning field of wastewater surveillance,"   where public health researchers have 
+access to a literal stream of data.   there are many measures of public health that can 
+be valuable to policy makers and health officials,   including stress levels, changes in mental health, 
+and the prevalence of antimicrobial-resistant   bacteria (one of the greatest human health 
+challenges of our time). of course, all the   work that went into standardizing and building out 
+capabilities of tracking infections will certainly   give us a leg up on resurgences of covid-19 or any 
+future new virus, heaven forbid. my weather report   already has a lot more information than it did 
+20 years ago, including pollen counts of various   allergy-inducing tree species, air pollution 
+levels, and uv-ray strength. we might soon   see infection rates of the various diseases 
+that spread through community populations   to help individuals, planners, and public 
+officials make better-informed decisions about our   health. sewers were one of the earliest and most 
+impactful advents of public health in urban areas,   and it's exciting that we're still 
+finding new ways to use them to that end. wastewater surveillance requires a whole bunch 
+of technical fields, combining engineering,   public health, and epidemiology. i think one 
+of the easiest shortcuts to success is finding   opportunities to mix and match areas of expertise 
+like this. in niches, there are riches, as they   say. but once you're out of school, it's much 
+harder to gain technical knowledge in different   industries. that's why i'm thankful for brilliant, 
+the sponsor of today's video, for providing   interactive courses in topics that interest me, 
+like this one about illicit drugs in wastewater.   sound familiar? my videos give a thousand foot 
+overview of many parts of engineering, but maybe   you're watching one of my videos and thinking, 
+"this is for me. this is what i'm interested in."   brilliant gives you the ability to dive into 
+math and science topics so you can really learn   them and get ahead in your studies or your 
+career. the website is beautifully designed,   and they've put a ton of effort into finding the 
+best ways to help you gain technical knowledge   and skills. learn to think like a scientist, 
+engineer, or epidemiologist completely free at   brilliant.org/practicalengineering. you don't pay 
+anything to sign up, and the first 200 people that   use the link will get 20% off an annual premium 
+subscription. again, it's completely free to sign   up. that link is in the description. thank you 
+for watching, and let me know what you think.

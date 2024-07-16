@@ -1,0 +1,232 @@
+hey everyone, this is the third in a 
+trilogy of videos with grant sanderson   from 3blue1brown about sequences that 
+don't necessarily do what you'd expect.   links to the first two videos are on the screen 
+and in the video description; you don't have to   have watched them to understand this one but you 
+may want to watch them to get the full experience. the way this is gonna work, we're gonna have a 
+race between prime numbers, okay. and we're going   to have two different categories: those which are 
+1 mod 4, meaning when you divide by 4 they leave   a remainder of 1, and those which are 3 mod 
+4. and we're basically just going to count up   the prime numbers. so the first one is 2, and 2 is 
+disqualified from the race because it's the oddest   prime, it doesn't really fit into the pattern of 
+the rest, it's the only one that's even. next   we've got 3 and then the next one is 5 and then 
+the next prime is 7. 7 is 3 above a multiple   of 4; and then 11 is also 3 above a multiple of 
+4. and then the next one 13 is just 1 above a   multiple of 4, and then the next one, 17. so they 
+seem pretty neck and neck so far as we're kind of   counting up. so after 17 we've got 19, which is 
+3 above a multiple of 4, and then 23 which is 3   above a multiple of 4. and then the next one will 
+be 29, and then after that we're going to have 31,   37. and one thing you might notice is that 
+so far in the whole race, even though it's   pretty neck and neck, team 3 has always been 
+in the lead so far. and you might say, okay,   that seems maybe just kind of at random that that 
+would be the case; but actually if we continue   this race - and if you want i can give you some 
+visuals that like show the race continuing on -  - (brady: do you know someone) (who's 
+good at making mathematics visuals?)  - i i can call a guy. but 
+it will be- it'll always be 3  who seems to be in the lead. and you know they're 
+pretty close, they're a pretty even balanced like   you might expect; but if it was completely 
+random, if it was just random which bucket   you're tossing it into you wouldn't expect such a 
+long streak for there to be a particular winner. and in fact it continues going on until the 
+first time that team 1 mod 4 is gonna break into   the lead is going to happen at the prime 26,861. 
+but even then the next prime after that is going  to be 26,863. so that was just one brief moment 
+of peeking into the lead and then after that they   do stay in the lead quite a bit longer, team 
+3 mod 4. and then the next time that team 1 is   able to get ahead is going to happen at 616,841. 
+and it keeps the lead a little bit longer then   but then 3 takes over. and if you're looking at 
+most of the numbers, most of the time it seems   like- you know 99% of the time the team that's 
+in the lead is team 3. and this was actually   a conjecture that someone made that said: is 
+it the case that as we let n tend to infinity   and we consider at all of the points of the 
+race, how often was it the case that team 3  was in the lead? does that percentage of the 
+time approach a 100%? interesting question.  you might expect it to be true, if there's 
+any reason that there should be more 3s then   you might expect it to either fall, you know, 
+completely 50/50 or completely to 100%. but,   you know, i think the question i'd like 
+to talk about a little is why would you   expect something like this to happen?
+it feels like the prime shouldn't have   a bias one way or another, why does 
+this team get any kind of advantage?  - (well primes do have a bias, they 
+have a bias towards odd numbers ) fair point, okay, so there's a very 
+strong bias towards odd numbers;  and maybe you're on to something there that we 
+shouldn't treat primes so randomly. but often you   have this criteria that's once you rule out 
+the obvious things that primes aren't going   to do, the things based on divisibility 
+constraints, their behavior feels random.   and this this heuristic actually helps people 
+make a lot of conjectures and a lot of it kind   of susses out- turns out to be true once 
+you delve into it. and so something like   this- another one that's in in same vein,
+let's say we look at the last digits of the   primes. is it going to be a 1? is it going 
+to be a 3? is it going to be a 7 or is it   going to be a 9? if you perform that race, as 
+you do that longer and longer they all tend to   be about 25% of the time, but two of them are 
+distinguished winners. they tend to be winning   the race even if it's just by a little bit. so 
+in the long run it tends to be about 25% percent   of them primes end in a 1 but there is just this 
+gentle bias. and you might ask why; okay there's   a very- you say the biased to be odd, there's a 
+very clear reason they're like strongly biased   to be odd. what is the what is the reason then 
+that 3 mod 4 would have this kind of advantage?  - (you have- so are you) (confirming to me 
+that it does have an advantage? is it- has   that conjecture been proven or?) that's- that's 
+a really interesting question which we will get   to at the end of the video actually. that- for 
+the moment let's just consider that conjecture   something that has strong empirical suggestiveness 
+um but it's very tricky to prove that kind of   thing and then the answer is surprising and we 
+will get to it. ah, here's a question of how   much detail we want to go into. i think this is 
+a pretty satisfying intuition, if you're willing   to take on faith one magical fact that i present 
+to you. so the story is going to start outside of   here but instead with a formula a lot of people 
+might know for pi of all things: 1 over 1 minus   1 over 3 plus 1 over 5 minus 1 over 7... so i'm 
+basically toggling whether i add or subtract,  and i'm going over all of the odd numbers. 
+so this isn't primes, it's all of the odd   numbers that i'm doing. in fact i'm going 
+to give a name to let it be kind of clear,   this plus minus pattern where i'm going to make 
+up a function that seems needlessly complicated   right now that i'm going to call chi of n. and 
+basically chi of n is going to be defined to be   +1 if n is 1 mod 4, it's going to be -1 when n 
+is 3 mod 4, and then i could maybe say that it's   0 you know if n is even. and so basically what 
+we're doing is we're adding up chi of n divided   by n. overly fancy way of saying, i'm toggling 
+between plus and minus on the odd numbers, but   it's it's nice to have a name for that function 
+for what we get to in a moment. now some people   might know that this actually converges, if you 
+look at this on the number line you have your 1,   you subtract back a little bit to 1/3,
+plus 1/5, minus 1/7 - and i can even draw   that out a little bit if we want. we've got 1, 
+and if we subtract 1/3 you land somewhere here,   if we add 1/5, you know, because that step is 
+smaller we don't quite get to that 1. and then   if we subtract 1/7 that step was smaller still and 
+so you'll basically be bouncing back and forth.   you know you're going to converge to something 
+and the value you converge to is pi-fourths. that   is actually not important for where we're going 
+but the fact that it's a number- it's going to   be something. who doesn't love pi right? right now 
+pi is almost just like an imposter into our story,   it doesn't really have much of importance other 
+than the fact that it's something. now the magical   fact, the absolute magical fact, is the number 
+theorists favorite way to take a logarithm.  and it works like this, we're going to take our 
+series - and in order for this trick to work,   there's just a couple criteria the series has 
+to have. there's got to be a number associated   with every natural number, so we might think of 0s 
+for all of the evens here, and then it has to   have the property that when i multiply the terms 
+associated with two numbers like 3 and 5 that the   product of the terms corresponds to the product 
+of those numbers. so in this case 3 times 5 is   15 and negative 1/3 times positive 1/5 is indeed 
+negative 1/15. it's not exactly obvious but this   will hold no matter which ones you look at. so for 
+example if we take 1/7 and 1/3: negative 1/7 times   negative 1/3 will be positive 1/21. and if we go- 
+it would be a positive 1/21. so as long as that   property holds you can do this magical thing 
+to take a logarithm, where i'm going to say,   i don't like composite numbers, i'm going to kick 
+out my composite numbers. if you're not prime   either you're not going to be in the club or 
+you're going to get a strong punishment based   on how not prime you are. so 1 we don't 
+like you, 1 gets kicked out entirely.   1/3 you get to stay. so your term 
+gets to stay, 1/5 you get to stay, 1/7 you get to stay. 1/9 we say okay, 
+1/9 you're not prime, i don't like you,   but you're just a prime power. at least you 
+only have one prime factor so you're not as   bad as those dirty composites like 6 or 15. so 
+we'll let you stay, but because you're the square   of a prime we're going to give you a punishment 
+by reducing you by 1/2. so it gets to stay but   only half as powerful. and then it goes on: 1/11, 
+you're prime, you're cool, you get to stay. 1/13,   you're prime, you're cool, you get to stay. 1/15, 
+not only are you not prime you have two different   prime factors, you're very composite, you're out 
+of the club entirely. and i'll just do a couple   more to kind of make it clear: we've got 1/17 - 
+and notice i've got two pluses in a row but that's   because we kind of kicked out the minus. all we 
+care about is whether this number is 1 mod 4 or 3 mod 4. so i'll be subtracting off 1/19, 
+i will also be subtracting off 1/23, because 1/21 got kicked out for having too many 
+factors. 1/25 we're going to have to keep him but   divide him by 2. a way of saying, okay you're not 
+prime, but you're just a prime power, and because   you're the square of a prime you get reduced. and 
+just to make this extra clear, the next one that   we see is the cube of a prime, 1/27, so i'm going 
+to reduce it by 1/3 that gets me 1/ 27. in general   what we're doing here is we're taking 1 over k 
+times something divided by p to the power of k;   where p is a prime number, k could be anything, 
+and we're basically taking this chi function of   p to the k. which is just a way of measuring, are 
+you plu- are you 1 mod 4 or 3 mod 4? so that might   be how you write this in general.
+- (so grant if this is) (some kind of shortcut, it's not 
+feeling like a shortcut but all right)  - so it's it's not a shortcut,
+it's just the coolest way-   because if you- okay i do this, i do this 
+completely random procedure to my series,   and you'd say what is it going to equal?
+i don't know, some completely different number   that's completely unrelated to the thing that we 
+started with. because you went, primes are such   a random thing that you're hacking them off at 
+these seemingly random points, you should expect   nothing normal to come from this. but the beauty 
+is that what you get is just the natural log of   whatever it was before. and we could do this 
+with a lot of different things actually: another   famous sequence people might know is if we take 1 
+over 1 + 1 over 4 + 1 over over 9 and we add   up the reciprocals of all the square numbers. so 
+we kind of go on and we're always adding up 1   over n squared. this has the property we care about 
+where when you multiply corresponding terms, what   you get corresponds to their product. if we do the 
+same game, we kick out some prime numbers, we keep   the prime powers but we reduce them a little bit, 
+uh it'll again be a logarithm. so this sequence   happens to be pi squared divided by 6, and if we do 
+our whole like prime number game - whatever we want   to call it - what we'll get will be the natural log 
+of pi squared over 6. and so that that holds in   general and it's it's the weirdest possible way 
+to take a logarithm. why am i talking about this?   the reason is that if we look at the sequence 
+that we have here; now we have mostly primes,  we've got some prime powers in there, but it's 
+mostly prime numbers and we're kind of adding   or subtracting them and this might give us a 
+little bit of an indication that if they're   to stay roughly evenly balanced, you know, that 
+would justify the fact that we're equaling some   constant. where if there were systematically way 
+more that are 1 above a multiple of 4 or way   more that are 3 above a multiple of 4, the whole 
+series might diverge. a couple other magical   facts i'll throw down will be that this series 
+diverges absolutely, which is a way of saying   if we changed all of the minuses to be pluses 
+and we just asked, hey i'm going to add up the   sizes of all of these terms, does that converge 
+to any number? it goes and blows up to infinity.   and what that kind of tells us is if we look at 
+the camp that are all of the things that are being   added and all the camp that are being subtracted, 
+both of those blow up to infinity. and so when   we're cutting it off at a finite point they have 
+to stay roughly balanced with each other. so this   tells us two important things: one is why we have a 
+kind of even balance in our race, and it's not that- (but this was- but you did this with the 
+odd numbers, this is just prime numbers but it's)   (the same sort of principle)
+- the key equation at 
+this point is to focus on what happens after we   do our log trick where all the stuff that remains 
+in the series is mostly primes. so what i could   say is, if we kick out all the prime powers 
+those- they don't actually amount to that much.   they converge absolutely, and in fact they 
+have to be just bounded by some constant. and so   we could say if we ignore all the prime powers 
+we would have the sequence which sometimes you're   adding a prime, sometimes you're subtracting it, and 
+because it equals just a constant, just some number,   we can know that neither one of those camps blows 
+up much faster than the other. however, all of the   nuance for who's winning the race happens when 
+we really think hard about what happens to those   prime powers. here's the like intuition - it is not 
+a proof - but here's the vague intuition for why you   might expect 3 mod 4 to be winning this race even 
+if you didn't start performing the race. if you   knew some analytic number theory, you had a strong 
+familiarity with the series, your prediction might   be i'm going to put my money on horse number 
+3. and how do i want to draw this? i'm going to   kind of have two buckets here; this is going to 
+be all of the stuff that we're adding in our sum   and then this is going to be all of the stuff that 
+we're subtracting. and we're just going to kind   of- what kind of things are we adding? what kind of 
+things are we subtracting? so the stuff that we're   adding, it's all of the primes which are 1 above 
+a multiple of 4 so- or rather the reciprocals of   those. so 1/5, 1/13, 1/17 - 
+these are the kind of things that we're adding. but   there's also some squares of primes that we're 
+adding: in fact critically the square of every   prime. because even if you started from someone who 
+is going to be a negative, like -1/3,  once we look at the square term corresponding 
+to it it's something that we're adding.  so also in this camp of things that we're adding 
+is you have things like one half of 1 over 9, or you also have things like one half of 1
+over 25, or one half of 1 over 49. so   all of the primes are represented here with their 
+squares. and then in terms of the cubes, those ones   are also kind of accounted for but only the ones 
+which are one above a multiple of 5. so for   example 5 cubed is going to make it in, 1 
+over 125, but 3 cubed is actually   something that we subtracted so it's accounted 
+for in the other one. and maybe i'll even write   that over here, so we've got -1/3 by 
+1 over 27. this is- the point i want to make i   guess is if we look at this negative bucket - i'll 
+also write up in the top - also subtracting all   of the primes associated with things that are 
+3 above a multiple of 4. so we're subtracting   1/3, subtracting 1/7, subtracting 1/11. 
+what i want you to notice is how all of   the all of the even powers necessarily end up in 
+this positive bucket. so we also have you know 1/4   outside of 1/81 - all of the even powers end up here.
+this gives a bias in some sense in the direction   of our adding bucket. so a priori, if we just say 
+looking at all of these terms what might we    we expect? we'd say, well, there's this little bit 
+of a bias for those in the adding bucket to just   have more numbers. if there were always the same 
+amount of numbers 1 above a multiple of 4 and   3 above a multiple of 4, because of those powers of 
+the primes that show up here, that gives a little   bit of added weight to this positive bucket. so if 
+we know that we actually want these terms to be   roughly evenly balanced, in the sense that they're 
+canceling each other out so much that they get to-   i mean the natural log of pi/4, it's a very small 
+number but the critically is it's a constant, it's   not like something that suggests one half of 
+this plus/minus bucket is going to tend off   to infinity. it means in order to make up for the 
+fault that they get by not getting of the any of   the fourth powers or any of the squares or any 
+of the sixth powers, we need just a little bit more   primes to start with, a little bit more that are in 
+this 3 mod 4 bucket. again, it's not a proof, but   that's where you might get this little intuition 
+that in order for this equation to balance out   you need a little leg up in that second camp. what 
+this would suggest is that there should be a bias   for 3- team 3 to stay in the lead more, there should 
+be a bias where there'll always be a few more   primes that are mod 3 to make up for this 
+imbalance that they get once you introduce the   powers. but the- what you might expect is saying how 
+often is it the case that they are in the lead? if   we're watching this horse race, is it the case that 
+after some amount of time team 3 always stays in   the lead there on thereafter? okay that's a little 
+bit strong. the softer consideration, which was the   conjecture made, is that the proportion of numbers 
+for which when you look at everything up to that   the team 3 is in the lead tends to be closer 
+and closer to 100% as you look at more and more   numbers. so as this horse race is proceeding, 
+and you widen and widen your glance, you say   at various different checkpoints on their track a 
+vast majority of those checkpoints should be ones   where team 3 is in the lead. now interestingly 
+that's not true; and if you look at what's the   percentage of numbers where team 3 was in the 
+lead on your way up it kind of toggles. it's   always very very big it's- you know 99%, 98%, close 
+to 100% but forever and forever it just sort of   wanders around and it doesn't approach anything. 
+let's say you look at the first billion numbers.   you might notice that as we look at the race up to 
+that billion numbers, 99.5% of the time team   3 was in the lead; but there was some times that 
+team 1 was in the lead. then you might ask, okay   what if i looked at the first trillion numbers, 
+the first quadrillion numbers. you might expect, oh when i look at the first quadrillion then 
+it's 99.99% of the time that team 3 is in the   lead - that's not true. as you look at it then, you 
+know, maybe it's like 98% of the time that team 3   is in the lead. so they do trade off but there's 
+a clear bias for team 3, and the question is, you   know, how often do they trade off? and turns 
+out if you measure in a slightly different way-  so we're going to change the rules of the 
+race, where rather than counting each prime   exactly you kind of discount them 
+by the- the reciprocal of that prime.  if- for the sake of the proofs i guess that must 
+have made it easier to prove, but it turns out   the team 3 will tend to be in the lead, as you 
+look at more and more numbers it's in the lead 99.59% of the time. so as you look at bigger and 
+bigger numbers it tends to be the case, with the   appropriate metric, that this is the amount of 
+time the team 3 is in the lead. so it's it's   almost always in the lead but not almost always 
+in the usual mathematician sense of the phrase.   because usually when they say 'almost always' they 
+mean like 100% or it tends to 100%. so instead   it's in the normal human way of using the word 
+almost, almost always the case that team 3   is in the lead. but it is not such a clean fact 
+that it's just 100% or 0.
+- (does it ever get to)   (a point where it will be in the lead forever or?) 
+- no
+- (so no matter where you are in the number line)   (team 1 has always got another moment in the 
+front coming?)
+- exactly, team 1 will always have   a chance. and in fact in this metric, as you look at 
+bigger and bigger swaths, it has 0.5% of the time it'll be up there.
+- (it's the little engine that could)
+- yes yes it really is, it really is. (it's the tortoise!)
+- it is the tortoise, slow and steady every now and then it beats the 
+hare - even if the hare seems systematically better.   thanks for watching this video. if you want 
+to see more from grant you probably already   watch his channel 3blue1brown, there'll be 
+links in all the usual places. i'd also like   to say thank you to numberphile's patreon 
+supporters who make it possible for me to   travel and have the time to meet with people 
+like grant and make these videos. if you'd like  

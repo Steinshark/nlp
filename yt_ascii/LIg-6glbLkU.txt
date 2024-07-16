@@ -1,0 +1,309 @@
+in 2024 hundreds of number enthusiasts gathered in 
+a school hall in london to try and calculate pi to   a record number of digits by hand a project which 
+would require untold hours of doing laborious   calculations with nothing but paper and a pen this 
+was all the fault of ridiculous maths person matt   parker and it was not going well it is where 
+we now 10 7 we're about to start packing up on   the end of friday day four of six and i'm still 
+working on a sheet here which goes up to digit   the 100th digit so that's as far as we've got and 
+the record is 527 i don't think we're going to do   this we're going to do this it's the first day we 
+have a small number of volunteers in setting up   all the sheets working out the systems getting 
+it up been going it's all going so well we are   a few short days and several hundred volunteers 
+away from a record amount of pie by hand it had   started well enough on day one a core group of 
+50 or so nerds had gathered to do the preliminary   setup calculations matt and his team explained how 
+the pi formula was going to work and what initial   calculations needed to be done as the rest of the 
+week would be spent doing long divisions a lot of   time tables had to be generated for the various 
+devisers these would be referred to extensively   in all future calculations it wasn't exciting work 
+but everyone was in high spirits so far it's very   exciting very busy i think there's a lot of 
+the initial admin that needs doing that you forget   about but it's nice to get get calculating 
+um and i'm now we've started i'm more hopeful   than i was yesterday we haven't actually done a 
+calculation like this in 80 years we don't need   to do this calculation it's just you know can 
+we still do it do we still have the ability to   do these things i think that's interesting to find 
+out well i'm sort of i'm cautiously optimistic i'm   fairly confident we'll beat the 2022 record yes 
+this wasn't the first time matt and the team had   tried to calculate pi by hand he had made several 
+attempts by himself since 2016 but never getting   more than six digits correct in 2020 he had a team 
+of five people for one day who managed five digits   in 2020 2 20 people gathered for 2 days to achieve 
+11 digits this time matt wasn't messing around up   to 200 people a day would churn out calculations 
+for six solid days and matt had a whole new   formula there was a category of pi equations 
+known as machin-like formula and of the hundreds   available we picked this one pi / 4 equals 
+and then you've got the sum of seven different   arctans each with a coefficient out the front this 
+means in theory we're doing seven different arctan   calculations which can all be done independently 
+this is quite parallelizable so we can keep track of   them we gave them all names and we went through 
+the rainbow of colours as well and so the final   answer is pi itself we preemptively multiplied 
+all the coefficients by four and all we have to   do now is calculate a lot of arctans the record to 
+beat was set in the'70 by british school teacher   william shanks over several decades shanks had 
+calculated 707 digits of pi but it wasn't until   the 1940s that someone found a mistake in the 
+528th digit making the current world record of   digits of pi computed by hand 527 digits matt had 
+even brought a little momento of shank's work to   help keep him motivated yes i bought an original 
+1873 print of shank's calculation which is right   there that's that's shank's pie that they thought 
+was right made a mistake little embarrassing   we're hoping to fix that but i thought it' be 
+nice just you know this is kind of my spiritual   predecessor having it here today i can't take 
+it actually in where we're doing the calculation   because as well as being a no calculator zone 
+which makes sense no calculation devices in   there i probably shouldn't take in 527 correct 
+digits a pie as well as the setup the day one crew   did start doing a few of the main calculation 
+steps and the answers which came back were not   as correct as they had hoped yeah we're getting 
+a lot more mistakes than we expected i'll be   honest i was hoping most of the sheets would 
+match when they come back in again but the   folks over here you can see the discussion on 
+the checking table they estimate when they get   two like duplicate sheets back in again they 
+don't match 75% of the time which means we're   getting a lot of mistakes now we' got systems in 
+place now we're going to over here we're going   to send out more copies so be three each time 
+which will slow us down a bit but everyone's   having fun so we'll see how that impacts us 
+when we have a room full of people in on day two day two and 100 new human calculators have 
+joined the core team bringing the room total up   to 150 people matt had asked in previous youtube 
+videos for volunteers and people had shown up from   around the world the only requirement was the 
+ability to do long division because division   is all you need to compute an arctan how do you 
+actually calculate an arctan thankfully there is   something called a tailor series it's an infinite 
+series of things you have to add and subtract   together to give you the value of your arctan 
+you're adding and subtracting these different   fractions with odd powers and odd coefficients 
+underneath we just need to calculate enough of   these we did it in two steps because the powers 
+are always the next odd power power up we could   first of all work out 1 /x and then we just 
+divide that by x^2 and then we divide that   by x^2 and each time if we divide by x^2 we will 
+get the next 1 /x to the power of some odd number   once we have those we then separately divide 
+each one by its appropriate odd value to put   the three the five the seven the 11 and so on back 
+in and by following those steps we have the chain   of dividing down that main spine of values and 
+separately with dividing by the odds the process   for each human calculator was simple they would 
+join the queue and wait to be issued a calculation   which needed to be done from one of the seven 
+handout desks one desk per arctan then they would   visit the pi-brary to borrow the devisor times 
+tables they would need and then find a seat on   the calculation floor and get cracking once their 
+calculation sheet was complete they would hand it   back in at the check-in desk return their times 
+table to the pi-brary and start the process again   we're doing the pi-brary section so our job is to 
+make sure that when people come down to do their   divisions they need their appropriate division 
+table so if you're dividing by seven we got a   seven table right here and if you're dividing 
+by pacific square pacific squared which is this   absurdly large number well you get that table and 
+they've all been checked and double checked for   errors and mistakes so our job is to make sure 
+people know what to divide by i just finished   dividing by do squared which is the largest 
+number that we have i completed it and i give   it to checkin and all i know at this point is it 
+was legible so it's been accepted the error rate   in the first days was higher than we expected and 
+so we have put some stuff in place to catch more   errors we are we're handing more sheets out at 
+once so we're originally going to hand out three   copies of a sheet and if two of them come back 
+correct we then check them more thoroughly   we're often getting three come back incorrect so 
+for the critical pass we're now doing five copies   at once so rather than three come back then you 
+wait we send the another out and wait again for   that to come back we're doing all of it at once 
+and hoping that that means we only after a single   time by the double time for those computations 
+but for this to work the arctan calculation   needed to be split into tiny chunks which could 
+be done individually one at a time by a swarm of   different humans here's how we actually calculated 
+the arctan in practice we did it in chunks of 20   digits at a time so first of all we calculate the 
+zeroth digit to the 20th digit then we do 20 to 40   40 to 60 and so on down the main one divided by 
+x whatever x is for that arctan spine we divide   all of those by x^2 to get the equivalent set of 
+digits for 1x cubed 1 x 5 and so on the issue is   once you've done one chunk of digits whatever the 
+remainder is has to feed into the next chunk of   digits so each sheet of working out is waiting 
+for the sheet above it to be finished and the   sheet before it to be finished to visualize the 
+step we can turn this wonderful 2d grid into a 3d   arrangement where now every single chunk has to be 
+divided by the corresponding odd number to get us   our actual series for the arctan and like before 
+each of these requires the appropriate spine chunk   to be done before it can be done dividing by the 
+odd number and there's a carry value which rolls   from each chunk to the next chunk after it in 
+the series this ridiculous plan devised by matt,   katie, scroggs and the rest of the pi-by-hand 
+council meant that there were thousands of pieces   of paper that both depended on and fed into other 
+bits of paper in an attempt to make tracking the   pages easier each sheet was colour coded pink and 
+green for positive and negative spine terms and   yellow and blue for positive and negative odds 
+terms surely that would help keep mistakes at all right day three i feel like we are still 
+making a lot of mistakes i i think we're still   over half the sheets of a mistake somewhere on 
+them which is fine we have systems in place but   i think we've caught all the errors we it's now 
+definitely got a lot more complex we've had a lot   of logistical challenges today where we've had 
+to invent new tasks recruit people to do various   checks we've had to buy a lot of clipboards 
+this it turns out moving 10,000 pieces of paper   around a room that all rely on one or two other 
+specific bits of paper and have to feed into one   or two others is a logistical nightmares but i'm 
+pretty sure we' found all the ones we lost all   recreated them we've audited all the gaps my 
+job now is just to finish this long division   very carefully the slogan we've got now is 
+we want long division not wrong division so ah   when a complete sheet was given to the check-in 
+desk they would do some initial checks to make   sure it had been filled in correctly and then 
+pass it on to the next stage the verification   station would wait for two duplicates of the same 
+calculation to be handed to them and see if they   match if there was a match they would pass the 
+paper on if the incoming answers conflicted more   copies of the same calculation will be sent out 
+to be done again until two results were the same   next the mod squad would perform mod arithmetic 
+checks on every calculation these calculations are   not able to produce the full answer but they 
+can verify the answer matches the inputs mod   9 10 and 11 now convinced the answer is probably 
+correct the team moves the pages on to processing   and staging where the sheets sit waiting for any 
+other outstanding calculations needed before they   can progress once all the dependent calculations 
+are in a complete pack of previous results and new   blank sheets are given to the human photocopier 
+who copy the required info onto the new sheets   which are then given to the handout tables and 
+the cycle continues so behind us we have a table   the verification station right they are getting 
+uh calculations from two independent people and   if they match which we hope they do they come 
+to us and we're checking to see if they match   by a fluke or if it actually correct so we're 
+doing a little mathematical check of casting   out nines which is what we used to do years ago 
+and if it passes our check then we can say yes   this is actually mathematically true and not just 
+randomly happen stance happens to be equal to each   other unfortunately everything coming to us is 
+passing our checks here are casting out n9 check   except for very dramatic moments yesterday yeah 
+absolutely so we had a super dramatic moment where   we checked the nines cast out the nines it's all 
+good checked the 10 cast out 10 it's all good and   then they had els and we checked it we checked it 
+again and we checked it again and we realized that   there was definitely an error and this was quite 
+early in the calculation so what happened is   two people had made exactly the same mathematical 
+arithmetic error that our casting 11s checked   otherwise it would have all been passed into 
+the sums and everything would have gone very   good yeah everything from that point on would 
+have been wrong the next three and a half days   and most of the stuff we're getting is passing 
+which is a lely sanity check because without   this we wouldn't know that things are actually 
+working so we are we can tell you things are   actually working and and dramatically cut out a 
+mistake that's it it was very exciting my five all around the record i think is something that 
+we've all kind of got in mind as it would be   nice to be able to break that record and 
+i guess comparing it to what shanks did was   literally just sit on his own and work on it and 
+that's fine if you've got you know 30 years   but given that we've got a week we kind of need to 
+compress that into a much smaller time scale which   is going to mean a lot more people are involved 
+it's a lot more i think it sort of scales badly   right so the more people you have involved the 
+more time you need to spend briefing them the   more logistics you need around all of that so 
+scaling up doesn't necessarily just mean you know   this much time times this many people or whatever 
+um but i think from what we did last time we've   kind of figured out maybe how to scale it up 
+and we did all of the maths on like how many   more sheets of paper we need how many terms are 
+we going to need depending on which formula we   use you know how is that going to change but 
+even then there's going to be things that you   don't anticipate so like delays in terms of 
+you get little backlogs you get little kind of   bottlenecks where one particular calculation 
+gets done by a few people and they come back   and they don't match so you have to resend them 
+out or you have to do again we have to find where   the error is that then slows down not just that 
+one but all the ones after that so that kind of   thing makes it take longer than you're expecting 
+it to right you can sit at home and do some long   division but you can't calculate pi on your own 
+um and i think the fact that people will come   here to to get involved is partly because they 
+want to you know contribute to that and also to   be able to say actually that was me i was part 
+of that thing and i guess wherever we get to   we've all done something we'd never otherwise 
+have normally done and it's a fun time it's a   good excuse to come and also the these people 
+are great like we we've met so many new like all   the volunteers new friends new cool max people 
+that we didn't know before and i think that's   really nice also in the room was the current world 
+record holder for computing pi by any means emma   i happen to work for a cloud service provider and 
+i had access to you know re computing resources i   could use and my team was celebrating pi day every 
+year so when we were planning for 2019 pi day i   realized maybe we have enough computing resources 
+to break the world record i see these are these   are two separate categories and humans like human 
+processors and as a software engineer or someone   in computer science i see this whole process as 
+someone said microarchitecture but yeah it's it's   a processor like par process processing system 
+so you have a large number of computers and   human calculators doing the long divisions 
+and then we have so in in the actual computer   you have when you look at the cpu you have actual 
+processing unit in a tiny portion of the overall   processor and then the rest is keep to keep these 
+processes pet so you break down the instructions   reorder them and then re retire so take so and 
+dispatch them out of order and then reorder them   so everything is in in in package process and i 
+find this process really like similar and to that   that analogy and i enjoy kind of watching this 
+kind of mechanism and system processing running smoothly day four and things are only getting 
+more complicated the collapsing station has   now kicked into action they are taking the 
+final results coming in for each arctan and   start adding up all of the terms together 
+it's slow methodical work meanwhile at the   far end of the room a new department has sprung 
+into existence the central intelligence archive   originally envisioned as a cardboard box where 
+used papers could be dumped the archive now had   a full staff of people maintaining a highly 
+organized record of the calculation thus far   and running extensive double checks and audits 
+on the pages they have also trained up several   progress enforcement officers one for each arctan 
+who roam the hall with clipboards making sure all   the pieces of paper are accounted for and are 
+moving through the system but despite all this   admin the papers are not moving fast enough 
+day four and we're excited that we got to 60   digits which is i mean good 60 very far very 
+carefully calculated digits but it's not it's   not 600 is it for the record so we've got 
+a a room full of 200 people working very hard   to maybe get to 100 by the end of day four so 
+uh yeah i mean i've just got to keep dividing with ever increasing complexity and still a high   error rate matt realizes the world 
+record has slipped out of his grasp matthew why aren't you doing your long division 
+shanks is it you well yeah yes even though there   are no confirmed pictures of me i think we can 
+probably agree this is bang all the money yeah   no good point look i can i call you william 
+will billy billy no mr shanks is fine okay   mr shanks emphasis on the mister mr shanks i 
+cannot believe having been through all this   that by yourself you were able to do 700 7 digits 
+with a single mistake well i've had years decades   toiling away on my own and i'm better at maths 
+than you okay valid point but but i've got you   know over a 100 people most of which are better 
+at maths than me and we i don't know we're doing   this for a week and we are going to struggle to 
+get to 100 in my day i had to work alone it took   me years by myself and when i was finished and 
+dead no one even checked for over 70 years but   you look at your vast group you put a call 
+out on this youtube and hundreds of nerds   descended from around the globe and sometimes 
+the real irrationality is the friends you made   along the way that's that's transcendental of 
+you is everyone having fun and a good time you   know i think everyone is well then w dividing 
+hard enough and you get back to work yes sir   that's mr sir mr shanks sir goodbye and get 
+back to work matt did he divided harder and   more carefully than ever before doing his part 
+as a tiny cog in a massive calculation machine day five and no one seems to be giving the record 
+a second thought the room full of 200 number fans   continued working away way as fast but as 
+carefully as they could everyone now fully   in the swing of doing something which hasn't 
+been attempted for over a century everyone   was curious to know just how far through 
+the digits of pi they would be able to reach i think a lot of us there's a lot of people 
+here who have done maths in the past and kind   of just missed doing the simple stuff say simple 
+long dividing by 150 billion is an exactly simple   it's it's just a nice to reminds yourself 
+of i guess where your roots are in a way   yes we've only got a couple hours left before 
+um we're done on kind of the last day tomorrow   we have to do the final calculation and we've 
+realized we're not going to get past 140 and   what's amazing is everyone's having a great time 
+and working together and and no one's sad that   we're not i mean obviously it would be great 
+to have gotten more digit but everyone is so   excited the prospect of 140 just just like that's 
+a thing we might be able to achieve is great and   we're over a 100 digits we're confident about 
+and i mean there's 200 people 200 people who   are despite everything that's happened to us 
+are dividing but they're not divided with one   day remaining it became very clear that if the 
+team wanted to hit the next digit milestone they   would need to try something different so the 
+core team planned out the hail mary protocol the new plan was simple the human machine which 
+had evolved over the week would continue as is   for all sheets up to digit 120 anything above 140 
+was cancelled no so the check is still happening   but the check is happening concurrently to 
+the next division happening so that we can   hopefully go faster try and get down these last 
+returns we get yeah we kick off the next division   before we've checked the previous one as long 
+as we know we got two copies that are the same   that's a kind of facing lev check we start 
+the next one and then the more thorough check   happens sort of in parallel with that so we end 
+up if there is an error we can kind of chase it   back and go stop come back do that one again 
+but it means that we can just jump straight to   the next one so we've been able to do the 
+remaining trunks for the whole of the next i   guess set of digits in the space of 3 hours so 
+it's been fast it's been faster than yesterday   but we also have made no progress for the next 20 
+there's no point now starting the next 20 because   they are there's even more things to do on those 
+because it's long more yeah i think we're sort   of secretly in our heads wondering if this is 
+actually a better method to use for next time   or what the problems with it are and we're 
+sort of i guess we'll we'll continue thinking   about that until we try this again if we try 
+this again when we try this again when we try   this again the final steps were adjudicated by 
+ardent tau fan and someone who would find it   very funny if matt's calculation had a mistake 
+steve mould if there's any uncertainty about   how how legit this calculation has been we 
+have an independent observer who's just here   to check everything as we're wrapping up from 
+the right place yeah and and i haven't seen any   calculators come out it's all been above what 
+everything seems to have been done by hand i've   checked some of the numbers as well you know i 
+love half to day i don't know why we do it   on the half but that's just you've got you' 
+got a special word for it haven't you i follow   steve around to make sure you doesn't try and 
+multiply anything by two when i'm not looking the collapsing station is carefully summing 
+up all the final positive and negative terms   into two grand totals these are dutifully copied 
+out onto two large pieces of paper for the final   grand subtraction digit by digit matt subtracts 
+one number from the other with hundreds of eyes   watching out for even the smallest mistake number 
+now all that is left to do is to verify the final   answer and see how many digits of pi are correct 
+if they get fewer than the previous attempts 11   digits this is going to be really embarrassing 
+you got pi got pi so we're going to do it like   we did before i'm going to read it out katie's 
+going to say yes or yep or or uh-huh and sophie's   doing the over the shoulder checking i think 
+i will i just point i'll just point and when   when we get to the bit that's wrong i'll 
+draw a sad face job done okay to be clear   sophie's also going to check that we don't walk 
+backwards into anything oh that's true that's a   very important to us halfway we'll swap and i'll 
+go back and you can be you can be okay three yeah so it's on a different line that's a 
+good point that's a good point the three   is like yeah yeah yeah i like no 
+i was expecting one no three point   one yep four yep one yep five yep nine 
+yep two yep six yep five yep three yep   five yep eight yep nine yep i don't think 
+anyone is surprised so far seven yep nine   yep three yep two yep three yep eight yep 
+four yep six yep we're ahead of last time okay how can such a chaotic flurry of calculations 
+give such a predictable result like maths ah two   yep six yep four yep 3 yep three yep 8 yep three 
+yep 2 yep 7 yep 9 yep 5 yep zero yes two yep eight   eight yep eight yep four yep one yep 9 yep s yep 
+one yep genuinely surprised okay that's that's   four if you want to swing around over there try 
+not to say numbers that's really confusing i just   instinctively said eight yeah it's fine mix it 
+up "do a scroggs" as we call i'm i'm not going   to say any numbers that's not it's not happening 
+okay now we've just read 971 yes okay six yes nine   yep three yep nine yep nine yep three yep seven 
+yep five yep one yep zero yes five yep 8 yep two   yep yep zero yep 9 yep 7 yep four yep n9 yep four 
+yep four y 5 yep 9 yep 2 yep 3 yep zer yep 7 yep 8   yep 1 yep six yep four yep zero yep 6 yep 2 yep 
+8 yep six yes two yep zer yes8 yep n yep nine y yes okay okay okay [music] okay i've got to stop sounding so 
+surprised every digits i feel like   i'm going to get increasingly surprised at 
+some point instead of yes i'll just say some what eight yes six yep two yep 8 yep zero yep 3 
+yep 4 yep 8 yep 2 yep 5 yep 3 yep four yep two yep   one yep one yep seven yes zero yep six yep seven 
+yep 9 yep 8 yep 2 yep 1 yep 4 yep eight yep z yep   8 yep 6 yep 5 yep 1 yep 3 yep 2 yep awfully 
+drawn eight yeah it's all right on here okay   just when i think my respect for shanks couldn't 
+get any higher two yes three yes zero yep what yep did you say zero and i heard no i said 
+yes oh said yes you said zero i think i'm i   think i'm just slipping into a dreamlike trance 
+yeah it's good that we got the three tiredest   people in the room this is really good so just to 
+recap we just had 230 yes now we are coming up at   120 digits so we are we are safely into the 
+hundreds we'll see how far we can get now so   let's get to 120 we just said 23 0 it then goes 
+six yes six yes four yep seven y okay okay okay final i mean what's nice bit of a miracle i me what's nice is we were if there 
+was a mistake like we were so confident we   check so much i don't know how we'd reverse 
+like it i was it be some systematic or you   know phantom error but we're okay now now we 
+hit the uncertain zone we're semi-confident   with the first 15 so let's check those 
+zero yes nine yep three yep 8 yep four   yep four yep 6 yep zero yep 9 yep five yep 
+five yep zero yep five yep eight yep two yes we can't applaud every digit so join us we need   moral support yes i i will 
+fall over it's not a race okay i'm they can't see them i'm blocking 
+them okay here we go we just did 582 yeah   then there's another two yes three 
+yes [music] yeah one y [applause] no [applause] okay okay i mean this 
+is a lucky dip seven [applause] yes six no that's it that's pretty [music] [applause] [music] good i'm i'm as surprised as anyone that's phenomenal 
+that's it huge thanks to the pi day organizing   committee of alex, ayliean, ben, christian, 
+deanna, james, katie, max, nicole, scroggs, and   sophie who've been working on this for the past 2 
+years and thanks to all the volunteers who stepped   up and did all sorts of phenomenal work above and 
+beyond the call of duty that made this possible   more names than i can possibly possibly think 
+they're all scrolling by here and if you want   to be involved in something like or maybe this in 
+the future there's a link in the description below   you can sign up and i'll let you know when i'm 
+next planning something this ridiculous and this   was funded by my kickstarter funders who funded my 
+humble pi standup special filming i said i'd use   the surplus funding on something else and that's 
+what paid for this ridiculous pi day calculation   if you want to help fund other videos and projects 
+uh of course you go to my patreon get involved the   more support i get the more ridiculous maths 
+occurs in the world thank you so much everyone   i'm feeling great we got so many digits i i really 
+can't believe that i was really fun and now i got   to go back and finish my phd i took a week off 
+for this i came here for for pie and all i got   was sandwiches yeah it was like comicon just for 
+mathematicians pretty emotional feels like the   end of a pretty incredible couple of days 
+pretty sad it's over but i think we did a pretty   good job great i really enjoyed the bit with the 
+mats i should probably get some sunlight and some sleep i'm looking forward to calculating 
+more things i had such a good week i was here   since wednesday and honestly everyone here 
+is absolutely lovely and we we calculated   a number i think the mathematical community 
+will be shaken by our new discovery that pi   just ends abruptly at 139 digits this has 
+been some of the most incredible few days   of my life to be surrounded by so many people 
+all passionate about the same thing has been   an incredible experience say what you want 
+but that surprise ending came out of nowhere   incredible results i can i literally cannot 
+believe it this was very worth the trip yeah   well i mean after at all you know matt was 
+going on about how once the only remainder   that he has left is the good memories we'll do 
+it again but i can't help but think if that's   the remainder where's the quotient yeah well 
+i mean i don't like giving things a scale from   0 to five but i give this one probably a a 
+3.1415 honestly it just felt kind of nerdy

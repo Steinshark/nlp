@@ -1,0 +1,300 @@
+so, monads are a concept that was
+invented in mathematics in the 1960s, and then it was rediscovered in computer
+science in the 1990s. and what it gives you, is a new way of thinking about
+programming with effects. and for me, this is one of the most important new ideas
+in programming languages in the last 25 years. so that's what we're going to be
+looking at today - programming with monads. we're going to come at this using a
+simple example, and the example that we're going to look at is the idea of
+writing a function that evaluates simple expressions. and i'm going to use haskell
+for this, but it doesn't matter if you don't know anything about haskell, because
+we're going to use it in a very simple way, and i'm going to explain everything
+as we're going along. so, what we're going to start with, is by defining a simple
+datatype for the kind of expressions that we're going to be evaluating. so,
+we'll use the data keyword in haskell, which introduces a new data type, and
+then we're going to define a new data type for expressions. and then there's
+two things that an expression can be. it can either be an integer value, so we'll
+write that down - we have val of an int. or, it can be the division of two
+sub-expressions. so we've got two constructors here in our
+data type - we've got val, which builds expressions from integers, and
+we've got div, which builds expressions from two sub-expressions. so, just to
+reiterate what what's actually going on here, we're declaring a new data type
+called expr, and it's got two new constructors - one called val, which
+takes an integer parameter, and one called div, which takes two
+sub-expressions as parameters as well. so basically what we're working with is
+expressions that are built up from integer values using a simple division
+operator. so, many of you may not be familiar of this kind of syntax, so let's
+have a couple of examples of values of this data type, so that we make sure
+everyone's on the same page. so, what i'm going to do here, is draw a little table.
+so, on one side, on the left-hand side, i'm going to have what we would normally
+write down in mathematics. and then on the right-hand side, we'll think how
+would you translate this into a value in this haskell data type? so, let's have
+three simple examples here - we'll have one, and we'll have
+six divided by two, and let's do one more example, we'll have six
+divided by three divided by one. so, these are simple expressions built up from integers
+using a division operator. but, we're writing haskell programs today, so let's
+think how do these things actually get represented as values of our expression
+data type? so, the first one is very simple - if we want to represent the value
+one, we just need to use the val tag, so we write val of one. if we want to have an
+expression like six divided by two, well it's a division, so we have a div at the top
+level, and then we have two values - we have val six, and val two. and actually, i'll
+leave the last one is a little exercise for you here, so you can try this one for
+yourself - how do you represent this as a value in haskell? well, you're gonna need
+two divisions, you're going to need three val constructors, and then a bunch of
+brackets. so, this is the basic idea -  we've got simple expressions built up
+from integers using division, and we want to think about how do we write a program
+to evaluate these expressions? let's write a program to do that. so, we're
+going to write an evaluator, and it's going to be a program, or a function in
+this case, that takes an expression as input, and what it's going to give back
+is the integer value of that expression. and there's going to be two cases here,
+because we have two kinds of expressions. we have a case for values, and we need to
+figure out what to do with that, which we'll do in a moment. and then we have a
+case for division, and we need to think what to do with that. so, we've got the
+skeleton here of a program, and then we just need to fill in the details. so, how
+do you evaluate an integer value? well, that's very simple, you just give back
+the number - so if i had val of one, it's value is just one. and then how do i
+evaluate a division? well, these two expressions here, x and y, these could be
+as complicated as you wish. so, we need to evaluate these recursively. so what we
+would do, is evaluate the first one, x, and that will give us an integer. and then
+we'll evaluate the second one, y, and that will give us another integer. and then,
+all we need to do is divide one by the other. so, this is a nice simple program
+that evaluates these kind of expressions built up from integers using division - we
+just have a simple recursive program, two cases, and everything looks
+fine. but there's a problem with this program, and the
+problem is that it may crash - because if you divide a number by zero, then that's
+undefined, so this program will just crash. so, in particular, if the value of
+the expression y here was zero, then this division operator would crash, and you
+get some kind of runtime error. so we don't want our programs to crash, so we
+think, what do we do to fix this problem? first of all, what we're going to do is
+we're going to define a safe version of the division operator, which doesn't
+crash anymore. because that's basically the root of the problem here - division by
+zero gives an undefined result, and the program is going to crash. so, let's
+define a safe version of the division operator. we're going to define a
+function called safediv, and it's going to take a couple of integers, and it's
+going to give back maybe an integer. and maybe is the way that we deal with
+things that can possibly fail in haskell. so, the type here is not int to int to int,
+it's int to int to maybe int, because division may fail. and we'll see how this
+maybe type works in a moment. so, how do we actually define safediv? we take two
+integers, n and m, and then what we'll do is check - is the second of these zero?
+because that's the case when things would go wrong. so, if m happened to be
+zero, then we will give back the result nothing. okay, so nothing is one of the
+constructors in the maybe type. if m is not zero, what we're going to do is just
+give back the result of dividing. so, just is another constructor in the maybe type -
+maybe only has two constructors, nothing, which represents things that have gone
+wrong, or in our case division by zero, and just, which represent things that
+have gone fine. in this case, we actually just get back the result of dividing one
+number by the other. so, what we have here now is a safe version of the division
+operator, which is explicitly checking for the case when the program would have
+crashed. so this doesn't crash anymore, it returns one of two values - either nothing
+if things go wrong, or just of the division if things have gone fine. so,
+what we can do then, with this safe division operator, is rewrite our little
+evaluator program to make sure that it doesn't crash. so, our new evaluator is
+going to have a slightly different type than before. so before, the original
+program just took an expression as input, and then it gave back an
+integer. but that program could crash. the new evaluator takes an expression as
+input as before, but now it maybe gives you an integer, because it could fail, it
+could have division by zero. so, how do we rewrite this evaluator? so, we'll do the
+two cases again - write down the skeleton, and then we'll fill in the details. so, in
+the base case, we can't just return n this time, because we've got to return a
+maybe value. and there's only two things we could return, either nothing or just,
+and in this case the right thing to do is to return just of n, because if you
+evaluate a value that's always going to succeed, so we use a success tag, which
+is just, and then we have the integer value sitting in here. if we have a
+division, now we need to do a bit more work, because when we evaluate x that may
+fail, when we evaluate y that may fail, and then when we do the division that
+may fail. so, we're going to need to do a little bit of checking and management of
+failure. so, what we're going to do, is when we evaluate a division, first of all,
+we'll do a case analysis on the result of evaluating x. and that could be one of
+two things - it could either be nothing, in which case we're going to do something,
+or we could get just of some number, in which case we're going to do something.  so,
+there's two cases to consider - when we evaluate the first parameter x, either it
+succeeds or it fails. so in the failure case, if we get back nothing, the only
+sensible thing to do is just to say, well if evaluation of x fails, the evaluation
+of the whole division fails. so we'll just return nothing as well. in the just
+case, then we need to evaluate the second parameter y. so, what we're going to do is
+do another case analysis, we'll do a case eval of y, and then again there's two
+possible outcomes which we could have here - either we could have nothing, which
+means it failed, or we could have just of m, some other number, in which case we've
+succeeded. then again, we need to think what do we do in each of these two cases.
+so, in the first case, if the evaluation of y fails, the only sensible thing to do
+is say, well, we fail as well. in the second case, we've now got to
+successfully evaluated expressions - x has given the result n, y has given the
+result m, and now we can do the safe division. so, in this case we just do
+safediv.  now we have a working evaluator. we started off with a two-line program,
+which kind of did the essence of evaluation, but it didn't check for
+things going wrong - it didn't check for a division by zero.  now we've
+fixed the problem completely, we have a program which works, this program
+will never crash, it will always give a well-defined result, either nothing or
+just, but there's a bit of a problem with this program, in that it's a bit too
+long. it's a bit too verbose, there's quite a lot of noise in here, i can
+hardly see what's going on anymore, because it's all of this management of
+failure. so, we can look at this program, and think - how can we make this program
+better? and how can we make it more like the original program, that didn't work,
+but still maintain the fact that this actually does the right thing? and the
+idea here, is we're going to observe a common pattern. so, when you look at this
+program, you can see quite clearly we're doing the same thing twice - we're doing
+two case analyses. what we're doing, is doing a case analysis on the result of
+evaluating x, and if it's nothing we give back nothing, and if it's just, we do
+something with the result. and then we do exactly the same thing with eval of y -
+we're doing a case analysis on the result of evaluating y, if that gives
+nothing we give back nothing, and if it's a just, we do something with it.  so,
+a very common idea in computing is when you see the same things multiple
+times, you abstract them out, and have them as a definition. and that's what
+we're going to do here. so, let's draw a little picture first, to capture the
+pattern which we've seen twice. so, the pattern we have here, is we're doing a
+case analysis on something, so let me just draw as a little box - we don't know
+what's in there, we're doing a case analysis on something. and, there's two
+cases - if it's nothing, we give back nothing, and if we get just of some value x,
+then what we're going to do is we're going to process it in some way, we're
+going to apply some other function to x. so, this is the pattern which we've seen
+twice. in the first case, we had eval of x sitting here, and in the second case, we
+had eval of y sitting here, but this is the same pattern that we see two
+times in the new evaluator which we've just written. so, what we
+can do now, is abstract this out as a definition. and the idea here, is that
+we're going to give names to these boxes. so, this box is a maybe value - it's going
+to be either nothing or a just, so we'll call it m. and this box is going
+to be a function, it's going process the result in the case we're
+successful, so we'll call this f. so, we can turn this picture here into a
+definition now, and then we can use it to make our program simpler.  so, the
+definition we're going to have is, if we have some maybe value, feeding into,
+or in sequence with, some function f. so, the operator we're defining here is
+this funny sequencing symbol, and we'll back to that in a second. what we're
+going to do, is a case analysis - we're going to look at what the maybe
+value is - if it's nothing, we'll give back nothing, and if it's just
+of x, we'll apply the function to it. okay, so we'll just captured the pattern, which
+we've seen twice, by a definition now. so, we have some maybe value, then, or in
+sequence with, some function f, and all we're going to do is look at what the
+value of the maybe is - if it's failed, we'll fail, if it succeeds, we pass the
+result to the function f. it's just the idea of abstracting out a common pattern
+as a definition. so, now we can use this definition to make our program simpler.
+so, let's rewrite our evaluator once again. the type will remain the same -
+it takes in an expression as input, and it's going to give back a maybe value,
+as before. but the definition is going to be a bit simpler this time. so, let's
+write down the skeleton. so, if we evaluate a value, we're going to do
+something. if we evaluate a division, we're going to do something. so, what do
+we write in the base case? well, i could write just of n here, but actually i'm
+going to abstract that as well - rather than writing just of n, i'm going to
+write return of n, so really what i'm making is a little kind of side
+definition, that says return of x is the same as just of x. and then, what are we
+doing in the division case? well, we're going to do an evaluation first - we're
+going to evaluate x, and then if that's successful, using our little sequencing
+operator, we're going to feed the result into a function. so that function is
+going to take the result, n, that comes from evaluating that, and then it's going
+to evaluate y. so, if we do eval of y, if that's successful, we're going to feed
+that result into a function. and here again, i'm using the lambda notation,
+which we did a video about previously, you can have a look back at that. so, if
+these two things are both successful, we'll have two values, n and m, and then
+all we do is call safediv with them, then close the brackets. so, this program
+here is equivalent to the program which we wrote, which had all the nested case
+analyses. but, that's all been abstracted away now - it's all been kind of
+abstracted into return, and the sequencing, and safediv. so, this is a
+nicer program now, but still i'm not entirely happy with this. there's
+still some complexity in there - we're still using the funny lambda notation,
+we're still using this funny symbol, which we've introduced. maybe i can make
+it even simpler? so, what a language like haskell gives you, is a special notation
+for writing programs which have this kind of form. and this is called the do
+notation. so let me write this in do notation, and then we'll come back to
+what this has all got to do with monads. so, let's write this program in an even
+more simple form, and this will be our final program. we take an expression as
+input, and it's going to maybe deliver us an integer. and the base case will not
+change, so we'll get return of n. but the recursive case is going to become a bit
+simpler, because we use the do notation as a shorthand for using the sequencing
+operator which we've introduced. so, i can say, if i evaluate a division, what i'm
+going to do, and this is the keyword, which just gives you a shorthand for
+exactly what we've just written, it's not anything special, it's just shorthand,
+just syntactic sugar. what we're going to do, is take the result n, from the result
+of evaluating x, if it's successful. then, we'll take the result m, from the result
+of evaluating y, if that's successful. and then, we will call safediv. and this is
+our final program, and i'm much happier with this one. i mean, it looks kind of
+similar to the original program, a similar level of complexity, but all the
+failure management is now handled for us automatically. the failure
+is happening behind the scenes with the do notation, and with
+safediv, but we don't need to see that when we're reading this program. this is
+a much nicer program than the last one, because we've kind of abstracted away
+from a lot of the detail. so, you can look at a program like this, and i've hardly
+mentioned the word monads in the last ten minutes, you can say what's this
+actually got to do with monads? well, what we've actually done,
+is we've rediscovered what's known as the maybe monad. the
+maybe monad is three things - it's the maybe type, or really the maybe
+type constructor, because it takes a parameter. so you can have maybe of an
+integer, or maybe of a boolean, or maybe of whatever you like. and then it's two
+functions - it's the function called return, and it's the sequencing operator
+which we introduced. and we can think about what are the types of these things?
+so what return does, is it takes a thing of any old type, a - could be an integer,
+could be a boolean, could be whatever you like. and it converts it into a maybe
+value. so, in our case, this just took an integer like five, and we return just of
+five. okay, so that's all the return was doing, it's basically just applying just.
+and what it gives you, is a bridge between the pure world of values here,
+and the impure world of things that could go wrong - so it's a bridge from
+pure to impure, if you like. and what sequencing does, is it gives you a way of
+sequencing things - so you give it something which can fail, a maybe a, and
+then you give it a function that tells you what to do with that a, if you
+succeed - so an a to maybe b. and then, finally, what you're going to get back is a
+maybe b. okay, and this is all that a monad is essentially - a monad is some
+kind of type constructor, like maybe, or list, or something else, as there's many
+other examples, together with two functions that have these types here. so, what we've
+essentially done is rediscovered what's called the maybe monad. what's the point
+of all of this? i mean, what's the point? we seem to have gone through quite a lot
+of steps, to write in the end quite a simple program. what was the actual point
+here? so there's four points which i would like to emphasize here. so, the
+first point, is that the same idea we've seen works for other effects as well -
+it's not specific to maybe, which captures failure. the same idea captures
+other kinds, or you can use with, other kinds of effects like input/output, like
+mutable state, like reading from environments, like writing to log files,
+non-determinism. all sorts of other things which you think of as being
+effects in programming languages fit exactly the same pattern. so, monads kind
+of give you a uniform framework for thinking about programming with effects.
+another important point is that it supports pure programming with effects.
+i mean, haskell is a pure language - functions just take inputs, and
+produce outputs, they don't have any kind of side effects at all. but you need to
+have side effects to write real programs. so, what monads give you is a
+way of doing impure things, like proper side effects, like input/output, in a pure
+programming language like haskell. another important point here, is that the use of
+the effects is explicit in the types. when i wrote the
+evaluator which didn't fail, it took an expression as input, and it
+delivered maybe of an integer. so, the maybe in the type is telling me that
+this program may fail. so, this is the idea of being explicit about what kind
+of effects, or side effects, that your programs can have in the types. and this
+is a very, very powerful idea. and the last thing is, it's a little bit strange,
+but it's particularly interesting, it's the idea of writing functions that work
+for any effect - we might call this kind of effect polymorphism. so, a simple example
+of this would be maybe you have a sequence of things, which can have some
+effects, and you want to run them all one after the other. you could write a
+generic function, in a language like haskell which supports monads, which
+would take a sequence of effects of any kind, any monadic type, and it would run
+them for you. so this is a very, very powerful idea, and languages like haskell
+have libraries of kind of generic effect functions, which are very useful. so,
+that's basically all i want to say. just going back to the start, i think the idea
+of programming with monads is one of the most important developments in
+programming languages in the last 25 years - i find this particularly
+fascinating. we've only really touched on the surface here, and if you want to know
+a little bit more, i can do a bit of a plug - i have a new book which came out
+fairly recently, programming in haskell, and this has got a chapter specifically
+about this, which goes into much more detail. i've only really touched on the
+surface, there's lots of things i didn't say, which maybe you need to know to
+write real programs using this stuff. so, you could have a look in the book to 
+find out more about that.  this is an interesting point, it causes quite quite
+some problems for people learning languages like haskell, because haskell
+people tend to use the proper mathematical terms for things, and those
+terms are often quite foreign to programmers. and it does cause quite a
+lot of difficulty - so there's some people have the view that we shouldn't actually
+have used the term monad, maybe we  should have called them effects, or
+something like that. so, just use the more kind of human, or a familiar term. but
+it is an issue. but i'm actually of the point of view that, if we know the
+proper term for something, we should call it that something, and the people who
+are using it should just learn that term. i mean, it's what it is, it's a monad,
+and we should kind of pay homage to the mathematicians for discovering this idea
+first, and not kind of reappropriate it as if it was discovered independently - the
+mathematicians discovered this, they should get  credit for that, and so i'm quite happy
+with the word monad. but, it does cause some problems when people are learning
+programming languages, because it does sound a bit scary, and there's lots more
+scary terms like this in programming as well. this is all built into
+languages like haskell. so, there's lots of libraries for programming
+with monadic things - you don't need to define a lot of the
+infrastructure, like maybe, and return, and the sequencing, for yourself - this is
+kind of built in as libraries. you can define your own ones if you want to, but
+there's maybe kind of fifteen or twenty monads which are just lying around
+waiting for people to use. and if you want to use multiple different monads
+in your programs, maybe you need two different kinds of effects, maybe you need
+things that can fail, and you need some state, there's ways of coping with that
+kind of stuff as well. so, you don't need to do all yourself,
+it's mostly built in for you.

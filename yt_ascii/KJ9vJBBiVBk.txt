@@ -1,0 +1,98 @@
+hi friends we are back today and this is a very 
+exciting video why because we are going to play   around with chat gpt's gpt 40 i feel like as i'm 
+saying that i had to think about am i saying that   correctly 40 it definitely doesn't roll off 
+the tongue as builders i think most people who   are part of this community love building things 
+whether you're an actual developer maybe you're   on the business side of tech it doesn't matter 
+we like to learn about the latest technology and   build really cool things and that is what i want 
+to do today i was really curious so i got here   my computer wasn't that heavy i don't know why 
+i did that so i got here i went on chat gpt   and i saw i now have access to gpt 40 as i'm 
+sure we all do and one thing that stood out to   me which we'll dive into shortly here is how 
+it's supposed to have better capabilities in   understanding images so i thought what better 
+than to take some screenshots of some really   interesting ui and see if it is able to take that 
+image understand it and generate code through that   i thought that'd be pretty cool it's fullon i 
+mean as expected with tailin but that's really   cool so that is what we are going to do today 
+play around with it and see if we can get some   really good prompts for it hopefully when you 
+watch this video it will spark some creativity   or some creative ideas as far as how you can build 
+your next project or even just understand better   the capabilities of this new release i mean this 
+is moving quickly and having an understanding of   its capabilities what's possible with it i think 
+is honestly the best way the only way to stay up   to date with this moving to stay what is it to 
+stay up to dat with it moving quickly you know   what i mean actually that brings up a really 
+interesting thought that i had i'm going   on a little side tangent here i was at a tech 
+conference the other week and the speaker for   the keynote was jensen the ceo and co-founder of 
+nvidia i love nvidia i think it's an incredible   company and they're doing some really cool things 
+over there now seeing jensen speak for me was   like seeing a celebrity speak in my opinion i 
+just think he's really brilliant and delivers   really thoughtful speeches sometimes maybe a 
+bit controversial but but that's another day   and one of the things he said was technology 
+is moving at the speed of a train when you're   not on the train and you're watching how fast 
+it's moving by it looks like it's impossible   to keep up to date with it's impossible to ever 
+catch up but if you choose to get on that train   and be a part of seeing what's coming up testing 
+out these innovations learning more about it you   realize the train isn't moving that fast i really 
+liked that analogy because it does do a good job   of when you're not you know when you're pushing 
+off learning something new or you're resenting   it it does feel as though things are moving 
+so quickly but when you're being part of it   learning and growing with it you realize that it 
+is possible to keep up with it not only keep up   with it but grow with it and that today is what 
+we are going to do with chat gp40 it's going to   take me a while to get used to saying that all 
+right let's go oh subscribe like leave in the   comments other videos you want me to cover all 
+right now let's go go meeting to my my dining room all right so you can see here i'm in chat gpt 40 
+and the first thing it gives us is some options   one to create a workout plan design a fun coding 
+game plan a relaxing day and explain a nostalgia   to a kindergarten that's cool but you know what 
+actually before we take a screenshot and see   how that works let's kind of just play around 
+with this tool let's see what the suggestion of   playing a fun design a fun coding game brings 
+up can you help me design a game concept all   right so now it's starting by prompting us 
+more which is interesting usually it would   just put out the output the solution where 
+in this it wants to know more let's do it in python now this is more chain prompting 
+style where it's you know wanting to   have more of a conversation with you 
+so they want to know target audience   game genre learning objectives 
+target audience is adults jean   you choose and it is for entertainment you pick 
+everything else i mean obviously if you were   really doing this for a specific thing you'd want 
+to get very particular but for this i want to see   what they have up their sleeve code quest that's 
+cool an adventure puzzle game where players embark   on a thrilling journey through different words 
+uh this is cool learning objectives game mechanic wow this is so cool if this will actually 
+output the right code for us that's pretty   impressive sample level what do you 
+think of this concept let's build it this is actually pretty impressive but will it build 
+the game for me that's what i   was hoping for i mean i wasn't very 
+clear about that but i just assumed can you build the game for me with 
+python code it said python code though wow this is interesting so it's doing a a 
+uh prototype and obviously i knew this was   a lot of work i'm a i'm a developer but 
+the way they positioned it was a little   bit misleading where it was like build 
+a interactive coding game i thought   that would mean the ai would build it for me so 
+that's a little interesting oh i do like how they   said how to run it though and next steps okay so 
+that's okay let's go into repple it and see if   we can run it and then we will do the screenshot 
+i'm going side i'm getting sidetracked here okay   so i just entered in the for loop here and you 
+can see when we go to run it congratulations you   saw the this is actually really cool it's very 
+creative okay so that was really cool actually   i'm i take back my my immediate thoughts around 
+40 now what i did is i just took a photo as you   can see here of udem homepage ui i don't know 
+why i said that so funny udem homepage ui and   i uploaded here so let's go ahead and say 
+uh create use this image to create code   for me to read that will reproduce this i would 
+like for you to use tailwind and you can choose   everything else that's a pretty vague prompt 
+but let's just start with that and see how it goes okay so they're using tailwind css i like how it comments it out too 
+like the hero section skill section tabs   da da da all right this is pretty cool this 
+is from one screenshot i took i remember i   know i'm going to sound so old but i remember 
+when i first was learning to code and we had   to create a to-do list with react and honestly i 
+spent like a full week on that because you know   there was stack overflow but when you're 
+just learning something new and this case   coding you don't really know how to google yet 
+like the proper terms to google or whatnot and   now it completely tools like this have completely 
+changed everything and i'm very interested to see   this next next generation of builders coders 
+tinkers whatever you want to call it who are   using this technology it's so fascinating to me 
+gone or the days or you're spending weeks on one   to-do list building it for the first time and 
+feeling those pains it's really interesting all   right so and it does an explanation all right 
+so i took that code from chat gpt and the tail   and css i inserted it into repple and this is 
+pretty cool so you can see here literally just   copy and paste it ran let's expand this though 
+this is so cool it's pretty much is it responsive   let's see can i do it and it is responsive 
+how responsive is it though let's see that's   our old code behind there it's full on i mean as 
+expected with tailin but that's really cool wow   obviously the images are broken do these work no 
+but that could be the next step is prompting it   to get these tabs to work i'm sure that's pretty 
+impressive i have to say the images obviously are   missing but otherwise it's pretty accurate that's 
+really cool let's go back to chat gpt let's go here and look at this yeah i mean it's a bit 
+different but it's very similar the future it's   here people all right quick recap i think this 
+is really cool i'm going to change the way we   build how teams build build even just by these 
+advancements and i truly believe that there are   a lot more exciting things coming with open ai 
+that they're going to be releasing by the end of   this year for sure that some i think they're 
+just holding back on i don't know why i just   have this sneaking suspicion it's really fun 
+and this tech is moving quickly as i mentioned   but the key here is to be part of it to try it 
+out through different tutorials like this just   get curious build things break things be part of 
+what was it that jensen from nvidia said be on the   be someone who is on the train all right 
+i hope you enjoyed this video make sure   to hit that subscribe button for more tech 
+coding future tech all the good stuff and   leave in the comments any other videos 
+you want me to make any topics you want   me to cover it's what i'm here for all 
+right i'll see you soon thanks everyone

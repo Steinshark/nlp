@@ -1,0 +1,138 @@
+- stop, stop, stop, stop. the big scary regulation
+boogeyman is coming to take away your gaming pc but only under
+very specific circumstances. in fact, everything on
+this table from the compact intel beast canyon nuc
+to this gaming pc from ek which is probably compliant,
+which raises the question, if an rtx 3090 equipped
+monster like this limbos under the california
+energy commission bar, why does the bar even exist? and how did dell manage to bonk it? well, to find out, we gathered
+these parts right here from our warehouse, with the
+goal of building a gaming pc that couldn't be shipped
+to any of the six states that are biding by the
+cec's title 20 standards. and it's all fun and games
+for me since i'm safely up in canada where we don't have to deal with any of the restrictions that wait, oh, they apply in bc too. more like cantda, am i right? well, let's get down to business and figure out what the
+heck is going on here. and also tell you about
+our sponsor glasswire. thanks to glasswire for
+sponsoring this video. instantly see your current
+and past network activity, detect malware and block
+badly behaving apps on your pc or android device. use offer code linus to
+get 25% off glasswire at the link below. (bright upbeat music) step one of building the pc
+equivalent of a 1960s muscle car is grabbing the most power
+hungry components possible. i'm gonna be using the
+11th gen core i9-11900k. according to this review by a anandtech, intel's final 14 nanometer
+flagship has only 2/3 as many cores as amd's
+price competitive 5900x while being capable of
+drawing twice as much power under peak load. this thing must not be allowed, right? - [colin] nope, it's all good. - oh, well, yeah,
+believe it or not the cec and every other entity
+following its guidelines, just don't care how much power
+your cpu draws under load. their primary concern is how
+much power is being wasted by machines that are sitting at idle. so we should be able to
+use any modern cpu we want as long as their motherboard
+is configured to allow deep enough sleep states. and our operating system is
+configured to activate them within 30 minutes. as for ram, i have chosen 64 gigabytes of, oh, i have chosen 64 gigabytes
+of wasteful rgb lights. believe it or not, these don't
+make your computer go faster. surely california hates these, right? (buzzer buzzing) yeah, actually the only situation
+where your system memory could put you in non-compliance would be if you had less
+than eight gigabytes of it. so go ham on your big
+chunkiest memory kits. just make sure you don't go
+overboard on your motherboard. this guy right here, it's compliant. but what happens if i was to
+have the partiest motherboard you could possibly imagine. this thing can't be compliant, is it? - [colin] it's even more compliance. - it's more compliant, all right. although this thing is a
+monster and has like six cpu power connectors and two 24 pins, it still is totally fine. the thing is that the expandability score is what actually matters. so things like memory
+slots, expansion cards, and even back panel ports, the higher expandability score or es. in brief, every pc is given
+a power draw allowance based on the score and
+it almost makes sense. a hard drive gets more
+power allowance than an ssd for example because it takes
+more power to spin up a disk. most importantly though,
+if that expandability score passes 690, nice, then you're exempt from the typical energy
+consumption standards, almost. you will still need to
+pass the performance bar for the energy efficient
+ethernet but that's another story for another time. the bottom line is that even
+things like liquid cooling contribute to this score. so any pc with premium gaming
+motherboards like this one or this monster, well, it
+increases the power allowance. so knowing that, i guess this
+giant fan triple aio cooler helps me. so yeah, don't press the
+buzzer, this thing is fine but surely, this rtx 3090 isn't compliant. like, it can draw over 400
+watts peak by itself alone and nvidia recommends
+1000 watt power supply. so any mortal that dares to-- - [colin] no, it's good.
+- yeah, yeah, it's fine. there's another way to
+get around the regulations by combining a powerful
+gpu, so that's a card with over 600 gigabytes
+per second of bandwidth with a power supply of over 600 watts, regardless of the
+efficiency, and the pc falls into the air quotes, high
+expandability computer bracket and is exempt from regulation. even this 1600 watt monster,
+oh yeah, it's totally fine. and this 1000 watt piece
+of (beep) i mean, come on, it weighs absolutely nothing. it's also totally fine. even though it shouldn't be
+for wildfire hazard reasons. but these guys right here, no dice. that's where the efficiency
+part really comes into effect. 80 plus is a body that
+certifies power supplies for their efficiency and the
+gold tier just so happens to align perfectly with the
+minimum efficiency requirements for title 20. 80 plus is just a brand name of sorts, so you can have a power supply
+that passes without acquiring the stamp but it does need
+to hit that gold target unless it's over 600 watts
+and paired with a chunker gpu and that's for a good reason. up until recently, bronze
+rated power supplies were considered ds but nowadays
+bronze is pretty low tier with gold, platinum and
+titanium efficiencies all being more affordable to boot. well, these bronze guys
+may be more wallet friendly in the short term, both you
+and your local power grid will pay the price in power and electrical overhead respectively. but it also just doesn't really matter because you're probably
+building your own pc anyway. fortunately, diy builds don't
+need to follow title 20 rules. so who does this apply to? only medium to large manufacturers in these six states right here. if you're outside of those
+states, don't worry for now. if you are in those states, well, you still probably don't need to worry. if you build your own pcs, you're fine. if you're buying a pc made from
+parts from a small business, you're also probably fine. title 20 is squarely aimed at
+mid to high volume producers. so like dell alienware, hp, lenovo, the kind of brands that pump out hundreds if not thousands of systems. system integrators like
+origin pcs, cyberpower and maingear will feel the effects but because they're doing bespoke builds rather than hundreds of the same pc, they should be able to work
+within the guidelines just fine as long as they follow the rules. how about an example? this is luke's old pc and in
+it we have a corsair tx750m, a gold rate at 750 watt
+power supply, that's good. it's above the 600 watt minimum required to be called a high expandability pc. but because of gpu here
+is a measly gtx 950, it now needs to be certified
+before it can be sold by someone like dell alienware. same for alienware's aurora lineup. this one does support the
+1000 watt power supply option which apparently is gold rated according to some dell help forum posts. it does not meet the
+threshold for exemption because the rtx 2080 super clocks in at 496 gigabytes
+per second of bandwidth. for this to be sold, it
+would need to be tested by a third party and marketed
+as such and that's expensive. dell confirmed with us that
+future r10 and r12 models would meet or exceed title 20 guidelines but that doesn't really answer
+why they didn't get this certified in the first place because they definitely
+knew it was coming. and dell isn't alone here, any
+medium to large pc builders will need to build and
+certify their machines under title 20 if they
+plan to do any business in the world's 5th largest economy, lying somewhere between
+germany and the u.k. in size or any add-on states. macro view title 20 declares
+the minimum efficiency levels for energy and water
+consumption in products. everything from light bulbs to plumbing. but what we're particularly concerned with is article four of the
+standard, appliances, which categorizes pcs into a
+handful of groups think laptop, desktop, workstation, and then
+further defines the allowable idle power consumption of each device with this rather complex formula. the reason all of this is even a thing is very straightforward. as pcs keep getting more
+powerful and power hungry, if you extrapolate that a
+bit to somewhere near 2040, the sheer volume of power
+required for computation will surpass the global power output. yeah, seriously, in less than 20 years, there'll be more computing
+than there is power to run computers. and that's not even taking into
+account the rapid automotive electrification but that's a
+whole different ball of worms. and that is why california is pushing for these tighter controls, not just to reduce their emissions from power generation but also reduce the infrastructure costs of up-scaling and moving that power around. if you can nip the downstream
+power demand in the bud, your existing infrastructure can go longer before upgrades are needed. computers alone account for
+roughly 3% of residential and 7% of commercial
+energy use in california. that is no small amount of power. title 20 is estimated to save more than 2.3 billion
+kilowatt-hours of energy. that's the equivalent of the entire city of san francisco yearly. there will be some trickle
+down costs to the consumer of course, as third-party
+certification isn't free. and with 80 plus bronze and silver no longer being an option,
+the cost of an 80 plus gold or higher power supply will
+have to come from somewhere and you will be footing the bill for that. but again, if you still
+want a bronze power supply, you can just build your own computer. we've got a whole host of pc build guides you can work off of
+and just jump right in. globally, there's an energy
+revolution taking place, whether it be through electric
+vehicles, renewable energy or increased computerization
+of our daily lives. when the chip shortage does
+end, hopefully half soon, the problem of sheer power
+consumption, generation and distribution is dead ahead. if we play our cards right today, hopefully we'll be able to
+power all of the chips tomorrow. - thanks to drop for
+sponsoring this video. drop and marvel have partnered together to bring your favorite
+superheroes to your pc setup. the collection features heroes
+such as captain america, iron man and black
+panther as well as a set based on the movie
+"avengers; infinity war". each set features heroic
+touches such as captain america star logo or black panther's
+mask and everything is sculpted in drop signature mt3 profile
+which features scooped keys and double shot abs construction. you'll get 160 key caps
+including a full numpad and extra modifiers for different layouts. so why wait? bring out your inner
+hero and order your set at the link down below. - it just says, throw it a tech cookie. actually let's put them to the tech video, those things are horribly
+inefficient, it's hilarious. bye.

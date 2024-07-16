@@ -1,0 +1,117 @@
+- it's a brave new world when it comes to building gaming pcs. but is it time for you to
+go with an all amd system? well, amd reached out and not only wanted to sponsor this video and
+give us some hardware, we actually have three different computers to take a look at today. first of all, we have this,
+which i'm almost done building, which is focused on 4k, but it's got the most high-end amd stuff that i can get my hands on. a radeon 6950 xt for the graphics card and the latest ryzen 7 5800x3d, a gaming focused cpu that
+i'm very excited about. on top of that, we also have another build which is focused on 1440p and 1080p, but this is all to find
+out the simple question, is it better to build an all amd gaming pc depending on your budget, or
+is it better to go with the... competition? so for the high-end 4k system, i've got basically all the fun toys. now this is the first time i've built with this hyte y60 case, and
+it actually is really nice. so you can see, i've got
+like the panorama view with the glass all the way around. it's also got like all of
+your i/o on the bottom here, which is kind of interesting. we've also got a fairly subtle look. so we've got the ryujin ii
+240 mil cooler from asus here. the rog cooler does come with
+these industrial ppc fans from noctua which i think
+is gonna look really rad. on top of that, it also
+has the vertical gpu mount built into the case, which means that we get
+to display our 6950 xt, pretty much filling up the entire case. that plus the screen and
+this strix motherboard, which is ridiculously high-end. i feel this is gonna be
+a nice looking system, but the aesthetic isn't
+the most important part. there are a few amd technologies, which theoretically will
+give you more performance, essentially for free, when
+you have both an amd cpu and an amd gpu. so to test, i have three computers. this one up here is the highest end. so the hyte system, this
+is really designed for 4k. now take a step over
+here, and what we've got is something that's a little
+bit more designed for 1080p. so inside this, we have a ryzen 5 5600 as well as we've got a radeon
+6650 xt in this system. and then down here, once i
+actually make room on the table, we have our mid-range 1440p system. so this is rocking a ryzen 7- - as you just crush things.
+- it's fine. a ryzen 7 5700x and a 6750 xt. so with all three of our systems built, i have a couple of questions. of course, the big one is really just, how much does the fully enhanced amd cpu plus gpu experience give you? so for the best, perfect optimal results, i wanna do everything
+and the kitchen sink on versus everything off. there are obviously a number
+of different amd technologies that you can play around with. something like smart access memory, which you enable via the bios, is something which should
+pretty much universally give you a little bit of
+extra gaming performance pretty much no matter what kind of game you're throwing at it. if it's remotely cpu bound, that will give you a little
+bit of that performance. but on top of that, there are also a bunch
+of graphics level things that could theoretically give
+you a lot of extra performance without hurting that image quality. so one of the games we're going to try is assassin's creed valhalla, specifically here we're going to be using radeon super resolution,
+which is not game dependent, but instead it is actually
+based in the driver settings. so this is something that you can turn on, again, should work with most games, and theoretically that will
+give us a boost in performance without a huge hit to image quality. we're also going to be testing
+with horizon zero dawn, which does have that full
+fidelityfx built into the game, meaning that this is sort
+of that best case scenario for a game which has been
+deeply optimized to work, again, with both the
+amd cpu and the amd gpu. and because we have
+all three systems here, we're going to be testing
+at different resolutions. so this white system is running at 1080p. the '90s looking colorway
+system is running at 1440 and the black system is running at 4k, to give us a good idea of
+in the best case scenario what kind of performance you could get and is it really worth it to go with an all amd setup or maybe not? so we are first up loaded into
+assassin's creed valhalla. the first thing we're going
+to do is run both this as well as horizon completely
+stock on all three systems. so you see we're running at 4k. hop into the graphics and you will see that everything is set to default ultra high. no upsampling, no fsr, rsr, none of the extra
+goodies are on right now. and as you can see on our 4k system, ryzen 7 5800x3d as well as the 6950 xt. so let's start by running
+the benchmark here and seeing what our base
+level performance is with none of the goodies turned on. you can see gpu is pretty much maxed out. our baseline on assassin's
+creed is an average of 63 fps. so that is the benchmark
+that we're going to go for. what we're gonna do is we're
+gonna restart the computer and gonna hop into the bios. inside the bios, there is
+one thing we need to do and one thing only, we need to turn on the resize bar feature. i literally click on and that's it. but essentially what this allows it to do is the cpu and the gpu can talk directly without having to do a bunch
+of extra loops back and forth. this is one of those things that's essentially free performance. like, you just turn this on. on top of that, let's go and
+play with some of the settings in the actual drivers and in the games which should give us some
+additional performance without really impacting
+the image quality. but smart access memory,
+resize bar, turn that on. now, let's see what kind
+of extra performance we have unlocked. so there are two different technologies that we're going to play around with. when it comes to
+assassin's creed valhalla, we're gonna do radeon super resolution. so before i do this next test,
+i'm going to hit alt + r, which is gonna pull up my radeon settings. what i care about is in the graphics side. all i care about right now though, is turning on this,
+radeon super resolution. so essentially it will allow
+you to lower the resolution of the game and it will do
+the upscaling with the driver and the gpu and allow you
+to get extra performance while not making a huge difference to the actual image quality, but it's going to do
+that upscaling itself. with the radeon super
+resolution turned on. we're gonna close this out. i'm gonna go into the options. by default, we need to set
+the resolution somewhere low. essentially what you're doing is, normally if you lower
+the resolution of a game, obviously you're gonna
+soften your image quality, but you will get that extra performance. the higher resolution that
+you can give it to work with, it is always gonna give
+you better results, but i'm gonna start out with just'00p and let's see what we can get here. this time we are up to 90 fps in valhalla. all we did was enable that
+amd smart access memory and turn on the radeon super resolution which is upscaling from
+1800p to the full 4k. next up, we have horizon zero dawn. we're going to run everything
+maxed out with the system. so 4k, but no upscaling
+or anything like that on and graphics running at ultimate. you kids are lucky these days. there's built-in benchmarks
+in a lot of games, you press one button you're done. i just have to line up like, kind of, okay, i need to walk,
+walk, walk, walk, walk, turn, stand, look at this thing. one, two, three, walk,
+walk, walk, go over here. i had to do my own benchmarks. i'm just saying, i used to walk back and forth
+to school uphill both ways. so for horizon, we've
+got an average of 84 fps on the 4k system. so now let's actually take a
+look to see what we need to do to get a little bit more
+of that secret sauce. so with horizon and fidelityfx turned on, we've got ourselves 135 fps. so on our 1440p system
+running an assassin's creed without any enhancements,
+our base result is 81 fps. that is the number to beat. turning on both smart access memory, as well as radeon super resolution does give us a pretty
+noticeable bump to performance on the 1440p system. so we went from about 80, 81
+fps in valhalla up to 100. and i'll say, while there is
+a slight difference in quality since we are upscaling 1080p, honestly, it's not that big. and that is a very noticeable amount of performance difference. hey, okay, so horizon
+running on the 1440p system completely native, we've
+got 97 frames per second. now it's time to turn everything on and see what the 1440p system can give us with that special sauce. the... - [cameraman] is that
+how you put sauce on? - yeah, this is the fancy way. - [jared] you like,
+cover your fingers in sauce and just let it drip.
+- yeah, it's like the salt. so with horizon zero
+dawn on the 1440p system, we're seeing some pretty solid
+performance improvements. we're all the way up to 122. that is a very playable frame rate. for our 1080p system,
+we've got valhalla running at ultra high settings and
+the results are pretty solid. we've got 90 fps without
+any enhancements whatsoever. so with that amd smart access memory as well as running
+radeon super resolution, we're getting a big jump in performance. so this is running at 900p
+being upscaled to that 1080p inside the driver. and we went from 90 to 116 fps. hopping into horizon zero dawn, again, running ultimate quality at 1080p, we're getting 101 fps out of this system with zero extra work or
+modifications or anything. ooh!
+- oh wow. - 147 fps, that is over
+a 40% gain in performance just by turning on the
+resizable bar in the bios and by turning on the
+fidelityfx super resolution, that is incredibly impressive. so to be clear, amd
+did sponsor this video. they did ask us to look at
+these specific configurations with these games, so of course you have to take everything with a little bit of a grain of salt. these are the best case scenarios. however, that being said,
+the results that we've seen and the logic behind it makes sense to me. if you are buying a amd gpu, you should probably put it
+together with an amd cpu. there are a lot of
+things that work together to give you better performance. i'm not gonna sit here and tell you that there's no such thing as another driver-based
+way of upscaling your games to get a little bit more performance or that resizable bar
+support doesn't exist on some other platform. what i can tell you is
+that the seamlessness of this amd integration
+does make a difference. so take from it what you will, but from what we've seen today, some of the performance
+gains you've gotten with a very, very minor trade off are really pretty impressive.

@@ -1,0 +1,230 @@
+In 1962, a 22-year old grad student at Cambridge 
+predicted a mind-blowing superconductor phenomena. His prediction paved the way for 
+a new type of superconductor-based   circuit capable of switching at incredible speed. For 15+ years, IBM tried to use these concepts to 
+make a computer. It didn't work. In this video,   we look at IBM's failed superconductor computer. ## The Superconductor I did a whole video about superconductivity 
+back during the LK-99 hype. I recommend you watch it. At room temperature, a superconductive material   exhibits electrical resistance - meaning that 
+it impedes the flow of an electrical current. For some materials, that resistance might 
+be quite high. But when the material reaches   a low enough temperature - the transition 
+temperature - the resistance falls to zero. Yes, actually zero. You can suspend 
+a current inside a superconducting   ring and it will stay there for an 
+indefinite period of time. No resistance. It will also float on a magnet. This superconductive state only exists in certain 
+circumstances. Not only a low enough temperature,   but also a weak enough magnetic field and 
+current density. If a magnetic field appears,   then the transition temperature goes down further. ## The Cryotron Concepts for a computer based on superconductors 
+have been around since the 1950s. Back then, the world's research institutes 
+were using vacuum tubes as switches for a   digital computer. However, these tubes 
+were not small or reliable enough. In late 1955, Dudley A. Buck - an 
+electrical engineer who left the   US National Security Agency for 
+MIT - proposed the "cryotron". Cryotrons are superconducting switches 
+- switching their superconductivity on   and off. The first cyrotron was 
+very simple - just a segment of   tantalum wire with another 
+copper wire wound around it. You then dip the whole thing into very cold 
+liquid helium, which causes the inner tantalum   wire to go superconductor. An electric current 
+can now flow through it without resistance. So how do you switch it off? You push a 
+current through the winding copper wire,   creating a magnetic field that pushes down 
+the transition temperature enough so that   the tantalum wire exits the superconductive state. ## Fizzled Start This is quite similar to 
+the field effect transistor,   except it uses a current rather than 
+a voltage as the control signal. The cryotron was not only far smaller 
+than existing transistors or vacuum tubes,   it could be easily fabricated. Buck and the media envisioned 
+superconducting circuits powering   computers as small as a "cubic foot, exclusive 
+of refrigeration and terminal equipment". Buck continued development on the cryotron 
+throughout the decade. But he unexpectedly   passed away in 1959 in Massachusetts at 
+the young age of 32 - apparently from a   viral pneumonia or an edema resulting 
+from the gases he was working with. Cyrotron development continued for 
+a little bit after Buck's death.   And industry people showed good 
+progress. A team at IBM created   a thin-film version that switched 
+far faster than Buck's original. And a team at GE was able to put some 2,000 
+superconductor switches onto a single integrated   circuit - far beyond what anyone else had 
+done before - and make a computer from it. However, the invention and subsequent growth of   the silicon planar integrated circuit 
+offered superior performance without   the need for liquid helium refrigeration. 
+The industry receded into the background. ## Broken Symmetry In 1961, a theoretical physicist 
+named Phil Anderson visited the   Royal Society Mond Laboratory 
+at Cambridge on sabbatical. Anderson himself would win the Nobel Prize 
+in 1977 for his contributions in solid-state   physics. In any story about superconductors, 
+seems like every character has won a Nobel. While at Cambridge, Anderson taught a course 
+on solid state physics - discussing an idea   known as "broken symmetry" and its 
+connection to superconductivity. The idea of symmetry in physics is an 
+important one, and what follows is a   radical simplification. If a statue is standing 
+upright, you should expect it to stay standing   upright until something acts on it. The 
+statue is not going to suddenly flop over. This should be the case no matter how we 
+"translate" that system. Meaning no matter   where the statue is - a translation in space - 
+and no matter when it is - a translation in time. The laws of motion are symmetrical in 
+terms of space and time. There are many   types of symmetries within physics 
+other than just the laws of motion. This was a tough concept for me to grasp at first,   so feel free to stop and Google 
+for additional info if you need it. Anderson proposed "broken symmetry" as a way to 
+explain how atoms can sometimes collapse into a   lower-energy state that do not exhibit the same 
+symmetry as the laws of physics acting on them. He uses this to explain how electrons in a 
+metal form what we call Cooper pairs when   a metal enters a superconducting state. This 
+unusual pairing would not normally happen in   a non-superconducting state - thus breaking 
+a symmetry of electromagnetic interactions. Did that make sense? I hope it did. Anderson also invoked this broken 
+symmetry theory to try to explain   how a superconducting material can expel 
+a magnetic field - the infamous Meissner   effect. Photons inside the superconductor 
+suddenly gain mass, expelling the field. Inspired by the concept of broken symmetry, 
+one particularly bright student in Anderson's   graduate class named Brian Josephson began trying 
+to see if it could be observed in an experiment. ## Josephson
+Josephson began studying several experiments and came across a few recent ones 
+on superconductor tunneling. Tunneling is when a single electron 
+or pair of electrons pass through a   barrier that would have ordinarily stopped 
+them. It is a quantum mechanics thing so   only practically observable when 
+the dimensions are very small. A 1960 experiment by Ivar Giaever showed 
+that single electrons can tunnel through   very thin barriers - like just 20 angstroms 
+wide - from one superconductor to another. Josephson tried to formulate a 
+theory of equations to fit this   behavior. As he tried to explain the 
+behavior of electrons traveling from   one superconductor to another, he 
+discovered something startling. ## The Effect Let us imagine a circuit with a junction or 
+barrier - made of some insulating material - in   between two metal superconductors. Let us now 
+put this circuit into differing situations. If the barrier is thick, then we cannot 
+send any current through from one side to   another. This is the case no matter 
+how much voltage we apply to this. Classical physics dominate 
+here, not quantum mechanics. Recall that voltage is like 
+the pressure for the current.   It is like how water pressure 
+pushes water through a pipe. Now let us shrink the barrier to a very 
+thin width. Per the well known tunneling   principle from quantum mechanics, this 
+thinness grants us the possibility that   a single electron can tunnel through 
+that thin barrier to the other side. We apply more voltage, we get a directly 
+proportionally stronger current tunneling through. Now, let us start lowering the temperature. As the   system approaches the transition temperature 
+for a superconductive state, we see this   directly proportional voltage-current 
+relationship start to break down. Now we are in a superconductive state. So long 
+as the current is below a certain threshold,   we see that current flow through what 
+is normally an insulating barrier   without resistance. No voltage/pressure necessary. But if the current breaches that certain threshold 
+- or if a magnetic field is applied - the   supercurrent collapses. The barrier regains its 
+resistive properties and everything is as before. This very strange behavior is what we now call the 
+Josephson Effect. What Josephson is saying that   is new and radical is that it is not just single 
+electrons quantum-tunneling through the barrier. But entire Cooper pairs - carrying their 
+superconductive abilities along with them.   The supercurrent flows like as if the 
+insulating barrier was not even there. Josephson's paper set off a rush of 
+people to verify his predictions,   which few people believed. Even John Bardeen 
+- co-creator of BCS theory and one of the   discoverers of the first transistor - could 
+not believe it. The two famously debated. But then in 1963, a set of experiments verified 
+the Josephson Effect. Bardeen graciously withdrew   his objections and Brian won the Nobel Physics 
+Prize in 1973 alongside the aforementioned Ivar   Giaever and the semiconductor pioneer Leo Esaki. 
+Josephson was just 33 years old at the time. ## The Junction The Josephson Effect's ability to move 
+between a zero-voltage superconducting   state and a normal resistive state 
+forms the basis of a digital switch. We can use the levels of voltage to 
+represent states of logic like 1s   or 0s. A high voltage state can be like 
+1, and a low voltage state be like a 0. After the Josephson effect 
+was experimentally verified,   IBM began working on building a thin-film 
+device for possible use in digital computers. In order to differentiate this 
+device from the "failed" cryotron,   IBM's Juris Matisoo decided to give it 
+a new name - the Josephson Junction. Early devices were made up of two pieces 
+of lead or niobium - chosen for their   relatively high transition temperatures - 
+separated by a very thin insulating oxide   barrier. One of the earliest displayed 
+examples was a flip-flop memory circuit. A memory cell has to retain a bit 
+- 1 or 0. DRAM memory cells do this   by storing a charge inside a 
+device called a "capacitor",   using a single transistor to read or 
+write that charge into said capacitor. The IBM superconductor memory 
+circuit does not do that - it   sets up a current circulating forever in 
+a superconducting loop. The direction the   current flows in indicates whether 
+the memory cell is holding a 1 or 0. IBM also showed it possible to put 
+an array of such memory and logic   devices onto a substrate using a series 
+of deposition steps - though there were   acknowledged challenges in uniformly 
+applying the very thin layers involved. By the late 1960s, IBM had seen enough 
+to initiate a research program to try   and build a computer system out 
+of these superconductor circuits. Their entry into this space spurred dozens 
+of other programs at universities and   labs. The NSA later got interested and 
+contributed funds too - hoping that a   Josephson computer could help break Soviet codes. ## The IBM Project Throughout the 1970s, the IBM superconductor 
+computing project focused on developing   the technologies to integrate various 
+Josephson junctions onto a single chip. Josephson circuits are patterned 
+using the same tools as those   used for traditional silicon ICs. You 
+use lithography to transfer a pattern   to a substrate and use deposition to lay 
+down the necessary layers for your chip. One of the most challenging parts 
+of fabricating these junctions was   putting down the insulating barrier 
+in between the superconductors. For   the Josephson effect to work, it needed 
+to be a uniform 1-4 nanometers thick. One of the great things about silicon was its 
+oxide - silicon dioxide. It is easy to grow and   sits quite well on top of silicon. That was not 
+the case for the Josephson Junction's materials,   so IBM had to develop a sputtering 
+deposition method in low pressure oxygen. The Josephson project was controversial within 
+IBM itself. Established technologists there like   Rolf Landauer criticized it - citing issues 
+with noise, unreliability and manufacturing. Why? Think back to a switch. A good switch is 
+one that gives you a solid 1 or 0, ON or OFF.   Give it a weak flick, it still either flips on 
+or off. It does not get stuck in the middle. If the device happens to take a 
+weak input, it can't give a weak,   uncertain output too. But that is 
+what the first Josephson junction   did. A resistive or superconductor 
+state is not as strong an output. This is important because no 
+fab can possibly make a perfect   transistor trillions of times. There will 
+inevitably be manufacturing variations. The silicon transistor's robust output 
+- no matter the weakness of its input   signal - gives you sufficient margins of 
+error when dealing with those billions of   transistors. Without that, you get unstable and 
+unreliable outputs at high volume manufacturing. ## The Promise The promise behind Josephson junctions and their   ability to surpass silicon systems 
+were based on a few arguments. First, Josephson junctions can seemingly switch 
+far faster than silicon ever can - as little   as 10 picoseconds. The argument is intuitive. 
+Faster switching means faster processing speeds. Second, people foresaw power limits on 
+silicon. Whenever a transistor switches,   a bit of power dissipates as heat 
+that needs to be carried away. The idea was that increasingly dense silicon 
+chips would dissipate increasingly more   power until consumption and heat generation 
+surpassed what cooling systems can handle. By comparison, Josephson circuits 
+dissipated orders of magnitude less   power - just several micro-watts. This presumably   balanced out the inconvenience of dipping 
+the whole computer into liquid helium. In 1977, a former IBM executive turned 
+consultant was quoted in a Computerworld article: > In 7-8 years, we should expect 10,000 
+times greater performance from Josephson   technology ... a megabit storage chip 
+will cost approximately $30 by 1985 Others hesitated to go that far,   thinking that a 500 times improvement 
+seemed more reasonable. In any case,   the claims were that Josephson technology would 
+unleash a flood of compute unto the world. As late as 1980, the IBM Josephson 
+project team still believed that   superconducting technology could build 
+the next generation of fast computers. The superconductor computer managed to get 
+to a stage where you had about 50-100 chips   packed into a single core and immersed into 
+liquid helium at temperatures of 4 Kelvin. But a few things happened. Silicon technology 
+raced far ahead faster than anyone could have   imagined. And IBM's superconductor technology did 
+not pan out in the ways they thought it would. ## Dennard's Law First, silicon chips continued 
+to get denser and denser. Yet somehow those denser silicon chips - with 
+device counts surpassing the millions - did   not consume proportionally 
+that much more power. Why? Midway through the 1970s, Robert Dennard - 
+inventor of the 1-transistor 1-capacitor DRAM   cell - proposed a scaling theory 
+that we now call Dennard's Law. Dennard's Law says that if we physically 
+shrink a transistor by some scaling factor,   then the voltage needed to supply that scaled-down 
+transistor also scales down by the same factor. This is because the transistor 
+relies on electric fields in   order to work and a smaller transistor 
+area requires a smaller electric field. So end result, Dennard scaling means that 
+power consumption per unit area of a die   remains the same. So even if we stuff 
+more transistors onto those unit areas,   the chip's overall power 
+consumption does not go up. Fueled by the ongoing PC revolution, 
+microprocessor innovation was going   absolutely nuts. Chips were getting 
+iterated on faster and faster,   shaping up silicon to be a 
+formidable competitor indeed. ## Speed Limits
+At the same time, the IBM team discovered a major limit on how fast their 
+Josephson circuits can switch. Experiments found that the Josephson 
+junction can switch very fast from a   resistive state to a superconducting state 
+in less than 10 picoseconds. This was good. But going in the reverse direction 
+- from a superconducting state to   a resistive one - was far slower. At least a 
+few hundred picoseconds in a practical sense. This essentially gated any Josephson-based circuit 
+to about 1 gigahertz. And by the early 1980s,   it became increasingly clear that 
+CMOS silicon chips were going to   hit and surpass those speeds without 
+needing to be dunked into liquid helium. Furthermore, there was a known issue known as 
+"punchthrough". This is basically a small but   non-zero possibility of the gate entirely 
+failing to reset to a zero-voltage state. In other words, the gate is - just like Brian 
+McKnight - back at one. A serious error issue. ## Failed Memory The final and most commonly cited reason why the 
+IBM Project sputtered out had to do with memory. IBM was never able to get anything 
+close to a large enough working memory   for their computer. Without a fast memory to 
+provide the logic circuits with data to run,   the computer's speed is fundamentally capped. As I mentioned, IBM had created early versions 
+of a memory cell that circulated a current in an   infinite loop. IBM broadened that into two working 
+concepts that could have created a computer. The problem was manufacturing and density. A 
+DRAM cell is just two devices - a capacitor   and a transistor. But a Josephson-based 
+memory cell needed all sorts of inductors   and resistors along with it - making it 
+huge compared to a DRAM or even SRAM cell. So the team struggled to put enough good 
+memory cells onto a single chip. By 1983,   the best the team was able to do was about 
+1 kilobyte. Twenty plus years later in 2006,   the best NEC in Japan could do was 4-kilobytes. ## End In 1980, IBM put together an 
+extended investigation on the   progress of their Josephson computer project. A council of experts evaluated 
+the Josephson team's progress   as well that of existing silicon 
+technologies. They wanted to see if   there was a possibility for Josephson to 
+overtake silicon over the next 15 years. Considering the issues we spoke about earlier,   12 out of 15 members voted not to continue. 
+Thus in 1983, IBM downscaled and eventually   canceled its Josephson Junction project 
+after 15 years and $100 million spent. Many felt it had gone way too long 
+even then. The team of about 150   people in Yorktown Heights in New 
+York State dispersed. These talents   benefitted other IBM projects like 
+those on heads for hard disk drives. At about the same time, a team at Japan's telecom 
+monopoly NTT picked up Josephson technology too. But despite a high profile start,   their project slogged on for eight 
+years before ending the same way. Today, there are few significant 
+Josephson-based devices in people's   hands. Most notably, "Superconducting 
+quantum interference devices" or SQUIDs. SQUIDs leverage superconductivity's sensitivity 
+to magnetic fields to measure the presence of   weak magnetic fields. They are regularly used in 
+neuroscience, metrology and detecting submarines. Because we have not overcome the manufacturing 
+variation issues at scale, these systems are   mostly analog. Such analog systems are 
+characterized by their low device count. ## Conclusion The issues with the IBM superconductor 
+computer demonstrate many of the problems   of creating brand new, alternate 
+paradigms of compute. Silicon for   all its problems works really well, and 
+the tradeoffs are often not slam dunks. But there is just something 
+about the superconductor   that really attracts attention and clicks. Adherents of superconductor 
+computing have pointed to a   new type of logic - Rapid-single-flux-quantum 
+or RSFQ. Invented in Moscow in the mid-1980s,   RSFQ replaces the flawed voltage-state logic 
+paradigm with quantized magnetic flux pulses. Today RSFQ is the dominant form of superconductor 
+digital logic. It presents the next great hope for   superconducting compute and - if we believe their 
+proponents - compute in general. We shall see.

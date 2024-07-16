@@ -1,0 +1,211 @@
+High-NA EUV is ASML's next-generation lithography   product, and is popularly marketed 
+as the machine to save Moore's Law. ASML has shipped one early machine to 
+Intel this year. The two are testing   it as we speak. ASML is planning to do 
+20 High-NA EUV machines a year by 2028. A year ago, I did a video that updated us on 
+High-NA EUV's latest progress. It was fun. Since another year has passed - time 
+really flies - let us dive in again   into High-NA EUV technology. 
+How are things going so far? ## Beginning One thing before we start. I plan to be in 
+Antwerp, Belgium for IMEC's ITF World 2024   in May 21st and 22nd. It's my first 
+trip to Belgium. If you are in town,   please let me know. Would love to speak to you. Let us briefly summarize 
+what High-NA EUV actually is. High-NA EUV systems raise the Numerical Aperture 
+or NA from 0.33 to 0.55. This would theoretically   shrink the size of the machines' half-pitch 
+lines some 64% to 7.5 or 8 nanometers. Raising the NA requires utilizing 
+more light. But ASML found that it   could not expand the size of the 6-inch EUV 
+photomask standard. More on this bit later. So ASML had to design its way around 
+this restriction by using larger and   stranger projection lenses. I have 
+already covered that part in prior   videos. No more lens talk, 
+please. Zeiss is watching. Anyway. These major architectural 
+choices - made many years ago in   different times - set the stage for the 
+technical and economic issues that ASML   and its partners have needed to overcome to 
+get their new machine ready for fab floors. ## Stitching One unavoidable consequence 
+of these changes is that the mask field size - the area on the wafer 
+exposed in a single expose step - gets   cut in half. The new field size is 
+about 26 by 16.5 millimeters. This   "Halvening" of the mask field 
+size has major consequences. If the customer wants to make a die larger than 
+this new field size - and there are valid reasons   for doing so - then ASML will need to do something 
+called in-die stitching or just stitching. Here, we take the original design and cut 
+it into two. Then we expose both masks with   some overlap. This overlap section is called the 
+stitching region and receives a double exposure. Now Intel has worked with mixed field sizes before 
+- they called it "1:2 printing" but not like this. Setting aside the colossal mechatronics 
+challenges of lining up the stitch - the   overlay here is less than 1 nanometers - 
+we need to consider all the weird dynamics   at play inside the Stitching Region. 
+The EUV photomask has two borders - a   border for the mask image, and then a 
+black border that is highly absorbent. This black border exists to prevent scattered 
+light from affecting the die's neighbors,   but it is still a little reflective, 
+about 1-3%. This creates a tiny bit   of a flash kind of like lens 
+flair which can blur the image. The border also collects the various mechanical 
+stresses from the multilayer deposition and   cleaning processes. SEM images of the region find 
+that the multilayer does not drop evenly straight   down. There is some undercut - theorized 
+to be because of repeated wash stages. These mechanical displacements add complexity and 
+can cause placement error. So we need to model   out the interactions between the mask image, 
+the mask image border, and the black border. The transitions between those 
+three areas are complicated.   And reflections can wash out neighboring images. Recent experiments done by Siemens in 
+conjunction with IMEC have suggested   that a double exposure hurts image 
+contrast for certain features like the   contact holes used to wire up the 
+different parts of a transistor. There was also some exploration 
+done with nifty ways to cut the   design. The simple thing would be to 
+just cut it straight down the middle. The risk with that being you leave 
+some short tails on one side of the   cut. If the stitch is not perfect then we 
+might be left with some cut-off polygons. But you don’t always have to 
+cut straight. First "Smart   cuts" retain certain polygons across 
+the border while leaving others out. And "stagger cuts" have a jagged shape 
+that leave the ends of lines semi-isolated,   making them slightly easier to print. And of course, chip designers can 
+also just move critical structures   like electrical connections away 
+from the stitching area. To me,   this feels like the most obvious solution 
+though it is unlikely to be a permanent one. In the same line, you can say all 
+this nicely benefits the ongoing   chiplet and advanced packaging boom. 
+The A15 Bionic chip inside the iPhone   13 is reported to be 8.58 by 12.55 millimeters. Skip the stitching headaches by 
+doing a smaller compute chiplet   with High-NA EUV-enabled nodes. Then use 
+advanced packaging to add on chiplets   made using less sophisticated nodes 
+like how it is with the AMD MI300. Or ... maybe ASML goes and makes 
+an even crazier machine? A wild   proposal from Kiwamu Takehisa of the 
+O2 Laser Laboratory caught my eye. A TWINSCAN lithography machine already does 
+two wafer stages and chucks at the same time. Why not have it run two 
+photomasks at the same time too? Crazy right? But crazier things have happened. And   early throughput simulations do show this new 
+scan paradigm raising throughput by 1.5 times. The only question is: Should 
+we call it the TWINTWINSCAN?   Or the TWINSCANSCAN? Vote now on 
+your phones for your favorite. ## The Resist The resist receives the light and thus 
+helps retain the design on the wafer. The main concern has been the 
+much thinner depth of focus,   which among other things means that 
+we need to apply thinner layers of   resist - maybe 40-60% thinner - to 
+maintain good focus during exposure. Existing EUV resists are organic "chemical 
+amplified resists" or CARs. They are mixes   of carbon-based chemicals that have been 
+used for lithography since the 1990s. Within the CAR, there is a photoacid generator 
+molecule that creates acid when it absorbs   EUV light. The acid then causes other 
+reactions during a post-exposure bake   step to amplify the photons' impact 
+like a photodetector in a chemical. The issue is that CARs are relatively 
+transparent to 13.5 nanometer EUV light,   which makes their use rather less than ideal. So having a thinner layer of them means 
+more issues in resolving a clear image. We also have now have to more consider how   the wafer's own reflectivity 
+affects the exposed image. And it also heightens the impact 
+of stochastics - random isolated   defects that basically cannot 
+be avoided because quantum. Tests done at ASML Taiwan found that cutting 
+the CAR layers by 30% and 50% introduced 3-7   times more defects, as recorded by electron beam   inspection. The resolved images were 
+also fuzzier, suffering more noise. The ASML Taiwan team notes that if we expect to 
+use thin CAR layers for High-NA EUV, we will need   to accommodate these defects in the recipes and 
+use aggressive metrology to find and repair them. Or better yet. Don’t use CARs 
+at all. I want to note a new,   highly promising resist candidate 
+- Metal Oxide Resists or   MOR. I don't know if that name was chosen 
+deliberately but MOR for Moore's Law hah. It is not clear to me how MORs exactly work - 
+if I knew then someone broke an NDA somewhere.   But I wonder if it has to do with the 
+introduction of tin atoms to stop and   absorb energy like how early contrast fluids 
+for CT scans used the heavy metal thorium. Anyway. With a MOR layer, you 
+can print features with less   line width roughness - which is good 
+because you want cleaner lines - using   slightly less UV light - which is good 
+because it means less time in exposure   and thus more throughput - than you would 
+need with an equally thin layer of CAR. The tin content also means that the 
+resist becomes highly resistant to   etch processes after it undergoes 
+the post-exposure bake step. We   shouldn't take this benefit too 
+lightly, it is really helpful. Though there seem to be an issue with 
+this particular post-exposure part.   Unspecified atmospheric conditions between the 
+exposure and bake steps can cause bridging,   pattern collapse, and pinching - visual 
+names for certain types of print defects. Recently, Tokyo Electron started talking 
+about a new method and tool modification   they call Enhanced Sensitivity 
+develoPER Technology - or ESPERT.   They say ESPERT - marketing needs to 
+look at that name again - can modify   the chemical image to fix or avoid 
+defects and get very tight patterns. As I mentioned, CARs have been the 
+photoresist of choice for nearly 30   years now. So if the fabs switch from CARs 
+to MORs it will cascade throughout the whole   lithography stack. A lot of existing things 
+that worked before will have to be thrown out. The leading supplier of MORs is Inpria, which 
+first spun out of Oregon State University but   was acquired by the Japanese chemical 
+company JSR in 2021. Considering its   emerging importance, a great get for the Japanese. ## Metrology Metrology is going to be playing 
+a huge role in High-NA EUV. I have not much mentioned the importance 
+of metrology - the study of measurement.   But the High-NA EUV era will once more grow the 
+role of semiconductor metrology and inspection. Stochastic failures will become more frequent, 
+and it is already slowing down the process   cycle. More metrology measurements have 
+to be done to find and flag these fails. At the same time, smaller resolutions 
+also bring down the minimum size of the   defects. Checking line width roughness 
+is harder because we are now measuring   in the sub-nanometer dimension. How 
+do we can guarantee a consistent   resist layer when the layer itself 
+is just 10 to 30 nanometers thick? This challenges existing tools, which 
+are largely based on optical principles,   and opens the door to electron 
+beam-based metrology and inspection.   Essentially mutant electron microscopes for 
+finding defects that optical tools cannot see. IMEC has started to bring tools like Transmission   Electron Microscopes into their labs 
+and integrating them into the line. And there are papers detailing something 
+called "massive metrology", which sounds   like a mobile game but describes a need to review 
+many features at the same time. Hitachi and IMEC   collaborated on a device that can inspect a 
+million contact holes at once for defects. And it is not just stochastic 
+defects to inspect for. For instance,   the flatter depth of focus means that 
+not only the resist layer but also the   wafer itself has to be far thinner. We are 
+going to need a whole lot more metrology   and inspection tools here and the fabs 
+must pay through the nose for all of it. ## Computational Lithography As you might be guessing by now, we are 
+coming towards a massive increase in the   computer's role in lithography 
+- computational lithography. The use of anamorphic lenses that demagnifies 
+one side more than the other. The fact that   there is now a hole in the middle of the 
+final projection lens. The effects of the   thinner resist layer. And the fact that the mask 
+shops aren't changing their methods or tools. This all needs to be incorporated into the 
+computational lithography methods used to   produce the rules and simulations for today's 
+EUV masks. It is an exceptional challenge. In a prior video, I talked about CuLitho, 
+the library of algorithms from Nvidia that   helps make it easier to do certain 
+computational lithography processes. Stuff like Optical Proximity 
+Correction - modifications we   make to the chip design in order to make 
+it print better. Or Inverse Lithography   Technology - completely reworking a chip 
+design backwards to make it print optimally. Nvidia recently announced in March 2024 that TSMC   and the EDA firm Synopsys has started 
+to put CuLitho algorithms into action. Nvidia noted how CuLitho helped optimize 
+the OPC module in Synopsys’ mask synthesis   solution Proteus, accelerating speed 
+and saving users many hours of time. It amuses me to think of TSMC making GPU 
+wafers for Nvidia and then buying them   back from Nvidia at a way, way higher 
+markup. But I think this trend of using   AI and parallelism in litho will only strengthen. I also want to call out TSMC's dire 
+need for more accurate computational   lithography models to predict what are called 
+"hotspots", certain areas in the design which   are more susceptible to open circuits 
+or short circuits for whatever reason. Hotspot detection is more of a general lithography 
+thing but they will become even more desirable in   the High-NA EUV era because of all the stochastic 
+issues and the machine's high cost of ownership.   Anything to cut the number of defects at 
+the design level is highly appreciated. It feels like something solvable, and 
+over the years there have been a number   of papers touching on it. But traditional 
+pattern-matching methods miss new types   of hotspots and machine learning methods ring 
+too many false positives. The search continues. ## Economics High-NA EUV's single biggest competitor 
+isn't a machine made by the Chinese or   Japanese. Rather, it is another ASML machine. The alternative to buying a $300 
+million High-NA EUV lithography   machine would be doing multiple passes 
+of standard Low-NA EUV. Right now it   looks like the economics are not 
+quite in High-NA’s favor just yet. As I mentioned in the last video, lithography's 
+cost of ownership is calculated as depreciation   cost divided by the product of raw 
+throughput and equipment utilization. Assuming you are utilizing the equipment 100% of 
+the time - which is impossible - then you can only   lower ownership cost by raising the throughput, 
+which is measured by wafers per hour processed. The thing that most concerns me 
+are throughput issues tied to the   low power source. If you raise a 
+lithography machine's resolution,   then unless you also upscale its power 
+source then the throughput will go down. The reason for this is - again - 
+stochastics. We need more photons   hitting the photoresist to overcome 
+the fact that a certain percentage   of them will "quantum" their 
+way to where they shouldn't be. If your power source cannot generate enough 
+EUV photons because it is underpowered,   then the only way to compensate is to hold 
+the wafer under the power source for longer.   This slows throughput and hurts cost of ownership. Right now, ASML has not raised the 
+power of the power source enough to   compensate for the resolution. They 
+will try to do this by changing the   drive laser and accelerating the frequency 
+of the tin droplets to 60,000 a second. To make a design to do this, we need to 
+measure and model the behavior of molten   tin at the higher-than-atmospheric 
+pressures inside the ASML machine. No instrument nor modeling software exists   for this. Yet another major metrology gap 
+to plug. The US's National Institute of   Standards and Technology is working 
+on it, as well as the Chinese. If we can pull all that off, will the 
+power gain be enough? I wonder. But   there seems to be no impending desire to 
+change the EUV power source design - and   the industry seems super insistent 
+that synchrotrons are not the answer. Moreover, we have the half-sized field, the 
+impending need to change the whole resist stack,   the gaps in current metrology, and 
+so on. Taking this into account,   it seems like the High-NA EUV 
+ecosystem is still a bit immature. It is good that Intel is trial 
+running these devices with ASML   and helping to work out the kinks. They are 
+very smart and will make many breakthroughs,   I reckon. But it's going to cost them. Luckily Intel is awash in cash and time! I think it is somewhat telling that TSMC has 
+not yet started buying these machines in bulk.   It indicates that TSMC wants to 
+see the cost of ownership for the   machine and its ecosystem go down. 
+That gap needs to close somehow. Perhaps with that new nano-patterning technique,   Directed Self-Patterning? DSA can 
+heal defects smaller than the pitch,   reducing the number of errors. I'll look at 
+that one later, if people want to hear about it. For additional information, I suggest reading 
+"ASML Dilemma" and "Intel’s 14A Magic Bullet:   Directed Self-Assembly (DSA)" by Jeff Koch and 
+Dylan Patel of SemiAnalysis. Great as always. ## Conclusion Over the past few years covering 
+the lithography industry,   I have reflected - hah! - on a few things. One of the reasons how ASML has gotten to where 
+it is now is because of its system integrator   role - sourcing parts from a broad supply chain 
+and retaining the job of putting them together. Like Boeing, but ouch let's not 
+make those comparisons right now. But the downsides of that is that 
+you are dependent on those companies   to cooperate with you on the future 
+roadmap. Who knows what High-NA EUV   might look like today if the mask makers 
+agreed to expand the size of the masks? Intel's Pat Gelsinger has told 
+friend of the show Ian Cutress   at More than Moore in an interview that 
+he wants ASML to explore larger masks. But the mask makers won't agree to do that 
+unless TSMC and Samsung sign on - giving   either a veto on technological progress in 
+the industry. It's the 450 millimeter wafer   upgrade problem all over again. ASML has been 
+ninja-ing its way around that refusal ever since. As EUV advances down the line, there might be 
+an argument for ASML to leave some of its former   approach behind and take more components in-house. 
+This would greatly expand the company's breadth,   dilute its focus, and raise its cost structure. 
+So it should not be take this decision lightly. But if an integrated approach helps them 
+get these things out faster and avoid   these major headaches, then maybe 
+they should at least consider it.

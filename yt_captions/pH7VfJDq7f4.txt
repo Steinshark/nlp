@@ -1,0 +1,78 @@
+We often think of civil engineers as designers
+of static structures, or things that don’t move. That would be nice, but the the reality is
+that everything moves for one reason or another, and one of those reasons happens to be temperature. Hey I’m Grady, and this is Practical Engineering. Today we’re talking about thermal expansion. This video is sponsored by Blue Apron. More on that later. Whether you realize or not, you’re probably
+already familiar with thermal expansion, which is the property of materials to change their
+volume depending on temperature. If you’ve used a glass thermometer, you’ve
+even taken advantage of it. The liquid in a thermometer, usually mercury
+or alcohol, increases in volume as it heats up. Since we can characterize this expansion,
+we can put it to use as a measuring device. Maybe you’ve had some experience with a
+less useful application of thermal expansion. If you’ve ever put glass dishware on a burner
+or poured cold water on a dish that just came out of the oven, you know it doesn’t go
+so well. If it’s allowed to expand and contract evenly,
+stresses in the material don’t build up. But, if you heat or cool it unevenly, certain
+parts of the glass will fight against each other as they change size. Glass isn’t flexible, so instead of bending,
+it just shatters. Thermal movement is something that has to
+be considered in nearly every field of engineering, because there aren’t many places that don’t
+see fluctuations in temperature. And there are really only two options when
+designing for thermal expansion: The first one is to prevent the movement by constraining
+it, a feat that is almost always impractical. Thermal movement can generate tremendous amounts
+of internal stress. Watch how this wire can lift up a weight just
+by heating it up, then cooling it down. So, the other way to accommodate thermal movement
+is just to allow your design the freedom to move as it so desires. But sometimes that’s easier said than done,
+especially for large civil structures. This is the formula for thermal expansion. It may look complicated, but it’s really
+not. It essentially says that the change in size
+of anything is a linear function of temperature proportional to its length. And the slope of this line is the coefficient
+of thermal expansion. We’ve measured this property for a whole
+host of materials, and you can look up tables online. Lucky for civil engineers, the thermal expansion
+coefficients for steel and concrete are nearly identical, which is why we can combine them
+into the ubiquitous construction material, reinforced concrete, without worrying too
+much about fluctuations in temperature pulling it apart. But, even though they expand and contract
+at the same rate, they still expand and contract. A perfect example of this is a sidewalk. Let’s look back at our formula and plug
+in some numbers for a very typical situation. If we enter values for the average length
+of a city block, the average high and low temperatures in a given year, and the thermal
+expansion coefficient for concrete, we can see that the total movement of a sidewalk
+over the course of a year can be upwards of 4 cm or 1.5 inches. Obviously, you can’t leave a gap in the
+sidewalk that big at the end of every block, so instead, we leave small gaps spaced every
+so often to accommodate that movement. Most of the joints you see along a sidewalk
+are just to control cracking, but if you pay attention, every so often you’ll see an
+actual break in the concrete filled with some kind of flexible material. These are expansion joints that give the walkway
+the freedom to move from fluctuations in temperature. But what about structures that are longer
+than a city block? Thermal movement scales with length, so engineers
+need to take a lot more care with linear infrastructure. Long runs of pipe, especially if they experience
+fluctuating temperatures, need expansions joints to prevent damage. The rails for trains can experience “sun
+kink” where a hot day can actually buckle the steel. One of the biggest challenges for thermal
+movement is on bridges. So I built a little model to show why (Montage?). Unlike sidewalks that can have periodic expansion
+joints, bridges only have support between spans. You can’t have an unsupported break in the
+bridge, so that means all of the thermal movement happens at the supports. The allowance can’t be evenly distributed
+across the length; it happens all in one spot. For bridges with very long spans, that can
+be a lot of movement. I’ve got my bridge set up with one side
+pinned and one side free to move. I’ll fire up the sunny day simulator and
+watch what happens on the dial indicator. The bridge expands along its length as it
+heats up. This is exactly what happens in real life. Now I’ll try to pin both sides of the bridge
+so that the movement is constrained. The bridge still expands as it heats up, but
+now it has to expand in directions it wasn’t meant to go. It’s a little bit hard to show on camera,
+but the entire bridge has buckled side to side. I’m using flexible rod for this demo, but
+if a real bridge was constrained like this, the forces generated by thermal expansion
+would probably lead to failure of the structural members. Expansion joints on bridges not only have
+to allow the bridge to move while still being supported, they also have to bridge the gap
+in the road deck so that cars can safely drive over it. So, if you look closely, you’ll see lots
+of creative ways engineers manage thermal expansion. These are some photos collected from the web
+and sent in to me by viewers of different bridge bearings that allow thermal movement. My inspiration to make this video came when
+I was looking through some vacation photos. Take a close look at this steel catwalk over
+the river. The shorter, cantilevered beams are welded
+directly to their anchor plates. They’re free to move because they’re only
+connected to the rock on one side. But look at the beams that stretch across
+both sides of the canyon. At first glance, it seems like they’re constrained
+on both sides and we know that’s bad engineering. But if you look closely, you can see that
+they’re bolted to the anchor plate using slotted holes to allow the beams to expand
+and contract. I hope this video gave you a little more insight
+into the dynamic nature of structures we normally consider static. Keep your eyes out and you’ll notice allowance
+for thermal movement everywhere you look. Thank you for watching, and let me know what
+you think. Thanks to Blue Apron for sponsoring this video. Blue Apron delivers all the fresh ingredients
+you need, right to your doorstep, in exactly the right proportions to create delicious
+recipes at home. No trips to the grocery store, and no waste
+from unused ingredients. We are really loving it at our house, and
+having a lot of fun cooking these meals together, not to mention eating them. If that sounds like something you’d be interested
+in, the first hundred people that click the link in the description will get $30 off their
+first order. Again, thanks for watching, and let me know
+what you think!

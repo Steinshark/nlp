@@ -1,0 +1,346 @@
+we're doing induction - or not induction,  it's up to us and i want to demonstrate here two 
+cases of induction. if i press the first domino, all right - wasn't perfect but you got the point.   and let's see what's going 
+to happen here if i press oh! and the last one fell down, because i was 
+trying to demonstrate infinite induction with   the white dominoes and finite induction 
+with the black one- black ones; and we   will see how this ties up with our problems. 
+so some of you have seen induction before.   while i'm explaining the basics, you 
+try the following problem on your own:   take any square and into how many smaller squares 
+you can cut it up? so i want to know the number n   of smaller squares - all of them. so can 
+you cut it up into seven smaller squares?   into 2021 smaller squares? and of course when 
+you're cutting it up, it means no overlaps and   no funky business. it's like tiling on the 
+wall - everything goes exactly in one spot. so what is induction? induction 
+is a scheme, or rather a vehicle, that you use to get from one point to another - in 
+particular to prove your mathematical statement.   but induction doesn't work without the 
+driver, and you will be the driver.   you need to come up with creative ideas to 
+fit within this vehicle. so let me give you   a problem that you may or may not have seen 
+before; it's a very famous one: find how many   subsets does a set with n elements have. so 
+what am i talking about? if you have three   people, how many groups can you extract from them? 
+and so you can fiddle around and maybe you will   come up with the answer: 8. that seems like a lot 
+but actually that's the case and we will show it.   and then you try with perhaps four people and, you 
+know, you count count count and you come up with   16 and of course you start seeing a pattern 
+and you're saying, oh maybe the answer is   a certain power of 2. and the power of the 
+exponent looks like it's the number of people,   or the number of elements. and at this point you 
+say i'm going to conjecture that the answer for   this problem, which i'm going to call s sub n 
+- so number of subsets if you have n people,   is precisely 2 to the n where n is greater than or 
+equal to 1. and now that you have this conjecture   induction can kick in. one of the drawbacks of 
+induction, not to disappoint you but i have to   tell you right away, is that you need to know the 
+answer ahead of time, induction by itself is not   going to tell it to you. but once you have it or 
+some annoying classmate of yours gives it to you   pretending they know too much you can use 
+induction and try to prove it. so how do   we prove this particular warm-up problem? so 
+induction starts with turning on the engine,  your key, ignition. so we're going to call it 
+the bs, base step. usually call it base case   but bs really caught you. so base case or base 
+step: n equals to 1. so for one person how many   subsets do we have? well we're supposed to show 2 
+to the first 2. of course i can have this person a by themselves alone and where is the 
+other subset? brady do you see another   subset here? (brady: is it no people?)
+- yes! no people, we forgot about them.   great so that's true, we are done with the 
+bs. next i'm going to do something called   inductive hypothesis - ih. so i'm going to 
+make a bold bold assumption: we shall assume   our statement is true for some n greater than or 
+equal to 1, and by that i mean a natural number.   i'm not going to tell you what this number is, 
+and that's the key, because i want a general   frame that works. and then the creative part 
+of induction, this is where you come in, how   to show that the next statement is also true. what 
+you saw with the dominoes, we place the dominoes   close to each other so that when one domino tips 
+the other one is also going to tip and fall over.   that is precisely what we are doing. we are 
+assuming that the nth domino falls and is   going to trigger the n+1st to do the same thing. 
+okay so in this problem we want to show that if   you have n+1 people that means you have 2 to the 
+n+1 subsets. okay how does this work? here are my   n+1 people - i'm just drawing a few points, n+1. we're 
+going to call one of them brady and brady will   either be selected on a team to go to the moon or 
+not. so we want to know how many such teams we can   send to the moon from those people. so if brady 
+is not selected, so brady is not happy, he's not   going to go to the moon, how many teams do we have?
+it means that we are choosing teams or subsets   from the remaining n people. but we already 
+assumed that our statement is true; in other words   for n people i have 2 to the n teams or subsets. 
+ah-ha - so if brady is not participating i have 2 to the n   teams. now, if brady is participating how many teams? 
+well what is such a team? such a team will contain   brady and probably a bunch of the others right?
+but then such a team means that i have to choose   the non-brady part and add to that part brady. 
+so brady is not relevant again unfortunately! i   just have to choose a team without brady, 2 
+to the n of those teams by our inductive   hypothesis, and then add brady. okay so how many do 
+we have now overall? all i have to do is add 2n+2n, so that's 2 times 2 to the n, 2 to the n+1 teams. 
+excellent. so we just showed the inductive step   and here, if you want to be absolutely formal, 
+you want to receive a receipt for your proof,  you have to make a conclusion. the conclusion 
+says: therefore all statements sn are true   for all n greater than or equal to 1. this 
+seems like a lot to say but actually that   is the domino effect. if you believe that when the 
+dominoes are placed close to each other then once   you push the first one all of them will fall, then 
+you should agree with this. or alternatively, let's   think about grindelwald - evil magician. okay so he 
+does all sorts of bad things on an island, the good   magicians gather together and they're gonna exile 
+him. upon leaving the island grindelwald casts an   evil spell: if it rains one day it's gonna rain 
+the next day. it rains today, will it rain forever   brady on this island, what do you think?
+- (i think it will yeah.)
+- yeah and so it means that brady believes   in the method of mathematical induction 
+because in this example with the evil spell   what is the bs? the bs, or base step, is it rains 
+today. what is the inductive hypothesis and the   inductive step? well that's the magic spell. the 
+inductive hypothesis would be if it rains one day   and the inductive step will be therefore it's 
+going to rain the next day. and so we're going to   conclude that in this case grindelwald will win. on 
+that island it will every single day. so you might   think about the domino effect it's a little bit 
+more optimistic, but either way will work. now just   a little bit of a switch here; once you realize 
+that the statement for the number of teams   was correct for n greater than or equal to 1 you 
+start asking yourself, can i slightly extend this?   does an action always have to start with n equals 
+to 1? how about n equals to 0, would that work?  so if you have no people how many teams do you 
+have? brady, what do you think?
+- (2 to the 0.)   2 to the 0, which is 1 and what's 
+that team? that's the empty one. wow so   we are extending actually our formula to one 
+more case. and indeed induction can start from   wherever the statements are true. it could start 
+from 10 or you can even start it from negative 5. so now we are ready for the squares, remember? into 
+how many smaller squares can we cut up a square?   without any monkey business, no overlaps, no other 
+stuff. so n is going to be the number of squares   and then we will say whether we can do it or not. 
+okay, so if n is one obviously we can do it, this is   our square, there is nothing to talk about. but once 
+we start going higher things get trickier. brady,   just think and tell me one of those cases 
+where you think it's definitely possible   to split a square into smaller ones. 
+- (4)
+- 4, yes, and how do you propose i split this into 4 smaller squares?
+- (you cut that in half vertically and horizontally.)
+- correct, and we're gonna call this   the window technique; we see a nice window 
+here. so 4 is fine. anything else? umm   i could use this one?
+- (you could- you could window all those squares?)
+- oh i can window in one of those   and how many did they get? did they get 8? 
+- (no, no, i've got 7.)
+- what happened? so 7   is okay but what happened? every time you use the 
+window technique you are replacing one square   with four, which means that you are adding only 
+three. so once i have 7 what else would i have?   - (10.)
+- 10, because we will start adding 3s here, 
+excellent; and obviously i can have then 13   which is out here. but now what? i still have 
+some gaps, what i'm going to do with the others?  this is not so easy anymore; maybe i'll help you 
+unless you've already discovered how to do it.   is there a way to do it for 6? now we have to 
+be more inventive okay? so suppose for a moment   i split this into 9 squares right? and everyone 
+agrees into 9 it's possible, so that's   possible; and then i'm going to use only some of 
+those for my 6 squares. in particular these 4 squares will be now lumped into one large square. 
+well how many do they get? 1, 2, 3, 4, 5,   6 - ah! so 6 works and then from 6 on - oh 
+this is really fun - because i know how to do 9,   that was our original cutting, but now i have 
+another way to do 9 right? i can use the window   technique on my 6 and split like that. but at any 
+rate we now know that with the window technique   we can go and cover another long sequence of of 
+ns here: we can do it 6, 9, 12 - umm i wonder can   we roll back to 3? can you possibly do it with 
+3? i can't quite see it so let me just let this   boil a little bit, simmer on the back burner. 
+something else - how about 8? can we do it with   8? what we did with 6 can be generalized for 
+8. so for 8 you could in principle do the   following: cut the side into four equal parts, just 
+those two sides, and then go straight only along   some of those, and finally cut up the remainder. so 
+you're gonna get 1 large, 2, 3, 4, 5, 6, 7, 8 total - so 7 small squares, so that's 
+8. so we are done for 8 and that will   trigger 11 with the window technique, 14 and 
+looks like we are fine from now on. so brady what   do you conjecture based on this table, when is it 
+possible from where on is it possible? 
+- (well so far) (it seems like it's possible from 6 everywhere 
+onwards. that's where the dominoes start.)
+- correct.    yeah and actually that's what i will conjecture. 
+we will conjecture that this is true, or possible,   for n greater than or equal to 6.
+- (why are you conjecturing it? i feel like you've proven it.) well i said "and so on". every time when you start 
+saying and so on, etc etc, it means that you   are applying induction in disguise, you're just 
+not communicating this to your audience. now   if you were a seasoned mathematician that would be 
+enough for them, they know how to formally package   this kind of situation into induction. but 
+if you're just starting with induction,   you haven't done it before, you 
+may need a little bit of help here.   and before i show you how to do this 
+formally i want to answer the questions   for the remaining gap. so what is going 
+on with 2, 3 and 5? the answer here is   no for all three of them. so these are kind 
+of sporadic cases where you cannot do it; but   the proof that it is impossible for 2, 3 and 5 is completely different from induction. and in fact showing it for 3 may not or may be 
+helpful for 5 but definitely that's not going   to be an inductive proof. wo what shall we tackle 
+first, the induction or those sporadic cases? what   do you think brady? 
+- (i'd like to get rid of those sporadic cases.)
+- first? okay, i'm going to leave   2 for homework because after you see the cases 
+for 3 and 5 you may quickly finish off   for 2. so let us see how it works for 3
+and 5. so suppose you can split the square   into three smaller squares, so we're reasoning 
+by contradiction. i'm going to use then three of   those smaller squares and push them onto my bigger 
+square - so this is the one i want to tile. there are   some ground rules here: they are corners in my 
+big square. well how many little squares can i   use in a corner here? can i use two? i don't think 
+so, because once i start doing things like that   it's going to come out of my big square and 
+that's that's no good. what we conclude from   here is that every corner of our square will be 
+covered by exactly one of our smaller squares,   that's what everyone should agree on. okay, but 
+then we are in trouble because how many corners   do i have brady? 
+- (you've got 4.)
+- and i have how many squares did we say? (you're aiming for three.)
+- for 3. so what must happen? one of those small 
+squares better cover two corners or else we just   can't do it. let's say the green square is going to 
+cover the remaining corner, but what happens then?   - (overlaps)
+- overlaps and i covered the whole thing 
+with it - well, that's against the rules. now let   us do it with 5 squares and show that it 
+is impossible for 5. we have 4 corners, so in this case we have an excess of one little 
+square. and as we reasoned before i cannot have a   single square like the green one cover two corners, 
+because it will cover the whole thing immediately.   so somehow the fifth square has to be in between 
+the others. but now i have leftover sides like   right here between those two adjacent squares, so i need to cover those those parts too.   is it possible for one small square 
+to cover two opposite pieces like that?   (only if it's the size of the whole square.)
+- exactly and i will let this for you to play around and   see it's just gonna cover the whole thing. so our 
+fifth square is going to dominate everything and   immediately show a contradiction. okay, we still 
+don't lose hope, we say okay we cannot cover   two opposite ones. maybe i can cover two adjacent 
+pieces? what will happen? in that case it means that   this brown fictitious square; well its sides still 
+have to meet it's going to go over our blue square   and we don't want that. again we don't lose hope, 
+we say fine, i'm just going to restrict to covering   only one piece on the side with my fifth square. 
+but that means that all of the remaining black   pieces here have to be covered by the original 
+four squares. so i have to enlarge them in order to   do this. okay, so i will start enlarging the purple 
+and the green one; they don't have to meet in the   middle they can meet a little bit off like that, 
+that's fine. i can start enlarging the blue one, yes, and i start seeing trouble. now the red one is 
+supposed to meet at least the green or the blue   one, not both right? but if it starts meeting 
+let's say the green one what what do we see?   we have covered everything, there is no 
+place for a fifth one and we are overlapping.   if i do for example try to meet the 
+blue one i'll again do the same thing.   so you need to label the sides probably x,
+1 - x, and so on and so forth, go around and really   complete this argument. but visually it is obvious 
+there is no place for the fifth square anymore. so   we cannot do it with 5, we cannot do it with 
+3 and for homework show that you can't do   it with 2. now where is the induction here? 
+mathematicians will tell you that if you can   prove a statement without induction, in 
+other words directly, go ahead and do it,  but you may not see that direct way. and that's why 
+i'm going to demonstrate for you something called   strong induction. we need strong induction here 
+in order to technically wrap up this solution. so   how does it work? what is our base step? it turns 
+out for strong induction you may need several   base steps; and you can easily convince yourself 
+that you will need three base steps for 6, 7 and 8. and you will say n equals to 6, 7 
+and 8 and you will demonstrate for all these   three cases which we already did. now what is the 
+inductive hypothesis? now, this is going to be tough   because i'm going to seem to assume more than 
+what i did before, but in fact these are equivalent   methods. so i'm going to assume all statements 
+s sub n, where n is the number of small squares,   are true for all and from 6, 7, 8 up to somewhere 
+let's call it k. so i'm just not going to tell   you k. but note what i have just done: i have 
+assumed a whole bunch of statements including   my three base cases. if k is 8 we are done, 
+i'm not doing anything extra, but if k is more   i'm actually making an assumption. so what do we 
+want to prove? inductive step is the creative one,   we want to show that s sub n+1 is true. so what 
+does it mean? that we can go one further case   higher. now why is this happening? so i have gone up 
+to n, just imagine the real line. we know that 6, 7, and 8 are true and and maybe some more - let's 
+say up to here this k - and now we want to go   one more higher right? so let's say n+1, as i said 
+my variable's a little bit funky but that's okay.   so why is this case true? as we saw messing around,
+the initial messing around with the problem,   in order to do 12 you wanted to go back 
+with three steps and kind of undo one window   technique, and that's precisely what you're 
+going to do here. you will go back three steps.  do you still land on a statement that is assumed 
+to be true or did you accidentally fly outside   and land it on 5 which we know already is 
+not true? the answer is no, you are still within   the cases that you assumed were true because you 
+have this barrier of three base cases that don't   allow you to fly over them when you subtract 3. so 
+you again land on a statement that is true, so you   have some square that you have somehow partitioned 
+artistically into sub-squares and all you have to   do is go back by adding one window technique to it 
+and three more. and that way you will show that the   next statement is true and then you will do this 
+magic conclusion by the method of mathematical   induction, all of those statements are true. this is 
+indeed using the method of mathematical induction;   they're direct proofs. i can give you a hint: 
+first do this problem for let's say a very large   even number - what's such a large even number? 
+like 2,000 - can you directly divide it into 2,000?  you can do something like 6 and 8, what 
+we did before. so i will split the sides into - how many sub-squares do you think brady? a nice number.
+- (any number?)
+- any- no it has to work. see for 8 we cut it down into 4, for 
+2,000 maybe we should cut it into   1,000? so you're gonna cut the side 
+into 1,000 squares and then you will   draw these lines and continue doing your small 
+sub-squares and one large. how many do we have?   you may think we have 1,000 plus 
+1,000 plus 1 but you are wrong because we   are just over counting this corner. so you have to 
+subtract that and bingo you have your 2,000.   i think this example is general enough for you 
+to try even numbers right away - and then how would   you do an odd number? if you add 3 to 2,000 you get 
+an odd number, so you just have to hit one of those   little squares with the window technique and you 
+will get odd numbers. okay, so you can wrap this   up into a direct proof that will nevertheless 
+use two cases: even numbers and odd numbers. and   you still cannot get 5, there is no way you 
+can get 5 because if you go three backwards   you're gonna land on 2 and that's the first 
+and only even number for which this is impossible. let's try to throw pies at each other. i'm sure you 
+have seen those all black and white movies where   everyone's having fights and pieing each other
+- (not 3.14 pi, actual pie)
+- actual eating pie. and   the funny thing is we're going to call it 
+the odd pie fight but it's not that the   pie's odd but the number of people involved 
+is odd. so you have an odd number of people   and and they're standing somewhere so that 
+no two pairs have the same distance. so   if i take any two different pairs of people, ab 
+cd i will see that ab is not equal to cd. and   this also applies to the same person, for example 
+ad here has to be different from everything else.   pairwise all distances are different, you 
+have an odd number of people and let's make   it interesting, at least 3, because for one 
+person you know you're not gonna pie anyone.   and what do they do? every person looks at 
+the closest to them other person and pies them. for instance, there are 5 people here and 
+it looks to me that c is closest to b - c is   gonna pie b. what's gonna happen to e? e looks 
+like he's going to pie a. a probably is gonna   pie b. b looks like he's gonna pie c. and d- d 
+is very far, i don't think anyone is pieing d  but d has to throw to someone - i don't know maybe 
+e. all right, if you were in that fight what would   you like brady to happen to you?
+- (if i was in the fight i would want to not get pied.)
+- correct. so do   we have a survivor always? in this picture we can 
+see that d is definitely a survivor but does   this always happen? unpied. so that's the 
+beauty of the problem. under these restrictions,  odd   number of people, pairwise different distances, 
+there is always a survivor. so let's write this   conclusion: there is always a survivor. i'm not 
+claiming uniqueness or any other funky things,   there is always a survivor.
+- (i've not seen that symbol before?)
+- oh, brady we're learning every day.   and 'there exists' a survivor and you look 
+at this and you say how can this have anything   to do with induction? of course it has something 
+to do with induction - most likely because there   is an n. these are infinitely many statements, this 
+is like the dominoes. but which statements are we   really concerned here? we want s_3 to work for three 
+people, we want s_5 to work, s_7 etc etc.   s_2k+1 - all of the odd statements; and induction will 
+help us show the implication, or if you remember the evil spell. we're going to keep on implying 
+like that. all right, so let's see how this works.  all right, what's the base step for three people?
+what kind of triangle can this be? it definitely   cannot be equilateral, can it be isosceles? 
+- (no, because it has to be pairwise.) no, that's right so it has to be something   called scalene right? we will label vertices here.
+you know in those old movies: laurel and - what was   the name harry? hardy? hardy and laurel. so 
+let us use l and h for them. i have l and h like that   and brady's gonna complete the picture.
+- (wow, i've just joined the most famous duo in comedy history!)   yup. so in this love hate triangle what's going 
+to happen? since it is a scalene triangle i have   three different sides. and without loss of 
+generality, as mathematicians like to say, i'm   going to say that a is - what do you say, less than 
+b less than b? something like that okay.
+- (so a is the smallest?) exactly! so what's going to happen with l and h?
+- (they're going to pie each other?)  yeah, laurel and hardy are pieing each other and brandy 
+is watching from far away. what is brandy? brady! (you got hardy wrong, you're allowed to get brady wrong)
+- absolutely but that b person, what is he gonna do?   he he has to pie someone and it looks like 
+c is less than b so hardy gets pied twice and we have a winner - brady survives. great, we've 
+done s_3. now by induction we know how to proceed.   inductive hypothesis: we shall assume that - and this 
+is not going to be strong induction like for the   squares it's going to be a regular induction but 
+sort of skipping because we don't care about the   even cases. so assume that s_2n - 1 is true, so 
+this s_2n - 1 is the previous statement here,   for some n. what should this n be and cannot 
+be 1 because it's going to be s_1. so how about   greater than or equal to 2? because if n is true 
+you're going to get your s_3. and we want to show   inductive step that s_2n+1 is true. now i'm going 
+to use finitely many points, a small number so you   can see how it works. for instance let's say we are 
+trying to show the 7th statement but exactly   the same idea is going to work for any n. so how 
+many points do we have? 1, 2, 3, 4, 5, 6,  and let's be on the safe side 7. okay so we've 
+got 7 people. we want to immediately eliminate   some, and we go for the smallest pairwise distance. 
+in other words which two people are closest to   each other? looks like those two, and of course 
+we're going to call them l and h - laurel and hardy.   so they're going to pie each other because they're 
+indeed closest to each other. now what's going to   happen with the remaining five people? we are going 
+to cool off our discussion and ask them to play   another game, just temporarily, a game only amongst 
+themselves. only those five people play the game.   but that's the previous statement and we have 
+assumed that the previous statement is true.  so what's going to happen for those five 
+people? there has to be a survivor, just for   those five people with this new game, someone 
+survives this new game. so who's gonna survive?   brady survives this new game. what would you 
+like brady to happen in the old game with you?   you definitely want to survive the original 
+game with seven people. if you survive this   one with five you'd like to survive the original.
+and i claim that you will. so whoever survives   the smaller game, i claim that person is gonna 
+survive the original bigger game. okay, so now   those people who played the five person game turn 
+around and start playing the seven person game.   will any pie be thrown to brady? so what- what 
+do you think? well what happened before was   that any one of those five people playing 
+the new game, they never threw to brady,   so they had a closer target to throw. so in the 
+new game brady is not the closest person to them;  because they already have someone closer so 
+from them nothing is going to go to brady.   but what could happen? could a pie be 
+redirected from the new game to the old game?   to outside to l or h? the answer is yes. maybe 
+this person who before pied someone else here   is going to pie hardy, that's possible. so 
+some of the pies in this new game could   be redirected to go outside to laurel and hardy. 
+could laurel and hardy pie someone in this game?   no, because they're the closest to each other 
+under any game. so no pies are going to fly,   no new pies are going to fly inside our this 
+this blue game, which means that brady is safe.  he didn't get pied before he's not gonna 
+get pied now either. and that concludes the   inductive step and now we conclude the whole 
+induction: by the method of mathematical induction   all statements are true. in other words as soon 
+as you have odd number of people positioned at   different pairwise distances there will be a 
+survivor. brady should the survivor be unique? (how do you mean?)
+- i mean for every game there 
+should be exactly one survival? is that always   going to happen? i mean if you have two people very 
+far away from kind of the other ones it looks like   they might both be survivors?
+- (they could both throw 
+pies into like the center of the solar system)   but not- nothing could go to them. so i'm not 
+claiming that this is a unique survivor is all i'm   saying, but i claim that there is a survivor. 
+and now for homework you can try to create situations   where there are more than one survivor; so there 
+is exactly one survival. for fun to see really   what's happening. but what's the burning question 
+that comes when you solve this problem?   (even number of people.)
+- even! why did we exclude the even pie fights right?
+let's see is s_2 true. if you   have two people at pairwise different distances - 
+but there's only one distance between them right - laurel and hardy, there is no survivor, they're 
+just gonna pie each other without question.   so we already see that for two people we can't 
+have it. well, but you say this is this really very   simple, maybe i could prove this it's true for 
+a big bunch number of people - even number right?   for example how many,'. why am i saying'?
+because here is what we're going to do with   those' people: i'm going to construct for you 
+a counter example. in other words i will show you   that s_18 is not true. we can put them in a valid 
+configuration where there is no survivor. so what   do we do with' people brady? we marry them 
+off in pairs disregarding their preferences.   just for the sake of mathematics, they'll 
+do it. and now that we have nine pairs of   so-so happily married couples we send them 
+off to the nine planets in the solar system-   i'm not gonna argue about pluto, don't 
+even ask me. okay, and we give of course   to the newlyweds a pie. okay, assuming that they 
+actually survive you know conditions on these   other planets what's going to happen brady? 
+- (they're going to pie each other.)
+- in pairs, the the spouses are going to pie each other, 
+there will be no survivor. why is this happening?   because the planets are so far away from each 
+other they outweigh any individual distances   on a particular planet, and that's why there will 
+be no survivor. so the problem makes absolutely   no sense for even number of people. but there is 
+one little glitch that you should have considered:   how about this business with different distances? 
+could we relax that? could we allow same distances?   you would say, well if i'm at the same distance 
+from laurel and hardy and brady then whom do i pie?   give them a choice. and will there 
+be still a survivor? could we   be always sure that there will be a survivor?
+the answer is no; because the simplest situation   of odd number of people that form an equilateral 
+triangle is going to be a counter example. they   have a choice. so let's say laurel decides to pie 
+hardy and brady decides to pie laurel. is brady safe?   no, because hardy could choose to pie brady. and 
+so in this situation you don't have a survivor.  so if you give this freedom of choice 
+to people with possibly equal pairwise   distances there may not be a survivor so 
+you cannot relax the conditions of the   problem. the perfect problem is exactly what 
+we solved: odd number of people at pairwise   different distances. 
+- (and just to be clear, you can 
+have an even number of people and have a survivor?)   - (but you've shown that there's always a- you could always do it- )
+- absolutely, you   can put all of the other - how many people - 2019 
+people inside this room and send brady to the moon,   right? who's gonna touch brady? brady is untouchable 
+and he will survive that even game too. so it is possible. we're not finished with induction 
+just yet; in fact in the next video zvezda is going   to go back to 1988 and the legendary question six 
+from the math olympiad which she managed to solve   using - you guessed it - induction. there are links 
+on the screen and in the video description.   ...really poorly the night beforehand, 
+i basically didn't sleep. i was so   tired i knew that if i don't solve the problems 
+very quickly i'm just not going to survive   the test. and they give you four and a half hours 
+for three problems every day, so this is day two...

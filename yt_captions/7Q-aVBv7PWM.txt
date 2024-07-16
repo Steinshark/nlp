@@ -1,0 +1,147 @@
+When you plug in an electric device, it’s
+easy not to even consider where the electricity actually comes from. The simple answer is a power generating station,
+also known as a power plant, usually someplace far away. But the reality is much more complicated than
+that. Generation is only the first of many steps
+our power takes on its nearly instantaneous journey from production to consumption. The behaviour of electricity doesn’t always
+follow our intuitions, which means the challenges associated with constructing, operating, and
+maintaining the power grid are often complicated and sometimes unexpected. Many of those challenges are overcome at facility
+which, at first glance, often looks like a chaotic and dangerous mess of wires and equipment,
+but which actually serves a number of essential roles in our electrical grid, the substation. I’m Grady and this is Public Works, my video
+series on infrastructure and the humanmade world around us. This video is sponsored by NordVPN. Visit NordVPN.com/practicalengineering to
+get 75% off a 3-year plan. More on that later. As simple as it is to imagine, the power grid
+isn’t just an interconnected series of wires to which all power producers and users collectively
+connect. In reality, the electricity normally makes
+its way through a series of discrete steps on the grid normally divided into three parts:
+generation, or production of electricity; transmission, or moving that electricity from
+centralized plants to populated areas; and distribution, or delivering the electricity
+to every individual customer. If you consider the power grid a gigantic
+machine (and many do), substations are the linkages that connect the various components
+together. One of the cool parts about our electrical
+infrastructure is that most of it is out in the open so anyone can have a look. I’m somewhat of an infrastructure tourist,
+a regular beholder of the constructed environment, and my goal is for you too to be able to mentally
+untangle this maze of modern electrical engineering so that the next time you feast your eyes
+on a substation, you’ll be able to appreciate it as much as I do. Originally named for smaller power plants
+that were converted for other purposes, “substation” is now a general term for a facility that
+can serve a wide variety of critical roles on the power grid. Those roles depend on which parts of the electrical
+grid are being connected together and the types, number, and reliability requirements
+of the eventual customers downstream. And the first and often simplest of these
+roles is switching. The general layout of a substation consists
+of some number of electric lines (called conductors if you want to fit in with the electrical
+engineers) coming into the facility. These high voltage conductors connect to a
+series of some or many pieces of equipment before heading out to their next step in the
+power grid. As a junction point in the grid, a substation
+often serves as the termination of many individual power lines. This creates redundancy, making sure that
+the substation stays energized even if one transmission lines goes down. But, it also creates complexity. The connections to these various devices are
+called buses, often rigid, overhead conductors that run along the entire substation. The arrangement of the bus is a critical part
+of the design of any substation because it can have a major impact on the overall reliability. Like all equipment, substations occasionally
+have malfunctions or things that simply require regular maintenance. To avoid shutting down the entire substation,
+we need switches that can isolate equipment, transfer load, and control the flow of electricity
+along the bus. This may seem obvious, but turning on and
+off high voltage lines isn’t as simple as flipping a light switch. At high voltages, even air can act like a
+conductor, which means even if you create a break in a line, electricity can continue
+flowing in a phenomenon known as an arc. Not only does arcing defeat the purpose of
+a switch, it is incredibly dangerous and damaging to equipment. So, switching in a substation is a carefully-controlled
+procedure with specially-designed equipment to handle high voltages. Disconnect switches are often just called
+switchgear in addition to the equipment that serves another important role in a substation:
+protection. I mentioned earlier that much of our electrical
+infrastructure is exposed and out in the open. That’s nice for people like me who enjoy
+having a look, but it also means being vulnerable to an endless number of things that can go
+wrong. From lightning strikes to rogue tree limbs,
+windstorms to squirrels, grid operators contend with so many threats to their infrastructure
+on a day by day basis. When something causes a short circuit on the
+power grid, also called a fault, it can severely damage power lines and other equipment. Not only that, because of the overwhelming
+complexity of the power grid, faults can and do cascade in unexpected and sometimes uncontrollable
+ways, leaving huge populations without power for hours or days. Many of the ways we protect equipment from
+faults are handled at a substation. One of the most common types of electrical
+fault is a short circuit to ground. This type of fault creates a low-resistance
+path for current to flow and leads to an overload of power lines and equipment. The simplest way to protect against this type
+of fault is with a fuse, a device that physically burns out at a certain current threshold. Fuses are dead simple and don’t require
+much maintenance, but they have some disadvantage too. They’re one-time use and can’t be used
+to interrupt current for other types of faults. On the other hand, circuit breakers are a
+class of devices that serve similar roles as fuses, but provide more sophistication
+for dealing with a wide variety of faults. Like disconnect switches, circuit breakers
+need to be carefully designed to interrupt huge voltages and currents without damage. As soon as contacts within a circuit breaker
+are moved apart from one another, an electrical arc forms. This arc needs to be extinguished as quickly
+as possible to prevent damage to the breaker or unsafe conditions for workers. Extinguishing the arc is accomplished by a
+material called a dielectric that doesn’t conduct electricity. For lower voltages, the circuit breakers can
+be located in a sealed container under vacuum to avoid electricity conducting in the air
+between the contacts. For higher voltage, breakers are often submerged
+in tanks filled with non-conductive oil or dense dielectric gas. These breakers give grid operators more control
+about how and when current gets interrupted. Not every fault is the same and sometimes
+operators even know about a disturbance ahead of time and can trigger breakers early to
+prevent cascading failures. Many faults are temporary like lightning strikes
+or swaying tree branches. A special kind of circuit breaker called a
+recloser can interrupt current for a short period of time and re-energize the line to
+test if the fault has cleared. Re-closers usually trip and reclose a few
+times, depending on their programming, before deciding that a fault is permanent and locking
+out. If electricity demand on the grid gets so
+high that it can’t be met by the utility, substations may also be used to shed load. Rolling blackouts are used to lower the total
+electrical demand to avoid bigger failures on the grid. One of the most important parts of the power
+grid is that different segments flow at different voltages. Voltage is a measure of electrical potential,
+somewhat equivalent to the pressure of a fluid in a pipe. At large power plants, electricity is produced
+at a somewhat low voltage of around 10-30 kilovolts or kV. From there, the voltage is increased much
+higher using transformers so that it can travel along transmission lines. Using a higher voltage reduces the losses
+along the way, making them more efficient but also much more dangerous. This is why overhead transmission lines are
+so tall - to keep them out of the way of trees and human activities. But, when transmission lines reach the populated
+areas which they serve, it’s not feasible to keep them so high in the air. So, prior to distribution, the voltage of
+the grid needs to be brought back down, again using transformers located within a substation. A transformer is an extremely simple device
+that relies on the alternating current of the grid to function. It consists of two adjacent coils of wire. As the voltage in one coil changes, it creates
+a magnetic field. This field couples with the other coil, inducing
+a voltage. The incredible part of a transformer has to
+do with the number of loops in each coil. The induced voltage will be proportional to
+the ratio of loops. For example, if the transmission side of a
+transformer has 1000 loops while the distribution side has 100, the voltage on the distribution
+side will be 10 times less. This simple but incredible fact makes it possible
+for us to step up or down voltage as necessary to balance the safety and efficiency along
+each part of the power grid. The simplicity of transformers is great in
+a lot of ways, but it also means that it can be difficult to make fine adjustments to the
+power leaving the substation. Because of this, many many substations include
+equipment for monitoring and controlling the power on the grid. Instrument transformers are small transformers
+used to measure the voltage or current on the grid or provide power to system monitoring
+devices. Depending on varying transmission and distribution
+losses, the voltage on the grid can swing outside an acceptable range. Regulators are devices with multiple taps
+that can make small adjustments - up or down - to the distribution voltage on feeder lines
+leaving the substation toward customers. If you look closely you can sometimes see
+the regulator dial indicating the tap position. All that different equipment requires lots
+of maintenance. The final and most important role of a substation
+is that it be safe for electricians and linemen to inspect, repair, and replace equipment. Substations are usually the only locations
+where extra-high voltage power lines get close to the ground, so safety is absolutely critical. The buswork running along the substation is
+protected from short-circuit by large insulators to avoid arcs to ground. Even the connections into each piece of equipment
+are done through a device called a bushing which maintains a safe distance between energized
+lines and the grounded metal housings. Some substations have large concrete walls
+to serve as fire barriers between equipment. All substations are built with a grid of grounding
+rods and conductors buried below the surface. In the event of a fault, the substation needs
+to be able to sink lots of current into the ground to trip the breakers as quickly as
+possible. This grounding grid also makes sure that the
+entire substation and all its equipment are kept at the same voltage level, called an
+equipotential, so that touching any piece of equipment doesn’t create a flow of electricity
+through a person. Finally, substations are surrounded by large
+fences and warning signs to make absolutely sure that any wayward citizens know to stay
+out. In many ways, the grid is a one-size-fits-all
+system - a gigantic machine to which we all connect spinning in perfect synchrony across,
+in some cases, an entire continent. On the other hand, our electricity needs,
+including when we need it, how much we need, and how reliably it should be delivered vary
+widely. Power requirements are vastly different between
+a sensitive research facility and a suburban residential neighborhood, between a military
+base and country club golf course, and between a steel mill and a bowling alley. Likewise, every electrical substation is customized
+to meet the needs of the infrastructure it links together. As the grid gets smarter, as demand patterns
+change, and as we (hopefully!) continue to replace fossil fuel generation with sources
+of renewable energy to curb global warming, managing our electrical infrastructure will
+only get more challenging. So, substations will continue to play a critical
+role in controlling and protecting the power grid. Just like electricity on the grid, internet
+traffic goes through several steps along the way. As I sat in an airport writing this video,
+I was definitely wondering if one of those steps might be a hacker or organization recording
+my traffic. Unfortunately, people have come up with lots
+of ways to intercept web traffic and use that information nefariously, which is why I use
+NordVPN. Some web traffic is already encrypted, but
+I don’t want to keep track of whatever protocol each website or service happens to be using. NordVPN makes it super simple to make absolutely
+sure I’m protected. I just load the app, click connect and it’s
+done. There’s no limit on bandwidth, and it works
+on all my devices. I don’t leave my house unlocked when I’m
+away, even though I know the likelihood of someone trying to break in is low. And even though there’s probably not someone
+sniffing packets at my local coffee shop, I don’t use their wifi (or any other public
+network) without using NordVPN. It’s just not worth the risk. If your privacy and security online is important
+to you, they’re offering an awesome discount to fans of the channel. Visit NordVPN.com/practicalengineering or
+click the link in the description below to get 75% off a 3-year plan. Use promo code PracticalEngineering to get
+an extra month for free. Thank you for watching, and let me know what
+you think!

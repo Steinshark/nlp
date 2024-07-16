@@ -1,0 +1,146 @@
+hello you there are looking at me matt parker 
+talking to you about these numbers that i'm now   pointing at this is a reasonably famous series of 
+numbers in mathematics and if you've not seen them   before do pause the video and have a go to see if 
+you can work out which one comes next i was given   this on must be my first week of teaching and i 
+spent all day but i cracked it so do pause try it   for yourself people complain i don't leave enough 
+pausing time for these puzzles so i'm going to use   this very brief window to say the video is brought 
+to you by jane street their internships are open   so if you're at the point in your academic career 
+where an internship in maths and finance would be   a good next step details at the end of the video 
+or in the description so hello to everyone who   paused welcome back i assume it's months later if 
+you spend all that time and you didn't crack it   you are going to hate this this is the look and 
+say sequence people often try to work out like   the ratio between the numbers and all these things 
+no you look at one number and you say it and that   gives you the next number so the first number is 
+one or more specifically looking at the digits one   one so the next number is one one but now we've 
+got two ones so the next one is two ones but now   there's one two and one one and you keep going 
+each time you look at one and you say it it's the   look and say sequence and while it feels like it's 
+just a ridiculous cheeky trick question there's   actually some surprisingly deep mathematics 
+behind this and it includes one of the rare   examples where the nice seemingly elegant perfect 
+solution to a mass problem was actually a decoy there is some serious mathematics behind this 
+sequence of numbers no other than john conway   got obsessed with it in the 1980s and what is 
+mathematics if not finding something ridiculous   and then taking it too seriously which is also the 
+motto of this channel so the two questions we want   to ask about this sequence is first of all each 
+sequential term how much longer than the previous   term is it i guess in the limit as it goes on and 
+on and on and secondly what's the ratio between   the different digits like are there more ones are 
+there more sevens what's the ratio between them   in the long run however we are not going 
+to have a look at the traditional look and   say sequence because too many digits to put it 
+shortly we're going to swap it out for the binary   look and say sequence the binary version is 
+exactly the same but in binary so it starts   one and then one one but now when you want to 
+write two ones the two is in binary so it's one   zero that's two one and the next line is pretty 
+straightforward 1 1 1 0 1 1 but now you've got   three ones and three in binary is one one and 
+you carry on using exactly the same look and   say principle as before and so we can still ask 
+the question how long is each next term compared   to the previous one as a ratio and in terms of 
+digits we've only got one ratio what is the ratio   between zeros to ones and we can start by just 
+looking at that experimentally as we go through   each one you can count at the number of ones count 
+the number of zeros so the first one that's got   a ratio is one zero one two to one twice as many 
+ones as zeros the next one five to one crazy and   then after a while it starts to settle down into 
+a pattern and once you pass the twenty third term   the pattern looks pretty much like it's just 1.666 
+so the ratio appears to be one and two-thirds   or is it for a while there everyone was happy 
+to just roll with the conjecture that of course   it's one and two-thirds it's a nice neat ratio 
+that's how maths works but then in 2010 nathaniel   johnson who's an associate math professor at 
+mount allison university in canada thought no   i want to double check i want to prove exactly 
+what that ratio is and so they use some   techniques that john conway had come up with and 
+applied them to the binary look and see sequence   to make the look and say sequence more manageable 
+we want to split it apart into a nice finite set   of blocks that can be recombined to make any of 
+the infinitely many terms in this series however   we can't just use like one and zero as our blocks 
+because we're interested in how the blocks lead   to each other so to explain here here are the 
+10 blocks right 10 blocks and each one always   goes to a set either one or two other blocks one 
+after the other so if you've got a one by itself   and ignore the fact yes one appears in the other 
+ones there's not like a unique way to split it   apart you just can split any term apart into these 
+chunks the one always goes to one one if you take   it as an individual bit which means that chunk one 
+always goes to chunk two so that's fine now chunk   two one one goes to chunk three and chunk one in 
+that order and you can go through every single one   and write for each block which other blocks or 
+chunks it goes to and you could represent this   as a network like showing which which block 
+goes to which but we want to know is in the   limit once we've done this over and over and over 
+again what kind of nice stable ratio do we settle   into and we're not going to do that using a 
+network we're going to do that using a matrix and here's the matrix so each column shows you 
+where a certain block goes to so the first column   only has a single one in position number two 
+that's because the first block goes directly   to the second block whereas the second column has 
+ones in position one and three because the second   block goes to blocks one and three so what you 
+can actually do is take any term in this sequence   which is like a series of which blocks you've got 
+and then you multiply that vector of which blocks   you've got in your current term by this matrix 
+and the result of that matrix multiplication   gives you the breakdown of the next term and 
+so the behavior going from one term to the next   is governed by this matrix but how do we 
+understand the long-term behavior of a   matrix if we're multiplying by it over and over 
+wow we need eigenvectors and eigenvalues one of   the most fantastic bits of mathematics that 
+most people have never heard of but it's okay   if you're one of those people it's your lucky 
+day we're gonna have a quick crash course   in how eigenvectors and eigenvalues work in a 
+segment i like to call i can see clearly now here i have a nice simple two by two matrix zero 
+one two three doesn't get much nicer than that i'm   actually going to turn this into negative two 
+and negative three i'm going to multiply it by   a one by two matrix which is going to be one two 
+nice and simple and straightforward and when you   multiply these matrices together you basically 
+you get this one and you flip it over and you   you do a you know you multiply zero by one which 
+is zero multiply one by two which is two and then   you add them together so that's gonna equal the 
+one at the top here is gonna be two and then   the one at the bottom here is gonna be one times 
+negative two two times negative three it's gonna   be negative eight so that goes down there okay 
+and that's that's matrix multiplication and   if you think of these as vectors this matrix 
+has taken this vector and turned it into that   vector which has a new length and indeed a new 
+direction but what if i made the one slight change   to that being negative one at the top 
+well okay let's redo the multiplication this time it equals well that's just still 
+well this top one is still two hasn't changed   here's that vector and the bottom one now 
+is now well that's gonna be positive two   times this so it's gonna be negative 4 this 
+time okay no major change but then if you have   a good look at this you're like wait a minute 
+this vector is that vector just multiplied   by negative 2. so actually i could turn this 
+back into the original vector negative 1   2 but put a negative 2 out the front and so 
+for this specific matrix or vector if you   multiply it by this matrix you get the same 
+vector just scaled and that in a nutshell   is eigenvectors and eigenvalues this is an 
+eigenvector of this matrix because if you   multiply it by the matrix you get the same vector 
+but with a value at the front the eigenvalue not   even the only option so instead of using negative 
+1 2 as our vector there we could put in the vector   negative 1 1 and it turns out if you multiply 
+that by this matrix you end up with exactly   the same vector negative 1 1 but the eigenvalue 
+is negative 1. so each time you multiply it by   this matrix all it's doing is flipping the sign 
+of that vector crazy stuff and this is useful   because the process of constantly multiplying by 
+the same matrix and getting out the same thing but   scaled means that the ratios of the values within 
+these vectors aren't changing and that's exactly   what we want we want in the limit when the ratios 
+between the different chunks cease to change so   what we have to do is find the eigenvector 
+and eigenvalues for the big matrix we had   and then that tells us once you hit this steady 
+state and we're going to look for the biggest   eigenvalue version of the many eigenvectors 
+that's the ultimate steady state that our   series will settle into and nathaniel knew 
+about this because their actual research   is looking at quantum information theory we're 
+looking at different quantum states and you use   the same idea of eigenvectors and eigenvalues 
+when you're doing quantum physics calculations   and nathaniel went ah i'm going to use them for 
+this which is much more important i specifically   put these negative values down here because if 
+you just do 0 1 2 3 you can get eigenvalues and   eigenvectors but they're way more complicated 
+they're not nice neat integers you get like   square roots of 17 everywhere i hope now you can 
+uh matrices how eigenvalues and eigenvectors work   although to be honest three blue one brown will 
+have a much better video with a much better nice   visual explanation of this so go check that out 
+um the downside is their theme song smells good we just need the eigenvector and eigenvalue for 
+our binary look and say matrix but how do we   find those well in nathaniel's blog post which 
+i'll link to below they explain how they did it   they say using maple it is simple to derive 
+this value they just put it in the software   package maple and i just spat the answer out 
+and the eigenvalue is four six five five seven   one and probably more digits and that's it so 
+in the limit it settles down into a nice rhythm   where each term is 46.6 five five seven 
+one percent longer than the previous one   and the eigenvector looks like this 
+interpreting this eigenvector shows us   that the first two chunks are irrelevant in the 
+long run the chunk with just a one or two ones   don't have to worry about them and then we have 
+the ratio between the other ones and so that b   squared means that the third and fourth chunks 
+are b squared times as likely to appear or as   frequent as the chunks with the one next to them 
+and we've got more complicated terms involving b   b is just an expression involving a and a is 
+an expression involving the square root of 93.   the eigenvector is all about the square root of 
+93 when it comes to this matrix and this is just   a nice neat way to collapse all those terms down 
+so that the eigenvector is a bit easier to look at   and understand but in theory you should substitute 
+all those things in to get the original ridiculous   vector now to get the limiting ratio between ones 
+and zeros we take the limit ratios we have between   all the different chunks and we multiply each 
+of those likelihoods of that chunk being there   by the ratio of ones and zeros in that chunk 
+and then we add them all up and we do not get   five divided by three we get this so on one 
+hand mathematicians had one and two thirds   on the other hand they had this ridiculous 
+expression and they're like oh which one   which ones are going to be in fact what 
+you're looking at now allow me to say is   the thumbnail good thumbnail thanks for watching 
+the video and it turns out this ridiculous one   is the correct answer which to be honest if 
+you do work it through comes out to 1.66572 and some stuff very close and a good reminder 
+that just because it looks like something   is the answer in mathematics you don't 
+know for certain until you do the maths   thank you for looking at me say to you thank 
+you for looking at this video it's been fun   and thanks to nathaniel johnson for doing 
+the maths in the first place and thank you   to jane street who support my channel they 
+saw very complex mathematical problems in   the financial world which means they just want 
+more mathematicians that they can potentially   hire which is why they support my channel 
+and why they run a very generous internship   program this is in all three of their offices the 
+london new york and hong kong officers do this   and i've visited all of them oh i'm doing hong 
+kong again soon the other ones i think i've   specifically seen the interns but no promises 
+i am the least appealing a part of the intern   process more importantly you'll learn about all 
+things like quantitative trading and software   engineering and quantity of research and business 
+development which i just read off a list you've   seen what i do for a living it's this anyway j 
+street they're incredible what they do and   if you want to do an internship i highly recommend 
+going to janestreet.com join j street with hyphens   in it and if you want slash internships or 
+something the link is on the screen do check   it out they're great and maybe i'll see you at one 
+of the offices there you are thank you jane street i can see clearly now the 
+rain is an equivalent scaler i can see all vectors that correspond gonna launch it's matrices be a bright high bright sunshine

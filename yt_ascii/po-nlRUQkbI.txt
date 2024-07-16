@@ -1,0 +1,195 @@
+why do we etch? lithography is the most charismatic part of the 
+semiconductor manufacturing process. and yes,   it significantly drives continued 
+semiconductor advancement. but all lithography does is transfer the chip 
+design onto the photoresist-coated wafer. that's it. job's not finished. 
+we still have more to do! we still need to engrave that design 
+into the wafer's layers. that is what   etch is for. we use a liquid or plasma 
+gas etchant to remove the parts of the   chip design we don't want and bring it to life. in this video we are going to look at the long 
+history and technology behind semiconductor etch. ## wet etch in the beginning, there was only 
+wet etch and this is how it worked. semiconductor manufacturers dunked the wafer   into a heated $10,000 quartz 
+bath full of acid chemicals. what that acid chemical was depended on what we 
+were etching. perhaps bare silicon or silicon   dioxide on the wafer. or maybe aluminum layers 
+they use for producing interconnects. it depends. then we shake it ... shake it like a polaroid 
+picture. the shaking helps bring more fresh   etchant solution to the wafer surface. it 
+also helps loosen any gas bubbles formed by   the reaction. bubbles prevent the etchant from 
+reaching the wafer, slowing down the etch rate. after the etch is complete, we wash off the acid,   dry the wafer using a spin-dryer 
+and then move on to the next step. we want our etching rates to be as high 
+and consistent as possible across every   wafer and every run. but the process 
+can only go as fast as its slowest step. so if the etch rates deviate from 
+expectation then something is wrong   and we need to troubleshoot. like maybe 
+we haven't shaken loose enough bubbles. eventually people switched from simply 
+dunking wafers into a bath - the fancy   word for this is "immersion etching" 
+- to using a spray. this allowed us   to bring a more continual supply 
+of fresh etchant to the surface. ## wet concerns wet etching is a chemical reaction, which 
+is its greatest upside and downside. one of the major upsides is that a chemical 
+reaction is selective. with the right etchant,   you can etch one particular thing, without 
+worrying about it etching any of the other layers. but a chemical reaction can be difficult to 
+consistently control. it is also hard to automate,   which means its effectiveness and yield is largely 
+dependent on the individual operator's skill. and environmentally, there are particle 
+contamination and toxic waste concerns.   some of these acids and their byproducts 
+can get really nasty and cause pollution. however, wet etch's most significant issue 
+was that it could no longer keep up with   the shrinking resolutions dictated 
+by moore's law. let me tell you why. ## isotropic a chemical reaction etches in all directions - 
+vertically and horizontally - at the same rate. we call this an "isotropic" etch profile, "iso" 
+meaning equal. the big problem with isotropic   etch is that we cannot guide 
+it in the proper direction. and if you are not careful, and the lines on the 
+resist patterning are thin enough, then isotropic   etching might cut entirely underneath those lines. 
+this "undercutting" hurts imaging resolution. undercutting first became a serious issue 
+at the 5 micrometer process node - used   for producing 16k dram. the industry 
+decided that wet etch alone can not   achieve the necessary resolution for the 
+next node - the 3 micrometer/64k dram. these concerns eventually pushed the 
+industry to explore the notion of "dry   etch" - an etching technique that 
+does not use these wet chemicals. ## the search for a dry etch in 1967, a researcher at the american 
+semiconductor company signetics named steve irving - no relation 
+to kyrie - demonstrated the use   of gas plasma to strip off a layer of 
+photoresist from a silicon surface. this methodology is called "ashing". so called 
+because it essentially reduces things to ash. the concept is not new. people have 
+been using gas plasma to "ash" the   organic parts of animal tissue so that 
+they can get inorganic stuff for testing.   in an interview for an article gloriously 
+titled "cool stripper", irving said: > photoresist material is nothing but organic 
+material, and i had remembered from college   that when we were looking at trace elements 
+in diseased human tissue, we had had the   same problem of removing the organics without 
+volatilizing the elements we wanted to look at. he purchased some plasma equipment 
+from tracer lab - a subsidiary of   lfe corporation - to run his tests. 
+and those tests successfully removed   the photoresist without destroying the 
+crystal structure of the underlying wafer. ## plasma plasma is the fourth state of matter. the plasma we use for plasma etching are 
+ionized. this means the gas atoms become   charged by either losing or gaining 
+an electron - creating ions. when a   significant percentage of the gas atoms 
+become ionized, then we have a plasma. the sun is made up of plasmas. they do fusion   research with plasmas heated up 
+to incredibly high temperatures. but the plasmas we produce for semiconductor 
+production are not like those plasmas. we create them by exposing gas not 
+to high temperatures but rather,   a very powerful radio frequency 
+field - usually 13.56 megahertz. the interesting thing about these 
+low-temperature plasmas - which are   still pretty hot at about 50-250 degrees 
+celsius - is that materials react to them   at lower temperatures and energies than if 
+they were in their gaseous or liquid states. for instance, carbon tetrafluoride or cf4. 
+we want to use it to etch a layer of silicon. this layer is made up of silicon-silicon 
+atom bonds which are quite strong. so if   that carbon tetrafluoride is 
+in its normal gaseous state,   then it can't do anything to that 
+silicon layer. no etching will happen. but if we convert the cf4 into a plasma, 
+we change the dynamics. a plasma state   breaks those carbon-fluoride bonds. the 
+cf4 breaks into a bunch of fluorine,   carbon fluoride 3, and carbon fluoride 2. and if we bombard the silicon surface layer with 
+ions, the silicon bonds also weaken. now suddenly,   it takes much less energy to get the carbon 
+and silicon to swap with one another. the result of the swap is a silicon tetrafluoride 
+gas, and a layer of carbon where the silicon had   once been. the silicon fluoride gas can be pumped 
+away. now what to do about the layer of carbon? if we pump oxygen into the chamber,   it reacts with the carbon to create carbon 
+dioxide. once that carbon dioxide goes away,   we have another layer of silicon atoms 
+below for more etching. we start again. in 1971, steve "not kyrie" irving received   a patent for the process of 
+"gas plasma vapor etching". after that, irving left signetics to join 
+international plasma corporation where   he developed the first plasma etch process 
+for silicon nitride for making led screens. ## barrels the first plasma etch equipment were crossovers. they came from other industries that 
+individual semiconductor people modified   for their own purposes. but it was not 
+long until the first specialized plasma   etching equipment emerged into the market. the first such machines came in around 1972 
+and were called barrel-type reactors. you know,   because their main plasma reactors 
+were in the shape of a barrel. on the outside of this barrel chamber 
+are coils which will generate the high   powered rf field. they put these coils 
+on the outside to prevent contamination. to use the machine, we stick the wafers into the 
+barrel chamber like dishes in a dishwasher. the   etchant gas mixture then goes inside and 
+we turn on the rf coils. simple as that. ## early issues despite these seeming breakthroughs, plasma 
+technology did not immediately take off. by 1975, the entire market was 
+estimated at only $1.6 million   in size. steve irving recalled that most 
+potential customers thought that plasma   etching was for the healthcare 
+field, not semiconductors. this attitude was justified. at the time, barrel 
+etchers did not perform very well outside of their   original purpose of photoresist stripping. in 
+that, they did well and are still used today. when it came to actual etching, the 
+product fell short. the barrel machines   were very simple. they did not have 
+good temperature control, they didn't   etch uniformly across the wafer, and the wafers 
+themselves often suffered radiation damage. most importantly, plasma etches of this 
+first generation used chemical reactions,   which meant that they were still 
+isotropic. this isotropic profile   disqualified it as a credible 
+replacement for wet etch equipment. ## improvements in 1973, alan reinberg at texas 
+instruments decided that enough was enough. he ditched the barrel and tried something 
+new, inspired by his work in chemical vapor   deposition - the parallel plate reactor. i have 
+also seen it called the radial flow reactor. this new design put the wafers on a platter 
+with an rf-powered electrode underneath them. the wafers surround a hole at the center of the 
+platter for gas to come in and out of. hence,   why it might be called a radial flow reactor. above the wafers, we have another 
+set of electrodes. together,   the two rf electrodes can convert gas into plasma. we can then use the rf electrode under 
+the wafers to accelerate the ions in   the plasma down towards said wafers - 
+physically bombarding them. this will   at the same time trigger a chemical reaction 
+between the etchant plasma and the substrate. the benefit is that we can still get the 
+selectiveness of a chemical reaction,   while guiding the etch in a single direction 
+- something called "anistropic" etch. the original parallel plate setup has 
+since evolved into what is more widely   known as the reactive ion etch system, 
+which i mentioned in a prior video. ## breakout unlocking anistropic etch unlocked 
+plasma etch's full market potential. in 1975, a team at ibm led by dr. 
+hwa-nien yu - who later worked at   taiwan's itri - produced an 8 kilobit memory 
+with line dimensions of 1-1.5 micrometers. the team used cutting edge technologies 
+of the time - electron beam lithography   to transfer the pattern. and then reactive ion   etch and ion implantation to etch the chip's 
+features and give it its electrical properties. the demonstration made clear the future. 
+semiconductor manufacturers quickly   transitioned from wet etch to dry etch. but with 
+that, they came across two significant issues. the first involved the plasma damaging 
+the silicon substrate and leaving residual   impurities of metal or whatever have you 
+on the substrate after finishing the etch. these damages and impurities need to be removed. 
+so fabs added a post-etch step to do so. post-etch   cleansing might be done by blasting the damage 
+with oxygen or hydrogen plasma followed by a   dousing of wet acid, followed then 
+with a good old-fashion hot bake. or they can use lasers, which to 
+me should always be the preferred   choice. especially if those 
+lasers are mounted on sharks. the other significant issue had to do with 
+the equipment themselves. they were too slow. ## raising throughput the first barrel-type etch tools 
+might not have done good etches,   but they did process wafers in large batches. 
+process batching let the fabs make wafers faster. the transition away from the barrel gave us 
+better etch precision and accuracy. however,   these early machines - reactive ion etching,   in particular - could only do them one at 
+a time and very slowly, hurting throughput. since these tools easily cost over 
+a million dollars each - which was a   lot back then - the fabs could not economically 
+justify the expense unless throughput improves. so the etch tool makers either 
+needed to get back to batching,   or speed up these single-wafer jobs. through the 
+early 1980s, american and japanese semiconductor   companies tried to improve the latter by looking 
+for ways to increase the density of the plasma. the first candidate was called 
+"magnetically enhanced reactive ion   etch" or merie. it is exactly as the name says. very similar to the traditional reactive ion etch 
+system, but we add a magnetic field to intensify   the plasma and enhance the etch. it kind of 
+worked. but the magnetic field's position   parallel to the wafer created non-uniform 
+plasma which in part nullified its effects. so just rotate the freakin' magnet,   ammirite? but doing so damaged the wafer. so, 
+merie turned out to be a bit of a dead end. ## ecr and icp in the 1950s, the oak ridge 
+national lab in tennessee - america's leading nuclear power and hot chicken   lab - invented a new method called 
+electron cyclotron resonance or ecr. ecr was originally designed for fusion research. 
+it uses both microwaves and magnetics to first   produce high density plasma in a separate 
+chamber before we move it to the wafer. the americans invented ecr, but the japanese 
+adapted it for semiconductor production.   in 1982, ntt filed a patent which they then 
+licensed to hitachi. hitachi rebranded it   to "microwave plasma etching" and used it for 
+their 4 megabit dram at the 800 nanometer node. throughout the late 1980s and early 
+1990s, sematech funded oak ridge's   efforts to commercialize ecr as well. but 
+they eventually fell out of love with it. ecr was too complicated, you needed a 
+huge magnetic coil which took up space,   and it lacked uniform etch rates. so in the late 1980s, they came 
+up with a modification called   "inductively coupled plasma" or icp. 
+you put the magnetic coil at the top   of the chamber to produce high density 
+plasma using electromagnetic induction. icp became the industry's dominant way 
+to do reactive ion etch with high-density   plasma. applied materials, lam research 
+and other vendors continue to work on   new ways to increase the plasma density 
+of the tool without damaging the wafer. ## deep reactive ion etch advancing etch technology is a key contributor 
+to moore's law. for instance, deep reactive ion   etching, which is an etch technique descended 
+from reactive ion etch and the mems world. mems artists wanted to cleanly, quickly 
+produce complex geometries in the silicon   like deep holes for something 
+like a tether beam. existing   etch methods fell short because 
+their holes were v-shaped. so in the 1990s, the mems department at the german 
+company bosch developed what is now called deep   reactive ion etching. their specific flavor 
+of it is named after them, the bosch process. this is pretty interesting. the bosch 
+process cycles through two steps of   adding etchant and then an inhibitor to the 
+substrate. each step lasts for a few seconds. let's imagine a flat substrate of silicon. then we fire a high density plasma mix of 
+etchant and ions down at it. this is just   the same as reactive ion etching. the 
+ions physically bombard the silicon,   while the etchant chemically reacts 
+with it. the etchant goes to work. because it is chemical, it is isotropic,   eating in all directions. this 
+creates a little round crater. then in the next step of the cycle, we 
+apply the inhibitor - something kind   of like teflon - onto the crater. it coats the 
+crater, nullifies the acid and stops the reaction. now we fire the etchant + ion plasma 
+mix again down at the crater. the ions   physically break through the 
+nullifying inhibitor layer,   exposing the silicon surface at the 
+crater's bottom for the acid to react with. but only at the bottom. because 
+those ions were fired in a single   direction - downwards - the layers of 
+the inhibitor on the sidewalls were   untouched. so, they keep the acid 
+from eating into those sidewalls. this way, only the bottoms of the crater get 
+scooped out. over the span of many cycles,   you get this deep hole in the 
+silicon with a characteristic   "scallop" sidewall. it is wickedly brilliant. deep reactive ion etch is used to produce 
+through-silicon vias or tsvs. tsvs are one   of the cornerstone technologies behind modern 
+die-stacked chips like our nvidia ai accelerators. we also use them to excavate the thin and deep 
+trenches necessary for leading edge dram chips. ## conclusion as moore's law progresses, etch faces 
+the same challenges faced by lithography. simply put, we need to get smaller. 
+smaller while also being more precise. oh,   and it still needs to be fast. so 
+what does the future hold for etch? atomic layer deposition is a 
+well-established nanotechnology   method to deposit very, very 
+thin layers onto substrates. i did a video about atomic layer 
+deposition a while ago. go check it out. if atomic layer deposition builds up 
+layers atom by atom, then atomic layer   etching does the conceptual opposite. it tears 
+down thin layers, atom by atom. easier said than   done. ald is already widely used on fab floors 
+but we are still working through ale's quirks. i will save this juicy topic for a 
+future video, but the work is a sign that   etch - lithography's unheralded sibling 
+- still has a vibrant future ahead of it.

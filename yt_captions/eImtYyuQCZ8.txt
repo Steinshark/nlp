@@ -1,0 +1,45 @@
+When you think about quicksand, you probably
+don’t feel much fear or uncertainty. What was once a popular plot device in island
+and jungle movies has begun to fade from our collective curiosity. But, in civil engineering, quicksand is more
+than just a puddle of mud. It has a specific, and potentially more catastrophic,
+definition that can affect all kinds of infrastructure. I’m Grady and today on Practical Engineering,
+we’re continuing the dive into the hazards of soil mechanics and talking about seepage. This video is sponsored in part by Blue Apron. More on that later. If you ever tried to build a dam in a creek
+or even in the storm gutter on your street, you know how hard it is. Water is not only powerful, but it’s elusive
+too. It seems to always find a way through. Like all fluids, water flows from areas of
+high pressure to low pressure, and a dam is essentially a structure which separates those
+two conditions. This is a prime circumstance to induce flow,
+whether it’s through the dam itself, or underneath (through its foundation). Water flowing through soil is called seepage,
+and it follows some interesting and unexpected rules. So, to give you a better understanding, I’m
+building this demonstration out of clear acrylic sheets and some plumbing fixtures. This will essentially let us see a cross section
+through a dam so we can observe how the seepage behaves. All dams have some seepage, so engineers need
+to be able to characterize it. Flow through soil follows Darcy’s Law, which
+is simple to understand, but difficult to calculate in two dimensions. Before computer models, engineers used an
+analytical tool called a flow net to estimate the behavior of seepage. Now software can do the work more quickly
+and accurately. Darcy’s law essentially says that the rate
+of seepage depends on the length of the flow path and the difference in pressure across
+it. The combination of these two factors is called
+the hydraulic gradient. If the difference in pressure is small, like
+in this example, the seepage will be very slow. The bigger the difference in pressure, the
+greater the seepage flow rate will be. But, if you increase the difference by too
+much, eventually some strange things start to happen. What’s happening here? I’ve talked about shear strength of soils
+in a previous video. Check that out if you want more detail, but
+here’s the gist: Soil is a granular material that has one main way of holding itself together:
+friction. Gravity pushes the soil particles together,
+creating friction which gives the soil strength. Seepage is the enemy of friction. The water gets between the soil particles,
+pushing them away from each other, reducing the friction and thus reducing the strength. This is important, because shear strength
+is really the only thing separating a solid from a fluid. In fact, when water pressure within the soil
+gets high enough to eliminate its shear strength all together, it’s called liquefaction,
+otherwise known as the “quick condition”. The soil is literally behaving as a liquid
+rather than a solid… it’s quicksand! You can see why seepage is bad for dams and
+levees: engineers generally try to avoid building civil structures out of liquids. Soil liquefaction can be the starting point
+for a specific type of erosion called piping. As soil is carried away from the dam’s foundation,
+the seepage path gets shorter. Remember that the seepage depends on the gradient,
+which is a function of the length of the seepage path and the difference in pressure. If the pressures stay the same, but the path
+gets shorter, the gradient goes up, creating more seepage. This is a dangerous positive feedback loop. The erosion shortens the seepage path while
+the increasing seepage creates more erosion. Eventually the erosion pipe reaches the reservoir,
+leading to catastrophic failure of the dam’s foundation. This isn’t just speculation; piping is the
+number one cause of failure for earthen levees and dams. How do engineers deal with seepage? One common way is a cutoff wall, a subsurface
+wall constructed in the foundation of dam. This is some footage from a previous demonstration
+I built that shows a cutoff wall in action. Notice the length of the seepage flow paths. They’re longer, which means the hydraulic
+gradient is lower. That means less seepage and less chance for
+erosion.

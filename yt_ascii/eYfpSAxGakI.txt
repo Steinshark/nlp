@@ -1,0 +1,258 @@
+at the end of the 19th century, david hilbert,
+who was a famous mathematician at the time, listed 20 problems that he thought were going to
+direct the future of 20th century  mathematics. but one of them, hilbert's 3rd
+problem, was so easy that hilbert's student solved it
+2 years after he posed it. so that's the one i
+want to explain today. yeah, i would call it
+hilbert's 3rd problem, but it's maybe, maybe let's call it the equidecomposability problem. if you have two
+polygons p_1 and p_2-- brady haran: so no rules about convex or concave?
+daniel litt: no rules about convex or concave. all you need is a finite number of straight
+lines which meet and form a closed figure. so here are 2 polygons, p_1 and p_2,
+and they have the same area, then you can cut off p_1 with finitely many
+straight lines and rearrange the pieces to get p_2. so here's an example of a
+polygon which i've already pre-cut. it's a parallelogram and here's how we can
+rearrange it into a rectangle with the same area. just move this triangle over here.
+so that was pretty easy. so the proof actually gives you an
+algorithm for cutting up a polygon and decomposing
+it into another one. so hilbert's
+3rd question, which was in'98, i think, was, "is the same thing true in three dimensions?" so what do i
+mean by that? i mean if you have two polyhedra,
+so three-dimensional figures which are made out of, you know,
+flat faces edges, and vertices, and if they have the same volume, can you cut one up into pieces with finitely many
+cuts and rearrange the pieces to make the other? brady haran: well, in my
+intuition, would be yes. it's because if you put two polyhedra
+with the same volume into, like, a bath, they'll displace the
+same amount of water. daniel litt: so, yeah, so if you were allowed to
+melt the polyhedra, you could definitely do it. but if you're only allowed to use
+straight cuts, it turns out you can't, and this is what
+dehn proved, and i think hilbert
+probably expected this, so i think he probably tried with the
+cube, tried to cut it up into pieces, and rearrange it
+into a tetrahedron, so that's a figure with 4 faces all a bunch of triangles,
+which are the same, and he couldn't do it. and so the actual
+question was: can you cut up a cube with finitely many knife cuts
+and rearrange the pieces to get a tetrahedron? and dehn ended up proving that you can't do that.
+brady haran: you can't do it? daniel litt: you can't do it. brady haran: what changes between 2 and 3
+dimensions that suddenly makes it impossible? daniel litt: yeah, so i can explain
+at least the idea behind dehn's proof. dehn was the student of hilbert, and it was his
+thesis problem to solve hilbert's third question, it's one of the greatest theses of all time,
+and so what was his idea? well, his idea was that, well, let's say you have
+2 polygons, which have a different area. why can't you cut one up
+and rearrange it to the other? well, the area is invariant under this action
+of cutting it and then moving the pieces around; the area
+doesn't change. so dehn's idea was that you should
+find some invariant of a polyhedron that doesn't change when you cut
+it up and move the pieces around, and then he wanted to compute that invariant for the
+cube and for the tetrahedron and see if they're different. so what that means
+is that, you know, no matter how you take the cube,
+cut it up, and move the pieces around, if these invariants are different,
+you can't get a tetrahedron. brady haran: the deal breaker,
+the thing that can't change-- daniel litt: the obstruction, yeah, to move, changing one piece and one polyhedron into another polyhedron.
+brady haran: what was it? are you going to tell me? daniel litt: i'll tell you,
+it's kind of complicated. so we should maybe we
+should build up to it. let's prove this
+1833 theorem. so this is equidecomposability for polygons. all right, so there are several
+steps. so what's the goal? let me first make the
+problem a little bit easier. let's try to cut up
+a polygon of area ?, so ? could be 5, and rearrange the pieces
+into a 1 by ? rectangle. and i claim
+that's enough. why is that? it's because cutting something up and
+rearranging the pieces is a reversible operation, so if you have a
+polygon of area ?, you can make it into
+1 by ? rectangle and another polygon with area ?; you can
+make it into the same 1 by ? rectangle, and then, well, how do you get from your
+first polygon to your second one? you just pass through the 1 by ? rectangle
+that you are able to make both of them into, so it's enough to do this. so we can assume one of p_1
+and p_2 is just a rectangle. what's the first step?
+it's easy. you just cut it
+into triangles. step 2 is a
+little trickier. we're going to turn triangles into parallelograms all right, so we have our triangle. what do we do? we take the midpoints
+of these two sides, we draw the line through them so that
+this has the same length as this, and then, well, we just move
+this triangle over here. so, here's a triangle, and now you can cut it up
+and turn it into a parallelogram. brady haran: so any triangle can be
+parallel, er, parallelogram-ized. daniel litt: yeah,
+that's exactly right. all right, now we're gonna turn
+parallelograms into rectangles. so here what
+do you do? you just drop a perpendicular like this
+and then move this triangle over here. here's my parallelogram and i'm
+going to turn it into a rectangle. that was easy. all right, so now, we have some rectangle,
+which has the same area as our original polygon. well, we do this for every triangle we got.
+and we get a bunch of rectangles, and now, we're gonna make
+it into a 1 by ? rectangle. so here's
+some rectangle, and what we do is we
+measure out a distance 1, let's say, 1 inch or so on the bottom, and draw a rectangle
+with the same area. now we connect
+these two vertices, and it turns out that the
+triangle ?bc is the same-- it's congruent to
+the triangle def, so we can start by moving this triangle and just sliding it down here. now, there's a
+little bit left over, it's these two triangles, and it
+turns out they're also the same; it turns out the triangle ?dg is
+the same as the triangle cfh. how do we cut this rectangle up into this
+one which has the desired property to 1 by area rectangle? just move this
+triangle over here and this triangle over here. okay, and that
+finishes the proof. we first cut into triangles,
+then we cut into parallelograms, then we cut into rectangles, then
+we cut it special rectangles. and then we undo all of that to get into the other
+polygon that we wanted to aim at at the beginning. brady haran: cool.
+daniel litt: okay. so, why did
+this work? it worked because we had this one invariant
+that we knew to search for the area, where we were gonna search for a 1 by ? rectangle, and it turns out that there's a secret
+hidden invariant in three dimensions that will stop us from
+running this algorithm. all right, so let's see
+what dehn did. so what he wanted to do is he wanted
+to take a cube and a tetrahedron, which have the
+same volume, and he wanted to show you
+couldn't cut this up in any way with a finite number of slices and
+rearrange the pieces to get this one, so he had to come up with some
+way of distinguishing the two, something that is different
+about these guys, and it doesn't change when you cut
+them up and rearrange the pieces. brady haran: daniel, you're saying he
+wanted to show you couldn't do it that's right.
+brady haran: wouldn't he rather have shown you could do it? did he already know--
+brady haran: he probably tried, i mean, yeah, so why do you conjecture
+something's impossible? you, like, to try really hard and
+try really hard and you just fail, and you get really frustrated and you're
+like, "i'm gonna prove this can't be done." and in dehn's case he
+was able to do it, right? so here's the
+basic observation. so let's zoom in on some
+edge of a polyhedron and there's two
+invariants of this edge. you can look at--
+you can look at the length, so l is the
+length of an edge, and there's another invariant which
+i'll call theta. that's the dihedral angles. it's the angle it takes to get
+from this face to this one, so it's the angle swept out by my hands;
+i moved from one face to the other it's the angle it takes to get
+from this face to this one, so that's an angle
+between 0 and 2pi so what's the observation?
+the observation is there's two ways to cut, so one is you
+can cut like this. so you can cut with a plane that kind of passes through the edge. it cuts this edge in half, right? brady haran: it changes the length. but it leaves the dihedral
+angle the same, right? and the lengths of the two edges you get
+are the-- they sum to the original length. so if you cut, let's say,
+vertically, you get (l_1, theta) and (l_2, theta), so the two lengths of
+these two pieces, l_1 and that's l_2, the theta's are the same and
+l_1+l_2 is the original length. right, so the other thing you
+can do is cut along the edge so the other thing you
+can do is cut like this, and then you get, well, two
+edges there, on these two pieces. they have the same length
+and angles, summed together, so you get
+(l, theta_1) and (l, theta_2), and here, theta_1+theta_2 is the original theta. so the two dihedral angles add together
+to give you what you started with. and, so, dehn's idea
+was to stare at this and just make it into an invariant
+in the most brutal way possible. so how did he do it? so here's the invariant: so you take the
+sum of the following symbols l_ixtheta_i we're here-- this runs over
+the edges of the polyhedron. so what you do is you take the length of
+each edge and the angle at each edge and write down just this sum, which
+is right now just a sum of symbols. it doesn't
+mean anything. so, let's figure out what it means.
+brady haran: how you add an angle to a length? that's right, it doesn't. well, so we're sort of we're formally multiplying them and then we're adding
+these symbols together, so let me let me
+say where this lives. so this lives in something, which is
+called the real numbers, tensored with real numbers mod 2pi so let me explain
+what this set is. brady haran: you're cracking
+out the new symbols on me now? daniel litt: that's right, yeah. so, let's say what this is:
+it's an element of this thing. this weird object is just
+a sum alpha_1xb_1+alpha_2xb_2. these are just symbols so far,
+all the way up to alpha_nxb_n for some n, where these alpha_i and b_i
+are just real numbers, but we say two symbols like this are
+the same if certain rules are satisfied. so what rules? well, first of all, alphaxb is the same as alphax(b+2pi).
+what is this expressing? it's just expressing that if you take an angle 
+and you add 2pi to it, you get the same angle. all right, now we have
+some other rules. we say that alpha_1xb+alpha_2xb=(alpha_1+alpha_2)xb so you're allowed to add on the left
+if the b's on the right are the same. so what does
+this express? it expresses that if you've 2theta's which are the same,
+if you cut, you can add two lengths. that's just
+expressing this. all right,
+there's one more rule: it's just the same thing on the other side. so it says that if
+you have alphaxb_1+alphaxb_2, that's the same
+as alphax(b_1+b_2). and that's just
+expressing this rule. so this is just a set of symbols which
+are allowed to add and subtract, but they follow some funny
+rules when you do that, and dehn's invariant is
+this object inside this set, and he's saying, "well, no matter how you
+cut off your shape, when you compute this invariant,
+you get the same thing in this set." that's called
+the dehn invariant. brady haran: i'm not gonna pretend
+to totally understand it, but i believe you. what's wrong
+with having an invariant though? what does that mean?
+i can't just, you know, be strategic and make millions of cuts and
+still be able to build these things-- yes, and the point
+of this invariant is that it doesn't change when
+you make a cut, right? you get more edges
+and you get more angles, but because of these rules over here
+and equivalently these rules over here, the invariant in the
+set just doesn't change so now what you have to do
+is give into a polyhedron. you have to compute this invariant and
+sometimes, they're different, right? so dehn's observation showed that the invariant of the cube is
+not the same as the invariant of the tetrahedron. brady haran: so this invariant is
+almost like a fingerprint or dna. daniel litt: that's exactly right.
+brady haran: it's unique to the polyhedron. yeah, so it turns out and
+dehn didn't know this, but it was proven
+about 30 years later that if you know the volume of a polyhedron
+and you know the dehn invariant, then that determines the polyhedron up to this
+operation of cutting and moving the pieces around. so in fact,
+it's true that if you have two polyhedra with the same
+volume and the same dehn invariant, then you can cut one up and get the
+other one by rearranging the pieces. but here, dehn, what dehn did is just showed that if
+you have two polyhedra with different invariants, you just can't do that.
+you're stuck. there's no way you
+can change the dehn there. brady haran: because once you've
+got that dehn invariant, you're stuck with it for life.
+daniel litt: that's right. yeah. there's nothing you can do, at least with
+this operation of cutting with a knife and moving the pieces around that changes
+that invariant. that's why it's called an invariant. brady haran: what's the dehn invariant of a cube? is it like-- daniel litt: yes, we can do the dehn invariant
+of a cube. that's a good example. so let's do the cube.
+so luckily, all the edges are the same. so we only have to
+compute with one edge. so let's say we have a
+cube of side length 1, and then what do
+we have to do? we have to compute the angle.
+well, that's just 90degrees, or pi/2. so for each edge contributes 1x(pi/2),
+and then how many edges are there? 1, 2, 3, 4, 5, 6,
+7, 8, 9, 10, 11, 12. well because of this rule that if
+the second guys are the same, we can add
+the first guys. this is just the same
+as 12x(pi/2), if you'd like. that's the dehn invariant
+of the cube. now, the tetrahedron is a little harder while you compute this angle which i'll just call theta, a little bit of a pain
+to compute it, so i won't do it here. you have to compute what side length gives you a volume of 1, so let's call it l. and how many
+edges are there? there's 1, 2, 3, 4, 5, 6,
+so you get 6lxtheta. and once you compute what these actually
+are, you'll see that it isn't the same as this. brady haran: so if i gave you a cube and
+said, "turn this into a tetrahedra," daniel litt: yeah.
+brady haran: you're gonna say, "yeah, i can do that," but unfortunately, i'm gonna
+have to change it's volume. no, unfortunately you have to do both
+with the volume and the dehn invariant. oh you have to change both because, of course, the volume doesn't change
+when you cut and move things around either, so those are exactly the
+two invariants of a polyhedron-- the volume and
+the dehn invariant. dehn's big contribution was to discover that this is
+there is the second one. nobody knew that before. brady haran: how come
+i can do it when i melt them? daniel litt: yeah,
+that's a good question. that's because melting them doesn't
+change the volume, right? but it does change this invariant;
+you've destroyed all the edges, so how would you even
+compute the dehn invariant? in fact, it turns out in higher dimensions, there are also even more invariants. we don't know what
+they are in general, so that's an
+open problem. if you want to think about, i don't
+know, 12 dimensional polyhedra, and one you can cut one
+up and get the other one. it's actually a really beautiful
+and exciting part of mathematics. brady haran: there's a little bit of
+complicated mathematics there are, daniel litt: that's right.
+brady haran: but, i can still appreciate
+what dehn did-- the cleverness of it-- that he found it-- that he
+realized those edges were the problem? daniel litt: yeah, that was clever. well, i think the really
+amazing thing is he knew, well, the lengths of the edges don't stay the same and the dihedral angles don't stay
+the same when you cut things up, but there's some funny way of combining
+them all together. that does stay the same. that's really the miracle
+of the dehn invariant. brady haran: clever.
+daniel litt: yeah. brady haran: good thesis.
+daniel litt: yeah. brady haran: i bet there was no questioning
+about giving him his doctorate. daniel litt: yeah, i mean, he went on to do a lot of
+amazing stuff to the rest of mathematics too. but yeah, this was
+an amazing start. [brady haran laughs]
+brady haran: cool! because the hotel's full, but the manager
+is clever, and here's what he does: he shifts the person
+in room 1 to room 2, and the person
+in room 2 to room 3, and the person
+in room 3 to room 4, and so on. everyone gets shifted
+forward one room, and because there are
+infinitely many rooms, you never run out of
+rooms to put people in.

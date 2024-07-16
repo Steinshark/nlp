@@ -1,0 +1,1320 @@
+- i see the danger of this
+concentration of power through proprietary ai systems as a much bigger danger
+than everything else. what works against this is people who think that
+for reasons of security, we should keep ai systems
+under lock and key because it's too dangerous to put it in the hands of everybody. that would lead to a very bad future in which all of our information diet is controlled by a small
+number of companies through proprietary systems. - i believe that people
+are fundamentally good and so if ai, especially open source ai can make them smarter, it just empowers the goodness in humans. - so i share that feeling. okay? i think people are
+fundamentally good. (laughing) and in fact a lot of doomers are doomers because they don't think that
+people are fundamentally good. - the following is a
+conversation with yann lecun, his third time on this podcast. he is the chief ai scientist at meta, professor at nyu, turing award winner and one of the seminal figures in the history of artificial intelligence. he and meta ai have been big proponents of
+open sourcing ai development, and have been walking the walk by open sourcing many
+of their biggest models, including llama 2 and eventually llama 3. also, yann has been an outspoken critic of those people in the ai community who warn about the looming danger and existential threat of agi. he believes the agi
+will be created one day, but it will be good. it will not escape human control nor will it dominate and kill all humans. at this moment of rapid ai development, this happens to be somewhat
+a controversial position. and so it's been fun seeing yann get into a lot of intense and fascinating discussions online as we do in this very conversation. this is the lex fridman podcast. to support it, please check out our
+sponsors in the description. and now, dear friends, here's yann lecun. you've had some strong statements, technical statements about the future of artificial
+intelligence recently, throughout your career
+actually but recently as well. you've said that autoregressive llms are not the way we're
+going to make progress towards superhuman intelligence. these are the large language models like gpt-4, like llama
+2 and 3 soon and so on. how do they work and why are they not going
+to take us all the way? - for a number of reasons. the first is that there is
+a number of characteristics of intelligent behavior. for example, the capacity
+to understand the world, understand the physical world, the ability to remember
+and retrieve things, persistent memory, the ability to reason
+and the ability to plan. those are four essential characteristic of intelligent systems or entities, humans, animals. llms can do none of those, or they can only do them
+in a very primitive way. and they don't really
+understand the physical world, they don't really have persistent memory, they can't really reason and they certainly can't plan. and so if you expect the
+system to become intelligent just without having the
+possibility of doing those things, you're making a mistake. that is not to say that
+autoregressive llms are not useful, they're certainly useful. that they're not interesting, that we can't build a whole ecosystem of
+applications around them, of course we can. but as a path towards
+human level intelligence, they're missing essential components. and then there is another tidbit or fact that i think is very interesting; those llms are trained on
+enormous amounts of text. basically the entirety of all publicly available
+text on the internet, right? that's typically on the
+order of 10 to the 13 tokens. each token is typically two bytes. so that's two 10 to the
+13 bytes as training data. it would take you or me 170,000 years to just read through this at
+eight hours a day. (laughs) so it seems like an enormous
+amount of knowledge, right? that those systems can accumulate. but then you realize it's
+really not that much data. if you talk to
+developmental psychologists, and they tell you a 4-year-old has been awake for 16,000
+hours in his or her life, and the amount of information that has reached the
+visual cortex of that child in four years is about 10 to 15 bytes. and you can compute this by estimating that the optical nerve carry about 20 megabytes
+per second, roughly. and so 10 to the 15 bytes for a 4-year-old versus two times 10 to the 13 bytes for 170,000 years worth of reading. what that tells you is
+that through sensory input, we see a lot more information than we do through language. and that despite our intuition, most of what we learn
+and most of our knowledge is through our observation and interaction with the real world, not through language. everything that we learn in
+the first few years of life, and certainly everything
+that animals learn has nothing to do with language. - so it would be good to maybe push against
+some of the intuition behind what you're saying. so it is true there's
+several orders of magnitude more data coming into the
+human mind, much faster, and the human mind is able to
+learn very quickly from that, filter the data very quickly. somebody might argue your comparison between
+sensory data versus language. that language is already very compressed. it already contains a lot more information than the bytes it takes to store them, if you compare it to visual data. so there's a lot of wisdom in language. there's words and the way
+we stitch them together, it already contains a lot of information. so is it possible that language alone already has enough wisdom
+and knowledge in there to be able to, from that
+language construct a world model and understanding of the world, an understanding of the physical world that you're saying llms lack? - so it's a big debate among philosophers and also cognitive scientists, like whether intelligence needs
+to be grounded in reality. i'm clearly in the camp that yes, intelligence cannot appear without some grounding in some reality. it doesn't need to be physical reality, it could be simulated but the environment is just much richer than what you can express in language. language is a very approximate
+representation or percepts and or mental models, right? i mean, there's a lot of
+tasks that we accomplish where we manipulate a mental
+model of the situation at hand, and that has nothing to do with language. everything that's physical,
+mechanical, whatever, when we build something, when we accomplish a task, a moderate task of grabbing
+something, et cetera, we plan our action sequences, and we do this by essentially imagining the result of the outcome of sequence of
+actions that we might imagine. and that requires mental models that don't have much to do with language. and that's, i would argue, most of our knowledge is derived from that interaction
+with the physical world. so a lot of my colleagues who are more interested in
+things like computer vision are really on that camp that ai needs to be embodied, essentially. and then other people
+coming from the nlp side or maybe some other motivation don't necessarily agree with that. and philosophers are split as well. and the complexity of the
+world is hard to imagine. it's hard to represent
+all the complexities that we take completely for
+granted in the real world that we don't even imagine
+require intelligence, right? this is the old moravec's paradox from the pioneer of
+robotics, hans moravec, who said, how is it that with computers, it seems to be easy to do
+high level complex tasks like playing chess and solving integrals and doing things like that, whereas the thing we take for
+granted that we do every day, like, i don't know,
+learning to drive a car or grabbing an object, we can't do with computers. (laughs) and we have llms that
+can pass the bar exam, so they must be smart. but then they can't
+launch a drive in 20 hours like any 17-year-old. they can't learn to clear
+out the dinner table and fill out the dishwasher like any 10-year-old
+can learn in one shot. why is that? like what are we missing? what type of learning or reasoning architecture
+or whatever are we missing that basically prevent us from having level five self-driving cars and domestic robots? - can a large language model
+construct a world model that does know how to drive and does know how to fill a dishwasher, but just doesn't know how to deal with visual data at this time? so it can operate in a space of concepts. - so yeah, that's what a lot
+of people are working on. so the answer, the short answer is no. and the more complex answer is you can use all kind of tricks to get an llm to basically
+digest visual representations of images or video or
+audio for that matter. and a classical way of doing this is you train a vision system in some way, and we have a number of ways
+to train vision systems, either supervised,
+unsupervised, self-supervised, all kinds of different ways. that will turn any image into
+a high level representation. basically, a list of tokens that are really similar
+to the kind of tokens that a typical llm takes as an input. and then you just feed that to the llm in addition to the text, and you just expect
+the llm during training to kind of be able to
+use those representations to help make decisions. i mean, there's been
+work along those lines for quite a long time. and now you see those systems, right? i mean, there are llms that
+have some vision extension. but they're basically hacks in the sense that those things are not like trained to handle, to really understand the world. they're not trained
+with video, for example. they don't really understand
+intuitive physics, at least not at the moment. - so you don't think there's something special to
+you about intuitive physics, about sort of common sense reasoning about the physical space,
+about physical reality? that to you is a giant leap that llms are just not able to do? - we're not gonna be able to do this with the type of llms that
+we are working with today. and there's a number of reasons for this, but the main reason is the way llms are trained is
+that you take a piece of text, you remove some of the words
+in that text, you mask them, you replace them by black markers, and you train a gigantic neural net to predict the words that are missing. and if you build this neural
+net in a particular way so that it can only look at words that are to the left of the
+one it's trying to predict, then what you have is a system that basically is trying to predict the next word in a text, right? so then you can feed it a text, a prompt, and you can ask it to
+predict the next word. it can never predict
+the next word exactly. and so what it's gonna do is produce a probability distribution of all the possible
+words in the dictionary. in fact, it doesn't predict words, it predicts tokens that
+are kind of subword units. and so it's easy to handle the uncertainty in the prediction there because there's only a finite number of possible words in the dictionary, and you can just compute
+a distribution over them. then what the system does is that it picks a word
+from that distribution. of course, there's a higher
+chance of picking words that have a higher probability
+within that distribution. so you sample from that distribution to actually produce a word, and then you shift that
+word into the input. and so that allows the system now to predict the second word, right? and once you do this, you shift it into the input, et cetera. that's called autoregressive prediction, which is why those llms should be called autoregressive llms, but we just call them at llms. and there is a difference
+between this kind of process and a process by which
+before producing a word, when you talk. when you and i talk, you and i are bilinguals. we think about what we're gonna say, and it's relatively independent of the language in which we're gonna say. when we talk about like, i don't know, let's say a mathematical
+concept or something. the kind of thinking that we're doing and the answer that
+we're planning to produce is not linked to whether
+we're gonna say it in french or russian or english. - chomsky just rolled his
+eyes, but i understand. so you're saying that
+there's a bigger abstraction that goes before language- - [yann] yeah.
+- and maps onto language. - right. it's certainly true for a
+lot of thinking that we do. - is that obvious that we don't? like you're saying your
+thinking is same in french as it is in english? - yeah, pretty much. - pretty much or is this... like how flexible are you, like if there's a
+probability distribution? (both laugh) - well, it depends what
+kind of thinking, right? if it's like producing puns, i get much better in french
+than english about that (laughs) or much worse- - is there an abstract
+representation of puns? like is your humor an abstract... like when you tweet and your tweets are
+sometimes a little bit spicy, is there an abstract representation
+in your brain of a tweet before it maps onto english? - there is an abstract representation of imagining the reaction
+of a reader to that text. - oh, you start with laughter and then figure out how
+to make that happen? - figure out like a
+reaction you wanna cause and then figure out how to say it so that it causes that reaction. but that's like really close to language. but think about like
+a mathematical concept or imagining something you
+want to build out of wood or something like this, right? the kind of thinking you're doing has absolutely nothing to
+do with language, really. like it's not like you have necessarily like an internal monologue
+in any particular language. you're imagining mental
+models of the thing, right? i mean, if i ask you to like imagine what this water bottle will look like if i rotate it 90 degrees, that has nothing to do with language. and so clearly there is a more abstract
+level of representation in which we do most of our thinking and we plan what we're gonna say if the output is uttered words as opposed to an output
+being muscle actions, right? we plan our answer before we produce it. and llms don't do that, they just produce one
+word after the other, instinctively if you want. it's a bit like the subconscious
+actions where you don't... like you're distracted. you're doing something, you're completely concentrated and someone comes to you
+and asks you a question. and you kind of answer the question. you don't have time to
+think about the answer, but the answer is easy so you don't need to pay attention and you sort of respond automatically. that's kind of what an llm does, right? it doesn't think about its answer, really. it retrieves it because it's
+accumulated a lot of knowledge, so it can retrieve some things, but it's going to just spit
+out one token after the other without planning the answer. - but you're making it sound
+just one token after the other, one token at a time generation
+is bound to be simplistic. but if the world model is
+sufficiently sophisticated, that one token at a time, the most likely thing it
+generates as a sequence of tokens is going to be a deeply profound thing. - okay. but then that assumes that those systems actually possess an internal world model. - so it really goes to the... i think the fundamental question is can you build a really
+complete world model? not complete, but one that has a deep
+understanding of the world. - yeah. so can you build this
+first of all by prediction? - [lex] right. - and the answer is probably yes. can you build it by predicting words? and the answer is most probably no, because language is
+very poor in terms of... or weak or low bandwidth if you want, there's just not enough information there. so building world models
+means observing the world and understanding why the world
+is evolving the way it is. and then the extra
+component of a world model is something that can predict how the world is going to evolve as a consequence of an
+action you might take, right? so one model really is, here is my idea of the state
+of the world at time t, here is an action i might take. what is the predicted state of the world at time t plus one? now, that state of the world does not need to represent
+everything about the world, it just needs to represent enough that's relevant for
+this planning of the action, but not necessarily all the details. now, here is the problem. you're not going to be able to do this with generative models. so a generative model
+that's trained on video, and we've tried to do this for 10 years. you take a video, show a system a piece of video and then ask you to predict
+the reminder of the video. basically predict what's gonna happen. - one frame at a time. do the same thing as sort of
+the autoregressive llms do, but for video. - right. either one frame at a time or
+a group of frames at a time. but yeah, a large video
+model, if you want. (laughing) the idea of doing this has been floating around for a long time. and at fair, some colleagues and i have been trying to do
+this for about 10 years. and you can't really do the
+same trick as with llms, because llms, as i said, you can't predict exactly
+which word is gonna follow a sequence of words, but you can predict the
+distribution of the words. now, if you go to video, what you would have to do is predict the distribution of all possible frames in a video. and we don't really know
+how to do that properly. we do not know how to
+represent distributions over high dimensional continuous spaces in ways that are useful. and there lies the main issue. and the reason we can do this is because the world is incredibly more complicated and richer in terms of information than text. text is discreet. video is high dimensional and continuous. a lot of details in this. so if i take a video of this room, and the video is a camera panning around, there is no way i can predict everything that's gonna be
+in the room as i pan around, the system cannot predict
+what's gonna be in the room as the camera is panning. maybe it's gonna predict, this is a room where there's
+a light and there is a wall and things like that. it can't predict what the
+painting of the wall looks like or what the texture of
+the couch looks like. certainly not the texture of the carpet. so there's no way it can
+predict all those details. so the way to handle this is one way to possibly to handle this, which we've been working for a long time, is to have a model that has
+what's called a latent variable. and the latent variable
+is fed to a neural net, and it's supposed to represent all the information about the world that you don't perceive yet. and that you need to augment the system for the prediction to do a
+good job at predicting pixels, including the fine texture
+of the carpet and the couch and the painting on the wall. that has been a complete
+failure, essentially. and we've tried lots of things. we tried just straight neural nets, we tried gans, we tried vaes, all kinds of regularized auto encoders, we tried many things. we also tried those kind of methods to learn good representations
+of images or video that could then be used as input for example, an image
+classification system. and that also has basically failed. like all the systems that
+attempt to predict missing parts of an image or a video from a corrupted version of it, basically. so, right, take an image or a video, corrupt it or transform it in some way, and then try to reconstruct
+the complete video or image from the corrupted version. and then hope that internally, the system will develop good
+representations of images that you can use for object recognition, segmentation, whatever it is. that has been essentially
+a complete failure. and it works really well for text. that's the principle that
+is used for llms, right? - so where's the failure exactly? is it that it is very difficult to form a good representation of an image, like a good embedding of all the important
+information in the image? is it in terms of the consistency of image to image to image to
+image that forms the video? if we do a highlight reel
+of all the ways you failed. what's that look like? - okay. so the reason this doesn't work is... first of all, i have to tell
+you exactly what doesn't work because there is something
+else that does work. so the thing that does not work is training the system to
+learn representations of images by training it to reconstruct a good image from a corrupted version of it. okay. that's what doesn't work. and we have a whole slew
+of techniques for this that are variant of then
+using auto encoders. something called mae, developed by some of
+my colleagues at fair, masked autoencoder. so it's basically like the
+llms or things like this where you train the
+system by corrupting text, except you corrupt images. you remove patches from it and you train a gigantic
+neural network to reconstruct. the features you get are not good. and you know they're not good because if you now train
+the same architecture, but you train it to
+supervise with label data, with textual descriptions
+of images, et cetera, you do get good representations. and the performance on
+recognition tasks is much better than if you do this self
+supervised free training. - so the architecture is good. - the architecture is good. the architecture of the encoder is good. okay? but the fact that you train the
+system to reconstruct images does not lead it to produce long good generic features of images. - [lex] when you train it
+in a self supervised way. - self supervised by reconstruction. - [lex] yeah, by reconstruction. - okay, so what's the alternative? (both laugh) the alternative is joint embedding. - what is joint embedding? what are these architectures
+that you're so excited about? - okay, so now instead
+of training a system to encode the image and then training it to
+reconstruct the full image from a corrupted version, you take the full image, you take the corrupted
+or transformed version, you run them both through encoders, which in general are
+identical but not necessarily. and then you train a predictor
+on top of those encoders to predict the representation
+of the full input from the representation
+of the corrupted one. okay? so joint embedding, because you're taking the full input and the corrupted version
+or transformed version, run them both through encoders so you get a joint embedding. and then you're saying can i predict the
+representation of the full one from the representation
+of the corrupted one? okay? and i call this a jepa, so that means joint embedding
+predictive architecture because there's joint embedding and there is this predictor that predicts the representation of the good guy from the bad guy. and the big question is how do you train something like this? and until five years ago or six years ago, we didn't have particularly good answers for how you train those things, except for one called
+contrastive learning. and the idea of contrastive learning is you take a pair of images that are, again, an image
+and a corrupted version or degraded version somehow or transformed version
+of the original one. and you train the predicted representation to be the same as that. if you only do this, this system collapses. it basically completely ignores the input and produces representations
+that are constant. so the contrastive methods avoid this. and those things have been
+around since the early '90s, i had a paper on this in 1993, is you also show pairs of images
+that you know are different and then you push away the
+representations from each other. so you say not only do
+representations of things that we know are the same, should be the same or should be similar, but representation of things
+that we know are different should be different. and that prevents the collapse, but it has some limitation. and there's a whole bunch of techniques that have appeared over
+the last six, seven years that can revive this type of method. some of them from fair, some of them from google and other places. but there are limitations to
+those contrastive methods. what has changed in the
+last three, four years is now we have methods
+that are non-contrastive. so they don't require those
+negative contrastive samples of images that we know are different. you train them only with images that are different versions or different views of the same thing. and you rely on some other tweaks to prevent the system from collapsing. and we have half a dozen
+different methods for this now. - so what is the fundamental difference between joint embedding
+architectures and llms? so can jepa take us to agi? whether we should say that
+you don't like the term agi and we'll probably argue, i think every single
+time i've talked to you we've argued about the g in agi. - [yann] yes. - i get it, i get it, i get it. (laughing) well we'll probably
+continue to argue about it. it's great. because you're like french, and ami is i guess friend in french- - [yann] yes. - and ami stands for advanced
+machine intelligence- - [yann] right. - but either way, can
+jepa take us to that, towards that advanced
+machine intelligence? - well, so it's a first step. okay? so first of all, what's the difference with generative architectures like llms? so llms or vision systems that
+are trained by reconstruction generate the inputs, right? they generate the original input that is non-corrupted,
+non-transformed, right? so you have to predict all the pixels. and there is a huge amount of
+resources spent in the system to actually predict all those
+pixels, all the details. in a jepa, you're not trying
+to predict all the pixels, you're only trying to predict an abstract representation
+of the inputs, right? and that's much easier in many ways. so what the jepa system when it's being trained is trying to do, is extract as much information
+as possible from the input, but yet only extract information that is relatively easily predictable. okay. so there's a lot of things in the world that we cannot predict. like for example, if you
+have a self driving car driving down the street or road. there may be trees around the road. and it could be a windy day, so the leaves on the
+tree are kind of moving in kind of semi chaotic random ways that you can't predict and you don't care, you don't want to predict. so what you want is your encoder to basically eliminate all those details. it'll tell you there's moving leaves, but it's not gonna keep the details of exactly what's going on. and so when you do the prediction
+in representation space, you're not going to have to predict every single pixel of every leaf. and that not only is a lot simpler, but also it allows the system to essentially learn an abstract
+representation of the world where what can be modeled
+and predicted is preserved and the rest is viewed as noise and eliminated by the encoder. so it kind of lifts the
+level of abstraction of the representation. if you think about this, this is something we do
+absolutely all the time. whenever we describe a phenomenon, we describe it at a particular
+level of abstraction. and we don't always describe
+every natural phenomenon in terms of quantum field theory, right? that would be impossible, right? so we have multiple levels of abstraction to describe what happens in the world. starting from quantum field theory to like atomic theory and
+molecules in chemistry, materials, all the way up to kind of
+concrete objects in the real world and things like that. so we can't just only model
+everything at the lowest level. and that's what the idea
+of jepa is really about. learn abstract representation
+in a self supervised manner. and you can do it hierarchically as well. so that i think is an essential component of an intelligent system. and in language, we can
+get away without doing this because language is already
+to some level abstract and already has eliminated
+a lot of information that is not predictable. and so we can get away without
+doing the joint embedding, without lifting the abstraction level and by directly predicting words. - so joint embedding. it's still generative, but it's generative in this
+abstract representation space. - [yann] yeah. - and you're saying language, we were lazy with language 'cause we already got the
+abstract representation for free and now we have to zoom out, actually think about
+generally intelligent systems, we have to deal with the full mess of physical of reality, of reality. and you do have to do this step of jumping from the full,
+rich, detailed reality to an abstract representation
+of that reality based on what you can then reason and all that kind of stuff. - right. and the thing is those
+self supervised algorithms that learn by prediction, even in representation space, they learn more concept if the input data you feed
+them is more redundant. the more redundancy there is in the data, the more they're able to capture some internal structure of it. and so there, there is way more
+redundancy in the structure in perceptual inputs,
+sensory input like vision, than there is in text, which is not nearly as redundant. this is back to the
+question you were asking a few minutes ago. language might represent
+more information really because it's already compressed, you're right about that. but that means it's also less redundant. and so self supervised
+only will not work as well. - is it possible to join the self supervised
+training on visual data and self supervised
+training on language data? there is a huge amount of knowledge even though you talk down about
+those 10 to the 13 tokens. those 10 to the 13 tokens represent the entirety, a large fraction of what
+us humans have figured out. both the shit talk on reddit and the contents of all
+the books and the articles and the full spectrum of
+human intellectual creation. so is it possible to
+join those two together? - well, eventually, yes, but i think if we do this too early, we run the risk of being tempted to cheat. and in fact, that's what
+people are doing at the moment with vision language model. we're basically cheating. we are using language as a crutch to help the deficiencies
+of our vision systems to kind of learn good representations
+from images and video. and the problem with this is that we might improve our
+vision language system a bit, i mean our language models
+by feeding them images. but we're not gonna get to the level of even the intelligence or level of understanding of the world of a cat or a dog which
+doesn't have language. they don't have language and they understand the world
+much better than any llm. they can plan really complex actions and sort of imagine the
+result of a bunch of actions. how do we get machines to learn that before we combine that with language? obviously, if we combine
+this with language, this is gonna be a winner, but before that we have to focus on like how do we get systems
+to learn how the world works? - so this kind of joint embedding
+predictive architecture, for you, that's gonna be able to learn something like common sense, something like what a cat uses to predict how to mess with
+its owner most optimally by knocking over a thing. - that's the hope. in fact, the techniques we're
+using are non-contrastive. so not only is the
+architecture non-generative, the learning procedures we're
+using are non-contrastive. we have two sets of techniques. one set is based on distillation and there's a number of methods
+that use this principle. one by deepmind called byol. a couple by fair, one called vicreg and
+another one called i-jepa. and vicreg, i should say, is not a distillation method actually, but i-jepa and byol certainly are. and there's another one
+also called dino or dino, also produced at fair. and the idea of those things is that you take the full
+input, let's say an image. you run it through an encoder, produces a representation. and then you corrupt that
+input or transform it, run it through essentially what
+amounts to the same encoder with some minor differences. and then train a predictor. sometimes a predictor is very simple, sometimes it doesn't exist. but train a predictor to
+predict a representation of the first uncorrupted input
+from the corrupted input. but you only train the second branch. you only train the part of the network that is fed with the corrupted input. the other network, you don't train. but since they share the same weight, when you modify the first one, it also modifies the second one. and with various tricks, you can prevent the system from collapsing with the collapse of the
+type i was explaining before where the system basically
+ignores the input. so that works very well. the two techniques
+we've developed at fair, dino and i-jepa work really well for that. - so what kind of data
+are we talking about here? - so there's several scenarios. one scenario is you take an image, you corrupt it by changing
+the cropping, for example, changing the size a little bit, maybe changing the
+orientation, blurring it, changing the colors, doing all kinds of horrible things to it- - but basic horrible things. - basic horrible things that sort of degrade
+the quality a little bit and change the framing, crop the image. and in some cases, in the case of i-jepa, you don't need to do any of this, you just mask some parts of it, right? you just basically remove some regions like a big block, essentially. and then run through the encoders and train the entire system, encoder and predictor, to predict the representation
+of the good one from the representation
+of the corrupted one. so that's the i-jepa. it doesn't need to know that
+it's an image, for example, because the only thing it needs to know is how to do this masking. whereas with dino, you need to know it's an image because you need to do things like geometry transformation and blurring and things like that that
+are really image specific. a more recent version of this
+that we have is called v-jepa. so it's basically the same idea as i-jepa except it's applied to video. so now you take a whole video and you mask a whole chunk of it. and what we mask is actually
+kind of a temporal tube. so like a whole segment
+of each frame in the video over the entire video. - and that tube is like
+statically positioned throughout the frames? it's literally just a straight tube? - throughout the tube, yeah. typically it's 16 frames or something, and we mask the same region
+over the entire 16 frames. it's a different one for
+every video, obviously. and then again, train that system so as to predict the
+representation of the full video from the partially masked video. and that works really well. it's the first system that we have that learns good representations of video so that when you feed
+those representations to a supervised classifier head, it can tell you what action
+is taking place in the video with pretty good accuracy. so it's the first time we get
+something of that quality. - so that's a good test that a good representation is formed. that means there's something to this. - yeah. we also preliminary result that seem to indicate that the representation
+allows our system to tell whether the video is physically possible or completely impossible because some object disappeared or an object suddenly jumped
+from one location to another or changed shape or something. - so it's able to capture
+some physics based constraints about the reality
+represented in the video? - [yann] yeah. - about the appearance and
+the disappearance of objects? - yeah. that's really new. - okay, but can this actually get us to this kind of world model that understands enough about the world to be able to drive a car? - possibly. and this is gonna take a while before we get to that point. and there are systems
+already, robotic systems, that are based on this idea. what you need for this is a slightly modified version of this where imagine that you have a video, a complete video, and what you're doing to this video is that you are either
+translating it in time towards the future. so you'll only see the
+beginning of the video, but you don't see the latter part of it that is in the original one. or you just mask the second
+half of the video, for example. and then you train this i-jepa system or the type i described, to predict representation
+of the full video from the shifted one. but you also feed the
+predictor with an action. for example, the wheel is turned 10 degrees to the right
+or something, right? so if it's a dash cam in a car and you know the angle of the wheel, you should be able to
+predict to some extent what's going to happen to what you see. you're not gonna be able
+to predict all the details of objects that appear
+in the view, obviously, but at an abstract representation level, you can probably predict
+what's gonna happen. so now what you have is an internal model that says, here is my idea of the state of the world at time t, here is an action i'm taking, here is a prediction of the state of the
+world at time t plus one, t plus delta t, t plus two seconds, whatever it is. if you have a model of this type, you can use it for planning. so now you can do what llms cannot do, which is planning what you're gonna do so as you arrive at a particular outcome or satisfy a particular objective, right? so you can have a number
+of objectives, right? i can predict that if i have
+an object like this, right? and i open my hand, it's gonna fall, right? and if i push it with a
+particular force on the table, it's gonna move. if i push the table itself, it's probably not gonna
+move with the same force. so we have this internal model
+of the world in our mind, which allows us to plan
+sequences of actions to arrive at a particular goal. and so now if you have this world model, we can imagine a sequence of actions, predict what the outcome of the sequence of action is going to be, measure to what extent the final state satisfies a particular objective like moving the bottle
+to the left of the table. and then plan a sequence of actions that will minimize this
+objective at runtime. we're not talking about learning, we're talking about inference time, right? so this is planning, really. and in optimal control, this is a very classical thing. it's called model predictive control. you have a model of the
+system you want to control that can predict the sequence of states corresponding to a sequence of commands. and you are planning
+a sequence of commands so that according to your world model, the end state of the system will satisfy any objectives that you fix. this is the way rocket
+trajectories have been planned since computers have been around. so since the early '60s, essentially. - so yes, for a model predictive control, but you also often talk
+about hierarchical planning. - [yann] yeah. - can hierarchical planning
+emerge from this somehow? - well, so no. you will have to build
+a specific architecture to allow for hierarchical planning. so hierarchical planning
+is absolutely necessary if you want to plan complex actions. if i wanna go from, let's
+say, from new york to paris, this the example i use all the time. and i'm sitting in my office at nyu. my objective that i need to minimize is my distance to paris. at a high level, a very abstract
+representation of my location, i would have to decompose
+this into two sub-goals. first one is go to the airport, second one is catch a plane to paris. okay. so my sub-goal is now
+going to the airport. my objective function is
+my distance to the airport. how do i go to the airport? well, i have to go in the
+street and hail a taxi, which you can do in new york. okay, now i have another sub-goal. go down on the street. well, that means going to the elevator, going down the elevator, walk out to the street. how do i go to the elevator? i have to stand up from my chair, open the door of my office, go to the elevator, push the button. how do i get up for my chair? like you can imagine going
+down all the way down to basically what amounts to millisecond by
+millisecond muscle control. okay? and obviously you're not
+going to plan your entire trip from new york to paris in terms of millisecond by
+millisecond muscle control. first, that would be incredibly expensive, but it will also be completely impossible because you don't know all the conditions of what's gonna happen. how long it's gonna take to catch a taxi or to go to the airport with traffic. i mean, you would have to know exactly the condition of everything to be able to do this planning, and you don't have the information. so you have to do this
+hierarchical planning so that you can start acting and then sort of re-planning as you go. and nobody really knows
+how to do this in ai. nobody knows how to train a system to learn the appropriate
+multiple levels of representation so that hierarchical planning works. - does something like that already emerge? so like can you use an llm, state-of-the-art llm, to get you from new york to paris by doing exactly the kind of detailed set of questions that you just did? which is can you give me a
+list of 10 steps i need to do to get from new york to paris? and then for each of those steps, can you give me a list of 10 steps how i make that step happen? and for each of those steps, can you give me a list of 10 steps to make each one of those, until you're moving
+your individual muscles? maybe not. whatever you can actually act upon using your own mind. - right. so there's a lot of questions that are also implied by this, right? so the first thing is llms
+will be able to answer some of those questions down to some level of abstraction. under the condition that
+they've been trained with similar scenarios
+in their training set. - they would be able to
+answer all of those questions. but some of them may be hallucinated, meaning non-factual. - yeah, true. i mean they'll probably
+produce some answer. except they're not gonna be able to really kind of produce millisecond by millisecond muscle control of how you stand up
+from your chair, right? but down to some level of abstraction where you can describe things by words, they might be able to give you a plan, but only under the condition
+that they've been trained to produce those kind of plans, right? they're not gonna be able
+to plan for situations they never encountered before. they basically are going to
+have to regurgitate the template that they've been trained on. - but where, just for the
+example of new york to paris, is it gonna start getting into trouble? like at which layer of abstraction do you think you'll start? because like i can imagine almost every single part of that, an llm will be able to
+answer somewhat accurately, especially when you're talking
+about new york and paris, major cities. - so i mean certainly an llm would be able to solve that problem if you fine tune it for it. - [lex] sure. - and so i can't say that
+an llm cannot do this, it can't do this if you train it for it, there's no question, down to a certain level where things can be
+formulated in terms of words. but like if you wanna go down to like how do you climb down the stairs or just stand up from your
+chair in terms of words, like you can't do it. that's one of the reasons you need experience of the physical world, which is much higher bandwidth than what you can express in words, in human language. - so everything we've been talking about on the joint embedding space, is it possible that that's what we need for like the interaction
+with physical reality on the robotics front? and then just the llms are the
+thing that sits on top of it for the bigger reasoning about like the fact that i
+need to book a plane ticket and i need to know know how to
+go to the websites and so on. - sure. and a lot of plans that people know about that are relatively high
+level are actually learned. most people don't invent
+the plans by themselves. we have some ability to do
+this, of course, obviously, but most plans that people use are plans that have been trained on. like they've seen other
+people use those plans or they've been told
+how to do things, right? that you can't invent how
+you like take a person who's never heard of airplanes and tell them like, how do
+you go from new york to paris? they're probably not going to be able to kind of deconstruct the whole plan unless they've seen
+examples of that before. so certainly llms are
+gonna be able to do this. but then how you link this
+from the low level of actions, that needs to be done
+with things like jepa, that basically lift the abstraction level of the representation without attempting to reconstruct every detail of the situation. that's why we need jepas for. - i would love to sort of
+linger on your skepticism around autoregressive llms. so one way i would like
+to test that skepticism is everything you say makes a lot of sense, but if i apply everything
+you said today and in general to like, i don't know, 10 years ago, maybe a little bit less. no, let's say three years ago. i wouldn't be able to
+predict the success of llms. so does it make sense to you that autoregressive llms
+are able to be so damn good? - [yann] yes. - can you explain your intuition? because if i were to take
+your wisdom and intuition at face value, i would say there's no
+way autoregressive llms one token at a time, would be able to do the kind
+of things they're doing. - no, there's one thing
+that autoregressive llms or that llms in general, not
+just the autoregressive ones, but including the bert
+style bidirectional ones, are exploiting and its
+self supervised running. and i've been a very, very strong advocate of self supervised running for many years. so those things are an incredibly
+impressive demonstration that self supervised
+learning actually works. the idea that started... it didn't start with bert, but it was really kind of a
+good demonstration with this. so the idea that you take a
+piece of text, you corrupt it, and then you train some
+gigantic neural net to reconstruct the parts that are missing. that has been an enormous... produced an enormous amount of benefits. it allowed us to create systems
+that understand language, systems that can translate hundreds of languages in any direction, systems that are multilingual. it's a single system that can be trained to
+understand hundreds of languages and translate in any direction and produce summaries and then answer questions
+and produce text. and then there's a special case of it, which is the autoregressive trick where you constrain the system to not elaborate a
+representation of the text from looking at the entire text, but only predicting a word from the words that have come before. right? and you do this by constraining the
+architecture of the network. and that's what you can build
+an autoregressive llm from. so there was a surprise many years ago with what's called decoder only llm. so systems of this type that are just trying to produce
+words from the previous one. and the fact that when you scale them up, they tend to really kind of
+understand more about language. when you train them on lots of data, you make them really big. that was kind of a surprise. and that surprise occurred
+quite a while back. like with work from google,
+meta, openai, et cetera, going back to the gpt kind of general pre-trained transformers. - you mean like gpt-2? like there's a certain place where you start to realize scaling might actually keep
+giving us an emergent benefit. - yeah, i mean there were
+work from various places, but if you want to kind of
+place it in the gpt timeline, that would be around gpt-2, yeah. - well, 'cause you said it, you're so charismatic and
+you said so many words, but self supervised learning, yes. but again, the same
+intuition you're applying to saying that autoregressive llms cannot have a deep
+understanding of the world, if we just apply that same intuition, does it make sense to you that they're able to form enough of a representation in the world to be damn convincing, essentially passing the
+original turing test with flying colors. - well, we're fooled by
+their fluency, right? we just assume that if a system is fluent in manipulating language, then it has all the characteristics
+of human intelligence. but that impression is false. we're really fooled by it. - well, what do you think
+alan turing would say? without understanding anything, just hanging out with it- - alan turing would decide that a turing test is a really bad test. (lex chuckles) okay. this is what the ai community
+has decided many years ago that the turing test was a
+really bad test of intelligence. - what would hans moravec say about the large language models? - hans moravec would say the moravec's paradox still applies. - [lex] okay. - okay? okay, we can pass- - you don't think he
+would be really impressed. - no, of course everybody
+would be impressed. (laughs) but it is not a question
+of being impressed or not, it is a question of knowing what the limit of those systems can do. again, they are impressive. they can do a lot of useful things. there's a whole industry that
+is being built around them. they're gonna make progress, but there is a lot of
+things they cannot do. and we have to realize what they cannot do and then figure out how we get there. and i'm not saying this... i'm saying this from
+basically 10 years of research on the idea of self supervised running, actually that's going
+back more than 10 years, but the idea of self supervised learning. so basically capturing
+the internal structure of a piece of a set of inputs without training the system
+for any particular task, right? learning representations. the conference i co-founded 14 years ago is called international conference on learning representations, that's the entire issue that
+deep learning is dealing with. right? and it's been my obsession
+for almost 40 years now. so learning representation
+is really the thing. for the longest time we could only do this
+with supervised learning. and then we started working on what we used to call unsupervised learning and sort of revived the idea
+of unsupervised learning in the early 2000s with
+yoshua bengio and jeff hinton. then discovered that supervised learning actually works pretty well if you can collect enough data. and so the whole idea of
+unsupervised self supervision took a backseat for a bit and then i kind of tried
+to revive it in a big way, starting in 2014 basically
+when we started fair, and really pushing for
+like finding new methods to do self supervised running, both for text and for images
+and for video and audio. and some of that work has
+been incredibly successful. i mean, the reason why we have multilingual translation system, things to do, content moderation on meta,
+for example, on facebook that are multilingual, that understand whether piece of text is hate speech or not, or something is due to their progress using self supervised running for nlp, combining this with
+transformer architectures and blah blah blah. but that's the big success
+of self supervised running. we had similar success
+in speech recognition, a system called wav2vec, which is also a joint embedding
+architecture by the way, trained with contrastive learning. and that system also can produce speech recognition systems
+that are multilingual with mostly unlabeled data and only need a few
+minutes of labeled data to actually do speech recognition. that's amazing. we have systems now based on
+those combination of ideas that can do real time translation of hundreds of languages into each other, speech to speech. - speech to speech, even including, which is fascinating, languages that don't have written forms- - that's right.
+- they're spoken only. - that's right. we don't go through text, it goes directly from speech to speech using an internal representation of kinda speech units that are discrete. but it's called textless nlp. we used to call it this way. but yeah. i mean incredible success there. and then for 10 years we
+tried to apply this idea to learning representations of images by training a system to predict videos, learning intuitive physics by training a system to predict what's gonna happen in the video. and tried and tried and failed and failed with generative models, with models that predict pixels. we could not get them to learn good representations of images, we could not get them to learn
+good presentations of videos. and we tried many times, we published lots of papers on it. they kind of sort of worked,
+but not really great. it started working, we abandoned this idea
+of predicting every pixel and basically just doing the
+joint embedding and predicting in representation space. that works. so there's ample evidence that we're not gonna be able
+to learn good representations of the real world using generative model. so i'm telling people, everybody's talking about generative ai. if you're really interested
+in human level ai, abandon the idea of generative ai. (lex laughs) - okay. but you really think it's possible to get far with joint
+embedding representation? so like there's common sense reasoning and then there's high level reasoning. like i feel like those are two... the kind of reasoning
+that llms are able to do. okay, let me not use the word reasoning, but the kind of stuff
+that llms are able to do seems fundamentally different than the common sense reasoning we use to navigate the world. - [yann] yeah. - it seems like we're gonna need both- - sure.
+- would you be able to get, with the joint embedding which
+is a jepa type of approach, looking at video, would
+you be able to learn, let's see, well, how to get from new york to paris, or how to understand the state
+of politics in the world? (both laugh) right? these are things where various humans generate a lot of
+language and opinions on, in the space of language, but don't visually represent that in any clearly compressible way. - right. well, there's a lot of situations that might be difficult for a purely language
+based system to know. like, okay, you can probably
+learn from reading texts, the entirety of the publicly
+available text in the world that i cannot get from new york to paris by snapping my fingers. that's not gonna work, right? - [lex] yes. - but there's probably
+sort of more complex scenarios of this type which an llm may never have encountered and may not be able to determine whether it's possible or not. so that link from the low
+level to the high level... the thing is that the high
+level that language expresses is based on the common
+experience of the low level, which llms currently do not have. when we talk to each other, we know we have a common
+experience of the world. like a lot of it is similar. and llms don't have that. - but see, there it's present. you and i have a common
+experience of the world in terms of the physics
+of how gravity works and stuff like this. and that common knowledge of the world, i feel like is there in the language. we don't explicitly express it, but if you have a huge amount of text, you're going to get this stuff
+that's between the lines. in order to form a consistent world model, you're going to have to
+understand how gravity works, even if you don't have an
+explicit explanation of gravity. so even though, in the case of gravity, there is explicit explanation. there's gravity in wikipedia. but like the stuff that we think of as common sense reasoning, i feel like to generate
+language correctly, you're going to have to figure that out. now, you could say as you have, there's not enough text-
+- well, i agree. - sorry. okay, yeah. (laughs) you don't think so? - no, i agree with what you just said, which is that to be able to
+do high level common sense... to have high level common sense, you need to have the
+low level common sense to build on top of. - [lex] yeah. but that's not there. - that's not there in llms. llms are purely trained from text. so then the other statement you made, i would not agree with the fact that implicit
+in all languages in the world is the underlying reality. there's a lot about underlying reality which is not expressed in language. - is that obvious to you? - yeah, totally. - so like all the conversations we have... okay, there's the dark web, meaning whatever, the private conversations
+like dms and stuff like this, which is much, much larger
+probably than what's available, what llms are trained on. - you don't need to communicate the stuff that is common. - but the humor, all of it. no, you do. you don't need to, but it comes through. like if i accidentally knock this over, you'll probably make fun of me. and in the content of
+the you making fun of me will be explanation of
+the fact that cups fall and then gravity works in this way. and then you'll have some
+very vague information about what kind of things
+explode when they hit the ground. and then maybe you'll
+make a joke about entropy or something like this and we will never be able
+to reconstruct this again. like, okay, you'll make
+a little joke like this and there'll be trillion of other jokes. and from the jokes, you can piece together the
+fact that gravity works and mugs can break and
+all this kind of stuff, you don't need to see... it'll be very inefficient. it's easier for like to not knock the thing over. (laughing) - [yann] yeah. - but i feel like it would be there if you have enough of that data. - i just think that most of
+the information of this type that we have accumulated
+when we were babies is just not present in text, in any description, essentially. and the sensory data
+is a much richer source for getting that kind of understanding. i mean, that's the 16,000 hours of wake time of a 4-year-old. and tend to do 15 bytes,
+going through vision. just vision, right? there is a similar bandwidth of touch and a little less through audio. and then text doesn't... language doesn't come in
+until like a year in life. and by the time you are nine years old, you've learned about gravity, you know about inertia, you know about gravity, you know there's stability, you know about the distinction between animate and inanimate objects. by' months, you know about like why
+people want to do things and you help them if they can't. i mean there's a lot of
+things that you learn mostly by observation, really not even through interaction. in the first few months of life, babies don't really have
+any influence on the world. they can only observe, right? and you accumulate like a
+gigantic amount of knowledge just from that. so that's what we're missing
+from current ai systems. - i think in one of your
+slides you have this nice plot that is one of the ways you
+show that llms are limited. i wonder if you could
+talk about hallucinations from your perspectives. why hallucinations happen
+from large language models, and to what degree is
+that a fundamental flaw of large language models. - right. so because of the
+autoregressive prediction, every time an llm produces
+a token or a word, there is some level of
+probability for that word to take you out of the
+set of reasonable answers. and if you assume, which is a very strong assumption, that the probability of such error is those errors are independent across a sequence of
+tokens being produced. what that means is that every
+time you produce a token, the probability that you stay within the set
+of correct answer decreases and it decreases exponentially. - so there's a strong, like
+you said, assumption there that if there's a non-zero
+probability of making a mistake, which there appears to be, then there's going to be a kind of drift. - yeah. and that drift is exponential. it's like errors accumulate, right? so the probability that an
+answer would be nonsensical increases exponentially
+with the number of tokens. - is that obvious to you by the way? well, so mathematically speaking maybe, but like isn't there a
+kind of gravitational pull towards the truth? because on average, hopefully, the truth is well represented
+in the training set. - no, it's basically a struggle against the curse of dimensionality. so the way you can correct for this is that you fine tune the system by having it produce answers for all kinds of questions
+that people might come up with. and people are people, so a lot of the questions that they have are very similar to each other. so you can probably cover, you know, 80% or whatever of
+questions that people will ask by collecting data. and then you fine tune the system to produce good answers
+for all of those things. and it's probably gonna
+be able to learn that because it's got a lot
+of capacity to learn. but then there is the
+enormous set of prompts that you have not covered during training. and that set is enormous. like within the set of
+all possible prompts, the proportion of prompts that
+have been used for training is absolutely tiny. it's a tiny, tiny, tiny subset
+of all possible prompts. and so the system will behave properly on the prompts that it's
+been either trained, pre-trained or fine tuned. but then there is an
+entire space of things that it cannot possibly
+have been trained on because it's just the number is gigantic. so whatever training the system has been subject to produce
+appropriate answers, you can break it by finding out a prompt that will be outside of the set of prompts it's been trained on or things that are similar, and then it will just
+spew complete nonsense. - when you say prompt, do you mean that exact prompt or do you mean a prompt that's like, in many parts very different than... is it that easy to ask a question or to say a thing that
+hasn't been said before on the internet? - i mean, people have come up with things where like you put essentially a random sequence of
+characters in a prompt and that's enough to kind of
+throw the system into a mode where it's gonna answer
+something completely different than it would have answered without this. so that's a way to jailbreak
+the system, basically. go outside of its conditioning, right? - so that's a very clear
+demonstration of it. but of course, that goes outside of what it's designed to do, right? if you actually stitch together reasonably grammatical sentences, is it that easy to break it? - yeah. some people have done things like you write a sentence in english or you ask a question in english and it produces a perfectly fine answer. and then you just substitute a few words by the same word in another language, and all of a sudden the
+answer is complete nonsense. - yeah. so i guess what i'm saying is like, which fraction of prompts that
+humans are likely to generate are going to break the system? - so the problem is that
+there is a long tail. - [lex] yes. - this is an issue that a
+lot of people have realized in social networks and stuff like that, which is there's a very, very long tail of things that people will ask. and you can fine tune the system for the 80% or whatever of the things that most people will ask. and then this long tail is so large that you're not gonna be
+able to fine tune the system for all the conditions. and in the end, the system ends up being kind of a giant lookup
+table, right? (laughing) essentially. which is not really what you want. you want systems that can reason, certainly that can plan. so the type of reasoning
+that takes place in llm is very, very primitive. and the reason you can tell it's primitive is because the amount of computation that is spent per token
+produced is constant. so if you ask a question and that question has an answer
+in a given number of token, the amount of computation
+devoted to computing that answer can be exactly estimated. it's the size of the prediction network with its 36 layers or 92
+layers or whatever it is, multiplied by number of tokens. that's it. and so essentially, it doesn't matter if
+the question being asked is simple to answer,
+complicated to answer, impossible to answer because it's decided,
+well, there's something. the amount of computation the system will be able to
+devote to the answer is constant or is proportional to the
+number of token produced in the answer, right? this is not the way we work, the way we reason is that when we are faced with a complex problem or a complex question, we spend more time trying to
+solve it and answer it, right? because it's more difficult. - there's a prediction element, there's an iterative element where you're like adjusting
+your understanding of a thing by going over and over and over. there's a hierarchical elements on. does this mean it's a
+fundamental flaw of llms- - [yann] yeah. - or does it mean that... (laughs) there's more part to that question? (laughs) now you're just behaving like an llm. (laughs) immediately answering. no, that it's just the
+low level world model on top of which we can then build some of these kinds of mechanisms, like you said, persistent
+long-term memory or reasoning, so on. but we need that world model
+that comes from language. maybe it is not so difficult to build this kind of reasoning system on top of a well constructed world model. - okay. whether it's difficult or not, the near future will say, because a lot of people
+are working on reasoning and planning abilities
+for dialogue systems. i mean, even if we restrict
+ourselves to language, just having the ability to plan your answer before you answer, in terms that are not necessarily linked with the language you're gonna
+use to produce the answer. right? so this idea of this mental model that allows you to plan
+what you're gonna say before you say it. that is very important. i think there's going
+to be a lot of systems over the next few years that are going to have this capability, but the blueprint of those systems will be extremely different
+from autoregressive llms. so it's the same difference as the difference between what psychology has called
+system one and system two in humans, right? so system one is the type of
+task that you can accomplish without like deliberately
+consciously think about how you do them. you just do them. you've done them enough that you can just do it
+subconsciously, right? without thinking about them. if you're an experienced driver, you can drive without
+really thinking about it and you can talk to
+someone at the same time or listen to the radio, right? if you are a very
+experienced chess player, you can play against a
+non-experienced chess player without really thinking either, you just recognize the
+pattern and you play, right? that's system one. so all the things that
+you do instinctively without really having to deliberately plan and think about it. and then there is other
+tasks where you need to plan. so if you are a not too
+experienced chess player or you are experienced but you play against another
+experienced chess player, you think about all
+kinds of options, right? you think about it for a while, right? and you're much better if you
+have time to think about it than you are if you play
+blitz with limited time. and so this type of deliberate planning, which uses your internal world
+model, that's system two, this is what llms currently cannot do. how do we get them to do this, right? how do we build a system that can do this kind
+of planning or reasoning that devotes more resources to complex problems
+than to simple problems. and it's not going to be autoregressive prediction of tokens, it's going to be more
+something akin to inference of latent variables in what used to be called
+probabilistic models or graphical models and
+things of that type. so basically the principle is like this. the prompt is like observed variables. and what the model does is that it's basically a measure of... it can measure to what extent an answer is a good answer for a prompt. okay? so think of it as some
+gigantic neural net, but it's got only one output. and that output is a scaler number, which is let's say zero if the answer is a good
+answer for the question, and a large number if the answer is not a good
+answer for the question. imagine you had this model. if you had such a model, you could use it to produce good answers. the way you would do is produce the prompt and then search through the
+space of possible answers for one that minimizes that number. that's called an energy based model. - but that energy based model would need the model
+constructed by the llm. - well, so really what you need to do would be to not search over
+possible strings of text that minimize that energy. but what you would do is do this in abstract
+representation space. so in sort of the space
+of abstract thoughts, you would elaborate a thought, right? using this process of minimizing
+the output of your model. okay? which is just a scaler. it's an optimization process, right? so now the way the system
+produces its answer is through optimization by minimizing an objective
+function basically, right? and this is, we're
+talking about inference, we're not talking about training, right? the system has been trained already. so now we have an abstract representation of the thought of the answer, representation of the answer. we feed that to basically
+an autoregressive decoder, which can be very simple, that turns this into a text
+that expresses this thought. okay? so that in my opinion is the blueprint of future data systems. they will think about their answer, plan their answer by optimization before turning it into text. and that is turning complete. - can you explain exactly what the optimization problem there is? like what's the objective function? just linger on it. you kind of briefly described it, but over what space are you optimizing? - the space of representations- - goes abstract representation. - that's right. so you have an abstract
+representation inside the system. you have a prompt. the prompt goes through an encoder, produces a representation, perhaps goes through a predictor that predicts a
+representation of the answer, of the proper answer. but that representation
+may not be a good answer because there might be
+some complicated reasoning you need to do, right? so then you have another process that takes the representation
+of the answers and modifies it so as to minimize a cost function that measures to what extent the answer is a good
+answer for the question. now we sort of ignore the fact for... i mean, the issue for a moment of how you train that system to measure whether an answer
+is a good answer for sure. - but suppose such a
+system could be created, what's the process? this kind of search like process. - it's an optimization process. you can do this if the entire
+system is differentiable, that scaler output is the result of running
+through some neural net, running the answer, the representation of the
+answer through some neural net. then by gradient descent, by back propagating gradients, you can figure out like how to modify the
+representation of the answers so as to minimize that. - so that's still a gradient based. - it's gradient based inference. so now you have a
+representation of the answer in abstract space. now you can turn it into text, right? and the cool thing about this is that the representation now can be optimized through gradient descent, but also is independent of the language in which you're going
+to express the answer. - right. so you're operating in the
+substruct of representation. i mean this goes back
+to the joint embedding. - [yann] right. - that it's better to
+work in the space of... i don't know. or to romanticize the notion like space of concepts versus the space of concrete
+sensory information. - right. - okay. but can this do something like reasoning, which is what we're talking about? - well, not really, only in a very simple way. i mean basically you can
+think of those things as doing the kind of optimization
+i was talking about, except they're optimizing
+the discrete space which is the space of
+possible sequences of tokens. and they do this optimization
+in a horribly inefficient way, which is generate a lot of hypothesis and then select the best ones. and that's incredibly wasteful in terms of competition, 'cause you basically have to run your llm for like every possible
+generative sequence. and it's incredibly wasteful. so it's much better to do an optimization in continuous space where you can do gradient descent as opposed to like generate tons of things and then select the best, you just iteratively refine your answer to go towards the best, right? that's much more efficient. but you can only do this
+in continuous spaces with differentiable functions. - you're talking about the reasoning, like ability to think
+deeply or to reason deeply. how do you know what is an answer that's better or worse
+based on deep reasoning? - right. so then we're asking the question, of conceptually, how do you
+train an energy based model? right? so energy based model is a function with a scaler
+output, just a number. you give it two inputs, x and y, and it tells you whether y
+is compatible with x or not. x you observe, let's say it's a prompt, an
+image, a video, whatever. and y is a proposal for an answer, a continuation of video, whatever. and it tells you whether
+y is compatible with x. and the way it tells you
+that y is compatible with x is that the output of that
+function would be zero if y is compatible with x, it would be a positive number, non-zero if y is not compatible with x. okay. how do you train a system like this? at a completely general level, is you show it pairs of x
+and ys that are compatible, a question and the corresponding answer. and you train the parameters
+of the big neural net inside to produce zero. okay. now that doesn't completely work because the system might decide, well, i'm just gonna
+say zero for everything. so now you have to have a process to make sure that for a wrong y, the energy will be larger than zero. and there you have two options, one is contrastive methods. so contrastive method is
+you show an x and a bad y, and you tell the system, well, give a high energy to this. like push up the energy, right? change the weights in the neural
+net that compute the energy so that it goes up. so that's contrasting methods. the problem with this is
+if the space of y is large, the number of such contrasted samples you're gonna have to show is gigantic. but people do this. they do this when you
+train a system with rlhf, basically what you're training is what's called a reward model, which is basically an objective function that tells you whether
+an answer is good or bad. and that's basically exactly what this is. so we already do this to some extent. we're just not using it for inference, we're just using it for training. there is another set of methods which are non-contrastive,
+and i prefer those. and those non-contrastive
+method basically say, okay, the energy function needs to have low energy on
+pairs of xys that are compatible that come from your training set. how do you make sure that the energy is gonna be higher everywhere else? and the way you do this is by having a regularizer, a criterion, a term in your cost function that basically minimizes
+the volume of space that can take low energy. and the precise way to do this, there's all kinds of different
+specific ways to do this depending on the architecture, but that's the basic principle. so that if you push
+down the energy function for particular regions in the xy space, it will automatically
+go up in other places because there's only a
+limited volume of space that can take low energy. okay? by the construction of the system or by the regularizing function. - we've been talking very generally, but what is a good x and a good y? what is a good representation of x and y? because we've been talking about language. and if you just take language directly, that presumably is not good, so there has to be some kind of abstract
+representation of ideas. - yeah. i mean you can do this
+with language directly by just, you know, x is a text and y is the continuation of that text. - [lex] yes. - or x is a question, y is the answer. - but you're saying
+that's not gonna take it. i mean, that's going to
+do what llms are doing. - well, no. it depends on how the internal
+structure of the system is built. if the internal structure of the system is built in such a way
+that inside of the system there is a latent variable, let's called it z, that you can manipulate so as to minimize the output energy, then that z can be viewed as
+representation of a good answer that you can translate into
+a y that is a good answer. - so this kind of system could be trained in a very similar way? - very similar way. but you have to have this
+way of preventing collapse, of ensuring that there is high energy for things you don't train it on. and currently it's very implicit in llms. it is done in a way that people don't realize it's being done, but it is being done. it's due to the fact that when you give a high
+probability to a word, automatically you give low
+probability to other words because you only have a finite amount of probability
+to go around. (laughing) right? they have to sub to one. so when you minimize the
+cross entropy or whatever, when you train your llm
+to predict the next word, you are increasing the probability your system will give to the correct word, but you're also decreasing the probability it will give to the incorrect words. now, indirectly, that gives
+a low probability to... a high probability to sequences
+of words that are good and low probability two
+sequences of words that are bad, but it's very indirect. it's not obvious why this
+actually works at all, because you're not doing
+it on a joint probability of all the symbols in a sequence, you're just doing it kind of, sort of factorized that probability in terms of conditional probabilities over successive tokens. - so how do you do this for visual data? - so we've been doing this with all jepa architectures,
+basically the- - [lex] the joint embedding? - i-jepa. so there, the compatibility
+between two things is here's an image or a video, here is a corrupted, shifted
+or transformed version of that image or video or masked. okay? and then the energy of the system is the prediction error
+of the representation. the predicted representation
+of the good thing versus the actual representation
+of the good thing, right? so you run the corrupted
+image to the system, predict the representation of
+the good input uncorrupted, and then compute the prediction error. that's the energy of the system. so this system will tell you, this is a good image and
+this is a corrupted version. it will give you zero energy if those two things are effectively, one of them is a corrupted
+version of the other, give you a high energy if the two images are
+completely different. - and hopefully that whole process gives you a really nice
+compressed representation of reality, of visual reality. - and we know it does because then we use those presentations as input to a classification
+system or something, and it works-
+- and then that classification system
+works really nicely. okay. well, so to summarize, you recommend in a spicy way
+that only yann lecun can, you recommend that we
+abandon generative models in favor of joint embedding architectures? - [yann] yes. - abandon autoregressive generation. - [yann] yes. - abandon... (laughs) this feels like court testimony. abandon probabilistic models in favor of energy based
+models, as we talked about. abandon contrastive methods in favor of regularized methods. and let me ask you about this; you've been for a while, a
+critic of reinforcement learning. - [yann] yes. - so the last recommendation
+is that we abandon rl in favor of model predictive control, as you were talking about. and only use rl when planning doesn't yield
+the predicted outcome. and we use rl in that case to adjust the world model or the critic. - [yann] yes. - so you've mentioned rlhf, reinforcement learning
+with human feedback. why do you still hate
+reinforcement learning? - [yann] i don't hate
+reinforcement learning, and i think it's-
+- so it's all love? - i think it should not
+be abandoned completely, but i think it's use should be minimized because it's incredibly
+inefficient in terms of samples. and so the proper way to train a system is to first have it learn good representations of
+the world and world models from mostly observation, maybe a little bit of interactions. - and then steer it based on that. if the representation is good, then the adjustments should be minimal. - yeah. now there's two things. if you've learned the world model, you can use the world model
+to plan a sequence of actions to arrive at a particular objective. you don't need rl, unless the way you measure
+whether you succeed might be inexact. your idea of whether you were
+gonna fall from your bike might be wrong, or whether the person
+you're fighting with mma was gonna do something and they do something else. (laughing) so there's two ways you can be wrong. either your objective function does not reflect the actual objective function
+you want to optimize, or your world model is inaccurate, right? so the prediction you were making about what was gonna happen
+in the world is inaccurate. so if you want to adjust your world model while you are operating the world or your objective function, that is basically in the realm of rl. this is what rl deals with
+to some extent, right? so adjust your world model. and the way to adjust your
+world model, even in advance, is to explore parts of the
+space with your world model, where you know that your
+world model is inaccurate. that's called curiosity
+basically, or play, right? when you play, you kind of explore
+part of the state space that you don't want to do for real because it might be dangerous, but you can adjust your world model without killing yourself
+basically. (laughs) so that's what you want to use rl for. when it comes time to
+learning a particular task, you already have all the
+good representations, you already have your world model, but you need to adjust it
+for the situation at hand. that's when you use rl. - why do you think rlhf works so well? this enforcement learning
+with human feedback, why did it have such a
+transformational effect on large language models that came before? - so what's had the
+transformational effect is human feedback. there is many ways to use it and some of it is just
+purely supervised, actually, it's not really reinforcement learning. - so it's the hf. (laughing) - it's the hf. and then there is various ways
+to use human feedback, right? so you can ask humans to rate answers, multiple answers that are
+produced by a world model. and then what you do is you
+train an objective function to predict that rating. and then you can use
+that objective function to predict whether an answer is good, and you can back propagate
+really through this to fine tune your system so that it only produces
+highly rated answers. okay? so that's one way. so that's like in rl, that means training what's
+called a reward model, right? so something that, basically your small neural net that estimates to what extent
+an answer is good, right? it's very similar to the objective i was talking about earlier for planning, except now it's not used for planning, it's used for fine tuning your system. i think it would be much more efficient to use it for planning, but currently it's used to fine tune the parameters of the system. now, there's several ways to do this. some of them are supervised. you just ask a human person, like what is a good
+answer for this, right? then you just type the answer. i mean, there's lots of ways that those systems are being adjusted. - now, a lot of people
+have been very critical of the recently released
+google's gemini 1.5 for essentially, in my words,
+i could say super woke. woke in the negative
+connotation of that word. there is some almost hilariously
+absurd things that it does, like it modifies history, like generating images of
+a black george washington or perhaps more seriously something that you commented on twitter, which is refusing to comment
+on or generate images of, or even descriptions of
+tiananmen square or the tank men, one of the most sort of legendary
+protest images in history. and of course, these
+images are highly censored by the chinese government. and therefore everybody
+started asking questions of what is the process
+of designing these llms? what is the role of censorship in these, and all that kind of stuff. so you commented on twitter saying that open source is the answer. (laughs)
+- yeah. - essentially. so can you explain? - i actually made that comment on just about every social network i can. (lex laughs) and i've made that point
+multiple times in various forums. here's my point of view on this. people can complain that
+ai systems are biased, and they generally are biased by the distribution of the training data that they've been trained on that reflects biases in society. and that is potentially
+offensive to some people or potentially not. and some techniques to de-bias then become offensive to some people because of historical
+incorrectness and things like that. and so you can ask the question. you can ask two questions. the first question is, is it possible to produce an
+ai system that is not biased? and the answer is absolutely not. and it's not because of
+technological challenges, although there are technological
+challenges to that. it's because bias is in
+the eye of the beholder. different people may have different ideas about what constitutes
+bias for a lot of things. i mean there are facts
+that are indisputable, but there are a lot of opinions or things that can be expressed in different ways. and so you cannot have an unbiased system, that's just an impossibility. and so what's the answer to this? and the answer is the
+same answer that we found in liberal democracy about the press. the press needs to be free and diverse. we have free speech for a good reason. it's because we don't want
+all of our information to come from a unique source, 'cause that's opposite to
+the whole idea of democracy and progressive ideas
+and even science, right? in science, people have to
+argue for different opinions. and science makes progress
+when people disagree and they come up with an answer and a consensus forms, right? and it's true in all
+democracies around the world. so there is a future
+which is already happening where every single one of our interaction with the digital world will be mediated by ai systems, ai assistance, right? we're gonna have smart glasses. you can already buy them
+from meta, (laughing) the ray-ban meta. where you can talk to them and they are connected with an llm and you can get answers
+on any question you have. or you can be looking at a monument and there is a camera in
+the system, in the glasses, you can ask it like what can you tell me about this building or this monument? you can be looking at a
+menu in a foreign language and the thing we will
+translate it for you. we can do real time translation if we speak different languages. so a lot of our interactions
+with the digital world are going to be mediated by those systems in the near future. increasingly, the search
+engines that we're gonna use are not gonna be search engines, they're gonna be dialogue systems that we just ask a question, and it will answer and then point you to the perhaps appropriate
+reference for it. but here is the thing, we cannot afford those systems to come from a handful of companies on the west coast of the us because those systems will constitute the repository of all human knowledge. and we cannot have that be controlled by a small number of people, right? it has to be diverse for the same reason the
+press has to be diverse. so how do we get a diverse
+set of ai assistance? it's very expensive and difficult to train a base model, right? a base llm at the moment. in the future might be
+something different, but at the moment that's an llm. so only a few companies
+can do this properly. and if some of those
+subsystems are open source, anybody can use them, anybody can fine tune them. if we put in place some systems that allows any group of people, whether they are individual citizens, groups of citizens, government organizations, ngos, companies, whatever, to take those open source
+systems, ai systems, and fine tune them for their
+own purpose on their own data, there we're gonna have
+a very large diversity of different ai systems that are specialized for
+all of those things, right? so i'll tell you, i talked to the french
+government quite a bit and the french government will not accept that the digital diet
+of all their citizens be controlled by three companies on the west coast of the us. that's just not acceptable. it's a danger to democracy. regardless of how well intentioned those companies are, right? and it's also a danger to local culture, to values, to language, right? i was talking with the
+founder of infosys in india. he's funding a project
+to fine tune llama 2, the open source model produced by meta. so that llama 2 speaks all 22
+official languages in india. it's very important for people in india. i was talking to a
+former colleague of mine, moustapha cisse, who used to be a scientist at fair, and then moved back to africa and created a research
+lab for google in africa and now has a new startup kera. and what he's trying to
+do is basically have llm that speaks the local languages in senegal so that people can have
+access to medical information, 'cause they don't have access to doctors, it's a very small number of
+doctors per capita in senegal. i mean, you can't have any of this unless you have open source platforms. so with open source platforms, you can have ai systems that are not only diverse in
+terms of political opinions or things of that type, but in terms of language,
+culture, value systems, political opinions, technical
+abilities in various domains. and you can have an industry, an ecosystem of companies that fine tune those open source systems for vertical applications
+in industry, right? you have, i don't know, a
+publisher has thousands of books and they want to build a system that allows a customer
+to just ask a question about the content of any of their books. you need to train on their
+proprietary data, right? you have a company, we have one within meta
+it's called meta mate. and it's basically an llm that can answer any question about internal stuff
+about about the company. very useful. a lot of companies want this, right? a lot of companies want this
+not just for their employees, but also for their customers, to take care of their customers. so the only way you're
+gonna have an ai industry, the only way you're gonna have ai systems that are not uniquely biased, is if you have open source platforms on top of which any group can
+build specialized systems. so the inevitable direction of history is that the vast majority of ai systems will be built on top of
+open source platforms. - so that's a beautiful vision. so meaning like a company
+like meta or google or so on, should take only minimal fine tuning steps after the building, the
+foundation, pre-trained model. as few steps as possible. - basically. (lex sighs) - can meta afford to do that? - no. - so i don't know if you know this, but companies are supposed
+to make money somehow. and open source is like giving away... i don't know, mark made a video, mark zuckerberg. a very sexy video talking
+about 350,000 nvidia h100s. the math of that is, just for the gpus,
+that's a hundred billion, plus the infrastructure
+for training everything. so i'm no business guy, but how do you make money on that? so the vision you paint
+is a really powerful one, but how is it possible to make money? - okay. so you have several
+business models, right? the business model that
+meta is built around is you offer a service, and the financing of that service is either through ads or
+through business customers. so for example, if you have an llm that can help a mom-and-pop pizza place by talking to their
+customers through whatsapp, and so the customers
+can just order a pizza and the system will just ask them, like what topping do you want
+or what size, blah blah, blah. the business will pay for that. okay? that's a model. and otherwise, if it's a system that is on the more kind
+of classical services, it can be ad supported or
+there's several models. but the point is, if you have a big enough
+potential customer base and you need to build that
+system anyway for them, it doesn't hurt you to actually distribute it to open source. - again, i'm no business guy, but if you release the open source model, then other people can
+do the same kind of task and compete on it. basically provide fine
+tuned models for businesses, is the bet that meta is making... by the way, i'm a huge fan of all this. but is the bet that meta is making is like, "we'll do a better job of it?" - well, no. the bet is more, we already have a huge user
+base and customer base. - [lex] ah, right.
+- right? so it's gonna be useful to them. whatever we offer them is gonna be useful and there is a way to
+derive revenue from this. - [lex] sure. - and it doesn't hurt that we provide that system
+or the base model, right? the foundation model in open source for others to build
+applications on top of it too. if those applications turn out to be useful for our customers, we can just buy it for them. it could be that they
+will improve the platform. in fact, we see this already. i mean there is literally
+millions of downloads of llama 2 and thousands of people
+who have provided ideas about how to make it better. so this clearly accelerates progress to make the system available to sort of a wide community of people. and there is literally
+thousands of businesses who are building applications with it. meta's ability to derive
+revenue from this technology is not impaired by the distribution of base models in open source. - the fundamental criticism
+that gemini is getting is that, as you pointed
+out on the west coast... just to clarify, we're currently in the east coast, where i would suppose meta
+ai headquarters would be. (laughs) so strong words about the west coast. but i guess the issue that happens is, i think it's fair to say
+that most tech people have a political affiliation
+with the left wing. they lean left. and so the problem that people
+are criticizing gemini with is that in that de-biasing
+process that you mentioned, that their ideological
+lean becomes obvious. is this something that could be escaped? you're saying open source is the only way? - [yann] yeah. - have you witnessed this
+kind of ideological lean that makes engineering difficult? - no, i don't think it has to do... i don't think the issue has to do with the political leaning of the people designing those systems. it has to do with the
+acceptability or political leanings of their customer base or audience, right? so a big company cannot afford
+to offend too many people. so they're going to make sure that whatever product
+they put out is "safe," whatever that means. and it's very possible to overdo it. and it's also very possible to... it's impossible to do it
+properly for everyone. you're not going to satisfy everyone. so that's what i said before, you cannot have a system that is unbiased and is perceived as unbiased by everyone. it's gonna be, you push it in one way, one set of people are
+gonna see it as biased. and then you push it the other way and another set of people
+is gonna see it as biased. and then in addition to this, there's the issue of
+if you push the system perhaps a little too far in one direction, it's gonna be non-factual, right? you're gonna have black nazi soldiers in- - yeah. so we should mention image generation of black nazi soldiers, which is not factually accurate. - right. and can be offensive for
+some people as well, right? so it's gonna be impossible to kind of produce systems
+that are unbiased for everyone. so the only solution
+that i see is diversity. - and diversity in full
+meaning of that word, diversity in every possible way. - [yann] yeah. - marc andreessen just tweeted today, let me do a tl;dr. the conclusion is only
+startups and open source can avoid the issue that he's
+highlighting with big tech. he's asking, can big tech actually field
+generative ai products? one, ever escalating demands
+from internal activists, employee mobs, crazed executives, broken boards, pressure groups, extremist regulators,
+government agencies, the press, in quotes "experts," and everything corrupting the output. two, constant risk of
+generating a bad answer or drawing a bad picture
+or rendering a bad video. who knows what it's going
+to say or do at any moment? three, legal exposure,
+product liability, slander, election law, many other things and so on. anything that makes congress mad. four, continuous attempts to tighten grip on acceptable output, degrade the model, like how good it actually is in terms of usable and
+pleasant to use and effective and all that kind of stuff. and five, publicity of
+bad text, images, video, actual puts those examples
+into the training data for the next version. and so on. so he just highlights
+how difficult this is. from all kinds of people being unhappy. he just said you can't create a system that makes everybody happy. - [yann] yes. - so if you're going to do
+the fine tuning yourself and keep a close source, essentially the problem there is then trying to minimize
+the number of people who are going to be unhappy. - [yann] yeah. - and you're saying like the only... that that's almost
+impossible to do, right? and the better way is to do open source. - basically, yeah. i mean marc is right about a
+number of things that he lists that indeed scare large companies. certainly, congressional
+investigations is one of them. legal liability. making things that get people to hurt
+themselves or hurt others. like big companies are really careful about not producing things of this type, because they have... they don't want to hurt
+anyone, first of all. and then second, they wanna
+preserve their business. so it's essentially impossible
+for systems like this that can inevitably
+formulate political opinions and opinions about various things that may be political or not, but that people may disagree about. about, you know, moral issues and things about like
+questions about religion and things like that, right? or cultural issues that people from different communities would disagree with in the first place. so there's only kind of a
+relatively small number of things that people will sort of agree on, basic principles. but beyond that, if you want those systems to be useful, they will necessarily have
+to offend a number of people, inevitably. - and so open source is just better- - [yann] diversity is better, right? - and open source enables diversity. - that's right. open source enables diversity. - this can be a fascinating world where if it's true that
+the open source world, if meta leads the way and creates this kind of open
+source foundation model world, there's going to be, like governments will have a
+fine tuned model. (laughing) - [yann] yeah. - and then potentially, people that vote left and right will have their own model and preference to be able to choose. and it will potentially
+divide us even more but that's on us humans. we get to figure out... basically the technology enables humans to human more effectively. and all the difficult ethical
+questions that humans raise we'll just leave it up
+to us to figure that out. - yeah, i mean there are
+some limits to what... the same way there are
+limits to free speech, there has to be some
+limit to the kind of stuff that those systems might
+be authorized to produce, some guardrails. so i mean, that's one thing
+i've been interested in, which is in the type of architecture that we were discussing before, where the output of the system is a result of an inference
+to satisfy an objective. that objective can include guardrails. and we can put guardrails
+in open source systems. i mean, if we eventually have systems that are built with this blueprint, we can put guardrails in those systems that guarantee that there is sort of a
+minimum set of guardrails that make the system non-dangerous
+and non-toxic, et cetera. basic things that
+everybody would agree on. and then the fine tuning
+that people will add or the additional guardrails
+that people will add will kind of cater to their
+community, whatever it is. - and yeah, the fine tuning would be more about the gray
+areas of what is hate speech, what is dangerous and
+all that kind of stuff. i mean, you've- - [yann] or different value systems. - different value systems. but still even with the objectives of how to build a bio weapon, for example, i think something you've commented on, or at least there's a paper where a collection of researchers is trying to understand the
+social impacts of these llms. and i guess one threshold that's nice is like does the llm make it
+any easier than a search would, like a google search would? - right. so the increasing number
+of studies on this seems to point to the
+fact that it doesn't help. so having an llm doesn't help you design or build a bio
+weapon or a chemical weapon if you already have access to
+a search engine and a library. and so the sort of increased
+information you get or the ease with which you get
+it doesn't really help you. that's the first thing. the second thing is, it's one thing to have
+a list of instructions of how to make a chemical weapon,
+for example, a bio weapon. it's another thing to actually build it. and it's much harder than you might think, and then llm will not help you with that. in fact, nobody in the world, not even like countries use bio weapons because most of the time they have no idea how to protect their own
+populations against it. so it's too dangerous
+actually to kind of ever use. and it's in fact banned
+by international treaties. chemical weapons is different. it's also banned by treaties, but it's the same problem. it's difficult to use in situations that doesn't
+turn against the perpetrators. but we could ask elon musk. like i can give you a very
+precise list of instructions of how you build a rocket engine. and even if you have
+a team of 50 engineers that are really experienced building it, you're still gonna have
+to blow up a dozen of them before you get one that works. and it's the same with
+chemical weapons or bio weapons or things like this. it requires expertise in the real world that the llm is not gonna help you with. - and it requires even
+the common sense expertise that we've been talking about, which is how to take
+language based instructions and materialize them in the physical world requires a lot of knowledge
+that's not in the instructions. - yeah, exactly. a lot of biologists have
+posted on this actually in response to those things saying like do you realize how hard it is to actually do the lab work? like this is not trivial. - yeah. and that's hans moravec
+comes to light once again. just to linger on llama. mark announced that llama
+3 is coming out eventually, i don't think there's a release date, but what are you most excited about? first of all, llama 2
+that's already out there, and maybe the future llama 3, 4, 5, 6, 10, just the future of the
+open source under meta? - well, a number of things. so there's gonna be like
+various versions of llama that are improvements of previous llamas. bigger, better, multimodal,
+things like that. and then in future generations, systems that are capable of planning, that really understand
+how the world works, maybe are trained from video
+so they have some world model. maybe capable of the type
+of reasoning and planning i was talking about earlier. like how long is that gonna take? like when is the research that
+is going in that direction going to sort of feed into
+the product line, if you want, of llama? i don't know, i can't tell you. and there's a few breakthroughs that we have to basically go through before we can get there. but you'll be able to monitor our progress because we publish our research, right? so last week we published the v-jepa work, which is sort of a first step towards training systems from video. and then the next step
+is gonna be world models based on kind of this type of idea, training from video. there's similar work at
+deepmind also taking place, and also at uc berkeley
+on world models and video. a lot of people are working on this. i think a lot of good ideas are appearing. my bet is that those systems
+are gonna be jepa-like, they're not gonna be generative models. and we'll see what the future will tell. there's really good work at... a gentleman called danijar
+hafner who is now deepmind, who's worked on kind
+of models of this type that learn representations and then use them for
+planning or learning tasks by reinforcement training. and a lot of work at berkeley by pieter abbeel, sergey levine, a bunch of other people of that type. i'm collaborating with actually in the context of some
+grants with my nyu hat. and then collaborations also through meta, 'cause the lab at berkeley is associated with meta
+in some way, with fair. so i think it's very exciting. i think i'm super excited about... i haven't been that excited about like the direction
+of machine learning and ai since 10 years ago when fair was started, and before that, 30 years ago, when we were working on, sorry 35, on combination nets and the
+early days of neural net. so i'm super excited because i see a path towards potentially human level intelligence with systems that can
+understand the world, remember, plan, reason. there is some set of ideas
+to make progress there that might have a chance of working. and i'm really excited about this. what i like is that somewhat we get onto like a good direction and perhaps succeed before my
+brain turns to a white sauce or before i need to retire. (laughs) - yeah. yeah. are you also excited by... is it beautiful to you just
+the amount of gpus involved, sort of the whole training
+process on this much compute? just zooming out, just looking at earth and humans together have built these computing devices and are able to train this one brain, we then open source. (laughs) like giving birth to
+this open source brain trained on this gigantic compute system. there's just the details
+of how to train on that, how to build the infrastructure
+and the hardware, the cooling, all of this kind of stuff. are you just still the
+most of your excitement is in the theory aspect of it? meaning like the software. - well, i used to be a
+hardware guy many years ago. (laughs)
+- yes, yes, that's right. - decades ago. - hardware has improved a little bit. changed a little bit, yeah. - i mean, certainly scale is
+necessary but not sufficient. - [lex] absolutely. - so we certainly need computation. i mean, we're still far
+in terms of compute power from what we would need to match the compute
+power of the human brain. this may occur in the next couple decades, but we're still some ways away. and certainly in terms
+of power efficiency, we're really far. so a lot of progress to make in hardware. and right now a lot of
+the progress is not... i mean, there's a bit coming
+from silicon technology, but a lot of it coming from
+architectural innovation and quite a bit coming from
+like more efficient ways of implementing the architectures
+that have become popular. basically combination of
+transformers and com net, right? and so there's still some ways to go until we are going to saturate. we're gonna have to come up with like new principles,
+new fabrication technology, new basic components, perhaps based on sort
+of different principles than those classical digital cmos. - interesting. so you think in order to build ami, ami, we potentially might need
+some hardware innovation too? - well, if we wanna make it ubiquitous, yeah, certainly. because we're gonna have to
+reduce the power consumption. a gpu today, right? is half a kilowatt to a kilowatt. human brain is about 25 watts. and the gpu is way below
+the power of human brain. you need something like a hundred thousand or a million to match it. so we are off by a huge factor. - you often say that
+agi is not coming soon. meaning like not this year,
+not the next few years, potentially farther away. what's your basic intuition behind that? - so first of all, it's
+not to be an event, right? the idea somehow which is popularized by
+science fiction in hollywood that somehow somebody is
+gonna discover the secret, the secret to agi or
+human level ai or ami, whatever you wanna call it, and then turn on a machine
+and then we have agi. that's just not going to happen. it's not going to be an event. it's gonna be gradual progress. are we gonna have systems that can learn from
+video how the world works and learn good representations? yeah. before we get them to
+the scale and performance that we observe in humans, it's gonna take quite a while. it's not gonna happen in one day. are we gonna get systems that can have large amount
+of associated memories so they can remember stuff? yeah. but same, it's not gonna happen tomorrow. i mean, there is some basic techniques that need to be developed. we have a lot of them, but like to get this to work
+together with a full system is another story. are we gonna have systems
+that can reason and plan, perhaps along the lines of
+objective driven ai architectures that i described before? yeah, but like before we
+get this to work properly, it's gonna take a while. and before we get all those
+things to work together. and then on top of this, have systems that can learn
+like hierarchical planning, hierarchical representations, systems that can be configured for a lot of different situation at hands the way the human brain can. all of this is gonna
+take at least a decade, probably much more, because there are a lot of problems that we're not seeing right now that we have not encountered. and so we don't know if
+there is an easy solution within this framework. it's not just around the corner. i mean, i've been hearing
+people for the last 12, 15 years claiming that agi is
+just around the corner and being systematically wrong. and i knew they were wrong
+when they were saying it. i called it bullshit. (laughs) - why do you think people
+have been calling... first of all, i mean,
+from the beginning of, from the birth of the term
+artificial intelligence, there has been an eternal optimism that's perhaps unlike other technologies. is it moravec's paradox? is it the explanation for why people are so
+optimistic about agi? - i don't think it's
+just moravec's paradox. moravec's paradox is a consequence of realizing that the world
+is not as easy as we think. so first of all, intelligence
+is not a linear thing that you can measure with a scaler, with a single number. can you say that humans are
+smarter than orangutans? in some ways, yes, but in some ways orangutans
+are smarter than humans in a lot of domains that allows them to survive
+in the forest, (laughing) for example. - so iq is a very limited
+measure of intelligence. true intelligence is bigger than what iq,
+for example, measures. - well, iq can measure
+approximately something for humans, but because humans kind of come in relatively kind of uniform form, right? - [lex] yeah. - but it only measures one type of ability that may be relevant for
+some tasks, but not others. but then if you are talking
+about other intelligent entities for which the basic things
+that are easy to them is very different, then it doesn't mean anything. so intelligence is a collection of skills and an ability to acquire
+new skills efficiently. right? and the collection of skills that a particular
+intelligent entity possess or is capable of learning quickly is different from the collection
+of skills of another one. and because it's a multidimensional thing, the set of skills is a
+high dimensional space, you can't measure. you cannot compare two things as to whether one is more
+intelligent than the other. it's multidimensional. - so you push back against what
+are called ai doomers a lot. can you explain their perspective and why you think they're wrong? - okay. so ai doomers imagine all
+kinds of catastrophe scenarios of how ai could escape our control and basically kill us all. (laughs) and that relies on a
+whole bunch of assumptions that are mostly false. so the first assumption is that the emergence
+of super intelligence could be an event. that at some point we're
+going to figure out the secret and we'll turn on a machine
+that is super intelligent. and because we'd never done it before, it's gonna take over the
+world and kill us all. that is false. it's not gonna be an event. we're gonna have systems that
+are like as smart as a cat, have all the characteristics
+of human level intelligence, but their level of intelligence would be like a cat or a
+parrot maybe or something. and then we're gonna walk our way up to kind of make those
+things more intelligent. and as we make them more intelligent, we're also gonna put
+some guardrails in them and learn how to kind
+of put some guardrails so they behave properly. and we're not gonna do
+this with just one... it's not gonna be one effort, but it's gonna be lots of
+different people doing this. and some of them are gonna succeed at making intelligent systems
+that are controllable and safe and have the right guardrails. and if some other goes rogue, then we can use the good ones
+to go against the rogue ones. (laughs) so it's gonna be smart ai
+police against your rogue ai. so it's not gonna be like
+we're gonna be exposed to like a single rogue ai
+that's gonna kill us all. that's just not happening. now, there is another fallacy, which is the fact that because
+the system is intelligent, it necessarily wants to take over. and there is several arguments that make people scared of this, which i think are
+completely false as well. so one of them is in nature, it seems to be that the
+more intelligent species are the ones that end
+up dominating the other. and even extinguishing the others sometimes by design,
+sometimes just by mistake. and so there is sort of a thinking by which you say, well, if ai systems are more intelligent than us, surely they're going to eliminate us, if not by design, simply because they don't care about us. and that's just preposterous
+for a number of reasons. first reason is they're
+not going to be a species. they're not gonna be a
+species that competes with us. they're not gonna have
+the desire to dominate because the desire to dominate is something that has to be hardwired into an intelligent system. it is hardwired in humans, it is hardwired in baboons, in chimpanzees, in wolves, not in orangutans. the species in which this
+desire to dominate or submit or attain status in other ways is specific to social species. non-social species like
+orangutans don't have it. right? and they are as smart as we are, almost. right? - and to you, there's
+not significant incentive for humans to encode
+that into the ai systems. and to the degree they do, there'll be other ais that
+sort of punish them for it. out-compete them over- - well, there's all kinds of incentive to make ai systems submissive to humans. right?
+- [lex] right. - i mean, this is the way
+we're gonna build them, right? and so then people say,
+oh, but look at llms. llms are not controllable. and they're right, llms are not controllable. but objective driven ai, so systems that derive their answers by optimization of an objective means they have to
+optimize this objective, and that objective can include guardrails. one guardrail is obey humans. another guardrail is don't obey humans if it's hurting other humans- - i've heard that before
+somewhere, i don't remember- - [yann] yes.
+(lex laughs) maybe in a book. (laughs) - yeah. but speaking of that book, could there be unintended
+consequences also from all of this? - no, of course. so this is not a simple problem, right? i mean designing those guardrails so that the system behaves properly is not gonna be a simple issue for which there is a silver bullet, for which you have a mathematical proof that the system can be safe. it's gonna be very progressive, iterative design system where we put those guardrails in such a way that the
+system behave properly. and sometimes they're
+going to do something that was unexpected because
+the guardrail wasn't right, and we're gonna correct them
+so that they do it right. the idea somehow that we
+can't get it slightly wrong, because if we get it
+slightly wrong we all die, is ridiculous. we're just gonna go progressively. the analogy i've used many
+times is turbojet design. how did we figure out how to make turbojets so
+unbelievably reliable, right? i mean, those are like incredibly
+complex pieces of hardware that run at really high temperatures for 20 hours at a time sometimes. and we can fly halfway around the world on a two engine jet liner
+at near the speed of sound. like how incredible is this? it is just unbelievable. and did we do this because we invented
+like a general principle of how to make turbojets safe? no, it took decades to kind of fine tune the
+design of those systems so that they were safe. is there a separate group within general electric
+or snecma or whatever that is specialized in turbojet safety? no. the design is all about safety. because a better turbojet
+is also a safer turbojet, a more reliable one. it's the same for ai. like do you need specific
+provisions to make ai safe? no, you need to make better ai systems and they will be safe because they are designed
+to be more useful and more controllable. - so let's imagine a system, ai system that's able to
+be incredibly convincing and can convince you of anything. i can at least imagine such a system. and i can see such a
+system be weapon-like, because it can control people's minds, we're pretty gullible. we want to believe a thing. and you can have an ai
+system that controls it and you could see governments
+using that as a weapon. so do you think if you
+imagine such a system, there's any parallel to
+something like nuclear weapons? - [yann] no. - so why is that technology different? so you're saying there's going
+to be gradual development? - [yann] yeah. - i mean it might be rapid, but they'll be iterative. and then we'll be able to
+kind of respond and so on. - so that ai system designed
+by vladimir putin or whatever, or his minions (laughing) is gonna be like trying
+to talk to every american to convince them to vote for- - [lex] whoever. - whoever pleases putin or whatever. or rile people up against each other as they've been trying to do. they're not gonna be talking to you, they're gonna be talking
+to your ai assistant which is going to be as
+smart as theirs, right? because as i said, in the future, every single one of your
+interaction with the digital world will be mediated by your ai assistant. so the first thing you're
+gonna ask is, is this a scam? like is this thing like
+telling me the truth? like it's not even going
+to be able to get to you because it's only going to
+talk to your ai assistant, and your ai is not even going to... it's gonna be like a spam filter, right? you're not even seeing the
+email, the spam email, right? it's automatically put in a
+folder that you never see. it's gonna be the same thing. that ai system that tries to
+convince you of something, it's gonna be talking to an ai system which is gonna be at least as smart as it. and is gonna say, this is spam. (laughs) it's not even going to
+bring it to your attention. - so to you it's very
+difficult for any one ai system to take such a big leap ahead to where it can convince
+even the other ai systems? so like there's always going
+to be this kind of race where nobody's way ahead? - that's the history of the world. history of the world is whenever there is a progress someplace, there is a countermeasure. and it's a cat and mouse game. - mostly yes, but this is why nuclear
+weapons are so interesting because that was such a powerful weapon that it mattered who got it first. that you could imagine hitler, stalin, mao getting the weapon first and that having a different
+kind of impact on the world than the united states
+getting the weapon first. to you, nuclear weapons is like... you don't imagine a breakthrough discovery and then manhattan project
+like effort for ai? - no. as i said, it's not going to be an event. it's gonna be continuous progress. and whenever one breakthrough occurs, it's gonna be widely
+disseminated really quickly. probably first within industry. i mean, this is not a domain where government or military organizations are particularly innovative, and they're in fact way behind. and so this is gonna come from industry. and this kind of information
+disseminates extremely quickly. we've seen this over the
+last few years, right? where you have a new... like even take alphago. this was reproduced within three months even without like particularly
+detailed information, right? - yeah. this is an industry that's
+not good at secrecy. (laughs) - but even if there is, just the fact that you know
+that something is possible makes you like realize that it's worth investing
+the time to actually do it. you may be the second person
+to do it but you'll do it. say for all the innovations of self supervised running transformers, decoder only architectures, llms. i mean those things, you don't need to know exactly
+the details of how they work to know that it's possible because it's deployed and
+then it's getting reproduced. and then people who work
+for those companies move. they go from one company to another. and the information disseminates. what makes the success
+of the us tech industry and silicon valley in
+particular, is exactly that, is because information
+circulates really, really quickly and disseminates very quickly. and so the whole region sort of is ahead because of that
+circulation of information. - maybe just to linger on
+the psychology of ai doomers. you give in the classic yann lecun way, a pretty good example of just when a new technology comes to be, you say engineer says, "i invented this new thing,
+i call it a ballpen." and then the twittersphere responds, "omg people could write
+horrible things with it like misinformation,
+propaganda, hate speech. ban it now!" then writing doomers come in, akin to the ai doomers, "imagine if everyone can get a ballpen. this could destroy society. there should be a law against using ballpen
+to write hate speech, regulate ballpens now." and then the pencil industry mogul says, "yeah, ballpens are very dangerous, unlike pencil writing which is erasable, ballpen writing stays forever. government should require a
+license for a pen manufacturer." i mean, this does seem to
+be part of human psychology when it comes up against new technology. what deep insights can
+you speak to about this? - well, there is a natural
+fear of new technology and the impact it can have on society. and people have kind
+of instinctive reaction to the world they know being threatened by major transformations that are either cultural phenomena or technological revolutions. and they fear for their culture, they fear for their job, they fear for the future of their children and their way of life, right? so any change is feared. and you see this along history, like any technological
+revolution or cultural phenomenon was always accompanied by
+groups or reaction in the media that basically attributed
+all the problems, the current problems of society to that particular change, right? electricity was going to
+kill everyone at some point. the train was going to be a horrible thing because you can't breathe
+past 50 kilometers an hour. and so there's a wonderful website called a pessimists archive, right? which has all those
+newspaper clips (laughing) of all the horrible things
+people imagined would arrive because of either technological innovation or a cultural phenomenon. wonderful examples of jazz or comic books being blamed for unemployment or young people not
+wanting to work anymore and things like that, right? and that has existed for centuries. and it's knee jerk reactions. the question is do we embrace
+change or do we resist it? and what are the real dangers as opposed to the imagined imagined ones? - so people worry about... i think one thing they
+worry about with big tech, something we've been
+talking about over and over but i think worth mentioning again, they worry about how powerful ai will be and they worry about it being in the hands of
+one centralized power of just a handful of central control. and so that's the
+skepticism with big tech. these companies can make
+a huge amount of money and control this technology. and by so doing, take advantage, abuse the
+little guy in society. - well, that's exactly why we
+need open source platforms. - yeah. i just wanted to... (laughs) nail the point home more and more. - [yann] yes. - so let me ask you on your... like i said, you do get a little bit flavorful on the internet. joscha bach tweeted
+something that you lol'd at in reference to hal 9,000. quote, "i appreciate your argument and i fully understand your frustration, but whether the pod bay doors
+should be opened or closed is a complex and nuanced issue." so you're at the head of meta ai. this is something that really worries me, that our ai overlords will speak down to us with
+corporate speak of this nature and you sort of resist that
+with your way of being. is this something you can just comment on sort of working at a big company, how you can avoid the
+over fearing, i suppose, the through caution create harm? - yeah. again, i think the answer to
+this is open source platforms and then enabling a widely
+diverse set of people to build ai assistants that represent the diversity of cultures, opinions, languages, and value systems across the world. so that you're not bound
+to just be brainwashed by a particular way of thinking because of a single ai entity. so i mean, i think it's a
+really, really important question for society. and the problem i'm seeing, which is why i've been so vocal and sometimes a little sardonic about it- - never stop. never stop, yann. (both laugh) we love it.
+- is because i see the danger of this concentration of power through proprietary ai systems as a much bigger danger
+than everything else. that if we really want
+diversity of opinion ai systems that in the future that we'll all be interacting
+through ai systems, we need those to be diverse for the preservation
+of a diversity of ideas and creeds and political
+opinions and whatever, and the preservation of democracy. and what works against this is people who think that
+for reasons of security, we should keep ai systems
+under lock and key because it's too dangerous to put it in the hands of everybody because it could be used
+by terrorists or something. that would lead to
+potentially a very bad future in which all of our information diet is controlled by a small
+number of companies through proprietary systems. - so you trust humans with this technology to build systems that are on
+the whole good for humanity? - isn't that what democracy
+and free speech is all about? - i think so. - do you trust institutions
+to do the right thing? do you trust people to do the right thing? and yeah, there's bad people
+who are gonna do bad things, but they're not going to
+have superior technology to the good people. so then it's gonna be my good
+ai against your bad ai, right? i mean it's the examples that
+we were just talking about of maybe some rogue country
+will build some ai system that's gonna try to convince everybody to go into a civil war or something or elect a favorable ruler. but then they will have to go
+past our ai systems, right? (laughs) - an ai system with a
+strong russian accent will be trying to convince our- - and doesn't put any
+articles in their sentences. (both laugh) - well, it'll be at the very
+least, absurdly comedic. okay. so since we talked about
+sort of the physical reality, i'd love to ask your vision
+of the future with robots in this physical reality. so many of the kinds of intelligence you've been speaking about would empower robots to be more effective
+collaborators with us humans. so since tesla's optimus team has been showing us some
+progress in humanoid robots, i think it really reinvigorated
+the whole industry that i think boston
+dynamics has been leading for a very, very long time. so now there's all kinds of companies, figure ai, obviously boston dynamics- - [yann] unitree. - unitree. but there's like a lot of them. it's great. it's great. i mean i love it. so do you think there'll be
+millions of humanoid robots walking around soon? - not soon, but it's gonna happen. like the next decade i think is gonna be really
+interesting in robots. like the emergence of
+the robotics industry has been in the waiting for 10, 20 years, without really emerging other than for like kind
+of pre-program behavior and stuff like that. and the main issue is again,
+the moravec's paradox. like how do we get the systems to understand how the world works and kind of plan actions? and so we can do it for
+really specialized tasks. and the way boston dynamics goes about it is basically with a lot of
+handcrafted dynamical models and careful planning in advance, which is very classical robotics
+with a lot of innovation, a little bit of perception, but it's still not... like they can't build a
+domestic robot, right? and we're still some distance away from completely autonomous
+level five driving. and we're certainly very far away from having level five autonomous driving by a system that can train itself by driving 20 hours, like any 17-year-old. so until we have, again, world models, systems that can train themselves to understand how the world works, we're not gonna have significant
+progress in robotics. so a lot of the people working on robotic hardware at the moment are betting or banking on the fact that ai is gonna make sufficient
+progress towards that. - and they're hoping to
+discover a product in it too- - [yann] yeah. - before you have a
+really strong world model, there'll be an almost strong world model. and people are trying to find a product in a clumsy robot, i suppose. like not a perfectly efficient robot. so there's the factory setting where humanoid robots can help automate some
+aspects of the factory. i think that's a crazy difficult task 'cause of all the safety required and all this kind of stuff, i think in the home is more interesting. but then you start to think... i think you mentioned loading
+the dishwasher, right? - [yann] yeah. - like i suppose that's
+one of the main problems you're working on. - i mean there's cleaning up. (laughs) - [lex] yeah. - cleaning the house, clearing up the table after a meal, washing the dishes, all
+those tasks, cooking. i mean all the tasks that in
+principle could be automated but are actually incredibly sophisticated, really complicated. - but even just basic navigation around a space full of uncertainty. - that sort of works. like you can sort of do this now. navigation is fine. - well, navigation in a way
+that's compelling to us humans is a different thing. - yeah. it's not gonna be necessarily... i mean we have demos actually 'cause there is a so-called
+embodied ai group at fair and they've been not
+building their own robots but using commercial robots. and you can tell the robot
+dog like go to the fridge and they can actually open the fridge and they can probably pick
+up a can in the fridge and stuff like that and bring it to you. so it can navigate, it can grab objects as long as it's been
+trained to recognize them, which vision systems work
+pretty well nowadays. but it's not like a
+completely general robot that would be sophisticated enough to do things like clearing
+up the dinner table. (laughs) - yeah, to me that's an exciting future of getting humanoid robots. robots in general in
+the home more and more because it gets humans to really directly
+interact with ai systems in the physical space. and in so doing it allows us to philosophically,
+psychologically explore our relationships with robots. it can be really, really interesting. so i hope you make progress
+on the whole jepa thing soon. (laughs) - well, i mean, i hope
+things can work as planned. i mean, again, we've been like
+kinda working on this idea of self supervised learning
+from video for 10 years. and only made significant
+progress in the last two or three. - and actually you've mentioned that there's a lot of
+interesting breakthroughs that can happen without having
+access to a lot of compute. so if you're interested in doing a phd in this kind of stuff, there's a lot of possibilities still to do innovative work. so like what advice would you give to a undergrad that's
+looking to go to grad school and do a phd? - so basically, i've listed them already. this idea of how do you train
+a world model by observation? and you don't have to train necessarily on gigantic data sets. i mean, it could turn out to be necessary to actually train on large data sets to have emergent properties
+like we have with llms. but i think there is a lot of
+good ideas that can be done without necessarily scaling up. then there is how do you do planning with a learn world model? if the world the system evolves in is not the physical world, but is the world of let's say the internet or some sort of world of where an action consists in doing a search in a search engine or interrogating a database, or running a simulation or calling a calculator or solving a differential equation, how do you get a system to actually plan a sequence of actions to give the solution to a problem? and so the question of planning is not just a question of
+planning physical actions, it could be planning actions to use tools for a dialogue system or for any kind of intelligence system. and there's some work on
+this but not a huge amount. some work at fair, one called toolformer,
+which was a couple years ago and some more recent work on planning, but i don't think we
+have like a good solution for any of that. then there is the question
+of hierarchical planning. so the example i mentioned of planning a trip from new york to paris, that's hierarchical, but almost every action that we take involves hierarchical
+planning in some sense. and we really have absolutely
+no idea how to do this. like there's zero demonstration of hierarchical planning in ai, where the various levels
+of representations that are necessary have been learned. we can do like two level
+hierarchical planning when we design the two levels. so for example, you have like
+a dog legged robot, right? you want it to go from the
+living room to the kitchen. you can plan a path that
+avoids the obstacle. and then you can send this
+to a lower level planner that figures out how to move the legs to kind of follow that
+trajectories, right? so that works, but that two level planning
+is designed by hand, right? we specify what the proper
+levels of abstraction, the representation at each
+level of abstraction have to be. how do you learn this? how do you learn that
+hierarchical representation of action plans, right? with com nets and deep learning, we can train the system to learn hierarchical
+representations of percepts. what is the equivalent when what you're trying to
+represent are action plans? - for action plans. yeah. so you want basically a
+robot dog or humanoid robot that turns on and travels
+from new york to paris all by itself. - [yann] for example. - all right. it might have some trouble at the tsa but- - no, but even doing
+something fairly simple like a household task. - [lex] sure. - like cooking or something. - yeah. there's a lot involved. it's a super complex task. once again, we take it for granted. what hope do you have for
+the future of humanity? we're talking about so
+many exciting technologies, so many exciting possibilities. what gives you hope when you look out over the next 10, 20, 50, 100 years? if you look at social media, there's wars going on, there's
+division, there's hatred, all this kind of stuff
+that's also part of humanity. but amidst all that, what gives you hope? - i love that question. we can make humanity smarter with ai. okay? i mean ai basically will
+amplify human intelligence. it's as if every one of us will have a staff of smart ai assistants. they might be smarter than us. they'll do our bidding, perhaps execute a task in ways that are much better
+than we could do ourselves because they'd be smarter than us. and so it's like everyone
+would be the boss of a staff of super smart virtual people. so we shouldn't feel threatened by this any more than we should feel threatened by being the manager of a group of people, some of whom are more intelligent than us. i certainly have a lot
+of experience with this. (laughs) of having people working with
+me who are smarter than me. that's actually a wonderful thing. so having machines that
+are smarter than us, that assist us in all of
+our tasks, our daily lives, whether it's professional or personal, i think would be an
+absolutely wonderful thing. because intelligence is the commodity that is most in demand. i mean, all the mistakes
+that humanity makes is because of lack of
+intelligence, really, or lack of knowledge, which is related. so making people smarter
+which can only be better. i mean, for the same reason that public education is a good thing and books are a good thing, and the internet is also a
+good thing, intrinsically. and even social networks are a good thing if you run them properly. (laughs) it's difficult, but you can. because it helps the communication of information and knowledge and the transmission of knowledge. so ai is gonna make humanity smarter. and the analogy i've been using is the fact that perhaps
+an equivalent event in the history of humanity to what might be provided by
+generalization of ai assistant is the invention of the printing press. it made everybody smarter. the fact that people could
+have access to books. books were a lot cheaper
+than they were before. and so a lot more people had
+an incentive to learn to read, which wasn't the case before. and people became smarter. it enabled the enlightenment, right? there wouldn't be an enlightenment without the printing press. it enabled philosophy, rationalism, escape from religious doctrine, democracy, science. and certainly without this there wouldn't have been
+the american revolution or the french revolution. and so we'll still be under
+feudal regimes perhaps. and so it completely transformed the world because people became smarter and kinda learned about things. now, it also created 200 years of essentially religious
+conflicts in europe, right? because the first thing that
+people read was the bible and realized that perhaps there was a different
+interpretation of the bible than what the priests were telling them. and so that created
+the protestant movement and created a rift. and in fact, the catholic church didn't like the idea of the printing press but they had no choice. and so it had some bad
+effects and some good effects. i don't think anyone today would say that the invention
+of the printing press had an overall negative effect despite the fact that it created 200 years of religious conflicts in europe. now compare this, and i was very proud of myself to come up with this analogy, but realized someone else came
+with the same idea before me. compare this with what
+happened in the ottoman empire. the ottoman empire banned the
+printing press for 200 years. and it didn't ban it for all languages, only for arabic. you could actually print books in latin or hebrew or whatever
+in the ottoman empire, just not in arabic. and i thought it was because the rulers just wanted to preserve the control over the
+population and the dogma, religious dogma and everything. but after talking with
+the uae minister of ai, omar al olama, he told me no, there was another reason. and the other reason was that it was to preserve the corporation
+of calligraphers, right? there's like an art form which is writing those
+beautiful arabic poems or whatever religious text in this thing. and it was very powerful
+corporation of scribes basically that kinda run a big chunk of the empire. and we couldn't put them out of business. so they banned the bridging press in part to protect that business. now, what's the analogy for ai today? like who are we protecting by banning ai? like who are the people who
+are asking that ai be regulated to protect their jobs? and of course, it's a real question of what is gonna be the effect of technological transformation like ai on the job market and the labor market? and there are economists who are much more expert
+at this than i am, but when i talk to them, they tell us we're not
+gonna run out of job. this is not gonna cause mass unemployment. this is just gonna be gradual shift of different professions. the professions that are gonna be hot 10 or 15 years from now, we have no idea today
+what they're gonna be. the same way if we go
+back 20 years in the past, like who could have thought 20 years ago that like the hottest job, even like 5, 10 years ago
+was mobile app developer? like smartphones weren't invented. - most of the jobs of the future might be in the metaverse. (laughs) - well, it could be. yeah. - but the point is you
+can't possibly predict. but you're right. i mean, you've made a
+lot of strong points. and i believe that people
+are fundamentally good, and so if ai, especially open source ai can make them smarter, it just empowers the goodness in humans. - so i share that feeling. okay? i think people are
+fundamentally good. (laughing) and in fact a lot of doomers are doomers because they don't think that
+people are fundamentally good. and they either don't trust people or they don't trust the
+institution to do the right thing so that people behave properly. - well, i think both you
+and i believe in humanity, and i think i speak for a lot of people in saying thank you for pushing
+the open source movement, pushing to making both
+research and ai open source, making it available to people, and also the models themselves, making that open source also. so thank you for that. and thank you for speaking your mind in such colorful and beautiful
+ways on the internet. i hope you never stop. you're one of the most fun people i know and get to be a fan of. so yann, thank you for
+speaking to me once again, and thank you for being you. - thank you lex. - thanks for listening to this
+conversation with yann lecun. to support this podcast, please check out our
+sponsors in the description. and now let me leave you with some words from arthur c. clarke, "the only way to discover
+the limits of the possible is to go beyond them into the impossible." thank you for listening and
+hope to see you next time.

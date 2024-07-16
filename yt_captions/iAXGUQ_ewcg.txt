@@ -1,0 +1,109 @@
+If you’re into science, technology, and/or
+space, chances are you’ve heard of the space elevator. And if you’re paying any attention at all,
+you’ve seen just about every famous advocate of space or science parrot out pretty much
+the same facts for the last 10 years. Just last week as I was writing this, the
+illustrious whooshing-animation YouTube channel Kurzgesagt released a video on this very topic. But yet again, it was same bland analogies
+and overall glossing over of the details. Well I may not have an expert animation team
+or a sexy British accent, but what I lack in charm, I’m going to try and make up for
+by diving into the quote-unquote meat and potatoes of engineering this literal stairway
+to the heavens. Hey I’m Grady. Today on Practical Engineering we’re designing
+a space elevator. I’ll go through the background quickly because
+chances are you’ve already heard it from at least a few people who are more handsome
+and charismatic than I am. The space elevator consists of a long tether
+between a geostationary satellite and an anchor point somewhere on the earth’s equator. A climber would ride along the cable to take
+cargo and even humans into space. The goal of the elevator is to reduce the
+complexity and risk associated with rockets and make access to space more routine. Some have estimated that it could reduce the
+costs of getting a payload to orbit by 95%. Unfortunately, there are some major engineering
+challenges that we need to overcome before the idea of an elevator to space can ever
+become a reality. Let’s take a look at what they are. To analyze the space elevator, it helps if
+we use a rotating reference frame. This simplifies the math by making the elevator
+static or unmoving. Having a massive static structure just like
+a bridge or dam puts us squarely within the realm of civil engineering, which most of
+us agree is the best kind of engineering. But how do you analyze a static structure? It’s simple: make sure all the forces cancel
+each other out. Since the structure is at rest, its acceleration
+is zero. Force is mass times acceleration, so the net
+force must be zero as well. Let’s add up the forces on a satellite first. We have gravity which pulls straight down,
+but the force of gravity varies with distance from the earth. This is based on the inverse square law which
+basically says that gravity gets weaker and weaker the further you get from its source. Gravity is the centripetal force pulling the
+satellite toward the earth. Since we’re within a rotating reference
+frame, the satellite also has a centrifugal force pulling in the opposite direction. This force is also dependent on the distance
+from the earth. For a given angular velocity, there’s a
+particular distance from the earth where these two forces are equal and cancel each other
+out, making the satellite static within its reference frame. If you’re trying to keep a satellite above
+a single spot on earth, or geostationary, the angular velocity has to be the same as
+earth’s rate of rotation, approximately one revolution per day. The centripetal and centrifugal forces for
+a geostationary satellite are equal at a distance of approximately 26000 miles or 42000 kilometers
+from the center of the earth. This is known as the Clark belt. Below the Clark Belt, gravity is stronger,
+and above it, the centrifugal force is stronger. But what happens if we add a new force to
+the satellite, say for example, the tension from a gigantic elevator cable? Now we’ve increased the centripetal force,
+so we need more centrifugal force to balance it out. Looking at the equation, we basically have
+two options (both of which come with costs): increase the distance of our satellite from
+earth or increase its mass. This is the reason why some have proposed
+using a captured asteroid for the counterweight. Next, let’s take a look at the climber. Unlike the rest of the space elevator, the
+structure of a climber is fairly easy to conceive. But it does have it’s own engineering challenges,
+the main one of which is power. A trip of over 22,000 miles or 35,000 kilometers
+is no short journey. Unfortunately, running an extension cord is
+just not feasible at these scales. What about solar power? We can do a thought experiment just to test
+out the idea: Just for fun let’s assume we could take all of the power from a high-performance
+thin-film solar panel and magically convert it into work just to lift the solar panel
+itself. Using the wonders of calculus, we can estimate
+that it would take on the order of a week to get from sea level to the Clark Belt. That sounds pretty reasonable until you consider
+the fact that it doesn’t include any of the weight of lifter’s structure or motors
+or payload or friction or drag et cetera. It’s a very generous theoretical minimum
+trip duration using solar power. The reality is much bleaker, so bleak in fact,
+that solar power itself has been pretty much ruled out for powering the lifter. Actually the only feasible way we’ve come
+up with so far is beaming power either through microwaves or gigantic lasers. And I’m using the word “feasible” loosely
+here, because even though practically every engineer ever has waited their entire lives
+for a problem where the solution was a gigantic laser, it’s actually not much better than
+solar power. The most power-intensive part of the journey
+for the climber is at the bottom, where gravity is strongest and centrifugal force is weakest. This is also the part of the journey where
+there’s lots of atmosphere that would distort and abberate the beam of the laser, reducing
+its efficiency even down to about a quarter of a percent. That’s like using an entire nuclear power
+plant for a single mid-rise office building. Luckily, scientists and engineers have developed
+adaptive optics, a system of measuring and compensating for atmospheric distortion in
+real time. This is like noise-cancelling headphones but
+for mirrors. It’s normally used for large earth-based
+telescopes to produce sharper images through the atmosphere, but it could also be applied
+to sharpen the beam of a laser passing up to power our lifter, possibly increasing the
+efficiency by tenfold over a non-adaptive system. Finally, let’s take a look at the tether. If a 26,000 mile rope is unimaginable to you,
+you’re not alone. The tether is generally considered the most
+significant impediment to the overall space elevator concept. The amount of stress a cable can withstand
+before breaking is called its ultimate tensile strength, and it’s measured in force divided
+by the cross sectional area. A thicker cable can withstand more force because
+it’s cross sectional area is larger. And that jives with our common sense. Ignoring the weight of the lifter for now,
+the only force on the cable is the force of gravity due to the weight cable itself. The tension in each part of the cable is the
+weight of everything below it. As you keep moving up, the cable is having
+to hold up more and more of itself, so its diameter must keep getting bigger and bigger
+to stay below the tensile strength. Again using the wonders of calculus we can
+estimate the taper ratio or the ratio between the tether’s diameter at the bottom of the
+elevator, and its diameter at the point of maximum tension at the Clark Belt. Obviously this ratio is extremely sensitive
+to the density and strength of the tether material. For steel, the taper ratio is 10^33. That means if we have a 1 centimeter cable
+at the bottom, it would have to be 11000 times the diameter of the observable universe at
+geostationary height just to be able to hold itself up. In other words, absolutely, positively, categorically
+untenable. For kevlar, things look a bit better with
+a ratio of 10^8. But that’s still 1000 kilometers in diameter,
+still completely unfeasible. I’m sure you see where this is going: nanomaterials. Here I, and indeed most people who have looked
+into this question, take small scale laboratory test results and wantonly scale them up larger
+than anything humanity has ever constructed in real life, completely skipping any intermediate
+steps because, well, the technology hasn’t even made it that far yet. Current estimates put the taper ratio for
+a carbon nanotube tether at somewhere between 2 and 20, which is a massive improvement over
+currently available materials. But only time will tell whether these superlight
+weight ultrastrong materials ever become a reality outside the lab. Is what I’ve done here a simplification? Yes. Is it a gross simplification? Absolutely not. They say the devil’s in the details, but
+that’s not really true for the space elevator. The biggest hang ups in this concept are the
+most fundamental aspects of its design: the mass of the counterweight, getting power to
+the climber, the strength of the tether. I didn’t even have time for details and
+trust me there are a lot. It’s almost to impossible speak in hyperbole
+about the space elevator. We’ve never built anything remotely similar
+in terms of size or technical complexity. And there’s no doubt that if we could build
+it, it would completely change the world by making access to space routine. If it ever does happen, it will be creative
+and passionate engineers leading the way. Thank you for watching and let me know what
+you think. Hey if you liked the video, I’d really appreciate
+if you push the like button and subscribe to the channel. If you like space, I’ve got a few other
+videos that you may find interesting. If you like giving money to strangers, your
+support on Patreon goes directly toward improving the quality and quantity of these videos in
+exchange for being a part of the inner circle of people who I rely on for feedback and advice. Finally, if you like the idea of saving someone’s
+life, please consider joining the Bone Marrow registry. The likelihood of being matched to someone
+in need is low, but if it happens, you might the only person in the world who can save
+that person from a life-threatening disease. Donating bone marrow is not much different
+than donating blood. Click the link in the description to find
+out more. Again, thanks for watching.
