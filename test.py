@@ -1,4 +1,155 @@
-import requests
+import torch.optim
+from transformers import GPT2Config
+from transformers import GPT2LMHeadModel
+from tokenizers.implementations import ByteLevelBPETokenizer
+from dataset import  TokenizedDataset, InfSampler, create_token_file, TextFileDataset
+import torch    
+from torch.utils.data import DataLoader
+import time 
+import os 
+import random 
+import numpy
+import argparse
+from torch.nn import CrossEntropyLoss
+import torch
+from matplotlib import pyplot as plt 
+import json 
+
+_KEYTOKENS      = []
+def keytoken_weighted_loss(inputs, logits, keytoken_ids, alpha=1.0):
+    # Shift so that tokens < n predict n
+    shift_labels = inputs[..., 1:].contiguous()
+    shift_logits = logits[..., :-1, :].contiguous()
+    # Calculate per-token loss
+    loss_fct = CrossEntropyLoss(reduce=False)
+    loss = loss_fct(shift_logits.view(-1, shift_logits.size(-1)), shift_labels.view(-1))
+    # Resize and average loss per sample
+    loss_per_sample = loss.view(shift_logits.size(0), shift_logits.size(1)).mean(axis=1)
+    #return loss_per_sample.mean()
+    # Calculate and scale weighting
+    weights = torch.stack([(inputs == kt).type(torch.float) for kt in keytoken_ids]).sum(
+        axis=[0, 2]
+    )
+    weights = alpha * (1.0 + weights)
+    # Calculate weighted average
+    weighted_loss = (loss_per_sample * weights).mean()
+    return weighted_loss
+
+
+DEVICE      = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+T_TYPE      = torch.float
+
+
+class GPTSteinshark(GPT2LMHeadModel):
+    
+
+    def __init__(self,
+                 input_size=64,
+                 vocab_size=1024,
+                 n_embed=64,
+                 n_layer=16,
+                 n_head=4,
+                 act_fn="gelu_new",
+                 name="steinshark1",
+                 tokenizer=ByteLevelBPETokenizer
+                 ):
+        
+        #Create config for the model 
+        self.config             = GPT2Config(vocab_size=vocab_size,
+                                             n_positions=input_size,
+                                             n_embd=n_embed,
+                                             n_layer=n_layer,
+                                             n_head=n_head,
+                                             activation_function=act_fn,
+                                             resid_pdrop=.05,
+                                             attn_pdrop=.05,
+                                             embd_pdrop=.05,
+                                             torch_dtype=T_TYPE,
+                                             layer_norm_epsilon=1e-5,
+                                             scale_attn_by_inverse_layer_idx=True
+                                             )
+
+        #Create the model
+        super(GPTSteinshark,self).__init__(self.config)
+        self.train_device       = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+        self.to(self.train_device)
+        self.tokenizer          = tokenizer
+        self.n_positions        = input_size
+        self.vocab_size         = vocab_size
+        self.name               = name
+        self.warmup             = True
+        self.train_iters        = 0
+        self.n_params           = sum([p.numel() for p in self.parameters()])
+
+        self.metadata           = {"tok_trained_on":0,"epochs_complete":0,"iters_trained_on":0}
+
+
+    def train_stein(self,   
+              n_iter=2**17,
+              bs=4,
+              warmup_bs=16,
+              lr=.0002,
+              warmup_lr=.0001,
+              wd=.01,
+              warmup_steps=2048,
+              sample_text='my cat is',
+              accu_steps=16,
+             temp=.85,
+              ds_root=""
+              ):
+
+        #Data Vars
+        self.train_bs                   = bs
+        self.warmup_bs                  = warmup_bs
+        self.accu_steps                 = accu_steps
+        self.eff_bs                     = bs*accu_steps
+
+        #Train Vars
+        self.total_training_iters       = n_iter
+        self.lr                         = lr
+        self.warmup_lr                  = warmup_lr
+        self.nominal_lr                 = lr
+        self.wd                         = wd 
+        self.warmup_steps               = warmup_steps
+        self.warming_up                 = True
+        self.continue_training          = True 
+
+        #Telemetry vars
+import torch.optim
+from transformers import GPT2Config
+from transformers import GPT2LMHeadModel
+from tokenizers.implementations import ByteLevelBPETokenizer
+from dataset import  TokenizedDataset, InfSampler, create_token_file, TextFileDataset
+import torch    
+from torch.utils.data import DataLoader
+import time 
+import os 
+import random 
+import numpy
+import argparse
+from torch.nn import CrossEntropyLoss
+import torch
+rom matplotlib import pyplot as plt 
+import json 
+
+_KEYTOKENS      = []
+def keytoken_weighted_loss(inputs, logits, keytoken_ids, alpha=1.0):
+    # Shift so that tokens < n predict n
+    shift_labels = inputs[..., 1:].contiguous()
+    shift_logits = logits[..., :-1, :].contiguous()
+    # Calculate per-token loss
+    loss_fct = CrossEntropyLoss(reduce=False)
+    loss = loss_fct(shift_logits.view(-1, shift_logits.size(-1)), shift_labels.view(-1))
+    # Resize and average loss per sample
+    loss_per_sample = loss.view(shift_logits.size(0), shift_logits.size(1)).mean(axis=1)
+    #return loss_per_sample.mean()
+    # Calculate and scale weighting
+    weights = torch.stack([(inputs == kt).type(torch.float) for kt in keytoken_ids]).sum(
+        axis=[0, 2]
+    )
+    weights = alpha * (1.0 + weights)
+    # Calculate weighted average
+    weimport requests
 import random
 import time 
 from matplotlib import pyplot as plt 
@@ -12,7 +163,7 @@ import unidecode
 
 #<td>Page views in the past 30 days</td><td><div class="mw-pvi-month"><a rel="nofollow" class="external text" href="
 # title_reg   = '([A-z]|[0-9]|"|:|\(|\)|\.| )'
-# OREGEX_KEY   = f'((<a href="\/wiki\/)({title_reg}*)((" title=){title_reg}*)(">)({title_reg}*)(<\/a>))'
+ OREGEX_KEY   = f'((<a href="\/wiki\/)({title_reg}*)((" title=){title_reg}*)(">)({title_reg}*)(<\/a>))'
 
 # REGEX_KEY   = f'((<a href="\/wiki\/)(([A-z]|[0-9]|:|\(|\))*)((" class=)(([A-z]|-|[0-9]|"|:|\(|\))*))*((" title=)([A-z]|[0-9]|"|:|\(|\)| )*)(">)(([A-z]|[0-9]|"|:|\(|\)| )*)(<\/a>))'
 # CITE_KEY    = f'((<sup id=")(([A-z]|[0-9]|_|-|\.)*)(" class="reference"><a href="#cite_note-)(([A-z]|[0-9]|_|-|\.)*)(">)(([A-z]|[0-9]|#|;|&|\.)*)(<\/a><\/sup>))'
