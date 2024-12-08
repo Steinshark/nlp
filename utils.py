@@ -466,7 +466,7 @@ def find_ml(ds_root:str,whitelist:list[str]):
     for subdir in os.listdir(ds_root):
         subdir  = os.path.join(ds_root,subdir)
         
-        
+
 '''
     DESCRIPTION:
         jennyblacklist sees if the paragraph is a good paragraph or not for training
@@ -484,7 +484,7 @@ def jennyblacklist(filetext:str):
         return False
 
     # Check for code-like structures (code blocks, hashes, bullets, etc.)
-    code_pattern = r'```|<code>.*</code>|#|\*|\-|\d+\.'  # Matches hashes, bullet points, numbered lists
+    code_pattern = r'```|<code>.*</code>|\*|\-|\d+\.|//|[A-Za-z0-9]{21,}'  # Matches hashes, bullet points, numbered lists
     random_string_pattern = r'[^\w\s]'  # Matches non-alphanumeric characters like random punctuation
 
     # If any code-like structures or random strings are found, return False
