@@ -467,11 +467,37 @@ def find_ml(ds_root:str,whitelist:list[str]):
         subdir  = os.path.join(ds_root,subdir)
         
 
+'''
+    DESCRIPTION:
+        given a filetext in the format of a str, return a bool of whether or 
+        not to include it in the training set. True -> include it 
 
-def blacklist(filetext:str):
+    PARAMETERS:
+        filetext            str :   text to consider
+'''
+def blacklist(filetext:str) -> bool:
 
-    #If ratio of alphabet to fullsize is < 50 deny it
-    text_len    = len(filetext) 
+    #lower it to make parsing and such easier
+    filetext        = filetext.lower()
+
+    #If ratio of alphabet to fullsize is < .50 deny it
+    alphabet_thresh = .5
+    alphabet        = ascii_lowercase + "." + "?" + "!"
+    text_len        = len(filetext) 
+    good_count      = sum([filetext.count(char) for char in alphabet])
+    alphabet_ratio  = good_count / text_len 
+
+    if alphabet_ratio < alphabet_thresh:
+        return False
+    
+    #If contains adult content words, discard
+    adult_triggers  = [" milf "," anal "," pussy "," cunt "] 
+    adult_count     = sum([filetext.count(keyword) for keyword in adult_triggers])
+    if (6*adult_count) / text_len > .01:    #Scale to account for word vs char
+        print(f"denying\n{filetext}")
+        input()
+        return False   
+    return 
 
 '''
     DESCRIPTION:
