@@ -99,9 +99,10 @@ def get_transcript(video_html:str):
     try:
         pre_parsed_url  = re.findall('(https://www.youtube.com/api/timedtext.{1,400}lang=en)',video_html)[0]
     except IndexError:
-        
+        #Could indicate its not in English (it sucks)
         with open("dump.html",'w',encoding='utf_8') as writefile:
             writefile.write(video_html)
+        print("out")
         raise IndexError
     parsed_url      = pre_parsed_url.replace(r"\u0026","&")
 
@@ -123,19 +124,24 @@ def get_transcript(video_html:str):
 
 def filter_bad_content(video_transcript:str):
 
-    #unrelated videos are:
-        # high ratio of [music] to text
-        # high ratio of [applause] to text 
-        # are less than 100 words
-    
-    num_words   = len(video_transcript.split(" "))
+    #Make determination on only 20_000 charas 
+    decision_window     = video_transcript[:10_000].lower()
+    decision_len        = len(decision_window)
 
-    if num_words < 100:
+    #Reject anything less than 500 chars 
+    if decision_len < 500:
         return False 
     
-    if ((video_transcript.count('[music]')+video_transcript.count('[applause]')+video_transcript.count('Music')) / num_words) > .075:
-        return False 
 
+
+    #Make checks for bad keywords 
+    #Reject if font occurs more than 200 times 
+    if decision_window.count("font") > 200:
+        return False 
+    elif (decision_window.count("[music]")*len("[music]"))/decision_len > .1:
+        return False 
+    elif (decision_window.count("[applause]")*len("[applause]"))/decision_len > .1:
+        return False
 
     return True
 

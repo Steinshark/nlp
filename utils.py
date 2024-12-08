@@ -466,6 +466,13 @@ def find_ml(ds_root:str,whitelist:list[str]):
     for subdir in os.listdir(ds_root):
         subdir  = os.path.join(ds_root,subdir)
         
+
+
+def blacklist(filetext:str):
+
+    #If ratio of alphabet to fullsize is < 50 deny it
+    text_len    = len(filetext) 
+
 '''
     DESCRIPTION:
         given a filetext in the format of a common crawl WET file, parse and return
@@ -489,8 +496,8 @@ def parse_wet_file(file:typing.TextIO,languages:list[str])-> list[str]:
         pri_header  += file.readline()
 
     #Used to determine if good source
-    greek           = "ΑαΒβΓγΔδΕεΖζΗηΘθΙιΚκΛλΜμΝνΞξΟοΠπΡρΣσςΤτΥυΦφΧχΨψΩω"
-    good_chars      = ascii_lowercase + r".,'?{}[]/\;:!@#$%^&*()1234567890-_=+ |~<>©°•·×→" + '"' + ascii_uppercase + greek
+    #greek           = "ΑαΒβΓγΔδΕεΖζΗηΘθΙιΚκΛλΜμΝνΞξΟοΠπΡρΣσςΤτΥυΦφΧχΨψΩω"
+    good_chars      = ascii_lowercase + r".,'?{}[]/\;:!@#$%^&*()1234567890-_=+ |~<>©°•·×→" + '"' + ascii_uppercase# + greek
     quality_cutoff  = .7
 
     #Parse each page
@@ -504,7 +511,7 @@ def parse_wet_file(file:typing.TextIO,languages:list[str])-> list[str]:
             break
         #ID language 
         page_lang       = headertext.split("\n")[7].split(": ")[-1].rstrip()
-        saving          =  page_lang in languages
+        saving          = page_lang in languages
 
 
         page_text       = '' 
@@ -596,8 +603,16 @@ def parse_wet_file(file:typing.TextIO,languages:list[str])-> list[str]:
 '''
 def download_crawl(crawl_size:int,ds_path:str,file_size:int,rand_selection:bool):
 
+    path_to_wet     = "C:/data/nlp/code/wet.paths"
+    base_path       = "C:/data/nlp"
+
+    #Create the path setup 
+    download_path   = "download"
+
+    if not os.path.exists(os.path.join(base_path,download_path)):
+        os.mkdir(os.path.join(base_path,download_path))
     #Generate URLS
-    with open("datacollection/wet.paths","r") as crawl_url_file:
+    with open(path_to_wet,"r") as crawl_url_file:
 
         crawl_urls  = [f"https://data.commoncrawl.org/{url}".replace('\n','') for url in crawl_url_file.readlines()]
 
@@ -606,27 +621,30 @@ def download_crawl(crawl_size:int,ds_path:str,file_size:int,rand_selection:bool)
         random.shuffle(crawl_urls)
     
     #Settings
-    end_token           = "<|ENDOFTEXT|>"
+    end_token           = "<|endoftext|>"
     current_size_MB     = 0
     total_size_MB       = 0
-    current_file        = max([int(f.replace('.txt','')) for f in os.listdir('data')] + [0])
-    writable_file       = open(f"{ds_path}/{current_file}.txt","w",encoding='utf_8')
+    current_file        = os.path.join(ds_path,f"{random.randint(100_000_000,999_999_999)}.txt")
+    writable_file       = open(current_file,"w",encoding='utf_8')
     
     while True:
 
-        #Grab and download next URL
+        #Grab and download next URL to "datacollection"
         next_url        = crawl_urls.pop(0)
-        filename        = f"datacollection/{next_url.split('/')[-1]}"
+        next_name       = next_url.split('/')[-1]
+        savepath        = os.path.join(base_path,"download")
+        filepath        = os.path.join(base_path,"download",next_name)
 
         #Download and unzip gunzip
         #subprocess.run(f"echo off")
-        subprocess.run(f"curl {next_url} -o{filename}")
-        subprocess.run(f'7z x {filename} "-o{filename.replace(".gz","")}"')
+        subprocess.run(f"curl {next_url} -o{filepath}")
+        subprocess.run(f'7z x "{filepath}" "-o{savepath}"')
+        #Remove old file 
+        os.remove(filepath)
 
         #Parse for eng documents 
-        filename        = filename.replace('.gz','') 
-        filename        = f"{filename}/{filename.replace('datacollection/','')}"
-        with open(filename,'r',encoding='utf_8') as file:
+        filepath        = filepath.replace('.gz','') 
+        with open(filepath,'r',encoding='utf_8') as file:
             parsed_texts = parse_wet_file(file,['eng'])
         
         #add all texts to the current file 
@@ -636,15 +654,15 @@ def download_crawl(crawl_size:int,ds_path:str,file_size:int,rand_selection:bool)
 
             writable_file.write(text_addition)
 
-            current_size_MB += text_len/1_000_000
-            total_size_MB   += text_len/1_000_000
+            current_size_MB += text_len/(1024*1024)
+            total_size_MB   += text_len/(1024*1024)
 
             if current_size_MB > file_size:
                 print(f"current file size [{current_size_MB:.2f}MB] > {file_size}. Writing file")
                 writable_file.close()
-                current_file        += 1
                 current_size_MB     = 0 
-                writable_file       = open(f"data/{current_file}.txt","w",encoding='utf_8')
+                current_file        = os.path.join(ds_path,f"{random.randint(100_000_000,999_999_999)}.txt")
+                writable_file       = open(current_file,"w",encoding='utf_8')   
             if total_size_MB > crawl_size:
                 print(f"Crawl download complete: [{total_size_MB:.2f}MB]. exiting")
                 writable_file.close()
@@ -779,44 +797,4 @@ def param_edit(parameter,method):
 
 
 if __name__ == "__main__":
-    list    = find_python_files("C:/gitrepos")
-    for fname in list:
-        hashed  = [ord(a) for a in fname+fname] 
-        item    = 1 
-        for num in hashed:
-            item *= num 
-        hashval = str(item)[:16]
-        with open(f"C:/gitrepos/nlp/pydata/{hashval}.txt",'w',encoding='utf_8') as write_file:
-            write_file.write(open(fname,'r',encoding='utf_8').read())
-    print(f"found {len(list)} python files")
-    #download_crawl(32,"data",8,True)
-    #create_vocab_threads("C:/code/nlp/data",1024,n_threads=12)
-    #   download_wiki()
-    #create_dataset()
-    #create_vocab_whole("C:/code/nlp/alldata",512)
-    exit()
-    #search("C:/code/nlp/alldata",'))))')
-    pyfiles     = find_python_files("C:/users/evere/Downloads/python-corpus.tar/",limit=100_000)
-    random.shuffle(pyfiles)
-    pyfiles     = pyfiles[:100_000]
-
-    wrote       = 0 
-    for filename in pyfiles:
-        if wrote > 1000:
-            break
-        try:
-            with open(filename,'r') as filein:
-                try:
-                    text    = filein.read()
-                    if len(text) > 4096 and ('pytorch' in text[:512] or 'numpy' in text[:512]):
-                        wrote += 1
-                        with open(f"pydata/python_{wrote}"+(filename.split("\\")[-1].split(".py")[0]+".txt"),'w',encoding='utf_8') as fileout:
-                            fileout.write(text)   
-                except UnicodeDecodeError as u:
-                    pass 
-                except FileNotFoundError:
-                    pass
-        except FileNotFoundError as e:
-            pass
-                    
-    print(f"saved {wrote}/{len(pyfiles)}")
+    download_crawl(2*1024,"C:\\data\\nlp\\crawl",64,True)

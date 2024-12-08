@@ -1,3 +1,4 @@
+from tokenizers.implementations import ByteLevelBPETokenizer
 import multiprocessing.pool
 import torch 
 from torch.utils.data import Dataset, Sampler
@@ -11,6 +12,7 @@ import multiprocessing
 import sys 
 #sys.path.append("youtubeDB")
 from youtubeDB.utils import filter_bad_content
+import json 
 
 class InfSampler(Sampler):
 
@@ -198,43 +200,82 @@ class TokenizedDataset(Dataset):
         self.n_positions    = n_positions 
 
         self.n_tokens       = len(self.tokens)
-        self.warmup         = True
+        self.warmup         = False
     
 
     def __getitem__(self, index)->dict[str,torch.Tensor]:
         #Pick random start 
 
-        end_point           = len(self.tokens) - self.n_positions if not self.warmup else int(len(self.tokens)*.02)
+        end_point           = len(self.tokens) - (self.n_positions+1) if not self.warmup else int(len(self.tokens)*.02)
         start_i             = random.randint(0,end_point)
 
-        token_seq           = numpy.asarray(self.tokens[start_i:start_i+self.n_positions])
-        token_seq_torch     = torch.from_numpy(token_seq).type(torch.long)
+        #start_i             = 0
 
-        return {"input_ids":token_seq_torch,"labels":token_seq_torch}
+        token_seq           = numpy.asarray(self.tokens[start_i:start_i+self.n_positions])
+        token_seq           = torch.from_numpy(token_seq).type(torch.int16)
+        target_seq          = numpy.asarray(self.tokens[start_i+1:start_i+self.n_positions+1])
+        target_seq          = torch.from_numpy(target_seq).type(torch.int16)
+        return {"input_ids":token_seq,"target_ids":target_seq}
     
+
+    def sample(self,bs:int,n_tokens:int,devices:list[torch.device])->dict[str,torch.Tensor]:
+        end_point           = len(self.tokens) - (self.n_positions+1) if not self.warmup else int(len(self.tokens)*.02)
+        idxs                = [random.randint(0, end_point) for _ in range(bs)]
+
+        token_seqs          = torch.tensor(numpy.array([self.tokens[idxs[i]:idxs[i]+n_tokens] for i in range(bs)])).to(devices[0]).long()
+        target_seqs         = torch.tensor(numpy.array([self.tokens[idxs[i]+1:idxs[i]+n_tokens+1] for i in range(bs)])).to(devices[1]).long()
+
+        return {"input_ids":token_seqs,"target_ids":target_seqs}
+
+
+
+
     def __len__(self):
         return len(self.tokens) // self.n_positions
 
  
 #All files are assumed to be cleaned
-def create_token_file(ds_root,input_size,tokenizer):
+def create_token_file(ds_root,tokenizer:ByteLevelBPETokenizer):
 
     #Gather all filenames
+    print(f"loading fnames")
     filenames       = [os.path.join(ds_root,file) for file in os.listdir(ds_root)]  
-
+    #random.shuffle(filenames)
     #Create list of all texts
-    texts           = [open(fname,'r',encoding='utf_8').read()+ "<|endoftext|>" for fname in filenames]
+    texts           = [None] * len(filenames) 
+    print(f"loading text",flush=True)
+    for i,fname in enumerate(filenames):
+        with open(fname,'r',encoding='utf_8') as readfile:
+            texts[i] = readfile.read() + "<|endoftext|>"
+
     tokens          = [] 
 
-    print(f"tokenizing texts")
-    for text in texts:
-        tokens += tokenizer.encode(text).ids
+    print(f"tokenizing texts",flush=True)
+    for i, text in enumerate(texts):
+        tokens.append(tokenizer.encode(text).ids)
+        if i % 25000 == 0:
+            print(i)
 
+    
     print(f"saving np")
-    np_arr:numpy.ndarray  = numpy.asarray(tokens)   
+    newtok  = [] 
+    for tok in tokens:
+        newtok += tok
+    np_arr:numpy.ndarray  = numpy.asarray(newtok).flatten()
     np_arr.astype(int)
-    numpy.save("dsnumpy.npy",np_arr)
+    numpy.save("C:/data/nlp/tokens.npy",np_arr)
     print(f"created token set {np_arr.shape}")
+
+
+def train_tokenizer(vocab_size=32768,train_root="C:/data/nlp/train_dir"):
+    print(f"Training tokenizer size={vocab_size}")
+    tokenizer               = ByteLevelBPETokenizer()
+    tokenizer.train([os.path.join(train_root,fname) for fname in os.listdir(train_root)],vocab_size=vocab_size)
+    tokenizer.add_tokens(["<|endoftext|>"])
+    if not os.path.exists("C:/data/nlp/stein_tokenizer_bpe"):
+        os.mkdir('C:/data/nlp/stein_tokenizer_bpe')
+    tokenizer.save_model('C:/data/nlp/stein_tokenizer_bpe')
+    print(f"\tcomplete")
 
 
 def get_yt_captions(ytdump_file:str='ytdump.html'):
@@ -298,8 +339,8 @@ def prep_data_for_training(desired_sources:list[str],final_dir="C:/data/nlp/trai
             fpath_load      = os.path.join(rootdir,fname)
             #Load contents
             with open(fpath_load,'r',encoding='utf_8') as readfile:
-                contents    = readfile.read()
-                contents    = clean_individual_text(contents)
+                contents    = json.loads(readfile.read())['transcript']
+                #good        = contents["is_quality"]
             
             #Ensure no duplicate contents
             hasher.update(contents.encode())
@@ -311,6 +352,7 @@ def prep_data_for_training(desired_sources:list[str],final_dir="C:/data/nlp/trai
                 continue
 
             if not os.path.exists(fpath_save):
+                contents    = clean_individual_text(contents)
                 chars       += len(contents)
                 words       += len(contents.split(" "))
 
@@ -327,14 +369,14 @@ def prep_data_for_training(desired_sources:list[str],final_dir="C:/data/nlp/trai
 def clean_individual_text(contents):
 
     #Remove all double newlines 
-    contents    = unidecode.unidecode(contents)
-    contents    = contents.replace("\n\n","\n")
+    contents    = unidecode.unidecode(contents).lower()
+    contents    = contents.replace("\n\n","\n").replace("&amp;quot;",'"').replace('[music]', " ")
 
-    #Preserve python indents 
-    contents    = contents.replace("    ",'|PYTHONINDENT|')
-    while "  " in contents:
-        contents = contents.replace("  "," ")
-    contents    = contents.replace('|PYTHONINDENT|',"    ").lower()
+    # #Preserve python indents 
+    # contents    = contents.replace("    ",'|PYTHONINDENT|')
+    # while "  " in contents:
+    #     contents = contents.replace("  "," ")
+    # contents    = contents.replace('|PYTHONINDENT|',"    ")
     
     return contents
 
@@ -567,4 +609,7 @@ def find_by_topic(final_dir="C:/data/nlp/train_dir",topic_keywords={"project":2,
             
 if __name__ == "__main__":
     prep_data_for_training(desired_sources=["C:/data/nlp/yt_ascii"])#,"C:/data/nlp/gutenberg/books","C:/data/nlp/academic","C:/data/nlp/code/randpython_files"])
+    train_tokenizer(vocab_size=50_000)
+    tokenizer               = ByteLevelBPETokenizer().from_file(vocab_filename="stein_tokenizer_bpe/vocab.json",merges_filename="stein_tokenizer_bpe/merges.txt")
+    create_token_file("C:/data/nlp/train_dir",tokenizer)
     exit()

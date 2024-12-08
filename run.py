@@ -70,6 +70,7 @@ class GPTSteinshark(GPT2LMHeadModel):
                                              torch_dtype=T_TYPE,
                                              layer_norm_epsilon=1e-5,
                                              scale_attn_by_inverse_layer_idx=True
+                                             
                                              )
 
         #Create the model
@@ -123,7 +124,7 @@ class GPTSteinshark(GPT2LMHeadModel):
         self.samples_trained_on         = 0
         self.tokens_trained_on          = self.metadata['tok_trained_on']
         self.tokens_trained_on_epoch    = self.metadata['tok_trained_on']
-        self.show_update_every_t        = 3*60
+        self.show_update_every_t        = 30
         self.sample_every_t             = 30* 60   
         self.start_timestamp            = time.time()
         self.last_update_timestamp      = time.time()
@@ -147,16 +148,16 @@ class GPTSteinshark(GPT2LMHeadModel):
 
         #Create the data pipeline1
         print(f"\tPreparing data")
-        if not os.path.exists("C:/data/nlp/dataset.npy"):
+        if not os.path.exists("C:/data/nlp/tokens.npy"):
             print(f"\tLoading Text Files")
             dataset                 = TextFileDataset(ds_root=ds_root,n_positions=self.n_positions)
             print(f"\tTokenizing")
             dataset.tokenize(self.tokenizer)
             np_arr:numpy.ndarray    = dataset.tokens
             np_arr                  = np_arr.astype(int)
-            numpy.save("C:/data/nlp/dataset.npy",np_arr)
+            numpy.save("C:/data/nlp/tokens.npy",np_arr)
         else:
-            np_arr                  = numpy.load("C:/data/nlp/dataset.npy")
+            np_arr                  = numpy.load("C:/data/nlp/tokens.npy")
             
         print("\tData Ready")
 
@@ -331,7 +332,7 @@ class GPTSteinshark(GPT2LMHeadModel):
 
         #Create the data pipeline1
         print(f"\tPreparing data")
-        if not os.path.exists("C:/data/nlp/dataset.npy"):
+        if not os.path.exists("C:/data/nlp/tokens.npy"):
             print(f"\tLoading Text Files")
             dataset                 = TextFileDataset(ds_root=ds_root,n_positions=self.n_positions)
             print(f"\tTokenizing")
@@ -340,7 +341,7 @@ class GPTSteinshark(GPT2LMHeadModel):
             np_arr                  = np_arr.astype(int)
             numpy.save("C:/data/nlp/dataset.npy",np_arr)
         else:
-            np_arr                  = numpy.load("C:/data/nlp/dataset.npy")
+            np_arr                  = numpy.load("C:/data/nlp/tokens.npy")
             
         print("\tData Ready")
 
@@ -604,10 +605,6 @@ class GPTSteinshark(GPT2LMHeadModel):
         print(f"Loaded model {name}")
 
         
-        
-        
-
-    
 
 if __name__ == "__main__":
     
@@ -619,18 +616,18 @@ if __name__ == "__main__":
 
 
     #Training/Model Settings 
-    virtual_bs  = 256
-    warmup_bs   = 4
-    train_bs    = 4
+    virtual_bs  = 64
+    warmup_bs   = 4     
+    train_bs    = 4     
     warmup_lr   = .00002
     train_lr    = .00005
     wd          = .01
     warmup_steps= 16
-    input_size  = 256+128
+    input_size  = 1024
     vocab_size  = 32768
     embed_size  = 1024
-    n_layers    = 32
-    n_heads     = 16
+    n_layers    = 16
+    n_heads     = embed_size//64
     accu_steps  = virtual_bs//train_bs
     train_root  = args.train_dir
     sample_text = "hi guys! so i trained a large language ai model to develop scripts for me and here is the output:"
