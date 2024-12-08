@@ -630,7 +630,7 @@ def parse_wet_file(file:typing.TextIO,languages:list[str])-> list[str]:
 def download_crawl(crawl_size:int,ds_path:str,file_size:int,rand_selection:bool):
 
     path_to_wet     = "C:/data/nlp/code/wet.paths"
-    base_path       = "C:/data/nlp"
+    base_path       = "C:\\data\\nlp"
 
     #Create the path setup 
     download_path   = "download"
@@ -664,6 +664,7 @@ def download_crawl(crawl_size:int,ds_path:str,file_size:int,rand_selection:bool)
         #Download and unzip gunzip
         #subprocess.run(f"echo off")
         subprocess.run(f"curl {next_url} -o{filepath}")
+        print(f"unzipping {filepath}")
         subprocess.run(f'7z x "{filepath}" "-o{savepath}"')
         #Remove old file 
         os.remove(filepath)
