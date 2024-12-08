@@ -466,6 +466,46 @@ def find_ml(ds_root:str,whitelist:list[str]):
     for subdir in os.listdir(ds_root):
         subdir  = os.path.join(ds_root,subdir)
         
+        
+'''
+    DESCRIPTION:
+        jennyblacklist sees if the paragraph is a good paragraph or not for training
+
+    PARAMETERS:
+        filetext [str] : string of the paragraph to check 
+        
+    RETURNS:
+        [bool] : True if the paragraph is good, False if the paragraph is bad
+'''
+def jennyblacklist(filetext:str):
+    # Check for URLs (http://, https://, www, etc.)
+    url_pattern = r'http[s]?://[^\s]+|www\.[^\s]+'
+    if re.search(url_pattern, filetext):
+        return False
+
+    # Check for code-like structures (code blocks, hashes, bullets, etc.)
+    code_pattern = r'```|<code>.*</code>|#|\*|\-|\d+\.'  # Matches hashes, bullet points, numbered lists
+    random_string_pattern = r'[^\w\s]'  # Matches non-alphanumeric characters like random punctuation
+
+    # If any code-like structures or random strings are found, return False
+    if re.search(code_pattern, filetext) or re.search(random_string_pattern, filetext):
+        return False
+
+    # Ensure the paragraph contains actual words (not random gibberish)
+    word_count = len(re.findall(r'\w+', filetext))
+    if word_count < 20:  # If fewer than 20 words, likely not coherent or helpful
+        return False
+    
+    # Check if the paragraph forms a recognizable sentence (capitalized start, punctuation at the end)
+    if not re.match(r'^[A-Z].*[.!?]$', filetext.strip()):
+        return False
+    
+    # Check if more than 5 lines in a row end in a newline, if so, then likely not a good paragraph
+    if re.search(r'(.*\n){5,}', filetext):
+        return False
+
+    return True
+
 
 '''
     DESCRIPTION:
