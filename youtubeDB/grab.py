@@ -14,6 +14,8 @@ from fp.fp import FreeProxy
 from multiprocessing import Pool
 
 
+
+
 def generate_proxies_list(timeout=.5,timelim=5):
     proxies         = [] 
     t0              = time.time()
@@ -171,6 +173,8 @@ def download_yt_transcripts(blank=None):
     print(f"generated {len(proxies)} proxies")
     #Get a set of all videos found 
     for fname in os.listdir("C:/data/nlp/urls"):
+        if not "scraped_urls" in fname:
+            continue
         fname   = os.path.join("C:/data/nlp/urls",fname)
         with open(fname,'r',encoding="utf_8") as readfile:
             for item in json.loads(readfile.read()):
@@ -193,8 +197,8 @@ def download_yt_transcripts(blank=None):
 
         #Get html of video 
         try:
-            #time.sleep(random.random()+.01)    
-            html_request    = requests.get(url=next_url,timeout=3,headers=headers.generate())#,proxies=random.choice(proxies))
+            time.sleep(random.random()+.2)    
+            html_request    = requests.get(url=next_url,timeout=3)#,proxies=random.choice(proxies))
 
             if html_request.status_code == 200:
 
@@ -225,7 +229,7 @@ def download_yt_transcripts(blank=None):
 
                 except IndexError as e:
                     print(f"index")
-                    return
+                    continue
             else:
                 print(f"rec code {html_request.status_code}")
                 if not html_request.status_code == 404:
@@ -238,6 +242,33 @@ def download_yt_transcripts(blank=None):
         except json.decoder.JSONDecodeError:
             pass
 
+
+def crawl_developer_tech_for_urls(start_url="https://www.developer-tech.com/news/holistic-open-source-tools-counter-ai-development-risks/"):
+
+    found_urls      = set()
+    unsearched_urls = {start_url}
+    next_step       = 100
+
+    while unsearched_urls:
+        next_url    = unsearched_urls.pop()
+
+        try:
+            urls    = utils.get_url_html(next_url)
+            for url in urls:
+                unsearched_urls.add(url)
+                found_urls.add(url)
+            print(len(found_urls))
+        except ValueError as ew:
+            print(f"got val error {ew}")
+            pass 
+
+        if len(found_urls) > next_step:
+            print(f"found {len(unsearched_urls)} urls")
+            next_step += 100
+            with open("C:/data/nlp/developer-tech/urls.txt",'w') as writefile:
+                writefile.write(json.dumps(list(found_urls)))
+
+        
 
         
 if __name__ == "__main__":
@@ -252,4 +283,6 @@ if __name__ == "__main__":
         crawl_so_for_urls()
     elif command == 'download':
         download_yt_transcripts()
+    elif command == 'news':
+        crawl_developer_tech_for_urls()
             #download_yt_transcripts()

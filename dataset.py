@@ -6,7 +6,7 @@ from tokenizer import SteinTokenizer
 import numpy
 import os 
 import random 
-import hashlib
+from xxhash import xxh3_64
 import unidecode
 import multiprocessing
 import sys 
@@ -30,14 +30,14 @@ class InfSampler(Sampler):
 
 class TextFileDataset(Dataset):
 
-    #Assumption is that all files in ds_root are pre_cleaned and ascii encodable
+    #Assumption is that all files in ds_root are pre_cleaned and utf_8 encodable
     def __init__(self,ds_root:str,n_positions:int,max_files:int=1_000_000,tokenize_with=None):
 
         #Get list of filenames
         self.filenames      = [os.path.join(ds_root,file) for file in os.listdir(ds_root)][:max_files]  
 
         #Load all content
-        self.texts          = [open(fname,'r',encoding='ascii').read() for fname in self.filenames]
+        self.texts          = [open(fname,'r',encoding='utf_8').read() for fname in self.filenames]
 
         self.tokens         = [] 
         #Set class variables
@@ -243,6 +243,8 @@ def create_token_file(ds_root,tokenizer:ByteLevelBPETokenizer):
     #random.shuffle(filenames)
     #Create list of all texts
     texts           = [None] * len(filenames) 
+    n_token_files   = 0 
+    total_tokens    = 0
     print(f"loading text",flush=True)
     for i,fname in enumerate(filenames):
         with open(fname,'r',encoding='utf_8') as readfile:
@@ -252,19 +254,19 @@ def create_token_file(ds_root,tokenizer:ByteLevelBPETokenizer):
 
     print(f"tokenizing texts",flush=True)
     for i, text in enumerate(texts):
-        tokens.append(tokenizer.encode(text).ids)
-        if i % 25000 == 0:
-            print(i)
+        tokens += tokenizer.encode(text).ids
+        if len(tokens) > 200_000_000:
+            np_arr:numpy.ndarray  = numpy.asarray(tokens).flatten()
+            np_arr.astype(int)
+            numpy.save(f"C:/data/nlp/tokens{n_token_files}.npy",np_arr)
+            n_token_files += 1
+            total_tokens += len(tokens)
+            tokens = []
 
-    
-    print(f"saving np")
-    newtok  = [] 
-    for tok in tokens:
-        newtok += tok
-    np_arr:numpy.ndarray  = numpy.asarray(newtok).flatten()
+    np_arr:numpy.ndarray  = numpy.asarray(tokens).flatten()
     np_arr.astype(int)
-    numpy.save("C:/data/nlp/tokens.npy",np_arr)
-    print(f"created token set {np_arr.shape}")
+    numpy.save(f"C:/data/nlp/tokens{n_token_files}.npy",np_arr)
+    print(f"created token set {total_tokens}")
 
 
 def train_tokenizer(vocab_size=32768,train_root="C:/data/nlp/train_dir"):
@@ -324,10 +326,7 @@ def prep_data_for_training(desired_sources:list[str],final_dir="C:/data/nlp/trai
     #Clear dataroot 
     for file in [os.path.join(final_dir,fname) for fname in os.listdir(final_dir)]:
         os.remove(file)
-    
 
-    hasher                  = hashlib.md5()
-    
     #stats 
     chars                   = 0 
     words                   = 0 
@@ -339,12 +338,13 @@ def prep_data_for_training(desired_sources:list[str],final_dir="C:/data/nlp/trai
             fpath_load      = os.path.join(rootdir,fname)
             #Load contents
             with open(fpath_load,'r',encoding='utf_8') as readfile:
-                contents    = json.loads(readfile.read())['transcript']
+                contents    = readfile.read()
+                if "yt_ascii" in rootdir:
+                    contents    = json.loads(contents)['transcript']
                 #good        = contents["is_quality"]
             
             #Ensure no duplicate contents
-            hasher.update(contents.encode())
-            content_hash    = hasher.hexdigest()
+            content_hash    = xxh3_64(contents.encode()).hexdigest()
             fpath_save      = os.path.join(final_dir,content_hash+".txt")
 
             #Ensure not saving empty file
@@ -357,7 +357,7 @@ def prep_data_for_training(desired_sources:list[str],final_dir="C:/data/nlp/trai
                 words       += len(contents.split(" "))
 
                 #Write contents 
-                with open(fpath_save,'w',encoding='ascii') as writefile:
+                with open(fpath_save,'w',encoding='utf_8') as writefile:
                     writefile.write(contents+eot_token)
     texts                   = len(os.listdir(final_dir))
 
@@ -369,7 +369,7 @@ def prep_data_for_training(desired_sources:list[str],final_dir="C:/data/nlp/trai
 def clean_individual_text(contents):
 
     #Remove all double newlines 
-    contents    = unidecode.unidecode(contents).lower()
+    #contents    = unidecode.unidecode(contents).lower()
     contents    = contents.replace("\n\n","\n").replace("&amp;quot;",'"').replace('[music]', " ")
 
     # #Preserve python indents 
@@ -606,10 +606,53 @@ def find_by_topic(final_dir="C:/data/nlp/train_dir",topic_keywords={"project":2,
     for fpath in sorted_scores[:10]:
         print(f"{fpath}-> {scores[fpath]}")
     
-            
+
+def generate_news_articles(ds_root:str):
+    if not os.path.exists(ds_root):
+        os.mkdir(ds_root)
+
+    root    = "C:/data/nlp/free-news-datasets-master/free-news-datasets-master/News_Datasets"
+    for cat in [os.path.join(root,ccat) for ccat in os.listdir(root)]:
+        print(f"parsing {cat}")
+        for fname in [os.path.join(cat,name) for name in os.listdir(cat)]:
+
+            #Load contents
+            try:
+                with open(fname,'r',encoding='utf_8') as readfile:
+                    contents    = json.loads(readfile.read()) 
+                    if contents['language'] == 'english':
+                        text        = contents['title'] + "\n\n" + contents['text']
+
+                        if text.count("https") > 30: #Skip too many links
+                            continue
+                        #Write to db 
+                        with open(os.path.join(ds_root,str(random.randint(100_000_000,999_999_999))+".txt"),'w',encoding='utf_8') as writefile:
+                            writefile.write(text)
+            except PermissionError:
+                pass
+
+
+def generate_stack_overflow(ds_root:str):
+    if not os.path.exists(ds_root):
+        os.mkdir(ds_root)
+
+    root    = "C:/data/nlp/stackoverflow"
+    for fname  in [os.path.join(root,ccat) for ccat in os.listdir(root)]:
+        with open(fname,'r',encoding='utf_8') as readfile:
+            contents    = readfile.read()
+            paragraphs  = contents.split("<p>")[1:]
+            paragraphs  = [p.split("</p>")[0] for p in paragraphs]
+
+            #Write to db 
+            with open(os.path.join(ds_root,str(random.randint(100_000_000,999_999_999))+".txt"),'w',encoding='utf_8') as writefile:
+                writefile.write("\n".join(paragraphs))
+
+
 if __name__ == "__main__":
-    prep_data_for_training(desired_sources=["C:/data/nlp/yt_ascii"])#,"C:/data/nlp/gutenberg/books","C:/data/nlp/academic","C:/data/nlp/code/randpython_files"])
-    train_tokenizer(vocab_size=50_000)
+    #generate_stack_overflow("C:/data/nlp/stackclean")
+    train_tokenizer(vocab_size=32768)
+    #generate_news_articles("C:/data/nlp/newsarticles")
+    prep_data_for_training(desired_sources=["C:/data/nlp/stackclean","C:/data/nlp/academic","C:/data/nlp/code/randpython_files","C:/data/nlp/yt_ascii","C:/data/nlp/crawl","C:/data/nlp/newsarticles","C:/data/nlp/gutenberg/books"])#,"C:/data/nlp/gutenberg/books","C:/data/nlp/academic","C:/data/nlp/code/randpython_files"])
     tokenizer               = ByteLevelBPETokenizer().from_file(vocab_filename="stein_tokenizer_bpe/vocab.json",merges_filename="stein_tokenizer_bpe/merges.txt")
     create_token_file("C:/data/nlp/train_dir",tokenizer)
     exit()

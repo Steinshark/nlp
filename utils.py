@@ -21,6 +21,134 @@ GOOD_CHARS          = ascii_lowercase + r".,'?{}[]/\;:!@#$%^&*()1234567890-_=+ |
 #sys.path.append(os.curdir)
 
 
+class WebPage:
+
+    def __init__(self,filetext:typing.TextIO,length_cutoff=500):
+        #Read off "WARC-Type: conversion"
+        filetext.readline()
+        #Read url 
+        self.url            = filetext.readline().replace("WARC-Target-URI: ","")
+        if "www.dataquest.io/" in self.url or "www.geeksforgeeks.org" in self.url:
+            input(f"found a key url: {self.url}")
+        #Read Date 
+        self.date           = filetext.readline().replace("WARC-Date: ","")
+        filetext.readline()
+        filetext.readline()
+        filetext.readline()
+        #Read language,type
+        self.lan            = filetext.readline().strip().replace("WARC-Identified-Content-Language: ","")
+        self.type           = filetext.readline().strip().replace("Content-Type: ","")
+        #Get length
+        try:
+            self.length     = int(filetext.readline().strip().replace("Content-Length: ",""))
+        except ValueError:
+            #Assume the best
+            self.length     = length_cutoff + 1
+
+        #Save line lengths
+        self.line_lengths   = []
+
+        #Determine if skipping or reading 
+        self.discovered_eof = False 
+        if not (self.lan == "eng" and self.length > length_cutoff and self.type == "text/plain"):
+            self.include    = False
+            self.skip(filetext)
+        else:
+            self.include    = True
+            self.parse(filetext)
+    
+
+
+    def skip(self,filetext:typing.TextIO):
+        nextline        = filetext.readline()
+        while not nextline == "WARC/1.0\n":
+            nextline    = filetext.readline()
+            if not nextline:
+                break
+        
+        if not nextline:
+            self.discovered_eof = True
+
+
+    def parse(self,filetext:typing.TextIO):
+        nextline        = filetext.readline()
+        self.contents   = nextline
+        self.line_lengths.append(len(nextline))
+        while not nextline == "WARC/1.0\n":
+            nextline    = filetext.readline()
+            if not nextline:
+                break
+            #dont include lines less than 40 chars 
+            if len(nextline) >= 40:
+                self.contents += nextline
+                self.line_lengths.append(len(nextline))
+        
+        if not nextline:
+            self.discovered_eof = True
+
+        self.contents   = self.contents.replace("WARC/1.0","")
+        while "\n\n" in self.contents:
+            self.contents = self.contents.replace("\n\n","\n")
+
+        
+        self.include    = self.checkpage()
+
+
+    def checkpage(self):
+        
+        #check if its a coding page 
+        #If average of line_lengths is < 200, no thanks 
+        if sum(self.line_lengths) / len(self.line_lengths) < 200:
+            return False 
+        
+        #coding_buzzwords    = ["python","tutorial","data", 'module', "dataset", "c++","cpp","g++","gpp","file","deep learning","numpy","neural network","network"]
+
+        #lower it to make common ground
+        checktext           = self.contents.lower()
+        # wordcounts          = sum(checktext.count(buzzword) for buzzword in coding_buzzwords)
+        # if wordcounts / len(checktext.split(" ")) > .05:
+        #     input(checktext)
+
+
+        #If ratio of alphabet to fullsize is < .80 deny it
+        alphabet_thresh = .80
+        alphabet        = ascii_lowercase + "." + "?" + "!" + ","
+        text_len        = len(checktext) 
+        good_count      = sum([checktext.count(char) for char in alphabet])
+        alphabet_ratio  = good_count / text_len 
+
+        if alphabet_ratio < alphabet_thresh:
+            return False
+        
+
+        #If contains adult content words, discard
+        adult_triggers  = [" milf "," anal "," pussy "," cunt ","porn"," sex "] 
+        adult_count     = sum([checktext.count(keyword) for keyword in adult_triggers])
+        if (6*adult_count) / text_len > .01:    #Scale to account for word vs char
+            return False 
+          
+        
+        #If average word size is > 12, its not right 
+        num_words       = len(checktext.split(" "))
+        if text_len / num_words > 10:
+            return False
+        
+        #If punctuation is less than .001, its a no go 
+        comma_count     = checktext.count(",")
+        period_count    = checktext.count(".")
+        punct_count     = period_count+checktext.count("!")+checktext.count("?")+comma_count
+        if punct_count / text_len < .002:
+            return False
+
+        #if comma ratio is over .1 its too much 
+        if comma_count / num_words > .1:
+            return False 
+        
+        #print(checktext)
+        return True 
+
+
+
 def load_corpus(ds_root:str,rand_select:float=1,lower:bool=True,eot:bool=True,newline:bool=True):
     corpus      = ""
     #Create Corpus
@@ -466,7 +594,8 @@ def find_ml(ds_root:str,whitelist:list[str]):
     for subdir in os.listdir(ds_root):
         subdir  = os.path.join(ds_root,subdir)
         
-        
+
+
 '''
     DESCRIPTION:
         jennyblacklist sees if the paragraph is a good paragraph or not for training
@@ -552,140 +681,102 @@ def parse_wet_file(file:typing.TextIO,languages:list[str])-> list[str]:
 
     pri_header_len  = 18 
     header_len      = 11
-    parsed_texts    = []
+    dataset         = [] 
     explicit_count  = 0
     total_count     = 0 
 
-    #Grab off header 
-    pri_header      = ''
+    #Scrape off header
     for _ in range(pri_header_len):
-        pri_header  += file.readline()
+        file.readline()
 
-    #Used to determine if good source
-    #greek           = "ΑαΒβΓγΔδΕεΖζΗηΘθΙιΚκΛλΜμΝνΞξΟοΠπΡρΣσςΤτΥυΦφΧχΨψΩω"
-    good_chars      = ascii_lowercase + r".,'?{}[]/\;:!@#$%^&*()1234567890-_=+ |~<>©°•·×→" + '"' + ascii_uppercase# + greek
-    quality_cutoff  = .7
+    #Parse each webpage
 
-    #Parse each page
-    while file:
-
-        #Grab page header 
-        headertext      = ''
-        for _ in range(header_len):
-            headertext     += file.readline()
-        if not headertext:
-            break
-        #ID language 
-        page_lang       = headertext.split("\n")[7].split(": ")[-1].rstrip()
-        saving          = page_lang in languages
-
-
-        page_text       = '' 
-        quality_count   = 0
-        n_chars         = 0
-        lines_read      = 0
-        trash           = False
-        while True:
-            
-            #Read line in 
-            line        = file.readline()
-            lines_read  += 1
-
-            #If in languages, is > 50 in len, save to text
-            if saving and len(line) > 50:
-                
-                #Do check for first 20
-                if lines_read < 20:
-                    for char in line[:200].lower():
-                        if char in good_chars:
-                            quality_count += 1
-                    n_chars += len(line[:200])
-
-                #Make determination after 20 
-                else:
-                    if quality_count/(n_chars+.001) < quality_cutoff:
-                        trash   = True
-                        saving  = False
-
-                #replace all chars in page_text
-                new_page_text = "" 
-                for char in line:
-                    if not char in good_chars:
-                        if char == '–' or char == '—':
-                            new_page_text += "-"
-                            continue
-                        elif char == '’' or char == 'ˈ' or char == '`':
-                            new_page_text += "'"
-                            continue
-                        elif char == '”':
-                            new_page_text += '"'
-                            continue
-                        elif char == '“':
-                            new_page_text += '"'
-                            continue
-                        elif char == '…':
-                            new_page_text += "..."
-                            continue
-
-                        elif ord(char) == 10:
-                            new_page_text += '\n'
-                        else:
-                            #print(f"no ref for char {char}")
-                            new_page_text += "?"
-                    else:
-                        new_page_text += char
-                page_text += new_page_text
-
-            if line     == '\n':
-                #Confirm is endl, then break
-                if file.readline() == '\n':
-                    break 
-
-        if saving:
-            total_count += 1
-            if page_text.count('fuck') > 4 or page_text.count('porn') > 4 or page_text.count('hardcore') > 5:
-                explicit_count += 1
-                pass 
-            else:
-                parsed_texts.append(page_text)
-        page_text   = ''
-
-    print(f"skipped {explicit_count}/{total_count}")
-    return parsed_texts
+    #Read off the first 'WARC/1.0'
+    file.readline()
+    done    = False
+    while file and not done:
+        nextpage    = WebPage(file)
+        if nextpage.include:
+            dataset.append(nextpage)
+        if nextpage.discovered_eof:
+            done = True
+    return dataset
 
 
 '''
     DESCRIPTION:
-        download_crawl pulls files (100MB of compressed, text-extracted
-        websites each) from the common crawl, unzips it, parses it for 
-        only english, and saves files of specified size to the ds_path.
-        *** "datacollection/wet.paths" is an expected file for this function.
+        download_crawl_to_db pulls files (100MB of compressed, text-extracted
+        websites each) from the common crawl, unzips it, and saves it to the 
+        ds_path for further processing.
+
 
     PARAMETERS:
-        crawl_size          [int]   :   final size of the crawl in MB of english-only text 
+        crawl_size          [int]   :   final number of .wet files to download
         ds_path             [str]   :   path to save all text files to 
-        file_size           [int]   :   size in MB of each file to be saved 
         rand_selection      [bool]  :   determines if crawl ursl are random or sequential from 0
+        path_to_urls        [str]   :   specifies a '\n' delimited file of urls to download
 '''
-def download_crawl(crawl_size:int,ds_path:str,file_size:int,rand_selection:bool):
-
-    path_to_wet     = "C:/data/nlp/code/wet.paths"
-    base_path       = "C:\\data\\nlp"
-
-    #Create the path setup 
-    download_path   = "download"
-
-    if not os.path.exists(os.path.join(base_path,download_path)):
-        os.mkdir(os.path.join(base_path,download_path))
-    #Generate URLS
-    with open(path_to_wet,"r") as crawl_url_file:
-
-        crawl_urls  = [f"https://data.commoncrawl.org/{url}".replace('\n','') for url in crawl_url_file.readlines()]
-
-    #Randomize as specified    
-    if rand_selection:
-        random.shuffle(crawl_urls)
+def download_crawl_to_db(crawl_size:int,ds_path:str,rand_selection:bool,path_to_urls="C:/data/nlp/urls/wet.paths"):
+    print(f"\n\nDownloading {crawl_size} files")
+    #Establish paths required 
+    #Create local download folder 
+    dload_path_local    = "downloads"
+    if not os.path.exists(dload_path_local):
+        os.mkdir(dload_path_local)
+    #Create ds_path 
+    if not os.path.exists(ds_path):
+        os.mkdir(ds_path)
     
+    #WET file paths saved here
+    path_to_wet     = path_to_urls
+
+    #Check for already downloaded list (by index)
+    pre_downloaded  = [fname.split(".wet")[0].replace(".txt","") for fname in os.listdir(ds_path)]
+
+    #Generate URLS that we have not downloaded already
+    un_downloaded   = [] 
+    with open(path_to_wet,"r") as crawl_url_file:
+        crawl_urls  = [url.strip() for url in crawl_url_file.readlines()]
+        #crawl_idxs  = [url.split(".wet")[0] for url in crawl_urls]
+
+        for url in crawl_urls:
+            if not url.replace("/","").split(".wet")[0] in pre_downloaded:
+                un_downloaded.append(url)
+
+    
+    if rand_selection:
+        random.shuffle(un_downloaded)
+    
+
+    #Save the first 'crawl_size' files to db 
+    for next_url in un_downloaded[:crawl_size]:
+        #Get full save path 
+        savepath        = os.path.join(ds_path,next_url.replace("/",""))
+
+        #Update url 
+        next_url        = "https://data.commoncrawl.org/" + next_url
+        #Download and unzip gunzip
+        #subprocess.run(f"echo off")
+        subprocess.run(f"curl {next_url} -o{savepath}") #Take out path name
+        subprocess.run(f'7z x "{savepath}" "-o{ds_path}"')
+        #Remove old file 
+        os.remove(savepath)
+
+'''
+    DESCRIPTION:
+        generate_ds parses files found in ds_path, performs a selection test 
+         and saves files of specified size to the ds_path.
+
+    PARAMETERS:
+        ds_size             [int]   :   final size of the ds in MB of english-only text 
+        data_path           [str]   :   path to raw downloaded text files
+        ds_path             [str]   :   path to store final ds in   
+        file_size           [int]   :   size in MB of each file to be saved 
+'''
+def generate_ds(ds_size:int,data_path:str,ds_path:str,file_size:int):
+    #Get paths of the raw dataset files 
+    text_file_paths = [os.path.join(data_path,fname) for fname in os.listdir(data_path) if not ".gz" in fname]
+
     #Settings
     end_token           = "<|endoftext|>"
     current_size_MB     = 0
@@ -693,48 +784,35 @@ def download_crawl(crawl_size:int,ds_path:str,file_size:int,rand_selection:bool)
     current_file        = os.path.join(ds_path,f"{random.randint(100_000_000,999_999_999)}.txt")
     writable_file       = open(current_file,"w",encoding='utf_8')
     
-    while True:
-
-        #Grab and download next URL to "datacollection"
-        next_url        = crawl_urls.pop(0)
-        next_name       = next_url.split('/')[-1]
-        savepath        = os.path.join(base_path,"download")
-        filepath        = os.path.join(base_path,"download",next_name)
-
-        #Download and unzip gunzip
-        #subprocess.run(f"echo off")
-        subprocess.run(f"curl {next_url} -o{filepath}")
-        print(f"unzipping {filepath}")
-        subprocess.run(f'7z x "{filepath}" "-o{savepath}"')
-        #Remove old file 
-        os.remove(filepath)
-
+    for fpath in text_file_paths:
+        
         #Parse for eng documents 
-        filepath        = filepath.replace('.gz','') 
-        with open(filepath,'r',encoding='utf_8') as file:
-            parsed_texts = parse_wet_file(file,['eng'])
-        
-        #add all texts to the current file 
-        for text in parsed_texts:
-            text_addition   = text + end_token
-            text_len        = len(text_addition.encode('utf-8'))
+        try:
+            with open(fpath,'r',encoding='utf_8') as file:
+                parsed_texts:list[WebPage] = parse_wet_file(file,['eng'])
 
-            writable_file.write(text_addition)
+            #add all texts to the current file 
+            for webpage in parsed_texts:
+                text_addition   = webpage.contents + end_token
+                text_len        = len(text_addition.encode('utf-8'))
 
-            current_size_MB += text_len/(1024*1024)
-            total_size_MB   += text_len/(1024*1024)
+                writable_file.write(text_addition)
 
-            if current_size_MB > file_size:
-                print(f"current file size [{current_size_MB:.2f}MB] > {file_size}. Writing file")
-                writable_file.close()
-                current_size_MB     = 0 
-                current_file        = os.path.join(ds_path,f"{random.randint(100_000_000,999_999_999)}.txt")
-                writable_file       = open(current_file,"w",encoding='utf_8')   
-            if total_size_MB > crawl_size:
-                print(f"Crawl download complete: [{total_size_MB:.2f}MB]. exiting")
-                writable_file.close()
-                return 
-        
+                current_size_MB += text_len/(1024*1024)
+                total_size_MB   += text_len/(1024*1024)
+
+                if current_size_MB > file_size:
+                    print(f"current file size [{current_size_MB:.2f}MB] > {file_size}. Writing file")
+                    writable_file.close()
+                    current_size_MB     = 0 
+                    current_file        = os.path.join(ds_path,f"{random.randint(100_000_000,999_999_999)}.txt")
+                    writable_file       = open(current_file,"w",encoding='utf_8')   
+                if total_size_MB > ds_size:
+                    print(f"Crawl download complete: [{total_size_MB:.2f}MB]. exiting")
+                    writable_file.close()
+                    return 
+        except:
+            pass
         #Cleanup file 
 
 
@@ -777,8 +855,6 @@ def create_dataset(root='alldata'):
             with open(filename.replace(droot,root),"w",encoding='utf_8') as file:
                 file.write(make_good(contents))
         
-
-
 
 
 class GPTDataSet(Dataset):
@@ -864,4 +940,10 @@ def param_edit(parameter,method):
 
 
 if __name__ == "__main__":
-    download_crawl(2*1024,"C:\\data\\nlp\\crawl",64,True)
+
+    commands    = sys.argv[1]
+
+    if commands == 'download':
+        download_crawl_to_db(1024,"E:\\data\\nlp\\crawl_download",True)
+    elif commands == 'generate':
+        generate_ds(5*1024,"E:/data/nlp/crawl_download","C:/data/nlp/crawl",64)

@@ -3,6 +3,12 @@ import urllib.request
 import requests
 import unidecode 
 import urllib
+import random 
+import time
+from fake_headers import Headers
+
+
+_HEADERS            = Headers(headers=True)
 
 ascii_cleaner   ={
         "\U0001f3b8":" ", "\u0171":"u","\u202a":" ",
@@ -106,7 +112,7 @@ def get_transcript(video_html:str):
         raise IndexError
     parsed_url      = pre_parsed_url.replace(r"\u0026","&")
 
-    response        = requests.get(parsed_url,timeout=3,proxies=urllib.request.getproxies())
+    response        = requests.get(parsed_url,timeout=3)
 
     transcript      = ""
     for line in response.text.replace("text start=","\n").split("\n")[1:]:
@@ -125,7 +131,7 @@ def get_transcript(video_html:str):
 def filter_bad_content(video_transcript:str):
 
     #Make determination on only 20_000 charas 
-    decision_window     = video_transcript[:10_000].lower()
+    decision_window     = video_transcript[:5_000].lower()
     decision_len        = len(decision_window)
 
     #Reject anything less than 500 chars 
@@ -136,7 +142,7 @@ def filter_bad_content(video_transcript:str):
 
     #Make checks for bad keywords 
     #Reject if font occurs more than 200 times 
-    if decision_window.count("font") > 200:
+    if decision_window.count("font") > 50:
         return False 
     elif (decision_window.count("[music]")*len("[music]"))/decision_len > .1:
         return False 
@@ -144,6 +150,28 @@ def filter_bad_content(video_transcript:str):
         return False
 
     return True
+
+
+def get_url_html(url:str,delay=.2):
+
+    time.sleep(delay)
+
+    #Try to make request 
+    print(f"requesting to {url}")
+    request         = requests.get(url,headers=_HEADERS.generate(),timeout=1)
+    print(f"\tgot back")
+    if request.status_code == 200:
+        text        = request.text 
+        print(f"\ttext back len {len(text)//1_000}K chars")
+        urls        = ["https://www.developer-tech.com/news/" + preurl.split('"><h3 itemprop')[0] for preurl in text.split("https://www.developer-tech.com/news/")[1:] if '"><h3 itemprop' in preurl]
+        #urls        = [it[0] for it in re.findall('(https://www.developer-tech.com/news/([a-z]+|-)+/)',text)]
+        print(f"\t{len(urls)} found")
+        return urls 
+    else:
+        print(f"\treq fail")
+        raise ValueError(f"{request.status_code}")
+
+        
 
 
 def is_transcribed(video_transcript:str):

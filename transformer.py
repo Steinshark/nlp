@@ -19,9 +19,9 @@ class MultiHeadAttention(torch.nn.Module):
         self.d_k                = embed_dim // num_heads # Dimension of each head's key, query, and value
         
         # Linear layers for transforming inputs
-        self.W_q                = torch.nn.Linear(embed_dim, embed_dim,device=device,bias=False)    # Query transformation
-        self.W_k                = torch.nn.Linear(embed_dim, embed_dim,device=device,bias=False)    # Key transformation
-        self.W_v                = torch.nn.Linear(embed_dim, embed_dim,device=device,bias=False)    # Value transformation
+        self.W_q                = torch.nn.Linear(embed_dim, embed_dim,device=device,bias=True)    # Query transformation
+        self.W_k                = torch.nn.Linear(embed_dim, embed_dim,device=device,bias=True)    # Key transformation
+        self.W_v                = torch.nn.Linear(embed_dim, embed_dim,device=device,bias=True)    # Value transformation
         self.W_o                = torch.nn.Linear(embed_dim, embed_dim,device=device,bias=True)     # Output transformation
 
         self.register_buffer('mask',torch.tril(torch.ones(n_positions,n_positions,device=device)))
@@ -86,7 +86,7 @@ class MultiHeadAttention2(torch.nn.Module):
         self.d_k                = embed_dim // num_heads # Dimension of each head's key, query, and value
         
         # Linear layers for transforming inputs
-        self.layer_1            = torch.nn.Linear(embed_dim,embed_dim*3)
+        self.layer_1            = torch.nn.Linear(embed_dim,embed_dim*3,bias=True)
         self.W_o                = torch.nn.Linear(embed_dim, embed_dim,device=device,bias=True)     # Output transformation
 
         self.register_buffer('mask',torch.tril(torch.ones(n_positions,n_positions,device=device)))
@@ -150,7 +150,7 @@ class DecoderLayer(torch.nn.Module):
         super(DecoderLayer,self).__init__()
         
         #Self attention
-        self.mh_attn                = MultiHeadAttention(n_embed,n_head,n_positions,device=device)
+        self.mh_attn                = MultiHeadAttention2(n_embed,n_head,n_positions,device=device)
         self.mha_dropout            = torch.nn.Dropout(p=dropout,inplace=True)
         self.mha_layer_norm         = torch.nn.LayerNorm(n_embed,device=device)
         
@@ -222,9 +222,10 @@ class LMSteinshark(torch.nn.Module):
             self.position_embedder  = torch.nn.Embedding(n_positions,n_embed,device=self.devices[0])
 
         #Create decoder stacks 
-        self.device_0_modules       = torch.nn.Sequential(OrderedDict({str(i):DecoderLayer(n_embed,n_heads,n_ff,dropout=dropout,act_fn=act_fn,device=self.devices[0],n_positions=n_positions) for i in range(n_layers//2+3)})).to(self.devices[0])
-        self.device_1_modules       = torch.nn.Sequential(OrderedDict({str(i):DecoderLayer(n_embed,n_heads,n_ff,dropout=dropout,act_fn=act_fn,device=self.devices[1],n_positions=n_positions) for i in range(n_layers//2-3)})).to(self.devices[1])
-        #self.decoder_stack          = torch.nn.ModuleList([DecoderLayer(n_embed,n_heads,n_ff,dropout=dropout,act_fn=act_fn,device=self.device,n_positions=n_positions//2) for _ in range(n_layers)] + [torch.nn.LayerNorm(n_embed,device=self.device)])
+        self.device_0_modules       = torch.nn.Sequential(OrderedDict({str(i):DecoderLayer(n_embed,n_heads,n_ff,dropout=dropout,act_fn=act_fn,device=self.devices[0],n_positions=n_positions) for i in range(n_layers//2+2)})).to(self.devices[0])
+        self.device_1_modules       = torch.nn.Sequential(OrderedDict({str(i):DecoderLayer(n_embed,n_heads,n_ff,dropout=dropout,act_fn=act_fn,device=self.devices[1],n_positions=n_positions) for i in range(n_layers//2-2)})).to(self.devices[1])
+        
+        #self.decoder_stack          = torch.nn.ModuleList([DecoderLayer(n_embed,n_heads,n_ff,dropout=dropout,act_fn=act_fn,device=self.devices[0],n_positions=n_positions//2) for _ in range(n_layers)] + [torch.nn.LayerNorm(n_embed,device=self.devices[0])])
         
         self.lm_head                = torch.nn.Sequential(torch.nn.LayerNorm(n_embed),torch.nn.Linear(n_embed,n_vocab,bias=False,device=self.devices[1])).to(self.devices[1])
 
@@ -242,23 +243,25 @@ class LMSteinshark(torch.nn.Module):
         #Init weights 
         self.initialize_weights()
         
-        
-    def forward(self,input_ids:torch.Tensor):
+
+        #prep template tensor for oversize inputs 
+
+
+    def forward(self,input_ids:torch.Tensor,target_ids:torch.Tensor):
 
         #Convert tokens to embedding space 
-        x                           = self.create_embeddings(input_ids)
-
+        x,y                         = self.create_embeddings(input_ids,target_ids)
         #Pass through transformer stack
         x                           = self.device_0_modules(x)
         x                           = x.to(self.devices[1])
-        x                           = self.device_1_modules(x)
-
+        x                            = self.device_1_modules(x)
+        #x = self.decoder_stack(x)
         # #Pass through decoders  
         # for layer in self.decoder_stack:
         #     x                       = layer(x)
         
         #Pass through lm_head to get logits
-        return self.lm_head(x)
+        return self.lm_head(x), y
 
    
     def initialize_weights(self):
@@ -267,17 +270,36 @@ class LMSteinshark(torch.nn.Module):
                 torch.nn.init.kaiming_normal_(param)
 
 
-    def create_embeddings(self,input_ids:torch.Tensor):
-        
-        #Get position embeddings 
-        position_idx                = torch.arange(input_ids.size(1),device=self.devices[0]).unsqueeze(0).expand_as(input_ids)
-        position_embeddings         = self.position_embedder(position_idx)
-        #print(f"position_embeddings shape {position_embeddings.shape}")        
-        #Get semantic embeddings
+    def create_embeddings(self,input_ids:torch.Tensor,target_ids:torch.Tensor):
+        #Get semantic embeddings regardless 
         semantic_embeddings         = self.semantic_embedder(input_ids)
-        #print(f"semantic_embeddings shape {semantic_embeddings.shape}")
+
+
+        #Check to combine semantics if need be
+        while semantic_embeddings.size(1) > self.n_positions:
+            
+            #If can be combined from a 
+            #Combine a semantic_embedding vector with another and reduce the matrix
+            r_index                             = random.randint(0,semantic_embeddings.size(1)-2) #1 for index, 1 to recombine after 
+            combined_sum                        = torch.sum(semantic_embeddings[:,r_index:r_index+2,:],dim=1)
+            target_ids                          = torch.cat([target_ids[:,:r_index+1],target_ids[:,r_index+2:]],dim=1)
+
+            semantic_embeddings[:,r_index,:]    = combined_sum
+            semantic_embeddings                 = torch.cat([semantic_embeddings[:,:r_index+1,:],semantic_embeddings[:,r_index+2:,:]],dim=1)
+
+
+        #Get position embeddings 
+        position_idx                = torch.arange(min(input_ids.size(1),self.n_positions),device=self.devices[0]).unsqueeze(0).expand_as(input_ids if input_ids.size(1) <= self.n_positions else torch.zeros(input_ids.size(0),self.n_positions))
+        position_embeddings         = self.position_embedder(position_idx)
+        
+        
+        #Return the sum
         batch_embeds                = position_embeddings + semantic_embeddings
-        return batch_embeds
+        return batch_embeds, target_ids
+        
+        #Group tokens into max of n_positions 
+        raise NotImplementedError("Over-Sized context not implemented. Get to work!")
+        
     
 
     def create_pos_embeddings(self,period=5_000):
@@ -323,7 +345,7 @@ class LMSteinshark(torch.nn.Module):
         print(f"\n\nLoaded model\n\n")
 
 
-    def generate(self,prompt:list[int],n_tokens=128,temperature=.9):
+    def generate(self,prompt:list[int],n_tokens=128,temperature=.5):
         self.eval()
 
         with torch.no_grad():
@@ -331,7 +353,7 @@ class LMSteinshark(torch.nn.Module):
         
             while len(tokens) - len(prompt) < n_tokens:
 
-                logits          = self(torch.tensor(tokens[-self.n_positions:],device=self.devices[0],requires_grad=False).unsqueeze_(dim=0))[0,-1,:]
+                logits          = self(torch.tensor(tokens[-self.n_positions:],device=self.devices[0],requires_grad=False).unsqueeze_(dim=0),None)[0][0,-1,:]
                 distribution    = torch.nn.functional.softmax(logits/temperature,dim=-1)
                 next_token      = torch.multinomial(distribution,1)
                 tokens          = tokens + [next_token]
@@ -340,16 +362,18 @@ class LMSteinshark(torch.nn.Module):
 
 if __name__ == "__main__":
 
-    n_embed     = 512 
+    n_embed     = 4 
     n_ff        = n_embed*2 
-    n_heads     = n_embed//64
+    n_heads     = n_embed//2
     bs          = 8 
-    n_positions = 256+128
+    n_positions = 4
     n_vocab     = 32768
 
     #Create model
     lm          = LMSteinshark(n_embed=n_embed,n_heads=n_heads,n_positions=n_positions,n_vocab=n_vocab,n_ff=n_ff,dropout=.1)
-
-    token_seq   = [[random.randint(0,n_vocab-1) for _ in range(n_positions)] for _ in range(bs)]
-    token_seq   = torch.tensor(token_seq,device=torch.device('cuda'))
-    print(lm.forward(token_seq).shape)
+    from dataset import TokenizedDataset
+    import numpy 
+    toks        = numpy.load("C:/data/nlp/tokens0.npy")
+    aa          = TokenizedDataset(toks,n_positions)
+    batch       = aa.sample(1,6,lm.devices)
+    lm.forward(batch['input_ids'],batch['target_ids'])
