@@ -28,8 +28,7 @@ class WebPage:
         filetext.readline()
         #Read url 
         self.url            = filetext.readline().replace("WARC-Target-URI: ","")
-        if "www.dataquest.io/" in self.url or "www.geeksforgeeks.org" in self.url:
-            input(f"found a key url: {self.url}")
+
         #Read Date 
         self.date           = filetext.readline().replace("WARC-Date: ","")
         filetext.readline()
@@ -95,7 +94,6 @@ class WebPage:
 
 
     def checkpage(self):
-        
         #check if its a coding page 
         #If average of line_lengths is < 200, no thanks 
         if sum(self.line_lengths) / len(self.line_lengths) < 200:
@@ -122,27 +120,60 @@ class WebPage:
         
 
         #If contains adult content words, discard
-        adult_triggers  = [" milf "," anal "," pussy "," cunt ","porn"," sex "] 
+        adult_triggers  = [" milf "," anal "," pussy "," cunt ","porn"," sex "," cum ", "fuck", "blowjob"] 
         adult_count     = sum([checktext.count(keyword) for keyword in adult_triggers])
-        if (6*adult_count) / text_len > .01:    #Scale to account for word vs char
+        if (6*adult_count) / text_len > .005:    #Scale to account for word vs char
             return False 
           
         
-        #If average word size is > 12, its not right 
+        #If average word size is > 15, its not right 
+        avg_size_max    = 15
         num_words       = len(checktext.split(" "))
-        if text_len / num_words > 10:
+        if text_len / num_words > avg_size_max:
             return False
         
         #If punctuation is less than .001, its a no go 
         comma_count     = checktext.count(",")
         period_count    = checktext.count(".")
-        punct_count     = period_count+checktext.count("!")+checktext.count("?")+comma_count
+        excl_count      = checktext.count("!")
+        ques_count      = checktext.count("?")
+        punct_count     = period_count+excl_count+ques_count+comma_count
         if punct_count / text_len < .002:
             return False
+        
 
         #if comma ratio is over .1 its too much 
+        dash_count      = checktext.count("-")
         if comma_count / num_words > .1:
             return False 
+        
+        #if comma count is above .05 and punct count is below .01
+        if (comma_count / num_words > .075) and ((punct_count-comma_count) / text_len < .005):
+            return False
+
+        #if dash count is over .01 its too much 
+        if dash_count / text_len > .01:
+            return False
+        
+        #Do split check on legitimate punctuation and remove all items longer than 100 words 
+        plausible_splits    = [".",'?',"!","\n",";"]
+        old_text            = checktext
+        for splitter in plausible_splits:
+            checktext       = checktext.replace(splitter,"<|SPLIT|>")
+        checktext           = checktext.split("<|SPLIT|>")
+        bad_runons          = [textitem for textitem in checktext if len(textitem.split(" ")) > 100]
+        
+        bad_indices         = [(old_text.find(runon),old_text.find(runon)+len(runon)) for runon in bad_runons]
+        bad_indices         = [item for item in bad_indices if not item[0] == -1]
+        
+        #do a dummy check
+        
+        for start,end in bad_indices:
+            find_chunk      = self.contents[start:end]
+            self.contents  = self.contents.replace(find_chunk,"")
+
+
+        
         
         #print(checktext)
         return True 
@@ -713,7 +744,7 @@ def parse_wet_file(file:typing.TextIO,languages:list[str])-> list[str]:
     PARAMETERS:
         crawl_size          [int]   :   final number of .wet files to download
         ds_path             [str]   :   path to save all text files to 
-        rand_selection      [bool]  :   determines if crawl ursl are random or sequential from 0
+        rand_selection      [bool]  :   determines if crawl urls are random or sequential from 0
         path_to_urls        [str]   :   specifies a '\n' delimited file of urls to download
 '''
 def download_crawl_to_db(crawl_size:int,ds_path:str,rand_selection:bool,path_to_urls="C:/data/nlp/urls/wet.paths"):
@@ -946,4 +977,4 @@ if __name__ == "__main__":
     if commands == 'download':
         download_crawl_to_db(1024,"E:\\data\\nlp\\crawl_download",True)
     elif commands == 'generate':
-        generate_ds(5*1024,"E:/data/nlp/crawl_download","C:/data/nlp/crawl",64)
+        generate_ds(16*1024,"E:/data/nlp/crawl_download","C:/data/nlp/crawl",16)

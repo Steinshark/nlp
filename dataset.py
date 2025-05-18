@@ -13,6 +13,9 @@ import sys
 #sys.path.append("youtubeDB")
 from youtubeDB.utils import filter_bad_content
 import json 
+import queue 
+import threading
+import time 
 
 class InfSampler(Sampler):
 
@@ -78,9 +81,7 @@ class TextFileDataset(Dataset):
         start_i                 = random.randint(0,int(len(self.text)*self.train_i)-self.n_positions)
 
         return self.tokenized_text[start_i:start_i+self.n_positions]
-        window                  = random.randint(1,self.n_positions)
-        window                  = self.n_positions*10
-        return self.text[start_i:start_i+window]
+
 
         
     def __len__(self):
@@ -178,13 +179,7 @@ class TextFileDataset(Dataset):
         for item in self.texts.split(self.eos_token):
             yield item
         return
-        text_files          = [open(fname,'r',encoding='utf_8').read().lower() for fname in self.filenames]
-        print(f"number of text files: {len(text_files)}")
-        for text in text_files:
-            i += 1 
-            if i > max_i:
-                break
-            yield text
+
 
 
     def save_to_file(self,fname:str):
@@ -193,7 +188,7 @@ class TextFileDataset(Dataset):
         return 
 
 
-class TokenizedDataset(Dataset):
+class TokenizedDataset2(Dataset):
 
     def __init__(self,tokens,n_positions):
         self.tokens         = tokens 
@@ -201,6 +196,7 @@ class TokenizedDataset(Dataset):
 
         self.n_tokens       = len(self.tokens)
         self.warmup         = False
+
     
 
     def __getitem__(self, index)->dict[str,torch.Tensor]:
@@ -218,12 +214,12 @@ class TokenizedDataset(Dataset):
         return {"input_ids":token_seq,"target_ids":target_seq}
     
 
-    def sample(self,bs:int,n_tokens:int,devices:list[torch.device])->dict[str,torch.Tensor]:
+    def sample(self,bs:int,n_tokens:int,device:torch.device,holder)->dict[str,torch.Tensor]:
         end_point           = len(self.tokens) - (self.n_positions+1) if not self.warmup else int(len(self.tokens)*.02)
         idxs                = [random.randint(0, end_point) for _ in range(bs)]
 
-        token_seqs          = torch.tensor(numpy.array([self.tokens[idxs[i]:idxs[i]+n_tokens] for i in range(bs)])).to(devices[0]).long()
-        target_seqs         = torch.tensor(numpy.array([self.tokens[idxs[i]+1:idxs[i]+n_tokens+1] for i in range(bs)])).to(devices[1]).long()
+        token_seqs          = torch.tensor(numpy.array([self.tokens[idxs[i]:idxs[i]+n_tokens] for i in range(bs)])).to(device,non_blocking=True).long()
+        target_seqs         = torch.tensor(numpy.array([self.tokens[idxs[i]+1:idxs[i]+n_tokens+1] for i in range(bs)])).to(device,non_blocking=True).long()
 
         return {"input_ids":token_seqs,"target_ids":target_seqs}
 
@@ -233,7 +229,133 @@ class TokenizedDataset(Dataset):
     def __len__(self):
         return len(self.tokens) // self.n_positions
 
- 
+
+class TokenizedDataset(Dataset):
+
+    def __init__(self, tokens, n_positions):
+        if isinstance(tokens, numpy.ndarray):
+            tokens = torch.from_numpy(tokens)
+        self.tokens = tokens.contiguous().to(torch.int16)  # Make sure it's contiguous for fast slicing
+        self.n_positions = n_positions
+        self.n_tokens = len(self.tokens)
+        self.warmup = False
+
+        #self.batch_input     = torch.empty((bs,n_tok),dtype=torch.long,device=device,pin_memory=False)
+        #self.batch_target    = torch.empty((bs,n_tok),dtype=torch.long,device=device,pin_memory=False)
+
+
+    def build_idxs(self,bs,n_tokens):
+        end_point = len(self.tokens) - (n_tokens + 1)
+        return  torch.randint(0, end_point, (bs,))
+
+    def stack_indices(self,n_tokens,idxs):
+        offsets         = idxs.unsqueeze(1) + torch.arange(n_tokens).unsqueeze(0)
+        batch_input = self.tokens[offsets]
+        batch_target = self.tokens[offsets + 1]
+        #batch_input     = torch.stack([self.tokens[i : i + n_tokens] for i in idxs])
+        #batch_target    = torch.stack([self.tokens[i + 1 : i + n_tokens + 1] for i in idxs])
+
+        return batch_input,batch_target
+    
+    def sample(self, bs: int, n_tokens: int, device=None, pin_memory=False) -> dict[str, torch.Tensor]:
+
+        idxs                                = self.build_idxs(bs,n_tokens)
+
+        
+        batch_input,batch_target           = self.stack_indices(n_tokens,idxs)
+        
+
+        #self.batch_input.copy_(bi,non_blocking=True)
+        #self.batch_target.copy_(bt,non_blocking=True)
+
+        return {
+            "input_ids": batch_input.to(device).long(),
+            "target_ids": batch_target.to(device).long(),
+        }
+
+    def __len__(self):
+        return self.n_tokens // self.n_positions
+
+
+class Prefetcher:
+
+    def __init__(self,dataset:TokenizedDataset,bs:int,n_tok:int,device:torch.device,queue_size=3):
+        self.dataset = dataset
+        self.batch_size = bs
+        self.n_tokens = n_tok
+        self.device = device
+        self.queue = queue.Queue(maxsize=queue_size)
+        self.running = True
+
+        self.thread = threading.Thread(target=self._worker)
+        self.thread.daemon = True
+        self.thread.start()
+
+
+    def _worker(self):
+        while self.running:
+            if not self.queue.full():
+                try:
+                    batch = self.dataset.sample(self.batch_size, self.n_tokens, self.device,pin_memory=True)
+                    self.queue.put(batch)
+                except Exception as e:
+                    print(f"[Prefetcher] Error: {e}")
+                    time.sleep(0.1)  # Prevent busy looping
+
+    def get_batch(self):
+        return self.queue.get()
+
+    def stop(self):
+        self.running = False
+        self.thread.join()
+
+import multiprocessing
+from functools import partial
+
+def read_and_tokenize(fname, tokenizer):
+    with open(fname, 'r', encoding='utf_8') as f:
+        text = f.read() + "<|endoftext|>"
+        return tokenizer.encode(text).ids
+
+
+def create_token_file_parallel(ds_root, tokenizer, save_dir, chunk_size=25_000_000):
+    from tqdm import tqdm
+    import numpy as np
+    import os
+
+    os.makedirs(save_dir, exist_ok=True)
+
+    filenames = [os.path.join(ds_root, f) for f in os.listdir(ds_root) if os.path.isfile(os.path.join(ds_root, f))]
+
+    # Create multiprocessing pool
+    pool = multiprocessing.Pool(processes=os.cpu_count())
+
+    tokenize_func = partial(read_and_tokenize, tokenizer=tokenizer)
+    token_batches = pool.imap(tokenize_func, filenames, chunksize=8)
+
+    token_buffer = []
+    n_token_files = 0
+    total_tokens = 0
+
+    for token_list in tqdm(token_batches, total=len(filenames), desc="Tokenizing"):
+        token_buffer += token_list
+
+        if len(token_buffer) >= chunk_size:
+            np_arr = np.asarray(token_buffer[:chunk_size], dtype=np.int32)
+            np.save(os.path.join(save_dir, f"{n_token_files}.npy"), np_arr)
+            n_token_files += 1
+            total_tokens += len(np_arr)
+            token_buffer = token_buffer[chunk_size:]
+
+    # Final dump
+    if token_buffer:
+        np_arr = np.asarray(token_buffer, dtype=np.int32)
+        np.save(os.path.join(save_dir, f"{n_token_files}.npy"), np_arr)
+        total_tokens += len(np_arr)
+
+    print(f"[✓] Finished tokenizing {total_tokens:,} tokens into {n_token_files+1} files.")
+
+
 #All files are assumed to be cleaned
 def create_token_file(ds_root,tokenizer:ByteLevelBPETokenizer):
 
@@ -242,42 +364,48 @@ def create_token_file(ds_root,tokenizer:ByteLevelBPETokenizer):
     filenames       = [os.path.join(ds_root,file) for file in os.listdir(ds_root)]  
     #random.shuffle(filenames)
     #Create list of all texts
-    texts           = [None] * len(filenames) 
+    #texts           = [None] * len(filenames) 
     n_token_files   = 0 
     total_tokens    = 0
     print(f"loading text",flush=True)
+    print(f"tokenizing texts",flush=True)
+    tokens          = [] 
     for i,fname in enumerate(filenames):
         with open(fname,'r',encoding='utf_8') as readfile:
-            texts[i] = readfile.read() + "<|endoftext|>"
+            #texts[i] = readfile.read() + "<|endoftext|>"
+            text        = readfile.read() + "<|endoftext|>"
 
-    tokens          = [] 
 
-    print(f"tokenizing texts",flush=True)
-    for i, text in enumerate(texts):
+    # i = 0
+    # while texts:
+    #     text        = texts.pop()
+        #i           += 1 
         tokens += tokenizer.encode(text).ids
-        if len(tokens) > 200_000_000:
+        if len(tokens) > 10_000_000:
             np_arr:numpy.ndarray  = numpy.asarray(tokens).flatten()
-            np_arr.astype(int)
-            numpy.save(f"C:/data/nlp/tokens{n_token_files}.npy",np_arr)
+            np_arr                = np_arr.astype(int)
+            numpy.save(f"C:/data/nlp/tokens/{n_token_files}.npy",np_arr)
             n_token_files += 1
             total_tokens += len(tokens)
             tokens = []
+            print(f"tokenized {n_token_files}")
 
     np_arr:numpy.ndarray  = numpy.asarray(tokens).flatten()
     np_arr.astype(int)
-    numpy.save(f"C:/data/nlp/tokens{n_token_files}.npy",np_arr)
+    numpy.save(f"C:/data/nlp/tokens/{n_token_files}.npy",np_arr)
     print(f"created token set {total_tokens}")
 
 
-def train_tokenizer(vocab_size=32768,train_root="C:/data/nlp/train_dir"):
-    print(f"Training tokenizer size={vocab_size}")
+def train_tokenizer(vocab_size=32768,train_root="C:/data/nlp/train_dir",name='stein_tokenizer_bpe'):
+    print(f"Training {name} tokenizer size={vocab_size}")
     tokenizer               = ByteLevelBPETokenizer()
-    tokenizer.train([os.path.join(train_root,fname) for fname in os.listdir(train_root)],vocab_size=vocab_size)
+    tokenizer.train([os.path.join(train_root,fname) for fname in os.listdir(train_root)],vocab_size=vocab_size-1)
     tokenizer.add_tokens(["<|endoftext|>"])
-    if not os.path.exists("C:/data/nlp/stein_tokenizer_bpe"):
-        os.mkdir('C:/data/nlp/stein_tokenizer_bpe')
-    tokenizer.save_model('C:/data/nlp/stein_tokenizer_bpe')
-    print(f"\tcomplete")
+
+    if not os.path.exists(f"C:/data/nlp/{name}"):
+        os.mkdir(f'C:/data/nlp/{name}')
+    tokenizer.save_model(f'C:/data/nlp/{name}')
+    print(f"\tcomplete - saved as {name}")
 
 
 def get_yt_captions(ytdump_file:str='ytdump.html'):
@@ -323,7 +451,11 @@ def get_yt_captions(ytdump_file:str='ytdump.html'):
 # combine these into train_dir based on contents 
 def prep_data_for_training(desired_sources:list[str],final_dir="C:/data/nlp/train_dir",eot_token="<|endoftext|>"):
     
+    if not os.path.exists(final_dir):
+        os.mkdir(final_dir)
+        
     #Clear dataroot 
+    print(f"Cleaning root")
     for file in [os.path.join(final_dir,fname) for fname in os.listdir(final_dir)]:
         os.remove(file)
 
@@ -331,7 +463,7 @@ def prep_data_for_training(desired_sources:list[str],final_dir="C:/data/nlp/trai
     chars                   = 0 
     words                   = 0 
     for rootdir in desired_sources:
-
+        print(f"\tfixing {rootdir}")
         for fname in os.listdir(rootdir):
             
             #Get absolute path
@@ -649,10 +781,15 @@ def generate_stack_overflow(ds_root:str):
 
 
 if __name__ == "__main__":
+    vocab_name              = '16k'
     #generate_stack_overflow("C:/data/nlp/stackclean")
-    train_tokenizer(vocab_size=32768)
+    #prep_data_for_training(desired_sources=["C:/data/nlp/stackclean","C:/data/nlp/academic","C:/data/nlp/yt_ascii","C:/data/nlp/crawl","C:/data/nlp/newsarticles","C:/data/nlp/gutenberg/books"],final_dir="C:/data/nlp/training")#,"C:/data/nlp/gutenberg/books","C:/data/nlp/academic","C:/data/nlp/code/randpython_files"])
+    train_tokenizer(vocab_size=16384,train_root="C:/data/nlp/training",name=vocab_name)
     #generate_news_articles("C:/data/nlp/newsarticles")
-    prep_data_for_training(desired_sources=["C:/data/nlp/stackclean","C:/data/nlp/academic","C:/data/nlp/code/randpython_files","C:/data/nlp/yt_ascii","C:/data/nlp/crawl","C:/data/nlp/newsarticles","C:/data/nlp/gutenberg/books"])#,"C:/data/nlp/gutenberg/books","C:/data/nlp/academic","C:/data/nlp/code/randpython_files"])
-    tokenizer               = ByteLevelBPETokenizer().from_file(vocab_filename="stein_tokenizer_bpe/vocab.json",merges_filename="stein_tokenizer_bpe/merges.txt")
-    create_token_file("C:/data/nlp/train_dir",tokenizer)
+    tokenizer               = ByteLevelBPETokenizer().from_file(vocab_filename=f"C:/data/nlp/{vocab_name}/vocab.json",merges_filename=f"C:/data/nlp/{vocab_name}/merges.txt")
+    tokenizer.add_tokens(["<|endoftext|>"])
+    print(tokenizer.get_vocab_size(True),"\nTokenizing")
+
+    create_token_file_parallel("C:/data/nlp/training",tokenizer,"C:/data/nlp/tokens16k/")
+    #create_token_file("C:/data/nlp/training",tokenizer)
     exit()
