@@ -22,7 +22,7 @@ _SAMPLE_EVERY_T                 = 10*60
 _LAST_UPDATE_T                  = time.time() 
 _LAST_SAMPLE_T                  = time.time() - (3*60)
 _SAVE_MODEL_EVERY               = 5000
-_N_TOKENS                       = 500_000_000
+_N_TOKENS                       = 5_000_000_000
 
 CUR_STEP                        = 0 
 TOT_STEP                        = 0
@@ -129,8 +129,8 @@ if __name__ == "__main__":
     context1_size               = 512       #sequence to coarse summarize 
     context2_size               = 256       #sequence to fine summarize
     core_size                   = 128       #1:1 sequence 
-    lg_size                     = 64        #coarse reduced to this 
-    md_size                     = 64        #fine reduced to this 
+    lg_size                     = 16        #coarse reduced to this 
+    md_size                     = 16        #fine reduced to this 
     tfmr_input_size             = core_size + lg_size + md_size     #size of sequence going through transformer stack
     input_size                  = context1_size + context2_size + core_size
     vocab_size                  = 16385
@@ -139,22 +139,22 @@ if __name__ == "__main__":
     n_layers                    = 16
     n_embed                     = 1024#1024
     n_heads                     = n_embed//128#n_embed//128
-    n_ff                        = int(n_embed*2)
+    n_ff                        = int(n_embed*3)
     act_fn                      = torch.nn.GELU
 
     #Training settings
-    train_batch_tok             = 128 * 1024
+    train_batch_tok             = 512 * 1024
     bs                          = 32
     lr                          = .00025
     wd                          = .04
     dropout                     = .06
-    train_root                  = args.train_dir
+    train_root                  = args.train_root
     tok_trained_on              = 0 
     virtual_bs                  = train_batch_tok // tfmr_input_size
     accu_steps                  = virtual_bs // bs
-    pct_start                   = .05
-    train_iters                 = 2*_N_TOKENS // (bs*tfmr_input_size)
-    lr_steps                    = 2*_N_TOKENS // train_batch_tok
+    pct_start                   = .3
+    train_iters                 = _N_TOKENS // (bs*tfmr_input_size)
+    lr_steps                    = _N_TOKENS // train_batch_tok
     sample_text                 = "Scientists have discovered a new technique for creating large language models"
 
     tokenizer_name              = '16k'
@@ -179,7 +179,7 @@ if __name__ == "__main__":
 
     #Create model 
     model                       = MiniTransformerSteinshark(context1_size,context2_size,core_size,lg_size,md_size,n_embed,n_layers,n_heads,n_ff,vocab_size,act_fn,dropout)
-    model.name                  = "summ_1"
+    model.name                  = "summ_2"
     MODEL                       = model
     TOKENIZER                   = tokenizer
     #model.load()
@@ -236,8 +236,8 @@ if __name__ == "__main__":
 
         #Compute and backward loss 
         loss                        = torch.nn.functional.cross_entropy(logits, targets) / accu_steps
-
         unscaled_loss               = loss.clone()
+
         #loss                        = scaler.scale(loss)
         loss.backward() 
         model.stats['tok_through']  += float(bs*core_size)
@@ -256,9 +256,7 @@ if __name__ == "__main__":
 
         #Zero if on step cycle 
         if cur_train_iter % accu_steps == 0:
-            torch.nn.utils.clip_grad_norm_(model.parameters(),1.69)
-            #scaler.step(optimizer)
-            #scaler.update()
+            torch.nn.utils.clip_grad_norm_(model.parameters(),1.00000001)
             optimizer.step()
             optimizer.zero_grad()
             try:
@@ -275,6 +273,7 @@ if __name__ == "__main__":
             
             plt.cla()
             plt.clf()
+            colors      = ["mediumblue","mediumspringgreen","darkorange","deeppink","dodgerblue","orangered","crimson"]
             #Plot all stats in save dir 
             for file in os.listdir(stats_root):
                 filepath    = os.path.join(stats_root,file)
@@ -282,7 +281,7 @@ if __name__ == "__main__":
                 tok         = stats_dict['tokens']
                 losses      = stats_dict['losses']     
 
-                plt.plot(tok,losses,label=stats_dict['name'])
+                plt.plot(tok,losses,label=stats_dict['name'],color=colors.pop())
 
             plt.title(f"Model Loss - {model.n_params//1_000_000}M params - [{cur_train_iter}/{train_iters}]")
             plt.legend()
