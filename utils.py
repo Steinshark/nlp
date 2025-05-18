@@ -1,10 +1,8 @@
-import torch 
 from torch.utils.data import Dataset
 import os 
 from transformers import PreTrainedTokenizer
 import random
 import re
-import nltk
 from nltk import corpus
 import time 
 import requests

@@ -3,22 +3,19 @@ from tokenizers.implementations import ByteLevelBPETokenizer
 from miniTransformer import MiniTransformerSteinshark
 import os 
 import argparse
-from torch.utils.data import DataLoader
 from dataset import TokenizedDataset, Prefetcher
 import numpy 
 import time 
 import matplotlib
 matplotlib.use("qt5agg")
 from matplotlib import pyplot as plt 
-import sys 
 import random
 import json 
 import tkinter as tk
-import threading 
-import queue
 
-sys.path.append("C:/gitrepos/steinpy/src")
-from steinpy.utils import reduce_arr 
+
+#sys.path.append("C:/gitrepos/steinpy/src")
+#from steinpy.utils import reduce_arr 
 
 _UPDATE_EVERY_T                 = int(1*60)
 _SAMPLE_EVERY_T                 = 10*60
@@ -51,7 +48,7 @@ def print_model_sample(model:MiniTransformerSteinshark,prompt:str,tokenizer:Byte
     print(f"{tokenizer.decode(model.generate(tokenizer.encode(prompt).ids,TOKENIZER,n_tokens=n_tokens,temperature=temp))}\n\n")
 
 
-def print_update(current_step,total_step,losses,tok_thruput,model:MiniTransformerSteinshark,prompt:str,tokenizer:ByteLevelBPETokenizer,optimizer:torch.optim.Adam):
+def print_update(current_step,total_step,losses,tok_thruput,model:MiniTransformerSteinshark,prompt:str,tokenizer:ByteLevelBPETokenizer,optimizer:torch.optim.Adam,args):
     global _LAST_UPDATE_T
     global _LAST_SAMPLE_T
 
@@ -69,7 +66,7 @@ def print_update(current_step,total_step,losses,tok_thruput,model:MiniTransforme
 
     #Check to save model 
     if current_step % _SAVE_MODEL_EVERY == 0 and not current_step == 0:
-        model.save()
+        model.save(f"{args.train_root}/models/")
 
     #Check to sample 
     if time.time() - _LAST_SAMPLE_T > _SAMPLE_EVERY_T:
@@ -123,7 +120,7 @@ if __name__ == "__main__":
     argparser                   = argparse.ArgumentParser()
     argparser.add_argument('--model_dir',default='')
     argparser.add_argument('--load_vocab',default='True')
-    argparser.add_argument('--train_dir',default='c:/data/nlp/train_dir')
+    argparser.add_argument('--train_root',default='c:/data/nlp')
     args                        = argparser.parse_args()
 
 
@@ -176,7 +173,7 @@ if __name__ == "__main__":
         exit()
 
     else:
-        tokenizer               = ByteLevelBPETokenizer().from_file(vocab_filename=f"C:/data/nlp/{tokenizer_name}/vocab.json",merges_filename=f"C:/data/nlp/{tokenizer_name}/merges.txt")
+        tokenizer               = ByteLevelBPETokenizer().from_file(vocab_filename=f"{train_root}/{tokenizer_name}/vocab.json",merges_filename=f"{train_root}/{tokenizer_name}/merges.txt")
         print(f"tokenizer is size {tokenizer.get_vocab_size()}")
         assert tokenizer.get_vocab_size() == vocab_size-1
 
@@ -191,10 +188,10 @@ if __name__ == "__main__":
     lr_sched                    = torch.optim.lr_scheduler.OneCycleLR(optimizer,max_lr=lr,pct_start=pct_start,total_steps=lr_steps)
     #Create loaders 
     tokens                      = [] 
-    fnames                      = [fname for fname in os.listdir("C:/data/nlp/tokens16k")]
+    fnames                      = [fname for fname in os.listdir(f"{train_root}/tokens16k")]
     fnames.sort(key= lambda x: int(x.replace("tokens","").replace(".npy","")))
     for fname in fnames:
-        fname   = f"C:/data/nlp/tokens16k/{fname}"
+        fname   = f"{train_root}/tokens16k/{fname}"
         tokens.append(numpy.load(fname).astype(numpy.int32))
 
     tokens                      = numpy.concatenate(tokens)
@@ -269,7 +266,7 @@ if __name__ == "__main__":
             except ValueError:
                 pass #happens if were at the end
             #Save to stats root
-            stats_root              = "C:/data/nlp/prev_runs/"
+            stats_root              = f"{train_root}/prev_runs/"
             save_dir    = os.path.join(stats_root,f"{model.name}.json")
             tok         = model.stats['tok_snap']
             losses      = model.stats['losses']
@@ -303,7 +300,7 @@ if __name__ == "__main__":
         if model.stats['tok_through'] // dataset.n_tokens > model.stats["eps_through"]:
             model.stats["eps_through"] += 1
 
-        print_update(cur_train_iter,train_iters,model.stats['losses'],model.stats['tok_through']/(time.time()-model.stats['time_start']),model,sample_text,tokenizer,optimizer)
+        print_update(cur_train_iter,train_iters,model.stats['losses'],model.stats['tok_through']/(time.time()-model.stats['time_start']),model,sample_text,tokenizer,optimizer,args)
 
         cur_train_iter += 1 
 

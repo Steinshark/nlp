@@ -1,0 +1,1449 @@
+
+Wikimedia CommonsWikibooksWikiquote
+From Wikipedia, the free encyclopedia
+For the song by Brooke Fraser, see Arithmetic (song).
+Elementary branch of mathematics
+The main arithmetic operations are addition, subtraction, multiplication, and division.
+Arithmetic is an elementary branch of mathematics that studies numerical operations like addition, subtraction, multiplication, and division. In a wider sense, it also includes exponentiation, extraction of roots, and taking logarithms. Arithmetic systems can be distinguished based on the type of number they operate on. Integer arithmetic restricts itself to calculations with positive and negative whole numbers. Rational number arithmetic involves operations on fractions that lie between integers. Real number arithmetic includes calculations with both rational and irrational numbers and covers the complete number line. Another distinction is based on the numeral system employed to perform calculations. Decimal arithmetic is the most common. It uses the basic numerals from 0 to 9 and their combinations to express numbers. Binary arithmetic, by contrast, is used by most computers and represents numbers as combinations of the basic numerals 0 and 1. Some arithmetic systems operate on mathematical objects other than numbers, such as interval arithmetic and matrix arithmetic.
+Arithmetic operations form the basis of many branches of mathematics, such as algebra, calculus, and statistics. They play a similar role in the sciences, like physics and economics. Arithmetic is present in many aspects of daily life, for example, to calculate change while shopping or to manage personal finances. It is one of the earliest forms of mathematics education that students encounter. Its cognitive and conceptual foundations are studied by psychology and philosophy.
+The practice of arithmetic is at least thousands and possibly tens of thousands of years old. Ancient civilizations like the Egyptians and the Sumerians invented numeral systems to solve practical arithmetic problems in about 3000 BCE. Starting in the 7th and 6th centuries BCE, the ancient Greeks initiated a more abstract study of numbers and introduced the method of rigorous mathematical proofs. The ancient Indians developed the concept of zero and the decimal system, which Arab mathematicians further refined and spread to the Western world during the medieval period. The first mechanical calculators were invented in the 17th century. The 18th and 19th centuries saw the development of modern number theory and the formulation of axiomatic foundations of arithmetic. In the 20th century, the emergence of electronic calculators and computers revolutionized the accuracy and speed with which arithmetic calculations could be performed.
+Definition, etymology, and related fields[edit]
+Arithmetic is the fundamental branch of mathematics that studies numbers and their operations. In particular, it deals with numerical calculations using the arithmetic operations of addition, subtraction, multiplication, and division.[1] In a wider sense, it also includes  exponentiation, extraction of roots, and logarithm.[2] The term "arithmetic" has its root in the Latin term "arithmetica" which derives from the Ancient Greek words ?ριθμ?ς (arithmos), meaning "number", and ?ριθμητικ? τ?χνη (arithmetike tekhne), meaning "the art of counting".[3]
+There are disagreements about its precise definition. According to a narrow characterization, arithmetic deals only with natural numbers.[4] However, the more common view is to include operations on integers, rational numbers, real numbers, and sometimes also complex numbers in its scope.[5] Some definitions restrict arithmetic to the field of numerical calculations.[6] When understood in a wider sense, it also includes the study of how the concept of numbers developed, the analysis of properties of and relations between numbers, and the examination of the axiomatic structure of arithmetic operations.[7]
+Arithmetic is closely related to number theory and some authors use the terms as synonyms.[8] However, in a more specific sense, number theory is restricted to the study of integers and focuses on their properties and relationships such as divisibility, factorization, and primality.[9] Traditionally, it is known as higher arithmetic.[10]
+Arithmetic is intimately connected to many branches of mathematics that depend on numerical operations. Algebra relies on arithmetic principles to solve equations using variables. These principles also play a key role in calculus in its attempt to determine rates of change and areas under curves. Geometry uses arithmetic operations to measure the properties of shapes while statistics utilizes them to analyze numerical data.[11]
+Numbers[edit]
+Numbers are mathematical objects used to count quantities and measure magnitudes. They are fundamental elements in arithmetic since all arithmetic operations are performed on numbers. There are different kinds of numbers and different numeral systems to represent them.[12]
+Kinds[edit]
+Different types of numbers on a number line. Integers are black, rational numbers are blue, and irrational numbers are green.
+The main kinds of numbers employed in arithmetic are natural numbers, whole numbers, integers, rational numbers, and real numbers.[13] The natural numbers are whole numbers that start from 1 and go to infinity. They exclude 0 and negative numbers. They are also known as counting numbers and can be expressed as {1, 2, 3, 4, ...}. The symbol of the natural numbers is 
+N
+.
+{\displaystyle \mathbb {N} .}
+ The whole numbers are identical to the natural numbers with the only difference being that they include 0. They can be represented as {0, 1, 2, 3, 4, ...} and have the symbol 
+N
+0
+{\displaystyle \mathbb {N} _{0}}
+.[14] Some mathematicians do not draw the distinction between the natural and the whole numbers by including 0 in the set of natural numbers.[15] The set of integers encompasses both positive and negative whole numbers. It has the symbol 
+Z
+{\displaystyle \mathbb {Z} }
+ and can be expressed as {..., -2, -1, 0, 1, 2, ...}.[16]
+A number is rational if it can be represented as the ratio of two integers. For instance, the rational number 
+1
+2
+{\displaystyle {\tfrac {1}{2}}}
+ is formed by dividing the integer 1, called the numerator, by the integer 2, called the denominator. Other examples are 
+3
+4
+{\displaystyle {\tfrac {3}{4}}}
+ and 
+281
+3
+{\displaystyle {\tfrac {281}{3}}}
+. The set of rational numbers includes all integers, which are fractions with a denominator of 1. The symbol of the rational numbers is 
+Q
+{\displaystyle \mathbb {Q} }
+.[17] Decimal fractions like 0.3 and 25.12 are a special type of rational numbers since their denominator is a power of 10. For instance, 0.3 is equal to 
+3
+10
+{\displaystyle {\tfrac {3}{10}}}
+, and 25.12 is equal to 
+2512
+100
+{\displaystyle {\tfrac {2512}{100}}}
+.[18] Every rational number corresponds to a finite or a repeating decimal.[19]
+Irrational numbers are sometimes required to describe magnitudes in geometry. For example, the length of the hypotenuse of a right triangle is irrational if its legs have a length of 1.
+Irrational numbers are numbers that cannot be expressed through the ratio of two integers. Examples are many square roots, such as 
+2
+{\displaystyle {\sqrt {2}}}
+, and numbers like π and e (Euler's number).[20] The decimal representation of an irrational number is infinite without repeating decimals.[21] The set of rational numbers together with the set of irrational numbers makes up the set of real numbers. The symbol of the real numbers is 
+R
+{\displaystyle \mathbb {R} }
+.[22] Even wider classes of numbers include complex numbers and quaternions.[23]
+Based on how numbers are used, they can be distinguished into cardinal and ordinal numbers. Cardinal numbers, like one, two, and three, are numbers that express the quantity of objects. They answer the question "how many?". Ordinal numbers, such as first, second, and third, indicate order or placement in a series. They answer the question "what position?".[24]
+Numeral systems[edit]
+A numeral is a symbol to represent a number and numeral systems are representational frameworks.[25] They usually have a limited amount of basic numerals, which directly refer to certain numbers. The system governs how these basic numerals may be combined to express any number.[26] Numeral systems are either positional or non-positional. All early numeral systems were non-positional.[27] For non-positional numeral systems, the value of a digit does not depend on its position in the numeral.[28]
+Tally marks and some tally sticks  use the non-positional unary numeral system.
+The simplest non-positional system is the unary numeral system. It relies on one symbol for the number 1. All higher numbers are written by repeating this symbol. For example, the number 7 can be represented by repeating the symbol for 1 seven times. This system makes it cumbersome to write large numbers, which is why many non-positional systems include additional symbols to directly represent larger numbers.[29] Variations of the unary numeral systems are employed in tally sticks using dents and in tally marks.[30]
+Hieroglyphic numerals from 1 to 10,000[31]
+Egyptian hieroglyphics had a more complex non-positional numeral system. They have additional symbols for numbers like 10, 100, 1000, and 10,000. These symbols can be combined into a sum to more conveniently express larger numbers. For instance, the numeral for 10,405 uses one time the symbol for 10,000, four times the symbol for 100, and five times the symbol for 1. A similar well-known framework is the Roman numeral system. It has the symbols I, V, X, L, C, D, M as its basic numerals to represent the numbers 1, 5, 10, 50, 100, 500, and 1000.[32]
+A numeral system is positional if the position of a basic numeral in a compound expression determines its value. Positional numeral systems have a radix that acts as a multiplicand of the different positions. For each subsequent position, the radix is raised to a higher power. In the common decimal system, also called the Hindu-Arabic numeral system, the radix is 10. This means that the first digit is multiplied by 
+10
+0
+{\displaystyle 10^{0}}
+, the next digit is multiplied by 
+10
+1
+{\displaystyle 10^{1}}
+, and so on. For example, the decimal numeral 532 stands for 
+5
+?
+10
+2
++
+3
+?
+10
+1
++
+2
+?
+10
+0
+{\displaystyle 5\cdot 10^{2}+3\cdot 10^{1}+2\cdot 10^{0}}
+. Because of the effect of the digits' positions, the numeral 532 differs from the numerals 325 and 253 even though they have the same digits.[33]
+Another positional numeral system used extensively in computer arithmetic is the binary system, which has a radix of 2. This means that the first digit is multiplied by 
+2
+0
+{\displaystyle 2^{0}}
+, the next digit by 
+2
+1
+{\displaystyle 2^{1}}
+, and so on. For example, the number 13 is written as 1101 in the binary notation, which stands for 
+1
+?
+2
+3
++
+1
+?
+2
+2
++
+0
+?
+2
+1
++
+1
+?
+2
+0
+{\displaystyle 1\cdot 2^{3}+1\cdot 2^{2}+0\cdot 2^{1}+1\cdot 2^{0}}
+. In computing, each digit in the binary notation corresponds to one bit.[34] The earliest positional system was developed by ancient Babylonians and had a radix of 60.[35]
+Arithmetic operations[edit]
+Arithmetic operations are ways of combining, transforming, or manipulating numbers. They are functions that have numbers both as input and output.[36] The most important operations in arithmetic are addition, subtraction, multiplication, and division.[37] Further operations include exponentiation, extraction of roots, and logarithm.[38] If these operations are performed on variables rather than numbers, they are sometimes referred to as algebraic operations.[39]
+Two important concepts in relation to arithmetic operations are identity elements and inverse elements. The identity element or neutral element of an operation does not cause any change if it is applied to another element. For example, the identity element of addition is 0 since any sum of a number and 0 results in the same number. The inverse element is the element that results in the identity element when combined with another element. For instance, the additive inverse of the number 6 is -6 since their sum is 0.[40]
+There are not only inverse elements but also inverse operations. In an informal sense, one operation is the inverse of another operation if it undoes the first operation. For example, subtraction is the inverse of addition since a number returns to its original value if a second number is first added and subsequently subtracted, as in 
+13
++
+4
+?
+4
+=
+13
+{\displaystyle 13+4-4=13}
+. Defined more formally, the operation "
+?
+{\displaystyle \star }
+" is an inverse of the operation "
+?
+{\displaystyle \circ }
+" if it fulfills the following condition: 
+t
+?
+s
+=
+r
+{\displaystyle t\star s=r}
+ if and only if 
+r
+?
+s
+=
+t
+{\displaystyle r\circ s=t}
+.[41]
+Commutativity and associativity are laws governing the order in which some arithmetic operations can be carried out. An operation is commutative if the order of the arguments can be changed without affecting the results. This is the case for addition, for instance, 
+7
++
+9
+{\displaystyle 7+9}
+ is the same as 
+9
++
+7
+{\displaystyle 9+7}
+. Associativity is a rule that affects the order in which a series of operations can be carried out. An operation is associative if, in a series of two operations, it does not matter which operation is carried out first. This is the case for multiplication, for example, since 
+(
+5
+×
+4
+)
+×
+2
+{\displaystyle (5\times 4)\times 2}
+ is the same as 
+5
+×
+(
+4
+×
+2
+)
+{\displaystyle 5\times (4\times 2)}
+.[42]
+Addition and subtraction[edit]
+Main articles: Addition and Subtraction
+Addition and subtraction
+Addition is an arithmetic operation in which two numbers, called the addends, are combined into a single number, called the sum. The symbol of addition is 
++
+{\displaystyle +}
+. Examples are 
+2
++
+2
+=
+4
+{\displaystyle 2+2=4}
+ and 
+6.3
++
+1.26
+=
+7.56
+{\displaystyle 6.3+1.26=7.56}
+.[43] The term summation is used if several additions are performed in a row. Counting is a type of repeated addition in which the number 1 is continuously added.[44]
+Subtraction is the inverse of addition. In it, one number, known as the subtrahend, is taken away from another, known as the minuend. The result of this operation is called the difference. The symbol of subtraction is 
+?
+{\displaystyle -}
+.[45] Examples are 
+14
+?
+8
+=
+6
+{\displaystyle 14-8=6}
+ and 
+45
+?
+1.7
+=
+43.3
+{\displaystyle 45-1.7=43.3}
+. Subtraction is often treated as a special case of addition: instead of subtracting a positive number, it is also possible to add a negative number. For instance 
+14
+?
+8
+=
+14
++
+(
+?
+8
+)
+{\displaystyle 14-8=14+(-8)}
+. This helps to simplify mathematical computations by reducing the number of basic arithmetic operations needed to perform calculations.[46]
+The additive identity element is 0 and the additive inverse of a number is the negative of that number. For instance, 
+13
++
+0
+=
+13
+{\displaystyle 13+0=13}
+ and 
+13
++
+(
+?
+13
+)
+=
+0
+{\displaystyle 13+(-13)=0}
+. Addition is both commutative and associative.[47]
+Multiplication and division[edit]
+Main articles: Multiplication and Division (mathematics)
+Multiplication and division
+Multiplication  is an arithmetic operation in which two numbers, called the multiplier and the multiplicand, are combined into a single number called the product.[48][a] The symbols of multiplication are 
+×
+{\displaystyle \times }
+, 
+?
+{\displaystyle \cdot }
+, and *. Examples are 
+2
+×
+3
+=
+6
+{\displaystyle 2\times 3=6}
+ and 
+0.3
+?
+5
+=
+1.5
+{\displaystyle 0.3\cdot 5=1.5}
+. If the multiplicand is a natural number then multiplication is the same as repeated addition, as in 
+2
+×
+3
+=
+2
++
+2
++
+2
+{\displaystyle 2\times 3=2+2+2}
+.[50]
+Division is the inverse of multiplication. In it, one number, known as the dividend, is split into several equal parts by another number, known as the divisor. The result of this operation is called the quotient. The symbols of division are 
+?
+{\displaystyle \div }
+ and 
+/
+{\displaystyle /}
+. Examples are 
+48
+?
+8
+=
+6
+{\displaystyle 48\div 8=6}
+ and 
+29.4
+/
+1.4
+=
+21
+{\displaystyle 29.4/1.4=21}
+.[51] Division is often treated as a special case of multiplication: instead of dividing by a number, it is also possible to multiply by its reciprocal. The reciprocal of a number is 1 divided by that number. For instance, 
+48
+?
+8
+=
+48
+×
+1
+8
+{\displaystyle 48\div 8=48\times {\tfrac {1}{8}}}
+.[52]
+The multiplicative identity element is 1 and the multiplicative inverse of a number is the reciprocal of that number. For example, 
+13
+×
+1
+=
+13
+{\displaystyle 13\times 1=13}
+ and 
+13
+×
+1
+13
+=
+1
+{\displaystyle 13\times {\tfrac {1}{13}}=1}
+. Multiplication is both commutative and associative.[53]
+Exponentiation and logarithm[edit]
+Main articles: Exponentiation and Logarithm
+Exponentiation and logarithm
+Exponentiation is an arithmetic operation in which a number, known as the base, is raised to the power of another number, known as the exponent. The result of this operation is called the power. Exponentiation is sometimes expressed using the symbol ^ but the more common way is to write the exponent in superscript right after the base. Examples are 
+2
+4
+=
+16
+{\displaystyle 2^{4}=16}
+ and 
+3
+{\displaystyle 3}
+^
+3
+=
+27
+{\displaystyle 3=27}
+. If the exponent is a natural number then exponentiation is the same as repeated multiplication, as in 
+2
+4
+=
+2
+×
+2
+×
+2
+×
+2
+{\displaystyle 2^{4}=2\times 2\times 2\times 2}
+.[54]
+Roots are a special type of exponentiation using a fractional exponent. For example, the square root of a number is the same as raising the number to the power of 
+1
+2
+{\displaystyle {\tfrac {1}{2}}}
+ and the cube root of a number is the same as raising the number to the power of 
+1
+3
+{\displaystyle {\tfrac {1}{3}}}
+. Examples are 
+4
+=
+4
+1
+2
+=
+2
+{\displaystyle {\sqrt {4}}=4^{\frac {1}{2}}=2}
+ and 
+27
+3
+=
+27
+1
+3
+=
+3
+{\displaystyle {\sqrt[{3}]{27}}=27^{\frac {1}{3}}=3}
+.[55]
+Logarithm is the inverse of exponentiation. The logarithm of a number 
+x
+{\displaystyle x}
+ to the base 
+b
+{\displaystyle b}
+ is the exponent to which 
+b
+{\displaystyle b}
+ must be raised to produce 
+x
+{\displaystyle x}
+. For instance, since 
+1000
+=
+10
+3
+{\displaystyle 1000=10^{3}}
+, the logarithm base 10 of 1000 is 3. The logarithm of 
+x
+{\displaystyle x}
+ to base 
+b
+{\displaystyle b}
+ is denoted as 
+log
+b
+?
+(
+x
+)
+{\displaystyle \log _{b}(x)}
+, or without parentheses, 
+log
+b
+?
+x
+{\displaystyle \log _{b}x}
+, or even without the explicit base, 
+log
+?
+x
+{\displaystyle \log x}
+, when the base can be understood from context. So, the previous example can be written 
+log
+10
+?
+1000
+=
+3
+{\displaystyle \log _{10}1000=3}
+.[56]
+Exponentiation and logarithm do not have general identity elements and inverse elements like addition and multiplication. The neutral element of exponentiation in relation to the exponent is 1, as in 
+14
+1
+=
+14
+{\displaystyle 14^{1}=14}
+. However, exponentiation does not have a general identity element since 1 is not the neutral element for the base.[57] Exponentiation and logarithm are neither commutative nor associative.[58]
+Types of arithmetic[edit]
+Different types of arithmetic systems are discussed in the academic literature. They differ from each other based on what type of number they operate on, what numeral system they use to represent them, and whether they operate on mathematical objects other than numbers.[59]
+Integer arithmetic[edit]
+Integer arithmetic is the branch of arithmetic that deals with the manipulation of positive and negative whole numbers.[60] Simple one-digit operations can be performed by following or memorizing a table that presents the results of all possible combinations, like an addition table or a multiplication table. Other common methods are verbal counting and finger-counting.[61]
+Addition table
++
+0
+1
+2
+3
+4
+...
+0
+0
+1
+2
+3
+4
+...
+1
+1
+2
+3
+4
+5
+...
+2
+2
+3
+4
+5
+6
+...
+3
+3
+4
+5
+6
+7
+...
+4
+4
+5
+6
+7
+8
+...
+...
+...
+...
+...
+...
+...
+...
+Multiplication table
+×
+0
+1
+2
+3
+4
+...
+0
+0
+0
+0
+0
+0
+...
+1
+0
+1
+2
+3
+4
+...
+2
+0
+2
+4
+6
+8
+...
+3
+0
+3
+6
+9
+12
+...
+4
+0
+4
+8
+12
+16
+...
+...
+...
+...
+...
+...
+...
+...
+Example of addition with carry. The black numbers are the addends, the green number is the carry, and the blue number is the sum.
+For operations on numbers with more than one digit, different techniques can be employed to calculate the result by using several one-digit operations in a row. For example, in the method addition with carries, the two numbers are written one above the other. Starting from the rightmost digit, each pair of digits is added together. The rightmost digit of the sum is written below them. If the sum is a two-digit number then the leftmost digit, called the "carry", is added to the next pair of digits to the left. This process is repeated until all digits have been added.[62] Other methods used for integer additions are the number line method, the partial sum method, and the compensation method.[63] A similar technique is utilized for subtraction: it also starts with the rightmost digit and uses a "borrow" or a negative carry for the column on the left if the result of the one-digit subtraction is negative.[64]
+Example of long multiplication. The black numbers are the multiplier and the multiplicand. The green numbers are intermediary products gained by multiplying the multiplier with only one digit of the multiplicand. The blue number is the total product calculated by adding the intermediary products.
+A basic technique of integer multiplication employs repeated addition. For example, the product of 3 × 4 can be calculated as 3 + 3 + 3 + 3.[65] A common technique for multiplication with larger numbers is called long multiplication. This method starts by writing the multiplier above the multiplicand. The calculation begins by multiplying the multiplier only with the rightmost digit of the multiplicand and writing the result below, starting in the rightmost column. The same is done for each digit of the multiplicand and the result in each case is shifted one position to the left. As a final step, all the individual products are added to arrive at the total product of the two multi-digit numbers.[66] Other techniques used for multiplication are the grid method and the lattice method.[67] Computer science is interested in multiplication algorithms with a low computational complexity to be able to efficiently multiply very large integers, such as the Karatsuba algorithm, the Sch?nhage-Strassen algorithm, and the Toom-Cook algorithm.[68] A common technique used for division is called long division. Other methods include short division and chunking.[69]
+Integer arithmetic is not closed under division. This means that when dividing one integer by another integer, the result is not always an integer. For instance, 7 divided by 2 is not a whole number but 3.5.[70] One way to ensure that the result is an integer is to round the result to a whole number. However, this method leads to inaccuracies as the original value is altered.[71] Another method is to perform the division only partially and retain the remainder. For example, 7 divided by 2 is 3 with a remainder of 1. These difficulties are avoided by rational number arithmetic, which allows for the exact representation of fractions.[72]
+A simple method to calculate exponentiation is by repeated multiplication. For instance, the exponentiation of 34 can be calculated as 3 × 3 × 3 × 3.[73] A more efficient technique used for large exponents is exponentiation by squaring. It breaks down the calculation into a number of squaring operations. For example, the exponentiation 365 can be written as (((((32)2)2)2)2)2 × 3. By taking advantage of repeated squaring operations, only 7 individual operations are needed rather than the 64 operations required for regular repeated multiplication.[74] Methods to calculate logarithms include the Taylor series and continued fractions.[75] Integer arithmetic is not closed under logarithm and under exponentiation with negative exponents, meaning that the result of these operations is not always an integer.[76]
+Number theory[edit]
+Main article: Number theory
+Number theory studies the structure and properties of integers as well as the relations and laws between them.[77] Some of the main branches of modern number theory include elementary number theory, analytic number theory, algebraic number theory, and geometric number theory.[78] Elementary number theory studies aspects of integers that can be investigated using elementary methods. In this regard, it excludes the use of methods found in analysis and calculus. Its topics include divisibility, factorization, and primality.[79] Analytic number theory, by contrast, relies on techniques from analysis and calculus. It examines problems like how prime numbers are distributed and the claim that every even number is a sum of two prime numbers.[80] Algebraic number theory employs algebraic structures to analyze the properties of and relations between numbers. Examples are the use of fields and rings, as in algebraic number fields like the ring of integers. Geometric number theory uses concepts from geometry to study numbers. For instance, it investigates how lattice points with integer coordinates behave in a plane.[81] Further branches of number theory are probabilistic number theory, combinatorial number theory, computational number theory, and applied number theory.[82]
+Influential theorems in number theory include the fundamental theorem of arithmetic, Euclid's theorem, and Fermat's last theorem.[83] According to the fundamental theorem of arithmetic, every integer greater than 1 is either a prime number or can be represented as a unique product of prime numbers. For example, the number 18 is not a prime number and can be represented as 
+2
+×
+3
+×
+3
+{\displaystyle 2\times 3\times 3}
+, all of which are prime numbers. The number 19, by contrast, is a prime number that has no other prime factorization.[84] Euclid's theorem states that there are infinitely many prime numbers.[85] Fermat's last theorem is the statement that no positive integer values can be found for 
+a
+{\displaystyle a}
+, 
+b
+{\displaystyle b}
+, and 
+c
+{\displaystyle c}
+, to solve the equation 
+a
+n
++
+b
+n
+=
+c
+n
+{\displaystyle a^{n}+b^{n}=c^{n}}
+ if 
+n
+{\displaystyle n}
+ is greater than 
+2
+{\displaystyle 2}
+.[86]
+Rational number arithmetic[edit]
+Rational number arithmetic is the branch of arithmetic that deals with the manipulation of numbers that can be expressed as a ratio of two integers.[87] Most arithmetic operations on rational numbers can be calculated by performing a series of integer arithmetic operations on the numerators and the denominators of the involved numbers. If two rational numbers have the same denominator then they can be added by adding their numerators and keeping the common denominator. For example, 
+2
+7
++
+3
+7
+=
+5
+7
+{\displaystyle {\tfrac {2}{7}}+{\tfrac {3}{7}}={\tfrac {5}{7}}}
+. A similar procedure is used for subtraction. If the two numbers do not have the same denominator then they must be transformed to find a common denominator. This can be achieved by scaling the first number with the denominator of the second number while scaling the second number with the denominator of the first number. For instance, 
+1
+3
++
+1
+2
+=
+1
+?
+2
+3
+?
+2
++
+1
+?
+3
+2
+?
+3
+=
+2
+6
++
+3
+6
+=
+5
+6
+{\displaystyle {\tfrac {1}{3}}+{\tfrac {1}{2}}={\tfrac {1\cdot 2}{3\cdot 2}}+{\tfrac {1\cdot 3}{2\cdot 3}}={\tfrac {2}{6}}+{\tfrac {3}{6}}={\tfrac {5}{6}}}
+.[88]
+Two rational numbers are multiplied by multiplying their numerators and their denominators respectively, as in 
+2
+3
+?
+2
+5
+=
+2
+?
+2
+3
+?
+5
+=
+4
+15
+{\displaystyle {\tfrac {2}{3}}\cdot {\tfrac {2}{5}}={\tfrac {2\cdot 2}{3\cdot 5}}={\tfrac {4}{15}}}
+. Dividing one rational number by another can be achieved by multiplying the first number with the reciprocal of the second number. This means that the numerator and the denominator of the second number change position. For example, 
+3
+5
+:
+2
+7
+=
+3
+5
+?
+7
+2
+=
+21
+10
+{\displaystyle {\tfrac {3}{5}}:{\tfrac {2}{7}}={\tfrac {3}{5}}\cdot {\tfrac {7}{2}}={\tfrac {21}{10}}}
+.[89] Unlike integer arithmetic, rational number arithmetic is closed under division as long as the divisor is not 0.[90]
+Both integer arithmetic and rational number arithmetic are not closed under exponentiation and logarithm.[91] One way to calculate exponentiation with a fractional exponent is to perform two separate calculations: one exponentiation using the numerator of the exponent followed by drawing the nth root of the result based on the denominator of the exponent. For example, 
+5
+2
+3
+=
+5
+2
+3
+{\displaystyle 5^{\frac {2}{3}}={\sqrt[{3}]{5^{2}}}}
+. The first operation can be completed using methods like repeated multiplication or exponentiation by squaring. One way to get an approximate result for the second operation is to employ Newton's method, which uses a series of steps to gradually refine an initial guess until it reaches the desired level of accuracy.[92] The Taylor series or the continued fraction method can be utilized to calculate logarithms.[93]
+The decimal fraction notation is a special way of representing rational numbers whose denominator is a power of 10. For instance, the rational numbers 
+1
+10
+{\displaystyle {\tfrac {1}{10}}}
+, 
+371
+100
+{\displaystyle {\tfrac {371}{100}}}
+, and 
+44
+10000
+{\displaystyle {\tfrac {44}{10000}}}
+ are written as 0.1, 3.71, and 0.0044 in the decimal fraction notation.[94] Modified versions of integer calculation methods like addition with carry and long multiplication can be applied to calculations with decimal fractions.[95] Not all rational numbers have a finite representation in the decimal notation. For example, the rational number 
+1
+3
+{\displaystyle {\tfrac {1}{3}}}
+ corresponds to 0.333... with an infinite number of 3s. The shortened notation for this type of repeating decimal is 0.3.[96] Every repeating decimal expresses a rational number.[19]
+Real number arithmetic[edit]
+Real number arithmetic is the branch of arithmetic that deals with the manipulation of both rational and irrational numbers. Irrational numbers are numbers that cannot be expressed through fractions or repeated decimals, like the root of 2 and π.[97] Unlike rational number arithmetic, real number arithmetic is closed under exponentiation as long as it uses a positive number as its base. The same is true for the logarithm of positive real numbers as long as the logarithm base is positive and not 1.[98]
+Irrational numbers involve an infinite non-repeating series of decimal digits. Because of this, there is often no simple and accurate way to express the results of arithmetic operations like 
+2
++
+π
+{\displaystyle {\sqrt {2}}+\pi }
+ or 
+e
+?
+3
+{\displaystyle e\cdot {\sqrt {3}}}
+.[99] In cases where absolute precision is not required, the problem of calculating arithmetic operations on real numbers is usually addressed by truncation or rounding. For truncation, a certain number of significant digits to the left are kept and additional digits to the right of the last significant digit are removed. For example, the number π has an infinite number of digits starting with 3.14159... . If this number is truncated to 4 significant digits, the result is 3.141. Rounding is a similar process in which the last significant digit is increased by one if the next digit is 5 or greater. If the next digit is less than 5, the last digit remains the same. For instance, if the number π is rounded to 4 significant digits, the result is 3.142 because the following digit is a 5.[100] These methods are essential to allow computers to efficiently perform calculations on real numbers.[101]
+Very large and very small real numbers are often expressed using normalized scientific notation. In it, numbers are represented using a so-called significand multiplied by a power of 10. The significand is a digit followed by a decimal point and a series of digits. For example, the normalized scientific notation of the number 8276000 is 
+8.276
+×
+10
+6
+{\displaystyle 8.276\times 10^{6}}
+ and the number 0.00735 has the normalized scientific notation of 
+7.35
+×
+10
+?
+3
+{\displaystyle 7.35\times 10^{-3}}
+.[102]
+A common method employed by computers to approximate real number arithmetic is called floating-point arithmetic. It represents real numbers similar to the scientific notation through three numbers: a significand, a base, and an exponent.[103] The precision of the significand is limited by the number of bits allocated to represent it. If an arithmetic operation results in a number that requires more bits than are available, the computer rounds the result to the closest representable number. This leads to rounding errors.[104] A consequence of this behavior is that certain laws of arithmetic are violated by floating-point arithmetic. For example, floating-point addition is not associative since the rounding errors introduced can depend on the order of the additions. This means that the result of 
+(
+a
++
+b
+)
++
+c
+{\displaystyle (a+b)+c}
+ is sometimes different from the result of 
+a
++
+(
+b
++
+c
+)
+{\displaystyle a+(b+c)}
+.[105] The most common technical standard used for floating-point arithmetic is called IEEE 754. Among other things, it determines how numbers are represented, how arithmetic operations and rounding are performed, and how errors and exceptions are handled.[106] In cases where computation speed is not a limiting factor, it is possible to use arbitrary-precision arithmetic, for which the precision of calculations is only restricted by the computer's memory.[107]
+Others[edit]
+Example of modular arithmetic using a clock: after adding 4 hours to 9 o'clock, the hand starts at the beginning again and points at 1 o'clock.
+There are many other types of arithmetic. Modular arithmetic operates on a finite set of numbers. If an operation would result in a number outside this finite set then the number is adjusted back into the set, similar to how the hands of clocks start at the beginning again after having completed one cycle. The number at which this adjustment happens is called the modulus. For example, a regular clock has a modulus of 12. In the case of adding 4 to 9, this means that the result is not 13 but 1. The same principle applies also to other operations, such as subtraction, multiplication, and division.[108]
+Some forms of arithmetic deal with operations performed on mathematical objects other than numbers. Interval arithmetic describes operations on intervals. Intervals can be used to represent a range of values if one does not know the precise magnitude, for example, because of measurement errors. Interval arithmetic includes operations like addition and multiplication on intervals, as in 
+[
+1
+,
+2
+]
++
+[
+3
+,
+4
+]
+=
+[
+4
+,
+6
+]
+{\displaystyle [1,2]+[3,4]=[4,6]}
+ and 
+[
+1
+,
+2
+]
+×
+[
+3
+,
+4
+]
+=
+[
+3
+,
+8
+]
+{\displaystyle [1,2]\times [3,4]=[3,8]}
+.[109] It is closely related to affine arithmetic, which aims to give more precise results by performing calculations on affine forms rather than intervals. An affine form is a number together with error terms that describe how the number may deviate from the actual magnitude.[110] Vector arithmetic and matrix arithmetic describe arithmetic operations on vectors and matrices, like vector addition and matrix multiplication.[111]
+Calculations in mental arithmetic are done exclusively in the mind without relying on external aids.
+For mental arithmetic, the calculations are performed exclusively in the mind without external tools like pen and paper or electronic calculators. Instead, mental arithmetic makes use of visualization, memorization, and certain calculation techniques to solve arithmetic problems.[112] One such technique is the compensation method. It consists in altering the numbers to make the calculation easier and then adjusting the result afterward. For example, instead of calculating 
+85
+?
+47
+{\displaystyle 85-47}
+, one calculates 
+85
+?
+50
+{\displaystyle 85-50}
+ which is easier because it uses a round number. In the next step, one adds 
+3
+{\displaystyle 3}
+ to the result to compensate for the earlier adjustment.[113] Mental arithmetic is often taught in primary education to train the numerical abilities of the students.[114]
+Arithmetic systems can be classified based on the numeral system they rely on. For instance, decimal arithmetic describes arithmetic operations in the decimal system. Other examples are binary arithmetic, octal arithmetic, and hexadecimal arithmetic.[115]
+Compound unit arithmetic describes arithmetic operations performed on magnitudes with compound units. It involves additional operations to govern the transformation between single unit and compound unit quantities. For example, the operation of reduction is used to transform the compound quantity 1 h 90 min into the single unit quantity 150 min.[116]
+Non-Diophantine arithmetics are arithmetic systems that violate traditional arithmetic intuitions and include equations like 
+1
++
+1
+=
+1
+{\displaystyle 1+1=1}
+ and 
+2
++
+2
+=
+5
+{\displaystyle 2+2=5}
+.[117] They can be employed to represent some real-world situations in modern physics and everyday life. For instance, the equation 
+1
++
+1
+=
+1
+{\displaystyle 1+1=1}
+ can be used to describe the observation that if one raindrop is added to another raindrop then they do not remain two separate entities but become one.[118]
+Axiomatic foundations[edit]
+Axiomatic foundations of arithmetic try to provide a small set of laws, so-called axioms, from which all fundamental properties of and operations on numbers can be derived. They constitute logically consistent and systematic frameworks that can be used to formulate mathematical proofs in a rigorous manner. Two well-known approaches are the Dedekind-Peano axioms and set-theoretic constructions.[119]
+The Dedekind-Peano axioms provide an axiomatization of the arithmetic of natural numbers. Their basic principles were first formulated by Richard Dedekind and later refined by Giuseppe Peano. They rely only on a small number of primitive mathematical concepts, such as 0, natural number, and successor.[b] The Peano axioms determine how these concepts are related to each other. All other arithmetic concepts can then be defined in terms of these primitive concepts.[120]
+0 is a natural number.
+For every natural number, there is a successor, which is also a natural number.
+The successors of two different natural numbers are never identical.
+0 is not the successor of a natural number.
+If a set contains 0 and every successor then it contains every natural number.[121][c]
+Numbers greater than 0 are expressed by repeated application of the successor function 
+s
+{\displaystyle s}
+. For example, 
+1
+{\displaystyle 1}
+ is 
+s
+(
+0
+)
+{\displaystyle s(0)}
+ and 
+3
+{\displaystyle 3}
+ is 
+s
+(
+s
+(
+s
+(
+0
+)
+)
+)
+{\displaystyle s(s(s(0)))}
+. Arithmetic operations can be defined as mechanisms that affect how the successor function is applied. For instance, to add 
+2
+{\displaystyle 2}
+ to any number is the same as applying the successor function two times to this number.[122]
+Various axiomatizations of arithmetic rely on set theory. They cover natural numbers but can also be extended to integers, rational numbers, and real numbers. Each natural number is represented by a unique set. 0 is usually defined as the empty set 
+?
+{\displaystyle \varnothing }
+. Each subsequent number can be defined as the union of the previous number with the set containing the previous number. For example, 
+1
+=
+0
+?
+{
+0
+}
+=
+{
+0
+}
+{\displaystyle 1=0\cup \{0\}=\{0\}}
+, 
+2
+=
+1
+?
+{
+1
+}
+=
+{
+0
+,
+1
+}
+{\displaystyle 2=1\cup \{1\}=\{0,1\}}
+, and 
+3
+=
+2
+?
+{
+2
+}
+=
+{
+0
+,
+1
+,
+2
+}
+{\displaystyle 3=2\cup \{2\}=\{0,1,2\}}
+.[123] Integers can be defined as ordered pairs of natural numbers where the second number is subtracted from the first one. For instance, the pair (9, 0) represents the number 9 while the pair (0, 9) represents the number -9.[124] Rational numbers are defined as pairs of integers where the first number represents the numerator and the second number represents the denominator. For example, the pair (3, 7) represents the rational number 
+3
+7
+{\displaystyle {\tfrac {3}{7}}}
+.[125] One way to construct the real numbers relies on the concept of Dedekind cuts. According to this approach, each real number is represented by a partition of all rational numbers into two sets, one for all numbers below the represented real number and the other for the rest.[126] Arithmetic operations are defined as functions that perform various set-theoretic transformations on the sets representing the input numbers to arrive at the set representing the result.[127]
+History[edit]
+Main article: History of arithmetic
+Some historians interpret the Ishango bone as one of the earliest arithmetic artifacts.
+The earliest forms of arithmetic are sometimes traced back to counting and tally marks used to keep track of quantities. Some historians suggest that the Lebombo bone (dated about 43,000 years ago) and the Ishango bone (dated about 22,000 to 30,000 years ago) are the oldest arithmetic artifacts but this interpretation is disputed.[128] However, a basic sense of numbers may predate these findings and might even have existed before the development of language.[129]
+It was not until the emergence of ancient civilizations that a more complex and structured approach to arithmetic began to evolve, starting around 3000 BCE. This became necessary because of the increased need to keep track of stored items, manage land ownership, and arrange exchanges.[130] All the major ancient civilizations developed non-positional numeral systems to facilitate the representation of numbers. They also had symbols for operations like addition and subtraction and were aware of fractions. Examples are Egyptian hieroglyphics as well as the numeral systems invented in Sumeria, China, and India.[131] The first positional numeral system was developed by the Babylonians starting around 1800 BCE. This was a significant improvement over earlier numeral systems since it made the representation of large numbers and calculations on them more efficient.[132] Abacuses have been utilized as hand-operated calculating tools since ancient times as efficient means for performing complex calculations.[133]
+Abacuses were used as manual calculation tools in ancient civilizations, such as the Suanpan in China.
+Early civilizations primarily used numbers for concrete practical purposes and lacked an abstract concept of number itself.[134] This changed with the ancient Greek mathematicians, who began to explore the abstract nature of numbers rather than studying how they are applied to specific problems.[135] Another novel feature was their use of proofs to establish mathematical truths and validate theories.[136] A further contribution was their distinction of various classes of numbers, such as even numbers, odd numbers, and prime numbers.[137] This included the discovery that numbers for certain geometrical lengths are irrational and therefore cannot be expressed as a fraction.[138] The works of Thales of Miletus and Pythagoras in the 7th and 6th centuries BCE are often regarded as the inception of Greek mathematics.[139] Diophantus was an influential figure in Greek arithmetic in the 3rd century BCE because of his numerous contributions to number theory and his exploration of the application of arithmetic operations to algebraic equations.[140]
+The ancient Indians were the first to develop the concept of zero as a number to be used in calculations. The exact rules of its operation were written down by Brahmagupta in around 628 CE.[141] The concept of zero or none existed long before, but it was not considered an object of arithmetic operations.[142] Brahmagupta further provided a detailed discussion of calculations with negative numbers and their application to problems like credit and debt.[143] The concept of negative numbers itself is significantly older and was first explored in Chinese mathematics in the first millennium BCE.[144]
+Indian mathematicians also developed the positional decimal system used today, in particular the concept of a zero digit instead of empty/missing positions. For example, a detailed treatment of its operations was provided by Aryabhata around the turn of the 6th century CE.[145] The Indian decimal system was further refined and expanded to non-integers during the Islamic Golden Age by Arab mathematicians such as Al-Khwarizmi. His work was influential in introducing the decimal numeral system to the Western world, which at that time relied on the Roman numeral system.[146] There, it was popularized by mathematicians like Leonardo Fibonacci, who lived in the 12th and 13th centuries and also developed the Fibonacci sequence.[147] During the Middle Ages and Renaissance, many popular textbooks were published to cover the practical calculations for commerce. The use of abacuses also became widespread in this period.[148] In the 16th century, the mathematician Gerolamo Cardano conceived the concept of complex numbers as a way to solve cubic equations.[149]
+Leibniz's stepped reckoner was the first calculator that could perform all four arithmetic operations.[150]
+The first mechanical calculators were developed in the 17th century and greatly facilitated complex mathematical calculations, such as Blaise Pascal's calculator and Gottfried Wilhelm Leibniz's stepped reckoner.[151] The 17th century also saw the discovery of the logarithm by John Napier.[152]
+In the 18th and 19th centuries, mathematicians such as Leonhard Euler and Carl Friedrich Gauss laid the foundations of modern number theory.[153] Another development in this period concerned work on the formalization and foundations of arithmetic, such as Georg Cantor's set theory and the Dedekind-Peano axioms used as an axiomatization of natural-number arithmetic.[154] Computers and electronic calculators were first developed in the 20th century. Their widespread use revolutionized both the accuracy and speed with which even complex arithmetic computations can be calculated.[155]
+In various fields[edit]
+Education[edit]
+Main article: Mathematics education
+Arithmetic education forms part of primary education. It is one of the first forms of mathematics education that children encounter. Elementary arithmetic aims to give students a basic sense of numbers and to familiarize them with fundamental numerical operations like addition, subtraction, multiplication, and division.[156] It is usually introduced in relation to concrete scenarios, like counting beads, dividing the class into groups of children of the same size, and calculating change when buying items. Common tools in early arithmetic education are number lines, addition and multiplication tables, and counting blocks.[157]
+Later stages focus on a more abstract understanding. They introduce the students to different types of numbers, such as negative numbers, fractions, real numbers, and complex numbers. They further cover more advanced numerical operations, like exponentiation, extraction of roots, and logarithm.[158] They also show how arithmetic operations are employed in other branches of mathematics, such as their application to describe geometrical shapes and the use of variables in algebra. Another aspect is to teach the students the use of algorithms and calculators to solve complex arithmetic problems.[159]
+Psychology[edit]
+The psychology of arithmetic is interested in how humans and animals learn about numbers, represent them, and use them for calculations. It examines how mathematical problems are understood and solved and how arithmetic abilities are related to perception, memory, judgment, and decision making.[160] For example, it investigates how collections of concrete items are first encountered in perception and subsequently associated with numbers.[161] A further field of inquiry concerns the relation between numerical calculations and the use of language to form representations.[162] Psychology also explores the biological origin of arithmetic as an inborn ability. This concerns pre-verbal and pre-symbolic cognitive processes implementing arithmetic-like operations required to successfully represent the world and perform tasks like spatial navigation.[163]
+One of the concepts studied by psychology is numeracy, which is the capability to comprehend numerical concepts, apply them to concrete situations, and reason with them. It includes a fundamental number sense as well as being able to estimate and compare quantities. It further encompasses the abilities to symbolically represent numbers in numbering systems, interpret numerical data, and evaluate arithmetic calculations.[164] Numeracy is a key skill in many academic fields. A lack of numeracy can inhibit academic success and lead to bad economic decisions in everyday life, for example, by misunderstanding mortgage plans and insurance policies.[165]
+Philosophy[edit]
+Main article: Philosophy of mathematics
+The philosophy of arithmetic studies the fundamental concepts and principles underlying numbers and arithmetic operations. It explores the nature and ontological status of numbers, the relation of arithmetic to language and logic, and how it is possible to acquire arithmetic knowledge.[166]
+According to Platonism, numbers have mind-independent existence: they exist as abstract objects outside spacetime and without causal powers.[167] This view is rejected by intuitionists, who claim that mathematical objects are mental constructions.[168] Further theories are logicism, which holds that mathematical truths are reducible to logical truths,[169] and formalism, which states that mathematical principles are rules of how symbols are manipulated without claiming that they correspond to entities outside the rule-governed activity.[170]
+The traditionally dominant view in the epistemology of arithmetic is that arithmetic truths are knowable a priori. This means that they can be known by thinking alone without the need to rely on sensory experience.[171] Some proponents of this view state that arithmetic knowledge is innate while others claim that there is some form of rational intuition through which mathematical truths can be apprehended.[172] A more recent alternative view was suggested by naturalist philosophers like Willard Van Orman Quine, who argue that mathematical principles are high-level generalizations that are ultimately grounded in the sensory world as described by the empirical sciences.[173]
+Others[edit]
+Arithmetic is relevant to many fields. In daily life, it is required to calculate change when shopping, manage personal finances, and adjust a cooking recipe for a different number of servings. Businesses use arithmetic to calculate profits and losses and analyze market trends. In the field of engineering, it is used to measure quantities, calculate loads and forces, and design structures.[174] Cryptography relies on arithmetic operations to protect sensitive information by encrypting data and messages.[175]
+Arithmetic operations lie at the foundation of many branches of mathematics, like algebra, calculus, and statistics. Through them, the influence of arithmetic extends to most sciences such as physics, computer science, and economics. These operations are used in calculations, problem-solving, data analysis, and algorithms, making them integral to scientific research, technological development, and economic modeling.[176]
+See also[edit]
+Arithmetic portalMathematics portal
+Algorism
+Finite field arithmetic
+Outline of arithmetic
+Plant arithmetic
+References[edit]
+Notes[edit]
+^ Some authors use a different terminology and refer to the first number as multiplicand and the second number as the multiplier.[49] 
+^ The successor of a natural number is the number that comes after it. For instance, 4 is the successor of 3.
+^ There are different versions of the exact formulation and number of axioms. For example, some formulations start with 1 instead of 0 in the first axiom.
+Citations[edit]
+^ Romanowski 2008, pp.?302-303HS staff 2022MW staff 2023EoM staff 2020a
+^ EoM staff 2020aBurgin 2022, pp.?57, 77MacDuffee, Lead SectionAdamowicz 1994, p.?299, The Power of Exponentiation in Arithmetic
+^ Peirce 2015, p.?109Waite 2013, p.?42Smith 1958, p.?7
+^ Oliver 2005, p.?58Hofweber 2016, p.?153
+^ Romanowski 2008, pp.?302-303HS staff 2022MW staff 2023EoM staff 2020a
+^ Sophian 2017, p.?84.
+^ EoM staff 2020aStevenson & Waite 2011, p.?70Romanowski 2008, pp.?303-304
+^ Lozano-Robledo 2019, p.?xiiiNagel & Newman 2008, p.?4
+^ Wilson 2020, pp.?1-2EoM staff 2020bCampbell 2012, p.?33Robbins 2006, p.?1
+^ Duverney 2010, p.?vRobbins 2006, p.?1
+^ Musser, Peterson & Burger 2013, p.?17Kleiner 2012, p.?255Marcus & McEvoy 2016, p.?285Monahan 2012, 2. Basic Computational Algorithms
+^ Romanowski 2008, pp.?302-304Khattar 2010, pp.?1-2Nakov & Kolev 2013, pp.?270-271
+^ Nagel 2002, pp.?180-181Luderer, Nollau & Vetters 2013, p.?9Khattar 2010, pp.?1-2
+^ Romanowski 2008, p.?304Nagel 2002, pp.?180-181Hindry 2011, p.?xEoM staff 2016
+^ Rajan 2022, p.?17Hafstrom 2013, p.?6
+^ Romanowski 2008, p.?304Nagel 2002, pp.?180-181Hindry 2011, p.?xHafstrom 2013, p.?95
+^ Romanowski 2008, p.?304Nagel 2002, pp.?180-181Hindry 2011, p.?xHafstrom 2013, p.?123
+^ Hosch 2023Gellert et al. 2012, p.?33
+^ a b Musser, Peterson & Burger 2013, p.?358.
+^ Romanowski 2008, p.?304Nagel 2002, pp.?180-181Hindry 2011, p.?x
+^ Musser, Peterson & Burger 2013, pp.?358-359Rooney 2021, p.?34
+^ Romanowski 2008, p.?304Hindry 2011, p.?x
+^ Hindry 2011, p.?xWard 2012, p.?55
+^ Orr 1995, p.?49Nelson 2019, p.?xxxi
+^ Ore 1948, pp.?1-2HC staff 2022HC staff 2022a
+^ Ore 1948, pp.?8-10Nakov & Kolev 2013, pp.?270-272
+^ Stakhov 2020, p.?73Nakov & Kolev 2013, pp.?271-272Jena 2021, pp.?17-18
+^ Nakov & Kolev 2013, pp.?271-272Jena 2021, pp.?17-18
+^ Ore 1948, pp.?8-10Mazumder & Ebong 2023, pp.?18-19Moncayo 2018, p.?25
+^ Ore 1948, p.?8Mazumder & Ebong 2023, p.?18
+^ Ore 1948, p.?10.
+^ Ore 1948, pp.?8-10Mazumder & Ebong 2023, pp.?18-19Stakhov 2020, pp.?77-78
+^ Romanowski 2008, p.?303Yan 2013, p.?261ITL Education Solutions Limited 2011, p.?28Ore 1948, pp.?2-3Jena 2021, pp.?17-18
+^ Nagel 2002, p.?178Jena 2021, pp.?20-21Null & Lobur 2006, p.?40
+^ Stakhov 2020, p.?74.
+^ Nagel 2002, p.?179Husserl & Willard 2012, pp.?XLIV-XLV, Translator's IntroductionO'Leary 2015, p.?190
+^ Rising et al. 2021, p.?110EoM staff 2020aNagel 2002, pp.?177, 179-180
+^ EoM staff 2020aMacDuffee, Lead SectionBurgin 2022, pp.?57, 77Adamowicz 1994, p.?299, The Power of Exponentiation in ArithmeticNagel 2002, pp.?177, 179-180
+^ Khan & Graham 2018, pp.?9-10Smyth 1864, p.?55
+^ Tarasov 2008, pp.?57-58Mazzola, Milmeister & Weissmann 2004, p.?66Krenn & Lor?nser 2023, p.?8
+^ Kay 2021, pp.?44-45Wright, Ellemor-Collins & Tabor 2011, p.?136
+^ Krenn & Lor?nser 2023, p.?8Mazzola, Milmeister & Weissmann 2004, p.?66
+^ Musser, Peterson & Burger 2013, p.?87Romanowski 2008, p.?303
+^ Burgin 2022, p.?25.
+^ Romanowski 2008, p.?303Musser, Peterson & Burger 2013, pp.?93-94Kay 2021, pp.?44-45Wright, Ellemor-Collins & Tabor 2011, p.?136
+^ Wheater 2015, p.?19Wright, Ellemor-Collins & Tabor 2011, pp.?136-137Achatz & Anderson 2005, p.?18
+^ Mazzola, Milmeister & Weissmann 2004, p.?66Romanowski 2008, p.?303Nagel 2002, pp.?179-180
+^ Romanowski 2008, p.?303Musser, Peterson & Burger 2013, pp.?101-102
+^ Cavanagh 2017, 6. Fixed-Point MultiplicationWeisstein
+^ Romanowski 2008, p.?304Wright, Ellemor-Collins & Tabor 2011, p.?136Musser, Peterson & Burger 2013, pp.?101-102
+^ Romanowski 2008, p.?303Wheater 2015, p.?19Wright, Ellemor-Collins & Tabor 2011, p.?136
+^ Kay 2021, p.?117Wheater 2015, p.?19Wright, Ellemor-Collins & Tabor 2011, pp.?136-137
+^ Mazzola, Milmeister & Weissmann 2004, p.?66Romanowski 2008, pp.?303-304Nagel 2002, pp.?179-180
+^ Musser, Peterson & Burger 2013, pp.?117-118Kay 2021, pp.?27-28
+^ Kay 2021, p.?118Klose 2014, p.?105
+^ Kay 2021, pp.?121-122Rodda & Little 2015, p.?7
+^ Kay 2021, p.?117Mazzola, Milmeister & Weissmann 2004, p.?66
+^ Sally & Sally (Jr.) 2012, p.?3Klose 2014, pp.?107-108
+^ Nagel 2002, pp.?180-181Gupta 2019, p.?3Vaccaro & Pepiciello 2022, pp.?9-12Liebler 2018, p.?36
+^ Romanowski 2008, p.?304Hindry 2011, p.?xHafstrom 2013, p.?95
+^ Kupferman 2015, pp.?45, 92Uspenskii & Semenov 2001, p.?113Geary 2006, p.?796
+^ Resnick & Ford 2012, p.?110Klein et al. 2010, pp.?67-68
+^ Quintero & Rosario 2016, p.?74Ebby, Hulbert & Broadhead 2020, pp.?24-26
+^ Sperling & Stuart 1981, p.?7.
+^ Sperling & Stuart 1981, p.?8.
+^ Ma 2020, pp.?35-36Sperling & Stuart 1981, p.?9
+^ Mooney et al. 2014, p.?148.
+^ Klein 2013, p.?249Muller et al. 2018, p.?539
+^ Davis, Goulding & Suggate 2017, pp.?11-12.
+^ Haylock & Cockburn 2008, p.?49.
+^ Prata 2002, p.?138.
+^ Koepf 2021, p.?49.
+^ Goodstein 2014, p.?33.
+^ Cafaro, Epicoco & Pulimeno 2018, p.?7, Techniques for Designing Bioinformatics AlgorithmsReilly 2009, p.?75
+^ Cuyt et al. 2008, p.?182Mahajan 2010, pp.?66-69
+^ Kay 2021, p.?57Cuyt et al. 2008, p.?182
+^ EoM staff 2016Grigorieva 2018, pp.?viii-ixPage 2003, p.?15
+^ Page 2003, p.?34Yan 2013, p.?12
+^ Page 2003, pp.?18-19, 34EoM staff 2014a
+^ Page 2003, p.?34EoM staff 2014
+^ Page 2003, pp.?34-35EoM staff 2019
+^ Yan 2013, p.?12Yan 2013a, p.?15
+^ EoM staff 2016K???ek, Somer & ?olcov? 2021, pp.?23, 25, 37
+^ K???ek, Somer & ?olcov? 2021, p.?23Riesel 2012, p.?2
+^ EoM staff 2016K???ek, Somer & ?olcov? 2021, p.?25
+^ EoM staff 2016K???ek, Somer & ?olcov? 2021, p.?37
+^ Gellert et al. 2012, p.?30Romanowski 2008, p.?304Hindry 2011, p.?xHafstrom 2013, p.?123
+^ Gellert et al. 2012, pp.?31-32Musser, Peterson & Burger 2013, p.?347
+^ Gellert et al. 2012, pp.?32-33.
+^ Gellert et al. 2012, p.?33.
+^ Klose 2014, p.?107.
+^ Hoffman & Frankel 2018, pp.?161-162Lange 2010, pp.?248-249Klose 2014, pp.?105-107
+^ Cuyt et al. 2008, p.?182Mahajan 2010, pp.?66-69
+^ Gellert et al. 2012, p.?33Igarashi et al. 2014, p.?18
+^ Gellert et al. 2012, p.?35Booker et al. 2015, pp.?308-309
+^ Gellert et al. 2012, p.?34Igarashi et al. 2014, p.?18
+^ Musser, Peterson & Burger 2013, pp.?358-359EoM staff 2020Rooney 2021, p.?34Young 2010, pp.?994-996
+^ Rossi 2011, p.?101Reitano 2010, p.?42Bronshtein et al. 2015, p.?2
+^ Musser, Peterson & Burger 2013, pp.?358-359EoM staff 2020Rooney 2021, p.?34Young 2010, pp.?994-996
+^ Wallis 2013, pp.?20-21Young 2010, pp.?996-997Young 2021, pp.?4-5
+^ Koren 2018, p.?71.
+^ Wallis 2013, p.?20Roe, deForest & Jamshidi 2018, p.?24
+^ Muller et al. 2009, pp.?13-16.
+^ Koren 2018, p.?71Muller et al. 2009, pp.?13-16Swartzlander 2017, p.?11.19, High-Speed Computer Arithmetic
+^ Stewart 2022, p.?26Meyer 2023, p.?234
+^ Muller et al. 2009, p.?54Brent & Zimmermann 2010, p.?79Cryer 2014, p.?450
+^ Duffy 2018, p.?1225.
+^ Lerner & Lerner 2008, pp.?2807-2808Wallis 2011, pp.?303-304Kaiser & Granade 2021, pp.?283-284
+^ Moore, Kearfott & Cloud 2009, pp.?10-11, 19Pharr, Jakob & Humphreys 2023, p.?1057
+^ Vaccaro & Pepiciello 2022, pp.?9-11Chakraverty & Rout 2022, pp.?2-4, 39-40
+^ Liebler 2018, p.?36Adhami et al. 2007, pp.?80-82, 98-102
+^ Musser, Peterson & Burger 2013, p.?131Verschaffel, Torbeyns & De Smedt 2011, p.?2177, Mental Arithmetic
+^ Emerson & Babtie 2014, p.?147Musser, Peterson & Burger 2013, pp.?131-132Verschaffel, Torbeyns & De Smedt 2011, p.?2177, Mental Arithmetic
+^ Musser, Peterson & Burger 2013, p.?131Verschaffel, Torbeyns & De Smedt 2011, p.?2177, Mental Arithmetic
+^ Shiva 2018, pp.?3, 14Gupta 2019, p.?3
+^ Burgin 2022, pp.?92-93.
+^ Burgin 2022, pp.?xviii-xx, xxiv, 137-138Caprio, Aveni & Mukherjee 2022, pp.?763-764
+^ Burgin 2022, p.?144Caprio, Aveni & Mukherjee 2022, pp.?763-764Seaman, Rossler & Burgin 2023, p.?226
+^ Oliver 2005, p.?58EoM staff 2020aTiles 2009, A Kantian Perspective on the Philosophy of Mathematics
+^ Oliver 2005, p.?58Ferreiros 2013, p.?251Ongley & Carey 2013, pp.?24-25
+^ Oliver 2005, p.?58Hosch 2010Ongley & Carey 2013, pp.?24-25Taylor 2012, p.?8
+^ Ongley & Carey 2013, pp.?24-25Taylor 2012, p.?8
+^ Bagaria 2023, ? 3. The Theory of Transfinite Ordinals and CardinalsCunningham 2016, pp.?83-84, 108
+^ Hamilton & Landin 2018, p.?133Bagaria 2023, ? 5. Set Theory as the Foundation of Mathematics
+^ Hamilton & Landin 2018, pp.?157-158Bagaria 2023, ? 5. Set Theory as the Foundation of Mathematics
+^ Bagaria 2023, ? 5. Set Theory as the Foundation of MathematicsHamilton & Landin 2018, p.?252
+^ Cunningham 2016, pp.?95-96.
+^ Burgin 2022, pp.?2-3Ore 1948, pp.?1, 6, 8, 10Thiam & Rochon 2019, p.?164
+^ Burgin 2022, p.?3Ponticorvo, Schmbri & Miglino 2019, p.?33
+^ Burgin 2022, pp.?4-6Ang & Lam 2004, p.?170
+^ Burgin 2022, pp.?5-7, 9-11Ore 1948, pp.?10-15Nagel 2002, p.?178Hindry 2011, p.?ix
+^ Burgin 2022, pp.?6-7, 9Ore 1948, pp.?16-18ITL Education Solutions Limited 2011, p.?28
+^ Ore 1948, p.?15Yadin 2016, p.?24
+^ Burgin 2022, pp.?4-5Brown 2010, p.?184
+^ Burgin 2022, p.?15Brown 2010, p.?184Romanowski 2008, p.?303Nagel 2002, p.?178
+^ Burgin 2022, p.?15Madden & Aubrey 2017, p.?xvii
+^ Burgin 2022, p.?31Payne 2017, p.?202
+^ Burgin 2022, pp.?20-21, 34Bloch 2011, p.?52
+^ Burgin 2022, p.?16L?tzen 2023, p.?19
+^ Burgin 2022, pp.?29-31Klein 2013a, p.?12
+^ Burgin 2022, pp.?36-37Bradley 2006, pp.?82-83Conradie & Goranko 2015, p.?268
+^ Burgin 2022, pp.?35-36Cai 2023, p.?110
+^ Burgin 2022, pp.?37, 40Bradley 2006, pp.?82-83Conradie & Goranko 2015, p.?268
+^ Hua & Feng 2020, pp.?119-120Chemla, Keller & Proust 2023, p.?47
+^ Burgin 2022, pp.?13, 34Conradie & Goranko 2015, p.?268
+^ Burgin 2022, pp.?38, 43-46Conradie & Goranko 2015, p.?268
+^ Burgin 2022, p.?56Oakes 2020, p.?330
+^ Burgin 2022, p.?55Wedell 2015, pp.?1235-1236, Numbers
+^ Burgin 2022, p.?62L?tzen 2023, p.?124
+^ Vullo 2020, p.?140.
+^ Cignoni & Cossu 2016, p.?103Koetsier 2018, p.?255Igarashi et al. 2014, pp.?87-89
+^ Burgin 2022, p.?77Eriksson, Estep & Johnson 2013, p.?474
+^ Burgin 2022, pp.?68-72Weil 2009, p.?ixKarlsson 2011, p.?309
+^ Burgin 2022, pp.?2, 88, 95-97Wang 1997, p.?334
+^ Burgin 2022, pp.?119, 124Curley 2011, pp.?5, 19Igarashi et al. 2014, p.?149
+^ NCTM StaffMusser, Peterson & Burger 2013, Curriculum Focal Points for Prekindergarten Through Grade 8 Mathematics, p. 44, p. 130Odom, Barbarin & Wasik 2009, p.?589, Applying Lessons from Developmental Science to Early Education
+^ Laski et al. 2015, pp.?1-3Musser, Peterson & Burger 2013, pp.?59, 90-91, 93-94, 106-108Nurnberger-Haag 2017, p.?215, Borrow, Trade, Regroup, or Unpack? Revealing How Instructional Metaphors Portray Base-Ten Number
+^ NCTM StaffMusser, Peterson & Burger 2013, Curriculum Focal Points for Prekindergarten Through Grade 8 Mathematics, pp. 208, 304, 340, 362
+^ NCTM StaffMusser, Peterson & Burger 2013, Curriculum Focal Points for Prekindergarten Through Grade 8 MathematicsCarraher & Schliemann 2015, p.?197, Powerful Ideas in Elementary School MathematicsRuthven 2012, pp.?435, 443-444, 12. Calculators in the Mathematics Curriculum: The Scope of Personal Computational Technology
+^ De Cruz, Neth & Schlimm 2010, pp.?59-60Grice et al. 2023, Abstract
+^ De Cruz, Neth & Schlimm 2010, pp.?60-62.
+^ De Cruz, Neth & Schlimm 2010, p.?63.
+^ Grice et al. 2023, Abstract.
+^ Victoria Department of Education Staff 2023Askew 2010, pp.?33-34, It Ain't (Just) What You Do: Effective Teachers of NumeracyDreeben-Irimia 2010, p.?102
+^ Victoria Department of Education Staff 2023Barnes, Rice & Hanoch 2017, p.?196, Using Behavioral Economics to Improve People's Decisions About Purchasing Health InsuranceGerardi, Goette & Meier 2013, pp.?11267-11268Jackson 2008, p.?152, Reading/Writing Connection
+^ Hofweber 2016, pp.?153-154, 162-163Oliver 2005, p.?58Sierpinska & Lerman 1996, p.?827
+^ Oliver 2005, p.?58Horsten 2023, ? 3. Platonism
+^ Horsten 2023, ? 2.2 Intuitionism.
+^ Horsten 2023, ? 2.1 LogicismHofweber 2016, pp.?174-175
+^ Weir 2022, Lead Section.
+^ Oliver 2005, p.?58Sierpinska & Lerman 1996, p.?830
+^ Oliver 2005, p.?58Sierpinska & Lerman 1996, pp.?827-876
+^ Horsten 2023, ? 3.2 Naturalism and IndispensabilitySierpinska & Lerman 1996, p.?830
+^ Lockhart 2017, pp.?1-2Bird 2021, p.?3Aubrey 1999, p.?49
+^ Omondi 2020, p.?viiiPaar & Pelzl 2009, p.?13
+^ Gallistel & Gelman 2005, pp.?559-560Ali Rahman et al. 2017, pp.?373-374Li & Schoenfeld 2019, Abstract, IntroducationAsano 2013, pp.?xiii-xv
+Sources[edit]
+Achatz, Thomas; Anderson, John G. (2005). Technical Shop Mathematics. Industrial Press Inc. ISBN?978-0-8311-3086-2.
+Adamowicz, Zofia (1994). "The Power of Exponentiation in Arithmetic". In Joseph, Anthony; Mignot, Fulbert; Murat, Fran?ois; Prum, Bernard; Rentschler, Rudolf (eds.). First European Congress of Mathematics: Paris, July 6-10, 1992 Volume I Invited Lectures (Part 1). Birkh?user. pp.?299-320. doi:10.1007/978-3-0348-9110-3_9. ISBN?978-3-0348-9110-3.
+Adhami, Reza; Meenen, Peter M.; Meenen, Peter; Hite, Denis (2007). Fundamental Concepts in Electrical and Computer Engineering with Practical Design Problems. Universal-Publishers. ISBN?978-1-58112-971-7.
+Ali Rahman, Ernna Sukinnah; Shahrill, Masitah; Abbas, Nor Arifahwati; Tan, Abby (2017). "Developing Students' Mathematical Skills Involving Order of Operations". International Journal of Research in Education and Science: 373. doi:10.21890/ijres.327896.
+Ang, Tian Se; Lam, Lay Yong (2004). Fleeting Footsteps: Tracing The Conception Of Arithmetic And Algebra In Ancient China (Revised?ed.). World Scientific. ISBN?978-981-4483-60-5.
+Asano, Akihito (2013). An Introduction to Mathematics for Economics. Cambridge University Press. ISBN?978-1-107-00760-4.
+Askew, Mike (2010). "It Ain't (Just) What You Do: Effective Teachers of Numeracy". In Ian, Thompson (ed.). Issues In Teaching Numeracy In Primary Schools. McGraw-Hill Education (UK). ISBN?978-0-335-24153-8.
+Aubrey, Carol (1999). A Developmental Approach to Early Numeracy: Helping to Raise Children's Achievements and Deal with Difficulties in Learning. A&C Black. ISBN?978-1-4411-9164-9.
+Bagaria, Joan (2023). "Set Theory". The Stanford Encyclopedia of Philosophy. Metaphysics Research Lab, Stanford University. Retrieved 19 November 2023.
+Barnes, Andrew J.; Rice, Thomase; Hanoch, Yaniv (2017). "Using Behavioral Economics to Improve People's Decisions About Purchasing Health Insurance". In Hanoch, Yaniv; Barnes, Andrew; Rice, Thomas (eds.). Behavioral Economics and Healthy Behaviors: Key Concepts and Current Research. Taylor & Francis. ISBN?978-1-317-26952-6.
+Bird, John (2021). Bird's Engineering Mathematics. Taylor & Francis. ISBN?978-0-367-64378-2.
+Bloch, Ethan D. (2011). The Real Numbers and Real Analysis. Springer Science & Business Media. ISBN?978-0-387-72177-4.
+Booker, George; Bond, Denise; Sparrow, Len; Swan, Paul (2015). Teaching Primary Mathematics. Pearson Higher Education AU. ISBN?978-1-4860-0488-1.
+Bradley, Michael J. (2006). The Birth of Mathematics: Ancient Times To 1300. Infobase Publishing. ISBN?978-0-7910-9723-6.
+Brent, Richard P.; Zimmermann, Paul (2010). Modern Computer Arithmetic. Cambridge University Press. ISBN?978-1-139-49228-7.
+Bronshtein, I. N.; Semendyayev, K. A.; Musiol, Gerhard; M?hlig, Heiner (2015). Handbook of Mathematics. Springer. ISBN?978-3-662-46221-8.
+Brown, David (2010). "The Measurement of Time and Distance in the Heavens Above Mesopotamia, with Brief Reference Made to Other Ancient Astral Science". In Morley, Iain; Renfrew, Colin (eds.). The Archaeology of Measurement: Comprehending Heaven, Earth and Time in Ancient Societies. Cambridge University Press. ISBN?978-0-521-11990-0.
+Burgin, Mark (2022). Trilogy Of Numbers And Arithmetic - Book 1: History Of Numbers And Arithmetic: An Information Perspective. World Scientific. ISBN?978-981-12-3685-3.
+Cafaro, Massimo; Epicoco, Italo; Pulimeno, Marco (2018). "Techniques for Designing Bioinformatics Algorithms". Encyclopedia of Bioinformatics and Computational Biology: ABC of Bioinformatics. Elsevier. ISBN?978-0-12-811432-2.
+Cai, Tianxin (2023). A Brief History of Mathematics: A Promenade Through the Civilizations of Our World. Springer Nature. ISBN?978-3-031-26841-0.
+Campbell, Stephen R. (2012). "Understanding Elementary Number Theory in Relation to Arithmetic and Algebra". In Zazkis, Rina; Campbell, Stephen R. (eds.). Number Theory in Mathematics Education: Perspectives and Prospects. Routledge. ISBN?978-1-136-50143-2.
+Caprio, Michele; Aveni, Andrea; Mukherjee, Sayan (2022). "Concerning Three Classes of Non-Diophantine Arithmetics". Involve, A Journal of Mathematics. 15 (5): 763-774. arXiv:2102.04197. doi:10.2140/involve.2022.15.763. S2CID?231847291.
+Carraher, David W.; Schliemann, Analucia D. (2015). "Powerful Ideas in Elementary School Mathematics". In English, Lyn D.; Kirshner, David (eds.). Handbook of International Research in Mathematics Education. Routledge. ISBN?978-1-134-62664-9.
+Cavanagh, Joseph (19 December 2017). "6. Fixed-Point Multiplication". Computer Arithmetic and Verilog HDL Fundamentals. CRC Press. ISBN?978-1-351-83411-7.
+Chakraverty, Snehashish; Rout, Saudamini (2022). Affine Arithmetic Based Solution of Uncertain Static and Dynamic Problems. Springer Nature. ISBN?978-3-031-02424-5.
+Chemla, Karine; Keller, Agathe; Proust, Christine (2023). Cultures of Computation and Quantification in the Ancient World: Numbers, Measurements, and Operations in Documents from Mesopotamia, China and South Asia. Springer Nature. ISBN?978-3-030-98361-1.
+Cignoni, Gioanni A.; Cossu, Giovanni A. (2016). "The Global Virtual Museum of Information Science & Technology, a Project Idea". In Tatnall, Arthur; Leslie, Christopher (eds.). International Communities of Invention and Innovation: IFIP WG 9.7 International Conference on the History of Computing, HC 2016, Brooklyn, NY, USA, May 25-29, 2016, Revised Selected Papers. Springer. ISBN?978-3-319-49463-0.
+Conradie, Willem; Goranko, Valentin (2015). Logic and Discrete Mathematics: A Concise Introduction. John Wiley & Sons. ISBN?978-1-118-76109-0.
+Cryer, C. W. (2014). A Math Primer for Engineers. IOS Press. ISBN?978-1-61499-299-8.
+Cunningham, Daniel W. (2016). Set Theory: A First Course. Cambridge University Press. ISBN?978-1-316-68204-3.
+Curley, Robert (2011). Computing: From the Abacus to the iPad. Britannica Educational Publishing. ISBN?978-1-61530-707-4.
+Cuyt, Annie A. M.; Petersen, Vigdis; Verdonk, Brigitte; Waadeland, Haakon; Jones, William B. (2008). Handbook of Continued Fractions for Special Functions. Springer Science & Business Media. ISBN?978-1-4020-6949-9.
+Davis, Andrew; Goulding, Maria; Suggate, Jennifer (2017). Mathematical Knowledge for Primary Teachers. Taylor & Francis. ISBN?978-1-317-21901-9.
+De Cruz, Helen; Neth, Hansj?rg; Schlimm, Dirk (2010). "The Cognitive Basis of Arithmetic". In L?we, Benedikt; M?ller, Thomas (eds.). PhiMSAMP: Philosophy of Mathematics?: Sociological Aspsects and Mathematical Practice. College Publications. ISBN?978-1-904987-95-6.
+Dreeben-Irimia, Olga (2010). Patient Education in Rehabilitation. Jones & Bartlett Publishers. ISBN?978-1-4496-1775-2.
+Duffy, Daniel J. (2018). Financial Instrument Pricing Using C++. John Wiley & Sons. ISBN?978-1-119-17048-8.
+Duverney, Daniel (2010). Number Theory: An Elementary Introduction Through Diophantine Problems. World Scientific. ISBN?978-981-4307-46-8.
+Ebby, Caroline B.; Hulbert, Elizabeth T.; Broadhead, Rachel M. (2020). A Focus on Addition and Subtraction: Bringing Mathematics Education Research to the Classroom. Routledge. ISBN?978-1-000-22087-2.
+Emerson, Jane; Babtie, Patricia (2014). The Dyscalculia Solution: Teaching Number Sense. Bloomsbury Publishing. ISBN?978-1-4729-2099-7.
+EoM staff (2020). "Real Number". Encyclopedia of Mathematics. Springer. Retrieved 23 October 2023.
+EoM staff (2020a). "Arithmetic". Encyclopedia of Mathematics. Springer. Retrieved 23 October 2023.
+EoM staff (2020b). "Number Theory". Encyclopedia of Mathematics. Springer. Retrieved 23 October 2023.
+EoM staff (2016). "Natural Number". Encyclopedia of Mathematics. Springer. Retrieved 23 October 2023.
+EoM staff (2014). "Analytic Number Theory". Encyclopedia of Mathematics. Springer. Retrieved 23 October 2023.
+EoM staff (2019). "Algebraic Number Theory". Encyclopedia of Mathematics. Springer. Retrieved 23 October 2023.
+EoM staff (2014a). "Elementary Number Theory". Encyclopedia of Mathematics. Springer. Retrieved 23 October 2023.
+Eriksson, Kenneth; Estep, Donald; Johnson, Claes (2013). Applied Mathematics: Body and Soul: Volume 2: Integrals and Geometry in IRn. Springer Science & Business Media. ISBN?978-3-662-05798-8.
+Ferreiros, Jose (2013). Labyrinth of Thought: A History of Set Theory and Its Role in Modern Mathematics. Birkh?user. ISBN?978-3-0348-5049-0.
+Gallistel, C. R.; Gelman, R. (2005). "Mathematical Cognition". In Holyoak, K. J.; Morrison, R. G. (eds.). The Cambridge Handbook of Thinking and Reasoning. Cambridge University Press. ISBN?978-0-521-53101-6.
+Geary, David C. (2006). "Development of Mathematical Understanding". In Damon, William; Lerner, Richard M.; Kuhn, Deanna; Siegler, Robert S. (eds.). Handbook of Child Psychology, Cognition, Perception, and Language. John Wiley & Sons. ISBN?978-0-470-05054-5.
+Gellert, W.; Hellwich, M.; K?stner, H.; K?stner, H. (2012). The VNR Concise Encyclopedia of Mathematics. Springer Science & Business Media. ISBN?978-94-011-6982-0.
+Gerardi, Kristopher; Goette, Lorenz; Meier, Stephan (2013). "Numerical Ability Predicts Mortgage Default". Proceedings of the National Academy of Sciences. 110 (28): 11267-11271. Bibcode:2013PNAS..11011267G. doi:10.1073/pnas.1220568110. PMC?3710828. PMID?23798401.
+Goodstein, R. L. (2014). Fundamental Concepts of Mathematics. Elsevier. ISBN?978-1-4831-5405-3.
+Grice, Matt; Kemp, Simon; Morton, Nicola J.; Grace, Randolph C. (2023). "The Psychological Scaffolding of Arithmetic". Psychological Review. doi:10.1037/rev0000431. PMID?37358523. S2CID?259251163.
+Grigorieva, Ellina (2018). Methods of Solving Number Theory Problems. Birkh?user. ISBN?978-3-319-90915-8.
+Gupta, Rajesh Kumar (2019). Numerical Methods: Fundamentals and Applications. Cambridge University Press. ISBN?978-1-108-68660-0.
+Hafstrom, John Edward (2013). Basic Concepts in Modern Mathematics. Courier Corporation. ISBN?978-0-486-31627-7.
+Hamilton, Norman T.; Landin, Joseph (2018). Set Theory: The Structure of Arithmetic. Courier Dover Publications. ISBN?978-0-486-83047-6.
+Haylock, Derek; Cockburn, Anne D. (2008). Understanding Mathematics for Young Children: A Guide for Foundation Stage and Lower Primary Teachers. SAGE. ISBN?978-1-4462-0497-9.
+HC staff (2022). "Numeral". www.ahdictionary.com. HarperCollins. Retrieved 11 November 2023.
+HC staff (2022a). "Number System". www.ahdictionary.com. HarperCollins. Retrieved 11 November 2023.
+Hindry, Marc (2011). Arithmetics. Springer. ISBN?978-1-4471-2130-5.
+Hoffman, Joe D.; Frankel, Steven (2018). Numerical Methods for Engineers and Scientists. CRC Press. ISBN?978-1-4822-7060-0.
+Hofweber, Thomas (2016). "The Philosophy of Arithmetic". Ontology and the Ambitions of Metaphysics. Oxford University Press. ISBN?978-0-19-876983-5.
+Horsten, Leon (2023). "Philosophy of Mathematics". The Stanford Encyclopedia of Philosophy. Metaphysics Research Lab, Stanford University. Retrieved 22 November 2023.
+Hosch, William L. (2023). "Rational Number". Encyclop?dia Britannica. Retrieved 24 October 2023.
+Hosch, William L. (2010). "Peano Axioms". Britannica. Retrieved 21 October 2023.
+HS staff (2022). "Arithmetic". www.ahdictionary.com. HarperCollins. Retrieved 19 October 2023.
+Hua, Jueming; Feng, Lisheng (2020). Thirty Great Inventions of China: From Millet Agriculture to Artemisinin. Springer Nature. ISBN?978-981-15-6525-0.
+Husserl, Edmund; Willard, Dallas (2012). "Translator's Introduction". Philosophy of Arithmetic: Psychological and Logical Investigations with Supplementary Texts from 1887-1901. Springer Science & Business Media. ISBN?978-94-010-0060-4.
+Igarashi, Yoshihide; Altman, Tom; Funada, Mariko; Kamiyama, Barbara (2014). Computing: A Historical and Technical Perspective. CRC Press. ISBN?978-1-4822-2741-3.
+ITL Education Solutions Limited (2011). Introduction to Computer Science. Pearson Education India. ISBN?978-81-317-6030-7.
+Jackson, Janna M. (2008). "Reading/Writing Connection". In Flippo, Rona F. (ed.). Handbook of College Reading and Study Strategy Research. Routledge. ISBN?978-1-135-70373-8.
+Jena, Sisir Kumar (2021). C Programming: Learn to Code. CRC Press. ISBN?978-1-000-46056-8.
+Kaiser, Sarah C.; Granade, Christopher (2021). Learn Quantum Computing with Python and Q#: A Hands-on Approach. Simon and Schuster. ISBN?978-1-61729-613-0.
+Karlsson, Anders (2011). "Applications of Heat Kernels on Abelian Groups". In Goldfeld, Dorian; Jorgenson, Jay; Jones, Peter; Ramakrishnan, Dinakar; Ribet, Kenneth; Tate, John (eds.). Number Theory, Analysis and Geometry: In Memory of Serge Lang. Springer Science & Business Media. ISBN?978-1-4614-1259-5.
+Kay, Anthony (2021). Number Systems: A Path into Rigorous Mathematics. CRC Press. ISBN?978-0-429-60776-9.
+Khan, Khalid; Graham, Tony Lee (2018). Engineering Mathematics with Applications to Fire Engineering. CRC Press. ISBN?978-1-351-59761-6.
+Khattar, Dinesh (2010). The Pearson Guide To Objective Arithmetic For Competitive Examinations, 3/E. Pearson Education India. ISBN?978-81-317-2673-0.
+Klein, Elise; Moeller, Korbinian; Dressel, Katharina; Domahs, Frank; Wood, Guilherme; Willmes, Klaus; Nuerk, Hans-Christoph (2010). "To Carry or Not to Carry - Is This the Question? Disentangling the Carry Effect in Multi-digit Addition". Acta Psychologica. 135 (1): 67-76. doi:10.1016/j.actpsy.2010.06.002. PMID?20580340.
+Klein, Andreas (2013). Stream Ciphers. Springer Science & Business Media. ISBN?978-1-4471-5079-4.
+Klein, Jacob (2013a). Greek Mathematical Thought and the Origin of Algebra. Courier Corporation. ISBN?978-0-486-31981-0.
+Kleiner, Israel (2012). Excursions in the History of Mathematics. Springer Science & Business Media. ISBN?978-0-8176-8268-2.
+Klose, Orval M. (2014). The Number Systems and Operations of Arithmetic: An Explanation of the Fundamental Principles of Mathematics Which Underlie the Understanding and Use of Arithmetic, Designed for In-Service Training of Elementary School Teachers Candidates Service Training of Elementary School Teacher Candidates. Elsevier. ISBN?978-1-4831-3709-4.
+Koepf, Wolfram (2021). Computer Algebra: An Algorithm-Oriented Introduction. Springer Nature. ISBN?978-3-030-78017-3.
+Koetsier, Teun (2018). The Ascent of GIM, the Global Intelligent Machine: A History of Production and Information Machines. Springer. ISBN?978-3-319-96547-5.
+Koren, Israel (2018). Computer Arithmetic Algorithms. CRC Press. ISBN?978-1-4398-6371-8.
+Krenn, Stephan; Lor?nser, Thomas (2023). An Introduction to Secret Sharing: A Systematic Overview and Guide for Protocol Selection. Springer Nature. ISBN?978-3-031-28161-7.
+Kupferman, Raz (2015). Elementary School Mathematics For Parents And Teachers - Volume 1. World Scientific Publishing Company. ISBN?978-981-4699-93-8.
+K???ek, Michal; Somer, Lawrence; ?olcov?, Alena (2021). From Great Discoveries in Number Theory to Applications. Springer Nature. ISBN?978-3-030-83899-7.
+Lange, Kenneth (2010). Numerical Analysis for Statisticians. Springer Science & Business Media. ISBN?978-1-4419-5944-7.
+Laski, Elida V.; Jor'dan, Jamilah R.; Daoust, Carolyn; Murray, Angela K. (2015). "What Makes Mathematics Manipulatives Effective? Lessons From Cognitive Science and Montessori Education". SAGE Open. 5 (2). doi:10.1177/2158244015589588. S2CID?11722953.
+Lerner, Brenda Wilmoth; Lerner, K. Lee, eds. (2008). "Modular Arithmetic". The Gale Encyclopedia of Science (4th?ed.). Thompson Gale. ISBN?978-1-4144-2877-2.
+Li, Yeping; Schoenfeld, Alan H. (2019). "Problematizing Teaching and Learning Mathematics as 'Given' in STEM Education". International Journal of STEM Education. 6 (1). doi:10.1186/s40594-019-0197-9.
+Liebler, Robert A. (2018). Basic Matrix Algebra with Algorithms and Applications. CRC Press. ISBN?978-0-429-85287-9.
+Lockhart, Paul (2017). Arithmetic. The Belknap Press of Harvard University Press. ISBN?978-0-674-97223-0.
+Lozano-Robledo, ?lvaro (2019). Number Theory and Geometry: An Introduction to Arithmetic Geometry. American Mathematical Soc. ISBN?978-1-4704-5016-8.
+Luderer, Bernd; Nollau, Volker; Vetters, Klaus (2013). Mathematical Formulas for Economists. Springer Science & Business Media. ISBN?978-3-662-12431-4.
+L?tzen, Jesper (2023). A History of Mathematical Impossibility. Oxford University Press. ISBN?978-0-19-286739-1.
+Ma, Liping (2020). Knowing and Teaching Elementary Mathematics: Teachers' Understanding of Fundamental Mathematics in China and the United States. Routledge. ISBN?978-1-000-02734-1.
+MacDuffee, C. C. "Arithmetic". Encyclopedia Britannica. Retrieved 18 November 2023.
+Madden, Daniel J.; Aubrey, Jason A. (2017). An Introduction to Proof Through Real Analysis. John Wiley & Sons. ISBN?978-1-119-31472-1.
+Mahajan, Sanjoy (2010). Street-Fighting Mathematics: The Art of Educated Guessing and Opportunistic Problem Solving. MIT Press. ISBN?978-0-262-26559-1.
+Marcus, Russell; McEvoy, Mark (2016). An Historical Introduction to the Philosophy of Mathematics: A Reader. Bloomsbury Publishing. ISBN?978-1-4725-3291-6.
+Mazumder, Pinaki; Ebong, Idongesit E. (2023). Lectures on Digital Design Principles. CRC Press. ISBN?978-1-000-92194-6.
+Mazzola, Guerino; Milmeister, G?rard; Weissmann, Jody (2004). Comprehensive Mathematics For Computer Scientists 1: Sets And Numbers, Graphs And Algebra, Logic And Machines, Linear Geometry. Springer Science & Business Media. ISBN?978-3-540-20835-8.
+Meyer, Carl D. (2023). Matrix Analysis and Applied Linear Algebra: Second Edition. SIAM. ISBN?978-1-61197-744-8.
+Monahan, John F. (2012). "2. Basic Computational Algorithms". In Gentle, James E.; H?rdle, Wolfgang Karl; Mori, Yuichi (eds.). Handbook of Computational Statistics: Concepts and Methods. Springer Science & Business Media. ISBN?978-3-642-21551-3.
+Moncayo, Raul (2018). Lalangue, Sinthome, Jouissance, and Nomination: A Reading Companion and Commentary on Lacan's Seminar XXIII on the Sinthome. Routledge. ISBN?978-0-429-91554-3.
+Mooney, Claire; Briggs, Mary; Hansen, Alice; McCullouch, Judith; Fletcher, Mike (2014). Primary Mathematics: Teaching Theory and Practice. Learning Matters. ISBN?978-1-4739-0707-2.
+Moore, Ramon E.; Kearfott, R. Baker; Cloud, Michael J. (2009). Introduction to Interval Analysis. SIAM. ISBN?978-0-89871-669-6.
+Muller, Jean-Michel; Brunie, Nicolas; Dinechin, Florent de; Jeannerod, Claude-Pierre; Joldes, Mioara; Lef?vre, Vincent; Melquiond, Guillaume; Revol, Nathalie; Torres, Serge (2018). Handbook of Floating-Point Arithmetic. Birkh?user. ISBN?978-3-319-76526-6.
+Muller, Jean-Michel; Brisebarre, Nicolas; Dinechin, Florent de; Jeannerod, Claude-Pierre; Lef?vre, Vincent; Melquiond, Guillaume; Revol, Nathalie; Stehl?, Damien; Torres, Serge (2009). Handbook of Floating-Point Arithmetic. Springer Science & Business Media. ISBN?978-0-8176-4705-6.
+Musser, Gary L.; Peterson, Blake E.; Burger, William F. (2013). Mathematics for Elementary Teachers: A Contemporary Approach. John Wiley & Sons. ISBN?978-1-118-48700-6.
+MW staff (2023). "Definition of Arithmetic". www.merriam-webster.com. Retrieved 19 October 2023.
+Nagel, Ernest; Newman, James Roy (2008). Godel's Proof. NYU Press. ISBN?978-0-8147-5837-3.
+Nagel, Rob (2002). U-X-L Encyclopedia of Science. U-X-L. ISBN?978-0-7876-5440-5.
+Nakov, Svetlin; Kolev, Veselin (2013). Fundamentals of Computer Programming with C#: The Bulgarian C# Book. Faber Publishing. ISBN?978-954-400-773-7.
+NCTM Staff. "Number and Operations". www.nctm.org. National Council of Teachers of Mathematics. Retrieved 21 November 2023.
+Nelson, Gerald (2019). English: An Essential Grammar. Routledge. ISBN?978-1-351-12273-3.
+Null, Linda; Lobur, Julia (2006). The Essentials of Computer Organization and Architecture. Jones & Bartlett Learning. ISBN?978-0-7637-3769-6.
+Nurnberger-Haag, Julie (2017). "Borrow, Trade, Regroup, or Unpack? Revealing How Instructional Metaphors Portray Base-Ten Number". In Jao, Limin; Radakovic, Nenad (eds.). Transdisciplinarity in Mathematics Education: Blurring Disciplinary Boundaries. Springer. ISBN?978-3-319-63624-5.
+O'Leary, Michael L. (2015). A First Course in Mathematical Logic and Set Theory. John Wiley & Sons. ISBN?978-0-470-90588-3.
+Oakes, Elizabeth (2020). Encyclopedia of World Scientists, Updated Edition. Infobase Publishing. ISBN?978-1-4381-9545-2.
+Odom, Samuel L.; Barbarin, Oscar A.; Wasik, Barbara Hanna (2009). "Applying Lessons from Developmental Science to Early Education". In Barbarin, Oscar A.; Wasik, Barbara Hanna (eds.). Handbook of Child Development and Early Education: Research to Practice. Guilford Press. ISBN?978-1-60623-302-3.
+Oliver, Alexander D. (2005). "Arithmetic, Foundations of". In Honderich, Ted (ed.). The Oxford Companion to Philosophy. Oxford University Press. ISBN?978-0-19-926479-7.
+Omondi, Amos R. (2020). Cryptography Arithmetic: Algorithms and Hardware Architectures. Springer Nature. ISBN?978-3-030-34142-8.
+Ongley, John; Carey, Rosalind (2013). Russell: A Guide for the Perplexed. Bloomsbury Publishing. ISBN?978-1-4411-9123-6.
+Ore, Oystein (1948). Number Theory and Its History. McGraw-Hill. OCLC?1397541.
+Orr, David B. (1995). Fundamentals of Applied Statistics and Surveys. CRC Press. ISBN?978-0-412-98821-9.
+Paar, Christof; Pelzl, Jan (2009). Understanding Cryptography: A Textbook for Students and Practitioners. Springer Science & Business Media. ISBN?978-3-642-04101-3.
+Page, Robert L. (2003). "Number Theory, Elementary". Encyclopedia of Physical Science and Technology (Third?ed.). Academic Press. ISBN?978-0-12-227410-7.
+Payne, Andrew (2017). The Teleology of Action in Plato's Republic. Oxford University Press. ISBN?978-0-19-879902-3.
+Peirce, Charles S. (2015). Arithmetic. Walter de Gruyter GmbH & Co KG. ISBN?978-3-11-086970-5.
+Pharr, Matt; Jakob, Wenzel; Humphreys, Greg (2023). Physically Based Rendering: From Theory to Implementation (4?ed.). MIT Press. ISBN?978-0-262-37403-3.
+Ponticorvo, Michela; Schmbri, Massimiliano; Miglino, Orazio (2019). "How to Improve Spatial and Numerical Cognition with a Game-Based and Technology-Enhanced Learning Approach". In Vicente, Jos? Manuel Ferr?ndez; ?lvarez-S?nchez, Jos? Ram?n; L?pez, F?lix de la Paz; Moreo, Javier Toledo; Adeli, Hojjat (eds.). Understanding the Brain Function and Emotions: 8th International Work-Conference on the Interplay Between Natural and Artificial Computation, IWINAC 2019, Almer?a, Spain, June 3-7, 2019, Proceedings, Part I. Springer. ISBN?978-3-030-19591-5.
+Prata, Stephen (2002). C Primer Plus. Sams Publishing. ISBN?978-0-672-32222-8.
+Quintero, Ana Helvia; Rosario, Hector (2016). Math Makes Sense!: A Constructivist Approach To The Teaching And Learning Of Mathematics. World Scientific. ISBN?978-1-78326-866-5.
+Rajan, Hridesh (2022). An Experiential Introduction to Principles of Programming Languages. MIT Press. ISBN?978-0-262-36243-6.
+Reilly, Norman R. (2009). Introduction to Applied Algebraic Systems. Oxford University Press. ISBN?978-0-19-970992-2.
+Reitano, Robert R. (2010). Introduction to Quantitative Finance: A Math Tool Kit. MIT Press. ISBN?978-0-262-01369-7.
+Resnick, L. B.; Ford, W. W. (2012). Psychology of Mathematics for Instruction. Routledge. ISBN?978-1-136-55759-0.
+Riesel, Hans (2012). Prime Numbers and Computer Methods for Factorization. Springer Science & Business Media. ISBN?978-1-4612-0251-6.
+Rising, Gerald R.; Matthews, James R.; Schoaff, Eileen; Matthew, Judith (2021). About Mathematics. Linus Learning. ISBN?978-1-60797-892-3.
+Robbins, Neville (2006). Beginning Number Theory. Jones & Bartlett Learning. ISBN?978-0-7637-3768-9.
+Rodda, Harvey J. E.; Little, Max A. (2015). Understanding Mathematical and Statistical Techniques in Hydrology: An Examples-based Approach. John Wiley & Sons. ISBN?978-1-119-07659-9.
+Roe, John; deForest, Russ; Jamshidi, Sara (2018). Mathematics for Sustainability. Springer. ISBN?978-3-319-76660-7.
+Romanowski, Perry (2008). "Arithmetic". In Lerner, Brenda Wilmoth; Lerner, K. Lee (eds.). The Gale Encyclopedia of Science (4th?ed.). Thompson Gale. ISBN?978-1-4144-2877-2.
+Rooney, Anne (2021). Think Like a Mathematician. The Rosen Publishing Group. ISBN?978-1-4994-7092-5.
+Rossi, Richard J. (2011). Theorems, Corollaries, Lemmas, and Methods of Proof. John Wiley & Sons. ISBN?978-1-118-03057-8.
+Ruthven, Kenneth (2012). "12. Calculators in the Mathematics Curriculum: The Scope of Personal Computational Technology". In Bishop, Alan; Clements, M. A. (Ken); Keitel-Kreidt, Christine; Kilpatrick, Jeremy; Laborde, Colette (eds.). International Handbook of Mathematics Education. Springer Science & Business Media. ISBN?978-94-009-1465-0.
+Sally, Judith D.; Sally (Jr.), Paul J. (2012). Integers, Fractions, and Arithmetic: A Guide for Teachers. American Mathematical Soc. ISBN?978-0-8218-8798-1.
+Seaman, William; Rossler, Otto E.; Burgin, Mark (2023). Chaos, Information, And The Future Of Physics: The Seaman-rossler Dialogue With Information Perspectives By Burgin And Seaman. World Scientific. ISBN?978-981-12-7138-0.
+Shiva, Sajjan G. (2018). Introduction to Logic Design. CRC Press. ISBN?978-1-351-98983-1.
+Sierpinska, Anna; Lerman, Stephen (1996). "Epistemologies of Mathematics and of Mathematics Education". In Alan J. Bishop; Ken Clements; Christine Keitel; Jeremy Kilpatrick; Colette Laborde (eds.). International Handbook of Mathematics Education: Part 1. Kluwer International Handbooks of Education, vol. 4. Springer Netherlands. pp.?827-876. doi:10.1007/978-94-009-1465-0_23. ISBN?978-94-009-1465-0.
+Smith, David E. (1958). History of Mathematics. Courier Corporation. ISBN?978-0-486-20430-7.
+Smyth, William (1864). Elementary Algebra: For Schools and Academies. Bailey and Noyes. OCLC?3901163143.
+Sophian, Catherine (2017). The Origins of Mathematical Knowledge in Childhood. Routledge. ISBN?978-1-351-54175-6.
+Sperling, Abraham; Stuart, Monroe (1981). Mathematics. Elsevier Science. ISBN?978-0-7506-0405-5.
+Stakhov, Alexey (2020). Mathematics Of Harmony As A New Interdisciplinary Direction And 'Golden' Paradigm Of Modern Science - Volume 2: Algorithmic Measurement Theory, Fibonacci And Golden Arithmetic's And Ternary Mirror-symmetrical Arithmetic. World Scientific. ISBN?978-981-12-1348-9.
+Stevenson, Angus; Waite, Maurice (2011). Concise Oxford English Dictionary: Luxury Edition. OUP Oxford. ISBN?978-0-19-960111-0.
+Stewart, David E. (2022). Numerical Analysis: A Graduate Course. Springer Nature. ISBN?978-3-031-08121-7.
+Swartzlander, Earl E. (2017). "High-Speed Computer Arithmetic". In Oklobdzija, Vojin G. (ed.). Digital Design and Fabrication. CRC Press. ISBN?978-0-8493-8604-6.
+Tarasov, Vasily (2008). Quantum Mechanics of Non-Hamiltonian and Dissipative Systems. Elsevier. ISBN?978-0-08-055971-1.
+Taylor, Joseph L. (2012). Foundations of Analysis. American Mathematical Soc. ISBN?978-0-8218-8984-8.
+Thiam, Thierno; Rochon, Gilbert (2019). Sustainability, Emerging Technologies, and Pan-Africanism. Springer Nature. ISBN?978-3-030-22180-5.
+Tiles, Mary (2009). "A Kantian Perspective on the Philosophy of Mathematics". In Irvine, Andrew D. (ed.). Philosophy of Mathematics. Elsevier. ISBN?978-0-08-093058-9.
+Uspenskii, V. A.; Semenov, A. L. (2001). "Solvable and Unsolvable Algorithmic Problems". In Tabachnikov, Serge (ed.). Kvant Selecta: Combinatorics, I: Combinatorics, I. American Mathematical Soc. ISBN?978-0-8218-2171-8.
+Vaccaro, Alfredo; Pepiciello, Antonio (2022). Affine Arithmetic-Based Methods for Uncertain Power System Analysis. Elsevier. ISBN?978-0-323-90503-9.
+Verschaffel, Lieven; Torbeyns, Joke; De Smedt, Bert (2011). "Mental Arithmetic". In Seel, Norbert M. (ed.). Encyclopedia of the Sciences of Learning. Springer Science & Business Media. ISBN?978-1-4419-1427-9.
+Victoria Department of Education Staff (2023). "Numeracy for All Learners". www.education.vic.gov.au. Retrieved 22 November 2023.
+Vullo, Vincenzo (2020). Gears: Volume 3: A Concise History. Springer Nature. ISBN?978-3-030-40164-1.
+Waite, Maurice (2013). Pocket Oxford English Dictionary. OUP Oxford. ISBN?978-0-19-966615-7.
+Wallis, W. D. (2013). A Beginner's Guide to Discrete Mathematics. Springer Science & Business Media. ISBN?978-1-4757-3826-1.
+Wallis, W. D. (2011). A Beginner's Guide to Discrete Mathematics. Springer Science & Business Media. ISBN?978-0-8176-8286-6.
+Wang, Hao (1997). A Logical Journey: From G?del to Philosophy. MIT Press. ISBN?978-0-262-26125-8.
+Ward, J. P. (2012). Quaternions and Cayley Numbers: Algebra and Applications. Springer Science & Business Media. ISBN?978-94-011-5768-1.
+Wedell, Moritz (2015). "Numbers". In Classen, Albrecht (ed.). Handbook of Medieval Culture. Volume 2. Walter de Gruyter GmbH & Co KG. ISBN?978-3-11-037763-7.
+Weil, Andr? (2009). Number Theory: An Approach Through History From Hammurapi to Legendre. Springer Science & Business Media. ISBN?978-0-8176-4571-7.
+Weir, Alan (2022). "Formalism in the Philosophy of Mathematics". The Stanford Encyclopedia of Philosophy. Metaphysics Research Lab, Stanford University. Retrieved 22 November 2023.
+Weisstein, Eric W. "Multiplier". Wolfram MathWorld. Retrieved 12 December 2023.
+Wheater, Carolyn (2015). Algebra I. Dorling Kindersley Limited. ISBN?978-0-241-88779-0.
+Wilson, Robin (2020). Number Theory: A Very Short Introduction. Oxford University Press. ISBN?978-0-19-879809-5.
+Wright, Robert J.; Ellemor-Collins, David; Tabor, Pamela D. (2011). Developing Number Knowledge: Assessment,Teaching and Intervention with 7-11 Year Olds. SAGE. ISBN?978-1-4462-8927-3.
+Yadin, Aharon (2016). Computer Systems Architecture. CRC Press. ISBN?978-1-315-35592-4.
+Yan, Song Y. (2013). Number Theory for Computing. Springer Science & Business Media. ISBN?978-3-662-04053-9.
+Yan, Song Y. (2013a). Computational Number Theory and Modern Cryptography. John Wiley & Sons. ISBN?978-1-118-18858-3.
+Young, Cynthia Y. (2010). Precalculus. John Wiley & Sons. ISBN?978-0-471-75684-2.
+Young, Cynthia Y. (2021). Algebra and Trigonometry. John Wiley & Sons. ISBN?978-1-119-77830-1.
+External links[edit]
+Look up arithmetic in Wiktionary, the free dictionary.
+Wikibooks has more on the topic of: Arithmetic
+Wikimedia Commons has media related to Arithmetic.
+Wikiquote has quotations related to Arithmetic.
+MathWorld article about arithmetic
+The New Student's Reference Work/Arithmetic (historical)
+Weyde, P. H. Vander (1879). "Arithmetic"?. The American Cyclop?dia.
+vteMajor mathematics areas
+History
+Timeline
+Future
+Outline
+Lists
+Glossary
+Foundations
+Category theory
+Information theory
+Mathematical logic
+Philosophy of mathematics
+Set theory
+Type theory
+Algebra
+Abstract
+Commutative
+Elementary
+Group theory
+Linear
+Multilinear
+Universal
+Homological
+Analysis
+Calculus
+Real analysis
+Complex analysis
+Hypercomplex analysis
+Differential equations
+Functional analysis
+Harmonic analysis
+Measure theory
+Discrete
+Combinatorics
+Graph theory
+Order theory
+Geometry
+Algebraic
+Analytic
+Arithmetic
+Differential
+Discrete
+Euclidean
+Finite
+Number theory
+Arithmetic
+Algebraic number theory
+Analytic number theory
+Diophantine geometry
+Topology
+General
+Algebraic
+Differential
+Geometric
+Homotopy theory
+Applied
+Engineering mathematics
+Mathematical biology
+Mathematical chemistry
+Mathematical economics
+Mathematical finance
+Mathematical physics
+Mathematical psychology
+Mathematical sociology
+Mathematical statistics
+Probability
+Statistics
+Systems science
+Control theory
+Game theory
+Operations research
+Computational
+Computer science
+Theory of computation
+Computational complexity theory
+Numerical analysis
+Optimization
+Computer algebra
+Related topics
+Mathematicians
+lists
+Informal mathematics
+Films about mathematicians
+Recreational mathematics
+Mathematics and art
+Mathematics education
+?Mathematics portal
+ Category
+ Commons
+ WikiProject
+Authority control databases National
+Germany
+Israel
+United States
+Japan
+Czech Republic
+Other
+Encyclopedia of Modern Ukraine
+Retrieved from "https://en.wikipedia.org/w/index.php?title=Arithmetic&oldid=1190736946"
+Categories: ArithmeticMathematics educationHidden categories: Articles with short descriptionShort description matches WikidataPages using multiple image with auto scaled imagesCommons category link is on WikidataWikipedia articles incorporating a citation from The American CyclopaediaWikipedia articles incorporating a citation from The American Cyclopaedia with a Wikisource referenceArticles with GND identifiersArticles with J9U identifiersArticles with LCCN identifiersArticles with NDL identifiersArticles with NKC identifiersArticles with EMU identifiers
+ This page was last edited on 19 December 2023, at 15:08?(UTC).
+Text is available under the Creative Commons Attribution-ShareAlike License 4.0;
+additional terms may apply.  By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia? is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.
+Privacy policy
+About Wikipedia
+Disclaimers
+Contact Wikipedia
+Code of Conduct
+Developers
+Statistics
+Cookie statement
+Mobile view
+Toggle limited content width
