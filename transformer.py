@@ -5,6 +5,8 @@ import random
 import os 
 import json
 import numpy 
+from tokenizers.implementations import ByteLevelBPETokenizer
+
 os.environ['TORCH_USE_CUDA_DSA'] = "True"
 class MultiHeadAttention(torch.nn.Module):
     
@@ -272,11 +274,12 @@ class ContextEncoderBlock(torch.nn.Module):
 
             #print(f"embeddings now size {semantic_embeddings.shape}")
             return final_embeddings
-            
+
+
 class EncoderBlock(torch.nn.Module):
     
     #Context_dim should be n_embed//4
-    def __init__(self,n_vocab,context_dim,embed_dim,n_positions,device):
+    def __init__(self,n_vocab,embed_dim,n_positions,device):
         super(EncoderBlock,self).__init__()
 
         self.device                 = device
@@ -284,19 +287,9 @@ class EncoderBlock(torch.nn.Module):
         self.semantic_embeddings    = torch.nn.Embedding(n_vocab,embed_dim,device=device)
         self.input_pos_embeddings   = torch.nn.Embedding(n_positions,embed_dim,device=device)           #up to 512 context
 
-        self.context_dim            = context_dim
-        self.embed_dim              = embed_dim
-        self.attn_scale             = 1 / math.sqrt(self.context_dim)
-        self.Q                      = torch.nn.Linear(context_dim,context_dim,bias=False,device=device)
-        self.K                      = torch.nn.Linear(context_dim,context_dim,bias=False,device=device)
-        self.V                      = torch.nn.Linear(context_dim,context_dim,bias=False,device=device)
-        self.V_w                    = torch.nn.Linear(context_dim,1,bias=True,device=device)
-
-        self.embed_translator       = torch.nn.Linear(context_dim,embed_dim,bias=True,device=device)
-
 
     #Given the context ids and the input ids, return the embeddings to be passed forward 
-    def forward(self,context_ids:torch.Tensor,input_ids:torch.Tensor)->torch.Tensor:
+    def forward(self,input_ids:torch.Tensor)->torch.Tensor:
         
         #Compute actual input embeddings
         semantic_embeddings:torch.Tensor        = self.semantic_embeddings(input_ids)
@@ -320,14 +313,12 @@ class LMSteinshark(torch.nn.Module):
     def __init__(self,
                  n_positions:int=512,
                  n_embed    :int=512,
-                 n_ctxt     :int=32,
                  n_layers   :int=16,
                  n_heads    :int=16,
                  n_ff       :int=1024,
                  n_vocab    :int=32768,
                  act_fn     :torch.nn.functional=torch.nn.GELU,
-                 dropout    :float=.1,
-                 trig_embd  :bool=True):
+                 dropout    :float=.1):
         
 
         super(LMSteinshark,self).__init__()
@@ -343,24 +334,17 @@ class LMSteinshark(torch.nn.Module):
         self.n_heads                = n_layers
         self.n_ff                   = n_ff
         self.devices                = [torch.device('cuda:0'),torch.device('cuda:0')]
+        self.device                 = self.devices[0]
         self.bal                    = 4
 
         #Use learnable position embeddings
         #self.input_block            = ContextEncoderBlock(n_vocab,n_ctxt,n_embed,n_positions,self.devices[0])
-        self.input_block            = EncoderBlock(n_vocab,n_ctxt,n_embed,n_positions,self.devices[0])
-        # self.semantic_embedder      = torch.nn.Embedding(n_vocab,n_embed,device=self.devices[0])
-        # if trig_embd:
-        #     self.position_embedder  = lambda x : self.create_pos_embeddings(period=10_000)
-        # else:
-        #     self.position_embedder  = torch.nn.Embedding(n_positions,n_embed,device=self.devices[0])
+        self.input_block            = EncoderBlock(n_vocab,n_embed,n_positions,self.devices[0])
 
         #Create decoder stacks 
-        self.device_0_modules       = torch.nn.Sequential(OrderedDict({str(i):DecoderLayer(n_embed,n_heads,n_ff,dropout=dropout,act_fn=act_fn,device=self.devices[0],n_positions=n_positions) for i in range(n_layers//2+self.bal)})).to(self.devices[0])
-        self.device_1_modules       = torch.nn.Sequential(OrderedDict({str(i):DecoderLayer(n_embed,n_heads,n_ff,dropout=dropout,act_fn=act_fn,device=self.devices[1],n_positions=n_positions) for i in range(n_layers//2-self.bal)})).to(self.devices[1])
-        
-        #self.decoder_stack          = torch.nn.ModuleList([DecoderLayer(n_embed,n_heads,n_ff,dropout=dropout,act_fn=act_fn,device=self.devices[0],n_positions=n_positions//2) for _ in range(n_layers)] + [torch.nn.LayerNorm(n_embed,device=self.devices[0])])
-        
-        self.lm_head                = torch.nn.Sequential(torch.nn.LayerNorm(n_embed),torch.nn.Linear(n_embed,n_vocab,bias=True,device=self.devices[1])).to(self.devices[1])
+        self.transformer_stack      = torch.nn.Sequential(OrderedDict({str(i):DecoderLayer(n_embed,n_heads,n_ff,dropout=dropout,act_fn=act_fn,device=self.devices[0],n_positions=n_positions) for i in range(n_layers//2+self.bal)})).to(self.devices[0])
+                
+        self.lm_head                = torch.nn.Sequential(torch.nn.LayerNorm(n_embed),torch.nn.Linear(n_embed,n_vocab,bias=True,device=self.devices[0])).to(self.devices[0])
 
         #Calc params 
         self.n_params               = sum(p.numel() for p in self.parameters())
@@ -372,7 +356,8 @@ class LMSteinshark(torch.nn.Module):
         self.stats                  = {"iter_through":0,
                                        "tok_through":0,
                                        "eps_through":0,
-                                       "losses":[]}
+                                       "losses":[],
+                                       "tok_snap":[]}
         #Init weights 
         self.initialize_weights()
         
@@ -383,17 +368,12 @@ class LMSteinshark(torch.nn.Module):
     def forward(self,input_ids:torch.Tensor,target_ids:torch.Tensor)->tuple[torch.Tensor, torch.Tensor]:
         
         #Split tokens
-        context_seq,input_seq,targets   = self.split_input(input_ids,target_ids)
-        context_seq                     = context_seq.contiguous()
-        input_seq                       = input_seq.contiguous()
-        targets                         = targets.contiguous()
+        input_seq,targets               = self.split_input(input_ids,target_ids)
 
-        x                               = self.input_block(context_seq,input_seq) #returns (bs,T,n_embed)
+        x                               = self.input_block(input_seq) #returns (bs,T,n_embed)
 
         #Pass through transformer stack
-        x                               = self.device_0_modules(x)
-        x                               = x.to(self.devices[1])
-        x                               = self.device_1_modules(x)
+        x                               = self.transformer_stack(x)
 
         #Pass through lm_head to get logits
         return self.lm_head(x), targets
@@ -479,7 +459,7 @@ class LMSteinshark(torch.nn.Module):
         print(f"\n\nLoaded model\n\n")
 
 
-    def generate(self,prompt:list[int],n_tokens=128,temperature=.5):
+    def generate(self,prompt:list[int],tokenizer:ByteLevelBPETokenizer,n_tokens=128,temperature=.5):
         self.eval()
 
         with torch.no_grad():
@@ -487,29 +467,28 @@ class LMSteinshark(torch.nn.Module):
         
             while len(tokens) - len(prompt) < n_tokens:
 
-                context_seq,input_seq,_         = self.split_input(torch.tensor(tokens,device=self.devices[0]).long(),None)
-                input_seq.unsqueeze_(dim=0)
-                context_seq.unsqueeze_(dim=0)
-                #print(f"dim={input_seq.shape}, {context_seq.shape}")
+                input_seq                       = torch.tensor(tokens,device=self.device).long().unsqueeze_(0)
+                context_seq                     = torch.empty_like(input_seq)
                 logits                          = self(input_seq,context_seq)[0][0,-1,:]
                 distribution                    = torch.nn.functional.softmax(logits/temperature,dim=-1)
                 next_token                      = torch.multinomial(distribution,1)
+
+                #Stop with end seq
+                if next_token == tokenizer.encode("<|endoftext|>"):
+                    self.train()
+                    return tokens
                 tokens                          = tokens + [next_token]
+
         
         self.train()
         return tokens
 
 
     def split_input(self,input_ids:torch.Tensor,target_ids:torch.Tensor=None):
-        context_seq                 = input_ids[...,:-self.n_positions].contiguous()
         input_seq                   = input_ids[...,-self.n_positions:].contiguous()
+        target_ids                  = target_ids[...,-self.n_positions:].contiguous()
         
-        if not target_ids is None:
-            targets                 = target_ids[...,-self.n_positions:].contiguous()
-        else:
-            targets                 = torch.Tensor([])  #Empty for nothing
-
-        return context_seq,input_seq,targets
+        return input_seq,target_ids
 
 
 if __name__ == "__main__":

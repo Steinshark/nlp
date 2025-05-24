@@ -72,7 +72,7 @@ class DecoderLayer(torch.nn.Module):
         
         #Self attention
         self.mh_attn                = MultiHeadAttention(n_embed,n_head,tfmr_input_size,device=device)
-        self.mha_dropout            = torch.nn.Dropout(p=dropout,inplace=True)
+        self.mha_dropout            = torch.nn.Dropout(p=dropout)
         self.mha_layer_norm         = torch.nn.LayerNorm(n_embed,device=device)
         
         
@@ -81,7 +81,7 @@ class DecoderLayer(torch.nn.Module):
             torch.nn.Linear(n_embed,n_ff,device=device),
             act_fn(),
             torch.nn.Linear(n_ff,n_embed,device=device))
-        self.ff_dropout             = torch.nn.Dropout(p=dropout,inplace=True)
+        self.ff_dropout             = torch.nn.Dropout(p=dropout)
         self.ff_layer_norm          = torch.nn.LayerNorm(n_embed,device=device)
 
         self.initialize_weights()

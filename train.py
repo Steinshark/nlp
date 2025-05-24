@@ -1,7 +1,9 @@
 import torch
 from tokenizers.implementations import ByteLevelBPETokenizer
 from miniTransformer import MiniTransformerSteinshark
-import os 
+from transformer import LMSteinshark
+import os
+os.environ["KMP_DUPLICATE_LIB_OK"]="TRUE"
 import argparse
 from dataset import TokenizedDataset, Prefetcher
 import numpy 
@@ -12,7 +14,7 @@ from matplotlib import pyplot as plt
 import random
 import json 
 import tkinter as tk
-
+from utils import reduce_arr
 
 #sys.path.append("C:/gitrepos/steinpy/src")
 #from steinpy.utils import reduce_arr 
@@ -119,6 +121,9 @@ if __name__ == "__main__":
     #Handle arguments
     argparser                   = argparse.ArgumentParser()
     argparser.add_argument('--model_dir',default='')
+    argparser.add_argument('--model_type',default='base')
+    argparser.add_argument('--bs',default='16')
+    argparser.add_argument('--bs_tok',default='131200')
     argparser.add_argument('--load_vocab',default='True')
     argparser.add_argument('--train_root',default='c:/data/nlp')
     args                        = argparser.parse_args()
@@ -126,38 +131,39 @@ if __name__ == "__main__":
 
     #Training/Model Settings 
     #Input Settings 
-    context1_size               = 512       #sequence to coarse summarize 
-    context2_size               = 256       #sequence to fine summarize
-    core_size                   = 128       #1:1 sequence 
-    lg_size                     = 16        #coarse reduced to this 
-    md_size                     = 16        #fine reduced to this 
-    tfmr_input_size             = core_size + lg_size + md_size     #size of sequence going through transformer stack
-    input_size                  = context1_size + context2_size + core_size
-    vocab_size                  = 16385
+    context1_size               = 8                                             #Sequence to coarse summarize 
+    context2_size               = 8                                             #Sequence to fine summarize
+    core_size                   = 128                                           #1:1 sequence 
+    lg_size                     = 0                                             #Coarse reduced to this 
+    md_size                     = 0                                             #Fine reduced to this 
+    tfmr_input_size             = core_size + lg_size + md_size                 #Size of sequence going through transformer stack
+    input_size                  = context1_size + context2_size + core_size     #Total number of tokens sampled per train step
+    vocab_size                  = 16385                                         #Vocab Size
 
     #Model settings 
-    n_layers                    = 16
-    n_embed                     = 1024#1024
-    n_heads                     = n_embed//128#n_embed//128
-    n_ff                        = int(n_embed*3)
-    act_fn                      = torch.nn.GELU
+    n_layers                    = 16                                            #Transformers stacked 
+    n_embed                     = 1024                                          #Dimension of the embedding per token             
+    n_heads                     = n_embed//128                                  #Number of attn heads          
+    n_ff                        = int(n_embed*2)                                #Size of the feed forward network 
+    act_fn                      = torch.nn.GELU                                 #Used throughout model
 
     #Training settings
-    train_batch_tok             = 512 * 1024
-    bs                          = 32
-    lr                          = .00025
-    wd                          = .04
-    dropout                     = .06
-    train_root                  = args.train_root
-    tok_trained_on              = 0 
-    virtual_bs                  = train_batch_tok // tfmr_input_size
-    accu_steps                  = virtual_bs // bs
-    pct_start                   = .3
-    train_iters                 = _N_TOKENS // (bs*tfmr_input_size)
-    lr_steps                    = _N_TOKENS // train_batch_tok
+    train_batch_tok             = int(args.bs_tok)                              #Number of tokens before stepping optimizer 
+    bs                          = int(args.bs)                                  #BS used per train iter (NOT per optimizer update)
+    lr                          = .0001                                         #Max LR used in OneCycleLR
+    wd                          = .04                                           #WD used throughout
+    dropout                     = .06                                           #P used throughout
+    train_root                  = args.train_root                               #Where all the training data will be found  
+    virtual_bs                  = train_batch_tok // tfmr_input_size            #Number of iters before stepping Optimizer
+    accu_steps                  = virtual_bs // bs                              #Number of steps before stepping optimizer
+    pct_start                   = .3                                            #Where peak LR will occur       
+    train_iters                 = _N_TOKENS // (bs*tfmr_input_size)             #Total iters used to train
+    lr_steps                    = _N_TOKENS // train_batch_tok                  #Total steps (used for OneCycleLR)
+    tokenizer_name              = '16k'                                         #Tokenizer used
+
+    #Sampling 
     sample_text                 = "Scientists have discovered a new technique for creating large language models"
 
-    tokenizer_name              = '16k'
     #Create Tokenizer
     if not args.load_vocab == "True":
         print(f"Training tokenizer size={vocab_size}")
@@ -178,8 +184,12 @@ if __name__ == "__main__":
         assert tokenizer.get_vocab_size() == vocab_size-1
 
     #Create model 
-    model                       = MiniTransformerSteinshark(context1_size,context2_size,core_size,lg_size,md_size,n_embed,n_layers,n_heads,n_ff,vocab_size,act_fn,dropout)
-    model.name                  = "summ_2"
+    if args.model_type == "summarizer": 
+        model                       = MiniTransformerSteinshark(context1_size,context2_size,core_size,lg_size,md_size,n_embed,n_layers,n_heads,n_ff,vocab_size,act_fn,dropout)
+    elif args.model_type == "base":
+        model                       = LMSteinshark(core_size,n_embed,n_layers,n_heads,n_ff,vocab_size,act_fn,dropout)
+    
+    model.name                  = "base"
     MODEL                       = model
     TOKENIZER                   = tokenizer
     #model.load()
@@ -192,7 +202,7 @@ if __name__ == "__main__":
     fnames.sort(key= lambda x: int(x.replace("tokens","").replace(".npy","")))
     for fname in fnames:
         fname   = f"{train_root}/tokens16k/{fname}"
-        tokens.append(numpy.load(fname).astype(numpy.int32))
+        tokens.append(numpy.load(fname).astype(numpy.uint16))
 
     tokens                      = numpy.concatenate(tokens)
     dataset                     = TokenizedDataset(tokens,input_size)
@@ -213,12 +223,12 @@ if __name__ == "__main__":
     model.stats['time_start'] = time.time()
 
     # #Speed 
-    # scaler                      = torch.amp.grad_scaler.GradScaler('cuda')
-    start_time                  = time.time()
+    # scaler                            = torch.amp.grad_scaler.GradScaler('cuda')
+    start_time                          = time.time()
     while cur_train_iter < train_iters:
         root.update_idletasks()
         root.update()
-        #cur_train_iter              = cur_train_iter + model.stats['iter_through']
+        #cur_train_iter                = cur_train_iter + model.stats['iter_through']
         t0                              = time.time()
 
         #Load data
@@ -273,27 +283,22 @@ if __name__ == "__main__":
             
             plt.cla()
             plt.clf()
-            colors      = ["mediumblue","mediumspringgreen","darkorange","deeppink","dodgerblue","orangered","crimson"]
+            colors      = ["mediumblue","darkorange","mediumspringgreen","dodgerblue","orangered","crimson"]
             #Plot all stats in save dir 
             for file in os.listdir(stats_root):
                 filepath    = os.path.join(stats_root,file)
                 stats_dict  = json.loads(open(filepath,'r').read())
                 tok         = stats_dict['tokens']
-                losses      = stats_dict['losses']     
+                losses      = stats_dict['losses']   
 
-                plt.plot(tok,losses,label=stats_dict['name'],color=colors.pop())
+                plt.plot(tok,losses,label=stats_dict['name'],color=colors.pop(0))
 
             plt.title(f"Model Loss - {model.n_params//1_000_000}M params - [{cur_train_iter}/{train_iters}]")
+            plt.xlabel("Tok. Trained On (Millions)")
+            plt.ylabel("Batch Loss")
             plt.legend()
             plt.draw()
             plt.pause(.01)
-            #is this going to do the same damn 
-            # #Save loss vs toks 
-            # save_dir    = f"C:/data/nlp/prev_runs/{model.name}.txt"
-            # tok         = model.stats['tok_snap']
-            # losses      = model.stats['losses']
-            # with open(save_dir,mode='w') as writefile:
-            #     writefile.write(json.dumps({"tokens":tok,'losses':losses,'name':model.name}))
 
         #Check if new epoch 
         if model.stats['tok_through'] // dataset.n_tokens > model.stats["eps_through"]:

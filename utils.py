@@ -14,6 +14,8 @@ from collections import defaultdict
 import json 
 import requests
 import bs4
+import math 
+import numpy 
 
 GOOD_CHARS          = ascii_lowercase + r".,'?{}[]/\;:!@#$%^&*()1234567890-_=+ |~<>©°•·×→" + '"' + ascii_uppercase + "ΑαΒβΓγΔδΕεΖζΗηΘθΙιΚκΛλΜμΝνΞξΟοΠπΡρΣσςΤτΥυΦφΧχΨψΩω"
 #sys.path.append(os.curdir)
@@ -106,6 +108,11 @@ class WebPage:
         #     input(checktext)
 
 
+        #Apparently a good number have this
+        if "the previous page is sending you to" in checktext or "please confirm that you and not a robot" in checktext:
+            return False 
+        
+
         #If ratio of alphabet to fullsize is < .80 deny it
         alphabet_thresh = .80
         alphabet        = ascii_lowercase + "." + "?" + "!" + ","
@@ -116,16 +123,20 @@ class WebPage:
         if alphabet_ratio < alphabet_thresh:
             return False
         
+        #if its less than 1500 words, its not good enough 
+        if text_len < 1500:
+            return False 
+        
 
         #If contains adult content words, discard
-        adult_triggers  = [" milf "," anal "," pussy "," cunt ","porn"," sex "," cum ", "fuck", "blowjob"] 
+        adult_triggers  = [" milf "," anal "," pussy "," cunt ","porn"," sex "," cum ", "fuck", "blowjob", "cock"] 
         adult_count     = sum([checktext.count(keyword) for keyword in adult_triggers])
         if (6*adult_count) / text_len > .005:    #Scale to account for word vs char
             return False 
           
         
         #If average word size is > 15, its not right 
-        avg_size_max    = 15
+        avg_size_max    = 11
         num_words       = len(checktext.split(" "))
         if text_len / num_words > avg_size_max:
             return False
@@ -165,17 +176,30 @@ class WebPage:
         bad_indices         = [item for item in bad_indices if not item[0] == -1]
         
         #do a dummy check
-        
         for start,end in bad_indices:
             find_chunk      = self.contents[start:end]
             self.contents  = self.contents.replace(find_chunk,"")
 
 
+        #Check for tell-tale sales shop quotes 
+        telltales           = ['free shipping', "sold out"]
         
         
         #print(checktext)
         return True 
 
+
+def reduce_arr(arr:list,newlen:int):
+    if not arr:
+        return []
+        
+    gcf         = math.gcd(len(arr),newlen)
+    mult_fact   = int(newlen / gcf)
+    div_fact    = int(len(arr) / gcf)
+
+    new_arr     = numpy.repeat(arr, mult_fact)
+
+    return [int(sum(list(new_arr[n*div_fact:(n+1)*div_fact])) / div_fact) for n in range(newlen)]
 
 
 def load_corpus(ds_root:str,rand_select:float=1,lower:bool=True,eot:bool=True,newline:bool=True):
