@@ -5,13 +5,13 @@ from transformer import LMSteinshark
 import os
 os.environ["KMP_DUPLICATE_LIB_OK"]="TRUE"
 import argparse
-from dataset import TokenizedDataset, Prefetcher
+from dataset import TokenizedDataset, load_tokenizer
 import numpy 
 import time 
 import matplotlib
 matplotlib.use("qt5agg")
 from matplotlib import pyplot as plt 
-import random
+import math
 import json 
 import tkinter as tk
 from utils import reduce_arr
@@ -24,7 +24,7 @@ _SAMPLE_EVERY_T                 = 10*60
 _LAST_UPDATE_T                  = time.time() 
 _LAST_SAMPLE_T                  = time.time() - (3*60)
 _SAVE_MODEL_EVERY               = 5000
-_N_TOKENS                       = 5_000_000_000
+_N_TOKENS                       = None
 
 CUR_STEP                        = 0 
 TOT_STEP                        = 0
@@ -123,65 +123,68 @@ if __name__ == "__main__":
     argparser.add_argument('--model_dir',default='')
     argparser.add_argument('--model_type',default='base')
     argparser.add_argument('--bs',default='16')
-    argparser.add_argument('--bs_tok',default='131200')
+    argparser.add_argument('--bs_tok',default='262144')
     argparser.add_argument('--load_vocab',default='True')
     argparser.add_argument('--train_root',default='c:/data/nlp')
+    argparser.add_argument('--ds_name',default='tokens32k_2')
+    argparser.add_argument('--tokenizer_name',default='32k')
+    argparser.add_argument('--input_size',default='256')
+    argparser.add_argument('--model_name',default='newmodel')
+    argparser.add_argument('--n_embed',default='1024')
     args                        = argparser.parse_args()
+
+
+    #Load data 
+    tokens                      = [] 
+    fnames                      = [fname for fname in os.listdir(f"{args.train_root}/{args.ds_name}")]
+    fnames.sort(key= lambda x: int(x.replace("tokens","").replace(".npy","").replace(".txt","")))
+    for fname in fnames:
+        fname   = f"{args.train_root}/{args.ds_name}/{fname}"
+        tokens.append(numpy.load(fname).astype(numpy.uint16))
+
+    tokens                      = numpy.concatenate(tokens)
+    dataset                     = TokenizedDataset(tokens,eval(args.input_size))
+    _N_TOKENS                   = dataset.n_tokens
 
 
     #Training/Model Settings 
     #Input Settings 
-    context1_size               = 8                                             #Sequence to coarse summarize 
-    context2_size               = 8                                             #Sequence to fine summarize
-    core_size                   = 128                                           #1:1 sequence 
+    context1_size               = 0                                             #Sequence to coarse summarize 
+    context2_size               = 0                                             #Sequence to fine summarize
+    core_size                   = eval(args.input_size)                         #1:1 sequence 
     lg_size                     = 0                                             #Coarse reduced to this 
     md_size                     = 0                                             #Fine reduced to this 
     tfmr_input_size             = core_size + lg_size + md_size                 #Size of sequence going through transformer stack
     input_size                  = context1_size + context2_size + core_size     #Total number of tokens sampled per train step
-    vocab_size                  = 16385                                         #Vocab Size
+    vocab_size                  = 32768                                         #Vocab Size
 
     #Model settings 
-    n_layers                    = 16                                            #Transformers stacked 
-    n_embed                     = 1024                                          #Dimension of the embedding per token             
+    n_layers                    = 24                                            #Transformers stacked 
+    n_embed                     = eval(args.n_embed)                            #Dimension of the embedding per token             
     n_heads                     = n_embed//128                                  #Number of attn heads          
-    n_ff                        = int(n_embed*2)                                #Size of the feed forward network 
+    n_ff                        = int(n_embed*4)                                #Size of the feed forward network 
     act_fn                      = torch.nn.GELU                                 #Used throughout model
 
     #Training settings
-    train_batch_tok             = int(args.bs_tok)                              #Number of tokens before stepping optimizer 
-    bs                          = int(args.bs)                                  #BS used per train iter (NOT per optimizer update)
+    train_batch_tok             = eval(args.bs_tok)                             #Number of tokens before stepping optimizer 
+    bs                          = eval(args.bs)                                 #BS used per train iter (NOT per optimizer update)
     lr                          = .0001                                         #Max LR used in OneCycleLR
-    wd                          = .04                                           #WD used throughout
-    dropout                     = .06                                           #P used throughout
+    wd                          = .01                                           #WD used throughout
+    dropout                     = .2                                            #P used throughout
     train_root                  = args.train_root                               #Where all the training data will be found  
     virtual_bs                  = train_batch_tok // tfmr_input_size            #Number of iters before stepping Optimizer
     accu_steps                  = virtual_bs // bs                              #Number of steps before stepping optimizer
     pct_start                   = .3                                            #Where peak LR will occur       
     train_iters                 = _N_TOKENS // (bs*tfmr_input_size)             #Total iters used to train
     lr_steps                    = _N_TOKENS // train_batch_tok                  #Total steps (used for OneCycleLR)
-    tokenizer_name              = '16k'                                         #Tokenizer used
+    tokenizer_name              = args.tokenizer_name                           #Tokenizer used
 
     #Sampling 
     sample_text                 = "Scientists have discovered a new technique for creating large language models"
 
     #Create Tokenizer
-    if not args.load_vocab == "True":
-        print(f"Training tokenizer size={vocab_size}")
-        tokenizer               = ByteLevelBPETokenizer()
-        tokenizer.train(random.sample([os.path.join(train_root,fname) for fname in os.listdir(train_root)],20_000),vocab_size=vocab_size-1)
-        print(tokenizer.get_vocab_size())
-        tokenizer.add_tokens(["<|endoftext|>"])
-        print(tokenizer.get_vocab_size())
-        if not os.path.exists("stein_tokenizer_bpe"):
-            os.mkdir('stein_tokenizer_bpe')
-        tokenizer.save_model('stein_tokenizer_bpe')
-        print(f"\tcomplete")
-        exit()
-
-    else:
-        tokenizer               = ByteLevelBPETokenizer().from_file(vocab_filename=f"{train_root}/{tokenizer_name}/vocab.json",merges_filename=f"{train_root}/{tokenizer_name}/merges.txt")
-        print(f"tokenizer is size {tokenizer.get_vocab_size()}")
-        assert tokenizer.get_vocab_size() == vocab_size-1
+    tokenizer               = load_tokenizer(f"{train_root}/{tokenizer_name}")
+    assert tokenizer.get_vocab_size() == vocab_size
 
     #Create model 
     if args.model_type == "summarizer": 
@@ -189,23 +192,16 @@ if __name__ == "__main__":
     elif args.model_type == "base":
         model                       = LMSteinshark(core_size,n_embed,n_layers,n_heads,n_ff,vocab_size,act_fn,dropout)
     
-    model.name                  = "base"
+    model.name                  = args.model_name
+    model.load()
     MODEL                       = model
     TOKENIZER                   = tokenizer
-    #model.load()
+
+
     #Create optimizer 
     optimizer                   = torch.optim.AdamW(params=model.parameters(),lr=lr,weight_decay=wd,betas=(.9,.95))
     lr_sched                    = torch.optim.lr_scheduler.OneCycleLR(optimizer,max_lr=lr,pct_start=pct_start,total_steps=lr_steps)
-    #Create loaders 
-    tokens                      = [] 
-    fnames                      = [fname for fname in os.listdir(f"{train_root}/tokens16k")]
-    fnames.sort(key= lambda x: int(x.replace("tokens","").replace(".npy","")))
-    for fname in fnames:
-        fname   = f"{train_root}/tokens16k/{fname}"
-        tokens.append(numpy.load(fname).astype(numpy.uint16))
-
-    tokens                      = numpy.concatenate(tokens)
-    dataset                     = TokenizedDataset(tokens,input_size)
+    
 
     #Create updates 
     losses                      = [] 
@@ -283,13 +279,19 @@ if __name__ == "__main__":
             
             plt.cla()
             plt.clf()
-            colors      = ["mediumblue","darkorange","mediumspringgreen","dodgerblue","orangered","crimson"]
+            colors      = ["mediumblue","darkorange","mediumspringgreen","dodgerblue","orangered","crimson",'black','gray']
             #Plot all stats in save dir 
             for file in os.listdir(stats_root):
                 filepath    = os.path.join(stats_root,file)
                 stats_dict  = json.loads(open(filepath,'r').read())
-                tok         = stats_dict['tokens']
+                tok         = [tok // 1_000_000 for tok in 
+                               stats_dict['tokens']]
                 losses      = stats_dict['losses']   
+
+                #Downsample array by 1,000 times 
+                newlen      = int(math.sqrt(len(tok)))
+                tok         = reduce_arr(tok,newlen)
+                losses      = reduce_arr(losses,newlen)
 
                 plt.plot(tok,losses,label=stats_dict['name'],color=colors.pop(0))
 

@@ -16,7 +16,13 @@ import json
 import queue 
 import threading
 import time 
+from collections import Counter
+from language_utils import ALL_MISSPELLINGS, CHAR_CORRECTIONS, REMOVAL_CHAR, REMOVAL_THRESH
+import language_utils
+import re 
 
+TOTAL_TOKENS                = 0 
+TOTAL_REPLACEMENTS          = 0 
 class InfSampler(Sampler):
 
     def __init__(self):
@@ -312,10 +318,27 @@ class Prefetcher:
 import multiprocessing
 from functools import partial
 
-def read_and_tokenize(fname, tokenizer):
+
+#For some reason, after training tokenizer, it doesnt save EOT token when finished
+def load_tokenizer(f_root:str)->ByteLevelBPETokenizer:
+    tokenizer               = ByteLevelBPETokenizer().from_file(vocab_filename=f"{f_root}/vocab.json",merges_filename=f"{f_root}/merges.txt")
+    print(f"init tokenizer size {tokenizer.get_vocab_size()}")
+    tokenizer.add_tokens(["<|endoftext|>"])
+    print(f"loaded tokenizer size {tokenizer.get_vocab_size()}")
+    return tokenizer
+
+
+def read_and_tokenize(fname, fpath, tokenizer:ByteLevelBPETokenizer):
+    global TOTAL_TOKENS
+    filename        = os.path.join(fpath,f"{random.randint(1_000_000_000,999_000_000_000)}")
     with open(fname, 'r', encoding='utf_8') as f:
         text = f.read() + "<|endoftext|>"
-        return tokenizer.encode(text).ids
+        ids         =  tokenizer.encode(text).ids
+    
+    tokens          = numpy.asarray(ids,dtype=numpy.uint16)
+    TOTAL_TOKENS    += tokens.__len__()
+    numpy.save(filename,tokens)
+    return tokens.__len__()
 
 
 def create_token_file_parallel(ds_root, tokenizer, save_dir, chunk_size=25_000_000):
@@ -324,36 +347,36 @@ def create_token_file_parallel(ds_root, tokenizer, save_dir, chunk_size=25_000_0
     import os
 
     os.makedirs(save_dir, exist_ok=True)
+    n_token_files   = 0
+    total_tokens    = 0
 
     filenames = [os.path.join(ds_root, f) for f in os.listdir(ds_root) if os.path.isfile(os.path.join(ds_root, f))]
 
+
     # Create multiprocessing pool
-    pool = multiprocessing.Pool(processes=os.cpu_count())
+    pool = multiprocessing.Pool(processes=8)
+    tokenize_func = partial(read_and_tokenize, tokenizer=tokenizer,fpath=save_dir)
+    results             = pool.imap(tokenize_func, filenames, chunksize=8)
+    for result in results:
+        print(result)
 
-    tokenize_func = partial(read_and_tokenize, tokenizer=tokenizer)
-    token_batches = pool.imap(tokenize_func, filenames, chunksize=8)
+    # for token_list in tqdm(token_batches, total=len(filenames), desc="Tokenizing"):
+    #     token_buffer += token_list
 
-    token_buffer = []
-    n_token_files = 0
-    total_tokens = 0
+    #     if len(token_buffer) >= chunk_size:
+    #         np_arr = np.asarray(token_buffer[:chunk_size], dtype=np.int32)
+    #         np.save(os.path.join(save_dir, f"{n_token_files}.npy"), np_arr)
+    #         n_token_files += 1
+    #         total_tokens += len(np_arr)
+    #         token_buffer = token_buffer[chunk_size:]
 
-    for token_list in tqdm(token_batches, total=len(filenames), desc="Tokenizing"):
-        token_buffer += token_list
+    # # Final dump
+    # if token_buffer:
+    #     np_arr = np.asarray(token_buffer, dtype=np.int32)
+    #     np.save(os.path.join(save_dir, f"{n_token_files}.npy"), np_arr)
+    #     total_tokens += len(np_arr)
 
-        if len(token_buffer) >= chunk_size:
-            np_arr = np.asarray(token_buffer[:chunk_size], dtype=np.int32)
-            np.save(os.path.join(save_dir, f"{n_token_files}.npy"), np_arr)
-            n_token_files += 1
-            total_tokens += len(np_arr)
-            token_buffer = token_buffer[chunk_size:]
-
-    # Final dump
-    if token_buffer:
-        np_arr = np.asarray(token_buffer, dtype=np.int32)
-        np.save(os.path.join(save_dir, f"{n_token_files}.npy"), np_arr)
-        total_tokens += len(np_arr)
-
-    print(f"[✓] Finished tokenizing {total_tokens:,} tokens into {n_token_files+1} files.")
+    print(f"[✓] Finished tokenizing {TOTAL_TOKENS:,} tokens")
 
 
 #All files are assumed to be cleaned
@@ -396,7 +419,7 @@ def create_token_file(ds_root,tokenizer:ByteLevelBPETokenizer):
     print(f"created token set {total_tokens}")
 
 
-def train_tokenizer(vocab_size=32768,train_root="C:/data/nlp/train_dir",name='stein_tokenizer_bpe'):
+def train_tokenizer(vocab_size=32768,train_root="C:/data/nlp/train_dir",name='stein_tok'):
     print(f"Training {name} tokenizer size={vocab_size}")
     tokenizer               = ByteLevelBPETokenizer()
     tokenizer.train([os.path.join(train_root,fname) for fname in os.listdir(train_root)],vocab_size=vocab_size-1)
@@ -447,6 +470,47 @@ def get_yt_captions(ytdump_file:str='ytdump.html'):
                 pass
 
 
+def add_file_to_db(fpath:str,final_dir:str,rootdir:str,removal_tokens:list):
+    
+    
+    with open(fpath,'r',encoding='utf_8') as readfile:
+        contents    = readfile.read()
+        if "yt_ascii" in rootdir:
+            contents    = json.loads(contents)['transcript']
+        #good        = contents["is_quality"]
+
+        #Clean contents    
+        clean_contents  = clean_individual_text(contents,removal_tokens)
+        content_hash    = xxh3_64(clean_contents.encode()).hexdigest()
+        fpath_save      = os.path.join(final_dir,content_hash+".txt")
+
+    #Ensure no duplicate contents
+    if not os.path.exists(fpath_save):
+        #Ensure not saving empty file
+        if not filter_bad_content(contents):
+            return 0,0
+        chars           = len(clean_contents)
+        words           = len(clean_contents.split(" "))
+
+        #Write contents 
+        with open(fpath_save,'w',encoding='utf_8') as writefile:
+            writefile.write(clean_contents+language_utils.EOT_STR)
+        return chars, words 
+    else:
+        return 0,0
+    
+def correct_by_dict(text: str) -> str:
+    return language_utils.PATTERN.sub(lambda x: language_utils.ALL_CORRECTIONS[x.group(0)], text)
+
+def parallel_substitution(texts: list[str], num_workers: int = None) -> list[list[str],multiprocessing.Pool]:
+    if num_workers is None:
+        num_workers = multiprocessing.cpu_count()
+
+    with multiprocessing.Pool(num_workers) as pool:
+        results = pool.map(correct_by_dict, texts)
+    
+    return results, pool
+
 #Provided a list of directories of text files,
 # combine these into train_dir based on contents 
 def prep_data_for_training(desired_sources:list[str],final_dir="C:/data/nlp/train_dir",eot_token="<|endoftext|>"):
@@ -459,257 +523,99 @@ def prep_data_for_training(desired_sources:list[str],final_dir="C:/data/nlp/trai
     for file in [os.path.join(final_dir,fname) for fname in os.listdir(final_dir)]:
         os.remove(file)
 
+    print(f"Calculating token statistics")
+    token_counts            = {}
+    total_tokens            = 0
+    i                       = 0 
+    fileset                 = [] 
+
+
+
+    #Generate list of all paths to data
+    for rootdir in desired_sources:
+        for fname in os.listdir(rootdir):
+            fpath_load      = os.path.join(rootdir,fname)
+            fileset.append(fpath_load)
+
+    #Clean and return all data
+    print(f"finding data")
+    all_paths               = [os.path.join(rootdir,fname) for fname in os.listdir(rootdir) for rootdir in desired_sources]
+    divs                    = 20
+    for i in range(divs):
+        start_i             = i * (len(all_paths) // divs)
+        end_i               = start_i + (len(all_paths)//divs)
+
+        print(f'\tloading data [{i}/{divs}]')
+        content_section     = [open(fpath,'r',encoding='utf_8').read() for fpath in all_paths[start_i:end_i]]
+        print(f"\tcleaning data")
+        clean_contents,pool = parallel_substitution(content_section,num_workers=16)
+        
+        #Count unique tokens 
+        for cont in clean_contents:
+            total_tokens += len(cont)
+            for tok in set(cont):
+                token_counts[tok] = 0
+        pool.join()
+
+
+    print(f"found {len(token_counts)} unique tokens")
+
+    #Clean using 5% of data to make statistics for what to drop
+    random.shuffle(fileset)
+    content_selection       = [open(fpath,'r',encoding='utf_8').read() for fpath in fileset[:len(fileset)//20]]
+    clean_contents,pool     = parallel_substitution(content_selection,num_workers=16)
+    counts                  = [Counter(content) for content in clean_contents]
+    for count in counts:
+        token_counts.update(count)
+
+    removal_tokens          = [tok[0] for tok in token_counts.items() if ((tok[1]/total_tokens) < REMOVAL_THRESH) and not (tok[0] in language_utils.GOOD_CHAR)]
+    print(f"dataset contains:\t{len(token_counts)} unique tokens")
+    print(f"dataset contains:\t{total_tokens} tokens")
+    print(f"marked {len(removal_tokens)} tokens for removal from set")
+    
+
     #stats 
     chars                   = 0 
     words                   = 0 
-    for rootdir in desired_sources:
-        print(f"\tfixing {rootdir}")
-        for fname in os.listdir(rootdir):
-            
-            #Get absolute path
-            fpath_load      = os.path.join(rootdir,fname)
-            #Load contents
-            with open(fpath_load,'r',encoding='utf_8') as readfile:
-                contents    = readfile.read()
-                if "yt_ascii" in rootdir:
-                    contents    = json.loads(contents)['transcript']
-                #good        = contents["is_quality"]
-            
-            #Ensure no duplicate contents
-            content_hash    = xxh3_64(contents.encode()).hexdigest()
-            fpath_save      = os.path.join(final_dir,content_hash+".txt")
 
-            #Ensure not saving empty file
-            if not filter_bad_content(contents):
-                continue
+    with multiprocessing.Pool(12) as pool:
+        results             = pool.starmap(add_file_to_db,[(p,final_dir,rootdir,removal_tokens) for p in all_paths])
 
-            if not os.path.exists(fpath_save):
-                contents    = clean_individual_text(contents)
-                chars       += len(contents)
-                words       += len(contents.split(" "))
+    
+    #results                 = map(add_file_to_db,all_paths,[final_dir for _ in all_paths],[rootdir for _ in all_paths],[removal_tokens for _ in all_paths])
+    
+    for result in results:
+        c,w                 = result 
+        chars += c 
+        words += w 
 
-                #Write contents 
-                with open(fpath_save,'w',encoding='utf_8') as writefile:
-                    writefile.write(contents+eot_token)
+    pool.join()
     texts                   = len(os.listdir(final_dir))
 
     print(f"gathered texts\n\tchars: {chars//1_000_000}M\n\twords: {words//1_000_000}M\n\ttexts: {texts}")
+    return
 
+def generate_clean_contents(fpath:str):
+    contents            = open(fpath,'r',encoding='utf_8').read()
+    corrections         = CHAR_CORRECTIONS.copy()
+    corrections.update(ALL_MISSPELLINGS)
+    clean_contents  = correct_by_dict(contents,corrections)
+
+    return clean_contents
+
+
+def remove_tokens(text:str, tokens_to_remove:list):
+    return text.translate(str.maketrans('', '', ''.join(tokens_to_remove)))
 
 #Create a ASCII version of the transcripts 
 # also take out stops words and other stupid stuff
-def clean_individual_text(contents):
+def clean_individual_text(contents:str,removal_tokens:list[str]):
 
-    #Remove all double newlines 
-    #contents    = unidecode.unidecode(contents).lower()
-    contents    = contents.replace("\n\n","\n").replace("&amp;quot;",'"').replace('[music]', " ")
+    clean_contents  = correct_by_dict(contents)
+    clean_contents  = remove_tokens(clean_contents,removal_tokens)
+    #clean_contents  = clean_contents.lower()
+    return clean_contents.strip()
 
-    # #Preserve python indents 
-    # contents    = contents.replace("    ",'|PYTHONINDENT|')
-    # while "  " in contents:
-    #     contents = contents.replace("  "," ")
-    # contents    = contents.replace('|PYTHONINDENT|',"    ")
-    
-    return contents
-
-
-
-def resave():
-
-    changes     = {
-        '\xa3':'L',
-        '\xa0':' ',
-        '\u2019':"'",
-        '\xb0':'degrees',
-        '\u266a':'[music]',
-        '\u2026':'...',
-        '\U0001f60a':':)',
-        "\x2018":"'",
-        "\u2018":"'",
-        "\xe9":"e",
-        "\u20ac":'Euro',
-        "\u2044":"/",
-        "\xe8":'e',
-        "\xf1":"n",
-        "\u201c":'"',
-        "\u201d":'"',
-        "\xed":'i',
-        "\xc5":'A',
-        "\xf3":'o',
-        "\u2014":'-',
-        " um ": " ",
-        " uh ": " ",
-        " i i ": " i ",
-        'ç':"c",
-        'с':"c",
-        'π':"pi",
-        '≅':"~=", 
-        '™':"TM",
-        '𝑛':"n",  
-        '𝑃':"P", 
-        'ℙ':"P", 
-        '−':"-", 
-        '²':"^2", 
-        '𝜋':"pi", 
-        '𝐸':"E", 
-        '~':"~", 
-        'γ':"gamma", 
-        '′':"`", 
-        '¹':"^1", 
-        '⁵':"^5", 
-        'в':"B", 
-        '𝐺':"G", 
-        '₂':"_2", 
-        '∀':" for all ", 
-        'м':"M",
-        '∃':" there exists ",
-        'Δ':"Delta", 
-        '𝜃':"Theta", 
-        '‽':"?!", 
-        '𝛿':"sigma", 
-        'ő':"o", 
-        '𝐻':"H", 
-        '�':"?",
-        '∈':" element of ",
-        '₁':"_1",
-        'δ':"sigma", 
-        '∎':"[]", 
-        '⊗':"X", 
-        'ɸ':"phi", 
-        'ν':"v", 
-        'ℕ':"N", 
-        '\u2009':"?",
-        '𝐷':"D", 
-        '·':" dot ",
-        'ä':"a",
-        '̶':"?", 
-        '⁰':"degrees", 
-        'É':"E",
-        'à':"a",
-        'е':"e",
-        'д':"D",
-        '×':"x",
-        '→':"->", 
-        'ö':"o",
-        'Ο':"O",
-        '𝐶':"C",
-        '𝑎':"alpha",
-        'ú':"u",
-        'т':"T",
-        '𝐹':"F",
-        '½':"1/2",
-        'ℝ':"R", 
-        'θ':"Theta", 
-        'έ':"e", 
-        'ô':"o", 
-        '³':"^3", 
-        'á':'a', 
-        '𝓁':"l", 
-        '´':"`", 
-        'ń':"n", 
-        '⅓':"1/3", 
-        'ï':"l", 
-        '･':"dot", 
-        '–':"-", 
-        '𝐵':"B", 
-        '∩':"intersection", 
-        '𝑏':"b", 
-        '∞':"infinity", 
-        '∂':"b", 
-        '¡':"!", 
-        'ü':"u", 
-        '⁴':"^4", 
-        'ᵢ':"_i", 
-        '♫':"[music]", 
-        'υ':"v", 
-        '😲':":)",
-        'ë':"e",
-        'ã':"",
-        'ā':"a",
-        'š':"s",
-        'ř':"r",
-        "ō":"o",
-        "õ":"o",
-        'й':"n",
-        'ì':"i",
-        'ī':"i",
-        'Š':"S",
-        'ù':"u",
-        '鼎':"?",'Н':"?",'у':"?",
-        '騎': "?",'幡': "?",'工': "?",
-        '昌': "?",'玉': "?",'п': "?",
-        '進': "?",'高': "?",'崎': "?",
-        '所': "?",'С': "?",'橋': "?",
-        '梁': "?",'新': "?",'木': "?",
-        'я': "?",'酒': "?",'空': "?",
-        '\ufeff': "?",'電': "?",'星': "?",
-        '和': "?",'豹': "?",'梅': "?",
-        '枸': "?",'н':"?",'許': "?",
-        '知': "?",'東': "?",'水': "?",
-        '吉': "?",'鉧': "?", '米': "?",
-        '運': "?",'州': "?",'可': "?",
-        '麒': "?",'Ж': "?",'Е': "?",
-        '造': "?",'千': "?",'茅': "?",
-        '陳': "?",'耀': "?",'胡': "?",'ズ': "?",'番': "?",'柚': "?",
-        '德': "?",'成': "?",'潘': "?",'壹': "?",
-        '豊': "?",'白': "?",'櫻': "?",'国': "?",'思': "?",
-        '𝐴': "?",'孟': "?",'區': "?",'吻': "?",
-        '紹': "?",'海': "?",'份': "?",'В' :"?",
-        '井': "?",'ー': "?",'ス': "?",'竹': "?",
-        '麟': "?",'盛': "?",'定': "?",'門': "?",
-        '攤': "?",'河': "?",'К': "?",'的':"?",
-        '鮭': "?",'義': "?",'ь': "?",'鐵': "?",
-        '́': "?",'ы': "?",'研': "?",'股': "?",'号': "?",'日': "?",'書': "?",'台': "?",
-        '立':"?",'鑑': "?",'學': "?",'限': "?",
-        'ш': "?",'房': "?",'鉤': "?",'л': "?",
-        '傅': "?",'  春': "?",'貴': "?",'А': "?",
-        '製': "?",'文': "?",'彦': "?",'政': "?",'花': "?",
-        'И': "?",'デ': "?",'小': "?",'リ': "?",'淵': "?",'美': "?",
-        '￼': "?",'瀬': "?",'藤': "?",'盧':"?",'蔭':"?",'燒': "?",
-        '大': "?",'鵬': "?",'公': "?",'辰': "?",'ラ': "?",'華': "?",'陽': "?",'科': "?",
-        '翎': "?",'鋼': "?",'帰': "?",'际': "?",'偈':"?",' 八': "?",
-        '印':"?",'六': "?",'璿': "?",'ž': "?",'制': "?",'零': "?",
-        '间': "?",'廠': "?",'ド': "?",'集': "?",'и': "?",'к': "?",
-        '蓝': "?",'交':"?",'發': "?",'有': "?",'川': "?",'р': "?",
-        'х': "?",'園': "?",'斗': "?",'鹿': "?",'争': "?",'子': "?",
-        'Ф': "?",'ч': "?",'曹': "?",'赤': "?",'團': "?",'澳': "?",
-        '西': "?",'本': "?",'レ': "?",'福': "?",'李': "?",'ニ': "?",
-        'サ': "?",'衡': "?",'荣': "?",'士': "?",'司': "?",'松': "?",
-        'б': "?",'た': "?",'о':"?",'ィ':"?",'見':"?",'ク': "?",
-        '通': "?",'ギ': "?",'鯤': "?",'航': "?",'寧': "?",'ら': "?",
-        '箭': "?",'國': "?",'ン': "?",'京': "?",'客': "?",'牂': "?",
-        '天': "?",'孫': "?",'а': "?",'坪':"?", 'ě':"?", '鉄':"?",
-        ' 平':"?",'Т':"?", '欣':"?", '榮':"?", '中':"?", 'г':"?", 
-        '酱':"?", '柯':"?", '院':"?",'春':"?", '平':"?", '八':"?",
-        '𝑧':"z", '⅔':"2/3", '¼':"1/4", 'ω':"w", '𝑤':"w"
-}
-
-
-    toks        = set()
-    good_toks   = set() 
-    fail_flag   = False
-    for file in os.listdir("yt_captions"):
-        fname = f"yt_captions/{file}"
-        if os.path.exists(fname.replace("yt_captions","yt_ascii")):
-            #os.remove(fname)
-            continue
-
-        with open(fname,'r',encoding='utf_8') as readfile, open(fname.replace("yt_captions","yt_ascii"),'w',encoding="ascii") as writefile:
-            contents    = readfile.read()
-
-            for x,y in changes.items():
-                contents    = contents.replace(x,y)
-            try:
-                writefile.write(contents.lower())
-                [good_toks.add(t) for t in set(contents)]
-            except UnicodeEncodeError:
-                fail_flag = True
-                [toks.add(t) for t in set(contents)]
-                pass
-    if fail_flag:
-        print(toks-good_toks)   
-    else:
-        print("perfect")
 
 
 def find_by_topic(final_dir="C:/data/nlp/train_dir",topic_keywords={"project":2,"application":5,"variable":6,"python":25,"c++":25,"cpp":25,"g++":25,"pytorch":25,"coding":25,"program":25,"parser":25,"computer":8,"neural network":25,"computer science":25,"comput":4,"byte":7,"tutorial":6,"code":6,"developer":12}):
@@ -781,15 +687,15 @@ def generate_stack_overflow(ds_root:str):
 
 
 if __name__ == "__main__":
-    vocab_name              = '16k'
+    vocab_name              = '32k_2'
     #generate_stack_overflow("C:/data/nlp/stackclean")
-    #prep_data_for_training(desired_sources=["C:/data/nlp/stackclean","C:/data/nlp/academic","C:/data/nlp/yt_ascii","C:/data/nlp/crawl","C:/data/nlp/newsarticles","C:/data/nlp/gutenberg/books"],final_dir="C:/data/nlp/training")#,"C:/data/nlp/gutenberg/books","C:/data/nlp/academic","C:/data/nlp/code/randpython_files"])
-    train_tokenizer(vocab_size=16384,train_root="C:/data/nlp/training",name=vocab_name)
+    #exit()
+    #exit()
     #generate_news_articles("C:/data/nlp/newsarticles")
-    tokenizer               = ByteLevelBPETokenizer().from_file(vocab_filename=f"C:/data/nlp/{vocab_name}/vocab.json",merges_filename=f"C:/data/nlp/{vocab_name}/merges.txt")
-    tokenizer.add_tokens(["<|endoftext|>"])
-    print(tokenizer.get_vocab_size(True),"\nTokenizing")
-
-    create_token_file_parallel("C:/data/nlp/training",tokenizer,"C:/data/nlp/tokens16k/")
+    #print(f"tokenization of '<|endoftext|>' -> {tokenizer.encode('<|endoftext|>').ids}")
+    #prep_data_for_training(desired_sources=["C:/data/nlp/crawl"],final_dir="C:/data/nlp/training")#,"C:/data/nlp/gutenberg/books","C:/data/nlp/academic","C:/data/nlp/code/randpython_files"])
+    train_tokenizer(vocab_size=32768,train_root="C:/data/nlp/training",name=vocab_name)
+    tokenizer               = load_tokenizer(f"C:/data/nlp/{vocab_name}")
+    create_token_file_parallel("C:/data/nlp/training",tokenizer,f"C:/data/nlp/tokens{vocab_name}/")
     #create_token_file("C:/data/nlp/training",tokenizer)
     exit()

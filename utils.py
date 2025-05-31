@@ -16,10 +16,14 @@ import requests
 import bs4
 import math 
 import numpy 
-
+from hashlib import sha256 
+import xxhash
 GOOD_CHARS          = ascii_lowercase + r".,'?{}[]/\;:!@#$%^&*()1234567890-_=+ |~<>©°•·×→" + '"' + ascii_uppercase + "ΑαΒβΓγΔδΕεΖζΗηΘθΙιΚκΛλΜμΝνΞξΟοΠπΡρΣσςΤτΥυΦφΧχΨψΩω"
 #sys.path.append(os.curdir)
 
+SEEN_URI            = "C:/data/nlp/urls/prev.json" if os.path.exists("C:/data/nlp/urls/prev.json") else ""
+print(f"seen uri is {SEEN_URI}")
+SEEN_TEXTS:set      = set(json.loads(open(SEEN_URI,'r').read()))
 
 class WebPage:
 
@@ -46,7 +50,6 @@ class WebPage:
 
         #Save line lengths
         self.line_lengths   = []
-
         #Determine if skipping or reading 
         self.discovered_eof = False 
         if not (self.lan == "eng" and self.length > length_cutoff and self.type == "text/plain"):
@@ -56,7 +59,6 @@ class WebPage:
             self.include    = True
             self.parse(filetext)
     
-
 
     def skip(self,filetext:typing.TextIO):
         nextline        = filetext.readline()
@@ -91,10 +93,18 @@ class WebPage:
 
         
         self.include    = self.checkpage()
+        
 
 
     def checkpage(self):
         #check if its a coding page 
+        checktext           = self.contents.lower()
+        text_len            = len(checktext) 
+
+        #if its less than 1500 words, its not good enough 
+        if text_len < 1500:
+            return False 
+
         #If average of line_lengths is < 200, no thanks 
         if sum(self.line_lengths) / len(self.line_lengths) < 200:
             return False 
@@ -102,7 +112,6 @@ class WebPage:
         #coding_buzzwords    = ["python","tutorial","data", 'module', "dataset", "c++","cpp","g++","gpp","file","deep learning","numpy","neural network","network"]
 
         #lower it to make common ground
-        checktext           = self.contents.lower()
         # wordcounts          = sum(checktext.count(buzzword) for buzzword in coding_buzzwords)
         # if wordcounts / len(checktext.split(" ")) > .05:
         #     input(checktext)
@@ -116,16 +125,11 @@ class WebPage:
         #If ratio of alphabet to fullsize is < .80 deny it
         alphabet_thresh = .80
         alphabet        = ascii_lowercase + "." + "?" + "!" + ","
-        text_len        = len(checktext) 
         good_count      = sum([checktext.count(char) for char in alphabet])
         alphabet_ratio  = good_count / text_len 
 
         if alphabet_ratio < alphabet_thresh:
             return False
-        
-        #if its less than 1500 words, its not good enough 
-        if text_len < 1500:
-            return False 
         
 
         #If contains adult content words, discard
@@ -192,14 +196,13 @@ class WebPage:
 def reduce_arr(arr:list,newlen:int):
     if not arr:
         return []
-        
-    gcf         = math.gcd(len(arr),newlen)
-    mult_fact   = int(newlen / gcf)
-    div_fact    = int(len(arr) / gcf)
-
-    new_arr     = numpy.repeat(arr, mult_fact)
-
-    return [int(sum(list(new_arr[n*div_fact:(n+1)*div_fact])) / div_fact) for n in range(newlen)]
+    
+    newlen      = max(1,newlen)
+    arr         = numpy.asarray(arr)
+    factor      = len(arr) // newlen
+    reduced     = arr[-newlen*factor:].reshape(newlen, factor).mean(axis=1)
+   
+    return reduced
 
 
 def load_corpus(ds_root:str,rand_select:float=1,lower:bool=True,eot:bool=True,newline:bool=True):
@@ -840,7 +843,7 @@ def generate_ds(ds_size:int,data_path:str,ds_path:str,file_size:int):
     for fpath in text_file_paths:
         
         #Parse for eng documents 
-        try:
+        # try:
             with open(fpath,'r',encoding='utf_8') as file:
                 parsed_texts:list[WebPage] = parse_wet_file(file,['eng'])
 
@@ -849,7 +852,14 @@ def generate_ds(ds_size:int,data_path:str,ds_path:str,file_size:int):
                 text_addition   = webpage.contents + end_token
                 text_len        = len(text_addition.encode('utf-8'))
 
-                writable_file.write(text_addition)
+                hashed          = xxhash.xxh3_64(text_addition.encode()).hexdigest()
+
+                if hashed in SEEN_TEXTS:
+                    continue 
+                else:
+                    writable_file.write(text_addition)
+                    #add writen file to already seen content 
+                    SEEN_TEXTS.add(hashed)
 
                 current_size_MB += text_len/(1024*1024)
                 total_size_MB   += text_len/(1024*1024)
@@ -863,10 +873,14 @@ def generate_ds(ds_size:int,data_path:str,ds_path:str,file_size:int):
                 if total_size_MB > ds_size:
                     print(f"Crawl download complete: [{total_size_MB:.2f}MB]. exiting")
                     writable_file.close()
+                    with open(SEEN_URI,'w') as writefile:
+                        writefile.write(json.dumps(list(SEEN_TEXTS)))
                     return 
-        except:
-            pass
+        # except:
+        #     pass
         #Cleanup file 
+    with open(SEEN_URI,'w') as writefile:
+        writefile.write(json.dumps(list(SEEN_TEXTS)))
 
 
 def download_wiki():
@@ -991,12 +1005,37 @@ def find_python_files(root_dir,limit=1000):
 def param_edit(parameter,method):
     method(parameter)
 
+#Takes a crawl-data file and returns a list of urls 
+def generate_urls(fpath:str):
+    urls        = []
+    crawlname   = fpath.split('/')[-1]
+    base_path   = os.path.join(fpath,"segments")
+
+    for id in os.listdir(base_path):
+        root    = os.path.join(base_path,id)
+        for wet in os.listdir(root):
+            newroot     = os.path.join(root,wet)
+
+            for maintype in os.listdir(newroot):
+                urls.append(f'https://data.commoncrawl.org/crawl-data/{crawlname}/segments/{id}/{wet}/{maintype}')
+    
+    return urls
+
+
 
 if __name__ == "__main__":
+    # generate_urls("C:/data/nlp/urls/crawl-data/CC-MAIN-2025-18")
+
+    # writefile = open('C:/data/nlp/urls/crawl2025.txt','w')
+    # for url in generate_urls("C:/data/nlp/urls/crawl-data/CC-MAIN-2025-18"):
+    #     writefile.write(url + "\n")
+    
+    # print(f"done")
+    # exit()
 
     commands    = sys.argv[1]
-
+    
     if commands == 'download':
-        download_crawl_to_db(1024,"E:\\data\\nlp\\crawl_download",True)
+        download_crawl_to_db(8,"C:\\data\\nlp\\download",True)
     elif commands == 'generate':
-        generate_ds(16*1024,"E:/data/nlp/crawl_download","C:/data/nlp/crawl",16)
+        generate_ds(1024*16,"C:/data/nlp/download","C:/data/nlp/crawl",16)
