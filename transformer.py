@@ -6,8 +6,28 @@ import os
 import json
 import numpy 
 from tokenizers.implementations import ByteLevelBPETokenizer
+from torch.nn.functional import scaled_dot_product_attention
+from torch.nn.attention import SDPBackend, sdpa_kernel
 
 os.environ['TORCH_USE_CUDA_DSA'] = "True"
+
+def apply_rope(x, seq_len, device):
+
+    head_dim = x.size(-1)
+    half_dim = head_dim // 2
+
+    # Compute frequencies
+    theta = 1.0 / (10000 ** (torch.arange(0, half_dim, dtype=torch.bfloat16, device=device) / half_dim))
+    seq_idx = torch.arange(seq_len, device=device)#.float()
+    freqs = torch.einsum("i,j->ij", seq_idx, theta)
+
+    sin = freqs.sin()[None, None, :, :]
+    cos = freqs.cos()[None, None, :, :]
+
+    x1, x2 = x[..., :half_dim], x[..., half_dim:]
+    x_rotated = torch.cat([x1 * cos - x2 * sin, x1 * sin + x2 * cos], dim=-1)
+
+    return x_rotated
 
 class MultiHeadAttention(torch.nn.Module):
     
@@ -26,7 +46,7 @@ class MultiHeadAttention(torch.nn.Module):
         # Linear layers for transforming inputs
         self.layer_1            = torch.nn.Linear(embed_dim,embed_dim*3,bias=True)
         self.W_o                = torch.nn.Linear(embed_dim, embed_dim,device=device,bias=True)     # Output transformation
-
+        self.scale              = 1 / math.sqrt(self.d_k)
         self.register_buffer('mask',torch.tril(torch.ones(n_positions,n_positions,device=device)))
         
 
@@ -39,19 +59,32 @@ class MultiHeadAttention(torch.nn.Module):
 
         # Apply linear transformations and split heads
         Q,K,V           = self.layer_1(x).split(self.embed_dim,dim=2)
-        Q:torch.Tensor  = Q.view(B, N, self.num_heads, C // self.num_heads).transpose(1,2)
-        K:torch.Tensor  = K.view(B, N, self.num_heads, C // self.num_heads).transpose(1,2)
-        V:torch.Tensor  = V.view(B, N, self.num_heads, C // self.num_heads).transpose(1,2)
+        Q:torch.Tensor  = Q.view(B, N, self.num_heads, self.d_k).transpose(1,2)
+        K:torch.Tensor  = K.view(B, N, self.num_heads, self.d_k).transpose(1,2)
+        V:torch.Tensor  = V.view(B, N, self.num_heads, self.d_k).transpose(1,2)
+
+        # Apply RoPE
+        Q               = apply_rope(Q,N,self.device)
+        K               = apply_rope(K,N,self.device)
+
         
-        # Perform scaled dot-product attention
-        attn_scores     = Q @ K.transpose(-2,-1)
-        attn_scores     = attn_scores * (1 / math.sqrt(self.d_k))
-        attn_scores.masked_fill_(self.mask[:N,:N]==0,float("-inf"))
-        attn_scores     = torch.nn.functional.softmax(attn_scores,dim=-1)
-        attn_result     = attn_scores @ V 
-        attn_result     = attn_result.transpose(1,2).contiguous().view(B,N,C)
-        output          = self.W_o(attn_result)
-        return output
+        with sdpa_kernel([SDPBackend.EFFICIENT_ATTENTION,SDPBackend.FLASH_ATTENTION,SDPBackend.MATH,SDPBackend.CUDNN_ATTENTION]):
+            attn_out    = scaled_dot_product_attention(Q,K,V,dropout_p=.05,is_causal=True,scale=self.scale)
+            attn_out    = attn_out.transpose(1,2).contiguous().view(B,N,C)
+            output      = self.W_o(attn_out)
+            return output
+            
+        # #     return output
+        # # Perform scaled dot-product attention
+        # attn_scores     = Q @ K.transpose(-2,-1)
+        # attn_scores     = attn_scores * (1 / math.sqrt(self.d_k))
+        # attn_scores.masked_fill_(self.mask[:N,:N]==0,float("-inf"))
+        # attn_scores     = torch.nn.functional.softmax(attn_scores,dim=-1)
+
+        # attn_result     = attn_scores @ V 
+        # attn_result     = attn_result.transpose(1,2).contiguous().view(B,N,C)
+        # output          = self.W_o(attn_result)
+        # return output
 
 
 class DecoderLayer(torch.nn.Module):
@@ -100,7 +133,7 @@ class EncoderBlock(torch.nn.Module):
         self.device                 = device
         #Start with a separate context embeddings module 
         self.semantic_embeddings    = torch.nn.Embedding(n_vocab,embed_dim,device=device)
-        self.input_pos_embeddings   = torch.nn.Embedding(n_positions,embed_dim,device=device)          
+        #self.input_pos_embeddings   = torch.nn.Embedding(n_positions,embed_dim,device=device)          
 
 
     #Given the context ids and the input ids, return the embeddings to be passed forward 
@@ -108,13 +141,8 @@ class EncoderBlock(torch.nn.Module):
         
         #Compute actual input embeddings
         semantic_embeddings:torch.Tensor        = self.semantic_embeddings(input_ids)
-        B,T                                     = input_ids.size()
-        input_position_idx                      = torch.from_numpy(numpy.asarray( [numpy.arange(T) for _ in range(B)])).to(self.device)
-        position_embeddings:torch.Tensor        = self.input_pos_embeddings(input_position_idx)
 
-        final_embeddings:torch.Tensor           = semantic_embeddings + position_embeddings
-
-        return final_embeddings
+        return semantic_embeddings
        
             
 
@@ -178,7 +206,7 @@ class LMSteinshark(torch.nn.Module):
 
         #prep template tensor for oversize inputs 
 
-
+    
     def forward(self,input_ids:torch.Tensor,target_ids:torch.Tensor)->tuple[torch.Tensor, torch.Tensor]:
         
         #Split tokens
@@ -307,17 +335,31 @@ class LMSteinshark(torch.nn.Module):
         return input_seq,target_ids
 
 
+    def model_info(self) -> str:
+        info    = f"Model: {self.name}\n"
+
+        info    += f'parameterss:\t{self.n_params // 1_000_000}M\n'
+        info    += f'num layers:\t{self.n_layers}\n'
+        info    += f'context:\t{self.n_positions}\n'
+        info    += f'embed dim:\t{self.n_embed}\n'
+        info    += f"ff size:\t{self.n_ff}\n"
+        info    += f'num heads:\t{self.n_heads}\n'
+
+        return info
+
 if __name__ == "__main__":
 
-    n_embed     = 4 
-    n_ff        = n_embed*2 
-    n_heads     = n_embed//2
+    n_embed     = 1024
+    n_ff        = n_embed*2
+    n_heads     = n_embed//128
     bs          = 8 
-    n_positions = 4
-    n_vocab     = 32768
+    n_positions = 512
+    n_vocab     = 16384
 
     #Create model
-    lm          = LMSteinshark(n_embed=n_embed,n_heads=n_heads,n_positions=n_positions,n_vocab=n_vocab,n_ff=n_ff,dropout=.1)
+    lm          = LMSteinshark(n_layers=32,n_embed=n_embed,n_heads=n_heads,n_positions=n_positions,n_vocab=n_vocab,n_ff=n_ff,dropout=.1)
+    print(lm.model_info())
+    exit()
     from dataset import TokenizedDataset
     import numpy 
     toks        = numpy.load("C:/data/nlp/tokens0.npy")

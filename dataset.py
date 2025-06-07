@@ -2,7 +2,6 @@ from tokenizers.implementations import ByteLevelBPETokenizer
 import multiprocessing.pool
 import torch 
 from torch.utils.data import Dataset, Sampler
-from tokenizer import SteinTokenizer
 import numpy
 import os 
 import random 
@@ -501,6 +500,9 @@ def add_file_to_db(fpath:str,final_dir:str,rootdir:str,removal_tokens:list):
     
 def correct_by_dict(text: str) -> str:
     return language_utils.PATTERN.sub(lambda x: language_utils.ALL_CORRECTIONS[x.group(0)], text)
+
+def correct_to_ascii(text:str) -> str:
+    return language_utils.ONLYASCII.sub(lambda x: "",text)
 
 def parallel_substitution(texts: list[str], num_workers: int = None) -> list[list[str],multiprocessing.Pool]:
     if num_workers is None:

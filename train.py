@@ -15,6 +15,8 @@ import math
 import json 
 import tkinter as tk
 from utils import reduce_arr
+from training import *
+
 
 #sys.path.append("C:/gitrepos/steinpy/src")
 #from steinpy.utils import reduce_arr 
@@ -68,7 +70,7 @@ def print_update(current_step,total_step,losses,tok_thruput,model:MiniTransforme
 
     #Check to save model 
     if current_step % _SAVE_MODEL_EVERY == 0 and not current_step == 0:
-        model.save(f"{args.train_root}/models/")
+        model.save(MODELS)
 
     #Check to sample 
     if time.time() - _LAST_SAMPLE_T > _SAMPLE_EVERY_T:
@@ -123,14 +125,17 @@ if __name__ == "__main__":
     argparser.add_argument('--model_dir',default='')
     argparser.add_argument('--model_type',default='base')
     argparser.add_argument('--bs',default='16')
+    argparser.add_argument("--n_layers",default='16')
     argparser.add_argument('--bs_tok',default='262144')
     argparser.add_argument('--load_vocab',default='True')
-    argparser.add_argument('--train_root',default='c:/data/nlp')
-    argparser.add_argument('--ds_name',default='tokens32k_2')
+    argparser.add_argument('--train_root',default=PATH)
+    argparser.add_argument('--ds_name',default='tokens')
     argparser.add_argument('--tokenizer_name',default='32k')
     argparser.add_argument('--input_size',default='256')
     argparser.add_argument('--model_name',default='newmodel')
     argparser.add_argument('--n_embed',default='1024')
+    argparser.add_argument('--n_ff',default='4')
+    argparser.add_argument('--load',default='False')
     args                        = argparser.parse_args()
 
 
@@ -159,10 +164,10 @@ if __name__ == "__main__":
     vocab_size                  = 32768                                         #Vocab Size
 
     #Model settings 
-    n_layers                    = 24                                            #Transformers stacked 
+    n_layers                    = eval(args.n_layers)                             #Transformers stacked 
     n_embed                     = eval(args.n_embed)                            #Dimension of the embedding per token             
     n_heads                     = n_embed//128                                  #Number of attn heads          
-    n_ff                        = int(n_embed*4)                                #Size of the feed forward network 
+    n_ff                        = int(n_embed*eval(args.n_ff))                  #Size of the feed forward network 
     act_fn                      = torch.nn.GELU                                 #Used throughout model
 
     #Training settings
@@ -175,12 +180,12 @@ if __name__ == "__main__":
     virtual_bs                  = train_batch_tok // tfmr_input_size            #Number of iters before stepping Optimizer
     accu_steps                  = virtual_bs // bs                              #Number of steps before stepping optimizer
     pct_start                   = .3                                            #Where peak LR will occur       
-    train_iters                 = _N_TOKENS // (bs*tfmr_input_size)             #Total iters used to train
-    lr_steps                    = _N_TOKENS // train_batch_tok                  #Total steps (used for OneCycleLR)
+    train_iters                 = 2* _N_TOKENS // (bs*tfmr_input_size)             #Total iters used to train
+    lr_steps                    = 2* _N_TOKENS // train_batch_tok                  #Total steps (used for OneCycleLR)
     tokenizer_name              = args.tokenizer_name                           #Tokenizer used
 
     #Sampling 
-    sample_text                 = "Scientists have discovered a new technique for creating large language models"
+    sample_text                 = "scientists have discovered a new technique for creating large language models"
 
     #Create Tokenizer
     tokenizer               = load_tokenizer(f"{train_root}/{tokenizer_name}")
@@ -193,14 +198,19 @@ if __name__ == "__main__":
         model                       = LMSteinshark(core_size,n_embed,n_layers,n_heads,n_ff,vocab_size,act_fn,dropout)
     
     model.name                  = args.model_name
-    model.load()
+    if eval(args.load):
+        model.load(root=MODELS)
+
+    model                       = model.bfloat16()
+    print(f"generated model\n\n{model.model_info()}\n\n")
     MODEL                       = model
     TOKENIZER                   = tokenizer
 
 
     #Create optimizer 
     optimizer                   = torch.optim.AdamW(params=model.parameters(),lr=lr,weight_decay=wd,betas=(.9,.95))
-    lr_sched                    = torch.optim.lr_scheduler.OneCycleLR(optimizer,max_lr=lr,pct_start=pct_start,total_steps=lr_steps)
+    opt2                        = torch.optim.SGD(params=model.parameters())
+    lr_sched                    = torch.optim.lr_scheduler.OneCycleLR(opt2,max_lr=lr,pct_start=pct_start,total_steps=lr_steps,div_factor=10,final_div_factor=100)
     
 
     #Create updates 
@@ -210,7 +220,10 @@ if __name__ == "__main__":
     time_per_iter               = [] 
 
     #Train model 
-    cur_train_iter              = 0 
+    cur_train_iter              = MODEL.stats['iter_through']
+    train_iters                 += cur_train_iter
+    trainset_iter               = 0
+    trainset_tok                = 0
 
     print(f"Beginning training\n\tModel Size:\t{model.n_params//1_000_000}M params\n\tData Size:\t{dataset.n_tokens//1_000_000}M Tokens\n")
     plt.ion()
@@ -241,20 +254,24 @@ if __name__ == "__main__":
         targets                     = target_ids.view(bs*core_size)
 
         #Compute and backward loss 
-        loss                        = torch.nn.functional.cross_entropy(logits, targets) / accu_steps
-        unscaled_loss               = loss.clone()
+        loss:torch.Tensor           = torch.nn.functional.cross_entropy(logits, targets) / accu_steps
 
         #loss                        = scaler.scale(loss)
         loss.backward() 
-        model.stats['tok_through']  += float(bs*core_size)
         model.stats['iter_through'] += 1
-        model.stats['tok_snap'].append(model.stats['tok_through'])
-        model.stats['losses'].append(float(unscaled_loss)*accu_steps)
+        model.stats['tok_through']  += float(bs*core_size)
+        trainset_iter               += 1
+        trainset_tok                += float(bs*core_size)
+
+
+        if cur_train_iter % 10 == 0:
+            model.stats['tok_snap'].append(model.stats['tok_through'])
+            model.stats['losses'].append(float(loss.detach())*accu_steps)
         
         #Update for all
         CUR_STEP                = model.stats['iter_through']
         TOT_STEP                = train_iters
-        TOK_THRU                = model.stats['tok_through'] / (time.time() - start_time)
+        TOK_THRU                = trainset_tok / (time.time() - start_time)
         LOSS                    = model.stats['losses']
 
         tok_thru_per_iter.append(targets.numel())
@@ -270,7 +287,7 @@ if __name__ == "__main__":
             except ValueError:
                 pass #happens if were at the end
             #Save to stats root
-            stats_root              = f"{train_root}/prev_runs/"
+            stats_root              = f"{train_root}/prev/"
             save_dir    = os.path.join(stats_root,f"{model.name}.json")
             tok         = model.stats['tok_snap']
             losses      = model.stats['losses']
@@ -306,7 +323,7 @@ if __name__ == "__main__":
         if model.stats['tok_through'] // dataset.n_tokens > model.stats["eps_through"]:
             model.stats["eps_through"] += 1
 
-        print_update(cur_train_iter,train_iters,model.stats['losses'],model.stats['tok_through']/(time.time()-model.stats['time_start']),model,sample_text,tokenizer,optimizer,args)
+        print_update(cur_train_iter,train_iters,model.stats['losses'],TOK_THRU,model,sample_text,tokenizer,optimizer,args)
 
         cur_train_iter += 1 
 

@@ -5,7 +5,6 @@ from matplotlib import pyplot as plt
 import re 
 import json
 import os 
-import zlib
 import unidecode
 #import wikipedia
 
@@ -27,10 +26,12 @@ HEADERS     = {
 "User-Agent":'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
 }
 
+
 def replacer(match:re.Match):
     text        = match.group()
     text        = text.split('title="')[1].split('"')[0]
     return text
+
 
 def wiki_html_parse(pagetext:str):
     #parse all paragraphs
@@ -50,6 +51,7 @@ def wiki_html_parse(pagetext:str):
 
     return parsed_text
     #input(f"paragraphs:\n{paragraphs}")
+
 
 def url_encode(url:str):
     url     = url.replace('https://en.wikipedia.org/wiki/','').replace(":",'_').replace(";","_")

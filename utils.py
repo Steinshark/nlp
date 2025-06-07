@@ -18,12 +18,11 @@ import math
 import numpy 
 from hashlib import sha256 
 import xxhash
+
+
 GOOD_CHARS          = ascii_lowercase + r".,'?{}[]/\;:!@#$%^&*()1234567890-_=+ |~<>©°•·×→" + '"' + ascii_uppercase + "ΑαΒβΓγΔδΕεΖζΗηΘθΙιΚκΛλΜμΝνΞξΟοΠπΡρΣσςΤτΥυΦφΧχΨψΩω"
 #sys.path.append(os.curdir)
 
-SEEN_URI            = "C:/data/nlp/urls/prev.json" if os.path.exists("C:/data/nlp/urls/prev.json") else ""
-print(f"seen uri is {SEEN_URI}")
-SEEN_TEXTS:set      = set(json.loads(open(SEEN_URI,'r').read()))
 
 class WebPage:
 
@@ -98,8 +97,7 @@ class WebPage:
 
     def checkpage(self):
         #check if its a coding page 
-        checktext           = self.contents.lower()
-        text_len            = len(checktext) 
+        text_len            = len(self.contents) 
 
         #if its less than 1500 words, its not good enough 
         if text_len < 1500:
@@ -109,6 +107,7 @@ class WebPage:
         if sum(self.line_lengths) / len(self.line_lengths) < 200:
             return False 
         
+        checktext           = self.contents.lower()
         #coding_buzzwords    = ["python","tutorial","data", 'module', "dataset", "c++","cpp","g++","gpp","file","deep learning","numpy","neural network","network"]
 
         #lower it to make common ground
@@ -131,7 +130,6 @@ class WebPage:
         if alphabet_ratio < alphabet_thresh:
             return False
         
-
         #If contains adult content words, discard
         adult_triggers  = [" milf "," anal "," pussy "," cunt ","porn"," sex "," cum ", "fuck", "blowjob", "cock"] 
         adult_count     = sum([checktext.count(keyword) for keyword in adult_triggers])
@@ -168,8 +166,13 @@ class WebPage:
         if dash_count / text_len > .01:
             return False
         
+        #Check for tell-tale sales shop quotes 
+        telltales           = [' free shipping ', " lorem ipsum ", " click here to learn more", "limited time offer", "don't miss out on", " no reviews yet ", " we are one of the "]
+        if any(phrase in checktext for phrase in telltales):
+            return False
+        
         #Do split check on legitimate punctuation and remove all items longer than 100 words 
-        plausible_splits    = [".",'?',"!","\n",";"]
+        plausible_splits    = [".",'?',"!","\n",";",","]
         old_text            = checktext
         for splitter in plausible_splits:
             checktext       = checktext.replace(splitter,"<|SPLIT|>")
@@ -183,11 +186,6 @@ class WebPage:
         for start,end in bad_indices:
             find_chunk      = self.contents[start:end]
             self.contents  = self.contents.replace(find_chunk,"")
-
-
-        #Check for tell-tale sales shop quotes 
-        telltales           = ['free shipping', "sold out"]
-        
         
         #print(checktext)
         return True 
@@ -883,31 +881,6 @@ def generate_ds(ds_size:int,data_path:str,ds_path:str,file_size:int):
         writefile.write(json.dumps(list(SEEN_TEXTS)))
 
 
-def download_wiki():
-
-    urls    = open(f"curated_data/urls.txt").readlines()
-    
-    for url in urls:
-        
-        url         = url.rstrip()
-        filename    = "curated_data/wiki_"+url.split('/')[-1]+".txt"
-        if os.path.exists(filename):
-            continue
-        response    = requests.get(url,timeout=1)
-        
-        if response.status_code == 200:
-            text    = response.text 
-            text    = bs4.BeautifulSoup(text).text
-            with open(filename,'w',encoding='utf_8') as file:
-                file.write(make_good(text))
-            file.close()
-            
-        else:
-            print(f"got {response.status_code} for {url}")
-    
-        time.sleep(random.randint(0,2))
-    
-
 def create_dataset(root='alldata'):
     
     if not os.path.exists(root):
@@ -922,38 +895,6 @@ def create_dataset(root='alldata'):
             with open(filename.replace(droot,root),"w",encoding='utf_8') as file:
                 file.write(make_good(contents))
         
-
-
-class GPTDataSet(Dataset):
-
-    def __init__(self,ds_root:str):
-        self.data   = data 
-    
-    def __getitem__(self,i):
-        return self.data[i]
-    
-    def __len__(self):
-        return len(self.data)
-    
-
-# Returns True if successfully executes and writes to a file
-def get_links(in_file, out_file):
-
-    try:
-        with open(in_file, "r", encoding='utf-8') as file:
-            wiki_info = file.read()
-        pattern = re.compile(r'href="(\/wiki\/[^"]+)"') #re.compile(r'href="(\/wiki\/[^"]+|https?:\/\/[^"]+)"') #re.compile(r'<a\s+href="([^"]+)"')
-        hrefs = pattern.findall(wiki_info)
-
-        # If hrefs exists, write to file
-        if hrefs:
-            with open(out_file, "w", encoding="utf-8") as o_file:
-                o_file.write('\n'.join(hrefs))
-    except Exception as e:
-        print("get_links function did not work because:\n", e)
-        return False
-
-    return True
 
 
 def get_readmes():

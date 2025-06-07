@@ -256,3 +256,5 @@ REMOVAL_THRESH          = 2e-7
 REMOVAL_CHAR            = ''
 EOT_STR                 = '<|endoftext|>'
 GOOD_CHAR               = string.ascii_letters + "1234567890" + "!@#$%^&*()_+-={}[]:;',./<>?~`|\\" + '"'
+
+ONLYASCII               = re.compile('|'.join(re.escape(c) for c in GOOD_CHAR))
