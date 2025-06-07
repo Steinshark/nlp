@@ -134,6 +134,7 @@ if __name__ == "__main__":
     argparser.add_argument('--input_size',default='256')
     argparser.add_argument('--model_name',default='newmodel')
     argparser.add_argument('--n_embed',default='1024')
+    argparser.add_argument('--head_dim',default='128')
     argparser.add_argument('--n_ff',default='4')
     argparser.add_argument('--load',default='False')
     argparser.add_argument('--max_tok',default='5_000_000_000')
@@ -173,9 +174,9 @@ if __name__ == "__main__":
     vocab_size                  = 32768                                         #Vocab Size
 
     #Model settings 
-    n_layers                    = eval(args.n_layers)                             #Transformers stacked 
+    n_layers                    = eval(args.n_layers)                           #Transformers stacked 
     n_embed                     = eval(args.n_embed)                            #Dimension of the embedding per token             
-    n_heads                     = n_embed//128                                  #Number of attn heads          
+    n_heads                     = n_embed//eval(args.head_dim)                  #Number of attn heads          
     n_ff                        = int(n_embed*eval(args.n_ff))                  #Size of the feed forward network 
     act_fn                      = torch.nn.GELU                                 #Used throughout model
 
