@@ -303,29 +303,39 @@ class LMSteinshark(torch.nn.Module):
         print(f"\n\nLoaded model\n\n")
 
 
-    def generate(self,prompt:list[int],tokenizer:ByteLevelBPETokenizer,n_tokens=128,temperature=.5):
+    def generate(self,prompt:list[int],tokenizer:ByteLevelBPETokenizer,n_tokens=128,temperature=.5,top_k=30):
         self.eval()
 
         with torch.no_grad():
-            tokens  = prompt
+            tokens          = prompt
+            model_output    = []
         
             while len(tokens) - len(prompt) < n_tokens:
 
                 input_seq                       = torch.tensor(tokens[-self.n_positions:],device=self.device).long().unsqueeze_(0)
                 target_ids                      = torch.empty_like(input_seq)
-                logits                          = self(input_seq,target_ids)[0][0,-1,:]
-                distribution                    = torch.nn.functional.softmax(logits/temperature,dim=-1)
-                next_token                      = torch.multinomial(distribution,1)
+                logits                          = self(input_seq,target_ids)[0]
+
+                #Scale logits by temp 
+                logits                          = logits / temperature
+                top_val,top_i                   = torch.topk(logits,k=top_k)
+
+                distribution                    = torch.nn.functional.softmax(top_val,dim=-1)
+                next_tokens_i                   = torch.distributions.Categorical(probs=distribution).sample()
+                next_tokens                     = torch.gather(top_i,2,next_tokens_i.unsqueeze(-1)).squeeze(-1)
+                
+                next_token                      = next_tokens[-1,-1]
+                model_output.append(next_token)
 
                 #Stop with end seq
                 if next_token == tokenizer.encode("<|endoftext|>").ids[0]:
                     self.train()
-                    return tokens
+                    return model_output
                 tokens                          = tokens + [next_token]
 
         
         self.train()
-        return tokens
+        return model_output
 
 
     def split_input(self,input_ids:torch.Tensor,target_ids:torch.Tensor=None):
@@ -349,21 +359,26 @@ class LMSteinshark(torch.nn.Module):
 
 if __name__ == "__main__":
 
-    n_embed     = 1024
+    n_embed     = 1536
     n_ff        = n_embed*2
     n_heads     = n_embed//128
     bs          = 1
     n_positions = 256
     n_vocab     = 32768
-    n_layers    = 11
+    n_layers    = 4
 
     #Create model
-    lm          = LMSteinshark(n_layers=n_layers,n_embed=n_embed,n_heads=n_heads,n_positions=n_positions,n_vocab=n_vocab,n_ff=n_ff,dropout=.1)
+    lm          = LMSteinshark(n_layers=n_layers,n_embed=n_embed,n_heads=n_heads,n_positions=n_positions,n_vocab=n_vocab,n_ff=n_ff,dropout=0)
+    lm.name     = '4x1536x256x2'
+    import training
+    lm.load(training.MODELS)
     print(lm.model_info())
+    import tok 
+    t           = tok.load_tokenizer('32k') 
+
+    while True:
+        prompt      = input('user: ')
+        tokens      = t.encode(prompt).ids
+        output      = t.decode(lm.generate(tokens,t,64,.7,top_k=100))
+        print(f"\n\nmodel:{output}\n\n\n")
     exit()
-    from dataset import TokenizedDataset
-    import numpy 
-    toks        = numpy.load("C:/data/nlp/tokens0.npy")
-    aa          = TokenizedDataset(toks,n_positions)
-    batch       = aa.sample(1,6,lm.devices)
-    lm.forward(batch['input_ids'],batch['target_ids'])
