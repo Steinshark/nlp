@@ -338,7 +338,7 @@ class LMSteinshark(torch.nn.Module):
     def model_info(self) -> str:
         info    = f"Model: {self.name}\n"
 
-        info    += f'parameterss:\t{self.n_params // 1_000_000}M\n'
+        info    += f'parameters:\t{self.n_params // 1_000_000}M\n'
         info    += f'num layers:\t{self.n_layers}\n'
         info    += f'context:\t{self.n_positions}\n'
         info    += f'embed dim:\t{self.n_embed}\n'
@@ -352,12 +352,13 @@ if __name__ == "__main__":
     n_embed     = 1024
     n_ff        = n_embed*2
     n_heads     = n_embed//128
-    bs          = 8 
-    n_positions = 512
-    n_vocab     = 16384
+    bs          = 1
+    n_positions = 256
+    n_vocab     = 32768
+    n_layers    = 11
 
     #Create model
-    lm          = LMSteinshark(n_layers=32,n_embed=n_embed,n_heads=n_heads,n_positions=n_positions,n_vocab=n_vocab,n_ff=n_ff,dropout=.1)
+    lm          = LMSteinshark(n_layers=n_layers,n_embed=n_embed,n_heads=n_heads,n_positions=n_positions,n_vocab=n_vocab,n_ff=n_ff,dropout=.1)
     print(lm.model_info())
     exit()
     from dataset import TokenizedDataset

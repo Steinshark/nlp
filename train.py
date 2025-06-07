@@ -136,18 +136,27 @@ if __name__ == "__main__":
     argparser.add_argument('--n_embed',default='1024')
     argparser.add_argument('--n_ff',default='4')
     argparser.add_argument('--load',default='False')
+    argparser.add_argument('--max_tok',default='5_000_000_000')
+
     args                        = argparser.parse_args()
 
 
     #Load data 
+    max_tokens                  = eval(args.max_tok)
     tokens                      = [] 
+    n_tok_loaded                = 0
     fnames                      = [fname for fname in os.listdir(f"{args.train_root}/{args.ds_name}")]
     fnames.sort(key= lambda x: int(x.replace("tokens","").replace(".npy","").replace(".txt","")))
     for fname in fnames:
-        fname   = f"{args.train_root}/{args.ds_name}/{fname}"
-        tokens.append(numpy.load(fname).astype(numpy.uint16))
+        fname               = f"{args.train_root}/{args.ds_name}/{fname}"
+        newtok:numpy.array  = numpy.load(fname).astype(numpy.uint16)
+        tokens.append(newtok)
+        n_tok_loaded        += len(newtok)
 
-    tokens                      = numpy.concatenate(tokens)
+        if n_tok_loaded > max_tokens:
+            break
+
+    tokens                      = numpy.concatenate(tokens)[-n_tok_loaded:]
     dataset                     = TokenizedDataset(tokens,eval(args.input_size))
     _N_TOKENS                   = dataset.n_tokens
 
@@ -300,7 +309,11 @@ if __name__ == "__main__":
             #Plot all stats in save dir 
             for file in os.listdir(stats_root):
                 filepath    = os.path.join(stats_root,file)
-                stats_dict  = json.loads(open(filepath,'r').read())
+                try:
+                    stats_dict  = json.loads(open(filepath,'r').read())
+                except json.decoder.JSONDecodeError as jde:
+                    time.sleep(1)
+                    stats_dict  = json.loads(open(filepath,'r').read())
                 tok         = [tok // 1_000_000 for tok in 
                                stats_dict['tokens']]
                 losses      = stats_dict['losses']   
