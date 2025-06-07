@@ -47,12 +47,12 @@ def print_model_info(current_step,total_step,tok_thruput,losses):
     print(iters+losses+tok_thru+toks+lr)
 
 
-def print_model_sample(model:MiniTransformerSteinshark,prompt:str,tokenizer:ByteLevelBPETokenizer,n_tokens:int,temp:float):
+def print_model_sample(model:LMSteinshark,prompt:str,tokenizer:ByteLevelBPETokenizer,n_tokens:int,temp:float):
     print(f"\n\nGenerating:")
-    print(f"{tokenizer.decode(model.generate(tokenizer.encode(prompt).ids,TOKENIZER,n_tokens=n_tokens,temperature=temp))}\n\n")
+    print(f"{tokenizer.decode(model.generate(tokenizer.encode(prompt).ids,TOKENIZER,n_tokens=n_tokens,temperature=temp,top_k=50))}\n\n")
 
 
-def print_update(current_step,total_step,losses,tok_thruput,model:MiniTransformerSteinshark,prompt:str,tokenizer:ByteLevelBPETokenizer,optimizer:torch.optim.Adam,args):
+def print_update(current_step,total_step,losses,tok_thruput,model:LMSteinshark,prompt:str,tokenizer:ByteLevelBPETokenizer,optimizer:torch.optim.Adam,args):
     global _LAST_UPDATE_T
     global _LAST_SAMPLE_T
 
@@ -75,7 +75,7 @@ def print_update(current_step,total_step,losses,tok_thruput,model:MiniTransforme
     #Check to sample 
     if time.time() - _LAST_SAMPLE_T > _SAMPLE_EVERY_T:
         print(f"\n\nGenerating:")
-        print(f"{tokenizer.decode(model.generate(tokenizer.encode(prompt).ids,TOKENIZER,n_tokens=256,temperature=.5))}\n\n")
+        print(f"{tokenizer.decode(model.generate(tokenizer.encode(prompt).ids,TOKENIZER,n_tokens=256,temperature=.7,top_k=50))}\n\n")
         _LAST_SAMPLE_T          = time.time()
 
 
@@ -156,10 +156,15 @@ if __name__ == "__main__":
 
         if n_tok_loaded > max_tokens:
             break
+    tokenizer_name              = args.tokenizer_name                           #Tokenizer used
+    train_root                  = args.train_root                               #Where all the training data will be found  
 
     tokens                      = numpy.concatenate(tokens)[-n_tok_loaded:]
     dataset                     = TokenizedDataset(tokens,eval(args.input_size))
     _N_TOKENS                   = dataset.n_tokens
+
+    tokenizer               = load_tokenizer(f"{train_root}/{tokenizer_name}")
+    print(f"loaded tokenizer: {train_root}/{tokenizer_name}")
 
 
     #Training/Model Settings 
@@ -171,7 +176,7 @@ if __name__ == "__main__":
     md_size                     = 0                                             #Fine reduced to this 
     tfmr_input_size             = core_size + lg_size + md_size                 #Size of sequence going through transformer stack
     input_size                  = context1_size + context2_size + core_size     #Total number of tokens sampled per train step
-    vocab_size                  = 32768                                         #Vocab Size
+    vocab_size                  = tokenizer.get_vocab_size()                    #Vocab Size
 
     #Model settings 
     n_layers                    = eval(args.n_layers)                           #Transformers stacked 
@@ -186,7 +191,6 @@ if __name__ == "__main__":
     lr                          = .0001                                         #Max LR used in OneCycleLR
     wd                          = .01                                           #WD used throughout
     dropout                     = .2                                            #P used throughout
-    train_root                  = args.train_root                               #Where all the training data will be found  
     virtual_bs                  = train_batch_tok // tfmr_input_size            #Number of iters before stepping Optimizer
     accu_steps                  = virtual_bs // bs                              #Number of steps before stepping optimizer
     pct_start                   = .3                                            #Where peak LR will occur       
