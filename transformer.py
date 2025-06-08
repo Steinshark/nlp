@@ -315,14 +315,15 @@ class LMSteinshark(torch.nn.Module):
                 input_seq                       = torch.tensor(tokens[-self.n_positions:],device=self.device).long().unsqueeze_(0)
                 target_ids                      = torch.empty_like(input_seq)
                 logits                          = self(input_seq,target_ids)[0][0,-1,:].float()
+
                 #Scale logits by temp 
                 logits                          = logits / temperature
-                top_val,top_i                   = torch.topk(logits,k=top_k)
+                vals,indices                    = torch.topk(logits,k=top_k)
 
-                distribution                    = torch.nn.functional.softmax(top_val,dim=-1)
-                next_tokens_i                   = torch.distributions.Categorical(probs=distribution).sample()
+                distribution                    = torch.nn.functional.softmax(vals,dim=-1)
+                local_i                         = torch.distributions.Categorical(probs=distribution).sample()
                 
-                next_token                      = int(next_tokens_i)
+                next_token                      = indices[local_i]
                 model_output.append(next_token)
 
                 #Stop with end seq

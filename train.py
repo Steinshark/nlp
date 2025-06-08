@@ -34,7 +34,7 @@ TOK_THRU                        = 0
 MODEL                           = None
 TOKENIZER                       = None
 LOSS                            = None 
-
+PROMPT                          = "<|endoftext|>"
 
 def print_model_info(current_step,total_step,tok_thruput,losses):
     iters                   = "iter " + f"{current_step}/{total_step}".rjust(11) + "   "
@@ -74,7 +74,7 @@ def print_update(current_step,total_step,losses,tok_thruput,model:LMSteinshark,p
 
     #Check to sample 
     if time.time() - _LAST_SAMPLE_T > _SAMPLE_EVERY_T:
-        print(f"\n\nGenerating:")
+        print(f"\n\nPrompt: {PROMPT}\n\nModel:",end='')
         print(f"{tokenizer.decode(model.generate(tokenizer.encode(prompt).ids,TOKENIZER,n_tokens=256,temperature=.7,top_k=50))}\n\n")
         _LAST_SAMPLE_T          = time.time()
 
@@ -200,7 +200,7 @@ if __name__ == "__main__":
 
     #Sampling 
     sample_text                 = "scientists have discovered a new technique for creating large language models"
-
+    PROMPT                      = sample_text
     #Create Tokenizer
     tokenizer               = load_tokenizer(f"{train_root}/{tokenizer_name}")
     assert tokenizer.get_vocab_size() == vocab_size
@@ -260,7 +260,7 @@ if __name__ == "__main__":
 
         input_ids                       = batch['input_ids']
         target_ids                      = batch['target_ids']
-       
+
         #Put through model 
         #with torch.amp.autocast('cuda'):
         logits,target_ids           = model.forward(input_ids,target_ids)

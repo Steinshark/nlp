@@ -7,6 +7,7 @@ from utils import parse_wet_file, WebPage
 import string 
 from dataset import correct_by_dict, correct_to_ascii
 from training import *
+import pandas 
 
 if not os.path.exists(DWNLD_PATH):
     with open(DWNLD_PATH,'w') as writefile:
@@ -115,8 +116,24 @@ def download_files(n_files:int=128,lower=True,writefile_size=64,total_size=128*1
     with open(DWNLD_PATH,'w') as writefile:
         writefile.write(json.dumps(list(prev_dwnld)))
 
-        
 
+def clean_fineweb(writefile_size=32,min_score=.97):
+
+    curfile     = os.path.join(FINEDB,str(random.randint(100_000_000,999_999_999))+".txt")
+    curwrite    = open(curfile,'w',encoding='utf_8')
+
+    for file in [os.path.join(FINE,fpath) for fpath in os.listdir(FINE) if ".parquet" in fpath]:
+
+        data    = pandas.read_parquet(file,engine='pyarrow')
+
+        for t,s,l in zip(data['text'],data['language_score'],data['language']):
+            if l == 'en' and s > min_score:
+                curwrite.write(t + END_TOKEN)
+
+                if os.path.getsize(curfile) > (writefile_size * 1024 * 1024):
+                    curwrite.close()
+                    curfile     = os.path.join(FINEDB,str(random.randint(100_000_000,999_999_999))+".txt")
+                    curwrite    = open(curfile,'w',encoding='utf_8')
 
 if __name__ =='__main__':
     
@@ -124,6 +141,7 @@ if __name__ =='__main__':
         fpath = sys.argv[1]
     else:
         fpath = 'C:/users/steinshark/downloads/wet.paths.gz'
-
-    generate_urls(fpath)
-    download_files(8000,writefile_size=128)
+        
+    clean_fineweb()
+    #generate_urls(fpath)
+    #download_files(8000,writefile_size=128)

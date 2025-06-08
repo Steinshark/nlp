@@ -6,6 +6,7 @@ from training import *
 import numpy
 import time 
 import multiprocessing
+import random 
 
 #Tokenizes based on the tokens found in CRAWL_DB
 def train_tokenizer(vocab_size:int,name:str,db:str=CRAWL_DB) ->ByteLevelBPETokenizer:
@@ -79,16 +80,17 @@ def tokenize_corpus(tokenizer_name:str,db:str=CRAWL_DB,tok_db:str=TOK_DB,n_worke
 
     print(f"generated {total_tok} tokens")
 
-        
+
 
 
 if __name__ == "__main__":
     name        = "32k_c"
-    #train_tokenizer(32768,name,db=f'{PATH}/fine')
+
+    train_tokenizer(32768,name,db=f'{FINE}')
     t = load_tokenizer(name)
     #print(f"Steinshark -> {t.encode('Steinshark').ids} -> {t.decode(t.encode('Steinshark').ids)}")
     #exit()
     #Loop so that it always runs
     #while True:
-    tokenize_corpus(name,db=FINEDB,tok_db=f'{PATH}/tokens_clean')
+    tokenize_corpus(name,db=FINEDB,tok_db=TOK_DB_CLEAN)
         #time.sleep(10)
