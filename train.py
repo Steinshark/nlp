@@ -310,7 +310,7 @@ if __name__ == "__main__":
             
             plt.cla()
             plt.clf()
-            colors      = ["mediumblue","darkorange","mediumspringgreen","dodgerblue","orangered","crimson",'black','gray']
+            colors      = ["mediumblue","darkorange","mediumspringgreen","dodgerblue","orangered","cyan","crimson",'black','gray',"olive"]
             #Plot all stats in save dir 
             for file in os.listdir(stats_root):
                 filepath    = os.path.join(stats_root,file)
