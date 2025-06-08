@@ -86,11 +86,11 @@ def tokenize_corpus(tokenizer_name:str,db:str=CRAWL_DB,tok_db:str=TOK_DB,n_worke
 if __name__ == "__main__":
     name        = "32k_c"
 
-    train_tokenizer(32768,name,db=f'{FINE}')
+    train_tokenizer(32768,name,db=FINEDB)
     t = load_tokenizer(name)
     #print(f"Steinshark -> {t.encode('Steinshark').ids} -> {t.decode(t.encode('Steinshark').ids)}")
     #exit()
     #Loop so that it always runs
     #while True:
-    tokenize_corpus(name,db=FINEDB,tok_db=TOK_DB_CLEAN)
+    tokenize_corpus(name,db=FINEDB,tok_db=TOK_DB_CLEAN,n_workers=8)
         #time.sleep(10)

@@ -135,13 +135,14 @@ def clean_fineweb(writefile_size=32,min_score=.97):
                     curfile     = os.path.join(FINEDB,str(random.randint(100_000_000,999_999_999))+".txt")
                     curwrite    = open(curfile,'w',encoding='utf_8')
 
+
 if __name__ =='__main__':
     
     if len(sys.argv) > 1:
         fpath = sys.argv[1]
     else:
         fpath = 'C:/users/steinshark/downloads/wet.paths.gz'
-        
+
     clean_fineweb()
     #generate_urls(fpath)
     #download_files(8000,writefile_size=128)
