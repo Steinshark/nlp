@@ -324,12 +324,13 @@ class LMSteinshark(torch.nn.Module):
                 local_i                         = torch.distributions.Categorical(probs=distribution).sample()
                 
                 next_token                      = indices[local_i]
-                model_output.append(next_token)
 
                 #Stop with end seq
                 if next_token == tokenizer.encode("<|endoftext|>").ids[0]:
                     self.train()
                     return model_output
+                
+                model_output.append(next_token)
                 tokens                          = tokens + [next_token]
 
         
