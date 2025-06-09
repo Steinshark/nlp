@@ -50,7 +50,7 @@ def tokenize_save_text(data:dict):
         tokpath     = fpath.replace(db,tok_db).replace(".txt",".npy")
 
         numpy.save(tokpath,np_ids)
-    return len(tokpath)
+    return len(np_ids)
 
 
 #Tokenizes the corpus found in CRAWL_DB and saves it to TOK_DB
@@ -78,7 +78,7 @@ def tokenize_corpus(tokenizer_name:str,db:str=CRAWL_DB,tok_db:str=TOK_DB,n_worke
     for res in results:
         total_tok += res 
 
-    print(f"generated {total_tok} tokens")
+    print(f"generated {total_tok/1_000_000_000:.3f}B tokens")
 
 
 

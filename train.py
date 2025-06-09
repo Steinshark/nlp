@@ -27,6 +27,7 @@ _LAST_UPDATE_T                  = time.time()
 _LAST_SAMPLE_T                  = time.time() - (3*60)
 _SAVE_MODEL_EVERY               = 5000
 _N_TOKENS                       = None
+MAX_NORM                        = 1000
 
 CUR_STEP                        = 0 
 TOT_STEP                        = 0
@@ -207,9 +208,9 @@ if __name__ == "__main__":
 
     #Create model 
     if args.model_type == "summarizer": 
-        model                       = MiniTransformerSteinshark(context1_size,context2_size,core_size,lg_size,md_size,n_embed,n_layers,n_heads,n_ff,vocab_size,act_fn,dropout)
+        model:MiniTransformerSteinshark = MiniTransformerSteinshark(context1_size,context2_size,core_size,lg_size,md_size,n_embed,n_layers,n_heads,n_ff,vocab_size,act_fn,dropout)
     elif args.model_type == "base":
-        model                       = LMSteinshark(core_size,n_embed,n_layers,n_heads,n_ff,vocab_size,act_fn,dropout)
+        model:LMSteinshark              = LMSteinshark(core_size,n_embed,n_layers,n_heads,n_ff,vocab_size,act_fn,dropout)
     
     model.name                  = args.model_name
     if eval(args.load):
@@ -279,8 +280,18 @@ if __name__ == "__main__":
 
 
         if cur_train_iter % 10 == 0:
+            #for loss, use a value of 
+            model.eval()
+            with torch.no_grad():
+                test_inputs                 = input_ids[:2,:]
+                test_targets                = target_ids[:2,:]
+                logits,targets              = model(test_inputs,test_targets)
+                logits                      = logits.view(test_inputs.size(0)*core_size,vocab_size)
+                targets                     = targets.view(test_targets.size(0)*core_size)
+                test_loss                   = torch.nn.functional.cross_entropy(logits, targets)
+            model.train()
             model.stats['tok_snap'].append(model.stats['tok_through'])
-            model.stats['losses'].append(float(loss.detach())*accu_steps)
+            model.stats['losses'].append(float(test_loss.detach()))
         
         #Update for all
         CUR_STEP                = model.stats['iter_through']
@@ -293,7 +304,7 @@ if __name__ == "__main__":
 
         #Zero if on step cycle 
         if cur_train_iter % accu_steps == 0:
-            torch.nn.utils.clip_grad_norm_(model.parameters(),1.00000001)
+            torch.nn.utils.clip_grad_norm_(model.parameters(),MAX_NORM)
             optimizer.step()
             optimizer.zero_grad()
             try:
@@ -310,7 +321,7 @@ if __name__ == "__main__":
             
             plt.cla()
             plt.clf()
-            colors      = ["mediumblue","darkorange","mediumspringgreen","dodgerblue","orangered","cyan","crimson",'black','gray',"olive"]
+            colors      = ["yellow","gold","mediumspringgreen","turquoise","deepskyblue","mediumblue","darkviolet","fuchsia","crimson",'gray','black']
             #Plot all stats in save dir 
             for file in os.listdir(stats_root):
                 filepath    = os.path.join(stats_root,file)
