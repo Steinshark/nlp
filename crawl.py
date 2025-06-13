@@ -127,7 +127,8 @@ def clean_fineweb(writefile_size=32,min_score=.97):
         data    = pandas.read_parquet(file,engine='pyarrow')
 
         for t,s,l in zip(data['text'],data['language_score'],data['language']):
-            if l == 'en' and s > min_score:
+
+            if l == 'en' and s > min_score and len(t) > 5_000:
                 curwrite.write(t + END_TOKEN)
 
                 if os.path.getsize(curfile) > (writefile_size * 1024 * 1024):
@@ -143,6 +144,6 @@ if __name__ =='__main__':
     else:
         fpath = 'C:/users/steinshark/downloads/wet.paths.gz'
 
-    clean_fineweb()
+    clean_fineweb(writefile_size=32,min_score=.9)
     #generate_urls(fpath)
     #download_files(8000,writefile_size=128)

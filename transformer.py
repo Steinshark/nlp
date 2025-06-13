@@ -31,7 +31,7 @@ def apply_rope(x, seq_len, device):
 
 class MultiHeadAttention(torch.nn.Module):
     
-    def __init__(self, embed_dim, num_heads,n_positions, device=torch.device('cuda' if torch.cuda.is_available() else 'cpu')):
+    def __init__(self, embed_dim, num_heads,n_positions, device=torch.device('cuda' if torch.cuda.is_available() else 'cpu'),droput=.2):
         super(MultiHeadAttention, self).__init__()
         
         # Ensure that the model dimension (d_model) is divisible by the number of heads
@@ -47,7 +47,8 @@ class MultiHeadAttention(torch.nn.Module):
         self.layer_1            = torch.nn.Linear(embed_dim,embed_dim*3,bias=True)
         self.W_o                = torch.nn.Linear(embed_dim, embed_dim,device=device,bias=True)     # Output transformation
         self.scale              = 1 / math.sqrt(self.d_k)
-        self.register_buffer('mask',torch.tril(torch.ones(n_positions,n_positions,device=device)))
+        self.dropout            = droput
+        self.is_training        = True
         
 
   
@@ -69,23 +70,11 @@ class MultiHeadAttention(torch.nn.Module):
 
         
         with sdpa_kernel([SDPBackend.EFFICIENT_ATTENTION,SDPBackend.FLASH_ATTENTION,SDPBackend.MATH,SDPBackend.CUDNN_ATTENTION]):
-            attn_out    = scaled_dot_product_attention(Q,K,V,dropout_p=.05,is_causal=True,scale=self.scale)
+            attn_out    = scaled_dot_product_attention(Q,K,V,dropout_p=self.dropout if self.is_training else 0,is_causal=True,scale=self.scale)
             attn_out    = attn_out.transpose(1,2).contiguous().view(B,N,C)
             output      = self.W_o(attn_out)
             return output
-            
-        # #     return output
-        # # Perform scaled dot-product attention
-        # attn_scores     = Q @ K.transpose(-2,-1)
-        # attn_scores     = attn_scores * (1 / math.sqrt(self.d_k))
-        # attn_scores.masked_fill_(self.mask[:N,:N]==0,float("-inf"))
-        # attn_scores     = torch.nn.functional.softmax(attn_scores,dim=-1)
-
-        # attn_result     = attn_scores @ V 
-        # attn_result     = attn_result.transpose(1,2).contiguous().view(B,N,C)
-        # output          = self.W_o(attn_result)
-        # return output
-
+      
 
 class DecoderLayer(torch.nn.Module):
 
@@ -105,7 +94,7 @@ class DecoderLayer(torch.nn.Module):
             torch.nn.Linear(n_ff,n_embed,device=device))
         self.ff_dropout             = torch.nn.Dropout(p=dropout)
         self.ff_layer_norm          = torch.nn.LayerNorm(n_embed,device=device)
-
+        
    
     def forward(self,x:torch.Tensor)->torch.Tensor:
         
@@ -124,6 +113,7 @@ class DecoderLayer(torch.nn.Module):
 
 
 
+
 class EncoderBlock(torch.nn.Module):
     
     #Context_dim should be n_embed//4
@@ -131,9 +121,9 @@ class EncoderBlock(torch.nn.Module):
         super(EncoderBlock,self).__init__()
 
         self.device                 = device
+
         #Start with a separate context embeddings module 
         self.semantic_embeddings    = torch.nn.Embedding(n_vocab,embed_dim,device=device)
-        #self.input_pos_embeddings   = torch.nn.Embedding(n_positions,embed_dim,device=device)          
 
 
     #Given the context ids and the input ids, return the embeddings to be passed forward 
@@ -302,10 +292,20 @@ class LMSteinshark(torch.nn.Module):
         self.load_state_dict(torch.load(save_path+f".pt",weights_only=True))
         print(f"\n\nLoaded model\n\n")
 
+    def set_generate_mode(self):
+        self.eval()
+        for decoder_layer in self.transformer_stack:
+            decoder_layer.mh_attn.is_training = False 
+
+    def set_train_mode(self):
+        for decoder_layer in self.transformer_stack:
+            decoder_layer.mh_attn.is_training = True
+        self.train()
 
     def generate(self,prompt:list[int],tokenizer:ByteLevelBPETokenizer,n_tokens=128,temperature=.5,top_k=30):
-        self.eval()
-
+        
+        self.set_generate_mode()
+        
         with torch.no_grad():
             tokens          = prompt
             model_output    = []
@@ -334,8 +334,42 @@ class LMSteinshark(torch.nn.Module):
                 tokens                          = tokens + [next_token]
 
         
-        self.train()
+        self.set_train_mode()
         return model_output
+
+
+    def token_streamer(self,prompt:list[int],tokenizer:ByteLevelBPETokenizer,n_tokens=128,temperature=.7,top_k=100):
+
+        self.set_generate_mode()
+        full_token_list         = prompt
+        generated_token_list    = []
+
+        while len(generated_token_list) < n_tokens:
+
+            #Get model output
+            model_input         = torch.tensor(full_token_list).cuda().long().unsqueeze(dim=0)  
+            placeholder_ids     = torch.zeros_like(model_input).cuda().long()
+            logits,_            = self(model_input,placeholder_ids)
+
+            logits              = logits[0,-1,:].float()
+            logits                          = logits / temperature
+            vals,indices                    = torch.topk(logits,k=top_k)
+
+            distribution                    = torch.nn.functional.softmax(vals,dim=-1)
+            local_i                         = torch.distributions.Categorical(probs=distribution).sample()
+            next_token                      = indices[local_i]
+
+            #Check if end of sequence
+            if next_token == tokenizer.encode('<|endoftext|>').ids[0]:
+                break
+            else:
+                full_token_list.append(next_token)
+                generated_token_list.append(next_token)
+                yield tokenizer.decode([next_token])
+
+        self.set_train_mode()
+        return 
+
 
 
     def split_input(self,input_ids:torch.Tensor,target_ids:torch.Tensor=None):

@@ -38,4 +38,4 @@ ALLOWABLE_CHAR      = string.ascii_lowercase + string.ascii_uppercase + "1234567
 
 ENGL_DICT           = enchant.Dict("en_US")
 
-LOWER               = True
+LOWER               = False

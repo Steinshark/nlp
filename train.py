@@ -16,7 +16,7 @@ import json
 import tkinter as tk
 from utils import reduce_arr
 from training import *
-
+from tok import * 
 
 #sys.path.append("C:/gitrepos/steinpy/src")
 #from steinpy.utils import reduce_arr 
@@ -146,26 +146,14 @@ if __name__ == "__main__":
     #Load data 
     max_tokens                  = eval(args.max_tok)
     tokens                      = [] 
-    n_tok_loaded                = 0
-    fnames                      = [fname for fname in os.listdir(f"{args.train_root}/{args.ds_name}")]
-    fnames.sort(key= lambda x: int(x.replace("tokens","").replace(".npy","").replace(".txt","")))
-    for fname in fnames:
-        fname               = f"{args.train_root}/{args.ds_name}/{fname}"
-        newtok:numpy.array  = numpy.load(fname).astype(numpy.uint16)
-        tokens.append(newtok)
-        n_tok_loaded        += len(newtok)
-
-        if n_tok_loaded > max_tokens:
-            break
-    tokenizer_name              = args.tokenizer_name                           #Tokenizer used
-    train_root                  = args.train_root                               #Where all the training data will be found  
-
-    tokens                      = numpy.concatenate(tokens)[-n_tok_loaded:]
-    dataset                     = TokenizedDataset(tokens,eval(args.input_size))
+    dataset,n_tok_loaded        = load_tokens(args,max_tokens)
     _N_TOKENS                   = dataset.n_tokens
 
+    tokenizer_name              = args.tokenizer_name                           #Tokenizer used
+    train_root                  = args.train_root                               #Where all the training data will be found  
+    
+    print(f"loading tokenizer: {train_root}/{tokenizer_name}/vocab.josn")
     tokenizer               = load_tokenizer(f"{train_root}/{tokenizer_name}")
-    print(f"loaded tokenizer: {train_root}/{tokenizer_name}")
 
 
     #Training/Model Settings 
@@ -223,9 +211,8 @@ if __name__ == "__main__":
 
 
     #Create optimizer 
-    optimizer                   = torch.optim.AdamW(params=model.parameters(),lr=lr,weight_decay=wd,betas=(.9,.95))
-    opt2                        = torch.optim.SGD(params=model.parameters())
-    lr_sched                    = torch.optim.lr_scheduler.OneCycleLR(opt2,max_lr=lr,pct_start=pct_start,total_steps=lr_steps,div_factor=10,final_div_factor=100)
+    optimizer                   = torch.optim.AdamW(params=model.parameters(),lr=lr,weight_decay=wd,betas=(.95,.99))
+    lr_sched                    = torch.optim.lr_scheduler.OneCycleLR(optimizer,max_lr=lr,pct_start=pct_start,total_steps=lr_steps,div_factor=10,final_div_factor=4)
     
 
     #Create updates 
@@ -250,6 +237,7 @@ if __name__ == "__main__":
     # scaler                            = torch.amp.grad_scaler.GradScaler('cuda')
     start_time                          = time.time()
     while cur_train_iter < train_iters:
+
         root.update_idletasks()
         root.update()
         #cur_train_iter                = cur_train_iter + model.stats['iter_through']
