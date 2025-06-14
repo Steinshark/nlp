@@ -83,6 +83,7 @@ def get_pageviews(pagetext:str):
         print(f"got strange on {url}({text1})")
         print(f"what: {ve}")
 
+
 def scan_wikipedia(url:str,data,depth,view_thresh:int=0,max_n:int=64,timeout:int=2,directory={},storing:str='C:/users/default/temp/wikistash/data'):
 
     #Check for return conditions

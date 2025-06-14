@@ -13,6 +13,26 @@ if not os.path.exists(DWNLD_PATH):
     with open(DWNLD_PATH,'w') as writefile:
         writefile.write(json.dumps([]))
 
+def passes_vibe_check(text:str,threshhold=5):
+    search_text     = text.lower()
+
+    bad_count       = 0
+
+    bad_words       = ["weight loss pill", 
+                       "casino", "viagra", 
+                       "testosterone booster", 
+                       "miracle cure",
+                       "hair loss treatment",
+                       "brain booster",
+                       "our top picks",
+                       "terms and conditions"]
+    
+    for word in bad_words:
+        bad_count += search_text.count(word)
+        if bad_count > threshhold:
+            return False 
+    
+    return True
 
 #Takes a path from a wet.paths.gz file and creates wet.paths 
 def generate_urls(wet_fpath:str):
@@ -128,7 +148,7 @@ def clean_fineweb(writefile_size=32,min_score=.97):
 
         for t,s,l in zip(data['text'],data['language_score'],data['language']):
 
-            if l == 'en' and s > min_score and len(t) > 5_000:
+            if l == 'en' and s > min_score and len(t) > 5_000 and passes_vibe_check(t):
                 curwrite.write(t + END_TOKEN)
 
                 if os.path.getsize(curfile) > (writefile_size * 1024 * 1024):

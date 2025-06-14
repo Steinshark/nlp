@@ -152,8 +152,7 @@ if __name__ == "__main__":
     tokenizer_name              = args.tokenizer_name                           #Tokenizer used
     train_root                  = args.train_root                               #Where all the training data will be found  
     
-    print(f"loading tokenizer: {train_root}/{tokenizer_name}/vocab.josn")
-    tokenizer               = load_tokenizer(f"{train_root}/{tokenizer_name}")
+    tokenizer                   = load_tokenizer(f"{train_root}/{tokenizer_name}")
 
 
     #Training/Model Settings 
@@ -204,7 +203,7 @@ if __name__ == "__main__":
     if eval(args.load):
         model.load(root=MODELS)
 
-    model                       = model.bfloat16()
+    #model                       = model.bfloat16()
     print(f"generated model\n\n{model.model_info()}\n\n")
     MODEL                       = model
     TOKENIZER                   = tokenizer
@@ -213,7 +212,7 @@ if __name__ == "__main__":
     #Create optimizer 
     optimizer                   = torch.optim.AdamW(params=model.parameters(),lr=lr,weight_decay=wd,betas=(.95,.99))
     lr_sched                    = torch.optim.lr_scheduler.OneCycleLR(optimizer,max_lr=lr,pct_start=pct_start,total_steps=lr_steps,div_factor=10,final_div_factor=4)
-    
+    scaler                      = torch.amp.GradScaler(enabled=True)
 
     #Create updates 
     losses                      = [] 
@@ -252,15 +251,17 @@ if __name__ == "__main__":
 
         #Put through model 
         #with torch.amp.autocast('cuda'):
-        logits,target_ids           = model.forward(input_ids,target_ids)
-        logits                      = logits.view(bs*core_size,vocab_size)
-        targets                     = target_ids.view(bs*core_size)
+        with torch.autocast(device_type='cuda',dtype=torch.float16):
+            logits,target_ids           = model.forward(input_ids,target_ids)
+            logits                      = logits.view(bs*core_size,vocab_size)
+            targets                     = target_ids.view(bs*core_size)
+            #Compute and backward loss 
+            loss:torch.Tensor           = torch.nn.functional.cross_entropy(logits, targets) / accu_steps
 
-        #Compute and backward loss 
-        loss:torch.Tensor           = torch.nn.functional.cross_entropy(logits, targets) / accu_steps
+        scaler.scale(loss).backward()
 
-        #loss                        = scaler.scale(loss)
-        loss.backward() 
+        ##loss                        = scaler.scale(loss)
+        #loss.backward() 
         model.stats['iter_through'] += 1
         model.stats['tok_through']  += float(bs*core_size)
         trainset_iter               += 1
@@ -293,7 +294,8 @@ if __name__ == "__main__":
         #Zero if on step cycle 
         if cur_train_iter % accu_steps == 0:
             torch.nn.utils.clip_grad_norm_(model.parameters(),MAX_NORM)
-            optimizer.step()
+            scaler.step(optimizer)
+            scaler.update()
             optimizer.zero_grad()
             try:
                 lr_sched.step()

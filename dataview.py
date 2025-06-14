@@ -1,6 +1,8 @@
 import tkinter as tk
 from tkinter import scrolledtext
 import os
+import numpy 
+import random 
 
 class WebpageViewerApp:
     def __init__(self, root, webpages):
@@ -44,11 +46,15 @@ class WebpageViewerApp:
         comma_count = text.count(",")
         comma_ratio = comma_count / num_words if num_words > 0 else 0
 
+        casino_count    = text.count("casino")
+
+
         return {
             "Alphabet Ratio": alphabet_ratio,
             "Punctuation Ratio": punct_ratio,
             "Avg Word Length": avg_word_length,
             "Comma Ratio": comma_ratio,
+            "Casino Count":casino_count
         }
 
     def calculate_char_ratio(self):
@@ -105,15 +111,47 @@ class WebpageViewerApp:
             self.text_display.delete(1.0, tk.END)
             self.text_display.insert(tk.END, f"Error loading webpages: {e}")
 
+    def load_tokens_from_directory(self,directory,tokenizer):
+        self.webpages       = [] 
+        eot_token           = tokenizer.encode('<|endoftext|>').ids[0]
+        prev_i              = 0
+        self.current_index  = 0 
+        fnames          = os.listdir(directory)
+        
+        random.shuffle(fnames)
+        try:
+            for filename in fnames[:10]:
+                print(filename)
+                if filename.endswith(".npy"):
+                    file_path               = os.path.join(directory, filename)
+                    tokens:numpy.ndarray    = numpy.load(file_path)
+                    splits                  = [int(a) for a in numpy.where(tokens==eot_token)[0]]
+
+                    while splits:
+                        cur_i                   = splits.pop(0)
+                        self.webpages.append(tokenizer.decode(tokens[prev_i:cur_i]))
+                        prev_i                  = cur_i
+
+            if self.webpages:
+                self.display_webpage(self.webpages.pop(0))
+            else:
+                self.text_display.delete(1.0, tk.END)
+                self.text_display.insert(tk.END, "No valid webpages found in the directory.")
+        except Exception as e:
+            self.text_display.delete(1.0, tk.END)
+            self.text_display.insert(tk.END, f"Error loading webpages: {e}")
+
 # Example usage with dummy webpages
 def main():
     root = tk.Tk()
     root.title("Webpage Viewer")
 
     app = WebpageViewerApp(root, [])
-    app.load_webpages_from_directory("C:/data/nlp/crawl")
+    app.load_tokens_from_directory(f"{PATH}/tokens_clean",load_tokenizer(f"{PATH}/32k_c"))
 
     root.mainloop()
 
 if __name__ == "__main__":
+    from training import *
+    from tok import load_tokenizer
     main()

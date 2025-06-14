@@ -26,7 +26,6 @@ def train_tokenizer(vocab_size:int,name:str,db:str=CRAWL_DB) ->ByteLevelBPEToken
 
 #Loads tokenizer from default location. Adds the endoftext token
 def load_tokenizer(tokenizer_name:str)->ByteLevelBPETokenizer:
-    print(f"{PATH}/{tokenizer_name}/vocab.json")
     tokenizer               = ByteLevelBPETokenizer().from_file(vocab_filename=f"{tokenizer_name}/vocab.json",merges_filename=f"{tokenizer_name}/merges.txt")
     tokenizer.add_tokens([END_TOKEN])
     return tokenizer
@@ -87,6 +86,7 @@ def tokenize_corpus(tokenizer_name:str,db:str=CRAWL_DB,tok_db:str=TOK_DB,n_worke
 
     print(f"generated {total_tok/1_000_000_000:.3f}B tokens")
 
+
 def load_tokens(args,max_tokens):
        #Load data 
     tokens                      = [] 
@@ -110,9 +110,9 @@ def load_tokens(args,max_tokens):
 
 
 if __name__ == "__main__":
-    name        = "32k_c"
+    name        = "32k_c++"
 
-    #train_tokenizer(32768,name,db=FINEDB)
+    train_tokenizer(32768,name,db=FINEDB)
     t = load_tokenizer(name)
     #print(f"Steinshark -> {t.encode('Steinshark').ids} -> {t.decode(t.encode('Steinshark').ids)}")
     #exit()
