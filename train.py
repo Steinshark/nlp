@@ -118,8 +118,8 @@ if __name__ == "__main__":
 
 
     #Ensure optimizations 
-    torch.backends.cuda.matmul.allow_tf32 = True
-    torch.backends.cudnn.allow_tf32 = True
+    # torch.backends.cuda.matmul.allow_tf32 = True
+    # torch.backends.cudnn.allow_tf32 = True
 
     #Handle arguments
     argparser                   = argparse.ArgumentParser()
@@ -200,6 +200,7 @@ if __name__ == "__main__":
         model:LMSteinshark              = LMSteinshark(core_size,n_embed,n_layers,n_heads,n_ff,vocab_size,act_fn,dropout)
     
     model.name                  = args.model_name
+    model                       = model.bfloat16()
     if eval(args.load):
         model.load(root=MODELS)
 
@@ -212,7 +213,6 @@ if __name__ == "__main__":
     #Create optimizer 
     optimizer                   = torch.optim.AdamW(params=model.parameters(),lr=lr,weight_decay=wd,betas=(.95,.99))
     lr_sched                    = torch.optim.lr_scheduler.OneCycleLR(optimizer,max_lr=lr,pct_start=pct_start,total_steps=lr_steps,div_factor=10,final_div_factor=4)
-    scaler                      = torch.amp.GradScaler(enabled=True)
 
     #Create updates 
     losses                      = [] 
@@ -226,7 +226,7 @@ if __name__ == "__main__":
     trainset_iter               = 0
     trainset_tok                = 0
 
-    print(f"Beginning training\n\tModel Size:\t{model.n_params//1_000_000}M params\n\tData Size:\t{dataset.n_tokens//1_000_000}M Tokens\n")
+    print(f"Beginning training\n\tModel Size:\t{model.n_params//1_000_000}M params\n\tData Size:\t{dataset.n_tokens//1_000_000}M Tokens\n\tBatch Size:\t{bs}")
     plt.ion()
     plt.show()
     plt.rcParams["figure.raise_window"]=False
@@ -251,14 +251,12 @@ if __name__ == "__main__":
 
         #Put through model 
         #with torch.amp.autocast('cuda'):
-        with torch.autocast(device_type='cuda',dtype=torch.float16):
-            logits,target_ids           = model.forward(input_ids,target_ids)
-            logits                      = logits.view(bs*core_size,vocab_size)
-            targets                     = target_ids.view(bs*core_size)
-            #Compute and backward loss 
-            loss:torch.Tensor           = torch.nn.functional.cross_entropy(logits, targets) / accu_steps
+        logits,target_ids           = model.forward(input_ids,target_ids)
+        logits                      = logits.view(bs*core_size,vocab_size)
+        targets                     = target_ids.view(bs*core_size)
+        #Compute and backward loss 
+        loss:torch.Tensor           = torch.nn.functional.cross_entropy(logits, targets) / accu_steps
 
-        scaler.scale(loss).backward()
 
         ##loss                        = scaler.scale(loss)
         #loss.backward() 
@@ -270,7 +268,7 @@ if __name__ == "__main__":
 
         if cur_train_iter % 10 == 0:
             #for loss, use a value of 
-            model.eval()
+            model.set_generate_mode()
             with torch.no_grad():
                 test_inputs                 = input_ids[:2,:]
                 test_targets                = target_ids[:2,:]
@@ -278,7 +276,7 @@ if __name__ == "__main__":
                 logits                      = logits.view(test_inputs.size(0)*core_size,vocab_size)
                 targets                     = targets.view(test_targets.size(0)*core_size)
                 test_loss                   = torch.nn.functional.cross_entropy(logits, targets)
-            model.train()
+            model.set_train_mode()
             model.stats['tok_snap'].append(model.stats['tok_through'])
             model.stats['losses'].append(float(test_loss.detach()))
         
@@ -294,8 +292,7 @@ if __name__ == "__main__":
         #Zero if on step cycle 
         if cur_train_iter % accu_steps == 0:
             torch.nn.utils.clip_grad_norm_(model.parameters(),MAX_NORM)
-            scaler.step(optimizer)
-            scaler.update()
+            optimizer.step()
             optimizer.zero_grad()
             try:
                 lr_sched.step()
@@ -336,7 +333,7 @@ if __name__ == "__main__":
             plt.ylabel("Batch Loss")
             plt.legend()
             plt.draw()
-            plt.pause(.01)
+            plt.pause(.001)
 
         #Check if new epoch 
         if model.stats['tok_through'] // dataset.n_tokens > model.stats["eps_through"]:
