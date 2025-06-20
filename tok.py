@@ -49,7 +49,7 @@ def tokenize_save_text(data:dict):
         #Split to all pages 
         webpages        = contents.split(END_TOKEN)
         encoded_pages   = tokenizer.encode_batch(webpages)
-        encoded_pages   = [numpy.asarray(page.ids + [tokenizer.encode(END_TOKEN)]) for page in encoded_pages]
+        encoded_pages   = [numpy.asarray(page.ids + tokenizer.encode(END_TOKEN).ids) for page in encoded_pages]
         np_ids          = numpy.concatenate(encoded_pages)
 
         # print(f"tokenizing {fpath}")

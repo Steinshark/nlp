@@ -256,7 +256,7 @@ if __name__ == "__main__":
         targets                     = target_ids.view(bs*core_size)
         #Compute and backward loss 
         loss:torch.Tensor           = torch.nn.functional.cross_entropy(logits, targets) / accu_steps
-
+        loss.backward()
 
         ##loss                        = scaler.scale(loss)
         #loss.backward() 
