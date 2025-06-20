@@ -4,28 +4,42 @@ import sys
 import json
 import random
 from utils import parse_wet_file, WebPage
+import tqdm
 import string 
 from dataset import correct_by_dict, correct_to_ascii
 from training import *
 import pandas 
+import re 
+import multiprocessing 
+from collections import Counter 
+from tokenizers.implementations import ByteLevelBPETokenizer
+import numpy
 
 if not os.path.exists(DWNLD_PATH):
     with open(DWNLD_PATH,'w') as writefile:
         writefile.write(json.dumps([]))
 
-def passes_vibe_check(text:str,threshhold=5):
+
+def passes_vibe_check(text:str,threshhold=3):
     search_text     = text.lower()
 
     bad_count       = 0
 
-    bad_words       = ["weight loss pill", 
-                       "casino", "viagra", 
-                       "testosterone booster", 
-                       "miracle cure",
-                       "hair loss treatment",
-                       "brain booster",
-                       "our top picks",
-                       "terms and conditions"]
+    # Explicit spam, adult, and ad language
+    bad_words = [
+        "weight loss pill", "casino", "viagra", "testosterone booster",
+        "miracle cure", "hair loss treatment", "brain booster",
+        "our top picks", "terms and conditions", "click here",
+        "free trial", "risk free", "money back", "guaranteed results",
+        "get rich", "buy now", "limited offer", "sponsored content",
+        "as seen on", "celebrity secret", "shocking trick",
+        "slut", "fuck", "cunt", "pussy", "sexy singles", "lgbtq",
+        "lock her up", "trans rights", "drag queen", "white privilege",
+        "microaggression", "systematic racism",
+        "omnipresent","omnipotent", "seeking allah", "eternal damnation", 
+        "accept jesus", "according to the hadith", "quran says", "the bible says",
+        "child of god", "children of god"
+    ]
     
     for word in bad_words:
         bad_count += search_text.count(word)
@@ -33,6 +47,7 @@ def passes_vibe_check(text:str,threshhold=5):
             return False 
     
     return True
+
 
 #Takes a path from a wet.paths.gz file and creates wet.paths 
 def generate_urls(wet_fpath:str):
@@ -137,24 +152,35 @@ def download_files(n_files:int=128,lower=True,writefile_size=64,total_size=128*1
         writefile.write(json.dumps(list(prev_dwnld)))
 
 
-def clean_fineweb(writefile_size=32,min_score=.97):
+def clean_fineweb(min_score=.97):
 
-    curfile     = os.path.join(FINEDB,str(random.randint(100_000_000,999_999_999))+".txt")
-    curwrite    = open(curfile,'w',encoding='utf_8')
+    print(f"cleaning fineweb - {FINEDB}")
+    texts       = [] 
 
-    for file in [os.path.join(FINE,fpath) for fpath in os.listdir(FINE) if ".parquet" in fpath]:
+    paths       = [os.path.join(FINE,fpath) for fpath in os.listdir(FINE) if ".parquet" in fpath]
+    random.shuffle(paths)
+    fpaths      = tqdm.tqdm(paths)
 
-        data    = pandas.read_parquet(file,engine='pyarrow')
 
+    for file in fpaths:
+
+        curfile     = file.replace(FINE,FINEDB).replace(".parquet",".txt")
+        if os.path.exists(curfile):
+            continue
+
+        data        = pandas.read_parquet(file,engine='pyarrow')
         for t,s,l in zip(data['text'],data['language_score'],data['language']):
 
-            if l == 'en' and s > min_score and len(t) > 5_000 and passes_vibe_check(t):
-                curwrite.write(t + END_TOKEN)
+            if l == 'en' and s > min_score and len(t) > 4_000 and passes_vibe_check(t):
+                texts.append(t + "\n" + END_TOKEN+"\n")
 
-                if os.path.getsize(curfile) > (writefile_size * 1024 * 1024):
-                    curwrite.close()
-                    curfile     = os.path.join(FINEDB,str(random.randint(100_000_000,999_999_999))+".txt")
-                    curwrite    = open(curfile,'w',encoding='utf_8')
+        
+        with open(curfile,'w',encoding='utf_8') as curwrite:
+            curwrite.write("".join(texts))
+            curwrite.close()
+
+        #Reset texts
+        texts       = []
 
 
 if __name__ =='__main__':
@@ -164,6 +190,4 @@ if __name__ =='__main__':
     else:
         fpath = 'C:/users/steinshark/downloads/wet.paths.gz'
 
-    clean_fineweb(writefile_size=32,min_score=.9)
-    #generate_urls(fpath)
-    #download_files(8000,writefile_size=128)
+    clean_fineweb(writefile_size=40,min_score=.9)

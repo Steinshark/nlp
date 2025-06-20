@@ -27,8 +27,11 @@ FINE                = f"{PATH}/fineweb"
 
 FINEDB              = f"{PATH}/fine"
 
+ULTRA               = f"{PATH}/ultrafine_tokens"
 
-for fpath in [CRAWL_DB,TOK_DB,PREV_RUNS,MODELS,FINE,FINEDB,TOK_DB_CLEAN]:
+INTER               = f"{PATH}/whitelist"
+
+for fpath in [CRAWL_DB,TOK_DB,PREV_RUNS,MODELS,FINE,FINEDB,TOK_DB_CLEAN,ULTRA,INTER]:
     if not os.path.exists(fpath):
         os.mkdir(fpath)
 
