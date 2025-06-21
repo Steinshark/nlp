@@ -1,6 +1,32 @@
 import string 
 import re 
 
+
+
+QUOTATIONS      = {
+    '‘': "'", '’': "'", '‚': ",", '‛': "'",
+    '“': '"', '”': '"', '„': ',', '‟': '"',
+    '′': "'", '″': '"'
+}
+
+DASHES          = {
+    '–': '-', '—': '-', '―': '-', '−': '-'
+}
+
+SPACING         = {
+    # Ellipsis
+        '…': '...',
+        
+        # Spaces
+        '\u00a0': ' ',  # non-breaking space
+        '\u200b': '',   # zero-width space
+        '\u200c': '',   # zero-width non-joiner
+        '\u200d': '',   # zero-width joiner
+        '\u202f': ' ',  # narrow no-break space
+        '\u2060': '',   # word joiner
+}
+
+
 CHAR_CORRECTIONS = {
         " i i ": " i ",        'ç':"c",
         'с':"c",        'π':"pi",
@@ -258,3 +284,48 @@ EOT_STR                 = '<|endoftext|>'
 GOOD_CHAR               = string.ascii_letters + "1234567890" + "!@#$%^&*()_+-={}[]:;',./<>?~`|\\" + '"'
 
 ONLYASCII               = re.compile('|'.join(re.escape(c) for c in GOOD_CHAR))
+
+def match_case(word: str, template: str) -> str:
+    if template.isupper():
+        return word.upper()
+    elif template[0].isupper():
+        return word.capitalize()
+    else:
+        return word.lower()
+    
+#Create regex pattern using quotations, dashes, spacing
+boundary_corrections             = {}  
+for correction_set in [COMMON_MISSPELLINGS,BRITISH_MISSPELLINGS]:
+    boundary_corrections.update(correction_set)
+
+compiled_boundary_corrections    = [(re.compile(rf"\b{re.escape(wrong)}\b", flags=re.IGNORECASE), right) for wrong, right in boundary_corrections.items()]
+
+
+nonboundary_corrections             = {}  
+for correction_set in [QUOTATIONS,DASHES,SPACING]:
+    nonboundary_corrections.update(correction_set)
+
+compiled_nonboundary_corrections    = [(re.compile(rf"{re.escape(wrong)}", flags=re.IGNORECASE), right) for wrong, right in nonboundary_corrections.items()]
+
+"""
+This function performs staple normalizations to include: 
+    - format all special punctuation to a standard format (we dont need 3 types of dashes)
+"""
+def normalize_text(text:str):
+    
+    #Perform word and utf-8 level corrections
+    for pattern, replacement in compiled_boundary_corrections:
+        def repl(match):
+            return match_case(replacement, match.group(0))
+        text = pattern.sub(repl, text)
+
+    for pattern, replacement in compiled_nonboundary_corrections:
+        text = pattern.sub(replacement, text)
+
+    return text 
+
+
+if __name__ =='__main__':
+    text = "“hello— -world”. Teh world will be Jewellery."
+    print(f"before: '{text}'")
+    print(normalize_text(text))
