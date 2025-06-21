@@ -1,0 +1,53 @@
+<p>I wrote two empty functions in rust with the hope of using each to test the use of retain on vectors or the use of filter on iterators, after writing the empty function for each case, on running the program, i noticed a huge dissimilarity between the duration of each function, this means that adding any logic to the currently empty function would lead to erroneous conclusions on their execution time.</p>
+<pre class=""lang-rust prettyprint-override""><code>use std::time::Instant;
+
+fn use_filter() {
+    
+}
+
+fn use_retain() {
+    
+}
+
+fn run_multiple(f: fn(), times: u64) {
+    for _ in 0..times {
+        f()
+    }
+} 
+
+fn main() {
+    let iter_count: u32 = 1_000_000_000;
+    
+    let _start_1 = Instant::now();
+    run_multiple(use_filter, iter_count as u64);
+    let duration = Instant::now() - _start_1;
+    println!(&quot;Use Filter duration: {:?}&quot;, duration / iter_count);
+    
+    let _start_2 = Instant::now();
+    run_multiple(use_retain, iter_count as u64);
+    let duration = Instant::now() - _start_2;
+    println!(&quot;Use Retain duration: {:?}&quot;, duration / iter_count);
+}
+</code></pre>
+<p>Expected output</p>
+<pre><code>Use Filter duration: xns
+Use Retain duration: xns
+</code></pre>
+<p>where x is the same for both function, since they are both empty and do nothing</p>
+<p>Actual Output</p>
+<pre><code>Use Filter duration: 8ns
+Use Retain duration: 10ns
+</code></pre>
+<p>what could explain empty functions having very different execution time in rust programming language.</p>
+","-6","Question"
+"79322933","","<p>Apologies in advance if this has been asked before or is too basic, but I am completely new to Haskell and have been experimenting in GHCi when I accidentally defined a function which I would have expected to throw an error.</p>
+<p>I have two simple functions <code>f</code> and <code>g</code> defined as such</p>
+<pre><code>f = (+)
+</code></pre>
+<pre><code>g = (-1)
+</code></pre>
+<p>Now obviously <code>f</code> takes two arguments and <code>g</code> takes one. <code>f</code> only returns one, however, and so I (incorrectly) tried composing them like so</p>
+<pre><code>h x = g (f x)
+</code></pre>
+<p>To my surprise, this did not raise an error. The resulting type of <code>h</code> is claimed by GHCi to be <code>h :: (Num a, Num (a -&gt; a)) =&gt; a -&gt; a -&gt; a</code>. This type signature is cryptic to me. Does it mean <code>a</code> needs to be both a number and a function at the same time?</p>
+<p>Moreover, when I try applying <code>h</code> to seemingly any numerical arguments it throws an error. So, I guess my question is - what have I actually defined? What is <code>h</code> and how does it work? Playing with it a bit more I see that it is equivalent to <code>h = g . f</code>. This is especially confusing because I was under the impression the composition operator <code>(.)</code> only accepts one-argument functions? I imagine there is a trick with currying happening here, but I'm not sure what it is exactly. As a corollary to the above, how can I <em>correctly</em> define the composition of <code>f</code> and <code>g</code> in point-free notation given that <code>f</code> takes two arguments and . expects one-argument functions only?</p>

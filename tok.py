@@ -147,8 +147,15 @@ def normalize_unicode_punctuation(text: str) -> str:
 
 
 def return_good_texts(data,thresh=3,sample_chance=.05):
+
     fpath, keywords,hqp     = data 
 
+    #Check if complete already
+    cleaned_fpath:str       = fpath.replace(FINEDB,INTER)
+    if os.path.exists(cleaned_fpath):
+        return (0,0,0)
+    
+    #Load articles and prep for cleaning
     articles                = open(fpath,'r',encoding='utf_8').read().split(END_TOKEN)
     articles                = [normalize_unicode_punctuation(article) for article in articles]
 
@@ -170,8 +177,8 @@ def return_good_texts(data,thresh=3,sample_chance=.05):
                 if random.random() < sample_chance:
                     good_articles.append(article)
         
-    cleaned_fpath:str       = fpath.replace(FINEDB,INTER)
 
+    #Save and write file
     with open(cleaned_fpath,'w',encoding='utf_8') as writefile:
         filetext            = f"{END_TOKEN}".join(good_articles) + END_TOKEN
         total_chars         = len(filetext)
@@ -478,7 +485,7 @@ def filter_by_topic(text_root:str=f"{FINEDB}"):#,tokenizer:ByteLevelBPETokenizer
         articles += a
         
 
-    print(f"curated dataset of:\n\tchars:\t{chars}\n\twords:\t{words}\n\tpages:\t{articles}")
+    print(f"Generated dataset of:\n\tchars:\t{chars}\n\twords:\t{words}\n\tpages:\t{articles}")
 
 
 

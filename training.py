@@ -36,6 +36,7 @@ for fpath in [CRAWL_DB,TOK_DB,PREV_RUNS,MODELS,FINE,FINEDB,TOK_DB_CLEAN,ULTRA,IN
         os.mkdir(fpath)
 
 END_TOKEN           = "<|endoftext|>"
+CODE_TOKEN          = "<|CODE|>"
 
 ALLOWABLE_CHAR      = string.ascii_lowercase + string.ascii_uppercase + "1234567890!@#$%^&*()~`':;{[}]_-+=<,>.?/}|\\ \n\t" + '"'
 
