@@ -151,7 +151,7 @@ def return_good_texts(data,thresh=3,sample_chance=.05):
     fpath, keywords,hqp     = data 
 
     #Check if complete already
-    cleaned_fpath:str       = fpath.replace(FINEDB,INTER)
+    cleaned_fpath:str       = fpath.replace(FINEWEB_CLEAN,TRAINING_TEXT)
     if os.path.exists(cleaned_fpath):
         return (0,0,0)
     
@@ -191,7 +191,7 @@ def return_good_texts(data,thresh=3,sample_chance=.05):
 
 
 #Finds all texts within corpus that contain keywords
-def filter_by_topic(text_root:str=f"{FINEDB}"):#,tokenizer:ByteLevelBPETokenizer=None):
+def filter_by_topic(text_root:str=f"{FINEWEB_CLEAN}"):#,tokenizer:ByteLevelBPETokenizer=None):
 
     print(f"filtering by keywords")
     keywords = list(set([
@@ -493,12 +493,12 @@ def filter_by_topic(text_root:str=f"{FINEDB}"):#,tokenizer:ByteLevelBPETokenizer
 if __name__ == "__main__":
     name        = f"{PATH}/32k_c++"
 
-    #train_tokenizer(32768,name,db=FINEDB)
+    #train_tokenizer(32768,name,db=FINEWEB_CLEAN)
     #t = load_tokenizer(name)
     #print(f"Steinshark -> {t.encode('Steinshark').ids} -> {t.decode(t.encode('Steinshark').ids)}")
     #exit()
     #Loop so that it always runs
     #while True:
-    filter_by_topic(text_root=FINEDB)#,tokenizer=t)
-    #tokenize_corpus(name,db=FINEDB,tok_db=TOK_DB_CLEAN,n_workers=8)
+    filter_by_topic(text_root=FINEWEB_CLEAN)#,tokenizer=t)
+    #tokenize_corpus(name,db=FINEWEB_CLEAN,tok_db=TOK_DB_CLEAN,n_workers=8)
         #time.sleep(10)

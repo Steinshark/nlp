@@ -16,27 +16,26 @@ DWNLD_PATH          = f"{PATH}/temp/downloaded_wet_files.json"
 
 CRAWL_DB            = f"{PATH}/crawl"
 
-TOK_DB              = f"{PATH}/tokens"
-TOK_DB_CLEAN        = f"{PATH}/tokens_clean"
-
 PREV_RUNS           = f"{PATH}/prev"
 
 MODELS              = f"{PATH}/models"
 
-FINE                = f"{PATH}/fineweb"
+FINEWEB_BASE        = f"{PATH}/fineweb"
 
-FINEDB              = f"{PATH}/fine"
+FINEWEB_CLEAN       = f"{PATH}/fineclean"
 
-ULTRA               = f"{PATH}/ultrafine_tokens"
+TRAINING_TEXT       = f"{PATH}/traintext"
 
-INTER               = f"{PATH}/whitelist"
+TRAINING_TOKENS     = f"{PATH}/tokens"
 
-for fpath in [CRAWL_DB,TOK_DB,PREV_RUNS,MODELS,FINE,FINEDB,TOK_DB_CLEAN,ULTRA,INTER]:
+
+for fpath in [CRAWL_DB,PREV_RUNS,MODELS,FINEWEB_BASE,FINEWEB_CLEAN,TRAINING_TEXT,TRAINING_TOKENS]:
     if not os.path.exists(fpath):
         os.mkdir(fpath)
 
 END_TOKEN           = "<|endoftext|>"
-CODE_TOKEN          = "<|CODE|>"
+CODE_TOKEN          = "<|code|>"
+WEB_TOKEN           = '<|websearch|>'
 
 ALLOWABLE_CHAR      = string.ascii_lowercase + string.ascii_uppercase + "1234567890!@#$%^&*()~`':;{[}]_-+=<,>.?/}|\\ \n\t" + '"'
 

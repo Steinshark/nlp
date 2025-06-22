@@ -295,7 +295,7 @@ def match_case(word: str, template: str) -> str:
     
 #Create regex pattern using quotations, dashes, spacing
 boundary_corrections             = {}  
-for correction_set in [COMMON_MISSPELLINGS,BRITISH_MISSPELLINGS]:
+for correction_set in [COMMON_MISSPELLINGS,BRITISH_MISSPELLINGS,SPACING_MISSPELLINGS]:
     boundary_corrections.update(correction_set)
 
 compiled_boundary_corrections    = [(re.compile(rf"\b{re.escape(wrong)}\b", flags=re.IGNORECASE), right) for wrong, right in boundary_corrections.items()]
@@ -306,6 +306,7 @@ for correction_set in [QUOTATIONS,DASHES,SPACING]:
     nonboundary_corrections.update(correction_set)
 
 compiled_nonboundary_corrections    = [(re.compile(rf"{re.escape(wrong)}", flags=re.IGNORECASE), right) for wrong, right in nonboundary_corrections.items()]
+
 
 """
 This function performs staple normalizations to include: 

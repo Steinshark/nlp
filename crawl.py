@@ -154,17 +154,17 @@ def download_files(n_files:int=128,lower=True,writefile_size=64,total_size=128*1
 
 def clean_fineweb(min_score=.97):
 
-    print(f"cleaning fineweb - {FINEDB}")
+    print(f"cleaning fineweb - {FINEWEB_BASE}")
     texts       = [] 
 
-    paths       = [os.path.join(FINE,fpath) for fpath in os.listdir(FINE) if ".parquet" in fpath]
+    paths       = [os.path.join(FINEWEB_BASE,fpath) for fpath in os.listdir(FINEWEB_BASE) if ".parquet" in fpath]
     random.shuffle(paths)
     fpaths      = tqdm.tqdm(paths)
 
 
     for file in fpaths:
 
-        curfile     = file.replace(FINE,FINEDB).replace(".parquet",".txt")
+        curfile     = file.replace(FINEWEB_BASE,FINEWEB_CLEAN).replace(".parquet",".txt")
         if os.path.exists(curfile):
             continue
 

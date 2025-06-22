@@ -1,5 +1,6 @@
 from tok import filter_by_topic, tokenize_corpus,load_tokenizer,train_tokenizer
 from crawl import clean_fineweb
+from language_utils import normalize_text
 from training import *
 import numpy 
 import tokenizers 
@@ -207,10 +208,11 @@ def generate_datasources():
 if __name__ == '__main__':
     #Clean fineweb
     clean_fineweb(min_score=.95)
-    #generate_datasources()
-    exit()
-    # #Perform whitelisting 
-    #filter_by_topic()
+    filter_by_topic()
+    #Perform whitelisting 
+    #Get all curated data sources
+    generate_datasources()
+
 
     # #Tokenize based on new whitelist 
     FINAL_SIZE              = 32768

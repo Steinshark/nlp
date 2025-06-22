@@ -57,6 +57,7 @@ def url_encode(url:str):
     url     = url.replace('https://en.wikipedia.org/wiki/','').replace(":",'_').replace(";","_")
     return url
 
+
 def get_pageviews(pagetext:str):
 
     #Check page stats
@@ -435,5 +436,5 @@ if __name__ == "__main__":
 
     for search in searches:
         url,subj    = search
-        scrape_yt(start_url=url,subject_start=subj,lim=30_000)
+        scrape_yt(start_url=url,subject_start=subj,lim=20)
 
