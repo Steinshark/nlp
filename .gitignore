@@ -1,0 +1,11 @@
+*.bigtxt*
+*.model*
+*.wet*
+*.gz*
+!*urls.txt*
+!*vocabulary.txt*
+!*vocab.txt
+!*vocab*
+*.npy*
+*.secret*
+*.csv*
